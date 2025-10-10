@@ -48,17 +48,17 @@ const fixRemainingErrors = () => {
           .replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
         
         if (oldName !== newName) {
-          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
+          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page: \\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
           modified = true;
         }
       }
       
       // Fix any remaining TODO comments that might cause issues;
-      content = content.replace(/\/\/\s*TODO:.*$/gm, '');
-      content = content.replace(/{\s*\/\/\s*TODO:.*?}/g, '{}');
-      content = content.replace(/\[\s*\/\/\s*TODO:.*?]/g, '[]');
-      content = content.replace(/\(\s*\/\/\s*TODO:.*?\)/g, '()');
+      content = content.replace(/\/\/\s*TODO: .*$/gm, '');
+      content = content.replace(/{\s*\/\/\s*TODO: .*?,}/g, '{}');
+      content = content.replace(/\[\s*\/\/\s*TODO: .*?]/g, '[]');
+      content = content.replace(/\(\s*\/\/\s*TODO: .*?\)/g, '()');
       
       // Fix any malformed JSX;
       content = content.replace(/\/\/\s*[^/]/g, '');

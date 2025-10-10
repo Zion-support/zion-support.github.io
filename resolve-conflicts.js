@@ -52,6 +52,6 @@ try {
   console.log('✅ Duplicate imports cleaned up!');
   
 } catch (error) {
-    console.error('❌ Error resolving conflicts:', error.message);
+    console.error('❌ Error resolving conflicts: ', error.message);
   process.exit(1)
   }

@@ -16,7 +16,7 @@ const RequestQuotePage: React.FC = () => {
     timeline: '',
     budget: '',
     description: '',
-    requirements:   ,
+    requirements: ,
 $4});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -72,81 +72,81 @@ $4});
     {
       icon: Calculator,
       title: 'Free Quote',
-      description:     ,
+      description: ,
 $4},
     {
       icon: Clock,
       title: 'Quick Response',
-      description:     ,
+      description: ,
 $4},
     {
       icon: CheckCircle,
       title: 'Transparent Pricing',
-      description:     ,
+      description: ,
 $4},
     {
       icon: Star,
       title: 'Expert Consultation',
-      description:     ,
+      description: ,
 $4}
   ];
   const whyChooseUs = [
     {
       icon: Users,
       title: '50+ Successful Projects',
-      description:     ,
+      description: ,
 $4},
     {
       icon: Award,
       title: '300% Average ROI',
-      description:     ,
+      description: ,
 $4},
     {
       icon: Clock,
       title: '24/7 Support',
-      description:     ,
+      description: ,
 $4},
     {
       icon: Star,
       title: '99.9% Uptime',
-      description:     ,
+      description: ,
 $4}
   ];
   if (isSubmitted) {
     return (
       <React.Fragment>
         <Navigation />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4 py-16 pt-24">
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+          <div className="container mx-auto px-4 py-16 pt-24"></div>
+            <div className="max-w-2xl mx-auto text-center"></div>
+              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <CheckCircle className="w-10 h-10 text-green-400" />
               </div>
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text">
+              <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1>
                 Quote Request Submitted!
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Thank you for your interest in our services. We've received your quote request 
                 and will get back to you within 24 hours with a detailed proposal.
               </p>
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8">
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1</div>
+              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>
+                <h3 className="text-lg font-semibold text-white mb-4"></h3>What happens next?</h3>
+                <div className="space-y-3 text-left"></div>
+                  <div className="flex items-center"></div>
+                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white"></div>1</div>
                     <span className="text-gray-300">Our team will review your requirements</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2</div>
+                  <div className="flex items-center"></div>
+                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white"></div>2</div>
                     <span className="text-gray-300">We'll prepare a detailed quote and proposal</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>
+                  <div className="flex items-center"></div>
+                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white"></div>3</div>
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -170,27 +170,27 @@ $4}
   return (
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text"></h1>
               Request a Quote,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12"></div>
             {/* Quote Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
+            <div className="lg:col-span-2"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50"></div>
+                <h2 className="text-2xl font-bold text-white mb-6"></h2>Project Details</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                       </label>
@@ -204,7 +204,7 @@ $4}
                         placeholder="Enter your full name"
                       />
                     </div>
-                    <div>
+                    <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Email Address *
                       </label>
@@ -219,8 +219,8 @@ $4}
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Company Name,
   </
@@ -233,7 +233,7 @@ $4}
                         placeholder="Enter your company name"
                       />
                     </div>
-                    <div>
+                    <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Phone Number,
   </
@@ -248,7 +248,7 @@ $4}
                     </div>
                   </div>
                   {/* Project Information */}
-                  <div>
+                  <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Service Type *
                     </label>
@@ -264,8 +264,8 @@ $4}
                       ))}
                     </select>
                   </div>
-                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-                    <div>
+                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
+                    <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Project Size,
   </
@@ -280,7 +280,7 @@ $4}
                         ))}
                       </select>
                     </div>
-                    <div>
+                    <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Timeline;
   </
@@ -296,7 +296,7 @@ $4}
                       </select>
                     </div>
                   </div>
-                  <div>
+                  <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Budget Range;
   </
@@ -311,7 +311,7 @@ $4}
                       ))}
                     </select>
                   </div>
-                  <div>
+                  <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Project Description *
                     </label>
@@ -325,7 +325,7 @@ $4}
                       placeholder="Describe your project requirements and goals..."
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Specific Requirements,
   </
@@ -341,10 +341,10 @@ $4}
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"></button>
                     {isSubmitting ? (
-                      <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      <div className="flex items-center justify-center"></div>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div></div>
                         Submitting...
                       </div>
                     ) : (
@@ -355,48 +355,48 @@ $4}
               </div>
             </div>
             {/* Sidebar */}
-            <div className="space-y-8">
+            <div className="space-y-8"></div>
               {/* Benefits */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
-                <div className="space-y-4">
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>
+                <h3 className="text-xl font-bold text-white mb-6"></h3>Why Request a Quote?</h3>
+                <div className="space-y-4"></div>
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                    <div key={index} className="flex items-start"></div>
+                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
                       </div>
-                      <div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>
-                        <p className="text-xs text-gray-300">{benefit.description}</p>
+                      <div></div>
+                        <h4 className="text-sm font-semibold text-white mb-1"></h4>{benefit.title}</h4>
+                        <p className="text-xs text-gray-300"></p>{benefit.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
               {/* Why Choose Us */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
-                <div className="space-y-4">
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>
+                <h3 className="text-xl font-bold text-white mb-6"></h3>Why Choose Us?</h3>
+                <div className="space-y-4"></div>
                   {whyChooseUs.map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                    <div key={index} className="flex items-start"></div>
+                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>
                         <item.icon className="w-4 h-4 text-purple-400" />
                       </div>
-                      <div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>
-                        <p className="text-xs text-gray-300">{item.description}</p>
+                      <div></div>
+                        <h4 className="text-sm font-semibold text-white mb-1"></h4>{item.title}</h4>
+                        <p className="text-xs text-gray-300"></p>{item.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
               {/* Contact Info */}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
-                <p className="text-gray-300 text-sm mb-4">
+              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-4"></h3>Need Immediate Help?</h3>
+                <p className="text-gray-300 text-sm mb-4"></p>
                   For urgent inquiries or immediate assistance, contact us directly.
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-3"></div>
                   <a
                     href="tel: +13024640950"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -416,10 +416,10 @@ $4}
                     <span className="text-sm">Contact Form</span>
                   </a>
                 </div>
-    <div>Coming Soon</div>
+    <div></div>Coming Soon</div>
   ),
 }
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
+  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   nam,
@@ -441,7 +441,7 @@ $4}
     descriptio,
   n: '',
     requirement,
-  s: '')
+  s: ''),
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -491,18 +491,18 @@ $4}
 //     'To be discussed'
   ];
   const handleInputChange = (e: React.ChangeEvent,)
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
+          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     const { name, value } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
+    setFormData(prev => ({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //       ...prev,
       [name]: value;)
     }));
   }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
+  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     e.preventDefault();
@@ -516,7 +516,7 @@ $4}
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -526,7 +526,7 @@ $4}
       descriptio,
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -534,9 +534,9 @@ $4}
       titl,
   e: 'Quick Response',
       descriptio,
-  n: 'We respond to all quote requests within 4 hours'
+  n: 'We respond to all quote requests within 4 hours',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -546,7 +546,7 @@ $4}
       descriptio,
   n: 'Clear, detailed pricing with no hidden fees'
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -554,14 +554,14 @@ $4}
       titl,
   e: 'Expert Consultation',
       descriptio,
-  n: 'Free consultation with our technology experts'
+  n: 'Free consultation with our technology experts',
     }
   ];
   const whyChooseUs = [
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -569,9 +569,9 @@ $4}
       titl,
   e: '50+ Successful Projects',
       descriptio,
-  n: 'Proven track record of delivering results'
+  n: 'Proven track record of delivering results',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -579,9 +579,9 @@ $4}
       titl,
   e: '300% Average ROI',
       descriptio,
-  n: 'Our clients see significant returns on investment'
+  n: 'Our clients see significant returns on investment',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -589,9 +589,9 @@ $4}
       titl,
   e: '24/7 Support',
       descriptio,
-  n: 'Round-the-clock support for all our clients'
+  n: 'Round-the-clock support for all our clients',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -602,44 +602,44 @@ $4}
   n: 'Reliable, high-performance solutions'
     }
   ];
-  if (isSubmitted) {/* TODO: Fix JSX expression */}
+  if (isSubmitted) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-    return (<div>Coming Soon</div>)
+    return (<div></div>Coming Soon</div>)
   )
           <React.Fragment>
         <Navigation /></Navigation>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-          <div className="container mx-auto px-4 py-16 pt-24"></div>"
-            <div className="max-w-2xl mx-auto text-center"></div>"
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>"
+          <div className="container mx-auto px-4 py-16 pt-24"></div></div>"
+            <div className="max-w-2xl mx-auto text-center"></div></div>"
+              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div></div>"
                 <CheckCircle className="w-10 h-10 text-green-400" /></CheckCircle>
               </div>"
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1>
+              <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1></h1>
 // Quote Request Submitted!
           </h1>"
-              <p className="text-xl text-gray-300 mb-8"></p>
+              <p className="text-xl text-gray-300 mb-8"></p></p>
                 Thank you for your interest in our services. We've received your quote request;
 // and will get back to you within 24 hours with a detailed proposal.
           </p>"
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>"
-                <div className="space-y-3 text-left"></div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1</div>"
+              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div></div>"
+                <h3 className="text-lg font-semibold text-white mb-4"></h3>What happens next?</h3>"
+                <div className="space-y-3 text-left"></div></div>"
+                  <div className="flex items-center"></div></div>"
+                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white"></div>1</div>"
                     <span className="text-gray-300">Our team will review your requirements</span>
                   </div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2</div>"
+                  <div className="flex items-center"></div></div>"
+                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white"></div>2</div>"
                     <span className="text-gray-300">We'll prepare a detailed quote and proposal</span>
                   </div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>"
+                  <div className="flex items-center"></div></div>"
+                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white"></div>3</div>"
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
@@ -665,31 +665,31 @@ $4}
       </React.Fragment>
     ),
   }
-  return (<div>Coming Soon</div>)
+  return (<div></div>Coming Soon</div>)
   )
           <React.Fragment>
       <Navigation /></Navigation>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>"
+        <div className="container mx-auto px-4 py-16 pt-24"></div></div>
           {/* Header */}"
-          <div className="text-center mb-16"></div>"
+          <div className="text-center mb-16"></div></div>"
             <h1 className="text-4xl,"
-  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1></h1>
 // Request a Quote
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Coming Soon,
   </
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12"></div>
             {/* Quote Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
+            <div className="lg:col-span-2"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50"></div>
+                <h2 className="text-2xl font-bold text-white mb-6"></h2>Project Details</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
 // Full Name *
           </label>
@@ -701,7 +701,7 @@ type="text" name="name"
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
 //                       />
           </div>
-                    <div></div>"
+                    <div></div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Email Address *
           </label>
@@ -715,8 +715,8 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
                   </div>"
                   <div className="grid grid-cols-1,"
-  md: grid-cols-2 gap-6"></div>
-                    <div></div>"
+  md: grid-cols-2 gap-6"></div></div>
+                    <div></div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Company Name,
           </label>
@@ -727,7 +727,7 @@ type="text" name="company"
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
 // />
           </div>
-                    <div></div>"
+                    <div></div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Phone Number,
           </label>
@@ -740,7 +740,7 @@ type="tel" name="phone"
           </div>
                   </div>
                   {/* Project Information */}
-                  <div></div>"
+                  <div></div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Service Type *
           </label>
@@ -758,8 +758,8 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     </select>
                   </div>"
                   <div className="grid grid-cols-1,"
-  md: grid-cols-2 gap-6"></div>
-                    <div></div>"
+  md: grid-cols-2 gap-6"></div></div>
+                    <div></div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Project Size,
           </label>
@@ -775,7 +775,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                         ))}
                       </select>
                     </div>
-                    <div>
+                    <div></div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
 // Timeline;
   </
@@ -792,7 +792,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       </select>
                     </div>
                   </div>
-                  <div></div>"
+                  <div></div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Budget Range;
           </label>
@@ -808,7 +808,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       ))}
                     </select>
                   </div>
-                  <div></div>"
+                  <div></div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Project Description *
           </label>
@@ -820,7 +820,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
 //                     />
           </div>
-                  <div></div>"
+                  <div></div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Specific Requirements,
           </label>
@@ -828,16 +828,16 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       name="requirements" value={formData.requirements}
                       onChange={handleInputChange}
                       rows={3}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
 // />
           </div>
                   <button
 type="submit" disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-// >
+// ></button>
                     {isSubmitting ? ()}"
-          <div className="flex items-center justify-center"></div>"
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+          <div className="flex items-center justify-center"></div></div>"
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div></div>
 // Submitting...
           </div>
                     ) : ()
@@ -848,45 +848,45 @@ type="submit" disabled={isSubmitting}
               </div>
             </div>
             {/* Sidebar */}"
-            <div className="space-y-8"></div>
+            <div className="space-y-8"></div></div>
               {/* Benefits */}"
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
-                <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>"
-                <div className="space-y-4"></div>
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div></div>"
+                <h3 className="text-xl font-bold text-white mb-6"></h3>Why Request a Quote?</h3>"
+                <div className="space-y-4"></div></div>
                   {benefits.map((benefit, index) => ()}"
-          <div key={index} className="flex items-start"></div>"
-                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>"
+          <div key={index} className="flex items-start"></div></div>"
+                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div></div>"
                         <benefit.icon className="w-4 h-4 text-cyan-400" /></benefit>
                       </div>
-                      <div></div>"
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>"
-                        <p className="text-xs text-gray-300">{benefit.description}</p>
+                      <div></div></div>"
+                        <h4 className="text-sm font-semibold text-white mb-1"></h4>{benefit.title}</h4>"
+                        <p className="text-xs text-gray-300"></p>{benefit.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
               {/* Why Choose Us */}"
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>"
-                <div className="space-y-4"></div>
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div></div>"
+                <h3 className="text-xl font-bold text-white mb-6"></h3>Why Choose Us?</h3>"
+                <div className="space-y-4"></div></div>
                   {whyChooseUs.map((item, index) => ()}"
-          <div key={index} className="flex items-start"></div>"
-                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>"
+          <div key={index} className="flex items-start"></div></div>"
+                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div></div>"
                         <item.icon className="w-4 h-4 text-purple-400" /></item>
                       </div>
-                      <div></div>"
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>"
-                        <p className="text-xs text-gray-300">{item.description}</p>
+                      <div></div></div>"
+                        <h4 className="text-sm font-semibold text-white mb-1"></h4>{item.title}</h4>"
+                        <p className="text-xs text-gray-300"></p>{item.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
               {/* Contact Info */}"
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>"
-                <p className="text-gray-300 text-sm mb-4"></p>
+              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div></div>"
+                <h3 className="text-xl font-bold text-white mb-4"></h3>Need Immediate Help?</h3>"
+                <p className="text-gray-300 text-sm mb-4"></p></p>
 // For urgent inquiries or immediate assistance, contact us directly.
           </p>
         </section>

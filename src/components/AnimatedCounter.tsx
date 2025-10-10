@@ -22,7 +22,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
           observer.disconnect()
   }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1,}
     );
     if (counterRef.current) {
     observer.observe(counterRef.current)
@@ -52,7 +52,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
     }
   }, [isVisible, end, duration]);
   return (
-    <div ref={counterRef} className={className}></di>
+    <div ref={counterRef} className={className}></div></di>
       {prefix}{count.toLocaleString()}{suffix}
     </div>
   );

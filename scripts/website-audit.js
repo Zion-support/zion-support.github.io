@@ -28,7 +28,7 @@ function scanDirectory(dir, basePath = '') {
         allPages.push({)
           path: route),
           file: pageFile),
-          exists: true
+          exists: true,
   });
       }
       // Recursively scan subdirectories;
@@ -131,7 +131,7 @@ allPages.forEach(page => {
       if (!existingRoutes.includes(link) && !link.startsWith('http')) {
         brokenLinks.push({),
           page: page.path),
-          brokenLink: link
+          brokenLink: link,
   });
       }
     }
@@ -157,7 +157,7 @@ const report = {
   missingPages: missingPages
   additionalMissing: additionalMissing
   brokenLinks: brokenLinks,
-  existingPages: allPages.map(p => p.path)}
+  existingPages: allPages.map(p => p.path),}
 
 fs.writeFileSync(
   path.join(__dirname, '..', 'website-audit-report.json'),
@@ -165,11 +165,11 @@ fs.writeFileSync(
 );
 
 console.log(`\n📊 Audit Summary: `),
-console.log(`  📄 Total pages found: ${allPages.length}`);
-console.log(`  🔗 Footer links: ${footerLinks.length}`);
-console.log(`  ❌ Missing pages: ${missingPages.length}`);
-console.log(`  💡 Additional pages to consider: ${additionalMissing.length}`);
-console.log(`  🔗 Broken internal links: ${brokenLinks.length}`);
+console.log(`  📄 Total pages found: ${allPages.length,}`);
+console.log(`  🔗 Footer links: ${footerLinks.length,}`);
+console.log(`  ❌ Missing pages: ${missingPages.length,}`);
+console.log(`  💡 Additional pages to consider: ${additionalMissing.length,}`);
+console.log(`  🔗 Broken internal links: ${brokenLinks.length,}`);
 console.log(`\n📋 Report saved to: website-audit-report.json`);
 
 console.log(`\n🎯 Next steps:`);

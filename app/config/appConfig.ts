@@ -6,7 +6,7 @@ export interface AppConfig {
     app: {
     name: string,
     version: string,
-    environment: 'development' | 'production' | 'test'
+    environment: 'development' | 'production' | 'test',
   }
   }
   api: {

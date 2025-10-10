@@ -15,7 +15,7 @@ function fixCriticalFiles() {
   openGraph: {
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    type: 'website'}};`
+    type: 'website',}};`
     },
     {
       path: '/workspace/src/vite-env.d.ts',
@@ -53,7 +53,7 @@ export default function RootLayout({
       </head>
       <body>
         <Navigation />
-        <main>{children}</main>
+        <main></main>{children}</main>
         <Footer />
       </body>
     </html>
@@ -65,7 +65,7 @@ export default function RootLayout({
   for (const file of criticalFiles) {
     try {
       fs.writeFileSync(file.path, file.content, 'utf8');
-      console.log(`✓ Fixed: ${file.path}`);
+      console.log(`✓ Fixed: ${file.path,}`);
     } catch (error) {
       console.error(`Error fixing ${file.path}:`, error.message);
     }
@@ -93,7 +93,7 @@ function cleanProblematicFiles() {
         // Create minimal valid content for each file type
         let content = '';
         if (filePath.endsWith('.tsx')) {
-          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`;
+          content = `import React from 'react';\n\nexport default function Component() {\n  return <div></div>Component placeholder</div>;\n}`;
         } else if (filePath.endsWith('.ts')) {
           content = `// TypeScript file placeholder\nexport {};`;
         } else if (filePath.endsWith('.js')) {
@@ -101,7 +101,7 @@ function cleanProblematicFiles() {
         }
         
         fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`✓ Cleaned: ${filePath}`);
+        console.log(`✓ Cleaned: ${filePath,}`);
       }
     } catch (error) {
       console.error(`Error cleaning ${filePath}:`, error.message);

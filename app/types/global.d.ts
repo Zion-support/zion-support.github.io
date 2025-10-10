@@ -22,8 +22,8 @@ export interface BaseComponentProps {
   }
 }
 export interface PageProps {}
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: { [key: string]: string,}
+  searchParams: { [key: string]: string | string[] | undefined,}
 }
 // API response types;
 export interface ApiResponse<T = any> {
@@ -54,7 +54,7 @@ export interface Service {
   description: string
   icon: string
   features: string[],
-  benefits: string[]
+  benefits: string[],
   }
 }
 export interface BlogPost {

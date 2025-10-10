@@ -2,7 +2,7 @@
 // This file contains utility functions and configurations
 
 interface AccessibilityConfig {
-    enableKeyboardNavigation: boolean
+    enableKeyboardNavigation: boolean,
   }
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean
@@ -11,14 +11,14 @@ interface AccessibilityConfig {
 }
 
 class AccessibilityEnhancer {
-    private config: AccessibilityConfig
+    private config: AccessibilityConfig,
   }
   constructor(config?: AccessibilityConfig) {this.config = config || {}
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
       enableHighContrast: true,
       enableFocusIndicators: true,
-      enableAriaLabels: true}
+      enableAriaLabels: true,}
     this.init()
 
   private init(): void {
@@ -45,7 +45,7 @@ class AccessibilityEnhancer {
       style.textContent = `
 
         *:focus {
-    outline: 2px solid #0066cc
+    outline: 2px solid #0066cc,
   }
           outline-offset: 2px,
         }

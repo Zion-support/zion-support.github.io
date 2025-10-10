@@ -2,7 +2,7 @@
 // This file contains utility functions and configurations
 
 interface SEOConfig {
-    title: string
+    title: string,
   }
   description: string;
   keywords: string[];
@@ -19,7 +19,7 @@ interface SEOConfig {
   lastModified?: string,
 }
 
-class SEOEnhancer {/* TODO: Fix JSX expression */}
+class SEOEnhancer {/* TODO: Fix JSX expression */,}
   config: SEOConfig,}
   constructor(confi)
   g: SEOConfig) {
@@ -51,7 +51,7 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
 
   public updateConfig(newConfi)
-  g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */}
+  g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */,}
     this.config = { ...this.config, ...newConfig }
     this.updateMetaTags()
   }

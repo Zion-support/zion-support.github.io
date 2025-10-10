@@ -13,12 +13,12 @@ const PartnersPage: React.FC = () => {
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       partners: [
-        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
-        { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' },
-        { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍' },
-        { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' },
-        { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮' },
-        { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
+        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢',},
+        { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️',},
+        { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍',},
+        { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖',},
+        { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮',},
+        { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻',}
       ]
     },
       title: 'Solution Partners',
@@ -26,35 +26,35 @@ const PartnersPage: React.FC = () => {
       icon: Handshake,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-        { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },
-        { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },
-        { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
-        { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
-        { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
-        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
+        { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️',},
+        { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️',},
+        { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊',},
+        { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈',},
+        { name: 'Workday', description: 'HR & Financial Management', logo: '👥',},
+        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧',}
       title: 'Integration Partners',
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-        { name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },
-        { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },
-        { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️' },
-        { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },
-        { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
-        { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
+        { name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾',},
+        { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐',},
+        { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️',},
+        { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩',},
+        { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️',},
+        { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋',}
     }
   ];
   const benefits = [
       icon: Globe,
       title: 'Global Reach',
-      description:       ,
+      description: ,
 icon$5: Users,
       title: 'Expertise Sharing',
-      description:       ,
+      description: ,
 icon$5: Star,
       title: 'Innovation',
-      description:       ,
+      description: ,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
@@ -70,7 +70,7 @@ icon$5: CheckCircle,
         'Custom pricing and terms'
       ],
       color: 'text-yellow-400',
-      bgColor:       ,
+      bgColor: ,
 namename: 'Solution Partners',
       level: 'Gold',
       description: 'Technology integration and solution delivery partnerships',
@@ -80,7 +80,7 @@ namename: 'Solution Partners',
         'Training and certification',
         'Preferred pricing'
       color: 'text-gray-400',
-      bgColor:       ,
+      bgColor: ,
 namename: 'Channel Partners',
       level: 'Silver',
       description: 'Reseller and referral partnerships for market expansion',
@@ -94,7 +94,7 @@ namename: 'Channel Partners',
   const partnerTypes = [],
   return (
     {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   titl,
@@ -111,18 +111,18 @@ namename: 'Channel Partners',
   s: [
   // TOD,
   O: Add items],
-        {/* TODO: Fix JSX expression */}
-  o: '' },
-        {/* TODO: Fix JSX expression */}
-  o: '' },
-        {/* TODO: Fix JSX expression */}
-  o: '' },
-        {/* TODO: Fix JSX expression */}
-  o: '' },
-        {/* TODO: Fix JSX expression */}
-  o: '' },
-        {/* TODO: Fix JSX expression */}
-  o: '' }
+        {/* TODO: Fix JSX expression */,}
+  o: '',},
+        {/* TODO: Fix JSX expression */,}
+  o: '',},
+        {/* TODO: Fix JSX expression */,}
+  o: '',},
+        {/* TODO: Fix JSX expression */,}
+  o: '',},
+        {/* TODO: Fix JSX expression */,}
+  o: '',},
+        {/* TODO: Fix JSX expression */,}
+  o: '',}
 //       ]
     },
       titl,
@@ -135,18 +135,18 @@ namename: 'Channel Partners',
   r: 'text-green-400',
       bgColo,
   r: 'bg-green-500/10',
-        {/* TODO: Fix JSX expression */}
-  o: '☁️' },
-        {/* TODO: Fix JSX expression */}
-  o: '⚙️' },
-        {/* TODO: Fix JSX expression */}
-  o: '📊' },
-        {/* TODO: Fix JSX expression */}
-  o: '📈' },
-        {/* TODO: Fix JSX expression */}
-  o: '👥' },
-        {/* TODO: Fix JSX expression */}
-  o: '🎧' }
+        {/* TODO: Fix JSX expression */,}
+  o: '☁️',},
+        {/* TODO: Fix JSX expression */,}
+  o: '⚙️',},
+        {/* TODO: Fix JSX expression */,}
+  o: '📊',},
+        {/* TODO: Fix JSX expression */,}
+  o: '📈',},
+        {/* TODO: Fix JSX expression */,}
+  o: '👥',},
+        {/* TODO: Fix JSX expression */,}
+  o: '🎧',}
   titl,
   e: 'Integration Partners',
       descriptio,
@@ -157,18 +157,18 @@ namename: 'Channel Partners',
   r: 'text-purple-400',
       bgColo,
   r: 'bg-purple-500/10',
-{/* TODO: Fix JSX expression */}
-  o: '💾' },
-        {/* TODO: Fix JSX expression */}
-  o: '🌐' },
-        {/* TODO: Fix JSX expression */}
-  o: '🖥️' },
-        {/* TODO: Fix JSX expression */}
-  o: '🎩' },
-        {/* TODO: Fix JSX expression */}
-  o: '🗄️' },
-        {/* TODO: Fix JSX expression */}
-  o: '📋' }
+{/* TODO: Fix JSX expression */,}
+  o: '💾',},
+        {/* TODO: Fix JSX expression */,}
+  o: '🌐',},
+        {/* TODO: Fix JSX expression */,}
+  o: '🖥️',},
+        {/* TODO: Fix JSX expression */,}
+  o: '🎩',},
+        {/* TODO: Fix JSX expression */,}
+  o: '🗄️',},
+        {/* TODO: Fix JSX expression */,}
+  o: '📋',}
     }
   ];
   const benefits = [
@@ -179,55 +179,55 @@ const PagePage: React.FC = () => {
   return (
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text"></h1>
               Our Partners,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               We work with industry-leading technology partners to deliver comprehensive solutions 
               that drive innovation and business success.
             </p>
           </div>
           {/* Partner Types */}
-          <div className="mb-16">
+          <div className="mb-16"></div>
             {partnerTypes.map((type, index) => (
-              <div key={index} className="mb-12">
-                <div className="flex items-center mb-8">
-                  <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
+              <div key={index} className="mb-12"></div>
+                <div className="flex items-center mb-8"></div>
+                  <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}></div>
                     <type.icon className={`w-6 h-6 ${type.color}`} />
-                  <div>
-                    <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>
-                    <p className="text-gray-300">{type.description}</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div></div>
+                    <h2 className="text-2xl font-bold text-white neon-text"></h2>{type.title}</h2>
+                    <p className="text-gray-300"></p>{type.description}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                   {type.partners.map((partner, partnerIndex) => (
-                    <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                      <div className="text-3xl mb-3">{partner.logo}</div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
-                      <p className="text-gray-300 text-sm">{partner.description}</p>
+                    <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"></div>
+                      <div className="text-3xl mb-3"></div>{partner.logo}</div>
+                      <h3 className="text-lg font-semibold text-white mb-2"></h3>{partner.name}</h3>
+                      <p className="text-gray-300 text-sm"></p>{partner.description}</p>
                   ))}
           {/* Partnership Benefits */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
               Why Partner With Us?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="text-center"></div>
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2"></h3>{benefit.title}</h3>
+                  <p className="text-gray-300 text-sm"></p>{benefit.description}</p>
           {/* Partnership Tiers */}
               Partnership Tiers
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {partnershipTiers.map((tier, index) => (
-                <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
-                  <div className="text-center mb-6">
-                    <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}</div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
-                    <p className="text-gray-300 text-sm">{tier.description}</p>
+                <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div>
+                  <div className="text-center mb-6"></div>
+                    <div className={`text-2xl font-bold ${tier.color} mb-2`}></div>{tier.level}</div>
+                    <h3 className="text-xl font-semibold text-white mb-2"></h3>{tier.name}</h3>
+                    <p className="text-gray-300 text-sm"></p>{tier.description}</p>
                   <ul className="space-y-3">
                     {tier.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-start">
@@ -236,13 +236,13 @@ const PagePage: React.FC = () => {
                       </li>
                   </ul>
           {/* Become a Partner CTA */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Become Our Partner
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success. 
               Let's build the future together.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -260,59 +260,59 @@ const PagePage: React.FC = () => {
       <Footer />
     </React.Fragment>
           {/* Header */}
-          <div className="text-center mb-16"></div>"
+          <div className="text-center mb-16"></div></div>"
             <h1 className="text-4xl,"
-  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1></h1>
 // Our Partners
           </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p></p>
 // We work with industry-leading technology partners to deliver comprehensive solutions,
 //               that drive innovation and business success.
           </p>
           </div>
           {/* Partner Types */}"
-          <div className="mb-16"></div>
+          <div className="mb-16"></div></div>
             {partnerTypes.map((type, index) => ()}"
-          <div key={index} className="mb-12"></div>"
-                <div className="flex items-center mb-8"></div>
-                  <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}></div>`
+          <div key={index} className="mb-12"></div></div>"
+                <div className="flex items-center mb-8"></div></div>
+                  <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}></div></div>`
                     <type.icon className={`w-6 h-6 ${type.color}`} /></type>
-                  <div></div>"
-                    <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>"
-                    <p className="text-gray-300">{type.description}</p>"
+                  <div></div></div>"
+                    <h2 className="text-2xl font-bold text-white neon-text"></h2>{type.title}</h2>"
+                    <p className="text-gray-300"></p>{type.description}</p>"
                 <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-6"></div>
+  md: grid-cols-2,"
+  lg:grid-cols-3 gap-6"></div></div>
                   {type.partners.map((partner, partnerIndex) => ()}"
           <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
-  hover:border-cyan-400/50 transition-all duration-300"></div>"
-                      <div className="text-3xl mb-3">{partner.logo}</div>"
-                      <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>"
-                      <p className="text-gray-300 text-sm">{partner.description}</p>
+  hover:border-cyan-400/50 transition-all duration-300"></div></div>"
+                      <div className="text-3xl mb-3"></div>{partner.logo}</div>"
+                      <h3 className="text-lg font-semibold text-white mb-2"></h3>{partner.name}</h3>"
+                      <p className="text-gray-300 text-sm"></p>{partner.description}</p>
                   ))}
           {/* Partnership Benefits */}"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2></h2>
 // Why Partner With Us?
           </h2>"
             <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>
+  md: grid-cols-2,"
+  lg:grid-cols-4 gap-6"></div></div>
               {benefits.map((benefit, index) => ()}"
-          <div key={index} className="text-center"></div>"
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
+          <div key={index} className="text-center"></div></div>"
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div></div>"
                     <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>"
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2"></h3>{benefit.title}</h3>"
+                  <p className="text-gray-300 text-sm"></p>{benefit.description}</p>
 {/* Partnership Tiers */}
               Partnership Tiers;"
             <div className="grid grid-cols-1,"
-  md:grid-cols-3 gap-8"></div>
+  md:grid-cols-3 gap-8"></div></div>
               {partnershipTiers.map((tier, index) => ()}`
-          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div>"
-                  <div className="text-center mb-6"></div>`
-                    <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}</div>"
-                    <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>"
-                    <p className="text-gray-300 text-sm">{tier.description}</p>"
+          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div></div>"
+                  <div className="text-center mb-6"></div></div>`
+                    <div className={`text-2xl font-bold ${tier.color} mb-2`}></div>{tier.level}</div>"
+                    <h3 className="text-xl font-semibold text-white mb-2"></h3>{tier.name}</h3>"
+                    <p className="text-gray-300 text-sm"></p>{tier.description}</p>"
                   <ul className="space-y-3"></ul>
                     {tier.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-start"></li>"
@@ -321,13 +321,13 @@ const PagePage: React.FC = () => {
                       </li>
                   </ul>
 {/* Become a Partner CTA */}"
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4"></h2>
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div></div>"
+            <h2 className="text-2xl font-bold text-white mb-4"></h2></h2>
               Become Our Partner;"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p></p>
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
               Let's build the future together.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >

@@ -7,10 +7,10 @@ interface SidebarNavigationProps {
 }
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: User },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: HelpCircle },
+    { name: 'Home', href: '/', icon: Home,},
+    { name: 'About', href: '/about', icon: User,},
+    { name: 'Services', href: '/services', icon: Settings,},
+    { name: 'Contact', href: '/contact', icon: HelpCircle,},
   ];
   return (
     <React.Fragment>
@@ -19,19 +19,19 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={onClose}
-        />
+        /></div>
       )}
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
-      >
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-white font-bold text-xl">Navigation</h2>
+      ></div>
+        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20"></div>
+          <h2 className="text-white font-bold text-xl"></h2>Navigation</h2>
           <button
             onClick={onClose}
-            className="text-gray-300 hover:text-cyan-400 transition-colors">
+            className="text-gray-300 hover:text-cyan-400 transition-colors"></button>
             <X className="w-6 h-6" />
           </button>
         </div>

@@ -8,12 +8,12 @@ const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const docCategories = [
-    { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
-    { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
-    { id: 'api', name: 'API Reference', icon: Code, count: 15 },
-    { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
-    { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
+    { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45,},
+    { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8,},
+    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12,},
+    { id: 'api', name: 'API Reference', icon: Code, count: 15,},
+    { id: 'integration', name: 'Integration', icon: Settings, count: 6,},
+    { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4,}
   ];
   const documentation = [
     {
@@ -44,7 +44,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Advanced',
       readTime: '45 min',
       icon: Brain,
-      content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.'
+      content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.',
     },
     {
       id: 4,
@@ -94,7 +94,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Advanced',
       readTime: '35 min',
       icon: MessageSquare,
-      content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.'
+      content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.',
     },
     {
       id: 9,
@@ -104,7 +104,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '25 min',
       icon: Bot,
-      content: 'Complete setup guide for deploying intelligent customer support bots on your website.'
+      content: 'Complete setup guide for deploying intelligent customer support bots on your website.',
     },
     {
       id: 10,
@@ -123,28 +123,28 @@ const DocsPage: React.FC = () => {
       description: 'Complete API documentation',
       icon: Code,
       link: '/api-docs',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
     },
     {
       title: 'SDK Downloads',
       description: 'Client libraries and tools',
       icon: Download,
       link: '/downloads',
-      color: 'text-green-400'
+      color: 'text-green-400',
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
       icon: Play,
       link: '/tutorials',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
     },
     {
       title: 'Community Forum',
       description: 'Connect with other developers',
       icon: Users,
       link: '/community',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     }
   ];
   const filteredDocs = selectedCategory === 'all' 
@@ -162,7 +162,7 @@ const DocsPage: React.FC = () => {
       case 'Beginner': return 'text-green-400 bg-green-500/20'
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20'
       case 'Advanced': return 'text-red-400 bg-red-500/20',
-      default: return 'text-gray-400 bg-gray-500/20'
+      default: return 'text-gray-400 bg-gray-500/20',
   }
   }
   return (
@@ -173,26 +173,26 @@ const DocsPage: React.FC = () => {
         keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}
         canonicalUrl="https://ziontechgroup.com/docs"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <main className="container mx-auto px-4 py-16 pt-24"></main>
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+          <section className="text-center mb-16"></section>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text"></h1>
               Documentation
   </
-            <p className="text-xl text-cyan-400 mb-8">
+            <p className="text-xl text-cyan-400 mb-8"></p>
               Everything you need to build with AI,
   </
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto"></p>
               Comprehensive guides, API references, and tutorials to help you 
               integrate and optimize our AI services for your business.
             </p>
           </section>
           {/* Search Section */}
-          <section className="mb-16">
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
+          <section className="mb-16"></section>
+            <div className="max-w-2xl mx-auto"></div>
+              <div className="relative"></div>
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -205,60 +205,60 @@ const DocsPage: React.FC = () => {
             </div>
           </section>
           {/* Quick Links */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Quick Links;
   </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {quickLinks.map((link, index) => (
                 <Link
                   key={index}
                   to={link.link}
                   className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
                   <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} />
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors"></h3>
                     {link.title}
                   </h3>
-                  <p className="text-gray-300">{link.description}</p>
+                  <p className="text-gray-300"></p>{link.description}</p>
                 </Link>
               ))}
             </div>
           </section>
           {/* Categories */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Browse by Category;
   </
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8"></div>
               {docCategories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={() =></button> setSelectedCategory(category.id)}
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'
+                      : 'bg-slate-800 text-white hover: bg-slate-700',
                   }`}
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
-                  <div className="text-sm font-semibold">{category.name}</div>
-                  <div className="text-xs opacity-75">{category.count} docs</div>
+                  <div className="text-sm font-semibold"></div>{category.name}</div>
+                  <div className="text-xs opacity-75"></div>{category.count} docs</div>
                 </button>
               ))}
             </div>
           </section>
           {/* Documentation List */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Documentation;
   </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {searchResults.map((doc) => (
-                <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-start mb-4">
+                <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                  <div className="flex items-start mb-4"></div>
                     <doc.icon className="w-8 h-8 text-cyan-400 mr-4 flex-shrink-0" />
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+                    <div className="flex-1"></div>
+                      <div className="flex items-center gap-2 mb-2"></div>
                         <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(doc.difficulty)}`}>
                           {doc.difficulty}
                         </span>
@@ -266,16 +266,16 @@ const DocsPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors"></h3>
                     {doc.title}
                   </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-gray-300 mb-4 leading-relaxed"></p>
                     {doc.description}
                   </p>
-                  <p className="text-gray-400 text-sm mb-4">
+                  <p className="text-gray-400 text-sm mb-4"></p>
                     {doc.content}
                   </p>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between"></div>
                     <Link
                       to={`/docs/${doc.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-white transition-colors">
@@ -291,15 +291,15 @@ const DocsPage: React.FC = () => {
             </div>
           </section>
           {/* Getting Started CTA */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6 neon-text">
+          <section className="text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text"></h2>
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Start building with our AI services today;
   </
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">

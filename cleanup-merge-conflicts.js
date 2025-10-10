@@ -39,7 +39,7 @@ function cleanMergeConflicts(filePath) {
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned: ${filePath}`);
+      console.log(`Cleaned: ${filePath,}`);
       return true;
     }
     return false;
@@ -101,7 +101,7 @@ console.log('Cleaning critical files...');
 for (const file of criticalFiles) {
   if (fs.existsSync(file)) {
     if (cleanMergeConflicts(file)) {
-      console.log(`Cleaned critical file: ${file}`);
+      console.log(`Cleaned critical file: ${file,}`);
     }
   }
 }

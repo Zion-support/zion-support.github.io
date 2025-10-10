@@ -10,22 +10,22 @@ const AiVoiceSolutionsPage: React.FC = () => {
         <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl font-bold text-white mb-6"></h1>
               AI Voice Solutions
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Revolutionize customer interactions with advanced AI voice technologies including 
               speech recognition, natural language processing, and intelligent voice assistants.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Speech Recognition</h3>
-              <p className="text-gray-300 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Speech Recognition</h3>
+              <p className="text-gray-300 mb-4"></p>
                 High-accuracy speech-to-text conversion with support for multiple languages and accents.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -36,9 +36,9 @@ const AiVoiceSolutionsPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Text-to-Speech</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Text-to-Speech</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Natural-sounding voice synthesis with customizable voices and emotional expression.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -49,9 +49,9 @@ const AiVoiceSolutionsPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Voice Assistants</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Voice Assistants</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Intelligent voice assistants that understand context and provide personalized responses.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -62,9 +62,9 @@ const AiVoiceSolutionsPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Conversational AI</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Conversational AI</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Advanced conversational AI that can handle complex dialogues and maintain context.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -75,9 +75,9 @@ const AiVoiceSolutionsPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Voice Analytics</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Voice Analytics</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Comprehensive analytics on voice interactions to improve customer experience.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -88,9 +88,9 @@ const AiVoiceSolutionsPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Voice Security</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Voice Security</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Advanced security features including voice biometrics and fraud detection.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -102,8 +102,8 @@ const AiVoiceSolutionsPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+          <div className="text-center"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"></button>
               Explore Voice Solutions
             </button>
           </div>

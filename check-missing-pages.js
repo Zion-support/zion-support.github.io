@@ -46,8 +46,8 @@ const routes = routeMatches ? routeMatches.map(match => match.replace('path="', 
 
 // Get existing pages;
 const existingPages = [];
-function findPages(dir) {/* TODO: Fix JSX expression */}
-    } else if (file === 'page.tsx') {/* TODO: Fix JSX expression */}
+function findPages(dir) {/* TODO: Fix JSX expression */,}
+    } else if (file === 'page.tsx') {/* TODO: Fix JSX expression */,}
     }
   }
 }
@@ -65,9 +65,9 @@ for (const link of allLinks) {
 }
 
 console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total links found: ${allLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Total links found: ${allLinks.length,}`);
+console.log(`Existing pages: ${existingPages.length,}`);
+console.log(`Missing pages: ${missingPages.length,}`);
 console.log('\n=== MISSING PAGES ===');
 missingPages.forEach(page => console.log(`- ${page}`));
 
@@ -87,7 +87,7 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Results saved to missing-pages.json');
 // Find missing pages;
-const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
+const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */,})
 });
 
 console.log('Missing)
@@ -95,8 +95,8 @@ console.log('Missing)
 missingPages.forEach(page => console.log(`- ${page}`));
 `
 console.log(`\nTotal missing)`
-  pages: ${missingPages.length}`);`
+  pages: ${missingPages.length,}`);`
 console.log(`Total)`
-  routes: ${routes.length}`);`
+  routes: ${routes.length,}`);`
 console.log(`Total existing)`
-  pages: ${existingPages.length}`);"`
+  pages: ${existingPages.length,}`);"`

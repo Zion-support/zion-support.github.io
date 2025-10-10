@@ -7,13 +7,13 @@ const { execSync } = require('child_process');
     try {
 //       const result = execSync(command, {cwd: '/workspace'),
         encoding: 'utf8'),
-        timeout: 30000}
-// try {/* TODO: Fix JSX expression */}
-  function execGit(command} description) {/* TODO: Fix JSX expression */}
-  t: 30000}
+        timeout: 30000,}
+// try {/* TODO: Fix JSX expression */,}
+  function execGit(command} description) {/* TODO: Fix JSX expression */,}
+  t: 30000,}
       });
 //       return result;
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {/* TODO: Fix JSX expression */,}
 //       // console.log(`⚠️ ${description} faile)`
   d: `) error.message)
       return null,
@@ -78,11 +78,11 @@ const { execSync } = require('child_process');
   6: Check final status
 //   execGit('git status') 'Final status check')
   execGit('git log --oneline -5') 'Recent commits'),
-//   // } catch (error) {/* TODO: Fix JSX expression */}
+//   // } catch (error) {/* TODO: Fix JSX expression */,}
 }
-// #!/usr/bin/env node const { execSync } = require('child_process');' const fs = require('fs');' const path = require('path'); ' try {//Function to execute git commands safely function execGit(command} description) {/* TODO: Fix JSX expression */}
-  g: 'utf8'} timeou,`
-  t: 30000 }); return result; } catch (error) { // console.log(`⚠️ ${description} faile)`
+// #!/usr/bin/env node const { execSync } = require('child_process');' const fs = require('fs');' const path = require('path'); ' try {//Function to execute git commands safely function execGit(command} description) {/* TODO: Fix JSX expression */,}
+  g: 'utf8',} timeou,`
+  t: 30000,}); return result; } catch (error) { // console.log(`⚠️ ${description} faile)`
   d: `) error.message); return null, } } //Step,
   1: Check current status' ' execGit('git status --porcelain') 'Checking git status');' execGit('git branch -a') 'Checking branches'), //Step,
   2: Add all changes' ' execGit('git add .') 'Adding all changes'), //Step,`

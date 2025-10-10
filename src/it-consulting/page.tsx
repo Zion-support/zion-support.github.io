@@ -30,34 +30,34 @@ const ITConsultingPage: React.FC = () => {
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /></meta>
       </Helmet>
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div></div>
         <Navigation /></Navigation>"
-        <main className="pt-24 pb-16 px-4"></main>"
-          <div className="max-w-7xl mx-auto"></div>"
-            <div className="text-center mb-16"></div>"
+        <main className="pt-24 pb-16 px-4"></main></main>"
+          <div className="max-w-7xl mx-auto"></div></div>"
+            <div className="text-center mb-16"></div></div>"
               <h1 className="text-4xl,"
-  md: text-6xl font-bold text-gray-900 mb-6"></h1>
+  md: text-6xl font-bold text-gray-900 mb-6"></h1></h1>
                 IT Consulting Services,
               </h1>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p></p>
                 Transform your business with expert IT consulting. We provide strategic guidance, 
                 digital transformation, and technology solutions that drive growth and efficiency.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16"></div>
               {consultingServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 bg-blue-100 rounded-xl mr-4">
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"></div>
+                  <div className="flex items-center mb-6"></div>
+                    <div className="p-3 bg-blue-100 rounded-xl mr-4"></div>
                       <service.icon className="w-8 h-8 text-blue-600" />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-                      <p className="text-gray-600">{service.description}</p>
+                    <div></div>
+                      <h3 className="text-2xl font-bold text-gray-900"></h3>{service.title}</h3>
+                      <p className="text-gray-600"></p>{service.description}</p>
                     </div>
                   </div>
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                  <div className="mb-6"></div>
+                    <h4 className="font-semibold text-gray-900 mb-3"></h4>Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
@@ -66,7 +66,7 @@ const ITConsultingPage: React.FC = () => {
                         </li>)
                       ))}
                     </ul>
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-3"></h4>Benefits:</h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
@@ -75,7 +75,7 @@ const ITConsultingPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-3"></h4>Benefits:</h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center">
@@ -84,9 +84,9 @@ const ITConsultingPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
-                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
+                    <div className="text-center"></div>
+                      <div className="text-3xl font-bold text-blue-600 mb-2"></div>{service.price}</div>
+                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors"></button>
                         Get Started,
   </
                     </div>
@@ -96,18 +96,18 @@ const ITConsultingPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?</h2>
-              <p className="text-xl text-gray-600 mb-8">
+          <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50"></section>
+            <div className="max-w-4xl mx-auto text-center"></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h2>Ready to Transform Your IT?</h2>
+              <p className="text-xl text-gray-600 mb-8"></p>
                 Contact our experts for a free consultation and discover how we can help your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors"></button>
                   <Phone className="w-5 h-5 inline mr-2" />
                   Call Us
   </
-                <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
+                <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors"></button>
                   <Mail className="w-5 h-5 inline mr-2" />
                   Email Us
   </

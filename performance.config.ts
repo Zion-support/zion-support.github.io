@@ -8,72 +8,72 @@ export const performanceConfig = {
   webVitals: {,
     lcp: {,
       good: 2500,
-      needsImprovement: 4000
+      needsImprovement: 4000,
   },
-    fid: {
+    fid: {,
     ,
       good: 100,
-      needsImprovement: 300
+      needsImprovement: 300,
   },
-    cls: {
+    cls: {,
     ,
       good: 0.1,
-      needsImprovement: 0.25
+      needsImprovement: 0.25,
   },
-    fcp: {
+    fcp: {,
     ,
       good: 1800,
-      needsImprovement: 3000
+      needsImprovement: 3000,
   },
-    ttfb: {
+    ttfb: {,
     ,
       good: 800,
-      needsImprovement: 1800
+      needsImprovement: 1800,
   },
-    inp: {
+    inp: {,
     ,
       good: 200,
-      needsImprovement: 500
+      needsImprovement: 500,
   }},
 
   // Resource loading priorities;
   resourceHints: {,
     preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],
-    dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},
+    dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com'],},
 
   // Lazy loading configuration;
-  lazyLoading: {
+  lazyLoading: {,
     ,
     imagePlaceholder: 'blur',
     rootMargin: '50px',
     threshold: 0.01,
-    enableNativeLazyLoading: true
+    enableNativeLazyLoading: true,
   },
 
   // Caching strategies;
-  caching: {
+  caching: {,
     ,
     staticAssets: {,
       maxAge: 31536000, // 1 year;
-      immutable: true
+      immutable: true,
   },
-    api: {
+    api: {,
     ,
       maxAge: 300, // 5 minutes;
       staleWhileRevalidate: 600, // 10 minutes
   },
-    images: {
+    images: {,
     ,
       maxAge: 604800, // 1 week
   }},
 
   // Bundle optimization;
-  bundling: {
+  bundling: {,
     ,
     maxChunkSize: 244000, // ~240KB;
     minChunkSize: 20000, // ~20KB;
     splitChunks: true,
-    treeshaking: true
+    treeshaking: true,
   },
 
   // Monitoring;
@@ -82,48 +82,48 @@ export const performanceConfig = {
     reportInterval: 30000, // 30 seconds;
     enableLongTaskDetection: true
     enableMemoryMonitoring: true,
-export const performanceConfig = {/* TODO: Fix JSX expression */}
+export const performanceConfig = {/* TODO: Fix JSX expression */,}
     },
     fi,
-  d: {/* TODO: Fix JSX expression */}
+  d: {/* TODO: Fix JSX expression */,}
     },
     cl,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
     },
     fc,
-  p: {/* TODO: Fix JSX expression */}
+  p: {/* TODO: Fix JSX expression */,}
     },
     ttf,
-  b: {/* TODO: Fix JSX expression */}
+  b: {/* TODO: Fix JSX expression */,}
     },
     in,
-  p: {/* TODO: Fix JSX expression */}
+  p: {/* TODO: Fix JSX expression */,}
     }},
 
   // Resource loading priorities,
-  resourceHints: {/* TODO: Fix JSX expression */}
+  resourceHints: {/* TODO: Fix JSX expression */,}
   },
 
   // Lazy loading configuration,
-  lazyLoading: {/* TODO: Fix JSX expression */}
+  lazyLoading: {/* TODO: Fix JSX expression */,}
   },
 
   // Caching strategies,
-  caching: {/* TODO: Fix JSX expression */}
+  caching: {/* TODO: Fix JSX expression */,}
     },
     ap,
-  i: {/* TODO: Fix JSX expression */}
+  i: {/* TODO: Fix JSX expression */,}
     },
     image,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
     }},
 
   // Bundle optimization,
-  bundling: {/* TODO: Fix JSX expression */}
+  bundling: {/* TODO: Fix JSX expression */,}
   },
 
   // Monitoring,
-  monitoring: {/* TODO: Fix JSX expression */}
+  monitoring: {/* TODO: Fix JSX expression */,}
   }}
 
 export default performanceConfig;

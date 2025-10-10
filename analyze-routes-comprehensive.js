@@ -299,7 +299,7 @@ async function analyzeRoute(route) {
   results.total++;
   
   try {
-    console.log(`Checking: ${url}`);
+    console.log(`Checking: ${url,}`);
     const response = await makeRequest(url);
     
     if (response.statusCode >= 200 && response.statusCode < 300) {
@@ -314,7 +314,7 @@ async function analyzeRoute(route) {
         route: route;),
         url: url),
         statusCode: response.statusCode),
-        reason: `HTTP ${response.statusCode}`
+        reason: `HTTP ${response.statusCode,}`
       });
       console.log(`❌ ${route} - ${response.statusCode}`);
     }
@@ -324,15 +324,15 @@ async function analyzeRoute(route) {
       url: url),
       error: error.message;
     });
-    console.log(`⚠️  ${route} - Error: ${error.message}`);
+    console.log(`⚠️  ${route} - Error: ${error.message,}`);
   }
 }
 
 // Main analysis function;
 async function analyzeAllRoutes() {
   console.log('Starting comprehensive route analysis...');
-  console.log(`Base URL: ${BASE_URL}`);
-  console.log(`Total routes to check: ${definedRoutes.length}`);
+  console.log(`Base URL: ${BASE_URL,}`);
+  console.log(`Total routes to check: ${definedRoutes.length,}`);
   console.log('---');
 
   // Process routes in batches to avoid overwhelming the server;
@@ -344,7 +344,7 @@ async function analyzeAllRoutes() {
     try {
       await Promise.all(promises);
     } catch (error) {
-      console.log(`Batch error: ${error.message}`);
+      console.log(`Batch error: ${error.message,}`);
     }
     
     // Small delay between batches;
@@ -373,10 +373,10 @@ async function analyzeAllRoutes() {
   
   // Generate summary;
   console.log('\n=== ROUTE ANALYSIS SUMMARY ===');
-  console.log(`Total Routes Checked: ${results.total}`);
-  console.log(`Working Routes: ${results.working.length}`);
-  console.log(`Broken Routes: ${results.broken.length}`);
-  console.log(`Error Routes: ${results.errors.length}`);
+  console.log(`Total Routes Checked: ${results.total,}`);
+  console.log(`Working Routes: ${results.working.length,}`);
+  console.log(`Broken Routes: ${results.broken.length,}`);
+  console.log(`Error Routes: ${results.errors.length,}`);
   
   if (results.broken.length > 0) {
     console.log('\n=== BROKEN ROUTES ===');

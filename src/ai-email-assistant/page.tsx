@@ -2,19 +2,19 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text"></h1>
 // AI Email Assistant</h1>"
           <p className="text-xl,"
-  md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
+  md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p></p>
 // Smart Email Management with AI-Powered Intelligence</p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             This page is under development. Please check back soon for updates.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12"></div>
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 // >,
@@ -27,56 +27,56 @@ import Footer from '../components/Footer';
           </div>
         </section>
         {/* Features Section */}"
-        <section className="mb-16"></section>"
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
+        <section className="mb-16"></section></section>"
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2></h2>
 // Key Features</h2>"
           <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
-              <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>"
-              <p className="text-gray-300"></p>
+  md: grid-cols-2,"
+  lg:grid-cols-3 gap-8"></div></div>"
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Smart Responses</h3>"
+              <p className="text-gray-300"></p></p>
 // AI-powered email responses that understand context and tone, automatically generating;
 //                 professional replies based on your communication style.
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
-              <h3 className="text-xl font-bold text-white mb-4">Intelligent Scheduling</h3>"
-              <p className="text-gray-300"></p>
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Intelligent Scheduling</h3>"
+              <p className="text-gray-300"></p></p>
 // Automatically schedule meetings, set reminders, and manage your calendar based on;
 //                 email content and your availability preferences.
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
-              <h3 className="text-xl font-bold text-white mb-4">Priority Sorting</h3>"
-              <p className="text-gray-300"></p>
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Priority Sorting</h3>"
+              <p className="text-gray-300"></p></p>
 // AI analyzes email importance and urgency, automatically organizing your inbox;
 //                 with smart priority levels and categorization.
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
-              <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>"
-              <p className="text-gray-300"></p>
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Auto Follow-ups</h3>"
+              <p className="text-gray-300"></p></p>
                 Automated follow-up sequences for sales, customer service, and project management;
 // with personalized timing and content.
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
-              <h3 className="text-xl font-bold text-white mb-4">Analytics Dashboard</h3>"
-              <p className="text-gray-300"></p>
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Analytics Dashboard</h3>"
+              <p className="text-gray-300"></p></p>
 // Track email performance, response times, and engagement metrics with detailed;
 //                 analytics and insights.
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
-              <div className="text-4xl mb-4"></div>"
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>"
-              <p className="text-gray-300"></p>
+            <div className="cyber-card hologram-card p-6"></div></div>"
+              <div className="text-4xl mb-4"></div></div>"
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Enterprise Security</h3>"
+              <p className="text-gray-300"></p></p>
 // Bank-level encryption and security protocols ensure your email data remains;
 //                 private and protected at all times.
           </p>
@@ -84,14 +84,14 @@ import Footer from '../components/Footer';
           </div>
         </section>
         {/* Pricing Section */}"
-        <section className="mb-16"></section>"
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
+        <section className="mb-16"></section></section>"
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2></h2>
 // Pricing Plans</h2>"
           <div className="grid grid-cols-1,"
-  md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
-            <div className="cyber-card hologram-card p-8 text-center"></div>"
-              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div>"
+  md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div></div>"
+            <div className="cyber-card hologram-card p-8 text-center"></div></div>"
+              <h3 className="text-2xl font-bold text-white mb-4"></h3>Starter</h3>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6"></div>$29<span className="text-lg text-gray-400">/month</span></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Up to 1,000 emails/month</li>
                 <li> Basic AI responses</li>
@@ -102,10 +102,10 @@ import Footer from '../components/Footer';
               <a href="/contact" className="cyber-button w-full text-center"></a>
 // Get Started</a>
             </div>"
-            <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div>"
-              <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>"
-              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-400">/month</span></div>"
+            <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div></div>"
+              <div className="text-sm font-bold text-cyan-400 mb-2"></div>MOST POPULAR</div>"
+              <h3 className="text-2xl font-bold text-white mb-4"></h3>Professional</h3>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6"></div>$79<span className="text-lg text-gray-400">/month</span></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Up to 10,000 emails/month</li>
                 <li> Advanced AI responses</li>
@@ -117,9 +117,9 @@ import Footer from '../components/Footer';
               <a href="/contact" className="cyber-button w-full text-center"></a>
 // Get Started</a>
             </div>"
-            <div className="cyber-card hologram-card p-8 text-center"></div>"
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>"
+            <div className="cyber-card hologram-card p-8 text-center"></div></div>"
+              <h3 className="text-2xl font-bold text-white mb-4"></h3>Enterprise</h3>"
+              <div className="text-4xl font-bold text-cyan-400 mb-6"></div>$199<span className="text-lg text-gray-400">/month</span></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Unlimited emails</li>
                 <li> Custom AI training</li>
@@ -134,15 +134,15 @@ import Footer from '../components/Footer';
           </div>
         </section>
         {/* Contact Section */}"
-        <section className="text-center"></section>"
-          <h2 className="text-3xl font-bold text-white mb-8 neon-text"></h2>
+        <section className="text-center"></section></section>"
+          <h2 className="text-3xl font-bold text-white mb-8 neon-text"></h2></h2>
 // Ready to Transform Your Email Workflow?
           </h2>"
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p></p>
 // Contact us today to schedule a free demo and see how our AI Email Assistant;
 //             can revolutionize your business communication.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 // >,

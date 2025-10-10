@@ -7,19 +7,19 @@ function fixMainPage() {
     let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
     
     // Fix self-closing div tags that have content after them
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1>');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1></div>');
     
     // Fix specific patterns that are common issues
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<div/g, '<div$1>\n<div');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<h/g, '<div$1>\n<h');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<p/g, '<div$1>\n<p');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<button/g, '<div$1>\n<button');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<span/g, '<div$1>\n<span');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<ul/g, '<div$1>\n<ul');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<li/g, '<div$1>\n<li');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<a/g, '<div$1>\n<a');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<img/g, '<div$1>\n<img');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<svg/g, '<div$1>\n<svg');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<div/g, '<div$1></div>\n<div');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<h/g, '<div$1></div>\n<h');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<p/g, '<div$1></div></p>\n<p');
+    content = content.replace(/<div([^></div></p>]*?)\s*\/>\s*\n\s*<button/g, '<div$1></div></button>\n<button');
+    content = content.replace(/<div([^></div></button>]*?)\s*\/>\s*\n\s*<span/g, '<div$1></div>\n<span');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<ul/g, '<div$1></div>\n<ul');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<li/g, '<div$1></div>\n<li');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<a/g, '<div$1></div>\n<a');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<img/g, '<div$1 /></div>\n<img');
+    content = content.replace(/<div([^ /></div>]*?)\s*\/>\s*\n\s*<svg/g, '<div$1></div>\n<svg');
     
     // Fix map function syntax issues
     content = content.replace(/map\(([^)]*)\)\s*=>\s*\(\s*<\/div>/g, 'map($1) => (');
@@ -31,7 +31,7 @@ function fixMainPage() {
     console.log('✅ Fixed main page.tsx file');
     return true;
   } catch (error) {
-    console.error('Error fixing main page:', error.message);
+    console.error('Error fixing main page: ', error.message);
     return false;
   }
 }

@@ -19,7 +19,7 @@ class SecurityEnhancer {
           "'self'",
           "'unsafe-inline'",
           'https: //fonts.googleapis.com'],
-        'img-src': ["'self'", 'data:', 'https: '],
+        'img-src': ["'self'", 'data: ', 'https: '],
         'font-src': ["'self'", 'https: //fonts.gstatic.com'],
         'connect-src': ["'self'", 'https: //api.ziontechgroup.com'],
         'frame-src': ["'none'"],
@@ -27,7 +27,7 @@ class SecurityEnhancer {
         'base-uri': ["'self'"],
         'form-action': ["'self'"]},
       trustedDomains: [,
-class SecurityEnhancer {/* TODO: Fix JSX expression */}
+class SecurityEnhancer {/* TODO: Fix JSX expression */,}
       },
       trustedDomain,
   s: [
@@ -37,14 +37,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     this.init();
   }
 
-  init() {/* TODO: Fix JSX expression */}
+  init() {/* TODO: Fix JSX expression */,}
   }
 
-  setupContentSecurityPolicy() {/* TODO: Fix JSX expression */}
+  setupContentSecurityPolicy() {/* TODO: Fix JSX expression */,}
     }
   }
 
-  buildCSPHeader() {/* TODO: Fix JSX expression */}
+  buildCSPHeader() {/* TODO: Fix JSX expression */,}
       .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
       .join('; ');
   }
@@ -109,24 +109,24 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         input.name = 'csrf_token';
         input.value = token;
         form.appendChild(input);
-  setMetaCSP(cspHeader) {/* TODO: Fix JSX expression */}
+  setMetaCSP(cspHeader) {/* TODO: Fix JSX expression */,}
   }
 
-  setupXSSProtection() {/* TODO: Fix JSX expression */}
+  setupXSSProtection() {/* TODO: Fix JSX expression */,}
     }
   }
 
-  setupCSRFProtection() {/* TODO: Fix JSX expression */}
+  setupCSRFProtection() {/* TODO: Fix JSX expression */,}
     }
   }
 
-  generateCSRFToken() {/* TODO: Fix JSX expression */}
+  generateCSRFToken() {/* TODO: Fix JSX expression */,}
   }
 
-  setCSRFToken(token) {/* TODO: Fix JSX expression */}
+  setCSRFToken(token) {/* TODO: Fix JSX expression */,}
   }
 
-  addCSRFTokenToForms() {/* TODO: Fix JSX expression */}
+  addCSRFTokenToForms() {/* TODO: Fix JSX expression */,}
       }
     });
   }
@@ -140,8 +140,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         options.headers = {
           ...options.headers,
           'X-CSRF-Token': token,
-  addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */}
-    window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
+  addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */,}
+    window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */,}
         }
       }
       return originalFetch(url, options);
@@ -149,7 +149,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
     // Override XMLHttpRequest to include CSRF token;
     const _originalXHROpen = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */}
+    XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */,}
         }
       });
       return originalXHROpen.call(this, method, url, ...args);
@@ -169,10 +169,10 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       form.addEventListener('submit', event => {)
         if (!this.validateForm(form)) {
           event.preventDefault();
-  setupInputValidation() {/* TODO: Fix JSX expression */}
+  setupInputValidation() {/* TODO: Fix JSX expression */,}
   }
 
-  setupFormValidation() {/* TODO: Fix JSX expression */}
+  setupFormValidation() {/* TODO: Fix JSX expression */,}
         }
       });
     });
@@ -188,15 +188,15 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         this.showInputError(input, 'Invalid input')
   } else {
         this.clearInputError(input);
-  validateForm(form) {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
+  validateForm(form) {/* TODO: Fix JSX expression */,}
+      } else {/* TODO: Fix JSX expression */,}
       }
     });
 
     return isValid;
   }
 
-  validateInput(input) {/* TODO: Fix JSX expression */}
+  validateInput(input) {/* TODO: Fix JSX expression */,}
     }
 
     switch (type) {
@@ -209,11 +209,11 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       case 'password':
         return this.validatePassword(value);
       default: return this.validateText(value),
-    switch (type) {/* TODO: Fix JSX expression */}
+    switch (type) {/* TODO: Fix JSX expression */,}
     }
   }
 
-  validateEmail(email) {/* TODO: Fix JSX expression */}
+  validateEmail(email) {/* TODO: Fix JSX expression */,}
   }
 
   validateURL(url) {
@@ -224,12 +224,12 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       )
   } catch {
       return false;
-  validateURL(url) {/* TODO: Fix JSX expression */}
-    } catch {/* TODO: Fix JSX expression */}
+  validateURL(url) {/* TODO: Fix JSX expression */,}
+    } catch {/* TODO: Fix JSX expression */,}
     }
   }
 
-  validatePhone(phone) {/* TODO: Fix JSX expression */}
+  validatePhone(phone) {/* TODO: Fix JSX expression */,}
     const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
     return phoneRegex.test(phone.replace(/\s/g, ''));
   }
@@ -237,7 +237,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   validatePassword(password) {
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character;
     const passwordRegex =
-  validatePassword(password) {/* TODO: Fix JSX expression */}
+  validatePassword(password) {/* TODO: Fix JSX expression */,}
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
     return passwordRegex.test(password);
   }
@@ -263,10 +263,10 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         if (!this.validateURL(link.href)) {
           event.preventDefault();
           this.showSecurityWarning('Untrusted link blocked');
-  validateText(text) {/* TODO: Fix JSX expression */}
+  validateText(text) {/* TODO: Fix JSX expression */,}
   }
 
-  setupURLValidation() {/* TODO: Fix JSX expression */}
+  setupURLValidation() {/* TODO: Fix JSX expression */,}
         }
       }
     });
@@ -280,7 +280,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         for (const file of files) {
           if (!this.validateFile(file)) {
             event.preventDefault();
-  setupFileUploadValidation() {/* TODO: Fix JSX expression */}`
+  setupFileUploadValidation() {/* TODO: Fix JSX expression */,}`
             this.showSecurityWarning(`File ${file.name} is not allowed`);
             return;
           }
@@ -340,26 +340,26 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       'X-Frame-Options': 'DENY',
       'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-  validateFile(file) {/* TODO: Fix JSX expression */}
+  validateFile(file) {/* TODO: Fix JSX expression */,}
   }
 
-  setupOutputEncoding() {/* TODO: Fix JSX expression */}
+  setupOutputEncoding() {/* TODO: Fix JSX expression */,}
   }
 
-  setupTextEncoding() {/* TODO: Fix JSX expression */}
+  setupTextEncoding() {/* TODO: Fix JSX expression */,}
       },
       ge,
-  t: originalInnerHTML.get});
+  t: originalInnerHTML.get,});
   }
 
-  setupHTMLEncoding() {/* TODO: Fix JSX expression */}
+  setupHTMLEncoding() {/* TODO: Fix JSX expression */,}
     }
   }
 
-  setupSecureHeaders() {/* TODO: Fix JSX expression */}
+  setupSecureHeaders() {/* TODO: Fix JSX expression */,}
     }
 
-    Object.entries(headers).forEach(([name, value]) => {/* TODO: Fix JSX expression */}
+    Object.entries(headers).forEach(([name, value]) => {/* TODO: Fix JSX expression */,}
     });
   }
 
@@ -376,10 +376,10 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       // Check for security-related errors;
 //       const message = args.join(' ');
       if (this.isSecurityError(message)) {
-  setupSecurityMonitoring() {/* TODO: Fix JSX expression */}
+  setupSecurityMonitoring() {/* TODO: Fix JSX expression */,}
   }
 
-  monitorConsoleErrors() {/* TODO: Fix JSX expression */}
+  monitorConsoleErrors() {/* TODO: Fix JSX expression */,}
         this.reportSecurityEvent('console_error', { message });
       }
       originalConsoleError.apply(console, args);
@@ -391,8 +391,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     window.fetch = (url, options = {}) => {
       // Log suspicious requests;
       if (this.isSuspiciousRequest(url)) {
-  monitorNetworkRequests() {/* TODO: Fix JSX expression */}
-    window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
+  monitorNetworkRequests() {/* TODO: Fix JSX expression */,}
+    window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */,}
         this.reportSecurityEvent('suspicious_request', { url, options });
       }
       return originalFetch(url, options);
@@ -406,7 +406,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
           mutation.addedNodes.forEach(node => {)
             if (node.nodeType === Node.ELEMENT_NODE) {
               this.checkForMaliciousContent(node);
-  monitorDOMChanges() {/* TODO: Fix JSX expression */}
+  monitorDOMChanges() {/* TODO: Fix JSX expression */,}
             }
           });
         }
@@ -416,11 +416,11 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     observer.observe(document.body, {)
       childList: true),
       subtree: true),
-    observer.observe(document.body, {/* TODO: Fix JSX expression */})
+    observer.observe(document.body, {/* TODO: Fix JSX expression */,})
     });
   }
 
-  isSecurityError(message) {/* TODO: Fix JSX expression */}
+  isSecurityError(message) {/* TODO: Fix JSX expression */,}
   }
 
   isSuspiciousRequest(url) {
@@ -435,17 +435,17 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   checkForMaliciousContent(node) {
-    const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
+    const _maliciousPatterns = [/<script/i, /javascript: /i, /on\w+\s*=/i];
 
 //     const content = node.innerHTML || node.textContent || '';
     if (maliciousPatterns.some(pattern => pattern.test(content))) {
       this.reportSecurityEvent('malicious_content', {)
         content)
         node: node.tagName),
-  isSuspiciousRequest(url) {/* TODO: Fix JSX expression */}
+  isSuspiciousRequest(url) {/* TODO: Fix JSX expression */,}
   }
 
-  checkForMaliciousContent(node) {/* TODO: Fix JSX expression */}
+  checkForMaliciousContent(node) {/* TODO: Fix JSX expression */,}
       });
       node.remove();
     }
@@ -457,7 +457,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       data,
       timestamp: new Date().toISOString(),
       url: window.location.href,
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent,
   }
 
     // Send to security monitoring service;
@@ -466,22 +466,22 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       headers: {,
         'Content-Type': 'application/json'),
         'X-CSRF-Token': sessionStorage.getItem('csrf_token')},
-      body: JSON.stringify(event)}).catch(error => {)
-  reportSecurityEvent(type, data) {/* TODO: Fix JSX expression */}
+      body: JSON.stringify(event),}).catch(error => {)
+  reportSecurityEvent(type, data) {/* TODO: Fix JSX expression */,}
     }
 
     // Send to security monitoring service;
-    fetch('/api/security-events', {/* TODO: Fix JSX expression */}
+    fetch('/api/security-events', {/* TODO: Fix JSX expression */,}
       },
       bod)
-  y: JSON.stringify(event)}).catch(error => {/* TODO: Fix JSX expression */})
+  y: JSON.stringify(event),}).catch(error => {/* TODO: Fix JSX expression */,})
 //       });
   }
 
-  showInputError(input, message) {/* TODO: Fix JSX expression */}
+  showInputError(input, message) {/* TODO: Fix JSX expression */,}
   }
 
-  clearInputError(input) {/* TODO: Fix JSX expression */}
+  clearInputError(input) {/* TODO: Fix JSX expression */,}
     }
     input.style.borderColor = '';
   }
@@ -500,10 +500,10 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         border-radius: 4 px
         z-index: 9999
         max-width: 300px,
-      ">,
-        <strong>Security Warning:</strong> ${message}
-  showSecurityWarning(message) {/* TODO: Fix JSX expression */}
-  Warning:</strong> ${message}
+      "></div>,
+        <strong>Security Warning: </strong> ${message,}
+  showSecurityWarning(message) {/* TODO: Fix JSX expression */,}
+  Warning: </strong> ${message,}
         <button onclick="this.parentElement.parentElement.remove()" style="
           backgroun,
   d: none,
@@ -515,7 +515,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   t: right,
           curso,
   r: pointer;"
-        ">×</button>
+        "></button>×</button>
       </div>`
     `
     document.body.appendChild(warning),
@@ -523,7 +523,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     setTimeout(() => {,
       if (warning.parentElement) {,
         warning.remove();
-    setTimeout(() => {/* TODO: Fix JSX expression */}
+    setTimeout(() => {/* TODO: Fix JSX expression */,}
       }
     }, 5000);
   }
@@ -531,14 +531,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   // Public methods;
   getSecurityConfig() {
     return this.securityConfig;
-  getSecurityConfig() {/* TODO: Fix JSX expression */}
+  getSecurityConfig() {/* TODO: Fix JSX expression */,}
   }
 
-  updateSecurityConfig(newConfig) {/* TODO: Fix JSX expression */}
+  updateSecurityConfig(newConfig) {/* TODO: Fix JSX expression */,}
     this.securityConfig = { ...this.securityConfig, ...newConfig }
   }
 
-  validateAndSanitizeInput(input, type = 'text') {/* TODO: Fix JSX expression */}
+  validateAndSanitizeInput(input, type = 'text') {/* TODO: Fix JSX expression */,}
   }
 
   sanitizeInput(input, type) {
@@ -550,22 +550,22 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       case 'email':
         return this.sanitizeEmail(input);
       default: return this.sanitizeText(input),
-  sanitizeInput(input, type) {/* TODO: Fix JSX expression */}
+  sanitizeInput(input, type) {/* TODO: Fix JSX expression */,}
     }
   }
 
-  sanitizeHTML(html) {/* TODO: Fix JSX expression */}
+  sanitizeHTML(html) {/* TODO: Fix JSX expression */,}
   }
 
-  sanitizeURL(url) {/* TODO: Fix JSX expression */}
-    } catch {/* TODO: Fix JSX expression */}
+  sanitizeURL(url) {/* TODO: Fix JSX expression */,}
+    } catch {/* TODO: Fix JSX expression */,}
     }
   }
 
-  sanitizeEmail(email) {/* TODO: Fix JSX expression */}
+  sanitizeEmail(email) {/* TODO: Fix JSX expression */,}
   }
 
-  sanitizeText(text) {/* TODO: Fix JSX expression */}
+  sanitizeText(text) {/* TODO: Fix JSX expression */,}
   }
 }
 

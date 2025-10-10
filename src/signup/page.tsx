@@ -14,7 +14,7 @@ const SignupPage: React.FC = () => {
     password: '',
     confirmPassword: '',
     agreeToTerms: false,
-    subscribeNewsletter: false
+    subscribeNewsletter: false,
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -44,14 +44,14 @@ const SignupPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description:     ,
+      description: ,
 $4},
       icon: Award,
       title: 'Proven Results',
-      description:       ,
+      description: ,
 icon$5: Globe,
       title: 'Global Support',
-      description:   ,
+      description: ,
 $4];
   const benefits = [
     'Free 14-day trial',
@@ -62,10 +62,10 @@ $4];
     'Regular updates'
   return (
     <React.Fragment>
-    <div>Coming Soon</div>
+    <div></div>Coming Soon</div>
   );
 }
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
+  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   firstNam,
@@ -91,26 +91,26 @@ $4];
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 const handleInputChange = (e: React.ChangeEvent,)
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
+          <HTMLInputElement>) => {/* TODO: Fix JSX expression */,}
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
+    setFormData(prev => ({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
     }));
   }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
+  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
+    if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       alert('Passwords do not match');
       return;
     }
-    if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
+    if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       alert('Please agree to the terms and conditions');
@@ -124,7 +124,7 @@ const handleInputChange = (e: React.ChangeEvent,)
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -132,35 +132,35 @@ const handleInputChange = (e: React.ChangeEvent,)
       titl,
   e: 'Enterprise Security',
       descriptio,
-  n: 'Bank-level security with advanced encryption and compliance'
+  n: 'Bank-level security with advanced encryption and compliance',
     },
 icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
 const PagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>
+        <div className="max-w-6xl mx-auto px-4"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
             {/* Left Side - Signup Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
-              <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text">
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>
+              <div className="text-center mb-8"></div>
+                <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
                   Create Your Account;
   </
-                <p className="text-gray-300">
+                <p className="text-gray-300"></p>
                   Join thousands of businesses transforming with AI and IT solutions;
   </
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
-                  <div>
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-4"></div>
+                  <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       First Name,
   </
-                    <div className="relative">
+                    <div className="relative"></div>
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
                         type="text"
@@ -201,7 +201,7 @@ const PagePage: React.FC = () => {
                       placeholder="Create a password"
                     <button
                       type="button"
-                      onClick={() => setShowPassword(!showPassword)}
+                      onClick={() =></button> setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
@@ -212,28 +212,28 @@ const PagePage: React.FC = () => {
                       placeholder="Confirm your password"
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                       {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="space-y-4">
+                <div className="space-y-4"></div>
                   <label className="flex items-start">
                       type="checkbox"
                       name="agreeToTerms"
             {/* Left Side - Signup Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
-              <div className="text-center mb-8"></div>"
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div></div>"
+              <div className="text-center mb-8"></div></div>"
+                <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1></h1>
 // Create Your Account;
           </h1>"
-                <p className="text-gray-300"></p>
+                <p className="text-gray-300"></p></p>
 // Join thousands of businesses transforming with AI and IT solutions;
           </p>
               </div>"
               <form onSubmit={handleSubmit} className="space-y-6"></form>"
                 <div className="grid grid-cols-1,"
-  md: grid-cols-2 gap-4"></div>
-                  <div></div>"
+  md: grid-cols-2 gap-4"></div></div>
+                  <div></div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // First Name,
           </label>
-                    <div className="relative">
+                    <div className="relative"></div>
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
 type="text" name="firstName"
@@ -261,7 +261,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       name="password" value={formData.password}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
                     <button
-                      type="button" onClick={() => setShowPassword(!showPassword)}
+                      type="button" onClick={() =></button> setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
 // >
                       {showPassword ?}"
@@ -272,7 +272,7 @@ Confirm Password;
                       name="confirmPassword" value={formData.confirmPassword}
                       placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                       {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="space-y-4">
+                <div className="space-y-4"></div>
                   <label className="flex items-start">
                       type="checkbox" name="agreeToTerms"
                       checked={formData.agreeToTerms}
@@ -294,51 +294,51 @@ Confirm Password;
                   disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    <div className="flex items-center justify-center"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div></div>
                       Creating Account...
                   ) : (
                     'Create Account'
                   )}
               </form>
-              <div className="mt-8 text-center">
+              <div className="mt-8 text-center"></div>
                   Already have an account?{' '}
                   <a
                     href="/login"
                     className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                     Sign in here
             {/* Right Side - Features and Benefits */}
-            <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+            <div className="space-y-8"></div>
+                <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
                   Transform Your Business Today;
   </
-                <p className="text-xl text-gray-300 mb-8">
+                <p className="text-xl text-gray-300 mb-8"></p>
                   Join thousands of businesses already using our AI and IT solutions 
                   to achieve unprecedented growth and efficiency.
-              <div className="space-y-6">
+              <div className="space-y-6"></div>
                 {features.map((feature, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div key={index} className="flex items-start"></div>
+                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>
                       <feature.icon className="w-6 h-6 text-cyan-400" />
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                      <p className="text-gray-300">{feature.description}</p>
+                      <h3 className="text-lg font-semibold text-white mb-2"></h3>{feature.title}</h3>
+                      <p className="text-gray-300"></p>{feature.description}</p>
                 ))}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-white mb-4">
+              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>
+                <h3 className="text-lg font-semibold text-white mb-4"></h3>
                   What You Get:
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2"></div>
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-300">
+                    <div key={index} className="flex items-center text-sm text-gray-300"></div>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
-              <div className="text-center">
-                <p className="text-gray-400 text-sm mb-4">
+              <div className="text-center"></div>
+                <p className="text-gray-400 text-sm mb-4"></p>
                   Trusted by 1000+ companies worldwide
-                <div className="flex justify-center items-center space-x-6 opacity-60">
-                  <div className="text-2xl font-bold text-white">Microsoft</div>
-                  <div className="text-2xl font-bold text-white">Google</div>
-                  <div className="text-2xl font-bold text-white">Amazon</div>
+                <div className="flex justify-center items-center space-x-6 opacity-60"></div>
+                  <div className="text-2xl font-bold text-white"></div>Microsoft</div>
+                  <div className="text-2xl font-bold text-white"></div>Google</div>
+                  <div className="text-2xl font-bold text-white"></div>Amazon</div>
       <Footer />
     </React.Fragment>
 // Terms of Service;
@@ -354,52 +354,52 @@ name="subscribeNewsletter" checked={formData.subscribeNewsletter}
                   type="submit" disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? ()}
-          <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+          <div className="flex items-center justify-center"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div></div>
 Creating Account...
                   ) : ()
 // 'Create Account'
                   )}
           </form>"
-              <div className="mt-8 text-center"></div>
+              <div className="mt-8 text-center"></div></div>
                   Already have an account?{' '}
                   <a
                     href="/login" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
 Sign in here,
             {/* Right Side - Features and Benefits */}"
-            <div className="space-y-8"></div>"
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
+            <div className="space-y-8"></div></div>"
+                <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2></h2>
 // Transform Your Business Today;
           </h2>"
-                <p className="text-xl text-gray-300 mb-8"></p>
+                <p className="text-xl text-gray-300 mb-8"></p></p>
 Join thousands of businesses already using our AI and IT solutions;
                   to achieve unprecedented growth and efficiency."
-              <div className="space-y-6"></div>
+              <div className="space-y-6"></div></div>
                 {features.map((feature, index) => ()}"
-          <div key={index} className="flex items-start"></div>"
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>"
+          <div key={index} className="flex items-start"></div></div>"
+                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div></div>"
                       <feature.icon className="w-6 h-6 text-cyan-400" /></feature>"
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
-                      <p className="text-gray-300">{feature.description}</p>
+                      <h3 className="text-lg font-semibold text-white mb-2"></h3>{feature.title}</h3>"
+                      <p className="text-gray-300"></p>{feature.description}</p>
                 ))}"
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
-                <h3 className="text-lg font-semibold text-white mb-4"></h3>
+              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div></div>"
+                <h3 className="text-lg font-semibold text-white mb-4"></h3></h3>
                   What You,
   Get:
                 </h3>"
                 <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-2"></div>
+  md:grid-cols-2 gap-2"></div></div>
                   {benefits.map((benefit, index) => ()}"
-          <div key={index} className="flex items-center text-sm text-gray-300"></div>"
+          <div key={index} className="flex items-center text-sm text-gray-300"></div></div>"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {benefit}"
-<div className="text-center"></div>"
-                <p className="text-gray-400 text-sm mb-4"></p>
+<div className="text-center"></div></div>"
+                <p className="text-gray-400 text-sm mb-4"></p></p>
                   Trusted by 1000+ companies worldwide;"
-                <div className="flex justify-center items-center space-x-6 opacity-60"></div>"
-                  <div className="text-2xl font-bold text-white">Microsoft</div>"
-                  <div className="text-2xl font-bold text-white">Google</div>"
-                  <div className="text-2xl font-bold text-white">Amazon</div>
+                <div className="flex justify-center items-center space-x-6 opacity-60"></div></div>"
+                  <div className="text-2xl font-bold text-white"></div>Microsoft</div>"
+                  <div className="text-2xl font-bold text-white"></div>Google</div>"
+                  <div className="text-2xl font-bold text-white"></div>Amazon</div>
       <Footer />
     </div>
   );

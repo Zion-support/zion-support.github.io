@@ -84,10 +84,10 @@ navMissingRoutes.forEach(route => console.log(route));
 
 // Summary
 console.log('\n=== SUMMARY ===');
-console.log(`Total defined routes: ${definedRoutes.length}`);
-console.log(`Total page files: ${pageFiles.length}`);
-console.log(`Missing routes: ${missingRoutes.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-console.log(`Navigation routes: ${navRoutes.length}`);
-console.log(`Navigation routes without pages: ${navMissingPages.length}`);
-console.log(`Navigation routes without route definitions: ${navMissingRoutes.length}`);
+console.log(`Total defined routes: ${definedRoutes.length,}`);
+console.log(`Total page files: ${pageFiles.length,}`);
+console.log(`Missing routes: ${missingRoutes.length,}`);
+console.log(`Missing pages: ${missingPages.length,}`);
+console.log(`Navigation routes: ${navRoutes.length,}`);
+console.log(`Navigation routes without pages: ${navMissingPages.length,}`);
+console.log(`Navigation routes without route definitions: ${navMissingRoutes.length,}`);

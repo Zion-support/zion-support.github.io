@@ -16,8 +16,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Task Management", "Productivity", "Collaboration", "Project Management"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 16
       name: "AI CodeGen Pro"
@@ -33,8 +33,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["AI Development", "Code Generation", "Code Review", "Automation", "Productivity"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 17
       name: "Quantum Analytics"
@@ -50,8 +50,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Quantum Analytics", "Predictive Modeling", "Business Intelligence", "AI", "Real-time"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 18
       name: "Blockchain Business Suite"
@@ -67,8 +67,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Blockchain", "Smart Contracts", "DeFi", "Cryptocurrency", "Business Solutions"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 19
       name: "IoT Enterprise Hub"
@@ -84,8 +84,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["IoT", "Device Management", "Real-time Monitoring", "Automation", "Enterprise"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 20
       name: "AR/VR Studio Pro"
@@ -101,8 +101,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["AR/VR", "3D Modeling", "Immersive Tech", "Training", "Development"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 2
       name: "InvoiceGenius"
@@ -118,8 +118,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Invoicing", "Finance", "AI", "Tax Preparation", "Expense Tracking"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 3
       name: "SocialSync Pro"
@@ -135,8 +135,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Social Media", "Marketing", "Analytics", "Content Management", "Automation"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 4
       name: "CustomerFlow CRM"
@@ -152,8 +152,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["CRM", "Sales", "Customer Management", "Pipeline", "Reporting"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 5
       name: "DataViz Studio"
@@ -169,8 +169,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Analytics", "Data Visualization", "Dashboards", "Business Intelligence", "Reporting"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 6
       name: "ScheduleMaster"
@@ -186,8 +186,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Scheduling", "Appointments", "Booking", "Calendar", "Automation"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 7
       name: "ContentCraft AI"
@@ -203,8 +203,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Content Creation", "AI", "SEO", "Marketing", "Automation"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 8
       name: "SecureVault"
@@ -220,8 +220,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Security", "Compliance", "Password Management", "Access Control", "Risk Management"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 9
       name: "MediaHub Pro"
@@ -237,8 +237,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Media Management", "Digital Assets", "Collaboration", "Organization", "Creative Tools"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 10
       name: "LearnFlow LMS"
@@ -254,8 +254,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["LMS", "Education", "Training", "Online Learning", "Assessment"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 11
       name: "EcoTrack Pro"
@@ -271,8 +271,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Sustainability", "Environmental Impact", "Carbon Tracking", "Reporting", "Compliance"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 12
       name: "LegalAssist AI"
@@ -288,8 +288,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Legal Tech", "AI", "Document Generation", "Contract Management", "Compliance"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 13
       name: "HealthTrack Plus"
@@ -305,8 +305,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Healthcare", "Wellness", "Health Monitoring", "Patient Portal", "Preventive Care"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 14
       name: "EventMaster Pro"
@@ -322,8 +322,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Event Management", "Ticketing", "Planning", "Attendee Management", "Analytics"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 15
       name: "InventorySmart"
@@ -339,8 +339,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Inventory Management", "Supply Chain", "Forecasting", "Analytics", "Optimization"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 21
       name: "Cybersecurity Shield"
@@ -356,8 +356,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Cybersecurity", "AI Security", "Threat Detection", "Compliance", "Enterprise"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 22
       name: "GreenTech Monitor"
@@ -373,8 +373,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Sustainability", "ESG", "Carbon Tracking", "Green Tech", "Compliance"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 23
       name: "VoiceAI Assistant"
@@ -390,8 +390,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Voice AI", "Automation", "Accessibility", "Customer Service", "AI Assistant"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 24
       name: "Quantum Finance Pro"
@@ -407,8 +407,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Quantum Finance", "Risk Assessment", "Portfolio Management", "Financial Modeling", "AI"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
+        website: "https://ziontechgroup.com",}
     },
     {id: 25
       name: "Edge Computing Hub"
@@ -424,266 +424,266 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       tags: ["Edge Computing", "Real-time Processing", "IoT", "Performance", "Infrastructure"],
       contactInfo: {,
         phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com"}
+        email: "kleber@ziontechgroup.com",}
         website: "https://ziontechgroup.com",
-    {/* TODO: Fix JSX expression */}
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     },
-    {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+    {/* TODO: Fix JSX expression */,}"
+  l: "kleber@ziontechgroup.com",}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
       }
     }
   ];
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
-    <div className="text-left">
+    <div className="text-left"></div>
       {/* Animated Background */}</div>
-      <div className="text-left"></div>
-        <div className="text-left"></div>
-        <div className="text-left"></div>
-        <div className="text-left"></div>
+      <div className="text-left"></div></div>
+        <div className="text-left"></div></div>
+        <div className="text-left"></div></div>
+        <div className="text-left"></div></div>
       </div>
-      <div className="text-left">
+      <div className="text-left"></div>
         {/* Header */}</div>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+        <div className="text-left"></div></div>
+          <div className="text-left"></div></div>
+            <div className="text-left"></div></div>
               <Zap className="text-left" />
               Innovation at Scale;
             </div>
           </div>
-          <h1 className="text-left">
+          <h1 className="text-left"></h1>
             Micro SAAS Services;
           </h1>
-          <p className="text-left">
+          <p className="text-left"></p>
             Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.</p>
             <span className="text-left"> Affordable, powerful, and future-ready.</span><
           </p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+          <div className="text-left"></div></div>
+            <div className="text-left"></div></div>
+              <div className="text-left"></div></div>
               <span>25+ Services Available</span><
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left"></div></div>
+              <div className="text-left"></div></div>
               <span>Starting from $15/month</span><
             </div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
+            <div className="text-left"></div></div>
+              <div className="text-left"></div></div>
               <span>24/7 Support</span><
         {/* Search and Filters */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left"></div></div>
+          <div className="text-left"></div></div>
             <Search className="text-left" />
             <input;
               type="text"
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
-    <div className="text-left"></div>
+    <div className="text-left"></div></div>
       {/* Animated Background */}"
-      <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>
+      <div className="text-left"></div></div>"
+        <div className="text-left"></div></div>"
+        <div className="text-left"></div></div>"
+        <div className="text-left"></div></div>
       </div>"
-      <div className="text-left"></div>
+      <div className="text-left"></div></div>
         {/* Header */}"
-        <div className="text-left"></div>"
-          <div className="text-left"></div>"
-            <div className="text-left"></div>"
+        <div className="text-left"></div></div>"
+          <div className="text-left"></div></div>"
+            <div className="text-left"></div></div>"
               <Zap className="text-left" /></Zap>
               Innovation at Scale;
             </div>
           </div>"
-          <h1 className="text-left"></h1>
+          <h1 className="text-left"></h1></h1>
             Micro SAAS Services;
           </h1>"
-          <p className="text-left"></p>
+          <p className="text-left"></p></p>
             Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs."
             <span className="text-left"> Affordable, powerful, and future-ready.<
           </p>"
-          <div className="text-left"></div>"
-            <div className="text-left"></div>"
-              <div className="text-left"></div>
+          <div className="text-left"></div></div>"
+            <div className="text-left"></div></div>"
+              <div className="text-left"></div></div>
               <span>25+ Services Available<
             </div>"
-            <div className="text-left"></div>"
-              <div className="text-left"></div>
+            <div className="text-left"></div></div>"
+              <div className="text-left"></div></div>
               <span>Starting from $15/month<
             </div>"
-            <div className="text-left"></div>"
-              <div className="text-left"></div>
+            <div className="text-left"></div></div>"
+              <div className="text-left"></div></div>
               <span>24/7 Support<
         {/* Search and Filters */}"
-        <div className="text-left"></div>"
-          <div className="text-left"></div>"
+        <div className="text-left"></div></div>"
+          <div className="text-left"></div></div>"
             <Search className="text-left" /></Search>
             <input></input>"
               type="text""
@@ -692,29 +692,29 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               onChange={(e) => setSearchTerm(e.target.value)}"
               className="text-left"
             />
-            <div className="text-left"></div>
-              <div className="text-left">
-                {filteredServices.length} services found;
-              </div>
-            </div>
-          </div>
-          <div className="text-left">
-            <select;
-          <div className="text-left"></div>
-            <select
-            />"
-            <div className="text-left"></div>"
+            <div className="text-left"></div></div>
               <div className="text-left"></div>
                 {filteredServices.length} services found;
               </div>
             </div>
-          </div>"
+          </div>
           <div className="text-left"></div>
+            <select;
+          <div className="text-left"></div></div>
+            <select
+            />"
+            <div className="text-left"></div></div>"
+              <div className="text-left"></div></div>
+                {filteredServices.length} services found;
+              </div>
+            </div>
+          </div>"
+          <div className="text-left"></div></div>
             <select></select>
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}"
               className="text-left">
-              {/* TODO: Fix JSX expression */}"
+              {/* TODO: Fix JSX expression */,}"
                 <option key={category} value={category} className="text-left"></option>
                   {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"
               className="text-left">
@@ -722,53 +722,53 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 <option key={pricing} value={pricing} className="text-left">)
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
         {/* Services Grid */})
-        <div className="text-left">)
+        <div className="text-left"></div>)
           {filteredServices.map((service) => (
               {pricingModels.map(pricing => (
                 <option key={pricing} value={pricing} className="text-left"></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}
-        <div className="text-left">
+        <div className="text-left"></div>
           {filteredServices.map((service) => (</div>
-            <div key={service.id} className="text-left">
+            <div key={service.id} className="text-left"></div>
               {/* Service Header */}</div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
-                    <div className="text-left">
+              <div className="text-left"></div></div>
+                <div className="text-left"></div></div>
+                  <div className="text-left"></div></div>
+                    <div className="text-left"></div>
                       {getCategoryIcon(service.category)}
                     </div>
                   </div>
-                  <div></div>
-                    <h3 className="text-left">
+                  <div></div></div>
+                    <h3 className="text-left"></h3>
                       {service.name}
                     </h3>
-                    <div className="text-left"></div>
+                    <div className="text-left"></div></div>
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}>
                         {service.pricing}</span>
                       <
                       <span className="text-left">
                         {service.category}</span>
-              {/* TODO: Fix JSX expression */}"
+              {/* TODO: Fix JSX expression */,}"
                 <option key={pricing} value={pricing} className="text-left"></option>`
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}"
-        <div className="text-left"></div>
-          {/* TODO: Fix JSX expression */}"
-            <div key={service.id} className="text-left"></div>
+        <div className="text-left"></div></div>
+          {/* TODO: Fix JSX expression */,}"
+            <div key={service.id} className="text-left"></div></div>
               {/* Service Header */}"
-              <div className="text-left"></div>"
-                <div className="text-left"></div>"
-                  <div className="text-left"></div>"
-                    <div className="text-left"></div>
+              <div className="text-left"></div></div>"
+                <div className="text-left"></div></div>"
+                  <div className="text-left"></div></div>"
+                    <div className="text-left"></div></div>
                       {getCategoryIcon(service.category)}
                     </div>
                   </div>
-                  <div></div>"
-                    <h3 className="text-left"></h3>
+                  <div></div></div>"
+                    <h3 className="text-left"></h3></h3>
                       {service.name}
                     </h3>"
-                    <div className="text-left"></div>`
+                    <div className="text-left"></div></div>`
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}></span>
                         {service.pricing}
                       <"
@@ -780,26 +780,26 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 </div>
               </div>
               {/* Description */}"
-              <p className="text-left"></p>
+              <p className="text-left"></p></p>
                 {service.description}
               </p>
               {/* Pricing */}
-              <div className="text-left"></div>
-                <div className="text-left">
-              {/* Pricing */}"
-              <div className="text-left"></div>"
+              <div className="text-left"></div></div>
                 <div className="text-left"></div>
+              {/* Pricing */}"
+              <div className="text-left"></div></div>"
+                <div className="text-left"></div></div>
                   {formatPrice(service.price} service.pricingModel)}
                 </div>"
-                <div className="text-left">{service.userLimit}</div>
+                <div className="text-left"></div>{service.userLimit}</div>
               </div>
               {/* Features */}
-              <div className="text-left"></div>
-                <h4 className="text-left">
+              <div className="text-left"></div></div>
+                <h4 className="text-left"></h4>
                   <Zap className="text-left" />
                   Key Features;
                 </h4>
-                <div className="text-left">
+                <div className="text-left"></div>
                   {service.features.slice(0) 3).map((feature} index) => (</div>
                     <span key={index} className="text-left">
                       {feature}</span>
@@ -808,12 +808,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 </div>
               </div>
               {/* Target Audience */}
-              <div className="text-left"></div>
-                <h4 className="text-left">
+              <div className="text-left"></div></div>
+                <h4 className="text-left"></h4>
                   <Users className="text-left" />
                   Perfect For;
                 </h4>
-                <div className="text-left">
+                <div className="text-left"></div>
                   {service.targetAudience.slice(0) 2).map((audience} index) => (</div>
                     <span key={index} className="text-left">
                       {audience}</span>
@@ -822,12 +822,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 </div>
               </div>
               {/* CTA */}
-              <div className="text-left">
-                <div className="text-left">
-                  <span className="text-left">Ready to transform your business?<
-                  <a;
               <div className="text-left"></div>
                 <div className="text-left"></div>
+                  <span className="text-left">Ready to transform your business?<
+                  <a;
+              <div className="text-left"></div></div>
+                <div className="text-left"></div></div>
                   <span className="text-left">Ready to transform your business?</span><
                   <a
                     href={service.contactInfo.website}
@@ -839,66 +839,66 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                     <Link className="text-left" />
                   </a>
         {/* Contact Information */}
-        <div className="text-left"></div>
-          <div className="text-left">
+        <div className="text-left"></div></div>
+          <div className="text-left"></div>
             {/* Background Elements */}</div>
-            <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
+            <div className="text-left"></div></div>
+            <div className="text-left"></div></div>
+              <div className="text-left"></div></div>
+                <div className="text-left"></div></div>
                   <Rocket className="text-left" />
                   Ready to Transform Your Business?
                 </div>
               </div>
-              <h2 className="text-left">
+              <h2 className="text-left"></h2>
                 Let's Build the Future Together;
               </h2>
-              <p className="text-left">
+              <p className="text-left"></p>
                 Our cutting-edge micro SAAS solutions are designed to scale with your business needs.</p>
                 <span className="text-left"> Start your digital transformation journey today.</span><
               </p>
-              <div className="text-left"></div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+              <div className="text-left"></div></div>
+                <div className="text-left"></div></div>
+                  <div className="text-left"></div></div>
                     <Phone className="text-left" />
                   </div>
-                  <p className="text-left">Phone</p>
-                  <p className="text-left">{microSaasServices[0].contactInfo.phone}</p>
+                  <p className="text-left"></p>Phone</p>
+                  <p className="text-left"></p>{microSaasServices[0].contactInfo.phone}</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left"></div></div>
+                  <div className="text-left"></div></div>
                     <Mail className="text-left" />
                   </div>
-                  <p className="text-left">Email</p>
-                  <p className="text-left">{microSaasServices[0].contactInfo.email}</p>
+                  <p className="text-left"></p>Email</p>
+                  <p className="text-left"></p>{microSaasServices[0].contactInfo.email}</p>
                 </div>
-                <div className="text-left"></div>
-                  <div className="text-left"></div>
+                <div className="text-left"></div></div>
+                  <div className="text-left"></div></div>
                     <MapPin className="text-left" />
                   </div>
-                  <p className="text-left">Address</p>
-                  <p className="text-left">364 E Main St STE 1008</p><br />Middletown DE 19709</p>
+                  <p className="text-left"></p>Address</p>
+                  <p className="text-left"></p>364 E Main St STE 1008</p><br />Middletown DE 19709</p>
                 </div>
               </div>
-              <div className="text-left">
-                <a;
               <div className="text-left"></div>
+                <a;
+              <div className="text-left"></div></div>
                 <a
                   href="mailto: kleber@ziontechgroup.<com" className="text-left">
                   <Mail className="text-left" />
                   Get Started Today
                 </a>
                 <a,
-                  href="tel:+<13024640950" className="text-left">,
+                  href="tel: +<13024640950" className="text-left">,
                   <Phone className="text-left" />,
                   Call Now;
               {/* Features */}"
-              <div className="text-left"></div>"
-                <h4 className="text-left"></h4>"
+              <div className="text-left"></div></div>"
+                <h4 className="text-left"></h4></h4>"
                   <Zap className="text-left" /></Zap>
                   Key Features;
                 </h4>"
-                <div className="text-left"></div>
+                <div className="text-left"></div></div>
                   {service.features.slice(0) 3).map((feature} index) => ("
                     <span key={index} className="text-left"></span>
                       {feature}
@@ -907,12 +907,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 </div>
               </div>
               {/* Target Audience */}"
-              <div className="text-left"></div>"
-                <h4 className="text-left"></h4>"
+              <div className="text-left"></div></div>"
+                <h4 className="text-left"></h4></h4>"
                   <Users className="text-left" /></Users>
                   Perfect For;
                 </h4>"
-                <div className="text-left"></div>
+                <div className="text-left"></div></div>
                   {service.targetAudience.slice(0) 2).map((audience} index) => ("
                     <span key={index} className="text-left"></span>
                       {audience}
@@ -921,8 +921,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 </div>
               </div>
               {/* CTA */}"
-              <div className="text-left"></div>"
-                <div className="text-left"></div>"
+              <div className="text-left"></div></div>"
+                <div className="text-left"></div></div>"
                   <span className="text-left">Ready to transform your business?<
                   <a></a>
                     href={service.contactInfo.website}"
@@ -934,48 +934,48 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                     <Link className="text-left" /></Link>
                   </a>
         {/* Contact Information */}"
-        <div className="text-left"></div>"
-          <div className="text-left"></div>
+        <div className="text-left"></div></div>"
+          <div className="text-left"></div></div>
             {/* Background Elements */}"
-            <div className="text-left"></div>"
-            <div className="text-left"></div>"
-              <div className="text-left"></div>"
-                <div className="text-left"></div>"
+            <div className="text-left"></div></div>"
+            <div className="text-left"></div></div>"
+              <div className="text-left"></div></div>"
+                <div className="text-left"></div></div>"
                   <Rocket className="text-left" /></Rocket>
                   Ready to Transform Your Business?
                 </div>
               </div>"
-              <h2 className="text-left"></h2>
+              <h2 className="text-left"></h2></h2>
                 Let's Build the Future Together;
               </h2>"
-              <p className="text-left"></p>
+              <p className="text-left"></p></p>
                 Our cutting-edge micro SAAS solutions are designed to scale with your business needs."
                 <span className="text-left"> Start your digital transformation journey today.<
               </p>"
-              <div className="text-left"></div>"
-                <div className="text-left"></div>"
-                  <div className="text-left"></div>"
+              <div className="text-left"></div></div>"
+                <div className="text-left"></div></div>"
+                  <div className="text-left"></div></div>"
                     <Phone className="text-left" /></Phone>
                   </div>"
-                  <p className="text-left">Phone</p>"
-                  <p className="text-left">{microSaasServices[0].contactInfo.phone}</p>
+                  <p className="text-left"></p>Phone</p>"
+                  <p className="text-left"></p>{microSaasServices[0].contactInfo.phone}</p>
                 </div>"
-                <div className="text-left"></div>"
-                  <div className="text-left"></div>"
+                <div className="text-left"></div></div>"
+                  <div className="text-left"></div></div>"
                     <Mail className="text-left" /></Mail>
                   </div>"
-                  <p className="text-left">Email</p>"
-                  <p className="text-left">{microSaasServices[0].contactInfo.email}</p>
+                  <p className="text-left"></p>Email</p>"
+                  <p className="text-left"></p>{microSaasServices[0].contactInfo.email}</p>
                 </div>"
-                <div className="text-left"></div>"
-                  <div className="text-left"></div>"
+                <div className="text-left"></div></div>"
+                  <div className="text-left"></div></div>"
                     <MapPin className="text-left" /></MapPin>
                   </div>"
-                  <p className="text-left">Address</p>"
-                  <p className="text-left">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-left"></p>Address</p>"
+                  <p className="text-left"></p>364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>"
-              <div className="text-left"></div>
+              <div className="text-left"></div></div>
                 <a></a>"
                   href="mailt,"
   o: kleber@ziontechgroup.<com" className="text-left"></com>"

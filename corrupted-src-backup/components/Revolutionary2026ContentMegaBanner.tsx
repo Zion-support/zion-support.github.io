@@ -1,5 +1,5 @@
 impo, r, t { Trending, U, p, Z, a, p } fr, o, m "luci, d, e-rea, c, t";
-impo, r, t {/* TODO: Fix JSX expression */}"
+impo, r, t {/* TODO: Fix JSX expression */,}"
 } fr, o, m "luci, d, e-rea, c, t";
 const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
     const, revolutionaryConten, t = [
@@ -119,13 +119,13 @@ da, t, e: "20, 2, 6-01-15"
 readTi, m, e: "43, mi, n"
 trendi, n, g: tr, u, e;
 ic, o, n: "🎭",
-const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
 i,
   d: 3,"
@@ -140,11 +140,11 @@ ic, o, n: "⚛️""
 impa, c, t: "Quantum, Breakthroug, h"
 featur, e, d: tr, u, e;
 }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
 }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
 i,
   d: 6,"
@@ -160,77 +160,77 @@ impa, c, t: "95% Accura, c, y"
 featur, e, d: fal, s, e;
 }
   ];
-  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-  return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s' }}></d, i, v>
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }}></d, i, v>
+  return (
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div>
+      {/* Animated, background, effects */}</div>
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div></div>
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></div></d, i, v>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s',}}></div></d, i, v>
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s',}}></div></d, i, v>
       </d, i, v>
-      <div, className="container, m, x-auto, p, x-6, relative, z-10">
+      <div, className="container, m, x-auto, p, x-6, relative, z-10"></div>
         {/* Head, e, r */}</div>
-        <div, className="te, x, t-center, m, b-16"></div>
-          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
-            <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>
+        <div, className="te, x, t-center, m, b-16"></div></div>
+          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div></div>
+            <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div></div>
               <span, className="w-4 h-4">🚀</sp, a, n>
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">REVOLUTIONARY, BREAKTHROUG, H • 20, 2, 6</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30"></div>
+            <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30"></div></div>
               <span, className="w-4 h-4">⚡</sp, a, n>
   return ("
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div>
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div></div>
       {/* Animated, background, effects */}"
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s' }}></d, i, v>"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s' }}></d, i, v>
+      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div></div>"
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></div></d, i, v>"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '3s',}}></div></d, i, v>"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1.5s',}}></div></d, i, v>
       </d, i, v>"
-      <div, className="container, m, x-auto, p, x-6, relative, z-10"></div>
+      <div, className="container, m, x-auto, p, x-6, relative, z-10"></div></div>
         {/* Head, e, r */}"
-        <div, className="te, x, t-center, m, b-16"></div>"
-          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
-            <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>"
+        <div, className="te, x, t-center, m, b-16"></div></div>"
+          <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div></div>"
+            <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div></div>"
               <span, className="w-4 h-4">🚀</sp, a, n>"
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">REVOLUTIONARY, BREAKTHROUG, H • 20, 2, 6</sp, a, n>
             </d, i, v>"
-            <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30"></div>"
+            <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30"></div></div>"
               <span, className="w-4 h-4">⚡</sp, a, n>"
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">6, BREAKTHROUGH, TECHNOLOGIES</sp, a, n>
             </d, i, v>
           </d, i, v>"
-          <h2, className="te, x, t-6xl, m, d:te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
+          <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2></h2>
             Revolutionary, 2026, Content;
           </h2>"
-          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
+          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p></p>
             Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. 
             Me, t, a-cognitive, A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
           </p>
-          <div, className="flex, item, s-center, justif, y-center, ga, p-8, tex, t-cent, e, r"></div>
-            <div, className="flex, item, s-center, ga, p-2"></div>
+          <div, className="flex, item, s-center, justif, y-center, ga, p-8, tex, t-cent, e, r"></div></div>
+            <div, className="flex, item, s-center, ga, p-2"></div></div>
               <span, className="w-6 h-6">🧠</sp, a, n>
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Me, t, a-Cognitive, A, I</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, ga, p-2"></div>
+            <div, className="flex, item, s-center, ga, p-2"></div></div>
               <span, className="w-6 h-6">🛡️</sp, a, n>
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Zero, Trust, Security</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, ga, p-2"></div>
+            <div, className="flex, item, s-center, ga, p-2"></div></div>
               <span, className="w-6 h-6">🚀</sp, a, n>
           </p>"
-          <div, className="flex, item, s-center, justif, y-center, ga, p-8, tex, t-cent, e, r"></div>"
-            <div, className="flex, item, s-center, ga, p-2"></div>"
+          <div, className="flex, item, s-center, justif, y-center, ga, p-8, tex, t-cent, e, r"></div></div>"
+            <div, className="flex, item, s-center, ga, p-2"></div></div>"
               <span, className="w-6 h-6">🧠</sp, a, n>"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Me, t, a-Cognitive, A, I</sp, a, n>
             </d, i, v>"
-            <div, className="flex, item, s-center, ga, p-2"></div>"
+            <div, className="flex, item, s-center, ga, p-2"></div></div>"
               <span, className="w-6 h-6">🛡️</sp, a, n>"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Zero, Trust, Security</sp, a, n>
             </d, i, v>"
-            <div, className="flex, item, s-center, ga, p-2"></div>"
+            <div, className="flex, item, s-center, ga, p-2"></div></div>"
               <span, className="w-6 h-6">🚀</sp, a, n>"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Autonomous, Operation, s</sp, a, n>
             </d, i, v>
@@ -238,61 +238,61 @@ featur, e, d: fal, s, e;
         </d, i, v>
         {/* Featured, Content, Grid */})
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">)
+  g: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>)
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (
             <d, i, v;
         {/* Featured, Content, Grid */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
+  g: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (</div>
             <d, i, v
   k, e, y={conte, n, t.id}
         {/* Featured, Content, Grid */}"
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"
-  g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
-          {/* TODO: Fix JSX expression */}
+  g: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div></div>
+          {/* TODO: Fix JSX expression */,}
   k, e, y={conte, n, t.id}"
               classNa, m, e="group, relativ, e"
             ></d>
               {/* Featured, badg, e */}
               {conte, n, t.featur, e, d && (
-                <div, className="absolu, t, e -t, o, p-3 -rig, h, t-3 z-20"></div>
-                  <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-xs, fon, t-bold, shado, w-lg"></div>
+                <div, className="absolu, t, e -t, o, p-3 -rig, h, t-3 z-20"></div></div>
+                  <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-xs, fon, t-bold, shado, w-lg"></div></div>
                     <span, className="w-3 h-3">⭐</sp, a, n>
                     <sp, a, n>FEATUR, E, D</sp, a, n>
                   </d, i, v>
                 </d, i, v>
               )}
               {/* Card, glow, effect */}
-              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>
+              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r: v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r: to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></div></d, i, v>
               <div, className="relative, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e;
-  r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">
+  r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l"></div>
                 {/* Ic, o, n & Badg, e, s */}</div>
-                <div, className="flex, item, s-start, justif, y-between, m, b-6"></div>
-                  <div, className="te, x, t-6xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">
+                <div, className="flex, item, s-start, justif, y-between, m, b-6"></div></div>
+                  <div, className="te, x, t-6xl, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>
                     {conte, n, t.ic, o, n}
                   </d, i, v>
-                  <div, className="flex, fle, x-col, ga, p-2">
+                  <div, className="flex, fle, x-col, ga, p-2"></div>
                     {conte, n, t.trendi, n, g && (</div>
-                      <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-pi, n, k-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg"></div>
+                      <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-pi, n, k-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg"></div></div>
                         <TrendingUp, className="w-3 h-3"  />
                         <sp, a, n>TRENDI, N, G</sp, a, n>
                       </d, i, v>
                     )}
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">
-              {/* TODO: Fix JSX expression */})
+              {/* TODO: Fix JSX expression */,})
               )}
               {/* Card, glow, effect */}"
-              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
+              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r: v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r: to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></div></d, i, v>"
               <div, className="relative, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e,"
-  r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l"></div>
+  r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l"></div></div>
                 {/* Ic, o, n & Badg, e, s */}"
-                <div, className="flex, item, s-start, justif, y-between, m, b-6"></div>"
-                  <div, className="te, x, t-6xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>
+                <div, className="flex, item, s-start, justif, y-between, m, b-6"></div></div>"
+                  <div, className="te, x, t-6xl, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div></div>
                     {conte, n, t.ic, o, n}
                   </d, i, v>"
-                  <div, className="flex, fle, x-col, ga, p-2"></div>
-                    {/* TODO: Fix JSX expression */}
+                  <div, className="flex, fle, x-col, ga, p-2"></div></div>
+                    {/* TODO: Fix JSX expression */,}
                     )}"
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30"></span>
                       REVOLUTIONA, R, Y;
@@ -300,40 +300,40 @@ featur, e, d: fal, s, e;
                   </d, i, v>
                 </d, i, v>
                 {/* Catego, r, y & Impa, c, t */}
-                <div, className="mb-4"></div>
+                <div, className="mb-4"></div></div>
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30">
                 {/* Catego, r, y & Impa, c, t */}"
-                <div, className="mb-4"></div>"
+                <div, className="mb-4"></div></div>"
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30"></span>
                     {conte, n, t.catego, r, y}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}"
-                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r:te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t"></h3>
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t"></h3></h3>
                   {conte, n, t.tit, l, e}
                 </h3>
                 {/* Descripti, o, n */}"
-                <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm"></p>
+                <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm"></p></p>
                   {conte, n, t.descripti, o, n}
                 </p>
                 {/* Impact, Badg, e */}
-                <div, className="mb-6"></div>
-                  <div, className="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/30">
-                    🚀 {conte, n, t.impa, c, t}
-                  </d, i, v>
-                </d, i, v>
-                {/* Meta, Inf, o */}
-                <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>
-                  <span, className="flex, item, s-center, ga, p-2"></span>
-                    <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0"  />
-                {/* Impact, Badg, e */}"
-                <div, className="mb-6"></div>"
+                <div, className="mb-6"></div></div>
                   <div, className="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/30"></div>
                     🚀 {conte, n, t.impa, c, t}
                   </d, i, v>
                 </d, i, v>
+                {/* Meta, Inf, o */}
+                <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div></div>
+                  <span, className="flex, item, s-center, ga, p-2"></span>
+                    <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0"  />
+                {/* Impact, Badg, e */}"
+                <div, className="mb-6"></div></div>"
+                  <div, className="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/30"></div></div>
+                    🚀 {conte, n, t.impa, c, t}
+                  </d, i, v>
+                </d, i, v>
                 {/* Meta, Inf, o */}"
-                <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>"
+                <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div></div>"
                   <span, className="flex, item, s-center, ga, p-2"></span>"
                     <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0"  /></Zap>
                     {conte, n, t.readTi, m, e}
@@ -343,101 +343,101 @@ featur, e, d: fal, s, e;
                 {/* CTA, Butto, n */}
                 <a;
   hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}`
-                  classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1"
+                  classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r: to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, transform, hover: -transla, t, e-y-1"
                 >
                   <Link, className="w-4 h-4"  />
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>
                   <span, className="w-4 h-4, grou, p-hov, e, r/bt;
                 <a></a>
   hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}`"
-                  classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,"
-  r:-transla, t, e-y-1"
+                  classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r: to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,"
+  r: -transla, t, e-y-1"
                 >"
                   <Link, className="w-4 h-4"  /></Link>
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>"
                   <span, className="w-4 h-4, grou, p-hov, e, r/bt,"
-  n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0">›</sp, a, n>
+  n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0">›</sp, a, n>
                 </a>
               </d, i, v>
             </d, i, v>
           ))}
         </d, i, v>
         {/* Revolutionary, Stat, s */}
-        <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div>
-          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>
-            <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-        {/* Revolutionary, Stat, s */}"
-        <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div>"
-          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>"
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div></div>
+          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div></div>
             <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
+        {/* Revolutionary, Stat, s */}"
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div></div>"
+          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div></div>"
+            <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div></div>
               100, 0, x;
             </d, i, v>"
-            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Processing, Spee, d</d, i, v>
+            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div>Processing, Spee, d</d, i, v>
           </d, i, v>
-          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>
-            <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-          </d, i, v>"
-          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>"
+          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div></div>
             <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
+          </d, i, v>"
+          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div></div>"
+            <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div></div>
               98%
             </d, i, v>"
-            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Automation, Rat, e</d, i, v>
+            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div>Automation, Rat, e</d, i, v>
           </d, i, v>
-          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>
-            <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-          </d, i, v>"
-          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>"
+          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div></div>
             <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
+          </d, i, v>"
+          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div></div>"
+            <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div></div>
               99.99%
             </d, i, v>"
-            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Security, Accurac, y</d, i, v>
+            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div>Security, Accurac, y</d, i, v>
           </d, i, v>
-          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>
-            <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-          </d, i, v>"
-          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>"
+          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div></div>
             <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
+          </d, i, v>"
+          <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div></div>"
+            <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div></div>
               $50, 0, M+
             </d, i, v>"
-            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Cost, Saving, s</d, i, v>
+            <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div>Cost, Saving, s</d, i, v>
           </d, i, v>
         </d, i, v>
         {/* Ca, l, l-to-Action, Sectio, n */}
-        <div, className="te, x, t-cent, e, r"></div>
-          <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>
-            <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>
-              <h3, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
-        {/* Ca, l, l-to-Action, Sectio, n */}"
-        <div, className="te, x, t-cent, e, r"></div>"
-          <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>"
-            <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>"
+        <div, className="te, x, t-cent, e, r"></div></div>
+          <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div></div>
+            <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div></div>
               <h3, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4"></h3>
+        {/* Ca, l, l-to-Action, Sectio, n */}"
+        <div, className="te, x, t-cent, e, r"></div></div>"
+          <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div></div>"
+            <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div></div>"
+              <h3, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4"></h3></h3>
                 Ready, for, the AI, Revolutio, n?
               </h3>"
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-auto, tex, t-lg"></p>
+              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-auto, tex, t-lg"></p></p>
                 Join, the, elite group, of, forward-thinking, organizations, implementing these, breakthrough, technologies. 
                 Get, exclusive, access to, implementation, guides, case, studie, s, and, expert, consultations.
               </p>
-              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div></div>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/conta, c, t"
               </p>"
-              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div></div>"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/conta, c, t""
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
+                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r: to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r: shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Rocket, className="w-5 h-5"  /></Rocket>
                   <sp, a, n>Start, Your, Revolution</sp, a, n>
                 </a>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
-                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e;
+                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e;
                 </a>"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/bl, o, g""
-                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e,"
-  r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
+                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e,"
+  r: te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 ></a>
                   <sp, a, n>Explore, All, Breakthroughs</sp, a, n>"
                   <Link, className="w-5 h-5"  /></Link>
@@ -447,28 +447,28 @@ featur, e, d: fal, s, e;
           </d, i, v>
         </d, i, v>
         {/* Stats, Foote, r */}
-        <div, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div>
-          <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r"></div>
+        <div, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div></div>
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r"></div></div>
             <d, i, v>
-              <div, className="te, x, t-4xl, fon, t-bold, tex, t-yell, o, w-3, 0, 0">6</d, i, v>
+              <div, className="te, x, t-4xl, fon, t-bold, tex, t-yell, o, w-3, 0, 0"></div>6</d, i, v>
         {/* Stats, Foote, r */}"
-        <div, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div>"
-          <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r"></div>
+        <div, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div></div>"
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r"></div></div>
             <d, i, v></d>"
-              <div, className="te, x, t-4xl, fon, t-bold, tex, t-yell, o, w-3, 0, 0">6</d, i, v>"
-              <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Revolutionary, Breakthrough, s</d, i, v>
+              <div, className="te, x, t-4xl, fon, t-bold, tex, t-yell, o, w-3, 0, 0"></div>6</d, i, v>"
+              <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div>Revolutionary, Breakthrough, s</d, i, v>
             </d, i, v>
             <d, i, v></d>"
-              <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">5, 0, 0+</d, i, v>"
-              <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Enterprise, Client, s</d, i, v>
+              <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0"></div>5, 0, 0+</d, i, v>"
+              <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div>Enterprise, Client, s</d, i, v>
             </d, i, v>
             <d, i, v></d>"
-              <div, className="te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-3, 0, 0">$5, 0, M+</d, i, v>"
-              <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Average, Annual, Savings</d, i, v>
+              <div, className="te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-3, 0, 0"></div>$5, 0, M+</d, i, v>"
+              <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div>Average, Annual, Savings</d, i, v>
             </d, i, v>
             <d, i, v></d>"
-              <div, className="te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0">98%</d, i, v>"
-              <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Automation, Rat, e</d, i, v>
+              <div, className="te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0"></div>98%</d, i, v>"
+              <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></div>Automation, Rat, e</d, i, v>
             </d, i, v>
           </d, i, v>
         </d, i, v>

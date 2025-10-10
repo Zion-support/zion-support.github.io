@@ -12,7 +12,7 @@ export const analyticsUtils = {
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-export const analyticsUtils = {/* TODO: Fix JSX expression */}
+export const analyticsUtils = {/* TODO: Fix JSX expression */,}
       }
 
       return metrics;
@@ -30,7 +30,7 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
       userAgent: navigator.userAgent,
       context,
   // Error tracking,
-  trackError: (error, context = {}) => {/* TODO: Fix JSX expression */}
+  trackError: (error, context = {}) => {/* TODO: Fix JSX expression */,}
     }
 
     // Send to analytics service;
@@ -49,7 +49,7 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
       url: window.location.href,
       metadata,
   // User behavior tracking,
-  trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
+  trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */,}
     }
 
     //     return interactionData;
@@ -65,8 +65,8 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
         //           getLCP(console.log);
         //           getTTFB(console.log);
   // Core Web Vitals,
-  measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+  measureCoreWebVitals: () => {/* TODO: Fix JSX expression */,}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */,}
       });
     }
   }}

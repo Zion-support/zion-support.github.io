@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
+interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */,}
 }
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
   children;
@@ -20,8 +20,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
 const,
-  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */,})
+}) => {/* TODO: Fix JSX expression */,}
     }
     return undefined;
   }, [enableHighContrast]);
@@ -34,7 +34,7 @@ const,
       const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches),
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
     }
     return undefined;
   }, [enableReducedMotion]);
@@ -48,7 +48,7 @@ const,
           if (skipLink) {,
             skipLink.focus();
             e.preventDefault();
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
           }
         }
         // Escape key handling;
@@ -56,7 +56,7 @@ const,
           const _activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
-        if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
+        if (e.key === 'Escape') {/* TODO: Fix JSX expression */,}
           }
         }
       }
@@ -69,16 +69,16 @@ const,
           const _announcement = target.getAttribute('aria-label'),
           if (announcement) {,
             announceToScreenReader(announcement);
-      const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
+      const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */,}
           }
         }
       }
-      const handleFocusOut = () => {/* TODO: Fix JSX expression */}
+      const handleFocusOut = () => {/* TODO: Fix JSX expression */,}
       }
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('focusin', handleFocusIn);
       document.addEventListener('focusout', handleFocusOut);
-      return () => {/* TODO: Fix JSX expression */}
+      return () => {/* TODO: Fix JSX expression */,}
       }
     }
     return undefined;
@@ -90,14 +90,14 @@ const,
       root.classList.add('high-contrast')
   } else {
       root.classList.remove('high-contrast');
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
     }
-    if (isReducedMotion) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+    if (isReducedMotion) {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
     }
-    if (focusVisible) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+    if (focusVisible) {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
     }
   }, [isHighContrast, isReducedMotion, focusVisible]);
   // Announce to screen reader;
@@ -112,12 +112,12 @@ const,
       setTimeout(() => {
         document.body.removeChild(announcement);
   const announceToScreenReader = (messag)
-  e: string) => {/* TODO: Fix JSX expression */}
+  e: string) => {/* TODO: Fix JSX expression */,}
       }, 1000);
     }
   }
   return(<div;
-  return (<div></div>
+  return (<div></div></div>
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
       role="main""
       aria-label="Main content"
@@ -136,28 +136,28 @@ const,
           const _main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {}
             (main as HTMLElement).focus();}
-            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+            (main as HTMLElement).scrollIntoView({ behavior: 'smooth',});
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""
         className="skip-link"
-        onClick={/* TODO: Fix JSX expression */})
-  r: 'smooth' });
+        onClick={/* TODO: Fix JSX expression */,})
+  r: 'smooth',});
           }
         }}
       >
         Skip to main content;
       </a>
       {/* Accessibility controls */}
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
-        <button;
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
+        <button;
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div></button></div>
         <button
-          onClick={() => setIsHighContrast(!isHighContrast)}
+          onClick={() =></button> setIsHighContrast(!isHighContrast)}
           className="accessibility-toggle"
       {/* Accessibility controls */}"
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
-        <button></button>
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div></div>
+        <button></button></button>
           onClick={() => setIsHighContrast(!isHighContrast)}"
           className="accessibility-toggle"`
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
@@ -165,9 +165,9 @@ const,
           {isHighContrast ? '🔆' : '🌙'} High Contrast;
         </button>
         <button;
-          onClick={() => setIsReducedMotion(!isReducedMotion)}
+          onClick={() =></button> setIsReducedMotion(!isReducedMotion)}
           className="accessibility-toggle"
-        <button></button>
+        <button></button></button>
           onClick={() => setIsReducedMotion(!isReducedMotion)}"
           className="accessibility-toggle"`
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}

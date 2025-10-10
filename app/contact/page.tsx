@@ -12,7 +12,7 @@ const ContactPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -40,7 +40,7 @@ const ContactPage: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
       })
     } catch (error) {
       setSubmitStatus('error');
@@ -58,47 +58,47 @@ const ContactPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
                 Contact Us
               </h1>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
                 Ready to transform your business? Get in touch with our experts for a free consultation.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
               {/* Contact Information */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
+              <div className="space-y-8"></div>
+                <div></div>
+                  <h2 className="text-2xl font-bold text-white mb-6"></h2>Get in Touch</h2>
+                  <div className="space-y-6"></div>
+                    <div className="flex items-start space-x-4"></div>
                       <Phone className="w-6 h-6 text-cyan-400 mt-1" />
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">Phone</h3>
-                        <p className="text-gray-300">+1 302 464 0950</p>
-                        <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
+                      <div></div>
+                        <h3 className="text-lg font-semibold text-white"></h3>Phone</h3>
+                        <p className="text-gray-300"></p>+1 302 464 0950</p>
+                        <p className="text-sm text-gray-400"></p>Mon-Fri: 9AM-6PM EST</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start space-x-4"></div>
                       <Mail className="w-6 h-6 text-cyan-400 mt-1" />
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">Email</h3>
-                        <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                        <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
+                      <div></div>
+                        <h3 className="text-lg font-semibold text-white"></h3>Email</h3>
+                        <p className="text-gray-300"></p>kleber@ziontechgroup.com</p>
+                        <p className="text-sm text-gray-400"></p>We'll respond within 24 hours</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start space-x-4"></div>
                       <MapPin className="w-6 h-6 text-cyan-400 mt-1" />
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">Address</h3>
-                        <p className="text-gray-300">
+                      <div></div>
+                        <h3 className="text-lg font-semibold text-white"></h3>Address</h3>
+                        <p className="text-gray-300"></p>
                           364 E Main St STE 1008<br />
                           Middletown, DE 19709
                         </p>
@@ -107,8 +107,8 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4">Why Choose Us?</h3>
+                <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <h3 className="text-lg font-semibold text-white mb-4"></h3>Why Choose Us?</h3>
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
@@ -131,24 +131,24 @@ const ContactPage: React.FC = () => {
               </div>
 
               {/* Contact Form */}
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+              <div className="bg-slate-800/50 rounded-lg p-8"></div>
+                <h2 className="text-2xl font-bold text-white mb-6"></h2>Send us a Message</h2>
                 
                 {submitStatus === 'success' && (
-                  <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6">
+                  <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6"></div>
                     Thank you! Your message has been sent successfully. We'll get back to you soon.
                   </div>
                 )}
                 
                 {submitStatus === 'error' && (
-                  <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">
+                  <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6"></div>
                     Sorry, there was an error sending your message. Please try again.
                   </div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    <div></div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Name *
                       </label>
@@ -164,7 +164,7 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                     
-                    <div>
+                    <div></div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email *
                       </label>
@@ -181,8 +181,8 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    <div></div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                         Company
                       </label>
@@ -197,7 +197,7 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                     
-                    <div>
+                    <div></div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                         Phone
                       </label>
@@ -213,7 +213,7 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div>
+                  <div></div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
                     </label>
@@ -233,7 +233,7 @@ const ContactPage: React.FC = () => {
                     </select>
                   </div>
 
-                  <div>
+                  <div></div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
                     </label>
@@ -253,10 +253,10 @@ const ContactPage: React.FC = () => {
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
+                  ></button>
                     {isSubmitting ? (
                       <>
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div></div>
                         <span>Sending...</span>
                       </>
                     ) : (

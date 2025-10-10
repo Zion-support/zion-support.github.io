@@ -40,7 +40,7 @@ function fixFunctionNames(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ Fixed: ${filePath,}`);
       return true;
     }
     
@@ -105,9 +105,9 @@ for (const file of files) {
 }
 
 console.log(`\n📊 Summary: `);
-console.log(`✅ Files fixed: ${fixedCount}`);
-console.log(`❌ Errors: ${errorCount}`);
-console.log(`📁 Total files processed: ${files.length}`);
+console.log(`✅ Files fixed: ${fixedCount,}`);
+console.log(`❌ Errors: ${errorCount,}`);
+console.log(`📁 Total files processed: ${files.length,}`);
 
 if (fixedCount > 0) {
   console.log('\n🎉 Function names fixed successfully!');

@@ -7,12 +7,12 @@ const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Tutorials', icon: BookOpen },
-    { id: 'ai', name: 'AI Services', icon: Brain },
-    { id: 'it', name: 'IT Services', icon: Cloud },
-    { id: 'saas', name: 'Micro SaaS', icon: Zap },
-    { id: 'security', name: 'Security', icon: Shield },
-    { id: 'integration', name: 'Integration', icon: Code }
+    { id: 'all', name: 'All Tutorials', icon: BookOpen,},
+    { id: 'ai', name: 'AI Services', icon: Brain,},
+    { id: 'it', name: 'IT Services', icon: Cloud,},
+    { id: 'saas', name: 'Micro SaaS', icon: Zap,},
+    { id: 'security', name: 'Security', icon: Shield,},
+    { id: 'integration', name: 'Integration', icon: Code,}
   ];
   const tutorials = [
     {
@@ -170,18 +170,18 @@ const TutorialsPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/tutorials" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced"></h1>
               Tutorials & Learning
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Master our AI, IT, and Micro SaaS services with step-by-step tutorials, 
               code examples, and best practices from our expert team.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <a
                 href="#featured"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
@@ -204,40 +204,40 @@ const TutorialsPage: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <div className="cyber-card-enhanced p-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"></div>
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300">Tutorials</div>
+              <div className="text-2xl font-bold text-white mb-2"></div>50+</div>
+              <div className="text-gray-300"></div>Tutorials</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               <Users className="w-8 h-8 text-green-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">5,000+</div>
-              <div className="text-gray-300">Students</div>
+              <div className="text-2xl font-bold text-white mb-2"></div>5,000+</div>
+              <div className="text-gray-300"></div>Students</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               <Star className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">4.8</div>
-              <div className="text-gray-300">Average Rating</div>
+              <div className="text-2xl font-bold text-white mb-2"></div>4.8</div>
+              <div className="text-gray-300"></div>Average Rating</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               <Clock className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">20+</div>
-              <div className="text-gray-300">Hours of Content</div>
+              <div className="text-2xl font-bold text-white mb-2"></div>20+</div>
+              <div className="text-gray-300"></div>Hours of Content</div>
             </div>
           </div>
 
           {/* Featured Tutorials */}
-          <section id="featured" className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Tutorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <section id="featured" className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Featured Tutorials</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {featuredTutorials.map((tutorial) => (
-                <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
-                  <div className="relative">
-                    <div className="w-full h-48 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-t-lg flex items-center justify-center">
+                <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300"></div>
+                  <div className="relative"></div>
+                    <div className="w-full h-48 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-t-lg flex items-center justify-center"></div>
                       <Play className="w-16 h-16 text-white opacity-80" />
                     </div>
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4"></div>
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${
                         tutorial.difficulty === 'Beginner' 
                           ? 'bg-green-600 text-white' 
@@ -249,15 +249,15 @@ const TutorialsPage: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <div className="p-6"></div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors"></h3>
                       {tutorial.title}
                     </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed"></p>
                       {tutorial.description}
                     </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className="flex items-center justify-between mb-4"></div>
+                      <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
                         <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
                           {tutorial.duration}
@@ -272,7 +272,7 @@ const TutorialsPage: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-4"></div>
                       {tutorial.tags.slice(0, 3).map((tag, index) => (
                         <span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">
                           {tag}
@@ -293,17 +293,17 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Category Filter */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+          <section className="mb-12"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center"></h2>Browse by Category</h2>
+            <div className="flex flex-wrap justify-center gap-4"></div>
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={() =></button> setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',
                   }`}
                 >
                   <category.icon className="w-5 h-5" />
@@ -314,16 +314,16 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* All Tutorials */}
-          <section id="all-tutorials" className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <section id="all-tutorials" className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>All Tutorials</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {filteredTutorials.map((tutorial) => (
-                <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
-                  <div className="relative">
-                    <div className="w-full h-48 bg-gradient-to-r from-purple-500 to-pink-600 rounded-t-lg flex items-center justify-center">
+                <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300"></div>
+                  <div className="relative"></div>
+                    <div className="w-full h-48 bg-gradient-to-r from-purple-500 to-pink-600 rounded-t-lg flex items-center justify-center"></div>
                       <BookOpen className="w-16 h-16 text-white opacity-80" />
                     </div>
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4"></div>
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${
                         tutorial.difficulty === 'Beginner' 
                           ? 'bg-green-600 text-white' 
@@ -335,15 +335,15 @@ const TutorialsPage: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <div className="p-6"></div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors"></h3>
                       {tutorial.title}
                     </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed"></p>
                       {tutorial.description}
                     </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className="flex items-center justify-between mb-4"></div>
+                      <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
                         <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
                           {tutorial.duration}
@@ -358,7 +358,7 @@ const TutorialsPage: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-4"></div>
                       {tutorial.tags.map((tag, index) => (
                         <span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">
                           {tag}
@@ -379,15 +379,15 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Learning Paths */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="cyber-card-enhanced p-8">
-                <div className="flex items-center mb-4">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Learning Paths</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="cyber-card-enhanced p-8"></div>
+                <div className="flex items-center mb-4"></div>
                   <Brain className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">AI Developer Path</h3>
+                  <h3 className="text-xl font-bold text-white"></h3>AI Developer Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6"></p>
                   Master AI development from basics to advanced implementations.
                 </p>
                 <ul className="space-y-2 mb-6">
@@ -409,12 +409,12 @@ const TutorialsPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-8">
-                <div className="flex items-center mb-4">
+              <div className="cyber-card-enhanced p-8"></div>
+                <div className="flex items-center mb-4"></div>
                   <Cloud className="w-8 h-8 text-green-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">Cloud Architect Path</h3>
+                  <h3 className="text-xl font-bold text-white"></h3>Cloud Architect Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6"></p>
                   Learn cloud architecture and infrastructure management.
                 </p>
                 <ul className="space-y-2 mb-6">
@@ -436,12 +436,12 @@ const TutorialsPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-8">
-                <div className="flex items-center mb-4">
+              <div className="cyber-card-enhanced p-8"></div>
+                <div className="flex items-center mb-4"></div>
                   <Zap className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">SaaS Entrepreneur Path</h3>
+                  <h3 className="text-xl font-bold text-white"></h3>SaaS Entrepreneur Path</h3>
                 </div>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6"></p>
                   Build and scale your own SaaS business from scratch.
                 </p>
                 <ul className="space-y-2 mb-6">
@@ -466,13 +466,13 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Resources */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="cyber-card-enhanced p-6 text-center">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Additional Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Code Examples</h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <h3 className="text-lg font-semibold text-white mb-2"></h3>Code Examples</h3>
+                <p className="text-gray-300 mb-4 text-sm"></p>
                   Ready-to-use code examples for all our services
                 </p>
                 <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm">
@@ -480,10 +480,10 @@ const TutorialsPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center">
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 <Download className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <h3 className="text-lg font-semibold text-white mb-2"></h3>SDKs & Libraries</h3>
+                <p className="text-gray-300 mb-4 text-sm"></p>
                   Official SDKs for popular programming languages
                 </p>
                 <a href="/api" className="text-green-400 hover:text-green-300 text-sm">
@@ -491,10 +491,10 @@ const TutorialsPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center">
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Community</h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <h3 className="text-lg font-semibold text-white mb-2"></h3>Community</h3>
+                <p className="text-gray-300 mb-4 text-sm"></p>
                   Join our developer community for support and discussions
                 </p>
                 <a href="/community" className="text-purple-400 hover:text-purple-300 text-sm">
@@ -502,10 +502,10 @@ const TutorialsPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="cyber-card-enhanced p-6 text-center">
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <h3 className="text-lg font-semibold text-white mb-2"></h3>Documentation</h3>
+                <p className="text-gray-300 mb-4 text-sm"></p>
                   Comprehensive API and service documentation
                 </p>
                 <a href="/docs" className="text-orange-400 hover:text-orange-300 text-sm">
@@ -516,13 +516,13 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* CTA */}
-          <section className="mb-16">
-            <div className="cyber-card-enhanced p-8 text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
-              <p className="text-gray-300 mb-6">
+          <section className="mb-16"></section>
+            <div className="cyber-card-enhanced p-8 text-center"></div>
+              <h2 className="text-2xl font-bold text-white mb-4"></h2>Ready to Start Learning?</h2>
+              <p className="text-gray-300 mb-6"></p>
                 Join thousands of developers who are already building amazing applications with our services.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4"></div>
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"

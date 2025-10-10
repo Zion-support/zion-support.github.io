@@ -14,15 +14,15 @@ export default {
           pink: '#ec4899',
           green: '#10 b981',
           orange: '#f59 e0 b',
-          blue: '#3 b82 f6'},
+          blue: '#3 b82 f6',},
         dark: {,
           bg: '#0f0f23',
           surface: '#1a1a2e',
-          elevated: '#16213e'},
+          elevated: '#16213e',},
         text: {,
           primary: '#ffffff',
           secondary: '#a1 a1 aa',
-          muted: '#71717 a'}},
+          muted: '#71717 a',}},
       fontFamily: {,
         sans: [,
           'Inter',
@@ -61,52 +61,52 @@ export default {
         'matrix-rain': {
           '0%': {
             transform: 'translateY(-100 vh)',
-            opacity: '0'},
+            opacity: '0',},
           '10%': {
-            opacity: '1'},
+            opacity: '1',},
           '90%': {
-            opacity: '1'},
+            opacity: '1',},
           '100%': {
             transform: 'translateY(100 vh)',
-            opacity: '0'}},
+            opacity: '0',}},
         'hologram-flicker': {
           '0%, 100%': {
             opacity: '1',
-            transform: 'scale(1)'},
+            transform: 'scale(1)',},
           '50%': {
             opacity: '0.8',
-            transform: 'scale(1.02)'}},
+            transform: 'scale(1.02)',}},
         'data-stream': {
           '0%': {
-            transform: 'translateX(-100%)'},
+            transform: 'translateX(-100%)',},
           '100%': {
-            transform: 'translateX(100 vw)'}},
+            transform: 'translateX(100 vw)',}},
         'fadeIn': {
           from: {,
             opacity: '0',
-            transform: 'translateY(20 px)'},
+            transform: 'translateY(20 px)',},
           to: {,
             opacity: '1',
-            transform: 'translateY(0)'}},
+            transform: 'translateY(0)',}},
         'slideIn': {
           from: {,
             opacity: '0',
-            transform: 'translateX(-20 px)'},
+            transform: 'translateX(-20 px)',},
           to: {,
             opacity: '1',
-            transform: 'translateX(0)'}},
+            transform: 'translateX(0)',}},
         'scaleIn': {
           from: {,
             opacity: '0',
-            transform: 'scale(0.9)'},
+            transform: 'scale(0.9)',},
           to: {,
             opacity: '1',
-            transform: 'scale(1)'}},
+            transform: 'scale(1)',}},
         'loading': {
           '0%': {
-            backgroundPosition: '200% 0'},
+            backgroundPosition: '200% 0',},
           '100%': {
-            backgroundPosition: '-200% 0'}}},
+            backgroundPosition: '-200% 0',}}},
       backgroundImage: {,
         'cyber-grid': `,
           linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
@@ -117,7 +117,7 @@ export default {
       backgroundSize: {,
         'grid': '20px 20px'},
       backdropBlur: {,
-        xs: '2px'},
+        xs: '2px',},
       boxShadow: {,
         'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
         'neon-lg': '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor',
@@ -143,16 +143,16 @@ export default {
       const newUtilities = {
         '.neon-text': {
           color: 'var(--neon-cyan)',
-          animation: 'neon-glow 2 s ease-in-out infinite alternate'},
+          animation: 'neon-glow 2 s ease-in-out infinite alternate',},
         '.neon-border': {
           border: '2 px solid var(--neon-cyan)',
           boxShadow: '0 0 10 px var(--neon-cyan), inset 0 0 10 px var(--neon-cyan)',
-          animation: 'neon-pulse 2 s ease-in-out infinite alternate'},
+          animation: 'neon-pulse 2 s ease-in-out infinite alternate',},
         '.hologram-card': {
           background: 'linear-gradient(135 deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)',
           border: '1 px solid rgba(139, 92, 246, 0.3)',
           backdropFilter: 'blur(10 px)',
-          animation: 'hologram-flicker 3 s ease-in-out infinite'},
+          animation: 'hologram-flicker 3 s ease-in-out infinite',},
         '.glass-morphism': {
           background: 'rgba(255, 255, 255, 0.1)',
           backdropFilter: 'blur(10 px)',
@@ -162,7 +162,7 @@ export default {
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '20 px 20 px'},
+          backgroundSize: '20 px 20 px',},
         '.cyber-button': {
           background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))',
           border: 'none'
@@ -174,7 +174,7 @@ export default {
           letterSpacing: '1 px',
           position: 'relative',
           overflow: 'hidden',
-          transition: 'all 0.3 s ease'},
+          transition: 'all 0.3 s ease',},
         '.cyber-button: hover': {,
           transform: 'translateY(-2px)',
           boxShadow: '0 10px 20px rgba(0, 255, 255, 0.3)'},
@@ -185,7 +185,7 @@ export default {
           padding: '24 px',
           position: 'relative',
           overflow: 'hidden',
-          transition: 'all 0.3 s ease'},
+          transition: 'all 0.3 s ease',},
         '.cyber-card: hover': {,
           transform: 'translateY(-5px)',
           borderColor: 'var(--neon-cyan)',
@@ -193,7 +193,7 @@ export default {
         '.loading-skeleton': {
           background: 'linear-gradient(90 deg, #f0 f0 f0 25%, #e0 e0 e0 50%, #f0 f0 f0 75%)',
           backgroundSize: '200% 100%',
-          animation: 'loading 1.5 s infinite'},
+          animation: 'loading 1.5 s infinite',},
         '.sr-only': {
           position: 'absolute'
           width: '1px',
@@ -203,7 +203,7 @@ export default {
           overflow: 'hidden',
           clip: 'rect(0, 0, 0, 0)',
           whiteSpace: 'nowrap',
-          border: '0'},
+          border: '0',},
         '.sr-only: focus': {
           position: 'static'
           width: 'auto'
@@ -212,7 +212,7 @@ export default {
           margin: 'inherit',
           overflow: 'visible',
           clip: 'auto',
-          whiteSpace: 'normal'}}
+          whiteSpace: 'normal',}}
       addUtilities(newUtilities)
     }
   ]}

@@ -13,10 +13,10 @@ const _warnings = [];
 // // Check Node version;
 // const requiredNodeVersion = '18.0.0';
 // const currentNodeVersion = process.version.slice(1);
-if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
+if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */,}
   errors.push(`Node.js version ${requiredNodeVersion} or higher is required (curren)`
-  t: ${currentNodeVersion})`);
-} else {/* TODO: Fix JSX expression */}
+  t: ${currentNodeVersion,})`);
+} else {/* TODO: Fix JSX expression */,}
 //   }
 
 // Check for required files;
@@ -27,9 +27,9 @@ const requiredFiles = [
   'tailwind.config.cjs',
   'postcss.config.cjs'];
 
-requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
-  missing: ${file}`);
-  } else {/* TODO: Fix JSX expression */}
+requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */,}`
+  missing: ${file,}`);
+  } else {/* TODO: Fix JSX expression */,}
 //     }
 });
 
@@ -40,13 +40,13 @@ try {
   
   requiredDeps.forEach((dep) => {
     if (!packageJson.dependencies[dep]) {
-      errors.push(`Missing required dependency: ${dep}`);
-try {/* TODO: Fix JSX expression */}`
-  dependency: ${dep}`);
+      errors.push(`Missing required dependency: ${dep,}`);
+try {/* TODO: Fix JSX expression */,}`
+  dependency: ${dep,}`);
     }
   });
   
-//   } catch (error) {/* TODO: Fix JSX expression */}
+//   } catch (error) {/* TODO: Fix JSX expression */,}
 }
 
 // Check TypeScript configuration;
@@ -56,10 +56,10 @@ try {
   if (!tsConfig.compilerOptions) {
     warnings.push('tsconfig.json missing compilerOptions')
   } else {
-try {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
+try {/* TODO: Fix JSX expression */,}
+  } else {/* TODO: Fix JSX expression */,}
 //     }
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }
 
 // Check environment variables setup;
@@ -70,20 +70,20 @@ if (!existsSync(resolve(process.cwd(), '.env.example'))) {
 
 // Report results;
 // if (errors.length > 0) {
-if (!existsSync(resolve(process.cwd(), '.env.example'))) {/* TODO: Fix JSX expression */}
-} else {/* TODO: Fix JSX expression */}
+if (!existsSync(resolve(process.cwd(), '.env.example'))) {/* TODO: Fix JSX expression */,}
+} else {/* TODO: Fix JSX expression */,}
 //   }
 
 // Report results;
-// if (errors.length > 0) {/* TODO: Fix JSX expression */}`
+// if (errors.length > 0) {/* TODO: Fix JSX expression */,}`
 //   //   errors.forEach((error) => // console.log(`   - ${error}`));
 }
 
-if (warnings.length > 0) {/* TODO: Fix JSX expression */}`
+if (warnings.length > 0) {/* TODO: Fix JSX expression */,}`
 //   //   warnings.forEach((warning) => // console.log(`   - ${warning}`));
 }
 
-if (errors.length === 0 && warnings.length === 0) {/* TODO: Fix JSX expression */}
-} else if (errors.length > 0) {/* TODO: Fix JSX expression */}
-} else {/* TODO: Fix JSX expression */}
+if (errors.length === 0 && warnings.length === 0) {/* TODO: Fix JSX expression */,}
+} else if (errors.length > 0) {/* TODO: Fix JSX expression */,}
+} else {/* TODO: Fix JSX expression */,}
 }`

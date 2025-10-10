@@ -42,7 +42,7 @@ const fixMergeConflicts = (filePath) => {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed merge conflicts in: ${filePath}`);
+      console.log(`Fixed merge conflicts in: ${filePath,}`);
       return true;
     }
     

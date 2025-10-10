@@ -10,22 +10,22 @@ const AiFinancialServicesPage: React.FC = () => {
         <meta name="keywords" content="AI financial services, fintech AI, fraud detection, risk assessment, algorithmic trading, financial forecasting" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl font-bold text-white mb-6"></h1>
               AI Financial Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Transform your financial operations with cutting-edge AI solutions for fraud detection, 
               risk assessment, algorithmic trading, and predictive analytics.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Fraud Detection</h3>
-              <p className="text-gray-300 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Fraud Detection</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Advanced machine learning algorithms to detect fraudulent transactions in real-time.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -36,9 +36,9 @@ const AiFinancialServicesPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Risk Assessment</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Risk Assessment</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Comprehensive risk analysis using AI to evaluate creditworthiness and investment risks.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -49,9 +49,9 @@ const AiFinancialServicesPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Algorithmic Trading</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Algorithmic Trading</h3>
+              <p className="text-gray-300 mb-4"></p>
                 AI-powered trading algorithms that adapt to market conditions and optimize returns.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -62,9 +62,9 @@ const AiFinancialServicesPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Financial Forecasting</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Financial Forecasting</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Predictive analytics for accurate financial forecasting and trend analysis.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -75,9 +75,9 @@ const AiFinancialServicesPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Regulatory Compliance</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Regulatory Compliance</h3>
+              <p className="text-gray-300 mb-4"></p>
                 AI-driven compliance monitoring and reporting for financial regulations.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -88,9 +88,9 @@ const AiFinancialServicesPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Customer Analytics</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-cyan-400 mb-4"></h3>Customer Analytics</h3>
+              <p className="text-gray-300 mb-4"></p>
                 Deep insights into customer behavior and preferences for personalized services.
               </p>
               <ul className="text-sm text-gray-400 space-y-2">
@@ -102,8 +102,8 @@ const AiFinancialServicesPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+          <div className="text-center"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"></button>
               Get Started with AI Financial Services
             </button>
           </div>

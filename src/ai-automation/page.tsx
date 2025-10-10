@@ -45,7 +45,7 @@ const AIAutomationPage: React.FC = () => {
         'Standard integrations',
         'Basic analytics'
       ],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -60,7 +60,7 @@ const AIAutomationPage: React.FC = () => {
         'Advanced analytics',
         'Workflow optimization'
       ],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -76,29 +76,29 @@ const AIAutomationPage: React.FC = () => {
         'API access',
         'Dedicated support'
       ],
-      popular: false
+      popular: false,
     }
   ];
   const stats = [
-    { icon: Users, value: '200+', label: 'Automated Processes' },
-    { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-    { icon: Clock, value: '60%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'Client Rating' }
+    { icon: Users, value: '200+', label: 'Automated Processes',},
+    { icon: TrendingUp, value: '80%', label: 'Efficiency Increase',},
+    { icon: Clock, value: '60%', label: 'Time Saved',},
+    { icon: Star, value: '4.9/5', label: 'Client Rating',}
   ];
 export default function AIAutomationPage() {
     return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="container mx-auto px-4 py-20"></div>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6"></h1>
             AI Automation
   </
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Intelligent process automation with AI-powered decision making and exception handling.
           </p>
-          <div className="bg-slate-800/50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">AI-Powered Automation</h2>
-            <p className="text-gray-300 mb-6">
+          <div className="bg-slate-800/50 rounded-lg p-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>AI-Powered Automation</h2>
+            <p className="text-gray-300 mb-6"></p>
               Transform your business processes with intelligent automation that learns and adapts to your needs.
             </p>
             <a

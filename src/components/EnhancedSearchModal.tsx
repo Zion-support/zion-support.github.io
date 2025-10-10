@@ -12,7 +12,7 @@ interface SearchResult {
   }
 interface SearchModalProps {
     isOpen: boolean,
-  onClose: () => void
+  onClose: () => void,
   }
 const mockSearchResults: SearchResult[] = [
   {
@@ -23,7 +23,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Micro SAAS',
     type: 'service',
     popularity: 95,
-    lastModified: '2024-01-15'
+    lastModified: '2024-01-15',
   },
   {
     id: '2',
@@ -33,7 +33,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'AI Services',
     type: 'service',
     popularity: 88,
-    lastModified: '2024-01-10'
+    lastModified: '2024-01-10',
   },
   {
     id: '3',
@@ -43,7 +43,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Company',
     type: 'page',
     popularity: 75,
-    lastModified: '2024-01-08'
+    lastModified: '2024-01-08',
   },
   {
     id: '4',
@@ -53,7 +53,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'AI Services',
     type: 'service',
     popularity: 90,
-    lastModified: '2024-01-14'
+    lastModified: '2024-01-14',
   },
   {
     id: '5',
@@ -63,7 +63,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Documentation',
     type: 'documentation',
     popularity: 80,
-    lastModified: '2024-01-05'
+    lastModified: '2024-01-05',
   }
 ];
 const recentSearches = [
@@ -158,8 +158,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return '🏢'
       case 'Documentation':
         return '📚',
-      default:
-        return '🔍'
+      default: return '🔍',
   }
   }
   const getTypeColor = (type: string) => {
@@ -172,22 +171,21 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return 'text-pink-400'
       case 'documentation':
         return 'text-green-400',
-      default:
-        return 'text-gray-400'
+      default: return 'text-gray-400',
   }
   }
   if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
+    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16"></div>
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
-      />
+      /></div>
       {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20">
+      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20"></div>
         {/* Header */}
-        <div className="flex items-center p-4 border-b border-cyan-400/20">
+        <div className="flex items-center p-4 border-b border-cyan-400/20"></div>
           <Search className="w-5 h-5 text-cyan-400 mr-3" />
           <input
             ref={inputRef}
@@ -199,24 +197,24 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
           />
           <button
             onClick={onClose}
-            className="p-2 text-gray-400 hover:text-white transition-colors">
+            className="p-2 text-gray-400 hover:text-white transition-colors"></button>
             <X className="w-5 h-5" />
           </button>
         </div>
         {/* Content */}
-        <div className="max-h-96 overflow-y-auto">
+        <div className="max-h-96 overflow-y-auto"></div>
           {showSuggestions && !query && (
-            <div className="p-4 space-y-6">
+            <div className="p-4 space-y-6"></div>
               {/* Recent Searches */}
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
+              <div></div>
+                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>
                   <Clock className="w-4 h-4 mr-2" />
                   Recent Searches</span>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2"></div>
                   {recentSearches.map((search, index) => (
                     <button
                       key={index}
-                      onClick={() => handleSuggestionClick(search)}
+                      onClick={() =></button> handleSuggestionClick(search)}
                       className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
                       {search}
                     </button>
@@ -224,15 +222,15 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                 </div>
               </div>
               {/* Popular Searches */}
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
+              <div></div>
+                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>
                   <TrendingUp className="w-4 h-4 mr-2" />
                   Popular Searches</span>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2"></div>
                   {popularSearches.map((search, index) => (
                     <button
                       key={index}
-                      onClick={() => handleSuggestionClick(search)}
+                      onClick={() =></button> handleSuggestionClick(search)}
                       className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
                       {search}
                     </button>
@@ -243,37 +241,37 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
           )}
           {/* Search Results */}
           {query && (
-            <div className="p-4">
+            <div className="p-4"></div>
               {isSearching ? (
-                <div className="flex items-center justify-center py-8">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
+                <div className="flex items-center justify-center py-8"></div>
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div></div>
                 </div>
               ) : results.length > 0 ? (
-                <div className="space-y-2">
+                <div className="space-y-2"></div>
                   {results.map((result, index) => (
                     <button
                       key={result.id}
-                      onClick={() => handleResultClick(result)}
+                      onClick={() =></button> handleResultClick(result)}
                       className={`w-full text-left p-3 rounded-lg transition-colors ${
                         index === selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'
-                          : 'hover:bg-slate-800/50 text-gray-300'
+                          : 'hover: bg-slate-800/50 text-gray-300',
                       }`}
                     >
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-2 mb-1">
+                      <div className="flex items-start justify-between"></div>
+                        <div className="flex-1"></div>
+                          <div className="flex items-center space-x-2 mb-1"></div>
                             <span className="text-lg">{getCategoryIcon(result.category)}</span>
-                            <h3 className="font-medium">{result.title}</h3>
+                            <h3 className="font-medium"></h3>{result.title}</h3>
                             <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50`}>
                               {result.type}
                             </span>
                           </div>
-                          <p className="text-sm text-gray-400 mb-2">{result.description}</p>
-                          <div className="flex items-center space-x-4 text-xs text-gray-500">
+                          <p className="text-sm text-gray-400 mb-2"></p>{result.description}</p>
+                          <div className="flex items-center space-x-4 text-xs text-gray-500"></div>
                             <span>{result.category}</span>
                             {result.popularity && (
-                              <div className="flex items-center space-x-1">
+                              <div className="flex items-center space-x-1"></div>
                                 <Star className="w-3 h-3" />
                                 <span>{result.popularity}%</span>
                               </div>
@@ -289,12 +287,12 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                   ))}
                 </div>
               ) : (
-                <div className="text-center py-8">
+                <div className="text-center py-8"></div>
                   <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-gray-300 mb-2">No results found</h3>
-                  <p className="text-sm text-gray-500">
+                  <h3 className="text-lg font-medium text-gray-300 mb-2"></h3>No results found</h3>
+                  <p className="text-sm text-gray-500"></p>
                     Try searching for something else or check your spelling</span>
-                  <div className="text-sm text-gray-500 mt-4">
+                  <div className="text-sm text-gray-500 mt-4"></div>
                     Popular searches: AI Analytics, Quantum Computing, Workflow Automation</span>
                 </div>
               )}

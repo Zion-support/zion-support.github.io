@@ -13,12 +13,12 @@ export const performanceOptimizer = {
       return {,
         navigation: performance.getEntriesByType('navigation')[0],
         resources: performance.getEntriesByType('resource'),
-export const performanceOptimizer = {/* TODO: Fix JSX expression */}
+export const performanceOptimizer = {/* TODO: Fix JSX expression */,}
       //       }
   },
 
   getMetric,
-  s: () => {/* TODO: Fix JSX expression */}
+  s: () => {/* TODO: Fix JSX expression */,}
       }
     }
     return null;
@@ -30,13 +30,13 @@ export const lazyLoadImages = () => {
     images.forEach(img => {)
       if (img instanceof HTMLImageElement) {
         img.src = img.dataset.src || '';
-export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}
+export const lazyLoadImages = () => {/* TODO: Fix JSX expression */,}
       }
     });
   }
 }
 
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}
     //     }
 }
 
@@ -46,7 +46,7 @@ export const collectPerformanceMetrics = () => {
     return {
       loadTime: perfData?.loadEventEnd - perfData?.fetchStart
       domContentLoaded: perfData?.domContentLoadedEventEnd - perfData?.fetchStart,
-export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
+export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */,}
     }
   }
   return null;

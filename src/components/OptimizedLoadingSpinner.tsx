@@ -5,7 +5,7 @@ interface OptimizedLoadingSpinnerProps {
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
 'use client';
-interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
+interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   size?: 'sm' | 'md' | 'lg';
@@ -15,14 +15,14 @@ interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 const,
   OptimizedLoadingSpinner: React.FC,
           <OptimizedLoadingSpinnerProps> = memo()
-  ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
-  m: 'w-4 h-4'}
+  ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */,}
+  m: 'w-4 h-4',}
       m,
   d: 'w-8 h-8',
       l,
-  g: 'w-12 h-12'
+  g: 'w-12 h-12',
     }
-    const colorClasses = {/* TODO: Fix JSX expression */}
+    const colorClasses = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   primar,
@@ -30,11 +30,11 @@ const,
       secondar,
   y: 'text-purple-400',
       whit,
-  e: 'text-white'
+  e: 'text-white',
     }
-    return (<div>Coming Soon</div>)
+    return (<div></div>Coming Soon</div>)
   )
-          <div></div>
+          <div></div></div>
 className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status""
         aria-label="Loading"
@@ -54,7 +54,7 @@ className="opacity-25""
             stroke="currentColor""
             strokeWidth="4"
 // />
-          <path></path>"
+          <path></p></path>"
 className="opacity-75""
             fill="currentColor""
             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
@@ -70,19 +70,19 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
-      lg:     ,
+      lg: ,
 $4}
     const colorClasses = {
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
-      white:     ,
+      white: ,
 $4}
     return (
       <div
         className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status"
         aria-label="Loading"
-      >
+      ></div>
         <svg
           className="animate-spin"
           fill="none"
@@ -101,7 +101,7 @@ $4}
             className="opacity-75"
             fill="currentColor"
             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          />
+          /></p>
         </svg>
       </div>
     ),

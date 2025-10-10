@@ -25,15 +25,15 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og: title" content={title,} />
+      <meta property="og: description" content={description,} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og: url" content={canonicalUrl,} />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter: title" content={title,} />
+      <meta name="twitter: description" content={description,} />
     </Helmet>
   );
 };

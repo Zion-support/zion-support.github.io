@@ -17,10 +17,10 @@ export type EnterpriseITSolution =
     | 'Data & Analytics',
     | 'Cloud Services',
     | 'Cybersecurity',
-  pricing: unknown}
+  pricing: unknown,}
     starter: string, // e.g. "$2} 999 / mo"
-export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
-  g: unknown}
+export type EnterpriseITSolution = {/* TODO: Fix JSX expression */,}
+  g: unknown,}
     starte,"
   r: string, // e.g. "$2} 999 / mo"
     professional?: string;
@@ -33,7 +33,7 @@ export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   integrations?: string[];
   use_cases?: string[]
   link: string; // canonical internal link under /services/*
-  real_service?: boolean,,
+  real_service?: boolean,
   rating?: number;
   lin,
   k: string; // canonical internal link under /services/*
@@ -60,9 +60,9 @@ export const,
     categor,
   y: 'Enterprise Security',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4, 999 / mo'} enterpris,
-  e: 'Custom' },
+  e: 'Custom',},
     feature,
   s: [,
       'Policy - based access',
@@ -75,42 +75,42 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
     description:,
       'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.'
     category: 'Enterprise Security',
-    pricing: {starter: '$4,999/mo'} enterprise: 'Custom' }
+    pricing: {starter: '$4,999/mo'} enterprise: 'Custom',}
     features: [,
     id: 'platform-engineering-foundation',
     name: 'Platform Engineering Foundation',
     description:,
       'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'
     category: 'DevOps & Automation',
-    pricing: {starter: '$3}499/mo' }
+    pricing: {starter: '$3,}499/mo' }
     features: [,
     id: 'enterprise-data-mesh',
     name: 'Enterprise Data Mesh',
     description:,
       'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'
     category: 'Data & Analytics',
-    pricing: {starter: '$5}999/mo' }
+    pricing: {starter: '$5,}999/mo' }
     features: [,
     id: 'cloud-migration-accelerator',
     name: 'Cloud Migration Accelerator',
     description:,
       'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'
     category: 'Cloud Services',
-    pricing: {starter: '$2}999/mo' }
+    pricing: {starter: '$2,}999/mo' }
     features: [,
     id: 'threat-detection-response',
     name: 'Threat Detection & Response',
     description:,
       'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'
     category: 'Cybersecurity',
-    pricing: {starter: '$3}999/mo' }
+    pricing: {starter: '$3,}999/mo' }
     features: [,
     id: 'observability-platform-starter',
     name: 'Observability Platform Starter',
     description:,
       'Unified logs, metrics, traces with SLO governance and incident workflows.'
     category: 'DevOps & Automation',
-    pricing: {starter: '$1}999/mo' }
+    pricing: {starter: '$1,}999/mo' }
     features: [,
 export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [,
@@ -121,14 +121,13 @@ export const,
     taglin,
   e: 'Identity-first perimeterless security for modern enterprises'
     descriptio,
-  n:
-      'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.'
+  n: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.'
     categor,
   y: 'Enterprise Security'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' }
+  e: 'Custom',}
     feature,
   s: [,
     i,
@@ -136,13 +135,12 @@ export const,
     nam,
   e: 'Platform Engineering Foundation'
     descriptio,
-  n:
-      'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'
+  n: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'
     categor,
   y: 'DevOps & Automation'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }
     feature,
   s: [,
     i,
@@ -150,13 +148,12 @@ export const,
     nam,
   e: 'Enterprise Data Mesh'
     descriptio,
-  n:
-      'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'
+  n: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'
     categor,
   y: 'Data & Analytics'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' }
     feature,
   s: [,
     i,
@@ -164,13 +161,12 @@ export const,
     nam,
   e: 'Cloud Migration Accelerator'
     descriptio,
-  n:
-      'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'
+  n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'
     categor,
   y: 'Cloud Services'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' }
     feature,
   s: [,
     i,
@@ -178,13 +174,12 @@ export const,
     nam,
   e: 'Threat Detection & Response'
     descriptio,
-  n:
-      'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'
+  n: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'
     categor,
   y: 'Cybersecurity'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' }
     feature,
   s: [,
     i,
@@ -192,15 +187,14 @@ export const,
     nam,
   e: 'Observability Platform Starter'
     descriptio,
-  n:
-      'Unified logs, metrics, traces with SLO governance and incident workflows.'
+  n: 'Unified logs, metrics, traces with SLO governance and incident workflows.'
     categor,
   y: 'DevOps & Automation'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' }
     feature,
-  s: [}
+  s: [,}
 export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [,
     i,
@@ -214,9 +208,9 @@ export const,
     categor,
   y: 'Enterprise Security',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' },
+  e: 'Custom',},
     feature,
   s: [,
       'Policy-based access',
@@ -227,7 +221,7 @@ export const,
     use_cases: ['Secure remote work', 'Lateral movement prevention'],
     link: 'https://ziontechgroup.com / services / zero - trust - network - architecture',
     real_service: true,
-    launch_date: '2025 - 11 - 01'},
+    launch_date: '2025 - 11 - 01',},
       'Self-service templates',
     id: 'platform - engineering - foundation',
     name: 'Platform Engineering Foundation',
@@ -238,11 +232,11 @@ export const,
   s: ['Secure remote work', 'Lateral movement prevention'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / zero - trust - network - architecture',
+  s: //ziontechgroup.com / services / zero - trust - network - architecture',
     real_servic,
   e: true,
     launch_dat,
-  e: '2025 - 11 - 01'},
+  e: '2025 - 11 - 01',},
       'Self-service templates',
     i,
   d: 'platform - engineering - foundation',
@@ -254,8 +248,8 @@ export const,
     categor,
   y: 'DevOps & Automation',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 499 / mo' },
     feature,
   s: [,
       'Self - service templates',
@@ -267,11 +261,11 @@ export const,
   s: ['Secure remote work', 'Lateral movement prevention'],
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/zero-trust-network-architecture',
+  s: //ziontechgroup.com/services/zero-trust-network-architecture',
     realServic,
   e: true,
     launchDat,
-  e: '2025-11-01'},
+  e: '2025-11-01',},
     i,
   d: 'platform-engineering-foundation',
     nam,
@@ -281,8 +275,8 @@ export const,
     categor,
   y: 'DevOps & Automation',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },
     feature,
   s: [,
       'Self-service templates',
@@ -300,7 +294,7 @@ export const,
     description: unknown,
       'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
     category: 'Data & Analytics',
-    pricing: {starter: '$5} 999 / mo' },
+    pricing: {starter: '$5,} 999 / mo' },
     features: [,
     useCases: ['Developer productivity', 'Standardized delivery'],
     link: 'https://ziontechgroup.com/services/platform-engineering-foundation',
@@ -312,11 +306,11 @@ export const,
   s: ['Developer productivity', 'Standardized delivery'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / platform - engineering - foundation',
+  s: //ziontechgroup.com / services / platform - engineering - foundation',
     real_servic,
   e: true,
     ratin,
-  g: 4.8}},
+  g: 4.8,}},
     i,
   d: 'enterprise - data - mesh',
     nam,
@@ -327,19 +321,19 @@ export const,
     categor,
   y: 'Data & Analytics',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5} 999 / mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,} 999 / mo' },
     feature,
   s: [,
     useCase,
   s: ['Developer productivity', 'Standardized delivery'],
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/platform-engineering-foundation',
+  s: //ziontechgroup.com/services/platform-engineering-foundation',
     realServic,
   e: true,
     ratin,
-  g: 4.8},
+  g: 4.8,},
     i,
   d: 'enterprise-data-mesh',
     nam,
@@ -349,8 +343,8 @@ export const,
     categor,
   y: 'Data & Analytics',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' },
     feature,
   s: [,
       'Domain data products',
@@ -367,7 +361,7 @@ export const,
     description: unknown,
       'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',
     category: 'Cloud Services',
-    pricing: {starter: '$2} 999 / mo' },
+    pricing: {starter: '$2,} 999 / mo' },
     features: [,
     useCases: ['Faster analytics', 'Federated governance'],
     link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
@@ -378,9 +372,9 @@ export const,
   s: ['Faster analytics', 'Federated governance'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / enterprise - data - mesh',
+  s: //ziontechgroup.com / services / enterprise - data - mesh',
     real_servic,
-  e: true}},
+  e: true,}},
     i,
   d: 'cloud - migration - accelerator',
     nam,
@@ -391,17 +385,17 @@ export const,
     categor,
   y: 'Cloud Services',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 999 / mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,} 999 / mo' },
     feature,
   s: [,
     useCase,
   s: ['Faster analytics', 'Federated governance'],
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/enterprise-data-mesh',
+  s: //ziontechgroup.com/services/enterprise-data-mesh',
     realServic,
-  e: true},
+  e: true,},
     i,
   d: 'cloud-migration-accelerator',
     nam,
@@ -411,8 +405,8 @@ export const,
     categor,
   y: 'Cloud Services',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' },
     feature,
   s: [,
       'Landing zones',
@@ -434,9 +428,9 @@ export const,
   s: ['Datacenter exit', 'Hybrid cloud enablement'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / cloud - landing - zone',
+  s: //ziontechgroup.com / services / cloud - landing - zone',
     real_servic,
-  e: true}},
+  e: true,}},
       'Detections-as-code',
     i,
   d: 'threat - detection - response',
@@ -448,8 +442,8 @@ export const,
     categor,
   y: 'Cybersecurity',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 999 / mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 999 / mo' },
     feature,
   s: [,
       'Detections - as - code',
@@ -460,9 +454,9 @@ export const,
   s: ['Datacenter exit', 'Hybrid cloud enablement'],
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/cloud-landing-zone',
+  s: //ziontechgroup.com/services/cloud-landing-zone',
     realServic,
-  e: true},
+  e: true,},
     i,
   d: 'threat-detection-response',
     nam,
@@ -472,8 +466,8 @@ export const,
     categor,
   y: 'Cybersecurity',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' },
     feature,
   s: [,
       'Detections-as-code',
@@ -490,7 +484,7 @@ export const,
     description: unknown,
       'Unified logs, metrics, traces with SLO governance and incident workflows.',
     category: 'DevOps & Automation',
-    pricing: {starter: '$1} 999 / mo' },
+    pricing: {starter: '$1,} 999 / mo' },
     features: [,
     useCases: ['Compliance readiness', 'Breaches prevention'],
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
@@ -501,9 +495,9 @@ export const,
   s: ['Compliance readiness', 'Breaches prevention'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / quantum - cybersecurity - services',
+  s: //ziontechgroup.com / services / quantum - cybersecurity - services',
     real_servic,
-  e: true}},
+  e: true,}},
     i,
   d: 'observability - platform - starter',
     nam,
@@ -514,17 +508,17 @@ export const,
     categor,
   y: 'DevOps & Automation',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1} 999 / mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,} 999 / mo' },
     feature,
   s: [,
     useCase,
   s: ['Compliance readiness', 'Breaches prevention'],
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/quantum-cybersecurity-services',
+  s: //ziontechgroup.com/services/quantum-cybersecurity-services',
     realServic,
-  e: true},
+  e: true,},
     i,
   d: 'observability-platform-starter',
     nam,
@@ -534,8 +528,8 @@ export const,
     categor,
   y: 'DevOps & Automation',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' },
     feature,
   s: [,
       'OpenTelemetry ingest',
@@ -556,9 +550,9 @@ export const,
   s: ['MTTR reduction', 'Reliability governance'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - observability - starter',
+  s: //ziontechgroup.com / services / api - observability - starter',
     real_servic,
-  e: true}},
+  e: true,}},
     i,
   d: 'cost - governance - suite',
     nam,
@@ -569,8 +563,8 @@ export const,
     categor,
   y: 'Cloud Services',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 499 / mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,} 499 / mo' },
     feature,
   s: [,
       'Budget guardrails',
@@ -592,18 +586,18 @@ export const,
   s: ['Cost optimization', 'Budget adherence'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - optimizer',
+  s: //ziontechgroup.com / cloud - cost - optimizer',
     real_servic,
-  e: true},
+  e: true,},
     i,
   d: 'identity - governance - administration',
     useCase,
   s: ['MTTR reduction', 'Reliability governance'],
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/api-observability-starter',
+  s: //ziontechgroup.com/services/api-observability-starter',
     realServic,
-  e: true},
+  e: true,},
     i,
   d: 'cost-governance-suite',
     nam,
@@ -613,8 +607,8 @@ export const,
     categor,
   y: 'Cloud Services',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' },
     feature,
   s: [,
       'Budget guardrails',
@@ -635,9 +629,9 @@ export const,
   s: ['Cost optimization', 'Budget adherence'],
     lin,
   k: 'http,
-  s://ziontechgroup.com/cloud-cost-optimizer',
+  s: //ziontechgroup.com/cloud-cost-optimizer',
     realServic,
-  e: true},
+  e: true,},
     i,
   d: 'identity-governance-administration',
     nam,
@@ -658,9 +652,9 @@ export const,
     categor,
   y: 'Enterprise Security',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' },
+  e: 'Custom',},
     feature,
   s: [,
       'Policy-based access',
@@ -678,7 +672,7 @@ export const,
   s: ['Secure remote work', 'Lateral movement prevention'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / zero - trust - network - architecture',
+  s: //ziontechgroup.com / services / zero - trust - network - architecture',
     real_servic,
   e: true,
     launch_dat,
@@ -726,8 +720,8 @@ export const,
     categor,
   y: 'Enterprise Security',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },
     feature,
   s: [,
       'Lifecycle automation',
@@ -814,12 +808,12 @@ export type EnterpriseITSolution =
 	launchDate?: string;
 		link: 'https://ziontechgroup && ziontechgroup.com/services/zero-trust-network-architecture',
 		realService: true,
-		launchDate: '2025-11-01'}
+		launchDate: '2025-11-01',}
 		id: 'platform-engineering-foundation',
 		name: 'Platform Engineering Foundation',
 		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'
 		category: 'DevOps & Automation',
-		pricing: {starter: '$3}499/mo' }
+		pricing: {starter: '$3,}499/mo' }
 		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails']
 		integrations: ['GitHubArgoCDBackstage'],
 		useCases: ['Developer productivityStandardized delivery']
@@ -831,7 +825,7 @@ export type EnterpriseITSolution =
 		name: 'Enterprise Data Mesh',
 		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'
 		category: 'Data & Analytics',
-		pricing: {starter: '$5}999/mo' }
+		pricing: {starter: '$5,}999/mo' }
 		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs']
 		integrations: ['SnowflakeDatabricksBigQuery'],
 		useCases: ['Faster analyticsFederated governance'],
@@ -842,7 +836,7 @@ export type EnterpriseITSolution =
 		name: 'Cloud Migration Accelerator',
 		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'
 		category: 'Cloud Services',
-		pricing: {starter: '$2}999/mo' }
+		pricing: {starter: '$2,}999/mo' }
 		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines']
 		integrations: ['AWSAzureGCP'],
 		useCases: ['Datacenter exitHybrid cloud enablement'],
@@ -853,7 +847,7 @@ export type EnterpriseITSolution =
 		name: 'Threat Detection & Response',
 		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'
 		category: 'Cybersecurity',
-		pricing: {starter: '$3}999/mo' }
+		pricing: {starter: '$3,}999/mo' }
 		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel']
 		integrations: ['CrowdStrikeWizSnykCloudflare'],
 		useCases: ['Compliance readinessBreaches prevention'],
@@ -864,7 +858,7 @@ export type EnterpriseITSolution =
 		name: 'Observability Platform Starter',
 		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.'
 		category: 'DevOps & Automation',
-		pricing: {starter: '$1}999/mo' }
+		pricing: {starter: '$1,}999/mo' }
 		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows']
 		integrations: ['GrafanaDatadogPagerDuty'],
 		useCases: ['MTTR reductionReliability governance'],
@@ -875,7 +869,7 @@ export type EnterpriseITSolution =
 		name: 'Cloud Cost Governance Suite',
 		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.'
 		category: 'Cloud Services',
-		pricing: {starter: '$2}499/mo' }
+		pricing: {starter: '$2,}499/mo' }
 		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback']
 		integrations: ['AWS CURAzure CostGCP Billing'],
 		useCases: ['Cost optimizationBudget adherence'],
@@ -886,7 +880,7 @@ export type EnterpriseITSolution =
 		name: 'Identity Governance & Administration',
 		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.'
 		category: 'Enterprise Security',
-		pricing: {starter: '$3}499/mo' }
+		pricing: {starter: '$3,}499/mo' }
 		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows']
 		integrations: ['OktaAzure ADGoogle Workspace'],
 		useCases: ['Audit readinessInsider risk reduction'],
@@ -896,7 +890,7 @@ export type EnterpriseITSolution =
 		realServic,
   e: true,
 		launchDat,
-  e: '2025-11-01'
+  e: '2025-11-01',
 	}
 		i,
   d: 'platform-engineering-foundation'
@@ -907,8 +901,8 @@ export type EnterpriseITSolution =
 		categor,
   y: 'DevOps & Automation'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }
 		feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],
 		integration,
@@ -921,7 +915,7 @@ export type EnterpriseITSolution =
 		realServic,
   e: true,
 		ratin,
-  g: 4 && 4.8}
+  g: 4 && 4.8,}
 		i,
   d: 'enterprise-data-mesh'
 		nam,
@@ -931,8 +925,8 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Data & Analytics'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' }
 		feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
 		integration,
@@ -941,9 +935,9 @@ export type EnterpriseITSolution =
   s: ['Faster analyticsFederated governance'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/enterprise-data-mesh',
+  s: //ziontechgroup && ziontechgroup.com/services/enterprise-data-mesh',
 		realServic,
-  e: true}
+  e: true,}
 		i,
   d: 'cloud-migration-accelerator'
 		nam,
@@ -953,8 +947,8 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Cloud Services'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' }
 		feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
 		integration,
@@ -963,9 +957,9 @@ export type EnterpriseITSolution =
   s: ['Datacenter exitHybrid cloud enablement'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/cloud-landing-zone',
+  s: //ziontechgroup && ziontechgroup.com/services/cloud-landing-zone',
 		realServic,
-  e: true}
+  e: true,}
 		i,
   d: 'threat-detection-response'
 		nam,
@@ -975,8 +969,8 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Cybersecurity'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' }
 		feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
 		integration,
@@ -985,9 +979,9 @@ export type EnterpriseITSolution =
   s: ['Compliance readinessBreaches prevention'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/quantum-cybersecurity-services',
+  s: //ziontechgroup && ziontechgroup.com/services/quantum-cybersecurity-services',
 		realServic,
-  e: true}
+  e: true,}
 		i,
   d: 'observability-platform-starter'
 		nam,
@@ -997,8 +991,8 @@ export type EnterpriseITSolution =
 		categor,
   y: 'DevOps & Automation'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' }
 		feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
 		integration,
@@ -1007,9 +1001,9 @@ export type EnterpriseITSolution =
   s: ['MTTR reductionReliability governance'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/api-observability-starter',
+  s: //ziontechgroup && ziontechgroup.com/services/api-observability-starter',
 		realServic,
-  e: true}
+  e: true,}
 		i,
   d: 'cost-governance-suite'
 		nam,
@@ -1019,8 +1013,8 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Cloud Services'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' }
 		feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
 		integration,
@@ -1029,9 +1023,9 @@ export type EnterpriseITSolution =
   s: ['Cost optimizationBudget adherence'],
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/cloud-cost-optimizer',
+  s: //ziontechgroup && ziontechgroup.com/cloud-cost-optimizer',
 		realServic,
-  e: true}
+  e: true,}
 		i,
   d: 'identity-governance-administration'
 		nam,
@@ -1041,32 +1035,32 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Enterprise Security'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }
 		feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],
 		integration,
   s: ['OktaAzure ADGoogle Workspace'],
 		useCase,
-  s: ['Audit readinessInsider risk reduction']},
+  s: ['Audit readinessInsider risk reduction'],},
 export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [}
+  enterpriseITSolutions: EnterpriseITSolution[] = [,}
 ];
 tagline: 'Identity-first perimeterless security for modern enterprises',
 		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',
 		category: 'Enterprise Security',
-		pricing: {starter: '$4,999/mo'} enterprise: 'Custom' },
+		pricing: {starter: '$4,999/mo'} enterprise: 'Custom',},
 		features: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration']
 		integrations: ['OktaAzure ADCloudflare Zero Trust'],
 		useCases: ['Secure remote workLateral movement prevention'],
 		link: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
 		realService: true,
-		launchDate: '2025-11-01'},
+		launchDate: '2025-11-01',},
 		id: 'platform-engineering-foundation',
 		name: 'Platform Engineering Foundation',
 		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',
 		category: 'DevOps & Automation',
-		pricing: {starter: '$3}499/mo' },
+		pricing: {starter: '$3,}499/mo' },
 		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails']
 		integrations: ['GitHubArgoCDBackstage'],
 		useCases: ['Developer productivityStandardized delivery'],
@@ -1078,7 +1072,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		name: 'Enterprise Data Mesh',
 		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
 		category: 'Data & Analytics',
-		pricing: {starter: '$5}999/mo' },
+		pricing: {starter: '$5,}999/mo' },
 		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
 		integrations: ['SnowflakeDatabricksBigQuery'],
 		useCases: ['Faster analyticsFederated governance'],
@@ -1089,7 +1083,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		name: 'Cloud Migration Accelerator',
 		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',
 		category: 'Cloud Services',
-		pricing: {starter: '$2}999/mo' },
+		pricing: {starter: '$2,}999/mo' },
 		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
 		integrations: ['AWSAzureGCP'],
 		useCases: ['Datacenter exitHybrid cloud enablement'],
@@ -1100,7 +1094,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		name: 'Threat Detection & Response',
 		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',
 		category: 'Cybersecurity',
-		pricing: {starter: '$3}999/mo' },
+		pricing: {starter: '$3,}999/mo' },
 		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
 		integrations: ['CrowdStrikeWizSnykCloudflare'],
 		useCases: ['Compliance readinessBreaches prevention'],
@@ -1111,7 +1105,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		name: 'Observability Platform Starter',
 		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.',
 		category: 'DevOps & Automation',
-		pricing: {starter: '$1}999/mo' },
+		pricing: {starter: '$1,}999/mo' },
 		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
 		integrations: ['GrafanaDatadogPagerDuty'],
 		useCases: ['MTTR reductionReliability governance'],
@@ -1122,7 +1116,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		name: 'Cloud Cost Governance Suite',
 		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',
 		category: 'Cloud Services',
-		pricing: {starter: '$2}499/mo' },
+		pricing: {starter: '$2,}499/mo' },
 		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
 		integrations: ['AWS CURAzure CostGCP Billing'],
 		useCases: ['Cost optimizationBudget adherence'],
@@ -1133,7 +1127,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
 		name: 'Identity Governance & Administration',
 		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',
 		category: 'Enterprise Security',
-		pricing: {starter: '$3}499/mo' },
+		pricing: {starter: '$3,}499/mo' },
 		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],
 		integrations: ['OktaAzure ADGoogle Workspace'],
 		useCases: ['Audit readinessInsider risk reduction'],
@@ -1146,7 +1140,7 @@ tagline: 'Identity-first perimeterless security for modern enterprises',
     real_service: true,
   }];
 real_service: true,
-launch_date: '2025 - 11 - 01'}
+launch_date: '2025 - 11 - 01',}
 link: 'https://ziontechgroup.com / services / platform - engineering - foundation',
 real_service: true
 rating: 4.8,
@@ -1167,9 +1161,9 @@ taglin,
 		categor,
   y: 'Enterprise Security',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' },
+  e: 'Custom',},
 		feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],
 		integration,
@@ -1178,11 +1172,11 @@ taglin,
   s: ['Secure remote workLateral movement prevention'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/zero-trust-network-architecture',
+  s: //ziontechgroup.com/services/zero-trust-network-architecture',
 		realServic,
   e: true,
 		launchDat,
-  e: '2025-11-01'
+  e: '2025-11-01',
 	},
 		i,
   d: 'platform-engineering-foundation',
@@ -1193,8 +1187,8 @@ taglin,
 		categor,
   y: 'DevOps & Automation',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },
 		feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],
 		integration,
@@ -1203,11 +1197,11 @@ taglin,
   s: ['Developer productivityStandardized delivery'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/platform-engineering-foundation',
+  s: //ziontechgroup.com/services/platform-engineering-foundation',
 		realServic,
   e: true,
 		ratin,
-  g: 4.8},
+  g: 4.8,},
 		i,
   d: 'enterprise-data-mesh',
 		nam,
@@ -1217,8 +1211,8 @@ taglin,
 		categor,
   y: 'Data & Analytics',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' },
 		feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
 		integration,
@@ -1227,9 +1221,9 @@ taglin,
   s: ['Faster analyticsFederated governance'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/enterprise-data-mesh',
+  s: //ziontechgroup.com/services/enterprise-data-mesh',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'cloud-migration-accelerator',
 		nam,
@@ -1239,8 +1233,8 @@ taglin,
 		categor,
   y: 'Cloud Services',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' },
 		feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
 		integration,
@@ -1249,9 +1243,9 @@ taglin,
   s: ['Datacenter exitHybrid cloud enablement'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/cloud-landing-zone',
+  s: //ziontechgroup.com/services/cloud-landing-zone',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'threat-detection-response',
 		nam,
@@ -1261,8 +1255,8 @@ taglin,
 		categor,
   y: 'Cybersecurity',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' },
 		feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
 		integration,
@@ -1271,9 +1265,9 @@ taglin,
   s: ['Compliance readinessBreaches prevention'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/quantum-cybersecurity-services',
+  s: //ziontechgroup.com/services/quantum-cybersecurity-services',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'observability-platform-starter',
 		nam,
@@ -1283,8 +1277,8 @@ taglin,
 		categor,
   y: 'DevOps & Automation',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' },
 		feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
 		integration,
@@ -1293,9 +1287,9 @@ taglin,
   s: ['MTTR reductionReliability governance'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/api-observability-starter',
+  s: //ziontechgroup.com/services/api-observability-starter',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'cost-governance-suite',
 		nam,
@@ -1305,8 +1299,8 @@ taglin,
 		categor,
   y: 'Cloud Services',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' },
 		feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
 		integration,
@@ -1315,9 +1309,9 @@ taglin,
   s: ['Cost optimizationBudget adherence'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/cloud-cost-optimizer',
+  s: //ziontechgroup.com/cloud-cost-optimizer',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'identity-governance-administration',
 		nam,
@@ -1327,8 +1321,8 @@ taglin,
 		categor,
   y: 'Enterprise Security',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },
 		feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],
 		integration,
@@ -1337,21 +1331,21 @@ taglin,
   s: ['Audit readinessInsider risk reduction'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
+  s: //ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realServic,
-  e: true}
+  e: true,}
 ];
     use_case,
   s: ['Audit readiness', 'Insider risk reduction'],
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
+  s: //ziontechgroup.com / services / sso - and - user - lifecycle - hub',
     real_servic,
-  e: true}];
+  e: true,}];
 real_servic,
   e: true,
 launch_dat,
-  e: '2025 - 11 - 01'
+  e: '2025 - 11 - 01',
 }
 lin,
   k: 'http,
@@ -1359,12 +1353,12 @@ lin,
 real_servic,
   e: true,
 ratin,
-  g: 4.8}
+  g: 4.8,}
 lin,
   k: 'http,
   s://ziontechgroup.com / services / sso - and - user - lifecycle - hub'
 real_servic,
-  e: true}];	i,
+  e: true,}];	i,
   d: string,
 nam,
   e: string,
@@ -1396,18 +1390,18 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   tagline: 'Identity - first perimeterless security for modern enterprises',
   description: 'Implement a Zero Trust security model with policy - based access, continuous verification, and micro - segmentation across users, devices, and workloads.'
   category: 'Enterprise Security',
-  pricing: {starter: '$4, 999 / mo'} enterprise: 'Custom' }
+  pricing: {starter: '$4, 999 / mo'} enterprise: 'Custom',}
   features: ['Policy - based access_micro - segmentation_device posture checksSSO & MFA integration']
   integrations: ['OktaAzure ADCloudflare Zero Trust'],
   use_cases: ['Secure remote work_lateral movement prevention']
   link: 'https://ziontechgroup.com / services / zero - trust - network - architecture',
   real_service: true,
-  launch_date: '2025 - 11 - 01'}
+  launch_date: '2025 - 11 - 01',}
   id: 'platform - engineering - foundation',
   name: 'Platform Engineering Foundation',
   description: 'Golden paths, paved roads, and self - service deployment for developers with strong guardrails and governance.'
   category: 'DevOps & Automation',
-  pricing: {starter: '$3} 499 / mo' }
+  pricing: {starter: '$3,} 499 / mo' }
   features: ['Self - service templates_golden pipelinesRBAC and policy packs_cost guardrails']
   integrations: ['GitHubArgoCDBackstage'],
   use_cases: ['Developer productivity_standardized delivery']
@@ -1419,7 +1413,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   name: 'Enterprise Data Mesh',
   description: 'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'
   category: 'Data & Analytics',
-  pricing: {starter: '$5} 999 / mo' }
+  pricing: {starter: '$5,} 999 / mo' }
   features: ['Domain data products_catalog & lineage_access governance_quality SLAs']
   integrations: ['SnowflakeDatabricksBigQuery'],
   use_cases: ['Faster analytics_federated governance'],
@@ -1430,7 +1424,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   name: 'Cloud Migration Accelerator',
   description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'
   category: 'Cloud Services',
-  pricing: {starter: '$2} 999 / mo' }
+  pricing: {starter: '$2,} 999 / mo' }
   features: ['Landing zones_infra as CodeAutomated cutoversFinOps baselines']
   integrations: ['AWSAzureGCP'],
   use_cases: ['Datacenter exit_hybrid cloud enablement'],
@@ -1441,7 +1435,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   name: 'Threat Detection & Response',
   description: 'Modern SOC capabilities with detections - as - code, attack surface reduction, and automated response.'
   category: 'Cybersecurity',
-  pricing: {starter: '$3} 999 / mo' }
+  pricing: {starter: '$3,} 999 / mo' }
   features: ['Detections - as - codeSOAR playbooks_attack surface monitoring_threat intel']
   integrations: ['CrowdStrikeWizSnykCloudflare'],
   use_cases: ['Compliance readiness_breaches prevention'],
@@ -1452,7 +1446,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   name: 'Observability Platform Starter',
   description: 'Unified logs, metrics, traces with SLO governance and incident workflows.'
   category: 'DevOps & Automation',
-  pricing: {starter: '$1} 999 / mo' }
+  pricing: {starter: '$1,} 999 / mo' }
   features: ['OpenTelemetry ingestSLO dashboards_burn rate alerts_incident workflows']
   integrations: ['GrafanaDatadogPagerDuty'],
   use_cases: ['MTTR reduction_reliability governance'],
@@ -1463,7 +1457,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   name: 'Cloud Cost Governance Suite',
   description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.'
   category: 'Cloud Services',
-  pricing: {starter: '$2} 499 / mo' }
+  pricing: {starter: '$2,} 499 / mo' }
   features: ['Budget guardrails_anomaly alertsForecastingShowback / chargeback']
   integrations: ['AWS CURAzure CostGCP Billing'],
   use_cases: ['Cost optimization_budget adherence'],
@@ -1474,7 +1468,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   name: 'Identity Governance & Administration',
   description: 'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.'
   category: 'Enterprise Security',
-  pricing: {starter: '$3} 499 / mo' }
+  pricing: {starter: '$3,} 499 / mo' }
   features: ['Lifecycle automation_access reviewsRBAC & SoDProvisioning workflows']
   integrations: ['OktaAzure ADGoogle Workspace'],
   use_cases: ['Audit readiness_insider risk reduction'],
@@ -1493,9 +1487,9 @@ export const,
   categor,
   y: 'Enterprise Security',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4, 999 / mo'} enterpris,
-  e: 'Custom' }
+  e: 'Custom',}
   feature,
   s: ['Policy - based access_micro - segmentation_device posture checksSSO & MFA integration'],
   integration,
@@ -1508,7 +1502,7 @@ export const,
   real_servic,
   e: true,
   launch_dat,
-  e: '2025 - 11 - 01'
+  e: '2025 - 11 - 01',
 }
   i,
   d: 'platform - engineering - foundation'
@@ -1519,8 +1513,8 @@ export const,
   categor,
   y: 'DevOps & Automation',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 499 / mo' }
   feature,
   s: ['Self - service templates_golden pipelinesRBAC and policy packs_cost guardrails'],
   integration,
@@ -1533,7 +1527,7 @@ export const,
   real_servic,
   e: true,
   ratin,
-  g: 4.8}
+  g: 4.8,}
   i,
   d: 'enterprise - data - mesh'
   nam,
@@ -1543,8 +1537,8 @@ export const,
   categor,
   y: 'Data & Analytics',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5} 999 / mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,} 999 / mo' }
   feature,
   s: ['Domain data products_catalog & lineage_access governance_quality SLAs'],
   integration,
@@ -1553,9 +1547,9 @@ export const,
   s: ['Faster analytics_federated governance'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / enterprise - data - mesh',
+  s: //ziontechgroup.com / services / enterprise - data - mesh',
   real_servic,
-  e: true}
+  e: true,}
   i,
   d: 'cloud - migration - accelerator'
   nam,
@@ -1565,8 +1559,8 @@ export const,
   categor,
   y: 'Cloud Services',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 999 / mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,} 999 / mo' }
   feature,
   s: ['Landing zones_infra as CodeAutomated cutoversFinOps baselines'],
   integration,
@@ -1575,9 +1569,9 @@ export const,
   s: ['Datacenter exit_hybrid cloud enablement'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / cloud - landing - zone',
+  s: //ziontechgroup.com / services / cloud - landing - zone',
   real_servic,
-  e: true}
+  e: true,}
   i,
   d: 'threat - detection - response'
   nam,
@@ -1587,8 +1581,8 @@ export const,
   categor,
   y: 'Cybersecurity',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 999 / mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 999 / mo' }
   feature,
   s: ['Detections - as - codeSOAR playbooks_attack surface monitoring_threat intel'],
   integration,
@@ -1597,9 +1591,9 @@ export const,
   s: ['Compliance readiness_breaches prevention'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / quantum - cybersecurity - services',
+  s: //ziontechgroup.com / services / quantum - cybersecurity - services',
   real_servic,
-  e: true}
+  e: true,}
   i,
   d: 'observability - platform - starter'
   nam,
@@ -1609,8 +1603,8 @@ export const,
   categor,
   y: 'DevOps & Automation',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1} 999 / mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,} 999 / mo' }
   feature,
   s: ['OpenTelemetry ingestSLO dashboards_burn rate alerts_incident workflows'],
   integration,
@@ -1619,9 +1613,9 @@ export const,
   s: ['MTTR reduction_reliability governance'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - observability - starter',
+  s: //ziontechgroup.com / services / api - observability - starter',
   real_servic,
-  e: true}
+  e: true,}
   i,
   d: 'cost - governance - suite'
   nam,
@@ -1631,8 +1625,8 @@ export const,
   categor,
   y: 'Cloud Services',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 499 / mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,} 499 / mo' }
   feature,
   s: ['Budget guardrails_anomaly alertsForecastingShowback / chargeback'],
   integration,
@@ -1641,9 +1635,9 @@ export const,
   s: ['Cost optimization_budget adherence'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - optimizer',
+  s: //ziontechgroup.com / cloud - cost - optimizer',
   real_servic,
-  e: true}
+  e: true,}
   i,
   d: 'identity - governance - administration'
   nam,
@@ -1653,8 +1647,8 @@ export const,
   categor,
   y: 'Enterprise Security',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 499 / mo' }
   feature,
   s: ['Lifecycle automation_access reviewsRBAC & SoDProvisioning workflows'],
   integration,
@@ -1663,12 +1657,12 @@ export const,
   s: ['Audit readiness_insider risk reduction'],
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
+  s: //ziontechgroup.com / services / sso - and - user - lifecycle - hub',
   real_servic,
-  e: true}
+  e: true,}
 },
 export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [}
+  enterpriseITSolutions: EnterpriseITSolution[] = [,}
 ];
 },
 export const enterpriseITSolutions: EnterpriseITSolution[] = [,
@@ -1680,18 +1674,18 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		tagline: 'Identity-first perimeterless security for modern enterprises',
 		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',
 		category: 'Enterprise Security',
-		pricing: { starter: '$4,999/mo'} enterprise: 'Custom' },
+		pricing: { starter: '$4,999/mo'} enterprise: 'Custom',},
 		features: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration']
 		integrations: ['OktaAzure ADCloudflare Zero Trust'],
 		useCases: ['Secure remote workLateral movement prevention'],
 		link: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
 		realService: true,
-		launchDate: '2025-11-01'},
+		launchDate: '2025-11-01',},
 		id: 'platform-engineering-foundation',
 		name: 'Platform Engineering Foundation',
 		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',
 		category: 'DevOps & Automation',
-		pricing: {starter: '$3}499/mo' },
+		pricing: {starter: '$3,}499/mo' },
 		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails']
 		integrations: ['GitHubArgoCDBackstage'],
 		useCases: ['Developer productivityStandardized delivery'],
@@ -1703,7 +1697,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		name: 'Enterprise Data Mesh',
 		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
 		category: 'Data & Analytics',
-		pricing: {starter: '$5}999/mo' },
+		pricing: {starter: '$5,}999/mo' },
 		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
 		integrations: ['SnowflakeDatabricksBigQuery'],
 		useCases: ['Faster analyticsFederated governance'],
@@ -1714,7 +1708,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		name: 'Cloud Migration Accelerator',
 		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',
 		category: 'Cloud Services',
-		pricing: {starter: '$2}999/mo' },
+		pricing: {starter: '$2,}999/mo' },
 		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
 		integrations: ['AWSAzureGCP'],
 		useCases: ['Datacenter exitHybrid cloud enablement'],
@@ -1725,7 +1719,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		name: 'Threat Detection & Response',
 		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',
 		category: 'Cybersecurity',
-		pricing: {starter: '$3}999/mo' },
+		pricing: {starter: '$3,}999/mo' },
 		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
 		integrations: ['CrowdStrikeWizSnykCloudflare'],
 		useCases: ['Compliance readinessBreaches prevention'],
@@ -1736,7 +1730,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		name: 'Observability Platform Starter',
 		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.',
 		category: 'DevOps & Automation',
-		pricing: {starter: '$1}999/mo' },
+		pricing: {starter: '$1,}999/mo' },
 		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
 		integrations: ['GrafanaDatadogPagerDuty'],
 		useCases: ['MTTR reductionReliability governance'],
@@ -1747,7 +1741,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		name: 'Cloud Cost Governance Suite',
 		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',
 		category: 'Cloud Services',
-		pricing: {starter: '$2}499/mo' },
+		pricing: {starter: '$2,}499/mo' },
 		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
 		integrations: ['AWS CURAzure CostGCP Billing'],
 		useCases: ['Cost optimizationBudget adherence'],
@@ -1758,7 +1752,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 		name: 'Identity Governance & Administration',
 		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',
 		category: 'Enterprise Security',
-		pricing: {starter: '$3}499/mo' },
+		pricing: {starter: '$3,}499/mo' },
 		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows']
 		integrations: ['OktaAzure ADGoogle Workspace']
 		useCases: ['Audit readinessInsider risk reduction']
@@ -1767,23 +1761,23 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [,
 export type EnterpriseITSolution = {
 	id: string
 	name: string
-	tagline?: string,,
+	tagline?: string,
 	description: string,
-	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
+	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',}
 	pricing: {,
 		starter: string, // e.g. "$2}999/mo"
 		professional?: string;
 		enterprise?: string;
 	}
 	features: string[]
-	integrations?: string[],,
+	integrations?: string[],
 	useCases?: string[];,
 	link: string, // canonical internal link under /services/*;
 export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [,
-	{/* TODO: Fix JSX expression */}
+	{/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' },
+  e: 'Custom',},
 		feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],
 		integration,
@@ -1792,11 +1786,11 @@ export const,
   s: ['Secure remote workLateral movement prevention'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/zero-trust-network-architecture',
+  s: //ziontechgroup.com/services/zero-trust-network-architecture',
 		realServic,
   e: true,
 		launchDat,
-  e: '2025-11-01'
+  e: '2025-11-01',
 	},
 		i,
   d: 'platform-engineering-foundation',
@@ -1807,8 +1801,8 @@ export const,
 		categor,
   y: 'DevOps & Automation',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },
 		feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],
 		integration,
@@ -1817,11 +1811,11 @@ export const,
   s: ['Developer productivityStandardized delivery'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/platform-engineering-foundation',
+  s: //ziontechgroup.com/services/platform-engineering-foundation',
 		realServic,
   e: true,
 		ratin,
-  g: 4.8},
+  g: 4.8,},
 		i,
   d: 'enterprise-data-mesh',
 		nam,
@@ -1831,8 +1825,8 @@ export const,
 		categor,
   y: 'Data & Analytics',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' },
 		feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
 		integration,
@@ -1841,9 +1835,9 @@ export const,
   s: ['Faster analyticsFederated governance'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/enterprise-data-mesh',
+  s: //ziontechgroup.com/services/enterprise-data-mesh',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'cloud-migration-accelerator',
 		nam,
@@ -1853,8 +1847,8 @@ export const,
 		categor,
   y: 'Cloud Services',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' },
 		feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
 		integration,
@@ -1863,9 +1857,9 @@ export const,
   s: ['Datacenter exitHybrid cloud enablement'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/cloud-landing-zone',
+  s: //ziontechgroup.com/services/cloud-landing-zone',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'threat-detection-response',
 		nam,
@@ -1875,8 +1869,8 @@ export const,
 		categor,
   y: 'Cybersecurity',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' },
 		feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
 		integration,
@@ -1885,9 +1879,9 @@ export const,
   s: ['Compliance readinessBreaches prevention'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/quantum-cybersecurity-services',
+  s: //ziontechgroup.com/services/quantum-cybersecurity-services',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'observability-platform-starter',
 		nam,
@@ -1897,8 +1891,8 @@ export const,
 		categor,
   y: 'DevOps & Automation',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' },
 		feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
 		integration,
@@ -1907,9 +1901,9 @@ export const,
   s: ['MTTR reductionReliability governance'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/api-observability-starter',
+  s: //ziontechgroup.com/services/api-observability-starter',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'cost-governance-suite',
 		nam,
@@ -1919,8 +1913,8 @@ export const,
 		categor,
   y: 'Cloud Services',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' },
 		feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
 		integration,
@@ -1929,9 +1923,9 @@ export const,
   s: ['Cost optimizationBudget adherence'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/cloud-cost-optimizer',
+  s: //ziontechgroup.com/cloud-cost-optimizer',
 		realServic,
-  e: true},
+  e: true,},
 		i,
   d: 'identity-governance-administration',
 		nam,
@@ -1941,8 +1935,8 @@ export const,
 		categor,
   y: 'Enterprise Security',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },
 		feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],
 		integration,
@@ -1951,13 +1945,13 @@ export const,
   s: ['Audit readinessInsider risk reduction'],
 		lin,
   k: 'http,
-  s://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
+  s: //ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realServic,
   e: true,
-export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
-  y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
+export type EnterpriseITSolution = {/* TODO: Fix JSX expression */,}
+  y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',}
 	pricin,
-  g: {/* TODO: Fix JSX expression */}"
+  g: {/* TODO: Fix JSX expression */,}"
   r: string, // e.g. "$2}999/mo"
 		professional?: string;
 		enterprise?: string;
@@ -1978,20 +1972,20 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		name: 'Zero Trust Network Architecture'
 		tagline: 'Identity-first perimeterless security for modern enterprises',
 		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.';
-		category: 'Enterprise Security'}
-		pricing: { starter: '$4,999/mo'} enterprise: 'Custom' }
+		category: 'Enterprise Security',}
+		pricing: { starter: '$4,999/mo'} enterprise: 'Custom',}
 		features: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'];
 		integrations: ['OktaAzure ADCloudflare Zero Trust'];
 		useCases: ['Secure remote workLateral movement prevention']
 		link: 'https://ziontechgroup.com/services/zero-trust-network-architecture'
 		realService: true,
-		launchDate: '2025-11-01'}
+		launchDate: '2025-11-01',}
 	{
 		id: 'platform-engineering-foundation'
 		name: 'Platform Engineering Foundation',
 		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.';
-		category: 'DevOps & Automation'}
-		pricing: { starter: '$3}499/mo' }
+		category: 'DevOps & Automation',}
+		pricing: { starter: '$3,}499/mo' }
 		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'];
 		integrations: ['GitHubArgoCDBackstage'];
 		useCases: ['Developer productivityStandardized delivery'];
@@ -2003,8 +1997,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		id: 'enterprise-data-mesh'
 		name: 'Enterprise Data Mesh',
 		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.';
-		category: 'Data & Analytics'}
-		pricing: { starter: '$5}999/mo' }
+		category: 'Data & Analytics',}
+		pricing: { starter: '$5,}999/mo' }
 		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'];
 		integrations: ['SnowflakeDatabricksBigQuery'];
 		useCases: ['Faster analyticsFederated governance']
@@ -2015,8 +2009,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		id: 'cloud-migration-accelerator'
 		name: 'Cloud Migration Accelerator',
 		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.';
-		category: 'Cloud Services'}
-		pricing: { starter: '$2}999/mo' }
+		category: 'Cloud Services',}
+		pricing: { starter: '$2,}999/mo' }
 		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'];
 		integrations: ['AWSAzureGCP'];
 		useCases: ['Datacenter exitHybrid cloud enablement']
@@ -2027,8 +2021,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		id: 'threat-detection-response'
 		name: 'Threat Detection & Response',
 		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.';
-		category: 'Cybersecurity'}
-		pricing: { starter: '$3}999/mo' }
+		category: 'Cybersecurity',}
+		pricing: { starter: '$3,}999/mo' }
 		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'];
 		integrations: ['CrowdStrikeWizSnykCloudflare'];
 		useCases: ['Compliance readinessBreaches prevention']
@@ -2039,8 +2033,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		id: 'observability-platform-starter'
 		name: 'Observability Platform Starter',
 		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.';
-		category: 'DevOps & Automation'}
-		pricing: { starter: '$1}999/mo' }
+		category: 'DevOps & Automation',}
+		pricing: { starter: '$1,}999/mo' }
 		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'];
 		integrations: ['GrafanaDatadogPagerDuty'];
 		useCases: ['MTTR reductionReliability governance']
@@ -2051,8 +2045,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		id: 'cost-governance-suite'
 		name: 'Cloud Cost Governance Suite',
 		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.';
-		category: 'Cloud Services'}
-		pricing: { starter: '$2}499/mo' }
+		category: 'Cloud Services',}
+		pricing: { starter: '$2,}499/mo' }
 		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'];
 		integrations: ['AWS CURAzure CostGCP Billing'];
 		useCases: ['Cost optimizationBudget adherence']
@@ -2063,8 +2057,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		id: 'identity-governance-administration'
 		name: 'Identity Governance & Administration',
 		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.';
-		category: 'Enterprise Security'}
-		pricing: { starter: '$3}499/mo' }
+		category: 'Enterprise Security',}
+		pricing: { starter: '$3,}499/mo' }
 		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'];
 		integrations: ['OktaAzure ADGoogle Workspace'];
 		useCases: ['Audit readinessInsider risk reduction']
@@ -2072,12 +2066,12 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		realService: true,
 export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [,
-	{/* TODO: Fix JSX expression */}
-  y: 'Enterprise Security'}
+	{/* TODO: Fix JSX expression */,}
+  y: 'Enterprise Security',}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' }
+  e: 'Custom',}
 		feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],
 		integration,
@@ -2090,13 +2084,13 @@ export const,
 		realServic,
   e: true,
 		launchDat,
-  e: '2025-11-01'
+  e: '2025-11-01',
 	}
-	{/* TODO: Fix JSX expression */}
-  y: 'DevOps & Automation'}
+	{/* TODO: Fix JSX expression */,}
+  y: 'DevOps & Automation',}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }
 		feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],
 		integration,
@@ -2109,12 +2103,12 @@ export const,
 		realServic,
   e: true,
 		ratin,
-  g: 4.8}
-	{/* TODO: Fix JSX expression */}
-  y: 'Data & Analytics'}
+  g: 4.8,}
+	{/* TODO: Fix JSX expression */,}
+  y: 'Data & Analytics',}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' }
 		feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
 		integration,
@@ -2125,12 +2119,12 @@ export const,
   k: 'http,
   s: //ziontechgroup.com/services/enterprise-data-mesh',
 		realServic,
-  e: true}
-	{/* TODO: Fix JSX expression */}
-  y: 'Cloud Services'}
+  e: true,}
+	{/* TODO: Fix JSX expression */,}
+  y: 'Cloud Services',}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' }
 		feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
 		integration,
@@ -2141,12 +2135,12 @@ export const,
   k: 'http,
   s: //ziontechgroup.com/services/cloud-landing-zone',
 		realServic,
-  e: true}
-	{/* TODO: Fix JSX expression */}
-  y: 'Cybersecurity'}
+  e: true,}
+	{/* TODO: Fix JSX expression */,}
+  y: 'Cybersecurity',}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' }
 		feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
 		integration,
@@ -2157,12 +2151,12 @@ export const,
   k: 'http,
   s: //ziontechgroup.com/services/quantum-cybersecurity-services',
 		realServic,
-  e: true}
-	{/* TODO: Fix JSX expression */}
-  y: 'DevOps & Automation'}
+  e: true,}
+	{/* TODO: Fix JSX expression */,}
+  y: 'DevOps & Automation',}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' }
 		feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
 		integration,
@@ -2173,12 +2167,12 @@ export const,
   k: 'http,
   s: //ziontechgroup.com/services/api-observability-starter',
 		realServic,
-  e: true}
-	{/* TODO: Fix JSX expression */}
-  y: 'Cloud Services'}
+  e: true,}
+	{/* TODO: Fix JSX expression */,}
+  y: 'Cloud Services',}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' }
 		feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
 		integration,
@@ -2189,12 +2183,12 @@ export const,
   k: 'http,
   s: //ziontechgroup.com/cloud-cost-optimizer',
 		realServic,
-  e: true}
-	{/* TODO: Fix JSX expression */}
-  y: 'Enterprise Security'}
+  e: true,}
+	{/* TODO: Fix JSX expression */,}
+  y: 'Enterprise Security',}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }
 		feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],
 		integration,
@@ -2205,252 +2199,252 @@ export const,
   k: 'http,
   s: //ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realServic,
-  e: true}
+  e: true,}
 ];
 export type EnterpriseITSolution = starte,"
   r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = starte,"
-  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
+  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution = {/* TODO: Fix JSX expression */,}
   y:} | 'Enterprise Security'' | 'DevOps & Automation'' | 'Data & Analytics'' | 'Cloud Services'' | 'Cybersecurity' pricin,
   g: starte,"
   r: string, // e.g. "$2} 999 / mo" professional?: string; enterprise?: string; } categor,
-  y:  , feature,
+  y: , feature,
   s: string[]; integrations?: string[]; use_cases?: string[], lin,
   k: string; // canonical internal link under /services/*; real_service?: boolean, rating?: number, ' 'Policy-based access',' 'Micro-segmentation'} export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [, ' i,
   d: 'zero - trust - network - architecture',' nam,
   e: 'Zero Trust Network Architecture',' taglin,
   e: 'Identity - first perimeterless security for modern enterprises', descriptio,
-  n:  ,' 'Implement a Zero Trust security model with policy - based access, continuous verification, and micro - segmentation across users, devices, and workloads.',' categor,
+  n: ,' 'Implement a Zero Trust security model with policy - based access, continuous verification, and micro - segmentation across users, devices, and workloads.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4, 999 / mo'} enterpris,
-  e: 'Custom' }, feature,
+  e: 'Custom',}, feature,
   s: [,' 'Policy - based access',' 'Micro - segmentation', launchDate?: string; export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [ ' i,
   d: 'zero-trust-network-architecture'' nam,
   e: 'Zero Trust Network Architecture'' taglin,
   e: 'Identity-first perimeterless security for modern enterprises' descriptio,
-  n:' 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.'' categor,
+  n: ' 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.'' categor,
   y: 'Enterprise Security'' pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' } feature,
+  e: 'Custom',} feature,
   s: [ ' i,
   d: 'platform-engineering-foundation'' nam,
   e: 'Platform Engineering Foundation' descriptio,
-  n:' 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'' categor,
+  n: ' 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'' categor,
   y: 'DevOps & Automation'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' } feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' } feature,
   s: [ ' i,
   d: 'enterprise-data-mesh'' nam,
   e: 'Enterprise Data Mesh' descriptio,
-  n:' 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'' categor,
+  n: ' 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'' categor,
   y: 'Data & Analytics'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' } feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' } feature,
   s: [ ' i,
   d: 'cloud-migration-accelerator'' nam,
   e: 'Cloud Migration Accelerator' descriptio,
-  n:' 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'' categor,
+  n: ' 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'' categor,
   y: 'Cloud Services'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' } feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' } feature,
   s: [ ' i,
   d: 'threat-detection-response'' nam,
   e: 'Threat Detection & Response' descriptio,
-  n:' 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'' categor,
+  n: ' 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'' categor,
   y: 'Cybersecurity'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' } feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' } feature,
   s: [ ' i,
   d: 'observability-platform-starter'' nam,
   e: 'Observability Platform Starter' descriptio,
-  n:' 'Unified logs, metrics, traces with SLO governance and incident workflows.'' categor,
+  n: ' 'Unified logs, metrics, traces with SLO governance and incident workflows.'' categor,
   y: 'DevOps & Automation'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' } feature,
-  s: [ } export const,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' } feature,
+  s: [,} export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [ ' i,
   d: 'zero-trust-network-architecture',' nam,
   e: 'Zero Trust Network Architecture',' taglin,
   e: 'Identity-first perimeterless security for modern enterprises', descriptio,
   n: ' 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' }, feature,
+  e: 'Custom',}, feature,
   s: [' 'Policy-based access',' 'Micro-segmentation',' 'Device posture checks',' 'SSO & MFA integration'],' integration,
   s: ['Okta', 'Azure AD', 'Cloudflare Zero Trust'], ' use_case,
   s: ['Secure remote work', 'Lateral movement prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / zero - trust - network - architecture', real_servic,
+  s: //ziontechgroup.com / services / zero - trust - network - architecture', real_servic,
   e: true,' launch_dat,
-  e: '2025 - 11 - 01'}, ' 'Self-service templates',' i,
+  e: '2025 - 11 - 01',}, ' 'Self-service templates',' i,
   d: 'platform - engineering - foundation',' nam,
   e: 'Platform Engineering Foundation', descriptio,
-  n:  ,' 'Golden paths, paved roads, and self - service deployment for developers with strong guardrails and governance.',' categor,
+  n: ,' 'Golden paths, paved roads, and self - service deployment for developers with strong guardrails and governance.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 499 / mo' }, feature,
   s: [,' 'Self - service templates', ' useCase,
   s: ['Secure remote work', 'Lateral movement prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/zero-trust-network-architecture', realServic,
+  s: //ziontechgroup.com/services/zero-trust-network-architecture', realServic,
   e: true,' launchDat,
-  e: '2025-11-01'}, ' i,
+  e: '2025-11-01',}, ' i,
   d: 'platform-engineering-foundation',' nam,
   e: 'Platform Engineering Foundation', descriptio,
   n: ' 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }, feature,
   s: [' 'Self-service templates',' 'Golden pipelines',' 'RBAC and policy packs',' 'Cost guardrails'],' integration,
   s: ['GitHub', 'ArgoCD', 'Backstage'], ' use_case,
   s: ['Developer productivity', 'Standardized delivery'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / platform - engineering - foundation', real_servic,
+  s: //ziontechgroup.com / services / platform - engineering - foundation', real_servic,
   e: true, ratin,
-  g: 4.8}}, ' i,
+  g: 4.8,}}, ' i,
   d: 'enterprise - data - mesh',' nam,
   e: 'Enterprise Data Mesh', descriptio,
-  n:  ,' 'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
+  n: ,' 'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5} 999 / mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,} 999 / mo' }, feature,
   s: [, ' useCase,
   s: ['Developer productivity', 'Standardized delivery'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/platform-engineering-foundation', realServic,
+  s: //ziontechgroup.com/services/platform-engineering-foundation', realServic,
   e: true, ratin,
-  g: 4.8}, ' i,
+  g: 4.8,}, ' i,
   d: 'enterprise-data-mesh',' nam,
   e: 'Enterprise Data Mesh', descriptio,
   n: ' 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' }, feature,
   s: [' 'Domain data products',' 'Catalog & lineage',' 'Access governance',' 'Quality SLAs'],' integration,
   s: ['Snowflake', 'Databricks', 'BigQuery'], ' use_case,
   s: ['Faster analytics', 'Federated governance'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / enterprise - data - mesh', real_servic,
-  e: true}}, ' i,
+  s: //ziontechgroup.com / services / enterprise - data - mesh', real_servic,
+  e: true,}}, ' i,
   d: 'cloud - migration - accelerator',' nam,
   e: 'Cloud Migration Accelerator', descriptio,
-  n:  ,' 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
+  n: ,' 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 999 / mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,} 999 / mo' }, feature,
   s: [, ' useCase,
   s: ['Faster analytics', 'Federated governance'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/enterprise-data-mesh', realServic,
-  e: true}, ' i,
+  s: //ziontechgroup.com/services/enterprise-data-mesh', realServic,
+  e: true,}, ' i,
   d: 'cloud-migration-accelerator',' nam,
   e: 'Cloud Migration Accelerator', descriptio,
   n: ' 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' }, feature,
   s: [' 'Landing zones',' 'Infra as Code',' 'Automated cutovers',' 'FinOps baselines'],' integration,
   s: ['AWS', 'Azure', 'GCP'], ' use_case,
   s: ['Datacenter exit', 'Hybrid cloud enablement'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / cloud - landing - zone', real_servic,
-  e: true}}, ' 'Detections-as-code',' i,
+  s: //ziontechgroup.com / services / cloud - landing - zone', real_servic,
+  e: true,}}, ' 'Detections-as-code',' i,
   d: 'threat - detection - response',' nam,
   e: 'Threat Detection & Response', descriptio,
-  n:  ,' 'Modern SOC capabilities with detections - as - code, attack surface reduction, and automated response.',' categor,
+  n: ,' 'Modern SOC capabilities with detections - as - code, attack surface reduction, and automated response.',' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 999 / mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 999 / mo' }, feature,
   s: [,' 'Detections - as - code', ' useCase,
   s: ['Datacenter exit', 'Hybrid cloud enablement'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/cloud-landing-zone', realServic,
-  e: true}, ' i,
+  s: //ziontechgroup.com/services/cloud-landing-zone', realServic,
+  e: true,}, ' i,
   d: 'threat-detection-response',' nam,
   e: 'Threat Detection & Response', descriptio,
   n: ' 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' }, feature,
   s: [' 'Detections-as-code',' 'SOAR playbooks',' 'Attack surface monitoring',' 'Threat intel'],' integration,
   s: ['CrowdStrike', 'Wiz', 'Snyk', 'Cloudflare'], ' use_case,
   s: ['Compliance readiness', 'Breaches prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / quantum - cybersecurity - services', real_servic,
-  e: true}}, ' i,
+  s: //ziontechgroup.com / services / quantum - cybersecurity - services', real_servic,
+  e: true,}}, ' i,
   d: 'observability - platform - starter',' nam,
   e: 'Observability Platform Starter', descriptio,
-  n:  ,' 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
+  n: ,' 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1} 999 / mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,} 999 / mo' }, feature,
   s: [, ' useCase,
   s: ['Compliance readiness', 'Breaches prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
-  e: true}, ' i,
+  s: //ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
+  e: true,}, ' i,
   d: 'observability-platform-starter',' nam,
   e: 'Observability Platform Starter', descriptio,
   n: ' 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' }, feature,
   s: [' 'OpenTelemetry ingest',' 'SLO dashboards',' 'Burn rate alerts',' 'Incident workflows'],' integration,
   s: ['Grafana', 'Datadog', 'PagerDuty'], ' use_case,
   s: ['MTTR reduction', 'Reliability governance'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - observability - starter', real_servic,
-  e: true}}, ' i,
+  s: //ziontechgroup.com / services / api - observability - starter', real_servic,
+  e: true,}}, ' i,
   d: 'cost - governance - suite',' nam,
   e: 'Cloud Cost Governance Suite', descriptio,
-  n:  ,' 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
+  n: ,' 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 499 / mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,} 499 / mo' }, feature,
   s: [, ' 'Budget guardrails',' 'Anomaly alerts',' 'Forecasting',' 'Showback / chargeback'],' integration,
   s: ['AWS CUR', 'Azure Cost', 'GCP Billing'], ' use_case,
   s: ['Cost optimization', 'Budget adherence'],' lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - optimizer', real_servic,
-  e: true}, ' i,
+  s: //ziontechgroup.com / cloud - cost - optimizer', real_servic,
+  e: true,}, ' i,
   d: 'identity - governance - administration',' useCase,
   s: ['MTTR reduction', 'Reliability governance'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/api-observability-starter', realServic,
-  e: true}, ' i,
+  s: //ziontechgroup.com/services/api-observability-starter', realServic,
+  e: true,}, ' i,
   d: 'cost-governance-suite',' nam,
   e: 'Cloud Cost Governance Suite', descriptio,
   n: ' 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' }, feature,
   s: [' 'Budget guardrails',' 'Anomaly alerts',' 'Forecasting',' 'Showback/chargeback'],' integration,
   s: ['AWS CUR', 'Azure Cost', 'GCP Billing'],' useCase,
   s: ['Cost optimization', 'Budget adherence'],' lin,
   k: 'http,
-  s://ziontechgroup.com/cloud-cost-optimizer', realServic,
-  e: true}, ' i,
+  s: //ziontechgroup.com/cloud-cost-optimizer', realServic,
+  e: true,}, ' i,
   d: 'identity-governance-administration', ' nam,
   e: 'Identity Governance & Administration', descriptio,
-  n:  ,' 'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.', export const,
+  n: ,' 'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.', export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [ ' i,
   d: 'zero-trust-network-architecture',' nam,
   e: 'Zero Trust Network Architecture',' taglin,
   e: 'Identity-first perimeterless security for modern enterprises', descriptio,
   n: ' 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' }, feature,
+  e: 'Custom',}, feature,
   s: [' 'Policy-based access',' 'Micro-segmentation',' 'Device posture checks',' 'SSO & MFA integration'],' integration,
   s: ['Okta', 'Azure AD', 'Cloudflare Zero Trust'], ' use_case,
   s: ['Secure remote work', 'Lateral movement prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / zero - trust - network - architecture', real_servic,
+  s: //ziontechgroup.com / services / zero - trust - network - architecture', real_servic,
   e: true,' launch_dat,
   e: '2025 - 11 - 01', ' 'Golden pipelines',' 'RBAC and policy packs',' 'Cost guardrails'],' integration,
   s: ['GitHub', 'ArgoCD', 'Backstage'],' 'Domain data products',' 'Catalog & lineage',' 'Access governance',' 'Quality SLAs'],' integration,
@@ -2463,8 +2457,8 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity Governance & Administration', descriptio,
   n: ' 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }, feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }, feature,
   s: [' 'Lifecycle automation',' 'Access reviews',' 'RBAC & SoD',' 'Provisioning workflows'],' integration,
   s: ['Okta', 'Azure AD', 'Google Workspace']}]; i,
   d: string, nam,
@@ -2490,203 +2484,203 @@ export type EnterpriseITSolution = starte,"
   s: string[], integrations?: string[], useCases?: string[], lin,
   k: string, // canonical internal link under /services/* realService?: boolean; rating?: number; launchDate?: string ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/zero-trust-network-architecture' realServic,
+  s: //ziontechgroup && ziontechgroup.com/services/zero-trust-network-architecture' realServic,
   e: true, ' launchDat,
-  e: '2025-11-01' } ' i,
+  e: '2025-11-01',} ' i,
   d: 'platform-engineering-foundation'' nam,
   e: 'Platform Engineering Foundation'' descriptio,
   n: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'' categor,
   y: 'DevOps & Automation'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }' feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],' integration,
   s: ['GitHubArgoCDBackstage'],' useCase,
   s: ['Developer productivityStandardized delivery'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/platform-engineering-foundation' realServic,
+  s: //ziontechgroup && ziontechgroup.com/services/platform-engineering-foundation' realServic,
   e: true, ratin,
-  g: 4 && 4.8 } ' i,
+  g: 4 && 4.8,} ' i,
   d: 'enterprise-data-mesh'' nam,
   e: 'Enterprise Data Mesh'' descriptio,
   n: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'' categor,
   y: 'Data & Analytics'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' }' feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],' integration,
   s: ['SnowflakeDatabricksBigQuery'],' useCase,
   s: ['Faster analyticsFederated governance'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/enterprise-data-mesh', realServic,
-  e: true } ' i,
+  s: //ziontechgroup && ziontechgroup.com/services/enterprise-data-mesh', realServic,
+  e: true,} ' i,
   d: 'cloud-migration-accelerator'' nam,
   e: 'Cloud Migration Accelerator'' descriptio,
   n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'' categor,
   y: 'Cloud Services'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' }' feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],' integration,
   s: ['AWSAzureGCP'],' useCase,
   s: ['Datacenter exitHybrid cloud enablement'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/cloud-landing-zone', realServic,
-  e: true } ' i,
+  s: //ziontechgroup && ziontechgroup.com/services/cloud-landing-zone', realServic,
+  e: true,} ' i,
   d: 'threat-detection-response'' nam,
   e: 'Threat Detection & Response'' descriptio,
   n: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'' categor,
   y: 'Cybersecurity'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' }' feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],' integration,
   s: ['CrowdStrikeWizSnykCloudflare'],' useCase,
   s: ['Compliance readinessBreaches prevention'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
-  e: true } ' i,
+  s: //ziontechgroup && ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
+  e: true,} ' i,
   d: 'observability-platform-starter'' nam,
   e: 'Observability Platform Starter'' descriptio,
   n: 'Unified logs, metrics, traces with SLO governance and incident workflows.'' categor,
   y: 'DevOps & Automation'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' }' feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],' integration,
   s: ['GrafanaDatadogPagerDuty'],' useCase,
   s: ['MTTR reductionReliability governance'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/api-observability-starter', realServic,
-  e: true } ' i,
+  s: //ziontechgroup && ziontechgroup.com/services/api-observability-starter', realServic,
+  e: true,} ' i,
   d: 'cost-governance-suite'' nam,
   e: 'Cloud Cost Governance Suite'' descriptio,
   n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.'' categor,
   y: 'Cloud Services'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' }' feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],' integration,
   s: ['AWS CURAzure CostGCP Billing'],' useCase,
   s: ['Cost optimizationBudget adherence'], ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/cloud-cost-optimizer', realServic,
-  e: true } ' i,
+  s: //ziontechgroup && ziontechgroup.com/cloud-cost-optimizer', realServic,
+  e: true,} ' i,
   d: 'identity-governance-administration'' nam,
   e: 'Identity Governance & Administration'' descriptio,
   n: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.'' categor,
   y: 'Enterprise Security'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }' feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],' integration,
   s: ['OktaAzure ADGoogle Workspace'],' useCase,
-  s: ['Audit readinessInsider risk reduction']}, export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [ } ];' ; taglin,
+  s: ['Audit readinessInsider risk reduction'],}, export const,
+  enterpriseITSolutions: EnterpriseITSolution[] = [,} ];' ; taglin,
   e: 'Identity-first perimeterless security for modern enterprises',' descriptio,
   n: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' },' feature,
+  e: 'Custom',},' feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],' integration,
   s: ['OktaAzure ADCloudflare Zero Trust'],' useCase,
   s: ['Secure remote workLateral movement prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/zero-trust-network-architecture', realServic,
+  s: //ziontechgroup.com/services/zero-trust-network-architecture', realServic,
   e: true,' launchDat,
-  e: '2025-11-01' }, ' i,
+  e: '2025-11-01',}, ' i,
   d: 'platform-engineering-foundation',' nam,
   e: 'Platform Engineering Foundation',' descriptio,
   n: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },' feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],' integration,
   s: ['GitHubArgoCDBackstage'],' useCase,
   s: ['Developer productivityStandardized delivery'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/platform-engineering-foundation', realServic,
+  s: //ziontechgroup.com/services/platform-engineering-foundation', realServic,
   e: true, ratin,
-  g: 4.8 }, ' i,
+  g: 4.8,}, ' i,
   d: 'enterprise-data-mesh',' nam,
   e: 'Enterprise Data Mesh',' descriptio,
   n: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' },' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' },' feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],' integration,
   s: ['SnowflakeDatabricksBigQuery'],' useCase,
   s: ['Faster analyticsFederated governance'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/enterprise-data-mesh', realServic,
-  e: true }, ' i,
+  s: //ziontechgroup.com/services/enterprise-data-mesh', realServic,
+  e: true,}, ' i,
   d: 'cloud-migration-accelerator',' nam,
   e: 'Cloud Migration Accelerator',' descriptio,
   n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' },' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' },' feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],' integration,
   s: ['AWSAzureGCP'],' useCase,
   s: ['Datacenter exitHybrid cloud enablement'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/cloud-landing-zone', realServic,
-  e: true }, ' i,
+  s: //ziontechgroup.com/services/cloud-landing-zone', realServic,
+  e: true,}, ' i,
   d: 'threat-detection-response',' nam,
   e: 'Threat Detection & Response',' descriptio,
   n: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' },' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' },' feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],' integration,
   s: ['CrowdStrikeWizSnykCloudflare'],' useCase,
   s: ['Compliance readinessBreaches prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
-  e: true }, ' i,
+  s: //ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
+  e: true,}, ' i,
   d: 'observability-platform-starter',' nam,
   e: 'Observability Platform Starter',' descriptio,
   n: 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' },' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' },' feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],' integration,
   s: ['GrafanaDatadogPagerDuty'],' useCase,
   s: ['MTTR reductionReliability governance'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/api-observability-starter', realServic,
-  e: true }, ' i,
+  s: //ziontechgroup.com/services/api-observability-starter', realServic,
+  e: true,}, ' i,
   d: 'cost-governance-suite',' nam,
   e: 'Cloud Cost Governance Suite',' descriptio,
   n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' },' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' },' feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],' integration,
   s: ['AWS CURAzure CostGCP Billing'],' useCase,
   s: ['Cost optimizationBudget adherence'],' lin,
   k: 'http,
-  s://ziontechgroup.com/cloud-cost-optimizer', realServic,
-  e: true }, ' i,
+  s: //ziontechgroup.com/cloud-cost-optimizer', realServic,
+  e: true,}, ' i,
   d: 'identity-governance-administration',' nam,
   e: 'Identity Governance & Administration',' descriptio,
   n: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },' feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],' integration,
   s: ['OktaAzure ADGoogle Workspace'],' useCase,
   s: ['Audit readinessInsider risk reduction'],' lin,
   k: 'http,
-  s://ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
-  e: true } ];' use_case,
+  s: //ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
+  e: true,} ];' use_case,
   s: ['Audit readiness', 'Insider risk reduction'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / sso - and - user - lifecycle - hub', real_servic,
-  e: true}]; real_servic,
+  s: //ziontechgroup.com / services / sso - and - user - lifecycle - hub', real_servic,
+  e: true,}]; real_servic,
   e: true,' launch_dat,
-  e: '2025 - 11 - 01' }' lin,
+  e: '2025 - 11 - 01',}' lin,
   k: 'http,
-  s://ziontechgroup.com / services / platform - engineering - foundation' real_servic,
+  s: //ziontechgroup.com / services / platform - engineering - foundation' real_servic,
   e: true, ratin,
-  g: 4.8}' lin,
+  g: 4.8,}' lin,
   k: 'http,
-  s://ziontechgroup.com / services / sso - and - user - lifecycle - hub' real_servic,
-  e: true}]; i,
+  s: //ziontechgroup.com / services / sso - and - user - lifecycle - hub' real_servic,
+  e: true,}]; i,
   d: string, nam,
   e: string, tagline?: string, descriptio,
   n: string,' categor,
@@ -2701,275 +2695,275 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity - first perimeterless security for modern enterprises',' descriptio,
   n: 'Implement a Zero Trust security model with policy - based access, continuous verification, and micro - segmentation across users, devices, and workloads.'' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
+  g: {/* TODO: Fix JSX expression */,}
   r: '$4, 999 / mo'} enterpris,
-  e: 'Custom' }' feature,
+  e: 'Custom',}' feature,
   s: ['Policy - based access_micro - segmentation_device posture checksSSO & MFA integration'],' integration,
   s: ['OktaAzure ADCloudflare Zero Trust'],' use_case,
   s: ['Secure remote work_lateral movement prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / zero - trust - network - architecture' real_servic,
+  s: //ziontechgroup.com / services / zero - trust - network - architecture' real_servic,
   e: true,' launch_dat,
-  e: '2025 - 11 - 01' } ' i,
+  e: '2025 - 11 - 01',} ' i,
   d: 'platform - engineering - foundation'' nam,
   e: 'Platform Engineering Foundation',' descriptio,
   n: 'Golden paths, paved roads, and self - service deployment for developers with strong guardrails and governance.'' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 499 / mo' }' feature,
   s: ['Self - service templates_golden pipelinesRBAC and policy packs_cost guardrails'],' integration,
   s: ['GitHubArgoCDBackstage'],' use_case,
   s: ['Developer productivity_standardized delivery'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / platform - engineering - foundation' real_servic,
+  s: //ziontechgroup.com / services / platform - engineering - foundation' real_servic,
   e: true, ratin,
-  g: 4.8} ' i,
+  g: 4.8,} ' i,
   d: 'enterprise - data - mesh'' nam,
   e: 'Enterprise Data Mesh',' descriptio,
   n: 'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5} 999 / mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,} 999 / mo' }' feature,
   s: ['Domain data products_catalog & lineage_access governance_quality SLAs'],' integration,
   s: ['SnowflakeDatabricksBigQuery'],' use_case,
   s: ['Faster analytics_federated governance'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / enterprise - data - mesh', real_servic,
-  e: true} ' i,
+  s: //ziontechgroup.com / services / enterprise - data - mesh', real_servic,
+  e: true,} ' i,
   d: 'cloud - migration - accelerator'' nam,
   e: 'Cloud Migration Accelerator',' descriptio,
   n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 999 / mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,} 999 / mo' }' feature,
   s: ['Landing zones_infra as CodeAutomated cutoversFinOps baselines'],' integration,
   s: ['AWSAzureGCP'],' use_case,
   s: ['Datacenter exit_hybrid cloud enablement'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / cloud - landing - zone', real_servic,
-  e: true} ' i,
+  s: //ziontechgroup.com / services / cloud - landing - zone', real_servic,
+  e: true,} ' i,
   d: 'threat - detection - response'' nam,
   e: 'Threat Detection & Response',' descriptio,
   n: 'Modern SOC capabilities with detections - as - code, attack surface reduction, and automated response.'' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 999 / mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 999 / mo' }' feature,
   s: ['Detections - as - codeSOAR playbooks_attack surface monitoring_threat intel'],' integration,
   s: ['CrowdStrikeWizSnykCloudflare'],' use_case,
   s: ['Compliance readiness_breaches prevention'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / quantum - cybersecurity - services', real_servic,
-  e: true} ' i,
+  s: //ziontechgroup.com / services / quantum - cybersecurity - services', real_servic,
+  e: true,} ' i,
   d: 'observability - platform - starter'' nam,
   e: 'Observability Platform Starter',' descriptio,
   n: 'Unified logs, metrics, traces with SLO governance and incident workflows.'' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1} 999 / mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,} 999 / mo' }' feature,
   s: ['OpenTelemetry ingestSLO dashboards_burn rate alerts_incident workflows'],' integration,
   s: ['GrafanaDatadogPagerDuty'],' use_case,
   s: ['MTTR reduction_reliability governance'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / api - observability - starter', real_servic,
-  e: true} ' i,
+  s: //ziontechgroup.com / services / api - observability - starter', real_servic,
+  e: true,} ' i,
   d: 'cost - governance - suite'' nam,
   e: 'Cloud Cost Governance Suite',' descriptio,
   n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.'' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 499 / mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,} 499 / mo' }' feature,
   s: ['Budget guardrails_anomaly alertsForecastingShowback / chargeback'],' integration,
   s: ['AWS CURAzure CostGCP Billing'],' use_case,
   s: ['Cost optimization_budget adherence'],' lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - optimizer', real_servic,
-  e: true} ' i,
+  s: //ziontechgroup.com / cloud - cost - optimizer', real_servic,
+  e: true,} ' i,
   d: 'identity - governance - administration'' nam,
   e: 'Identity Governance & Administration',' descriptio,
   n: 'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.'' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' }' feature,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,} 499 / mo' }' feature,
   s: ['Lifecycle automation_access reviewsRBAC & SoDProvisioning workflows'],' integration,
   s: ['OktaAzure ADGoogle Workspace'],' use_case,
   s: ['Audit readiness_insider risk reduction'],' lin,
   k: 'http,
-  s://ziontechgroup.com / services / sso - and - user - lifecycle - hub', real_servic,
-  e: true} }, export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [ } ]; }, export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [ {/* TODO: Fix JSX expression */}
+  s: //ziontechgroup.com / services / sso - and - user - lifecycle - hub', real_servic,
+  e: true,} }, export const,
+  enterpriseITSolutions: EnterpriseITSolution[] = [,} ]; }, export const,
+  enterpriseITSolutions: EnterpriseITSolution[] = [ {/* TODO: Fix JSX expression */,}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' },' feature,
-  s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],' integration,
-  s: ['OktaAzure ADCloudflare Zero Trust'],' useCase,
-  s: ['Secure remote workLateral movement prevention'],' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/zero-trust-network-architecture', realServic,
-  e: true,' launchDat,
-  e: '2025-11-01' }, ' i,
-  d: 'platform-engineering-foundation',' nam,
-  e: 'Platform Engineering Foundation',' descriptio,
-  n: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',' categor,
-  y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },' feature,
-  s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],' integration,
-  s: ['GitHubArgoCDBackstage'],' useCase,
-  s: ['Developer productivityStandardized delivery'],' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/platform-engineering-foundation', realServic,
-  e: true, ratin,
-  g: 4.8 }, ' i,
-  d: 'enterprise-data-mesh',' nam,
-  e: 'Enterprise Data Mesh',' descriptio,
-  n: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
-  y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' },' feature,
-  s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],' integration,
-  s: ['SnowflakeDatabricksBigQuery'],' useCase,
-  s: ['Faster analyticsFederated governance'],' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/enterprise-data-mesh', realServic,
-  e: true }, ' i,
-  d: 'cloud-migration-accelerator',' nam,
-  e: 'Cloud Migration Accelerator',' descriptio,
-  n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
-  y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' },' feature,
-  s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],' integration,
-  s: ['AWSAzureGCP'],' useCase,
-  s: ['Datacenter exitHybrid cloud enablement'],' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/cloud-landing-zone', realServic,
-  e: true }, ' i,
-  d: 'threat-detection-response',' nam,
-  e: 'Threat Detection & Response',' descriptio,
-  n: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',' categor,
-  y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' },' feature,
-  s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],' integration,
-  s: ['CrowdStrikeWizSnykCloudflare'],' useCase,
-  s: ['Compliance readinessBreaches prevention'],' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
-  e: true }, ' i,
-  d: 'observability-platform-starter',' nam,
-  e: 'Observability Platform Starter',' descriptio,
-  n: 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
-  y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' },' feature,
-  s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],' integration,
-  s: ['GrafanaDatadogPagerDuty'],' useCase,
-  s: ['MTTR reductionReliability governance'],' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/api-observability-starter', realServic,
-  e: true }, ' i,
-  d: 'cost-governance-suite',' nam,
-  e: 'Cloud Cost Governance Suite',' descriptio,
-  n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
-  y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' },' feature,
-  s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],' integration,
-  s: ['AWS CURAzure CostGCP Billing'],' useCase,
-  s: ['Cost optimizationBudget adherence'],' lin,
-  k: 'http,
-  s://ziontechgroup.com/cloud-cost-optimizer', realServic,
-  e: true }, ' i,
-  d: 'identity-governance-administration',' nam,
-  e: 'Identity Governance & Administration',' descriptio,
-  n: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',' categor,
-  y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },' feature,
-  s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],' integration,
-  s: ['OktaAzure ADGoogle Workspace'],' useCase,
-  s: ['Audit readinessInsider risk reduction'],' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
-  e: true export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
-  y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'} pricin,
-  g: {/* TODO: Fix JSX expression */}"
-  r: string, // e.g. "$2,999/mo" professional?: string} enterprise?: string; } feature,
-  s: string[]; integrations?: string[]; useCases?: string[], lin,
-  k: string, // canonical internal link under /services/*; realService?: boolean; rating?: number; launchDate?: string; } export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [, {/* TODO: Fix JSX expression */}
-  y: 'Enterprise Security'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$4,999/mo'} enterpris,
-  e: 'Custom' }' feature,
+  e: 'Custom',},' feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],' integration,
   s: ['OktaAzure ADCloudflare Zero Trust'],' useCase,
   s: ['Secure remote workLateral movement prevention'],' lin,
   k: 'http,
   s: //ziontechgroup.com/services/zero-trust-network-architecture', realServic,
   e: true,' launchDat,
-  e: '2025-11-01' } {/* TODO: Fix JSX expression */}
-  y: 'DevOps & Automation'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }' feature,
+  e: '2025-11-01',}, ' i,
+  d: 'platform-engineering-foundation',' nam,
+  e: 'Platform Engineering Foundation',' descriptio,
+  n: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',' categor,
+  y: 'DevOps & Automation',' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },' feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],' integration,
   s: ['GitHubArgoCDBackstage'],' useCase,
   s: ['Developer productivityStandardized delivery'],' lin,
   k: 'http,
   s: //ziontechgroup.com/services/platform-engineering-foundation', realServic,
   e: true, ratin,
-  g: 4.8} {/* TODO: Fix JSX expression */}
-  y: 'Data & Analytics'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' }' feature,
+  g: 4.8,}, ' i,
+  d: 'enterprise-data-mesh',' nam,
+  e: 'Enterprise Data Mesh',' descriptio,
+  n: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
+  y: 'Data & Analytics',' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' },' feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],' integration,
   s: ['SnowflakeDatabricksBigQuery'],' useCase,
   s: ['Faster analyticsFederated governance'],' lin,
   k: 'http,
   s: //ziontechgroup.com/services/enterprise-data-mesh', realServic,
-  e: true} {/* TODO: Fix JSX expression */}
-  y: 'Cloud Services'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' }' feature,
+  e: true,}, ' i,
+  d: 'cloud-migration-accelerator',' nam,
+  e: 'Cloud Migration Accelerator',' descriptio,
+  n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
+  y: 'Cloud Services',' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' },' feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],' integration,
   s: ['AWSAzureGCP'],' useCase,
   s: ['Datacenter exitHybrid cloud enablement'],' lin,
   k: 'http,
   s: //ziontechgroup.com/services/cloud-landing-zone', realServic,
-  e: true} {/* TODO: Fix JSX expression */}
-  y: 'Cybersecurity'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' }' feature,
+  e: true,}, ' i,
+  d: 'threat-detection-response',' nam,
+  e: 'Threat Detection & Response',' descriptio,
+  n: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',' categor,
+  y: 'Cybersecurity',' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' },' feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],' integration,
   s: ['CrowdStrikeWizSnykCloudflare'],' useCase,
   s: ['Compliance readinessBreaches prevention'],' lin,
   k: 'http,
   s: //ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
-  e: true} {/* TODO: Fix JSX expression */}
-  y: 'DevOps & Automation'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' }' feature,
+  e: true,}, ' i,
+  d: 'observability-platform-starter',' nam,
+  e: 'Observability Platform Starter',' descriptio,
+  n: 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
+  y: 'DevOps & Automation',' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' },' feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],' integration,
   s: ['GrafanaDatadogPagerDuty'],' useCase,
   s: ['MTTR reductionReliability governance'],' lin,
   k: 'http,
   s: //ziontechgroup.com/services/api-observability-starter', realServic,
-  e: true} {/* TODO: Fix JSX expression */}
-  y: 'Cloud Services'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' }' feature,
+  e: true,}, ' i,
+  d: 'cost-governance-suite',' nam,
+  e: 'Cloud Cost Governance Suite',' descriptio,
+  n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
+  y: 'Cloud Services',' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' },' feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],' integration,
   s: ['AWS CURAzure CostGCP Billing'],' useCase,
   s: ['Cost optimizationBudget adherence'],' lin,
   k: 'http,
   s: //ziontechgroup.com/cloud-cost-optimizer', realServic,
-  e: true} {/* TODO: Fix JSX expression */}
-  y: 'Enterprise Security'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }' feature,
+  e: true,}, ' i,
+  d: 'identity-governance-administration',' nam,
+  e: 'Identity Governance & Administration',' descriptio,
+  n: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',' categor,
+  y: 'Enterprise Security',' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' },' feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],' integration,
   s: ['OktaAzure ADGoogle Workspace'],' useCase,
   s: ['Audit readinessInsider risk reduction'],' lin,
   k: 'http,
   s: //ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
-  e: true} ]; '"
+  e: true export type EnterpriseITSolution = {/* TODO: Fix JSX expression */,}
+  y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',} pricin,
+  g: {/* TODO: Fix JSX expression */,}"
+  r: string, // e.g. "$2,999/mo" professional?: string} enterprise?: string; } feature,
+  s: string[]; integrations?: string[]; useCases?: string[], lin,
+  k: string, // canonical internal link under /services/*; realService?: boolean; rating?: number; launchDate?: string; } export const,
+  enterpriseITSolutions: EnterpriseITSolution[] = [, {/* TODO: Fix JSX expression */,}
+  y: 'Enterprise Security',}' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$4,999/mo'} enterpris,
+  e: 'Custom',}' feature,
+  s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],' integration,
+  s: ['OktaAzure ADCloudflare Zero Trust'],' useCase,
+  s: ['Secure remote workLateral movement prevention'],' lin,
+  k: 'http,
+  s: //ziontechgroup.com/services/zero-trust-network-architecture', realServic,
+  e: true,' launchDat,
+  e: '2025-11-01',} {/* TODO: Fix JSX expression */,}
+  y: 'DevOps & Automation',}' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }' feature,
+  s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],' integration,
+  s: ['GitHubArgoCDBackstage'],' useCase,
+  s: ['Developer productivityStandardized delivery'],' lin,
+  k: 'http,
+  s: //ziontechgroup.com/services/platform-engineering-foundation', realServic,
+  e: true, ratin,
+  g: 4.8,} {/* TODO: Fix JSX expression */,}
+  y: 'Data & Analytics',}' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$5,}999/mo' }' feature,
+  s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],' integration,
+  s: ['SnowflakeDatabricksBigQuery'],' useCase,
+  s: ['Faster analyticsFederated governance'],' lin,
+  k: 'http,
+  s: //ziontechgroup.com/services/enterprise-data-mesh', realServic,
+  e: true,} {/* TODO: Fix JSX expression */,}
+  y: 'Cloud Services',}' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}999/mo' }' feature,
+  s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],' integration,
+  s: ['AWSAzureGCP'],' useCase,
+  s: ['Datacenter exitHybrid cloud enablement'],' lin,
+  k: 'http,
+  s: //ziontechgroup.com/services/cloud-landing-zone', realServic,
+  e: true,} {/* TODO: Fix JSX expression */,}
+  y: 'Cybersecurity',}' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}999/mo' }' feature,
+  s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],' integration,
+  s: ['CrowdStrikeWizSnykCloudflare'],' useCase,
+  s: ['Compliance readinessBreaches prevention'],' lin,
+  k: 'http,
+  s: //ziontechgroup.com/services/quantum-cybersecurity-services', realServic,
+  e: true,} {/* TODO: Fix JSX expression */,}
+  y: 'DevOps & Automation',}' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$1,}999/mo' }' feature,
+  s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],' integration,
+  s: ['GrafanaDatadogPagerDuty'],' useCase,
+  s: ['MTTR reductionReliability governance'],' lin,
+  k: 'http,
+  s: //ziontechgroup.com/services/api-observability-starter', realServic,
+  e: true,} {/* TODO: Fix JSX expression */,}
+  y: 'Cloud Services',}' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$2,}499/mo' }' feature,
+  s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],' integration,
+  s: ['AWS CURAzure CostGCP Billing'],' useCase,
+  s: ['Cost optimizationBudget adherence'],' lin,
+  k: 'http,
+  s: //ziontechgroup.com/cloud-cost-optimizer', realServic,
+  e: true,} {/* TODO: Fix JSX expression */,}
+  y: 'Enterprise Security',}' pricin,
+  g: {/* TODO: Fix JSX expression */,}
+  r: '$3,}499/mo' }' feature,
+  s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],' integration,
+  s: ['OktaAzure ADGoogle Workspace'],' useCase,
+  s: ['Audit readinessInsider risk reduction'],' lin,
+  k: 'http,
+  s: //ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
+  e: true,} ]; '"

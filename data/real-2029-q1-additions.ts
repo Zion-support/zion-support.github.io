@@ -68,7 +68,7 @@
   r: 'text - emerald - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / finops - scheduler - optimizer',
+  s: //ziontechgroup.com / services / finops - scheduler - optimizer',
     market_positio,
   n: unknown,
       'Actionable, lowtouch FinOps that pays for itself within 90 days.',
@@ -111,7 +111,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 12},
+  s: 12,},
     i,
   d: 'db - index - advisor',
     nam,
@@ -414,8 +414,8 @@
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'}
+	address: '364 E Main St STE 1008 Middletown DE 19709',}
+	website: 'https://ziontechgroup.com',}
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{
 		id: 'ai-redteam-evaluator';
@@ -449,8 +449,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.'
 		launchDate: '2025-02-01'
 		customers: 40,
-		rating: 4.7}
-		reviews: 18}
+		rating: 4.7,}
+		reviews: 18,}
     popula,
   r: false,
     ico,
@@ -461,7 +461,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   r: 'text - indigo - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / services / db - index - advisor',
+  s: //ziontechgroup.com / services / db - index - advisor',
     market_positio,
   n: unknown,
       'Modern alternative to legacy APM addons with focused insights.',
@@ -504,7 +504,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4 && 4.5,
     review,
-  s: 9}
+  s: 9,}
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudienc,
   e: 'DBA, Backend, Platform'
@@ -545,7 +545,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4.5,
     review,
-  s: 9}
+  s: 9,}
       'Modern alternative to legacy APM addons with focused insights.',
     targetAudienc,
   e: 'DBA, Backend, Platform',
@@ -586,7 +586,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4.5,
     review,
-  s: 9}
+  s: 9,}
 ];
 		perio,
   d: '/month'
@@ -615,7 +615,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		textColo,
   r: 'text-rose-300', lin,
   k: 'http,
-  s://ziontechgroup.com/services/ai-redteam-evaluator',
+  s: //ziontechgroup.com/services/ai-redteam-evaluator',
 		marketPositio,
   n: 'Simpler and more affordable compared to bespoke security audits.',
 		targetAudienc,
@@ -657,7 +657,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 18}
+  s: 18,}
 		i,
   d: 'finops-scheduler-optimizer'
 		nam,
@@ -682,7 +682,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   r: 'text-emerald-300'
 		lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
+  s: //ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 		marketPositio,
   n: 'Actionable, lowtouch FinOps that pays for itself within 90 days.'
 		targetAudienc,
@@ -724,7 +724,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 12}
+  s: 12,}
 		i,
   d: 'db-index-advisor'
 		nam,
@@ -791,7 +791,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 9}
+  s: 9,}
 ];
   i,
   d: 'ai - redteam - evaluator'
@@ -859,7 +859,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.7,
   review,
-  s: 18}
+  s: 18,}
   i,
   d: 'finops - scheduler - optimizer'
   nam,
@@ -884,7 +884,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   r: 'text - emerald - 300'
   lin,
   k: 'http,
-  s://ziontechgroup.com / services / finops - scheduler - optimizer',
+  s: //ziontechgroup.com / services / finops - scheduler - optimizer',
   market_positio,
   n: 'Actionable, lowtouch FinOps that pays for itself within 90 days.'
   target_audienc,
@@ -926,7 +926,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 12}
+  s: 12,}
   i,
   d: 'db - index - advisor'
   nam,
@@ -993,40 +993,40 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 9}
+  s: 9,}
 		ratin,
   g: 4.5,
 		review,
   s: 9,
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact = {/* TODO: Fix JSX expression */,}
+  s: '364 E Main St STE 1008 Middletown DE 19709',}
 	websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
 }
 export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [,
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */,}
+  g: 4.7,}
 		review,
-  s: 18}
+  s: 18,}
 	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */,}
+  g: 4.6,}
 		review,
-  s: 12}
+  s: 12,}
 	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */,}
+  g: 4.5,}
 		review,
-  s: 9}
+  s: 9,}
 	}
 ];
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'}
+	address: '364 E Main St STE 1008 Middletown DE 19709',}
+	website: 'https://ziontechgroup.com',}
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{
 		id: 'ai-redteam-evaluator';
@@ -1060,30 +1060,30 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.'
 		launchDate: '2025-02-01'
 		customers: 40,
-		rating: 4.7}
-		reviews: 18}
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+		rating: 4.7,}
+		reviews: 18,}
+// const contact = {/* TODO: Fix JSX expression */,}
+  s: '364 E Main St STE 1008 Middletown DE 19709',}
 	websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
 }
 export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [,
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */,}
+  g: 4.7,}
 		review,
-  s: 18}
+  s: 18,}
 	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */,}
+  g: 4.6,}
 		review,
-  s: 12}
+  s: 12,}
 	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */,}
+  g: 4.5,}
 		review,
-  s: 9}
+  s: 9,}
 	}
 ];
 i,
@@ -1092,15 +1092,15 @@ i,
   e: 'Rightsizing & schedules with IaC exports',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.', feature,
+  n: ,' 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.', feature,
   s: [, ' 'Idle detection',' 'Schedule generator',' 'IaC export',' 'Alerting'], popula,
   r: true,' ico,
   n: '💸', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / finops - scheduler - optimizer', market_positio,
-  n:  , ' 'Actionable, low‑touch FinOps that pays for itself within 90 days.',' target_audienc,
+  s: //ziontechgroup.com / services / finops - scheduler - optimizer', market_positio,
+  n: , ' 'Actionable, low‑touch FinOps that pays for itself within 90 days.',' target_audienc,
   e: 'Platform, SRE, Finance', trial_day,
   s: 14,' setup_tim,
   e: '2 hours',' categor,
@@ -1120,21 +1120,21 @@ i,
   e: '2025 - 02 - 10', customer,
   s: 25, ratin,
   g: 4 && 4.6, review,
-  s: 12}, ' i,
+  s: 12,}, ' i,
   d: 'db - index - advisor',' nam,
   e: 'DB Index Advisor',' taglin,
   e: 'AI index recommendations for Postgres / MySQL',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Collects slow queries and proposes safe index changes with before / after impact analysis.', feature,
+  n: ,' 'Collects slow queries and proposes safe index changes with before / after impact analysis.', feature,
   s: [, ' 'Slow query capture',' 'Index suggestions',' 'Impact simulation',' 'Capacity forecast'], popula,
   r: false,' ico,
   n: '🗄️', ' colo,
   r: 'from - indigo - 600 to - violet - 700',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / services / db - index - advisor', market_positio,
-  n:  , ' 'Modern alternative to legacy APM add‑ons with focused insights.',' target_audienc,
+  s: //ziontechgroup.com / services / db - index - advisor', market_positio,
+  n: , ' 'Modern alternative to legacy APM add‑ons with focused insights.',' target_audienc,
   e: 'DBA, Backend, Platform', trial_day,
   s: 14,' setup_tim,
   e: '30 minutes',' categor,
@@ -1154,7 +1154,7 @@ i,
   e: '2025 - 02 - 12', customer,
   s: 18, ratin,
   g: 4 && 4.5, review,
-  s: 9} ' 'Modern alternative to legacy APM add‑ons with focused insights.'' targetAudienc,
+  s: 9,} ' 'Modern alternative to legacy APM add‑ons with focused insights.'' targetAudienc,
   e: 'DBA, Backend, Platform' trialDay,
   s: 14' setupTim,
   e: '30 minutes'' categor,
@@ -1174,7 +1174,7 @@ i,
   e: '2025-02-12' customer,
   s: 18,
   rating: 4.5,
-  reviews: 9 }' 'Modern alternative to legacy APM add‑ons with focused insights.',' targetAudienc,
+  reviews: 9,}' 'Modern alternative to legacy APM add‑ons with focused insights.',' targetAudienc,
   e: 'DBA, Backend, Platform', trialDay,
   s: 14,' setupTim,
   e: '30 minutes',' categor,
@@ -1194,7 +1194,7 @@ i,
   e: '2025-02-12', customer,
   s: 18, ratin,
   g: 4.5, review,
-  s: 9} ]; ' perio,
+  s: 9,} ]; ' perio,
   d: '/month'' descriptio,
   n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'' feature,
   s: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popula,
@@ -1210,7 +1210,7 @@ i,
   r: 'from-rose-600 to-red-700',' textColo,
   r: 'text-rose-300', lin,
   k: 'http,
-  s://ziontechgroup.com/services/ai-redteam-evaluator',' marketPositio,
+  s: //ziontechgroup.com/services/ai-redteam-evaluator',' marketPositio,
   n: 'Simpler and more affordable compared to bespoke security audits.',' targetAudienc,
   e: 'AI platform, Security, Compliance' trialDay,
   s: 14,' setupTim,
@@ -1231,7 +1231,7 @@ i,
   e: '2025-02-01' customer,
   s: 40, ratin,
   g: 4 && 4.7, review,
-  s: 18 } ' i,
+  s: 18,} ' i,
   d: 'finops-scheduler-optimizer'' nam,
   e: 'FinOps Scheduler Optimizer'' taglin,
   e: 'Rightsizing & schedules with IaC exports'' pric,
@@ -1244,7 +1244,7 @@ i,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer', ' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer', ' marketPositio,
   n: 'Actionable, low‑touch FinOps that pays for itself within 90 days.'' targetAudienc,
   e: 'Platform, SRE, Finance' trialDay,
   s: 14,' setupTim,
@@ -1265,7 +1265,7 @@ i,
   e: '2025-02-10' customer,
   s: 25, ratin,
   g: 4 && 4.6, review,
-  s: 12 } ' i,
+  s: 12,} ' i,
   d: 'db-index-advisor'' nam,
   e: 'DB Index Advisor'' taglin,
   e: 'AI index recommendations for Postgres/MySQL'' pric,
@@ -1278,7 +1278,7 @@ i,
   r: 'from-indigo-600 to-violet-700'' textColo,
   r: 'text-indigo-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/services/db-index-advisor'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/services/db-index-advisor'' marketPositio,
   n: 'Modern alternative to legacy APM add‑ons with focused insights.', ' targetAudienc,
   e: 'DBA, Backend, Platform' trialDay,
   s: 14,' setupTim,
@@ -1299,7 +1299,7 @@ i,
   e: '2025-02-12' customer,
   s: 18, ratin,
   g: 4 && 4.5, review,
-  s: 9 } ]; ' i,
+  s: 9,} ]; ' i,
   d: 'ai - redteam - evaluator'' nam,
   e: 'AI Red‑Team Evaluator'' taglin,
   e: 'Continuous LLM red‑teaming and safety scoring'' pric,
@@ -1312,7 +1312,7 @@ i,
   r: 'from - rose - 600 to - red - 700'' text_colo,
   r: 'text - rose - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / ai - redteam - evaluator'' market_positio,
+  s: //ziontechgroup.com / services / ai - redteam - evaluator'' market_positio,
   n: 'Simpler and more affordable compared to bespoke security audits.',' target_audienc,
   e: 'AI platform, Security, Compliance' trial_day,
   s: 14,' setup_tim,
@@ -1333,7 +1333,7 @@ i,
   e: '2025 - 02 - 01' customer,
   s: 40, ratin,
   g: 4.7, review,
-  s: 18} ' i,
+  s: 18,} ' i,
   d: 'finops - scheduler - optimizer'' nam,
   e: 'FinOps Scheduler Optimizer'' taglin,
   e: 'Rightsizing & schedules with IaC exports'' pric,
@@ -1346,7 +1346,7 @@ i,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / finops - scheduler - optimizer',' market_positio,
+  s: //ziontechgroup.com / services / finops - scheduler - optimizer',' market_positio,
   n: 'Actionable, low‑touch FinOps that pays for itself within 90 days.'' target_audienc,
   e: 'Platform, SRE, Finance' trial_day,
   s: 14,' setup_tim,
@@ -1367,7 +1367,7 @@ i,
   e: '2025 - 02 - 10' customer,
   s: 25, ratin,
   g: 4.6, review,
-  s: 12} ' i,
+  s: 12,} ' i,
   d: 'db - index - advisor'' nam,
   e: 'DB Index Advisor'' taglin,
   e: 'AI index recommendations for Postgres / MySQL'' pric,
@@ -1380,7 +1380,7 @@ i,
   r: 'from - indigo - 600 to - violet - 700'' text_colo,
   r: 'text - indigo - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / services / db - index - advisor'' market_positio,
+  s: //ziontechgroup.com / services / db - index - advisor'' market_positio,
   n: 'Modern alternative to legacy APM add‑ons with focused insights.',' target_audienc,
   e: 'DBA, Backend, Platform' trial_day,
   s: 14,' setup_tim,
@@ -1401,28 +1401,28 @@ i,
   e: '2025 - 02 - 12' customer,
   s: 18, ratin,
   g: 4.5, review,
-  s: 9} ratin,
+  s: 9,} ratin,
   g: 4.5,
-  reviews: 9 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  reviews: 9 ' import { EnhancedRealMicroSaasService,} from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 18} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 9} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: //ziontechgroup.com',} export const,
+  real2029Q1Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */,}
+  g: 4.7,} review,
+  s: 18,} } {/* TODO: Fix JSX expression */,}
+  g: 4.6,} review,
+  s: 12,} } {/* TODO: Fix JSX expression */,}
+  g: 4.5,} review,
+  s: 9,} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 18} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 9} } ]; '
+  s: //ziontechgroup.com',} export const,
+  real2029Q1Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */,}
+  g: 4.7,} review,
+  s: 18,} } {/* TODO: Fix JSX expression */,}
+  g: 4.6,} review,
+  s: 12,} } {/* TODO: Fix JSX expression */,}
+  g: 4.5,} review,
+  s: 9,} } ]; '

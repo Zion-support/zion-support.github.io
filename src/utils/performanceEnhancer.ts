@@ -2,7 +2,7 @@
 // This file contains utility functions and configurations
 
 interface PerformanceMetrics {
-    lcp: number
+    lcp: number,
   }
   fid: number;
   cls: number;
@@ -12,7 +12,7 @@ interface PerformanceMetrics {
 }
 
 interface OptimizationConfig {
-    enableImageOptimization: boolean
+    enableImageOptimization: boolean,
   }
   enableLazyLoading: boolean;
   enableCodeSplitting: boolean;
@@ -24,7 +24,7 @@ interface OptimizationConfig {
 }
 
 class PerformanceEnhancer {
-    private config: OptimizationConfig
+    private config: OptimizationConfig,
   }
   private metrics: PerformanceMetrics | null = null,
 
@@ -48,13 +48,13 @@ class PerformanceEnhancer {
     // Process performance entries
   }
             console.log('Performance)
-  entry:', entry.name, entry.duration);
+  entry: ', entry.name, entry.duration);
           });
         });
 
         observer.observe({ entryTypes: ['measure', 'navigation'] });
       } catch (error) {
-    console.warn('PerformanceObserver not supported:', error)
+    console.warn('PerformanceObserver not supported: ', error)
   }
 
       }

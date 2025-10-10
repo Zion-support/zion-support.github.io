@@ -7,7 +7,7 @@ interface AccessibilitySettings {
   reducedMotion: boolean
   fontSize: 'small' | 'medium' | 'large'
   screenReader: boolean,
-  keyboardNavigation: boolean
+  keyboardNavigation: boolean,
   }
 
 interface EnhancedAccessibilityProps {
@@ -30,7 +30,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: false,
-    keyboardNavigation: false
+    keyboardNavigation: false,
   })
 
   const analytics = useAnalytics();
@@ -43,20 +43,20 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast,
     }));
 
     // Apply initial accessibility settings
     applyAccessibilitySettings({
       ...settings,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast,
     })
 
     // Track accessibility usage
     analytics?.track('accessibility_initialized', {
       reduced_motion: prefersReducedMotion,
-      high_contrast: prefersHighContrast
+      high_contrast: prefersHighContrast,
     })
   }, []);
 

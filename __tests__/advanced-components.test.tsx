@@ -3,11 +3,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 
 // Mock component that throws an error
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean,}) => {
   if (shouldThrow) {
     throw new Error('Test error');
   }
-  return <div>Test content</div>;
+  return <div></div>Test content</div>;
 };
 
 describe('Advanced Components', () => {

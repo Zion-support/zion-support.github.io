@@ -12,15 +12,15 @@ const addStructuredData = () => {
 //Optimize sitemap;
 const optimizeSitemap = () => {
   //   //Add sitemap optimization logic here;
-const optimizeMetaTags = () => {/* TODO: Fix JSX expression */}
+const optimizeMetaTags = () => {/* TODO: Fix JSX expression */,}
 }
 
 //Add structured data;
-const addStructuredData = () => {/* TODO: Fix JSX expression */}
+const addStructuredData = () => {/* TODO: Fix JSX expression */,}
 }
 
 //Optimize sitemap;
-const optimizeSitemap = () => {/* TODO: Fix JSX expression */}
+const optimizeSitemap = () => {/* TODO: Fix JSX expression */,}
 }
 
 // Run SEO improvements;

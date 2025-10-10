@@ -97,12 +97,12 @@ function fixJsxFile(filePath) {
     // Fix 9: Fix malformed return statements
     const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g,
     content = content.replace(malformedReturnPattern, 'return (\n    <div');
-    if (content.includes('</LoadingSpinner></div><div')) {
+    if (content.includes('</LoadingSpinner></div></div><div')) {
     modified = true
   }
 
     // Fix 10: Fix malformed conditional returns
-    const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g,
+    const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div></div>/g,
     content = content.replace(malformedConditionalPattern, 'return <LoadingSpinner />');</LoadingSpinner>if</LoadingSpinner> (content.includes('<LoadingSpinner >')) {
     </LoadingSpinner>modified</LoadingSpinner> = true
   }

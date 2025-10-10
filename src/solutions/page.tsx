@@ -14,7 +14,7 @@ const SolutionsPage: React.FC = () => {
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description:     ,
+      description: ,
 $4},
     {
       id: 'it',
@@ -22,7 +22,7 @@ $4},
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description:     ,
+      description: ,
 $4},
     {
       id: 'security',
@@ -30,7 +30,7 @@ $4},
       icon: Shield,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
-      description:     ,
+      description: ,
 $4},
     {
       id: 'automation',
@@ -38,7 +38,7 @@ $4},
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description:     ,
+      description: ,
 $4}
   ];
   const solutions = {
@@ -49,7 +49,7 @@ $4}
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
         icon: BarChart,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'AI Marketing Automation',
@@ -57,7 +57,7 @@ $4},
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricing: 'Starting at $199/month',
         icon: Target,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'AI Customer Support',
@@ -65,7 +65,7 @@ $4},
         features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricing: 'Starting at $299/month',
         icon: Users,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'AI Process Automation',
@@ -73,7 +73,7 @@ $4},
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricing: 'Starting at $399/month',
         icon: Zap,
-        color:       ,
+        color: ,
 $4}
     ],
     it: [
@@ -83,7 +83,7 @@ $4}
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
         icon: Cloud,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'IT Infrastructure Management',
@@ -91,7 +91,7 @@ $4},
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricing: 'Starting at $799/month',
         icon: Globe,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'DevOps & CI/CD',
@@ -99,7 +99,7 @@ $4},
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricing: 'Starting at $599/month',
         icon: Zap,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'Database Management',
@@ -107,7 +107,7 @@ $4},
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricing: 'Starting at $399/month',
         icon: BarChart,
-        color:       ,
+        color: ,
 $4}
     ],
     security: [
@@ -117,7 +117,7 @@ $4}
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
         icon: Shield,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'AI Security Monitoring',
@@ -125,7 +125,7 @@ $4},
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricing: 'Starting at $299/month',
         icon: Brain,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'Compliance Management',
@@ -133,7 +133,7 @@ $4},
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricing: 'Starting at $499/month',
         icon: CheckCircle,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'Security Training',
@@ -141,7 +141,7 @@ $4},
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricing: 'Starting at $199/month',
         icon: Users,
-        color:       ,
+        color: ,
 $4}
     ],
     automation: [
@@ -151,7 +151,7 @@ $4}
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
         icon: Zap,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'IT Automation',
@@ -159,7 +159,7 @@ $4},
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricing: 'Starting at $299/month',
         icon: Cloud,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'Marketing Automation',
@@ -167,7 +167,7 @@ $4},
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricing: 'Starting at $199/month',
         icon: Target,
-        color:       ,
+        color: ,
 $4},
       {
         title: 'Data Automation',
@@ -175,7 +175,7 @@ $4},
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricing: 'Starting at $249/month',
         icon: BarChart,
-        color:       ,
+        color: ,
 $4}
     ]
   }
@@ -183,50 +183,50 @@ $4}
     {
       icon: Star,
       title: 'Proven Results',
-      description:     ,
+      description: ,
 $4},
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description:     ,
+      description: ,
 $4},
     {
       icon: Globe,
       title: 'Global Support',
-      description:     ,
+      description: ,
 $4},
     {
       icon: Users,
       title: 'Expert Team',
-      description:     ,
+      description: ,
 $4}
   ];
   return (
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text"></h1>
               Our Solutions,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
             </p>
           </div>
           {/* Solution Categories Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="mb-12"></div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
               {solutionCategories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setActiveTab(category.id)}
+                  onClick={() =></button> setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 border-2 border-transparent',
                   }`}
                 >
                   <category.icon className="w-5 h-5 mr-2" />
@@ -234,9 +234,9 @@ $4}
                 </button>
               ))}
             </div>
-            <div className="text-center">
-              <p className="text-gray-300 max-w-2xl mx-auto">
-    <div>Coming Soon</div>
+            <div className="text-center"></div>
+              <p className="text-gray-300 max-w-2xl mx-auto"></p>
+    <div></div>Coming Soon</div>
   );
 }
   const [activeTab, setActiveTab] = useState('ai');
@@ -244,7 +244,7 @@ $4}
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   i,
@@ -258,9 +258,9 @@ $4}
       bgColo,
   r: 'bg-purple-500/10',
       descriptio,
-  n: 'Transform your business with cutting-edge artificial intelligence'
+  n: 'Transform your business with cutting-edge artificial intelligence',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   i,
@@ -274,9 +274,9 @@ $4}
       bgColo,
   r: 'bg-blue-500/10',
       descriptio,
-  n: 'Robust and scalable IT infrastructure solutions'
+  n: 'Robust and scalable IT infrastructure solutions',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   i,
@@ -290,9 +290,9 @@ $4}
       bgColo,
   r: 'bg-red-500/10',
       descriptio,
-  n: 'Comprehensive security solutions for your digital assets'
+  n: 'Comprehensive security solutions for your digital assets',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   i,
@@ -306,17 +306,17 @@ $4}
       bgColo,
   r: 'bg-yellow-500/10',
       descriptio,
-  n: 'Streamline operations with intelligent automation'
+  n: 'Streamline operations with intelligent automation',
     }
   ];
-  const solutions = {/* TODO: Fix JSX expression */}
+  const solutions = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   a,
   i: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -330,9 +330,9 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -346,9 +346,9 @@ $4}
         ico,
   n: Target,
         colo,
-  r: 'text-pink-400'
+  r: 'text-pink-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -362,9 +362,9 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -378,14 +378,14 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
+  r: 'text-yellow-400',
       }
 //     ],
     i,
   t: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -399,9 +399,9 @@ $4}
         ico,
   n: Cloud,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -415,9 +415,9 @@ $4}
         ico,
   n: Globe,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -431,9 +431,9 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-purple-400'
+  r: 'text-purple-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -447,14 +447,14 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-orange-400'
+  r: 'text-orange-400',
       }
 //     ],
     securit,
   y: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -468,9 +468,9 @@ $4}
         ico,
   n: Shield,
         colo,
-  r: 'text-red-400'
+  r: 'text-red-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -484,9 +484,9 @@ $4}
         ico,
   n: Brain,
         colo,
-  r: 'text-purple-400'
+  r: 'text-purple-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -500,9 +500,9 @@ $4}
         ico,
   n: CheckCircle,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -516,14 +516,14 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       }
 //     ],
     automatio,
   n: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -537,9 +537,9 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
+  r: 'text-yellow-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -553,9 +553,9 @@ $4}
         ico,
   n: Cloud,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -569,9 +569,9 @@ $4}
         ico,
   n: Target,
         colo,
-  r: 'text-pink-400'
+  r: 'text-pink-400',
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -585,7 +585,7 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       }
 //     ]
   }
@@ -593,7 +593,7 @@ $4}
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -601,9 +601,9 @@ $4}
       titl,
   e: 'Proven Results',
       descriptio,
-  n: '300% average ROI and 95% process automation for our clients'
+  n: '300% average ROI and 95% process automation for our clients',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -611,9 +611,9 @@ $4}
       titl,
   e: 'Enterprise Security',
       descriptio,
-  n: 'Bank-level security and compliance for all our solutions'
+  n: 'Bank-level security and compliance for all our solutions',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -621,9 +621,9 @@ $4}
       titl,
   e: 'Global Support',
       descriptio,
-  n: '24/7 support and services across multiple time zones'
+  n: '24/7 support and services across multiple time zones',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -631,31 +631,31 @@ $4}
       titl,
   e: 'Expert Team',
       descriptio,
-  n: 'Certified professionals with years of industry experience'
+  n: 'Certified professionals with years of industry experience',
     }
   ];
-  return (<div>Coming Soon</div>)
+  return (<div></div>Coming Soon</div>)
   )
           <React.Fragment>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>"
+        <div className="container mx-auto px-4 py-16 pt-24"></div></div>
           {/* Header */}"
-          <div className="text-center mb-16"></div>"
+          <div className="text-center mb-16"></div></div>"
             <h1 className="text-4xl,"
-  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1></h1>
 // Our Solutions
           </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p></p>
 // Comprehensive technology solutions designed to transform your business operations,
 //               and drive innovation across every aspect of your organization.
           </p>
           </div>
           {/* Solution Categories Tabs */}"
-          <div className="mb-12"></div>"
-            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+          <div className="mb-12"></div></div>"
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div></div>
               {solutionCategories.map((category) => ()}
-          <button></button>
+          <button></button></button>
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
@@ -665,7 +665,7 @@ $4}
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
+  hover: bg-slate-700/50 border-2 border-transparent'`,
                   }`}
 //                 >
           "
@@ -674,50 +674,50 @@ $4}
                 </button>
               ))}
             </div>"
-            <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto"></p>
+            <div className="text-center"></div></div>"
+              <p className="text-gray-300 max-w-2xl mx-auto"></p></p>
                 {solutionCategories.find(cat => cat.id === activeTab)?.description}
               </p>
             </div>
           </div>
           {/* Solutions Grid */}
-          <div className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mb-16"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"></div>
+                  <div className="flex items-start mb-4"></div>
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>
                       <solution.icon className={`w-6 h-6 ${solution.color}`} />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
+                    <div className="flex-1"></div>
+                      <h3 className="text-xl font-semibold text-white mb-2"></h3>{solution.title}</h3>
+                      <p className="text-gray-300 text-sm mb-4"></p>{solution.description}</p>
                     </div>
                   </div>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                  <div className="mb-4"></div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4>Key Features:</h4>
                     <ul className="space-y-1">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
           {/* Solutions Grid */}"
-          <div className="mb-16"></div>"
+          <div className="mb-16"></div></div>"
             <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-8"></div>
+  md:grid-cols-2 gap-8"></div></div>
               {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
-  hover:border-cyan-400/50 transition-all duration-300"></div>"
-                  <div className="flex items-start mb-4"></div>`
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
+  hover:border-cyan-400/50 transition-all duration-300"></div></div>"
+                  <div className="flex items-start mb-4"></div></div>`
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div></div>`
                       <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>
                     </div>"
-                    <div className="flex-1"></div>"
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
+                    <div className="flex-1"></div></div>"
+                      <h3 className="text-xl font-semibold text-white mb-2"></h3>{solution.title}</h3>"
+                      <p className="text-gray-300 text-sm mb-4"></p>{solution.description}</p>
                     </div>
                   </div>"
-                  <div className="mb-4"></div>"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
+                  <div className="mb-4"></div></div>"
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4>Key,
   Features:</h4>"
                     <ul className="space-y-1"></ul>
                       {solution.features.map((feature, featureIndex) => ()}"
@@ -728,8 +728,8 @@ $4}
                       ))}
                     </ul>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <div className={`text-lg font-bold ${solution.color}`}>
+                  <div className="flex items-center justify-between"></div>
+                    <div className={`text-lg font-bold ${solution.color}`}></div>
                       {solution.pricing}
                     </div>
                     <a
@@ -738,8 +738,8 @@ $4}
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                   </div>"
-                  <div className="flex items-center justify-between"></div>`
-                    <div className={`text-lg font-bold ${solution.color}`}></div>
+                  <div className="flex items-center justify-between"></div></div>`
+                    <div className={`text-lg font-bold ${solution.color}`}></div></div>
                       {solution.pricing}
                     </div>
                     <a
@@ -754,46 +754,46 @@ $4}
             </div>
           </div>
           {/* Benefits Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+          <div className="mb-16"></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
               Why Choose Our Solutions?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="text-center"></div>
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-2"></h3>{benefit.title}</h3>
           {/* Benefits Section */}"
-          <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
+          <div className="mb-16"></div></div>"
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2></h2>
 // Why Choose Our Solutions?
           </h2>"
             <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>
+  md: grid-cols-2,"
+  lg:grid-cols-4 gap-6"></div></div>
               {benefits.map((benefit, index) => ()}"
-          <div key={index} className="text-center"></div>"
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
+          <div key={index} className="text-center"></div></div>"
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div></div>"
                     <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>
                   </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2"></h3>{benefit.title}</h3>"
+                  <p className="text-gray-300 text-sm"></p>{benefit.description}</p>
                 </div>
               ))}
             </div>
           </div>
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Ready to Transform Your Business?
             </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Get a free consultation and discover how our solutions can revolutionize your operations 
               and drive unprecedented growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -813,15 +813,15 @@ $4}
                 Email Us,
   </
           {/* CTA Section */}"
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4"></h2>
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div></div>"
+            <h2 className="text-2xl font-bold text-white mb-4"></h2></h2>
 // Ready to Transform Your Business?
           </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p></p>
 // Get a free consultation and discover how our solutions can revolutionize your operations;
 //               and drive unprecedented growth.
           </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >

@@ -78,162 +78,162 @@ const, September30NewContentMegaBanne, r = () => {
       impa, c, t: "97% mastery, rat, e"
     }
   ];
-  return(<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">,
+  return(<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden"></div>,
       {/* Animated background */}
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden"></div>
       {/* Animated background */}</div>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
-      <div className="relative z-10">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div></div>
+      <div className="relative z-10"></div>
         {/* Header */}</div>
-        <div className="text-center mb-10"></div>
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20"></div>
+        <div className="text-center mb-10"></div></div>
+          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20"></div></div>
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" /></Sparkles>
           </div>
-          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">,
+          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>,
             🚀 5 Revolutionary AI Breakthroughs;)
         </div>)
         {/* Articles Grid */})
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">),
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10"></div>),
           {newArticles.map((article, index) => (
             <Link;
-          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>
             🚀 5 Revolutionary AI Breakthroughs,
   </
         {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"></div>
           {newArticles.map((article, index) => (</div>
             <Link
               key={index}
               to={article.link}
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <div className="flex items-start gap-4">,
-                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">,
+              <div className="flex items-start gap-4"></div>,
+                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover: scale-110 transition-transform"></div>,
                     <article.icon className="w-6 h-6" />,
                   </div>,
-                <div className="flex-1">,
-                  <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
-                  <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors">,
+                <div className="flex-1"></div>,
+                  <div className="text-xs font-semibold text-cyan-300 mb-2"></div>{article.category}</div>
+                  <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors"></h3>,
                     {article.title}
             <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover: scale-125 transition-transform" />
-            <h3 className="text-xl font-bold mb-2">View All Articles</h3>
-            <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
-            <div className="flex items-center gap-2 text-yellow-400 font-semibold">
+            <h3 className="text-xl font-bold mb-2"></h3>View All Articles</h3>
+            <p className="text-sm text-yellow-200 mb-4"></p>200+ groundbreaking insights</p>
+            <div className="flex items-center gap-2 text-yellow-400 font-semibold"></div>
               Explore Now,
-              <div className="flex items-start gap-4"></div>
-                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform"></div>
+              <div className="flex items-start gap-4"></div></div>
+                <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform"></div></div>
                     <article.icon className="w-6 h-6" />
                   </div>
-                <div className="flex-1"></div>
-                  <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors">
+                <div className="flex-1"></div></div>
+                  <div className="text-xs font-semibold text-cyan-300 mb-2"></div>{article.category}</div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors"></h3>
                     {article.title}</h3>
             <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover:scale-125 transition-transform" />
-            <h3 className="text-xl font-bold mb-2">View All Articles</h3>
-            <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
-            <div className="flex items-center gap-2 text-yellow-400 font-semibold">
+            <h3 className="text-xl font-bold mb-2"></h3>View All Articles</h3>
+            <p className="text-sm text-yellow-200 mb-4"></p>200+ groundbreaking insights</p>
+            <div className="flex items-center gap-2 text-yellow-400 font-semibold"></div>
               Explore Now</div>
               <Link className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>,
           </Link>,
         </div>,
         {/* Stats Banner */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">
-            <div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center"></div>
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center"></div>
             <div></div>
-              <div className="text-sm text-blue-200">New Breakthroughs</div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div></div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center"></div></div>
+            <div></div></div>
+              <div className="text-sm text-blue-200"></div>New Breakthroughs</div>
+            </div>
+            <div></div></div>
+              <div className="text-3xl font-bold text-green-400 mb-1"></div>10×</div>
+              <div className="text-sm text-blue-200"></div>Performance Gains</div>
+            </div>
+            <div></div></div>
+              <div className="text-3xl font-bold text-purple-400 mb-1"></div>1M×</div>
+              <div className="text-sm text-blue-200"></div>Quantum Speedup</div>
+            </div>
+            <div></div></div>
+              <div className="text-3xl font-bold text-yellow-400 mb-1"></div>97%</div>
+              <div className="text-sm text-blue-200"></div>Success Rate</div>
             </div>
             <div></div>
-              <div className="text-3xl font-bold text-green-400 mb-1">10×</div>
-              <div className="text-sm text-blue-200">Performance Gains</div>
-            </div>
-            <div></div>
-              <div className="text-3xl font-bold text-purple-400 mb-1">1M×</div>
-              <div className="text-sm text-blue-200">Quantum Speedup</div>
-            </div>
-            <div></div>
-              <div className="text-3xl font-bold text-yellow-400 mb-1">97%</div>
-              <div className="text-sm text-blue-200">Success Rate</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>,
-              <div className="text-sm text-blue-200">Market Impact</div>,
+              <div className="text-3xl font-bold text-pink-400 mb-1"></div>$15T</div>,
+              <div className="text-sm text-blue-200"></div>Market Impact</div>,
             </div>,
           </div>,
         </div>,
         {/* CTA Buttons */}
-        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
           <Link,
-            <div></div>
-              <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
-const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
+            <div></div></div>
+              <div className="text-3xl font-bold text-pink-400 mb-1"></div>$15T</div>
+const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
   ];
   return (<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8,"
-  md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden"></div>
+  md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden"></div></div>
       {/* Animated background */}"
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>"
-      <div className="relative z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div></div>"
+      <div className="relative z-10"></div></div>
         {/* Header */}"
-        <div className="text-center mb-10"></div>"
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20"></div>"
+        <div className="text-center mb-10"></div></div>"
+          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20"></div></div>"
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" /></Sparkles>"
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>"
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" /></Sparkles>
           </div>"
           <h2 className="text-4xl,"
-  md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>
+  md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2></h2>
             🚀 5 Revolutionary AI Breakthroughs,
         </div>
         {/* Articles Grid */}"
         <div className="grid,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-6 mb-10"></div>
-          {/* TODO: Fix JSX expression */}
+  md: grid-cols-2,"
+  lg:grid-cols-3 gap-6 mb-10"></div></div>
+          {/* TODO: Fix JSX expression */,}
               key={index}
               to={article.link}"
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20,
-  hover:bg-white/20,
-  hover:border-cyan-400/50 transition-all duration-300,
-  hover:scale-105,"
+  hover: bg-white/20,
+  hover: border-cyan-400/50 transition-all duration-300,
+  hover: scale-105,"
   hover:shadow-2xl"
             >"
-              <div className="flex items-start gap-4"></div>"
+              <div className="flex items-start gap-4"></div></div>"
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hove,"
-  r:scale-110 transition-transform"></div>"
+  r:scale-110 transition-transform"></div></div>"
                     <article.icon className="w-6 h-6" /></article>
                   </div>"
-                <div className="flex-1"></div>"
-                  <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>"
+                <div className="flex-1"></div></div>"
+                  <div className="text-xs font-semibold text-cyan-300 mb-2"></div>{article.category}</div>"
                   <h3 className="text-lg font-bold mb-2 group-hove,"
-  r:text-cyan-300 transition-colors"></h3>
+  r:text-cyan-300 transition-colors"></h3></h3>
                     {article.title}"
             <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hove,"
   r: scale-125 transition-transform" /></Sparkles>"
-            <h3 className="text-xl font-bold mb-2">View All Articles</h3>"
-            <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>"
-            <div className="flex items-center gap-2 text-yellow-400 font-semibold"></div>
+            <h3 className="text-xl font-bold mb-2"></h3>View All Articles</h3>"
+            <p className="text-sm text-yellow-200 mb-4"></p>200+ groundbreaking insights</p>"
+            <div className="flex items-center gap-2 text-yellow-400 font-semibold"></div></div>
               Explore Now,"
               <Link className="w-5 h-5 group-hove,"
   r:translate-x-1 transition-transform" /></Link>
@@ -241,32 +241,32 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
           </Link>
         </div>
         {/* Stats Banner */}"
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div>"
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div></div>"
           <div className="grid grid-cols-2,"
-  md:grid-cols-5 gap-6 text-center"></div>
-            <div></div>"
-              <div className="text-sm text-blue-200">New Breakthroughs</div>
+  md:grid-cols-5 gap-6 text-center"></div></div>
+            <div></div></div>"
+              <div className="text-sm text-blue-200"></div>New Breakthroughs</div>
             </div>
-            <div></div>"
-              <div className="text-3xl font-bold text-green-400 mb-1">10×</div>"
-              <div className="text-sm text-blue-200">Performance Gains</div>
+            <div></div></div>"
+              <div className="text-3xl font-bold text-green-400 mb-1"></div>10×</div>"
+              <div className="text-sm text-blue-200"></div>Performance Gains</div>
             </div>
-            <div></div>"
-              <div className="text-3xl font-bold text-purple-400 mb-1">1M×</div>"
-              <div className="text-sm text-blue-200">Quantum Speedup</div>
+            <div></div></div>"
+              <div className="text-3xl font-bold text-purple-400 mb-1"></div>1M×</div>"
+              <div className="text-sm text-blue-200"></div>Quantum Speedup</div>
             </div>
-            <div></div>"
-              <div className="text-3xl font-bold text-yellow-400 mb-1">97%</div>"
-              <div className="text-sm text-blue-200">Success Rate</div>
+            <div></div></div>"
+              <div className="text-3xl font-bold text-yellow-400 mb-1"></div>97%</div>"
+              <div className="text-sm text-blue-200"></div>Success Rate</div>
             </div>
-            <div></div>"
-              <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>"
-              <div className="text-sm text-blue-200">Market Impact</div>
+            <div></div></div>"
+              <div className="text-3xl font-bold text-pink-400 mb-1"></div>$15T</div>"
+              <div className="text-sm text-blue-200"></div>Market Impact</div>
             </div>
           </div>
         </div>
         {/* CTA Buttons */}
-        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
+        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div></div>
           <Link
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
@@ -275,7 +275,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
           </Link>,
         </div>,
         {/* Tags */}
-        <div className="mt-8 flex flex-wrap gap-3 justify-center"></div>
+        <div className="mt-8 flex flex-wrap gap-3 justify-center"></div></div>
           <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30">
             🧠 Neural Coding;
           </span>
@@ -291,20 +291,20 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
           <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30">
         {/* CTA Buttons */}"
         <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center items-center"></div>
+  sm:flex-row gap-4 justify-center items-center"></div></div>
           <Link></Link>"
             to="/blog""
             className="bg-gradient-to-r from-cyan-500 to-blue-600,
-  hover:from-cyan-400,
-  hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300,
-  hover:scale-105,"
+  hover: from-cyan-400,
+  hover: to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300,
+  hover: scale-105,"
   hover: shadow-2xl inline-flex items-center gap-3 group""
             <Sparkles className="w-5 h-5" /></Sparkles>
             Get Started Today,
           </Link>
         </div>
         {/* Tags */}"
-        <div className="mt-8 flex flex-wrap gap-3 justify-center"></div>"
+        <div className="mt-8 flex flex-wrap gap-3 justify-center"></div></div>"
           <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30"></span>
             🧠 Neural Coding;
           </span>"

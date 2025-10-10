@@ -5,7 +5,7 @@
  */
 
 export interface SecurityHeadersConfig {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -17,7 +17,7 @@ export interface SecurityHeadersConfig {
   permissionsPolicy?: string;
 }
 export const,
-  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
+  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   // Content Security Policy,
@@ -27,18 +27,18 @@ export const,
   O: Add items]
 //     "default-src 'self'","
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
-  s://www.googletagmanager.com,"
-  https://www.google-analytics.com","
+  s: //www.googletagmanager.com,"
+  https: //www.google-analytics.com","
 //     "style-src 'self' 'unsafe-inline'","
     "img-src 'self' dat,
   a: http,
   s: blo,"
-  b:","
+  b: ","
     "font-src 'self' dat,"
-  a:","
+  a: ","
     "connect-src 'self' http,
-  s://www.google-analytics.com,"
-  https://analytics.google.com","
+  s: //www.google-analytics.com,"
+  https: //analytics.google.com","
 //     "frame-ancestors 'none'","
 //     "base-uri 'self'","
 //     "form-action 'self'",
@@ -85,32 +85,32 @@ export function getSecurityHeaders()
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'
   }
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
+  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     headers['Content-Security-Policy'] = config.contentSecurityPolicy;
   }
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
+  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     headers['Strict-Transport-Security'] = config.strictTransportSecurity;
   }
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
+  if (config.xFrameOptions) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     headers['X-Frame-Options'] = config.xFrameOptions;
   }
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
+  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     headers['X-Content-Type-Options'] = config.xContentTypeOptions;
   }
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
+  if (config.referrerPolicy) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     headers['Referrer-Policy'] = config.referrerPolicy;
   }
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
+  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     headers['Permissions-Policy'] = config.permissionsPolicy;
@@ -126,13 +126,13 @@ export function getNextSecurityHeaders()
   customConfig?: Partial;
 
           <SecurityHeadersConfig>
-): Array<{ key: string, value: string }> {
-    // TODO: Add content
+): Array<{ key: string, value: string,}> {
+    // TODO: Add content,
   }
 
 }
   const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({/* TODO: Fix JSX expression */}
+  return Object.entries(headers).map(([key, value]) => ({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //     key,

@@ -14,20 +14,20 @@ const MarketplacePage: React.FC = () => {
       icon: ShoppingCart,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description:     ,
+      description: ,
 $4},
       id: 'talent',
       name: 'Talent',
       icon: Users,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description:       ,
+      description: ,
 idid: 'equipment',
       name: 'Equipment',
       icon: Wrench,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description:     ,
+      description: ,
 $4}
   ];
   const products = [
@@ -122,8 +122,7 @@ $4}
         return talent;
       case 'equipment':
         return equipment;
-      default:
-        return []
+      default: return [],
   }
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -132,13 +131,13 @@ $4}
   const stats = [
       value: '500+',
       label: 'Products Available',
-      color:       ,
+      color: ,
 valuevalue: '200+',
       label: 'Expert Professionals',
-      color:       ,
+      color: ,
 valuevalue: '100+',
       label: 'Equipment Solutions',
-      color:       ,
+      color: ,
 iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
@@ -146,44 +145,44 @@ iconicon: Star,
   const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
-      description:       ,
+      description: ,
 icon$5: Shield,
       title: 'Secure Transactions',
-      description:       ,
+      description: ,
 icon$5: Clock,
       title: '24/7 Support',
-      description:       ,
+      description: ,
 icon$5: Award,
       title: 'Quality Guarantee',
       description: '100% satisfaction guarantee on all purchases'
   return (
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text"></h1>
               Zion Tech Marketplace,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Discover, compare, and purchase AI and IT solutions from verified vendors. 
               Find the perfect tools, talent, and equipment for your business needs.
             </p>
           </div>
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
+              <div key={index} className="text-center"></div>
+                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
-                <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+                <div className={`text-3xl font-bold ${stat.color} mb-2`}></div>{stat.value}</div>
+                <div className="text-gray-300 text-sm"></div>{stat.label}</div>
             ))}
           {/* Search and Filters */}
-          <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
+          <div className="mb-12"></div>
+            <div className="flex flex-col md:flex-row gap-4 mb-8"></div>
+              <div className="flex-1 relative"></div>
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -192,48 +191,48 @@ icon$5: Award,
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
-              <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
+              <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center"></button>
                 <Filter className="w-5 h-5 mr-2" />
                 Filters,
   </
             {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onClick={() =></button> setActiveCategory(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeCategory === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 border-2 border-transparent',
                   }`}
                 >
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
           {/* Items Grid */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8">
+          <div className="mb-16"></div>
+            <h2 className="text-2xl font-bold text-white mb-8"></h2>
               {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {filteredItems.map((item) => (
-                <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className="text-4xl mr-4">{item.image}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-white">{item.name}</h3>
+                <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"></div>
+                  <div className="flex items-start mb-4"></div>
+                    <div className="text-4xl mr-4"></div>{item.image}</div>
+                    <div className="flex-1"></div>
+                      <div className="flex items-center justify-between mb-2"></div>
+                        <h3 className="text-lg font-semibold text-white"></h3>{item.name}</h3>
                         {item.verified && (
-                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center"></div>
                             <CheckCircle className="w-3 h-3 text-white" />
                         )}
-                      <p className="text-gray-300 text-sm mb-2">{item.description}</p>
-                      <div className="flex items-center text-sm text-gray-400 mb-2">
+                      <p className="text-gray-300 text-sm mb-2"></p>{item.description}</p>
+                      <div className="flex items-center text-sm text-gray-400 mb-2"></div>
                         <span className="mr-2">{item.category}</span>
                         {item.vendor && <span>• {item.vendor}</span>}
                   {activeCategory === 'products' && (
-                      <div className="mb-4">
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                      <div className="mb-4"></div>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4>Key Features:</h4>
                         <ul className="space-y-1">
                           {item.features.map((feature, index) => (
                             <li key={index} className="text-sm text-gray-300 flex items-start">
@@ -241,53 +240,53 @@ icon$5: Award,
                               {feature}
                             </li>
                         </ul>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center">
+                      <div className="flex items-center justify-between mb-4"></div>
+                        <div className="flex items-center"></div>
                           <Star className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-sm text-white font-medium">{item.rating}</span>
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
-                        <div className="text-lg font-bold text-cyan-400">{item.price}</div>
+                        <div className="text-lg font-bold text-cyan-400"></div>{item.price}</div>
                     </React.Fragment>
                   {activeCategory === 'talent' && (
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
-                        <div className="flex flex-wrap gap-1">
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4>Expertise:</h4>
+                        <div className="flex flex-wrap gap-1"></div>
                           {item.expertise.map((skill, index) => (
                             <span key={index} className="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">
                               {skill}
                             </span>
                           <span className="text-sm text-gray-400 ml-1">({item.projects} projects)</span>
-                        <div className="text-lg font-bold text-cyan-400">{item.rate}</div>
-                      <div className="flex items-center justify-between text-sm">
+                        <div className="text-lg font-bold text-cyan-400"></div>{item.rate}</div>
+                      <div className="flex items-center justify-between text-sm"></div>
                         <span className="text-gray-400">{item.experience} experience</span>
                         <span className={`px-2 py-1 rounded text-xs ${
                           item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                         }`}>
                           {item.available ? 'Available' : 'Busy'}
                   {activeCategory === 'equipment' && (
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:</h4>
+                        <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4>Specifications:</h4>
                         <span className="text-gray-400">{item.vendor}</span>
                           item.inStock ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                           {item.inStock ? 'In Stock' : 'Out of Stock'}
-                  <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
+                  <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center"></button>
                     {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}
                     <ArrowRight className="w-4 h-4 ml-2" />
           {/* Benefits */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
               Why Choose Our Marketplace?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => (
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2"></h3>{benefit.title}</h3>
+                  <p className="text-gray-300 text-sm"></p>{benefit.description}</p>
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Ready to Find Your Perfect Solution?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Browse our marketplace to discover the tools, talent, and equipment you need 
               to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -304,13 +303,13 @@ icon$5: Award,
                 Email Us
       <Footer />
   return (
-    <div>Coming Soon</div>
+    <div></div>Coming Soon</div>
   ),
 }
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   i,
@@ -324,7 +323,7 @@ const categories = [
       bgColo,
   r: 'bg-blue-500/10',
       descriptio,
-  n: 'AI-powered software products and solutions'
+  n: 'AI-powered software products and solutions',
     },
       i,
   d: 'talent',

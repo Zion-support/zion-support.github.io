@@ -1,7 +1,7 @@
 module.exports = {
     metaTags: {,
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1'
+    robots: 'index, follow, max-image-preview: large, max-snippet: -1, max-video-preview: -1'
     canonical: true
     alternate: true,
     ogTags: {
@@ -10,12 +10,12 @@ module.exports = {
       site_name: 'Zion Tech Group'
       image: '/images/og-image.jpg',
       imageWidth: 1200,
-      imageHeight: 630
+      imageHeight: 630,
   },
     twitterCards: {,
       card: 'summary_large_image',
       creator: '@ZionTechGroup',
-      site: '@ZionTechGroup'},
+      site: '@ZionTechGroup',},
     additional: {,
       'theme-color': '#000000',
       'msapplication-TileColor': '#000000',
@@ -31,18 +31,18 @@ module.exports = {
       contactPoint: {,
         '@type': 'ContactPoint',
         telephone: '+1-800-ZION-TECH',
-        contactType: 'customer service'},
+        contactType: 'customer service',},
       sameAs: [,
-        'https://twitter.com/ZionTechGroup',
+        'https: //twitter.com/ZionTechGroup',
         'https: //linkedin.com/company/zion-tech-group',
-        'https: //github.com/Zion-Holdings']},
+        'https: //github.com/Zion-Holdings'],},
     website: {
       '@type': 'WebSite',
       name: 'Zion Tech Group',
       url: 'https://zion.app',
       potentialAction: {,
         '@type': 'SearchAction',
-        target: 'https://zion.app/search?q={search_term_string}',
+        target: 'https://zion.app/search?q={search_term_string,}',
         'query-input': 'required name=search_term_string'}},
     breadcrumbs: true;
     services: true;
@@ -58,28 +58,28 @@ module.exports = {
       about: 0.8
       contact: 0.7
       blog: 0.6,
-module.exports = {/* TODO: Fix JSX expression */}
+module.exports = {/* TODO: Fix JSX expression */,}
     },
     twitterCard,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
     },
     additiona,
-  l: {/* TODO: Fix JSX expression */}
+  l: {/* TODO: Fix JSX expression */,}
     }},
   structuredDat,
-  a: {/* TODO: Fix JSX expression */}
+  a: {/* TODO: Fix JSX expression */,}
       },
       sameA,
   s: [
         'http,
-  s://twitter.com/ZionTechGroup',
+  s: //twitter.com/ZionTechGroup',
         'http,
-  s://linkedin.com/company/zion-tech-group',
+  s: //linkedin.com/company/zion-tech-group',
         'http,
-  s://github.com/Zion-Holdings']},
+  s: //github.com/Zion-Holdings'],},
     websit,
-  e: {/* TODO: Fix JSX expression */}
-  s://zion.app/search?q={search_term_string}',
+  e: {/* TODO: Fix JSX expression */,}
+  s: //zion.app/search?q={search_term_string,}',
         'query-input': 'required name=search_term_string'}},
     breadcrumb,
   s: true,
@@ -90,12 +90,12 @@ module.exports = {/* TODO: Fix JSX expression */}
     review,
   s: true,
     event,
-  s: true},
+  s: true,},
   sitemapOptimizatio,
-  n: {/* TODO: Fix JSX expression */}
+  n: {/* TODO: Fix JSX expression */,}
     },
     changefre,
-  q: {/* TODO: Fix JSX expression */}
+  q: {/* TODO: Fix JSX expression */,}
     },
     lastmod: true
     images: true
@@ -116,17 +116,17 @@ module.exports = {/* TODO: Fix JSX expression */}
     image,
   s: true,
     video,
-  s: true},
+  s: true,},
   coreWebVital,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
     },
     fi,
-  d: {/* TODO: Fix JSX expression */}
+  d: {/* TODO: Fix JSX expression */,}
     },
     cl,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
     }},
   timestam,
   p: '2025-10-06T0,
-  4:4,
-  9:10.507Z'}
+  4: 4,
+  9: 10.507Z',}

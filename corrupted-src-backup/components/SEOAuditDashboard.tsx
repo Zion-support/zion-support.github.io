@@ -1,7 +1,7 @@
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
-impo, r, t {/* TODO: Fix JSX expression */}"
+impo, r, t {/* TODO: Fix JSX expression */,}"
 } fr, o, m "fram, e, r-moti, o, n";';
-impo, r, t {/* TODO: Fix JSX expression */}"
+impo, r, t {/* TODO: Fix JSX expression */,}"
 } fr, o, m "luci, d, e-rea, c, t";
 interface, SEOIssu, e {
     id: stri, n, g;
@@ -38,13 +38,13 @@ headin, g, s: { h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; 
     imag, e, s: { tot, a, l: numb, e, r; withA, l, t: numb, e, r; without, A, l;
   t: numb, e, r }
     lin, k, s: { tot, a, l: numb, e, r; intern, a, l: numb, e, r; exter, n, a;
-interface, SEOIssu, e {/* TODO: Fix JSX expression */}
+interface, SEOIssu, e {/* TODO: Fix JSX expression */,}
 }
-interface, SEORepor, t {/* TODO: Fix JSX expression */}
+interface, SEORepor, t {/* TODO: Fix JSX expression */,}
 }
-    imag, e, s: {/* TODO: Fix JSX expression */}
+    imag, e, s: {/* TODO: Fix JSX expression */,}
   t: numb, e, r }
-    lin, k, s: {/* TODO: Fix JSX expression */}
+    lin, k, s: {/* TODO: Fix JSX expression */,}
   l: numb, e, r }
     wordCou, n, t: numb, e, r;
     readabilitySco, r, e: numb, e, r;
@@ -55,25 +55,25 @@ interface, SEORepor, t {/* TODO: Fix JSX expression */}
   }
   lastUpdat, e, d: numb, e, r;
 }
-const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e<stri, n, g>('a, l, l');';
   con, s, t [selectedImpa, c, t, setSelectedImpa, c, t] = useSta, t, e<stri, n, g>('a, l, l');';
@@ -86,7 +86,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'conte, n, t',';
       f, i, x: 'Optimize, title, length for, better, search engine, visibilit, y',';
-      sco, r, e: 75
+      sco, r, e: 75,
   }
     {
     id: 'me, t, a-descripti, o, n',';
@@ -96,7 +96,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'conte, n, t',';
       f, i, x: 'Write, compelling, meta descriptions, that, encourage clic, k, s',';
-      sco, r, e: 80
+      sco, r, e: 80,
   }
     {
     id: 'headi, n, g-structu, r, e',';
@@ -106,7 +106,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'conte, n, t',';
       f, i, x: 'Use, only, one H1, tag, and maintain, logical, heading ord, e, r',';
-      sco, r, e: 85
+      sco, r, e: 85,
   }
     {
     id: 'ima, g, e-a, l, t-te, x, t',';
@@ -116,7 +116,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'accessibili, t, y',';
       f, i, x: 'Add, descriptive, alt text, to, all imag, e, s',';
-      sco, r, e: 60
+      sco, r, e: 60,
   }
     {
     id: 'mobi, l, e-friend, l, y',';
@@ -126,7 +126,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'mobi, l, e',';
       f, i, x: 'Ensure, all, content is, accessible, on mobile, device, s',';
-      sco, r, e: 90
+      sco, r, e: 90,
   }
     {
     id: 'pa, g, e-spe, e, d',';
@@ -136,7 +136,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'performan, c, e',';
       f, i, x: 'Optimize, image, s, minimize, CS, S/JS, and, use, CDN',';
-      sco, r, e: 70
+      sco, r, e: 70,
   }
     {
     id: 'intern, a, l-linki, n, g',';
@@ -146,7 +146,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'technic, a, l',';
       f, i, x: 'Create, a, logical internal, linking, structure',';
-      sco, r, e: 65
+      sco, r, e: 65,
   }
     {
     id: 'sche, m, a-mark, u, p',';
@@ -156,7 +156,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'technic, a, l',';
       f, i, x: 'Add, JSO, N-LD, schema, markup for, better, search resul, t, s',';
-      sco, r, e: 50
+      sco, r, e: 50,
   }
     {
     id: 's, s, l-certifica, t, e',';
@@ -166,7 +166,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'technic, a, l',';
       f, i, x: 'Maintain, valid, SSL certificate, and, redirect HTTP, to, HTTPS',';
-      sco, r, e: 95
+      sco, r, e: 95,
   }
     {
     id: 'brok, e, n-lin, k, s',';
@@ -176,7 +176,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       impa, c, t: 'medi, u, m',';
       catego, r, y: 'technic, a, l',';
       f, i, x: 'Fix, or, remove broken, links, to improve, user, experience',';
-      sco, r, e: 40
+      sco, r, e: 40,
   }
   ];
   const, runSEOAudi, t = asy, n, c () => {
@@ -213,34 +213,34 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
   } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {';
         ty, p, e = 'in, f, o';';
         sco, r, e = 95;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
   ];
-  const, runSEOAudi, t = asy, n, c () => {/* TODO: Fix JSX expression */}
-      } else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {/* TODO: Fix JSX expression */}
-      } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {/* TODO: Fix JSX expression */}
-      } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {/* TODO: Fix JSX expression */}
-      } else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {/* TODO: Fix JSX expression */}
-      } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {/* TODO: Fix JSX expression */}
-      } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {/* TODO: Fix JSX expression */}
+  const, runSEOAudi, t = asy, n, c () => {/* TODO: Fix JSX expression */,}
+      } else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {/* TODO: Fix JSX expression */,}
+      } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {/* TODO: Fix JSX expression */,}
+      } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {/* TODO: Fix JSX expression */,}
+      } else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {/* TODO: Fix JSX expression */,}
+      } else, i, f (iss, u, e.id === 'brok, e, n-lin, k, s' && Ma, t, h.rand, o, m() > 0.7) {/* TODO: Fix JSX expression */,}
+      } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {/* TODO: Fix JSX expression */,}
       }
       retu, r, n { ...iss, u, e, ty, p, e, sco, r, e }
     });
@@ -257,11 +257,11 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         pageTit, l, e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s'
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.'
         headin, g, s: { h,
-  1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 }
+  1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2,}
         imag, e, s: { to, t, a;
-  l: 24, withA, l, t: 18, withoutA, l, t: 6 }
+  l: 24, withA, l, t: 18, withoutA, l, t: 6,}
         lin, k, s: { to, t, a;)
-  l: 45, intern, a, l: 32, extern, a, l: 13 })
+  l: 45, intern, a, l: 32, extern, a, l: 13,})
         wordCou, n, t: 28, 4, 7;)
         readabilitySco, r, e: 72,)}
       lastUpdat, e, d: Da, t, e.n, o, w()
@@ -269,16 +269,16 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
   e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s',';
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.',';
         headin, g, s: { h,
-  1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 }
+  1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2,}
         imag, e, s: { to, t, a;
-  l: 24, withA, l, t: 18, withoutA, l, t: 6 }
+  l: 24, withA, l, t: 18, withoutA, l, t: 6,}
         lin, k, s: { to, t, a;
-    setRepo, r, t({/* TODO: Fix JSX expression */}
-  6: 2 }
-        imag, e, s: {/* TODO: Fix JSX expression */}
-  l: 24, withA, l, t: 18, withoutA, l, t: 6 }
-        lin, k, s: {/* TODO: Fix JSX expression */}
-  l: 45, intern, a, l: 32, extern, a, l: 13 }
+    setRepo, r, t({/* TODO: Fix JSX expression */,}
+  6: 2,}
+        imag, e, s: {/* TODO: Fix JSX expression */,}
+  l: 24, withA, l, t: 18, withoutA, l, t: 6,}
+        lin, k, s: {/* TODO: Fix JSX expression */,}
+  l: 45, intern, a, l: 32, extern, a, l: 13,}
         wordCou, n, t: 28, 4, 7;
         readabilitySco, r, e: 72,
       })
@@ -286,12 +286,12 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
         pageTi, t, l,
   e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s',';
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.',';
-        headin, g, s: {/* TODO: Fix JSX expression */}
-  6: 2 }
-        imag, e, s: {/* TODO: Fix JSX expression */}
-  l: 24, withA, l, t: 18, withoutA, l, t: 6 }
-        lin, k, s: {/* TODO: Fix JSX expression */}
-  l: 45, intern, a, l: 32, extern, a, l: 13 }
+        headin, g, s: {/* TODO: Fix JSX expression */,}
+  6: 2,}
+        imag, e, s: {/* TODO: Fix JSX expression */,}
+  l: 24, withA, l, t: 18, withoutA, l, t: 6,}
+        lin, k, s: {/* TODO: Fix JSX expression */,}
+  l: 45, intern, a, l: 32, extern, a, l: 13,}
         wordCou, n, t: 28, 4, 7;
         readabilitySco, r, e: 72,
       }
@@ -299,7 +299,7 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
     });
     setIsRunni, n, g(fal, s, e);
   }
-  const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression */}
+  const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression */,}
 }
 ca, s, e 'err, o, r':';"
 retu, r, n <XCircle>";
@@ -321,51 +321,50 @@ retu, r, n 'bg-r, e, d-100, tex, t-r, e, d-800, borde, r-r, e, d-2, 0, 0';';
 ca, s, e 'medi, u, m':';
 retu, r, n 'bg-yell, o, w-100, tex, t-yell, o, w-800, borde, r-yell, o, w-2, 0, 0';';
 defa, u, l;
-  t:
-retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
-  const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression */}
+  t: retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
+  const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression */,}
 }
   }
-  const, getCategoryIco, n = (catego, r, y: stri, n, g) => {/* TODO: Fix JSX expression */}
+  const, getCategoryIco, n = (catego, r, y: stri, n, g) => {/* TODO: Fix JSX expression */,}
 }
   }
-  const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression */}
+  const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression */,}
 }
   }
-  const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression */}
+  const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression */,}
   }
   const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {
     const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';)
     const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;)
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression */})
+  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression */,})
   }) || [];
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i => i.catego, r, y)))];
   const, impact, s = ['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i => i.catego, r, y)))];';
   const, impact, s = ['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];';
-  useEffe, c, t(() => {/* TODO: Fix JSX expression */}
+  useEffe, c, t(() => {/* TODO: Fix JSX expression */,}
   }, []);
-  return(<div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";
-      <div, className="flex, justif, y-between, item, s-center, m, b-6">";
+  return(<div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o"></div>";
+      <div, className="flex, justif, y-between, item, s-center, m, b-6"></div>";
   return (
-    <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";</div>
-      <div, className="flex, justif, y-between, item, s-center, m, b-6">";</div>
+    <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o"></div>";</div>
+      <div, className="flex, justif, y-between, item, s-center, m, b-6"></div>";</div>
         <d, i, v>
-          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"></h2>
+          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"></h2></h2>
             <Search, className="w-6 h-6  />
-          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";</h2>
+          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"></h2>";</h2>
   return ("
-    <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";"
-      <div, className="flex, justif, y-between, item, s-center, m, b-6">";
+    <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o"></div>";"
+      <div, className="flex, justif, y-between, item, s-center, m, b-6"></div>";
         <d, i, v></d>"
-          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"></h2>"
+          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"></h2></h2>"
             <Search, className="w-6 h-6  /></Search>"
-          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";"
+          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"></h2>";"
             <Search, className="w-6 h-6" />";
             SEO, Audit, Dashboard;
           </h2>"
-          <p, className="te, x, t-gr, a, y-600, m, t-1">Comprehensive, SEO, analysis and, optimization, recommendations</p>";
+          <p, className="te, x, t-gr, a, y-600, m, t-1"></p>Comprehensive, SEO, analysis and, optimization, recommendations</p>";
         </d, i, v>
         <butt, o, n;
   onCli, c, k={runSEOAud, i, t}
@@ -375,7 +374,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
             isRunni, n, g
   }
               ? 'bg-gr, a, y-400, tex, t-white, curso, r-n, o, t-allow, e, d'}
-          classNa, m, e={/* TODO: Fix JSX expression */}
+          classNa, m, e={/* TODO: Fix JSX expression */,}
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0}`}`;`
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'`
           }`}`;`
@@ -383,7 +382,7 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
           {
 isRunni, n, g ? (
 <React.Fragment>
-<div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></d, i, v>";)
+<div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></div></d, i, v>";)
 Analyzi, n, g...)
 </React.Fragment>)
 ) : (
@@ -398,75 +397,75 @@ Analyzi, n, g...)
       {repo, r, t && (
         <React.Fragment>{}
           {/* SEO, Score, Overview */}
-          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">"</div>
-            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"></div>
-              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>
-          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";</div>
-            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";</div>
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
+          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6"></div>"</div>
+            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"></div></div>
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div></div>
+          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6"></div>";</div>
+            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"></div>";</div>
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>";</div>
                 <d, i, v>
-                  <p, className="te, x, t-bl, u, e-100, tex, t-sm">SEO, Scor, e</p>";
+                  <p, className="te, x, t-bl, u, e-100, tex, t-sm"></p>SEO, Scor, e</p>";
         ></butt>
-          {/* TODO: Fix JSX expression */}
+          {/* TODO: Fix JSX expression */,}
 }
         </butt, o, n>
       </d, i, v>
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
           {/* SEO, Score, Overview */}"
-          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">""
-            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"></div>"
-              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>"
-          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";"
-            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";"
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";
+          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6"></div>""
+            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"></div></div>"
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div></div>"
+          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6"></div>";"
+            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"></div>";"
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>";
                 <d, i, v></d>"
-                  <p, className="te, x, t-bl, u, e-100, tex, t-sm">SEO, Scor, e</p>";"
-                  <p, className="te, x, t-3xl, fon, t-bo, l, d">{repo, r, t.overallSco, r, e}%</p>";
+                  <p, className="te, x, t-bl, u, e-100, tex, t-sm"></p>SEO, Scor, e</p>";"
+                  <p, className="te, x, t-3xl, fon, t-bo, l, d"></p>{repo, r, t.overallSco, r, e}%</p>";
                 </d, i, v>"
                 <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0  /></Search>"
                 <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0" />";
               </d, i, v>
             </d, i, v>
-            <div, className="bg-r, e, d-50, rounde, d-l, g, p-4">";</div>
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
+            <div, className="bg-r, e, d-50, rounde, d-l, g, p-4"></div>";</div>
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>";</div>
                 <d, i, v>
-                  <p, className="te, x, t-r, e, d-600, tex, t-sm">Erro, r, s</p>";
+                  <p, className="te, x, t-r, e, d-600, tex, t-sm"></p>Erro, r, s</p>";
             </d, i, v>"
-            <div, className="bg-r, e, d-50, rounde, d-l, g, p-4">";"
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";
+            <div, className="bg-r, e, d-50, rounde, d-l, g, p-4"></div>";"
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>";
                 <d, i, v></d>"
-                  <p, className="te, x, t-r, e, d-600, tex, t-sm">Erro, r, s</p>";"
-                  <p, className="te, x, t-2xl, fon, t-bold, tex, t-r, e, d-7, 0, 0">{repo, r, t.erro, r, s}</p>";
+                  <p, className="te, x, t-r, e, d-600, tex, t-sm"></p>Erro, r, s</p>";"
+                  <p, className="te, x, t-2xl, fon, t-bold, tex, t-r, e, d-7, 0, 0"></p>{repo, r, t.erro, r, s}</p>";
                 </d, i, v>"
                 <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0  /></XCircle>"
                 <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0" />";
               </d, i, v>
             </d, i, v>
-            <div, className="bg-yell, o, w-50, rounde, d-l, g, p-4">";</div>
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
+            <div, className="bg-yell, o, w-50, rounde, d-l, g, p-4"></div>";</div>
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>";</div>
                 <d, i, v>
-                  <p, className="te, x, t-yell, o, w-600, tex, t-sm">Warnin, g, s</p>";
+                  <p, className="te, x, t-yell, o, w-600, tex, t-sm"></p>Warnin, g, s</p>";
             </d, i, v>"
-            <div, className="bg-yell, o, w-50, rounde, d-l, g, p-4">";"
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";
+            <div, className="bg-yell, o, w-50, rounde, d-l, g, p-4"></div>";"
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>";
                 <d, i, v></d>"
-                  <p, className="te, x, t-yell, o, w-600, tex, t-sm">Warnin, g, s</p>";"
-                  <p, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-7, 0, 0">{repo, r, t.warnin, g, s}</p>";
+                  <p, className="te, x, t-yell, o, w-600, tex, t-sm"></p>Warnin, g, s</p>";"
+                  <p, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-7, 0, 0"></p>{repo, r, t.warnin, g, s}</p>";
                 </d, i, v>"
                 <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0  /></AlertTriangle>"
                 <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0" />";
               </d, i, v>
             </d, i, v>
-            <div, className="bg-gre, e, n-50, rounde, d-l, g, p-4">";</div>
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
+            <div, className="bg-gre, e, n-50, rounde, d-l, g, p-4"></div>";</div>
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>";</div>
                 <d, i, v>
-                  <p, className="te, x, t-gre, e, n-600, tex, t-sm">Total, Issue, s</p>";
+                  <p, className="te, x, t-gre, e, n-600, tex, t-sm"></p>Total, Issue, s</p>";
             </d, i, v>"
-            <div, className="bg-gre, e, n-50, rounde, d-l, g, p-4">";"
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";
+            <div, className="bg-gre, e, n-50, rounde, d-l, g, p-4"></div>";"
+              <div, className="flex, justif, y-between, item, s-cent, e, r"></div>";
                 <d, i, v></d>"
-                  <p, className="te, x, t-gre, e, n-600, tex, t-sm">Total, Issue, s</p>";"
-                  <p, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-7, 0, 0">{repo, r, t.totalIssu, e, s}</p>";
+                  <p, className="te, x, t-gre, e, n-600, tex, t-sm"></p>Total, Issue, s</p>";"
+                  <p, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-7, 0, 0"></p>{repo, r, t.totalIssu, e, s}</p>";
                 </d, i, v>"
                 <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0  /></Eye>"
                 <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0" />";
@@ -474,57 +473,57 @@ Analyzi, n, g...)
             </d, i, v>
           </d, i, v>
           {/* SEO, Metric, s */}
-          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6"></div>
-            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s</h3>
-            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">"</div>
+          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6"></div></div>
+            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4"></h3>Page, Metric, s</h3>
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4"></div>"</div>
               <d, i, v>
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Content, Analysi, s</h4>
-                <div, className="spa, c, e-y-1, tex, t-sm"></div>
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Content, Analysi, s</h4>
+                <div, className="spa, c, e-y-1, tex, t-sm"></div></div>
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>Word, Coun, t: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}</sp, a, n>
                   </d, i, v>
-                  <div, className="flex, justif, y-betwe, e, n"></div>
-          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6">";</div>
-            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s</h3>";
-            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">";</div>
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
+          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6"></div>";</div>
+            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4"></h3>Page, Metric, s</h3>";
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4"></div>";</div>
               <d, i, v>
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Content, Analysi, s</h4>";
-                <div, className="spa, c, e-y-1, tex, t-sm">";
-                  <div, className="flex, justif, y-betwe, e, n">";
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Content, Analysi, s</h4>";
+                <div, className="spa, c, e-y-1, tex, t-sm"></div>";
+                  <div, className="flex, justif, y-betwe, e, n"></div>";
                     <sp, a, n>Word, Cou, n;
-                <div, className="spa, c, e-y-1, tex, t-sm">";</div>
-                  <div, className="flex, justif, y-betwe, e, n">";</div>
+                <div, className="spa, c, e-y-1, tex, t-sm"></div>";</div>
+                  <div, className="flex, justif, y-betwe, e, n"></div>";</div>
                     <sp, a, n>Word, Cou, n
   t: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}</sp, a, n>";
                   </d, i, v>
-                  <div, className="flex, justif, y-betwe, e, n">";</div>
+                  <div, className="flex, justif, y-betwe, e, n"></div>";</div>
                     <sp, a, n>Readability, Scor, e: </sp, a, n>
           {/* SEO, Metric, s */}"
-          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6"></div>"
-            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s</h3>"
-            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">"
+          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6"></div></div>"
+            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4"></h3>Page, Metric, s</h3>"
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4"></div>"
               <d, i, v></d>"
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Content, Analysi, s</h4>"
-                <div, className="spa, c, e-y-1, tex, t-sm"></div>"
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Content, Analysi, s</h4>"
+                <div, className="spa, c, e-y-1, tex, t-sm"></div></div>"
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>Word, Coun, t: </sp, a, n>")
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}</sp, a, n>
                   </d, i, v>"
-                  <div, className="flex, justif, y-betwe, e, n"></div>"
-          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6">";"
-            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s</h3>";"
-            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">";
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>"
+          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6"></div>";"
+            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4"></h3>Page, Metric, s</h3>";"
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4"></div>";
               <d, i, v></d>"
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Content, Analysi, s</h4>";"
-                <div, className="spa, c, e-y-1, tex, t-sm">";"
-                  <div, className="flex, justif, y-betwe, e, n">";
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Content, Analysi, s</h4>";"
+                <div, className="spa, c, e-y-1, tex, t-sm"></div>";"
+                  <div, className="flex, justif, y-betwe, e, n"></div>";
                     <sp, a, n>Word, Cou, n,
   t: </sp, a, n>"
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}</sp, a, n>";
                   </d, i, v>"
-                  <div, className="flex, justif, y-betwe, e, n">";
+                  <div, className="flex, justif, y-betwe, e, n"></div>";
                     <sp, a, n>Readability, Scor, e: </sp, a, n>`
                     <span, className={`px-2, p, y-1, rounded, text-xs, fon, t-medi, u, m ${getScoreCol, o, r(repo, r, t.metri, c, s.readabilitySco, r, e)}`}>`;`
                       {repo, r, t.metri, c, s.readabilitySco, r, e}/1, 0, 0;
@@ -533,40 +532,40 @@ Analyzi, n, g...)
                 </d, i, v>
               </d, i, v>
               <d, i, v>
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>
-                <div, className="spa, c, e-y-1, tex, t-sm"></div>
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Structu, r, e</h4>
+                <div, className="spa, c, e-y-1, tex, t-sm"></div></div>
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>H1, s: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}</sp, a, n>
                   </d, i, v>
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>Total, Heading, s: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m"></span>
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>";
-                <div, className="spa, c, e-y-1, tex, t-sm">";</div>
-                  <div, className="flex, justif, y-betwe, e, n">";</div>
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Structu, r, e</h4>";
+                <div, className="spa, c, e-y-1, tex, t-sm"></div>";</div>
+                  <div, className="flex, justif, y-betwe, e, n"></div>";</div>
                     <sp, a, n>H1, s: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}</sp, a, n>";
                   </d, i, v>
-                  <div, className="flex, justif, y-betwe, e, n">";</div>
+                  <div, className="flex, justif, y-betwe, e, n"></div>";</div>
                     <sp, a, n>Total, Heading, s: </sp, a, n>
               <d, i, v></d>"
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>"
-                <div, className="spa, c, e-y-1, tex, t-sm"></div>"
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Structu, r, e</h4>"
+                <div, className="spa, c, e-y-1, tex, t-sm"></div></div>"
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>H1, s: </sp, a, n>"
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}</sp, a, n>
                   </d, i, v>"
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>Total, Heading, s: </sp, a, n>"
                     <span, className="fo, n, t-medi, u, m"></span>"
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>";"
-                <div, className="spa, c, e-y-1, tex, t-sm">";"
-                  <div, className="flex, justif, y-betwe, e, n">";
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Structu, r, e</h4>";"
+                <div, className="spa, c, e-y-1, tex, t-sm"></div>";"
+                  <div, className="flex, justif, y-betwe, e, n"></div>";
                     <sp, a, n>H1, s: </sp, a, n>"
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}</sp, a, n>";
                   </d, i, v>"
-                  <div, className="flex, justif, y-betwe, e, n">";
+                  <div, className="flex, justif, y-betwe, e, n"></div>";
                     <sp, a, n>Total, Heading, s: </sp, a, n>"
                     <span, className="fo, n, t-medi, u, m">";
                       {Obje, c, t.valu, e, s(repo, r, t.metri, c, s.headin, g, s).redu, c, e((s, u, m, cou, n, t) => s, u, m + cou, n, t, 0)}
@@ -575,41 +574,41 @@ Analyzi, n, g...)
                 </d, i, v>
               </d, i, v>
               <d, i, v>
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s</h4>
-                <div, className="spa, c, e-y-1, tex, t-sm"></div>
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Med, i, a & Lin, k, s</h4>
+                <div, className="spa, c, e-y-1, tex, t-sm"></div></div>
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>Imag, e, s: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}</sp, a, n>
                   </d, i, v>
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>Missing, Alt, Text: </sp, a, n>
                     <span, className="fo, n, t-medium, tex, t-r, e, d-6, 0, 0">{repo, r, t.metri, c, s.imag, e, s.withoutA, l, t}</sp, a, n>
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s</h4>";
-                <div, className="spa, c, e-y-1, tex, t-sm">";</div>
-                  <div, className="flex, justif, y-betwe, e, n">";</div>
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Med, i, a & Lin, k, s</h4>";
+                <div, className="spa, c, e-y-1, tex, t-sm"></div>";</div>
+                  <div, className="flex, justif, y-betwe, e, n"></div>";</div>
                     <sp, a, n>Imag, e, s: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}</sp, a, n>";
                   </d, i, v>
-                  <div, className="flex, justif, y-betwe, e, n">";</div>
+                  <div, className="flex, justif, y-betwe, e, n"></div>";</div>
                     <sp, a, n>Missing, Alt, Text: </sp, a, n>
               <d, i, v></d>"
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s</h4>"
-                <div, className="spa, c, e-y-1, tex, t-sm"></div>"
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Med, i, a & Lin, k, s</h4>"
+                <div, className="spa, c, e-y-1, tex, t-sm"></div></div>"
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>Imag, e, s: </sp, a, n>"
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}</sp, a, n>
                   </d, i, v>"
-                  <div, className="flex, justif, y-betwe, e, n"></div>
+                  <div, className="flex, justif, y-betwe, e, n"></div></div>
                     <sp, a, n>Missing, Alt, Tex,
   t: </sp, a, n>"
                     <span, className="fo, n, t-medium, tex, t-r, e, d-6, 0, 0">{repo, r, t.metri, c, s.imag, e, s.withoutA, l, t}</sp, a, n>"
-                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s</h4>";"
-                <div, className="spa, c, e-y-1, tex, t-sm">";"
-                  <div, className="flex, justif, y-betwe, e, n">";
+                <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2"></h4>Med, i, a & Lin, k, s</h4>";"
+                <div, className="spa, c, e-y-1, tex, t-sm"></div>";"
+                  <div, className="flex, justif, y-betwe, e, n"></div>";
                     <sp, a, n>Imag, e, s: </sp, a, n>"
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}</sp, a, n>";
                   </d, i, v>"
-                  <div, className="flex, justif, y-betwe, e, n">";
+                  <div, className="flex, justif, y-betwe, e, n"></div>";
                     <sp, a, n>Missing, Alt, Tex,
   t: </sp, a, n>"
                     <span, className="fo, n, t-medium, tex, t-r, e, d-6, 0, 0">{repo, r, t.metri, c, s.imag, e, s.withoutA, l, t}</sp, a, n>";
@@ -619,10 +618,10 @@ Analyzi, n, g...)
             </d, i, v>
           </d, i, v>
           {/* Filte, r, s */}
-          <div, className="flex, fle, x-wrap, ga, p-4, m, b-6">";</div>
+          <div, className="flex, fle, x-wrap, ga, p-4, m, b-6"></div>";</div>
             <d, i, v>
           {/* Filte, r, s */}"
-          <div, className="flex, fle, x-wrap, ga, p-4, m, b-6">";
+          <div, className="flex, fle, x-wrap, ga, p-4, m, b-6"></div>";
             <d, i, v></d>"
               <label, className="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-1">Catego, r, y</lab, e, l>";
               <sele, c, t;
@@ -632,7 +631,7 @@ Analyzi, n, g...)
               >
                 {categori, e, s.m, a, p(catego, r, y => ()
                   <option, ke, y={catego, r, y} val, u, e={catego, r, y}>)
-                {/* TODO: Fix JSX expression */}
+                {/* TODO: Fix JSX expression */,}
                   <option, ke, y={catego, r, y} val, u, e={catego, r, y}></option>
                     {catego, r, y.char, A, t(0).toUpperCa, s, e() + catego, r, y.sli, c, e(1)}
                   </opti, o, n>
@@ -648,7 +647,7 @@ Analyzi, n, g...)
               >
                 {impac, t, s.m, a, p(impa, c, t => ()
                   <option, ke, y={impa, c, t} val, u, e={impa, c, t}>)
-                {/* TODO: Fix JSX expression */}
+                {/* TODO: Fix JSX expression */,}
                   <option, ke, y={impa, c, t} val, u, e={impa, c, t}></option>
                     {impa, c, t.char, A, t(0).toUpperCa, s, e() + impa, c, t.sli, c, e(1)}
                   </opti, o, n>
@@ -657,41 +656,41 @@ Analyzi, n, g...)
             </d, i, v>
           </d, i, v>
           {/* SEO, Issue, s */}
-          <div, className="spa, c, e-y-3">";</div>
-            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">SEO, Issue, s & Recommendatio, n, s</h3>";
+          <div, className="spa, c, e-y-3"></div>";</div>
+            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0"></h3>SEO, Issue, s & Recommendatio, n, s</h3>";
             <AnimatePresen, c, e></AnimatePresen>
               {filteredIssu, e, s.m, a, p((iss, u, e) => (
                 <moti, o, n.d, i, v;
           {/* SEO, Issue, s */}"
-          <div, className="spa, c, e-y-3">";"
-            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">SEO, Issue, s & Recommendatio, n, s</h3>";
+          <div, className="spa, c, e-y-3"></div>";"
+            <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0"></h3>SEO, Issue, s & Recommendatio, n, s</h3>";
             <AnimatePresen, c, e></AnimatePresen>
-              {/* TODO: Fix JSX expression */}
+              {/* TODO: Fix JSX expression */,}
   k, e, y={iss, u, e.id}
-                  initi, a, l={{ opaci, t, y: 0, y: 20 }}
-                  anima, t, e={{ opaci, t, y: 1, y: 0 }}
-                  ex, i, t={{ opaci, t, y: 0, y: -20 }}"
+                  initi, a, l={{ opaci, t, y: 0, y: 20,}}
+                  anima, t, e={{ opaci, t, y: 1, y: 0,}}
+                  ex, i, t={{ opaci, t, y: 0, y: -20,}}"
                   classNa, m, e="border, borde, r-gr, a, y-200, rounde, d-l, g, p-4, hove, r: shad, o, w-md, transitio, n-shad, o, w"
                 >
-                  <div, className="flex, item, s-start, justif, y-betwe, e, n">";</div>
-                    <div, className="flex, item, s-start, ga, p-3, fle, x-1">";
+                  <div, className="flex, item, s-start, justif, y-betwe, e, n"></div>";</div>
+                    <div, className="flex, item, s-start, ga, p-3, fle, x-1"></div>";
                       {getIssueIc, o, n(iss, u, e.ty, p, e)}</div>
-                      <div, className="fl, e, x-1"></div>
-                        <div, className="flex, item, s-center, ga, p-2, m, b-1"></div>
-                          <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}</h4>
-                      <div, className="fl, e, x-1">";</div>
-                        <div, className="flex, item, s-center, ga, p-2, m, b-1">";</div>
-                          <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}</h4>";
+                      <div, className="fl, e, x-1"></div></div>
+                        <div, className="flex, item, s-center, ga, p-2, m, b-1"></div></div>
+                          <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0"></h4>{iss, u, e.tit, l, e}</h4>
+                      <div, className="fl, e, x-1"></div>";</div>
+                        <div, className="flex, item, s-center, ga, p-2, m, b-1"></div>";</div>
+                          <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0"></h4>{iss, u, e.tit, l, e}</h4>";
                 ></moti>"
-                  <div, className="flex, item, s-start, justif, y-betwe, e, n">";"
-                    <div, className="flex, item, s-start, ga, p-3, fle, x-1">";
+                  <div, className="flex, item, s-start, justif, y-betwe, e, n"></div>";"
+                    <div, className="flex, item, s-start, ga, p-3, fle, x-1"></div>";
                       {getIssueIc, o, n(iss, u, e.ty, p, e)}"
-                      <div, className="fl, e, x-1"></div>"
-                        <div, className="flex, item, s-center, ga, p-2, m, b-1"></div>"
-                          <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}</h4>"
-                      <div, className="fl, e, x-1">";"
-                        <div, className="flex, item, s-center, ga, p-2, m, b-1">";"
-                          <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}</h4>";`
+                      <div, className="fl, e, x-1"></div></div>"
+                        <div, className="flex, item, s-center, ga, p-2, m, b-1"></div></div>"
+                          <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0"></h4>{iss, u, e.tit, l, e}</h4>"
+                      <div, className="fl, e, x-1"></div>";"
+                        <div, className="flex, item, s-center, ga, p-2, m, b-1"></div>";"
+                          <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0"></h4>{iss, u, e.tit, l, e}</h4>";`
                           <span, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, borde, r ${getImpactCol, o, r(iss, u, e.impa, c, t)}`}>`;`
                             {iss, u, e.impa, c, t}
                           </sp, a, n>"
@@ -703,26 +702,26 @@ Analyzi, n, g...)
                             {iss, u, e.sco, r, e}/1, 0, 0;
                           </sp, a, n>
                         </d, i, v>
-                        <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}</p>
-                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>",
+                        <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2"></p>{iss, u, e.descripti, o, n}</p>
                         <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"></div>
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>"
-                          <p, className="te, x, t-gre, e, n-700, tex, t-sm">{iss, u, e.f, i, x}</p>
-                        <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}</p>";
-                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">";</div>
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>",
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m"></p>How, to, Fix: </p>",
+                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"></div></div>
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m"></p>How, to, Fix: </p>"
+                          <p, className="te, x, t-gre, e, n-700, tex, t-sm"></p>{iss, u, e.f, i, x}</p>
+                        <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2"></p>{iss, u, e.descripti, o, n}</p>";
+                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"></div>";</div>
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m"></p>How, to, Fix: </p>",
                         </d, i, v>"
-                        <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}</p>"
-                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"></div>"
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fi,"
+                        <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2"></p>{iss, u, e.descripti, o, n}</p>"
+                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"></div></div>"
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m"></p>How, to, Fi,"
   x: </p>""
-                          <p, className="te, x, t-gre, e, n-700, tex, t-sm">{iss, u, e.f, i, x}</p>"
-                        <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}</p>";"
-                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">";"
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fi,"
+                          <p, className="te, x, t-gre, e, n-700, tex, t-sm"></p>{iss, u, e.f, i, x}</p>"
+                        <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2"></p>{iss, u, e.descripti, o, n}</p>";"
+                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"></div>";"
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m"></p>How, to, Fi,"
   x: </p>","
-                          <p, className="te, x, t-gre, e, n-700, tex, t-sm">{iss, u, e.f, i, x}</p>";
+                          <p, className="te, x, t-gre, e, n-700, tex, t-sm"></p>{iss, u, e.f, i, x}</p>";
                         </d, i, v>
                       </d, i, v>
                     </d, i, v>
@@ -732,7 +731,7 @@ Analyzi, n, g...)
             </AnimatePresen, c, e>
           </d, i, v>
           {/* Last, Update, d */}"
-          <div, className="mt-6, tex, t-center, tex, t-sm, tex, t-gr, a, y-5, 0, 0">";
+          <div, className="mt-6, tex, t-center, tex, t-sm, tex, t-gr, a, y-5, 0, 0"></div>";
             Last, update, d: {new, Dat, e(repo, r, t.lastUpdat, e, d).toLocaleStri, n, g()}
           </d, i, v>
         </React.Fragment>

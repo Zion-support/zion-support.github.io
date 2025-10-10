@@ -43,53 +43,53 @@ return (
     <>
       <Helmet>
         <title>Ai Workflow Automation - Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></div></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1>
+        <section className="relative py-20 px-4 overflow-hidden"></section></section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s',}} /></div></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div></div>
+            <h1></h1>
               Ai Workflow Automation;
             </h1>
-            <p>
+            <p></p>
               Advanced AI-powered ai workflow automation solution for modern businesses.;
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>
+              <button></button>
                 Get Started
               </button>
-              <button>
+              <button></button>
                 View Demo,
               </button>
             </div>
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>
+        <section className="py-20 px-4"></section></section>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2></h2>
                 Key Features;
               </h2>
-              <p>
+              <p></p>
                 Advanced AI technology that drives results;
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
               {
     features.map((feature, index) => (
   }
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div></div>
                     <feature>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4"></h3>{feature.title}</h3>
+                  <p className="text-gray-300 mb-4"></p>{feature.description}</p>
                   {
     feature.benefits && (;
                     <ul>
@@ -97,21 +97,16 @@ return (
   }
                         <li>
                           <CheckCircle>
-
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users } from 'lucide-react';
-
 const AIWorkflowAutomation: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
   const features = [
     {
       icon: Brain,
@@ -150,7 +145,6 @@ const AIWorkflowAutomation: React.FC = () => {
       benefits: ['Performance metrics', 'ROI tracking', 'Custom reports']
     }
   ];
-
   const services = [
     {
       icon: Zap,
@@ -174,14 +168,12 @@ const AIWorkflowAutomation: React.FC = () => {
       benefits: ['Custom AI models', 'Dedicated support', 'White-label options']
     }
   ];
-
   const stats = [
-    { number: '90%', label: 'Time Savings' },
-    { number: '75%', label: 'Error Reduction' },
-    { number: '500+', label: 'Integrations' },
-    { number: '24/7', label: 'Automation' }
+    { number: '90%', label: 'Time Savings',},
+    { number: '75%', label: 'Error Reduction',},
+    { number: '500+', label: 'Integrations',},
+    { number: '24/7', label: 'Automation',}
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -190,25 +182,23 @@ const AIWorkflowAutomation: React.FC = () => {
         keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles"></div>
         <Navigation />
-        
-        <main className="pt-16">
+        <main className="pt-16"></main>
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text"></h1>
                 AI Workflow Automation Platform
               </h1>
-              <p className="text-xl md:text-2xl text-yellow-400 mb-8">
+              <p className="text-xl md:text-2xl text-yellow-400 mb-8"></p>
                 Automate any business process with intelligent workflows
               </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>
                 Our AI-powered workflow automation platform helps businesses eliminate manual tasks, 
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
@@ -225,36 +215,33 @@ const AIWorkflowAutomation: React.FC = () => {
                   <span>Start Free Trial</span>
                 </a>
               </div>
-
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
                 {stats.map((stat, index) => (
-                  <div key={index} className="hologram-card-enhanced p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2 neon-text">
+                  <div key={index} className="hologram-card-enhanced p-6 text-center"></div>
+                    <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2 neon-text"></div>
                       {stat.number}
                     </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
+                    <div className="text-gray-300 font-medium"></div>{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
           </section>
-
           {/* Features Section */}
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <section className="py-16"></section>
+            <div className="container mx-auto px-4"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
                 Powerful Automation Features
               </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {features.map((feature, index) => (
-                  <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
-                    <div className="text-4xl mb-4 text-yellow-400">
+                  <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300"></div>
+                    <div className="text-4xl mb-4 text-yellow-400"></div>
                       <feature.icon className="w-10 h-10" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-3"></h3>{feature.title}</h3>
+                    <p className="text-gray-300 mb-4"></p>{feature.description}</p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
@@ -266,83 +253,78 @@ const AIWorkflowAutomation: React.FC = () => {
                   )}
                 </div>
               ))}
-
             </div>
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>
+        <section className="py-20 px-4"></section></section>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2></h2>
                 Why Choose Our Solution?;
               </h2>
-              <p>
+              <p></p>
                 Proven results that drive business growth and efficiency;
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
               {
     benefits.map((benefit, index) => (
   }
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div></div>
                     <CheckCircle>
                   </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
+                  <p className="text-lg text-white font-medium"></p>{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2>
+        <section className="py-20 px-4"></section></section>
+          <div className="max-w-4xl mx-auto text-center"></div></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div></div>
+              <h2></h2>
                 Ready to Get Started?;
               </h2>
-              <p>
+              <p></p>
                 Contact our experts to discuss your requirements and get started today.;
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>
+                <button></button>
                   Contact Us;
                 </button>
-                <button>
+                <button></button>
                   Learn More
                 </button>
-=======
                   </div>
                 ))}
               </div>
             </div>
           </section>
-
           {/* Services Section */}
-          <section className="py-16 bg-gray-900/50">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <section className="py-16 bg-gray-900/50"></section>
+            <div className="container mx-auto px-4"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
                 Automation Services
               </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {services.map((service, index) => (
-                  <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
-                    <div className="text-4xl mb-4 text-cyan-400">
+                  <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300"></div>
+                    <div className="text-4xl mb-4 text-cyan-400"></div>
                       <service.icon className="w-10 h-10" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <div className="text-sm text-gray-400 mb-4">{service.period}</div>
-                      <div className="space-y-1">
+                    <h3 className="text-xl font-bold text-white mb-3"></h3>{service.title}</h3>
+                    <div className="text-center"></div>
+                      <div className="text-2xl font-bold text-cyan-400 mb-2"></div>{service.price}</div>
+                      <div className="text-sm text-gray-400 mb-4"></div>{service.period}</div>
+                      <div className="space-y-1"></div>
                         {service.benefits.map((benefit, benefitIndex) => (
-                          <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
+                          <p key={benefitIndex} className="text-sm text-green-600"></p>✓ {benefit}</p>
                         ))}
                       </div>
                     </div>
-                    
                     <a 
                       href="/contact"
                       className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center justify-center mt-4"
@@ -360,5 +342,4 @@ const AIWorkflowAutomation: React.FC = () => {
     </>
   );
 };
-
 export default AiWorkflowAutomationPage;

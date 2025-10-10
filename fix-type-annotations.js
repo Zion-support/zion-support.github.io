@@ -10,41 +10,41 @@ const __dirname = path.dirname(__filename);
 function fixTypeAnnotations(content) {
   // Fix malformed type annotations with comments inside;
   content = content.replace(
-function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
+function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */,}
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
-    (match, body) => {/* TODO: Fix JSX expression */}
+    (match, body) => {/* TODO: Fix JSX expression */,}
       return `{ ${body.trim()} }`;
     }
   );
 
   // Fix specific patterns we've seen;
-  content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
-    '{ usedJSHeapSize: number }'
+  content = content.replace(/\{\/\*\/\s*usedJSHeapSize: \s*number\s*\/\*\/\,}/g)
+    '{ usedJSHeapSize: number,}'
   );
 
-  content = content.replace(/\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g)
-    '{ value: number }'
+  content = content.replace(/\{\/\*\/\s*value: \s*number\s*\/\*\/\,}/g)
+    '{ value: number,}'
   );
 
   // Fix variable name issues;
   content = content.replace(
-  content = content.replace(/\{/* TODO: Fix JSX expression */}
-  e:\s*number\s*\/\*\/\}/g,
-    '{/* TODO: Fix JSX expression */}
-  e: number }')
+  content = content.replace(/\{/* TODO: Fix JSX expression */,}
+  e: \s*number\s*\/\*\/\,}/g,
+    '{/* TODO: Fix JSX expression */,}
+  e: number,}')
   );
 
-  content = content.replace(/\{/* TODO: Fix JSX expression */}
-  e:\s*number\s*\/\*\/\}/g,
-    '{/* TODO: Fix JSX expression */}
-  e: number }')
+  content = content.replace(/\{/* TODO: Fix JSX expression */,}
+  e: \s*number\s*\/\*\/\,}/g,
+    '{/* TODO: Fix JSX expression */,}
+  e: number,}')
   );
 
   // Fix variable name issues;
   content = content.replace()
     /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,
-    'const _memory = (performance as {/* TODO: Fix JSX expression */})
-  e: number } }).memory;\n          memoryUsage = _memory?.'
+    'const _memory = (performance as {/* TODO: Fix JSX expression */,})
+  e: number,} }).memory;\n          memoryUsage = _memory?.'
   );
 
   return content;
@@ -64,11 +64,11 @@ function processFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
+function processFile(filePath) {/* TODO: Fix JSX expression */,}
     }
 
     return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -94,9 +94,9 @@ function findSourceFiles(dir) {
         // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
           files.push(fullPath);
-function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
+function findSourceFiles(dir) {/* TODO: Fix JSX expression */,}
         }
-      } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
+      } else if (stat.isFile()) {/* TODO: Fix JSX expression */,}
         }
       }
     }
@@ -116,8 +116,8 @@ const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
-for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+for (const file of files) {/* TODO: Fix JSX expression */,}`
+  d: ${file,}`);
   }
 }
 `

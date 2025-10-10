@@ -14,20 +14,20 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
   description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",
   keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n',
   canonic, a, l,
-  u, r, l = 'htt, p, s: //ziontechgro u p.c o m' ,
-  image = 'htt, p, s: //ziontechgro u p.c o m/og-image.j p g' ,
+  u, r, l = 'htt, p, s: //ziontechgro u p.c o m',
+  image = 'htt, p, s: //ziontechgro u p.c o m/og-image.j p g',
   ty, p, e = 'webs, i, t, e',
   author = 'Zion, Tech, Grou, p'}) => { 
   const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {
-    '@conte, x, t': 'htt, p, s: //sche m a.o r g' ,
+    '@conte, x, t': 'htt, p, s: //sche m a.o r g',
     '@ty, p, e': 'Organizati, o, n',
     na, m, e: 'Zion, Tech, Grou, p',
     description: 'Revolutionary, AI, and IT, Solutio, n, s',
-    u, r, l: 'htt, p, s: //ziontechgro u p.co m' ,
-    lo, g, o: 'htt, p, s: //ziontechgro u p.c o m/lo g o.pn g' ,
+    u, r, l: 'htt, p, s: //ziontechgro u p.co m',
+    lo, g, o: 'htt, p, s: //ziontechgro u p.c o m/lo g o.pn g',
     same, A, s: [,
-      'htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p' ,
-      'htt, p, s: //twitt e r.c o m/ziontechgr o u p' ,
+      'htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p',
+      'htt, p, s: //twitt e r.c o m/ziontechgr o u p',
       'htt, p, s: //gith u b.c o m/ZionClo u d s' ],
     contactPoi, n, t: {,
       '@ty, p, e': 'ContactPo, i, n, t',
@@ -45,12 +45,12 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     numberOfEmploye, e, s: '50, 0+',
     industry: 'Artificial, Intelligen, c, e',
     servic, e, s: [,
-interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
+interface SEOHeadProp, s {/* TODO: Fix JSX expression */,}
  }
-const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */,})
+}) => {/* TODO: Fix JSX expression */,}
      },
-    addre, s, s: {/* TODO: Fix JSX expression */}
+    addre, s, s: {/* TODO: Fix JSX expression */,}
     },
     foundingDa, t, e: '2, 0, 2, 0',
     numberOfEmploye, e, s: '50, 0+',
@@ -76,10 +76,10 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, propert, y = 'og: u, r, l' conte, n, t={canonica, l, U, r, l} />
       <meta, propert, y = 'og: ty, p, e' conte, n, t={ty, p, e} />
       <meta, propert, y = 'og: site_na, m, e' conte, n, t='Zion, Tech, Group' />
-      <meta, propert, y='og:loca, l, e' conte, n, t='en_, U, S' />
+      <meta, propert, y='og: loca, l, e' conte, n, t='en_, U, S' />
       {/* Twitter, Card, Meta Ta, g, s */}
       <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
-      <meta, nam, e='twitt, e, r:title' conte, n, t={t, i, t, l, e} />
+      <meta, nam, e='twitt, e, r: title' conte, n, t={t, i, t, l, e} />
       <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />
       <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />
       {/* Additional, Metas */}
@@ -119,10 +119,10 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, propert, y = 'o,
   g: site_na, m, e' conte, n, t='Zion, Tech, Group' /></meta>
       <meta, propert, y='o,
-  g:loca, l, e' conte, n, t='en_, U, S' /></meta>
+  g: loca, l, e' conte, n, t='en_, U, S' /></meta>
       {/* Twitter, Card, Meta Ta, g, s */}
       <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' /></meta>
-      <meta, nam, e='twitt, e, r:title' conte, n, t={t, i, t, l, e} /></meta>
+      <meta, nam, e='twitt, e, r: title' conte, n, t={t, i, t, l, e} /></meta>
       <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} /></meta>
       <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} /></meta>
       {/* Additional, Metas */}

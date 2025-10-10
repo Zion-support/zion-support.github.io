@@ -29,16 +29,16 @@ function fixParsingError(filePath) {
 
     // Check if file ends with ); but is missing the closing brace;
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {
-function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
-    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
+function fixParsingError(filePath) {/* TODO: Fix JSX expression */,}
+    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */,}
       content = content.trim() + '\n};';
       modified = true;
     }
 
-    if (modified) {/* TODO: Fix JSX expression */}
+    if (modified) {/* TODO: Fix JSX expression */,}
   d: ${path.relative(__dirname, filePath)}`);
     }
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
@@ -49,7 +49,7 @@ filesWithErrors.forEach(file => {)
   if (fs.existsSync(fullPath)) {
     fixParsingError(fullPath);
   }
-filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
+filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */,}
   })
 });
 

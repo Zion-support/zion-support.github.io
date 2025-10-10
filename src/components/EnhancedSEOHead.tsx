@@ -11,16 +11,16 @@ interface SEOHeadProps {
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.png",
-  url = "https://ziontechgroup.com",
+  image = "https: //ziontechgroup.com/og-image.png",
+  url = "https: //ziontechgroup.com",
   type = "website"
 }) => {
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": "https: //ziontechgroup.com",
+    "logo": "https: //ziontechgroup.com/logo.png",
     "description": description,
     "address": {
       "@type": "PostalAddress",
@@ -37,8 +37,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
+      "https: //linkedin.com/company/zion-tech-group",
+      "https: //twitter.com/ziontechgroup",
       "https://github.com/zion-tech-group"
     ],
     "foundingDate": "2020",
@@ -68,19 +68,19 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta name="format-detection" content="telephone=no,address=no,email=no" /></meta>
       <meta name="color-scheme" content="dark light" /></meta>
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} /></meta>
-      <meta property="og:url" content={url} /></meta>
-      <meta property="og:title" content={title} /></meta>
-      <meta property="og:description" content={description} /></meta>
-      <meta property="og:image" content={image} /></meta>
+      <meta property="og: type" content={type,} /></meta>
+      <meta property="og: url" content={url,} /></meta>
+      <meta property="og: title" content={title,} /></meta>
+      <meta property="og: description" content={description,} /></meta>
+      <meta property="og: image" content={image,} /></meta>
       <meta property="og:site_name" content="Zion Tech Group" /></meta>
       <meta property="og:locale" content="en_US" /></meta>
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" /></meta>
-      <meta property="twitter:url" content={url} /></meta>
-      <meta property="twitter:title" content={title} /></meta>
-      <meta property="twitter:description" content={description} /></meta>
-      <meta property="twitter:image" content={image} /></meta>
+      <meta property="twitter: url" content={url,} /></meta>
+      <meta property="twitter: title" content={title,} /></meta>
+      <meta property="twitter: description" content={description,} /></meta>
+      <meta property="twitter: image" content={image,} /></meta>
       <meta property="twitter:creator" content="@ziontechgroup" /></meta>
       <meta property="twitter:site" content="@ziontechgroup" /></meta>
       {/* Canonical URL */}
@@ -103,13 +103,13 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       {/* Additional SEO Scripts */}
       <script type="application/ld+json"></scrip>
         {JSON.stringify({
-          "@context": "https://schema.org",
+          "@context": "https: //schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com/",
+          "url": "https: //ziontechgroup.com/",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "target": "https: //ziontechgroup.com/search?q={search_term_string,}",
             "query-input": "required name=search_term_string"
           }
         })}
@@ -149,18 +149,18 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <link rel="dns-prefetch" href="https://fonts.googleapis.com" /></link>
       <link rel="dns-prefetch" href="https://fonts.gstatic.com" /></link>
       {/* Rich Snippets */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /></meta>
-      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /></meta>
-      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /></meta>
+      <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview: large, max-video-preview:-1" /></meta>
+      <meta name="googlebot" content="index, follow, max-snippet: -1, max-image-preview: large, max-video-preview:-1" /></meta>
+      <meta name="bingbot" content="index, follow, max-snippet: -1, max-image-preview: large, max-video-preview:-1" /></meta>
       {/* Enhanced Open Graph */}
       <meta property="og:image:width" content="1200" /></meta>
       <meta property="og:image:height" content="630" /></meta>
       <meta property="og:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" /></meta>
-      <meta property="og:updated_time" content={new Date().toISOString()} /></meta>
+      <meta property="og: updated_time" content={new Date().toISOString(),} /></meta>
       {/* Enhanced Twitter Cards */}
       <meta name="twitter:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" /></meta>
       <meta name="twitter:domain" content="ziontechgroup.com" /></meta>
-      <meta name="twitter:url" content={url} /></meta>
+      <meta name="twitter: url" content={url,} /></meta>
       {/* Additional Performance Hints */}
       <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /></link>
       <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" /></link>

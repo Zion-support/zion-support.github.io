@@ -36,17 +36,17 @@ export interface EnterpriseITService2029V2 {
   contact: unknown
     mobile: string
     email: string,
-    website: string}
-    address: string}
+    website: string,}
+    address: string,}
   }
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     description:,
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
-  e: string}
+export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */,}
+  e: string,}
     addres,
-  s: string}
+  s: string,}
   }
 export const,
   enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
@@ -55,8 +55,7 @@ export const,
     nam,
   e: 'Autonomous DevOps Platform'
     descriptio,
-  n:
-      'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.'
+  n: 'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.'
     categor,
   y: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD', 'Monitoring']
     pric,
@@ -117,7 +116,7 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
@@ -192,7 +191,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
     i,
@@ -200,8 +199,7 @@ export const,
     nam,
   e: 'Quantum Cloud Infrastructure'
     descriptio,
-  n:
-      'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.'
+  n: 'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.'
     categor,
   y: [,
       'Cloud Computing'
@@ -279,7 +277,7 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
     id: 'ai-powered-enterprise-security',
     name: 'AI-Powered Enterprise Security',
@@ -344,7 +342,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
     i,
@@ -352,8 +350,7 @@ export const,
     nam,
   e: 'AI-Powered Enterprise Security'
     descriptio,
-  n:
-      'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.'
+  n: 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.'
     categor,
   y: [,
       'Cybersecurity'
@@ -422,7 +419,7 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
     id: 'autonomous-it-operations-center',
     name: 'Autonomous IT Operations Center',
@@ -500,7 +497,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
     i,
@@ -508,8 +505,7 @@ export const,
     nam,
   e: 'Autonomous IT Operations Center'
     descriptio,
-  n:
-      'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.'
+  n: 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.'
     categor,
   y: [,
       'IT Operations'
@@ -627,7 +623,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
       mobil,
@@ -636,9 +632,9 @@ export const,
   l: 'kleber@ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}
+  s: '364 E Main St STE 1008 Middletown DE 19709',}}
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
     ];
     benefit,
@@ -727,9 +723,9 @@ export const,
   l: 'kleber@ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
     i,
@@ -831,9 +827,9 @@ export const,
   l: 'kleber@ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
     i,
@@ -940,7 +936,7 @@ export const,
     exit: 'IPO or enterprise acquisition'
     contact: unknown,
       mobile: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
 ];
     api: 'Operations management APIs', mobile: 'Mobile operations apps',
@@ -1005,7 +1001,7 @@ export const,
       mobil,
   e: '+1 302 464 0950'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ];
@@ -1040,19 +1036,19 @@ export const,
   l: 'kleber@ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ];
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
-  e: string} addres,
-  s: string} } export const,
+export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */,}
+  e: string,} addres,
+  s: string,} } export const,
   enterpriseITServices2029V2: EnterpriseITService2029V2[] = [ i,
   d: 'autonomous-devops-platform'' nam,
   e: 'Autonomous DevOps Platform' descriptio,
-  n:' 'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.'' categor,
+  n: ' 'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.'' categor,
   y: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD', 'Monitoring']' pric,
   e: '$6,999/month' feature,
   s: [' 'Autonomous infrastructure management'' 'Self-healing systems'' 'Automated deployment pipelines'' 'Intelligent monitoring and alerting'' 'Performance optimization'' 'Security automation'' 'Cost optimization'' 'Predictive maintenance' ] benefit,
@@ -1087,11 +1083,11 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' websit,
   e: 'http,
-  s://ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }' i,
+  s: //ziontechgroup.com'' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} }' i,
   d: 'quantum-cloud-infrastructure'' nam,
   e: 'Quantum Cloud Infrastructure' descriptio,
-  n:' 'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.' categor,
+  n: ' 'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.' categor,
   y: [' 'Cloud Computing'' 'Quantum Computing'' 'Infrastructure'' 'Security'' 'Performance' ]' pric,
   e: '$18,999/month' feature,
   s: [' 'Quantum computing resources'' 'Quantum-safe encryption'' 'Hybrid quantum-classical computing'' 'Quantum networking capabilities'' 'Quantum storage solutions'' 'Quantum security protocols'' 'Performance optimization'' 'Scalable quantum resources' ] benefit,
@@ -1126,11 +1122,11 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' websit,
   e: 'http,
-  s://ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }' i,
+  s: //ziontechgroup.com'' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} }' i,
   d: 'ai-powered-enterprise-security'' nam,
   e: 'AI-Powered Enterprise Security' descriptio,
-  n:' 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.' categor,
+  n: ' 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.' categor,
   y: [' 'Cybersecurity'' 'AI'' 'Enterprise Security'' 'Threat Detection'' 'Automation' ]' pric,
   e: '$9,999/month' feature,
   s: [' 'AI-powered threat detection'' 'Real-time security monitoring'' 'Automated incident response'' 'Predictive threat analytics'' 'Behavioral analysis'' 'Zero-day threat protection'' 'Security automation'' 'Compliance management' ] benefit,
@@ -1165,11 +1161,11 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' websit,
   e: 'http,
-  s://ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }' i,
+  s: //ziontechgroup.com'' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} }' i,
   d: 'autonomous-it-operations-center'' nam,
   e: 'Autonomous IT Operations Center' descriptio,
-  n:' 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.' categor,
+  n: ' 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.' categor,
   y: [' 'IT Operations'' 'Automation'' 'Infrastructure'' 'Monitoring'' 'Management' ]' pric,
   e: '$14,999/month' feature,
   s: [' 'Autonomous infrastructure management'' 'Self-healing systems'' 'Predictive maintenance'' 'Performance optimization'' 'Capacity planning'' 'Automated troubleshooting'' 'Intelligent resource allocation'' 'Continuous optimization' ] benefit,
@@ -1204,13 +1200,13 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' websit,
   e: 'http,
-  s://ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }' mobil,
+  s: //ziontechgroup.com'' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} }' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}' ]; 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ]; benefit,
+  s: //ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}}' ]; 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ]; benefit,
   s: [' 'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value' ], useCase,
   s: [' 'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development' ],' marketSiz,
   e: '$35.2B by 2029', competitor,
@@ -1242,8 +1238,8 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ' i,
+  s: //ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } ' i,
   d: 'ai-powered-enterprise-security', nam,
   e: 'AI-Powered Enterprise Security',' descriptio,
   n: 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.',' categor,
@@ -1281,8 +1277,8 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ' i,
+  s: //ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } ' i,
   d: 'autonomous-it-operations-center', nam,
   e: 'Autonomous IT Operations Center',' descriptio,
   n: 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',' categor,
@@ -1335,7 +1331,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   t: 'IPO or enterprise acquisition' contac,
   t: ' mobil,
   e: '+1 302 464 0950'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ];' ap,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } ];' ap,
   i: 'Operations management APIs', mobil,
   e: 'Mobile operations apps',' securit,
   y: 'Enterprise security, access controls',' backu,
@@ -1353,5 +1349,5 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; '
+  s: //ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } ]; '

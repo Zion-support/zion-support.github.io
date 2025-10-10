@@ -87,12 +87,12 @@ export default defineConfig({
       mangle: {
         safari10: true,
         properties: {
-          regex: /^_/
+          regex: /^_/,
         }
       },
       format: {
         comments: false,
-        ascii_only: true
+        ascii_only: true,
       }
     },
     chunkSizeWarningLimit: 500,
@@ -102,16 +102,16 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    host: true
+    host: true,
   },
   preview: {
     port: 4173,
-    host: true
+    host: true,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
   },
   css: {
-    devSourcemap: true
+    devSourcemap: true,
   }
 });

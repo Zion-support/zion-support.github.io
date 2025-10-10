@@ -1,4 +1,4 @@
-export interface BreakthroughContent {/* TODO: Fix JSX expression */}
+export interface BreakthroughContent {/* TODO: Fix JSX expression */,}
   }
 }
 
@@ -29,7 +29,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
       performance: '99.9% uptime'
       savings: '$2.8M annually',
       accuracy: '95% optimization',
-      roi: '300%'}},
+      roi: '300%',}},
   {
     id: 'quantum-ai-security-2025'
     title: 'Quantum AI Security 2025: Next-Generation Protection'
@@ -59,7 +59,7 @@ Protect your AI systems with next-generation quantum security frameworks.
       roi: '500%',
 export const,
   newBreakthroughContent2025: BreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
     }},
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
     }}];

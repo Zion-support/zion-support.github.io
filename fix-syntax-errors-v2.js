@@ -15,56 +15,56 @@ function fixSyntaxErrors(filePath) {
       // Fix missing commas in object properties (like the values array in about/page.tsx)
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
+        replacement: '$1: $2,\n    $3: ',
       },
       // Fix malformed object properties with missing commas
       {
         pattern: /(\w+):\s*(\w+),?\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
+        replacement: '$1: $2,\n    $3: ',
       },
       // Fix missing commas in arrays
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
+        replacement: '$1: $2,\n    $3: ',
       },
       // Fix malformed metadata objects
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:'
+        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3: ',
       },
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: "$2",\n  $3:'
+        replacement: 'export const metadata = {\n  $1: "$2",\n  $3: ',
       },
       // Fix malformed function parameters
       {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'export default function $1({\n  $2:'
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*,}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*,}\s*;\s*(\w+):/g,
+        replacement: 'export default function $1({\n  $2:',
       },
       // Fix malformed object literals with missing commas
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
+        replacement: '$1: $2,\n    $3: ',
       },
       // Fix missing closing braces and parentheses
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
+        replacement: '$1: $2,\n    $3: ',
       },
       // Fix malformed JSX attributes
       {
         pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
-        replacement: '$1="$2" $3'
+        replacement: '$1="$2" $3',
       },
       // Fix missing semicolons in exports
       {
         pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const $1 = {\n  $2: \'$3\',\n  $4:'
+        replacement: 'export const $1 = {\n  $2: \'$3\',\n  $4: ',
       },
       // Fix malformed function declarations
       {
-        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'function $1({\n  $2:'
+        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*,}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*,}\s*;\s*(\w+):/g,
+        replacement: 'function $1({\n  $2:',
       }
     ];
     
@@ -81,17 +81,17 @@ function fixSyntaxErrors(filePath) {
       // Fix the specific pattern in about/page.tsx
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
+        replacement: '$1: $2,\n    $3: ',
       },
       // Fix malformed metadata
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:'
+        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3: ',
       },
       // Fix malformed function parameters
       {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'export default function $1({\n  $2:'
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*,}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*,}\s*;\s*(\w+):/g,
+        replacement: 'export default function $1({\n  $2:',
       }
     ];
     
@@ -105,7 +105,7 @@ function fixSyntaxErrors(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath,}`);
       return true;
     }
     
@@ -119,10 +119,10 @@ function fixSyntaxErrors(filePath) {
 // Function to find files with syntax errors
 function findFilesWithSyntaxErrors() {
   try {
-    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
+    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8',});
     return result.trim().split('\n').filter(file => file.length > 0);
   } catch (error) {
-    console.error('Error finding files with syntax errors:', error.message);
+    console.error('Error finding files with syntax errors: ', error.message);
     return [];
   }
 }
@@ -144,7 +144,7 @@ console.log(`Fixed syntax errors in ${fixedCount} files`);
 
 // Verify no more syntax errors exist
 try {
-  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
+  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8',});
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
     console.log('✅ All syntax errors resolved!');

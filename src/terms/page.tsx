@@ -22,7 +22,7 @@ export default function TermsPage() {
     {
       title: 'User Responsibilities',
       icon: User,
-      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.'
+      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.',
     },
     {
       title: 'Intellectual Property',
@@ -32,7 +32,7 @@ export default function TermsPage() {
     {
       title: 'Limitation of Liability',
       icon: Shield,
-      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
+      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.',
     }
   ];
   const prohibitedUses = [
@@ -50,50 +50,50 @@ export default function TermsPage() {
       service: 'AI Services',
       uptime: '99.9%',
       support: '24/7',
-      response: '1 hour'
+      response: '1 hour',
     },
     {
       service: 'IT Infrastructure',
       uptime: '99.95%',
       support: '24/7',
-      response: '30 minutes'
+      response: '30 minutes',
     },
     {
       service: 'Cloud Services',
       uptime: '99.9%',
       support: '24/7',
-      response: '1 hour'
+      response: '1 hour',
     },
     {
       service: 'Support Services',
       uptime: 'N/A',
       support: 'Business Hours',
-      response: '4 hours'
+      response: '4 hours',
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+      <section className="relative py-20 lg: py-32 overflow-hidden"></section>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div></div>
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse"></h1>
               Terms of Service,
   </
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
               Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <Scale className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">Legal Agreement</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <Shield className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">Protection</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent</span>
               </div>
@@ -102,14 +102,14 @@ export default function TermsPage() {
         </div>
       </section>
       {/* Last Updated */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-800/50 rounded-lg p-6 text-center">
-              <p className="text-gray-300">
-                <strong>Last Updated:</strong> {lastUpdated}
+      <section className="py-8"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
+              <p className="text-gray-300"></p>
+                <strong>Last Updated: </strong> {lastUpdated,}
               </p>
-              <p className="text-sm text-gray-400 mt-2">
+              <p className="text-sm text-gray-400 mt-2"></p>
                 These terms may be updated from time to time. Continued use of our services constitutes acceptance of any changes.
               </p>
             </div>
@@ -117,18 +117,18 @@ export default function TermsPage() {
         </div>
       </section>
       {/* Key Terms */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Terms</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-6xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center"></h2>Key Terms</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {sections.map((section, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <section.icon className="w-8 h-8 text-cyan-400" />
-                    <h3 className="text-xl font-bold text-white">{section.title}</h3>
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <div className="flex items-center space-x-3 mb-4"></div>
+                    <section.icon className="w-8 h-8 text-cyan-400" /></section>
+                    <h3 className="text-xl font-bold text-white"></h3>{section.title}</h3>
                   </div>
-                  <p className="text-gray-300 text-sm">{section.content}</p>
+                  <p className="text-gray-300 text-sm"></p>{section.content}</p>
                 </div>
               ))}
             </div>
@@ -136,16 +136,16 @@ export default function TermsPage() {
         </div>
       </section>
       {/* Prohibited Uses */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Prohibited Uses</h2>
-            <p className="text-gray-300 mb-8 text-center">
+      <section className="py-20 bg-slate-800/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Prohibited Uses</h2>
+            <p className="text-gray-300 mb-8 text-center"></p>
               You may not use our services for any unlawful purpose or to solicit others to perform unlawful acts.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
               {prohibitedUses.map((use, index) => (
-                <div key={index} className="flex items-start space-x-3">
+                <div key={index} className="flex items-start space-x-3"></div>
                   <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{use}</span>
                 </div>
@@ -155,11 +155,11 @@ export default function TermsPage() {
         </div>
       </section>
       {/* Service Level Agreements */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Level Agreements</h2>
-            <div className="overflow-x-auto">
+      <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-6xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center"></h2>Service Level Agreements</h2>
+            <div className="overflow-x-auto"></div>
               <table className="w-full bg-slate-800/50 rounded-lg overflow-hidden">
                 <thead>
                   <tr className="bg-slate-700/50">
@@ -185,28 +185,28 @@ export default function TermsPage() {
         </div>
       </section>
       {/* Payment Terms */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Payment Terms</h2>
-            <div className="space-y-6">
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Billing</h3>
-                <p className="text-gray-300">
+      <section className="py-20 bg-slate-800/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Payment Terms</h2>
+            <div className="space-y-6"></div>
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Billing</h3>
+                <p className="text-gray-300"></p>
                   Services are billed monthly or annually as agreed upon in your service contract. 
                   Payment is due within 30 days of invoice date.
                 </p>
               </div>
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Refunds</h3>
-                <p className="text-gray-300">
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Refunds</h3>
+                <p className="text-gray-300"></p>
                   Refunds are provided at our discretion and are subject to the terms of your specific service agreement. 
                   No refunds for services already delivered.
                 </p>
               </div>
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Late Payments</h3>
-                <p className="text-gray-300">
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Late Payments</h3>
+                <p className="text-gray-300"></p>
                   Late payments may result in service suspension. A late fee of 1.5% per month may be applied to overdue accounts.
                 </p>
               </div>
@@ -215,28 +215,28 @@ export default function TermsPage() {
         </div>
       </section>
       {/* Termination */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Termination</h2>
-            <div className="space-y-6">
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Termination by You</h3>
-                <p className="text-gray-300">
+      <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Termination</h2>
+            <div className="space-y-6"></div>
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Termination by You</h3>
+                <p className="text-gray-300"></p>
                   You may terminate your account at any time by providing 30 days written notice. 
                   Data will be provided in a standard format upon request.
                 </p>
               </div>
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Termination by Us</h3>
-                <p className="text-gray-300">
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Termination by Us</h3>
+                <p className="text-gray-300"></p>
                   We may terminate your account immediately if you violate these terms or engage in prohibited activities. 
                   We will provide reasonable notice when possible.
                 </p>
               </div>
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Effect of Termination</h3>
-                <p className="text-gray-300">
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Effect of Termination</h3>
+                <p className="text-gray-300"></p>
                   Upon termination, your right to use our services ceases immediately. 
                   We will retain your data for 90 days after termination for recovery purposes.
                 </p>
@@ -246,24 +246,24 @@ export default function TermsPage() {
         </div>
       </section>
       {/* Governing Law */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Governing Law</h2>
-            <p className="text-xl text-gray-300 mb-8">
+      <section className="py-20 bg-slate-800/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>Governing Law</h2>
+            <p className="text-xl text-gray-300 mb-8"></p>
               These terms are governed by the laws of the State of Delaware, United States. 
               Any disputes will be resolved in the courts of Delaware.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center justify-center space-x-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+              <div className="flex items-center justify-center space-x-3"></div>
                 <Globe className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">Delaware, USA</span>
               </div>
-              <div className="flex items-center justify-center space-x-3">
+              <div className="flex items-center justify-center space-x-3"></div>
                 <Scale className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">US Law</span>
               </div>
-              <div className="flex items-center justify-center space-x-3">
+              <div className="flex items-center justify-center space-x-3"></div>
                 <FileText className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">English Language</span>
               </div>
@@ -272,23 +272,23 @@ export default function TermsPage() {
         </div>
       </section>
       {/* Contact Information */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Questions About These Terms?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>Questions About These Terms?</h2>
+            <p className="text-xl text-gray-300 mb-8"></p>
               If you have any questions about these Terms of Service, please contact us.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center space-x-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+              <div className="flex items-center justify-center space-x-3"></div>
                 <Mail className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center justify-center space-x-3">
+              <div className="flex items-center justify-center space-x-3"></div>
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">+1 (302) 464-0950</span>
               </div>
-              <div className="flex items-center justify-center space-x-3">
+              <div className="flex items-center justify-center space-x-3"></div>
                 <Globe className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">Middletown, DE</span>
               </div>

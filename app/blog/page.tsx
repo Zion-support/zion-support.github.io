@@ -16,7 +16,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-15',
       readTime: '5 min read',
       category: 'AI & Technology',
-      image: '/images/blog/ai-business.jpg'
+      image: '/images/blog/ai-business.jpg',
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-10',
       readTime: '7 min read',
       category: 'Cloud Computing',
-      image: '/images/blog/cloud-migration.jpg'
+      image: '/images/blog/cloud-migration.jpg',
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-05',
       readTime: '6 min read',
       category: 'Security',
-      image: '/images/blog/cybersecurity.jpg'
+      image: '/images/blog/cybersecurity.jpg',
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-01',
       readTime: '8 min read',
       category: 'Development',
-      image: '/images/blog/micro-saas.jpg'
+      image: '/images/blog/micro-saas.jpg',
     }
   ];
   const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
@@ -65,20 +65,20 @@ const BlogPage: React.FC = () => {
         <meta name="keywords" content="AI blog, technology insights, cloud computing, cybersecurity, micro SaaS, tech trends" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 Tech Insights & Blog
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
                 Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
               </p>
             </div>
 
-            <div className="mb-12">
-              <div className="relative max-w-2xl mx-auto">
+            <div className="mb-12"></div>
+              <div className="relative max-w-2xl mx-auto"></div>
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -90,28 +90,28 @@ const BlogPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
               {categories.map((category) => (
                 <button
                   key={category}
                   className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                >
+                ></button>
                   {category}
                 </button>
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {filteredPosts.map((post) => (
                 <article
                   key={post.id}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl mb-6 flex items-center justify-center">
-                    <div className="text-6xl opacity-50">📝</div>
+                  <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl mb-6 flex items-center justify-center"></div>
+                    <div className="text-6xl opacity-50"></div>📝</div>
                   </div>
                   
-                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4"></div>
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       {post.date}
@@ -122,20 +122,20 @@ const BlogPage: React.FC = () => {
                     </span>
                   </div>
 
-                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors"></h2>
                     {post.title}
                   </h2>
                   
-                  <p className="text-gray-300 mb-4 line-clamp-3">
+                  <p className="text-gray-300 mb-4 line-clamp-3"></p>
                     {post.excerpt}
                   </p>
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <div className="flex items-center justify-between"></div>
+                    <div className="flex items-center gap-2 text-sm text-gray-400"></div>
                       <User className="w-4 h-4" />
                       {post.author}
                     </div>
-                    <button className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <button className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"></button>
                       Read More
                       <ArrowRight className="w-4 h-4" />
                     </button>
@@ -145,8 +145,8 @@ const BlogPage: React.FC = () => {
             </div>
             
             {filteredPosts.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No articles found matching your search.</p>
+              <div className="text-center py-12"></div>
+                <p className="text-gray-400 text-lg"></p>No articles found matching your search.</p>
               </div>
             )}
           </div>

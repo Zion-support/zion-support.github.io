@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({)
         message: 'Sitemap pinged successfully'),
         sitemapUrl),
-        timestamp: new Date().toISOString()})
+        timestamp: new Date().toISOString(),})
     }
   } catch (error) {
     return {
@@ -16,10 +16,10 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({),
         error: 'Failed to ping sitemap'),
         message: error.message,
-exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
+exports.handler = async (event, context) => {/* TODO: Fix JSX expression */,}
       })
     }
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
       })
     }
   }

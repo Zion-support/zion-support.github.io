@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>)
       <Component {...pageProps} />)
     </React.Fragment>)
-export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}
+export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */,}
       <Component {...pageProps} /></Component>
     </React.Fragment>
   );

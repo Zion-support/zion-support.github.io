@@ -239,52 +239,52 @@ export default function MicroSaasPage() {
     }
   ];
   const categories = [
-    { name: 'All', count: microSaasServices.length },
-    { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
-    { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length },
-    { name: 'Development', count: microSaasServices.filter(s => s.category === 'Development').length },
-    { name: 'Productivity', count: microSaasServices.filter(s => s.category === 'Productivity').length },
-    { name: 'Marketing', count: microSaasServices.filter(s => s.category === 'Marketing').length },
-    { name: 'Customer Service', count: microSaasServices.filter(s => s.category === 'Customer Service').length },
-    { name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length },
-    { name: 'Sales', count: microSaasServices.filter(s => s.category === 'Sales').length },
-    { name: 'Security', count: microSaasServices.filter(s => s.category === 'Security').length },
-    { name: 'Data Management', count: microSaasServices.filter(s => s.category === 'Data Management').length },
-    { name: 'Project Management', count: microSaasServices.filter(s => s.category === 'Project Management').length },
-    { name: 'Inventory', count: microSaasServices.filter(s => s.category === 'Inventory').length },
-    { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
-    { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
+    { name: 'All', count: microSaasServices.length,},
+    { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length,},
+    { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length,},
+    { name: 'Development', count: microSaasServices.filter(s => s.category === 'Development').length,},
+    { name: 'Productivity', count: microSaasServices.filter(s => s.category === 'Productivity').length,},
+    { name: 'Marketing', count: microSaasServices.filter(s => s.category === 'Marketing').length,},
+    { name: 'Customer Service', count: microSaasServices.filter(s => s.category === 'Customer Service').length,},
+    { name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length,},
+    { name: 'Sales', count: microSaasServices.filter(s => s.category === 'Sales').length,},
+    { name: 'Security', count: microSaasServices.filter(s => s.category === 'Security').length,},
+    { name: 'Data Management', count: microSaasServices.filter(s => s.category === 'Data Management').length,},
+    { name: 'Project Management', count: microSaasServices.filter(s => s.category === 'Project Management').length,},
+    { name: 'Inventory', count: microSaasServices.filter(s => s.category === 'Inventory').length,},
+    { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length,},
+    { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length,}
   ];
   const benefits = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
-      description: 'Average 300% return on investment for our micro SAAS clients'
+      description: 'Average 300% return on investment for our micro SAAS clients',
     },
     {
       icon: Users,
       title: 'Easy Setup',
-      description: 'Get started in minutes with our intuitive setup process'
+      description: 'Get started in minutes with our intuitive setup process',
     },
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
+      description: 'Round-the-clock support with guaranteed response times',
     },
     {
       icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee'
+      description: 'Enterprise-grade security with 99.9% uptime guarantee',
     }
   ];
   const stats = [
     { label: 'Active Users', value: '10,000+' },
-    { label: 'Apps Available', value: '50+' },
-    { label: 'Uptime Guarantee', value: '99.9%' },
-    { label: 'Support Available', value: '24/7' }
+    { label: 'Apps Available', value: '50+',},
+    { label: 'Uptime Guarantee', value: '99.9%',},
+    { label: 'Support Available', value: '24/7',}
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer 
         title="Micro SAAS Solutions - Zion Tech Group"
         description="50+ AI-powered micro SAAS applications for modern businesses. Affordable tools starting from $14/month. Analytics, e-commerce, productivity, marketing, and more."
@@ -292,16 +292,16 @@ export default function MicroSaasPage() {
       />
       <Navigation />
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="pt-24 pb-16"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Micro SAAS Solutions,
   </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
@@ -318,15 +318,15 @@ export default function MicroSaasPage() {
         </div>
       </section>
       {/* Stats Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-16 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+              <div key={index} className="text-center"></div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2"></div>
                   {stat.value}
                 </div>
-                <div className="text-gray-300 text-sm md:text-base">
+                <div className="text-gray-300 text-sm md:text-base"></div>
                   {stat.label}
                 </div>
               </div>
@@ -335,13 +335,13 @@ export default function MicroSaasPage() {
         </div>
       </section>
       {/* Category Filter */}
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2">
+      <section className="py-8"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="flex flex-wrap justify-center gap-2"></div>
             {categories.map((category, index) => (
               <button
                 key={index}
-                className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300">
+                className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300"></button>
                 {category.name} ({category.count})
               </button>
             ))}
@@ -349,26 +349,26 @@ export default function MicroSaasPage() {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <section className="py-24"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
             {microSaasServices.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : '',}`}></div>
                 {service.popular && (
-                  <div className="flex items-center justify-center mb-4">
+                  <div className="flex items-center justify-center mb-4"></div>
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Most Popular;
   </
                   </div>
                 )}
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4"></div>
                   <service.icon className="h-8 w-8 text-purple-400 mr-3" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+                  <div></div>
+                    <h3 className="text-lg font-semibold text-white"></h3>{service.title}</h3>
                     <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}</span>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <p className="text-gray-300 mb-4 text-sm"></p>{service.description}</p>
                 <ul className="space-y-1 mb-4">
                   {service.features.slice(0, 3).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-xs text-gray-300">
@@ -382,9 +382,9 @@ export default function MicroSaasPage() {
   </
                   )}
                 </ul>
-                <div className="text-center">
-                  <div className="text-xl font-bold text-purple-400 mb-2">{service.price}</div>
-                  <div className="text-xs text-gray-400 mb-3">
+                <div className="text-center"></div>
+                  <div className="text-xl font-bold text-purple-400 mb-2"></div>{service.price}</div>
+                  <div className="text-xs text-gray-400 mb-3"></div>
                     {service.benefits[0]}
                   </div>
                   <Link
@@ -399,44 +399,44 @@ export default function MicroSaasPage() {
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-24 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-24 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose Our Micro SAAS Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               We deliver powerful, affordable tools that help businesses grow and succeed;
   </
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-purple-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center"></div>
+                <div className="bg-purple-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                   <benefit.icon className="h-8 w-8 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2"></h3>{benefit.title}</h3>
+                <p className="text-gray-300"></p>{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Pricing Tiers */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-24"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Simple, Transparent Pricing;
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Choose the plan that fits your business needs. All plans include 24/7 support and regular updates.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$19<span className="text-lg text-gray-400">/month</span></div>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg"></div>
+              <h3 className="text-2xl font-bold text-white mb-4"></h3>Starter</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-4"></div>$19<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
@@ -461,14 +461,14 @@ export default function MicroSaasPage() {
                 Get Started;
   </
             </div>
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 p-8 rounded-xl shadow-lg ring-2 ring-cyan-400">
-              <div className="flex items-center justify-center mb-4">
+            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 p-8 rounded-xl shadow-lg ring-2 ring-cyan-400"></div>
+              <div className="flex items-center justify-center mb-4"></div>
                 <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                   Most Popular;
   </
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$49<span className="text-lg text-gray-400">/month</span></div>
+              <h3 className="text-2xl font-bold text-white mb-4"></h3>Professional</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-4"></div>$49<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
@@ -497,9 +497,9 @@ export default function MicroSaasPage() {
                 Get Started;
   </
             </div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$99<span className="text-lg text-gray-400">/month</span></div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg"></div>
+              <h3 className="text-2xl font-bold text-white mb-4"></h3>Enterprise</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-4"></div>$99<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
@@ -532,16 +532,16 @@ export default function MicroSaasPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-24"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+          <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"></p>
               Start your free trial today and experience the power of AI-driven micro SAAS solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">

@@ -16,7 +16,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Cloud Infrastructure & Migration',
@@ -28,7 +28,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
     },
     // Cybersecurity Services
     {
@@ -41,7 +41,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Prevent 99.9% of threats', 'Reduce response time by 80%', 'Compliance assurance', '24/7 monitoring'],
       technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'AI/ML', 'Threat Intelligence'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Identity & Access Management',
@@ -53,7 +53,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Enhanced security', 'Improved user experience', 'Compliance support', 'Reduced IT overhead'],
       technologies: ['Azure AD', 'Okta', 'Ping Identity', 'CyberArk', 'SailPoint', 'ForgeRock'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Security Compliance & Audit',
@@ -65,7 +65,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Achieve compliance', 'Reduce audit time', 'Minimize risks', 'Build trust'],
       technologies: ['GRC Tools', 'Risk Management', 'Compliance Frameworks', 'Audit Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Security Operations Center (SOC)',
@@ -77,7 +77,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Continuous protection', 'Rapid response', 'Expert analysis', 'Proactive defense'],
       technologies: ['SIEM', 'SOAR', 'EDR', 'Threat Intelligence', 'Forensic Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     // Database & Data Management
     {
@@ -90,7 +90,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved performance', 'Reduced downtime', 'Cost optimization', 'Data protection'],
       technologies: ['SQL Server', 'Oracle', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Data Backup & Disaster Recovery',
@@ -102,7 +102,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Minimize data loss', 'Rapid recovery', 'Business continuity', 'Compliance support'],
       technologies: ['Veeam', 'Commvault', 'Rubrik', 'AWS Backup', 'Azure Backup', 'Google Cloud Backup'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Data Migration Services',
@@ -114,7 +114,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Risk-free migration', 'Minimal downtime', 'Data integrity', 'Cost savings'],
       technologies: ['AWS DMS', 'Azure Data Factory', 'Google Cloud Data Transfer', 'Custom Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     // DevOps & Development
     {
@@ -127,7 +127,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Faster deployments', 'Improved quality', 'Reduced errors', 'Better collaboration'],
       technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Kubernetes', 'Docker', 'Terraform'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Microservices Architecture',
@@ -139,7 +139,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved scalability', 'Better maintainability', 'Faster development', 'Technology flexibility'],
       technologies: ['Kubernetes', 'Istio', 'Docker', 'API Gateway', 'Service Mesh', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'API Development & Management',
@@ -151,7 +151,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Better integration', 'Improved security', 'Enhanced performance', 'Developer experience'],
       technologies: ['Node.js', 'Python', 'Java', 'Kong', 'Apigee', 'AWS API Gateway'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     // IT Support & Management
     {
@@ -164,7 +164,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Reduced IT costs', 'Improved uptime', 'Expert support', 'Proactive maintenance'],
       technologies: ['RMM Tools', 'PSA Software', 'Remote Access', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'IT Strategy & Consulting',
@@ -176,7 +176,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Strategic alignment', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],
       technologies: ['Strategy Frameworks', 'Assessment Tools', 'Planning Software'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'IT Asset Management',
@@ -188,7 +188,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Cost savings', 'Compliance assurance', 'Better planning', 'Reduced risks'],
       technologies: ['Asset Management Tools', 'License Management', 'CMDB', 'Reporting Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     // Specialized Services
     {
@@ -201,7 +201,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved collaboration', 'Enhanced security', 'Cost savings', 'Better productivity'],
       technologies: ['Microsoft 365', 'Azure AD', 'PowerShell', 'Migration Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'VoIP & Unified Communications',
@@ -213,7 +213,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Cost savings', 'Improved collaboration', 'Better mobility', 'Enhanced features'],
       technologies: ['Cisco', 'Microsoft Teams', 'Zoom', '8x8', 'RingCentral', 'Avaya'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'IT Training & Certification',
@@ -225,7 +225,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved skills', 'Better productivity', 'Reduced support needs', 'Career development'],
       technologies: ['Learning Management Systems', 'Virtual Labs', 'Certification Programs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'IT Project Management',
@@ -236,22 +236,22 @@ const ITServicesPage: React.FC = () => {
       category: 'Project Management',
       benefits: ['On-time delivery', 'Cost control', 'Quality assurance', 'Risk mitigation'],
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     }
   ];
   const categories = [
-    { name: 'All', count: itServices.length },
-    { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-    { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
-    { name: 'Data', count: itServices.filter(s => s.category === 'Data').length },
-    { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
-    { name: 'Support', count: itServices.filter(s => s.category === 'Support').length },
-    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length },
-    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length },
-    { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
-    { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
-    { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
+    { name: 'All', count: itServices.length,},
+    { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length,},
+    { name: 'Security', count: itServices.filter(s => s.category === 'Security').length,},
+    { name: 'Data', count: itServices.filter(s => s.category === 'Data').length,},
+    { name: 'Development', count: itServices.filter(s => s.category === 'Development').length,},
+    { name: 'Support', count: itServices.filter(s => s.category === 'Support').length,},
+    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length,},
+    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length,},
+    { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length,},
+    { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length,},
+    { name: 'Training', count: itServices.filter(s => s.category === 'Training').length,},
+    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length,}
   ];
   const services = [
     {
@@ -260,7 +260,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
       features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
       price: 'Starting at $1,299/month',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
     },
     {
       icon: Shield,
@@ -268,7 +268,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Comprehensive security solutions with threat detection and automated response.',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Automated Response', 'Compliance Reporting'],
       price: 'Starting at $799/month',
-      color: 'text-red-400'
+      color: 'text-red-400',
     },
     {
       icon: Settings,
@@ -276,7 +276,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
       features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Performance Monitoring'],
       price: 'Starting at $599/month',
-      color: 'text-green-400'
+      color: 'text-green-400',
     },
     {
       icon: Database,
@@ -284,7 +284,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
       features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
       price: 'Starting at $399/month',
-      color: 'text-teal-400'
+      color: 'text-teal-400',
     },
     {
       icon: Globe,
@@ -292,7 +292,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Enterprise networking with high-speed connectivity and advanced security features.',
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Support'],
       price: 'Starting at $699/month',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
     },
     {
       icon: Smartphone,
@@ -300,7 +300,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Native and cross-platform mobile applications with modern UI/UX design.',
       features: ['iOS & Android Apps', 'Cross-Platform Development', 'UI/UX Design', 'App Store Optimization'],
       price: 'Starting at $2,500/project',
-      color: 'text-orange-400'
+      color: 'text-orange-400',
     }
   ];
   const additionalServices = [
@@ -308,19 +308,19 @@ const ITServicesPage: React.FC = () => {
       icon: Users,
       title: 'IT Consulting',
       description: 'Strategic IT planning and technology roadmap development.',
-      price: '$200/hour'
+      price: '$200/hour',
     },
     {
       icon: Server,
       title: 'Server Management',
       description: '24/7 server monitoring, maintenance, and optimization.',
-      price: 'Starting at $299/month'
+      price: 'Starting at $299/month',
     },
     {
       icon: HardDrive,
       title: 'Data Backup & Recovery',
       description: 'Automated backup solutions and disaster recovery planning.',
-      price: 'Starting at $199/month'
+      price: 'Starting at $199/month',
     },
     {
       icon: Monitor,
@@ -332,30 +332,30 @@ const ITServicesPage: React.FC = () => {
       icon: Printer,
       title: 'Hardware Support',
       description: 'Computer, printer, and network equipment support.',
-      price: 'Starting at $99/month'
+      price: 'Starting at $99/month',
     },
     {
       icon: Router,
       title: 'Network Security',
       description: 'Firewall configuration and network security implementation.',
-      price: 'Starting at $399/month'
+      price: 'Starting at $399/month',
     }
   ];
   const benefits = [
     {
       icon: Star,
       title: 'Proven Expertise',
-      description: '10+ years of experience with 100+ successful projects'
+      description: '10+ years of experience with 100+ successful projects',
     },
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock technical support and monitoring'
+      description: 'Round-the-clock technical support and monitoring',
     },
     {
       icon: ShieldCheck,
       title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for all solutions'
+      description: 'Bank-level security and compliance for all solutions',
     },
     {
       icon: Award,
@@ -364,20 +364,20 @@ const ITServicesPage: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
         {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <section className="text-center mb-16"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               IT Services & Infrastructure</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Comprehensive IT solutions to support and optimize your business infrastructure. 
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
@@ -389,18 +389,18 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
         {/* Main Services Grid */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>Core IT Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {itServices.map((service, index) => (
-              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-cyan-400 mb-4">
-                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-8 h-8" })}
+              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div className="text-cyan-400 mb-4"></div>
+                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-8 h-8",})}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm"></p>{service.description}</p>
+                <div className="mb-4"></div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4>Key Features:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
@@ -410,8 +410,8 @@ const ITServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
+                <div className="mb-4"></div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4>Benefits:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
                       <li key={idx} className="flex items-center">
@@ -421,12 +421,12 @@ const ITServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="mb-4">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                <div className="mb-4"></div>
+                  <div className="text-2xl font-bold text-cyan-400 mb-2"></div>{service.price}</div>
                 </div>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
-                  <div className="flex flex-wrap gap-1">
+                <div className="mb-4"></div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4>Technologies:</h4>
+                  <div className="flex flex-wrap gap-1"></div>
                     {service.technologies.slice(0, 4).map((tech, idx) => (
                       <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">
                         {tech}
@@ -434,7 +434,7 @@ const ITServicesPage: React.FC = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <p className="text-gray-300 mb-4"></p>{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
@@ -443,11 +443,11 @@ const ITServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color || 'text-cyan-400'} mb-2`}>{service.price}</div>
+                <div className="text-center"></div>
+                  <div className={`text-lg font-bold ${service.color || 'text-cyan-400'} mb-2`}></div>{service.price}</div>
                   <a
                     href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color || 'text-cyan-400'} hover:opacity-80 transition-opacity`}
+                    className={`inline-flex items-center text-sm font-medium ${service.color || 'text-cyan-400'} hover: opacity-80 transition-opacity`,}
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
@@ -457,28 +457,28 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
         {/* Additional Services */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>Additional IT Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {additionalServices.map((service, index) => (
-              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
-                <div className="flex items-center mb-3">
-                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-6 h-6 text-cyan-400 mr-3" })}
-                  <h3 className="text-lg font-bold text-white">{service.title}</h3>
+              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300"></div>
+                <div className="flex items-center mb-3"></div>
+                  {React.createElement(service.icon as React.ComponentType<any>, { className: "w-6 h-6 text-cyan-400 mr-3",})}
+                  <h3 className="text-lg font-bold text-white"></h3>{service.title}</h3>
                 </div>
-                <p className="text-gray-300 text-sm mb-3">{service.description}</p>
-                <div className="text-cyan-400 font-bold text-sm">{service.price}</div>
+                <p className="text-gray-300 text-sm mb-3"></p>{service.description}</p>
+                <div className="text-cyan-400 font-bold text-sm"></div>{service.price}</div>
               </div>
             ))}
           </div>
         </section>
         {/* Support Tiers */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>Support Tiers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Basic Support</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4"></div>$199/month</div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -495,9 +495,9 @@ const ITServicesPage: React.FC = () => {
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
                 Get Started</span>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
-              <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500"></div>
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Professional Support</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4"></div>$499/month</div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -517,9 +517,9 @@ const ITServicesPage: React.FC = () => {
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
                 Get Started</span>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+              <h3 className="text-xl font-bold text-white mb-4"></h3>Enterprise Support</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4"></div>Custom</div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
@@ -542,13 +542,13 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+        <section className="text-center"></section>
+          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8"></div>
+            <h2 className="text-3xl font-bold text-white mb-4"></h2>Ready to Optimize Your IT Infrastructure?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">

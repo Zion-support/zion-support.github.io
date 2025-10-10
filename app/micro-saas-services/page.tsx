@@ -29,14 +29,14 @@ export interface MicroSaasService {
     languages: string[]
     frameworks: string[]
     databases: string[],
-    cloudProviders: string[]
+    cloudProviders: string[],
   }
   }
   pricing: {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[]
+    features: string[],
   }
   }
 }
@@ -1050,13 +1050,13 @@ export const pricingTiers = {
     price: '$29-99/month',
     features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']
   },
-  professional: {
+  professional: {,
     ,
     name: 'Professional',
     price: '$99-299/month',
     features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access']
   },
-  enterprise: {
+  enterprise: {,
     ,
     name: 'Enterprise',
     price: '$299-999/month',
@@ -1072,4 +1072,4 @@ export const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
   }
-  timezone: 'EST (Eastern Standard Time)'}
+  timezone: 'EST (Eastern Standard Time)',}

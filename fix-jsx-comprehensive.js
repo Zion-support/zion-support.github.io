@@ -9,8 +9,8 @@ function fixJsxFile(filePath) {
     let modified = false;
     
     // Fix self-closing div tags that have content after them
-    const selfClosingDivPattern = /<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g;
-    const selfClosingDivReplacement = '<div$1>';
+    const selfClosingDivPattern = /<div([^></div>]*?)\s*\/>\s*\n\s*<[^/]/g;
+    const selfClosingDivReplacement = '<div$1></div>';
     
     const newContent = content.replace(selfClosingDivPattern, selfClosingDivReplacement);
     if (newContent !== content) {
@@ -20,7 +20,7 @@ function fixJsxFile(filePath) {
     }
     
     // Fix mismatched section/div tags
-    const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g;
+    const sectionDivPattern = /<section([^></section>]*)>[\s\S]*?<\/div>/g;
     const sectionDivReplacement = (match, sectionAttrs) => {
       return match.replace(/<\/div>$/, '</section>');
     };

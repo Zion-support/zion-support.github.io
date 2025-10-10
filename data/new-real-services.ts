@@ -567,7 +567,7 @@
   r: 'text - cyan - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / llm - observability - suite',
+  s: //ziontechgroup.com / llm - observability - suite',
     market_positio,
   n: unknown,
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.',    feature,
@@ -626,7 +626,7 @@
     ratin,
   g: 4.8,
     review,
-  s: 22}
+  s: 22,}
     i,
   d: 'ai - sales - email - copilot'
     nam,
@@ -740,7 +740,7 @@
     ratin,
   g: 4.7,
     review,
-  s: 58}
+  s: 58,}
     i,
   d: 'security - posture - as - code'
     nam,
@@ -824,7 +824,7 @@
     ratin,
   g: 4.6,
     review,
-  s: 14}
+  s: 14,}
     i,
   d: 'etl - observability - starter'
     nam,
@@ -905,7 +905,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 12}
+  s: 12,}
     i,
   d: 'api-performance-shield'
     nam,
@@ -944,7 +944,7 @@
     ratin,
   g: 4.5,
     review,
-  s: 12}
+  s: 12,}
     i,
   d: 'api - performance - shield'
     nam,
@@ -1013,7 +1013,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 9}
+  s: 9,}
     i,
   d: 'ai-product-analytics'
     nam,
@@ -1058,7 +1058,7 @@
     ratin,
   g: 4.7,
     review,
-  s: 9}
+  s: 9,}
     i,
   d: 'ai - product - analytics'
     nam,
@@ -1127,7 +1127,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 20}
+  s: 20,}
     i,
   d: 'ai-support-deflection'
     nam,
@@ -1172,7 +1172,7 @@
     ratin,
   g: 4.6,
     review,
-  s: 20}
+  s: 20,}
     i,
   d: 'ai - support - deflection'
     nam,
@@ -1241,7 +1241,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 48}
+  s: 48,}
     i,
   d: 'cloud-cost-autopilot'
     nam,
@@ -1269,7 +1269,7 @@
   r: 'text-amber-400'
     lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
+  s: //ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
     marketPositio,
   n: 'Actionable savings, not just dashboards.'
     targetAudienc,
@@ -1281,7 +1281,7 @@
     ratin,
   g: 4.7,
     review,
-  s: 48}
+  s: 48,}
     i,
   d: 'cloud - cost - autopilot'
     nam,
@@ -1309,7 +1309,7 @@
   r: 'text - amber - 400'
     lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - autopilot',
+  s: //ziontechgroup.com / cloud - cost - autopilot',
     market_positio,
   n: 'Actionable savings, not just dashboards.'
     target_audienc,
@@ -1355,7 +1355,7 @@
     ratin,
   g: 4.5,
     review,
-  s: 11}
+  s: 11,}
     i,
   d: 'privacy - vault'
     nam,
@@ -1439,7 +1439,7 @@
     ratin,
   g: 4.6,
     review,
-  s: 7}
+  s: 7,}
     i,
   d: 'ai - fraud - detection - lite'
     nam,
@@ -2000,7 +2000,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 8}
+  s: 8,}
     i,
   d: 'managed-postgres-ha-pro'
     nam,
@@ -2039,7 +2039,7 @@
     ratin,
   g: 4.5,
     review,
-  s: 8}
+  s: 8,}
     i,
   d: 'managed - postgres - ha - pro'
     nam,
@@ -2108,7 +2108,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5}
+  s: 5,}
     i,
   d: 'browser-performance-monitor-pro'
     nam,
@@ -2135,7 +2135,7 @@
   r: 'text-amber-300'
     lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/browser-performance-monitor',
+  s: //ziontechgroup && ziontechgroup.com/browser-performance-monitor',
     marketPositio,
   n: 'Lightweight, privacy-friendly RUM for modern teams.'
     targetAudienc,
@@ -2147,7 +2147,7 @@
     ratin,
   g: 4.6,
     review,
-  s: 5}
+  s: 5,}
     i,
   d: 'browser - performance - monitor - pro'
     nam,
@@ -2174,7 +2174,7 @@
   r: 'text - amber - 300'
     lin,
   k: 'http,
-  s://ziontechgroup.com / browser - performance - monitor',
+  s: //ziontechgroup.com / browser - performance - monitor',
     market_positio,
   n: 'Lightweight, privacy - friendly RUM for modern teams.'
     target_audienc,
@@ -2216,7 +2216,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 6}
+  s: 6,}
     i,
   d: 'seo-automation-studio'
     nam,
@@ -2224,7 +2224,7 @@
     ratin,
   g: 4.5,
     review,
-  s: 6}
+  s: 6,}
     i,
   d: 'seo - automation - studio'
     nam,
@@ -2314,7 +2314,7 @@
     ratin,
   g: 4.4,
     review,
-  s: 4}
+  s: 4,}
     i,
   d: 'webhook - relay - replay - pro'
     nam,
@@ -2404,7 +2404,7 @@
     ratin,
   g: 4.6,
     review,
-  s: 3}
+  s: 3,}
     i,
   d: 'pdf - render - api - pro'
     nam,
@@ -2468,7 +2468,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 10}
+  s: 10,}
     i,
   d: 'api-observability-starter-pro'
     nam,
@@ -2523,7 +2523,7 @@
     ratin,
   g: 4.6,
     review,
-  s: 10}
+  s: 10,}
     i,
   d: 'api - observability - starter - pro'
     nam,
@@ -2576,7 +2576,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4}
+  s: 4,}
     i,
   d: 'sso-in-a-box-pro'
     nam,
@@ -2600,7 +2600,7 @@
     ratin,
   g: 4.5,
     review,
-  s: 4}
+  s: 4,}
     i,
   d: 'sso - in - a-box - pro'
     nam,
@@ -2673,7 +2673,7 @@
     ratin,
   g: 4.7,
     review,
-  s: 3}
+  s: 3,}
     i,
   d: 'it - asset - discovery - agent - pro'
     nam,
@@ -2732,7 +2732,7 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 2}
+  s: 2,}
     i,
   d: 'vendor-risk-automation-lite'
     nam,
@@ -2750,7 +2750,7 @@
     ratin,
   g: 4.4,
     review,
-  s: 2}
+  s: 2,}
     i,
   d: 'vendor - risk - automation - lite'
     nam,
@@ -2844,7 +2844,7 @@
     ratin,
   g: 4.5,
     review,
-  s: 3}
+  s: 3,}
 ];
     target_audienc,
   e: 'AI product teams, platform engineers, data teams',
@@ -2912,7 +2912,7 @@
     ratin,
   g: 4 && 4.8,
     review,
-  s: 22},
+  s: 22,},
     i,
   d: 'ai - sales - email - copilot',
     nam,
@@ -2980,7 +2980,7 @@
   r: 'text - violet - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - sales - email - copilot',
+  s: //ziontechgroup.com / ai - sales - email - copilot',
     market_positio,
   n: unknown,
       'Lower cost with better personalization vs. Jasper and constant - contact tools.',
@@ -3024,7 +3024,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 58},
+  s: 58,},
       'Policy packs for CIS/NIST',
     i,
   d: 'security - posture - as - code',
@@ -3098,7 +3098,7 @@
   r: 'text - emerald - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / security - posture - as - code',
+  s: //ziontechgroup.com / security - posture - as - code',
     market_positio,
   n: unknown,
       'Brings policy - as - code and compliance automation into one product.',
@@ -3142,7 +3142,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 14},
+  s: 14,},
     i,
   d: 'etl - observability - starter',
     nam,
@@ -3208,7 +3208,7 @@
   r: 'text - blue - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / etl - observability - starter',
+  s: //ziontechgroup.com / etl - observability - starter',
     market_positio,
   n: unknown,
       'Simpler and faster to adopt vs. enterprise data observability tools.',
@@ -3252,7 +3252,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 12},
+  s: 12,},
     i,
   d: 'api - performance - shield',
     nam,
@@ -3318,7 +3318,7 @@
   r: 'text - cyan - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / api - performance - shield',
+  s: //ziontechgroup.com / api - performance - shield',
     market_positio,
   n: 'Unified performance and security at SMB - friendly pricing.',
     target_audienc,
@@ -3361,7 +3361,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 9},
+  s: 9,},
       'Auto-segmentation and cohorts',
     i,
   d: 'ai - product - analytics',
@@ -3428,7 +3428,7 @@
   r: 'text - purple - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - product - analytics',
+  s: //ziontechgroup.com / ai - product - analytics',
     market_positio,
   n: unknown,
       'Brings AI querying and anomaly detection without vendor lock - in.',
@@ -3471,7 +3471,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 20},
+  s: 20,},
       'Multi-channel widgets',
     i,
   d: 'ai - support - deflection',
@@ -3537,7 +3537,7 @@
   r: 'text - rose - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - support - deflection',
+  s: //ziontechgroup.com / ai - support - deflection',
     market_positio,
   n: 'Faster time - to - value vs. enterprise chatbot suites.',
     target_audienc,
@@ -3579,7 +3579,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 48},
+  s: 48,},
     i,
   d: 'cloud - cost - autopilot',
     nam,
@@ -3644,7 +3644,7 @@
   r: 'text - amber - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - autopilot',
+  s: //ziontechgroup.com / cloud - cost - autopilot',
     market_positio,
   n: 'Actionable savings, not just dashboards.',
     target_audienc,
@@ -3686,7 +3686,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 11},
+  s: 11,},
       'Field-level encryption',
     i,
   d: 'privacy - vault',
@@ -3752,7 +3752,7 @@
   r: 'text - slate - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / privacy - vault',
+  s: //ziontechgroup.com / privacy - vault',
     market_positio,
   n: unknown,
       'Developer - first alternative to heavy enterprise privacy suites.',
@@ -3795,7 +3795,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 7},
+  s: 7,},
       'Graph-based anomaly detection',
     i,
   d: 'ai - fraud - detection - lite',
@@ -3860,7 +3860,7 @@
   r: 'text - pink - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - fraud - detection - lite',
+  s: //ziontechgroup.com / ai - fraud - detection - lite',
     market_positio,
   n: 'Accessible alternative to enterprise fraud stacks.',
     target_audienc,
@@ -3903,7 +3903,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 8},
+  s: 8,},
     i,
   d: 'managed - postgres - ha - pro',
     nam,
@@ -3967,7 +3967,7 @@
   r: 'text - blue - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / managed - postgres - ha',
+  s: //ziontechgroup.com / managed - postgres - ha',
     market_positio,
   n: unknown,
       'Hands - on SRE support at a fraction of DBaaS enterprise tiers.',
@@ -4010,7 +4010,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5},
+  s: 5,},
     i,
   d: 'browser - performance - monitor - pro',
     nam,
@@ -4073,7 +4073,7 @@
   r: 'text - amber - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / browser - performance - monitor',
+  s: //ziontechgroup.com / browser - performance - monitor',
     market_positio,
   n: 'Lightweight, privacy - friendly RUM for modern teams.',
     target_audienc,
@@ -4115,7 +4115,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 6},
+  s: 6,},
     i,
   d: 'seo - automation - studio',
     nam,
@@ -4178,7 +4178,7 @@
   r: 'text - emerald - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / seo - automation',
+  s: //ziontechgroup.com / seo - automation',
     market_positio,
   n: 'Builder - focused alternative to heavy SEO suites.',
     target_audienc,
@@ -4220,7 +4220,7 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 4},
+  s: 4,},
     i,
   d: 'webhook - relay - replay - pro',
     nam,
@@ -4283,7 +4283,7 @@
   r: 'text - cyan - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / webhook - relay - replay',
+  s: //ziontechgroup.com / webhook - relay - replay',
     market_positio,
   n: 'Production safety net for integrations.',
     target_audienc,
@@ -4325,7 +4325,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 3},
+  s: 3,},
     i,
   d: 'pdf - render - api - pro',
     nam,
@@ -4389,7 +4389,7 @@
   r: 'text - slate - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / pdf - render - api',
+  s: //ziontechgroup.com / pdf - render - api',
     market_positio,
   n: 'Secure alternative to self - hosting headless browsers.',
     target_audienc,
@@ -4431,7 +4431,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 10},
+  s: 10,},
       'Auto-instrumentation',
     i,
   d: 'api - observability - starter - pro',
@@ -4495,7 +4495,7 @@
   r: 'text - purple - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / api - observability - starter',
+  s: //ziontechgroup.com / api - observability - starter',
     market_positio,
   n: 'Developer - first observability starter kit.',
     target_audienc,
@@ -4537,7 +4537,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4},
+  s: 4,},
     i,
   d: 'sso - in - a-box - pro',
     nam,
@@ -4600,7 +4600,7 @@
   r: 'text - emerald - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / sso - in - a-box',
+  s: //ziontechgroup.com / sso - in - a-box',
     market_positio,
   n: 'Ship enterprise features in days.',
     target_audienc,
@@ -4642,7 +4642,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 3},
+  s: 3,},
     i,
   d: 'it - asset - discovery - agent - pro',
     nam,
@@ -4705,7 +4705,7 @@
   r: 'text - sky - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / it - asset - discovery - agent',
+  s: //ziontechgroup.com / it - asset - discovery - agent',
     market_positio,
   n: 'Modern take on asset discovery.',
     target_audienc,
@@ -4747,7 +4747,7 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 2},
+  s: 2,},
     i,
   d: 'vendor - risk - automation - lite',
     nam,
@@ -4803,7 +4803,7 @@
   r: 'text - rose - 300',
     lin,
   k: 'http,
-  s://ziontechgroup.com / vendor - risk - automation',
+  s: //ziontechgroup.com / vendor - risk - automation',
     market_positio,
   n: 'Faster and lighter than legacy GRC.',
     target_audienc,
@@ -4845,7 +4845,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 3},
+  s: 3,},
     i,
   d: 'llm-observability-suite', nam,
   e: 'LLM Observability Suite',
@@ -5012,7 +5012,7 @@ id: 'ai-sales-email-copilot'
   r: 'text-cyan-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/llm-observability-suite', marketPositio,
+  s: //ziontechgroup.com/llm-observability-suite', marketPositio,
   n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
     targetAudienc,
   e: 'AI product teams, platform engineers, data teams',
@@ -5045,7 +5045,7 @@ id: 'ai-sales-email-copilot'
     ratin,
   g: 4.8,
     review,
-  s: 22}
+  s: 22,}
 ];
 i,
   d: 'ai-sales-email-copilot'
@@ -5058,12 +5058,11 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
+  n: 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
     feature,
   s: [,
     review,
-  s: 58}
+  s: 58,}
     i,
   d: 'security-posture-as-code'
     nam,
@@ -5075,12 +5074,11 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
+  n: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
     feature,
   s: [,
     review,
-  s: 14}
+  s: 14,}
     i,
   d: 'etl-observability-starter'
     nam,
@@ -5092,13 +5090,12 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Monitor data pipelines end-to-en,
+  n: 'Monitor data pipelines end-to-en,
   d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
     feature,
   s: [,
     review,
-  s: 12}
+  s: 12,}
     i,
   d: 'api-performance-shield'
     nam,
@@ -5110,30 +5107,27 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
+  n: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
     feature,
   s: [,
     review,
-  s: 9}
+  s: 9,}
     i,
   d: 'ai-product-analytics'
     nam,
   e: 'AI Product Analytics'
     taglin,
-  e:
-      'Session insights, funnel auto-segmentation, and LLM-based insights'
+  e: 'Session insights, funnel auto-segmentation, and LLM-based insights'
     pric,
   e: '$129'
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
+  n: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
     feature,
   s: [,
     review,
-  s: 20}
+  s: 20,}
     i,
   d: 'ai-support-deflection'
     nam,
@@ -5145,12 +5139,11 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
+  n: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
     feature,
   s: [,
     review,
-  s: 48}
+  s: 48,}
     i,
   d: 'cloud-cost-autopilot'
     nam,
@@ -5162,13 +5155,12 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Proactive optimization for AWS/Azure/GC,
+  n: 'Proactive optimization for AWS/Azure/GC,
   P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
     feature,
   s: [,
     review,
-  s: 11}
+  s: 11,}
     i,
   d: 'privacy-vault'
     nam,
@@ -5180,12 +5172,11 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
+  n: 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
     feature,
   s: [,
     review,
-  s: 7}
+  s: 7,}
     i,
   d: 'ai-fraud-detection-lite'
     nam,
@@ -5201,7 +5192,7 @@ i,
     feature,
   s: [,
     review,
-  s: 8}
+  s: 8,}
     i,
   d: 'managed-postgres-ha-pro'
     nam,
@@ -5213,12 +5204,11 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
+  n: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
     feature,
   s: [,
     review,
-  s: 5}
+  s: 5,}
     i,
   d: 'browser-performance-monitor-pro'
     nam,
@@ -5230,12 +5220,11 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
+  n: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
     feature,
   s: [,
     review,
-  s: 6}
+  s: 6,}
     i,
   d: 'seo-automation-studio'
     nam,
@@ -5247,12 +5236,11 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
+  n: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
     feature,
   s: [,
     review,
-  s: 4}
+  s: 4,}
     i,
   d: 'webhook-relay-replay-pro'
     nam,
@@ -5264,8 +5252,7 @@ i,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
+  n: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
     feature,
   s: [;
 ]
@@ -5273,20 +5260,20 @@ i,
 // const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup.com'],
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact = {/* TODO: Fix JSX expression */,}
+  s: '364 E Main St STE 1008 Middletown DE 19709',}
   websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
 }
 export const,
   newRealServices: EnhancedRealMicroSaasService[] = [,
-  {/* TODO: Fix JSX expression */}
-  g: 4.8}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.8,}
     review,
-  s: 22}
+  s: 22,}
   }
   {
     id: 'ai-sales-email-copilot';
@@ -5322,8 +5309,8 @@ export const,
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.';
     launchDate: '2024-12-20'
     customers: 120,
-    rating: 4.7}
-    reviews: 58}
+    rating: 4.7,}
+    reviews: 58,}
   }
   {
     id: 'security-posture-as-code';
@@ -5359,8 +5346,8 @@ export const,
     implementationDetails: 'Policy engine plus cloud/K8 s scanners and fix generators.'
     launchDate: '2025-01-05'
     customers: 18,
-    rating: 4.6}
-    reviews: 14}
+    rating: 4.6,}
+    reviews: 14,}
   }
   {
     id: 'etl-observability-starter';
@@ -5396,8 +5383,8 @@ export const,
     implementationDetails: 'Light agents and metadata collectors with warehouse connectors.'
     launchDate: '2025-01-12'
     customers: 25,
-    rating: 4.5}
-    reviews: 12}
+    rating: 4.5,}
+    reviews: 12,}
   }
   {
     id: 'api-performance-shield'
@@ -5433,8 +5420,8 @@ export const,
     implementationDetails: 'Managed edge configs and anomaly ML with safe rollout tools.'
     launchDate: '2025-01-15'
     customers: 14,
-    rating: 4.7}
-    reviews: 9}
+    rating: 4.7,}
+    reviews: 9,}
   }
   {
     id: 'ai-product-analytics'
@@ -5470,8 +5457,8 @@ export const,
     implementationDetails: 'Event capture SDKs and warehouse-first analytics.'
     launchDate: '2025-01-02'
     customers: 41,
-    rating: 4.6}
-    reviews: 20}
+    rating: 4.6,}
+    reviews: 20,}
   }
   {
     id: 'ai-support-deflection'
@@ -5507,8 +5494,8 @@ export const,
     implementationDetails: 'Embeddable widget and handoff connectors.'
     launchDate: '2024-12-15'
     customers: 75,
-    rating: 4.7}
-    reviews: 48}
+    rating: 4.7,}
+    reviews: 48,}
   }
   {
     id: 'cloud-cost-autopilot'
@@ -5544,8 +5531,8 @@ export const,
     implementationDetails: 'Read-only billing analysis with PR-based changes.'
     launchDate: '2025-01-03'
     customers: 19,
-    rating: 4.5}
-    reviews: 11}
+    rating: 4.5,}
+    reviews: 11,}
   }
   {
     id: 'privacy-vault';
@@ -5581,8 +5568,8 @@ export const,
     implementationDetails: 'Drop-in SDKs and proxy-based tokenization.'
     launchDate: '2025-01-07'
     customers: 9,
-    rating: 4.6}
-    reviews: 7}
+    rating: 4.6,}
+    reviews: 7,}
   }
   {
     id: 'ai-fraud-detection-lite';
@@ -5618,8 +5605,8 @@ export const,
     implementationDetails: 'Streaming and batch detectors with human-in-the-loop review.'
     launchDate: '2025-01-09'
     customers: 11,
-    rating: 4.5}
-    reviews: 8}
+    rating: 4.5,}
+    reviews: 8,}
   }
   {
     id: 'managed-postgres-ha-pro'
@@ -5655,8 +5642,8 @@ export const,
     implementationDetails: 'Managed cluster with observability and runbooks.'
     launchDate: '2025-01-16'
     customers: 8,
-    rating: 4.6}
-    reviews: 5}
+    rating: 4.6,}
+    reviews: 5,}
   }
   {
     id: 'browser-performance-monitor-pro'
@@ -5692,8 +5679,8 @@ export const,
     implementationDetails: 'Agent + dashboards + anomaly alerts.'
     launchDate: '2025-01-17'
     customers: 12,
-    rating: 4.5}
-    reviews: 6}
+    rating: 4.5,}
+    reviews: 6,}
   }
   {
     id: 'seo-automation-studio'
@@ -5729,8 +5716,8 @@ export const,
     implementationDetails: 'Crawlers, fixers, programmatic builder.';
     launchDate: '2025-01-18'
     customers: 10,
-    rating: 4.4}
-    reviews: 4}
+    rating: 4.4,}
+    reviews: 4,}
   }
   {
     id: 'webhook-relay-replay-pro';
@@ -5766,8 +5753,8 @@ export const,
     implementationDetails: 'Broker + storage + replayer UI.'
     launchDate: '2025-01-19'
     customers: 7,
-    rating: 4.6}
-    reviews: 3}
+    rating: 4.6,}
+    reviews: 3,}
   }
   {
     id: 'pdf-render-api-pro';
@@ -5803,8 +5790,8 @@ export const,
     implementationDetails: 'Isolated renderer pool, signed URLs.';
     launchDate: '2025-01-18'
     customers: 22,
-    rating: 4.6}
-    reviews: 10}
+    rating: 4.6,}
+    reviews: 10,}
   }
   {
     id: 'api-observability-starter-pro'
@@ -5840,8 +5827,8 @@ export const,
     implementationDetails: 'SDKs, collectors, quick dashboards.';
     launchDate: '2025-01-17'
     customers: 9,
-    rating: 4.5}
-    reviews: 4}
+    rating: 4.5,}
+    reviews: 4,}
   }
   {
     id: 'sso-in-a-box-pro'
@@ -5877,8 +5864,8 @@ export const,
     implementationDetails: 'Hosted broker + mappings UI.'
     launchDate: '2025-01-17'
     customers: 6,
-    rating: 4.7}
-    reviews: 3}
+    rating: 4.7,}
+    reviews: 3,}
   }
   {
     id: 'it-asset-discovery-agent-pro';
@@ -5914,8 +5901,8 @@ export const,
     implementationDetails: 'Scanners, parsers, CMDB sync.';
     launchDate: '2025-01-16'
     customers: 5,
-    rating: 4.4}
-    reviews: 2}
+    rating: 4.4,}
+    reviews: 2,}
   }
   {
     id: 'vendor-risk-automation-lite'
@@ -5951,104 +5938,104 @@ export const,
     implementationDetails: 'Portal + integrations + reports.'
     launchDate: '2025-01-19'
     customers: 6,
-    rating: 4.5}
-    reviews: 3}
-  {/* TODO: Fix JSX expression */}
-  g: 4.7}
+    rating: 4.5,}
+    reviews: 3,}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.7,}
     review,
-  s: 58}
+  s: 58,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.6,}
     review,
-  s: 14}
+  s: 14,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.5,}
     review,
-  s: 12}
+  s: 12,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.7}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.7,}
     review,
-  s: 9}
+  s: 9,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.6,}
     review,
-  s: 20}
+  s: 20,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.7}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.7,}
     review,
-  s: 48}
+  s: 48,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.5,}
     review,
-  s: 11}
+  s: 11,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.6,}
     review,
-  s: 7}
+  s: 7,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.5,}
     review,
-  s: 8}
+  s: 8,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.6,}
     review,
-  s: 5}
+  s: 5,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.5,}
     review,
-  s: 6}
+  s: 6,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.4}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.4,}
     review,
-  s: 4}
+  s: 4,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.6,}
     review,
-  s: 3}
+  s: 3,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.6,}
     review,
-  s: 10}
+  s: 10,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.5,}
     review,
-  s: 4}
+  s: 4,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.7}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.7,}
     review,
-  s: 3}
+  s: 3,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.4}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.4,}
     review,
-  s: 2}
+  s: 2,}
   }
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */,}
+  g: 4.5,}
     review,
-  s: 3}
+  s: 3,}
   }
 ];
 'Prompt and response tracing',' 'Cost and token analytics',' 'Automatic PII redaction',' 'Offline and online evals',' 'Guardrail policy engine',' 'Drift and performance alerts',' 'SDKs for JS, Python, Go',' 'Grafana and Datadog exporters'], popula,
   r: true,' ico,
   n: '📈', ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/llm-observability-suite'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/llm-observability-suite'' marketPositio,
   n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.', marketPositio,
   n: ' 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.', feature,
   s: [' 'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters' ]; popula,
@@ -6057,7 +6044,7 @@ export const,
   r: 'from-cyan-600 to-blue-700'' textColo,
   r: 'text-cyan-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/llm-observability-suite'' marketPositio,
+  s: //ziontechgroup.com/llm-observability-suite'' marketPositio,
   n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.'' targetAudienc,
   e: 'AI product teams, platform engineers, data teams' trialDay,
   s: 21,' setupTim,
@@ -6082,15 +6069,15 @@ export const,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / llm - observability - suite', market_positio,
-  n:  ,' 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.', feature,
+  s: //ziontechgroup.com / llm - observability - suite', market_positio,
+  n: ,' 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.', feature,
   s: [,' 'Prompt and response tracing_cost and token analytics_automatic PII redaction_offline and online evals_guardrail policy engine_drift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters' ]; popula,
   r: true,' ico,
   n: '📈'' colo,
   r: 'from - cyan - 600 to - blue - 700'' text_colo,
   r: 'text - cyan - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / llm - observability - suite'' market_positio,
+  s: //ziontechgroup.com / llm - observability - suite'' market_positio,
   n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.',' target_audienc,
   e: 'AI product teams, platform engineers, data teams' trial_day,
   s: 21,' setup_tim,
@@ -6111,13 +6098,13 @@ export const,
   e: '2025 - 01 - 10' customer,
   s: 32, ratin,
   g: 4.8, review,
-  s: 22} ' i,
+  s: 22,} ' i,
   d: 'ai - sales - email - copilot'' nam,
   e: 'AI Sales Email Copilot'' taglin,
   e: 'Personalized multi - touch outbound with real - time enrichment'' pric,
   e: '$129' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/ai-sales-email-copilot'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/ai-sales-email-copilot'' marketPositio,
   n: 'Lower cost with better personalization vs. Jasper and constant-contact tools.', ' targetAudienc,
   e: 'B2B startups, agencies, SDR teams' trialDay,
   s: 14,' setupTim,
@@ -6147,7 +6134,7 @@ export const,
   r: 'from - violet - 600 to - fuchsia - 700'' text_colo,
   r: 'text - violet - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - sales - email - copilot'' market_positio,
+  s: //ziontechgroup.com / ai - sales - email - copilot'' market_positio,
   n: 'Lower cost with better personalization vs. Jasper and constant - contact tools.',' target_audienc,
   e: 'B2B startups, agencies, SDR teams' trial_day,
   s: 14,' setup_tim,
@@ -6168,13 +6155,13 @@ export const,
   e: '2024 - 12 - 20' customer,
   s: 120, ratin,
   g: 4.7, review,
-  s: 58} ' i,
+  s: 58,} ' i,
   d: 'security - posture - as - code'' nam,
   e: 'Security Posture as Code'' taglin,
   e: 'CIS / NIST / Kyverno policy packs with drift remediation'' pric,
   e: '$399' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/security-posture-as-code'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/security-posture-as-code'' marketPositio,
   n: 'Brings policy-as-code and compliance automation into one product.', ' targetAudienc,
   e: 'Platform teams, security engineers, compliance leads' trialDay,
   s: 21,' setupTim,
@@ -6187,7 +6174,7 @@ export const,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
   r: 'text - emerald - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / security - posture - as - code'' market_positio,
+  s: //ziontechgroup.com / security - posture - as - code'' market_positio,
   n: 'Brings policy - as - code and compliance automation into one product.',' target_audienc,
   e: 'Platform teams, security engineers, compliance leads' trial_day,
   s: 21,' setup_tim,
@@ -6210,13 +6197,13 @@ export const,
   g: 4 && 4.6, review,
   s: 14,
   rating: 4.6, review,
-  s: 14} ' i,
+  s: 14,} ' i,
   d: 'etl - observability - starter'' nam,
   e: 'ETL Observability Starter'' taglin,
   e: 'Data pipeline health with schema change and freshness alerts'' pric,
   e: '$99' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/etl-observability-starter'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/etl-observability-starter'' marketPositio,
   n: 'Simpler and faster to adopt vs. enterprise data observability tools.', ' targetAudienc,
   e: 'Analytics engineers, data teams' trialDay,
   s: 14,' setupTim,
@@ -6230,7 +6217,7 @@ export const,
   r: 'from - blue - 600 to - indigo - 700'' text_colo,
   r: 'text - blue - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / etl - observability - starter'' market_positio,
+  s: //ziontechgroup.com / etl - observability - starter'' market_positio,
   n: 'Simpler and faster to adopt vs. enterprise data observability tools.',' target_audienc,
   e: 'Analytics engineers, data teams' trial_day,
   s: 14,' setup_tim,
@@ -6251,7 +6238,7 @@ export const,
   e: '2025 - 01 - 12' customer,
   s: 25, ratin,
   g: 4 && 4.5, review,
-  s: 12 } ' i,
+  s: 12,} ' i,
   d: 'api-performance-shield'' nam,
   e: 'API Performance Shield'' taglin,
   e: 'Global edge caching, rate limiting, and anomaly detection'' pric,
@@ -6264,13 +6251,13 @@ export const,
   r: 'from-cyan-600 to-sky-700'' textColo,
   r: 'text-cyan-400' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/api-performance-shield'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/api-performance-shield'' marketPositio,
   n: 'Unified performance and security at SMB-friendly pricing.', ' targetAudienc,
   e: 'API-first startups, SaaS, marketplaces' trialDay,
   s: 14,' setupTim,
   e: 'Same day' ratin,
   g: 4.5, review,
-  s: 12} ' i,
+  s: 12,} ' i,
   d: 'api - performance - shield'' nam,
   e: 'API Performance Shield',' taglin,
   e: 'Global edge caching, rate limiting, and anomaly detection'' pric,
@@ -6283,7 +6270,7 @@ export const,
   r: 'from - cyan - 600 to - sky - 700'' text_colo,
   r: 'text - cyan - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / api - performance - shield'' market_positio,
+  s: //ziontechgroup.com / api - performance - shield'' market_positio,
   n: 'Unified performance and security at SMB - friendly pricing.',' target_audienc,
   e: 'API - first startups, SaaS, marketplaces' trial_day,
   s: 14,' setup_tim,
@@ -6304,7 +6291,7 @@ export const,
   e: '2025 - 01 - 15' customer,
   s: 14, ratin,
   g: 4 && 4.7, review,
-  s: 9 } ' i,
+  s: 9,} ' i,
   d: 'ai-product-analytics'' nam,
   e: 'AI Product Analytics'' taglin,
   e: 'Session insights, funnel auto-segmentation, and LLM-based insights'' pric,
@@ -6317,7 +6304,7 @@ export const,
   r: 'from-purple-600 to-indigo-700'' textColo,
   r: 'text-purple-400' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/ai-product-analytics'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/ai-product-analytics'' marketPositio,
   n: 'Brings AI querying and anomaly detection without vendor lock-in.', ' targetAudienc,
   e: 'Product teams, founders, analysts' trialDay,
   s: 14,' setupTim,
@@ -6326,7 +6313,7 @@ export const,
   e: true,' technolog,
   y: ['Next && Next.jsPostHogClickHouse'], ratin,
   g: 4.7, review,
-  s: 9} ' i,
+  s: 9,} ' i,
   d: 'ai - product - analytics'' nam,
   e: 'AI Product Analytics',' taglin,
   e: 'Session insights, funnel auto - segmentation, and LLM - based insights'' pric,
@@ -6339,7 +6326,7 @@ export const,
   r: 'from - purple - 600 to - indigo - 700'' text_colo,
   r: 'text - purple - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - product - analytics'' market_positio,
+  s: //ziontechgroup.com / ai - product - analytics'' market_positio,
   n: 'Brings AI querying and anomaly detection without vendor lock - in.',' target_audienc,
   e: 'Product teams, founders, analysts' trial_day,
   s: 14,' setup_tim,
@@ -6360,7 +6347,7 @@ export const,
   e: '2025 - 01 - 02' customer,
   s: 41, ratin,
   g: 4 && 4.6, review,
-  s: 20 } ' i,
+  s: 20,} ' i,
   d: 'ai-support-deflection'' nam,
   e: 'AI Support Deflection'' taglin,
   e: 'Self-serve answers with RAG, forms, and secure handoff'' pric,
@@ -6373,7 +6360,7 @@ export const,
   r: 'from-rose-600 to-orange-700'' textColo,
   r: 'text-rose-400' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/ai-support-deflection'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/ai-support-deflection'' marketPositio,
   n: 'Faster time-to-value vs. enterprise chatbot suites.', ' targetAudienc,
   e: 'Support teams, SMB SaaS, marketplaces' trialDay,
   s: 14,' setupTim,
@@ -6382,7 +6369,7 @@ export const,
   e: true,' technolog,
   y: ['RAGVector DBNext && DBNext.js'], ratin,
   g: 4.6, review,
-  s: 20} ' i,
+  s: 20,} ' i,
   d: 'ai - support - deflection'' nam,
   e: 'AI Support Deflection',' taglin,
   e: 'Self - serve answers with RAG, forms, and secure handoff'' pric,
@@ -6395,7 +6382,7 @@ export const,
   r: 'from - rose - 600 to - orange - 700'' text_colo,
   r: 'text - rose - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - support - deflection'' market_positio,
+  s: //ziontechgroup.com / ai - support - deflection'' market_positio,
   n: 'Faster time - to - value vs. enterprise chatbot suites.',' target_audienc,
   e: 'Support teams, SMB SaaS, marketplaces' trial_day,
   s: 14,' setup_tim,
@@ -6416,7 +6403,7 @@ export const,
   e: '2024 - 12 - 15' customer,
   s: 75, ratin,
   g: 4 && 4.7, review,
-  s: 48 } ' i,
+  s: 48,} ' i,
   d: 'cloud-cost-autopilot'' nam,
   e: 'Cloud Cost Autopilot'' taglin,
   e: 'Automated rightsizing, anomaly alerts, and commitment planning'' pric,
@@ -6430,13 +6417,13 @@ export const,
   r: 'from-amber-600 to-yellow-700'' textColo,
   r: 'text-amber-400' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot', ' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/cloud-cost-autopilot', ' marketPositio,
   n: 'Actionable savings, not just dashboards.'' targetAudienc,
   e: 'FinOps teams, platform and SRE' trialDay,
   s: 21,' setupTim,
   e: '2–5 days' ratin,
   g: 4.7, review,
-  s: 48} ' i,
+  s: 48,} ' i,
   d: 'cloud - cost - autopilot'' nam,
   e: 'Cloud Cost Autopilot',' taglin,
   e: 'Automated rightsizing, anomaly alerts, and commitment planning'' pric,
@@ -6450,7 +6437,7 @@ export const,
   r: 'from - amber - 600 to - yellow - 700'' text_colo,
   r: 'text - amber - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - autopilot',' market_positio,
+  s: //ziontechgroup.com / cloud - cost - autopilot',' market_positio,
   n: 'Actionable savings, not just dashboards.'' target_audienc,
   e: 'FinOps teams, platform and SRE' trial_day,
   s: 21,' setup_tim,
@@ -6473,13 +6460,13 @@ export const,
   g: 4 && 4.5, review,
   s: 11,
   rating: 4.5, review,
-  s: 11} ' i,
+  s: 11,} ' i,
   d: 'privacy - vault'' nam,
   e: 'Privacy Vault'' taglin,
   e: 'Tokenize PII and control access with audit trails'' pric,
   e: '$179' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/privacy-vault'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/privacy-vault'' marketPositio,
   n: 'Developer-first alternative to heavy enterprise privacy suites.', ' targetAudienc,
   e: 'Developers, privacy and legal teams' trialDay,
   s: 14,' setupTim,
@@ -6492,7 +6479,7 @@ export const,
   r: 'from - slate - 600 to - gray - 700'' text_colo,
   r: 'text - slate - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / privacy - vault'' market_positio,
+  s: //ziontechgroup.com / privacy - vault'' market_positio,
   n: 'Developer - first alternative to heavy enterprise privacy suites.',' target_audienc,
   e: 'Developers, privacy and legal teams' trial_day,
   s: 14,' setup_tim,
@@ -6515,7 +6502,7 @@ export const,
   g: 4 && 4.6, review,
   s: 7,
   rating: 4.6, review,
-  s: 7} ' i,
+  s: 7,} ' i,
   d: 'ai - fraud - detection - lite'' nam,
   e: 'AI Fraud Detection Lite'' taglin,
   e: 'Graph - based anomalies with explainability for SMBs'' pric,
@@ -6526,7 +6513,7 @@ export const,
   r: false,' ico,
   n: '🧠' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite'' marketPositio,
   n: 'Accessible alternative to enterprise fraud stacks.', ' targetAudienc,
   e: 'Marketplaces, fintech, e-commerce' trialDay,
   s: 14,' setupTim,
@@ -6534,7 +6521,7 @@ export const,
   r: 'from - pink - 600 to - rose - 700'' text_colo,
   r: 'text - pink - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - fraud - detection - lite'' market_positio,
+  s: //ziontechgroup.com / ai - fraud - detection - lite'' market_positio,
   n: 'Accessible alternative to enterprise fraud stacks.',' target_audienc,
   e: 'Marketplaces, fintech, e - commerce' trial_day,
   s: 14,' setup_tim,
@@ -6555,7 +6542,7 @@ export const,
   e: '2025 - 01 - 09' customer,
   s: 11, ratin,
   g: 4 && 4.5, review,
-  s: 8 } ' i,
+  s: 8,} ' i,
   d: 'managed-postgres-ha-pro'' nam,
   e: 'Managed Postgres HA Pro'' taglin,
   e: 'Turnkey HA, backups, PITR, and query tuning'' pric,
@@ -6568,13 +6555,13 @@ export const,
   r: 'from-blue-600 to-indigo-700'' textColo,
   r: 'text-blue-400' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/managed-postgres-ha'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/managed-postgres-ha'' marketPositio,
   n: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.', ' targetAudienc,
   e: 'Startups, SMBs, data teams' trialDay,
   s: 14,' setupTim,
   e: '1–2 days' ratin,
   g: 4.5, review,
-  s: 8} ' i,
+  s: 8,} ' i,
   d: 'managed - postgres - ha - pro'' nam,
   e: 'Managed Postgres HA Pro',' taglin,
   e: 'Turnkey HA, backups, PITR, and query tuning'' pric,
@@ -6587,7 +6574,7 @@ export const,
   r: 'from - blue - 600 to - indigo - 700'' text_colo,
   r: 'text - blue - 400'' lin,
   k: 'http,
-  s://ziontechgroup.com / managed - postgres - ha'' market_positio,
+  s: //ziontechgroup.com / managed - postgres - ha'' market_positio,
   n: 'Hands - on SRE support at a fraction of DBaaS enterprise tiers.',' target_audienc,
   e: 'Startups, SMBs, data teams' trial_day,
   s: 14,' setup_tim,
@@ -6608,7 +6595,7 @@ export const,
   e: '2025 - 01 - 16' customer,
   s: 8, ratin,
   g: 4 && 4.6, review,
-  s: 5 } ' i,
+  s: 5,} ' i,
   d: 'browser-performance-monitor-pro'' nam,
   e: 'Browser Performance Monitor Pro'' taglin,
   e: 'RUM, Core Web Vitals, and session replay'' pric,
@@ -6621,13 +6608,13 @@ export const,
   r: 'from-amber-600 to-yellow-700'' textColo,
   r: 'text-amber-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/browser-performance-monitor', ' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/browser-performance-monitor', ' marketPositio,
   n: 'Lightweight, privacy-friendly RUM for modern teams.'' targetAudienc,
   e: 'Frontend, growth, product' trialDay,
   s: 14,' setupTim,
   e: '30 minutes' ratin,
   g: 4.6, review,
-  s: 5} ' i,
+  s: 5,} ' i,
   d: 'browser - performance - monitor - pro'' nam,
   e: 'Browser Performance Monitor Pro',' taglin,
   e: 'RUM, Core Web Vitals, and session replay'' pric,
@@ -6640,7 +6627,7 @@ export const,
   r: 'from - amber - 600 to - yellow - 700'' text_colo,
   r: 'text - amber - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / browser - performance - monitor',' market_positio,
+  s: //ziontechgroup.com / browser - performance - monitor',' market_positio,
   n: 'Lightweight, privacy - friendly RUM for modern teams.'' target_audienc,
   e: 'Frontend, growth, product' trial_day,
   s: 14,' setup_tim,
@@ -6661,11 +6648,11 @@ export const,
   e: '2025 - 01 - 17' customer,
   s: 12, ratin,
   g: 4 && 4.5, review,
-  s: 6 } ' i,
+  s: 6,} ' i,
   d: 'seo-automation-studio'' nam,
   e: 'SEO Automation Studio' ratin,
   g: 4.5, review,
-  s: 6} ' i,
+  s: 6,} ' i,
   d: 'seo - automation - studio'' nam,
   e: 'SEO Automation Studio',' taglin,
   e: 'Programmatic SEO, audits, and internal linking automation'' pric,
@@ -6676,7 +6663,7 @@ export const,
   r: false,' ico,
   n: '🔎' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/seo-automation'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/seo-automation'' marketPositio,
   n: 'Builder-focused alternative to heavy SEO suites.', ' targetAudienc,
   e: 'Growth, content, agencies' trialDay,
   s: 14,' setupTim,
@@ -6687,7 +6674,7 @@ export const,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / seo - automation'' market_positio,
+  s: //ziontechgroup.com / seo - automation'' market_positio,
   n: 'Builder - focused alternative to heavy SEO suites.',' target_audienc,
   e: 'Growth, content, agencies' trial_day,
   s: 14,' setup_tim,
@@ -6710,7 +6697,7 @@ export const,
   e: '2025 - 01 - 18' customer,
   s: 10, ratin,
   g: 4.4, review,
-  s: 4} ' i,
+  s: 4,} ' i,
   d: 'webhook - relay - replay - pro'' nam,
   e: 'Webhook Relay & Replay Pro'' taglin,
   e: 'Reliable webhooks with DLQ and replays'' pric,
@@ -6721,7 +6708,7 @@ export const,
   r: true,' ico,
   n: '🔁' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/webhook-relay-replay'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/webhook-relay-replay'' marketPositio,
   n: 'Production safety net for integrations.', ' targetAudienc,
   e: 'Developers, platforms' trialDay,
   s: 14,' setupTim,
@@ -6732,7 +6719,7 @@ export const,
   r: 'from - cyan - 600 to - sky - 700'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / webhook - relay - replay'' market_positio,
+  s: //ziontechgroup.com / webhook - relay - replay'' market_positio,
   n: 'Production safety net for integrations.',' target_audienc,
   e: 'Developers, platforms' trial_day,
   s: 14,' setup_tim,
@@ -6755,13 +6742,13 @@ export const,
   g: 4 && 4.6, review,
   s: 3,
   rating: 4.6, review,
-  s: 3} ' i,
+  s: 3,} ' i,
   d: 'pdf - render - api - pro'' nam,
   e: 'PDF Render API Pro'' taglin,
   e: 'Fast HTML - to - PDF with brand - safe templates'' pric,
   e: '$49' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/pdf-render-api'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/pdf-render-api'' marketPositio,
   n: 'Secure alternative to self-hosting headless browsers.', ' targetAudienc,
   e: 'SaaS, finance, ops' trialDay,
   s: 14,' setupTim,
@@ -6774,7 +6761,7 @@ export const,
   r: 'from - slate - 600 to - gray - 700'' text_colo,
   r: 'text - slate - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / pdf - render - api'' market_positio,
+  s: //ziontechgroup.com / pdf - render - api'' market_positio,
   n: 'Secure alternative to self - hosting headless browsers.',' target_audienc,
   e: 'SaaS, finance, ops' trial_day,
   s: 14,' setup_tim,
@@ -6787,7 +6774,7 @@ export const,
   i: 'Save days of maintenance yearly'' competitor,
   s: ['PDFShiftDocRaptor'], ratin,
   g: 4 && 4.6, review,
-  s: 10 } ' i,
+  s: 10,} ' i,
   d: 'api-observability-starter-pro'' nam,
   e: 'API Observability Starter Pro'' taglin,
   e: 'Traces, metrics, logs for APIs without the bloat'' pric,
@@ -6800,7 +6787,7 @@ export const,
   r: 'from-purple-600 to-indigo-700'' textColo,
   r: 'text-purple-300' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/api-observability-starter'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/api-observability-starter'' marketPositio,
   n: 'Developer-first observability starter kit.', ' targetAudienc,
   e: 'Backend teams, SRE' trialDay,
   s: 14,' setupTim,
@@ -6814,7 +6801,7 @@ export const,
   e: '2025 - 01 - 18' customer,
   s: 22, ratin,
   g: 4.6, review,
-  s: 10} ' i,
+  s: 10,} ' i,
   d: 'api - observability - starter - pro'' nam,
   e: 'API Observability Starter Pro',' taglin,
   e: 'Traces, metrics, logs for APIs without the bloat'' pric,
@@ -6827,7 +6814,7 @@ export const,
   r: 'from - purple - 600 to - indigo - 700'' text_colo,
   r: 'text - purple - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / api - observability - starter'' market_positio,
+  s: //ziontechgroup.com / api - observability - starter'' market_positio,
   n: 'Developer - first observability starter kit.',' target_audienc,
   e: 'Backend teams, SRE' trial_day,
   s: 14,' setup_tim,
@@ -6840,7 +6827,7 @@ export const,
   i: 'Reduce MTTR by 30–50%'' competitor,
   s: ['HoneycombLightstep'], ratin,
   g: 4 && 4.5, review,
-  s: 4 } ' i,
+  s: 4,} ' i,
   d: 'sso-in-a-box-pro'' nam,
   e: 'SSO in a Box Pro'' market_siz,
   e: '$10B Observability'' growth_rat,
@@ -6852,7 +6839,7 @@ export const,
   e: '2025 - 01 - 17' customer,
   s: 9, ratin,
   g: 4.5, review,
-  s: 4} ' i,
+  s: 4,} ' i,
   d: 'sso - in - a-box - pro'' nam,
   e: 'SSO in a Box Pro',' taglin,
   e: 'SAML, OIDC, SCIM with turnkey onboarding'' pric,
@@ -6865,7 +6852,7 @@ export const,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / sso - in - a-box'' market_positio,
+  s: //ziontechgroup.com / sso - in - a-box'' market_positio,
   n: 'Ship enterprise features in days.'' target_audienc,
   e: 'SaaS teams' trial_day,
   s: 14,' setup_tim,
@@ -6888,7 +6875,7 @@ export const,
   g: 4 && 4.7, review,
   s: 3,
   rating: 4.7, review,
-  s: 3} ' i,
+  s: 3,} ' i,
   d: 'it - asset - discovery - agent - pro'' nam,
   e: 'IT Asset Discovery Agent Pro'' taglin,
   e: 'Agentless discovery with CMDB sync'' pric,
@@ -6901,7 +6888,7 @@ export const,
   r: 'from - sky - 600 to - blue - 700'' text_colo,
   r: 'text - sky - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / it - asset - discovery - agent'' market_positio,
+  s: //ziontechgroup.com / it - asset - discovery - agent'' market_positio,
   n: 'Modern take on asset discovery.'' target_audienc,
   e: 'IT and security ops' trial_day,
   s: 14,' setup_tim,
@@ -6917,7 +6904,7 @@ export const,
   e: 'Growing'' varian,
   t: 'holographic' ratin,
   g: 4 && 4.4, review,
-  s: 2 } ' i,
+  s: 2,} ' i,
   d: 'vendor-risk-automation-lite'' nam,
   e: 'Vendor Risk Automation Lite' contact_inf,
   o: contact, real_implementatio,
@@ -6926,7 +6913,7 @@ export const,
   e: '2025 - 01 - 16' customer,
   s: 5, ratin,
   g: 4.4, review,
-  s: 2} ' i,
+  s: 2,} ' i,
   d: 'vendor - risk - automation - lite'' nam,
   e: 'Vendor Risk Automation Lite',' taglin,
   e: 'Questionnaires, evidence, and continuous monitoring'' pric,
@@ -6937,7 +6924,7 @@ export const,
   r: true,' ico,
   n: '📋' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/vendor-risk-automation'' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/vendor-risk-automation'' marketPositio,
   n: 'Faster and lighter than legacy GRC.', ' targetAudienc,
   e: 'Security, procurement' trialDay,
   s: 14,' setupTim,
@@ -6948,7 +6935,7 @@ export const,
   r: 'from - rose - 600 to - orange - 700'' text_colo,
   r: 'text - rose - 300'' lin,
   k: 'http,
-  s://ziontechgroup.com / vendor - risk - automation'' market_positio,
+  s: //ziontechgroup.com / vendor - risk - automation'' market_positio,
   n: 'Faster and lighter than legacy GRC.',' target_audienc,
   e: 'Security, procurement' trial_day,
   s: 14,' setup_tim,
@@ -6973,7 +6960,7 @@ export const,
   rating: 4.5, review,
   s: 3, ratin,
   g: 4.5, review,
-  s: 3} ];' target_audienc,
+  s: 3,} ];' target_audienc,
   e: 'AI product teams, platform engineers, data teams', trial_day,
   s: 21,' setup_tim,
   e: '1 day',' categor,
@@ -6989,25 +6976,25 @@ export const,
   t: 'quantum - holographic', contact_inf,
   o: contact, real_implementatio,
   n: true, implementation_detail,
-  s:  , ' 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',' launch_dat,
+  s: , ' 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',' launch_dat,
   e: '2025 - 01 - 10', customer,
   s: 32, ratin,
   g: 4 && 4.8, review,
-  s: 22}, ' i,
+  s: 22,}, ' i,
   d: 'ai - sales - email - copilot',' nam,
   e: 'AI Sales Email Copilot',' taglin,
   e: 'Personalized multi - touch outbound with real - time enrichment',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.', feature,
+  n: ,' 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.', feature,
   s: [, ' 'Prospect enrichment via public sources',' 'Personalized email generation',' 'Sequence and follow - up scheduling',' 'A / B testing and analytics',' 'SPF / DKIM / DMARC checks',' 'Inbox rotation support'], popula,
   r: false,' ico,
   n: '✉️', ' colo,
   r: 'from - violet - 600 to - fuchsia - 700',' text_colo,
   r: 'text - violet - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - sales - email - copilot', market_positio,
-  n:  ,' 'Lower cost with better personalization vs. Jasper and constant - contact tools.',' target_audienc,
+  s: //ziontechgroup.com / ai - sales - email - copilot', market_positio,
+  n: ,' 'Lower cost with better personalization vs. Jasper and constant - contact tools.',' target_audienc,
   e: 'B2B startups, agencies, SDR teams', trial_day,
   s: 14,' setup_tim,
   e: '2 hours',' categor,
@@ -7023,17 +7010,17 @@ export const,
   t: 'holographic', contact_inf,
   o: contact, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Sequencer, enrichment adapters, and warm - up utilities.',' launch_dat,
+  s: ,' 'Sequencer, enrichment adapters, and warm - up utilities.',' launch_dat,
   e: '2024 - 12 - 20', customer,
   s: 120, ratin,
   g: 4 && 4.7, review,
-  s: 58}, ' 'Policy packs for CIS/NIST',' i,
+  s: 58,}, ' 'Policy packs for CIS/NIST',' i,
   d: 'security - posture - as - code',' nam,
   e: 'Security Posture as Code',' taglin,
   e: 'CIS / NIST / Kyverno policy packs with drift remediation',' pric,
   e: '$399',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.', feature,
+  n: ,' 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.', feature,
   s: [,' 'Policy packs for CIS / NIST', ' 'Kubernetes and cloud posture',' 'Auto - remediation PRs',' 'Evidence collection and reports',' 'SOC2 / ISO 27001 export'], popula,
   r: true,' ico,
   n: '🛡️', ' 'Policy engine plus cloud/K8s scanners and fix generators.',' launchDat,
@@ -7041,8 +7028,8 @@ export const,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / security - posture - as - code', market_positio,
-  n:  ,' 'Brings policy - as - code and compliance automation into one product.',' target_audienc,
+  s: //ziontechgroup.com / security - posture - as - code', market_positio,
+  n: ,' 'Brings policy - as - code and compliance automation into one product.',' target_audienc,
   e: 'Platform teams, security engineers, compliance leads', trial_day,
   s: 21,' setup_tim,
   e: '1–3 days',' categor,
@@ -7058,17 +7045,17 @@ export const,
   t: 'neural - quantum', contact_inf,
   o: contact, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Policy engine plus cloud / K8s scanners and fix generators.',' launch_dat,
+  s: ,' 'Policy engine plus cloud / K8s scanners and fix generators.',' launch_dat,
   e: '2025 - 01 - 05', customer,
   s: 18, ratin,
   g: 4 && 4.6, review,
-  s: 14}, ' i,
+  s: 14,}, ' i,
   d: 'etl - observability - starter',' nam,
   e: 'ETL Observability Starter',' taglin,
   e: 'Data pipeline health with schema change and freshness alerts',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Monitor data pipelines end - to - en,
+  n: ,' 'Monitor data pipelines end - to - en,
   d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.', feature,
   s: [, ' 'Freshness and volume checks',' 'Schema drift detection',' 'SLA and SLO tracking',' 'Incident routing to Slack / Teams'], popula,
   r: false,' ico,
@@ -7076,8 +7063,8 @@ export const,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / etl - observability - starter', market_positio,
-  n:  ,' 'Simpler and faster to adopt vs. enterprise data observability tools.',' target_audienc,
+  s: //ziontechgroup.com / etl - observability - starter', market_positio,
+  n: ,' 'Simpler and faster to adopt vs. enterprise data observability tools.',' target_audienc,
   e: 'Analytics engineers, data teams', trial_day,
   s: 14,' setup_tim,
   e: '1 day',' categor,
@@ -7093,24 +7080,24 @@ export const,
   t: 'quantum', contact_inf,
   o: contact, real_implementatio,
   n: true, implementation_detail,
-  s:  , ' 'Light agents and metadata collectors with warehouse connectors.',' launch_dat,
+  s: , ' 'Light agents and metadata collectors with warehouse connectors.',' launch_dat,
   e: '2025 - 01 - 12', customer,
   s: 25, ratin,
   g: 4 && 4.5, review,
-  s: 12}, ' i,
+  s: 12,}, ' i,
   d: 'api - performance - shield',' nam,
   e: 'API Performance Shield',' taglin,
   e: 'Global edge caching, rate limiting, and anomaly detection',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.', feature,
+  n: ,' 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.', feature,
   s: [, ' 'Global CDN edge caching',' 'Dynamic rate limiting',' 'Anomaly and abuse detection',' 'Zero - downtime deploys with shadow traffic'], popula,
   r: true,' ico,
   n: '🛰️', ' colo,
   r: 'from - cyan - 600 to - sky - 700',' text_colo,
   r: 'text - cyan - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / api - performance - shield',' market_positio,
+  s: //ziontechgroup.com / api - performance - shield',' market_positio,
   n: 'Unified performance and security at SMB - friendly pricing.',' target_audienc,
   e: 'API - first startups, SaaS, marketplaces', trial_day,
   s: 14,' setup_tim,
@@ -7127,25 +7114,25 @@ export const,
   t: 'quantum - matrix', contact_inf,
   o: contact, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Managed edge configs and anomaly ML with safe rollout tools.',' launch_dat,
+  s: ,' 'Managed edge configs and anomaly ML with safe rollout tools.',' launch_dat,
   e: '2025 - 01 - 15', customer,
   s: 14, ratin,
   g: 4 && 4.7, review,
-  s: 9}, ' 'Auto-segmentation and cohorts',' i,
+  s: 9,}, ' 'Auto-segmentation and cohorts',' i,
   d: 'ai - product - analytics',' nam,
   e: 'AI Product Analytics', taglin,
-  e:  ,' 'Session insights, funnel auto - segmentation, and LLM - based insights',' pric,
+  e: ,' 'Session insights, funnel auto - segmentation, and LLM - based insights',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.', feature,
+  n: ,' 'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.', feature,
   s: [,' 'Auto - segmentation and cohorts', ' 'LLM query interface',' 'Retention and churn signals',' 'Anomaly alerts to Slack / Teams'], popula,
   r: false,' ico,
   n: '📊', ' colo,
   r: 'from - purple - 600 to - indigo - 700',' text_colo,
   r: 'text - purple - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - product - analytics', market_positio,
-  n:  ,' 'Brings AI querying and anomaly detection without vendor lock - in.',' target_audienc,
+  s: //ziontechgroup.com / ai - product - analytics', market_positio,
+  n: ,' 'Brings AI querying and anomaly detection without vendor lock - in.',' target_audienc,
   e: 'Product teams, founders, analysts', trial_day,
   s: 14,' setup_tim,
   e: '1 day',' categor,
@@ -7165,20 +7152,20 @@ export const,
   e: '2025 - 01 - 02', customer,
   s: 41, ratin,
   g: 4 && 4.6, review,
-  s: 20}, ' 'Multi-channel widgets',' i,
+  s: 20,}, ' 'Multi-channel widgets',' i,
   d: 'ai - support - deflection',' nam,
   e: 'AI Support Deflection',' taglin,
   e: 'Self - serve answers with RAG, forms, and secure handoff',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.', feature,
+  n: ,' 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.', feature,
   s: [,' 'Multi - channel widgets', ' 'Grounded answers with citations',' 'Secure human handoff',' 'Analytics and CSAT tracking'], popula,
   r: true,' ico,
   n: '💬', ' colo,
   r: 'from - rose - 600 to - orange - 700',' text_colo,
   r: 'text - rose - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - support - deflection',' market_positio,
+  s: //ziontechgroup.com / ai - support - deflection',' market_positio,
   n: 'Faster time - to - value vs. enterprise chatbot suites.',' target_audienc,
   e: 'Support teams, SMB SaaS, marketplaces', trial_day,
   s: 14,' setup_tim,
@@ -7199,13 +7186,13 @@ export const,
   e: '2024 - 12 - 15', customer,
   s: 75, ratin,
   g: 4 && 4.7, review,
-  s: 48}, ' i,
+  s: 48,}, ' i,
   d: 'cloud - cost - autopilot',' nam,
   e: 'Cloud Cost Autopilot',' taglin,
   e: 'Automated rightsizing, anomaly alerts, and commitment planning',' pric,
   e: '$249',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Proactive optimization for AWS / Azure / GC,
+  n: ,' 'Proactive optimization for AWS / Azure / GC,
   P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.', feature,
   s: [, ' 'Rightsizing recommendations',' 'Anomaly detection',' 'Savings plan / RIs planning',' 'Tag hygiene and showback'], popula,
   r: true,' ico,
@@ -7213,7 +7200,7 @@ export const,
   r: 'from - amber - 600 to - yellow - 700',' text_colo,
   r: 'text - amber - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - cost - autopilot',' market_positio,
+  s: //ziontechgroup.com / cloud - cost - autopilot',' market_positio,
   n: 'Actionable savings, not just dashboards.',' target_audienc,
   e: 'FinOps teams, platform and SRE', trial_day,
   s: 21,' setup_tim,
@@ -7234,21 +7221,21 @@ export const,
   e: '2025 - 01 - 03', customer,
   s: 19, ratin,
   g: 4 && 4.5, review,
-  s: 11}, ' 'Field-level encryption',' i,
+  s: 11,}, ' 'Field-level encryption',' i,
   d: 'privacy - vault',' nam,
   e: 'Privacy Vault',' taglin,
   e: 'Tokenize PII and control access with audit trails',' pric,
   e: '$179',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.', feature,
+  n: ,' 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.', feature,
   s: [,' 'Field - level encryption', ' 'Tokenization APIs',' 'Consent enforcement',' 'Audit trail and reporting'], popula,
   r: false,' ico,
   n: '🔏', ' colo,
   r: 'from - slate - 600 to - gray - 700',' text_colo,
   r: 'text - slate - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / privacy - vault', market_positio,
-  n:  ,' 'Developer - first alternative to heavy enterprise privacy suites.',' target_audienc,
+  s: //ziontechgroup.com / privacy - vault', market_positio,
+  n: ,' 'Developer - first alternative to heavy enterprise privacy suites.',' target_audienc,
   e: 'Developers, privacy and legal teams', trial_day,
   s: 14,' setup_tim,
   e: '1–3 days', ' categor,
@@ -7268,20 +7255,20 @@ export const,
   e: '2025 - 01 - 07', customer,
   s: 9, ratin,
   g: 4 && 4.6, review,
-  s: 7}, ' 'Graph-based anomaly detection',' i,
+  s: 7,}, ' 'Graph-based anomaly detection',' i,
   d: 'ai - fraud - detection - lite',' nam,
   e: 'AI Fraud Detection Lite',' taglin,
   e: 'Graph - based anomalies with explainability for SMBs',' pric,
   e: '$159',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.', feature,
+  n: ,' 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.', feature,
   s: [,' 'Graph - based anomaly detection', ' 'Explainability reports',' 'Risk scoring API',' 'Workflow actions and webhooks'], popula,
   r: false,' ico,
   n: '🧠', ' colo,
   r: 'from - pink - 600 to - rose - 700',' text_colo,
   r: 'text - pink - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - fraud - detection - lite',' market_positio,
+  s: //ziontechgroup.com / ai - fraud - detection - lite',' market_positio,
   n: 'Accessible alternative to enterprise fraud stacks.',' target_audienc,
   e: 'Marketplaces, fintech, e - commerce', trial_day,
   s: 14,' setup_tim,
@@ -7298,25 +7285,25 @@ export const,
   t: 'quantum - financial', contact_inf,
   o: contact, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Streaming and batch detectors with human - in - the - loop review.',' launch_dat,
+  s: ,' 'Streaming and batch detectors with human - in - the - loop review.',' launch_dat,
   e: '2025 - 01 - 09', customer,
   s: 11, ratin,
   g: 4 && 4.5, review,
-  s: 8}, ' i,
+  s: 8,}, ' i,
   d: 'managed - postgres - ha - pro',' nam,
   e: 'Managed Postgres HA Pro',' taglin,
   e: 'Turnkey HA, backups, PITR, and query tuning',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.', feature,
+  n: ,' 'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.', feature,
   s: [, ' 'HA with automatic failover',' 'Continuous backups and PITR',' 'Slow query insights and indexing',' 'Encryption and access controls'], popula,
   r: true,' ico,
   n: '🗃️', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / managed - postgres - ha', market_positio,
-  n:  ,' 'Hands - on SRE support at a fraction of DBaaS enterprise tiers.',' target_audienc,
+  s: //ziontechgroup.com / managed - postgres - ha', market_positio,
+  n: ,' 'Hands - on SRE support at a fraction of DBaaS enterprise tiers.',' target_audienc,
   e: 'Startups, SMBs, data teams', trial_day,
   s: 14,' setup_tim,
   e: '1–2 days', ' categor,
@@ -7336,20 +7323,20 @@ export const,
   e: '2025 - 01 - 16', customer,
   s: 8, ratin,
   g: 4 && 4.6, review,
-  s: 5}, ' i,
+  s: 5,}, ' i,
   d: 'browser - performance - monitor - pro',' nam,
   e: 'Browser Performance Monitor Pro',' taglin,
   e: 'RUM, Core Web Vitals, and session replay',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.', feature,
+  n: ,' 'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.', feature,
   s: [, ' 'Core Web Vitals dashboards',' 'Session replay and heatmaps',' 'Error tracking and sourcemaps',' 'A / B test impact analysis'], popula,
   r: true,' ico,
   n: '⚡', ' colo,
   r: 'from - amber - 600 to - yellow - 700',' text_colo,
   r: 'text - amber - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / browser - performance - monitor',' market_positio,
+  s: //ziontechgroup.com / browser - performance - monitor',' market_positio,
   n: 'Lightweight, privacy - friendly RUM for modern teams.',' target_audienc,
   e: 'Frontend, growth, product', trial_day,
   s: 14,' setup_tim,
@@ -7370,20 +7357,20 @@ export const,
   e: '2025 - 01 - 17', customer,
   s: 12, ratin,
   g: 4 && 4.5, review,
-  s: 6}, ' i,
+  s: 6,}, ' i,
   d: 'seo - automation - studio',' nam,
   e: 'SEO Automation Studio',' taglin,
   e: 'Programmatic SEO, audits, and internal linking automation',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.', feature,
+  n: ,' 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.', feature,
   s: [, ' 'Site audits and fixes',' 'Schema and sitemaps',' 'Programmatic pages',' 'Internal linking graph'], popula,
   r: false,' ico,
   n: '🔎', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / seo - automation',' market_positio,
+  s: //ziontechgroup.com / seo - automation',' market_positio,
   n: 'Builder - focused alternative to heavy SEO suites.',' target_audienc,
   e: 'Growth, content, agencies', trial_day,
   s: 14,' setup_tim,
@@ -7404,20 +7391,20 @@ export const,
   e: '2025 - 01 - 18', customer,
   s: 10, ratin,
   g: 4 && 4.4, review,
-  s: 4}, ' i,
+  s: 4,}, ' i,
   d: 'webhook - relay - replay - pro',' nam,
   e: 'Webhook Relay & Replay Pro',' taglin,
   e: 'Reliable webhooks with DLQ and replays',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.', feature,
+  n: ,' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.', feature,
   s: [, ' 'DLQ and retry policies',' 'Inspector and redaction',' 'Signature verification',' 'Fan - out and transformations'], popula,
   r: true,' ico,
   n: '🔁', ' colo,
   r: 'from - cyan - 600 to - sky - 700',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / webhook - relay - replay',' market_positio,
+  s: //ziontechgroup.com / webhook - relay - replay',' market_positio,
   n: 'Production safety net for integrations.',' target_audienc,
   e: 'Developers, platforms', trial_day,
   s: 14,' setup_tim,
@@ -7438,20 +7425,20 @@ export const,
   e: '2025 - 01 - 19', customer,
   s: 7, ratin,
   g: 4 && 4.6, review,
-  s: 3}, ' i,
+  s: 3,}, ' i,
   d: 'pdf - render - api - pro',' nam,
   e: 'PDF Render API Pro',' taglin,
   e: 'Fast HTML - to - PDF with brand - safe templates',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.', feature,
+  n: ,' 'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.', feature,
   s: [, ' 'Serverless scale',' 'Template gallery',' 'Brand - safe fonts',' 'Webhook on completion'], popula,
   r: true,' ico,
   n: '📄', ' colo,
   r: 'from - slate - 600 to - gray - 700',' text_colo,
   r: 'text - slate - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / pdf - render - api',' market_positio,
+  s: //ziontechgroup.com / pdf - render - api',' market_positio,
   n: 'Secure alternative to self - hosting headless browsers.',' target_audienc,
   e: 'SaaS, finance, ops', trial_day,
   s: 14,' setup_tim,
@@ -7472,20 +7459,20 @@ export const,
   e: '2025 - 01 - 18', customer,
   s: 22, ratin,
   g: 4 && 4.6, review,
-  s: 10}, ' 'Auto-instrumentation',' i,
+  s: 10,}, ' 'Auto-instrumentation',' i,
   d: 'api - observability - starter - pro',' nam,
   e: 'API Observability Starter Pro',' taglin,
   e: 'Traces, metrics, logs for APIs without the bloat',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.', feature,
+  n: ,' 'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.', feature,
   s: [,' 'Auto - instrumentation', ' 'RED dashboards',' 'Error analytics',' 'Exporters to APMs'], popula,
   r: false,' ico,
   n: '🛰️', ' colo,
   r: 'from - purple - 600 to - indigo - 700',' text_colo,
   r: 'text - purple - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / api - observability - starter',' market_positio,
+  s: //ziontechgroup.com / api - observability - starter',' market_positio,
   n: 'Developer - first observability starter kit.',' target_audienc,
   e: 'Backend teams, SRE', trial_day,
   s: 14,' setup_tim,
@@ -7506,20 +7493,20 @@ export const,
   e: '2025 - 01 - 17', customer,
   s: 9, ratin,
   g: 4 && 4.5, review,
-  s: 4}, ' i,
+  s: 4,}, ' i,
   d: 'sso - in - a-box - pro',' nam,
   e: 'SSO in a Box Pro',' taglin,
   e: 'SAML, OIDC, SCIM with turnkey onboarding',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.', feature,
+  n: ,' 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.', feature,
   s: [, ' 'SAML and OIDC',' 'SCIM and JIT provisioning',' 'Branding and mapping',' 'Customer sandbox'], popula,
   r: true,' ico,
   n: '🔐', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / sso - in - a-box',' market_positio,
+  s: //ziontechgroup.com / sso - in - a-box',' market_positio,
   n: 'Ship enterprise features in days.',' target_audienc,
   e: 'SaaS teams', trial_day,
   s: 14,' setup_tim,
@@ -7540,20 +7527,20 @@ export const,
   e: '2025 - 01 - 17', customer,
   s: 6, ratin,
   g: 4 && 4.7, review,
-  s: 3}, ' i,
+  s: 3,}, ' i,
   d: 'it - asset - discovery - agent - pro',' nam,
   e: 'IT Asset Discovery Agent Pro',' taglin,
   e: 'Agentless discovery with CMDB sync',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.', feature,
+  n: ,' 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.', feature,
   s: [, ' 'Network scans and SNMP',' 'Software inventory',' 'Change tracking',' 'CMDB integrations'], popula,
   r: false,' ico,
   n: '🛰️', ' colo,
   r: 'from - sky - 600 to - blue - 700',' text_colo,
   r: 'text - sky - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / it - asset - discovery - agent',' market_positio,
+  s: //ziontechgroup.com / it - asset - discovery - agent',' market_positio,
   n: 'Modern take on asset discovery.',' target_audienc,
   e: 'IT and security ops', trial_day,
   s: 14,' setup_tim,
@@ -7574,20 +7561,20 @@ export const,
   e: '2025 - 01 - 16', customer,
   s: 5, ratin,
   g: 4 && 4.4, review,
-  s: 2}, ' i,
+  s: 2,}, ' i,
   d: 'vendor - risk - automation - lite',' nam,
   e: 'Vendor Risk Automation Lite',' taglin,
   e: 'Questionnaires, evidence, and continuous monitoring',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.', feature,
+  n: ,' 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.', feature,
   s: [, ' 'Questionnaire templates',' 'Evidence collection portal',' 'Continuous monitoring',' 'Risk scoring'], popula,
   r: true,' ico,
   n: '📋', ' colo,
   r: 'from - rose - 600 to - orange - 700',' text_colo,
   r: 'text - rose - 300',' lin,
   k: 'http,
-  s://ziontechgroup.com / vendor - risk - automation',' market_positio,
+  s: //ziontechgroup.com / vendor - risk - automation',' market_positio,
   n: 'Faster and lighter than legacy GRC.',' target_audienc,
   e: 'Security, procurement', trial_day,
   s: 14,' setup_tim,
@@ -7608,7 +7595,7 @@ export const,
   e: '2025 - 01 - 19', customer,
   s: 6, ratin,
   g: 4 && 4.5, review,
-  s: 3}, ' i,
+  s: 3,}, ' i,
   d: 'llm-observability-suite', nam,
   e: 'LLM Observability Suite',' taglin,
   e: 'Track latency, cost, quality and drift across all prompts',' pric,
@@ -7622,7 +7609,7 @@ export const,
   r: 'from-cyan-600 to-blue-700', textColo,
   r: 'text-cyan-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/llm-observability-suite', marketPositio,
+  s: //ziontechgroup.com/llm-observability-suite', marketPositio,
   n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',' targetAudienc,
   e: 'AI product teams, platform engineers, data teams',' trialDay,
   s: 21, setupTim,
@@ -7643,152 +7630,152 @@ export const,
   e: '2025-01-10', customer,
   s: 32, ratin,
   g: 4.8, review,
-  s: 22 } ]; ' i,
+  s: 22,} ]; ' i,
   d: 'ai-sales-email-copilot'' nam,
   e: 'AI Sales Email Copilot'' taglin,
   e: 'Personalized multi-touch outbound with real-time enrichment'' pric,
   e: '$129'' perio,
   d: '/month' descriptio,
-  n:' 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.' feature,
+  n: ' 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.' feature,
   s: [ review,
-  s: 58 } ' i,
+  s: 58,} ' i,
   d: 'security-posture-as-code'' nam,
   e: 'Security Posture as Code'' taglin,
   e: 'CIS/NIST/Kyverno policy packs with drift remediation'' pric,
   e: '$399'' perio,
   d: '/month' descriptio,
-  n:' 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.' feature,
+  n: ' 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.' feature,
   s: [ review,
-  s: 14 } ' i,
+  s: 14,} ' i,
   d: 'etl-observability-starter'' nam,
   e: 'ETL Observability Starter'' taglin,
   e: 'Data pipeline health with schema change and freshness alerts'' pric,
   e: '$99'' perio,
   d: '/month' descriptio,
-  n:' 'Monitor data pipelines end-to-en,
+  n: ' 'Monitor data pipelines end-to-en,
   d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.' feature,
   s: [ review,
-  s: 12 } ' i,
+  s: 12,} ' i,
   d: 'api-performance-shield'' nam,
   e: 'API Performance Shield'' taglin,
   e: 'Global edge caching, rate limiting, and anomaly detection'' pric,
   e: '$149'' perio,
   d: '/month' descriptio,
-  n:' 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.' feature,
+  n: ' 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.' feature,
   s: [ review,
-  s: 9 } ' i,
+  s: 9,} ' i,
   d: 'ai-product-analytics'' nam,
   e: 'AI Product Analytics' taglin,
-  e:' 'Session insights, funnel auto-segmentation, and LLM-based insights'' pric,
+  e: ' 'Session insights, funnel auto-segmentation, and LLM-based insights'' pric,
   e: '$129'' perio,
   d: '/month' descriptio,
-  n:' 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.' feature,
+  n: ' 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.' feature,
   s: [ review,
-  s: 20 } ' i,
+  s: 20,} ' i,
   d: 'ai-support-deflection'' nam,
   e: 'AI Support Deflection'' taglin,
   e: 'Self-serve answers with RAG, forms, and secure handoff'' pric,
   e: '$99'' perio,
   d: '/month' descriptio,
-  n:' 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.' feature,
+  n: ' 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.' feature,
   s: [ review,
-  s: 48 } ' i,
+  s: 48,} ' i,
   d: 'cloud-cost-autopilot'' nam,
   e: 'Cloud Cost Autopilot'' taglin,
   e: 'Automated rightsizing, anomaly alerts, and commitment planning'' pric,
   e: '$249'' perio,
   d: '/month' descriptio,
-  n:' 'Proactive optimization for AWS/Azure/GC,
+  n: ' 'Proactive optimization for AWS/Azure/GC,
   P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.' feature,
   s: [ review,
-  s: 11 } ' i,
+  s: 11,} ' i,
   d: 'privacy-vault'' nam,
   e: 'Privacy Vault'' taglin,
   e: 'Tokenize PII and control access with audit trails'' pric,
   e: '$179'' perio,
   d: '/month' descriptio,
-  n:' 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.' feature,
+  n: ' 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.' feature,
   s: [ review,
-  s: 7 } ' i,
+  s: 7,} ' i,
   d: 'ai-fraud-detection-lite'' nam,
   e: 'AI Fraud Detection Lite'' taglin,
   e: 'Graph-based anomalies with explainability for SMBs'' pric,
   e: '$159'' perio,
   d: '/month' descriptio,
-  n:' 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.' feature,
+  n: ' 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.' feature,
   s: [ review,
-  s: 8 } ' i,
+  s: 8,} ' i,
   d: 'managed-postgres-ha-pro'' nam,
   e: 'Managed Postgres HA Pro'' taglin,
   e: 'Turnkey HA, backups, PITR, and query tuning'' pric,
   e: '$199'' perio,
   d: '/month' descriptio,
-  n:' 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.' feature,
+  n: ' 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.' feature,
   s: [ review,
-  s: 5 } ' i,
+  s: 5,} ' i,
   d: 'browser-performance-monitor-pro'' nam,
   e: 'Browser Performance Monitor Pro'' taglin,
   e: 'RUM, Core Web Vitals, and session replay'' pric,
   e: '$79'' perio,
   d: '/month' descriptio,
-  n:' 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.' feature,
+  n: ' 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.' feature,
   s: [ review,
-  s: 6 } ' i,
+  s: 6,} ' i,
   d: 'seo-automation-studio'' nam,
   e: 'SEO Automation Studio'' taglin,
   e: 'Programmatic SEO, audits, and internal linking automation'' pric,
   e: '$99'' perio,
   d: '/month' descriptio,
-  n:' 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.' feature,
+  n: ' 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.' feature,
   s: [ review,
-  s: 4 } ' i,
+  s: 4,} ' i,
   d: 'webhook-relay-replay-pro'' nam,
   e: 'Webhook Relay & Replay Pro'' taglin,
   e: 'Reliable webhooks with DLQ and replays'' pric,
   e: '$59'' perio,
   d: '/month' descriptio,
-  n:' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.' feature,
-  s: [], ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  n: ' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.' feature,
+  s: [], ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } export const,
-  newRealServices: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
-  g: 4.8} review,
-  s: 22} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 58} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 14} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 9} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 20} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 48} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 11} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.6} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-  g: 4.7} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
-  g: 4.4} review,
-  s: 2} } {/* TODO: Fix JSX expression */}
-  g: 4.5} review,
-  s: 3} } ]; '
+  s: //ziontechgroup.com',} export const,
+  newRealServices: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */,}
+  g: 4.8,} review,
+  s: 22,} } {/* TODO: Fix JSX expression */,}
+  g: 4.7,} review,
+  s: 58,} } {/* TODO: Fix JSX expression */,}
+  g: 4.6,} review,
+  s: 14,} } {/* TODO: Fix JSX expression */,}
+  g: 4.5,} review,
+  s: 12,} } {/* TODO: Fix JSX expression */,}
+  g: 4.7,} review,
+  s: 9,} } {/* TODO: Fix JSX expression */,}
+  g: 4.6,} review,
+  s: 20,} } {/* TODO: Fix JSX expression */,}
+  g: 4.7,} review,
+  s: 48,} } {/* TODO: Fix JSX expression */,}
+  g: 4.5,} review,
+  s: 11,} } {/* TODO: Fix JSX expression */,}
+  g: 4.6,} review,
+  s: 7,} } {/* TODO: Fix JSX expression */,}
+  g: 4.5,} review,
+  s: 8,} } {/* TODO: Fix JSX expression */,}
+  g: 4.6,} review,
+  s: 5,} } {/* TODO: Fix JSX expression */,}
+  g: 4.5,} review,
+  s: 6,} } {/* TODO: Fix JSX expression */,}
+  g: 4.4,} review,
+  s: 4,} } {/* TODO: Fix JSX expression */,}
+  g: 4.6,} review,
+  s: 3,} } {/* TODO: Fix JSX expression */,}
+  g: 4.6,} review,
+  s: 10,} } {/* TODO: Fix JSX expression */,}
+  g: 4.5,} review,
+  s: 4,} } {/* TODO: Fix JSX expression */,}
+  g: 4.7,} review,
+  s: 3,} } {/* TODO: Fix JSX expression */,}
+  g: 4.4,} review,
+  s: 2,} } {/* TODO: Fix JSX expression */,}
+  g: 4.5,} review,
+  s: 3,} } ]; '

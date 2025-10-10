@@ -10,8 +10,8 @@ packageJson.scripts = {
     'optimize: css': 'node scripts/optimize-css.cjs',
     'optimize: all': 'pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized',
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
-    'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
-packageJson.scripts = {/* TODO: Fix JSX expression */}
+    'perf: audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
+packageJson.scripts = {/* TODO: Fix JSX expression */,}
 }
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -20,23 +20,23 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 
 // // Optimize images;
 // try {
-    execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: 'pipe' });
+    execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: 'pipe',});
 //     } catch (error) {
 //     }
 
 // Optimize CSS;
 // try {
-    execSync('pnpm run build:optimized', { stdio: 'pipe' });
+    execSync('pnpm run build: optimized', { stdio: 'pipe',});
 //     } catch (error) {
-// try {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-//     } catch (error) {/* TODO: Fix JSX expression */}
+// try {/* TODO: Fix JSX expression */,}
+  o: 'pipe',});
+//     } catch (error) {/* TODO: Fix JSX expression */,}
 //     }
 
 // Optimize CSS;
-// try {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-//     } catch (error) {/* TODO: Fix JSX expression */}
+// try {/* TODO: Fix JSX expression */,}
+  o: 'pipe',});
+//     } catch (error) {/* TODO: Fix JSX expression */,}
 //     }
 `
 // `;
@@ -53,8 +53,8 @@ fs.writeFileSync('/workspace/scripts/performance-optimizer.js', performanceScrip
 // // const accessibilityScript = `import { execSync } from 'child_process';
 
 // // Check for accessibility issues;
-// try {/* TODO: Fix JSX expression */}
-//     } catch (error) {/* TODO: Fix JSX expression */}
+// try {/* TODO: Fix JSX expression */,}
+//     } catch (error) {/* TODO: Fix JSX expression */,}
 //     }
 `
 // `;
@@ -71,8 +71,8 @@ fs.writeFileSync('/workspace/scripts/accessibility-improver.js', accessibilitySc
 // // const seoScript = `import { execSync } from 'child_process';
 
 // // Check for SEO issues;
-// try {/* TODO: Fix JSX expression */}
-//     } catch (error) {/* TODO: Fix JSX expression */}
+// try {/* TODO: Fix JSX expression */,}
+//     } catch (error) {/* TODO: Fix JSX expression */,}
 //     }
 `
 // `;
@@ -82,7 +82,7 @@ fs.writeFileSync('/workspace/scripts/seo-improver.js', seoScript);
 // // 5. Create comprehensive test suite;`
 // // const testSuite = `import { describe, it, expect } from '@jest/globals';
 
-describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
+describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */,}
     });
 
     it('should pass performance test', () => {
@@ -95,10 +95,10 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     it('should pass accessibility test', () => {
         // Basic accessibility check;
         expect(document).toBeDefined();
-    it('should pass performance test', () => {/* TODO: Fix JSX expression */}
+    it('should pass performance test', () => {/* TODO: Fix JSX expression */,}
     });
 
-    it('should pass accessibility test', () => {/* TODO: Fix JSX expression */}
+    it('should pass accessibility test', () => {/* TODO: Fix JSX expression */,}
     });
 });`
 `;
@@ -109,7 +109,7 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 
 // // Monitor performance;
 // try {
-//     // console.log('Memory usage:', {)
+//     // console.log('Memory usage: ', {)
         rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB',
@@ -117,9 +117,9 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 // // const monitoringScript = `import { execSync } from 'child_process';
 
 // // Monitor performance;
-// try {/* TODO: Fix JSX expression */}
+// try {/* TODO: Fix JSX expression */,}
     });
-//     } catch (error) {/* TODO: Fix JSX expression */}
+//     } catch (error) {/* TODO: Fix JSX expression */,}
 //     }
 `
 // `;
@@ -170,7 +170,7 @@ pnpm perf: audit;
 - \`pnpm test\` - Run tests;
 - \`pnpm lint\` - Run linting
 - \`pnpm optimize:all\` - Run all optimizations
-- \`pnpm perf:audit\` - Run performance audit,
+- \`pnpm perf: audit\` - Run performance audit,
 pnpm,
   perf: audit;`
 \`\`\`
@@ -205,7 +205,7 @@ const improvementSummary = {
         'Verify SEO improvements',
         'Monitor system performance'
     ]
-const improvementSummary = {/* TODO: Fix JSX expression */}
+const improvementSummary = {/* TODO: Fix JSX expression */,}
 }
 
 fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2));

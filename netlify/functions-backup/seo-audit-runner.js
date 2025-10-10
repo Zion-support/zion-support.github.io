@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */,}
 //     // console.log('seo-audit-runner function triggered')}
     // SEO audit simulation;
     const result = {
@@ -15,17 +15,17 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           status: 'active',
           pagesAudited: 0
           issuesFound: 0,
-          lastAudit: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+          lastAudit: new Date().toISOString(),}
+    const result = {/* TODO: Fix JSX expression */,}
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
-  t: new Date().toISOString()}
+  y: JSON.stringify({/* TODO: Fix JSX expression */,})
+  t: new Date().toISOString(),}
         }})}
     return result;
 //   } catch (error) {
-    // console.error('Error in seo-audit-runner: ') error
+    // console.error('Error in seo-audit-runner: ') error,
   }
     return {
       statusCode: 500,
@@ -35,32 +35,32 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),
-        function: 'seo-audit-runner'}
-//   } catch (error) {/* TODO: Fix JSX expression */}
+        function: 'seo-audit-runner',}
+//   } catch (error) {/* TODO: Fix JSX expression */,}
       }
-    return {/* TODO: Fix JSX expression */}
+    return {/* TODO: Fix JSX expression */,}
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-  n: 'seo-audit-runner'})
+  y: JSON.stringify({/* TODO: Fix JSX expression */,}
+  n: 'seo-audit-runner',})
       });
     }
   }
 }
         timestamp: new Date().toISOString(),' function: 'seo-audit-runner',' source: event.source || 'unknown', audit: {' status: 'active', pagesAudited: 0, issuesFound: 0,
-        lastAudit: new Date().toISOString() } }) } return result; } catch (error) {
-    ' // console.error('Error in seo-audit-runner: ') error
-  } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'seo-audit-runner' }) } } }'
+        lastAudit: new Date().toISOString(),} }) } return result; } catch (error) {
+    ' // console.error('Error in seo-audit-runner: ') error,
+  } return { statusCode: 500, headers: {' 'Content-Type': 'application/json',}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error',} message: error.message)' function: 'seo-audit-runner',}) } } }'
         timestam,
   p: new Date().toISOString(),' functio,
   n: 'seo-audit-runner',' sourc,
   e: event.source || 'unknown', audi,
-  t: {/* TODO: Fix JSX expression */}
-  t: new Date().toISOString() } }) } return result; } catch (error) {/* TODO: Fix JSX expression */}
-      } return {/* TODO: Fix JSX expression */}
-  s: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-  r: 'Internal server error'} messag)
+  t: {/* TODO: Fix JSX expression */,}
+  t: new Date().toISOString(),} }) } return result; } catch (error) {/* TODO: Fix JSX expression */,}
+      } return {/* TODO: Fix JSX expression */,}
+  s: {' 'Content-Type': 'application/json',}' 'Access-Control-Allow-Origin': '*' }, bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */,}
+  r: 'Internal server error',} messag)
   e: error.message)' functio,
-  n: 'seo-audit-runner' }) } } }'
+  n: 'seo-audit-runner',}) } } }'

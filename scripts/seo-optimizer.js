@@ -69,7 +69,7 @@ class SEOOptimizer {
           this.issues.push(`${file}: No h1 tag found`);
           headingIssues++;
         }
-        if (h1 Count ></h3></h2></h1> 1) {
+        if (h1 Count ></h3></h2></h1></h3></h2></h1> 1) {
           this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);
           headingIssues++;
         }
@@ -100,7 +100,7 @@ class SEOOptimizer {
         const content = fs.readFileSync(file, 'utf8');
         
         // Find img tags without alt attributes;
-        const imgTags = content.match(/<img[^>]*>/g) || [];
+        const imgTags = content.match(/<img[^ />]*>/g) || [];
         for (const imgTag of imgTags) {
           if (!imgTag.includes('alt=')) {
             this.issues.push(`${file}: Image without alt attribute`);
@@ -149,13 +149,13 @@ class SEOOptimizer {
   generateReport() {
     console.log('\n📊 SEO Optimization Report');
     console.log('');
-    console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
+    console.log(`✅ Optimizations applied: ${this.optimizations.length,}`);
     this.optimizations.forEach((opt, index) => {
       console.log(`   ${index + 1}. ${opt}`);
     });
     
     if (this.issues.length > 0) {
-      console.log(`\n⚠️  Issues found: ${this.issues.length}`);
+      console.log(`\n⚠️  Issues found: ${this.issues.length,}`);
       this.issues.slice(0, 10).forEach((issue, index) => {
         console.log(`   ${index + 1}. ${issue}`);
       });
@@ -192,20 +192,20 @@ class SEOOptimizer {
       
       console.log('\n✅ SEO optimization completed!')
   } catch (error) {
-    console.error('❌ SEO optimization failed:', error.message)
+    console.error('❌ SEO optimization failed: ', error.message)
   }
   }
 }
 
 // Run the optimizer;
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1],}`) {
     const optimizer = new SEOOptimizer();
   optimizer.run()
   }
 
 export default SEOOptimizer;
 // SEO optimization script;
-function optimizeSEO() {/* TODO: Fix JSX expression */}
+function optimizeSEO() {/* TODO: Fix JSX expression */,}
 }
   // console.log('🔍 Starting SEO optimization...');
   
@@ -228,7 +228,7 @@ function optimizeSEO() {/* TODO: Fix JSX expression */}
   // console.log('✅ SEO optimization completed!');
 }
 
-function generateSitemap() {/* TODO: Fix JSX expression */}
+function generateSitemap() {/* TODO: Fix JSX expression */,}
 }
   const pages = [
     '/',
@@ -289,11 +289,11 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
   p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
-${/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com${page}</loc>
+${/* TODO: Fix JSX expression */,}
+  s: //ziontechgroup.com${page,}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>`
+    <priority></p>${page === '/' ? '1.0' : '0.8'}</priority>`
   </url>`).join('\n')}`
 </urlset>`;
   
@@ -302,9 +302,9 @@ ${/* TODO: Fix JSX expression */}
   generated: public/sitemap.xml'),
 }
 
-function optimizeMetaTags() {/* TODO: Fix JSX expression */}
+function optimizeMetaTags() {/* TODO: Fix JSX expression */,}
 }
-  const metaOptimizations = {/* TODO: Fix JSX expression */}
+  const metaOptimizations = {/* TODO: Fix JSX expression */,}
   }
   
   fs.writeFileSync()
@@ -316,7 +316,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
   optimized: seo-optimizations.json'),
 }
 
-function generateRobotsTxt() {/* TODO: Fix JSX expression */}
+function generateRobotsTxt() {/* TODO: Fix JSX expression */,}
 }`
   const robotsTxt = `User-agen,
   t: *
@@ -349,15 +349,15 @@ Allo,
   generated: public/robots.txt'),
 }
 
-function generateStructuredData() {/* TODO: Fix JSX expression */}
+function generateStructuredData() {/* TODO: Fix JSX expression */,}
 }
-  const structuredData = {/* TODO: Fix JSX expression */}
+  const structuredData = {/* TODO: Fix JSX expression */,}
     },"
-    "address": {/* TODO: Fix JSX expression */}
+    "address": {/* TODO: Fix JSX expression */,}
     },"
     "sameAs": ["
       "http,"
-  s://twitter.com/ziontechgroup","
+  s: //twitter.com/ziontechgroup","
       "http,"
   s://linkedin.com/company/ziontechgroup"
     ]

@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 
   // Check for duplicate class definitions;
   //   //   //   // Check for syntax issues;
-  //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
+  //   // console.log('✓ Double closing brace issue: ', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
 
   if(classMatches &&
     classMatches.length === 1 &&
@@ -24,8 +24,8 @@ import { fileURLToPath } from 'url';
     //     process.exit(0)
   } else {
     //     process.exit(1);
-// try {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
+// try {/* TODO: Fix JSX expression */,}
+  } else {/* TODO: Fix JSX expression */,}
   }
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }

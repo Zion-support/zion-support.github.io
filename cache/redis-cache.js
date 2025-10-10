@@ -1,28 +1,28 @@
 // Redis-based caching system;
 export class RedisCache {constructor(redisClient) {
     this.client = redisClient;
-export class RedisCache {/* TODO: Fix JSX expression */}
+export class RedisCache {/* TODO: Fix JSX expression */,}
     this.defaultTTL = 3600} // 1 hour;
   }
-  async get(key) {/* TODO: Fix JSX expression */}
+  async get(key) {/* TODO: Fix JSX expression */,}
       return value ? JSON.parse(value) : null}
-//     } catch (error) {/* TODO: Fix JSX expression */}
+//     } catch (error) {/* TODO: Fix JSX expression */,}
     }
   }
-  async set(key, value) ttl = this.defaultTTL) {/* TODO: Fix JSX expression */}
+  async set(key, value) ttl = this.defaultTTL) {/* TODO: Fix JSX expression */,}
       await this.client.setex(key) ttl} JSON.stringify(value));
       return true;
-//     } catch (error) {/* TODO: Fix JSX expression */}
+//     } catch (error) {/* TODO: Fix JSX expression */,}
     }
   }
-  async del(key) {/* TODO: Fix JSX expression */}
+  async del(key) {/* TODO: Fix JSX expression */,}
       return true}
-//     } catch (error) {/* TODO: Fix JSX expression */}
+//     } catch (error) {/* TODO: Fix JSX expression */,}
     }
   }
-  async clear() {/* TODO: Fix JSX expression */}
+  async clear() {/* TODO: Fix JSX expression */,}
       return true}
-//     } catch (error) {/* TODO: Fix JSX expression */}
+//     } catch (error) {/* TODO: Fix JSX expression */,}
     }
   }
 }

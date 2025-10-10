@@ -1,4 +1,4 @@
-declare global {/* TODO: Fix JSX expression */}
+declare global {/* TODO: Fix JSX expression */,}
   }
 }
 

@@ -43,7 +43,7 @@ export interface IntegrationProviderMeta {
     id: string
   name: string
   category: 'crm' | 'ats' | 'hr',
-  description: string
+  description: string,
   }
 }
 
@@ -161,10 +161,10 @@ export interface ZapierEvent {
 export interface IntegrationProviderMeta {,
   timestamp: number
   status: 'success' | 'error' | 'warning',
-  message: string
+  message: string,
   }
 
-export interface ManualOverride {/* TODO: Fix JSX expression */}
+export interface ManualOverride {/* TODO: Fix JSX expression */,}
 }
 
 export interface IntegrationOverride {
@@ -174,10 +174,10 @@ export interface IntegrationOverride {
   value: unknown
   reason: string
   createdAt: Date,
-  updatedAt: Date
+  updatedAt: Date,
   }
 
-export interface IntegrationEvent {/* TODO: Fix JSX expression */}
+export interface IntegrationEvent {/* TODO: Fix JSX expression */,}
 }
 
 export interface ZapierEvent {
@@ -199,9 +199,9 @@ export interface IntegrationsState {
     connections: ProviderConnection[]
   logs: SyncLogEntry[]
   overrides: ManualOverride[],
-  events: ZapierEvent[]
+  events: ZapierEvent[],
   }
-  payload: Record<string></string>
+  payload: Record<string></string>,
 }
 
 export interface ProviderConnection {
@@ -212,20 +212,20 @@ export interface ProviderConnection {
   expiresAt?: number
   status: SyncStatus
   lastSync?: number,
-  createdAt: number
+  createdAt: number,
   }
 
 export interface IntegrationProviderMeta {
     id: IntegrationProviderId
   name: string
   category: 'crm' | 'ats' | 'hr',
-  description: string
+  description: string,
   }
   logoUrl?: string;
   websiteUrl?: string;
   apiDocsUrl?: string;
 }
-  payload: Record<string></string>
+  payload: Record<string></string>,
 }
 }
 

@@ -25,12 +25,12 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-    message: ''
+    message: '',
   }
   })
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,}
 
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -56,7 +56,7 @@ try {
         service: '',
         budget: '',
         timeline: '',
-        message: ''
+        message: '',
   }
       })
     } catch (error) {
@@ -87,25 +87,25 @@ const contactInfo = [
     icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST'
+      description: 'Mon-Fri 9AM-6PM EST',
   },
     {
     icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      description: 'We respond within 24 hours',
   },
     {
     icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office'
+      description: 'Visit our office',
   },
     {
     icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
+      description: 'Eastern Time',
   }
     }
   ]
@@ -116,29 +116,29 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
-        <div className="container mx-auto px-4"></div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div></div>
+        <div className="container mx-auto px-4"></div></div>
           {/* Header */}
-          <div className="text-center mb-16"></div>
-            <h1>
+          <div className="text-center mb-16"></div></div>
+            <h1></h1>
               Get in;
               <span>
                 {' '}Touch
               </span>
             </h1>
-            <p>
+            <p></p>
               Ready to transform your business? Let's discuss your project and explore;
               how our AI and IT solutions can help you achieve your goals.
             </p>
           </div>
         </section>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div></div>
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div></div>
+              <h2 className="text-3xl font-bold text-white mb-6"></h2>Send us a Message</h2>
               {
     submitStatus === 'success' && (;
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div></div>
                   <CheckCircle>
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
@@ -146,53 +146,53 @@ return (
               )}
 {
     submitStatus === 'error' && (;
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
   }
               )}
 <form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
-                  <div />
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div></div>
+                  <div /></div>
                     <label>
                       Full Name *
                     </label>
-                    <div className="relative"></div>
+                    <div className="relative"></div></div>
                       <User>
                       <input />
                   </div>
-                  <div />
+                  <div /></div>
                     <label>
                       Email Address *
                     </label>
-                    <div className="relative"></div>
+                    <div className="relative"></div></div>
                       <Mail>
                       <input />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div>
+                  <div /></div>
                     <label>
                       Company
                     </label>
-                    <div className="relative"></div>
+                    <div className="relative"></div></div>
                       <Building>
                       <input />
                   </div>
-                  <div />
+                  <div /></div>
                     <label>
                       Phone Number
                     </label>
-                    <div className="relative"></div>
+                    <div className="relative"></div></div>
                       <Phone>
                       <input />
                   </div>
                 </div>
-                <div />
+                <div /></div>
                   <label>
                     Service Interest,
                   </label>
-                  <div className="relative"></div>
+                  <div className="relative"></div></div>
                     <Globe>
                     <select>
                       <option value="">Select a service</option>
@@ -208,19 +208,19 @@ return (
                     </select>
                   </div>
                 </div>
-                <div />
+                <div /></div>
                   <label>
                     Message *
                   </label>
-                  <div className="relative"></div>
+                  <div className="relative"></div></div>
                     <MessageCircle>
                     <textarea />
                 </div>
-                <button>
+                <button></button>
                   {
     isSubmitting ? (;
                     <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div></div>
                       <span>Sending...</span>
                     </>
                   ) : (;
@@ -234,62 +234,62 @@ return (
               </form>
             </div>
             {/* Contact Information */}
-            <div className="space-y-8"></div>
-              <div />
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p>
+            <div className="space-y-8"></div></div>
+              <div /></div>
+                <h2 className="text-3xl font-bold text-white mb-6"></h2>Contact Information</h2>
+                <p></p>
                   We're here to help! Reach out to us through any of these channels;
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
               {/* Contact Information */}
-              <div className="space-y-8"></div>
-                <div />
-                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                  <p>
+              <div className="space-y-8"></div></div>
+                <div /></div>
+                  <h2 className="text-3xl font-bold text-white mb-6"></h2>Get in Touch</h2>
+                  <p></p>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
                 </div>
-                <div className="space-y-6"></div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
+                <div className="space-y-6"></div></div>
+                  <div className="flex items-center"></div></div>
+                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div></div>
                       <Phone />
-                    <div />
-<h3>
+                    <div /></div>
+<h3></h3>
 
                         {info.title}
                       </h3>
-                      <p>
+                      <p></p>
                         {info.details}
                       </p>
-                      <p>
+                      <p></p>
                         {info.description}
 
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
+                  <div className="flex items-center"></div></div>
+                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div></div>
                       <Mail />
-                    <div />
-                      <h3 className="text-lg font-semibold text-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
+                    <div /></div>
+                      <h3 className="text-lg font-semibold text-white"></h3>Email</h3>
+                      <p className="text-gray-300"></p>info@ziontechgroup.com</p>
                     </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
+                  <div className="flex items-center"></div></div>
+                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div></div>
                       <MapPin />
-                    <div />
-                      <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
+                    <div /></div>
+                      <h3 className="text-lg font-semibold text-white"></h3>Address</h3>
+                      <p className="text-gray-300"></p>123 Tech Street<br />San Francisco, CA 94105</p>
                     </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
+                  <div className="flex items-center"></div></div>
+                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div></div>
                       <Clock />
-                    <div />
-                      <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
+                    <div /></div>
+                      <h3 className="text-lg font-semibold text-white"></h3>Business Hours</h3>
+                      <p className="text-gray-300"></p>Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
                   </div>
                 </div>

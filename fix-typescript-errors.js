@@ -27,15 +27,15 @@ const filesToFix = [
 // Pattern to match commented-out variable declarations;
 const patterns = [
   // Match commented-out const/let/var declarations;
-  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' },
+  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =',},
   // Match commented-out variable assignments;
-  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
+  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =',},
   // Match commented-out variable references;
-  { regex: /\/\/\s*(\w+)\s*[;)]/g, replacement: '$1' },
+  { regex: /\/\/\s*(\w+)\s*[;)]/g, replacement: '$1',},
   // Match commented-out object property assignments;
-  { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
+  { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2',},
   // Match commented-out function calls;
-  { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1(' })
+  { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1(',})
 ];
 
 function fixFile(filePath) {
@@ -55,22 +55,22 @@ function fixFile(filePath) {
 // Pattern to match commented-out variable declarations;
 const patterns = [
   // Match commented-out const/let/var declarations;
-  {/* TODO: Fix JSX expression */}
-  t: '$1 $2 =' },
+  {/* TODO: Fix JSX expression */,}
+  t: '$1 $2 =',},
   // Match commented-out variable assignments;
-  {/* TODO: Fix JSX expression */}
-  t: '$1 =' },
+  {/* TODO: Fix JSX expression */,}
+  t: '$1 =',},
   // Match commented-out variable references;
-  {/* TODO: Fix JSX expression */}
-  t: '$1' },
+  {/* TODO: Fix JSX expression */,}
+  t: '$1',},
   // Match commented-out object property assignments;
-  {/* TODO: Fix JSX expression */}
-  t: '$1: $2' },
+  {/* TODO: Fix JSX expression */,}
+  t: '$1: $2',},
   // Match commented-out function calls;
-  {/* TODO: Fix JSX expression */}
-  t: '$1(' }];
+  {/* TODO: Fix JSX expression */,}
+  t: '$1(',}];
 )
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
+function fixFile(filePath) {/* TODO: Fix JSX expression */,}
       }
       return match;
     });
@@ -116,11 +116,11 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix 5: Fix malformed SVG URLs in className
-    const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g;
+    const svgUrlPattern = /bg-\[url\('data: image\/svg\+xml,([^']+)'\)\]/g;
     content = content.replace(svgUrlPattern, (match, svgContent) => {
       const encodedSvg = encodeURIComponent(svgContent);
       modified = true;
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`;
+      return `bg-[url('data: image/svg+xml,${encodedSvg}')]`;
     });
 
     // Fix 6: Fix missing closing parentheses in function calls
@@ -142,9 +142,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath,}`);
       return true;
-    if (modified) {/* TODO: Fix JSX expression */}
+    if (modified) {/* TODO: Fix JSX expression */,}
     }
     
     return false;
@@ -168,16 +168,16 @@ async function main() {
       fixedCount++;
     }
   } else {
-    console.log(`File not found: ${filePath}`);
+    console.log(`File not found: ${filePath,}`);
   }
 });
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
-async function main() {/* TODO: Fix JSX expression */}
+async function main() {/* TODO: Fix JSX expression */,}
 }
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file => {/* TODO: Fix JSX expression */,}
     })
   });
 

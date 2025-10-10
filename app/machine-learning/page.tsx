@@ -16,7 +16,7 @@ const benefits = [
     'Proven track record of success'
   ]
 </h1>
-            <p>
+            <p></p>
               Transform your business with our advanced page solutions.;
               Powered by cutting-edge AI technology and industry expertise.
             </p>
@@ -25,8 +25,8 @@ const benefits = [
         </div>
       </section>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3>{feature.title}</h3>
+                <p className="text-gray-300"></p>{feature.description}</p>
               </div>
             ))}
           </div>
@@ -38,28 +38,28 @@ const benefits = [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+      <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p>Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>
+            <h2></h2>
               Ready to Get Started?
             </h2>
-            <p>
+            <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              <button></button>
                 <Phone>
                 Call Now
               </button>
-              <button>
+              <button></button>
                 <Mail>
                 Email Us
               </button>

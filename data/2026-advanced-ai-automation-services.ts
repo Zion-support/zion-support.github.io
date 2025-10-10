@@ -27,8 +27,8 @@ export interface AdvancedAIAutomationService {id: string;
   contactInfo: unknown
     mobile: string
     email: string,
-    address: string}
-    website: string}
+    address: string,}
+    website: string,}
   }
     id: 'ai-predictive-enterprise-analytics', name: 'AI Predictive Enterprise Analytics',
     tagline: 'Predict business outcomes with 99.7% accuracy using advanced AI algorithms', price: '$899',
@@ -108,10 +108,10 @@ export interface AdvancedAIAutomationService {id: string;
     launchDate: '2026-02-15', customers: 145
     rating: 4.8
     reviews: 189,
-export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
   }
     i,
   d: 'ai-predictive-enterprise-analytics', nam,
@@ -136,7 +136,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   r: 'text-purple-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-predictive-enterprise-analytics',
+  s: //ziontechgroup.com/ai-predictive-enterprise-analytics',
     marketPositio,
   n: 'Highest accuracy in enterprise predictions, competes with Tableau, Power BI, and Qlik.',
     targetAudienc,
@@ -172,7 +172,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 312}
+  s: 312,}
     i,
   d: 'ai-autonomous-customer-success', nam,
   e: 'AI Autonomous Customer Success',
@@ -196,7 +196,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   r: 'text-green-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-autonomous-customer-success',
+  s: //ziontechgroup.com/ai-autonomous-customer-success',
     marketPositio,
   n: 'First autonomous customer success platform, competes with Gainsight, Totango, and ChurnZero.',
     targetAudienc,
@@ -232,7 +232,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 203}
+  s: 203,}
     i,
   d: 'ai-autonomous-marketing-orchestrator', nam,
   e: 'AI Autonomous Marketing Orchestrator',
@@ -257,7 +257,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   r: 'text-pink-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-autonomous-marketing-orchestrator',
+  s: //ziontechgroup.com/ai-autonomous-marketing-orchestrator',
     marketPositio,
   n: 'First autonomous marketing orchestrator, competes with HubSpot, Marketo, and Pardot.',
     targetAudienc,
@@ -293,7 +293,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 189}
+  s: 189,}
     i,
   d: 'ai-autonomous-sales-intelligence', nam,
   e: 'AI Autonomous Sales Intelligence',
@@ -345,7 +345,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   r: 'text-yellow-400'
     lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
+  s: //ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
     marketPositio,
   n: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
     targetAudienc,
@@ -387,7 +387,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.9,
     review,
-  s: 267}
+  s: 267,}
 ];
 // Service categories;
 export const aiAutomationCategories = [
@@ -400,7 +400,7 @@ export const aiAutomationCategories = [
   'AI & Marketing'
 ];
 export const getAIAutomationServicesByCategory = (category: string) =>
-  if (category === 'All') return advancedAIAutomationServices,,
+  if (category === 'All') return advancedAIAutomationServices,
   return advancedAIAutomationServices.filter(service => service.category === category);
 }
 export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] =>
@@ -451,8 +451,8 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
     ],
     pricing: unknown,
       starter: '$599/month',
-      professional: '$1199/month'}
-      enterprise: 'Custom'}
+      professional: '$1199/month',}
+      enterprise: 'Custom',}
   },
     name: 'Advanced AI Workflow Engine 2026'
     path: '/services/advanced-ai-workflow-engine-2026',
@@ -460,10 +460,10 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
     icon: 'Workflow',
     category: 'AI & Automation',
     features: [,
-export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */}
-  l: '$1199/month'}
+export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */,}
+  l: '$1199/month',}
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   },
     nam,
@@ -494,7 +494,7 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
       professiona,
   l: '$799/month',
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   }
 ];
@@ -517,7 +517,7 @@ export const advancedAIAutomationStats2026 = {}
   averageRatin,
   g: 4.9,
   activeUser,
-  s: 3000}
+  s: 3000,}
 export interface AdvancedAIAutomationService,
   id: string, nam,
   e: string, taglin,
@@ -549,7 +549,7 @@ export interface AdvancedAIAutomationService,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string} i,
+  e: string,} i,
   d: 'ai-predictive-enterprise-analytics', nam,
   e: 'AI Predictive Enterprise Analytics',' taglin,
   e: 'Predict business outcomes with 99.7% accuracy using advanced AI algorithms', pric,
@@ -562,7 +562,7 @@ export interface AdvancedAIAutomationService,
   r: 'from-purple-600 to-indigo-700', textColo,
   r: 'text-purple-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-predictive-enterprise-analytics',' marketPositio,
+  s: //ziontechgroup.com/ai-predictive-enterprise-analytics',' marketPositio,
   n: 'Highest accuracy in enterprise predictions, competes with Tableau, Power BI, and Qlik.',' targetAudienc,
   e: ['Fortune 500 companiesfinancial institutionsconsulting firmsgovernment agencies'], trialDay,
   s: 30,' setupTim,
@@ -583,7 +583,7 @@ export interface AdvancedAIAutomationService,
   e: '2026-02-01', customer,
   s: 234, ratin,
   g: 4.9, review,
-  s: 312 } ' i,
+  s: 312,} ' i,
   d: 'ai-autonomous-customer-success', nam,
   e: 'AI Autonomous Customer Success',' taglin,
   e: 'Automatically increase customer retention and satisfaction with AI-driven insights', pric,
@@ -596,7 +596,7 @@ export interface AdvancedAIAutomationService,
   r: 'from-green-600 to-emerald-700', textColo,
   r: 'text-green-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-autonomous-customer-success',' marketPositio,
+  s: //ziontechgroup.com/ai-autonomous-customer-success',' marketPositio,
   n: 'First autonomous customer success platform, competes with Gainsight, Totango, and ChurnZero.',' targetAudienc,
   e: ['SaaS companiessubscription businessesenterprise softwaree-commerce platforms'], trialDay,
   s: 14,' setupTim,
@@ -617,7 +617,7 @@ export interface AdvancedAIAutomationService,
   e: '2026-01-20', customer,
   s: 167, ratin,
   g: 4.7, review,
-  s: 203 } ' i,
+  s: 203,} ' i,
   d: 'ai-autonomous-marketing-orchestrator', nam,
   e: 'AI Autonomous Marketing Orchestrator',' taglin,
   e: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',' pric,
@@ -630,7 +630,7 @@ export interface AdvancedAIAutomationService,
   r: 'from-pink-600 to-rose-700', textColo,
   r: 'text-pink-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-autonomous-marketing-orchestrator',' marketPositio,
+  s: //ziontechgroup.com/ai-autonomous-marketing-orchestrator',' marketPositio,
   n: 'First autonomous marketing orchestrator, competes with HubSpot, Marketo, and Pardot.',' targetAudienc,
   e: ['Marketing agenciesenterprise companiese-commerce businessesB2B companies'], trialDay,
   s: 21,' setupTim,
@@ -651,7 +651,7 @@ export interface AdvancedAIAutomationService,
   e: '2026-02-15', customer,
   s: 145, ratin,
   g: 4.8, review,
-  s: 189 } ' i,
+  s: 189,} ' i,
   d: 'ai-autonomous-sales-intelligence', nam,
   e: 'AI Autonomous Sales Intelligence',' taglin,
   e: 'Automatically identify, qualify, and nurture leads with AI-driven insights',' pric,
@@ -664,7 +664,7 @@ export interface AdvancedAIAutomationService,
   r: 'from-yellow-600 to-orange-700'' textColo,
   r: 'text-yellow-400' ' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence', ' marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence', ' marketPositio,
   n: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'' targetAudienc,
   e: ['Sales teamsB2B companiesenterprise softwareconsulting firms'], trialDay,
   s: 14,' setupTim,
@@ -685,7 +685,7 @@ export interface AdvancedAIAutomationService,
   e: '2026-01-25' customer,
   s: 198, ratin,
   g: 4 && 4.9, review,
-  s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ]; export const getAIAutomationServicesByCategory = (categor)
+  s: 267,} ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ]; export const getAIAutomationServicesByCategory = (categor)
   y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category), } export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit), } export const getAIAutomationServicesByTechnology = (technolog)
   y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) ), } export const getAIAutomationServicesByPriceRange = (minPric)
@@ -700,7 +700,7 @@ export interface AdvancedAIAutomationService,
   g: ' starte,
   r: '$599/month',' professiona,
   l: '$1199/month',' enterpris,
-  e: 'Custom' } }, ' nam,
+  e: 'Custom',} }, ' nam,
   e: 'Advanced AI Workflow Engine 2026',' pat,
   h: '/services/advanced-ai-workflow-engine-2026',' descriptio,
   n: 'Intelligent workflow automation with AI',' ico,
@@ -710,8 +710,8 @@ export interface AdvancedAIAutomationService,
   g: ' starte,
   r: '$399/month',' professiona,
   l: '$799/month',' enterpris,
-  e: 'Custom' } } ]; export const advancedAIAutomationCategories2026 = [' 'Process Automation',' 'Workflow Management',' 'Decision Intelligence',' 'Performance Optimization' ]; export const advancedAIAutomationStats2026 = totalService,
+  e: 'Custom',} } ]; export const advancedAIAutomationCategories2026 = [' 'Process Automation',' 'Workflow Management',' 'Decision Intelligence',' 'Performance Optimization' ]; export const advancedAIAutomationStats2026 = totalService,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,
-  s: 3000 }'
+  s: 3000,}'

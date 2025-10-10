@@ -21,7 +21,7 @@ const analysisResults = {
   workingLinks: 0;
   brokenLinks: 0;
   missingPages: 0;
-  errors: []};
+  errors: [],};
 
 // Helper function to make HTTP requests;
 function makeRequest(url, options = {}) {
@@ -98,7 +98,7 @@ function extractLinks(html, baseUrl) {
           element: anchor.outerHTML;
         });
       } catch (error) {
-        console.log(`Invalid URL: ${href}`);
+        console.log(`Invalid URL: ${href,}`);
       }
     }
   });
@@ -116,7 +116,7 @@ function extractLinks(html, baseUrl) {
           element: form.outerHTML;
         });
       } catch (error) {
-        console.log(`Invalid form action: ${action}`);
+        console.log(`Invalid form action: ${action,}`);
       }
     }
   });
@@ -142,7 +142,7 @@ async function analyzeUrl(url, depth = 0) {
   }
 
   visitedUrls.add(url);
-  console.log(`Analyzing: ${url} (depth: ${depth})`);
+  console.log(`Analyzing: ${url,} (depth: ${depth,})`);
 
   try {
     const response = await makeRequest(url);
@@ -171,14 +171,14 @@ async function analyzeUrl(url, depth = 0) {
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'Page not found'});
+        reason: 'Page not found',});
       analysisResults.brokenLinks++;
     } else {
       brokenLinks.push({)
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'HTTP error'});
+        reason: 'HTTP error',});
       analysisResults.brokenLinks++;
     }
   } catch (error) {
@@ -200,8 +200,8 @@ async function analyzeUrl(url, depth = 0) {
 // Main analysis function;
 async function analyzeWebsite() {
   console.log('Starting comprehensive website analysis...');
-  console.log(`Base URL: ${BASE_URL}`);
-  console.log(`Max Depth: ${MAX_DEPTH}`);
+  console.log(`Base URL: ${BASE_URL,}`);
+  console.log(`Max Depth: ${MAX_DEPTH,}`);
   console.log('---');
 
   try {
@@ -224,10 +224,10 @@ async function analyzeWebsite() {
     
     // Generate summary report;
     console.log('\n=== ANALYSIS SUMMARY ===');
-    console.log(`Total Links Analyzed: ${analysisResults.totalLinks}`);
-    console.log(`Working Links: ${analysisResults.workingLinks}`);
-    console.log(`Broken Links: ${analysisResults.brokenLinks}`);
-    console.log(`Errors: ${analysisResults.errors.length}`);
+    console.log(`Total Links Analyzed: ${analysisResults.totalLinks,}`);
+    console.log(`Working Links: ${analysisResults.workingLinks,}`);
+    console.log(`Broken Links: ${analysisResults.brokenLinks,}`);
+    console.log(`Errors: ${analysisResults.errors.length,}`);
     
     if (brokenLinks.length > 0) {
       console.log('\n=== BROKEN LINKS ===');
@@ -263,7 +263,7 @@ async function analyzeWebsite() {
 
     console.log('\nDetailed report saved to: website-analysis-report.json');
     } catch (error) {
-    console.error('Analysis failed:', error);
+    console.error('Analysis failed: ', error);
   }
 }
 
@@ -289,7 +289,7 @@ class WebsiteAnalyzer {
       await this.crawlWebsite(this.baseUrl, 0);
       this.generateReport();
     } catch (error) {
-      console.error('❌ Analysis failed:', error.message);
+      console.error('❌ Analysis failed: ', error.message);
     }
   }
 
@@ -299,7 +299,7 @@ class WebsiteAnalyzer {
     }
 
     this.visitedUrls.add(url);
-    console.log(`📄 Analyzing: ${url} (depth: ${depth})`);
+    console.log(`📄 Analyzing: ${url,} (depth: ${depth,})`);
 
     try {
       const content = await this.fetchPage(url);
@@ -311,7 +311,7 @@ class WebsiteAnalyzer {
         this.pages.set(url, {
           title: document.title,
           content: content,
-          links: []
+          links: [],
         });
 
         // Extract all links
@@ -329,7 +329,7 @@ class WebsiteAnalyzer {
       }
     } catch (err) {
       console.error(`❌ Error analyzing ${url}:`, err.message);
-      this.brokenLinks.push({ url, error: err.message });
+      this.brokenLinks.push({ url, error: err.message,});
     }
   }
 
@@ -341,7 +341,7 @@ class WebsiteAnalyzer {
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
         path: urlObj.pathname + urlObj.search,
         method: 'GET',
-        timeout: 10000
+        timeout: 10000,
       };
 
       const protocol = urlObj.protocol === 'https:' ? https : http;
@@ -379,7 +379,7 @@ class WebsiteAnalyzer {
         links.push({
           href: absoluteUrl,
           text: link.textContent.trim(),
-          title: link.getAttribute('title') || ''
+          title: link.getAttribute('title') || '',
         });
       }
     });
@@ -408,9 +408,9 @@ class WebsiteAnalyzer {
   generateReport() {
     console.log('\n📊 Analysis Report');
     console.log('='.repeat(60));
-    console.log(`📄 Pages analyzed: ${this.pages.size}`);
-    console.log(`🔗 Total links found: ${this.allLinks.size}`);
-    console.log(`❌ Broken links: ${this.brokenLinks.length}`);
+    console.log(`📄 Pages analyzed: ${this.pages.size,}`);
+    console.log(`🔗 Total links found: ${this.allLinks.size,}`);
+    console.log(`❌ Broken links: ${this.brokenLinks.length,}`);
     
     if (this.brokenLinks.length > 0) {
       console.log('\n❌ Broken Links:');
@@ -422,8 +422,8 @@ class WebsiteAnalyzer {
     console.log(`\n📄 PAGES FOUND:`);
     this.pages.forEach((page, url) => {
       console.log(`   • ${url}`);
-      console.log(`     Title: ${page.title}`);
-      console.log(`     Links: ${page.links.length}`);
+      console.log(`     Title: ${page.title,}`);
+      console.log(`     Links: ${page.links.length,}`);
     });
     
     // Save detailed report
@@ -437,7 +437,7 @@ class WebsiteAnalyzer {
       pages: Array.from(this.pages.entries()).map(([url, data]) => ({
         url,
         title: data.title,
-        linkCount: data.links.length
+        linkCount: data.links.length,
       }))
     };
     
@@ -450,7 +450,7 @@ class WebsiteAnalyzer {
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyze().catch(console.error);
 // Main execution
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1],}`) {
   const baseUrl = process.argv[2] || 'https://ziontechgroup.com';
   const analyzer = new WebsiteAnalyzer(baseUrl);
   analyzer.analyze();

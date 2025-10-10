@@ -41,7 +41,7 @@ const FuturisticBackground: React.FC = () => {
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)]
+        color: colors[Math.floor(Math.random() * colors.length)],
       })
     }
 
@@ -120,7 +120,7 @@ const FuturisticBackground: React.FC = () => {
     <canvas
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'transparent' }}
+      style={{ background: 'transparent',}}
     />
   );
 };

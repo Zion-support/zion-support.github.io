@@ -5,7 +5,7 @@ import { glob } from 'glob';
 
 // Function to optimize images;
 function optimizeImages() {
-function optimizeImages() {/* TODO: Fix JSX expression */}
+function optimizeImages() {/* TODO: Fix JSX expression */,}
 }
   // console.log('🖼️  Optimizing images...');
   // This would typically use sharp or imagemin;
@@ -15,7 +15,7 @@ function optimizeImages() {/* TODO: Fix JSX expression */}
 
 // Function to optimize CSS;
 function optimizeCSS() {
-function optimizeCSS() {/* TODO: Fix JSX expression */}
+function optimizeCSS() {/* TODO: Fix JSX expression */,}
 }
   // console.log('🎨 Optimizing CSS...');
   // This would typically use postcss and purgecss;
@@ -25,7 +25,7 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
 
 // Function to optimize JavaScript bundles;
 function optimizeJS() {
-function optimizeJS() {/* TODO: Fix JSX expression */}
+function optimizeJS() {/* TODO: Fix JSX expression */,}
 }
   // console.log('📦 Optimizing JavaScript bundles...');
   // This would typically use webpack-bundle-analyzer or similar;
@@ -35,39 +35,39 @@ function optimizeJS() {/* TODO: Fix JSX expression */}
 
 // Function to generate sitemap;
 function generateSitemap() {
-function generateSitemap() {/* TODO: Fix JSX expression */}
+function generateSitemap() {/* TODO: Fix JSX expression */,}
 }
   // console.log('🗺️  Generating sitemap...');
   
   const pages = [
-    {/* TODO: Fix JSX expression */}
-  q: 'daily' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' }
+    {/* TODO: Fix JSX expression */,}
+  q: 'daily',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',}
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
 ${pages.map(page => `  <url>),
-    <loc>https://ziontechgroup.com${page.url}</loc>
+    <loc>https: //ziontechgroup.com${page.url,}</loc>
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
   p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
-${/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com${page.url}</loc>
+${/* TODO: Fix JSX expression */,}
+  s: //ziontechgroup.com${page.url,}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>`
+    <priority></p>${page.priority}</priority>`
   </url>`).join('\n')}`
 </urlset>`;
 
@@ -77,7 +77,7 @@ ${/* TODO: Fix JSX expression */}
 
 // Function to generate robots.txt;
 function generateRobots() {
-function generateRobots() {/* TODO: Fix JSX expression */}
+function generateRobots() {/* TODO: Fix JSX expression */,}
 }
   // console.log('🤖 Generating robots.txt...');
   `
@@ -103,7 +103,7 @@ Crawl-dela,`
 
 // Function to check for performance issues;
 async function checkPerformance() {
-async function checkPerformance() {/* TODO: Fix JSX expression */}
+async function checkPerformance() {/* TODO: Fix JSX expression */,}
 }
   // console.log('⚡ Checking for performance issues...');
   
@@ -114,20 +114,20 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
   for (const file of files) {
     const stats = fs.statSync(file);
     if (stats.size > 100000) { // 100KB;
-      issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
+      issues.push(`Large file detected: ${file,} (${Math.round(stats.size / 1024)}KB)`);
     }
   }
   
   if (issues.length > 0) {
     // console.log('⚠️  Performance issues found: '),
-  for (const file of files) {/* TODO: Fix JSX expression */}`
-  detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
+  for (const file of files) {/* TODO: Fix JSX expression */,}`
+  detected: ${file,} (${Math.round(stats.size / 1024)}KB)`);
     }
   }
   
-  if (issues.length > 0) {/* TODO: Fix JSX expression */}`
+  if (issues.length > 0) {/* TODO: Fix JSX expression */,}`
     issues.forEach(issue => // console.log(`   - ${issue}`));
-  } else {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */,}
   }
 }
 
@@ -139,11 +139,11 @@ async function optimize() {
     // Create public directory if it doesn't exist;
     if (!fs.existsSync('public')) {
       fs.mkdirSync('public');
-async function optimize() {/* TODO: Fix JSX expression */}
+async function optimize() {/* TODO: Fix JSX expression */,}
 }
   // console.log('🚀 Starting build optimization...\n');
   
-  try {/* TODO: Fix JSX expression */}
+  try {/* TODO: Fix JSX expression */,}
     }
     
     await checkPerformance();
@@ -163,9 +163,9 @@ async function optimize() {/* TODO: Fix JSX expression */}
     // console.log('   - Sitemap generated')
     // console.log('   - Robots.txt generated'),
     } catch (error) {
-    // console.error('❌ Optimization failed:', error.message);
+    // console.error('❌ Optimization failed: ', error.message);
     process.exit(1)
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 

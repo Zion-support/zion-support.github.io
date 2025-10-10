@@ -14,7 +14,7 @@ export const securityConfig = {
         "'unsafe-eval'",
         'https: //www.googletagmanager.com'],
       'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
-      'img-src': ["'self'", 'data:', 'https:', 'blob: '],
+      'img-src': ["'self'", 'data: ', 'https: ', 'blob: '],
       'font-src': ["'self'", 'https: //fonts.gstatic.com'],
       'connect-src': ["'self'", 'https: //www.google-analytics.com'],
       'frame-ancestors': ["'none'"],
@@ -33,7 +33,7 @@ export const securityConfig = {
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'},
 
   // Input validation;
-  validation: {
+  validation: {,
     ,
     maxInputLength: 10000,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
@@ -41,16 +41,16 @@ export const securityConfig = {
   },
 
   // Rate limiting;
-  rateLimit: {
+  rateLimit: {,
     ,
     windowMs: 15 * 60 * 1000, // 15 minutes;
     maxRequests: 100
     skipSuccessfulRequests: false,
-    skipFailedRequests: false
+    skipFailedRequests: false,
   },
 
   // CORS configuration;
-  cors: {
+  cors: {,
     ,
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
@@ -60,7 +60,7 @@ export const securityConfig = {
   },
 
   // Authentication;
-  auth: {
+  auth: {,
     ,
     sessionTimeout: 3600000, // 1 hour;
     maxLoginAttempts: 5,
@@ -68,7 +68,7 @@ export const securityConfig = {
     passwordMinLength: 12
     requireSpecialChars: true
     requireNumbers: true,
-    requireUppercase: true
+    requireUppercase: true,
   },
 
   // Data sanitization;
@@ -77,33 +77,33 @@ export const securityConfig = {
     encodeSpecialChars: true
     trimWhitespace: true
     removeNullBytes: true,
-export const securityConfig = {/* TODO: Fix JSX expression */}
+export const securityConfig = {/* TODO: Fix JSX expression */,}
     },
     reportOnl,
-  y: false},
+  y: false,},
 
   // Security Headers,
-  headers: {/* TODO: Fix JSX expression */}
+  headers: {/* TODO: Fix JSX expression */,}
   },
 
   // Input validation,
-  validation: {/* TODO: Fix JSX expression */}
+  validation: {/* TODO: Fix JSX expression */,}
   },
 
   // Rate limiting,
-  rateLimit: {/* TODO: Fix JSX expression */}
+  rateLimit: {/* TODO: Fix JSX expression */,}
   },
 
   // CORS configuration,
-  cors: {/* TODO: Fix JSX expression */}
+  cors: {/* TODO: Fix JSX expression */,}
   },
 
   // Authentication,
-  auth: {/* TODO: Fix JSX expression */}
+  auth: {/* TODO: Fix JSX expression */,}
   },
 
   // Data sanitization,
-  sanitization: {/* TODO: Fix JSX expression */}
+  sanitization: {/* TODO: Fix JSX expression */,}
   }}
 
 export default securityConfig;

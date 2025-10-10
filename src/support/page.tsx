@@ -8,50 +8,50 @@ const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const supportCategories = [
-    { id: 'all', name: 'All Topics', icon: Search, count: 45 },
-    { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
-    { id: 'billing', name: 'Billing & Pricing', icon: CreditCard, count: 6 },
-    { id: 'technical', name: 'Technical Support', icon: Code, count: 10 },
-    { id: 'account', name: 'Account Management', icon: Users, count: 5 },
-    { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
+    { id: 'all', name: 'All Topics', icon: Search, count: 45,},
+    { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12,},
+    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8,},
+    { id: 'billing', name: 'Billing & Pricing', icon: CreditCard, count: 6,},
+    { id: 'technical', name: 'Technical Support', icon: Code, count: 10,},
+    { id: 'account', name: 'Account Management', icon: Users, count: 5,},
+    { id: 'api', name: 'API & Integration', icon: BarChart, count: 4,}
   ];
   const faqs = [
     {
       id: 1,
       question: 'How do I get started with Zion Tech Group services?',
       answer: 'Getting started is easy! Contact our team at +1 302 464 0950 or email kleber@ziontechgroup.com for a free consultation. We\'ll assess your needs and recommend the best AI solutions for your business.',
-      category: 'getting-started'
+      category: 'getting-started',
     },
     {
       id: 2,
       question: 'What AI services do you offer?',
       answer: 'We offer comprehensive AI services including Machine Learning, Natural Language Processing, Computer Vision, AI Automation, Quantum AI Computing, and AI Cybersecurity. We also provide Micro SAAS solutions for immediate deployment.',
-      category: 'ai-services'
+      category: 'ai-services',
     },
     {
       id: 3,
       question: 'How much do your services cost?',
       answer: 'Our pricing starts at $299/month for the Starter plan. We offer flexible pricing based on your specific needs. Contact us for a custom quote tailored to your requirements.',
-      category: 'billing'
+      category: 'billing',
     },
     {
       id: 4,
       question: 'Do you provide 24/7 technical support?',
       answer: 'Yes! We offer 24/7 technical support for all our clients. Our expert team is always available to help with any technical issues or questions you may have.',
-      category: 'technical'
+      category: 'technical',
     },
     {
       id: 5,
       question: 'How do I integrate your AI services with my existing systems?',
       answer: 'Our team provides comprehensive integration support. We work with your existing infrastructure and provide APIs, SDKs, and custom integration solutions to ensure seamless implementation.',
-      category: 'api'
+      category: 'api',
     },
     {
       id: 6,
       question: 'What is your typical project timeline?',
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
-      category: 'getting-started'
+      category: 'getting-started',
     }
   ];
   const supportChannels = [
@@ -61,7 +61,7 @@ const SupportPage: React.FC = () => {
       description: 'Speak directly with our AI experts',
       contact: '+1 302 464 0950',
       availability: '24/7 Available',
-      color: 'text-green-400'
+      color: 'text-green-400',
     },
     {
       icon: Mail,
@@ -69,7 +69,7 @@ const SupportPage: React.FC = () => {
       description: 'Get detailed responses via email',
       contact: 'kleber@ziontechgroup.com',
       availability: 'Response within 2 hours',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
     },
     {
       icon: MessageSquare,
@@ -77,7 +77,7 @@ const SupportPage: React.FC = () => {
       description: 'Instant support through our chat system',
       contact: 'Start Chat',
       availability: 'Mon-Fri 9AM-6PM EST',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
     },
     {
       icon: Calendar,
@@ -85,7 +85,7 @@ const SupportPage: React.FC = () => {
       description: 'Book a consultation with our team',
       contact: 'Book Now',
       availability: 'Flexible scheduling',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     }
   ];
   const resources = [
@@ -93,37 +93,37 @@ const SupportPage: React.FC = () => {
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
-      link: '/docs'
+      link: '/docs',
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all services',
       icon: Eye,
-      link: '/tutorials'
+      link: '/tutorials',
     },
     {
       title: 'Case Studies',
       description: 'Real-world examples and success stories',
       icon: BarChart,
-      link: '/case-studies'
+      link: '/case-studies',
     },
     {
       title: 'API Reference',
       description: 'Complete API documentation and examples',
       icon: Code,
-      link: '/api-docs'
+      link: '/api-docs',
     },
     {
       title: 'Best Practices',
       description: 'Industry best practices and guidelines',
       icon: Award,
-      link: '/best-practices'
+      link: '/best-practices',
     },
     {
       title: 'Community Forum',
       description: 'Connect with other users and experts',
       icon: Users,
-      link: '/community'
+      link: '/community',
     }
   ];
   const filteredFaqs = selectedCategory === 'all' 
@@ -143,26 +143,26 @@ const SupportPage: React.FC = () => {
         keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}
         canonicalUrl="https://ziontechgroup.com/support"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <main className="container mx-auto px-4 py-16 pt-24"></main>
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+          <section className="text-center mb-16"></section>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text"></h1>
               Support Center
   </
-            <p className="text-xl text-cyan-400 mb-8">
+            <p className="text-xl text-cyan-400 mb-8"></p>
               We're here to help you succeed with AI,
   </
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto"></p>
               Get instant answers to your questions, access comprehensive resources, 
               and connect with our expert support team.
             </p>
           </section>
           {/* Search Section */}
-          <section className="mb-16">
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
+          <section className="mb-16"></section>
+            <div className="max-w-2xl mx-auto"></div>
+              <div className="relative"></div>
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -175,92 +175,92 @@ const SupportPage: React.FC = () => {
             </div>
           </section>
           {/* Support Channels */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Get Support;
   </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {supportChannels.map((channel, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} />
-                  <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
-                  <p className="text-gray-300 mb-4">{channel.description}</p>
-                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
-                  <div className="text-gray-400 text-sm">{channel.availability}</div>
+                  <h3 className="text-xl font-bold text-white mb-2"></h3>{channel.title}</h3>
+                  <p className="text-gray-300 mb-4"></p>{channel.description}</p>
+                  <div className="text-cyan-400 font-semibold mb-2"></div>{channel.contact}</div>
+                  <div className="text-gray-400 text-sm"></div>{channel.availability}</div>
                 </div>
               ))}
             </div>
           </section>
           {/* FAQ Categories */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Browse by Category;
   </
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8"></div>
               {supportCategories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={() =></button> setSelectedCategory(category.id)}
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'
+                      : 'bg-slate-800 text-white hover: bg-slate-700',
                   }`}
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
-                  <div className="text-sm font-semibold">{category.name}</div>
-                  <div className="text-xs opacity-75">{category.count} topics</div>
+                  <div className="text-sm font-semibold"></div>{category.name}</div>
+                  <div className="text-xs opacity-75"></div>{category.count} topics</div>
                 </button>
               ))}
             </div>
           </section>
           {/* FAQ Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Frequently Asked Questions;
   </
-            <div className="max-w-4xl mx-auto space-y-4">
+            <div className="max-w-4xl mx-auto space-y-4"></div>
               {searchResults.map((faq) => (
-                <div key={faq.id} className="cyber-card p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                <div key={faq.id} className="cyber-card p-6"></div>
+                  <h3 className="text-xl font-bold text-white mb-3"></h3>{faq.question}</h3>
+                  <p className="text-gray-300 leading-relaxed"></p>{faq.answer}</p>
                 </div>
               ))}
             </div>
           </section>
           {/* Resources Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Helpful Resources;
   </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {resources.map((resource, index) => (
                 <Link
                   key={index}
                   to={resource.link}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center mb-4"></div>
                     <resource.icon className="w-8 h-8 text-cyan-400 mr-4" />
                     <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors"></h3>
                     {resource.title}
                   </h3>
-                  <p className="text-gray-300">{resource.description}</p>
+                  <p className="text-gray-300"></p>{resource.description}</p>
                 </Link>
               ))}
             </div>
           </section>
           {/* Contact CTA */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6 neon-text">
+          <section className="text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text"></h2>
                 Still Need Help?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Our expert team is ready to assist you with any questions or issues;
   </
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">

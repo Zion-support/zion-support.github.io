@@ -11,8 +11,8 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
     ],
     pricing: unknown,
       starter: '$699/month',
-      professional: '$1399/month'}
-      enterprise: 'Custom'}
+      professional: '$1399/month',}
+      enterprise: 'Custom',}
   },
     name: 'Cutting Edge Tech Innovation 2027'
     path: '/services/cutting-edge-tech-innovation-2027',
@@ -20,10 +20,10 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
     icon: 'Zap',
     category: 'Technology Innovation',
     features: [,
-export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}
-  l: '$1399/month'}
+export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */,}
+  l: '$1399/month',}
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   },
     nam,
@@ -54,7 +54,7 @@ export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}
       professiona,
   l: '$1199/month',
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   }
 ];
@@ -77,7 +77,7 @@ export const cuttingEdge2027Stats = {}
   averageRatin,
   g: 4.9,
   activeUser,
-  s: 3500}
+  s: 3500,}
 export const cuttingEdge2027Innovations = [ nam,
   e: 'Cutting Edge AI Innovation 2027',' pat,
   h: '/services/cutting-edge-ai-innovation-2027',' descriptio,
@@ -88,7 +88,7 @@ export const cuttingEdge2027Innovations = [ nam,
   g: ' starte,
   r: '$699/month',' professiona,
   l: '$1399/month',' enterpris,
-  e: 'Custom' } }, ' nam,
+  e: 'Custom',} }, ' nam,
   e: 'Cutting Edge Tech Innovation 2027',' pat,
   h: '/services/cutting-edge-tech-innovation-2027',' descriptio,
   n: 'Revolutionary technology innovations for 2027',' ico,
@@ -98,8 +98,8 @@ export const cuttingEdge2027Innovations = [ nam,
   g: ' starte,
   r: '$599/month',' professiona,
   l: '$1199/month',' enterpris,
-  e: 'Custom' } } ]; export const cuttingEdge2027Categories = [' 'AI & Innovation',' 'Technology Innovation',' 'Future Tech',' 'Advanced Solutions' ]; export const cuttingEdge2027Stats = totalService,
+  e: 'Custom',} } ]; export const cuttingEdge2027Categories = [' 'AI & Innovation',' 'Technology Innovation',' 'Future Tech',' 'Advanced Solutions' ]; export const cuttingEdge2027Stats = totalService,
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,
-  s: 3500 }'
+  s: 3500,}'

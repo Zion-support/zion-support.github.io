@@ -11,8 +11,8 @@ function fixEmojis(content) {
     '📈': 'trending-up',
     '💰': 'dollar-sign',
     '👥': 'users',
-    '📧': 'Email:',
-    '📍': 'Address:',
+    '📧': 'Email: ',
+    '📍': 'Address: ',
     '🚀': 'rocket',
     '⚡': 'zap',
     '🔒': 'lock',
@@ -90,10 +90,10 @@ function fixJSXStructure(content) {
   
   // Count opening and closing div tags
   const openDivs = (content.match(/<div/g) || []).length;
-  const closeDivs = (content.match(/<\/div>/g) || []).length;
+  const closeDivs = (content.match(/<\/div></div>/g) || []).length;
   
   if (openDivs > closeDivs) {
-    console.log(`Warning: Found ${openDivs - closeDivs} unclosed div tags`);
+    console.log(`Warning: Found ${openDivs - closeDivs,} unclosed div tags`);
     // This is a basic check - more sophisticated parsing would be needed
   }
   
@@ -134,7 +134,7 @@ async function processFiles() {
         // Only write if content changed
         if (fixed !== content) {
           fs.writeFileSync(file, fixed, 'utf8');
-          console.log(`Fixed: ${file}`);
+          console.log(`Fixed: ${file,}`);
           processedCount++;
         }
       } catch (error) {

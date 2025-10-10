@@ -55,9 +55,9 @@ for (const link of allLinks) {
 }
 
 console.log('=== NAVIGATION LINKS ANALYSIS ===');
-console.log(`Total navigation links found: ${allLinks.length}`);
-console.log(`Existing pages in src: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Total navigation links found: ${allLinks.length,}`);
+console.log(`Existing pages in src: ${existingPages.length,}`);
+console.log(`Missing pages: ${missingPages.length,}`);
 
 if (missingPages.length > 0) {
   console.log('\n=== MISSING PAGES ===');

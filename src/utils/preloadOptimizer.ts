@@ -5,7 +5,7 @@
  */
 
 export const _preloadCriticalResources = () => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -16,15 +16,15 @@ const fontPreloads = [
   O: Add items
 ],
     'http,
-  s://fonts.googleapis.com/css2?family=Inte,
+  s: //fonts.googleapis.com/css2?family=Inte,
   r: wght@400;500;600,700&display=swap',
     'http,
-  s://fonts.googleapis.com/css2?family=JetBrains+Mon,
+  s: //fonts.googleapis.com/css2?family=JetBrains+Mon,
   o: wght@400;500;600&display=swap'
   ],
 
   fontPreloads.forEach(href => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
 
@@ -47,7 +47,7 @@ const criticalImages = [
   ];
 
   criticalImages.forEach(src => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
 
@@ -61,13 +61,13 @@ const criticalImages = [
 }
 
 export const preloadRoute = (route: string) => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-const routeResources = {/* TODO: Fix JSX expression */}
+const routeResources = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
@@ -77,11 +77,11 @@ const routeResources = {/* TODO: Fix JSX expression */}
   const resources = routeResources[route as keyof typeof routeResources]
 
   if (resources) {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
     resources.forEach(resource => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
 
@@ -95,33 +95,33 @@ const routeResources = {/* TODO: Fix JSX expression */}
 }
 
 export const optimizeImages = () => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
   if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
 const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img => {/* TODO: Fix JSX expression */}
+  images.forEach(img => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 })
 //     img.setAttribute('loading', 'lazy')
   })
   // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
+  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-    const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
+    const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-      entries.forEach(entry => {/* TODO: Fix JSX expression */}
+      entries.forEach(entry => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 })
-        if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
+        if (entry.isIntersecting) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
           const img = entry.target as HTMLImageElement;
-          if (img.dataset['src']) {/* TODO: Fix JSX expression */}
+          if (img.dataset['src']) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
             img['src'] = img.dataset['src']
@@ -139,31 +139,31 @@ const images = document.querySelectorAll('img[data-lazy]')
 }
 
 export const optimizeThirdPartyScripts = () => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
 const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script => {/* TODO: Fix JSX expression */}
+  scripts.forEach(script => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 })
 //     script.setAttribute('defer', '')
   })
   // Load analytics after page load;
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
+  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 
     document.addEventListener('DOMContentLoaded', () => {}
   )
-  } else {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */,}
   }
 }
 
 const loadAnalytics = () => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }

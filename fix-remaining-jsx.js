@@ -14,7 +14,7 @@ function fixRemainingJsx() {
       let line = lines[i];
       
       // Check if this is a self-closing div followed by content
-      if (line.includes('<div') && line.includes('/>') && i + 1 < lines.length) {
+      if (line.includes('<div') && line.includes('/></div>') && i + 1 < lines.length) {
         const nextLine = lines[i + 1];
         // If next line starts with whitespace and has content, fix the div
         if (nextLine.trim() && (nextLine.includes('<') || nextLine.includes('{') || nextLine.includes('}'))) {
@@ -28,15 +28,15 @@ function fixRemainingJsx() {
     content = fixedLines.join('\n');
     
     // Additional specific fixes
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1>');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*{/g, '<div$1>');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<\/div>/g, '<div$1>');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1></div>');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*{/g, '<div$1></div>');
+    content = content.replace(/<div([^></div>]*?)\s*\/>\s*\n\s*<\/div>/g, '<div$1></div>');
     
     fs.writeFileSync('/workspace/app/page.tsx', content);
     console.log('✅ Fixed remaining JSX issues in main page');
     return true;
   } catch (error) {
-    console.error('Error fixing remaining JSX:', error.message);
+    console.error('Error fixing remaining JSX: ', error.message);
     return false;
   }
 }

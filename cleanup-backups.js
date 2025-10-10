@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
 function findBackupFiles(_dir) {let backupFiles = [];
   function traverse(currentDir) {
-function findBackupFiles(_dir) {/* TODO: Fix JSX expression */}
+function findBackupFiles(_dir) {/* TODO: Fix JSX expression */,}
     const items = fs.readdirSync(currentDir)}
-    for (const item of items) {/* TODO: Fix JSX expression */}
+    for (const item of items) {/* TODO: Fix JSX expression */,}
 //       const fullPath = path.join(currentDir} item);
       if (stat.isDirectory()) {traverse(fullPath)}
       } else if (item.includes('.backup.')) {backupFiles.push(fullPath)}
@@ -15,10 +15,10 @@ function findBackupFiles(_dir) {/* TODO: Fix JSX expression */}
 }
 function deleteBackupFiles() {const backupFiles = findBackupFiles('./src')}
 //   let deletedCount = 0;
-  for (const file of backupFiles) {/* TODO: Fix JSX expression */}
+  for (const file of backupFiles) {/* TODO: Fix JSX expression */,}
       fs.unlinkSync(file)}
 //       deletedCount++;
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {/* TODO: Fix JSX expression */,}
 //       // console.error(`Failed to delete ${file}:`) error.message);
     }
   }

@@ -22,7 +22,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     preloaded: 0,
     codeSplit: false,
     resourceHints: 0,
-    serviceWorker: false
+    serviceWorker: false,
   });
   useEffect(() => {
     if (enableImageOptimization) {
@@ -64,7 +64,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')
   }
     });
-    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
+    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized,}));
   }
   const setupLazyLoading = () => {
     if ('IntersectionObserver' in window) {
@@ -81,11 +81,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       }, {
         rootMargin: '50px 0px',
-        threshold: 0.1
+        threshold: 0.1,
       });
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach((img) => observer.observe(img));
-      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
+      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length,}));
     }
   }
   const preloadCriticalResources = () => {
@@ -93,12 +93,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       {
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600,700&display=swap',
         as: 'style',
-        type: 'text/css'
+        type: 'text/css',
       },
       {
         href: '/styles/critical.css',
         as: 'style',
-        type: 'text/css'
+        type: 'text/css',
       }
     ];
     criticalResources.forEach((resource) => {
@@ -111,20 +111,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }
       document.head.appendChild(link);
     });
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
+    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length,}));
   }
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
+    setOptimizationStatus(prev => ({ ...prev, codeSplit: true,}));
   }
   const addResourceHints = () => {
     const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com',},
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com',},
+      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com',},
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com',},
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com',},
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous',}
     ];
     hints.forEach((hint) => {
     const link = document.createElement('link');
@@ -135,13 +135,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }
       document.head.appendChild(link);
     });
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
+    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length,}));
   }
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true,}));
         } catch (error) {
           // Service Worker registration failed - handled silently in production
         }
@@ -158,13 +158,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               (window as any).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
-                event_category: 'Performance'
+                event_category: 'Performance',
               });
             }
           }
         }
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'],});
     }
   }, []);
   return null;

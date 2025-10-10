@@ -13,35 +13,35 @@ function makeGitHubRequest(endpoint) {
       headers: {,
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json',
-function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
+function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */,}
       }
     }
 
-    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */,}
       });
-      res.on('end', () => {/* TODO: Fix JSX expression */}
-        } catch (error) {/* TODO: Fix JSX expression */}
-  JSON: ${error.message}`));
+      res.on('end', () => {/* TODO: Fix JSX expression */,}
+        } catch (error) {/* TODO: Fix JSX expression */,}
+  JSON: ${error.message,}`));
         }
       });
     });
 
-    req.on('error', (error) => {/* TODO: Fix JSX expression */}
+    req.on('error', (error) => {/* TODO: Fix JSX expression */,}
     });
 
     req.end();
   });
 }
 
-async function getOpenPRs() {/* TODO: Fix JSX expression */}
+async function getOpenPRs() {/* TODO: Fix JSX expression */,}
 }
-  try {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
+  try {/* TODO: Fix JSX expression */,}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
-async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
+async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */,}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
@@ -50,19 +50,19 @@ function runGitCommand(command) {
     const result = execSync(command, { )
       cwd: '/workspace'),
       encoding: 'utf8'),
-      stdio: 'pipe'});
-    return { success: true, output: result }
+      stdio: 'pipe',});
+    return { success: true, output: result,}
   } catch (error) {
     return {
       success: false
       error: error.message,
       output: error.stdout ? error.stdout.toString() : '',
       stderr: error.stderr ? error.stderr.toString() : '',
-function runGitCommand(command) {/* TODO: Fix JSX expression */}
+function runGitCommand(command) {/* TODO: Fix JSX expression */,}
     });
-    return {/* TODO: Fix JSX expression */}
-  t: result }
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return {/* TODO: Fix JSX expression */,}
+  t: result,}
+  } catch (error) {/* TODO: Fix JSX expression */,}
     }
   }
 }
@@ -108,29 +108,29 @@ async function mergePRWithGit(pr) {
   }
       } else {
         return false;
-async function mergePRWithGit(pr) {/* TODO: Fix JSX expression */}
+async function mergePRWithGit(pr) {/* TODO: Fix JSX expression */,}
     }
 
     // Check if PR is mergeable;
-    if (prDetails.mergeable === false) {/* TODO: Fix JSX expression */}
+    if (prDetails.mergeable === false) {/* TODO: Fix JSX expression */,}
     }
 
     // Fetch the PR branch;
-    if (!fetchResult.success) {/* TODO: Fix JSX expression */}
+    if (!fetchResult.success) {/* TODO: Fix JSX expression */,}
     }
 
     // Try to merge the branch;
-    if (mergeResult.success) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-          } else {/* TODO: Fix JSX expression */}
+    if (mergeResult.success) {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
+          } else {/* TODO: Fix JSX expression */,}
           }
-        } else {/* TODO: Fix JSX expression */}
+        } else {/* TODO: Fix JSX expression */,}
         }
-      } else {/* TODO: Fix JSX expression */}
+      } else {/* TODO: Fix JSX expression */,}
       }
     }
 
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
@@ -139,16 +139,16 @@ async function mergeAllPRsWithGit() {
     if (prs.length === 0) {
 
       return;
-async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
+async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */,}
 }
-  try {/* TODO: Fix JSX expression */}
+  try {/* TODO: Fix JSX expression */,}
     }
 
     // Filter PRs that target main branch;
     if (mainPRs.length === 0) {
 
       return;
-    if (mainPRs.length === 0) {/* TODO: Fix JSX expression */}
+    if (mainPRs.length === 0) {/* TODO: Fix JSX expression */,}
     }
 
     // Process PRs one by one;
@@ -157,15 +157,15 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
         successCount++
   } else {
         failCount++;
-    for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
+    for (const pr of mainPRs) {/* TODO: Fix JSX expression */,}
+      } else {/* TODO: Fix JSX expression */,}
       }
       
       // Add a small delay between merges;
       await new Promise(resolve => setTimeout(resolve, 2000));
     }
 
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
@@ -177,6 +177,6 @@ mergeAllPRsWithGit().then(() => {
 )
   process.exit(1)
   });
-mergeAllPRsWithGit().then(() => {/* TODO: Fix JSX expression */}
-}).catch(error => {/* TODO: Fix JSX expression */})
+mergeAllPRsWithGit().then(() => {/* TODO: Fix JSX expression */,}
+}).catch(error => {/* TODO: Fix JSX expression */,})
 });`

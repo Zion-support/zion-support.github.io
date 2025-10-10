@@ -13,7 +13,7 @@ export const january2026NewContent = {
       category: 'Enterprise AI',
       tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
       readTime: '12 min',
-      excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.'},
+      excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.',},
     {
       id: 'ai-2026-january-quantum-edge-computing'
       title: '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution'
@@ -25,7 +25,7 @@ export const january2026NewContent = {
       category: 'Quantum Computing',
       tags: ['quantum', 'edge', 'computing', 'latency', '2026'],
       readTime: '15 min',
-      excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications."},
+      excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications.",},
     {
       id: 'ai-2026-january-synthetic-consciousness',
       title: '🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness',
@@ -84,21 +84,21 @@ export const january2026NewContent = {
         '99.7% efficiency',
         'Zero human error'],
       duration: '6 months',
-export const january2026NewContent = {/* TODO: Fix JSX expression */}
+export const january2026NewContent = {/* TODO: Fix JSX expression */,}
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }],
   featuredService,
   s: [
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }],
   caseStudie,
   s: [
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }]}
 
 export default january2026 NewContent;

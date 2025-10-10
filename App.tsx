@@ -32,7 +32,7 @@ const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
 
 // Performance monitoring hook
-const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode,}> = ({ children }) => {
   usePerformanceMonitor();
   return <React.Fragment>{children}</React.Fragment>;
 };

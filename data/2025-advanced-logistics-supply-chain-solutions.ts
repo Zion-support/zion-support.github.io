@@ -91,7 +91,7 @@
     addres,
   s: string,
     websit,
-  e: string}
+  e: string,}
   real_implementatio,
   n: boolean,
   implementation_detail,
@@ -164,7 +164,7 @@ export const,
   r: 'text - blue - 400',
       lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - supply - chain - optimization',
+  s: //ziontechgroup.com / ai - powered - supply - chain - optimization',
       market_positio,
   n: unknown,
         'Leading AI supply chain optimization platform with advanced analytics',
@@ -197,7 +197,7 @@ export const,
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
+        website: 'https://ziontechgroup && ziontechgroup.com',},
       real_implementation: true
       implementation_details: unknown,
         'Production - ready AI supply chain platform with comprehensive optimization and analytics capabilities.',
@@ -232,7 +232,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
         websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
       real_implementatio,
   n: true,
       implementation_detail,
@@ -245,7 +245,7 @@ export const,
       ratin,
   g: 4 && 4.8,
       review,
-  s: 98},
+  s: 98,},
       i,
   d: 'quantum - logistics - optimization - platform',
       nam,
@@ -295,7 +295,7 @@ export const,
   r: 'text - purple - 400',
       lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - logistics - optimization - platform',
+  s: //ziontechgroup.com / quantum - logistics - optimization - platform',
       market_positio,
   n: unknown,
         'Leading quantum logistics platform with advanced optimization capabilities',
@@ -331,7 +331,7 @@ export const,
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
+        website: 'https://ziontechgroup && ziontechgroup.com',},
       real_implementation: true
       implementation_details: unknown,
         'Production - ready quantum logistics platform with advanced algorithms and enterprise integration.',
@@ -363,7 +363,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
         websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
       real_implementatio,
   n: true,
       implementation_detail,
@@ -376,7 +376,7 @@ export const,
       ratin,
   g: 4 && 4.9,
       review,
-  s: 23},
+  s: 23,},
         'Real-time tracking',
       i,
   d: 'iot - fleet - management - platform',
@@ -427,7 +427,7 @@ export const,
   r: 'text - green - 400',
       lin,
   k: 'http,
-  s://ziontechgroup.com / iot - fleet - management - platform',
+  s: //ziontechgroup.com / iot - fleet - management - platform',
       market_positio,
   n: unknown,
         'Leading IoT fleet management platform with comprehensive monitoring',
@@ -463,7 +463,7 @@ export const,
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
+        website: 'https://ziontechgroup && ziontechgroup.com',},
       real_implementation: true
       implementation_details: unknown,
         'Production - ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',
@@ -495,7 +495,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
         websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
       real_implementatio,
   n: true,
       implementation_detail,
@@ -508,7 +508,7 @@ export const,
       ratin,
   g: 4 && 4.7,
       review,
-  s: 145},
+  s: 145,},
         'End-to-end traceability',
       i,
   d: 'blockchain - supply - chain - transparency',
@@ -559,7 +559,7 @@ export const,
   r: 'text - indigo - 400',
       lin,
   k: 'http,
-  s://ziontechgroup.com / blockchain - supply - chain - transparency',
+  s: //ziontechgroup.com / blockchain - supply - chain - transparency',
       market_positio,
   n: unknown,
         'Leading blockchain supply chain platform with comprehensive transparency',
@@ -595,7 +595,7 @@ export const,
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
+        website: 'https://ziontechgroup && ziontechgroup.com',},
       real_implementation: true
       implementation_details: unknown,
         'Production - ready blockchain supply chain platform with comprehensive transparency and compliance features.',
@@ -619,7 +619,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
         websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
       real_implementatio,
   n: true,
       implementation_detail,
@@ -632,7 +632,7 @@ export const,
       ratin,
   g: 4 && 4.6,
       review,
-  s: 56},
+  s: 56,},
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -667,7 +667,7 @@ export const,
   r: 'text - orange - 400',
       lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - warehouse - automation',
+  s: //ziontechgroup.com / ai - powered - warehouse - automation',
       market_positio,
   n: unknown,
         'Leading AI warehouse automation platform with intelligent optimization',
@@ -703,7 +703,7 @@ export const,
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
+        website: 'https://ziontechgroup && ziontechgroup.com',},
       real_implementation: true
       implementation_details: unknown,
       market_siz,
@@ -722,7 +722,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
         websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
       real_implementatio,
   n: true,
       implementation_detail,
@@ -752,7 +752,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: str
   contactInfo: unknown,
     mobile: string, email: string
     address: string,
-    website: string}
+    website: string,}
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number
@@ -778,11 +778,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       ratin,
   g: 4 && 4.8,
       review,
-  s: 112}
+  s: 112,}
   ];    feature,
   s: [,
-export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
-  e: string}
+export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */,}
+  e: string,}
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -793,7 +793,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
     i,
@@ -820,8 +820,7 @@ export const,
       perio,
   d: '/month'
       descriptio,
-  n:
-        'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.'
+  n: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.'
       feature,
   s: [
         'Automated picking'
@@ -862,8 +861,7 @@ export const,
       marketPositio,
   n: 'Leading AI warehouse automation platform with intelligent optimization'
       targetAudienc,
-  e:
-        'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers'
+  e: 'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers'
       trialDay,
   s: 21,
       setupTim,
@@ -894,7 +892,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com'}
+        website: 'https://ziontechgroup.com',}
       realImplementation: true;
       implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
       launchDate: '2025-02-18'
@@ -922,13 +920,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
         websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
       }
       realImplementatio,
   n: true,
       implementationDetail,
-  s:
-        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+  s: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDat,
   e: '2025-02-18',
       customer,
@@ -936,7 +933,7 @@ export const,
       ratin,
   g: 4.8,
       review,
-  s: 112}
+  s: 112,}
   ];    feature,
   s: [
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
@@ -987,7 +984,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true;
     implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.'
     launchDate: '2025-02-02'
@@ -1026,7 +1023,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -1039,7 +1036,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 23},
+  s: 23,},
     i,
   d: 'iot-fleet-management-platform',
     nam,
@@ -1088,7 +1085,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true;
     implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.'
     launchDate: '2025-02-07'
@@ -1105,7 +1102,7 @@ export const,
   r: 'text-green-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/iot-fleet-management-platform',
+  s: //ziontechgroup.com/iot-fleet-management-platform',
     marketPositio,
   n: 'Leading IoT fleet management platform with comprehensive monitoring',
     targetAudienc,
@@ -1144,7 +1141,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -1157,7 +1154,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 145},
+  s: 145,},
     i,
   d: 'blockchain-supply-chain-transparency',
     nam,
@@ -1206,7 +1203,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true;
     implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.'
     launchDate: '2025-02-12'
@@ -1223,7 +1220,7 @@ export const,
   r: 'text-indigo-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/blockchain-supply-chain-transparency',
+  s: //ziontechgroup.com/blockchain-supply-chain-transparency',
     marketPositio,
   n: 'Leading blockchain supply chain platform with comprehensive transparency',
     targetAudienc,
@@ -1262,7 +1259,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -1275,7 +1272,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 56},
+  s: 56,},
     i,
   d: 'ai-powered-warehouse-automation',
     nam,
@@ -1324,7 +1321,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true;
     implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
     launchDate: '2025-02-18'
@@ -1341,7 +1338,7 @@ export const,
   r: 'text-orange-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-warehouse-automation',
+  s: //ziontechgroup.com/ai-powered-warehouse-automation',
     marketPositio,
   n: 'Leading AI warehouse automation platform with intelligent optimization',
     targetAudienc,
@@ -1380,7 +1377,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -1393,12 +1390,12 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 112}
+  s: 112,}
 ];
-export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -1437,12 +1434,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSize: '$45 B supply chain management market'
     growthRate: '28% annual growth',
-    variant: 'logistics'}
-    contactInfo: {}
+    variant: 'logistics',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.';
     launchDate: '2025-01-26';
@@ -1479,12 +1476,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'];
     marketSize: '$8 B quantum computing market'
     growthRate: '65% annual growth',
-    variant: 'quantum-logistics'}
-    contactInfo: {}
+    variant: 'quantum-logistics',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.';
     launchDate: '2025-02-02';
@@ -1521,12 +1518,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'];
     marketSize: '$30 B fleet management market'
     growthRate: '32% annual growth',
-    variant: 'iot-futuristic'}
-    contactInfo: {}
+    variant: 'iot-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.';
     launchDate: '2025-02-07';
@@ -1563,12 +1560,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'];
     marketSize: '$22 B blockchain supply chain market'
     growthRate: '45% annual growth',
-    variant: 'blockchain-futuristic'}
-    contactInfo: {}
+    variant: 'blockchain-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.';
     launchDate: '2025-02-12';
@@ -1605,12 +1602,12 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'];
     marketSize: '$28 B warehouse automation market'
     growthRate: '38% annual growth',
-    variant: 'ai-supply-chain-enterprise'}
-    contactInfo: {}
+    variant: 'ai-supply-chain-enterprise',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.';
     launchDate: '2025-02-18';
@@ -1628,13 +1625,13 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
-  {/* TODO: Fix JSX expression */}
-  t: 'logistics'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'logistics',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1643,7 +1640,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -1656,11 +1653,11 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 98}
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-logistics'}
+  s: 98,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-logistics',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1669,7 +1666,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -1682,11 +1679,11 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 23}
-  {/* TODO: Fix JSX expression */}
-  t: 'iot-futuristic'}
+  s: 23,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'iot-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1695,7 +1692,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -1708,11 +1705,11 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 145}
-  {/* TODO: Fix JSX expression */}
-  t: 'blockchain-futuristic'}
+  s: 145,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'blockchain-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1721,7 +1718,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -1734,11 +1731,11 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 56}
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-supply-chain-enterprise'}
+  s: 56,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'ai-supply-chain-enterprise',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1747,7 +1744,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -1760,7 +1757,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 112}
+  s: 112,}
 ];
 i,
   d: string, nam,
@@ -1793,7 +1790,7 @@ i,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string} real_implementatio,
+  e: string,} real_implementatio,
   n: boolean, implementation_detail,
   s: string, launch_dat,
   e: string, customer,
@@ -1806,16 +1803,16 @@ i,
   e: 'Intelligent supply chain planning and optimization',' pric,
   e: '$1, 299',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced AI - powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.', feature,
+  n: ,' 'Advanced AI - powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.', feature,
   s: [, ' 'Demand forecasting',' 'Inventory optimization',' 'Route optimization',' 'Supplier management',' 'Risk assessment',' 'Performance analytics',' 'Real - time monitoring',' 'API integration',' 'Custom algorithms',' 'Compliance tools'], popula,
   r: true,' ico,
   n: '📦', ' colo,
   r: 'from - blue - 600 via - indigo - 600 to - purple - 600',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - supply - chain - optimization', market_positio,
-  n:  ,' 'Leading AI supply chain optimization platform with advanced analytics', target_audienc,
-  e:  ,' 'Manufacturing companies, Retail chains, E - commerce platforms, Logistics providers, Distribution centers', trial_day,
+  s: //ziontechgroup.com / ai - powered - supply - chain - optimization', market_positio,
+  n: ,' 'Leading AI supply chain optimization platform with advanced analytics', target_audienc,
+  e: ,' 'Manufacturing companies, Retail chains, E - commerce platforms, Logistics providers, Distribution centers', trial_day,
   s: 30,' setup_tim,
   e: '15 - 20 days',' categor,
   y: 'Logistics & Supply Chain', real_servic,
@@ -1833,28 +1830,28 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready AI supply chain platform with comprehensive optimization and analytics capabilities.',' launch_dat,
+  s: ,' 'Production - ready AI supply chain platform with comprehensive optimization and analytics capabilities.',' launch_dat,
   e: '2025 - 01 - 26', customer,
   s: 156, ratin,
   g: 4 && 4.8, review,
-  s: 98}, ' i,
+  s: 98,}, ' i,
   d: 'quantum - logistics - optimization - platform',' nam,
   e: 'Quantum Logistics Optimization Platform',' taglin,
   e: 'Quantum computing for complex logistics problems',' pric,
   e: '$2, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.', feature,
+  n: ,' 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.', feature,
   s: [, ' 'Quantum algorithms',' 'Route optimization',' 'Scheduling optimization',' 'Vehicle routing',' 'Capacity planning',' 'Real - time optimization',' 'High - performance computing',' 'API access',' 'Custom models',' 'Performance analytics'], popula,
   r: false,' ico,
   n: '⚛️', ' colo,
   r: 'from - purple - 600 via - violet - 600 to - indigo - 600',' text_colo,
   r: 'text - purple - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - logistics - optimization - platform', market_positio,
-  n:  ,' 'Leading quantum logistics platform with advanced optimization capabilities', target_audienc,
-  e:  ,' 'Large logistics companies, Transportation networks, Global supply chains, Research institutions, Government agencies', trial_day,
+  s: //ziontechgroup.com / quantum - logistics - optimization - platform', market_positio,
+  n: ,' 'Leading quantum logistics platform with advanced optimization capabilities', target_audienc,
+  e: ,' 'Large logistics companies, Transportation networks, Global supply chains, Research institutions, Government agencies', trial_day,
   s: 45,' setup_tim,
   e: '20 - 30 days',' categor,
   y: 'Logistics & Supply Chain', real_servic,
@@ -1872,28 +1869,28 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready quantum logistics platform with advanced algorithms and enterprise integration.',' launch_dat,
+  s: ,' 'Production - ready quantum logistics platform with advanced algorithms and enterprise integration.',' launch_dat,
   e: '2025 - 02 - 02', customer,
   s: 34, ratin,
   g: 4 && 4.9, review,
-  s: 23}, ' 'Real-time tracking',' i,
+  s: 23,}, ' 'Real-time tracking',' i,
   d: 'iot - fleet - management - platform',' nam,
   e: 'IoT Fleet Management Platform',' taglin,
   e: 'Comprehensive IoT - based fleet monitoring and management',' pric,
   e: '$799',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced IoT - based fleet management platform that provides real - time monitoring, predictive maintenance, and optimization for vehicle fleets.', feature,
+  n: ,' 'Advanced IoT - based fleet management platform that provides real - time monitoring, predictive maintenance, and optimization for vehicle fleets.', feature,
   s: [,' 'Real - time tracking', ' 'Predictive maintenance',' 'Fuel monitoring',' 'Driver behavior analysis',' 'Route optimization',' 'Performance analytics',' 'Mobile integration',' 'API access',' 'Custom dashboards',' 'Compliance tools'], popula,
   r: true,' ico,
   n: '🚛', ' colo,
   r: 'from - green - 600 via - emerald - 600 to - teal - 600',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / iot - fleet - management - platform', market_positio,
-  n:  ,' 'Leading IoT fleet management platform with comprehensive monitoring', target_audienc,
-  e:  ,' 'Transportation companies, Delivery services, Logistics providers, Fleet operators, Government agencies', trial_day,
+  s: //ziontechgroup.com / iot - fleet - management - platform', market_positio,
+  n: ,' 'Leading IoT fleet management platform with comprehensive monitoring', target_audienc,
+  e: ,' 'Transportation companies, Delivery services, Logistics providers, Fleet operators, Government agencies', trial_day,
   s: 21,' setup_tim,
   e: '10 - 15 days',' categor,
   y: 'Logistics & Supply Chain', real_servic,
@@ -1911,28 +1908,28 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',' launch_dat,
+  s: ,' 'Production - ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',' launch_dat,
   e: '2025 - 02 - 07', customer,
   s: 234, ratin,
   g: 4 && 4.7, review,
-  s: 145}, ' 'End-to-end traceability',' i,
+  s: 145,}, ' 'End-to-end traceability',' i,
   d: 'blockchain - supply - chain - transparency',' nam,
   e: 'Blockchain Supply Chain Transparency Platform',' taglin,
   e: 'End - to - end supply chain transparency with blockchain',' pric,
   e: '$899',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced blockchain - based supply chain transparency platform that provides end - to - end visibility, traceability, and compliance across global supply chains.', feature,
+  n: ,' 'Advanced blockchain - based supply chain transparency platform that provides end - to - end visibility, traceability, and compliance across global supply chains.', feature,
   s: [,' 'End - to - end traceability', ' 'Smart contracts',' 'Compliance tracking',' 'Quality assurance',' 'Sustainability monitoring',' 'Real - time updates',' 'API integration',' 'Data analytics',' 'Audit trails',' 'Performance monitoring'], popula,
   r: false,' ico,
   n: '⛓️', ' colo,
   r: 'from - indigo - 600 via - purple - 600 to - pink - 600',' text_colo,
   r: 'text - indigo - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / blockchain - supply - chain - transparency', market_positio,
-  n:  ,' 'Leading blockchain supply chain platform with comprehensive transparency', target_audienc,
-  e:  ,' 'Global manufacturers, Retail chains, Food companies, Pharmaceutical companies, Luxury brands', trial_day,
+  s: //ziontechgroup.com / blockchain - supply - chain - transparency', market_positio,
+  n: ,' 'Leading blockchain supply chain platform with comprehensive transparency', target_audienc,
+  e: ,' 'Global manufacturers, Retail chains, Food companies, Pharmaceutical companies, Luxury brands', trial_day,
   s: 30,' setup_tim,
   e: '15 - 20 days',' categor,
   y: 'Logistics & Supply Chain', real_servic,
@@ -1950,21 +1947,21 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready blockchain supply chain platform with comprehensive transparency and compliance features.',' launch_dat,
+  s: ,' 'Production - ready blockchain supply chain platform with comprehensive transparency and compliance features.',' launch_dat,
   e: '2025 - 02 - 12', customer,
   s: 89, ratin,
   g: 4 && 4.6, review,
-  s: 56}, ' 'Automated picking',' 'Smart routing',' 'Inventory optimization',' 'Performance analytics',' 'Predictive maintenance',' 'Real - time monitoring',' 'Mobile integration',' 'API access',' 'Custom workflows',' 'Compliance tools'], popula,
+  s: 56,}, ' 'Automated picking',' 'Smart routing',' 'Inventory optimization',' 'Performance analytics',' 'Predictive maintenance',' 'Real - time monitoring',' 'Mobile integration',' 'API access',' 'Custom workflows',' 'Compliance tools'], popula,
   r: true,' ico,
   n: '🏭', ' colo,
   r: 'from - orange - 600 via - amber - 600 to - yellow - 600',' text_colo,
   r: 'text - orange - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - warehouse - automation', market_positio,
-  n:  ,' 'Leading AI warehouse automation platform with intelligent optimization', target_audienc,
-  e:  ,' 'E - commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers', trial_day,
+  s: //ziontechgroup.com / ai - powered - warehouse - automation', market_positio,
+  n: ,' 'Leading AI warehouse automation platform with intelligent optimization', target_audienc,
+  e: ,' 'E - commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers', trial_day,
   s: 21,' setup_tim,
   e: '10 - 15 days',' categor,
   y: 'Logistics & Supply Chain', real_servic,
@@ -1982,14 +1979,14 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',' launch_dat,
+  s: ,' 'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',' launch_dat,
   e: '2025 - 02 - 18', ' 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',' launchDat,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4 && 4.8, review,
-  s: 112} ]; feature,
+  s: 112,} ]; feature,
   s: [ export interface AdvancedLogisticsSupplyChainSolution2025,
   id: string, nam,
   e: string, taglin,
@@ -2021,13 +2018,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string }, realImplementatio,
+  e: string,}, realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } export const,
+  s: number,} export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [ ' i,
   d: 'ai-powered-supply-chain-optimization', nam,
   e: 'AI-Powered Supply Chain Optimization',' taglin,
@@ -2041,16 +2038,16 @@ i,
   e: 'Intelligent warehouse automation and optimization'' pric,
   e: '$1,099'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.' feature,
+  n: ' 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.' feature,
   s: [' 'Automated picking'' 'Smart routing'' 'Inventory optimization'' 'Performance analytics'' 'Predictive maintenance'' 'Real-time monitoring'' 'Mobile integration'' 'API access'' 'Custom workflows'' 'Compliance tools' ] popula,
   r: true' ico,
   n: '🏭'' colo,
   r: 'from-orange-600 via-amber-600 to-yellow-600'' textColo,
   r: 'text-orange-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-warehouse-automation' marketPositio,
-  n:' 'Leading AI warehouse automation platform with intelligent optimization' targetAudienc,
-  e:' 'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers' trialDay,
+  s: //ziontechgroup.com/ai-powered-warehouse-automation' marketPositio,
+  n: ' 'Leading AI warehouse automation platform with intelligent optimization' targetAudienc,
+  e: ' 'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers' trialDay,
   s: 21' setupTim,
   e: '10-15 days'' categor,
   y: 'Logistics & Supply Chain' realServic,
@@ -2068,13 +2065,13 @@ i,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',' launchDat,
+  implementationDetails: ' 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',' launchDat,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112} ]; feature,
+  s: 112,} ]; feature,
   s: [' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools' ], feature,
   s: [,' 'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'' 'Custom algorithms_compliance tools' ], ' popula,
   r: true, ico,
@@ -2104,13 +2101,13 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.',' launchDat,
   e: '2025-02-02', customer,
   s: 34, ratin,
   g: 4.9, review,
-  s: 23 }, ' i,
+  s: 23,}, ' i,
   d: 'iot-fleet-management-platform',' nam,
   e: 'IoT Fleet Management Platform',' taglin,
   e: 'Comprehensive IoT-based fleet monitoring and management',' pric,
@@ -2123,7 +2120,7 @@ i,
   r: 'from-green-600 via-emerald-600 to-teal-600',' textColo,
   r: 'text-green-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/iot-fleet-management-platform',' marketPositio,
+  s: //ziontechgroup.com/iot-fleet-management-platform',' marketPositio,
   n: 'Leading IoT fleet management platform with comprehensive monitoring',' targetAudienc,
   e: 'Transportation companies, Delivery services, Logistics providers, Fleet operators, Government agencies', trialDay,
   s: 21,' setupTim,
@@ -2143,13 +2140,13 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',' launchDat,
   e: '2025-02-07', customer,
   s: 234, ratin,
   g: 4.7, review,
-  s: 145 }, ' i,
+  s: 145,}, ' i,
   d: 'blockchain-supply-chain-transparency',' nam,
   e: 'Blockchain Supply Chain Transparency Platform',' taglin,
   e: 'End-to-end supply chain transparency with blockchain',' pric,
@@ -2162,7 +2159,7 @@ i,
   r: 'from-indigo-600 via-purple-600 to-pink-600',' textColo,
   r: 'text-indigo-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/blockchain-supply-chain-transparency',' marketPositio,
+  s: //ziontechgroup.com/blockchain-supply-chain-transparency',' marketPositio,
   n: 'Leading blockchain supply chain platform with comprehensive transparency',' targetAudienc,
   e: 'Global manufacturers, Retail chains, Food companies, Pharmaceutical companies, Luxury brands', trialDay,
   s: 30,' setupTim,
@@ -2182,13 +2179,13 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.',' launchDat,
   e: '2025-02-12', customer,
   s: 89, ratin,
   g: 4.6, review,
-  s: 56 }, ' i,
+  s: 56,}, ' i,
   d: 'ai-powered-warehouse-automation',' nam,
   e: 'AI-Powered Warehouse Automation Platform',' taglin,
   e: 'Intelligent warehouse automation and optimization',' pric,
@@ -2201,7 +2198,7 @@ i,
   r: 'from-orange-600 via-amber-600 to-yellow-600',' textColo,
   r: 'text-orange-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-warehouse-automation',' marketPositio,
+  s: //ziontechgroup.com/ai-powered-warehouse-automation',' marketPositio,
   n: 'Leading AI warehouse automation platform with intelligent optimization',' targetAudienc,
   e: 'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers', trialDay,
   s: 21,' setupTim,
@@ -2221,69 +2218,69 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',' launchDat,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112 } ];' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string} } realImplementatio,
+  s: 112,} ];' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */,}
+  s: string,} websit,
+  e: string,} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number} export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [, {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: number,} export const,
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [, {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.',' launchDat,
   e: '2025-01-26', customer,
   s: 156, ratin,
   g: 4.8, review,
-  s: 98} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 98,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.',' launchDat,
   e: '2025-02-02', customer,
   s: 34, ratin,
   g: 4.9, review,
-  s: 23} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 23,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',' launchDat,
   e: '2025-02-07', customer,
   s: 234, ratin,
   g: 4.7, review,
-  s: 145} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 145,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.',' launchDat,
   e: '2025-02-12', customer,
   s: 89, ratin,
   g: 4.6, review,
-  s: 56} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 56,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',' launchDat,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112} ]; '
+  s: 112,} ]; '

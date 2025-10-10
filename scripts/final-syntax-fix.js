@@ -11,15 +11,15 @@ console.log('🔧 Final comprehensive syntax fix...');
 // Final syntax fixes;
 const fixes = [
   // Fix missing commas in object arrays;
-  { pattern: /icon: '[^']+'}\s*},/g, replacement: (match) => match.replace('}', '') },
-  { pattern: /color: 'text-\w+-\d+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
-  { pattern: /price: '[^']+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
+  { pattern: /icon: '[^']+',}\s*},/g, replacement: (match) => match.replace(',}', '') },
+  { pattern: /color: 'text-\w+-\d+'\s*,}\s*},/g, replacement: (match) => match.replace(',}', '') },
+  { pattern: /price: '[^']+'\s*,}\s*},/g, replacement: (match) => match.replace(',}', '') },
   // Fix missing commas in arrays;
-  { pattern: /}\s*}\s*];/g, replacement: '}]' },
+  { pattern: /,}\s*}\s*];/g, replacement: ',}]' },
   // Fix stray semicolons;
-  { pattern: /,\s*$/gm, replacement: '' },
+  { pattern: /,\s*$/gm, replacement: '',},
   // Fix console statements;
-  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '' }];
+  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '',}];
 
 function fixFile(filePath) {
     try {
@@ -36,7 +36,7 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ Fixed: ${filePath,}`);
       return true;
     }
     return false;

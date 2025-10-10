@@ -8,7 +8,7 @@ export const trackPageView = (pagePath: string, pageTitle?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: pagePath,
-      page_title: pageTitle});
+      page_title: pageTitle,});
   }
 }
 
@@ -17,7 +17,7 @@ export const initAnalytics = (measurementId: string) => {
     // Load Google Analytics script
     const script = document.createElement('script')
     script.async = true,
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script.src = `https: //www.googletagmanager.com/gtag/js?id=${measurementId,}`;
     document.head.appendChild(script);
 
     // Initialize gtag
@@ -35,6 +35,6 @@ export const initAnalytics = (measurementId: string) => {
 declare global {
     interface Window {
     gtag: (...args: any[]) => void,
-    dataLayer: any[]
+    dataLayer: any[],
   }
 }

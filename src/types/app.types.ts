@@ -24,7 +24,7 @@ export interface PerformanceMetrics {
  */
 
 export interface PerformanceReport {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   webVitals: Partial,
@@ -43,14 +43,14 @@ export interface PerformanceReport {
  */
 
 export interface ResourceStats {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   total: number,,
     scripts: number,,
     styles: number,,
     images: number,,
-    fonts: number
+    fonts: number,
 
 }
 /**
@@ -59,12 +59,12 @@ export interface ResourceStats {
  */
 
 export interface MemoryStats {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   usedJSHeapSize: number,,
     totalJSHeapSize: number,,
-    jsHeapSizeLimit: number
+    jsHeapSizeLimit: number,
 
 }
 /**
@@ -73,7 +73,7 @@ export interface MemoryStats {
  */
 
 export interface PerformanceAlert {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   type: 'warning' | 'error' | 'info',,
@@ -81,7 +81,7 @@ export interface PerformanceAlert {
     metric: keyof PerformanceMetrics,,
     value: number,,
     threshold: number,,
-    timestamp: number
+    timestamp: number,
 
 }
 /**
@@ -90,11 +90,11 @@ export interface PerformanceAlert {
  */
 
 export interface LayoutShift extends PerformanceEntry {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   value: number,,
-    hadRecentInput: boolean
+    hadRecentInput: boolean,
 
 }
 /**
@@ -103,18 +103,18 @@ export interface LayoutShift extends PerformanceEntry {
  */
 
 export interface PerformanceWithMemory extends Performance {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
   memor,
-  y: {/* TODO: Fix JSX expression */}
+  y: {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 
   usedJSHeapSize: number,,
     totalJSHeapSize: number,,
-    jsHeapSizeLimit: number
+    jsHeapSizeLimit: number,
 
   }
 }

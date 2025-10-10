@@ -10,31 +10,31 @@
       new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         const _lastEntry = entries[entries.length - 1];
-//         }).observe({ entryTypes: ['largest-contentful-paint'] });
+//         }).observe({ entryTypes: ['largest-contentful-paint'],});
       
       // FID;
       new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         entries.forEach((entry) => {
-(function() {/* TODO: Fix JSX expression */}
+(function() {/* TODO: Fix JSX expression */,}
 }
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-//         }).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */,}
+//         }).observe({/* TODO: Fix JSX expression */,})
+  s: ['largest-contentful-paint'],});
       
       // FID;
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}
 //           });
-      }).observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+      }).observe({/* TODO: Fix JSX expression */,})
+  s: ['first-input'],});
       
       // CLS;
       let _clsValue = 0;
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}
           }
         });
-//         }).observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+//         }).observe({/* TODO: Fix JSX expression */,})
+  s: ['layout-shift'],});
     }
   }
   
@@ -43,7 +43,7 @@
     document.addEventListener('DOMContentLoaded', observeWebVitals)
   } else {
     observeWebVitals();
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
+  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */,}
+  } else {/* TODO: Fix JSX expression */,}
   }
 })();

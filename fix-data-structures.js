@@ -12,7 +12,7 @@ function fixDataStructures(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   let modified = false;
 
-  // Fix malformed object literals - pattern: {} followed by properties
+  // Fix malformed object literals - pattern: {,} followed by properties
   const objectPattern = /\{\}\s*(\w+):/g;
   if (objectPattern.test(content)) {
     content = content.replace(objectPattern, '{\n      $1:');
@@ -45,7 +45,7 @@ function fixDataStructures(filePath) {
   // Fix missing closing braces in arrays
   const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;
   if (arrayClosePattern.test(content)) {
-    content = content.replace(arrayClosePattern, '$1: $2\n    }');
+    content = content.replace(arrayClosePattern, '$1: $2\n,}');
     modified = true;
   }
 
@@ -58,7 +58,7 @@ function fixDataStructures(filePath) {
 
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed data structures in: ${filePath}`);
+    console.log(`Fixed data structures in: ${filePath,}`);
     return true;
   }
 
@@ -68,7 +68,7 @@ function fixDataStructures(filePath) {
 // Get all TypeScript files with errors
 function getFilesWithErrors() {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
+    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8',});
     const files = new Set();
     output.split('\n').forEach(line => {
       const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);
@@ -101,7 +101,7 @@ function main() {
   // Run type check again
   console.log('\n🔍 Running type check...');
   try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
+    execSync('pnpm run type-check', { stdio: 'inherit',});
     console.log('✅ All TypeScript errors fixed!');
   } catch (error) {
     console.log('⚠️  Some errors remain, continuing...');

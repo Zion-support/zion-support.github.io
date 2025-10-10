@@ -42,13 +42,13 @@ class EnvironmentConfig {}
       logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],;
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
+      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,}
     }
-export interface EnvConfig {/* TODO: Fix JSX expression */}
+export interface EnvConfig {/* TODO: Fix JSX expression */,}
 }
-class EnvironmentConfig {/* TODO: Fix JSX expression */}
+class EnvironmentConfig {/* TODO: Fix JSX expression */,}
   }
-  private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
+  private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */,}
     }
   }
   /**;
@@ -56,45 +56,45 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    */;
   public getConfig(): Readonly<EnvConfig> {}
     return Object.freeze({ ...this.config })
-  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
+  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */,}
     return Object.freeze({ ...this.config })
   }
   /**;
    * Get a specific configuration value;
    */;
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {
+  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
     ,
   }
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
+  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,}
     return this.config[key]}
   public get<K extends keyof EnvConfig>(ke);
-  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
+  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */,}
   }
   /**;
    * Check if running in production;
    */;
   public isProduction(): boolean {}
     return this.config.nodeEnv === 'production';}
-  public isProduction(): boolean {/* TODO: Fix JSX expression */}
+  public isProduction(): boolean {/* TODO: Fix JSX expression */,}
   }
   /**;
    * Check if running in development;
    */;
   public isDevelopment(): boolean {}
     return this.config.nodeEnv === 'development';}
-  public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
+  public isDevelopment(): boolean {/* TODO: Fix JSX expression */,}
   }
   /**;
    * Check if running in test mode;
    */;
   public isTest(): boolean {}
     return this.config.nodeEnv === 'test';}
-  public isTest(): boolean {/* TODO: Fix JSX expression */}
+  public isTest(): boolean {/* TODO: Fix JSX expression */,}
   }
   /**;
    * Validate required environment variables;
    */;
-  public validate(requiredVars: (keyof EnvConfig)[]): {
+  public validate(requiredVars: (keyof EnvConfig)[]): {,
     ,
     valid: boolean,
   }
@@ -108,9 +108,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       }
     }
     return {
-    valid: missing.length === 0
+    valid: missing.length === 0,
   }
-  public validate(requiredVars: (keyof EnvConfig)[]): {}
+  public validate(requiredVars: (keyof EnvConfig)[]): {,}
     valid: boolean
     missing: string[],}
   } {}
@@ -125,11 +125,11 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       missing}
     }
   public validate(requiredVar);
-  s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
+  s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */,}
+  } {/* TODO: Fix JSX expression */,}
       }
     }
-    return {/* TODO: Fix JSX expression */}
+    return {/* TODO: Fix JSX expression */,}
     }
   }
   /**;
@@ -141,9 +141,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
     if (this.config.apiKey) {}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
-  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
+  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */,}
     }
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
+    if (this.config.apiKey) {/* TODO: Fix JSX expression */,}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
     }
     return headers;
@@ -153,7 +153,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    */;
   public logConfig(): void {}
     if (this.isDevelopment()) {}
-  public logConfig(): void {/* TODO: Fix JSX expression */}
+  public logConfig(): void {/* TODO: Fix JSX expression */,}
       })
     }
   }

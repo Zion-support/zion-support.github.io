@@ -15,9 +15,9 @@ function fixCommentBlocks(content) {
       const fixedBody = body.split('\n').map(line => {)
         if (line.trim() && !line.trim().startsWith('//')) {
           return '// ' + line.trim();
-function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
+function fixCommentBlocks(content) {/* TODO: Fix JSX expression */,}
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {/* TODO: Fix JSX expression */}
+    (match, method, body) => {/* TODO: Fix JSX expression */,}
         }
         return line;
       }).join('\n');
@@ -34,7 +34,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
           return '// ' + line.trim();
   content = content.replace()
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
-    (match, body) => {/* TODO: Fix JSX expression */}
+    (match, body) => {/* TODO: Fix JSX expression */,}
         }
         return line;
       }).join('\n');
@@ -52,7 +52,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
           return '// ' + line.trim();
   content = content.replace()
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {/* TODO: Fix JSX expression */}
+    (match, method, body) => {/* TODO: Fix JSX expression */,}
         }
         return line;
       });`
@@ -77,11 +77,11 @@ function processFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
+function processFile(filePath) {/* TODO: Fix JSX expression */,}
     }
 
     return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -107,9 +107,9 @@ function findSourceFiles(dir) {
         // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
           files.push(fullPath);
-function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
+function findSourceFiles(dir) {/* TODO: Fix JSX expression */,}
         }
-      } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
+      } else if (stat.isFile()) {/* TODO: Fix JSX expression */,}
         }
       }
     }
@@ -129,8 +129,8 @@ const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
-for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+for (const file of files) {/* TODO: Fix JSX expression */,}`
+  d: ${file,}`);
   }
 }
 `

@@ -10,19 +10,19 @@ const __dirname = path.dirname(__filename);
 function fixJSXTags(content) {
   // Fix JSX opening tags;
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {
-function fixJSXTags(content) {/* TODO: Fix JSX expression */}
+function fixJSXTags(content) {/* TODO: Fix JSX expression */,}
     return `<${tagName.substring(1)}`; // Remove the underscore;
   });
   
   // Fix JSX closing tags;
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
-  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */,}`
     return `</${tagName.substring(1)}>`; // Remove the underscore;
   });
   
   // Fix self-closing JSX tags;
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
-  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {/* TODO: Fix JSX expression */,}`
     return `<${tagName.substring(1)} />`; // Remove the underscore;
   });
   
@@ -47,15 +47,15 @@ function fixDestructuringVariables(content) {
       const trimmed = v.trim();
       if (trimmed.startsWith('_') && trimmed.length > 1) {
         return trimmed.substring(1);
-function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
+function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */,}
   });
   
   // Fix arrow function parameters;
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
+  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */,}
   });
   
   // Fix destructuring assignments;
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */,}
       }
       return trimmed;
     }).join(', ');`
@@ -80,11 +80,11 @@ function processFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
+function processFile(filePath) {/* TODO: Fix JSX expression */,}
     }
 
     return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -110,9 +110,9 @@ function findSourceFiles(dir) {
         // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
           files.push(fullPath);
-function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
+function findSourceFiles(dir) {/* TODO: Fix JSX expression */,}
         }
-      } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
+      } else if (stat.isFile()) {/* TODO: Fix JSX expression */,}
         }
       }
     }
@@ -132,8 +132,8 @@ const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
-for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+for (const file of files) {/* TODO: Fix JSX expression */,}`
+  d: ${file,}`);
   }
 }
 `
@@ -141,8 +141,8 @@ console.log(`Processed ${processedCount} files`);
 
 // Also process root level files;
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];
-for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+for (const file of rootFiles) {/* TODO: Fix JSX expression */,}`
+  d: ${file,}`);
     }
   }
 }

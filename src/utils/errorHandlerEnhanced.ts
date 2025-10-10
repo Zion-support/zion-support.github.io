@@ -2,7 +2,7 @@
 
 'use client';
 // Enhanced Error Handler;
-export class AppError extends Error {/* TODO: Fix JSX expression */}
+export class AppError extends Error {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   statusCod,
@@ -12,7 +12,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
     timestam,
   p: string,
   constructor(messag)
-  e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
+  e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //     super(message)
@@ -24,18 +24,18 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 }
 
 export const _errorHandler = (error: AppError | Error) => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message)
-// console.error({message: appError.message}
+// console.error({message: appError.message,}
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500,
 
   });
-  return {/* TODO: Fix JSX expression */}
+  return {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   messag,
@@ -51,14 +51,14 @@ export const asyncHandler = (f,
   t: unknown) => unknown) => (re,
   q: unknown, re,
   s: unknown, nex)
-  t: unknown) => {/* TODO: Fix JSX expression */}
+  t: unknown) => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   Promise.resolve(fn(req, res, next)).catch((erro)
-  r: unknown) => {/* TODO: Fix JSX expression */}
+  r: unknown) => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
+    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       next(error);

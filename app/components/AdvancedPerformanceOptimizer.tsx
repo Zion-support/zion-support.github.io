@@ -13,7 +13,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
-    totalSavings: 0
+    totalSavings: 0,
   })
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -69,7 +69,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       imagesOptimized,
       scriptsOptimized,
       cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized,
     })
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
@@ -96,7 +96,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => observer.disconnect();
   }, []);
   return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
+    <div className="performance-optimized" data-optimized={isOptimized}></div>
       {children}
       {process.env.NODE_ENV === 'development' && (
         <div className="optimization-debug" style={{
@@ -108,12 +108,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
-          zIndex: 1000
-        }}>
-          <div>Images: {optimizationMetrics.imagesOptimized}</div>
-          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
-          <div>CSS: {optimizationMetrics.cssOptimized}</div>
-          <div>Total: {optimizationMetrics.totalSavings}</div>
+          zIndex: 1000,
+        }}></div>
+          <div></div>Images: {optimizationMetrics.imagesOptimized,}</div>
+          <div></div>Scripts: {optimizationMetrics.scriptsOptimized,}</div>
+          <div></div>CSS: {optimizationMetrics.cssOptimized,}</div>
+          <div></div>Total: {optimizationMetrics.totalSavings,}</div>
         </div>
       )}
     </div>

@@ -13,14 +13,14 @@ function fixConsoleStatements(content) {
 
   // Add closing parenthesis for the if statement;
   content = content.replace(
-function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
+function fixConsoleStatements(content) {/* TODO: Fix JSX expression */,}
     return `if (process.env.NODE_ENV === 'development') console.${method}(`;)
   });
 
   // Add closing parenthesis for the if statement;
   content = content.replace()
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
-    match => {/* TODO: Fix JSX expression */}
+    match => {/* TODO: Fix JSX expression */,}
       return match.replace(/\);$/, '); }');
     }
   );
@@ -45,11 +45,11 @@ function fixFile(filePath) {
     if (!fs.existsSync(fullPath)) {
 
       return;
-function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
+function fixUnusedVariables(content) {/* TODO: Fix JSX expression */,}
 }
 
 // Function to fix specific files;
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
+function fixFile(filePath) {/* TODO: Fix JSX expression */,}
     }
 
 
@@ -59,7 +59,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     fs.writeFileSync(fullPath, content);
 
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 

@@ -10,7 +10,7 @@ interface ImageOptimizerProps {
   onLoad?: () => void,
   onError?: () => void
   }
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     ,
   src;
   alt,
@@ -36,7 +36,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       },
       {
     rootMargin: '50px 0px',
-        threshold: 0.01
+        threshold: 0.01,
   }
     );
     if (imgRef.current) {
@@ -73,10 +73,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      ></div>
-        <div className="text-gray-400 text-center"></div>
-          <div className="text-4xl mb-2">⚠️</div>
-          <div className="text-sm">Image failed to load</div>)
+      ></div></div>
+        <div className="text-gray-400 text-center"></div></div>
+          <div className="text-4xl mb-2"></div>⚠️</div>
+          <div className="text-sm"></div>Image failed to load</div>)
         </div>)
       </div>)
     );
@@ -85,17 +85,17 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-    >
+    ></div>
       {/* Placeholder */})
       {!isLoaded && ()
         <img;)
       {/* Placeholder */}
-      {!isLoaded && (</div>
+      {!isLoaded && (</div />
         <img
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
-          style={{ filter: 'blur(1 px)' }}
+          style={{ filter: 'blur(1 px)',}}
         /></img>
       )}
       {/* Actual Image */}

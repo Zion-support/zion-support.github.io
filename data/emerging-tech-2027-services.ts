@@ -12,7 +12,7 @@
     mobile: string
     email: string,
 export interface EmergingTech2027Service {,
-    address: string}
+    address: string,}
   i,
   d: string,
   nam,
@@ -37,8 +37,8 @@ export interface EmergingTech2027Service {,
   e: string,
     emai,
   l: string,
-export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
-  s: string}
+export interface EmergingTech2027Service {/* TODO: Fix JSX expression */,}
+  s: string,}
 }
   i,
   d: string,
@@ -59,13 +59,13 @@ export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  l: string}
+  o: {/* TODO: Fix JSX expression */,}
+  l: string,}
     addres,
-  s: string}
+  s: string,}
   }
 }
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709",}
   }
 ];
   id: string, name: string,
@@ -90,17 +90,17 @@ export const emergingTech2027 Services: EmergingTech2027 Service[] = [,
       "Expert insights"],
     link: "/services/2027-emerging-tech", category: "Emerging Tech 2027",
     realImplementation: true,
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709",}
   }
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709",}
   }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
@@ -124,7 +124,7 @@ export const emergingTech2027 Services: EmergingTech2027 Service[] = [,
   e: string, emai,
   l: string,
     addres,
-  s: string}
+  s: string,}
 }
 export const,
   emergingTech2027Services: EmergingTech2027Service[] = [,
@@ -151,7 +151,7 @@ export const,
   n: true,
     contactInf,
   o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
@@ -159,14 +159,14 @@ export const,
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
       addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
@@ -190,7 +190,7 @@ id: "2027-emerging-tech"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}}
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
@@ -231,7 +231,7 @@ id: "2027-emerging-tech"
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}
+  s: '364 E Main St STE 1008 Middletown DE 19709',}}
 ];      mobil,"
   e: "+1 302 464 0950",
   emai,"
@@ -241,7 +241,7 @@ id: "2027-emerging-tech"
       emai,"
   l: "kleber@ziontechgroup.com",
       addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
@@ -257,8 +257,8 @@ i,
   n: boolean, contactInf,
   o: mobil,
   e: string, emai,
-  l: string, export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
-  s: string } i,
+  l: string, export interface EmergingTech2027Service {/* TODO: Fix JSX expression */,}
+  s: string,} i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -268,10 +268,10 @@ i,
   k: string, categor,
   y: string, realImplementatio,
   n: boolean, contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  o: {/* TODO: Fix JSX expression */,}
+  l: string,} addres,
+  s: string,} } } addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709",} } ]; i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -284,7 +284,7 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
+  s: string,} } export const,
   emergingTech2027Services: EmergingTech2027Service[] = [ i,"
   d: "2027-emerging-tech", nam,"
   e: "2027 Emerging Tech Platform", taglin,"
@@ -296,13 +296,13 @@ i,
   y: "Emerging Tech 2027", realImplementatio,
   n: true, contactInf,
   o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
+  s: "364 E Main St STE 1008 Middletown DE 19709",} } ]; mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  s: "364 E Main St STE 1008 Middletown DE 19709",} } ]; emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
+  s: "364 E Main St STE 1008 Middletown DE 19709",} } ]; i,"
   d: "2027-emerging-tech", nam,"
   e: "2027 Emerging Tech Platform", taglin,"
   e: "Emerging tech for 2027", pric,"
@@ -317,10 +317,10 @@ i,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709',}} ]; mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  s: "364 E Main St STE 1008 Middletown DE 19709",} } ]; '"

@@ -11,17 +11,17 @@ console.log('🔧 Comprehensive syntax fix for all files...');
 // Comprehensive syntax fixes;
 const fixes = [
   // Fix semicolons in object properties;
-  { pattern: /color: 'text-\w+-\d+'\}/g, replacement: "color: 'text-\\w+-\\d+'" },
+  { pattern: /color: 'text-\w+-\d+'\,}/g, replacement: "color: 'text-\\w+-\\d+'",},
   // Fix semicolons in JSX attributes;
-  { pattern: /className=\{`[^`]+`\}/g, replacement: (match) => match.replace(',', '') },
+  { pattern: /className=\{`[^`]+`\,}/g, replacement: (match) => match.replace(',', '') },
   // Fix semicolons in JSX props;
-  { pattern: /keywords=\{[^}]+\}\}/g, replacement: (match) => match.replace('}', '}') },
+  { pattern: /keywords=\{[^,}]+\}\}/g, replacement: (match) => match.replace(',}', '}') },
   // Fix missing commas in arrays;
-  { pattern: /}\s*;\s*$/gm, replacement: '}' },
+  { pattern: /,}\s*;\s*$/gm, replacement: ',}' },
   // Fix stray semicolons;
-  { pattern: /,\s*$/gm, replacement: '' },
+  { pattern: /,\s*$/gm, replacement: '',},
   // Fix console statements;
-  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '' }];
+  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '',}];
 
 function fixFile(filePath) {
     try {
@@ -38,7 +38,7 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ Fixed: ${filePath,}`);
       return true;
     }
     return false;

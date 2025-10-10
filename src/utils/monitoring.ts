@@ -6,7 +6,7 @@
  * Comprehensive Monitoring Utility;
  * Real-time application monitoring, performance tracking, and error reporting;
  */
-export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+export interface PerformanceMetrics {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   lcp?: number;
@@ -16,25 +16,25 @@ export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   ttfb?: number;
   inp?: number;
 }
-export interface ErrorReport {/* TODO: Fix JSX expression */}
+export interface ErrorReport {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   messag,
   e: string
   stack?: string
-  component?: string,,
+  component?: string,
     timestam,
   p: number,,
     userAgen,
   t: string,,
     ur,
   l: string,
-class MonitoringService {/* TODO: Fix JSX expression */}
+class MonitoringService {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 
 class MonitoringService {
-  private metrics: PerformanceMetrics = {}
+  private metrics: PerformanceMetrics = {,}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
 
@@ -60,7 +60,7 @@ class MonitoringService {
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
         })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'],})
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
@@ -70,7 +70,7 @@ class MonitoringService {
             this.reportMetric('fid', this.metrics.fid)
   });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ['first-input'],});
 
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
@@ -83,7 +83,7 @@ class MonitoringService {
   }
           })
         })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+        clsObserver.observe({ entryTypes: ['layout-shift'],})
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
@@ -93,9 +93,9 @@ class MonitoringService {
             this.reportMetric('fcp', entry.startTime)
   });
         });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+        fcpObserver.observe({ entryTypes: ['paint'],});
       } catch (error) {
-    // console.error('Error setting up performance observers:', error)
+    // console.error('Error setting up performance observers: ', error)
   }
     }
   }
@@ -105,13 +105,13 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // console.warn('Long task detected:', {
+            // console.warn('Long task detected: ', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
             // })
           }
         })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
+        longTaskObserver.observe({ entryTypes: ['longtask'],})
       } catch (error) {
         // Long task API might not be available
       }
@@ -126,7 +126,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming,
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
-              // console.warn('Slow resource detected:', {
+              // console.warn('Slow resource detected: ', {
               //   name: resourceEntry.name,
               //   duration: resourceEntry.duration,
               //   type: resourceEntry.initiatorType
@@ -134,9 +134,9 @@ class MonitoringService {
             }
           });
         });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+        resourceObserver.observe({ entryTypes: ['resource'],});
       } catch (_error) {
-    // console.error('Error monitoring resources:', _error)
+    // console.error('Error monitoring resources: ', _error)
   }
     }
   }
@@ -148,17 +148,17 @@ class MonitoringService {
         stack: event.error?.stack,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       })
     })
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`,
+        message: `Unhandled Promise Rejection: ${event.reason,}`,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       })
     })
   }
@@ -175,7 +175,7 @@ class MonitoringService {
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
+        event_category: 'Web Vitals',
       })
     }
   }
@@ -201,12 +201,12 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number,} }).memory
       if (memory) {
         // console.log('[Memory]', {
-        //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
-        //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
-        //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
+        //   used: `${Math.round(memory.usedJSHeapSize / 1048576),}MB`,
+        //   total: `${Math.round(memory.totalJSHeapSize / 1048576),}MB`,
+        //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576),}MB`
         // })
       }
     }

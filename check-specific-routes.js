@@ -49,6 +49,6 @@ if (missingRoutes.length > 0) {
 fs.writeFileSync('/workspace/missing-routes.json', JSON.stringify({)
   missingRoutes: missingRoutes),
   importStatements: missingRoutes.map(generateImportStatement),
-  routeStatements: missingRoutes.map(generateRouteStatement)}, null, 2));
+  routeStatements: missingRoutes.map(generateRouteStatement),}, null, 2));
 
 console.log(`\n✅ Analysis complete. Results saved to missing-routes.json`);

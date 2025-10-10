@@ -3,7 +3,7 @@
 
           <reference types="vite/client" />
 interface ImportMetaEnv {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
 
@@ -13,7 +13,7 @@ interface ImportMetaEnv {
 }
 
 interface ImportMeta {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
 

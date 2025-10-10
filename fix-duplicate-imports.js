@@ -17,9 +17,9 @@ function fixDuplicateImports(filePath) {
         // Remove duplicates while preserving order;
         const uniqueImports = [...new Set(importList)];
         
-function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
+function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */,}
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
-      (match, imports) => {/* TODO: Fix JSX expression */}
+      (match, imports) => {/* TODO: Fix JSX expression */,}
         return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`;
       }
     );
@@ -27,10 +27,10 @@ function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
     // Fix any remaining syntax issues with extra commas;
     content = content.replace(/,\s*,/g, ',');
     content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/{/* TODO: Fix JSX expression */})`
-  in: ${filePath}`);
+    content = content.replace(/{/* TODO: Fix JSX expression */,})`
+  in: ${filePath,}`);
     return true;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -38,7 +38,7 @@ function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
 
 // Main function;
 function main() {
-function main() {/* TODO: Fix JSX expression */}
+function main() {/* TODO: Fix JSX expression */,}
 }
   const files = [
     'src/api/page.tsx',
@@ -65,7 +65,7 @@ function main() {/* TODO: Fix JSX expression */}
     if (fs.existsSync(file)) {
       if (fixDuplicateImports(file)) {
         fixedCount++;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file => {/* TODO: Fix JSX expression */,}
       }
     })
   });

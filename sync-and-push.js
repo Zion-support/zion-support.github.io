@@ -1,13 +1,13 @@
 import { execSync } from 'child_process';
 
-function runCommand(command) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.stderr }
+function runCommand(command) {/* TODO: Fix JSX expression */,}
+  o: 'pipe',});
+  } catch (error) {/* TODO: Fix JSX expression */,}
+  r: error.stderr,}
   }
 }
 
-function main() {/* TODO: Fix JSX expression */}
+function main() {/* TODO: Fix JSX expression */,}
 }
   console.log('🚀 Syncing with remote and pushing changes...');
   
@@ -17,9 +17,9 @@ function main() {/* TODO: Fix JSX expression */}
     const fetchResult = runCommand('git fetch origin');
     
     if (fetchResult.error) {
-      console.log('❌ Error fetching:', fetchResult.stderr);
+      console.log('❌ Error fetching: ', fetchResult.stderr);
       return false;
-  try {/* TODO: Fix JSX expression */}
+  try {/* TODO: Fix JSX expression */,}
     }
     
     console.log('✅ Fetched latest changes');
@@ -35,20 +35,20 @@ function main() {/* TODO: Fix JSX expression */}
       const mergeResult = runCommand('git pull origin main');
       
       if (mergeResult.error) {
-        console.log('❌ Merge also failed:', mergeResult.stderr);
+        console.log('❌ Merge also failed: ', mergeResult.stderr);
         return false;
-    if (pullResult.error) {/* TODO: Fix JSX expression */}
+    if (pullResult.error) {/* TODO: Fix JSX expression */,}
       }
       
       console.log('✅ Successfully merged with remote');
-    } else {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */,}
     }
     
     // Now push the changes;
     console.log('📤 Pushing changes...');
     const pushResult = runCommand('git push origin main');
     
-    if (pushResult.error) {/* TODO: Fix JSX expression */}
+    if (pushResult.error) {/* TODO: Fix JSX expression */,}
     }
     
     console.log('✅ Successfully pushed to main branch');
@@ -62,8 +62,8 @@ function main() {/* TODO: Fix JSX expression */}
     console.log('🎉 All changes successfully synced and pushed!')
     return true,
     } catch (error) {
-    console.log('❌ Error syncing and pushing:', error.message);
+    console.log('❌ Error syncing and pushing: ', error.message);
     return false
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }

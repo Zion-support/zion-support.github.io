@@ -14,7 +14,7 @@ class SEOOptimizer {
       twitterHandle: '@ZionTechGroup',
       structuredData: {,
         organization: {,
-          '@context': 'https://schema.org',
+          '@context': 'https: //schema.org',
           '@type': 'Organization',
           name: 'Zion Tech Group'
           url: 'https://ziontechgroup.com'
@@ -22,22 +22,22 @@ class SEOOptimizer {
           description: 'Advanced AI and IT Solutions',
           address: {,
             '@type': 'PostalAddress',
-            addressCountry: 'US'},
+            addressCountry: 'US',},
           sameAs: [,
-            'https://linkedin.com/company/ziontechgroup',
+            'https: //linkedin.com/company/ziontechgroup',
             'https: //twitter.com/ziontechgroup',
-class SEOOptimizer {/* TODO: Fix JSX expression */}
+class SEOOptimizer {/* TODO: Fix JSX expression */,}
           },
           sameA,
   s: [
             'http,
-  s://linkedin.com/company/ziontechgroup',
+  s: //linkedin.com/company/ziontechgroup',
             'http,
-  s://twitter.com/ziontechgroup']}}}
+  s: //twitter.com/ziontechgroup'],}}}
     this.init();
   }
 
-  init() {/* TODO: Fix JSX expression */}
+  init() {/* TODO: Fix JSX expression */,}
   }
 
   setupMetaTags() {
@@ -51,45 +51,45 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.addMetaTag('robots', 'index, follow');
     this.addMetaTag('language', 'en');
     this.addMetaTag('revisit-after', '7 days');
-  setupMetaTags() {/* TODO: Fix JSX expression */}
+  setupMetaTags() {/* TODO: Fix JSX expression */,}
   }
 
-  addMetaTag(name, content) {/* TODO: Fix JSX expression */}
-    if (!document.querySelector(`meta[name="${name}"]`)) {/* TODO: Fix JSX expression */}
+  addMetaTag(name, content) {/* TODO: Fix JSX expression */,}
+    if (!document.querySelector(`meta[name="${name}"]`)) {/* TODO: Fix JSX expression */,}
     }
   }
 
   setupStructuredData() {
     // Add organization structured data;
     this.addStructuredData(this.seoConfig.structuredData.organization);
-  setupStructuredData() {/* TODO: Fix JSX expression */}
+  setupStructuredData() {/* TODO: Fix JSX expression */,}
   }
 
-  addStructuredData(data) {/* TODO: Fix JSX expression */}
+  addStructuredData(data) {/* TODO: Fix JSX expression */,}
   }
 
   setupSitemap() {
     // Generate dynamic sitemap;
     this.generateSitemap();
-  setupSitemap() {/* TODO: Fix JSX expression */}
+  setupSitemap() {/* TODO: Fix JSX expression */,}
   }
 
-  generateSitemap() {/* TODO: Fix JSX expression */}
-  q: 'daily' },
-      {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-      {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-      {/* TODO: Fix JSX expression */}
-  q: 'daily' },
-      {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-      {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-      {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
-      {/* TODO: Fix JSX expression */}
-  q: 'yearly' }];
+  generateSitemap() {/* TODO: Fix JSX expression */,}
+  q: 'daily',},
+      {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+      {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+      {/* TODO: Fix JSX expression */,}
+  q: 'daily',},
+      {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+      {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+      {/* TODO: Fix JSX expression */,}
+  q: 'yearly',},
+      {/* TODO: Fix JSX expression */,}
+  q: 'yearly',}];
 
     const _sitemap = this.buildSitemapXML(pages);
     this.createSitemapFile(sitemap);
@@ -107,11 +107,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       xml += `    <loc>${baseUrl}${page.url}</loc>\n`;
       xml += `    <lastmod>${lastmod}</lastmod>\n`;
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
-  buildSitemapXML(pages) {/* TODO: Fix JSX expression */}`
+  buildSitemapXML(pages) {/* TODO: Fix JSX expression */,}`
       xml += `    <loc>${baseUrl}${page.url}</loc>\n`;`
       xml += `    <lastmod>${lastmod}</lastmod>\n`;`
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
-      xml += `    <priority>${page.priority}</priority>\n`;
+      xml += `    <priority></p>${page.priority}</priority>\n`;
       xml += '  </url>\n';
     });
 
@@ -129,7 +129,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     const robotsTxt = `User-agent: *,
 Allow: /,
 ,
-Sitemap: ${this.seoConfig.siteUrl}/sitemap.xml;
+Sitemap: ${this.seoConfig.siteUrl,}/sitemap.xml;
 # Disallow admin and private areas;
 Disallow: /admin/
 Disallow: /api/
@@ -183,18 +183,18 @@ Disallow: /middleware/`,
 
   setupOpenGraph() {
     // Open Graph meta tags;
-    this.addOGTag('og:type', 'website');
-    this.addOGTag('og:site_name', this.seoConfig.siteName);
-    this.addOGTag('og:title', this.getPageTitle());
-    this.addOGTag('og:description', this.getPageDescription());
-    this.addOGTag('og:url', this.seoConfig.siteUrl + window.location.pathname);
-    this.addOGTag('og:image', this.getPageImage());
-    this.addOGTag('og:locale', 'en_US');
-  createSitemapFile(sitemap) {/* TODO: Fix JSX expression */}
+    this.addOGTag('og: type', 'website');
+    this.addOGTag('og: site_name', this.seoConfig.siteName);
+    this.addOGTag('og: title', this.getPageTitle());
+    this.addOGTag('og: description', this.getPageDescription());
+    this.addOGTag('og: url', this.seoConfig.siteUrl + window.location.pathname);
+    this.addOGTag('og: image', this.getPageImage());
+    this.addOGTag('og: locale', 'en_US');
+  createSitemapFile(sitemap) {/* TODO: Fix JSX expression */,}
   }
 
-  setupRobotsTxt() {/* TODO: Fix JSX expression */}
-  p: ${this.seoConfig.siteUrl}/sitemap.xml;
+  setupRobotsTxt() {/* TODO: Fix JSX expression */,}
+  p: ${this.seoConfig.siteUrl,}/sitemap.xml;
 # Disallow admin and private areas,
   Disallow: /admin/
 Disallo,
@@ -275,43 +275,43 @@ Disallo,`
     document.documentElement.setAttribute('data-robots-txt', robotsTxt);
   }
 
-  setupCanonicalUrls() {/* TODO: Fix JSX expression */}
+  setupCanonicalUrls() {/* TODO: Fix JSX expression */,}
   }
 
-  setupOpenGraph() {/* TODO: Fix JSX expression */}
+  setupOpenGraph() {/* TODO: Fix JSX expression */,}
   }
 
-  addOGTag(property, content) {/* TODO: Fix JSX expression */}"`
-    if (!document.querySelector(`meta[property="${property}"]`)) {/* TODO: Fix JSX expression */}
+  addOGTag(property, content) {/* TODO: Fix JSX expression */,}"`
+    if (!document.querySelector(`meta[property="${property}"]`)) {/* TODO: Fix JSX expression */,}
     }
   }
 
   setupTwitterCards() {
     // Twitter Card meta tags;
-    this.addTwitterTag('twitter:card', 'summary_large_image');
-    this.addTwitterTag('twitter:site', this.seoConfig.twitterHandle);
-    this.addTwitterTag('twitter:creator', this.seoConfig.twitterHandle);
-    this.addTwitterTag('twitter:title', this.getPageTitle());
-    this.addTwitterTag('twitter:description', this.getPageDescription());
-    this.addTwitterTag('twitter:image', this.getPageImage());
-  setupTwitterCards() {/* TODO: Fix JSX expression */}
+    this.addTwitterTag('twitter: card', 'summary_large_image');
+    this.addTwitterTag('twitter: site', this.seoConfig.twitterHandle);
+    this.addTwitterTag('twitter: creator', this.seoConfig.twitterHandle);
+    this.addTwitterTag('twitter: title', this.getPageTitle());
+    this.addTwitterTag('twitter: description', this.getPageDescription());
+    this.addTwitterTag('twitter: image', this.getPageImage());
+  setupTwitterCards() {/* TODO: Fix JSX expression */,}
   }
 
-  addTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`
-    if (!document.querySelector(`meta[name="${name}"]`)) {/* TODO: Fix JSX expression */}
+  addTwitterTag(name, content) {/* TODO: Fix JSX expression */,}"`
+    if (!document.querySelector(`meta[name="${name}"]`)) {/* TODO: Fix JSX expression */,}
     }
   }
 
   setupSchemaMarkup() {
     // Add page-specific schema markup;
     this.addPageSchema();
-  setupSchemaMarkup() {/* TODO: Fix JSX expression */}
+  setupSchemaMarkup() {/* TODO: Fix JSX expression */,}
   }
 
-  addPageSchema() {/* TODO: Fix JSX expression */}
+  addPageSchema() {/* TODO: Fix JSX expression */,}
     }
 
-    if (schema) {/* TODO: Fix JSX expression */}
+    if (schema) {/* TODO: Fix JSX expression */,}
     }
   }
 
@@ -324,9 +324,9 @@ Disallo,`
       description: this.seoConfig.siteDescription,
       potentialAction: {,
         '@type': 'SearchAction',
-        target: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
-  getHomePageSchema() {/* TODO: Fix JSX expression */}`
-  t: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
+        target: `${this.seoConfig.siteUrl,}/search?q={search_term_string}`,
+  getHomePageSchema() {/* TODO: Fix JSX expression */,}`
+  t: `${this.seoConfig.siteUrl,}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string'}}
   }
 
@@ -336,7 +336,7 @@ Disallo,`
       '@type': 'AboutPage',
       name: 'About Zion Tech Group',
       description: 'Learn about Zion Tech Group, a leading AI and IT solutions company.',
-      url: `${this.seoConfig.siteUrl}/about`,
+      url: `${this.seoConfig.siteUrl,}/about`,
       mainEntity: this.seoConfig.structuredData.organization,
     }
   }
@@ -349,7 +349,7 @@ Disallo,`
       description: 'Comprehensive AI and IT consulting services'
       provider: this.seoConfig.structuredData.organization,
       serviceType: 'Technology Consulting',
-      areaServed: 'Worldwide'}
+      areaServed: 'Worldwide',}
   }
 
   getContactPageSchema() {
@@ -358,7 +358,7 @@ Disallo,`
       '@type': 'ContactPage',
       name: 'Contact Zion Tech Group',
       description: 'Get in touch with our team for AI and IT solutions',
-      url: `${this.seoConfig.siteUrl}/contact`,
+      url: `${this.seoConfig.siteUrl,}/contact`,
       mainEntity: this.seoConfig.structuredData.organization,
     }
   }
@@ -369,7 +369,7 @@ Disallo,`
       '@type': 'Blog',
       name: 'Zion Tech Group Blog',
       description: 'Latest insights on AI, technology, and IT solutions',
-      url: `${this.seoConfig.siteUrl}/blog`,
+      url: `${this.seoConfig.siteUrl,}/blog`,
       publisher: this.seoConfig.structuredData.organization,
     }
   }
@@ -399,46 +399,46 @@ Disallo,`
         img.addEventListener('load', () => {
           img.width = img.naturalWidth;
           img.height = img.naturalHeight;
-  getAboutPageSchema() {/* TODO: Fix JSX expression */}`
-  l: `${this.seoConfig.siteUrl}/about`,
+  getAboutPageSchema() {/* TODO: Fix JSX expression */,}`
+  l: `${this.seoConfig.siteUrl,}/about`,
       mainEntit,
-  y: this.seoConfig.structuredData.organization}
+  y: this.seoConfig.structuredData.organization,}
   }
 
-  getServicesPageSchema() {/* TODO: Fix JSX expression */}
+  getServicesPageSchema() {/* TODO: Fix JSX expression */,}
     }
   }
 
-  getContactPageSchema() {/* TODO: Fix JSX expression */}`
-  l: `${this.seoConfig.siteUrl}/contact`,
+  getContactPageSchema() {/* TODO: Fix JSX expression */,}`
+  l: `${this.seoConfig.siteUrl,}/contact`,
       mainEntit,
-  y: this.seoConfig.structuredData.organization}
+  y: this.seoConfig.structuredData.organization,}
   }
 
-  getBlogPageSchema() {/* TODO: Fix JSX expression */}`
-  l: `${this.seoConfig.siteUrl}/blog`,
+  getBlogPageSchema() {/* TODO: Fix JSX expression */,}`
+  l: `${this.seoConfig.siteUrl,}/blog`,
       publishe,
-  r: this.seoConfig.structuredData.organization}
+  r: this.seoConfig.structuredData.organization,}
   }
 
-  setupPerformanceSEO() {/* TODO: Fix JSX expression */}
+  setupPerformanceSEO() {/* TODO: Fix JSX expression */,}
   }
 
-  optimizeImages() {/* TODO: Fix JSX expression */}
+  optimizeImages() {/* TODO: Fix JSX expression */,}
       }
 
       // Add alt text if missing;
-      if (!img.alt) {/* TODO: Fix JSX expression */}
+      if (!img.alt) {/* TODO: Fix JSX expression */,}
       }
 
       // Add width and height attributes;
-      if (!img.width && !img.height) {/* TODO: Fix JSX expression */}
+      if (!img.width && !img.height) {/* TODO: Fix JSX expression */,}
         });
       }
     });
   }
 
-  generateAltText(src) {/* TODO: Fix JSX expression */}
+  generateAltText(src) {/* TODO: Fix JSX expression */,}
   }
 
   optimizeFonts() {
@@ -454,7 +454,7 @@ Disallo,`
       link.as = 'style',
       link.onload = () => {,
         link.rel = 'stylesheet';
-  optimizeFonts() {/* TODO: Fix JSX expression */}
+  optimizeFonts() {/* TODO: Fix JSX expression */,}
       }
       document.head.appendChild(link);
     });
@@ -463,29 +463,29 @@ Disallo,`
   optimizeCriticalCSS() {
     // Inline critical CSS for above-the-fold content;
     const criticalCSS = `
-      body { font-family: Inter, sans-serif; margin: 0, padding: 0
+      body { font-family: Inter, sans-serif; margin: 0, padding: 0,
   }
       .container {
-    max-width: 1200px; margin: 0 auto, padding: 0 20px
+    max-width: 1200px; margin: 0 auto, padding: 0 20px,
   }
       .header {
-    background: #fff, box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0, z-index: 100
+    background: #fff, box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0, z-index: 100,
   }
       .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0, text-align: center
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0, text-align: center,
   }
       .btn {
-    background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none, display: inline-block
+    background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none, display: inline-block,
   }
-  optimizeCriticalCSS() {/* TODO: Fix JSX expression */}
+  optimizeCriticalCSS() {/* TODO: Fix JSX expression */,}
   g: 0, }
-      .container {/* TODO: Fix JSX expression */}
+      .container {/* TODO: Fix JSX expression */,}
   g: 0 20px, }
-      .header {/* TODO: Fix JSX expression */}
+      .header {/* TODO: Fix JSX expression */,}
   x: 100, }
-      .hero {/* TODO: Fix JSX expression */}
+      .hero {/* TODO: Fix JSX expression */,}
   n: center, }
-      .btn {/* TODO: Fix JSX expression */}
+      .btn {/* TODO: Fix JSX expression */,}
   y: inline-block, }`
     `;
 
@@ -494,17 +494,17 @@ Disallo,`
     document.head.appendChild(style);
   }
 
-  getPageTitle() {/* TODO: Fix JSX expression */}
+  getPageTitle() {/* TODO: Fix JSX expression */,}
     }
     return titles[currentPath] || this.seoConfig.siteName;
   }
 
-  getPageDescription() {/* TODO: Fix JSX expression */}
+  getPageDescription() {/* TODO: Fix JSX expression */,}
     }
     return descriptions[currentPath] || this.seoConfig.siteDescription;
   }
 
-  getPageImage() {/* TODO: Fix JSX expression */}
+  getPageImage() {/* TODO: Fix JSX expression */,}
     }
     return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage);
   }
@@ -518,47 +518,47 @@ Disallo,`
     this.updateMetaTag('description', description);
 
     // Update Open Graph tags;
-    this.updateOGTag('og:title', title);
-    this.updateOGTag('og:description', description);
+    this.updateOGTag('og: title', title);
+    this.updateOGTag('og: description', description);
     if (image) {
-      this.updateOGTag('og:image', image)
+      this.updateOGTag('og: image', image)
   }
 
     // Update Twitter Card tags;
-    this.updateTwitterTag('twitter:title', title);
-    this.updateTwitterTag('twitter:description', description);
+    this.updateTwitterTag('twitter: title', title);
+    this.updateTwitterTag('twitter: description', description);
     if (image) {
-      this.updateTwitterTag('twitter:image', image);
-  updatePageSEO(title, description, image) {/* TODO: Fix JSX expression */}
+      this.updateTwitterTag('twitter: image', image);
+  updatePageSEO(title, description, image) {/* TODO: Fix JSX expression */,}
     }
 
     // Update Twitter Card tags;
     this.updateTwitterTag('twitte)
-  r:title', title);
+  r: title', title);
     this.updateTwitterTag('twitte)
-  r:description', description);
-    if (image) {/* TODO: Fix JSX expression */}
+  r: description', description);
+    if (image) {/* TODO: Fix JSX expression */,}
     }
   }
 
-  updateMetaTag(name, content) {/* TODO: Fix JSX expression */}"`
+  updateMetaTag(name, content) {/* TODO: Fix JSX expression */,}"`
     const _meta = document.querySelector(`meta[name="${name}"]`);
-    if (meta) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+    if (meta) {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
     }
   }
 
-  updateOGTag(property, content) {/* TODO: Fix JSX expression */}"`
+  updateOGTag(property, content) {/* TODO: Fix JSX expression */,}"`
     const _meta = document.querySelector(`meta[property="${property}"]`);
-    if (meta) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+    if (meta) {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
     }
   }
 
-  updateTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`
+  updateTwitterTag(name, content) {/* TODO: Fix JSX expression */,}"`
     const _meta = document.querySelector(`meta[name="${name}"]`);
-    if (meta) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+    if (meta) {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
     }
   }
 
@@ -571,7 +571,7 @@ Disallo,`
         position: index + 1
         name: item.name
         item: item.url,
-  generateBreadcrumbs(items) {/* TODO: Fix JSX expression */}
+  generateBreadcrumbs(items) {/* TODO: Fix JSX expression */,}
       }))}
 
     this.addStructuredData(breadcrumbSchema);
@@ -583,7 +583,7 @@ Disallo,`
       window.gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: this.getPageTitle(),
         page_location: window.location.href,
-  trackPageView() {/* TODO: Fix JSX expression */}
+  trackPageView() {/* TODO: Fix JSX expression */,}
       });
     }
   }

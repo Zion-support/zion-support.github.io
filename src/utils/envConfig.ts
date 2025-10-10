@@ -6,13 +6,13 @@
  */
 
 export interface EnvConfig {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   nodeEnv: 'development' | 'production' | 'test',,
     apiUrl: string
 
-  apiKey?: string,,
+  apiKey?: string,
     enableAnalytic,
   s: boolean,,
     enableLoggin,
@@ -24,14 +24,14 @@ export interface EnvConfig {
 }
 
 class EnvironmentConfig {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
   private,
   config: EnvConfig
   private isInitialized = false,
-  constructor() {/* TODO: Fix JSX expression */}
+  constructor() {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     this.config = this.loadConfig();
@@ -40,20 +40,18 @@ class EnvironmentConfig {
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults
   }
-    return {/* TODO: Fix JSX expression */}
+    return {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //       nodeEnv,
       apiUr,
-  l:
-        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'htt,
-  p://localhos,
-  t:3000/api',
+  l: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'htt,
+  p: //localhos,
+  t: 3000/api',
       apiKe,
   y: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
       enableAnalytic,
-  s:
-        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+  s: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
       enableLoggin,
   g: nodeEnv !== 'test',
       logLeve,
@@ -69,7 +67,7 @@ class EnvironmentConfig {
    * Get the entire configuration object;
    */
   public getConfig(): Readonly;
-          <EnvConfig> {/* TODO: Fix JSX expression */}
+          <EnvConfig> {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     return Object.freeze({ ...this.config });
@@ -79,7 +77,7 @@ class EnvironmentConfig {
    */
   public get;
           <K extends keyof EnvConfig>(ke)
-  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
+  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     return this.config[key];
@@ -89,7 +87,7 @@ class EnvironmentConfig {
    */
 
   public isProduction(): boolean {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -100,7 +98,7 @@ class EnvironmentConfig {
    */
 
   public isDevelopment(): boolean {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -111,7 +109,7 @@ class EnvironmentConfig {
    */
 
   public isTest(): boolean {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -122,7 +120,7 @@ class EnvironmentConfig {
    */
 
   public validate(requiredVars: (keyof EnvConfig)[]): {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -130,21 +128,21 @@ class EnvironmentConfig {
   d: boolean,,
     missin,
   g: string[],
-  } {/* TODO: Fix JSX expression */}
+  } {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     const,
   missing: string[] = [],
-    for (const varName of requiredVars) {/* TODO: Fix JSX expression */}
+    for (const varName of requiredVars) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-      if (!this.config[varName]) {/* TODO: Fix JSX expression */}
+      if (!this.config[varName]) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
         missing.push(varName);
       }
     }
-    return {/* TODO: Fix JSX expression */}
+    return {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   vali,
@@ -156,22 +154,22 @@ class EnvironmentConfig {
    * Get API headers with authentication;
    */
   public getApiHeaders(): Record;
-          <string, string> {/* TODO: Fix JSX expression */}
+          <string, string> {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     const,
   headers: Record,
-          <string, string> = {/* TODO: Fix JSX expression */}
+          <string, string> = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       'Content-Type': 'application/json'
     }
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
+    if (this.config.apiKey) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
     }
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
+    if (this.config.apiKey) {/* TODO: Fix JSX expression */,}
   }`
       headers['Authorization'] = `Bearer ${this.config.apiKey}`
     }
@@ -182,15 +180,15 @@ class EnvironmentConfig {
    */
 
   public logConfig(): void {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
-    if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
+    if (this.isDevelopment()) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       console.group(' Environment Configuration');
-      console.table({/* TODO: Fix JSX expression */}
+      console.table({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 

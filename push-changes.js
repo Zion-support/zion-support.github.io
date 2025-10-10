@@ -1,13 +1,13 @@
 import { execSync } from 'child_process';
 
-function runCommand(command) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.stderr }
+function runCommand(command) {/* TODO: Fix JSX expression */,}
+  o: 'pipe',});
+  } catch (error) {/* TODO: Fix JSX expression */,}
+  r: error.stderr,}
   }
 }
 
-function main() {/* TODO: Fix JSX expression */}
+function main() {/* TODO: Fix JSX expression */,}
 }
   console.log('🚀 Pushing changes to main branch...');
   
@@ -17,16 +17,16 @@ function main() {/* TODO: Fix JSX expression */}
     const pushResult = runCommand('git push --force-with-lease origin main');
     
     if (pushResult.error) {
-      console.log('❌ Error pushing:', pushResult.stderr);
+      console.log('❌ Error pushing: ', pushResult.stderr);
       
       // Try regular push as fallback;
       console.log('🔄 Trying regular push...');
       const fallbackResult = runCommand('git push origin main');
       
       if (fallbackResult.error) {
-        console.log('❌ Fallback push also failed:', fallbackResult.stderr);
+        console.log('❌ Fallback push also failed: ', fallbackResult.stderr);
         return false;
-  try {/* TODO: Fix JSX expression */}
+  try {/* TODO: Fix JSX expression */,}
       }
     }
     
@@ -41,8 +41,8 @@ function main() {/* TODO: Fix JSX expression */}
     console.log('🎉 All changes successfully pushed to main!')
     return true,
     } catch (error) {
-    console.log('❌ Error pushing changes:', error.message);
+    console.log('❌ Error pushing changes: ', error.message);
     return false
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }

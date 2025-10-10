@@ -177,10 +177,10 @@ const nextConfig = {
   // Performance optimizations
   modularizeImports: {
     'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member,}}',
     },
     '@heroicons/react': {
-      transform: '@heroicons/react/{{member}}',
+      transform: '@heroicons/react/{{member,}}',
     },
   },
 

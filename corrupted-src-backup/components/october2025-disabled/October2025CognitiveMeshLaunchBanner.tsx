@@ -11,48 +11,48 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
   return(<section,
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
       aria-label="Cognitive Mesh Platform Launch Announcement",
-     > {/* Animated background elements - purely decorative */}
-      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></section>
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
+     ></section> {/* Animated background elements - purely decorative */}
+      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div></section>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div></div>
         <div;
 const,
-  October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {/* TODO: Fix JSX expression */}
+  October2025CognitiveMeshLaunchBanner: React.FC = memo(() =></div> {/* TODO: Fix JSX expression */,}
      > {/* Animated background elements - purely decorative */}
-      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
-        <div></div>"
+      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div></div>"
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div></div>
+        <div></div></div>"
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
-          style={/* TODO: Fix JSX expression */}
-  y: '2s' }}
+          style={/* TODO: Fix JSX expression */,}
+  y: '2s',}}
         ></div>
         <div;
-        <div></div>"
+        <div></div></div>"
           className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
-          style={/* TODO: Fix JSX expression */}
-  y: '4s' }}
+          style={/* TODO: Fix JSX expression */,}
+  y: '4s',}}
         ></div>
       </div>
-      <div className="container mx-auto px-6 py-12 relative z-10">
+      <div className="container mx-auto px-6 py-12 relative z-10"></div>
         {/* Header Section */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8"></div>
           <div;
         {/* Header Section */}</div>
-        <div className="text-center mb-8"></div>
+</div>        <div className="text-center mb-8"></div></div>
           <div 
             className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in"
             role="status"
             aria-label="New product launch announcement"
-          >
+          ></div>
              aria-hidden="true" <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025;
              aria-hidden="true"</div> <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025;
   </
              aria-hidden="true"</div>
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-4 animate-slide-up">
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-4 animate-slide-up"></h1>
             Cognitive Mesh Orchestration Platform
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in">
+          <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in"></p>
             The Revolutionary Distributed AI Platform Transforming Enterprise Operations,
           </p>
 )
@@ -60,10 +60,10 @@ const,
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">)
               <Network className="w-5 h-5 text-green-300" aria-hidden="true" />),
 "
-      <div className="container mx-auto px-6 py-12 relative z-10"></div>
+      <div className="container mx-auto px-6 py-12 relative z-10"></div></div>
         {/* Header Section */}"
-        <div className="text-center mb-8"></div>
-          <div></div>"
+        <div className="text-center mb-8"></div></div>
+          <div></div></div>"
             className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in""
             role="status""
             aria-label="New product launch announcement"
@@ -74,12 +74,12 @@ const,
              aria-hidden="true"</div>
 "
           <h1 className="text-4xl,"
-  md: text-5xl font-bold text-white mb-4 animate-slide-up"></h1>
+  md: text-5xl font-bold text-white mb-4 animate-slide-up"></h1></h1>
             Cognitive Mesh Orchestration Platform,
           </h1>
           "
           <p className="text-xl,"
-  md: text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in"></p>
+  md: text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in"></p></p>
             The Revolutionary Distributed AI Platform Transforming Enterprise Operations,
           </p>
 "
@@ -103,11 +103,11 @@ const,
           </ul>
         </section>
         {/* Call to Action */}
-        <div  className="text-center" role="region" aria-label="Call to action">
-          <div  className="inline-flex flex-col sm: flex-row gap-4">
-            <Link;
         <div  className="text-center" role="region" aria-label="Call to action"></div>
-          <div  className="inline-flex flex-col sm:flex-row gap-4"></div>
+          <div  className="inline-flex flex-col sm: flex-row gap-4"></div>
+            <Link;
+        <div  className="text-center" role="region" aria-label="Call to action"></div></div>
+          <div  className="inline-flex flex-col sm:flex-row gap-4"></div></div>
             <Link
               to="/contact"
                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2 xl transform hover:scale-105"
@@ -124,17 +124,17 @@ const,
               Learn More,
             </Link>
           </div>
-          <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
+          <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto"></p>
             ✨</p> <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
         {/* Call to Action */}"
-        <div  className="text-center" role="region" aria-label="Call to action"></div>"
+        <div  className="text-center" role="region" aria-label="Call to action"></div></div>"
           <div  className="inline-flex flex-col,"
-  sm:flex-row gap-4"></div>
+  sm:flex-row gap-4"></div></div>
             <Link></Link>"
               to="/contact""
                className="inline-flex items-center justify-center gap-2 bg-white,
-  hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg,
-  hover:shadow-2xl transform,"
+  hover: bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg,
+  hover: shadow-2xl transform,"
   hover: scale-105""
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
@@ -150,7 +150,7 @@ const,
               Learn More,
             </Link>
           </div>"
-          <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto"></p>
+          <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto"></p></p>
             ✨ <strong>Limited Time,
   Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
             Free 2-week assessment included. No commitment required.

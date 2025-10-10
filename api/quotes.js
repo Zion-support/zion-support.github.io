@@ -25,12 +25,12 @@ export default async function handler(req, res) {
       country: country || 'Not specified',
       service: service || 'General inquiry',
       timestamp: new Date().toISOString(),
-      status: 'pending'
+      status: 'pending',
     };
 
     // Log quote request for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Quote request received:', quoteData);
+      console.log('Quote request received: ', quoteData);
     }
 
     res.statusCode = 200;
@@ -38,17 +38,17 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Quote request submitted successfully',
-      quoteId: `quote_${Date.now()}`,
-      data: quoteData
+      quoteId: `quote_${Date.now(),}`,
+      data: quoteData,
     }));
 
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Quote submission error:', error);
+      console.error('Quote submission error: ', error);
     }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    res.end(JSON.stringify({ error: 'Internal server error',}));
   }
 }

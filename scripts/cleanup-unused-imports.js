@@ -55,7 +55,7 @@ function cleanupFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Cleaned: ${filePath}`);
+      console.log(`✅ Cleaned: ${filePath,}`);
       return true;
     }
     return false;
@@ -110,7 +110,7 @@ console.log(`\n🎉 Cleanup complete! Modified ${cleanedCount} files.`);
 // Run ESLint fix to clean up remaining issues;
 console.log('\n🔧 Running ESLint fix...');
 try {
-  execSync('npm run lint:fix', { stdio: 'inherit' });
+  execSync('npm run lint: fix', { stdio: 'inherit',});
   console.log('✅ ESLint fix completed');
 } catch (error) {
     console.log('⚠️ ESLint fix had some issues, but continuing...')

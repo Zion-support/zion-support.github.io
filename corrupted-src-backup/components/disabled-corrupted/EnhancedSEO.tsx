@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOProps {/* TODO: Fix JSX expression */}
+interface SEOProps {/* TODO: Fix JSX expression */,}
 }
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -19,8 +19,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   canonical}) => {
   const _location = useLocation();
 const,
-  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */,})
+}) => {/* TODO: Fix JSX expression */,}
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
@@ -31,23 +31,23 @@ const,
     name: 'Zion Tech Group',
     description: description
     url: window.location.origin,
-    logo: `${window.location.origin}/images/logo.png`,
+    logo: `${window.location.origin,}/images/logo.png`,
     sameAs: [,
-      'https://linkedin.com/company/zion-tech-group',
+      'https: //linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup',
       'https: //github.com/zion-tech-group',
-  const structuredData = {/* TODO: Fix JSX expression */}`
-  o: `${window.location.origin}/images/logo.png`,
+  const structuredData = {/* TODO: Fix JSX expression */,}`
+  o: `${window.location.origin,}/images/logo.png`,
     sameA,
   s: [
       'http,
-  s://linkedin.com/company/zion-tech-group',
+  s: //linkedin.com/company/zion-tech-group',
       'http,
-  s://twitter.com/ziontechgroup',
+  s: //twitter.com/ziontechgroup',
       'http,
-  s://github.com/zion-tech-group'],
+  s: //github.com/zion-tech-group'],
     contactPoin,
-  t: {/* TODO: Fix JSX expression */}
+  t: {/* TODO: Fix JSX expression */,}
     },
     address: {
       '@type': 'PostalAddress'
@@ -57,7 +57,7 @@ const,
       postalCode: '94105',
       addressCountry: 'US',
     addres,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
     }}
   // Add article structured data if type is article;
   if (type === 'article') {
@@ -69,34 +69,34 @@ const,
       image: image,
       author: {,
         '@type': 'Organization',
-        name: author
+        name: author,
   },
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
         logo: {,
           '@type': 'ImageObject',
-          url: `${window.location.origin}/images/logo.png`}},
+          url: `${window.location.origin,}/images/logo.png`}},
       datePublished: publishedTime || currentTime
       dateModified: modifiedTime || currentTime,
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
-  if (type === 'article') {/* TODO: Fix JSX expression */}
+  if (type === 'article') {/* TODO: Fix JSX expression */,}
       },
       publishe,
-  r: {/* TODO: Fix JSX expression */}`
-  l: `${window.location.origin}/images/logo.png`}},
+  r: {/* TODO: Fix JSX expression */,}`
+  l: `${window.location.origin,}/images/logo.png`}},
       datePublishe,
   d: publishedTime || currentTime,
       dateModifie,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
-  e: {/* TODO: Fix JSX expression */}
+  e: {/* TODO: Fix JSX expression */,}
       }}
-    if (section) {/* TODO: Fix JSX expression */}
+    if (section) {/* TODO: Fix JSX expression */,}
     }
-    if (tags.length > 0) {/* TODO: Fix JSX expression */}
+    if (tags.length > 0) {/* TODO: Fix JSX expression */,}
     }
     (structuredData as any)['@graph'] = [structuredData, articleData];
   }
@@ -107,7 +107,7 @@ const,
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
       });
     }
     // Custom analytics tracking;
@@ -116,7 +116,7 @@ const,
         title)
         url: currentUrl),
         type),
-    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */,}
       });
     }
   }, [title, currentUrl, type]);
@@ -134,27 +134,27 @@ const,
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />)
-      <meta property="og:description" content={description} />)
+      <meta property="og: type" content={type,} />
+      <meta property="og: title" content={title,} />)
+      <meta property="og: description" content={description,} />)
       <meta;)
         property="og: image"),
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
-      <meta property="og:url" content={currentUrl} />
+      <meta property="og: url" content={currentUrl,} />
       <meta property="og: site_name" content="Zion Tech Group" />,
-      <meta property="og:locale" content="en_US" />,
+      <meta property="og: locale" content="en_US" />,
 ,
       {/* Twitter */}
       <meta name="twitter: card" content="summary_large_image" />,
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter: title" content={title,} />
+      <meta name="twitter: description" content={description,} />
       <meta;
         name="twitter: image",
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
       <meta name="twitter: site" content="@ziontechgroup" />,
-      <meta name="twitter:creator" content="@ziontechgroup" />,
+      <meta name="twitter: creator" content="@ziontechgroup" />,
 ,
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -174,8 +174,8 @@ const,
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
-      <link rel="preconnect" href="https://www.google-analytics.com" />,
+      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />,
+      <link rel="preconnect" href="https: //www.google-analytics.com" />,
 ,
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -194,7 +194,7 @@ const,
                 '@type': 'ListItem'
                 position: 1,
                 name: 'Home',
-                item: window.location.origin
+                item: window.location.origin,
   },
               {
                 '@type': 'ListItem')
@@ -209,7 +209,7 @@ const,
       <meta name="keywords" content={keywords} /></meta>"
       <meta name="author" content={author} /></meta>
       {/* Robots */}
-      <meta></meta>"
+      <meta /></meta>"
         name="robots"`
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
@@ -217,18 +217,18 @@ const,
       <link rel="canonical" href={canonicalUrl} /></link>
       {/* Open Graph / Facebook */}"
       <meta property="o,"
-  g:type" content={type} /></meta>"
+  g: type" content={type,} /></meta>"
       <meta property="o,"
-  g:title" content={title} /></meta>"
+  g: title" content={title,} /></meta>"
       <meta property="o,"
-  g:description" content={description} /></meta>
-      <meta></meta>"
+  g: description" content={description,} /></meta>
+      <meta /></meta>"
         property="o,"
   g:image")`
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />"
       <meta property="o,"
-  g:url" content={currentUrl} /></meta>"
+  g: url" content={currentUrl,} /></meta>"
       <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>"
       <meta property="o,"
@@ -237,10 +237,10 @@ const,
       <meta name="twitte,"
   r:card" content="summary_large_image" /></meta>"
       <meta name="twitte,"
-  r:title" content={title} /></meta>"
+  r: title" content={title,} /></meta>"
       <meta name="twitte,"
-  r:description" content={description} /></meta>
-      <meta></meta>"
+  r: description" content={description,} /></meta>
+      <meta /></meta>"
         name="twitte,"
   r:image"`
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
@@ -278,9 +278,9 @@ const,
       {/* Structured Data */}"
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       {/* Additional structured data for breadcrumbs */}
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
               },
-              {/* TODO: Fix JSX expression */}
+              {/* TODO: Fix JSX expression */,}
               }]})}
         </script>
       )}

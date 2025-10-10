@@ -1,5 +1,5 @@
 // Accessibility utilities for improving user experience and compliance;
-export const generateId = (prefix: string = 'id'): string => {}
+export const generateId = (prefix: string = 'id'): string => {,}
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
 export const createAriaLabel = (text: string, context?: string): string => {}

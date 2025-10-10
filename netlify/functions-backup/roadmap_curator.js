@@ -6,31 +6,31 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({),
         message: 'roadmap_curator function executed successfully'),
         timestamp: timestamp),
-        function: 'roadmap_curator'}
+        function: 'roadmap_curator',}
       });
     }
 //   } catch (error) {
-    // console.error('❌ roadmap_curator function failed: ') error
+    // console.error('❌ roadmap_curator function failed: ') error,
   }
     return {
       statusCode: 500,
       body: JSON.stringify({),
         error: 'roadmap_curator function failed'),
         message: error.message),
-        timestamp: new Date().toISOString()}
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+        timestamp: new Date().toISOString(),}
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */,}
     const timestamp = new Date().toISOString()}
-    return {/* TODO: Fix JSX expression */}
-  n: 'roadmap_curator'}
+    return {/* TODO: Fix JSX expression */,}
+  n: 'roadmap_curator',}
       });
     }
-//   } catch (error) {/* TODO: Fix JSX expression */}
+//   } catch (error) {/* TODO: Fix JSX expression */,}
       }
-    return {/* TODO: Fix JSX expression */}
-  p: new Date().toISOString()}
+    return {/* TODO: Fix JSX expression */,}
+  p: new Date().toISOString(),}
       });
     }
   }
 }
         timestam,
-  p: new Date().toISOString() }) } } }'
+  p: new Date().toISOString(),}) } } }'

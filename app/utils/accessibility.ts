@@ -4,7 +4,7 @@ export interface AccessibilityConfig {
   enableScreenReader: boolean
   enableKeyboardNavigation: boolean
   fontSize: 'small' | 'medium' | 'large',
-  colorScheme: 'light' | 'dark' | 'auto'
+  colorScheme: 'light' | 'dark' | 'auto',
   }
 }
 export const defaultAccessibilityConfig: AccessibilityConfig = {
@@ -21,7 +21,7 @@ constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {
     this.config = config
   }
   }
-public updateConfig(newConfig: Partial<AccessibilityConfig>): void {}
+public updateConfig(newConfig: Partial<AccessibilityConfig>): void {,}
     this.config = { ...this.config, ...newConfig }
     this.applyConfig();
   }

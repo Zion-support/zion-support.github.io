@@ -196,10 +196,10 @@ const ServicesPage: React.FC = () => {
     },
   ];
   const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
-    { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
-    { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
+    { id: 'all', name: 'All Services', count: services.length,},
+    { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length,},
+    { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length,},
+    { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length,}
   ]
 
   const filteredServices = services.filter(service => {
@@ -218,23 +218,23 @@ const ServicesPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-6xl mx-auto"></div>
             {/* Header */}
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <div className="text-center mb-12"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
                 Our Services
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Comprehensive solutions to transform your business with cutting-edge technology
               </p>
             </div>
 
             {/* Search and Filter */}
-            <div className="mb-12">
-              <div className="flex flex-col md:flex-row gap-4 mb-8">
-                <div className="flex-1 relative">
+            <div className="mb-12"></div>
+              <div className="flex flex-col md:flex-row gap-4 mb-8"></div>
+                <div className="flex-1 relative"></div>
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
@@ -244,7 +244,7 @@ const ServicesPage: React.FC = () => {
                     className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2"></div>
                   <Filter className="text-gray-400 w-5 h-5" />
                   <select
                     value={selectedCategory}
@@ -262,16 +262,16 @@ const ServicesPage: React.FC = () => {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {filteredServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group"></div>
+                  <div className="flex items-center mb-4"></div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"></div>
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                      <div className="flex items-center space-x-2 mt-1">
+                    <div className="flex-1"></div>
+                      <h3 className="text-xl font-bold text-white"></h3>{service.title}</h3>
+                      <div className="flex items-center space-x-2 mt-1"></div>
                         <span className="text-cyan-400 font-semibold">{service.price}</span>
                         {service.marketPrice && (
                           <span className="text-gray-400 text-sm line-through">{service.marketPrice}</span>
@@ -280,12 +280,12 @@ const ServicesPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-gray-300 mb-4 leading-relaxed"></p>
                     {service.description}
                   </p>
                   
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                  <div className="mb-4"></div>
+                    <h4 className="text-sm font-semibold text-white mb-2"></h4>Key Features:</h4>
                     <ul className="space-y-1">
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -297,8 +297,8 @@ const ServicesPage: React.FC = () => {
                   </div>
 
                   {service.benefits && (
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                    <div className="mb-6"></div>
+                      <h4 className="text-sm font-semibold text-white mb-2"></h4>Benefits:</h4>
                       <ul className="space-y-1">
                         {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
                           <li key={benefitIndex} className="flex items-center text-sm text-green-300">
@@ -310,7 +310,7 @@ const ServicesPage: React.FC = () => {
                     </div>
                   )}
                   
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between"></div>
                     <a
                       href="/contact"
                       className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -330,15 +330,15 @@ const ServicesPage: React.FC = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="mt-16 text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="mt-16 text-center"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8"></div>
+                <h2 className="text-2xl font-bold text-white mb-4"></h2>
                   Ready to Get Started?
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
                   Contact our experts for a free consultation and discover how our services can transform your business.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"

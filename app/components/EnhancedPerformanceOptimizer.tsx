@@ -49,7 +49,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           }
         })
       },
-      { threshold: 0.1 } )
+      { threshold: 0.1,} )
 
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach((el) => observer.observe(el));
@@ -115,7 +115,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
+          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0,
         }
 
         // Send metrics to analytics
@@ -124,7 +124,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           gtag('event', 'performance_metrics', {
             event_category: 'performance',
             event_label: 'page_load',
-            value: Math.round(metrics.domContentLoaded)
+            value: Math.round(metrics.domContentLoaded),
           })
         }
       }

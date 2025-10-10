@@ -14,12 +14,12 @@ const StructuredData: React.FC<StructuredDataProps> = ({
     switch (type) {
       case 'Organization':
         return {
-          "@context": "https://schema.org",
+          "@context": "https: //schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
+          "url": "https: //ziontechgroup.com",
+          "logo": "https: //ziontechgroup.com/logo.png",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
@@ -35,7 +35,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "addressCountry": "US"
           },
           "sameAs": [
-            "https://twitter.com/ziontechgroup",
+            "https: //twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
           ],
           "foundingDate": "2020",
@@ -55,10 +55,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({
       
       case 'WebSite':
         return {
-          "@context": "https://schema.org",
+          "@context": "https: //schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
+          "url": "https: //ziontechgroup.com",
           "description": "Advanced AI and IT solutions for modern businesses",
           "publisher": {
             "@type": "Organization",
@@ -66,22 +66,22 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "target": "https: //ziontechgroup.com/search?q={search_term_string,}",
             "query-input": "required name=search_term_string"
           }
         }
       
       case 'WebPage':
         return {
-          "@context": "https://schema.org",
+          "@context": "https: //schema.org",
           "@type": "WebPage",
           "name": "Zion Tech Group - Advanced AI and IT Solutions",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "url": "https://ziontechgroup.com",
+          "url": "https: //ziontechgroup.com",
           "isPartOf": {
             "@type": "WebSite",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com"
+            "url": "https: //ziontechgroup.com",
           },
           "about": {
             "@type": "Organization",
@@ -94,7 +94,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://ziontechgroup.com"
+                "item": "https: //ziontechgroup.com",
               }
             ]
           }
@@ -102,14 +102,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({
       
       case 'Service':
         return {
-          "@context": "https://schema.org",
+          "@context": "https: //schema.org",
           "@type": "Service",
           "name": "AI and IT Solutions",
           "description": "Comprehensive AI and IT solutions including machine learning, cloud infrastructure, cybersecurity, and digital transformation services.",
           "provider": {
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com"
+            "url": "https: //ziontechgroup.com",
           },
           "areaServed": "Worldwide",
           "serviceType": [
@@ -123,17 +123,17 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "offers": {
             "@type": "Offer",
             "description": "Professional AI and IT consulting services",
-            "availability": "https://schema.org/InStock"
+            "availability": "https: //schema.org/InStock",
           }
         }
       
       case 'LocalBusiness':
         return {
-          "@context": "https://schema.org",
+          "@context": "https: //schema.org",
           "@type": "LocalBusiness",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered enterprise solutions and digital transformation services.",
-          "url": "https://ziontechgroup.com",
+          "url": "https: //ziontechgroup.com",
           "telephone": "+1-302-464-0950",
           "email": "kleber@ziontechgroup.com",
           "address": {
@@ -149,7 +149,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "latitude": "39.4500",
             "longitude": "-75.7167"
           },
-          "openingHours": "Mo-Fr 09:00-17:00",
+          "openingHours": "Mo-Fr 09: 00-17:00",
           "priceRange": "$$",
           "serviceArea": {
             "@type": "GeoCircle",
@@ -162,8 +162,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           }
         }
       
-      default:
-        return {}
+      default: return {,}
     }
   }
 

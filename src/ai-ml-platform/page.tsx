@@ -49,7 +49,7 @@ const AIMLPlatformPage: React.FC = () => {
   const features = [];
   return (
     {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   ico,
@@ -117,46 +117,46 @@ const AIMLPlatformPage: React.FC = () => {
   // TOD,
   O: Add items
 ],
-    { icon: Users, value: '500+', label: 'Data Scientists' },
-    { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
-    { icon: Clock, value: '70%', label: 'Faster Development' },
-    { icon: Star, value: '4.9/5', label: 'User Rating' }
+    { icon: Users, value: '500+', label: 'Data Scientists',},
+    { icon: TrendingUp, value: '95%', label: 'Model Accuracy',},
+    { icon: Clock, value: '70%', label: 'Faster Development',},
+    { icon: Star, value: '4.9/5', label: 'User Rating',}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>AI ML Platform | Zion Tech Group</title>
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
       </Helmet>
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>AI ML Platform</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Coming Soon - Advanced AI ML platform solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>
               Contact Us;
   </
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors"></button>
               Learn More;
   </
       <Footer />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             Page
   </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Coming Soon
   </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>
 // Contact Us,
           </button>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
-  hover:bg-cyan-400,"
-  hover: text-slate-900 transition-colors"></button>
+  hover: bg-cyan-400,"
+  hover: text-slate-900 transition-colors"></button></button>
 Learn More
           </div>
       <Footer />

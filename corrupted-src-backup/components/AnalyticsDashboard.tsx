@@ -8,15 +8,15 @@ interface AnalyticsData {
   conversionRate: number,
   topPages: Array<{,
     path: string,
-    views: number
+    views: number,
   }>;
   trafficSources: Array<{,
     source: string
     percentage: number,
-interface AnalyticsData {/* TODO: Fix JSX expression */}
+interface AnalyticsData {/* TODO: Fix JSX expression */,}
   }>;
   trafficSource,
-  s: Array<{/* TODO: Fix JSX expression */}
+  s: Array<{/* TODO: Fix JSX expression */,}
   }>;
 }
 export default AnalyticsDashboard;

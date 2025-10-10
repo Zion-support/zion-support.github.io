@@ -29,8 +29,8 @@ export interface InnovativeITService2024 {id: string;
   contactInfo: unknown
     mobile: string
     email: string,
-    address: string}
-    website: string}
+    address: string,}
+    website: string,}
 }
   realImplementation: boolean;
   implementationDetails: string
@@ -79,17 +79,17 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"},
+      website: "https://ziontechgroup.com",},
     realImplementation: true,
     implementationDetails: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.",
     launchDate: "2024-01-15"
     customers: 950
     rating: 4.8
     reviews: 520,
-export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeITService2024 {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
 }
   realImplementatio,
   n: boolean,
@@ -98,7 +98,7 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   launchDat,
   e: string,
   review,
-  s: number}
+  s: number,}
 export const,
   innovativeITServices2024: InnovativeITService2024[] = [,
     i,
@@ -136,7 +136,7 @@ export const,
   r: "text-blue-400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com/autonomous-devops",
+  s: //ziontechgroup.com/autonomous-devops",
     marketPositio,"
   n: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,"
   advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.",
@@ -176,7 +176,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com",
     },
     realImplementatio,
   n: true,
@@ -189,7 +189,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 520}
+  s: 520,}
 ];
 export interface InnovativeITService2024,
   id: string, nam,
@@ -224,11 +224,11 @@ export interface InnovativeITService2024,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string } realImplementatio,
+  e: string,} realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, review,
-  s: number} export const,
+  s: number,} export const,
   innovativeITServices2024: InnovativeITService2024[] = [ i,"
   d: "autonomous-devops-platform", nam,"
   e: "Autonomous DevOps Platform", taglin,"
@@ -242,7 +242,7 @@ export interface InnovativeITService2024,
   r: "from-blue-500 to-cyan-600", textColo,"
   r: "text-blue-400", lin,"
   k: "http,"
-  s://ziontechgroup.com/autonomous-devops", marketPositio,"
+  s: //ziontechgroup.com/autonomous-devops", marketPositio,"
   n: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,"
   advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.", targetAudienc,"
   e: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups", trialDay,
@@ -263,10 +263,10 @@ export interface InnovativeITService2024,
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup.com" }, realImplementatio,
+  s: //ziontechgroup.com",}, realImplementatio,
   n: true, implementationDetail,"
   s: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.", launchDat,"
   e: "2024-01-15", customer,
   s: 950, ratin,
   g: 4.8, review,
-  s: 520 } ];"
+  s: 520,} ];"

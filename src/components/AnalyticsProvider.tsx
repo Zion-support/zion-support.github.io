@@ -19,7 +19,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      script.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId,}`;
       document.head.appendChild(script);
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
@@ -30,7 +30,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
-        page_location: window.location.href});
+        page_location: window.location.href,});
     }
   }, [trackingId]);
   const track = (event: string, properties?: Record<string, any>) => {
@@ -39,7 +39,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Event:', event, properties)
+    console.log('Analytics Event: ', event, properties)
   }
   }
   const page = (name: string, properties?: Record<string, any>) => {
@@ -51,7 +51,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Page:', name, properties)
+    console.log('Analytics Page: ', name, properties)
   }
   }
   const identify = (userId: string, traits?: Record<string, any>) => {
@@ -62,7 +62,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Identify:', userId, traits)
+    console.log('Analytics Identify: ', userId, traits)
   }
   }
   const value: AnalyticsContextType = {
@@ -86,7 +86,7 @@ export const useAnalytics = (): AnalyticsContextType => {
 declare global {
     interface Window {
     dataLayer: any[],
-    gtag: (...args: any[]) => void
+    gtag: (...args: any[]) => void,
   }
 }
   </AnalyticsProviderProps>

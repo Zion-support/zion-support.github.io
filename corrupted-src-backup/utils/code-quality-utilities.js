@@ -4,7 +4,7 @@ export const codeQualityUtils = {
   validateTypes: (value, expectedType) => {
     //     const actualType = typeof value;
     if (actualType !== expectedType) {
-export const codeQualityUtils = {/* TODO: Fix JSX expression */}
+export const codeQualityUtils = {/* TODO: Fix JSX expression */,}
       throw new Error(`Expected ${expectedType}, got ${actualType}`);
     }
     return true;
@@ -26,7 +26,7 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
         if (!keys2.includes(key)) return false;
         if (!deepEqual(obj1[key], obj2[key])) return false;
   // Deep object comparison,
-  deepEqual: (obj1, obj2) => {/* TODO: Fix JSX expression */}
+  deepEqual: (obj1, obj2) => {/* TODO: Fix JSX expression */,}
       }
 
       return true;
@@ -43,7 +43,7 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
         clearTimeout(timeout);
         func(...args);
   // Debounce utility,
-  debounce: (func, wait) => {/* TODO: Fix JSX expression */}
+  debounce: (func, wait) => {/* TODO: Fix JSX expression */,}
       }
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
@@ -59,7 +59,7 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
         inThrottle = true;
         setTimeout(() => (inThrottle = false), limit);
   // Throttle utility,
-  throttle: (func, limit) => {/* TODO: Fix JSX expression */}
+  throttle: (func, limit) => {/* TODO: Fix JSX expression */,}
       }
     }
   },
@@ -72,7 +72,7 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
       if (cache.has(key)) {,
         return cache.get(key);
   // Memoization,
-  memoize: fn => {/* TODO: Fix JSX expression */}
+  memoize: fn => {/* TODO: Fix JSX expression */,}
       }
       //       const result = fn.apply(this, args);
       cache.set(key, result);

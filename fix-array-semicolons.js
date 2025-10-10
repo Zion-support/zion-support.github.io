@@ -9,14 +9,14 @@ function fixArraySemicolons(filePath) {
     // Fix semicolons after arrays in object properties;
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
       return match.replace(';', '');
-function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
+function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */,}
     });
     
     fs.writeFileSync(filePath, content);
     console.log(`Fixed array semicolons)`
-  in: ${filePath}`);
+  in: ${filePath,}`);
     return true;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -24,7 +24,7 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
 
 // Main function;
 function main() {
-function main() {/* TODO: Fix JSX expression */}
+function main() {/* TODO: Fix JSX expression */,}
 }
   const files = [
     'src/ai-ab-testing/page.tsx',
@@ -47,7 +47,7 @@ function main() {/* TODO: Fix JSX expression */}
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
         fixedCount++;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file => {/* TODO: Fix JSX expression */,}
       }
     })
   });

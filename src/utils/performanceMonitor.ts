@@ -53,7 +53,7 @@ class PerformanceMonitor {
           (this._metrics as any)[metric] = entry.startTime;
         }
       });
-      observer.observe({ entryTypes: ['paint'] });
+      observer.observe({ entryTypes: ['paint'],});
       this.observers.push(observer);
     } catch (error) {
       console.warn(`Failed to observe ${name}:`, error);
@@ -69,10 +69,10 @@ class PerformanceMonitor {
           this._metrics.lcp = lastEntry.startTime;
         }
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'],});
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe LCP:', error);
+      console.warn('Failed to observe LCP: ', error);
     }
   }
 
@@ -84,10 +84,10 @@ class PerformanceMonitor {
           this._metrics.fid = entry.processingStart - entry.startTime;
         });
       });
-      observer.observe({ entryTypes: ['first-input'] });
+      observer.observe({ entryTypes: ['first-input'],});
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe FID:', error);
+      console.warn('Failed to observe FID: ', error);
     }
   }
 
@@ -103,10 +103,10 @@ class PerformanceMonitor {
         });
         this._metrics.cls = clsValue;
       });
-      observer.observe({ entryTypes: ['layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'],});
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe CLS:', error);
+      console.warn('Failed to observe CLS: ', error);
     }
   }
 
@@ -133,7 +133,7 @@ class PerformanceMonitor {
   reportMetrics(): void {
     if (typeof window === 'undefined') return;
     
-    console.log('Performance Metrics:', this._metrics);
+    console.log('Performance Metrics: ', this._metrics);
     
     // Send to analytics service
     if (typeof gtag !== 'undefined') {
@@ -143,7 +143,7 @@ class PerformanceMonitor {
         value: Math.round(this._metrics.lcp || 0),
         custom_parameter_1: this._metrics.fcp,
         custom_parameter_2: this._metrics.cls,
-        custom_parameter_3: this._metrics.fid
+        custom_parameter_3: this._metrics.fid,
       });
     }
   }

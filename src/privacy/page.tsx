@@ -33,32 +33,32 @@ export default function PrivacyPage() {
     {
       title: 'Right to Access',
       description: 'Request a copy of your personal data',
-      icon: Eye
+      icon: Eye,
     },
     {
       title: 'Right to Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: FileText
+      icon: FileText,
     },
     {
       title: 'Right to Erasure',
       description: 'Request deletion of your personal data',
-      icon: Database
+      icon: Database,
     },
     {
       title: 'Right to Portability',
       description: 'Receive your data in a structured format',
-      icon: ArrowRight
+      icon: ArrowRight,
     },
     {
       title: 'Right to Object',
       description: 'Object to processing of your data',
-      icon: AlertTriangle
+      icon: AlertTriangle,
     },
     {
       title: 'Right to Restrict',
       description: 'Limit how we process your data',
-      icon: Lock
+      icon: Lock,
     }
   ];
   const securityMeasures = [
@@ -70,28 +70,28 @@ export default function PrivacyPage() {
     'Incident response and breach notification procedures'
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+      <section className="relative py-20 lg: py-32 overflow-hidden"></section>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div></div>
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse"></h1>
               Privacy Policy,
   </
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
               Your privacy is important to us. Learn how we collect, use, and protect your personal information.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <Shield className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">GDPR Compliant</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <Lock className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">Secure Data</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent</span>
               </div>
@@ -100,14 +100,14 @@ export default function PrivacyPage() {
         </div>
       </section>
       {/* Last Updated */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-800/50 rounded-lg p-6 text-center">
-              <p className="text-gray-300">
-                <strong>Last Updated:</strong> {lastUpdated}
+      <section className="py-8"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
+              <p className="text-gray-300"></p>
+                <strong>Last Updated: </strong> {lastUpdated,}
               </p>
-              <p className="text-sm text-gray-400 mt-2">
+              <p className="text-sm text-gray-400 mt-2"></p>
                 This privacy policy may be updated from time to time. We will notify you of any changes.
               </p>
             </div>
@@ -115,17 +115,17 @@ export default function PrivacyPage() {
         </div>
       </section>
       {/* Introduction */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-6">Introduction</h2>
-            <div className="prose prose-lg prose-invert max-w-none">
-              <p className="text-gray-300 mb-6">
+      <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>Introduction</h2>
+            <div className="prose prose-lg prose-invert max-w-none"></div>
+              <p className="text-gray-300 mb-6"></p>
                 Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
                 our website or use our services.
               </p>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6"></p>
                 By using our website or services, you agree to the collection and use of information in accordance with 
                 this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
               </p>
@@ -134,20 +134,20 @@ export default function PrivacyPage() {
         </div>
       </section>
       {/* Information We Collect */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Information We Collect</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="py-20 bg-slate-800/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-6xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center"></h2>Information We Collect</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               {dataTypes.map((type, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <div className="flex items-center space-x-3 mb-4">
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <div className="flex items-center space-x-3 mb-4"></div>
                     <type.icon className="w-8 h-8 text-cyan-400" />
-                    <h3 className="text-xl font-bold text-white">{type.category}</h3>
+                    <h3 className="text-xl font-bold text-white"></h3>{type.category}</h3>
                   </div>
-                  <p className="text-gray-300 mb-4">{type.description}</p>
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-cyan-400">Examples:</h4>
+                  <p className="text-gray-300 mb-4"></p>{type.description}</p>
+                  <div className="space-y-2"></div>
+                    <h4 className="text-sm font-semibold text-cyan-400"></h4>Examples:</h4>
                     <ul className="space-y-1">
                       {type.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
@@ -164,38 +164,38 @@ export default function PrivacyPage() {
         </div>
       </section>
       {/* How We Use Your Information */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8">How We Use Your Information</h2>
-            <div className="space-y-6">
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Service Delivery</h3>
-                <p className="text-gray-300">
+      <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-8"></h2>How We Use Your Information</h2>
+            <div className="space-y-6"></div>
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Service Delivery</h3>
+                <p className="text-gray-300"></p>
                   To provide, maintain, and improve our services, including AI solutions, IT services, and customer support.
                 </p>
               </div>
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Communication</h3>
-                <p className="text-gray-300">
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Communication</h3>
+                <p className="text-gray-300"></p>
                   To respond to your inquiries, send important updates, and provide customer support.
                 </p>
               </div>
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Marketing</h3>
-                <p className="text-gray-300">
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Marketing</h3>
+                <p className="text-gray-300"></p>
                   To send you newsletters, promotional materials, and information about our services (with your consent).
                 </p>
               </div>
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Analytics</h3>
-                <p className="text-gray-300">
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Analytics</h3>
+                <p className="text-gray-300"></p>
                   To analyze website usage, improve user experience, and understand how our services are used.
                 </p>
               </div>
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Legal Compliance</h3>
-                <p className="text-gray-300">
+              <div className="bg-slate-800/50 rounded-lg p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h3>Legal Compliance</h3>
+                <p className="text-gray-300"></p>
                   To comply with legal obligations, resolve disputes, and enforce our agreements.
                 </p>
               </div>
@@ -204,16 +204,16 @@ export default function PrivacyPage() {
         </div>
       </section>
       {/* Data Security */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Data Security</h2>
-            <p className="text-gray-300 mb-8 text-center">
+      <section className="py-20 bg-slate-800/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Data Security</h2>
+            <p className="text-gray-300 mb-8 text-center"></p>
               We implement appropriate technical and organizational measures to protect your personal information.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {securityMeasures.map((measure, index) => (
-                <div key={index} className="flex items-center space-x-3">
+                <div key={index} className="flex items-center space-x-3"></div>
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{measure}</span>
                 </div>
@@ -223,16 +223,16 @@ export default function PrivacyPage() {
         </div>
       </section>
       {/* Your Rights */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Your Rights</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-6xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center"></h2>Your Rights</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {rights.map((right, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
                   <right.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{right.title}</h3>
-                  <p className="text-gray-300 text-sm">{right.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3"></h3>{right.title}</h3>
+                  <p className="text-gray-300 text-sm"></p>{right.description}</p>
                 </div>
               ))}
             </div>
@@ -240,23 +240,23 @@ export default function PrivacyPage() {
         </div>
       </section>
       {/* Contact Information */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Questions About Your Privacy?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>Questions About Your Privacy?</h2>
+            <p className="text-xl text-gray-300 mb-8"></p>
               If you have any questions about this Privacy Policy or our data practices, please contact us.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center space-x-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+              <div className="flex items-center justify-center space-x-3"></div>
                 <Mail className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center justify-center space-x-3">
+              <div className="flex items-center justify-center space-x-3"></div>
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">+1 (302) 464-0950</span>
               </div>
-              <div className="flex items-center justify-center space-x-3">
+              <div className="flex items-center justify-center space-x-3"></div>
                 <Globe className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">Middletown, DE</span>
               </div>

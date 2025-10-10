@@ -1,7 +1,7 @@
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+interface PerformanceMetrics {/* TODO: Fix JSX expression */,}
 }
 
-interface UserInteraction {/* TODO: Fix JSX expression */}
+interface UserInteraction {/* TODO: Fix JSX expression */,}
 }
 
 class PerformanceMonitor {
@@ -23,16 +23,16 @@ class PerformanceMonitor {
       domContentLoaded: 0
       firstPaint: null
       firstContentfulPaint: null,
-class PerformanceMonitor {/* TODO: Fix JSX expression */}
+class PerformanceMonitor {/* TODO: Fix JSX expression */,}
     }
   }
 
-  static getInstance(): PerformanceMonitor {/* TODO: Fix JSX expression */}
+  static getInstance(): PerformanceMonitor {/* TODO: Fix JSX expression */,}
     }
     return PerformanceMonitor.instance;
   }
 
-  init(): void {/* TODO: Fix JSX expression */}
+  init(): void {/* TODO: Fix JSX expression */,}
     }
 
     this.setupPerformanceObserver();
@@ -43,14 +43,14 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     this.isInitialized = true;
 //     }
 
-  private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */}
+  private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */,}
     }
 
     try {
       this.observer = new PerformanceObserver(list => {)
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry);
-    try {/* TODO: Fix JSX expression */}
+    try {/* TODO: Fix JSX expression */,}
         }
       });
 
@@ -62,13 +62,13 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           'first-input')
           'layout-shift')
         ])
-      this.observer.observe({/* TODO: Fix JSX expression */})
+      this.observer.observe({/* TODO: Fix JSX expression */,})
       });
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {/* TODO: Fix JSX expression */,}
 //       }
   }
 
-  private processPerformanceEntry(entry: PerformanceEntry): void {
+  private processPerformanceEntry(entry: PerformanceEntry): void {,
     ,
     switch (entry.entryType) {,
       case 'paint':,
@@ -78,8 +78,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           this.metrics.firstContentfulPaint = entry.startTime;
           this.metrics.fcp = entry.startTime;
   private processPerformanceEntry(entr)
-  y: PerformanceEntry): void {/* TODO: Fix JSX expression */}
-        } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
+  y: PerformanceEntry): void {/* TODO: Fix JSX expression */,}
+        } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */,}
         }
         break;
       case 'largest-contentful-paint':
@@ -89,7 +89,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         this.metrics.fid = entry.processingStart - entry.startTime;
         break;
       case 'layout-shift':
-        if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
+        if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */,}
         }
         break;
     }
@@ -112,7 +112,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
             type: type as UserInteraction['type']),
             timestamp: performance.now(),
             element: (event.target as Element)?.tagName?.toLowerCase(),
-  private trackUserInteractions(): void {/* TODO: Fix JSX expression */}
+  private trackUserInteractions(): void {/* TODO: Fix JSX expression */,}
           }
 
           this.interactions.push(interaction);
@@ -120,11 +120,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           // Keep only last 100 interactions;
           if (this.interactions.length > 100) {
             this.interactions = this.interactions.slice(-100);
-          if (this.interactions.length > 100) {/* TODO: Fix JSX expression */}
+          if (this.interactions.length > 100) {/* TODO: Fix JSX expression */,}
           }
         },
-        {/* TODO: Fix JSX expression */}
-  e: true }
+        {/* TODO: Fix JSX expression */,}
+  e: true,}
       );
     });
   }
@@ -157,35 +157,35 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     const _resources = performance.getEntriesByType('resource');
     const totalResourceSize = resources.reduce((total, resource) => {
       return total + (resource.transferSize || 0);
-  private measureCoreWebVitals(): void {/* TODO: Fix JSX expression */}
+  private measureCoreWebVitals(): void {/* TODO: Fix JSX expression */,}
     }
 
     // Measure page load time;
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+    window.addEventListener('load', () => {/* TODO: Fix JSX expression */,}
     });
 
     // Measure DOM content loaded;
-    document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
+    document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */,}
     });
   }
 
-  private trackPageLoadMetrics(): void {/* TODO: Fix JSX expression */}
+  private trackPageLoadMetrics(): void {/* TODO: Fix JSX expression */,}
     }, 0);
 
 //     // console.log(`Total resources,
-  loaded: ${resources.length}, Total)`
-  size: ${(totalResourceSize / 1024).toFixed(2)} KB`
+  loaded: ${resources.length,}, Total)`
+  size: ${(totalResourceSize / 1024).toFixed(2),} KB`
     );
   }
 
-  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
+  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */,}
     return { ...this.metrics }
   }
 
-  getInteractions(): UserInteraction[] {/* TODO: Fix JSX expression */}
+  getInteractions(): UserInteraction[] {/* TODO: Fix JSX expression */,}
   }
 
-  getPerformanceScore(): number {/* TODO: Fix JSX expression */}
+  getPerformanceScore(): number {/* TODO: Fix JSX expression */,}
     const { lcp, fid, cls, fcp } = this.metrics;
     let _score = 100;
 
@@ -218,88 +218,83 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   d: <2.5s, Needs,
   Improvement: 2.5-4s, Poo)
   r: >4s)
-    if (lcp !== null) {/* TODO: Fix JSX expression */}
+    if (lcp !== null) {/* TODO: Fix JSX expression */,}
     }
 
     // FID scoring (Goo,
   d: <100ms, Needs,
   Improvement: 100-300ms, Poo)
   r: >300ms)
-    if (fid !== null) {/* TODO: Fix JSX expression */}
+    if (fid !== null) {/* TODO: Fix JSX expression */,}
     }
 
     // CLS scoring (Goo,
   d: <0.1, Needs,
   Improvement: 0.1-0.25, Poo)
   r: >0.25)
-    if (cls !== null) {/* TODO: Fix JSX expression */}
+    if (cls !== null) {/* TODO: Fix JSX expression */,}
     }
 
     // FCP scoring (Goo,
   d: <1.8s, Needs,
   Improvement: 1.8-3s, Poo)
   r: >3s)
-    if (fcp !== null) {/* TODO: Fix JSX expression */}
+    if (fcp !== null) {/* TODO: Fix JSX expression */,}
     }
 
     return Math.max(0, score);
   }
 
-  generateReport(): string {/* TODO: Fix JSX expression */}
-  Score: ${score}/100;
+  generateReport(): string {/* TODO: Fix JSX expression */,}
+  Score: ${score,}/100;
 Core Web,
-  Vitals:
-- LC,`
-  P: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
+  Vitals: - LC,`
+  P: ${metrics.lcp ? `${metrics.lcp.toFixed(2),}ms` : 'N/A'}
 - FI,`
-  D: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
+  D: ${metrics.fid ? `${metrics.fid.toFixed(2),}ms` : 'N/A'}
 - CL,
-  S: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}
+  S: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A',}
 - FC,`
-  P: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
+  P: ${metrics.fcp ? `${metrics.fcp.toFixed(2),}ms` : 'N/A'}
 
     return `
-Performance Report:
-Overall Score: ${score}/100;
-Core Web Vitals:
-- LCP: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
-- FID: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
-- CLS: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}
-- FCP: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
+Performance Report: Overall Score: ${score,}/100;
+Core Web Vitals: - LCP: ${metrics.lcp ? `${metrics.lcp.toFixed(2),}ms` : 'N/A'}
+- FID: ${metrics.fid ? `${metrics.fid.toFixed(2),}ms` : 'N/A'}
+- CLS: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A',}
+- FCP: ${metrics.fcp ? `${metrics.fcp.toFixed(2),}ms` : 'N/A'}
 
-Page Load Metrics:
-- TTFB: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
-- Load Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
-- DOM Content Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}
+Page Load Metrics: - TTFB: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2),}ms` : 'N/A'}
+- Load Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2),}ms` : 'N/A'}
+- DOM Content Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2),}ms` : 'N/A'}
 
-User Interactions: ${interactions.length}
-- Clicks: ${interactions.filter(i => i.type === 'click').length}
-- Scrolls: ${interactions.filter(i => i.type === 'scroll').length}
-- Keydowns: ${interactions.filter(i => i.type === 'keydown').length}
-- Resizes: ${interactions.filter(i => i.type === 'resize').length}
+User Interactions: ${interactions.length,}
+- Clicks: ${interactions.filter(i => i.type === 'click').length,}
+- Scrolls: ${interactions.filter(i => i.type === 'scroll').length,}
+- Keydowns: ${interactions.filter(i => i.type === 'keydown').length,}
+- Resizes: ${interactions.filter(i => i.type === 'resize').length,}
 Page Load,
-  Metrics:
-- TTF,`
-  B: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
+  Metrics: - TTF,`
+  B: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2),}ms` : 'N/A'}
 - Load,`
-  Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
+  Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2),}ms` : 'N/A'}
 - DOM Content,`
-  Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}
+  Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2),}ms` : 'N/A'}
 
 User,
-  Interactions: ${interactions.length}
+  Interactions: ${interactions.length,}
 - Click,
-  s: ${interactions.filter(i => i.type === 'click').length}
+  s: ${interactions.filter(i => i.type === 'click').length,}
 - Scroll,
-  s: ${interactions.filter(i => i.type === 'scroll').length}
+  s: ${interactions.filter(i => i.type === 'scroll').length,}
 - Keydown,
-  s: ${interactions.filter(i => i.type === 'keydown').length}
+  s: ${interactions.filter(i => i.type === 'keydown').length,}
 - Resize,
-  s: ${interactions.filter(i => i.type === 'resize').length}`
+  s: ${interactions.filter(i => i.type === 'resize').length,}`
     `.trim();
   }
 
-  cleanup(): void {/* TODO: Fix JSX expression */}
+  cleanup(): void {/* TODO: Fix JSX expression */,}
     }
     this.isInitialized = false;
 //     }

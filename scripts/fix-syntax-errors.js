@@ -126,7 +126,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd(),});
     allFiles.push(...files);
   }
 
@@ -141,14 +141,14 @@ async function main() {
 
   console.log(`\n🎉 Syntax error fixes completed!`);
   console.log(`📊 Statistics: `),
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Files fixed: ${fixedFiles}`);
+  console.log(`   - Files processed: ${processedFiles,}/${totalFiles}`);
+  console.log(`   - Files fixed: ${fixedFiles,}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1],}`) {
     main()
   }
 
 export { processFile, fixSyntaxErrors }
-// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
-  d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}
+// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */,}
+  d: '/workspace',}); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */,}

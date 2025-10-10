@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
+interface SEOEnhancerProps {/* TODO: Fix JSX expression */,}
 }
 const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */,})
+}) => {/* TODO: Fix JSX expression */,}
     },
     addres,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
     }}
   const finalStructuredData = structuredData || defaultStructuredData;
   return (<React.Fragment>
@@ -28,16 +28,16 @@ const,
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {/* Open Graph Tags */}"
         <meta property="o,"
-  g:type" content={ogType} /></meta>"
+  g: type" content={ogType,} /></meta>"
         <meta property="o,"
-  g:title" content={title} /></meta>"
+  g: title" content={title,} /></meta>"
         <meta property="o,"
-  g:description" content={description} /></meta>"
+  g: description" content={description,} /></meta>"
         <meta property="o,"
-  g:image" content={ogImage} /></meta>"
+  g: image" content={ogImage,} /></meta>"
         <meta property="o,"
-  g:url" content={/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com'} /></meta>"
+  g: url" content={/* TODO: Fix JSX expression */,}
+  s: //ziontechgroup.com',} /></meta>"
         <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>"
         <meta property="o,"
@@ -46,11 +46,11 @@ const,
         <meta name="twitte,"
   r:card" content="summary_large_image" /></meta>"
         <meta name="twitte,"
-  r:title" content={title} /></meta>"
+  r: title" content={title,} /></meta>"
         <meta name="twitte,"
-  r:description" content={description} /></meta>"
+  r: description" content={description,} /></meta>"
         <meta name="twitte,"
-  r:image" content={ogImage} /></meta>"
+  r: image" content={ogImage,} /></meta>"
         <meta name="twitte,"
   r:site" content="@ziontechgroup" /></meta>"
         <meta name="twitte,"

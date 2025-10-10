@@ -2,7 +2,7 @@
 // This file contains utility functions and configurations
 
 interface SecurityConfig {
-    enableCSP: boolean
+    enableCSP: boolean,
   }
   enableHTTPS: boolean;
   enableXSSProtection: boolean
@@ -11,14 +11,14 @@ interface SecurityConfig {
 }
 
 class SecurityEnhancer {
-    private config: SecurityConfig
+    private config: SecurityConfig,
   }
   constructor(config?: SecurityConfig) {this.config = config || {}
       enableCSP: true,
       enableHTTPS: true,
       enableXSSProtection: true,
       enableCSRFProtection: true,
-      enableContentSecurityPolicy: true}
+      enableContentSecurityPolicy: true,}
     this.init()
 
   private init(): void {
@@ -38,11 +38,11 @@ class SecurityEnhancer {
     if (!this.config.enableContentSecurityPolicy) return
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com",
+      "font-src 'self' https: //fonts.gstatic.com",
       "img-src 'self' data: https:",
-      "connect-src 'self' https://api.zion.app",
+      "connect-src 'self' https: //api.zion.app",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'"
@@ -93,7 +93,7 @@ class SecurityEnhancer {
       log: console.log.bind(console),
       warn: console.warn.bind(console),
       error: console.error.bind(console),
-      info: console.info.bind(console)
+      info: console.info.bind(console),
     }
     // Override console methods to detect debugging
     Object.assign(console, originalConsole);
@@ -115,7 +115,7 @@ class SecurityEnhancer {
     })
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     })
     this.eventListeners.push(() => observer.disconnect())
   }
@@ -126,7 +126,7 @@ class SecurityEnhancer {
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed')
+        throw new Error('Request blocked: Origin not allowed'),
       }
       return originalFetch(input, init)
     }

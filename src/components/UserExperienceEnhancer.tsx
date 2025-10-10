@@ -32,25 +32,25 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       const style = document.createElement('style');
       style.textContent = `
         html {
-          scroll-behavior: smooth
+          scroll-behavior: smooth,
   }
         @media (prefers-reduced-motion: reduce) {
           html {
             scroll-behavior: auto,
-interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */}
+interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */,}
 }
 const,
-  UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({/* TODO: Fix JSX expression */,})
+}) => {/* TODO: Fix JSX expression */,}
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
   // Handle online/offline status;
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
     }
   // Smooth scrolling;
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
         }
         @media (prefers-reduced-motio)
-  n: reduce) {/* TODO: Fix JSX expression */}
+  n: reduce) {/* TODO: Fix JSX expression */,}
           }
         }
       `;
@@ -73,11 +73,11 @@ const,
   // Loading states management,
   const setLoading = useCallback((ke,
   y: string, loadin)
-  g: boolean) => {/* TODO: Fix JSX expression */}
+  g: boolean) => {/* TODO: Fix JSX expression */,}
     setLoadingStates(prev => ({ ...prev, [key]: loading }));
   }, []);
   // Global loading state;
-  useEffect(() => {/* TODO: Fix JSX expression */}`
+  useEffect(() => {/* TODO: Fix JSX expression */,}`
             setLoading(`link-${href}`, true);
           }
         });
@@ -88,25 +88,25 @@ const,
   useEffect(() => {
     if (enableErrorBoundaries) {
       const handleError = (event: ErrorEvent) => {
-        // console.error('Global error caught:', event.error);
+        // console.error('Global error caught: ', event.error);
         // Send error to analytics if available
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
             description: event.error?.message || 'Unknown error',
             fatal: false
   // Error boundary enhancement,
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
           });
         }
       }
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        // console.error('Unhandled promise rejection:', event.reason);
+        // console.error('Unhandled promise rejection: ', event.reason);
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {
             description: event.reason?.message || 'Unhandled promise rejection',
             fatal: false
       const handleUnhandledRejection = (even)
-  t: PromiseRejectionEvent) => {/* TODO: Fix JSX expression */}
+  t: PromiseRejectionEvent) => {/* TODO: Fix JSX expression */,}
           });
         }
       }
@@ -115,7 +115,7 @@ const,
       return () => {
         window.removeEventListener('error', handleError);
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-      return () => {/* TODO: Fix JSX expression */}
+      return () => {/* TODO: Fix JSX expression */,}
       }
     }
   }, [enableErrorBoundaries]);
@@ -127,19 +127,19 @@ const,
         if (document.hidden) {
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_hidden', {
-              event_category:             ,
+              event_category: ,
 $4});
           }
         } else {
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_visible', {
-              event_category:             ,
+              event_category: ,
 $4});
   // Analytics enhancement;
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
             });
           }
-        } else {/* TODO: Fix JSX expression */}
+        } else {/* TODO: Fix JSX expression */,}
             });
           }
         }
@@ -156,21 +156,21 @@ $4});
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
-                value: 25
+                value: 25,
               });
             }
           } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
-                value: 50
+                value: 50,
               });
             }
           } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
             if ('gtag' in window) {
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
-                value: 75
+                value: 75,
               });
             }
           } else if (maxScrollDepth >= 90) {
@@ -180,16 +180,16 @@ $4});
                 value: 90
       // Track scroll depth
       let maxScrollDepth = 0,
-      const handleScroll = () => {/* TODO: Fix JSX expression */}
+      const handleScroll = () => {/* TODO: Fix JSX expression */,}
               });
             }
-          } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {/* TODO: Fix JSX expression */}
+          } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {/* TODO: Fix JSX expression */,}
               });
             }
-          } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {/* TODO: Fix JSX expression */}
+          } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {/* TODO: Fix JSX expression */,}
               });
             }
-          } else if (maxScrollDepth >= 90) {/* TODO: Fix JSX expression */}
+          } else if (maxScrollDepth >= 90) {/* TODO: Fix JSX expression */,}
               });
             }
           }
@@ -203,25 +203,25 @@ $4});
           (window as any).gtag('event', 'timing_complete', {
             name: 'time_on_page',
             value: timeOnPage,
-            event_category:           ,
+            event_category: ,
 $4});
       // Track time on page;
       const startTime = Date.now();
-      const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
+      const handleBeforeUnload = () => {/* TODO: Fix JSX expression */,}
           });
         }
       }
       document.addEventListener('visibilitychange', handleVisibilityChange);
-      window.addEventListener('scroll', handleScroll, { passive: true });
+      window.addEventListener('scroll', handleScroll, { passive: true,});
       window.addEventListener('beforeunload', handleBeforeUnload);
       return () => {
         document.removeEventListener('visibilitychange', handleVisibilityChange);
         window.removeEventListener('scroll', handleScroll);
         window.removeEventListener('beforeunload', handleBeforeUnload);
-      window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
-  e: true });
+      window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */,})
+  e: true,});
       window.addEventListener('beforeunload', handleBeforeUnload);
-      return () => {/* TODO: Fix JSX expression */}
+      return () => {/* TODO: Fix JSX expression */,}
       }
     }
   }, [enableAnalytics]);
@@ -240,9 +240,9 @@ $4});
         clearTimeout(timer);
         notification.remove();
   // Notifications;
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
       }, 5000);
-      return () => {/* TODO: Fix JSX expression */}
+      return () => {/* TODO: Fix JSX expression */,}
       }
     }
   }, [isOnline, enableNotifications]);
@@ -257,7 +257,7 @@ $4});
               (window as any).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
-                event_category:               ,
+                event_category: ,
 $4});
             }
           } else if (entry.entryType === 'first-input') {
@@ -265,7 +265,7 @@ $4});
               (window as any).gtag('event', 'web_vitals', {
                 name: 'FID',
                 value: Math.round(entry.processingStart - entry.startTime),
-                event_category:               ,
+                event_category: ,
 $4});
             }
           } else if (entry.entryType === 'layout-shift') {
@@ -274,16 +274,16 @@ $4});
                 (window as any).gtag('event', 'web_vitals', {
                   name: 'CLS',
                   value: Math.round((entry as any).value * 1000),
-                  event_category:                 ,
+                  event_category: ,
 $4});
   // Performance monitoring;
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
               });
             }
-          } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
+          } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */,}
               });
             }
-          } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
+          } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */,}
                 });
               }
             }
@@ -293,9 +293,9 @@ $4});
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       return () => {
         observer.disconnect();
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe({/* TODO: Fix JSX expression */,})
   s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      return () => {/* TODO: Fix JSX expression */}
+      return () => {/* TODO: Fix JSX expression */,}
       }
     }
   }, []);

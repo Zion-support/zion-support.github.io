@@ -1,40 +1,40 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */}
+export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */,}
   const { slug } = useParams();
-  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div></div>
       <Helmet>
         <title>Post - Zion Website</title>
         <meta name="description" content="Read our latest blog post." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="max-w-4xl mx-auto"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog Post</h1>
-          <p className="text-xl text-gray-600 mb-8">Post slug: {slug}</p>
-          <div className="bg-white rounded-lg shadow-lg p-8"></div>
-            <p className="text-gray-600">
+      <div className="container mx-auto px-4 py-16"></div></div>
+        <div className="max-w-4xl mx-auto"></div></div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6"></h1>Blog Post</h1>
+          <p className="text-xl text-gray-600 mb-8"></p>Post slug: {slug,}</p>
+          <div className="bg-white rounded-lg shadow-lg p-8"></div></div>
+            <p className="text-gray-600"></p>
               This is a placeholder for the blog post content. The actual content would be loaded;
               based on the slug parameter.
             </p>)
           </div>)
         </div>)
       </div>)
-  return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
+  return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div></div>
       <Helmet></Helmet>
         <title>Post - Zion Website</title>"
         <meta name="description" content="Read our latest blog post." /></meta>
       </Helmet>
 "
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="max-w-4xl mx-auto"></div>"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog Post</h1>"
-          <p className="text-xl text-gray-600 mb-8">Post,
-  slug: {slug}</p>
+      <div className="container mx-auto px-4 py-16"></div></div>"
+        <div className="max-w-4xl mx-auto"></div></div>"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6"></h1>Blog Post</h1>"
+          <p className="text-xl text-gray-600 mb-8"></p>Post,
+  slug: {slug,}</p>
 "
-          <div className="bg-white rounded-lg shadow-lg p-8"></div>"
-            <p className="text-gray-600"></p>
+          <div className="bg-white rounded-lg shadow-lg p-8"></div></div>"
+            <p className="text-gray-600"></p></p>
               This is a placeholder for the blog post content. The actual content would be loaded;
               based on the slug parameter.
             </p>

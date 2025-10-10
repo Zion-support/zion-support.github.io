@@ -79,7 +79,7 @@
   varian,
   t: string,
     websit,
-  e: string}
+  e: string,}
       'React',
       'Node && Node.js',
       'Python',
@@ -92,7 +92,7 @@
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementation: true;
     implementation_details: unknown;
     customers: 3200
@@ -114,7 +114,7 @@
     ratin,
   g: 4 && 4.8,
     review,
-  s: 1600},
+  s: 1600,},
     i,
   d: 'smart - contract - automation',
     nam,
@@ -164,7 +164,7 @@
   r: 'text - green - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / smart - contract - automation',
+  s: //ziontechgroup.com / smart - contract - automation',
     market_positio,
   n: unknown,
       'Competitive with OpenLaw ($free), Clause ($variable), and Agrello ($variable). Our,
@@ -217,7 +217,7 @@
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Complete smart contract platform with visual builder, multi - blockchain support, and comprehensive automation features.',
@@ -254,7 +254,7 @@
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -267,7 +267,7 @@
     ratin,
   g: 4 && 4.9,
     review,
-  s: 900},
+  s: 900,},
       'AI-powered sentiment analysis',
       'Multi-channel feedback collection',
     i,
@@ -319,7 +319,7 @@
   r: 'text - purple - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - customer - feedback - analyzer',
+  s: //ziontechgroup.com / ai - powered - customer - feedback - analyzer',
     market_positio,
   n: unknown,
       'Competitive with Qualtrics ($1500+), SurveyMonkey ($25 - 99), and Typeform ($25 - 99). Our,
@@ -380,7 +380,7 @@
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',
@@ -409,7 +409,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 1400},
+  s: 1400,},
       'AI-powered scheduling',
       'AI-powered scheduling',
     i,
@@ -463,7 +463,7 @@
   r: 'text - pink - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / automated - social - media - scheduler',
+  s: //ziontechgroup.com / automated - social - media - scheduler',
     market_positio,
   n: unknown,
       'Competitive with Buffer ($15 - 99), Hootsuite ($29 - 599), and Later ($18 - 40). Our,
@@ -524,7 +524,7 @@
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Complete social media management platform with AI optimization, multi - platform support, and comprehensive analytics.',
@@ -557,7 +557,7 @@
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -570,7 +570,7 @@
     ratin,
   g: 4 && 4.8,
     review,
-  s: 2250},
+  s: 2250,},
       'AI-powered planning',
       'AI-powered planning',
     i,
@@ -624,7 +624,7 @@
   r: 'text - orange - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / intelligent - project - management',
+  s: //ziontechgroup.com / intelligent - project - management',
     market_positio,
   n: unknown,
       'Competitive with Asana ($10.99 - 24.99), Monday.com ($8 - 16), and ClickUp ($5 - 19). Our,
@@ -678,7 +678,7 @@
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.',
@@ -722,7 +722,7 @@
     ratin,
   g: 4 && 4.8,
     review,
-  s: 1600}];      mobil,
+  s: 1600,}];      mobil,
   e: '+1 302 464 0950'
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'
@@ -773,7 +773,7 @@
     addres,
   s: string,
     websit,
-  e: string},
+  e: string,},
     realImplementatio,
   n: boolean, implementationDetail,
   s: string,
@@ -783,7 +783,7 @@
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   innovativeMicroSaas: InnovativeMicroSaas[] = [,
     i,
@@ -815,7 +815,7 @@ export const,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     real_implementation: true,
     implementation_details: 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.'
     launch_date: '2024 - 01 - 30'
@@ -830,7 +830,7 @@ export const,
   r: 'text-blue-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-invoice-processor',
+  s: //ziontechgroup.com/ai-powered-invoice-processor',
     marketPositio,
   n: 'Competitive with Bill.com ($39-69), Expensify ($5-9), and Receipt Bank ($20-50). Our,
   advantage: Better AI accuracy, faster processing, and competitive pricing.',
@@ -863,7 +863,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     real_implementatio,
   n: true,
@@ -876,8 +876,8 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 1600}
-export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
+  s: 1600,}
+export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */,}
   }
 ];
 'AI-powered sentiment analysis',
@@ -937,7 +937,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   r: 'text - purple - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - customer - feedback - analyzer',
+  s: //ziontechgroup.com / ai - powered - customer - feedback - analyzer',
     market_positio,
   n: unknown,
       'Competitive with Qualtrics ($1500+), SurveyMonkey ($25 - 99), and Typeform ($25 - 99). Our,
@@ -997,7 +997,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',
@@ -1029,7 +1029,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1042,7 +1042,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 1400},
+  s: 1400,},
       'AI-powered scheduling',
     i,
   d: 'automated - social - media - scheduler',
@@ -1095,7 +1095,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   r: 'text - pink - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / automated - social - media - scheduler',
+  s: //ziontechgroup.com / automated - social - media - scheduler',
     market_positio,
   n: unknown,
       'Competitive with Buffer ($15 - 99), Hootsuite ($29 - 599), and Later ($18 - 40). Our,
@@ -1156,7 +1156,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Complete social media management platform with AI optimization, multi - platform support, and comprehensive analytics.',
@@ -1188,7 +1188,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1201,7 +1201,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 2250},
+  s: 2250,},
       'AI-powered planning',
     i,
   d: 'intelligent - project - management',
@@ -1254,7 +1254,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   r: 'text - orange - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / intelligent - project - management',
+  s: //ziontechgroup.com / intelligent - project - management',
     market_positio,
   n: unknown,
       'Competitive with Asana ($10.99 - 24.99), Monday.com ($8 - 16), and ClickUp ($5 - 19). Our,
@@ -1307,7 +1307,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.',
@@ -1359,7 +1359,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1372,7 +1372,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 1600}];      mobil,
+  s: 1600,}];      mobil,
   e: '+1 302 464 0950'
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'
@@ -1423,7 +1423,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
     addres,
   s: string,
     websit,
-  e: string},
+  e: string,},
     realImplementatio,
   n: boolean, implementationDetail,
   s: string,
@@ -1433,7 +1433,7 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   innovativeMicroSaas: InnovativeMicroSaas[] = [,
     i,
@@ -1465,7 +1465,7 @@ export const,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.'
@@ -1488,7 +1488,7 @@ export const,
   r: 'text-blue-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-invoice-processor',
+  s: //ziontechgroup.com/ai-powered-invoice-processor',
     marketPositio,
   n: 'Competitive with Bill.com ($39-69), Expensify ($5-9), and Receipt Bank ($20-50). Our,
   advantage: Better AI accuracy, faster processing, and competitive pricing.',
@@ -1521,13 +1521,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.'
+  s: 'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.'
     launchDat,
   e: '2024-01-15'
     customer,
@@ -1535,7 +1534,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 1600}
+  s: 1600,}
     i,
   d: 'smart-contract-automation'
     nam,
@@ -1547,8 +1546,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.'
+  n: 'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.'
     feature,
   s: [
       'Visual smart contract builder'
@@ -1587,8 +1585,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/smart-contract-automation'
     marketPositio,
-  n:
-      'Competitive with OpenLaw ($free), Clause ($variable), and Agrello ($variable). Our,
+  n: 'Competitive with OpenLaw ($free), Clause ($variable), and Agrello ($variable). Our,
   advantage: Better user experience, more templates, and comprehensive support.'
     targetAudienc,
   e: 'Legal firms, Real estate companies, Insurance companies, Financial services, Supply chain companiestups'
@@ -1639,7 +1636,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.'
@@ -1675,13 +1672,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.'
+  s: 'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.'
     launchDat,
   e: '2024-01-10'
     customer,
@@ -1689,7 +1685,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 900}
+  s: 900,}
     i,
   d: 'ai-powered-customer-feedback-analyzer'
     nam,
@@ -1701,8 +1697,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.'
+  n: 'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.'
     feature,
   s: [
       'AI-powered sentiment analysis'
@@ -1741,8 +1736,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/ai-powered-customer-feedback-analyzer'
     marketPositio,
-  n:
-      'Competitive with Qualtrics ($1500+), SurveyMonkey ($25-99), and Typeform ($25-99). Our,
+  n: 'Competitive with Qualtrics ($1500+), SurveyMonkey ($25-99), and Typeform ($25-99). Our,
   advantage: Better AI analysis, competitive pricing, and comprehensive features.'
     targetAudienc,
   e: 'Customer success teams, Product managers, Marketing teams, E-commerce businesses, SaaS companies, Service companies'
@@ -1803,7 +1797,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.'
@@ -1833,13 +1827,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.'
+  s: 'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.'
     launchDat,
   e: '2024-01-20'
     customer,
@@ -1847,7 +1840,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 1400}
+  s: 1400,}
     i,
   d: 'automated-social-media-scheduler'
     nam,
@@ -1859,8 +1852,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.'
+  n: 'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.'
     feature,
   s: [
       'AI-powered scheduling'
@@ -1899,8 +1891,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/automated-social-media-scheduler'
     marketPositio,
-  n:
-      'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40). Our,
+  n: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40). Our,
   advantage: Better AI optimization, competitive pricing, and comprehensive features.'
     targetAudienc,
   e: 'Social media managers, Marketing teams, Small businesses, Influencers, Content creators, Agencies'
@@ -1962,7 +1953,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.'
@@ -1992,13 +1983,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.'
+  s: 'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.'
     launchDat,
   e: '2024-01-25'
     customer,
@@ -2006,7 +1996,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 2250}
+  s: 2250,}
     i,
   d: 'intelligent-project-management'
     nam,
@@ -2018,8 +2008,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.'
+  n: 'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.'
     feature,
   s: [
       'AI-powered planning'
@@ -2058,8 +2047,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/intelligent-project-management'
     marketPositio,
-  n:
-      'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-19). Our,
+  n: 'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-19). Our,
   advantage: Better AI capabilities, competitive pricing, and comprehensive features.'
     targetAudienc,
   e: 'Project managers, Development teams, Marketing teams, Creative agencies, Construction companies, Event planners'
@@ -2110,7 +2098,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
@@ -2128,7 +2116,7 @@ export const,
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
     launchDate: '2024-01-30'
@@ -2137,7 +2125,7 @@ export const,
     reviews: 1600,
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 1600,
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     real_implementation: true,
     implementation_details: 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.'
     launch_date: '2024 - 01 - 30'
@@ -2165,13 +2153,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
+  s: 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
     launchDat,
   e: '2024-01-30'
     customer,
@@ -2179,7 +2166,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 1600}
+  s: 1600,}
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.',
     launchDat,
   e: '2024-01-30',
@@ -2188,7 +2175,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 1600}
+  s: 1600,}
 ];      mobil,
   e: '+1 302 464 0950'
       emai,
@@ -2197,7 +2184,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -2217,7 +2204,7 @@ export const,
   s: 1600,
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     real_implementatio,
   n: true,
@@ -2230,12 +2217,12 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 1600}
+  s: 1600,}
 ];
-export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -2274,12 +2261,12 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     competitors: ['Bill.comExpensifyReceipt BankSage IntacctNetSuite']
     marketSize: '$2.8 B invoice processing market'
     growthRate: '140% annual growth',
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.';
     launchDate: '2024-01-15';
@@ -2316,12 +2303,12 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     competitors: ['OpenLawClauseAgrelloLexonMonax']
     marketSize: '$1.2 B smart contract market'
     growthRate: '200% annual growth',
-    variant: 'quantum-blockchain'}
-    contactInfo: {}
+    variant: 'quantum-blockchain',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.';
     launchDate: '2024-01-10';
@@ -2358,12 +2345,12 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     competitors: ['QualtricsSurveyMonkeyTypeformGetFeedbackSurveyGizmo']
     marketSize: '$3.5 B feedback management market'
     growthRate: '160% annual growth',
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.';
     launchDate: '2024-01-20';
@@ -2400,12 +2387,12 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     competitors: ['BufferHootsuiteLaterSprout SocialAgorapulse']
     marketSize: '$4.2 B social media management market'
     growthRate: '180% annual growth',
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.';
     launchDate: '2024-01-25';
@@ -2442,12 +2429,12 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     competitors: ['AsanaMonday.comClickUpTrelloBasecamp']
     marketSize: '$5.8 B project management market'
     growthRate: '150% annual growth',
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.';
     launchDate: '2024-01-30';
@@ -2465,13 +2452,13 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   innovativeMicroSaas: InnovativeMicroSaas[] = [,
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'ai-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -2480,7 +2467,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -2493,11 +2480,11 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 1600}
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-blockchain'}
+  s: 1600,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-blockchain',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -2506,7 +2493,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -2519,11 +2506,11 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 900}
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-futuristic'}
+  s: 900,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'ai-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -2532,7 +2519,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -2545,11 +2532,11 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 1400}
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-futuristic'}
+  s: 1400,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'ai-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -2558,7 +2545,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -2571,11 +2558,11 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 2250}
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-futuristic'}
+  s: 2250,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'ai-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -2584,7 +2571,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -2597,7 +2584,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 1600}
+  s: 1600,}
 ];
   i,
   d: string,
@@ -2652,10 +2639,10 @@ export const,
   varian,
   t: string,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string}
+  o: {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -2674,7 +2661,7 @@ export const,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 i,
   d: string, nam,
   e: string, taglin,
@@ -2702,33 +2689,33 @@ i,
   e: string, growthRat,
   e: string, varian,
   t: string, websit,
-  e: string} 'React',' 'Node && Node.js',' 'Python',' 'PostgreSQL',' mobil,
+  e: string,} 'React',' 'Node && Node.js',' 'Python',' 'PostgreSQL',' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  , customer,
+  s: , customer,
   s: 3200, ratin,
   g: 4 && 4.8, review,
-  s: 1600}, ' i,
+  s: 1600,}, ' i,
   d: 'smart - contract - automation',' nam,
   e: 'Smart Contract Automation',' taglin,
   e: 'Automate business processes with smart contracts',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.', feature,
+  n: ,' 'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.', feature,
   s: [, ' 'Visual smart contract builder',' 'Multi - blockchain support',' 'Template library',' 'Automated execution',' 'Payment processing',' 'Legal compliance tools',' 'Analytics dashboard',' 'API integration',' 'Mobile app',' 'Expert support'], popula,
   r: true,' ico,
   n: '⚡', ' colo,
   r: 'from - green - 500 to - emerald - 600',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / smart - contract - automation', market_positio,
-  n:  ,' 'Competitive with OpenLaw ($free), Clause ($variable), and Agrello ($variable). Our,
+  s: //ziontechgroup.com / smart - contract - automation', market_positio,
+  n: ,' 'Competitive with OpenLaw ($free), Clause ($variable), and Agrello ($variable). Our,
   advantage: Better user experience, more templates, and comprehensive support.', target_audienc,
-  e:  ,' 'Legal firms, Real estate companies, Insurance companies, Financial services, Supply chain companiestups', trial_day,
+  e: ,' 'Legal firms, Real estate companies, Insurance companies, Financial services, Supply chain companiestups', trial_day,
   s: 21,' setup_tim,
   e: '30 minutes',' categor,
   y: 'Micro SaaS & Blockchain', real_servic,
@@ -2746,29 +2733,29 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Complete smart contract platform with visual builder, multi - blockchain support, and comprehensive automation features.',' launch_dat,
+  s: ,' 'Complete smart contract platform with visual builder, multi - blockchain support, and comprehensive automation features.',' launch_dat,
   e: '2024 - 01 - 10', customer,
   s: 1800, ratin,
   g: 4 && 4.9, review,
-  s: 900}, ' 'AI-powered sentiment analysis',' 'Multi-channel feedback collection',' i,
+  s: 900,}, ' 'AI-powered sentiment analysis',' 'Multi-channel feedback collection',' i,
   d: 'ai - powered - customer - feedback - analyzer',' nam,
   e: 'AI - Powered Customer Feedback Analyzer',' taglin,
   e: 'Transform feedback into actionable insights',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.', feature,
+  n: ,' 'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.', feature,
   s: [,' 'AI - powered sentiment analysis',' 'Multi - channel feedback collection', ' 'Automatic categorization',' 'Trend identification',' 'Real - time alerts',' 'Custom dashboards',' 'Integration with CRM',' 'Export capabilities',' 'API access',' 'Mobile app'], popula,
   r: true,' ico,
   n: '💬', ' colo,
   r: 'from - purple - 500 to - pink - 600',' text_colo,
   r: 'text - purple - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - customer - feedback - analyzer', market_positio,
-  n:  ,' 'Competitive with Qualtrics ($1500+), SurveyMonkey ($25 - 99), and Typeform ($25 - 99). Our,
+  s: //ziontechgroup.com / ai - powered - customer - feedback - analyzer', market_positio,
+  n: ,' 'Competitive with Qualtrics ($1500+), SurveyMonkey ($25 - 99), and Typeform ($25 - 99). Our,
   advantage: Better AI analysis, competitive pricing, and comprehensive features.', target_audienc,
-  e:  ,' 'Customer success teams, Product managers, Marketing teams, E - commerce businesses, SaaS companies, Service companies', trial_day,
+  e: ,' 'Customer success teams, Product managers, Marketing teams, E - commerce businesses, SaaS companies, Service companies', trial_day,
   s: 14,' setup_tim,
   e: '15 minutes',' categor,
   y: 'Micro SaaS & Customer Experience', real_servic,
@@ -2782,29 +2769,29 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',' launch_dat,
+  s: ,' 'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',' launch_dat,
   e: '2024 - 01 - 20', customer,
   s: 2800, ratin,
   g: 4 && 4.7, review,
-  s: 1400}, ' 'AI-powered scheduling', ' 'AI-powered scheduling',' i,
+  s: 1400,}, ' 'AI-powered scheduling', ' 'AI-powered scheduling',' i,
   d: 'automated - social - media - scheduler',' nam,
   e: 'Automated Social Media Scheduler',' taglin,
   e: 'AI - powered social media management',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.', feature,
+  n: ,' 'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.', feature,
   s: [,' 'AI - powered scheduling', ' 'Content generation suggestions',' 'Multi - platform support',' 'Analytics and insights',' 'Team collaboration',' 'Content calendar',' 'Hashtag optimization',' 'Performance tracking',' 'Mobile app',' 'API integration'], popula,
   r: true,' ico,
   n: '📱', ' 'AI/ML',' colo,
   r: 'from - pink - 500 to - rose - 600',' text_colo,
   r: 'text - pink - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / automated - social - media - scheduler', market_positio,
-  n:  ,' 'Competitive with Buffer ($15 - 99), Hootsuite ($29 - 599), and Later ($18 - 40). Our,
+  s: //ziontechgroup.com / automated - social - media - scheduler', market_positio,
+  n: ,' 'Competitive with Buffer ($15 - 99), Hootsuite ($29 - 599), and Later ($18 - 40). Our,
   advantage: Better AI optimization, competitive pricing, and comprehensive features.', target_audienc,
-  e:  ,' 'Social media managers, Marketing teams, Small businesses, Influencers, Content creators, Agencies', trial_day,
+  e: ,' 'Social media managers, Marketing teams, Small businesses, Influencers, Content creators, Agencies', trial_day,
   s: 14,' setup_tim,
   e: '5 minutes',' categor,
   y: 'Micro SaaS & Marketing', real_servic,
@@ -2822,29 +2809,29 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Complete social media management platform with AI optimization, multi - platform support, and comprehensive analytics.',' launch_dat,
+  s: ,' 'Complete social media management platform with AI optimization, multi - platform support, and comprehensive analytics.',' launch_dat,
   e: '2024 - 01 - 25', customer,
   s: 4500, ratin,
   g: 4 && 4.8, review,
-  s: 2250}, ' 'AI-powered planning', ' 'AI-powered planning',' i,
+  s: 2250,}, ' 'AI-powered planning', ' 'AI-powered planning',' i,
   d: 'intelligent - project - management',' nam,
   e: 'Intelligent Project Management',' taglin,
   e: 'AI - powered project planning and execution',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.', feature,
+  n: ,' 'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.', feature,
   s: [,' 'AI - powered planning', ' 'Resource optimization',' 'Timeline prediction',' 'Risk assessment',' 'Team collaboration',' 'Progress tracking',' 'Custom workflows',' 'Integration capabilities',' 'Mobile app',' 'Analytics dashboard'], popula,
   r: true,' ico,
   n: '📋', ' 'AI/ML',' colo,
   r: 'from - orange - 500 to - yellow - 600',' text_colo,
   r: 'text - orange - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / intelligent - project - management', market_positio,
-  n:  ,' 'Competitive with Asana ($10.99 - 24.99), Monday.com ($8 - 16), and ClickUp ($5 - 19). Our,
+  s: //ziontechgroup.com / intelligent - project - management', market_positio,
+  n: ,' 'Competitive with Asana ($10.99 - 24.99), Monday.com ($8 - 16), and ClickUp ($5 - 19). Our,
   advantage: Better AI capabilities, competitive pricing, and comprehensive features.', target_audienc,
-  e:  ,' 'Project managers, Development teams, Marketing teams, Creative agencies, Construction companies, Event planners', trial_day,
+  e: ,' 'Project managers, Development teams, Marketing teams, Creative agencies, Construction companies, Event planners', trial_day,
   s: 21,' setup_tim,
   e: '10 minutes',' categor,
   y: 'Micro SaaS & Project Management', real_servic,
@@ -2857,13 +2844,13 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.',' launch_dat,
+  s: ,' 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.',' launch_dat,
   e: '2024 - 01 - 30', customer,
   s: 3200, ratin,
   g: 4 && 4.8, review,
-  s: 1600},' ]; mobil,
+  s: 1600,},' ]; mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com' i,
   d: string, nam,
@@ -2896,13 +2883,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string }, realImplementatio,
+  e: string,}, realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } export const,
+  s: number,} export const,
   innovativeMicroSaas: InnovativeMicroSaas[] = [ ' i,
   d: 'ai-powered-invoice-processor', nam,
   e: 'AI-Powered Invoice Processor',' taglin,
@@ -2916,7 +2903,7 @@ i,
   r: 'from-blue-500 to-indigo-600', textColo,
   r: 'text-blue-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-invoice-processor',' marketPositio,
+  s: //ziontechgroup.com/ai-powered-invoice-processor',' marketPositio,
   n: 'Competitive with Bill.com ($39-69), Expensify ($5-9), and Receipt Bank ($20-50). Our,
   advantage: Better AI accuracy, faster processing, and competitive pricing.',' targetAudienc,
   e: 'Small businesses, Accounting firms, Freelancers, E-commerce businesses, Service companies, Consultants',' trialDay,
@@ -2937,29 +2924,29 @@ i,
   l: 'kleber@ziontechgroup.com', ' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com' } real_implementatio,
+  s: //ziontechgroup.com',} real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.'' launch_dat,
   e: '2024 - 01 - 30' customer,
   s: 3200, ratin,
   g: 4.8, review,
-  s: 1600} export interface InnovativeMicroSaas { } ]; ' 'AI-powered sentiment analysis',' 'Multi-channel feedback collection',' i,
+  s: 1600,} export interface InnovativeMicroSaas { } ]; ' 'AI-powered sentiment analysis',' 'Multi-channel feedback collection',' i,
   d: 'ai - powered - customer - feedback - analyzer',' nam,
   e: 'AI - Powered Customer Feedback Analyzer',' taglin,
   e: 'Transform feedback into actionable insights',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.', feature,
+  n: ,' 'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.', feature,
   s: [,' 'AI - powered sentiment analysis',' 'Multi - channel feedback collection',' 'Automatic categorization',' 'Trend identification',' 'Real - time alerts',' 'Custom dashboards',' 'Integration with CRM',' 'Export capabilities',' 'API access',' 'Mobile app'], popula,
   r: true,' ico,
   n: '💬',' colo,
   r: 'from - purple - 500 to - pink - 600',' text_colo,
   r: 'text - purple - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - customer - feedback - analyzer', market_positio,
-  n:  ,' 'Competitive with Qualtrics ($1500+), SurveyMonkey ($25 - 99), and Typeform ($25 - 99). Our,
+  s: //ziontechgroup.com / ai - powered - customer - feedback - analyzer', market_positio,
+  n: ,' 'Competitive with Qualtrics ($1500+), SurveyMonkey ($25 - 99), and Typeform ($25 - 99). Our,
   advantage: Better AI analysis, competitive pricing, and comprehensive features.', target_audienc,
-  e:  ,' 'Customer success teams, Product managers, Marketing teams, E - commerce businesses, SaaS companies, Service companies', trial_day,
+  e: ,' 'Customer success teams, Product managers, Marketing teams, E - commerce businesses, SaaS companies, Service companies', trial_day,
   s: 14,' setup_tim,
   e: '15 minutes',' categor,
   y: 'Micro SaaS & Customer Experience', real_servic,
@@ -2977,29 +2964,29 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',' launch_dat,
+  s: ,' 'Complete feedback analysis platform with AI - powered insights, real - time processing, and comprehensive analytics.',' launch_dat,
   e: '2024 - 01 - 20', customer,
   s: 2800, ratin,
   g: 4 && 4.7, review,
-  s: 1400}, ' 'AI-powered scheduling',' i,
+  s: 1400,}, ' 'AI-powered scheduling',' i,
   d: 'automated - social - media - scheduler',' nam,
   e: 'Automated Social Media Scheduler',' taglin,
   e: 'AI - powered social media management',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.', feature,
+  n: ,' 'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.', feature,
   s: [,' 'AI - powered scheduling',' 'Content generation suggestions',' 'Multi - platform support',' 'Analytics and insights',' 'Team collaboration',' 'Content calendar',' 'Hashtag optimization',' 'Performance tracking',' 'Mobile app',' 'API integration'], popula,
   r: true,' ico,
   n: '📱',' 'AI/ML',' colo,
   r: 'from - pink - 500 to - rose - 600',' text_colo,
   r: 'text - pink - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / automated - social - media - scheduler', market_positio,
-  n:  ,' 'Competitive with Buffer ($15 - 99), Hootsuite ($29 - 599), and Later ($18 - 40). Our,
+  s: //ziontechgroup.com / automated - social - media - scheduler', market_positio,
+  n: ,' 'Competitive with Buffer ($15 - 99), Hootsuite ($29 - 599), and Later ($18 - 40). Our,
   advantage: Better AI optimization, competitive pricing, and comprehensive features.', target_audienc,
-  e:  ,' 'Social media managers, Marketing teams, Small businesses, Influencers, Content creators, Agencies', trial_day,
+  e: ,' 'Social media managers, Marketing teams, Small businesses, Influencers, Content creators, Agencies', trial_day,
   s: 14,' setup_tim,
   e: '5 minutes',' categor,
   y: 'Micro SaaS & Marketing', real_servic,
@@ -3017,29 +3004,29 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Complete social media management platform with AI optimization, multi - platform support, and comprehensive analytics.',' launch_dat,
+  s: ,' 'Complete social media management platform with AI optimization, multi - platform support, and comprehensive analytics.',' launch_dat,
   e: '2024 - 01 - 25', customer,
   s: 4500, ratin,
   g: 4 && 4.8, review,
-  s: 2250}, ' 'AI-powered planning',' i,
+  s: 2250,}, ' 'AI-powered planning',' i,
   d: 'intelligent - project - management',' nam,
   e: 'Intelligent Project Management',' taglin,
   e: 'AI - powered project planning and execution',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.', feature,
+  n: ,' 'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.', feature,
   s: [,' 'AI - powered planning',' 'Resource optimization',' 'Timeline prediction',' 'Risk assessment',' 'Team collaboration',' 'Progress tracking',' 'Custom workflows',' 'Integration capabilities',' 'Mobile app',' 'Analytics dashboard'], popula,
   r: true,' ico,
   n: '📋',' 'AI/ML',' colo,
   r: 'from - orange - 500 to - yellow - 600',' text_colo,
   r: 'text - orange - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / intelligent - project - management', market_positio,
-  n:  ,' 'Competitive with Asana ($10.99 - 24.99), Monday.com ($8 - 16), and ClickUp ($5 - 19). Our,
+  s: //ziontechgroup.com / intelligent - project - management', market_positio,
+  n: ,' 'Competitive with Asana ($10.99 - 24.99), Monday.com ($8 - 16), and ClickUp ($5 - 19). Our,
   advantage: Better AI capabilities, competitive pricing, and comprehensive features.', target_audienc,
-  e:  ,' 'Project managers, Development teams, Marketing teams, Creative agencies, Construction companies, Event planners', trial_day,
+  e: ,' 'Project managers, Development teams, Marketing teams, Creative agencies, Construction companies, Event planners', trial_day,
   s: 21,' setup_tim,
   e: '10 minutes',' categor,
   y: 'Micro SaaS & Project Management', real_servic,
@@ -3057,13 +3044,13 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.',' launch_dat,
+  s: ,' 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.',' launch_dat,
   e: '2024 - 01 - 30', customer,
   s: 3200, ratin,
   g: 4 && 4.8, review,
-  s: 1600},' ]; mobil,
+  s: 1600,},' ]; mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com' i,
   d: string, nam,
@@ -3096,13 +3083,13 @@ i,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string }, realImplementatio,
+  e: string,}, realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } export const,
+  s: number,} export const,
   innovativeMicroSaas: InnovativeMicroSaas[] = [ ' i,
   d: 'ai-powered-invoice-processor', nam,
   e: 'AI-Powered Invoice Processor',' taglin,
@@ -3116,7 +3103,7 @@ i,
   r: 'from-blue-500 to-indigo-600', textColo,
   r: 'text-blue-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-invoice-processor',' marketPositio,
+  s: //ziontechgroup.com/ai-powered-invoice-processor',' marketPositio,
   n: 'Competitive with Bill.com ($39-69), Expensify ($5-9), and Receipt Bank ($20-50). Our,
   advantage: Better AI accuracy, faster processing, and competitive pricing.',' targetAudienc,
   e: 'Small businesses, Accounting firms, Freelancers, E-commerce businesses, Service companies, Consultants',' trialDay,
@@ -3137,27 +3124,27 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.'' launchDat,
+  implementationDetails: ' 'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.'' launchDat,
   e: '2024-01-15' customer,
   s: 3200,
   rating: 4.8,
-  reviews: 1600 } ' i,
+  reviews: 1600,} ' i,
   d: 'smart-contract-automation'' nam,
   e: 'Smart Contract Automation'' taglin,
   e: 'Automate business processes with smart contracts'' pric,
   e: '$149'' perio,
   d: '/month' descriptio,
-  n:' 'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.' feature,
+  n: ' 'Platform for creating and deploying smart contracts to automate business processes, payments, and agreements without intermediaries.' feature,
   s: [' 'Visual smart contract builder'' 'Multi-blockchain support'' 'Template library'' 'Automated execution'' 'Payment processing'' 'Legal compliance tools'' 'Analytics dashboard'' 'API integration'' 'Mobile app'' 'Expert support' ] popula,
   r: true' ico,
   n: '⚡'' colo,
   r: 'from-green-500 to-emerald-600'' textColo,
   r: 'text-green-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/smart-contract-automation' marketPositio,
-  n:' 'Competitive with OpenLaw ($free), Clause ($variable), and Agrello ($variable). Our,
+  s: //ziontechgroup.com/smart-contract-automation' marketPositio,
+  n: ' 'Competitive with OpenLaw ($free), Clause ($variable), and Agrello ($variable). Our,
   advantage: Better user experience, more templates, and comprehensive support.' targetAudienc,
   e: ' 'Legal firms, Real estate companies, Insurance companies, Financial services, Supply chain companiestups' trialDay,
   s: 21' setupTim,
@@ -3177,27 +3164,27 @@ i,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.'' launchDat,
+  implementationDetails: ' 'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.'' launchDat,
   e: '2024-01-10' customer,
   s: 1800,
   rating: 4.9,
-  reviews: 900 } ' i,
+  reviews: 900,} ' i,
   d: 'ai-powered-customer-feedback-analyzer'' nam,
   e: 'AI-Powered Customer Feedback Analyzer'' taglin,
   e: 'Transform feedback into actionable insights'' pric,
   e: '$89'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.' feature,
+  n: ' 'Advanced feedback analysis platform that uses AI to automatically categorize, analyze, and extract insights from customer feedback across multiple channels.' feature,
   s: [' 'AI-powered sentiment analysis'' 'Multi-channel feedback collection'' 'Automatic categorization'' 'Trend identification'' 'Real-time alerts'' 'Custom dashboards'' 'Integration with CRM'' 'Export capabilities'' 'API access'' 'Mobile app' ] popula,
   r: true' ico,
   n: '💬'' colo,
   r: 'from-purple-500 to-pink-600'' textColo,
   r: 'text-purple-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-customer-feedback-analyzer' marketPositio,
-  n:' 'Competitive with Qualtrics ($1500+), SurveyMonkey ($25-99), and Typeform ($25-99). Our,
+  s: //ziontechgroup.com/ai-powered-customer-feedback-analyzer' marketPositio,
+  n: ' 'Competitive with Qualtrics ($1500+), SurveyMonkey ($25-99), and Typeform ($25-99). Our,
   advantage: Better AI analysis, competitive pricing, and comprehensive features.' targetAudienc,
   e: ' 'Customer success teams, Product managers, Marketing teams, E-commerce businesses, SaaS companies, Service companies' trialDay,
   s: 14' setupTim,
@@ -3217,27 +3204,27 @@ i,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.'' launchDat,
+  implementationDetails: ' 'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.'' launchDat,
   e: '2024-01-20' customer,
   s: 2800,
   rating: 4.7,
-  reviews: 1400 } ' i,
+  reviews: 1400,} ' i,
   d: 'automated-social-media-scheduler'' nam,
   e: 'Automated Social Media Scheduler'' taglin,
   e: 'AI-powered social media management'' pric,
   e: '$59'' perio,
   d: '/month' descriptio,
-  n:' 'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.' feature,
+  n: ' 'Intelligent social media scheduling platform that uses AI to optimize posting times, generate content ideas, and automate social media management.' feature,
   s: [' 'AI-powered scheduling'' 'Content generation suggestions'' 'Multi-platform support'' 'Analytics and insights'' 'Team collaboration'' 'Content calendar'' 'Hashtag optimization'' 'Performance tracking'' 'Mobile app'' 'API integration' ] popula,
   r: true' ico,
   n: '📱'' colo,
   r: 'from-pink-500 to-rose-600'' textColo,
   r: 'text-pink-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/automated-social-media-scheduler' marketPositio,
-  n:' 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40). Our,
+  s: //ziontechgroup.com/automated-social-media-scheduler' marketPositio,
+  n: ' 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40). Our,
   advantage: Better AI optimization, competitive pricing, and comprehensive features.' targetAudienc,
   e: ' 'Social media managers, Marketing teams, Small businesses, Influencers, Content creators, Agencies' trialDay,
   s: 14' setupTim,
@@ -3257,27 +3244,27 @@ i,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.'' launchDat,
+  implementationDetails: ' 'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.'' launchDat,
   e: '2024-01-25' customer,
   s: 4500,
   rating: 4.8,
-  reviews: 2250 } ' i,
+  reviews: 2250,} ' i,
   d: 'intelligent-project-management'' nam,
   e: 'Intelligent Project Management'' taglin,
   e: 'AI-powered project planning and execution'' pric,
   e: '$129'' perio,
   d: '/month' descriptio,
-  n:' 'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.' feature,
+  n: ' 'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.' feature,
   s: [' 'AI-powered planning'' 'Resource optimization'' 'Timeline prediction'' 'Risk assessment'' 'Team collaboration'' 'Progress tracking'' 'Custom workflows'' 'Integration capabilities'' 'Mobile app'' 'Analytics dashboard' ] popula,
   r: true' ico,
   n: '📋'' colo,
   r: 'from-orange-500 to-yellow-600'' textColo,
   r: 'text-orange-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/intelligent-project-management' marketPositio,
-  n:' 'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-19). Our,
+  s: //ziontechgroup.com/intelligent-project-management' marketPositio,
+  n: ' 'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-19). Our,
   advantage: Better AI capabilities, competitive pricing, and comprehensive features.' targetAudienc,
   e: ' 'Project managers, Development teams, Marketing teams, Creative agencies, Construction companies, Event planners' trialDay,
   s: 21' setupTim,
@@ -3297,22 +3284,22 @@ i,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'' launchDat,
+  implementationDetails: ' 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'' launchDat,
   e: '2024-01-30' customer,
   s: 3200,
   rating: 4.8,
-  reviews: 1600 }' 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.',' launchDat,
+  reviews: 1600,}' 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.',' launchDat,
   e: '2024-01-30', customer,
   s: 3200, ratin,
   g: 4.8, review,
-  s: 1600}' ]; mobil,
+  s: 1600,}' ]; mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'' launchDat,
   e: '2024-01-30' customer,
@@ -3322,72 +3309,72 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709', review,
   s: 1600' websit,
   e: 'http,
-  s://ziontechgroup.com' } real_implementatio,
+  s: //ziontechgroup.com',} real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete project management platform with AI - powered planning, resource optimization, and comprehensive collaboration features.'' launch_dat,
   e: '2024 - 01 - 30' customer,
   s: 3200, ratin,
   g: 4.8, review,
-  s: 1600} ]; export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string} } realImplementatio,
+  s: 1600,} ]; export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */,}
+  s: string,} websit,
+  e: string,} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number} export const,
-  innovativeMicroSaas: InnovativeMicroSaas[] = [, {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: number,} export const,
+  innovativeMicroSaas: InnovativeMicroSaas[] = [, {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.';' launchDat,
   e: '2024-01-15', customer,
   s: 3200, ratin,
   g: 4.8, review,
-  s: 1600} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 1600,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.';' launchDat,
   e: '2024-01-10', customer,
   s: 1800, ratin,
   g: 4.9, review,
-  s: 900} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 900,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.';' launchDat,
   e: '2024-01-20', customer,
   s: 2800, ratin,
   g: 4.7, review,
-  s: 1400} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 1400,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.';' launchDat,
   e: '2024-01-25', customer,
   s: 4500, ratin,
   g: 4.8, review,
-  s: 2250} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 2250,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.';' launchDat,
   e: '2024-01-30', customer,
   s: 3200, ratin,
   g: 4.8, review,
-  s: 1600} ]; i,
+  s: 1600,} ]; i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -3414,12 +3401,12 @@ i,
   e: string, growthRat,
   e: string, varian,
   t: string, contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string} } realImplementatio,
+  o: {/* TODO: Fix JSX expression */,}
+  s: string,} websit,
+  e: string,} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number} '
+  s: number,} '

@@ -6,7 +6,7 @@ if (fs.existsSync(appMinimalTestPath)) {
 
   // Fix jest imports - use the correct import;
   content = content.replace(/import \{ describe, it, expect \} from '@jest\/globals';/)
-if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
+if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */,}
     /import \{ describe, it, expect \} from '@jest\/globals';/,
     `import { describe, it, expect } from 'vitest';`
   );
@@ -28,7 +28,7 @@ blogPages.forEach(pagePath => {)
 
     fs.writeFileSync(pagePath, content);
     //         }
-blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
+blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */,}
     //         })
 });
 
@@ -41,10 +41,10 @@ openGraphPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
     // Fix authors format to use string array;
-    content = content.replace(/authors: \[\{ name: 'Zion Tech Group' \}\]/g)
+    content = content.replace(/authors: \[\{ name: 'Zion Tech Group' \,}\]/g)
       "authors: ['Zion Tech Group']",
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-  e: 'Zion Tech Group' \}\]/g,
+openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */,}
+  e: 'Zion Tech Group' \,}\]/g,
       "author,"
   s: ['Zion Tech Group']")
     ),
@@ -58,7 +58,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 if (fs.existsSync(calculatorPagePath)) {
 
   // Replace Calculator with CalculatorIcon;
-if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
+if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */,}
   content = content.replace(/import \{ CalculatorIcon \}/, 'import { Calculator }');
   content = content.replace(/<CalculatorIcon/g, '<Calculator');
 
@@ -73,7 +73,7 @@ if (fs.existsSync(analyticsTrackerPath)) {
   content = content.replace(/dataLayer: unknown\[\],/, 'dataLayer: unknown[];'),
 ,
   fs.writeFileSync(analyticsTrackerPath, content);
-if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
+if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */,}
   //     }
 
 // 6. Fix SystemMonitor - remove performanceEnhancer calls;
@@ -96,7 +96,7 @@ if (fs.existsSync(systemMonitorPath)) {
   content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {'),
 ,
   fs.writeFileSync(systemMonitorPath, content);
-if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}
+if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */,}
   //     }
 
 // 

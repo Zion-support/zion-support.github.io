@@ -25,9 +25,9 @@ function fixFile(filePath) {
       
       // Remove unused imports;
       unusedImports.forEach(importName => {)
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
+function fixFile(filePath) {/* TODO: Fix JSX expression */,}
         const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g');
-        if (content.match(regex)) {/* TODO: Fix JSX expression */}
+        if (content.match(regex)) {/* TODO: Fix JSX expression */,}
         }
       });
       
@@ -67,29 +67,29 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       content = content.replace(/const AIWritingAssistantPage: React\.FC = \(\) => \{/, 'export default function AIWritingAssistantPage() {');
       content = content.replace(/export default AIWritingAssistantPage;/, '');
       modified = true;
-      content = content.replace(/\(error\) => \{/* TODO: Fix JSX expression */}
+      content = content.replace(/\(error\) => \{/* TODO: Fix JSX expression */,}
     }
 
     // Fix about/page.tsx - remove unused imports and fix export;
-    if (filePath.includes('about/page.tsx')) {/* TODO: Fix JSX expression */}
+    if (filePath.includes('about/page.tsx')) {/* TODO: Fix JSX expression */,}
     }
 
     // Fix ai-crm/page.tsx - remove unused imports;
-    if (filePath.includes('ai-crm/page.tsx')) {/* TODO: Fix JSX expression */}
+    if (filePath.includes('ai-crm/page.tsx')) {/* TODO: Fix JSX expression */,}
     }
 
     // Fix ai-customer-support/page.tsx - fix export;
-    if (filePath.includes('ai-customer-support/page.tsx')) {/* TODO: Fix JSX expression */}
+    if (filePath.includes('ai-customer-support/page.tsx')) {/* TODO: Fix JSX expression */,}
     }
 
     // Fix ai-writing-assistant/page.tsx - fix export;
-    if (filePath.includes('ai-writing-assistant/page.tsx')) {/* TODO: Fix JSX expression */}
+    if (filePath.includes('ai-writing-assistant/page.tsx')) {/* TODO: Fix JSX expression */,}
     }
 
-    if (modified) {/* TODO: Fix JSX expression */}`
+    if (modified) {/* TODO: Fix JSX expression */,}`
       console.log(`✓ Fixed ${filePath}`);
     }
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`);
   }
 }
@@ -105,7 +105,7 @@ const filesToFix = [
   'src/ai-writing-assistant/page.tsx'
 ];
 
-for (const file of filesToFix) {/* TODO: Fix JSX expression */}
+for (const file of filesToFix) {/* TODO: Fix JSX expression */,}
   }
 }
 

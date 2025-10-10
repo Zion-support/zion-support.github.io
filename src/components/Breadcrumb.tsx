@@ -11,7 +11,7 @@ const Breadcrumb: React.FC = () => {
   const generateBreadcrumbs = (): BreadcrumbItem[] => {,
     const pathSegments = location.pathname.split('/').filter(Boolean);
     const breadcrumbs: BreadcrumbItem[] = [,
-      { name: 'Home', href: '/' }
+      { name: 'Home', href: '/',}
     ];
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
@@ -26,7 +26,7 @@ const Breadcrumb: React.FC = () => {
     )
         name)
         href: currentPath),
-        current: isLast
+        current: isLast,
   });
     });
     return breadcrumbs;
@@ -43,17 +43,17 @@ const Breadcrumb: React.FC = () => {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://ziontechgroup.com${item.href}`
+      "item": `https: //ziontechgroup.com${item.href,}`
     }))
   }
   return(<React.Fragment>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>)
           <ol className="flex items-center space-x-2 text-sm">),
   return (
     <React.Fragment>
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div></div>
           <ol className="flex items-center space-x-2 text-sm">
             {breadcrumbs.map((item, index) => (
               <li key={item.href} className="flex items-center"></li>
@@ -81,7 +81,7 @@ const Breadcrumb: React.FC = () => {
       {/* Structured Data */}
       <script;
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData),}}
       /></script>
   );
 }

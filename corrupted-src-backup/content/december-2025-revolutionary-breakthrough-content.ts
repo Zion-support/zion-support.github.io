@@ -20,7 +20,7 @@ export interface RevolutionaryBreakthroughContent {
     savings: string
     accuracy: string
     roi: string,
-export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */}
+export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */,}
   }
   consciousnessLevel?: string;
   transcendenceLevel?: string;
@@ -52,14 +52,14 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
       roi: '10,000x ROI',
 export const,
   december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
     },
     consciousnessLeve,
   l: 'Transcendent',
     transcendenceLeve,
   l: 'Ultimate',
     superintelligenceLeve,
-  l: 'Infinite'},
+  l: 'Infinite',},
   {
     id: 'artificial-superintelligence-breakthrough-2025'
     slug: 'ai-2025-december-artificial-superintelligence-breakthrough'
@@ -81,11 +81,11 @@ export const,
       savings: '$2.5 B+ annual savings',
       accuracy: '99.99% superintelligence accuracy',
       roi: '25,000x ROI',
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
     },
     consciousnessLeve,
   l: 'Superintelligent',
     transcendenceLeve,
   l: 'Ultimate',
     superintelligenceLeve,
-  l: 'Infinite'}];
+  l: 'Infinite',}];

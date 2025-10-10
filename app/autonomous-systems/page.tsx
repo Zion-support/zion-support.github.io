@@ -6,15 +6,15 @@ const AutonomousSystemsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
-        <meta>
+        <meta />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center mb-16"></div>
-            <h1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+        <div className="container mx-auto px-4 py-16"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h1></h1>
               Autonomous <span className="text-cyan-400">Systems</span>
             </h1>
-            <p>
+            <p></p>
               Advanced autonomous systems solutions for modern businesses.
             </p>
           </div>

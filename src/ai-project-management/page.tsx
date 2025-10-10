@@ -1,8 +1,8 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
+export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */,}
 }
-  return (<div><Helmet></Helmet>
+  return (<div></div><Helmet></Helmet>
         <title>AI Project Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /></meta>"
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" /></meta>"
@@ -10,85 +10,85 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
   s://ziontechgroup.com/ai-project-management" /></link>
       </Helmet>
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div></div>
         <Navigation /></Navigation>"
-        <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <main className="container mx-auto px-4 py-16 pt-24"></main></main>
           {/* Hero Section */}"
-          <section className="text-center mb-16"></section>"
+          <section className="text-center mb-16"></section></section>"
             <h1 className="text-4xl,"
-  md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+  md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1></h1>
               AI Project Management
             </h1>"
-            <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            <p className="text-xl text-cyan-400 mb-8 font-medium"></p></p>
               Intelligent project management powered by AI,
             </p>"
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p></p>
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
             </p>
           </section>
           {/* Features Grid */}"
-          <section className="mb-16"></section>"
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
+          <section className="mb-16"></section></section>"
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text"></h2>AI-Powered Features</h2>"
             <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">🔮</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics</h3>"
-                <p className="text-gray-300 text-center"></p>
+  md: grid-cols-2,"
+  lg:grid-cols-3 gap-8"></div></div>"
+              <div className="cyber-card p-6 energy-pulse"></div></div>"
+                <div className="text-4xl mb-4 text-center"></div>🔮</div>"
+                <h3 className="text-xl font-bold text-white mb-4 text-center"></h3>Predictive Analytics</h3>"
+                <p className="text-gray-300 text-center"></p></p>
                   AI predicts project risks, delays, and resource needs with 90% accuracy to keep projects on track.
                 </p>
               </div>
               "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">⚡</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Task Allocation</h3>"
-                <p className="text-gray-300 text-center"></p>
+              <div className="cyber-card p-6 energy-pulse"></div></div>"
+                <div className="text-4xl mb-4 text-center"></div>⚡</div>"
+                <h3 className="text-xl font-bold text-white mb-4 text-center"></h3>Smart Task Allocation</h3>"
+                <p className="text-gray-300 text-center"></p></p>
                   Automatically assign tasks to the right team members based on skills, workload, and availability.
                 </p>
               </div>
               "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">📊</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Insights</h3>"
-                <p className="text-gray-300 text-center"></p>
+              <div className="cyber-card p-6 energy-pulse"></div></div>"
+                <div className="text-4xl mb-4 text-center"></div>📊</div>"
+                <h3 className="text-xl font-bold text-white mb-4 text-center"></h3>Real-time Insights</h3>"
+                <p className="text-gray-300 text-center"></p></p>
                   Get instant visibility into project health, team performance, and budget utilization.
                 </p>
               </div>
               "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">🎯</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Resource Optimization</h3>"
-                <p className="text-gray-300 text-center"></p>
+              <div className="cyber-card p-6 energy-pulse"></div></div>"
+                <div className="text-4xl mb-4 text-center"></div>🎯</div>"
+                <h3 className="text-xl font-bold text-white mb-4 text-center"></h3>Resource Optimization</h3>"
+                <p className="text-gray-300 text-center"></p></p>
                   AI optimizes resource allocation to maximize efficiency and minimize project costs.
                 </p>
               </div>
               "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">🚨</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Risk Management</h3>"
-                <p className="text-gray-300 text-center"></p>
+              <div className="cyber-card p-6 energy-pulse"></div></div>"
+                <div className="text-4xl mb-4 text-center"></div>🚨</div>"
+                <h3 className="text-xl font-bold text-white mb-4 text-center"></h3>Risk Management</h3>"
+                <p className="text-gray-300 text-center"></p></p>
                   Proactive risk identification and mitigation strategies powered by machine learning.
                 </p>
               </div>
               "
-              <div className="cyber-card p-6 energy-pulse"></div>"
-                <div className="text-4xl mb-4 text-center">📈</div>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Performance Tracking</h3>"
-                <p className="text-gray-300 text-center"></p>
+              <div className="cyber-card p-6 energy-pulse"></div></div>"
+                <div className="text-4xl mb-4 text-center"></div>📈</div>"
+                <h3 className="text-xl font-bold text-white mb-4 text-center"></h3>Performance Tracking</h3>"
+                <p className="text-gray-300 text-center"></p></p>
                   Advanced metrics and KPIs to track team productivity and project success rates.
                 </p>
               </div>
             </div>
           </section>
           {/* Pricing Section */}"
-          <section className="mb-16"></section>"
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
+          <section className="mb-16"></section></section>"
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text"></h2>Pricing Plans</h2>"
             <div className="grid grid-cols-1,"
-  md:grid-cols-3 gap-8"></div>"
-              <div className="cyber-card p-8 text-center"></div>"
-                <h3 className="text-2xl font-bold text-white mb-4">Team</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg">/month</span></div>"
+  md:grid-cols-3 gap-8"></div></div>"
+              <div className="cyber-card p-8 text-center"></div></div>"
+                <h3 className="text-2xl font-bold text-white mb-4"></h3>Team</h3>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6"></div>$199<span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Up to 10 team members</li>
                   <li>5 active projects</li>
@@ -99,9 +99,9 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
               "
-              <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
-                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$499<span className="text-lg">/month</span></div>"
+              <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div></div>"
+                <h3 className="text-2xl font-bold text-white mb-4"></h3>Professional</h3>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6"></div>$499<span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Up to 50 team members</li>
                   <li>Unlimited projects</li>
@@ -113,9 +113,9 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
               "
-              <div className="cyber-card p-8 text-center"></div>"
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
-                <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>"
+              <div className="cyber-card p-8 text-center"></div></div>"
+                <h3 className="text-2xl font-bold text-white mb-4"></h3>Enterprise</h3>"
+                <div className="text-4xl font-bold text-cyan-400 mb-6"></div>Custom</div>"
                 <ul className="text-gray-300 space-y-3 mb-8"></ul>
                   <li>Unlimited team members</li>
                   <li>Unlimited projects</li>
@@ -129,51 +129,51 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
             </div>
           </section>
           {/* Benefits Section */}"
-          <section className="mb-16"></section>"
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>"
+          <section className="mb-16"></section></section>"
+            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text"></h2>Proven Results</h2>"
             <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl font-bold text-cyan-400 mb-4">40%</div>"
-                <h3 className="text-xl font-bold text-white mb-2">Faster Delivery</h3>"
-                <p className="text-gray-300">Projects completed 40% faster with AI optimization</p>
+  md: grid-cols-2,"
+  lg:grid-cols-4 gap-8"></div></div>"
+              <div className="cyber-card p-6 text-center"></div></div>"
+                <div className="text-4xl font-bold text-cyan-400 mb-4"></div>40%</div>"
+                <h3 className="text-xl font-bold text-white mb-2"></h3>Faster Delivery</h3>"
+                <p className="text-gray-300"></p>Projects completed 40% faster with AI optimization</p>
               </div>
               "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl font-bold text-green-400 mb-4">30%</div>"
-                <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>"
-                <p className="text-gray-300">Average 30% reduction in project costs</p>
+              <div className="cyber-card p-6 text-center"></div></div>"
+                <div className="text-4xl font-bold text-green-400 mb-4"></div>30%</div>"
+                <h3 className="text-xl font-bold text-white mb-2"></h3>Cost Reduction</h3>"
+                <p className="text-gray-300"></p>Average 30% reduction in project costs</p>
               </div>
               "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl font-bold text-pink-400 mb-4">95%</div>"
-                <h3 className="text-xl font-bold text-white mb-2">On-Time Delivery</h3>"
-                <p className="text-gray-300">95% of projects delivered on time</p>
+              <div className="cyber-card p-6 text-center"></div></div>"
+                <div className="text-4xl font-bold text-pink-400 mb-4"></div>95%</div>"
+                <h3 className="text-xl font-bold text-white mb-2"></h3>On-Time Delivery</h3>"
+                <p className="text-gray-300"></p>95% of projects delivered on time</p>
               </div>
               "
-              <div className="cyber-card p-6 text-center"></div>"
-                <div className="text-4xl font-bold text-yellow-400 mb-4">85%</div>"
-                <h3 className="text-xl font-bold text-white mb-2">Team Productivity</h3>"
-                <p className="text-gray-300">85% increase in team productivity</p>
+              <div className="cyber-card p-6 text-center"></div></div>"
+                <div className="text-4xl font-bold text-yellow-400 mb-4"></div>85%</div>"
+                <h3 className="text-xl font-bold text-white mb-2"></h3>Team Productivity</h3>"
+                <p className="text-gray-300"></p>85% increase in team productivity</p>
               </div>
             </div>
           </section>
           {/* CTA Section */}"
-          <section className="text-center"></section>"
-            <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2>"
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+          <section className="text-center"></section></section>"
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>Transform Your Project Management Today</h2>"
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p></p>
               Join 1,000+ teams using our AI project management solutions to deliver better projects faster and more efficiently.
             </p>"
             <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>"
+  sm:flex-row gap-4 justify-center"></div></div>"
               <a href="te,"
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
   l: (302) 464-0950,
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
-  hover:bg-white,"
+  hover: bg-white,"
   hover: text-indigo-600 transition-all duration-300"></a>
                 Get Free Trial
               </a>

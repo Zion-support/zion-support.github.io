@@ -23,7 +23,7 @@ export const preloadCriticalResources = useCallback((...args) => {}
     link.href = href;
     link.crossOrigin = 'anonymous',;
     document.head.appendChild(link)}
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}
   })
   // Preload critical images;
   const criticalImages = [
@@ -100,21 +100,21 @@ export const optimizeImages = useCallback((...args) => {}
             img.removeAttribute('data-src');
             imageObserver.unobserve(img)}
   ]
-  criticalImages.forEach(src => {/* TODO: Fix JSX expression */})
+  criticalImages.forEach(src => {/* TODO: Fix JSX expression */,})
   })
 }
 export const preloadRoute = (rout);
-  e: string) => {/* TODO: Fix JSX expression */}
+  e: string) => {/* TODO: Fix JSX expression */,}
   }
   const resources = routeResources[route as keyof typeof routeResources]
-  if (resources) {/* TODO: Fix JSX expression */}
+  if (resources) {/* TODO: Fix JSX expression */,}
     })
   }
 }
-export const optimizeImages = () => {/* TODO: Fix JSX expression */}
+export const optimizeImages = () => {/* TODO: Fix JSX expression */,}
   })
   // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
+  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */,}
           }
         }
       })
@@ -159,13 +159,13 @@ const loadAnalytics = useCallback((...args) => {}
   gaScript.async = true;
   gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
   document.head.appendChild(gaScript)}
-export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
+export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */,}
   })
   // Load analytics after page load;
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
+  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */,}
     })
-  } else {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */,}
   }
 }
-const loadAnalytics = () => {/* TODO: Fix JSX expression */}
+const loadAnalytics = () => {/* TODO: Fix JSX expression */,}
 }

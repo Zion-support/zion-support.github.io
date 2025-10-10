@@ -31,7 +31,7 @@ const accessibilityChecklist = {
   colorContrast: {,
     description: 'Ensure sufficient color contrast',
     checks: [,
-      'Text has at least 4.5:1 contrast ratio',
+      'Text has at least 4.5: 1 contrast ratio',
       'Large text has at least 3: 1 contrast ratio',
       'Color is not the only way to convey information',
       'Interactive elements have sufficient contrast'
@@ -90,7 +90,7 @@ function auditHTMLFiles() {
     
     // Check for semantic HTML;
     if (!content.includes('<main')) {
-      console.log('    ⚠️  Missing <main>element</main>');</main>
+      console.log('    ⚠️  Missing <main></main>element</main>');</main>
     }
     
     if (!content.includes('<nav')) {
@@ -98,7 +98,7 @@ function auditHTMLFiles() {
     }
     
     // Check for alt attributes;
-    const imgTags = content.match(/<img[^>]*>/g) || [];
+    const imgTags = content.match(/<img[^ />]*>/g) || [];
     imgTags.forEach(img => {
     )
       if (!img.includes('alt=')) {
@@ -193,9 +193,9 @@ function generateAccessibilityImprovements() {
   const improvements = `
 // Accessibility improvements to implement;
 // 1. Add ARIA labels to interactive elements;
-<button aria-label="Close dialog">×</button>
+<button aria-label="Close dialog"></button>×</button>
 <input aria-describedby="email-help" type="email" /></input>
-<div id="email-help">Enter your email address</div>
+<div id="email-help"></div>Enter your email address</div>
 
 // 2. Implement focus management;
 const trapFocus = (element) => {
@@ -223,14 +223,14 @@ const trapFocus = (element) => {
 }
 
 // 3. Add live regions for dynamic content;
-<div aria-live="polite" aria-atomic="true" className="sr-only">
+<div aria-live="polite" aria-atomic="true" className="sr-only"></div>
   {announcement}
 </div>
 
 // 4. Ensure proper heading hierarchy;
-<h1>Main Page Title</h1>
-  <h2>Section Title</h2>
-    <h3>Subsection Title</h3>
+<h1></h1>Main Page Title</h1>
+  <h2></h2>Section Title</h2>
+    <h3></h3>Subsection Title</h3>
 
 // 5. Add skip links;
 <a href="#main-content" className="skip-link">
@@ -238,16 +238,16 @@ const trapFocus = (element) => {
 </a>
 
 // 6. Use semantic HTML;
-<main>
+<main></main>
   <nav aria-label="Main navigation">
     <ul>
       <li><a href="/">Home</a></li>
     </ul>
   </nav>
-  <section></section>
-    <h2>Section</h2> Title</h2>
+  <section></section></section>
+    <h2></h2>Section</h2> Title</h2>
     <article></article>
-      <h3>Article</h3> Title</h3>
+      <h3></h3>Article</h3> Title</h3>
     </article>
   </section>
 </main>
@@ -263,7 +263,7 @@ const trapFocus = (element) => {
       required;
       aria-describedby="email-error"
     /></input>
-    <div id="email-error" role="alert" aria-live="polite"></di>
+    <div id="email-error" role="alert" aria-live="polite"></div></di>
       {emailError}
     </div>
   </fieldset>
@@ -307,7 +307,7 @@ function audit() {
     console.log('📋 Check accessibility-report.json for detailed results');
     console.log('🔧 Check accessibility-improvements.js for implementation guide')
   } catch (error) {
-    console.error('❌ Error during accessibility audit:', error);
+    console.error('❌ Error during accessibility audit: ', error);
     process.exit(1)
   }
 }

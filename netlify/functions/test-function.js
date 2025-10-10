@@ -9,11 +9,11 @@ exports.handler = async function (event, context) {
         context: {,
           awsRequestId: context.awsRequestId
           functionName: context.functionName,
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */,}
         }
       }),
       header,
-  s: {'Content-Type': 'application/json'}
+  s: {'Content-Type': 'application/json',}
     }
   } catch (error) {
 
@@ -22,10 +22,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({)
         error: 'Test function failed'),
         message: error.message),
-        timestamp: new Date().toISOString()} catch (error) {/* TODO: Fix JSX expression */}
+        timestamp: new Date().toISOString(),} catch (error) {/* TODO: Fix JSX expression */,}
       }),
       header,
-  s: {'Content-Type': 'application/json'}
+  s: {'Content-Type': 'application/json',}
     }
   }
 }

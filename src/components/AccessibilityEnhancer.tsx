@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 interface AccessibilityEnhancerProps {
-    children: React.ReactNode
+    children: React.ReactNode,
   }
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children,}) => {
     </AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -19,7 +19,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2 px solid #06 b6 d4 !important,
-          outline-offset: 2 px !important
+          outline-offset: 2 px !important,
   }
       `;
       document.head.appendChild(style);
@@ -84,14 +84,14 @@ interface AccessibilitySettings {
     highContrast: boolean
   reducedMotion: boolean
   fontSize: 'small' | 'medium' | 'large',
-  focusVisible: boolean
+  focusVisible: boolean,
   }
 const AccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
-    focusVisible: false});
+    focusVisible: false,});
   useEffect(() => {
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -99,7 +99,7 @@ const AccessibilityEnhancer: React.FC = () => {
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast}));
+      highContrast: prefersHighContrast,}));
     // Apply accessibility settings
     const root = document.documentElement;
     if (settings.highContrast) {
@@ -165,7 +165,7 @@ const AccessibilityEnhancer: React.FC = () => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         const pageTitle = document.title;
-        liveRegion.textContent = `Page loaded: ${pageTitle}`;
+        liveRegion.textContent = `Page loaded: ${pageTitle,}`;
       }
     }
     // Announce after a short delay to ensure content is loaded
@@ -177,14 +177,14 @@ const AccessibilityEnhancer: React.FC = () => {
     return null
   }
   return (
-    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
-      <div className="mb-2 font-bold">Accessibility Settings</div>
-      <div className="space-y-2">
+    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50"></div>
+      <div className="mb-2 font-bold"></div>Accessibility Settings</div>
+      <div className="space-y-2"></div>
         <label className="flex items-center space-x-2">
           <input
             type="checkbox"
             checked={settings.highContrast}
-            onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
+            onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked,}))}
             className="rounded"
           />
           <span>High Contrast</span>
@@ -193,16 +193,16 @@ const AccessibilityEnhancer: React.FC = () => {
           <input
             type="checkbox"
             checked={settings.reducedMotion}
-            onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
+            onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked,}))}
             className="rounded"
           />
           <span>Reduced Motion</span>
         </label>
-        <div>
+        <div></div>
           <label className="block mb-1">Font Size:</label>
           <select
             value={settings.fontSize}
-            onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
+            onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any,}))}
             className="bg-gray-700 text-white rounded px-2 py-1">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -213,7 +213,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <input
             type="checkbox"
             checked={settings.focusVisible}
-            onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked }))}
+            onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked,}))}
             className="rounded"
           />
           <span>Focus Visible</span>

@@ -6,7 +6,7 @@ import fs from 'fs';
 // Remove the duplicate errorHandler object at the end;
 content = content.replace(
   /export const errorHandler = \{\s*log: \(error: Error, context\?: string\) => \{[\s\S]*?\}\s*;\s*$/g,
-content = content.replace(/export const errorHandler = \{/* TODO: Fix JSX expression */})
+content = content.replace(/export const errorHandler = \{/* TODO: Fix JSX expression */,})
   r: Error, context\?: string\) => \{[\s\S]*?\}\s*;\s*$/g,
   ''
 );

@@ -19,7 +19,7 @@ const PricingPage: React.FC = () => {
         'Monthly Reports',
         'Basic Analytics Dashboard'
       ],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -35,7 +35,7 @@ const PricingPage: React.FC = () => {
         'API Access',
         'Training Sessions'
       ],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -52,7 +52,7 @@ const PricingPage: React.FC = () => {
         'On-site Training',
         'SLA Guarantee'
       ],
-      popular: false
+      popular: false,
     }
   ]
 
@@ -64,38 +64,38 @@ const PricingPage: React.FC = () => {
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 Transparent Pricing
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
                 Choose the perfect plan for your business needs. All plans include our core AI and IT services.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {plans.map((plan, index) => (
                 <div
                   key={index}
                   className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
                     plan.popular 
                       ? 'border-cyan-400/50 scale-105' 
-                      : 'border-white/10 hover:border-cyan-400/30'
+                      : 'border-white/10 hover: border-cyan-400/30',
                   }`}
-                >
+                ></div>
                   {plan.popular && (
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6"></div>
                       Most Popular
                     </div>
                   )}
                   
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4"></h3>{plan.name}</h3>
+                  <p className="text-gray-300 mb-6"></p>{plan.description}</p>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <span className="text-4xl font-bold text-white">${plan.price}</span>
                     <span className="text-gray-400 ml-2">/month</span>
                   </div>
@@ -112,20 +112,20 @@ const PricingPage: React.FC = () => {
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}>
+                      : 'bg-white/10 text-white hover: bg-white/20',
+                  }`}></button>
                     {plan.popular ? 'Get Started' : 'Choose Plan'}
                   </button>
                 </div>
               ))}
             </div>
 
-            <div className="text-center mt-16">
-              <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <div className="text-center mt-16"></div>
+              <h2 className="text-3xl font-bold text-white mb-4"></h2>Need a Custom Solution?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
                 We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
               </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"></button>
                 Contact Sales
               </button>
             </div>

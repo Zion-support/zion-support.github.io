@@ -5,12 +5,12 @@
  */
 
 export interface AppConfig {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
   ap,
-  p: {/* TODO: Fix JSX expression */}
+  p: {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   nam,
@@ -21,7 +21,7 @@ export interface AppConfig {
   t: 'development' | 'production' | 'test',
   }
   ap,
-  i: {/* TODO: Fix JSX expression */}
+  i: {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   baseUr,
@@ -31,7 +31,7 @@ export interface AppConfig {
     retryAttempt,
   s: number,,
     feature,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 
@@ -40,7 +40,7 @@ export interface AppConfig {
     errorTracking: boolean,,
     performanceOptimization: boolean,,
     performance: {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   enableLazyLoading: boolean,,
@@ -48,12 +48,12 @@ export interface AppConfig {
     componentLazyLoadThreshold: number,,
     cacheMaxAge: number,,
     security: {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
   enableCSP: boolean,,
     enableHSTS: boolean,,
-    enableXSSProtection: boolean
+    enableXSSProtection: boolean,
 
 }
     nam,
@@ -61,8 +61,7 @@ export interface AppConfig {
     versio,
   n: '1.0.0',
     environmen,
-  t:
-//       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
+  t: //       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
   },
     enableLazyLoadin,
   g: true,
@@ -88,37 +87,37 @@ export function getConfig,
   const __keys = keyPath.split('.');
   let,
   value: unknown = config,
-  for (const key of keys) {/* TODO: Fix JSX expression */}
+  for (const key of keys) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-    if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
+    if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       value = (value as Record;)
           <string, unknown>)[key];
-    } else {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       throw new Error(`Configuration key "${keyPath}" not found`);
   return value as T;
  * Check if a feature is enabled;
 export function isFeatureEnabled(featur)
-  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
+  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   return config.features[feature];
  * Get current environment;
-export function getEnvironment(): string {/* TODO: Fix JSX expression */}
+export function getEnvironment(): string {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   return config.app.environment;
  * Check if running in production;
-export function isProduction(): boolean {/* TODO: Fix JSX expression */}
+export function isProduction(): boolean {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   return config.app.environment === 'production';
  * Check if running in development;
-export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
+export function isDevelopment(): boolean {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   return config.app.environment === 'development';

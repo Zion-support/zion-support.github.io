@@ -54,7 +54,7 @@ gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {
     page_title: document.title,
       page_location: window.location.href,
-      send_page_view: true
+      send_page_view: true,
   }
     })
   }
@@ -111,7 +111,7 @@ const initializeErrorTracking = (;
     window.addEventListener('unhandledrejection', (event) => {
     trackEvent('error', 'unhandled_promise_rejection', {
         reason: event.reason,
-        promise: event.promise
+        promise: event.promise,
   }
       })
     })
@@ -121,7 +121,7 @@ const initializeErrorTracking = (;
         trackEvent('error', 'resource_error', {
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
-          error: event.type
+          error: event.type,
   }
 
         })
@@ -169,13 +169,13 @@ if (tagName === 'a') {
         const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {
           link_url: href,
-          link_text: target.textContent?.trim()
+          link_text: target.textContent?.trim(),
   }
         })
       } else if (tagName === 'button') {
     trackEvent('engagement', 'button_click', {
           button_text: target.textContent?.trim(),
-          button_class: target.className
+          button_class: target.className,
   }
         })
       }
@@ -186,7 +186,7 @@ if (tagName === 'a') {
       trackEvent('engagement', 'form_submit', {
         form_id: form.id,
         form_class: form.className,
-        form_action: form.action
+        form_action: form.action,
   }
       })
     })
@@ -211,14 +211,14 @@ declare global {
     interface Window {
 
     dataLayer: any[],
-    gtag: (...args: any[]) => void
+    gtag: (...args: any[]) => void,
   }
   }
 };
 
 export default Analytics;
 // Analytics Provider for context;
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode,}> = ({ children }) => {
     return (
     <>
       <Analytics />

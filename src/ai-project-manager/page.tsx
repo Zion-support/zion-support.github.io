@@ -64,28 +64,28 @@ const AiProjectManagerPage: React.FC = () => {
         'White-label options',
         'API access'
   const stats = [
-    { icon: Users, value: '500+', label: 'Active Teams' },
-    { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
-    { icon: Clock, value: '70%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'User Rating' }
+    { icon: Users, value: '500+', label: 'Active Teams',},
+    { icon: TrendingUp, value: '40%', label: 'Productivity Increase',},
+    { icon: Clock, value: '70%', label: 'Time Saved',},
+    { icon: Star, value: '4.9/5', label: 'User Rating',}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>AI Project Manager | Zion Tech Group</title>
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
       </Helmet>
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>AI Project Manager</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Coming Soon - Advanced AI project management solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"></button>
               Contact Us
   </
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors"></button>
               Learn More
   </
       <Footer />

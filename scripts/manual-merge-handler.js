@@ -11,11 +11,11 @@ function execGitCommand(command, description) {
     const result = execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe'});
+      stdio: 'pipe',});
     console.log(`✅ ${description} completed`);
     return result;
   } catch (error) {
-    console.log(`❌ ${description} failed: ${error.message}`);
+    console.log(`❌ ${description} failed: ${error.message,}`);
     return null;
   }
 }

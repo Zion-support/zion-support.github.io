@@ -1,7 +1,7 @@
 import React from 'react';
 interface SkipLinkProps {
     to: string,
-  children: React.ReactNode
+  children: React.ReactNode,
   }
 const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps>return</SkipLinkProps> (
     <a
@@ -19,7 +19,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps
         transition: 'top 0.3 s',
         borderRadius: '4 px',
         fontSize: '14 px',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       }}
       onFocus={
     (e) => {

@@ -6,7 +6,7 @@ if (fs.existsSync(appMinimalTestPath)) {
 
   // Fix jest imports;
   content = content.replace(/import \{ describe, it, expect \} from 'jest';/)
-if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
+if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */,}
     /import \{ describe, it, expect \} from 'jest';/,
     `import { describe, it, expect } from '@jest/globals';`
   );
@@ -28,7 +28,7 @@ blogPages.forEach(pagePath => {)
 
     fs.writeFileSync(pagePath, content);
     //         }
-blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
+blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */,}
     //         })
 });
 
@@ -42,9 +42,9 @@ openGraphPages.forEach(pagePath => {)
 
     // Fix authors format to match Author type;
     content = content.replace(/authors: \['Zion Tech Group'\]/g),
-      "authors: [{ name: 'Zion Tech Group' }]"
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-  e: 'Zion Tech Group' }]")
+      "authors: [{ name: 'Zion Tech Group',}]"
+openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */,}
+  e: 'Zion Tech Group',}]")
     );
 
     fs.writeFileSync(pagePath, content);
@@ -56,7 +56,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 if (fs.existsSync(calculatorPagePath)) {
 
   // Replace Calculator with CalculatorIcon;
-if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
+if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */,}
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
   content = content.replace(/<Calculator/g, '<CalculatorIcon');
 
@@ -76,10 +76,10 @@ if (fs.existsSync(seoOptimizerPath)) {
     keywords: string[];
     canonicalUrl: string
     ogImage: string
-    structuredData?: unknown,,
-if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
+    structuredData?: unknown,
+if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */,}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
-    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
+    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */,}
   }
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
@@ -102,12 +102,12 @@ if (fs.existsSync(analyticsTrackerPath)) {
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper imports and declarations at the top;
-if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
+if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */,}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper imports and declarations at the top;`
   content = `
-declare global {/* TODO: Fix JSX expression */}
+declare global {/* TODO: Fix JSX expression */,}
   }
 }
 `
@@ -122,7 +122,7 @@ if (fs.existsSync(systemMonitorPath)) {
 
   // Add proper React imports;
   content = content.replace(/import React from 'react';/)
-if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
+if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */,}`
     `import React, { useState, useEffect } from 'react';`
   );
 
@@ -150,11 +150,11 @@ if (fs.existsSync(performancePath)) {
   content = `declare global {
   interface Window {
     gtag: (...args: unknown[]) => void,
-if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
+if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */,}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper declaration at the top;`
-  content = `declare global {/* TODO: Fix JSX expression */}
+  content = `declare global {/* TODO: Fix JSX expression */,}
   }
 }
 `

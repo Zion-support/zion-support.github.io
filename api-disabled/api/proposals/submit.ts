@@ -32,7 +32,7 @@ async function submitByEmail(to: string;)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed',});
 async function submitByEmail(t,
   o: string,
   subjec,
@@ -41,62 +41,62 @@ async function submitByEmail(t,
   t: string,
   attachment,
   s: unknown[] = [])
-) {/* TODO: Fix JSX expression */}
+) {/* TODO: Fix JSX expression */,}
   }
 
-  const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}
+  const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */,}
   h: { user, pass })
   });
 
-  await transporter.sendMail({/* TODO: Fix JSX expression */})
+  await transporter.sendMail({/* TODO: Fix JSX expression */,})
   });
 }
 
 export default async function handler(re,
   q: NextApiRequest, re)
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method not allowed' });
+  s: NextApiResponse) {/* TODO: Fix JSX expression */,}
+  r: 'Method not allowed',});
   }
 
-  try {/* TODO: Fix JSX expression */}
+  try {/* TODO: Fix JSX expression */,}
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
 
-    if (!id) {/* TODO: Fix JSX expression */}
-  r: 'Proposal ID required' });
+    if (!id) {/* TODO: Fix JSX expression */,}
+  r: 'Proposal ID required',});
     }
 
     const _meta = getProposal(id);
-    if (!meta) {/* TODO: Fix JSX expression */}
-  r: 'Proposal not found' });
+    if (!meta) {/* TODO: Fix JSX expression */,}
+  r: 'Proposal not found',});
     }
 
     // Email submission;
     if (channels.includes('email')) {
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-    if (channels.includes('email')) {/* TODO: Fix JSX expression */}
+    if (channels.includes('email')) {/* TODO: Fix JSX expression */,}
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
       const text = `Please find the proposal attached.
 
 Titl,
-  e: ${meta.title}
+  e: ${meta.title,}
 Targe,
-  t: ${meta.targetInstitution}
+  t: ${meta.targetInstitution,}
 Typ,
-  e: ${meta.type}
+  e: ${meta.type,}
 Regio,
-  n: ${meta.regionalScope}
+  n: ${meta.regionalScope,}
 Budget/Resolutio,
-  n: ${meta.budgetOrResolution}
+  n: ${meta.budgetOrResolution,}
 
 DAO Governance: See document.,
 ,
-Delegate Note: ${delegateNote || 'N/A'}`;
+Delegate Note: ${delegateNote || 'N/A',}`;
 DAO,
   Governance: See document.
 
 Delegate,`
-  Note: ${delegateNote || 'N/A'}`;
+  Note: ${delegateNote || 'N/A',}`;
 
       await submitByEmail(to, subject, text);
     }
@@ -113,29 +113,29 @@ Delegate,`
 
     const updated = updateProposalMeta(id, m => ({)
       ...m)
-      status: 'Submitted')}));
+      status: 'Submitted'),}));
 
-    return res.status(200).json({ meta: updated });
+    return res.status(200).json({ meta: updated,});
   } catch (error: unknown) {,
-    return res.status(500).json({ error: error?.message || 'Submission failed' });
+    return res.status(500).json({ error: error?.message || 'Submission failed',});
     // ENS record hash (defaul)
   t: compute and store hash only)
     let,
   ensRecordHash: string | undefined;
-    try {/* TODO: Fix JSX expression */}`
+    try {/* TODO: Fix JSX expression */,}`
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash });
-    } catch {/* TODO: Fix JSX expression */}
+    } catch {/* TODO: Fix JSX expression */,}
     }
 
-    const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
+    const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */,})
     }));
 
-    return res.status(200).json({/* TODO: Fix JSX expression */})
-  a: updated });
+    return res.status(200).json({/* TODO: Fix JSX expression */,})
+  a: updated,});
   } catch (erro)
-  r: unknown) {/* TODO: Fix JSX expression */}
-  r: error?.message || 'Submission failed' });
+  r: unknown) {/* TODO: Fix JSX expression */,}
+  r: error?.message || 'Submission failed',});
   }
 }
 `

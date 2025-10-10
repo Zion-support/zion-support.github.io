@@ -7,22 +7,22 @@ const PagePage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
   },
     {
     icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
   },
     {
     icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
   },
     {
     icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
   }
     }
   ]
@@ -41,19 +41,19 @@ const benefits = [
     'Proven track record of success'
   ]
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
             </h1>
-            <p>
+            <p></p>
               Transform your business with our advanced page solutions.;
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </h2>
-            <p>
+            <p></p>
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
@@ -61,7 +61,7 @@ return (
         </div>
       </section>
             </h2>
-            <p>
+            <p></p>
               Experience the power of our page solutions for your business.
             </p>
           </div>
@@ -70,15 +70,15 @@ return (
       </section>
               Ready to Get Started?
             </h2>
-            <p>
+            <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>
+              <button></button>
                 <Phone>
                 Call Now
               </button>
-              <button>
+              <button></button>
                 <Mail>
                 Email Us
               </button>

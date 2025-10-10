@@ -16,8 +16,8 @@ export const securityHeaders = {
       ],;
       styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
       fontSrc: ["'self'", 'https: //fonts.gstatic.com'],
-      imgSrc: ["'self'", 'data:', 'https:', 'blob: '],
-      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],
+      imgSrc: ["'self'", 'data: ', 'https: ', 'blob: '],
+      connectSrc: ["'self'", 'https: //www.google-analytics.com', 'https: //analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: true,
@@ -84,7 +84,7 @@ export const validationPatterns = {}
 export function sanitizeInput(input: string): string {
     return input,
     .replace(/[<>]/g, '') // Remove < and >;
-    .replace(/javascript:/gi, '') // Remove javascript: protocol,
+    .replace(/javascript: /gi, '') // Remove javascript: protocol,
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim()
   }

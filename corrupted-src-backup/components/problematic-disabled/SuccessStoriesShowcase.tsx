@@ -1,5 +1,5 @@
 import React from 'react';
-const SuccessStoriesShowcas, e: React.FC = () => { ,
+const SuccessStoriesShowcas, e: React.FC = () => {,
   const storie, s = [
     {
       company: "TechCorp, Internatio, n, a, l",
@@ -40,77 +40,77 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       ],",
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
      }
-  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
-      <div, className="container, m, x-auto, p, x-6">
-        <div, className="te, x, t-center, m, b-16">
-  ]; return (
-    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
-      <div, className="container, m, x-auto, p, x-6"></section>
+  ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>
+      <div, className="container, m, x-auto, p, x-6"></div>
         <div, className="te, x, t-center, m, b-16"></div>
-          <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+  ]; return (
+    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>
+      <div, className="container, m, x-auto, p, x-6"></div></section>
+        <div, className="te, x, t-center, m, b-16"></div></div>
+          <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
             Success, Storie, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
+          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o"></p>
             See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
           </p>)
         </div>)
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">)
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12"></div>)
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
             See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
   </
         </div>
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12"></div>
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (</div>
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
-            ></div>
-              <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>
-                <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
+            ></div></div>
+              <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div></div>
+                <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4"></div>
                   {sto, r, y.ic, o, n}</div>
                   <d, i, v>
-                    <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>
-const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
+                    <h3, className="fo, n, t-bold, tex, t-xl"></h3>{sto, r, y.company}</h3>
+const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */,}
      },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
      },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
      }
-  ]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>"
-      <div, className="container, m, x-auto, p, x-6"></div>"
-        <div, className="te, x, t-center, m, b-16"></div>"
-          <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
+  ]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section></section>"
+      <div, className="container, m, x-auto, p, x-6"></div></div>"
+        <div, className="te, x, t-center, m, b-16"></div></div>"
+          <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2></h2>
             Success, Storie, s;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o"></p>
+          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o"></p></p>
             See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
           </p>
         </div>"
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12"></div>
-          {/* TODO: Fix JSX expression */}"
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12"></div></div>
+          {/* TODO: Fix JSX expression */,}"
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
-            ></div>
-              <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>"
-                <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4"></div>
+            ></div></div>
+              <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div></div>"
+                <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4"></div></div>
                   {sto, r, y.ic, o, n}
                   <d, i, v></d>"
-                    <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>"
-                    <p, className="te, x, t-sm, opacit, y-90">{sto, r, y.industry}</p>
+                    <h3, className="fo, n, t-bold, tex, t-xl"></h3>{sto, r, y.company}</h3>"
+                    <p, className="te, x, t-sm, opacit, y-90"></p>{sto, r, y.industry}</p>
                   </div>
                 </div>"
-                <div, className="te, x, t-3xl, fon, t-bo, l, d">{sto, r, y.resu, l, t}</div>
+                <div, className="te, x, t-3xl, fon, t-bo, l, d"></div>{sto, r, y.resu, l, t}</div>
               </div>
-              <div, className="p-6"></div>
-                <p, className="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.description}</p>
-                <div, className="spa, c, e-y-2, m, b-6">
-                  { sto, r, y.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (</div>
-                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2"></div>
-                      <div, className="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" /></div>
-              </div>"
-              <div, className="p-6"></div>"
-                <p, className="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.description}</p>"
+              <div, className="p-6"></div></div>
+                <p, className="te, x, t-gr, a, y-600, m, b-6"></p>{sto, r, y.description}</p>
                 <div, className="spa, c, e-y-2, m, b-6"></div>
-                  {/* TODO: Fix JSX expression */}"
-                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2"></div>"
-                      <div, className="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" /></div>"
+                  { sto, r, y.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (</div>
+                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2"></div></div>
+                      <div, className="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" /></div></div>
+              </div>"
+              <div, className="p-6"></div></div>"
+                <p, className="te, x, t-gr, a, y-600, m, b-6"></p>{sto, r, y.description}</p>"
+                <div, className="spa, c, e-y-2, m, b-6"></div></div>
+                  {/* TODO: Fix JSX expression */,}"
+                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2"></div></div>"
+                      <div, className="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" /></div></div>"
                       <span, className="te, x, t-sm, tex, t-gr, a, y-7, 0, 0">{metr, i, c}</sp, a, n>
                     </di, v>)
                   ))}
@@ -127,15 +127,15 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
             </div>
           ))}
         </div>
-        <div, classNam, e = "te, x, t-cent, e, r"></div>
+        <div, classNam, e = "te, x, t-cent, e, r"></div></div>
           <Link, t, o="/ca, s, e-studi, e, s"
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg">
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r: sca, l, e-105, shado, w-lg">
             View, All, Success Stori, e, s;
             <Link, className="w-6 h-6" />
         </div>"
-        <div, classNam, e = "te, x, t-cent, e, r"></div>"
+        <div, classNam, e = "te, x, t-cent, e, r"></div></div>"
           <Link, t, o="/ca, s, e-studi, e, s""
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"></Link>
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r: sca, l, e-105, shado, w-lg"></Link>
             View, All, Success Stori, e, s;"
             <Link, className="w-6 h-6" /></Link>
           </Li, n, k>

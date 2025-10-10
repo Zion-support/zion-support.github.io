@@ -63,7 +63,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Calculate performance score
     const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
     setPerformanceScore(score);
-    newOptimizations.push(`Performance score: ${score}/100`);
+    newOptimizations.push(`Performance score: ${score,}/100`);
 
     setOptimizations(newOptimizations);
     setIsOptimizing(false);
@@ -79,32 +79,32 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [runOptimizations]);
 
   return (
-    <div className="performance-optimizer">
+    <div className="performance-optimizer"></div>
       {children}
       
       {/* Performance Status Indicator (only in development) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
-          <div className="flex items-center space-x-2 mb-2">
+        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs"></div>
+          <div className="flex items-center space-x-2 mb-2"></div>
             <Settings className="w-4 h-4 text-cyan-400" />
             <span className="font-semibold">Performance Optimizer</span>
           </div>
           
           {isOptimizing ? (
-            <div className="flex items-center space-x-2 text-yellow-400">
+            <div className="flex items-center space-x-2 text-yellow-400"></div>
               <Zap className="w-4 h-4 animate-pulse" />
               <span>Optimizing...</span>
             </div>
           ) : (
-            <div className="space-y-2">
+            <div className="space-y-2"></div>
               {performanceScore && (
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2"></div>
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Score: {performanceScore}/100</span>
+                  <span>Score: {performanceScore,}/100</span>
                 </div>
               )}
               
-              <div className="text-xs text-gray-300">
+              <div className="text-xs text-gray-300"></div>
                 {optimizations.length > 0 ? (
                   <ul className="space-y-1">
                     {optimizations.map((opt, index) => (

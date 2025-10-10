@@ -19,7 +19,7 @@ function fixMergeConflicts(filePath) {
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
       return headContent.trim();
-function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
+function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */,}
     });
 
     // Remove any remaining conflict markers;
@@ -38,14 +38,14 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
       .replace(/\s+$/gm, ''); // Remove trailing spaces;
     if (modified || content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-    if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
-  d: ${filePath}`);
+      console.log(`Fixed: ${filePath,}`);
+    if (modified || content !== originalContent) {/* TODO: Fix JSX expression */,}
+  d: ${filePath,}`);
       return true;
     }
     
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -66,8 +66,8 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
         traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */,}
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */,}
       }
     }
   }
@@ -85,9 +85,9 @@ const files = findFiles(srcDir);
 let fixedCount = 0;
 let errorCount = 0;
 
-for (const file of files) {/* TODO: Fix JSX expression */}
+for (const file of files) {/* TODO: Fix JSX expression */,}
     }
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Failed to process ${file}:`, error.message);
     errorCount++;
   }
@@ -96,29 +96,29 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 console.log(`\nMerge conflict resolution)`
   complete:`);`
 console.log(`- Files)`
-  processed: ${files.length}`);`
+  processed: ${files.length,}`);`
 console.log(`- Files)`
-  fixed: ${fixedCount}`);`
+  fixed: ${fixedCount,}`);`
 console.log(`- Error)`
-  s: ${errorCount}`);
+  s: ${errorCount,}`);
 
 console.log(`\nMerge conflict resolution complete: `);
-console.log(`- Files processed: ${files.length}`);
-console.log(`- Files fixed: ${fixedCount}`);
-console.log(`- Errors: ${errorCount}`);
+console.log(`- Files processed: ${files.length,}`);
+console.log(`- Files fixed: ${fixedCount,}`);
+console.log(`- Errors: ${errorCount,}`);
 
 // Run linting to check for remaining issues;
 console.log('\nRunning linting to check for remaining issues...');
-try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+try {/* TODO: Fix JSX expression */,}
+  o: 'inherit',});
   console.log('Linting passed!');
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }
 
 // Try building;
 console.log('\nTrying to build...');
-try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+try {/* TODO: Fix JSX expression */,}
+  o: 'inherit',});
   console.log('Build successful!');
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }`

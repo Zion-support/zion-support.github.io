@@ -13,7 +13,7 @@ export interface January2026Content {
   valueProposition: string,
   pricing: {,
     starting: string,
-    enterprise: string
+    enterprise: string,
   }
 }
 
@@ -42,7 +42,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
     valueProposition: '$1.2T enterprise value creation'
     pricing: {,
       starting: 'Contact for pricing',
-      enterprise: 'Custom solutions available'}},
+      enterprise: 'Custom solutions available',}},
   {
     id: 'quantum-ai-synthesis-2026'
     title: 'Quantum AI Synthesis 2026: The Convergence Revolution'
@@ -68,13 +68,13 @@ The convergence of quantum computing and artificial intelligence opens new front
     pricing: {,
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available',
-export interface January2026Content {/* TODO: Fix JSX expression */}
+export interface January2026Content {/* TODO: Fix JSX expression */,}
   }
 }
 
 export const,
   newJanuary2026Content: January2026Content[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
     }},
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
     }}];

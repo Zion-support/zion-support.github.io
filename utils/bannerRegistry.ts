@@ -22,7 +22,7 @@ export interface BannerConfig {
   metadata?: {
     description?: string
     author?: string
-    version?: string,,
+    version?: string,
     lastModified?: string
   }
 }
@@ -32,9 +32,9 @@ export class BannerRegistry {
   private maxConcurrentBanners: number = 3,
   private loadingPromises: Map<string, Promise<void>> = new Map();</string>
 
-export interface BannerConfig {/* TODO: Fix JSX expression */}
+export interface BannerConfig {/* TODO: Fix JSX expression */,}
   }
 }
 
-export class BannerRegistry {/* TODO: Fix JSX expression */}
+export class BannerRegistry {/* TODO: Fix JSX expression */,}
 }

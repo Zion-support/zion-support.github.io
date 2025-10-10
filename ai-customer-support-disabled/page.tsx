@@ -30,32 +30,32 @@ const AICustomerSupportPage: React.FC = () => {
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
 const,
-  AICustomerSupportPage: React.FC = () => {/* TODO: Fix JSX expression */}
+  AICustomerSupportPage: React.FC = () => {/* TODO: Fix JSX expression */,}
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
   ];
   const pricing = [
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
     }
   ];
   const stats = [
-    {/* TODO: Fix JSX expression */}
-  l: 'Customer Satisfaction' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Faster Resolution' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Availability' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Languages Supported' }
+    {/* TODO: Fix JSX expression */,}
+  l: 'Customer Satisfaction',},
+    {/* TODO: Fix JSX expression */,}
+  l: 'Faster Resolution',},
+    {/* TODO: Fix JSX expression */,}
+  l: 'Availability',},
+    {/* TODO: Fix JSX expression */,}
+  l: 'Languages Supported',}
   ];
   return(<React.Fragment>
       <SEOOptimizer;
@@ -64,30 +64,30 @@ const,
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
         canonicalUrl="https: //ziontechgroup.com/ai-customer-support",
       />,
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>,
         <Navigation />,
-        <main className="pt-16">,
+        <main className="pt-16"></main>,
         canonicalUrl="https://ziontechgroup.com/ai-customer-support"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
         <Navigation />
-        <main className="pt-16">
+        <main className="pt-16"></main>
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text"></h1>
                 AI Customer Support Solutions;
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">)
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8"></p>)
                 Transform your customer service with intelligent AI that never sleeps;)
               </p>)
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">),
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>),
                 Our AI-powered customer support platform combines advanced chatbots, omnichannel communication)
                 and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16"></div>
                 <a;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div></div>
                 <a
                   href="tel:+13024640950"
   return (<React.Fragment>
@@ -98,26 +98,26 @@ const,
         canonicalUrl="http,"
   s://ziontechgroup.com/ai-customer-support"
       />"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
         <Navigation /></Navigation>"
-        <main className="pt-16"></main>
+        <main className="pt-16"></main></main>
           {/* Hero Section */}"
-          <section className="container mx-auto px-4 py-16 text-center"></section>"
-            <div className="max-w-4xl mx-auto"></div>"
+          <section className="container mx-auto px-4 py-16 text-center"></section></section>"
+            <div className="max-w-4xl mx-auto"></div></div>"
               <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text"></h1>
+  md:text-6xl font-bold text-white mb-6 neon-text"></h1></h1>
                 AI Customer Support Solutions;
               </h1>"
               <p className="text-xl,"
-  md:text-2xl text-cyan-400 mb-8"></p>
+  md:text-2xl text-cyan-400 mb-8"></p></p>
                 Transform your customer service with intelligent AI that never sleeps;
               </p>"
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p></p>
                 Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
                 and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
               </p>"
               <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center items-center mb-16"></div>
+  sm:flex-row gap-4 justify-center items-center mb-16"></div></div>
                 <a></a>"
                   href="te,"
   l:+13024640950""
@@ -126,7 +126,7 @@ const,
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a;
-                  href="mailto:kleber@ziontechgroup.com",
+                  href="mailto: kleber@ziontechgroup.com",
                   className="cyber-button flex items-center space-x-2",
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
@@ -135,15 +135,15 @@ const,
                 </a>
               </div>
               {/* Stats */}
-              <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
+              <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"></div>,
                 {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text">,
+                  <div key={index} className="cyber-card p-6 text-center"></div>
+                    <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>,
                 <a></a>"
                   href="mailt,"
   o:kleber@ziontechgroup.com""
                   className="cyber-button flex items-center space-x-2"
-                  style={/* TODO: Fix JSX expression */}
+                  style={/* TODO: Fix JSX expression */,}
   d: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >"
                   <Mail className="w-5 h-5" /></Mail>
@@ -152,14 +152,14 @@ const,
               </div>
               {/* Stats */}"
               <div className="grid grid-cols-2,"
-  md:grid-cols-4 gap-8 mb-16"></div>
-                {/* TODO: Fix JSX expression */}"
-                  <div key={index} className="cyber-card p-6 text-center"></div>"
+  md:grid-cols-4 gap-8 mb-16"></div></div>
+                {/* TODO: Fix JSX expression */,}"
+                  <div key={index} className="cyber-card p-6 text-center"></div></div>"
                     <div className="text-3xl,"
-  md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
+  md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div></div>
                       {stat.number}
                     </div>"
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
+                    <div className="text-gray-300 font-medium"></div>{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -172,28 +172,28 @@ const,
   );
 };
 const AICustomerSupportPage2: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>)
       <Navigation />)
-      <main className="pt-24 pb-16 px-4">)
-        <div className="max-w-7xl mx-auto">),
+      <main className="pt-24 pb-16 px-4"></main>)
+        <div className="max-w-7xl mx-auto"></div>),
           {/* Hero Section */}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div></div>
       <Navigation />
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <main className="pt-24 pb-16 px-4"></main>
+        <div className="max-w-7xl mx-auto"></div>
           {/* Hero Section */}</div>
-          <section className="text-center mb-16">
-            <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <section className="text-center mb-16"></section>
+            <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text"></h1>
               AI Customer Support;
             </h1>,
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>,
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance),
               smart ticket routing, and predictive analytics.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"></a>
@@ -208,23 +208,23 @@ const AICustomerSupportPage2: React.FC = () => {
             </div>,
           </section>,
           {/* Features Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
               Key Features;
             </h2>,
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
+                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300"></div>,
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
               Key Features;
   </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (</section>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3"></h3>{feature.title}</h3>
+                  <p className="text-gray-300 mb-4"></p>{feature.description}</p>
                   <ul className="space-y-2"></u></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></l></li>
@@ -238,34 +238,34 @@ const AICustomerSupportPage2: React.FC = () => {
             </div>
           </section>
           {/* Pricing Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
               Pricing Plans;
             </h2>,
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto"></div>,
               {pricingPlans.map((plan, index) => (
                 <div;
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text"></div></h2>
               Pricing Plans;
   </
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
               {pricingPlans.map((plan, index) => (</section>
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${}
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}
                   }`}
-                >
+                ></div>
                   {plan.popular && (</div>
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div></div>
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular;
                       </span>
                     </div>
                   )}
-                  <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h></h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</di></div>
+                  <h3 className="text-2 xl font-bold text-white mb-2"></h3>{plan.name}</h></h3>
+                  <p className="text-gray-300 mb-4"></p>{plan.description}</p>
+                  <div className="text-4 xl font-bold text-cyan-400 mb-6"></div>{plan.price}</di></div>
                   <ul className="space-y-3 mb-8"></u></ul>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300"></l></li>
@@ -275,7 +275,7 @@ const AICustomerSupportPage2: React.FC = () => {
                     ))}
                   </ul>
                   <a;
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
+                    href={`mailto: kleber@ziontechgroup.com?subject=Interest in ${plan.name,} Plan`}
                     className="cyber-button w-full text-center block">
                     Get Started;
                   </a>
@@ -284,19 +284,19 @@ const AICustomerSupportPage2: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text"></h2>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div></section>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text"></h2>
                 Ready to Transform Your Customer Support?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Join 500+ companies already using our AI customer support solutions;
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"></a>
@@ -304,7 +304,7 @@ const AICustomerSupportPage2: React.FC = () => {
                   <<<<span>Call</span></span></span> (302) 464-0950</span>
                 </a>
                 <a;
-                  href="mailto:kleber@ziontechgroup.com",
+                  href="mailto: kleber@ziontechgroup.com",
                   className="cyber-button flex items-center justify-center space-x-2",
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
@@ -317,10 +317,10 @@ const AICustomerSupportPage2: React.FC = () => {
         </main>
         <Footer /></Foote></Footer>
       </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text"></h1>
               AI Customer Support;
   </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
             </p>
           </section>

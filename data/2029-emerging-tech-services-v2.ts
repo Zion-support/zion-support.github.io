@@ -108,7 +108,7 @@ export const emergingTechServices2029 V2: EmergingTechService2029 V2[] = [,
     websit,
   e: string,
     addres,
-  s: string}
+  s: string,}
 export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [,
     i,
@@ -256,8 +256,7 @@ export const,
     nam,
   e: 'Quantum Financial Trading Platform'
     descriptio,
-  n:
-      'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.'
+  n: 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.'
     categor,
   y: [,
       'Fintech'
@@ -328,7 +327,7 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
     id: 'quantum-creativity-studio',
     name: 'Quantum Creativity Studio',
@@ -399,7 +398,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
     i,
@@ -407,8 +406,7 @@ export const,
     nam,
   e: 'Quantum Creativity Studio'
     descriptio,
-  n:
-      'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'
+  n: 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'
     categor,
   y: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art']
     pric,
@@ -533,7 +531,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
       mobil,
@@ -542,9 +540,9 @@ export const,
   l: 'kleber@ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}
+  s: '364 E Main St STE 1008 Middletown DE 19709',}}
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
     marketSize: '$18.9B by 2029'
@@ -570,9 +568,9 @@ export const,
   l: 'kleber@ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
     feature,
@@ -963,7 +961,7 @@ export const,
     exit: 'Acquisition by major creative platform'
     contact: unknown,
       mobile: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
 ];
   id: string, name: string,
@@ -1095,7 +1093,7 @@ export const,
       mobil,
   e: '+1 302 464 0950'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ];
@@ -1157,7 +1155,7 @@ export const,
     websit,
   e: string,
     addres,
-  s: string}
+  s: string,}
 }
 export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [,
@@ -1260,9 +1258,9 @@ export const,
   l: 'kleber@ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
     i,
@@ -1354,17 +1352,17 @@ export const,
   s: 'Trading analytics, performance reports',
     customizatio,
   n: 'Custom trading strategies, integration',
-export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
+export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */,}
     }
   }
 ];
 }
   }
 ];
-export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
-  e: string}
+export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */,}
+  e: string,}
     addres,
-  s: string}
+  s: string,}
   }
 }
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [,
@@ -1407,12 +1405,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [,
     referral: '$50,000 bonus for partnerships';
     partnership: 'Strategic security partnerships',
     funding: 'Series C funding, $300 M valuation';
-    exit: 'IPO or security acquisition'}
-    contact: {}
+    exit: 'IPO or security acquisition',}
+    contact: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
   {
     id: 'biotech-dna-computing-platform',
@@ -1453,12 +1451,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [,
     referral: '$75,000 bonus for partnerships';
     partnership: 'Research institution partnerships',
     funding: 'Series B funding, $150 M valuation';
-    exit: 'IPO or biotech acquisition'}
-    contact: {}
+    exit: 'IPO or biotech acquisition',}
+    contact: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
   {
     id: 'quantum-financial-trading-platform',
@@ -1499,12 +1497,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [,
     referral: '$100,000 bonus for partnerships';
     partnership: 'Financial institution partnerships',
     funding: 'Series C funding, $500 M valuation';
-    exit: 'IPO or financial acquisition'}
-    contact: {}
+    exit: 'IPO or financial acquisition',}
+    contact: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
   {
     id: 'quantum-creativity-studio',
@@ -1545,12 +1543,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [,
     referral: '$10,000 bonus for partnerships';
     partnership: 'Creative agency partnerships',
     funding: 'Series A funding, $80 M valuation';
-    exit: 'Acquisition by major creative platform'}
-    contact: {}
+    exit: 'Acquisition by major creative platform',}
+    contact: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
   }
 ];
     funding: 'Series C funding, $500 M valuation',
@@ -1559,16 +1557,16 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
     deployment: 'Cloud-based, web and desktop apps',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}},
+      address: '364 E Main St STE 1008 Middletown DE 19709',}},
     id: 'quantum - creativity - studio',
     name: 'Quantum Creativity Studio',
     description: unknown,
 export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [,
-  {/* TODO: Fix JSX expression */}
-  t: 'IPO or security acquisition'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'IPO or security acquisition',}
     contac,
-  t: {}
+  t: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1577,13 +1575,13 @@ export const,
   e: 'http,
   s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
-  {/* TODO: Fix JSX expression */}
-  t: 'IPO or biotech acquisition'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'IPO or biotech acquisition',}
     contac,
-  t: {}
+  t: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1592,13 +1590,13 @@ export const,
   e: 'http,
   s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
-  {/* TODO: Fix JSX expression */}
-  t: 'IPO or financial acquisition'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'IPO or financial acquisition',}
     contac,
-  t: {}
+  t: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1607,13 +1605,13 @@ export const,
   e: 'http,
   s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
-  {/* TODO: Fix JSX expression */}
-  t: 'Acquisition by major creative platform'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'Acquisition by major creative platform',}
     contac,
-  t: {}
+  t: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1622,7 +1620,7 @@ export const,
   e: 'http,
   s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ];
@@ -1637,11 +1635,11 @@ export const,
   l: 'kleber@ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
     deploymen,
   t: 'Cloud-based, web and desktop apps',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}},
+  s: '364 E Main St STE 1008 Middletown DE 19709',}},
     i,
   d: 'quantum - creativity - studio',
     nam,
@@ -1729,9 +1727,9 @@ export const,
   n: 'Custom creative tools, templates',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ];
@@ -1770,11 +1768,11 @@ i,
   e: string, emai,
   l: string, websit,
   e: string, addres,
-  s: string} export const,
+  s: string,} export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [, i,
   d: 'quantum - internet - security - gateway',' nam,
   e: 'Quantum Internet Security Gateway', descriptio,
-  n:  ,' 'Next - generation quantum internet security platform that provides unbreakable encryption and quantum - safe communication protocols for the future quantum internet infrastructure.', categor,
+  n: ,' 'Next - generation quantum internet security platform that provides unbreakable encryption and quantum - safe communication protocols for the future quantum internet infrastructure.', categor,
   y: [,' 'Cybersecurity',' 'Quantum Computing',' 'Internet Security',' 'Encryption',' 'Network Security'],' pric,
   e: '$15, 999 / month', feature,
   s: [,' 'Quantum - resistant encryption algorithms',' 'Post - quantum cryptography',' 'Quantum key distribution (QKD)',' 'Real - time threat detection',' 'Quantum - safe VPN services',' 'Secure quantum communication channels',' 'Quantum network monitoring',' 'Future - proof security protocols'], benefit,
@@ -1801,12 +1799,12 @@ i,
   g: 'Series C funding, $300M valuation',' exi,
   t: 'IPO or security acquisition', contac,
   t: descriptio,
-  n:' 'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.' categor,
+  n: ' 'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.' categor,
   y: [' 'Biotechnology'' 'Computing'' 'Data Storage'' 'Research'' 'Innovation' ]' pric,
   e: '$25,999/month' } }' i,
   d: 'quantum-financial-trading-platform'' nam,
   e: 'Quantum Financial Trading Platform' descriptio,
-  n:' 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.' categor,
+  n: ' 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.' categor,
   y: [' 'Fintech'' 'Quantum Computing'' 'Trading'' 'Finance'' 'Analytics' ]' pric,
   e: '$35,999/month' feature,
   s: [' 'Quantum market analysis algorithms'' 'Real-time trading execution'' 'Predictive market modeling'' 'Risk assessment and management'' 'Portfolio optimization'' 'High-frequency trading capabilities'' 'Market sentiment analysis'' 'Automated trading strategies' ] benefit,
@@ -1841,11 +1839,11 @@ i,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' websit,
   e: 'http,
-  s://ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }' i,
+  s: //ziontechgroup.com'' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} }' i,
   d: 'quantum-creativity-studio'' nam,
   e: 'Quantum Creativity Studio' descriptio,
-  n:' 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'' categor,
+  n: ' 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'' categor,
   y: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art']' pric,
   e: '$1,999/month' feature,
   s: [' 'Quantum creativity algorithms'' 'AI-powered content generation'' 'Creative design tools'' 'Collaborative workspace'' 'Real-time rendering'' 'Creative asset management'' 'Design automation'' 'Creative analytics' ] benefit,
@@ -1880,13 +1878,13 @@ i,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' websit,
   e: 'http,
-  s://ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }' mobil,
+  s: //ziontechgroup.com'' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} }' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}' ]; 'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists' ];' marketSiz,
+  s: //ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}}' ]; 'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists' ];' marketSiz,
   e: '$18.9B by 2029'' competitor,
   s: ['Adobe Creative SuiteCanvaFigmaSketch'],' technolog,
   y: ['Quantum ComputingAI/MLComputer GraphicsDesign Tools'],' integratio,
@@ -1895,8 +1893,8 @@ i,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } feature,
+  s: //ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } feature,
   s: [' 'DNA-based data storage'' 'Molecular computing algorithms'' 'Biological data processing'' 'High-density storage solutions'' 'Parallel molecular operations'' 'Bio-compatible interfaces'' 'Molecular programming tools'' 'Biological error correction' ] benefit,
   s: [' 'Exponential storage density increase'' 'Parallel processing capabilities'' 'Energy-efficient computing'' 'Long-term data preservation'' 'Biological compatibility'' 'Revolutionary computing paradigm' ] useCase,
   s: [' 'Scientific research computing',' 'Medical data storage',' 'Environmental monitoring',' 'Space exploration data',' 'Biological research'], technolog,
@@ -1949,7 +1947,7 @@ i,
   g: 'Series B funding, $150M valuation',' exi,
   t: 'IPO or biotech acquisition', contac,
   t: descriptio,
-  n:' 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.' categor,
+  n: ' 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.' categor,
   y: [' 'Fintech'' 'Quantum Computing'' 'Trading'' 'Finance'' 'Analytics' ]' pric,
   e: '$35,999/month' feature,
   s: [' 'Quantum market analysis algorithms'' 'Real-time trading execution'' 'Predictive market modeling'' 'Risk assessment and management'' 'Portfolio optimization'' 'High-frequency trading capabilities'' 'Market sentiment analysis'' 'Automated trading strategies' ] benefit,
@@ -1979,7 +1977,7 @@ i,
   g: 'Series C funding, $500M valuation'' exi,
   t: 'IPO or financial acquisition' contac,
   t: descriptio,
-  n:' 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'' categor,
+  n: ' 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.'' categor,
   y: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art']' pric,
   e: '$1,999/month' feature,
   s: [' 'Quantum creativity algorithms'' 'AI-powered content generation'' 'Creative design tools'' 'Collaborative workspace'' 'Real-time rendering'' 'Creative asset management'' 'Design automation'' 'Creative analytics' ] benefit,
@@ -2036,7 +2034,7 @@ i,
   t: 'Acquisition by major creative platform' contac,
   t: ' mobil,
   e: '+1 302 464 0950'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; i,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } ]; i,
   d: string, nam,
   e: string, descriptio,
   n: string, categor,
@@ -2074,7 +2072,7 @@ i,
   e: string, emai,
   l: string, websit,
   e: string, addres,
-  s: string } } export const,
+  s: string,} } export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [ ' i,
   d: 'quantum-financial-trading-platform', nam,
   e: 'Quantum Financial Trading Platform',' descriptio,
@@ -2113,8 +2111,8 @@ i,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ' i,
+  s: //ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } ' i,
   d: 'biotech-dna-computing-platform', nam,
   e: 'Biotech DNA Computing Platform',' descriptio,
   n: 'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.',' categor,
@@ -2154,38 +2152,38 @@ i,
   p: 'Real - time backup, disaster recovery',' monitorin,
   g: 'Trading performance monitoring',' analytic,
   s: 'Trading analytics, performance reports',' customizatio,
-  n: 'Custom trading strategies, integration', export interface EmergingTechService2029V2 { } } ]; } } ]; export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
-  e: string} addres,
-  s: string} } } export const,
-  emergingTechServices2029V2: EmergingTechService2029V2[] = [, {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' websit,
+  n: 'Custom trading strategies, integration', export interface EmergingTechService2029V2 { } } ]; } } ]; export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */,}
+  e: string,} addres,
+  s: string,} } } export const,
+  emergingTechServices2029V2: EmergingTechService2029V2[] = [, {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' websit,
   e: 'http,
-  s://ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' websit,
+  s: //ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' websit,
   e: 'http,
-  s://ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' websit,
+  s: //ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' websit,
   e: 'http,
-  s://ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' websit,
+  s: //ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' websit,
   e: 'http,
-  s://ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ];' fundin,
+  s: //ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } ];' fundin,
   g: 'Series C funding, $500M valuation',' exi,
   t: 'IPO or financial acquisition', contac,
   t: ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com',' deploymen,
+  s: //ziontechgroup.com',' deploymen,
   t: 'Cloud-based, web and desktop apps',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}},' i,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}},' i,
   d: 'quantum - creativity - studio',' nam,
   e: 'Quantum Creativity Studio', descriptio,
-  n:  ,' 'Innovative quantum - enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.',' categor,
+  n: ,' 'Innovative quantum - enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.',' categor,
   y: ['Creativity', 'Quantum Computing', 'AI', 'Design', 'Art'],' pric,
   e: '$1, 999 / month', feature,
   s: [,' 'Quantum creativity algorithms',' 'AI - powered content generation',' 'Creative design tools',' 'Collaborative workspace',' 'Real - time rendering',' 'Creative asset management',' 'Design automation',' 'Creative analytics'], benefit,
@@ -2209,5 +2207,5 @@ i,
   s: 'Creative insights, usage analytics',' customizatio,
   n: 'Custom creative tools, templates',' websit,
   e: 'http,
-  s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; '
+  s: //ziontechgroup.com',' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',} } ]; '

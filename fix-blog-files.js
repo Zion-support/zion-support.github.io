@@ -11,8 +11,8 @@ function fixBlogFile(filePath) {
 
     // Fix missing closing parenthesis and return statement;
     if (content.includes('};') && !content.includes('  );')) {
-function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
-    if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
+function fixBlogFile(filePath) {/* TODO: Fix JSX expression */,}
+    if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */,}
       content = content.replace(/};$/, '  );\n};');
       modified = true;
     }
@@ -22,10 +22,10 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
       return;
     }
 
-    if (modified) {/* TODO: Fix JSX expression */}`
+    if (modified) {/* TODO: Fix JSX expression */,}`
       console.log(`✓ Fixed ${filePath}`);
     }
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`);
   }
 }
@@ -54,7 +54,7 @@ const blogFiles = [
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
 ];
 
-for (const file of blogFiles) {/* TODO: Fix JSX expression */}
+for (const file of blogFiles) {/* TODO: Fix JSX expression */,}
   }
 }
 

@@ -31,15 +31,15 @@ jest.mock('./src/utils/errorTracking.ts', () => ({
 
 jest.mock('./src/hooks/usePerformance.ts', () => ({
   usePerformance: jest.fn(() => ({
-    metrics: {},
+    metrics: {,},
     optimize: jest.fn(),
   })),
 }));
 
 jest.mock('./src/hooks/usePerformanceMonitoring.ts', () => ({
   usePerformanceMonitoring: jest.fn(() => ({
-    metrics: {},
-    report: {},
+    metrics: {,},
+    report: {,},
   })),
 }));
 
@@ -56,15 +56,15 @@ jest.mock('react-router-dom', () => {
       hash: '',
       state: null,
     }),
-    useParams: () => ({}),
+    useParams: () => ({,}),
     Link: ({ children, to, ...props }) => {
       return React.createElement('a', { href: to, ...props }, children);
     },
     NavLink: ({ children, to, ...props }) => {
       return React.createElement('a', { href: to, ...props }, children);
     },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
+    BrowserRouter: ({ children,}) => children,
+    MemoryRouter: ({ children,}) => {
       const { createMemoryRouter, RouterProvider } = actual;
       const router = createMemoryRouter([
         {
@@ -77,7 +77,7 @@ jest.mock('react-router-dom', () => {
       });
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: ({ router }) => null,
+    RouterProvider: ({ router,}) => null,
   }
 });
 

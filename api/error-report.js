@@ -8,21 +8,20 @@ export default function handler(req, res) {
     const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
 
     // Log error details (in production you would send this to your monitoring service)
-    // In a real application, you would:
-    // 1. Send to Sentry, LogRocket, Bugsnag, etc.
+    // In a real application, you would: // 1. Send to Sentry, LogRocket, Bugsnag, etc.
     // 2. Store in your database
     // 3. Send alerts to your team
 
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Client Error Report:', {
+      console.error('Client Error Report: ', {
         error: error?.message || error,
         stack,
         componentStack,
         timestamp,
         userAgent,
         url,
-        serverTime: new Date().toISOString()
+        serverTime: new Date().toISOString(),
       });
     }
 
@@ -31,16 +30,16 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Error report received' 
+      message: 'Error report received',
     }));
 
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error reporting error:', error);
+      console.error('Error reporting error: ', error);
     }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process error report' }));
+    res.end(JSON.stringify({ error: 'Failed to process error report',}));
   }
 }

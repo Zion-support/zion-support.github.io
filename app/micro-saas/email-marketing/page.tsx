@@ -6,54 +6,54 @@ const EmailMarketingSuitePage: React.FC = () => {
     <>,
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
-        <meta>
+        <meta />
         <link>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p>Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto text-center"></div>
-            <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+          <div className="max-w-7xl mx-auto text-center"></div></div>
+            <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div></div>
               <Mail>
               <span>Email Marketing Suite</span>
             </div>
-            <h1>
+            <h1></h1>
               AI Email </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
-            <p>
+            <p></p>
               AI-powered email marketing automation. Create, send, and optimize email campaigns;
               with intelligent automation and personalization.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>
+              <button></button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
+              <button></button>
                 View Demo
               </button>
             </div>
           </div>
         </section>
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p>Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2>Coming Soon</h2>
+              <p></p>
                 We're developing powerful email marketing solutions. Stay tuned for updates!
               </p>
             </div>

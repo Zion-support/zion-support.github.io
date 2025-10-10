@@ -4,7 +4,7 @@ async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed',}));
     return;
   }
 
@@ -13,7 +13,7 @@ async function handler(req, res) {
   if (!amount) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Amount is required' }));
+    res.end(JSON.stringify({ error: 'Amount is required',}));
     return;
   }
 
@@ -23,7 +23,7 @@ async function handler(req, res) {
       amount: Math.round(amount * 100), // Convert to cents
       currency,
       status: 'requires_payment_method',
-      created: Math.floor(Date.now() / 1000)
+      created: Math.floor(Date.now() / 1000),
     };
 
     res.statusCode = 200;
@@ -31,11 +31,11 @@ async function handler(req, res) {
   } catch (err) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.error("Error:", err);
+      console.error("Error: ", err);
     }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
+    res.end(JSON.stringify({ error: 'Failed to create payment intent',}));
   }
 }
 

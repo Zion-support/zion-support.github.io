@@ -62,11 +62,11 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 4: Fix malformed SVG URLs
-    const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g;
+    const svgUrlPattern = /bg-\[url\('data: image\/svg\+xml,([^']+)'\)\]/g;
     content = content.replace(svgUrlPattern, (match, svgContent) => {
       const encodedSvg = encodeURIComponent(svgContent);
       modified = true;
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`;
+      return `bg-[url('data: image/svg+xml,${encodedSvg}')]`;
     });
 
     // Fix 5: Fix missing closing parentheses in function calls

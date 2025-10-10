@@ -53,7 +53,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud',
       popular: true,
-      icon: Cloud
+      icon: Cloud,
     },
     {
       id: 'cybersecurity',
@@ -77,7 +77,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Security',
       popular: true,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'devops',
@@ -101,7 +101,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'DevOps',
       popular: false,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'database-management',
@@ -125,7 +125,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Database',
       popular: false,
-      icon: Database
+      icon: Database,
     },
     {
       id: 'mobile-development',
@@ -149,7 +149,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Development',
       popular: false,
-      icon: Smartphone
+      icon: Smartphone,
     },
     {
       id: 'web-development',
@@ -173,7 +173,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Development',
       popular: false,
-      icon: Globe
+      icon: Globe,
     },
     {
       id: 'network-infrastructure',
@@ -197,7 +197,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Networking',
       popular: false,
-      icon: Wifi
+      icon: Wifi,
     },
     {
       id: 'data-center-services',
@@ -221,7 +221,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Center',
       popular: false,
-      icon: Server
+      icon: Server,
     },
     {
       id: 'it-consulting',
@@ -245,7 +245,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Consulting',
       popular: true,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'managed-services',
@@ -269,7 +269,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Managed Services',
       popular: true,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'api-development',
@@ -293,7 +293,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'API Development',
       popular: false,
-      icon: Code
+      icon: Code,
     },
     {
       id: 'ecommerce-solutions',
@@ -317,7 +317,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'E-commerce',
       popular: true,
-      icon: ShoppingCart
+      icon: ShoppingCart,
     },
     {
       id: 'enterprise-software',
@@ -341,7 +341,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Software Development',
       popular: false,
-      icon: Monitor
+      icon: Monitor,
     },
     {
       id: 'it-support',
@@ -365,7 +365,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Support',
       popular: true,
-      icon: Headphones
+      icon: Headphones,
     },
     {
       id: 'cloud-security',
@@ -389,7 +389,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: false,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'data-analytics',
@@ -413,7 +413,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Analytics',
       popular: true,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'disaster-recovery',
@@ -437,7 +437,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Disaster Recovery',
       popular: false,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'it-audit',
@@ -461,7 +461,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Compliance',
       popular: false,
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       id: 'cloud-native-development',
@@ -487,7 +487,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Development',
       popular: true,
-      icon: Cloud
+      icon: Cloud,
     },
     {
       id: 'ai-integration-services',
@@ -513,7 +513,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'AI Integration',
       popular: true,
-      icon: Brain
+      icon: Brain,
     },
     {
       id: 'blockchain-development',
@@ -539,7 +539,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Blockchain',
       popular: false,
-      icon: Link
+      icon: Link,
     },
     {
       id: 'iot-development',
@@ -565,7 +565,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'IoT Development',
       popular: true,
-      icon: Wifi
+      icon: Wifi,
     },
     {
       id: 'mobile-app-development',
@@ -591,7 +591,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Mobile Development',
       popular: true,
-      icon: Smartphone
+      icon: Smartphone,
     },
     {
       id: 'e-commerce-development',
@@ -617,7 +617,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'E-commerce',
       popular: true,
-      icon: ShoppingCart
+      icon: ShoppingCart,
     },
     {
       id: 'api-development-advanced',
@@ -643,7 +643,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'API Development',
       popular: true,
-      icon: Code
+      icon: Code,
     },
     {
       id: 'data-engineering',
@@ -669,7 +669,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Engineering',
       popular: true,
-      icon: Database
+      icon: Database,
     },
     {
       id: 'cybersecurity-advanced',
@@ -695,7 +695,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cybersecurity',
       popular: true,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'cloud-migration-advanced',
@@ -721,7 +721,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Migration',
       popular: true,
-      icon: Cloud
+      icon: Cloud,
     },
     {
       id: 'devops-advanced',
@@ -747,7 +747,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'DevOps',
       popular: true,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'machine-learning-ops',
@@ -773,7 +773,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'MLOps',
       popular: true,
-      icon: Cpu
+      icon: Cpu,
     },
     {
       id: 'enterprise-integration',
@@ -799,7 +799,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Integration',
       popular: true,
-      icon: Link
+      icon: Link,
     },
     {
       id: 'performance-optimization',
@@ -825,7 +825,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Performance',
       popular: true,
-      icon: Zap
+      icon: Zap,
     },
     {
       id: 'disaster-recovery-advanced',
@@ -851,7 +851,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Disaster Recovery',
       popular: false,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'compliance-automation',
@@ -877,7 +877,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Compliance',
       popular: true,
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       id: 'cloud-cost-optimization',
@@ -903,7 +903,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Optimization',
       popular: true,
-      icon: TrendingUp
+      icon: TrendingUp,
     },
     {
       id: 'security-automation',
@@ -929,7 +929,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Security Automation',
       popular: true,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'data-visualization',
@@ -955,7 +955,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Visualization',
       popular: true,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'workflow-automation',
@@ -981,7 +981,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'cloud-native-security',
@@ -1007,43 +1007,43 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: true,
-      icon: Shield
+      icon: Shield,
     }
   ];
   const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
-    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
-    { id: 'DevOps', name: 'DevOps', count: services.filter(s => s.category === 'DevOps').length },
-    { id: 'Database', name: 'Database', count: services.filter(s => s.category === 'Database').length },
-    { id: 'Development', name: 'Development', count: services.filter(s => s.category === 'Development').length },
-    { id: 'Networking', name: 'Networking', count: services.filter(s => s.category === 'Networking').length },
-    { id: 'Data Center', name: 'Data Center', count: services.filter(s => s.category === 'Data Center').length },
-    { id: 'Consulting', name: 'Consulting', count: services.filter(s => s.category === 'Consulting').length },
-    { id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length },
-    { id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length },
-    { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
-    { id: 'Software Development', name: 'Software Development', count: services.filter(s => s.category === 'Software Development').length },
-    { id: 'Support', name: 'Support', count: services.filter(s => s.category === 'Support').length },
-    { id: 'Cloud Security', name: 'Cloud Security', count: services.filter(s => s.category === 'Cloud Security').length },
-    { id: 'Data Analytics', name: 'Data Analytics', count: services.filter(s => s.category === 'Data Analytics').length },
-    { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length },
-    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
-    { id: 'Cloud Development', name: 'Cloud Development', count: services.filter(s => s.category === 'Cloud Development').length },
-    { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length },
-    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
-    { id: 'IoT Development', name: 'IoT Development', count: services.filter(s => s.category === 'IoT Development').length },
-    { id: 'Mobile Development', name: 'Mobile Development', count: services.filter(s => s.category === 'Mobile Development').length },
-    { id: 'Data Engineering', name: 'Data Engineering', count: services.filter(s => s.category === 'Data Engineering').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'Cloud Migration', name: 'Cloud Migration', count: services.filter(s => s.category === 'Cloud Migration').length },
-    { id: 'MLOps', name: 'MLOps', count: services.filter(s => s.category === 'MLOps').length },
-    { id: 'Integration', name: 'Integration', count: services.filter(s => s.category === 'Integration').length },
-    { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
-    { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
-    { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
-    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'all', name: 'All Services', count: services.length,},
+    { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length,},
+    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length,},
+    { id: 'DevOps', name: 'DevOps', count: services.filter(s => s.category === 'DevOps').length,},
+    { id: 'Database', name: 'Database', count: services.filter(s => s.category === 'Database').length,},
+    { id: 'Development', name: 'Development', count: services.filter(s => s.category === 'Development').length,},
+    { id: 'Networking', name: 'Networking', count: services.filter(s => s.category === 'Networking').length,},
+    { id: 'Data Center', name: 'Data Center', count: services.filter(s => s.category === 'Data Center').length,},
+    { id: 'Consulting', name: 'Consulting', count: services.filter(s => s.category === 'Consulting').length,},
+    { id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length,},
+    { id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length,},
+    { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length,},
+    { id: 'Software Development', name: 'Software Development', count: services.filter(s => s.category === 'Software Development').length,},
+    { id: 'Support', name: 'Support', count: services.filter(s => s.category === 'Support').length,},
+    { id: 'Cloud Security', name: 'Cloud Security', count: services.filter(s => s.category === 'Cloud Security').length,},
+    { id: 'Data Analytics', name: 'Data Analytics', count: services.filter(s => s.category === 'Data Analytics').length,},
+    { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length,},
+    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length,},
+    { id: 'Cloud Development', name: 'Cloud Development', count: services.filter(s => s.category === 'Cloud Development').length,},
+    { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length,},
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length,},
+    { id: 'IoT Development', name: 'IoT Development', count: services.filter(s => s.category === 'IoT Development').length,},
+    { id: 'Mobile Development', name: 'Mobile Development', count: services.filter(s => s.category === 'Mobile Development').length,},
+    { id: 'Data Engineering', name: 'Data Engineering', count: services.filter(s => s.category === 'Data Engineering').length,},
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length,},
+    { id: 'Cloud Migration', name: 'Cloud Migration', count: services.filter(s => s.category === 'Cloud Migration').length,},
+    { id: 'MLOps', name: 'MLOps', count: services.filter(s => s.category === 'MLOps').length,},
+    { id: 'Integration', name: 'Integration', count: services.filter(s => s.category === 'Integration').length,},
+    { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length,},
+    { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length,},
+    { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length,},
+    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length,},
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length,}
   ]
 
   const filteredServices = services.filter(service => 
@@ -1059,31 +1059,31 @@ const ItServicesPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-6xl mx-auto"></div>
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <div className="text-center mb-16"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
                 IT Services
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Complete IT solutions to modernize your infrastructure and drive business growth. 
                 From cloud migration to cybersecurity, we have the expertise you need.
               </p>
             </div>
 
             {/* Category Filter */}
-            <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
+            <div className="mb-12"></div>
+              <div className="flex flex-wrap justify-center gap-4"></div>
                 {categories.map((category) => (
                   <button
                     key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
+                    onClick={() =></button> setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category.id
                         ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                        : 'bg-slate-800 text-gray-300 hover: bg-slate-700',
                     }`}
                   >
                     {category.name} ({category.count})
@@ -1093,15 +1093,15 @@ const ItServicesPage: React.FC = () => {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
               {filteredServices.map((service) => (
-                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
+                  <div className="flex items-center justify-between mb-4"></div>
+                    <div className="flex items-center space-x-3"></div>
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
                         <service.icon className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                      <h3 className="text-xl font-bold text-white"></h3>{service.name}</h3>
                     </div>
                     {service.popular && (
                       <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -1111,18 +1111,18 @@ const ItServicesPage: React.FC = () => {
                     )}
                   </div>
                   
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-gray-300 mb-4"></p>{service.description}</p>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
+                  <div className="flex items-center justify-between mb-4"></div>
+                    <div></div>
                       <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                       <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
                     </div>
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                  <div className="mb-6"></div>
+                    <h4 className="text-lg font-semibold text-white mb-3"></h4>Key Features</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <li key={index} className="flex items-start space-x-2">
@@ -1133,7 +1133,7 @@ const ItServicesPage: React.FC = () => {
                     </ul>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between"></div>
                     <Link
                       to="/contact"
                       className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
@@ -1153,16 +1153,16 @@ const ItServicesPage: React.FC = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="text-center"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8"></div>
+                <h2 className="text-2xl font-bold text-white mb-4"></h2>
                   Ready to Modernize Your IT Infrastructure?
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
                   Let our IT experts help you choose the right solutions for your business needs. 
                   Get a free consultation and see how we can transform your technology infrastructure.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <Link
                     to="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"

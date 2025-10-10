@@ -10,29 +10,29 @@ const AboutPage: React.FC = () => {
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions for modern businesses." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               About <span className="text-cyan-400">Zion Tech Group</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               We are passionate about transforming businesses through cutting-edge AI and IT solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"></div>
+            <div></div>
+              <h2 className="text-3xl font-bold text-white mb-6"></h2>Our Mission</h2>
+              <p className="text-gray-300 mb-6 leading-relaxed"></p>
                 To empower businesses with innovative AI and IT solutions that drive growth, efficiency, and competitive advantage in the digital age.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed"></p>
                 We believe technology should be accessible, powerful, and transformative. Our team of experts works tirelessly to deliver solutions that not only meet today's needs but anticipate tomorrow's challenges.
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20"></div>
+              <h3 className="text-2xl font-bold text-white mb-4"></h3>Why Choose Us?</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-3 mt-1">✓</span>

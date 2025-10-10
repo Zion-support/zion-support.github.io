@@ -18,61 +18,61 @@ const FAQPage: React.FC = () => {
       category: 'General Questions',
       questions: [
           question: 'What is Zion Tech Group?',
-          answer:         ,
+          answer: ,
 $4},
           question: 'What services do you offer?',
-          answer:           ,
+          answer: ,
 questionquestion: 'How can I get started?',
           answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.'
           question: 'Do you offer custom solutions?',
-          answer:         ,
+          answer: ,
 $4}
       ]
       category: 'AI Services',
           question: 'What AI services do you provide?',
-          answer:           ,
+          answer: ,
 questionquestion: 'How much do AI services cost?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Do you provide AI training for our team?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Can you integrate AI with our existing systems?',
-          answer:       ,
+          answer: ,
 categorycategory: 'IT Services',
           question: 'What IT services do you offer?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Do you provide 24/7 support?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Can you help with cloud migration?',
-          answer:           ,
+          answer: ,
 questionquestion: 'What cybersecurity services do you provide?',
-          answer:       ,
+          answer: ,
 categorycategory: 'Micro SAAS Solutions',
           question: 'What are Micro SAAS solutions?',
-          answer:           ,
+          answer: ,
 questionquestion: 'How quickly can I deploy a Micro SAAS solution?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Do I need technical expertise to use Micro SAAS?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Can Micro SAAS solutions be customized?',
-          answer:       ,
+          answer: ,
 categorycategory: 'Pricing & Billing',
           question: 'What are your pricing models?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Do you offer free consultations?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Are there any setup fees?',
           answer: 'Setup fees vary by service type. Some services include setup in the monthly fee, while others may have one-time setup charges. We\'ll provide clear pricing details during consultation.'
           question: 'Do you offer discounts for long-term contracts?',
-          answer:       ,
+          answer: ,
 categorycategory: 'Support & Contact',
           question: 'How can I contact support?',
-          answer:           ,
+          answer: ,
 questionquestion: 'What are your business hours?',
-          answer:           ,
+          answer: ,
 questionquestion: 'Do you offer remote support?',
-          answer:           ,
+          answer: ,
 questionquestion: 'How quickly do you respond to support requests?',
-          answer:   ,
+          answer: ,
 $4];
   const filteredData = faqData.map(category => ({
     ...category,
@@ -84,17 +84,17 @@ $4];
   return (
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+          <div className="text-center mb-12"></div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"></h1>
               Frequently Asked Questions</span>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Find answers to common questions about our AI and IT services, pricing, and support.
             </p>
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">
+            <div className="max-w-md mx-auto relative"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -105,19 +105,19 @@ $4];
               />
             </div>
           {/* FAQ Content */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto"></div>
             {filteredData.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-12">
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
+              <div key={categoryIndex} className="mb-12"></div>
+                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"></h2>
                   {category.category}
                 </h2>
-                <div className="space-y-4">
+                <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
+                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
                         <button
-                          onClick={() => toggleItem(globalIndex)}
+                          onClick={() =></button> toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors">
                           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? (
@@ -127,17 +127,17 @@ $4];
                           )}
                         </button>
                         {isOpen && (
-                          <div className="px-6 pb-4">
-                            <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+                          <div className="px-6 pb-4"></div>
+                            <p className="text-gray-300 leading-relaxed"></p>{item.answer}</p>
                   })}
             ))}
           {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Still Have Questions?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -159,13 +159,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
     return (
-    <div>Coming Soon</div>
+    <div></div>Coming Soon</div>
   )
   }
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (inde)
-  x: number) => {setOpenItems(prev =>})
+  x: number) => {setOpenItems(prev =>,})
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
@@ -175,7 +175,7 @@ const toggleItem = (inde)
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   categor,
@@ -292,7 +292,7 @@ const toggleItem = (inde)
           answe,
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ],
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
+  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //     ...category,
@@ -302,42 +302,42 @@ const toggleItem = (inde)
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
   })).filter(category => category.questions.length > 0);
-  return (<div>Coming Soon</div>)
+  return (<div></div>Coming Soon</div>)
   )
           <React.Fragment>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>"
+        <div className="container mx-auto px-4 py-16 pt-24"></div></div>
           {/* Header */}"
-          <div className="text-center mb-12"></div>"
+          <div className="text-center mb-12"></div></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
+  md:text-5xl font-bold text-white mb-6 neon-text"></h1></h1>
 // Frequently Asked Questions</h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p></p>
 // Find answers to common questions about our AI and IT services, pricing, and support.
           </p>
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">
+            <div className="max-w-md mx-auto relative"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
 type="text" placeholder="Search FAQs..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
+  focus: outline-none,
+  focus: border-cyan-400,
+  focus: ring-2,"
   focus:ring-cyan-400/20"
 // />
           </div>
           {/* FAQ Content */}"
-          <div className="max-w-4xl mx-auto"></div>
+          <div className="max-w-4xl mx-auto"></div></div>
             {filteredData.map((category, categoryIndex) => ()}"
-          <div key={categoryIndex} className="mb-12"></div>"
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"></h2>
+          <div key={categoryIndex} className="mb-12"></div></div>"
+                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"></h2></h2>
                   {category.category}
                 </h2>"
-                <div className="space-y-4"></div>
+                <div className="space-y-4"></div></div>
                   {category.questions.map((item, itemIndex) => {}
   // TOD,
   O: Add content,
@@ -345,8 +345,8 @@ type="text" placeholder="Search FAQs..."
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
           "
-          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
-                        <button></button>
+          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div></div>
+                        <button></button></button>
                           onClick={() => toggleItem(globalIndex)}"
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
   hover:bg-slate-700/50 transition-colors"
@@ -361,17 +361,17 @@ type="text" placeholder="Search FAQs..."
                           )}
                         </button>
                         {isOpen && ()}"
-          <div className="px-6 pb-4"></div>"
-                            <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+          <div className="px-6 pb-4"></div></div>"
+                            <p className="text-gray-300 leading-relaxed"></p>{item.answer}</p>
                   })}
             ))}
 {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Still Have Questions?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />

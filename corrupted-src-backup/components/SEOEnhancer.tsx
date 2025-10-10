@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
+interface SEOEnhancerProps {/* TODO: Fix JSX expression */,}
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -30,8 +30,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       return () => {
         document.head.removeChild(script);
 const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */,})
+}) => {/* TODO: Fix JSX expression */,}
       }
     }
   }, [structuredData]);
@@ -42,21 +42,21 @@ const,
     name: 'Zion Tech Group',
     description: description
     url: canonicalUrl || window.location.origin,
-    logo: `${window.location.origin}/logo.png`,
+    logo: `${window.location.origin,}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
     contactPoint: {,
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
       contactType: 'customer service',
       availableLanguage: 'English',
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
-  o: `${window.location.origin}/logo.png`,
+  const defaultStructuredData = {/* TODO: Fix JSX expression */,}
+  o: `${window.location.origin,}/logo.png`,
     sameA,
   s: ['http,
-  s://linkedin.com/company/zion-tech-group', 'http,
-  s://twitter.com/ziontechgroup'],
+  s: //linkedin.com/company/zion-tech-group', 'http,
+  s: //twitter.com/ziontechgroup'],
     contactPoin,
-  t: {/* TODO: Fix JSX expression */}
+  t: {/* TODO: Fix JSX expression */,}
     }}
   //   const finalStructuredData = structuredData || defaultStructuredData;
   return(<React.Fragment>)
@@ -71,21 +71,21 @@ const,
         {/* Canonical URL */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}</link>
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content={ogType} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonicalUrl || window.location.href} />
+        <meta property="og: title" content={title,} />
+        <meta property="og: description" content={description,} />
+        <meta property="og: type" content={ogType,} />
+        <meta property="og: image" content={ogImage,} />
+        <meta property="og: url" content={canonicalUrl || window.location.href,} />
         <meta property="og: site_name" content="Zion Tech Group" />,
-        <meta property="og:locale" content="en_US" />,
+        <meta property="og: locale" content="en_US" />,
 ,
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter: card" content={twitterCard,} />
+        <meta name="twitter: title" content={title,} />
+        <meta name="twitter: description" content={description,} />
+        <meta name="twitter: image" content={ogImage,} />
         <meta name="twitter: site" content="@ziontechgroup" />,
-        <meta name="twitter:creator" content="@ziontechgroup" />,
+        <meta name="twitter: creator" content="@ziontechgroup" />,
 ,
         {/* Additional SEO Meta Tags */}
         <meta name="theme-color" content="#1e40af" />
@@ -101,7 +101,7 @@ const,
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
+        <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous" />,
 ,
         {/* Favicon and Icons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -123,28 +123,28 @@ const,
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {/* Open Graph Meta Tags */}"
         <meta property="o,"
-  g:title" content={title} /></meta>"
+  g: title" content={title,} /></meta>"
         <meta property="o,"
-  g:description" content={description} /></meta>"
+  g: description" content={description,} /></meta>"
         <meta property="o,"
-  g:type" content={ogType} /></meta>"
+  g: type" content={ogType,} /></meta>"
         <meta property="o,"
-  g:image" content={ogImage} /></meta>"
+  g: image" content={ogImage,} /></meta>"
         <meta property="o,"
-  g:url" content={canonicalUrl || window.location.href} /></meta>"
+  g: url" content={canonicalUrl || window.location.href,} /></meta>"
         <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>"
         <meta property="o,"
   g:locale" content="en_US" /></meta>
         {/* Twitter Card Meta Tags */}"
         <meta name="twitte,"
-  r:card" content={twitterCard} /></meta>"
+  r: card" content={twitterCard,} /></meta>"
         <meta name="twitte,"
-  r:title" content={title} /></meta>"
+  r: title" content={title,} /></meta>"
         <meta name="twitte,"
-  r:description" content={description} /></meta>"
+  r: description" content={description,} /></meta>"
         <meta name="twitte,"
-  r:image" content={ogImage} /></meta>"
+  r: image" content={ogImage,} /></meta>"
         <meta name="twitte,"
   r:site" content="@ziontechgroup" /></meta>"
         <meta name="twitte,"

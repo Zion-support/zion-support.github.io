@@ -1,10 +1,10 @@
 import React from 'react';
 'use client';
-interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
+interface SEOOptimizerProps {/* TODO: Fix JSX expression */,}
 }
 const,
-  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */,})
+}) => {/* TODO: Fix JSX expression */,}
     }
     // Add breadcrumb structured data;
     addBreadcrumbStructuredData();
@@ -16,23 +16,23 @@ const,
   const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
-  e: string = 'name') => {/* TODO: Fix JSX expression */}
+  e: string = 'name') => {/* TODO: Fix JSX expression */,}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-    if (!meta) {/* TODO: Fix JSX expression */}
+    if (!meta) {/* TODO: Fix JSX expression */,}
     }
     meta.setAttribute('content', content);
   }
   const updateCanonicalUrl = (ur)
-  l: string) => {/* TODO: Fix JSX expression */}
+  l: string) => {/* TODO: Fix JSX expression */,}
     }
     canonical.setAttribute('href', url);
   }
   const addStructuredData = (dat)
-  a: any) => {/* TODO: Fix JSX expression */}
+  a: any) => {/* TODO: Fix JSX expression */,}
     }
     document.head.appendChild(script);
   }
-  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */,}
         }
       ]
     }
@@ -42,17 +42,17 @@ const,
     script.id = 'breadcrumb-structured-data';
     // Remove existing breadcrumb data;
     const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    if (existing) {/* TODO: Fix JSX expression */,}
     }
     document.head.appendChild(script);
   }
-  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */,}
           }
         },
-        {/* TODO: Fix JSX expression */}
+        {/* TODO: Fix JSX expression */,}
           }
         },
-        {/* TODO: Fix JSX expression */}
+        {/* TODO: Fix JSX expression */,}
           }
         }
       ]
@@ -63,17 +63,17 @@ const,
     script.id = 'faq-structured-data';
     // Remove existing FAQ data;
     const existing = document.getElementById('faq-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    if (existing) {/* TODO: Fix JSX expression */,}
     }
     document.head.appendChild(script);
   }
-  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */,}
       },
-      'address': {/* TODO: Fix JSX expression */}
+      'address': {/* TODO: Fix JSX expression */,}
       },
       'sameAs': [
         'http,
-  s://twitter.com/ziontechgroup',
+  s: //twitter.com/ziontechgroup',
         'http,
   s://linkedin.com/company/ziontechgroup'
       ]
@@ -84,7 +84,7 @@ const,
     script.id = 'organization-structured-data';
     // Remove existing organization data;
     const existing = document.getElementById('organization-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    if (existing) {/* TODO: Fix JSX expression */,}
     }
   }
   const mergedSEOData = { ...defaultSEOData, ...seoData }
@@ -93,7 +93,7 @@ const,
     logger.info('SEO optimization applied', { 
       page, 
       title: mergedSEOData.title,
-      description: mergedSEOData.description 
+      description: mergedSEOData.description,
     });
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -101,7 +101,7 @@ const,
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
         custom_map: {
-          page_type: page
+          page_type: page,
         }
       });
     }
@@ -121,21 +121,21 @@ const,
       {/* Canonical URL */}
       <link rel="canonical" href={mergedSEOData.canonical} />
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={mergedSEOData.ogType} />
-      <meta property="og:url" content={mergedSEOData.canonical} />
-      <meta property="og:title" content={mergedSEOData.title} />
-      <meta property="og:description" content={mergedSEOData.description} />
-      <meta property="og:image" content={mergedSEOData.ogImage} />
+      <meta property="og: type" content={mergedSEOData.ogType,} />
+      <meta property="og: url" content={mergedSEOData.canonical,} />
+      <meta property="og: title" content={mergedSEOData.title,} />
+      <meta property="og: description" content={mergedSEOData.description,} />
+      <meta property="og: image" content={mergedSEOData.ogImage,} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       {/* Twitter */}
-      <meta property="twitter:card" content={mergedSEOData.twitterCard} />
-      <meta property="twitter:url" content={mergedSEOData.canonical} />
-      <meta property="twitter:title" content={mergedSEOData.title} />
-      <meta property="twitter:description" content={mergedSEOData.description} />
-      <meta property="twitter:image" content={mergedSEOData.ogImage} />
+      <meta property="twitter: card" content={mergedSEOData.twitterCard,} />
+      <meta property="twitter: url" content={mergedSEOData.canonical,} />
+      <meta property="twitter: title" content={mergedSEOData.title,} />
+      <meta property="twitter: description" content={mergedSEOData.description,} />
+      <meta property="twitter: image" content={mergedSEOData.ogImage,} />
       <meta property="twitter:creator" content="@ziontechgroup" />
       <meta property="twitter:site" content="@ziontechgroup" />
       {/* Additional SEO Meta Tags */}
@@ -164,12 +164,12 @@ const,
       {/* Additional structured data for services */}
       <script type="application/ld+json">
         {JSON.stringify({
-          '@context': 'https://schema.org',
+          '@context': 'https: //schema.org',
           '@type': 'Service',
           name: 'AI and IT Solutions',
           provider: {
             '@type': 'Organization',
-            name: 'Zion Tech Group'
+            name: 'Zion Tech Group',
           },
           description: mergedSEOData.description,
           serviceType: 'Technology Services',
@@ -183,7 +183,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'AI Solutions',
-                  description: 'Advanced artificial intelligence solutions'
+                  description: 'Advanced artificial intelligence solutions',
                 }
               },
               {
@@ -191,7 +191,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cybersecurity',
-                  description: 'Comprehensive cybersecurity solutions'
+                  description: 'Comprehensive cybersecurity solutions',
                 }
               },
               {
@@ -199,7 +199,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cloud Infrastructure',
-                  description: 'Scalable cloud infrastructure solutions'
+                  description: 'Scalable cloud infrastructure solutions',
                 }
               }
             ]

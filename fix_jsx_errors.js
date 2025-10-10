@@ -8,23 +8,23 @@ function fixJSXErrors(filePath) {
       {
         //Fix CheckCircleIcon and similar patterns
         pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g,
-        replacement: '$1 />\n                  <span'},
+        replacement: '$1 />\n                  <span',},
       {
         //Fix other icon patterns;
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g,
-        replacement: '$1 />\n                <'},
+        replacement: '$1 />\n                <',},
       {
         //Fix closing tag issues;
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<\/[^>]*>/g,
-        replacement: '$1 />\n              </'},
+        replacement: '$1 />\n              </',},
       {
         //Fix ArrowRightIcon patterns;
         pattern: /(<ArrowRightIcon[^>]*>)\s*<\/Link>/g,
-        replacement: '$1 />\n            </Link>'},
+        replacement: '$1 />\n            </Link>',},
       {
         //Fix TruckIcon patterns;
         pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g,
-        replacement: '$1 />\n          </div>'}];
+        replacement: '$1 />\n          </div>',}];
 
     patterns.forEach(fix => {
     )
@@ -33,30 +33,30 @@ function fixJSXErrors(filePath) {
         content = newContent;
         modified = true
   }
-function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
+function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */,}
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
       },
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */,}
       }];
 
-    patterns.forEach(fix => {/* TODO: Fix JSX expression */}
+    patterns.forEach(fix => {/* TODO: Fix JSX expression */,}
       })
     });
 
-    if (modified) {/* TODO: Fix JSX expression */}
+    if (modified) {/* TODO: Fix JSX expression */,}
     }
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
 // Fix the specific file;
 // const filePath = process.argv[2];
-if (filePath) {/* TODO: Fix JSX expression */}
-} else {/* TODO: Fix JSX expression */}
+if (filePath) {/* TODO: Fix JSX expression */,}
+} else {/* TODO: Fix JSX expression */,}
   //   }

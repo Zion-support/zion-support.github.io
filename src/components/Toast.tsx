@@ -1,20 +1,20 @@
 import React from 'react';
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
-export interface ToastProps {/* TODO: Fix JSX expression */}
+export interface ToastProps {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   messag,
   e: string;
   type?: ToastType
   duration?: number
-  onClose?: () => void,,
+  onClose?: () => void,
     sho,
   w: boolean,
 }
 const,
   Toast: React.FC,
-          <ToastProps> = ({/* TODO: Fix JSX expression */}
+          <ToastProps> = ({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //   message,
@@ -22,18 +22,18 @@ const,
   duration = 3000,
 //   onClose,
 //   show;)
-}) => {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   const [isVisible, setIsVisible] = useState(show);
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     setIsVisible(show);
     if (show && duration > 0) {
     setIsVisible(false)
   }
-        if (onClose) {/* TODO: Fix JSX expression */}
+        if (onClose) {/* TODO: Fix JSX expression */,}
         }
       }, duration);
       return () => clearTimeout(timer);
@@ -41,10 +41,10 @@ const,
     return undefined;
   }, [show, duration, onClose]);
   if (!isVisible) return null;
-  const getToastStyles = () => {/* TODO: Fix JSX expression */}
+  const getToastStyles = () => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-    switch (type) {/* TODO: Fix JSX expression */}
+    switch (type) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       case 'success':
@@ -59,10 +59,10 @@ const,
   t: return 'bg-gray-800 text-white',
     }
   }
-  const getIcon = () => {/* TODO: Fix JSX expression */}
+  const getIcon = () => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-    switch (type) {/* TODO: Fix JSX expression */}
+    switch (type) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       case 'success':
@@ -77,9 +77,9 @@ const,
   t: return '',
     }
   }
-  return (<div>Coming Soon</div>)
+  return (<div></div>Coming Soon</div>)
   )
-          <div></div>
+          <div></div></div>
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert""
       aria-live="polite"
@@ -87,7 +87,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           "
           <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
-      <button></button>
+      <button></button></button>
         onClick={() => {}
   // TOD,
   O: Add content,

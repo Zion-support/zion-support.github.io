@@ -18,17 +18,17 @@ function removeConsoleLogs(filePath) {
     if (content !== originalContent) {
       modified = true;
       fs.writeFileSync(filePath, content, 'utf8');
-function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
+function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */,}
 //       }
     
     return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
 // Function to process all TypeScript and JavaScript files;
 async function processFiles() {
-async function processFiles() {/* TODO: Fix JSX expression */}
+async function processFiles() {/* TODO: Fix JSX expression */,}
 }
   const patterns = [
     'src/**/*.{ts,tsx,js,jsx}',
@@ -55,10 +55,10 @@ async function processFiles() {/* TODO: Fix JSX expression */}
       if (removeConsoleLogs(file)) {
         modifiedFiles++
   }
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
+  for (const pattern of patterns) {/* TODO: Fix JSX expression */,}
     });
     
-    files.forEach(file => {/* TODO: Fix JSX expression */}
+    files.forEach(file => {/* TODO: Fix JSX expression */,}
       })
     });
   });

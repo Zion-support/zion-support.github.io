@@ -1,12 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
-
 const CookiesPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
-  
   const cookieTypes = [
     {
       type: 'Essential Cookies',
@@ -18,7 +15,7 @@ const CookiesPage: React.FC = () => {
         'Load balancing cookies',
         'User interface customization'
       ],
-      required: true
+      required: true,
     },
     {
       type: 'Analytics Cookies',
@@ -30,7 +27,7 @@ const CookiesPage: React.FC = () => {
         'User behavior analysis',
         'Performance monitoring'
       ],
-      required: false
+      required: false,
     },
     {
       type: 'Functional Cookies',
@@ -42,7 +39,7 @@ const CookiesPage: React.FC = () => {
         'User preferences',
         'Form data storage'
       ],
-      required: false
+      required: false,
     },
     {
       type: 'Marketing Cookies',
@@ -54,34 +51,31 @@ const CookiesPage: React.FC = () => {
         'Email marketing tracking',
         'Campaign performance'
       ],
-      required: false
+      required: false,
     }
   ];
   const purposes = [
     {
       title: 'Website Functionality',
       description: 'Ensure the website works correctly and securely',
-      icon: Shield
+      icon: Shield,
     },
     {
       title: 'User Experience',
       description: 'Remember your preferences and settings',
-      icon: Settings
+      icon: Settings,
     },
     {
       title: 'Analytics',
       description: 'Understand how users interact with our site',
-      icon: Database
+      icon: Database,
     },
     {
       title: 'Marketing',
       description: 'Deliver relevant content and advertisements',
-      icon: Eye
+      icon: Eye,
     }
   ]
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   return (
     <>
       <Helmet>
@@ -94,5 +88,4 @@ const CookiesPage: React.FC = () => {
     </>
   );
 };
-
 export default CookiesPage;

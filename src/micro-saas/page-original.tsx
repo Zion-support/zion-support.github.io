@@ -16,7 +16,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/ai-code-review',
-      popular: true
+      popular: true,
     },
     {
       title: 'AI Test Generation Suite',
@@ -28,7 +28,7 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Developer Tools',
       technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'Smart API Documentation Generator',
@@ -40,7 +40,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Developer Tools',
       technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Marketing & SEO Tools
     {
@@ -53,7 +53,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Marketing',
       technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Social Media Manager',
@@ -65,7 +65,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Marketing',
       technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Email Marketing Platform',
@@ -77,7 +77,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Marketing',
       technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Content Generator Pro',
@@ -89,7 +89,7 @@ $4},
       marketPrice: '$180-350/month',
       category: 'Content Creation',
       technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Business Intelligence & Analytics
     {
@@ -102,7 +102,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Analytics',
       technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Lead Scoring Engine',
@@ -114,7 +114,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Sales',
       technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Customer Insights Platform',
@@ -126,7 +126,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Customer Analytics',
       technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Finance & Accounting Tools
     {
@@ -139,7 +139,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Finance',
       technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Financial Planning Assistant',
@@ -151,7 +151,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Finance',
       technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Expense Management System',
@@ -163,7 +163,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Finance',
       technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Healthcare & Wellness
     {
@@ -176,7 +176,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Healthcare',
       technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Fitness Coach Pro',
@@ -188,7 +188,7 @@ $4},
       marketPrice: '$80-150/month',
       category: 'Health & Fitness',
       technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Mental Health Assistant',
@@ -200,7 +200,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Mental Health',
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Education & Learning
     {
@@ -213,7 +213,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Education',
       technologies: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Study Assistant Pro',
@@ -225,7 +225,7 @@ $4},
       marketPrice: '$100-200/month',
       category: 'Education',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Skill Assessment Platform',
@@ -237,7 +237,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI E-commerce & Retail
     {
@@ -250,7 +250,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Supply Chain',
       technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Product Recommendation Engine',
@@ -262,7 +262,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Price Optimization Tool',
@@ -274,7 +274,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Legal & Compliance
     {
@@ -287,7 +287,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Real Estate & Property Management
     {
@@ -300,7 +300,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI HR & Recruitment
     {
@@ -313,7 +313,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Interview Scheduler Pro',
@@ -325,7 +325,7 @@ $4},
       marketPrice: '$120-300/month',
       category: 'HR & Recruitment',
       technologies: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Employee Performance Tracker',
@@ -337,7 +337,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'HR & Recruitment',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Finance & Accounting
     {
@@ -350,7 +350,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Finance & Accounting',
       technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Invoice Processing System',
@@ -362,7 +362,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Finance & Accounting',
       technologies: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Financial Forecasting Tool',
@@ -374,7 +374,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Finance & Accounting',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Project Management
     {
@@ -387,7 +387,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Time Tracking & Analytics',
@@ -399,7 +399,7 @@ $4},
       marketPrice: '$120-300/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Customer Service
     {
@@ -412,7 +412,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Customer Service',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Ticket Classification System',
@@ -424,7 +424,7 @@ $4},
       marketPrice: '$150-350/month',
       category: 'Customer Service',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Sales & CRM
     {
@@ -437,7 +437,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Sales Forecasting Platform',
@@ -449,7 +449,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Healthcare & Wellness
     {
@@ -462,7 +462,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Healthcare',
       technologies: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Fitness Coach Platform',
@@ -474,7 +474,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Healthcare',
       technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Security & Compliance
     {
@@ -487,7 +487,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Security',
       technologies: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Compliance Checker',
@@ -499,7 +499,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Security',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Productivity & Automation
     {
@@ -512,7 +512,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Productivity',
       technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Email Management System',
@@ -524,7 +524,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Productivity',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Document Management Platform',
@@ -536,7 +536,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'Productivity',
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Analytics & Reporting
     {
@@ -549,7 +549,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Analytics',
       technologies: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Social Media Analytics',
@@ -561,7 +561,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Analytics',
       technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Development & DevOps
     {
@@ -574,7 +574,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Development',
       technologies: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Deployment Automation',
@@ -586,7 +586,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Development',
       technologies: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Communication & Collaboration
     {
@@ -599,7 +599,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Collaboration',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Video Conferencing Assistant',
@@ -611,7 +611,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Collaboration',
       technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Marketing & Advertising
     {
@@ -624,7 +624,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Marketing',
       technologies: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Influencer Marketing Platform',
@@ -636,7 +636,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Marketing',
       technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI E-commerce & Retail
     {
@@ -649,7 +649,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Supply Chain Optimizer',
@@ -661,7 +661,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Supply Chain',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Education & Training
     {
@@ -674,7 +674,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Knowledge Management System',
@@ -686,7 +686,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'Education',
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Legal & Compliance
     {
@@ -699,7 +699,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Privacy Compliance Monitor',
@@ -711,7 +711,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Real Estate & Property
     {
@@ -724,7 +724,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Market Research Platform',
@@ -736,7 +736,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Research',
       technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Agriculture & Environment
     {
@@ -749,7 +749,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Environmental Monitoring',
@@ -761,7 +761,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Environment',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Transportation & Logistics
     {
@@ -774,7 +774,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Transportation',
       technologies: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Logistics Optimizer',
@@ -786,7 +786,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Logistics',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Entertainment & Media
     {
@@ -799,7 +799,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Media',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Video Production Assistant',
@@ -811,7 +811,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Media',
       technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Gaming & Entertainment
     {
@@ -824,7 +824,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Gaming',
       technologies: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Player Behavior Analytics',
@@ -836,7 +836,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Gaming',
       technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Research & Development
     {
@@ -849,7 +849,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Patent Analysis Tool',
@@ -861,7 +861,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Energy & Utilities
     {
@@ -874,7 +874,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Energy',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Smart Grid Optimizer',
@@ -886,7 +886,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Energy',
       technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Manufacturing & Industrial
     {
@@ -899,7 +899,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Manufacturing',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Production Planning Optimizer',
@@ -911,7 +911,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Manufacturing',
       technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Insurance & Risk Management
     {
@@ -924,7 +924,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Insurance',
       technologies: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Claims Processing System',
@@ -936,7 +936,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Insurance',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Government & Public Sector
     {
@@ -949,7 +949,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'Government',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Public Safety System',
@@ -961,7 +961,7 @@ $4},
       marketPrice: '$1000-2000/month',
       category: 'Government',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Non-Profit & Social Impact
     {
@@ -974,7 +974,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Non-Profit',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Volunteer Matching Platform',
@@ -986,7 +986,7 @@ $4},
       marketPrice: '$200-500/month',
       category: 'Non-Profit',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Travel & Hospitality
     {
@@ -999,7 +999,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Travel',
       technologies: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Hotel Revenue Optimizer',
@@ -1011,7 +1011,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Hospitality',
       technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Sports & Fitness
     {
@@ -1024,7 +1024,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Sports',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Fitness Nutrition Coach',
@@ -1036,7 +1036,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Fitness',
       technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Beauty & Fashion
     {
@@ -1049,7 +1049,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Fashion',
       technologies: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Beauty Analysis Tool',
@@ -1061,7 +1061,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Beauty',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Home & Lifestyle
     {
@@ -1074,7 +1074,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Smart Home',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Personal Assistant Platform',
@@ -1086,7 +1086,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Personal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Pets & Animals
     {
@@ -1099,7 +1099,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Pets',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Pet Training Assistant',
@@ -1111,7 +1111,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Pets',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Education & Learning
     {
@@ -1124,7 +1124,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Homework Helper',
@@ -1136,7 +1136,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Education',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Music & Audio
     {
@@ -1149,7 +1149,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Music',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Audio Enhancement Platform',
@@ -1161,7 +1161,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Audio',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Art & Design
     {
@@ -1174,7 +1174,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Design',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Logo Generator Platform',
@@ -1186,7 +1186,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Design',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Dating & Relationships
     {
@@ -1199,7 +1199,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Dating',
       technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Relationship Counselor',
@@ -1211,7 +1211,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Relationships',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Parenting & Family
     {
@@ -1224,7 +1224,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Parenting',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Family Organizer',
@@ -1236,7 +1236,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Family',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Senior Care & Aging
     {
@@ -1249,7 +1249,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Senior Care',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Memory Assistant',
@@ -1261,7 +1261,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Memory',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Accessibility & Inclusion
     {
@@ -1274,7 +1274,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Accessibility',
       technologies: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Language Translation Pro',
@@ -1286,7 +1286,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Translation',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Emergency & Crisis Management
     {
@@ -1299,7 +1299,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'Emergency',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Crisis Communication Platform',
@@ -1311,7 +1311,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Crisis Management',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Space & Astronomy
     {
@@ -1324,7 +1324,7 @@ $4},
       marketPrice: '$1000-2000/month',
       category: 'Space',
       technologies: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Astronomical Data Analyzer',
@@ -1336,7 +1336,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Astronomy',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Ocean & Marine
     {
@@ -1349,7 +1349,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Marine',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Ocean Current Predictor',
@@ -1361,7 +1361,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Oceanography',
       technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Archaeology & History
     {
@@ -1374,7 +1374,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Archaeology',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Historical Document Processor',
@@ -1386,7 +1386,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'History',
       technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Psychology & Mental Health
     {
@@ -1399,7 +1399,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Mental Health',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Therapy Assistant',
@@ -1411,7 +1411,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Therapy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Philosophy & Ethics
     {
@@ -1424,7 +1424,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Ethics',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Philosophy Research Assistant',
@@ -1436,7 +1436,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Philosophy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Spirituality & Religion
     {
@@ -1449,7 +1449,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Spirituality',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Religious Text Analyzer',
@@ -1461,7 +1461,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Religion',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Future & Innovation
     {
@@ -1474,7 +1474,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Innovation',
       technologies: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Future Scenario Generator',
@@ -1486,7 +1486,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Future Planning',
       technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Consciousness & AI Ethics
     {
@@ -1499,7 +1499,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'AI Ethics',
       technologies: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Rights Management System',
@@ -1511,7 +1511,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'AI Rights',
       technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Time & Space
     {
@@ -1524,7 +1524,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Time Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Space-Time Analyzer',
@@ -1536,7 +1536,7 @@ $4},
       marketPrice: '$1000-2000/month',
       category: 'Space-Time',
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Quantum & Advanced Physics
     {
@@ -1549,7 +1549,7 @@ $4},
       marketPrice: '$1200-2500/month',
       category: 'Quantum Computing',
       technologies: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Physics Research Assistant',
@@ -1561,7 +1561,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Physics',
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Multiverse & Parallel Realities
     {
@@ -1574,7 +1574,7 @@ $4},
       marketPrice: '$1500-3000/month',
       category: 'Multiverse',
       technologies: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Reality Manipulation Tool',
@@ -1586,7 +1586,7 @@ $4},
       marketPrice: '$2000-4000/month',
       category: 'Reality',
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Transcendence & Enlightenment
     {
@@ -1599,7 +1599,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'Enlightenment',
       technologies: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Transcendence Platform',
@@ -1611,7 +1611,7 @@ $4},
       marketPrice: '$1500-3000/month',
       category: 'Transcendence',
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Universal Consciousness
     {
@@ -1624,7 +1624,7 @@ $4},
       marketPrice: '$3000-6000/month',
       category: 'Universal Consciousness',
       technologies: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Cosmic Intelligence Platform',
@@ -1636,7 +1636,7 @@ $4},
       marketPrice: '$5000-10000/month',
       category: 'Cosmic Intelligence',
       technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Infinite Possibilities
     {
@@ -1649,7 +1649,7 @@ $4},
       marketPrice: '$10000-20000/month',
       category: 'Infinite Possibilities',
       technologies: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Ultimate Reality Creator',
@@ -1661,7 +1661,7 @@ $4},
       marketPrice: '$20000-50000/month',
       category: 'Ultimate Reality',
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4}
   ];
   /* const realEstateSaaS = [
@@ -1675,7 +1675,7 @@ $4}
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Tenant Screening Platform',
@@ -1687,7 +1687,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Property Management',
       technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Agriculture & Food Tech
     {
@@ -1700,7 +1700,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Food Safety Inspector',
@@ -1712,7 +1712,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Food Safety',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Transportation & Logistics
     {
@@ -1725,7 +1725,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Logistics',
       technologies: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Fleet Maintenance Predictor',
@@ -1737,7 +1737,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Fleet Management',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Energy & Sustainability
     {
@@ -1750,7 +1750,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Energy Management',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Carbon Footprint Tracker',
@@ -1762,7 +1762,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Sustainability',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Entertainment & Media
     {
@@ -1775,7 +1775,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Content Moderation',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Video Editor Pro',
@@ -1787,7 +1787,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Video Production',
       technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Security & Surveillance
     {
@@ -1800,7 +1800,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Security',
       technologies: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Fraud Detection Engine',
@@ -1812,7 +1812,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Fraud Prevention',
       technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Research & Development
     {
@@ -1825,7 +1825,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Patent Search Engine',
@@ -1837,7 +1837,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Compliance Monitoring Suite',
@@ -1849,7 +1849,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Compliance',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Real Estate & Property
     {
@@ -1862,7 +1862,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Property Management System',
@@ -1874,7 +1874,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI HR & Recruitment
     {
@@ -1887,7 +1887,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Employee Performance Tracker',
@@ -1899,7 +1899,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'HR & Recruitment',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Project Management
     {
@@ -1912,7 +1912,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Task Automation Suite',
@@ -1924,7 +1924,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Supply Chain & Logistics
     {
@@ -1937,7 +1937,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Supply Chain',
       technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Warehouse Management System',
@@ -1949,7 +1949,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Supply Chain',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Agriculture & Food Tech
     {
@@ -1962,7 +1962,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Food Safety Monitor',
@@ -1974,7 +1974,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Food Tech',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Energy & Sustainability
     {
@@ -1987,7 +1987,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Energy',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Carbon Footprint Tracker',
@@ -1999,7 +1999,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Sustainability',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Gaming & Entertainment
     {
@@ -2012,7 +2012,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Gaming',
       technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Content Moderation Platform',
@@ -2024,7 +2024,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Content Moderation',
       technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Transportation & Mobility
     {
@@ -2037,7 +2037,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Transportation',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Traffic Management Platform',
@@ -2049,7 +2049,7 @@ $4},
       marketPrice: '$800-1500/month',
       category: 'Smart Cities',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Research & Development
     {
@@ -2062,7 +2062,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Patent Analysis Tool',
@@ -2074,7 +2074,7 @@ $4},
       marketPrice: '$500-1000/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Personal Productivity
     {
@@ -2087,7 +2087,7 @@ $4},
       marketPrice: '$80-150/month',
       category: 'Personal Productivity',
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Meeting Assistant',
@@ -2099,7 +2099,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Meeting Management',
       technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Insurance Underwriting Assistant',
@@ -2972,7 +2972,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Productivity',
       technologies: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Task Management & Prioritization',
@@ -2984,7 +2984,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Productivity',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Email Management & Prioritization',
@@ -2996,7 +2996,7 @@ $4},
       marketPrice: '$100-200/month',
       category: 'Communication',
       technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI HR & Recruitment
     {
@@ -3009,7 +3009,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Employee Performance Tracker',
@@ -3021,7 +3021,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'HR & Performance',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Workplace Safety Monitor',
@@ -3033,7 +3033,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Workplace Safety',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Customer Service & Support
     {
@@ -3046,7 +3046,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Customer Support',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Customer Feedback Analyzer',
@@ -3058,7 +3058,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Customer Analytics',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Live Chat Assistant',
@@ -3070,7 +3070,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Customer Support',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Sales & CRM
     {
@@ -3083,7 +3083,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Sales Call Analyzer',
@@ -3095,7 +3095,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Sales Training',
       technologies: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Proposal Generator Pro',
@@ -3107,7 +3107,7 @@ $4},
       marketPrice: '$180-350/month',
       category: 'Sales Tools',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Project Management
     {
@@ -3120,7 +3120,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Resource Allocation Optimizer',
@@ -3132,7 +3132,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Resource Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Project Timeline Predictor',
@@ -3144,7 +3144,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Project Planning',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Security & Compliance
     {
@@ -3157,7 +3157,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Cybersecurity',
       technologies: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Compliance Monitor',
@@ -3169,7 +3169,7 @@ $4},
       marketPrice: '$350-700/month',
       category: 'Compliance',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Data Privacy Manager',
@@ -3181,7 +3181,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Data Privacy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Quality Assurance & Testing
     {
@@ -3194,7 +3194,7 @@ $4},
       marketPrice: '$250-500/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Bug Prediction & Prevention',
@@ -3206,7 +3206,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Quality Assurance',
       technologies: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Performance Monitoring Pro',
@@ -3218,7 +3218,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Performance Monitoring',
       technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Content & Media
     {
@@ -3231,7 +3231,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Content Creation',
       technologies: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Podcast Production Suite',
@@ -3243,7 +3243,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Audio Production',
       technologies: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Image & Design Generator',
@@ -3255,7 +3255,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Design',
       technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Research & Development
     {
@@ -3268,7 +3268,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Patent Analyzer & Generator',
@@ -3280,7 +3280,7 @@ $4},
       marketPrice: '$600-1200/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Innovation Tracker',
@@ -3292,7 +3292,7 @@ $4},
       marketPrice: '$200-400/month',
       category: 'Innovation',
       technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Personal & Lifestyle
     {
@@ -3305,7 +3305,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Personal Finance',
       technologies: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Personal Assistant Pro',
@@ -3317,7 +3317,7 @@ $4},
       marketPrice: '$150-300/month',
       category: 'Personal Assistant',
       technologies: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Home Energy Optimizer',
@@ -3329,7 +3329,7 @@ $4},
       marketPrice: '$120-250/month',
       category: 'Smart Home',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     // AI Gaming & Entertainment
     {
@@ -3342,7 +3342,7 @@ $4},
       marketPrice: '$400-800/month',
       category: 'Game Development',
       technologies: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Music Composition Studio',
@@ -3354,7 +3354,7 @@ $4},
       marketPrice: '$300-600/month',
       category: 'Music Production',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
-      contactInfo:     ,
+      contactInfo: ,
 $4},
     {
       title: 'AI Streaming Content Optimizer',
@@ -3366,56 +3366,56 @@ $4},
       marketPrice: '$350-700/month',
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
-      contactInfo:     ,
+      contactInfo: ,
 $4}
   ];
   const categories = [
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     }
   ]; */
   /* const categories = [
-    { name: 'All', count: microSAASServices.length },
-    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
-    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
-    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },
-    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
-    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },
-    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length },
-    { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length },
-    { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
-    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
+    { name: 'All', count: microSAASServices.length,},
+    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length,},
+    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length,},
+    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length,},
+    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length,},
+    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length,},
+    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length,},
+    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length,},
+    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length,},
+    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length,},
+    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length,},
+    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length,},
+    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length,},
+    { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length,},
+    { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length,},
+    { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length,},
+    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length,},
+    { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length,},
+    { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length,},
+    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length,},
+    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length,},
+    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length,}
   ]; */
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
       </Helmet>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
+      <section className="pt-24 pb-16 px-4"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             Micro SAAS Solutions,
   </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
     return (
-    <div>Coming Soon</div>
+    <div></div>Coming Soon</div>
   )
   }
   const _microSAASServices = [
@@ -3423,7 +3423,7 @@ const MicroSAASPage: React.FC = () => {
   O: Add items;
 ]
     // AI-Powered Developer Tools,
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3449,11 +3449,11 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950',
       lin,
   k: 'http,
-  s://ziontechgroup.com/ai-code-review',
+  s: //ziontechgroup.com/ai-code-review',
       popula,
   r: true,
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3476,9 +3476,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3501,10 +3501,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Marketing & SEO Tools;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3527,9 +3527,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3552,9 +3552,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3577,9 +3577,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3602,10 +3602,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Business Intelligence & Analytics;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3628,9 +3628,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3653,9 +3653,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3678,10 +3678,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Finance & Accounting Tools;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3704,9 +3704,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3729,9 +3729,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3754,10 +3754,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Healthcare & Wellness;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3780,9 +3780,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3805,9 +3805,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3830,10 +3830,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Education & Learning;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3856,9 +3856,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3881,9 +3881,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3906,10 +3906,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI E-commerce & Retail;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3932,9 +3932,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3957,9 +3957,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -3982,10 +3982,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Legal & Compliance;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4008,10 +4008,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Real Estate & Property Management;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4034,10 +4034,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI HR & Recruitment;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4060,9 +4060,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4085,9 +4085,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4110,10 +4110,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Finance & Accounting;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4136,9 +4136,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4161,9 +4161,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4186,10 +4186,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Project Management;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4212,9 +4212,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4237,10 +4237,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Customer Service;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4263,9 +4263,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4288,10 +4288,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Sales & CRM;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4314,9 +4314,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4339,10 +4339,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Healthcare & Wellness;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4365,9 +4365,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4390,10 +4390,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Security & Compliance;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4416,9 +4416,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4441,10 +4441,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Productivity & Automation;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4467,9 +4467,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4492,9 +4492,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4517,10 +4517,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Analytics & Reporting;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4543,9 +4543,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4568,10 +4568,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Development & DevOps;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4594,9 +4594,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4619,10 +4619,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Communication & Collaboration;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4645,9 +4645,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4670,10 +4670,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Marketing & Advertising;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4696,9 +4696,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4721,10 +4721,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI E-commerce & Retail;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4747,9 +4747,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4772,10 +4772,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Education & Training;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4798,9 +4798,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4823,10 +4823,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Legal & Compliance;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4849,9 +4849,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4874,10 +4874,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Real Estate & Property;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4900,9 +4900,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4925,10 +4925,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Agriculture & Environment;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4951,9 +4951,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -4976,10 +4976,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Transportation & Logistics;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5002,9 +5002,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5027,10 +5027,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Entertainment & Media;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5053,9 +5053,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5078,10 +5078,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Gaming & Entertainment;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5104,9 +5104,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5129,10 +5129,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Research & Development;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5155,9 +5155,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5180,10 +5180,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Energy & Utilities;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5206,9 +5206,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5231,10 +5231,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Manufacturing & Industrial;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5257,9 +5257,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5282,10 +5282,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Insurance & Risk Management;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5308,9 +5308,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5333,10 +5333,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Government & Public Sector;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5359,9 +5359,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5384,10 +5384,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Non-Profit & Social Impact;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5410,9 +5410,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5435,10 +5435,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Travel & Hospitality;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5461,9 +5461,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5486,10 +5486,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Sports & Fitness;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5512,9 +5512,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5537,10 +5537,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Beauty & Fashion;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5563,9 +5563,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5588,10 +5588,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Home & Lifestyle;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5614,9 +5614,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5639,10 +5639,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Pets & Animals;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5665,9 +5665,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5690,10 +5690,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Education & Learning;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5716,9 +5716,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5741,10 +5741,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Music & Audio;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5767,9 +5767,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5792,10 +5792,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Art & Design;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5818,9 +5818,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5843,10 +5843,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Dating & Relationships;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5869,9 +5869,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5894,10 +5894,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Parenting & Family;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5920,9 +5920,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5945,10 +5945,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Senior Care & Aging;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5971,9 +5971,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -5996,10 +5996,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Accessibility & Inclusion;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6022,9 +6022,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6047,10 +6047,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Emergency & Crisis Management;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6073,9 +6073,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6098,10 +6098,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Space & Astronomy;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6124,9 +6124,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6149,10 +6149,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Ocean & Marine;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6175,9 +6175,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6200,10 +6200,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Archaeology & History;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6226,9 +6226,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6251,10 +6251,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Psychology & Mental Health;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6277,9 +6277,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6302,10 +6302,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Philosophy & Ethics;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6328,9 +6328,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6353,10 +6353,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Spirituality & Religion;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6379,9 +6379,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6404,10 +6404,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Future & Innovation;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6430,9 +6430,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6455,10 +6455,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Consciousness & AI Ethics;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6481,9 +6481,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6506,10 +6506,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Time & Space;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6532,9 +6532,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6557,10 +6557,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Quantum & Advanced Physics;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6583,9 +6583,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6608,10 +6608,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Multiverse & Parallel Realities;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6634,9 +6634,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6659,10 +6659,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Transcendence & Enlightenment;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6685,9 +6685,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6710,10 +6710,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Universal Consciousness;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6736,9 +6736,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6761,10 +6761,10 @@ const MicroSAASPage: React.FC = () => {
   s: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Infinite Possibilities;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6787,9 +6787,9 @@ const MicroSAASPage: React.FC = () => {
   s: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6812,11 +6812,11 @@ const MicroSAASPage: React.FC = () => {
   s: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     }
   ];
 const realEstateSaaS = [
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6839,9 +6839,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6864,10 +6864,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Agriculture & Food Tech;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6890,9 +6890,9 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6915,10 +6915,10 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Transportation & Logistics;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6941,9 +6941,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6966,10 +6966,10 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Energy & Sustainability;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -6992,9 +6992,9 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7017,10 +7017,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Entertainment & Media;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7043,9 +7043,9 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7068,10 +7068,10 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Security & Surveillance;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7094,9 +7094,9 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7119,10 +7119,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Research & Development;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7145,9 +7145,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7170,9 +7170,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7195,10 +7195,10 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Real Estate & Property;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7221,9 +7221,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7246,10 +7246,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI HR & Recruitment;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7272,9 +7272,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7297,10 +7297,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Project Management;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7323,9 +7323,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7348,10 +7348,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Supply Chain & Logistics;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7374,9 +7374,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7399,10 +7399,10 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Agriculture & Food Tech;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7425,9 +7425,9 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7450,10 +7450,10 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Energy & Sustainability;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7476,9 +7476,9 @@ const realEstateSaaS = [
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7501,10 +7501,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Gaming & Entertainment;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7527,9 +7527,9 @@ const realEstateSaaS = [
   s: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7552,10 +7552,10 @@ const realEstateSaaS = [
   s: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Transportation & Mobility;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7578,9 +7578,9 @@ const realEstateSaaS = [
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7603,10 +7603,10 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Research & Development;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7629,9 +7629,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7654,10 +7654,10 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Personal Productivity;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7680,9 +7680,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7705,9 +7705,9 @@ const realEstateSaaS = [
   s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7729,7 +7729,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7751,7 +7751,7 @@ const realEstateSaaS = [
       technologie,
   s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7773,7 +7773,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7795,7 +7795,7 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7817,7 +7817,7 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7839,7 +7839,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7861,7 +7861,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7883,7 +7883,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7905,7 +7905,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7927,7 +7927,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7949,7 +7949,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7971,7 +7971,7 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -7993,7 +7993,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8015,7 +8015,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8037,7 +8037,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8059,7 +8059,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8082,7 +8082,7 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8104,7 +8104,7 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8126,7 +8126,7 @@ const realEstateSaaS = [
       technologie,
   s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8148,7 +8148,7 @@ const realEstateSaaS = [
       technologie,
   s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8170,7 +8170,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8192,7 +8192,7 @@ const realEstateSaaS = [
       technologie,
   s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8214,7 +8214,7 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8236,7 +8236,7 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8258,7 +8258,7 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8280,7 +8280,7 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8302,7 +8302,7 @@ const realEstateSaaS = [
       technologie,
   s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8324,7 +8324,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8346,7 +8346,7 @@ const realEstateSaaS = [
       technologie,
   s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8368,7 +8368,7 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8390,7 +8390,7 @@ const realEstateSaaS = [
       technologie,
   s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8412,7 +8412,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8434,7 +8434,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8456,7 +8456,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8478,7 +8478,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8500,7 +8500,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8522,7 +8522,7 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8544,7 +8544,7 @@ const realEstateSaaS = [
       technologie,
   s: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8566,7 +8566,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8588,7 +8588,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8610,7 +8610,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8632,7 +8632,7 @@ const realEstateSaaS = [
       technologie,
   s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8654,7 +8654,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8676,7 +8676,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8698,7 +8698,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8720,7 +8720,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8742,7 +8742,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8764,7 +8764,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8786,7 +8786,7 @@ const realEstateSaaS = [
       technologie,
   s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8808,7 +8808,7 @@ const realEstateSaaS = [
       technologie,
   s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8830,7 +8830,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8852,7 +8852,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8874,7 +8874,7 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8896,7 +8896,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8918,7 +8918,7 @@ const realEstateSaaS = [
       technologie,
   s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8940,7 +8940,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8962,7 +8962,7 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -8984,7 +8984,7 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9006,7 +9006,7 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9028,7 +9028,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9050,7 +9050,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9072,7 +9072,7 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9094,7 +9094,7 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9116,7 +9116,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9138,7 +9138,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9160,7 +9160,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9182,7 +9182,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9204,7 +9204,7 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9226,7 +9226,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9248,7 +9248,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9270,7 +9270,7 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9292,7 +9292,7 @@ const realEstateSaaS = [
       technologie,
   s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9314,7 +9314,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9336,7 +9336,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9358,7 +9358,7 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9380,7 +9380,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9402,7 +9402,7 @@ const realEstateSaaS = [
       technologie,
   s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9426,7 +9426,7 @@ const realEstateSaaS = [
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES;
     // AI Productivity & Time Management;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9449,9 +9449,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9474,9 +9474,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9499,10 +9499,10 @@ const realEstateSaaS = [
   s: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI HR & Recruitment;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9525,9 +9525,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9550,9 +9550,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9575,10 +9575,10 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Customer Service & Support;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9601,9 +9601,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9626,9 +9626,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9651,10 +9651,10 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Sales & CRM;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9677,9 +9677,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9702,9 +9702,9 @@ const realEstateSaaS = [
   s: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9727,10 +9727,10 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Project Management;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9753,9 +9753,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9778,9 +9778,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9803,10 +9803,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Security & Compliance;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9829,9 +9829,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9854,9 +9854,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9879,10 +9879,10 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Quality Assurance & Testing;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9905,9 +9905,9 @@ const realEstateSaaS = [
   s: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9930,9 +9930,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9955,10 +9955,10 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Content & Media;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -9981,9 +9981,9 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10006,9 +10006,9 @@ const realEstateSaaS = [
   s: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10031,10 +10031,10 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Research & Development;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10057,9 +10057,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10082,9 +10082,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10107,10 +10107,10 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Personal & Lifestyle;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10133,9 +10133,9 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10158,9 +10158,9 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10183,10 +10183,10 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     // AI Gaming & Entertainment;
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10209,9 +10209,9 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10234,9 +10234,9 @@ const realEstateSaaS = [
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
@@ -10259,135 +10259,135 @@ const realEstateSaaS = [
   s: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950',
     }
   ];
 const categories = [
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Marketing').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Analytics').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Finance').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Education').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Legal').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Project Management').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Productivity').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Communication').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Research').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Game Development').length }
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Developer Tools').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Marketing').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Analytics').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Finance').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Healthcare').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Education').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'E-commerce').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Legal').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Real Estate').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Project Management').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Productivity').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Communication').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Customer Support').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Sales & CRM').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Cybersecurity').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Quality Assurance').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Content Creation').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Research').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Personal Finance').length,},
+    {/* TODO: Fix JSX expression */,}
+  t: microSAASServices.filter(s => s.category === 'Game Development').length,}
   ];
-  return (<div>Coming Soon</div>)
+  return (<div></div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet></Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>"
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." /></meta>"
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" /></meta>
       </Helmet>
       {/* Hero Section */}"
-      <section className="pt-24 pb-16 px-4"></section>"
-        <div className="max-w-7xl mx-auto text-center"></div>"
+      <section className="pt-24 pb-16 px-4"></section></section>"
+        <div className="max-w-7xl mx-auto text-center"></div></div>"
           <h1 className="text-4xl,
-  sm:text-5xl,"
-  md: text-6xl font-bold text-white mb-6"></h1>
+  sm: text-5xl,"
+  md: text-6xl font-bold text-white mb-6"></h1></h1>
 // Micro SAAS Solutions
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Coming Soon,
   </
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-              <div className="text-gray-300">Applications</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2"></div>50+</div>
+              <div className="text-gray-300"></div>Applications</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$49</div>
-              <div className="text-gray-300">Starting Price</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-green-400 mb-2"></div>$49</div>
+              <div className="text-gray-300"></div>Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-purple-400 mb-2"></div>24/7</div>
+              <div className="text-gray-300"></div>Support</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+              <div className="text-3xl font-bold text-orange-400 mb-2"></div>99.9%</div>
+              <div className="text-gray-300"></div>Uptime</div>
             </div>
           </div>
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
+              <div className="flex items-center space-x-2"></div>
                 <Phone className="w-5 h-5" />
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <Mail className="w-5 h-5" />
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2"></div>
                 <MapPin className="w-5 h-5" />
             </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <div className="text-3xl font-bold text-green-400 mb-2">$49</div>"
-              <div className="text-gray-300">Starting Price</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div></div>"
+              <div className="text-3xl font-bold text-green-400 mb-2"></div>$49</div>"
+              <div className="text-gray-300"></div>Starting Price</div>
             </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>"
-              <div className="text-gray-300">Support</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div></div>"
+              <div className="text-3xl font-bold text-purple-400 mb-2"></div>24/7</div>"
+              <div className="text-gray-300"></div>Support</div>
             </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>"
-              <div className="text-gray-300">Uptime</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div></div>"
+              <div className="text-3xl font-bold text-orange-400 mb-2"></div>99.9%</div>"
+              <div className="text-gray-300"></div>Uptime</div>
             </div>
           </div>
           {/* Contact Info */}"
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div></div>"
             <div className="flex flex-col,
-  md:flex-row items-center justify-center space-y-4,
-  md:space-y-0,"
-  md:space-x-8"></div>"
-              <div className="flex items-center space-x-2"></div>"
+  md: flex-row items-center justify-center space-y-4,
+  md: space-y-0,"
+  md:space-x-8"></div></div>"
+              <div className="flex items-center space-x-2"></div></div>"
                 <Phone className="w-5 h-5" /></Phone>"
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>"
-              <div className="flex items-center space-x-2"></div>"
+              <div className="flex items-center space-x-2"></div></div>"
                 <Mail className="w-5 h-5" /></Mail>"
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>"
-              <div className="flex items-center space-x-2"></div>"
+              <div className="flex items-center space-x-2"></div></div>"
                 <MapPin className="w-5 h-5" /></MapPin>"
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
@@ -10396,30 +10396,30 @@ const categories = [
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Choose Your Perfect AI Tools;
   </
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {microSAASServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"></div>
+                <div className="text-center mb-6"></div>
+                  <div className="text-5xl mb-4"></div>{service.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2"></h3>{service.title}</h3>
+                  <p className="text-gray-600 text-sm"></p>{service.description}</p>
                 </div>
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="mb-6"></div>
+                  <div className="flex items-center justify-between mb-4"></div>
                     <span className="text-2xl font-bold text-green-600">{service.price}</span>
-                    <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                    <span className="text-sm text-gray-500">Market: {service.marketPrice,}</span>
                   </div>
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"></div>
                     {service.category}
                   </div>
                 </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3"></h4>Key Features:</h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -10434,42 +10434,42 @@ const categories = [
                     )}
                   </ul>
                 </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3"></h4>Benefits:</h4>
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
       {/* Services Grid */}"
-      <section className="py-16 px-4"></section>"
-        <div className="max-w-7xl mx-auto"></div>"
-          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
+      <section className="py-16 px-4"></section></section>"
+        <div className="max-w-7xl mx-auto"></div></div>"
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2></h2>
 // Choose Your Perfect AI Tools;
           </h2>"
           <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>
+  md: grid-cols-2,"
+  lg:grid-cols-3 gap-8"></div></div>
             {microSAASServices.map((service, index) => ()}"
           <div key={index} className="bg-white rounded-xl shadow-lg p-6,
-  hover:shadow-2xl transition-all duration-300,"
-  hover:scale-105"></div>"
-                <div className="text-center mb-6"></div>"
-                  <div className="text-5xl mb-4">{service.icon}</div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
-                  <p className="text-gray-600 text-sm">{service.description}</p>
+  hover: shadow-2xl transition-all duration-300,"
+  hover:scale-105"></div></div>"
+                <div className="text-center mb-6"></div></div>"
+                  <div className="text-5xl mb-4"></div>{service.icon}</div>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2"></h3>{service.title}</h3>"
+                  <p className="text-gray-600 text-sm"></p>{service.description}</p>
                 </div>"
-                <div className="mb-6"></div>"
-                  <div className="flex items-center justify-between mb-4"></div>"
+                <div className="mb-6"></div></div>"
+                  <div className="flex items-center justify-between mb-4"></div></div>"
                     <span className="text-2xl font-bold text-green-600">{service.price}</span>"
                     <span className="text-sm text-gray-500">Marke,
-  t: {service.marketPrice}</span>
+  t: {service.marketPrice,}</span>
                   </div>"
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"></div>
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"></div></div>
                     {service.category}
                   </div>
                 </div>"
-                <div className="mb-6"></div>"
-                  <h4 className="font-semibold text-gray-900 mb-3">Key,
+                <div className="mb-6"></div></div>"
+                  <h4 className="font-semibold text-gray-900 mb-3"></h4>Key,
   Features:</h4>"
                   <ul className="space-y-2"></ul>
                     {service.features.slice(0, 4).map((feature, featureIndex) => ()}"
@@ -10485,8 +10485,8 @@ const categories = [
                     )}
                   </ul>
                 </div>"
-                <div className="mb-6"></div>"
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefit,
+                <div className="mb-6"></div></div>"
+                  <h4 className="font-semibold text-gray-900 mb-3"></h4>Benefit,
   s:</h4>"
                   <ul className="space-y-1"></ul>
                     {service.benefits.map((benefit, benefitIndex) => ()}"
@@ -10497,16 +10497,16 @@ const categories = [
                     ))}
                   </ul>
                 </div>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3"></h4>Technologies:</h4>
+                  <div className="flex flex-wrap gap-2"></div>
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                 </div>"
-                <div className="mb-6"></div>"
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologie,
+                <div className="mb-6"></div></div>"
+                  <h4 className="font-semibold text-gray-900 mb-3"></h4>Technologie,
   s:</h4>"
-                  <div className="flex flex-wrap gap-2"></div>
+                  <div className="flex flex-wrap gap-2"></div></div>
                     {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"></span>
                         {tech}
@@ -10514,25 +10514,25 @@ const categories = [
                     ))}
                   </div>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
+                    href={`mailto: kleber@ziontechgroup.com?subject=Interest in ${service.title,}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
                     Get Started Now,
   </
-                  <p className="text-xs text-gray-500 mt-2">
+                  <p className="text-xs text-gray-500 mt-2"></p>
                 </div>"
-                <div className="text-center"></div>
+                <div className="text-center"></div></div>
                   <a></a>
-                    href={/* TODO: Fix JSX expression */}
-  o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
+                    href={/* TODO: Fix JSX expression */,}
+  o: kleber@ziontechgroup.com?subject=Interest in ${service.title,}`}"
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
-  hover:from-purple-700,"
+  hover: from-purple-700,"
   hover: to-blue-700 transition-all inline-block"
 // >
 //                     Get Started Now,
           </a>"
-                  <p className="text-xs text-gray-500 mt-2"></p>
+                  <p className="text-xs text-gray-500 mt-2"></p></p>
                     {service.contactInfo}
                   </p>
                 </div>
@@ -10542,15 +10542,15 @@ const categories = [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8"></p>
             Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
@@ -10562,15 +10562,15 @@ const categories = [
               Email Us,
   </
       {/* CTA Section */}"
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
-        <div className="max-w-4xl mx-auto text-center"></div>"
-          <h2 className="text-3xl font-bold text-white mb-6"></h2>
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section></section>"
+        <div className="max-w-4xl mx-auto text-center"></div></div>"
+          <h2 className="text-3xl font-bold text-white mb-6"></h2></h2>
 // Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-purple-100 mb-8"></p>
+          <p className="text-xl text-purple-100 mb-8"></p></p>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >

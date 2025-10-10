@@ -138,16 +138,16 @@ function shouldRemoveFunction(filename) {
   // Keep essential functions;
   if (essentialFunctions.includes(filename)) {
     return false;
-function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
+function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */,}
   }
   
   // Remove functions that match any of the patterns;
   return functionsToRemove.some(pattern => filename.includes(pattern));
 }
 
-function cleanupFunctions() {/* TODO: Fix JSX expression */}
+function cleanupFunctions() {/* TODO: Fix JSX expression */,}
 }
-  if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */}
+  if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */,}
   }
 
   const _files = fs.readdirSync(functionsDir);
@@ -166,10 +166,10 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   } catch (error) {}
       } else {
         keptCount++;
-  files.forEach(file => {/* TODO: Fix JSX expression */})
-        } catch (error) {/* TODO: Fix JSX expression */}
+  files.forEach(file => {/* TODO: Fix JSX expression */,})
+        } catch (error) {/* TODO: Fix JSX expression */,}
         }
-      } else {/* TODO: Fix JSX expression */}
+      } else {/* TODO: Fix JSX expression */,}
       }
     }
   });

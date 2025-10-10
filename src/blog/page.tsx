@@ -13,7 +13,7 @@ interface BlogPost {
   featured: boolean
   stats?: {
     views: number,
-    engagement: number
+    engagement: number,
   }
 }
 export default function BlogPage() {
@@ -31,7 +31,7 @@ export default function BlogPage() {
       path: '/blog/ai-enterprise-transformation-2025',
       image: '💰',
       featured: true,
-      stats: { views: 18750, engagement: 97 }
+      stats: { views: 18750, engagement: 97,}
     },
     {
       id: 'ai-2025-2026-mega-trends-breakthrough',
@@ -43,7 +43,7 @@ export default function BlogPage() {
       path: '/blog/ai-2025-2026-mega-trends-breakthrough',
       image: '🚀',
       featured: true,
-      stats: { views: 12500, engagement: 94 }
+      stats: { views: 12500, engagement: 94,}
     },
     {
       id: 'ai-2026-autonomous-enterprise-architecture',
@@ -55,7 +55,7 @@ export default function BlogPage() {
       path: '/blog/ai-2026-autonomous-enterprise-architecture',
       image: '🏗️',
       featured: true,
-      stats: { views: 8900, engagement: 91 }
+      stats: { views: 8900, engagement: 91,}
     },
     {
       id: 'ai-2026-autonomous-agent-factories',
@@ -67,7 +67,7 @@ export default function BlogPage() {
       path: '/blog/ai-2026-autonomous-agent-factories',
       image: '🤖',
       featured: false,
-      stats: { views: 7200, engagement: 88 }
+      stats: { views: 7200, engagement: 88,}
     },
     {
       id: 'ai-2026-consensus-intelligence-breakthrough',
@@ -79,7 +79,7 @@ export default function BlogPage() {
       path: '/blog/ai-2026-consensus-intelligence-breakthrough',
       image: '🧠',
       featured: false,
-      stats: { views: 6500, engagement: 85 }
+      stats: { views: 6500, engagement: 85,}
     },
     {
       id: 'ai-cost-optimization-breakthrough-2026',
@@ -91,7 +91,7 @@ export default function BlogPage() {
       path: '/blog/ai-cost-optimization-breakthrough-2026',
       image: '💡',
       featured: false,
-      stats: { views: 9800, engagement: 92 }
+      stats: { views: 9800, engagement: 92,}
     },
     {
       id: 'ai-2026-hyperconscious-computing-revolution',
@@ -103,7 +103,7 @@ export default function BlogPage() {
       path: '/blog/ai-2026-hyperconscious-computing-revolution',
       image: '⚡',
       featured: false,
-      stats: { views: 5800, engagement: 87 }
+      stats: { views: 5800, engagement: 87,}
     },
     {
       id: 'ai-enterprise-transformation-ultimate-guide-2025',
@@ -115,7 +115,7 @@ export default function BlogPage() {
       path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
       image: '📚',
       featured: false,
-      stats: { views: 11200, engagement: 93 }
+      stats: { views: 11200, engagement: 93,}
     }
   ], []);
   useEffect(() => {
@@ -132,19 +132,19 @@ export default function BlogPage() {
   const featuredPosts = posts.filter(post => post.featured);
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
+      <div className="min-h-screen bg-gray-50"></div>
+        <div className="container mx-auto px-4 py-8"></div>
+          <div className="text-center mb-12"></div>
+            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div></div>
+            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse"></div>
+                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div></div>
+                <div className="h-6 bg-gray-200 rounded mb-2"></div></div>
+                <div className="h-4 bg-gray-200 rounded mb-2"></div></div>
+                <div className="h-4 bg-gray-200 rounded w-3/4"></div></div>
               </div>
             ))}
           </div>
@@ -153,25 +153,25 @@ export default function BlogPage() {
     );
   }
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-50"></div>
+      <div className="container mx-auto px-4 py-8"></div>
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4"></h1>AI & Technology Blog</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
             Latest insights on AI, enterprise automation, and digital transformation from our expert team;
   </
         </header>
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-12"></div>
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() =></button> setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === category
                   ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
+                  : 'bg-white text-gray-600 hover: bg-gray-100',
               }`}
             >
               {category === 'all' ? 'All Articles' : category}
@@ -180,11 +180,11 @@ export default function BlogPage() {
         </div>
         {/* Featured Posts */}
         {selectedCategory === 'all' && (
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center"></h2>
               🌟 Featured Articles;
   </
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"></div>
               {featuredPosts.map((post) => (
                 <ContentPreviewCard
                   key={post.id}
@@ -195,11 +195,11 @@ export default function BlogPage() {
           </section>
         )}
         {/* All Posts */}
-        <section>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <section></section>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center"></h2>
             {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {filteredPosts.map((post) => (
               <ContentPreviewCard
                 key={post.id}
@@ -209,12 +209,12 @@ export default function BlogPage() {
           </div>
         </section>
         {/* Newsletter CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="mt-16 text-center"></div>
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8"></div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4"></h3>
               Never Miss an Update;
   </
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto"></p>
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
               and breakthrough content delivered directly to your inbox.
             </p>

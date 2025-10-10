@@ -7,18 +7,18 @@ import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
   const certifications = [],
   return (
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR Compliant', status: 'Certified' },
-    { name: 'HIPAA Compliant', status: 'Certified' },
-    { name: 'PCI DSS Level 1', status: 'Certified' },
-    { name: 'NIST Framework', status: 'Implemented' }
+    { name: 'SOC 2 Type II', status: 'Certified',},
+    { name: 'ISO 27001', status: 'Certified',},
+    { name: 'GDPR Compliant', status: 'Certified',},
+    { name: 'HIPAA Compliant', status: 'Certified',},
+    { name: 'PCI DSS Level 1', status: 'Certified',},
+    { name: 'NIST Framework', status: 'Implemented',}
   ];
   const complianceAreas = [
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   ico,
@@ -47,14 +47,14 @@ const CompliancePage: React.FC = () => {
       feature,
   s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
-  return (<div>Coming Soon</div>)
+  return (<div></div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
         {/* Header */}
-        <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
-            <div className="flex items-center">
+        <section className="bg-white shadow-sm border-b"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6"></div>
+            <div className="flex items-center"></div>
               <Link
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 // >
@@ -62,47 +62,47 @@ const CompliancePage: React.FC = () => {
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Privacy Policy,
           </Link>"
-              <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
+              <h1 className="text-2xl font-bold text-gray-900"></h1>Compliance & Certifications</h1>
             </div>
         </section>"
         <main className="max-w-7xl mx-auto px-4,
-  sm:px-6,"
-  lg:px-8 py-12"></main>
+  sm: px-6,"
+  lg:px-8 py-12"></main></main>
           {/* Overview */}"
-          <section className="mb-16"></section>"
-            <div className="text-center mb-12"></div>"
-              <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
+          <section className="mb-16"></section></section>"
+            <div className="text-center mb-12"></div></div>"
+              <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2></h2>
 // Our Commitment to Compliance;
           </h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p></p>
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected;
 //                 and our services meet the most stringent requirements.
           </p>
             {/* Certifications Grid */}"
             <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-6 mb-12"></div>
+  md: grid-cols-2,"
+  lg:grid-cols-3 gap-6 mb-12"></div></div>
               {certifications.map((cert, index) => ()}"
-          <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500"></div>"
-                  <div className="flex items-center justify-between"></div>"
-                    <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>"
-                    <div className="flex items-center text-green-600"></div>"
+          <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500"></div></div>"
+                  <div className="flex items-center justify-between"></div></div>"
+                    <h3 className="text-lg font-semibold text-gray-900"></h3>{cert.name}</h3>"
+                    <div className="flex items-center text-green-600"></div></div>"
                       <CheckCircle className="w-5 h-5 mr-2" /></CheckCircle>"
                       <span className="text-sm font-medium">{cert.status}</span>
               ))}
           {/* Compliance Areas */}"
-            <h2 className="text-2xl font-bold text-gray-900 text-center mb-12"></h2>
+            <h2 className="text-2xl font-bold text-gray-900 text-center mb-12"></h2></h2>
 Compliance Areas;"
             <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-8"></div>
+  md:grid-cols-2 gap-8"></div></div>
               {complianceAreas.map((area, index) => ()}"
-          <div key={index} className="bg-white rounded-lg shadow-md p-8"></div>"
-                  <div className="flex items-center mb-4"></div>"
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"></div>"
+          <div key={index} className="bg-white rounded-lg shadow-md p-8"></div></div>"
+                  <div className="flex items-center mb-4"></div></div>"
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"></div></div>"
                       <area.icon className="w-6 h-6 text-blue-600" /></area>"
-                    <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>"
-                  <p className="text-gray-600 mb-4">{area.description}</p>"
+                    <h3 className="text-xl font-semibold text-gray-900"></h3>{area.title}</h3>"
+                  <p className="text-gray-600 mb-4"></p>{area.description}</p>"
                   <ul className="space-y-2"></ul>
                     {area.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
@@ -111,18 +111,18 @@ Compliance Areas;"
                       </li>
                   </ul>
 {/* Contact Section */}"
-          <section className="bg-blue-50 rounded-lg p-8 text-center"></section>"
-            <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2>
+          <section className="bg-blue-50 rounded-lg p-8 text-center"></section></section>"
+            <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2></h2>
               Questions About Our Compliance?"
-            <p className="text-gray-600 mb-6"></p>
+            <p className="text-gray-600 mb-6"></p></p>
               Our compliance team is available to answer any questions about our certifications,
               security measures, or data protection practices.
             <a
               href="mailto: compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
               Contact Compliance Team,
             </a>"
-            <div className="mt-8 text-sm text-blue-200"></div>
-              <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
+            <div className="mt-8 text-sm text-blue-200"></div></div>
+              <p></p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
   );

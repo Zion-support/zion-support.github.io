@@ -6,7 +6,7 @@
  */
 
 export interface EnvConfig {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -16,7 +16,7 @@ export interface EnvConfig {
   NEXT_PUBLIC_GA_ID?: string
   NEXT_PUBLIC_SITE_URL?: string,
 }
-class EnvValidator {/* TODO: Fix JSX expression */}
+class EnvValidator {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 
@@ -25,8 +25,8 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   /**
    * Validate all environment variables
    */
-  validate(): { isValid: boolean; errors: string[], warnings: string[] } {
-    // TODO: Add content
+  validate(): { isValid: boolean; errors: string[], warnings: string[],} {
+    // TODO: Add content,
   }
 
 }
@@ -38,7 +38,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 //     this.validateOptionalVars()
 
     return {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -68,7 +68,7 @@ ${validation.errors.join('
     const nodeEnv = process.env['NODE_ENV']
   }
     const validEnvs = ['development', 'production', 'test'];
-    if (!nodeEnv) {/* TODO: Fix JSX expression */}
+    if (!nodeEnv) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //       this.errors.push('NODE_ENV is not set')
@@ -76,25 +76,25 @@ ${validation.errors.join('
     }
 
     if (!validEnvs.includes(nodeEnv)) {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
 //       this.errors.push()
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
+        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv,}`
 //       )
     }
   }
   private validateOptionalVars(): void {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
     const nodeEnv = this.getNodeEnv()
     // In production, these should be set;
-    if (nodeEnv === 'production') {/* TODO: Fix JSX expression */}
+    if (nodeEnv === 'production') {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-      if (!process.env['NEXT_PUBLIC_SITE_URL']) {/* TODO: Fix JSX expression */}
+      if (!process.env['NEXT_PUBLIC_SITE_URL']) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //         this.warnings.push()
@@ -103,7 +103,7 @@ ${validation.errors.join('
       }
 
       if (!process.env['NEXT_PUBLIC_GA_ID']) {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -115,7 +115,7 @@ ${validation.errors.join('
   }
 
   private getNodeEnv(): 'development' | 'production' | 'test' {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
@@ -126,7 +126,7 @@ ${validation.errors.join('
 // Export singleton instance;
 export const envValidator = new EnvValidator()
 // Export convenience function;
-export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
+export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   return envValidator.getConfig()

@@ -47,73 +47,73 @@ const CareersPage: React.FC = () => {
     {
       icon: Star,
       title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with technology'
+      description: 'We push the boundaries of what\'s possible with technology',
     },
     {
       icon: Users,
       title: 'Collaboration',
-      description: 'We work together to achieve extraordinary results'
+      description: 'We work together to achieve extraordinary results',
     },
     {
       icon: Heart,
       title: 'Impact',
-      description: 'We create solutions that make a real difference'
+      description: 'We create solutions that make a real difference',
     },
     {
       icon: Award,
       title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do'
+      description: 'We strive for the highest quality in everything we do',
     }
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
       </Helmet>
 
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative py-20 px-4 overflow-hidden"></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s',}} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             Join Our Team
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Work on cutting-edge AI and IT solutions that transform businesses worldwide.
           </p>
         </div>
       </section>
 
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+      <section className="py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Open Positions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16"></div>
             {openPositions.map((position, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
-                <div className="flex flex-wrap gap-4 text-sm text-gray-300 mb-4">
-                  <div className="flex items-center space-x-1">
+              ></div>
+                <h3 className="text-xl font-semibold text-white mb-2"></h3>{position.title}</h3>
+                <div className="flex flex-wrap gap-4 text-sm text-gray-300 mb-4"></div>
+                  <div className="flex items-center space-x-1"></div>
                     <Briefcase className="w-4 h-4" />
                     <span>{position.department}</span>
                   </div>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center space-x-1"></div>
                     <MapPin className="w-4 h-4" />
                     <span>{position.location}</span>
                   </div>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center space-x-1"></div>
                     <Clock className="w-4 h-4" />
                     <span>{position.type}</span>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
+                <p className="text-gray-300 mb-4"></p>{position.description}</p>
+                <div className="mb-4"></div>
+                  <h4 className="text-sm font-semibold text-white mb-2"></h4>Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     {position.requirements?.map((req, reqIndex) => (
                       <li key={reqIndex} className="flex items-center space-x-2">
@@ -123,7 +123,7 @@ const CareersPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"></button>
                   Apply Now
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
@@ -133,35 +133,35 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <section className="py-20 px-4 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>Why Work With Us?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
             {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2"></h3>{value.title}</h3>
+                <p className="text-gray-300"></p>{value.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Benefits & Perks</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <section className="py-20 px-4"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-8"></h2>Benefits & Perks</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <div key={index} className="flex items-center space-x-3"></div>
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div></div>
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
           </div>
-          <div className="mt-8">
+          <div className="mt-8"></div>
             <Link
               to="/contact"
               className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"

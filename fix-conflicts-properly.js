@@ -19,7 +19,7 @@ function fixFile(filePath) {
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
       return headContent.trim();
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
+function fixFile(filePath) {/* TODO: Fix JSX expression */,}
     });
 
     // Fix common syntax issues;
@@ -27,7 +27,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Remove any remaining conflict markers;
       .replace(/[\s\S]*?)
       // Fix common syntax patterns;)
-      .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n}')
+      .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n,}')
       .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]'),
       .replace(/\(\s*$/gm, '(\n  // TODO: Add parameters\n)'),
       // Fix missing semicolons;
@@ -36,8 +36,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: '),
       .replace(/[\s\S]*?
       // Fix common syntax patterns;
-      .replace(/\{/* TODO: Fix JSX expression */})
-  O: Add content\n}')
+      .replace(/\{/* TODO: Fix JSX expression */,})
+  O: Add content\n,}')
       .replace(/\[\s*$/gm, '[\n  // TOD)
   O: Add items\n]')
       .replace(/\(\s*$/gm, '(\n  // TOD)
@@ -58,14 +58,14 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {
         const lines = match.split('\n');
         return lines[0] + ';';
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
+      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */,}
       })
       // Remove empty lines with just spaces;
       .replace(/^\s*\n/gm, '\n')
       // Fix missing closing braces;
-      .replace(/\{\s*$/, '{\n  // TODO: Add content\n}');
-      .replace(/\{/* TODO: Fix JSX expression */})
-  O: Add content\n}');
+      .replace(/\{\s*$/, '{\n  // TODO: Add content\n,}');
+      .replace(/\{/* TODO: Fix JSX expression */,})
+  O: Add content\n,}');
 
     // Additional specific fixes for common patterns;
     const lines = content.split('\n');
@@ -82,14 +82,14 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Track JSX state;
       if (trimmed.includes('<') && !trimmed.includes('</')) {
         inJSX = true;
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
+    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */,}
       }
-      if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */}
+      if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */,}
       }
 
       // Track brace/bracket/paren counts;
       braceCount += (line.match(/\{/g) || []).length;
-      braceCount += (line.match(/\{/* TODO: Fix JSX expression */})
+      braceCount += (line.match(/\{/* TODO: Fix JSX expression */,})
       braceCount -= (line.match(/\}/g) || []).length;
       bracketCount += (line.match(/\[/g) || []).length;
       bracketCount -= (line.match(/\]/g) || []).length;
@@ -100,11 +100,11 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       if (trimmed === '') {
         cleanedLines.push(line);
         continue;
-      if (trimmed === '') {/* TODO: Fix JSX expression */}
+      if (trimmed === '') {/* TODO: Fix JSX expression */,}
       }
 
       // Fix missing commas in object literals (not in JSX)
-      if (!inJSX && trimmed.match(/\w+\s*$/) && i < lines.length - 1) {/* TODO: Fix JSX expression */}
+      if (!inJSX && trimmed.match(/\w+\s*$/) && i < lines.length - 1) {/* TODO: Fix JSX expression */,}
         }
       }
 
@@ -113,14 +113,14 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
           line = line.replace(/\s*$/, ';');
           modified = true;
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}
+      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */,}
         }
       }
 
       // Fix missing closing braces;
       if (braceCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < braceCount; j++) {
-      if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
+      if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */,}
           line += '\n}';
         }
         modified = true;
@@ -130,7 +130,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       if (bracketCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < bracketCount; j++) {
           line += '\n]';
-      if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
+      if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */,}
         }
         modified = true;
       }
@@ -139,7 +139,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       if (parenCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < parenCount; j++) {
           line += '\n)';
-      if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
+      if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */,}
         }
         modified = true;
       }
@@ -156,14 +156,14 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/\s+$/gm, ''); // Remove trailing spaces;
     if (modified || content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-    if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
-  d: ${filePath}`);
+      console.log(`Fixed: ${filePath,}`);
+    if (modified || content !== originalContent) {/* TODO: Fix JSX expression */,}
+  d: ${filePath,}`);
       return true;
     }
     
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -184,8 +184,8 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
         traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */,}
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */,}
       }
     }
   }
@@ -203,9 +203,9 @@ const files = findFiles(srcDir);
 let fixedCount = 0;
 let errorCount = 0;
 
-for (const file of files) {/* TODO: Fix JSX expression */}
+for (const file of files) {/* TODO: Fix JSX expression */,}
     }
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */,}`
     console.error(`Failed to process ${file}:`, error.message);
     errorCount++;
   }
@@ -214,21 +214,21 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 console.log(`\nMerge conflict resolution)`
   complete:`);`
 console.log(`- Files)`
-  processed: ${files.length}`);`
+  processed: ${files.length,}`);`
 console.log(`- Files)`
-  fixed: ${fixedCount}`);`
+  fixed: ${fixedCount,}`);`
 console.log(`- Error)`
-  s: ${errorCount}`);
+  s: ${errorCount,}`);
 
 console.log(`\nMerge conflict resolution complete: `);
-console.log(`- Files processed: ${files.length}`);
-console.log(`- Files fixed: ${fixedCount}`);
-console.log(`- Errors: ${errorCount}`);
+console.log(`- Files processed: ${files.length,}`);
+console.log(`- Files fixed: ${fixedCount,}`);
+console.log(`- Errors: ${errorCount,}`);
 
 // Run linting to check for remaining issues;
 console.log('\nRunning linting to check for remaining issues...');
-try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+try {/* TODO: Fix JSX expression */,}
+  o: 'inherit',});
   console.log('Linting passed!');
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }"`

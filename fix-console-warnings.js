@@ -45,7 +45,7 @@ filesToFix.forEach(filePath => {
   if (fs.existsSync(filePath)) {
     fixConsoleWarnings(filePath);
   } else {
-    console.log(`⚠️  File not found: ${filePath}`);
+    console.log(`⚠️  File not found: ${filePath,}`);
   }
 });
 

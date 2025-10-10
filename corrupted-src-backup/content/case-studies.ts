@@ -19,8 +19,7 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Energy & Utilities',
     challenge:,
       'Critical infrastructure aging with $2.3B annual maintenance costs, 87 major outages in 2024, and declining customer satisfaction',
-    solution:
-      'Enterprise AI-Powered Digital Twin Platform with real-time monitoring, predictive analytics, and autonomous optimization across 125,000 assets',
+    solution: 'Enterprise AI-Powered Digital Twin Platform with real-time monitoring, predictive analytics, and autonomous optimization across 125,000 assets',
     results: [,
       '$850 million in documented value creation',
       '1,808% ROI over 3 years',
@@ -36,7 +35,7 @@ export const caseStudies: CaseStudy[] = [
       'Unity 3 D',
       'Kubernetes'],
     duration: '18 months',
-    imageUrl: '/images/case-studies/energy-digital-twin.jpg'},
+    imageUrl: '/images/case-studies/energy-digital-twin.jpg',},
   {
     id: 'fintech-ai-platform',
     title: 'AI-Powered Financial Analytics Platform',
@@ -44,8 +43,7 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Financial Services',
     challenge:,
       "Manual financial analysis processes were taking 40+ hours per week and prone to human error, limiting the company's ability to provide real-time insights to clients.",
-    solution:
-      'Developed a comprehensive AI analytics platform with machine learning models for predictive analysis, automated report generation, and real-time dashboard monitoring.',
+    solution: 'Developed a comprehensive AI analytics platform with machine learning models for predictive analysis, automated report generation, and real-time dashboard monitoring.',
     results: [,
       'Reduced analysis time from 40 hours to 2 hours per week',
       'Improved prediction accuracy by 85%',
@@ -53,7 +51,7 @@ export const caseStudies: CaseStudy[] = [
       'Generated $2.3 M in additional revenue through better insights'],
     technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL', 'Docker'],
     duration: '12 weeks',
-    imageUrl: '/images/case-studies/fintech-platform.jpg'},
+    imageUrl: '/images/case-studies/fintech-platform.jpg',},
   {
     id: 'healthcare-chatbot',
     title: 'Healthcare AI Chatbot System',
@@ -61,8 +59,7 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Healthcare',
     challenge:,
       'High patient inquiry volume was overwhelming staff, leading to 30+ minute wait times for basic questions and decreased patient satisfaction.',
-    solution:
-      'Implemented an intelligent chatbot system with natural language processing, medical knowledge base integration, and seamless handoff to human specialists.',
+    solution: 'Implemented an intelligent chatbot system with natural language processing, medical knowledge base integration, and seamless handoff to human specialists.',
     results: [,
       'Reduced average response time from 30 minutes to 2 minutes',
       'Handled 70% of inquiries without human intervention',
@@ -70,7 +67,7 @@ export const caseStudies: CaseStudy[] = [
       'Freed up 15 hours daily for staff to focus on critical cases'],
     technologies: ['OpenAI GPT-4', 'Node.js', 'React', 'MongoDB', 'AWS Lambda'],
     duration: '8 weeks',
-    imageUrl: '/images/case-studies/healthcare-chatbot.jpg'},
+    imageUrl: '/images/case-studies/healthcare-chatbot.jpg',},
   {
     id: 'ecommerce-optimization'
     title: 'E-commerce AI Optimization Suite',
@@ -86,7 +83,7 @@ export const caseStudies: CaseStudy[] = [
       'Generated $1.8 M in additional revenue in 6 months'],
     technologies: ['Machine Learning', 'Python', 'Vue.js', 'Redis', 'Kubernetes'],
     duration: '10 weeks',
-    imageUrl: '/images/case-studies/ecommerce-ai.jpg'},
+    imageUrl: '/images/case-studies/ecommerce-ai.jpg',},
   {
     id: 'manufacturing-iot',
     title: 'Smart Manufacturing IoT Platform',
@@ -94,8 +91,7 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Manufacturing',
     challenge:,
       'Equipment downtime was costing $50K per hour with no predictive maintenance capabilities, leading to unexpected failures.',
-    solution:
-      'Developed an IoT platform with real-time monitoring, predictive maintenance algorithms, and automated alert systems for equipment optimization.',
+    solution: 'Developed an IoT platform with real-time monitoring, predictive maintenance algorithms, and automated alert systems for equipment optimization.',
     results: [,
       'Reduced unplanned downtime by 65%',
       'Improved equipment efficiency by 25%',
@@ -103,7 +99,7 @@ export const caseStudies: CaseStudy[] = [
       'Increased production output by 18%'],
     technologies: ['IoT Sensors', 'Edge Computing', 'Python', 'React', 'Azure IoT Hub'],
     duration: '16 weeks',
-    imageUrl: '/images/case-studies/manufacturing-iot.jpg'},
+    imageUrl: '/images/case-studies/manufacturing-iot.jpg',},
   {
     id: 'saas-analytics',
     title: 'SaaS Analytics Dashboard',
@@ -111,8 +107,7 @@ export const caseStudies: CaseStudy[] = [
     industry: 'SaaS',
     challenge:,
       'Lack of comprehensive analytics made it difficult to understand user behavior, leading to high churn rates and poor product decisions.',
-    solution:
-      'Built a real-time analytics platform with user journey tracking, cohort analysis, and predictive churn modeling to drive data-driven decisions.',
+    solution: 'Built a real-time analytics platform with user journey tracking, cohort analysis, and predictive churn modeling to drive data-driven decisions.',
     results: [,
       'Reduced churn rate from 15% to 8%',
       'Improved user engagement by 45%',
@@ -120,7 +115,7 @@ export const caseStudies: CaseStudy[] = [
       'Enabled 90% faster product decision-making'],
     technologies: ['Apache Kafka', 'ClickHouse', 'React', 'D3.js', 'AWS'],
     duration: '14 weeks',
-    imageUrl: '/images/case-studies/saas-analytics.jpg'},
+    imageUrl: '/images/case-studies/saas-analytics.jpg',},
   {
     id: 'cybersecurity-automation',
     title: 'Automated Cybersecurity Platform',
@@ -128,8 +123,7 @@ export const caseStudies: CaseStudy[] = [
     industry: 'Financial Services',
     challenge:,
       'Manual security monitoring was missing 30% of threats and took 6+ hours to respond to incidents, creating significant risk exposure.',
-    solution:
-      'Implemented an AI-powered security platform with automated threat detection, incident response, and compliance monitoring.',
+    solution: 'Implemented an AI-powered security platform with automated threat detection, incident response, and compliance monitoring.',
     results: [,
       'Reduced threat detection time from 6 hours to 15 minutes',
       'Improved threat detection accuracy to 98%',
@@ -137,7 +131,7 @@ export const caseStudies: CaseStudy[] = [
       'Prevented $3.2 M in potential security breaches'],
     technologies: ['SIEM', 'Machine Learning', 'Python', 'Elasticsearch', 'Kubernetes'],
     duration: '20 weeks',
-    imageUrl: '/images/case-studies/cybersecurity.jpg'},
+    imageUrl: '/images/case-studies/cybersecurity.jpg',},
   {
     id: 'telco-edge-observability'
     title: 'Telco Edge Observability Overhaul',
@@ -153,7 +147,7 @@ export const caseStudies: CaseStudy[] = [
       '$4.7 M annual SLA penalty savings'],
     technologies: ['OpenTelemetry', 'ClickHouse', 'Edge Workers', 'TypeScript', 'Kubernetes'],
     duration: '18 weeks',
-    imageUrl: '/images/case-studies/telco-edge.jpg'},
+    imageUrl: '/images/case-studies/telco-edge.jpg',},
   {
     id: 'enterprise-rag-rollout'
     title: 'Enterprise RAG Rollout at Fortune 500',
@@ -170,26 +164,26 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
-export type CaseStudy = {/* TODO: Fix JSX expression */}
+export type CaseStudy = {/* TODO: Fix JSX expression */,}
 }
 
 export const,
   caseStudies: CaseStudy[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   }];

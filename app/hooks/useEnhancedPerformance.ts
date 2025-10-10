@@ -12,7 +12,7 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean
   }
 }
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {,}) {
     const {
     component = 'Unknown',;
     trackErrors = true,;
@@ -84,7 +84,7 @@ const trackUserAction = useCallback(;
     [component, trackAnalytics]
   );
 const measureOperation = useCallback(;
-    (operationName: string) => {}
+    (operationName: string) => {,}
       const _markName = `${component}-${operationName}`;
       const _startTime = performance.now();
 return {

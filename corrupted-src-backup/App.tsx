@@ -17,20 +17,20 @@ function App() {
       //       }
   }, []);
   return(<ErrorBoundary>
-      <div>
+      <div></div>
   return (
     <ErrorBoundary>
-      <div></div>
+      <div></div></div>
         <Router>
-function App() {/* TODO: Fix JSX expression */}
+function App() {/* TODO: Fix JSX expression */,}
 }
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {/* TODO: Fix JSX expression */,}
       //       }
   }, []);
   return (<ErrorBoundary></ErrorBoundary>
-      <div></div>
+      <div></div></div>
         <Router></Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div></div>Loading...</div>}>
             <Routes></Routes>
               <Route path="/" element={<Home />} />"
               <Route path="/about" element={<About />} />"
@@ -53,40 +53,40 @@ function App() {/* TODO: Fix JSX expression */}
 }
 // Simple Error Boundary;
 class ErrorBoundary extends React.Component<
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   n: React.ReactNode, fallback?: React.ReactNode },
-  {/* TODO: Fix JSX expression */}
-  r: boolean }
-> {/* TODO: Fix JSX expression */}
-  n: React.ReactNode, fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
-  r: false }
+  {/* TODO: Fix JSX expression */,}
+  r: boolean,}
+> {/* TODO: Fix JSX expression */,}
+  n: React.ReactNode, fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */,}
+  r: false,}
   }
-  static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
-  r: true }
+  static getDerivedStateFromError() {/* TODO: Fix JSX expression */,}
+  r: true,}
   }
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     //     }
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || ()
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">)
-            <div className="text-center">)
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>)
+            <div className="text-center"></div>)
+              <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>Something went wrong</h1>)
               <button;)
       return (
         this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-            <div className="text-center"></div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div></button></div>
+            <div className="text-center"></div></div>
+              <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>Something went wrong</h1>
               <button
-                onClick={() => this.setState({ hasError: false })}
+                onClick={() =></button> this.setState({ hasError: false,})}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
   componentDidCatch(erro,
   r: Error, errorInf)
-  o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
+  o: React.ErrorInfo) {/* TODO: Fix JSX expression */,}
     //     }
-  render() {/* TODO: Fix JSX expression */}
-  r: false })}"
+  render() {/* TODO: Fix JSX expression */,}
+  r: false,})}"
                 className="bg-blue-600 text-white px-4 py-2 rounded,"
   hover: bg-blue-700"
               >

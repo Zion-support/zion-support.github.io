@@ -38,10 +38,10 @@ try {
           }
         }
       })
-      observer.observe({ entryTypes: ['paint'] })
+      observer.observe({ entryTypes: ['paint'],})
       this.observers.push(observer);
     } catch (error) {
-    console.warn('PerformanceObserver not supported:', error)
+    console.warn('PerformanceObserver not supported: ', error)
   }
     }
   }
@@ -54,10 +54,10 @@ try {
         this.metrics.largestContentfulPaint = lastEntry.startTime
   }
       })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      observer.observe({ entryTypes: ['largest-contentful-paint'],})
       this.observers.push(observer);
     } catch (error) {
-    console.warn('LCP observer not supported:', error)
+    console.warn('LCP observer not supported: ', error)
   }
     }
   }
@@ -70,10 +70,10 @@ try {
   }
         }
       })
-      observer.observe({ entryTypes: ['first-input'] })
+      observer.observe({ entryTypes: ['first-input'],})
       this.observers.push(observer);
     } catch (error) {
-    console.warn('FID observer not supported:', error)
+    console.warn('FID observer not supported: ', error)
   }
     }
   }
@@ -90,10 +90,10 @@ try {
         }
         this.metrics.cumulativeLayoutShift = clsValue;
       })
-      observer.observe({ entryTypes: ['layout-shift'] })
+      observer.observe({ entryTypes: ['layout-shift'],})
       this.observers.push(observer);
     } catch (error) {
-    console.warn('CLS observer not supported:', error)
+    console.warn('CLS observer not supported: ', error)
   }
     }
   }

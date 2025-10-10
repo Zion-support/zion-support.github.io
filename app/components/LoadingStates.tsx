@@ -14,7 +14,7 @@ export const PageLoader: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export const ComponentLoader: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ export const ComponentLoader: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export const ServiceCardSkeleton: React.FC = () => {
   return (
@@ -37,21 +37,72 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-8 bg-slate-700 rounded w-1/2 mx-auto"></div>
     </div>
   );
-}
+};
 
 export const ContentSkeleton: React.FC = () => {
   return (
-    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
-      <div className="h-8 bg-slate-700 rounded mb-4 w-1/2"></div>
-      <div className="h-4 bg-slate-700 rounded mb-2"></div>
-      <div className="h-4 bg-slate-700 rounded mb-2"></div>
+    <div className="space-y-4 animate-pulse">
+      <div className="h-8 bg-slate-700 rounded w-3/4"></div>
+      <div className="h-4 bg-slate-700 rounded w-full"></div>
+      <div className="h-4 bg-slate-700 rounded w-5/6"></div>
+      <div className="h-4 bg-slate-700 rounded w-4/6"></div>
+    </div>
+  );
+};
+
+export const TableSkeleton: React.FC = () => {
+  return (
+    <div className="space-y-3 animate-pulse">
+      <div className="h-4 bg-slate-700 rounded w-full"></div>
+      <div className="h-4 bg-slate-700 rounded w-5/6"></div>
+      <div className="h-4 bg-slate-700 rounded w-4/6"></div>
       <div className="h-4 bg-slate-700 rounded w-3/4"></div>
     </div>
   );
-}
+};
 
-export const LoadingSpinner: React.FC = () => (
-  <div className="flex items-center justify-center p-8">
-    <div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-  </div>
-);
+export const ChartSkeleton: React.FC = () => {
+  return (
+    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
+      <div className="h-6 bg-slate-700 rounded mb-4 w-1/3"></div>
+      <div className="h-64 bg-slate-700 rounded"></div>
+    </div>
+  );
+};
+
+export const CardSkeleton: React.FC = () => {
+  return (
+    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
+      <div className="w-12 h-12 bg-slate-700 rounded-lg mb-4"></div>
+      <div className="h-6 bg-slate-700 rounded mb-3 w-3/4"></div>
+      <div className="h-4 bg-slate-700 rounded mb-2"></div>
+      <div className="h-4 bg-slate-700 rounded w-5/6"></div>
+    </div>
+  );
+};
+
+export const ListSkeleton: React.FC = () => {
+  return (
+    <div className="space-y-3 animate-pulse">
+      {[...Array(5)].map((_, index) => (
+        <div key={index} className="flex items-center space-x-3">
+          <div className="w-8 h-8 bg-slate-700 rounded-full"></div>
+          <div className="flex-1">
+            <div className="h-4 bg-slate-700 rounded w-3/4 mb-2"></div>
+            <div className="h-3 bg-slate-700 rounded w-1/2"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export const GridSkeleton: React.FC = ({ count = 6 }: { count?: number }) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[...Array(count)].map((_, index) => (
+        <CardSkeleton key={index} />
+      ))}
+    </div>
+  );
+};

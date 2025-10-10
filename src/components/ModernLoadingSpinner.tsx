@@ -15,12 +15,12 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-    xl:   ,
+    xl: ,
 $4}
   const colorClasses = {
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
-    accent:   ,
+    accent: ,
 $4}
   const spinnerClasses = `
     ${sizeClasses[size]}
@@ -35,18 +35,18 @@ $4}
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
   return (
-    <div className={containerClasses} role="status" aria-label="Loading">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="relative">
-          <div className={spinnerClasses}></div>
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
+    <div className={containerClasses} role="status" aria-label="Loading"></div>
+      <div className="flex flex-col items-center space-y-4"></div>
+        <div className="relative"></div>
+          <div className={spinnerClasses}></div></div>
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div></div>
         </div>
         {text && (
-          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
+          <p className="text-sm text-gray-300 animate-pulse"></p>{text}</p>
         )}
       </div>
 'use client';
-interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
+interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -56,23 +56,23 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 const,
   ModernLoadingSpinner: React.FC,
-          <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
+          <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   size = 'md',
   color = 'primary',
   text = 'Loading...',
   fullScreen = false;)
-}) => {/* TODO: Fix JSX expression */}
-  m: 'w-4 h-4'}
+}) => {/* TODO: Fix JSX expression */,}
+  m: 'w-4 h-4',}
     m,
   d: 'w-8 h-8',
     l,
   g: 'w-12 h-12',
     x,
-  l: 'w-16 h-16'
+  l: 'w-16 h-16',
   }
-  const colorClasses = {/* TODO: Fix JSX expression */}
+  const colorClasses = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   primar,
@@ -80,7 +80,7 @@ const,
     secondar,
   y: 'text-purple-400',
     accen,
-  t: 'text-pink-400'
+  t: 'text-pink-400',
   }
   const spinnerClasses = `
     ${sizeClasses[size]}
@@ -94,16 +94,16 @@ const,
   const containerClasses = fullScreen;
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
-  return (<div>Coming Soon</div>)
+  return (<div></div>Coming Soon</div>)
   )
-          <div className={containerClasses} role="status" aria-label="Loading"></div>"
-      <div className="flex flex-col items-center space-y-4"></div>"
-        <div className="relative"></div>
-          <div className={spinnerClasses}></div>"
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
+          <div className={containerClasses} role="status" aria-label="Loading"></div></div>"
+      <div className="flex flex-col items-center space-y-4"></div></div>"
+        <div className="relative"></div></div>
+          <div className={spinnerClasses}></div></div>"
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div></div>
         </div>
         {text && ()}"
-          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
+          <p className="text-sm text-gray-300 animate-pulse"></p>{text}</p>
         )}
       </div>"
       <span className="sr-only">Loading content, please wait...</span>

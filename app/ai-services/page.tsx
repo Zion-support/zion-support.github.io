@@ -53,7 +53,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare
+      icon: MessageSquare,
     },
     {
       id: 'ai-content',
@@ -76,7 +76,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content',
       popular: true,
-      icon: Brain
+      icon: Brain,
     },
     {
       id: 'ai-analytics',
@@ -99,7 +99,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Analytics',
       popular: false,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'ai-vision',
@@ -122,7 +122,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Computer Vision',
       popular: false,
-      icon: Eye
+      icon: Eye,
     },
     {
       id: 'ai-voice',
@@ -145,7 +145,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: false,
-      icon: Mic
+      icon: Mic,
     },
     {
       id: 'ai-automation',
@@ -168,7 +168,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Zap
+      icon: Zap,
     },
     {
       id: 'ai-fraud-detection',
@@ -191,7 +191,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Security',
       popular: true,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'ai-predictive-maintenance',
@@ -214,7 +214,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Industrial AI',
       popular: false,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'ai-personalization',
@@ -237,7 +237,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Marketing',
       popular: true,
-      icon: Target
+      icon: Target,
     },
     {
       id: 'ai-supply-chain',
@@ -260,7 +260,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Supply Chain',
       popular: false,
-      icon: Box
+      icon: Box,
     },
     {
       id: 'ai-healthcare-diagnostics',
@@ -283,7 +283,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Healthcare',
       popular: false,
-      icon: Heart
+      icon: Heart,
     },
     {
       id: 'ai-financial-modeling',
@@ -306,7 +306,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Finance',
       popular: true,
-      icon: TrendingUp
+      icon: TrendingUp,
     },
     {
       id: 'ai-nlp-processing',
@@ -329,7 +329,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Language Processing',
       popular: false,
-      icon: FileText
+      icon: FileText,
     },
     {
       id: 'ai-robotic-process',
@@ -352,7 +352,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Cpu
+      icon: Cpu,
     },
     {
       id: 'ai-customer-insights',
@@ -375,7 +375,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'ai-quality-assurance',
@@ -398,7 +398,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Software Testing',
       popular: false,
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       id: 'ai-energy-optimization',
@@ -421,7 +421,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Energy',
       popular: false,
-      icon: Zap
+      icon: Zap,
     },
     {
       id: 'ai-hr-analytics',
@@ -444,7 +444,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Human Resources',
       popular: false,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'ai-blockchain-analytics',
@@ -467,7 +467,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Blockchain',
       popular: false,
-      icon: Link
+      icon: Link,
     },
     {
       id: 'ai-edge-computing',
@@ -490,7 +490,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Edge Computing',
       popular: false,
-      icon: Server
+      icon: Server,
     },
     {
       id: 'ai-video-analysis',
@@ -516,7 +516,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Computer Vision',
       popular: true,
-      icon: Eye
+      icon: Eye,
     },
     {
       id: 'ai-speech-synthesis',
@@ -542,7 +542,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: true,
-      icon: Mic
+      icon: Mic,
     },
     {
       id: 'ai-recommendation-engine',
@@ -568,7 +568,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Personalization',
       popular: true,
-      icon: Target
+      icon: Target,
     },
     {
       id: 'ai-sentiment-analysis',
@@ -594,7 +594,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Language Processing',
       popular: true,
-      icon: Heart
+      icon: Heart,
     },
     {
       id: 'ai-chatbot-enterprise',
@@ -620,7 +620,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare
+      icon: MessageSquare,
     },
     {
       id: 'ai-content-moderation',
@@ -646,7 +646,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Moderation',
       popular: false,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'ai-predictive-modeling',
@@ -672,7 +672,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Analytics',
       popular: true,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'ai-document-intelligence',
@@ -698,7 +698,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Document Processing',
       popular: true,
-      icon: FileText
+      icon: FileText,
     },
     {
       id: 'ai-conversation-analytics',
@@ -724,7 +724,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'ai-supply-chain-ai',
@@ -750,7 +750,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Supply Chain',
       popular: false,
-      icon: Box
+      icon: Box,
     },
     {
       id: 'ai-healthcare-diagnostics',
@@ -776,7 +776,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Healthcare',
       popular: false,
-      icon: Heart
+      icon: Heart,
     },
     {
       id: 'ai-financial-forecasting',
@@ -802,7 +802,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Finance',
       popular: true,
-      icon: TrendingUp
+      icon: TrendingUp,
     },
     {
       id: 'ai-iot-analytics',
@@ -828,7 +828,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'IoT & Analytics',
       popular: false,
-      icon: Cpu
+      icon: Cpu,
     },
     {
       id: 'ai-conversational-ai',
@@ -854,7 +854,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Conversational AI',
       popular: true,
-      icon: MessageCircle
+      icon: MessageCircle,
     },
     {
       id: 'ai-automated-testing',
@@ -880,7 +880,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Software Testing',
       popular: true,
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       id: 'ai-knowledge-management',
@@ -906,7 +906,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Knowledge Management',
       popular: false,
-      icon: FileText
+      icon: FileText,
     },
     {
       id: 'ai-customer-churn',
@@ -932,7 +932,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'ai-automated-reporting',
@@ -958,7 +958,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Reporting & Analytics',
       popular: true,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'ai-voice-assistant',
@@ -984,7 +984,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: true,
-      icon: Mic
+      icon: Mic,
     },
     {
       id: 'ai-content-generation',
@@ -1010,39 +1010,39 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Generation',
       popular: true,
-      icon: FileText
+      icon: FileText,
     }
   ]
 
   const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
-    { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
-    { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length },
-    { id: 'Computer Vision', name: 'Computer Vision', count: services.filter(s => s.category === 'Computer Vision').length },
-    { id: 'Voice AI', name: 'Voice AI', count: services.filter(s => s.category === 'Voice AI').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
-    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
-    { id: 'Industrial AI', name: 'Industrial AI', count: services.filter(s => s.category === 'Industrial AI').length },
-    { id: 'Marketing', name: 'Marketing', count: services.filter(s => s.category === 'Marketing').length },
-    { id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length },
-    { id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length },
-    { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length },
-    { id: 'Language Processing', name: 'Language Processing', count: services.filter(s => s.category === 'Language Processing').length },
-    { id: 'Customer Analytics', name: 'Customer Analytics', count: services.filter(s => s.category === 'Customer Analytics').length },
-    { id: 'Software Testing', name: 'Software Testing', count: services.filter(s => s.category === 'Software Testing').length },
-    { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length },
-    { id: 'Human Resources', name: 'Human Resources', count: services.filter(s => s.category === 'Human Resources').length },
-    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
-    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
-    { id: 'Personalization', name: 'Personalization', count: services.filter(s => s.category === 'Personalization').length },
-    { id: 'Content Moderation', name: 'Content Moderation', count: services.filter(s => s.category === 'Content Moderation').length },
-    { id: 'Document Processing', name: 'Document Processing', count: services.filter(s => s.category === 'Document Processing').length },
-    { id: 'IoT & Analytics', name: 'IoT & Analytics', count: services.filter(s => s.category === 'IoT & Analytics').length },
-    { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
-    { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
-    { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'all', name: 'All Services', count: services.length,},
+    { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length,},
+    { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length,},
+    { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length,},
+    { id: 'Computer Vision', name: 'Computer Vision', count: services.filter(s => s.category === 'Computer Vision').length,},
+    { id: 'Voice AI', name: 'Voice AI', count: services.filter(s => s.category === 'Voice AI').length,},
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length,},
+    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length,},
+    { id: 'Industrial AI', name: 'Industrial AI', count: services.filter(s => s.category === 'Industrial AI').length,},
+    { id: 'Marketing', name: 'Marketing', count: services.filter(s => s.category === 'Marketing').length,},
+    { id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length,},
+    { id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length,},
+    { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length,},
+    { id: 'Language Processing', name: 'Language Processing', count: services.filter(s => s.category === 'Language Processing').length,},
+    { id: 'Customer Analytics', name: 'Customer Analytics', count: services.filter(s => s.category === 'Customer Analytics').length,},
+    { id: 'Software Testing', name: 'Software Testing', count: services.filter(s => s.category === 'Software Testing').length,},
+    { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length,},
+    { id: 'Human Resources', name: 'Human Resources', count: services.filter(s => s.category === 'Human Resources').length,},
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length,},
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length,},
+    { id: 'Personalization', name: 'Personalization', count: services.filter(s => s.category === 'Personalization').length,},
+    { id: 'Content Moderation', name: 'Content Moderation', count: services.filter(s => s.category === 'Content Moderation').length,},
+    { id: 'Document Processing', name: 'Document Processing', count: services.filter(s => s.category === 'Document Processing').length,},
+    { id: 'IoT & Analytics', name: 'IoT & Analytics', count: services.filter(s => s.category === 'IoT & Analytics').length,},
+    { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length,},
+    { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length,},
+    { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length,},
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length,}
   ]
 
   const filteredServices = services.filter(service => 
@@ -1058,31 +1058,31 @@ const AiServicesPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></main>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-6xl mx-auto"></div>
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <div className="text-center mb-16"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1>
                 AI Services
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Comprehensive AI solutions designed to transform your business operations. 
                 From chatbots to computer vision, we have the AI expertise you need.
               </p>
             </div>
 
             {/* Category Filter */}
-            <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
+            <div className="mb-12"></div>
+              <div className="flex flex-wrap justify-center gap-4"></div>
                 {categories.map((category) => (
                   <button
                     key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
+                    onClick={() =></button> setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category.id
                         ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                        : 'bg-slate-800 text-gray-300 hover: bg-slate-700',
                     }`}
                   >
                     {category.name} ({category.count})
@@ -1092,15 +1092,15 @@ const AiServicesPage: React.FC = () => {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
               {filteredServices.map((service) => (
-                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
+                  <div className="flex items-center justify-between mb-4"></div>
+                    <div className="flex items-center space-x-3"></div>
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
                         <service.icon className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                      <h3 className="text-xl font-bold text-white"></h3>{service.name}</h3>
                     </div>
                     {service.popular && (
                       <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -1110,18 +1110,18 @@ const AiServicesPage: React.FC = () => {
                     )}
                   </div>
                   
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-gray-300 mb-4"></p>{service.description}</p>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
+                  <div className="flex items-center justify-between mb-4"></div>
+                    <div></div>
                       <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                       <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
                     </div>
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                  <div className="mb-6"></div>
+                    <h4 className="text-lg font-semibold text-white mb-3"></h4>Key Features</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <li key={index} className="flex items-start space-x-2">
@@ -1132,7 +1132,7 @@ const AiServicesPage: React.FC = () => {
                     </ul>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between"></div>
                     <Link
                       to="/contact"
                       className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -1152,16 +1152,16 @@ const AiServicesPage: React.FC = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="text-center"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8"></div>
+                <h2 className="text-2xl font-bold text-white mb-4"></h2>
                   Ready to Transform Your Business with AI?
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
                   Let our AI experts help you choose the right solutions for your business needs. 
                   Get a free consultation and see how AI can transform your operations.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                   <Link
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"

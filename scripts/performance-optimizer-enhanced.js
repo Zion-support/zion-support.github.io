@@ -12,7 +12,7 @@ const optimizations = {
   },
 
   // Optimize images (placeholder - would need actual image processing)
-  optimizeImages: (content) => {
+  optimizeImages: (content) => {,
     ,
     // Replace large image references with optimized versions;
     return content;
@@ -139,7 +139,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd(),});
     allFiles.push(...files);
   }
 
@@ -154,11 +154,11 @@ async function main() {
 
   console.log(`\n🎉 Enhanced performance optimization completed!`);
   console.log(`📊 Statistics: `),
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Optimizations applied: ${optimizationsApplied}`);
+  console.log(`   - Files processed: ${processedFiles,}/${totalFiles}`);
+  console.log(`   - Optimizations applied: ${optimizationsApplied,}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1],}`) {
     main()
   }
 

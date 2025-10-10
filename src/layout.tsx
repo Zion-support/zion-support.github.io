@@ -6,10 +6,10 @@ import Footer from '../components/Footer';
 import Analytics from './components/Analytics';
 export default function RootLayout({
   children}: {
-    children: React.ReactNode
+    children: React.ReactNode,
   }) {
   const structuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
@@ -32,10 +32,10 @@ export default function RootLayout({
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
-      availableLanguage: 'en'},
+      availableLanguage: 'en',},
     sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
+      'https: //twitter.com/ziontechgroup',
+      'https: //linkedin.com/company/ziontechgroup',
     address: {
     '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
@@ -54,7 +54,7 @@ export default function RootLayout({
     addressCountry: 'US',
     offers: [
   // TODO: Add items]
-      {// TODO: Add content
+      {// TODO: Add content,
   }
 }
         '@type': 'Offer',
@@ -64,7 +64,7 @@ export default function RootLayout({
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          billingIncrement:         ,
+          billingIncrement: ,
 $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
@@ -74,7 +74,7 @@ $4}
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
-        longitude:       ,
+        longitude: ,
 geoRadiusgeoRadius: '1000000'
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -83,11 +83,11 @@ geoRadiusgeoRadius: '1000000'
           itemOffered: {
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
-            description:             ,
+            description: ,
 name$5: 'Digital Automation',
-            description:             ,
+            description: ,
 name$5: 'Cloud Infrastructure',
-            description:       ,
+            description: ,
 $4]
   }
   return (
@@ -136,7 +136,7 @@ $4]
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta property="og: description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -145,7 +145,7 @@ $4]
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://ziontechgroup.com" />
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
+        <meta name="twitter: description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
@@ -158,7 +158,7 @@ $4]
         <meta name='twitter:creator' content='@ziontechgroup' />
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData),}}
         />
       </head>
       <body className='antialiased'>
@@ -172,14 +172,14 @@ $4]
   );
 export default RootLayout;
         priceSpecification: {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
           '@type': 'PriceSpecification',
-          billingIncrement: 'P1M'
+          billingIncrement: 'P1M',
         }
   itemOffered: {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
             '@type': 'Service',

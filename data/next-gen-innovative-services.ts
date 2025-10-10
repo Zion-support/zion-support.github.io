@@ -80,17 +80,17 @@ export const,
   y: 'Quantum AI & Neuroscience',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-ai-brain-computer-interface',
+  s: //ziontechgroup.com/quantum-ai-brain-computer-interface',
     marketPositio,
   n: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-ai-brain-computer-interface',
+  s: //ziontechgroup.com/quantum-ai-brain-computer-interface',
     marketPositio,
   n: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-ai-brain-computer-interface',
+  s: //ziontechgroup.com/quantum-ai-brain-computer-interface',
     marketPositio,
   n: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
     targetAudienc,
@@ -164,8 +164,8 @@ export interface NextGenInnovativeService {
   color: string
     mobile: string
     email: string,
-    address: string}
-    website: string}
+    address: string,}
+    website: string,}
   }
   customers: number
   rating: number,
@@ -173,7 +173,7 @@ export interface NextGenInnovativeService {
   reviews: number,    mobile: string
     email: string
     address: string,
-    website: string}
+    website: string,}
   },
   realImplementation: boolean;
   implementationDetails: string;
@@ -238,19 +238,19 @@ export interface NextGenInnovativeService {
     ratin,
   g: 4 && 4.9,
     review,
-  s: 8},
+  s: 8,},
 export interface NextGenInnovativeService;
-export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface NextGenInnovativeService {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
   }
   customer,
   s: number,
   ratin,
   g: number,
-export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
-  e: string}
+export interface NextGenInnovativeService {/* TODO: Fix JSX expression */,}
+  e: string,}
   },
   realImplementatio,
   n: boolean,
@@ -263,7 +263,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
   i,
   d: string,
   nam,
@@ -317,10 +317,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   varian,
   t: string,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string}
+  o: {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -361,7 +361,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
   review,
   s: number,    mobil,
   e: string,
@@ -370,7 +370,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     addres,
   s: string,
     websit,
-  e: string}
+  e: string,}
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -382,7 +382,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [,
   // Quantum AI & Advanced Computing,
@@ -462,8 +462,7 @@ export const,
     marketPositio,
   n: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.'
     targetAudienc,
-  e:
-      'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',    trialDay,
+  e: 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',    trialDay,
   s: 30,
     setupTim,
   e: '2-4 weeks'
@@ -516,14 +515,14 @@ export const,
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.'
     launchDate: '2024-12-01',
     customers: 15
     rating: 4.9,
-    reviews: 8}}
+    reviews: 8,}}
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.'
     launchDate: '2024-12-01'
@@ -589,8 +588,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',}
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',
     launchDate: '2024-12-01'
@@ -600,7 +599,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   },
     reviews: 8,
   },
-    reviews: 8}},
+    reviews: 8,}},
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',
     launchDate: '2024-12-01'
@@ -647,21 +646,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s:
-      'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.'
-    launchDat,
-  e: '2024-12-01'
-    customer,
-  s: 15,
-    ratin,
-  g: 4.9,
-    review,
-  s: 8}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -672,11 +658,23 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   s: 15,
     ratin,
   g: 4.9,
-export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com'}
+    review,
+  s: 8,}}
+    realImplementatio,
+  n: true,
+    implementationDetail,
+  s: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.'
+    launchDat,
+  e: '2024-12-01'
+    customer,
+  s: 15,
+    ratin,
+  g: 4.9,
+export interface NextGenInnovativeService {/* TODO: Fix JSX expression */,}
+  s: //ziontechgroup.com',}
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -689,11 +687,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 8},
+  s: 8,},
     review,
-  s: 8},
+  s: 8,},
     review,
-  s: 8}},
+  s: 8,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -705,9 +703,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 8},
+  s: 8,},
     review,
-  s: 8}
+  s: 8,}
   // Space Technology Platform,
   id: 'space-technology-platform',
     real_implementatio,
@@ -721,7 +719,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 8},
+  s: 8,},
   // Space Technology Platform;
     i,
   d: 'space - technology - platform',
@@ -789,12 +787,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Space Technology',
     lin,
   k: 'http,
-  s://ziontechgroup.com/space-technology',
+  s: //ziontechgroup.com/space-technology',
     marketPositio,
   n: 'First comprehensive commercial space platform. 5x more features than existing solutions.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/space-technology',
+  s: //ziontechgroup.com/space-technology',
     marketPositio,
   n: 'First comprehensive commercial space platform. 5x more features than existing solutions.',
     targetAudienc,
@@ -917,7 +915,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 12},
+  s: 12,},
     i,
   d: 'space-technology-platform'
     nam,
@@ -929,8 +927,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.'
+  n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.'
     feature,
   s: [,
       'Satellite mission planning'
@@ -988,8 +985,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'First comprehensive commercial space platform. 5x more features than existing solutions.'
     targetAudienc,
-  e:
-      'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions',    trialDay,
+  e: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions',    trialDay,
   s: 30,
     setupTim,
   e: '4-6 weeks'
@@ -1043,14 +1039,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.'
     launchDate: '2024-11-15',
     customers: 8
     rating: 4.8,
-    reviews: 12}}
+    reviews: 12,}}
     realImplementation: true,
     implementationDetails: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.'
     launchDate: '2024-11-15'
@@ -1092,13 +1088,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.'
+  s: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.'
     launchDat,
   e: '2024-11-15'
     customer,
@@ -1106,7 +1101,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 12}}
+  s: 12,}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1176,7 +1171,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-cyan-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/space-technology',
+  s: //ziontechgroup.com/space-technology',
     marketPositio,
   n: 'First comprehensive commercial space platform. 5x more features than existing solutions.',
     targetAudienc,
@@ -1236,7 +1231,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.',
     launchDate: '2024-11-15'
@@ -1246,7 +1241,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   },
     reviews: 12,
   },
-    reviews: 12}},
+    reviews: 12,}},
     realImplementation: true,
     implementationDetails: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.',
     launchDate: '2024-11-15'
@@ -1294,10 +1289,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -1310,11 +1305,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 12},
+  s: 12,},
     review,
-  s: 12},
+  s: 12,},
     review,
-  s: 12}},
+  s: 12,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1326,9 +1321,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 12},
+  s: 12,},
     review,
-  s: 12}
+  s: 12,}
   // Biotech AI Platform,
   id: 'biotech-ai-platform',
     real_implementatio,
@@ -1342,7 +1337,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 12},
+  s: 12,},
   // Biotech AI Platform;
     i,
   d: 'biotech - ai - platform',
@@ -1410,12 +1405,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Biotech & Healthcare AI',
     lin,
   k: 'http,
-  s://ziontechgroup.com/biotech-ai',
+  s: //ziontechgroup.com/biotech-ai',
     marketPositio,
   n: 'Leading AI drug discovery platform. 5x faster than traditional methods.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/biotech-ai',
+  s: //ziontechgroup.com/biotech-ai',
     marketPositio,
   n: 'Leading AI drug discovery platform. 5x faster than traditional methods.',
     targetAudienc,
@@ -1535,7 +1530,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 18},
+  s: 18,},
     i,
   d: 'biotech-ai-platform'
     nam,
@@ -1605,8 +1600,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'Leading AI drug discovery platform. 5x faster than traditional methods.'
     targetAudienc,
-  e:
-      'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs',    trialDay,
+  e: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs',    trialDay,
   s: 30,
     setupTim,
   e: '2-3 weeks'
@@ -1659,14 +1653,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.'
     launchDate: '2024-10-01',
     customers: 25
     rating: 4.7,
-    reviews: 18}}
+    reviews: 18,}}
     realImplementation: true,
     implementationDetails: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.'
     launchDate: '2024-10-01'
@@ -1708,13 +1702,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.'
+  s: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.'
     launchDat,
   e: '2024-10-01'
     customer,
@@ -1722,7 +1715,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 18}}
+  s: 18,}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1792,7 +1785,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-emerald-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/biotech-ai',
+  s: //ziontechgroup.com/biotech-ai',
     marketPositio,
   n: 'Leading AI drug discovery platform. 5x faster than traditional methods.',
     targetAudienc,
@@ -1851,7 +1844,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',
     launchDate: '2024-10-01'
@@ -1861,7 +1854,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   },
     reviews: 18,
   },
-    reviews: 18}},
+    reviews: 18,}},
     realImplementation: true,
     implementationDetails: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',
     launchDate: '2024-10-01'
@@ -1909,10 +1902,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -1925,11 +1918,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 18},
+  s: 18,},
     review,
-  s: 18},
+  s: 18,},
     review,
-  s: 18}},
+  s: 18,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1941,9 +1934,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 18},
+  s: 18,},
     review,
-  s: 18}
+  s: 18,}
   // Quantum Financial Trading Platform,
   id: 'quantum-financial-trading',
     real_implementatio,
@@ -1957,7 +1950,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 18},
+  s: 18,},
   // Quantum Financial Trading Platform;
     i,
   d: 'quantum - financial - trading',
@@ -2022,12 +2015,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Quantum Finance & Trading',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-financial-trading',
+  s: //ziontechgroup.com/quantum-financial-trading',
     marketPositio,
   n: 'First quantum AI trading platform. 100x faster than traditional systems.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-financial-trading',
+  s: //ziontechgroup.com/quantum-financial-trading',
     marketPositio,
   n: 'First quantum AI trading platform. 100x faster than traditional systems.',
     targetAudienc,
@@ -2149,7 +2142,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.9,
     review,
-  s: 15},
+  s: 15,},
     i,
   d: 'quantum-financial-trading'
     nam,
@@ -2219,8 +2212,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'First quantum AI trading platform. 100x faster than traditional systems.'
     targetAudienc,
-  e:
-      'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions',    trialDay,
+  e: 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions',    trialDay,
   s: 30,
     setupTim,
   e: '3-4 weeks'
@@ -2275,14 +2267,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.'
     launchDate: '2024-09-01',
     customers: 12
     rating: 4.9,
-    reviews: 15}}
+    reviews: 15,}}
     realImplementation: true,
     implementationDetails: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.'
     launchDate: '2024-09-01'
@@ -2325,13 +2317,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.'
+  s: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.'
     launchDat,
   e: '2024-09-01'
     customer,
@@ -2339,7 +2330,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 15}}
+  s: 15,}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2409,7 +2400,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-yellow-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-financial-trading',
+  s: //ziontechgroup.com/quantum-financial-trading',
     marketPositio,
   n: 'First quantum AI trading platform. 100x faster than traditional systems.',
     targetAudienc,
@@ -2472,7 +2463,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.',
     launchDate: '2024-09-01'
@@ -2482,7 +2473,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   },
     reviews: 15,
   },
-    reviews: 15}},
+    reviews: 15,}},
     realImplementation: true,
     implementationDetails: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.',
     launchDate: '2024-09-01'
@@ -2527,10 +2518,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -2543,11 +2534,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 15},
+  s: 15,},
     review,
-  s: 15},
+  s: 15,},
     review,
-  s: 15}},
+  s: 15,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2559,9 +2550,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 15},
+  s: 15,},
     review,
-  s: 15}
+  s: 15,}
   // Autonomous Vehicle AI Platform,
   id: 'autonomous-vehicle-ai-platform',
     real_implementatio,
@@ -2575,7 +2566,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 15},
+  s: 15,},
   // Autonomous Vehicle AI Platform;
     i,
   d: 'autonomous - vehicle - ai - platform',
@@ -2640,12 +2631,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Autonomous Vehicles & Robotics',
     lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai',
+  s: //ziontechgroup.com/autonomous-vehicle-ai',
     marketPositio,
   n: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai',
+  s: //ziontechgroup.com/autonomous-vehicle-ai',
     marketPositio,
   n: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
     targetAudienc,
@@ -2767,7 +2758,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 22},
+  s: 22,},
     i,
   d: 'autonomous-vehicle-ai-platform'
     nam,
@@ -2779,8 +2770,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.'
+  n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.'
     feature,
   s: [,
       'Advanced computer vision'
@@ -2838,8 +2828,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.'
     targetAudienc,
-  e:
-      'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies',    trialDay,
+  e: 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies',    trialDay,
   s: 30,
     setupTim,
   e: '4-6 weeks'
@@ -2892,14 +2881,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.'
     launchDate: '2024-08-01',
     customers: 18
     rating: 4.8,
-    reviews: 22}}
+    reviews: 22,}}
     realImplementation: true,
     implementationDetails: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.'
     launchDate: '2024-08-01'
@@ -2941,13 +2930,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.'
+  s: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.'
     launchDat,
   e: '2024-08-01'
     customer,
@@ -2955,7 +2943,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 22}}
+  s: 22,}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3025,7 +3013,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-blue-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai',
+  s: //ziontechgroup.com/autonomous-vehicle-ai',
     marketPositio,
   n: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
     targetAudienc,
@@ -3084,7 +3072,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.',
     launchDate: '2024-08-01'
@@ -3094,7 +3082,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   },
     reviews: 22,
   },
-    reviews: 22}},
+    reviews: 22,}},
     realImplementation: true,
     implementationDetails: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.',
     launchDate: '2024-08-01'
@@ -3142,10 +3130,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -3158,11 +3146,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 22},
+  s: 22,},
     review,
-  s: 22},
+  s: 22,},
     review,
-  s: 22}},
+  s: 22,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3174,9 +3162,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 22},
+  s: 22,},
     review,
-  s: 22}
+  s: 22,}
   // Quantum Cybersecurity Platform,
   id: 'quantum-cybersecurity-platform',
     real_implementatio,
@@ -3190,7 +3178,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 22},
+  s: 22,},
   // Quantum Cybersecurity Platform;
     i,
   d: 'quantum - cybersecurity - platform',
@@ -3353,7 +3341,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.9,
     review,
-  s: 28},
+  s: 28,},
     i,
   d: 'quantum-cybersecurity-platform'
     nam,
@@ -3423,8 +3411,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.'
     targetAudienc,
-  e:
-      'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure',    trialDay,
+  e: 'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure',    trialDay,
   s: 30,
     setupTim,
   e: '2-3 weeks'
@@ -3479,14 +3466,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.'
     launchDate: '2024-07-01',
     customers: 35
     rating: 4.9,
-    reviews: 28}}
+    reviews: 28,}}
     realImplementation: true,
     implementationDetails: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.'
     launchDate: '2024-07-01'
@@ -3529,13 +3516,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.'
+  s: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.'
     launchDat,
   e: '2024-07-01'
     customer,
@@ -3543,7 +3529,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 28}}
+  s: 28,}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3613,7 +3599,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-red-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-cybersecurity',
+  s: //ziontechgroup.com/quantum-cybersecurity',
     marketPositio,
   n: 'First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.',
     targetAudienc,
@@ -3676,7 +3662,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',
     launchDate: '2024-07-01'
@@ -3686,7 +3672,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   },
     reviews: 28,
   },
-    reviews: 28}},
+    reviews: 28,}},
     realImplementation: true,
     implementationDetails: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',
     launchDate: '2024-07-01'
@@ -3731,10 +3717,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -3747,11 +3733,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 28},
+  s: 28,},
     review,
-  s: 28},
+  s: 28,},
     review,
-  s: 28}},
+  s: 28,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3763,9 +3749,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 28},
+  s: 28,},
     review,
-  s: 28}
+  s: 28,}
   // Metaverse AI Development Platform,
   id: 'metaverse-ai-development-platform',
     real_implementatio,
@@ -3779,7 +3765,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9,
     review,
-  s: 28},
+  s: 28,},
   // Metaverse AI Development Platform;
     i,
   d: 'metaverse - ai - development - platform',
@@ -3844,12 +3830,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Metaverse & Virtual Reality',
     lin,
   k: 'http,
-  s://ziontechgroup.com/metaverse-ai-development',
+  s: //ziontechgroup.com/metaverse-ai-development',
     marketPositio,
   n: 'Leading metaverse AI platform. 5x more features than existing solutions.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/metaverse-ai-development',
+  s: //ziontechgroup.com/metaverse-ai-development',
     marketPositio,
   n: 'Leading metaverse AI platform. 5x more features than existing solutions.',
     targetAudienc,
@@ -3969,7 +3955,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 32},
+  s: 32,},
     i,
   d: 'metaverse-ai-development-platform'
     nam,
@@ -3981,8 +3967,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.'
+  n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.'
     feature,
   s: [,
       'AI content generation'
@@ -4040,8 +4025,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'Leading metaverse AI platform. 5x more features than existing solutions.'
     targetAudienc,
-  e:
-      'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies',    trialDay,
+  e: 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies',    trialDay,
   s: 30,
     setupTim,
   e: '2-3 weeks'
@@ -4094,14 +4078,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete metaverse AI platform with content generation, world building, and social interaction features.'
     launchDate: '2024-06-01',
     customers: 45
     rating: 4.7,
-    reviews: 32}}
+    reviews: 32,}}
     realImplementation: true,
     implementationDetails: 'Complete metaverse AI platform with content generation, world building, and social interaction features.'
     launchDate: '2024-06-01'
@@ -4143,13 +4127,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete metaverse AI platform with content generation, world building, and social interaction features.'
+  s: 'Complete metaverse AI platform with content generation, world building, and social interaction features.'
     launchDat,
   e: '2024-06-01'
     customer,
@@ -4157,7 +4140,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 32}}
+  s: 32,}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4227,7 +4210,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-purple-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/metaverse-ai-development',
+  s: //ziontechgroup.com/metaverse-ai-development',
     marketPositio,
   n: 'Leading metaverse AI platform. 5x more features than existing solutions.',
     targetAudienc,
@@ -4286,7 +4269,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',
     launchDate: '2024-06-01'
@@ -4296,7 +4279,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   },
     reviews: 32,
   },
-    reviews: 32}},
+    reviews: 32,}},
     realImplementation: true,
     implementationDetails: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',
     launchDate: '2024-06-01'
@@ -4344,10 +4327,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -4360,11 +4343,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 32},
+  s: 32,},
     review,
-  s: 32},
+  s: 32,},
     review,
-  s: 32}},
+  s: 32,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4376,9 +4359,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 32},
+  s: 32,},
     review,
-  s: 32}
+  s: 32,}
   // Quantum Internet Security Platform,
   id: 'quantum-internet-security-platform',
     real_implementatio,
@@ -4392,7 +4375,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 32},
+  s: 32,},
   // Quantum Internet Security Platform;
     i,
   d: 'quantum - internet - security - platform',
@@ -4457,12 +4440,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'Quantum Internet & Security',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-internet-security',
+  s: //ziontechgroup.com/quantum-internet-security',
     marketPositio,
   n: 'First quantum internet security platform. 100x more secure than traditional solutions.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-internet-security',
+  s: //ziontechgroup.com/quantum-internet-security',
     marketPositio,
   n: 'First quantum internet security platform. 100x more secure than traditional solutions.',
     targetAudienc,
@@ -4583,7 +4566,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 19},
+  s: 19,},
     i,
   d: 'quantum-internet-security-platform'
     nam,
@@ -4653,8 +4636,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'First quantum internet security platform. 100x more secure than traditional solutions.'
     targetAudienc,
-  e:
-      'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations',    trialDay,
+  e: 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations',    trialDay,
   s: 30,
     setupTim,
   e: '3-4 weeks'
@@ -4707,14 +4689,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete quantum internet security platform with encryption, monitoring, and protection features.'
     launchDate: '2024-05-01',
     customers: 22
     rating: 4.8,
-    reviews: 19}}
+    reviews: 19,}}
     realImplementation: true,
     implementationDetails: 'Complete quantum internet security platform with encryption, monitoring, and protection features.'
     launchDate: '2024-05-01'
@@ -4756,13 +4738,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete quantum internet security platform with encryption, monitoring, and protection features.'
+  s: 'Complete quantum internet security platform with encryption, monitoring, and protection features.'
     launchDat,
   e: '2024-05-01'
     customer,
@@ -4770,7 +4751,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 19}}
+  s: 19,}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4840,7 +4821,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-green-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-internet-security',
+  s: //ziontechgroup.com/quantum-internet-security',
     marketPositio,
   n: 'First quantum internet security platform. 100x more secure than traditional solutions.',
     targetAudienc,
@@ -4899,7 +4880,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',
     launchDate: '2024-05-01'
@@ -4909,7 +4890,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   },
     reviews: 19,
   },
-    reviews: 19}},
+    reviews: 19,}},
     realImplementation: true,
     implementationDetails: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',
     launchDate: '2024-05-01'
@@ -4957,10 +4938,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -4973,11 +4954,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 19},
+  s: 19,},
     review,
-  s: 19},
+  s: 19,},
     review,
-  s: 19}},
+  s: 19,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4989,9 +4970,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 19},
+  s: 19,},
     review,
-  s: 19}
+  s: 19,}
   // AI-Powered Legal Contract Analyzer,
   id: 'ai-legal-contract-analyzer',
     real_implementatio,
@@ -5005,7 +4986,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 19},
+  s: 19,},
   // AI - Powered Legal Contract Analyzer;
     i,
   d: 'ai - legal - contract - analyzer',
@@ -5075,12 +5056,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   y: 'AI Legal Services',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-legal-contract-analyzer',
+  s: //ziontechgroup.com/ai-legal-contract-analyzer',
     marketPositio,
   n: 'Leading AI legal platform. 10x faster than traditional legal review.',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-legal-contract-analyzer',
+  s: //ziontechgroup.com/ai-legal-contract-analyzer',
     marketPositio,
   n: 'Leading AI legal platform. 10x faster than traditional legal review.',
     targetAudienc,
@@ -5201,7 +5182,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 45},
+  s: 45,},
     i,
   d: 'ai-legal-contract-analyzer'
     nam,
@@ -5213,8 +5194,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.'
+  n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.'
     feature,
   s: [,
       'AI contract analysis'
@@ -5272,8 +5252,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'Leading AI legal platform. 10x faster than traditional legal review.'
     targetAudienc,
-  e:
-      'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions',    trialDay,
+  e: 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions',    trialDay,
   s: 30,
     setupTim,
   e: '1-2 weeks'
@@ -5326,14 +5305,14 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Complete AI legal platform with document analysis, risk assessment, and compliance features.'
     launchDate: '2024-04-01',
     customers: 65
     rating: 4.6,
-    reviews: 45}}
+    reviews: 45,}}
     realImplementation: true,
     implementationDetails: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.'
     launchDate: '2024-04-01'
@@ -5375,13 +5354,12 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Complete AI legal platform with document analysis, risk assessment, and compliance features.'
+  s: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.'
     launchDat,
   e: '2024-04-01'
     customer,
@@ -5389,7 +5367,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 45}}
+  s: 45,}}
     realImplementatio,
   n: true,
     implementationDetail,
@@ -5459,7 +5437,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-indigo-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-legal-contract-analyzer',
+  s: //ziontechgroup.com/ai-legal-contract-analyzer',
     marketPositio,
   n: 'Leading AI legal platform. 10x faster than traditional legal review.',
     targetAudienc,
@@ -5518,7 +5496,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.',
     launchDate: '2024-04-01'
@@ -5528,7 +5506,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   },
     reviews: 45,
   },
-    reviews: 45}},
+    reviews: 45,}},
     realImplementation: true,
     implementationDetails: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.',
     launchDate: '2024-04-01'
@@ -5578,10 +5556,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -5594,11 +5572,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 45},
+  s: 45,},
     review,
-  s: 45},
+  s: 45,},
     review,
-  s: 45}},
+  s: 45,}},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -5610,9 +5588,9 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 45},
+  s: 45,},
     review,
-  s: 45}
+  s: 45,}
   // Quantum IoT Platform,
   name: 'Quantum IoT Platform',
     taglin,
@@ -5683,7 +5661,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     contactInfo: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'},
+      address: '364 E Main St STE 1008 Middletown DE 19709',},
     realImplementation: true,
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',
     launchDate: '2024-03-01'
@@ -5707,7 +5685,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   i: '600% ROI through security improvements and operational efficiency',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-iot-platform',
+  s: //ziontechgroup.com/quantum-iot-platform',
     marketPositio,
   n: 'First quantum IoT platform. 100x more secure than traditional solutions.',
     targetAudienc,
@@ -5761,7 +5739,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 26}
+  s: 26,}
 ],
     growthRat,
   e: '250% annual growth',
@@ -5774,7 +5752,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'},
+  s: '364 E Main St STE 1008 Middletown DE 19709',},
     realImplementatio,
   n: true,
     implementationDetail,
@@ -5797,7 +5775,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - purple - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - ai - brain - computer - interface",
+  s: //ziontechgroup.com / quantum - ai - brain - computer - interface",
     market_positio,"
   n: "Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.",
     target_audienc,"
@@ -5823,7 +5801,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Fully functional quantum AI platform with neural interface capabilities, real - time processing, and advanced security features.",
     launch_date: "2024 - 12 - 01",
@@ -5846,7 +5824,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -5905,7 +5883,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - cyan - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / space - technology",
+  s: //ziontechgroup.com / space - technology",
     market_positio,"
   n: "First comprehensive commercial space platform. 5x more features than existing solutions.",
     target_audienc,"
@@ -5931,7 +5909,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete space operations platform with real - time tracking, mission planning tools, and regulatory compliance features.",
     launch_date: "2024 - 11 - 15",
@@ -5954,7 +5932,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6013,7 +5991,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - emerald - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / biotech - ai",
+  s: //ziontechgroup.com / biotech - ai",
     market_positio,"
   n: "Leading AI drug discovery platform. 5x faster than traditional methods.",
     target_audienc,"
@@ -6039,7 +6017,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.",
     launch_date: "2024 - 10 - 01",
@@ -6062,7 +6040,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6121,7 +6099,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - yellow - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - financial - trading",
+  s: //ziontechgroup.com / quantum - financial - trading",
     market_positio,"
   n: "First quantum AI trading platform. 100x faster than traditional systems.",
     target_audienc,"
@@ -6147,7 +6125,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete quantum trading platform with real - time execution, advanced risk management, and comprehensive analytics.",
     launch_date: "2024 - 09 - 01",
@@ -6170,7 +6148,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6229,7 +6207,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - blue - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / autonomous - vehicle - ai",
+  s: //ziontechgroup.com / autonomous - vehicle - ai",
     market_positio,"
   n: "Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.",
     target_audienc,"
@@ -6255,7 +6233,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete autonomous AI platform with computer vision, decision - making algorithms, and safety systems.",
     launch_date: "2024 - 08 - 01",
@@ -6278,7 +6256,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6337,7 +6315,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - red - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - cybersecurity",
+  s: //ziontechgroup.com / quantum - cybersecurity",
     market_positio,"
   n: "First quantum - resistant cybersecurity platform. 100x more secure than traditional solutions.",
     target_audienc,"
@@ -6363,7 +6341,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.",
     launch_date: "2024 - 07 - 01",
@@ -6386,7 +6364,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6445,7 +6423,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - purple - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / metaverse - ai - development",
+  s: //ziontechgroup.com / metaverse - ai - development",
     market_positio,"
   n: "Leading metaverse AI platform. 5x more features than existing solutions.",
     target_audienc,"
@@ -6471,7 +6449,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete metaverse AI platform with content generation, world building, and social interaction features.",
     launch_date: "2024 - 06 - 01",
@@ -6494,7 +6472,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6553,7 +6531,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - green - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - internet - security",
+  s: //ziontechgroup.com / quantum - internet - security",
     market_positio,"
   n: "First quantum internet security platform. 100x more secure than traditional solutions.",
     target_audienc,"
@@ -6579,7 +6557,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete quantum internet security platform with encryption, monitoring, and protection features.",
     launch_date: "2024 - 05 - 01",
@@ -6602,7 +6580,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6661,7 +6639,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - indigo - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / ai - legal - contract - analyzer",
+  s: //ziontechgroup.com / ai - legal - contract - analyzer",
     market_positio,"
   n: "Leading AI legal platform. 10x faster than traditional legal review.",
     target_audienc,"
@@ -6687,7 +6665,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete AI legal platform with document analysis, risk assessment, and compliance features.",
     launch_date: "2024 - 04 - 01",
@@ -6710,7 +6688,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6769,7 +6747,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: "text - blue - 400",
     lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - iot - platform",
+  s: //ziontechgroup.com / quantum - iot - platform",
     market_positio,"
   n: "First quantum IoT platform. 100x more secure than traditional solutions.",
     target_audienc,"
@@ -6795,7 +6773,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com"},
+      website: "https://ziontechgroup && ziontechgroup.com",},
     real_implementation: true,
     implementation_details: "Complete quantum IoT platform with security, edge computing, and device management features.",
     launch_date: "2024 - 03 - 01'
@@ -6803,7 +6781,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     rating: 4 && 4.7
     reviews: 26,
 ]}}
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     real_implementation: true,
     implementation_details: 'Complete quantum IoT platform with security, edge computing, and device management features.',
     launch_date: '2024 - 03 - 01',
@@ -6827,7 +6805,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"},
+  s: //ziontechgroup && ziontechgroup.com",},
     real_implementatio,
   n: true,
     implementation_detail,"
@@ -6839,10 +6817,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 26]}}
+  s: 26],}}
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     real_implementatio,
   n: true,
@@ -6855,7 +6833,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 26}
+  s: 26,}
 ]
     i,
   d: 'quantum-iot-platform',
@@ -6933,7 +6911,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   r: 'text-blue-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-iot-platform',
+  s: //ziontechgroup.com/quantum-iot-platform',
     marketPositio,
   n: 'First quantum IoT platform. 100x more secure than traditional solutions.',
     targetAudienc,
@@ -6965,8 +6943,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     marketPositio,
   n: 'First quantum IoT platform. 100x more secure than traditional solutions.'
     targetAudienc,
-  e:
-      'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',    trialDay,
+  e: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',    trialDay,
   s: 30,
     setupTim,
   e: '2-3 weeks'
@@ -7071,7 +7048,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com'},
+      website: 'https://ziontechgroup.com',},
     realImplementation: true,
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',
     launchDate: '2024-03-01'
@@ -7082,11 +7059,11 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   i: '600% ROI through security improvements and operational efficiency',
     lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-iot-platform',
+  s: //ziontechgroup.com/quantum-iot-platform',
     marketPositio,
   n: 'First quantum IoT platform. 100x more secure than traditional solutions.',    lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-iot-platform',
+  s: //ziontechgroup.com/quantum-iot-platform',
     targetAudienc,
   e: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',
     trialDay,
@@ -7157,10 +7134,10 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     },
     realImplementatio,
   n: true,
@@ -7206,12 +7183,12 @@ export const,
     competitors: ['Neuralink ($10)000+/month)Kernel ($50)000+/month)']
     marketSize: '$1.5 B BCI market'
     growthRate: '300% annual growth',
-    variant: 'quantum-ai-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-ai-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.';
     launchDate: '2024-12-01';
@@ -7249,12 +7226,12 @@ export const,
     competitors: ['SpaceX Starlink ($99/month)OneWeb ($50/month)']
     marketSize: '$469 B space economy'
     growthRate: '400% annual growth',
-    variant: 'space-futuristic'}
-    contactInfo: {}
+    variant: 'space-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.';
     launchDate: '2024-11-15';
@@ -7292,12 +7269,12 @@ export const,
     competitors: ['Insitro ($100 M+ funding)Recursion ($2 B+ funding)']
     marketSize: '$150 B AI in healthcare'
     growthRate: '250% annual growth',
-    variant: 'biotech-futuristic'}
-    contactInfo: {}
+    variant: 'biotech-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.';
     launchDate: '2024-10-01';
@@ -7335,12 +7312,12 @@ export const,
     competitors: ['Renaissance Technologies ($100 B+ AUM)Two Sigma ($60 B+ AUM)']
     marketSize: '$15 T algorithmic trading'
     growthRate: '150% annual growth',
-    variant: 'quantum-finance-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-finance-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.';
     launchDate: '2024-09-01';
@@ -7378,12 +7355,12 @@ export const,
     competitors: ['Waymo ($1 B+ investment)Tesla Autopilot ($12)000)']
     marketSize: '$2.5 T autonomous vehicle market'
     growthRate: '200% annual growth',
-    variant: 'autonomous-futuristic'}
-    contactInfo: {}
+    variant: 'autonomous-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.';
     launchDate: '2024-08-01';
@@ -7421,12 +7398,12 @@ export const,
     competitors: ['Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)']
     marketSize: '$200 B cybersecurity market'
     growthRate: '180% annual growth',
-    variant: 'quantum-security-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-security-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.';
     launchDate: '2024-07-01';
@@ -7464,12 +7441,12 @@ export const,
     competitors: ['Meta Horizon ($30/month)Roblox ($25/month)']
     marketSize: '$800 B metaverse market'
     growthRate: '300% annual growth',
-    variant: 'metaverse-futuristic'}
-    contactInfo: {}
+    variant: 'metaverse-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete metaverse AI platform with content generation, world building, and social interaction features.';
     launchDate: '2024-06-01';
@@ -7507,12 +7484,12 @@ export const,
     competitors: ['Cloudflare ($20/month)Akamai ($100+/month)']
     marketSize: '$150 B internet security market'
     growthRate: '200% annual growth',
-    variant: 'quantum-internet-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-internet-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete quantum internet security platform with encryption, monitoring, and protection features.';
     launchDate: '2024-05-01';
@@ -7550,12 +7527,12 @@ export const,
     competitors: ['DocuSign ($25/month)ContractPodAi ($500+/month)']
     marketSize: '$25 B legal tech market'
     growthRate: '150% annual growth',
-    variant: 'ai-legal-futuristic'}
-    contactInfo: {}
+    variant: 'ai-legal-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.';
     launchDate: '2024-04-01';
@@ -7593,12 +7570,12 @@ export const,
     competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)']
     marketSize: '$1.5 T IoT market'
     growthRate: '250% annual growth',
-    variant: 'quantum-iot-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-iot-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.';
     launchDate: '2024-03-01';
@@ -7608,10 +7585,10 @@ export const,
   }
 ];
     reviews: 26,
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-ai-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-ai-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7620,7 +7597,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7633,12 +7610,12 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 8}
+  s: 8,}
   // Space Technology Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'space-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'space-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7647,7 +7624,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7660,12 +7637,12 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 12}
+  s: 12,}
   // Biotech AI Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'biotech-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'biotech-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7674,7 +7651,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7687,12 +7664,12 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 18}
+  s: 18,}
   // Quantum Financial Trading Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-finance-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-finance-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7701,7 +7678,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7714,12 +7691,12 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 15}
+  s: 15,}
   // Autonomous Vehicle AI Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'autonomous-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'autonomous-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7728,7 +7705,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7741,12 +7718,12 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 22}
+  s: 22,}
   // Quantum Cybersecurity Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-security-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-security-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7755,7 +7732,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7768,12 +7745,12 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 28}
+  s: 28,}
   // Metaverse AI Development Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'metaverse-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'metaverse-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7782,7 +7759,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7795,12 +7772,12 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 32}
+  s: 32,}
   // Quantum Internet Security Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-internet-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-internet-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7809,7 +7786,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7822,12 +7799,12 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 19}
+  s: 19,}
   // AI-Powered Legal Contract Analyzer;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-legal-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'ai-legal-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7836,7 +7813,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7849,12 +7826,12 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 45}
+  s: 45,}
   // Quantum IoT Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-iot-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-iot-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -7863,7 +7840,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -7876,10 +7853,10 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 26}
+  s: 26,}
 ];
     review,
-  s: 26}
+  s: 26,}
 ];export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [,
     review,
@@ -7927,7 +7904,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.",
@@ -7976,7 +7953,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.",
@@ -8025,7 +8002,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.",
@@ -8074,7 +8051,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.",
@@ -8123,7 +8100,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.",
@@ -8172,7 +8149,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.",
@@ -8221,7 +8198,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete metaverse AI platform with content generation, world building, and social interaction features.",
@@ -8270,7 +8247,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete quantum internet security platform with encryption, monitoring, and protection features.",
@@ -8319,7 +8296,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete AI legal platform with document analysis, risk assessment, and compliance features.",
@@ -8368,7 +8345,7 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"}
+      website: "https://ziontechgroup.com",}
 },
     realImplementation: true,
     implementationDetails: "Complete quantum IoT platform with security, edge computing, and device management features.",
@@ -8384,8 +8361,8 @@ export const,
     customers: 38
     rating: 4.7
     reviews: 26,
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8400,8 +8377,8 @@ export const,
     review,
   s: 8,},
   // Space Technology Platform;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8416,8 +8393,8 @@ export const,
     review,
   s: 12,},
   // Biotech AI Platform;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8432,8 +8409,8 @@ export const,
     review,
   s: 18,},
   // Quantum Financial Trading Platform;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8448,8 +8425,8 @@ export const,
     review,
   s: 15,},
   // Autonomous Vehicle AI Platform;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8464,8 +8441,8 @@ export const,
     review,
   s: 22,},
   // Quantum Cybersecurity Platform;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8480,8 +8457,8 @@ export const,
     review,
   s: 28,},
   // Metaverse AI Development Platform;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8496,8 +8473,8 @@ export const,
     review,
   s: 32,},
   // Quantum Internet Security Platform;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8512,8 +8489,8 @@ export const,
     review,
   s: 19,},
   // AI-Powered Legal Contract Analyzer;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8528,8 +8505,8 @@ export const,
     review,
   s: 45,},
   // Quantum IoT Platform;
-  {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"}
+  {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",}
 },
     realImplementatio,
   n: true,
@@ -8542,7 +8519,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 26]}}
+  s: 26],}}
     },
     realImplementatio,
   n: true,
@@ -8555,7 +8532,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 26}
+  s: 26,}
 ]}
 ];
 export const,
@@ -8563,7 +8540,7 @@ export const,
   id: 'quantum-ai-brain-computer-interface',' nam,
   e: 'Quantum AI Brain-Computer Interface', ' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.', feature,
+  n: ,' 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.', feature,
   s: [,' 'Quantum neural signal processing',' 'Real - time brain activity monitoring',' 'AI - powered cognitive enhancement',' 'Neural pattern recognition',' 'Secure quantum encryption',' 'Multi - modal interface support',' 'Advanced analytics dashboard',' 'API for research integration',' 'Compliance with medical standards', ' taglin,
   e: 'World\'s first quantum-enhanced AI with human-like reasoning',' pric,
   e: '$2,999', ' '24 / 7 quantum AI support'], pric,
@@ -8576,18 +8553,18 @@ export const,
   s: [,' 'Quantum neural signal processing_real - time brain activity monitoringAI - powered cognitive enhancement_neural pattern recognition_secure quantum encryption_multi - modal interface support_advanced analytics dashboardAPI for research integration',' 'Compliance with medical standards24 / 7 quantum AI support' ], popula,
   r: true,' ico,
   n: '🧠', ' 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.', target_audienc,
-  e:  ,' 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities', trial_day,
+  e: ,' 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities', trial_day,
   s: 30,' setup_tim,
   e: '2 - 4 weeks',' categor,
   y: 'Quantum AI & Neuroscience', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-ai-brain-computer-interface',' marketPositio,
+  s: //ziontechgroup.com/quantum-ai-brain-computer-interface',' marketPositio,
   n: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-ai-brain-computer-interface',' marketPositio,
+  s: //ziontechgroup.com/quantum-ai-brain-computer-interface',' marketPositio,
   n: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-ai-brain-computer-interface',' marketPositio,
+  s: //ziontechgroup.com/quantum-ai-brain-computer-interface',' marketPositio,
   n: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.', ' targetAudienc,
   e: 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities', trialDay,
   s: 30,' setupTim,
@@ -8625,19 +8602,19 @@ export const,
   e: '2024-12-01', customer,
   s: 15, ratin,
   g: 4 && 4.9, review,
-  s: 8 }, export interface NextGenInnovativeService export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string} } customer,
+  s: 8,}, export interface NextGenInnovativeService export interface NextGenInnovativeService {/* TODO: Fix JSX expression */,}
+  s: string,} websit,
+  e: string,} } customer,
   s: number, ratin,
-  g: number, export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string }, realImplementatio,
+  g: number, export interface NextGenInnovativeService {/* TODO: Fix JSX expression */,}
+  s: string,} websit,
+  e: string,}, realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } i,
+  s: number,} i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -8664,33 +8641,33 @@ export const,
   e: string, growthRat,
   e: string, varian,
   t: string, contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string} } realImplementatio,
+  o: {/* TODO: Fix JSX expression */,}
+  s: string,} websit,
+  e: string,} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number} review,
+  s: number,} review,
   s: number, mobil,
   e: string,
   email: string,
   address: string,
-  website: string } realImplementatio,
+  website: string,} realImplementatio,
   n: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number } export const,
+  reviews: number,} export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [ // Quantum AI & Advanced Computing ' i,
   d: 'quantum-ai-brain-computer-interface'' nam,
   e: 'Quantum AI Brain-Computer Interface'' taglin,"
   e: "World's first quantum-enhanced AI with human-like reasoning"' pric,
   e: '$2,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.' feature,
+  n: ' 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.' feature,
   s: [' 'Quantum neural signal processing'' 'Real-time brain activity monitoring'' 'AI-powered cognitive enhancement'' 'Neural pattern recognition'' 'Secure quantum encryption'' 'Multi-modal interface support'' 'Advanced analytics dashboard'' 'API for research integration'' 'Compliance with medical standards'' '24/7 quantum AI support'], pric,
   e: '$2,999'' perio,
   d: '/month'' descriptio,
@@ -8701,9 +8678,9 @@ export const,
   r: 'from-purple-600 to-indigo-700'' textColo,
   r: 'text-purple-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-ai-brain-computer-interface' marketPositio,
-  n:' 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.' targetAudienc,
-  e:' 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities', trialDay,
+  s: //ziontechgroup.com/quantum-ai-brain-computer-interface' marketPositio,
+  n: ' 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.' targetAudienc,
+  e: ' 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities', trialDay,
   s: 30' setupTim,
   e: '2-4 weeks'' categor,
   y: 'Quantum AI & Neuroscience'' realServic,
@@ -8732,43 +8709,43 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.'' launchDat,
+  implementationDetails: ' 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.'' launchDat,
   e: '2024-12-01' customer,
   s: 15,
   rating: 4.9,
-  reviews: 8}} realImplementatio,
+  reviews: 8,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.'' launchDat,
   e: '2024-12-01' customer,
   s: 15,
-  rating: 4.9 export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com'}' websit,
+  rating: 4.9 export interface NextGenInnovativeService {/* TODO: Fix JSX expression */,}
+  s: //ziontechgroup.com',}' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',' launchDat,
   e: '2024-12-01', customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8 }, review,
-  s: 8 }, review,
-  s: 8}}, realImplementatio,
+  s: 8,}, review,
+  s: 8,}, review,
+  s: 8,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.',' launchDat,
   e: '2024-12-01', customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8 }, review,
-  s: 8 } // Space Technology Platform ' i,
+  s: 8,}, review,
+  s: 8,} // Space Technology Platform ' i,
   d: 'space-technology-platform', real_implementatio,
   n: true,' implementation_detail,
   s: 'Fully functional quantum AI platform with neural interface capabilities, real - time processing, and advanced security features.',' launch_dat,
   e: '2024 - 12 - 01', customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8}, // Space Technology Platform; ' i,
+  s: 8,}, // Space Technology Platform; ' i,
   d: 'space - technology - platform', ' nam,
   e: 'Space Technology Platform',' taglin,
   e: 'Complete space mission management and satellite operations',' pric,
@@ -8781,15 +8758,15 @@ export const,
   n: '🚀',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-400', ' 'First comprehensive commercial space platform. 5x more features than existing solutions.', target_audienc,
-  e:  ,' 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions', trial_day,
+  e: ,' 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions', trial_day,
   s: 30,' setup_tim,
   e: '4 - 6 weeks',' categor,
   y: 'Space Technology', ' lin,
   k: 'http,
-  s://ziontechgroup.com/space-technology',' marketPositio,
+  s: //ziontechgroup.com/space-technology',' marketPositio,
   n: 'First comprehensive commercial space platform. 5x more features than existing solutions.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/space-technology',' marketPositio,
+  s: //ziontechgroup.com/space-technology',' marketPositio,
   n: 'First comprehensive commercial space platform. 5x more features than existing solutions.',' targetAudienc,
   e: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions', trialDay,
   s: 30,' setupTim,
@@ -8826,13 +8803,13 @@ export const,
   e: '2024-11-15', customer,
   s: 8, ratin,
   g: 4 && 4.8, review,
-  s: 12 }, ' i,
+  s: 12,}, ' i,
   d: 'space-technology-platform'' nam,
   e: 'Space Technology Platform'' taglin,
   e: 'Complete space mission management and satellite operations'' pric,
   e: '$5,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.' feature,
+  n: ' 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.' feature,
   s: [' 'Satellite mission planning'' 'Orbital mechanics calculations'' 'Real-time satellite tracking'' 'Space weather monitoring'' 'Launch vehicle integration'' 'Ground station management'' 'Space debris tracking'' 'Mission analytics dashboard'' 'Regulatory compliance tools'' 'Multi-satellite operations'], descriptio,
   n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.' feature,
   s: [' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard'' 'Regulatory compliance toolsMulti-satellite operations' popula,
@@ -8841,9 +8818,9 @@ export const,
   r: 'from-cyan-600 to-blue-700'' textColo,
   r: 'text-cyan-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/space-technology' marketPositio,
-  n:' 'First comprehensive commercial space platform. 5x more features than existing solutions.' targetAudienc,
-  e:' 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions', trialDay,
+  s: //ziontechgroup.com/space-technology' marketPositio,
+  n: ' 'First comprehensive commercial space platform. 5x more features than existing solutions.' targetAudienc,
+  e: ' 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions', trialDay,
   s: 30' setupTim,
   e: '4-6 weeks'' categor,
   y: 'Space Technology'' realServic,
@@ -8872,13 +8849,13 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.'' launchDat,
+  implementationDetails: ' 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.'' launchDat,
   e: '2024-11-15' customer,
   s: 8,
   rating: 4.8,
-  reviews: 12}} realImplementatio,
+  reviews: 12,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.'' launchDat,
   e: '2024-11-15' customer,
@@ -8898,7 +8875,7 @@ export const,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/space-technology', marketPositio,
+  s: //ziontechgroup.com/space-technology', marketPositio,
   n: ' 'First comprehensive commercial space platform. 5x more features than existing solutions.', targetAudienc,
   e: ' 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions', trialDay,
   s: 30,' setupTim,
@@ -8931,31 +8908,31 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.',' launchDat,
   e: '2024-11-15', customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12 }, review,
-  s: 12 }, review,
-  s: 12}}, realImplementatio,
+  s: 12,}, review,
+  s: 12,}, review,
+  s: 12,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.',' launchDat,
   e: '2024-11-15', customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12 }, review,
-  s: 12 } // Biotech AI Platform ' i,
+  s: 12,}, review,
+  s: 12,} // Biotech AI Platform ' i,
   d: 'biotech-ai-platform', real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete space operations platform with real - time tracking, mission planning tools, and regulatory compliance features.',' launch_dat,
   e: '2024 - 11 - 15', customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12}, // Biotech AI Platform; ' i,
+  s: 12,}, // Biotech AI Platform; ' i,
   d: 'biotech - ai - platform', ' nam,
   e: 'Biotech AI Platform',' taglin,
   e: 'AI - powered drug discovery and genetic engineering',' pric,
@@ -8968,15 +8945,15 @@ export const,
   n: '🧬',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-400', ' 'Leading AI drug discovery platform. 5x faster than traditional methods.', target_audienc,
-  e:  ,' 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs', trial_day,
+  e: ,' 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs', trial_day,
   s: 30,' setup_tim,
   e: '2 - 3 weeks',' categor,
   y: 'Biotech & Healthcare AI', ' lin,
   k: 'http,
-  s://ziontechgroup.com/biotech-ai',' marketPositio,
+  s: //ziontechgroup.com/biotech-ai',' marketPositio,
   n: 'Leading AI drug discovery platform. 5x faster than traditional methods.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/biotech-ai',' marketPositio,
+  s: //ziontechgroup.com/biotech-ai',' marketPositio,
   n: 'Leading AI drug discovery platform. 5x faster than traditional methods.',' targetAudienc,
   e: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs', trialDay,
   s: 30,' setupTim,
@@ -9013,13 +8990,13 @@ export const,
   e: '2024-10-01', customer,
   s: 25, ratin,
   g: 4 && 4.7, review,
-  s: 18 }, ' i,
+  s: 18,}, ' i,
   d: 'biotech-ai-platform'' nam,
   e: 'Biotech AI Platform'' taglin,
   e: 'AI-powered drug discovery and genetic engineering'' pric,
   e: '$3,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.' feature,
+  n: ' 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.' feature,
   s: [' 'AI drug discovery algorithms'' 'Genetic sequence analysis'' 'Protein folding prediction'' 'Drug interaction modeling'' 'Clinical trial optimization'' 'Regulatory compliance tools'' 'Research collaboration platform'' 'Advanced analytics dashboard'' 'API for research integration'' 'Multi-omics data analysis'], descriptio,
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.' feature,
   s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'' 'API for research integrationMulti-omics data analysis' popula,
@@ -9028,9 +9005,9 @@ export const,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/biotech-ai' marketPositio,
-  n:' 'Leading AI drug discovery platform. 5x faster than traditional methods.' targetAudienc,
-  e:' 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs', trialDay,
+  s: //ziontechgroup.com/biotech-ai' marketPositio,
+  n: ' 'Leading AI drug discovery platform. 5x faster than traditional methods.' targetAudienc,
+  e: ' 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs', trialDay,
   s: 30' setupTim,
   e: '2-3 weeks'' categor,
   y: 'Biotech & Healthcare AI'' realServic,
@@ -9059,13 +9036,13 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.'' launchDat,
+  implementationDetails: ' 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.'' launchDat,
   e: '2024-10-01' customer,
   s: 25,
   rating: 4.7,
-  reviews: 18}} realImplementatio,
+  reviews: 18,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.'' launchDat,
   e: '2024-10-01' customer,
@@ -9085,7 +9062,7 @@ export const,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/biotech-ai', marketPositio,
+  s: //ziontechgroup.com/biotech-ai', marketPositio,
   n: ' 'Leading AI drug discovery platform. 5x faster than traditional methods.', targetAudienc,
   e: ' 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs', trialDay,
   s: 30,' setupTim,
@@ -9118,31 +9095,31 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',' launchDat,
   e: '2024-10-01', customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18 }, review,
-  s: 18 }, review,
-  s: 18}}, realImplementatio,
+  s: 18,}, review,
+  s: 18,}, review,
+  s: 18,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',' launchDat,
   e: '2024-10-01', customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18 }, review,
-  s: 18 } // Quantum Financial Trading Platform ' i,
+  s: 18,}, review,
+  s: 18,} // Quantum Financial Trading Platform ' i,
   d: 'quantum-financial-trading', real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.',' launch_dat,
   e: '2024 - 10 - 01', customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18}, // Quantum Financial Trading Platform; ' i,
+  s: 18,}, // Quantum Financial Trading Platform; ' i,
   d: 'quantum - financial - trading', ' nam,
   e: 'Quantum Financial Trading Platform',' taglin,
   e: 'Quantum AI - powered algorithmic trading with nanosecond precision',' pric,
@@ -9154,15 +9131,15 @@ export const,
   n: '💰',' colo,
   r: 'from-yellow-600 to-orange-700',' textColo,
   r: 'text-yellow-400', ' 'First quantum AI trading platform. 100x faster than traditional systems.', target_audienc,
-  e:  ,' 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions', trial_day,
+  e: ,' 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions', trial_day,
   s: 30,' setup_tim,
   e: '3 - 4 weeks',' categor,
   y: 'Quantum Finance & Trading', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-financial-trading',' marketPositio,
+  s: //ziontechgroup.com/quantum-financial-trading',' marketPositio,
   n: 'First quantum AI trading platform. 100x faster than traditional systems.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-financial-trading',' marketPositio,
+  s: //ziontechgroup.com/quantum-financial-trading',' marketPositio,
   n: 'First quantum AI trading platform. 100x faster than traditional systems.',' targetAudienc,
   e: 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions', trialDay,
   s: 30,' setupTim,
@@ -9199,13 +9176,13 @@ export const,
   e: '2024-09-01', customer,
   s: 12, ratin,
   g: 4 && 4.9, review,
-  s: 15 }, ' i,
+  s: 15,}, ' i,
   d: 'quantum-financial-trading'' nam,
   e: 'Quantum Financial Trading Platform'' taglin,
   e: 'Quantum AI-powered algorithmic trading with nanosecond precision'' pric,
   e: '$7,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.' feature,
+  n: ' 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.' feature,
   s: [' 'Quantum AI trading algorithms'' 'Nanosecond execution speed'' 'Real-time market analysis'' 'Risk management tools'' 'Portfolio optimization'' 'Multi-asset trading'' 'Advanced backtesting'' 'Regulatory compliance'' 'Performance analytics'' 'API for integration'], descriptio,
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.' feature,
   s: [' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance'' 'Performance analyticsAPI for integration' popula,
@@ -9214,9 +9191,9 @@ export const,
   r: 'from-yellow-600 to-orange-700'' textColo,
   r: 'text-yellow-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-financial-trading' marketPositio,
-  n:' 'First quantum AI trading platform. 100x faster than traditional systems.' targetAudienc,
-  e:' 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions', trialDay,
+  s: //ziontechgroup.com/quantum-financial-trading' marketPositio,
+  n: ' 'First quantum AI trading platform. 100x faster than traditional systems.' targetAudienc,
+  e: ' 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions', trialDay,
   s: 30' setupTim,
   e: '3-4 weeks'' categor,
   y: 'Quantum Finance & Trading'' realServic,
@@ -9245,13 +9222,13 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.'' launchDat,
+  implementationDetails: ' 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.'' launchDat,
   e: '2024-09-01' customer,
   s: 12,
   rating: 4.9,
-  reviews: 15}} realImplementatio,
+  reviews: 15,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.'' launchDat,
   e: '2024-09-01' customer,
@@ -9271,7 +9248,7 @@ export const,
   r: 'from-yellow-600 to-orange-700',' textColo,
   r: 'text-yellow-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-financial-trading', marketPositio,
+  s: //ziontechgroup.com/quantum-financial-trading', marketPositio,
   n: ' 'First quantum AI trading platform. 100x faster than traditional systems.', targetAudienc,
   e: ' 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions', trialDay,
   s: 30,' setupTim,
@@ -9304,31 +9281,31 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.',' launchDat,
   e: '2024-09-01', customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15 }, review,
-  s: 15 }, review,
-  s: 15}}, realImplementatio,
+  s: 15,}, review,
+  s: 15,}, review,
+  s: 15,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.',' launchDat,
   e: '2024-09-01', customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15 }, review,
-  s: 15 } // Autonomous Vehicle AI Platform ' i,
+  s: 15,}, review,
+  s: 15,} // Autonomous Vehicle AI Platform ' i,
   d: 'autonomous-vehicle-ai-platform', real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete quantum trading platform with real - time execution, advanced risk management, and comprehensive analytics.',' launch_dat,
   e: '2024 - 09 - 01', customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15}, // Autonomous Vehicle AI Platform; ' i,
+  s: 15,}, // Autonomous Vehicle AI Platform; ' i,
   d: 'autonomous - vehicle - ai - platform', ' nam,
   e: 'Autonomous Vehicle AI Platform',' taglin,
   e: 'Complete AI platform for autonomous vehicles and robotics',' pric,
@@ -9340,15 +9317,15 @@ export const,
   n: '🚗',' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-blue-400', ' 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.', target_audienc,
-  e:  ,' 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies', trial_day,
+  e: ,' 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies', trial_day,
   s: 30,' setup_tim,
   e: '4 - 6 weeks',' categor,
   y: 'Autonomous Vehicles & Robotics', ' lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai',' marketPositio,
+  s: //ziontechgroup.com/autonomous-vehicle-ai',' marketPositio,
   n: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai',' marketPositio,
+  s: //ziontechgroup.com/autonomous-vehicle-ai',' marketPositio,
   n: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',' targetAudienc,
   e: 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies', trialDay,
   s: 30,' setupTim,
@@ -9385,13 +9362,13 @@ export const,
   e: '2024-08-01', customer,
   s: 18, ratin,
   g: 4 && 4.8, review,
-  s: 22 }, ' i,
+  s: 22,}, ' i,
   d: 'autonomous-vehicle-ai-platform'' nam,
   e: 'Autonomous Vehicle AI Platform'' taglin,
   e: 'Complete AI platform for autonomous vehicles and robotics'' pric,
   e: '$4,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.' feature,
+  n: ' 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.' feature,
   s: [' 'Advanced computer vision'' 'Real-time decision making'' 'Sensor fusion algorithms'' 'Path planning & navigation'' 'Obstacle detection & avoidance'' 'Traffic prediction'' 'Safety systems'' 'Fleet management'' 'Performance analytics'' 'API for integration'], descriptio,
   n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.' feature,
   s: [' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management'' 'Performance analyticsAPI for integration' popula,
@@ -9400,9 +9377,9 @@ export const,
   r: 'from-blue-600 to-indigo-700'' textColo,
   r: 'text-blue-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai' marketPositio,
-  n:' 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.' targetAudienc,
-  e:' 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies', trialDay,
+  s: //ziontechgroup.com/autonomous-vehicle-ai' marketPositio,
+  n: ' 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.' targetAudienc,
+  e: ' 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies', trialDay,
   s: 30' setupTim,
   e: '4-6 weeks'' categor,
   y: 'Autonomous Vehicles & Robotics'' realServic,
@@ -9431,13 +9408,13 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.'' launchDat,
+  implementationDetails: ' 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.'' launchDat,
   e: '2024-08-01' customer,
   s: 18,
   rating: 4.8,
-  reviews: 22}} realImplementatio,
+  reviews: 22,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.'' launchDat,
   e: '2024-08-01' customer,
@@ -9457,7 +9434,7 @@ export const,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-blue-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai', marketPositio,
+  s: //ziontechgroup.com/autonomous-vehicle-ai', marketPositio,
   n: ' 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.', targetAudienc,
   e: ' 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies', trialDay,
   s: 30,' setupTim,
@@ -9490,31 +9467,31 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.',' launchDat,
   e: '2024-08-01', customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22 }, review,
-  s: 22 }, review,
-  s: 22}}, realImplementatio,
+  s: 22,}, review,
+  s: 22,}, review,
+  s: 22,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.',' launchDat,
   e: '2024-08-01', customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22 }, review,
-  s: 22 } // Quantum Cybersecurity Platform ' i,
+  s: 22,}, review,
+  s: 22,} // Quantum Cybersecurity Platform ' i,
   d: 'quantum-cybersecurity-platform', real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete autonomous AI platform with computer vision, decision - making algorithms, and safety systems.',' launch_dat,
   e: '2024 - 08 - 01', customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22}, // Quantum Cybersecurity Platform; ' i,
+  s: 22,}, // Quantum Cybersecurity Platform; ' i,
   d: 'quantum - cybersecurity - platform', ' nam,
   e: 'Quantum Cybersecurity Platform',' taglin,
   e: 'Quantum - resistant cybersecurity with AI threat detection',' pric,
@@ -9561,13 +9538,13 @@ export const,
   e: '2024-07-01', customer,
   s: 35, ratin,
   g: 4 && 4.9, review,
-  s: 28 }, ' i,
+  s: 28,}, ' i,
   d: 'quantum-cybersecurity-platform'' nam,
   e: 'Quantum Cybersecurity Platform'' taglin,
   e: 'Quantum-resistant cybersecurity with AI threat detection'' pric,
   e: '$3,999'' perio,
   d: '/month' descriptio,
-  n:' 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.' feature,
+  n: ' 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.' feature,
   s: [' 'Quantum-resistant encryption'' 'AI threat detection'' 'Real-time monitoring'' 'Advanced analytics'' 'Incident response'' 'Compliance tools'' 'Threat intelligence'' 'Vulnerability assessment'' 'Security automation'' 'API for integration'], descriptio,
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.' feature,
   s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment'' 'Security automationAPI for integration' popula,
@@ -9576,9 +9553,9 @@ export const,
   r: 'from-red-600 to-pink-700'' textColo,
   r: 'text-red-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-cybersecurity' marketPositio,
-  n:' 'First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.' targetAudienc,
-  e:' 'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure', trialDay,
+  s: //ziontechgroup.com/quantum-cybersecurity' marketPositio,
+  n: ' 'First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.' targetAudienc,
+  e: ' 'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure', trialDay,
   s: 30' setupTim,
   e: '2-3 weeks'' categor,
   y: 'Quantum Cybersecurity'' realServic,
@@ -9607,13 +9584,13 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.'' launchDat,
+  implementationDetails: ' 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.'' launchDat,
   e: '2024-07-01' customer,
   s: 35,
   rating: 4.9,
-  reviews: 28}} realImplementatio,
+  reviews: 28,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.'' launchDat,
   e: '2024-07-01' customer,
@@ -9633,7 +9610,7 @@ export const,
   r: 'from-red-600 to-pink-700',' textColo,
   r: 'text-red-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-cybersecurity', marketPositio,
+  s: //ziontechgroup.com/quantum-cybersecurity', marketPositio,
   n: ' 'First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.', targetAudienc,
   e: ' 'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure', trialDay,
   s: 30,' setupTim,
@@ -9666,31 +9643,31 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',' launchDat,
   e: '2024-07-01', customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28 }, review,
-  s: 28 }, review,
-  s: 28}}, realImplementatio,
+  s: 28,}, review,
+  s: 28,}, review,
+  s: 28,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',' launchDat,
   e: '2024-07-01', customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28 }, review,
-  s: 28 } // Metaverse AI Development Platform ' i,
+  s: 28,}, review,
+  s: 28,} // Metaverse AI Development Platform ' i,
   d: 'metaverse-ai-development-platform', real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.',' launch_dat,
   e: '2024 - 07 - 01', customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28}, // Metaverse AI Development Platform; ' i,
+  s: 28,}, // Metaverse AI Development Platform; ' i,
   d: 'metaverse - ai - development - platform', ' nam,
   e: 'Metaverse AI Development Platform',' taglin,
   e: 'Complete AI platform for metaverse and virtual world creation',' pric,
@@ -9702,15 +9679,15 @@ export const,
   n: '🌐',' colo,
   r: 'from-purple-600 to-pink-700',' textColo,
   r: 'text-purple-400', ' 'Leading metaverse AI platform. 5x more features than existing solutions.', target_audienc,
-  e:  ,' 'Gaming companies, VR / AR developers, Social platforms, Educational institutions, Entertainment companies', trial_day,
+  e: ,' 'Gaming companies, VR / AR developers, Social platforms, Educational institutions, Entertainment companies', trial_day,
   s: 30,' setup_tim,
   e: '2 - 3 weeks',' categor,
   y: 'Metaverse & Virtual Reality', ' lin,
   k: 'http,
-  s://ziontechgroup.com/metaverse-ai-development',' marketPositio,
+  s: //ziontechgroup.com/metaverse-ai-development',' marketPositio,
   n: 'Leading metaverse AI platform. 5x more features than existing solutions.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/metaverse-ai-development',' marketPositio,
+  s: //ziontechgroup.com/metaverse-ai-development',' marketPositio,
   n: 'Leading metaverse AI platform. 5x more features than existing solutions.',' targetAudienc,
   e: 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies', trialDay,
   s: 30,' setupTim,
@@ -9747,13 +9724,13 @@ export const,
   e: '2024-06-01', customer,
   s: 45, ratin,
   g: 4 && 4.7, review,
-  s: 32 }, ' i,
+  s: 32,}, ' i,
   d: 'metaverse-ai-development-platform'' nam,
   e: 'Metaverse AI Development Platform'' taglin,
   e: 'Complete AI platform for metaverse and virtual world creation'' pric,
   e: '$2,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.' feature,
+  n: ' 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.' feature,
   s: [' 'AI content generation'' 'Virtual world building'' 'Real-time interactions'' 'Avatar customization'' 'Social features'' 'Monetization tools'' 'Analytics dashboard'' 'Multi-platform support'' 'API for integration'' 'Developer tools'], descriptio,
   n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.' feature,
   s: [' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support'' 'API for integrationDeveloper tools' popula,
@@ -9762,9 +9739,9 @@ export const,
   r: 'from-purple-600 to-pink-700'' textColo,
   r: 'text-purple-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/metaverse-ai-development' marketPositio,
-  n:' 'Leading metaverse AI platform. 5x more features than existing solutions.' targetAudienc,
-  e:' 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies', trialDay,
+  s: //ziontechgroup.com/metaverse-ai-development' marketPositio,
+  n: ' 'Leading metaverse AI platform. 5x more features than existing solutions.' targetAudienc,
+  e: ' 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies', trialDay,
   s: 30' setupTim,
   e: '2-3 weeks'' categor,
   y: 'Metaverse & Virtual Reality'' realServic,
@@ -9793,13 +9770,13 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete metaverse AI platform with content generation, world building, and social interaction features.'' launchDat,
+  implementationDetails: ' 'Complete metaverse AI platform with content generation, world building, and social interaction features.'' launchDat,
   e: '2024-06-01' customer,
   s: 45,
   rating: 4.7,
-  reviews: 32}} realImplementatio,
+  reviews: 32,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete metaverse AI platform with content generation, world building, and social interaction features.'' launchDat,
   e: '2024-06-01' customer,
@@ -9819,7 +9796,7 @@ export const,
   r: 'from-purple-600 to-pink-700',' textColo,
   r: 'text-purple-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/metaverse-ai-development', marketPositio,
+  s: //ziontechgroup.com/metaverse-ai-development', marketPositio,
   n: ' 'Leading metaverse AI platform. 5x more features than existing solutions.', targetAudienc,
   e: ' 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies', trialDay,
   s: 30,' setupTim,
@@ -9852,31 +9829,31 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',' launchDat,
   e: '2024-06-01', customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32 }, review,
-  s: 32 }, review,
-  s: 32}}, realImplementatio,
+  s: 32,}, review,
+  s: 32,}, review,
+  s: 32,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',' launchDat,
   e: '2024-06-01', customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32 }, review,
-  s: 32 } // Quantum Internet Security Platform ' i,
+  s: 32,}, review,
+  s: 32,} // Quantum Internet Security Platform ' i,
   d: 'quantum-internet-security-platform', real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete metaverse AI platform with content generation, world building, and social interaction features.',' launch_dat,
   e: '2024 - 06 - 01', customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32}, // Quantum Internet Security Platform; ' i,
+  s: 32,}, // Quantum Internet Security Platform; ' i,
   d: 'quantum - internet - security - platform', ' nam,
   e: 'Quantum Internet Security Platform',' taglin,
   e: 'Quantum - secured internet infrastructure with AI monitoring',' pric,
@@ -9888,15 +9865,15 @@ export const,
   n: '🌍',' colo,
   r: 'from-green-600 to-emerald-700',' textColo,
   r: 'text-green-400', ' 'First quantum internet security platform. 100x more secure than traditional solutions.', target_audienc,
-  e:  ,' 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations', trial_day,
+  e: ,' 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations', trial_day,
   s: 30,' setup_tim,
   e: '3 - 4 weeks',' categor,
   y: 'Quantum Internet & Security', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-internet-security',' marketPositio,
+  s: //ziontechgroup.com/quantum-internet-security',' marketPositio,
   n: 'First quantum internet security platform. 100x more secure than traditional solutions.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-internet-security',' marketPositio,
+  s: //ziontechgroup.com/quantum-internet-security',' marketPositio,
   n: 'First quantum internet security platform. 100x more secure than traditional solutions.',' targetAudienc,
   e: 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations', trialDay,
   s: 30,' setupTim,
@@ -9933,13 +9910,13 @@ export const,
   e: '2024-05-01', customer,
   s: 22, ratin,
   g: 4 && 4.8, review,
-  s: 19 }, ' i,
+  s: 19,}, ' i,
   d: 'quantum-internet-security-platform'' nam,
   e: 'Quantum Internet Security Platform'' taglin,
   e: 'Quantum-secured internet infrastructure with AI monitoring'' pric,
   e: '$4,999'' perio,
   d: '/month' descriptio,
-  n:' 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.' feature,
+  n: ' 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.' feature,
   s: [' 'Quantum key distribution'' 'AI threat monitoring'' 'Real-time protection'' 'Network security'' 'Data encryption'' 'Threat intelligence'' 'Compliance tools'' 'Performance analytics'' 'API for integration'' '24/7 monitoring'], descriptio,
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.' feature,
   s: [' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics'' 'API for integration24/7 monitoring' popula,
@@ -9948,9 +9925,9 @@ export const,
   r: 'from-green-600 to-emerald-700'' textColo,
   r: 'text-green-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-internet-security' marketPositio,
-  n:' 'First quantum internet security platform. 100x more secure than traditional solutions.' targetAudienc,
-  e:' 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations', trialDay,
+  s: //ziontechgroup.com/quantum-internet-security' marketPositio,
+  n: ' 'First quantum internet security platform. 100x more secure than traditional solutions.' targetAudienc,
+  e: ' 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations', trialDay,
   s: 30' setupTim,
   e: '3-4 weeks'' categor,
   y: 'Quantum Internet & Security'' realServic,
@@ -9979,13 +9956,13 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete quantum internet security platform with encryption, monitoring, and protection features.'' launchDat,
+  implementationDetails: ' 'Complete quantum internet security platform with encryption, monitoring, and protection features.'' launchDat,
   e: '2024-05-01' customer,
   s: 22,
   rating: 4.8,
-  reviews: 19}} realImplementatio,
+  reviews: 19,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete quantum internet security platform with encryption, monitoring, and protection features.'' launchDat,
   e: '2024-05-01' customer,
@@ -10005,7 +9982,7 @@ export const,
   r: 'from-green-600 to-emerald-700',' textColo,
   r: 'text-green-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-internet-security', marketPositio,
+  s: //ziontechgroup.com/quantum-internet-security', marketPositio,
   n: ' 'First quantum internet security platform. 100x more secure than traditional solutions.', targetAudienc,
   e: ' 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations', trialDay,
   s: 30,' setupTim,
@@ -10038,31 +10015,31 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',' launchDat,
   e: '2024-05-01', customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19 }, review,
-  s: 19 }, review,
-  s: 19}}, realImplementatio,
+  s: 19,}, review,
+  s: 19,}, review,
+  s: 19,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',' launchDat,
   e: '2024-05-01', customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19 }, review,
-  s: 19 } // AI-Powered Legal Contract Analyzer ' i,
+  s: 19,}, review,
+  s: 19,} // AI-Powered Legal Contract Analyzer ' i,
   d: 'ai-legal-contract-analyzer', real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete quantum internet security platform with encryption, monitoring, and protection features.',' launch_dat,
   e: '2024 - 05 - 01', customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19}, // AI - Powered Legal Contract Analyzer; ' i,
+  s: 19,}, // AI - Powered Legal Contract Analyzer; ' i,
   d: 'ai - legal - contract - analyzer', ' nam,
   e: 'AI Legal Contract Analyzer',' taglin,
   e: 'AI - powered legal document analysis and risk assessment',' pric,
@@ -10076,15 +10053,15 @@ export const,
   n: '⚖️',' colo,
   r: 'from-indigo-600 to-purple-700',' textColo,
   r: 'text-indigo-400', ' 'Leading AI legal platform. 10x faster than traditional legal review.', target_audienc,
-  e:  ,' 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions', trial_day,
+  e: ,' 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions', trial_day,
   s: 30,' setup_tim,
   e: '1 - 2 weeks',' categor,
   y: 'AI Legal Services', ' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-legal-contract-analyzer',' marketPositio,
+  s: //ziontechgroup.com/ai-legal-contract-analyzer',' marketPositio,
   n: 'Leading AI legal platform. 10x faster than traditional legal review.', ' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-legal-contract-analyzer',' marketPositio,
+  s: //ziontechgroup.com/ai-legal-contract-analyzer',' marketPositio,
   n: 'Leading AI legal platform. 10x faster than traditional legal review.',' targetAudienc,
   e: 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions', trialDay,
   s: 30,' setupTim,
@@ -10121,13 +10098,13 @@ export const,
   e: '2024-04-01', customer,
   s: 65, ratin,
   g: 4 && 4.6, review,
-  s: 45 }, ' i,
+  s: 45,}, ' i,
   d: 'ai-legal-contract-analyzer'' nam,
   e: 'AI Legal Contract Analyzer'' taglin,
   e: 'AI-powered legal document analysis and risk assessment'' pric,
   e: '$1,999'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.' feature,
+  n: ' 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.' feature,
   s: [' 'AI contract analysis'' 'Risk assessment'' 'Compliance checking'' 'Legal research'' 'Document comparison'' 'Clause extraction'' 'Legal analytics'' 'Team collaboration'' 'API for integration'' 'Mobile app support'], descriptio,
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.' feature,
   s: [' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration'' 'API for integrationMobile app support' popula,
@@ -10136,9 +10113,9 @@ export const,
   r: 'from-indigo-600 to-purple-700'' textColo,
   r: 'text-indigo-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-legal-contract-analyzer' marketPositio,
-  n:' 'Leading AI legal platform. 10x faster than traditional legal review.' targetAudienc,
-  e:' 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions', trialDay,
+  s: //ziontechgroup.com/ai-legal-contract-analyzer' marketPositio,
+  n: ' 'Leading AI legal platform. 10x faster than traditional legal review.' targetAudienc,
+  e: ' 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions', trialDay,
   s: 30' setupTim,
   e: '1-2 weeks'' categor,
   y: 'AI Legal Services'' realServic,
@@ -10167,13 +10144,13 @@ export const,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Complete AI legal platform with document analysis, risk assessment, and compliance features.'' launchDat,
+  implementationDetails: ' 'Complete AI legal platform with document analysis, risk assessment, and compliance features.'' launchDat,
   e: '2024-04-01' customer,
   s: 65,
   rating: 4.6,
-  reviews: 45}} realImplementatio,
+  reviews: 45,}} realImplementatio,
   n: true' implementationDetail,
   s: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.'' launchDat,
   e: '2024-04-01' customer,
@@ -10193,7 +10170,7 @@ export const,
   r: 'from-indigo-600 to-purple-700',' textColo,
   r: 'text-indigo-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-legal-contract-analyzer', marketPositio,
+  s: //ziontechgroup.com/ai-legal-contract-analyzer', marketPositio,
   n: ' 'Leading AI legal platform. 10x faster than traditional legal review.', targetAudienc,
   e: ' 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions', trialDay,
   s: 30,' setupTim,
@@ -10226,24 +10203,24 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.',' launchDat,
   e: '2024-04-01', customer,
   s: 65, ratin,
   g: 4.6, review,
-  s: 45 }, review,
-  s: 45 }, review,
-  s: 45}}, realImplementatio,
+  s: 45,}, review,
+  s: 45,}, review,
+  s: 45,}}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.',' launchDat,
   e: '2024-04-01', customer,
   s: 65, ratin,
   g: 4.6, review,
-  s: 45 }, review,
-  s: 45 } // Quantum IoT Platform ' nam,
+  s: 45,}, review,
+  s: 45,} // Quantum IoT Platform ' nam,
   e: 'Quantum IoT Platform',' taglin,
   e: 'Quantum - secured IoT platform with AI edge computing',' pric,
   e: '$2, 999',' perio,
@@ -10252,11 +10229,11 @@ export const,
   n: '📱',' colo,
   r: 'from-blue-600 to-cyan-700',' textColo,
   r: 'text-blue-400', descriptio,
-  n:  ,' 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real - time AI processing and quantum encryption.', feature,
+  n: ,' 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real - time AI processing and quantum encryption.', feature,
   s: [,' 'Quantum device security',' 'AI edge computing',' 'Real - time processing',' 'Device management',' 'Data analytics',' 'Security monitoring',' 'Scalability tools',' 'API for integration',' 'Mobile app support', ' 'Smart cities',' 'Industrial IoT',' 'Healthcare monitoring',' 'Consumer devices',' 'Security systems'],' ro,
   i: '600% ROI through security improvements and operational efficiency', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-iot-platform',' marketPositio,
+  s: //ziontechgroup.com/quantum-iot-platform',' marketPositio,
   n: 'First quantum IoT platform. 100x more secure than traditional solutions.',' targetAudienc,
   e: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics', trialDay,
   s: 30,' setupTim,
@@ -10284,13 +10261,13 @@ export const,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ratin,
   g: 4.7, review,
-  s: 26} ], ' growthRat,
+  s: 26,} ], ' growthRat,
   e: '250% annual growth',' varian,
   t: 'quantum-iot-futuristic', contactInf,
   o: ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}, realImplementatio,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum IoT platform with security, edge computing, and device management features.',' launchDat,
   e: '2024-03-01', customer,
@@ -10302,7 +10279,7 @@ export const,
   r: "from - purple - 600 to - indigo - 700", text_colo,"
   r: "text - purple - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - ai - brain - computer - interface", market_positio,"
+  s: //ziontechgroup.com / quantum - ai - brain - computer - interface", market_positio,"
   n: "Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.", target_audienc,"
   e: "Research institutions, Medical centers, Defense contractors, Tech companies, Universities", trial_day,
   s: 30, setup_tim,"
@@ -10318,7 +10295,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Fully functional quantum AI platform with neural interface capabilities, real - time processing, and advanced security features.", launch_dat,"
   e: "2024 - 12 - 01", customer,
@@ -10336,7 +10313,7 @@ export const,
   r: "from - cyan - 600 to - blue - 700", text_colo,"
   r: "text - cyan - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / space - technology", market_positio,"
+  s: //ziontechgroup.com / space - technology", market_positio,"
   n: "First comprehensive commercial space platform. 5x more features than existing solutions.", target_audienc,"
   e: "Space companies, Satellite operators, Launch providers, Government agencies, Research institutions", trial_day,
   s: 30, setup_tim,"
@@ -10352,7 +10329,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete space operations platform with real - time tracking, mission planning tools, and regulatory compliance features.", launch_dat,"
   e: "2024 - 11 - 15", customer,
@@ -10370,7 +10347,7 @@ export const,
   r: "from - emerald - 600 to - teal - 700", text_colo,"
   r: "text - emerald - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / biotech - ai", market_positio,"
+  s: //ziontechgroup.com / biotech - ai", market_positio,"
   n: "Leading AI drug discovery platform. 5x faster than traditional methods.", target_audienc,"
   e: "Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs", trial_day,
   s: 30, setup_tim,"
@@ -10386,7 +10363,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.", launch_dat,"
   e: "2024 - 10 - 01", customer,
@@ -10404,7 +10381,7 @@ export const,
   r: "from - yellow - 600 to - orange - 700", text_colo,"
   r: "text - yellow - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - financial - trading", market_positio,"
+  s: //ziontechgroup.com / quantum - financial - trading", market_positio,"
   n: "First quantum AI trading platform. 100x faster than traditional systems.", target_audienc,"
   e: "Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions", trial_day,
   s: 30, setup_tim,"
@@ -10420,7 +10397,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete quantum trading platform with real - time execution, advanced risk management, and comprehensive analytics.", launch_dat,"
   e: "2024 - 09 - 01", customer,
@@ -10438,7 +10415,7 @@ export const,
   r: "from - blue - 600 to - indigo - 700", text_colo,"
   r: "text - blue - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / autonomous - vehicle - ai", market_positio,"
+  s: //ziontechgroup.com / autonomous - vehicle - ai", market_positio,"
   n: "Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.", target_audienc,"
   e: "Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies", trial_day,
   s: 30, setup_tim,"
@@ -10454,7 +10431,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete autonomous AI platform with computer vision, decision - making algorithms, and safety systems.", launch_dat,"
   e: "2024 - 08 - 01", customer,
@@ -10472,7 +10449,7 @@ export const,
   r: "from - red - 600 to - pink - 700", text_colo,"
   r: "text - red - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - cybersecurity", market_positio,"
+  s: //ziontechgroup.com / quantum - cybersecurity", market_positio,"
   n: "First quantum - resistant cybersecurity platform. 100x more secure than traditional solutions.", target_audienc,"
   e: "Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure", trial_day,
   s: 30, setup_tim,"
@@ -10488,7 +10465,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.", launch_dat,"
   e: "2024 - 07 - 01", customer,
@@ -10506,7 +10483,7 @@ export const,
   r: "from - purple - 600 to - pink - 700", text_colo,"
   r: "text - purple - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / metaverse - ai - development", market_positio,"
+  s: //ziontechgroup.com / metaverse - ai - development", market_positio,"
   n: "Leading metaverse AI platform. 5x more features than existing solutions.", target_audienc,"
   e: "Gaming companies, VR / AR developers, Social platforms, Educational institutions, Entertainment companies", trial_day,
   s: 30, setup_tim,"
@@ -10522,7 +10499,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete metaverse AI platform with content generation, world building, and social interaction features.", launch_dat,"
   e: "2024 - 06 - 01", customer,
@@ -10540,7 +10517,7 @@ export const,
   r: "from - green - 600 to - emerald - 700", text_colo,"
   r: "text - green - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - internet - security", market_positio,"
+  s: //ziontechgroup.com / quantum - internet - security", market_positio,"
   n: "First quantum internet security platform. 100x more secure than traditional solutions.", target_audienc,"
   e: "Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations", trial_day,
   s: 30, setup_tim,"
@@ -10556,7 +10533,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete quantum internet security platform with encryption, monitoring, and protection features.", launch_dat,"
   e: "2024 - 05 - 01", customer,
@@ -10574,7 +10551,7 @@ export const,
   r: "from - indigo - 600 to - purple - 700", text_colo,"
   r: "text - indigo - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / ai - legal - contract - analyzer", market_positio,"
+  s: //ziontechgroup.com / ai - legal - contract - analyzer", market_positio,"
   n: "Leading AI legal platform. 10x faster than traditional legal review.", target_audienc,"
   e: "Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions", trial_day,
   s: 30, setup_tim,"
@@ -10590,7 +10567,7 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete AI legal platform with document analysis, risk assessment, and compliance features.", launch_dat,"
   e: "2024 - 04 - 01", customer,
@@ -10608,7 +10585,7 @@ export const,
   r: "from - blue - 600 to - cyan - 700", text_colo,"
   r: "text - blue - 400", lin,"
   k: "http,"
-  s://ziontechgroup.com / quantum - iot - platform", market_positio,"
+  s: //ziontechgroup.com / quantum - iot - platform", market_positio,"
   n: "First quantum IoT platform. 100x more secure than traditional solutions.", target_audienc,"
   e: "IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics", trial_day,
   s: 30, setup_tim,"
@@ -10624,21 +10601,21 @@ export const,
   l: "kleber@ziontechgroup && ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
   e: "http,"
-  s://ziontechgroup && ziontechgroup.com"}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com",}, real_implementatio,
   n: true, implementation_detail,"
   s: "Complete quantum IoT platform with security, edge computing, and device management features.",' launch_dat,"
   e: "2024 - 03 - 01', customer,
   s: 38, ratin,
   g: 4 && 4.7, review,
-  s: 26]}}' websit,
+  s: 26],}}' websit,
   e: 'http,
-  s://ziontechgroup.com' }, real_implementatio,
+  s: //ziontechgroup.com',}, real_implementatio,
   n: true,' implementation_detail,
   s: 'Complete quantum IoT platform with security, edge computing, and device management features.',' launch_dat,
   e: '2024 - 03 - 01', customer,
   s: 38]], ratin,
   g: 4.7, review,
-  s: 26} ]' i,
+  s: 26,} ]' i,
   d: 'quantum-iot-platform',' nam,
   e: 'Quantum IoT Platform',' taglin,
   e: 'Quantum-secured IoT platform with AI edge computing',' pric,
@@ -10653,7 +10630,7 @@ export const,
   r: 'from-blue-600 to-cyan-700',' textColo,
   r: 'text-blue-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-iot-platform', marketPositio,
+  s: //ziontechgroup.com/quantum-iot-platform', marketPositio,
   n: ' 'First quantum IoT platform. 100x more secure than traditional solutions.', targetAudienc,
   e: ' 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics', trialDay,
   s: 30,' setupTim,
@@ -10669,7 +10646,7 @@ export const,
   e: true, technolog,
   y: [' 'Quantum Computing',' 'AI/ML', marketPositio,
   n: ' 'First quantum IoT platform. 100x more secure than traditional solutions.' targetAudienc,
-  e:' 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics', trialDay,
+  e: ' 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics', trialDay,
   s: 30' setupTim,
   e: '2-3 weeks'' categor,
   y: 'Quantum IoT & Edge Computing'' realServic,
@@ -10683,17 +10660,17 @@ export const,
   technology: [' 'Quantum Computing'' 'AI/ML'' 'IoT'' 'Edge Computing'' 'Blockchain' ] integration,
   s: [' 'IoT devices'' 'Cloud platforms'' 'Security tools'' 'Analytics platforms' ] useCase,
   s: [' 'First quantum IoT platform. 100x more secure than traditional solutions.', target_audienc,
-  e:  ,' 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics', trial_day,
+  e: ,' 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics', trial_day,
   s: 30,' setup_tim,
   e: '2 - 3 weeks',' categor,
   y: 'Quantum IoT & Edge Computing',' 'Quantum Computing',' 'AI / ML',' 'IoT',' 'Edge Computing',' 'Blockchain'],' 'IoT devices',' 'Cloud platforms',' 'Security tools',' 'Analytics platforms'], use_case,
   s: [,' 'Smart cities',' 'Industrial IoT',' 'Healthcare monitoring',' 'Consumer devices',' 'Security systems'],' ro,
   i: '600% ROI through security improvements and operational efficiency', ' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-iot-platform',' marketPositio,
+  s: //ziontechgroup.com/quantum-iot-platform',' marketPositio,
   n: 'First quantum IoT platform. 100x more secure than traditional solutions.', lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-iot-platform', ' targetAudienc,
+  s: //ziontechgroup.com/quantum-iot-platform', ' targetAudienc,
   e: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics', trialDay,
   s: 30,' setupTim,
   e: '2-3 weeks',' categor,
@@ -10730,193 +10707,193 @@ export const,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
   e: 'http,
-  s://ziontechgroup.com',' websit,
+  s: //ziontechgroup.com',' websit,
   e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
+  s: //ziontechgroup.com',}, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum IoT platform with security, edge computing, and device management features.',' launchDat,
   e: '2024-03-01', customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26 , export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing, {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 26, export const,
+  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing, {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.';' launchDat,
   e: '2024-12-01', customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8} // Space Technology Platform; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 8,} // Space Technology Platform; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.';' launchDat,
   e: '2024-11-15', customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12} // Biotech AI Platform; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 12,} // Biotech AI Platform; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.';' launchDat,
   e: '2024-10-01', customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18} // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 18,} // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.';' launchDat,
   e: '2024-09-01', customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15} // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 15,} // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.';' launchDat,
   e: '2024-08-01', customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22} // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 22,} // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.';' launchDat,
   e: '2024-07-01', customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28} // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 28,} // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete metaverse AI platform with content generation, world building, and social interaction features.';' launchDat,
   e: '2024-06-01', customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32} // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 32,} // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum internet security platform with encryption, monitoring, and protection features.';' launchDat,
   e: '2024-05-01', customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19} // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 19,} // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete AI legal platform with document analysis, risk assessment, and compliance features.';' launchDat,
   e: '2024-04-01', customer,
   s: 65, ratin,
   g: 4.6, review,
-  s: 45} // Quantum IoT Platform; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 45,} // Quantum IoT Platform; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum IoT platform with security, edge computing, and device management features.';' launchDat,
   e: '2024-03-01', customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26} ]; review,
-  s: 26} ];export const,
+  s: 26,} ]; review,
+  s: 26,} ];export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [, review,
-  s: 26 , export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing, {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 26, export const,
+  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing, {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.", launchDat,"
   e: "2024-12-01", customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8,}, // Space Technology Platform; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 8,}, // Space Technology Platform; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.", launchDat,"
   e: "2024-11-15", customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12,}, // Biotech AI Platform; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 12,}, // Biotech AI Platform; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.", launchDat,"
   e: "2024-10-01", customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18,}, // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 18,}, // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.", launchDat,"
   e: "2024-09-01", customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15,}, // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 15,}, // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.", launchDat,"
   e: "2024-08-01", customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22,}, // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 22,}, // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.", launchDat,"
   e: "2024-07-01", customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28,}, // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 28,}, // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete metaverse AI platform with content generation, world building, and social interaction features.", launchDat,"
   e: "2024-06-01", customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32,}, // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 32,}, // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum internet security platform with encryption, monitoring, and protection features.", launchDat,"
   e: "2024-05-01", customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19,}, // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 19,}, // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete AI legal platform with document analysis, risk assessment, and compliance features.", launchDat,"
   e: "2024-04-01", customer,
   s: 65, ratin,
   g: 4.6, review,
-  s: 45,}, // Quantum IoT Platform; {/* TODO: Fix JSX expression */}"
-  s://ziontechgroup.com"} }, realImplementatio,
+  s: 45,}, // Quantum IoT Platform; {/* TODO: Fix JSX expression */,}"
+  s: //ziontechgroup.com",} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum IoT platform with security, edge computing, and device management features.",' launchDat,"
   e: "2024-03-01', customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26]}} }, realImplementatio,
+  s: 26],}} }, realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum IoT platform with security, edge computing, and device management features.',' launchDat,
   e: '2024-03-01', customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26 } ]} ]; '"
+  s: 26,} ]} ]; '"

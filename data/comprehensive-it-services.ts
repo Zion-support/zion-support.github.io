@@ -27,7 +27,7 @@ export interface ComprehensiveITService {id: string;
   variant: string
   contact_info: unknown
     mobile: string,
-    email: string}
+    email: string,}
     address: string,
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
@@ -39,8 +39,8 @@ export interface ComprehensiveITService {id: string;
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
     market_position: unknown,
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  l: string}
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */,}
+  l: string,}
     addres,
   s: string,
     i,
@@ -61,7 +61,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   r: 'text - blue - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - cloud - infrastructure',
+  s: //ziontechgroup.com / quantum - cloud - infrastructure',
     market_positio,
   n: unknown,
       'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.',
@@ -100,7 +100,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   r: 'text - gray - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / enterprise - it - infrastructure',
+  s: //ziontechgroup.com / enterprise - it - infrastructure',
     market_positio,
   n: unknown,
       'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
@@ -150,7 +150,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'}
+      website: 'https://ziontechgroup && ziontechgroup.com',}
     },
     real_implementation: true
     implementation_details: unknown,
@@ -179,7 +179,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}
+  s: //ziontechgroup && ziontechgroup.com',}
     },
     real_implementatio,
   n: true,
@@ -193,7 +193,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.9,
     review,
-  s: 32},
+  s: 32,},
     i,
   d: 'ai - powered - devops - automation',
     nam,
@@ -244,7 +244,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   r: 'text - green - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - devops - automation',
+  s: //ziontechgroup.com / ai - powered - devops - automation',
     market_positio,
   n: unknown,
       'Advanced AI - powered DevOps automation. Competitors like GitLab CI / CD and Jenkins lack AI optimization capabilities.',
@@ -341,7 +341,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   r: 'text - blue - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - migration - optimization',
+  s: //ziontechgroup.com / cloud - migration - optimization',
     market_positio,
   n: unknown,
       'Competes with AWS Professional Services ($200 / hour), Microsoft Consulting ($250 / hour), and Google Cloud ($180 / hour). Our,
@@ -399,7 +399,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
     id: 'quantum - cybersecurity - suite',
@@ -424,7 +424,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -478,7 +478,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   r: 'text - red - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - cybersecurity - suite',
+  s: //ziontechgroup.com / quantum - cybersecurity - suite',
     market_positio,
   n: unknown,
       'First - to - market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.',
@@ -553,7 +553,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 12},
+  s: 12,},
       '24/7 threat monitoring',
       'AI-powered threat detection',
   // Cybersecurity Operations Center;
@@ -612,7 +612,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   r: 'text - red - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / cybersecurity - operations - center',
+  s: //ziontechgroup.com / cybersecurity - operations - center',
     market_positio,
   n: unknown,
       'Competes with CrowdStrike Falcon Complete ($8.99 / user / month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6 / user / month). Our,
@@ -669,7 +669,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
   id: string, name: string,
@@ -750,7 +750,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -802,7 +802,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     addres,
   s: string,
     websit,
-  e: string},
+  e: string,},
     realImplementatio,
   n: boolean, implementationDetail,
   s: string,
@@ -812,7 +812,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services,
@@ -839,7 +839,7 @@ export const,
   r: 'text-gray-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/enterprise-it-infrastructure',
+  s: //ziontechgroup.com/enterprise-it-infrastructure',
     marketPositio,
   n: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.',
@@ -880,7 +880,7 @@ export const,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 24},
+  s: 24,},
   // Data Center Management Services;
     i,
   d: 'data - center - management',
@@ -931,7 +931,7 @@ export const,
   r: 'text - green - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / data - center - management',
+  s: //ziontechgroup.com / data - center - management',
     market_positio,
   n: unknown,
       'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
@@ -988,7 +988,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24 / 7 operations center and strategic consulting.',
@@ -1012,7 +1012,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1025,7 +1025,7 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 11},
+  s: 11,},
       'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99 && 99.9% network availability.',
     feature,
   s: [,
@@ -1088,7 +1088,7 @@ export const,
   r: 'text - indigo - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / network - security - sdwan',
+  s: //ziontechgroup.com / network - security - sdwan',
     market_positio,
   n: unknown,
       'Competes with Cisco SD - WAN ($50K+), VMware SD - WAN ($40K+), and Fortinet ($35K+). Our,
@@ -1145,7 +1145,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional network security and SD - WAN management service with comprehensive security integration and network optimization capabilities. Includes 24 / 7 network support and monitoring.',
@@ -1177,7 +1177,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1190,7 +1190,7 @@ export const,
     ratin,
   g: 4 && 4.6,
     review,
-  s: 19},
+  s: 19,},
   // IT Project Management Services;
     i,
   d: 'it - project - management',
@@ -1241,7 +1241,7 @@ export const,
   r: 'text - orange - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / it - project - management',
+  s: //ziontechgroup.com / it - project - management',
     market_positio,
   n: unknown,
       'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
@@ -1291,7 +1291,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',
@@ -1327,7 +1327,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1340,7 +1340,7 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 32},
+  s: 32,},
   // IT Training & Certification Services;
     i,
   d: 'it - training - certification',
@@ -1391,7 +1391,7 @@ export const,
   r: 'text - purple - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / it - training - certification',
+  s: //ziontechgroup.com / it - training - certification',
     market_positio,
   n: unknown,
       'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
@@ -1448,7 +1448,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24 / 7 support.',
@@ -1479,7 +1479,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1492,7 +1492,7 @@ export const,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 89},
+  s: 89,},
     i,
   d: 'quantum - cloud - infrastructure',
     nam,
@@ -1545,7 +1545,7 @@ export const,
   r: 'text - blue - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - cloud - infrastructure',
+  s: //ziontechgroup.com / quantum - cloud - infrastructure',
     market_positio,
   n: unknown,
       'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.',
@@ -1600,7 +1600,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',
@@ -1632,7 +1632,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1645,7 +1645,7 @@ export const,
     ratin,
   g: 4 && 4.9,
     review,
-  s: 32},
+  s: 32,},
       'AI-powered deployment optimization',
     i,
   d: 'ai - powered - devops - automation',
@@ -1696,7 +1696,7 @@ export const,
   r: 'text - green - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - devops - automation',
+  s: //ziontechgroup.com / ai - powered - devops - automation',
     market_positio,
   n: unknown,
       'Advanced AI - powered DevOps automation. Competitors like GitLab CI / CD and Jenkins lack AI optimization capabilities.',
@@ -1750,7 +1750,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Comprehensive AI - powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.',
@@ -1785,7 +1785,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1798,7 +1798,7 @@ export const,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 245},
+  s: 245,},
     i,
   d: 'quantum - cybersecurity - suite',
     nam,
@@ -1848,7 +1848,7 @@ export const,
   r: 'text - red - 400',
     lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - cybersecurity - suite',
+  s: //ziontechgroup.com / quantum - cybersecurity - suite',
     market_positio,
   n: unknown,
       'First - to - market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.',
@@ -1904,7 +1904,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
@@ -1985,7 +1985,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1998,7 +1998,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     ratin,
   g: 4 && 4.9,
     review,
-  s: 156}];      mobil,
+  s: 156,}];      mobil,
   e: '+1 302 464 0950'
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'
@@ -2101,7 +2101,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     addres,
   s: string,
     websit,
-  e: string},
+  e: string,},
     realImplementatio,
   n: boolean, implementationDetail,
   s: string,
@@ -2111,7 +2111,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services,
@@ -2152,7 +2152,7 @@ export const,
   r: 'text-gray-400',
     lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/enterprise-it-infrastructure',
+  s: //ziontechgroup && ziontechgroup.com/enterprise-it-infrastructure',
     marketPositio,
   n: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.',
@@ -2229,8 +2229,8 @@ export const,
   contactInfo: {,
     mobile: string
     email: string,
-    address: string}
-    website: string}
+    address: string,}
+    website: string,}
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -2310,10 +2310,10 @@ export const,
   varian,
   t: string,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string}
+  o: {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
   }
   realImplementatio,
   n: boolean,
@@ -2326,7 +2326,7 @@ export const,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [;
   // Enterprise IT Infrastructure Services;
@@ -2359,22 +2359,22 @@ export const,
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'],
     marketSize: '$1.2 T IT services market, 8% annual growth';
     growthRate: '8% annual growth',
-    variant: 'enterprise-futuristic'}
-    contactInfo: {}
+    variant: 'enterprise-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     real_implementation: true,
     implementation_details: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launch_date: '2024 - 09 - 15'
     customers: 180
     rating: 4.9
     reviews: 156,
-  {/* TODO: Fix JSX expression */}
-  t: 'enterprise-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'enterprise-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -2383,7 +2383,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     real_implementatio,
   n: true,
@@ -2396,8 +2396,8 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 156}
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
+  s: 156,}
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */,}
   }
 ];
 }
@@ -2420,8 +2420,7 @@ realImplementation: true,
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
+  s: 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
     launchDat,
   e: '2024-02-01'
     customer,
@@ -2429,7 +2428,7 @@ realImplementation: true,
     ratin,
   g: 4.7,
     review,
-  s: 12}
+  s: 12,}
   // Cybersecurity Operations Center,
   id: 'cybersecurity-operations-center'
     nam,
@@ -2441,8 +2440,7 @@ realImplementation: true,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.'
+  n: 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.'
     feature,
   s: [
       '24/7 threat monitoring'
@@ -2476,12 +2474,10 @@ realImplementation: true,
   k: 'http,
   s://ziontechgroup.com/cybersecurity-operations-center'
     marketPositio,
-  n:
-      'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6/user/month). Our,
+  n: 'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6/user/month). Our,
   advantage: Comprehensive SOC services and AI threat detection.'
     targetAudienc,
-  e:
-      'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations'
+  e: 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations'
     trialDay,
   s: 0,
     setupTim,
@@ -2531,7 +2527,7 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.'
@@ -2572,13 +2568,12 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.'
+  s: 'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.'
     launchDat,
   e: '2024-01-15'
     customer,
@@ -2586,7 +2581,7 @@ realImplementation: true,
     ratin,
   g: 4.8,
     review,
-  s: 24}
+  s: 24,}
   // Data Center Management Services,
   id: 'data-center-management'
     nam,
@@ -2598,8 +2593,7 @@ realImplementation: true,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.'
+  n: 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.'
     feature,
   s: [
       'Data center infrastructure management'
@@ -2633,12 +2627,10 @@ realImplementation: true,
   k: 'http,
   s://ziontechgroup.com/data-center-management'
     marketPositio,
-  n:
-      'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
+  n: 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
   advantage: Comprehensive management and AI optimization.'
     targetAudienc,
-  e:
-      'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies'
+  e: 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies'
     trialDay,
   s: 0,
     setupTim,
@@ -2688,7 +2680,7 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.'
     launchDate: '2024-01-20'
@@ -2731,7 +2723,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -2744,7 +2736,7 @@ realImplementation: true,
     ratin,
   g: 4.7,
     review,
-  s: 11}
+  s: 11,}
   // Network Security & SD-WAN Services,
   id: 'network-security-sdwan'
     nam,
@@ -2756,8 +2748,7 @@ realImplementation: true,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.'
+  n: 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.'
     feature,
   s: [
       'SD-WAN implementation'
@@ -2791,12 +2782,10 @@ realImplementation: true,
   k: 'http,
   s://ziontechgroup.com/network-security-sdwan'
     marketPositio,
-  n:
-      'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our,
+  n: 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our,
   advantage: Comprehensive security integration and competitive pricing.'
     targetAudienc,
-  e:
-      'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions'
+  e: 'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions'
     trialDay,
   s: 0,
     setupTim,
@@ -2846,7 +2835,7 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.'
     launchDate: '2024-02-15'
@@ -2886,7 +2875,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -2899,7 +2888,7 @@ realImplementation: true,
     ratin,
   g: 4.6,
     review,
-  s: 19}
+  s: 19,}
   // IT Project Management Services,
   id: 'it-project-management'
     nam,
@@ -2911,8 +2900,7 @@ realImplementation: true,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.'
+  n: 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.'
     feature,
   s: [
       'Project planning and management'
@@ -2946,12 +2934,10 @@ realImplementation: true,
   k: 'http,
   s://ziontechgroup.com/it-project-management'
     marketPositio,
-  n:
-      'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
+  n: 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
   advantage: Specialized IT focus and competitive pricing.'
     targetAudienc,
-  e:
-      'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery'
+  e: 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery'
     trialDay,
   s: 0,
     setupTim,
@@ -2996,7 +2982,7 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.'
     launchDate: '2024-01-10'
@@ -3032,7 +3018,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -3045,7 +3031,7 @@ realImplementation: true,
     ratin,
   g: 4.7,
     review,
-  s: 32}
+  s: 32,}
   // IT Training & Certification Services,
   id: 'it-training-certification'
     nam,
@@ -3057,8 +3043,7 @@ realImplementation: true,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.'
+  n: 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.'
     feature,
   s: [
       'Comprehensive IT training'
@@ -3092,12 +3077,10 @@ realImplementation: true,
   k: 'http,
   s://ziontechgroup.com/it-training-certification'
     marketPositio,
-  n:
-      'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
+  n: 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
   advantage: Comprehensive training and competitive pricing.'
     targetAudienc,
-  e:
-      'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions'
+  e: 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions'
     trialDay,
   s: 7,
     setupTim,
@@ -3147,7 +3130,7 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.'
     launchDate: '2024-01-05'
@@ -3186,7 +3169,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -3199,7 +3182,7 @@ realImplementation: true,
     ratin,
   g: 4.8,
     review,
-  s: 89}
+  s: 89,}
     i,
   d: 'quantum-cloud-infrastructure'
     nam,
@@ -3211,8 +3194,7 @@ realImplementation: true,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.'
+  n: 'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.'
     feature,
   s: [
       'Quantum computing resources'
@@ -3244,8 +3226,7 @@ realImplementation: true,
   k: 'http,
   s://ziontechgroup.com/quantum-cloud-infrastructure'
     marketPositio,
-  n:
-      'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.'
+  n: 'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.'
     targetAudienc,
   e: 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies'
     trialDay,
@@ -3296,7 +3277,7 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.'
@@ -3335,13 +3316,12 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.'
+  s: 'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.'
     launchDat,
   e: '2024-11-15'
     customer,
@@ -3349,7 +3329,7 @@ realImplementation: true,
     ratin,
   g: 4.9,
     review,
-  s: 32}
+  s: 32,}
     i,
   d: 'ai-powered-devops-automation'
     nam,
@@ -3361,8 +3341,7 @@ realImplementation: true,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.'
+  n: 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.'
     feature,
   s: [
       'AI-powered deployment optimization'
@@ -3397,8 +3376,7 @@ realImplementation: true,
     marketPositio,
   n: 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.'
     targetAudienc,
-  e:
-      'DevOps teams, Engineering organizations, Tech companies, Enterprisestups'
+  e: 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups'
     trialDay,
   s: 21,
     setupTim,
@@ -3448,7 +3426,7 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.'
@@ -3485,13 +3463,12 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.'
+  s: 'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.'
     launchDat,
   e: '2024-10-01'
     customer,
@@ -3499,7 +3476,7 @@ realImplementation: true,
     ratin,
   g: 4.8,
     review,
-  s: 245}
+  s: 245,}
     i,
   d: 'quantum-cybersecurity-suite'
     nam,
@@ -3603,7 +3580,7 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
@@ -3621,7 +3598,7 @@ realImplementation: true,
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launchDate: '2024-09-15'
@@ -3638,8 +3615,7 @@ realImplementation: true,
       'Traditional security tools'
     ]
     marketSiz,
-  e:
-      '$150B cybersecurity market, quantum segment growing 400% annually'
+  e: '$150B cybersecurity market, quantum segment growing 400% annually'
     growthRat,
   e: '400% annual growth'
     varian,
@@ -3653,39 +3629,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
-    }
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s:
-      'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
-    launchDat,
-  e: '2024-09-15'
-    customer,
-  s: 180,
-    ratin,
-  g: 4.9,
-    review,
-  s: 156}
-      'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
-    launchDat,
-  e: '2024-09-15',
-    customer,
-  s: 180,
-    ratin,
-  g: 4.9,
-    review,
-  s: 156}
-];      mobil,
-  e: '+1 302 464 0950'
-      emai,
-  l: 'kleber@ziontechgroup.com'
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
-      websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -3698,12 +3642,43 @@ realImplementation: true,
     ratin,
   g: 4.9,
     review,
-  s: 156}
+  s: 156,}
+      'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
+    launchDat,
+  e: '2024-09-15',
+    customer,
+  s: 180,
+    ratin,
+  g: 4.9,
+    review,
+  s: 156,}
+];      mobil,
+  e: '+1 302 464 0950'
+      emai,
+  l: 'kleber@ziontechgroup.com'
+      addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709'
+      websit,
+  e: 'http,
+  s: //ziontechgroup.com',
+    }
+    realImplementatio,
+  n: true,
+    implementationDetail,
+  s: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
+    launchDat,
+  e: '2024-09-15'
+    customer,
+  s: 180,
+    ratin,
+  g: 4.9,
+    review,
+  s: 156,}
 ];
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */,}
+  s: string,}
     websit,
-  e: string}
+  e: string,}
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -3722,7 +3697,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [;
   // Enterprise IT Infrastructure Services;
@@ -3755,12 +3730,12 @@ export const,
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'],
     marketSize: '$1.2 T IT services market, 8% annual growth';
     growthRate: '8% annual growth',
-    variant: 'enterprise-futuristic'}
-    contactInfo: {}
+    variant: 'enterprise-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.';
     launchDate: '2024-01-01';
@@ -3798,12 +3773,12 @@ export const,
     competitors: ['AWS Professional ServicesMicrosoft ConsultingGoogle CloudAccentureDeloitte'],
     marketSize: '$400 B cloud services market, 20% annual growth';
     growthRate: '20% annual growth',
-    variant: 'cloud-futuristic'}
-    contactInfo: {}
+    variant: 'cloud-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.';
     launchDate: '2024-02-01';
@@ -3841,12 +3816,12 @@ export const,
     competitors: ['CrowdStrike Falcon CompletePalo Alto Networks CortexSentinelOne VigilanceCarbon BlackCylance'],
     marketSize: '$200 B cybersecurity market, 15% annual growth';
     growthRate: '15% annual growth',
-    variant: 'cybersecurity-futuristic'}
-    contactInfo: {}
+    variant: 'cybersecurity-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.';
     launchDate: '2024-01-15';
@@ -3884,12 +3859,12 @@ export const,
     competitors: ['EquinixDigital RealtyCyrusOneCoreSiteQTS Realty'],
     marketSize: '$200 B data center market, 12% annual growth';
     growthRate: '12% annual growth',
-    variant: 'datacenter-futuristic'}
-    contactInfo: {}
+    variant: 'datacenter-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.';
     launchDate: '2024-01-20';
@@ -3927,12 +3902,12 @@ export const,
     competitors: ['Cisco SD-WANVMware SD-WANFortinetPalo Alto NetworksJuniper Networks'],
     marketSize: '$8 B SD-WAN market, 35% annual growth';
     growthRate: '35% annual growth',
-    variant: 'network-futuristic'}
-    contactInfo: {}
+    variant: 'network-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.';
     launchDate: '2024-02-15';
@@ -3970,12 +3945,12 @@ export const,
     competitors: ['McKinseyBCGBainAccentureDeloitte'],
     marketSize: '$50 B IT consulting market, 10% annual growth';
     growthRate: '10% annual growth',
-    variant: 'consulting-futuristic'}
-    contactInfo: {}
+    variant: 'consulting-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.';
     launchDate: '2024-01-10';
@@ -4013,12 +3988,12 @@ export const,
     competitors: ['CompTIACiscoMicrosoftAWS TrainingGoogle Cloud Training'],
     marketSize: '$15 B IT training market, 12% annual growth';
     growthRate: '12% annual growth',
-    variant: 'training-futuristic'}
-    contactInfo: {}
+    variant: 'training-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true;
     implementationDetails: 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.';
     launchDate: '2024-01-05';
@@ -4055,12 +4030,12 @@ export const,
     competitors: ['AWSAzureGoogle CloudTraditional cloud providers'],
     marketSize: '$400 B cloud market, quantum segment growing 400% annually';
     growthRate: '400% annual growth',
-    variant: 'quantum-advanced'}
-    contactInfo: {}
+    variant: 'quantum-advanced',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.';
     launchDate: '2024-11-15';
@@ -4097,12 +4072,12 @@ export const,
     competitors: ['GitLab CI/CDJenkinsCircleCIGitHub Actions'],
     marketSize: '$8 B DevOps market, AI segment growing 350% annually';
     growthRate: '350% annual growth',
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.';
     launchDate: '2024-10-01';
@@ -4139,22 +4114,22 @@ export const,
     competitors: ['Palo Alto NetworksCrowdStrikeSymantecTraditional security tools'],
     marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually';
     growthRate: '400% annual growth',
-    variant: 'quantum-cyberpunk'}
-    contactInfo: {}
+    variant: 'quantum-cyberpunk',}
+    contactInfo: {,}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.';
     launchDate: '2024-09-15';
     customers: 180
     rating: 4.9
     reviews: 156,
-  {/* TODO: Fix JSX expression */}
-  t: 'enterprise-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'enterprise-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4163,7 +4138,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4176,12 +4151,12 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 18}
+  s: 18,}
   // Cloud Migration & Optimization Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'cloud-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'cloud-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4190,7 +4165,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4203,12 +4178,12 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 12}
+  s: 12,}
   // Cybersecurity Operations Center;
-  {/* TODO: Fix JSX expression */}
-  t: 'cybersecurity-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'cybersecurity-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4217,7 +4192,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4230,12 +4205,12 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 24}
+  s: 24,}
   // Data Center Management Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'datacenter-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'datacenter-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4244,7 +4219,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4257,12 +4232,12 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 11}
+  s: 11,}
   // Network Security & SD-WAN Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'network-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'network-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4271,7 +4246,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4284,12 +4259,12 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 19}
+  s: 19,}
   // IT Project Management Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'consulting-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'consulting-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4298,7 +4273,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4311,12 +4286,12 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 32}
+  s: 32,}
   // IT Training & Certification Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'training-futuristic'}
+  {/* TODO: Fix JSX expression */,}
+  t: 'training-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4325,7 +4300,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4338,11 +4313,11 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 89}
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-advanced'}
+  s: 89,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-advanced',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4351,7 +4326,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4364,11 +4339,11 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 32}
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-futuristic'}
+  s: 32,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'ai-futuristic',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4377,7 +4352,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4390,11 +4365,11 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 245}
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-cyberpunk'}
+  s: 245,}
+  {/* TODO: Fix JSX expression */,}
+  t: 'quantum-cyberpunk',}
     contactInf,
-  o: {}
+  o: {,}
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4403,7 +4378,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
@@ -4416,13 +4391,13 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 156}
+  s: 156,}
 ];
   }
 ];
     website: string,
     websit,
-  e: string}
+  e: string,}
       'Network infrastructure management',
       'Server and storage management',
       'Security monitoring and management',
@@ -4497,7 +4472,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24 / 7 operations center and strategic consulting.',
@@ -4524,7 +4499,7 @@ export const,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 18},
+  s: 18,},
     i,
   d: 'enterprise-it-infrastructure'
     nam,
@@ -4536,8 +4511,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.'
+  n: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.'
       'Network infrastructure management'
       'Server and storage management'
       'Security monitoring and management'
@@ -4569,12 +4543,10 @@ export const,
   k: 'http,
   s://ziontechgroup.com/enterprise-it-infrastructure'
     marketPositio,
-  n:
-      'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
+  n: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.'
     targetAudienc,
-  e:
-      'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions'
+  e: 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions'
     trialDay,
   s: 0,
     setupTim,
@@ -4619,7 +4591,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     realImplementation: true,
     implementationDetails:,
       'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'
@@ -4658,13 +4630,12 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     realImplementatio,
   n: true,
     implementationDetail,
-  s:
-      'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'
+  s: 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'
     launchDat,
   e: '2024-01-01'
     customer,
@@ -4672,7 +4643,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 18}
+  s: 18,}
   // Cloud Migration & Optimization Services,
   id: 'cloud-migration-optimization'
     nam,
@@ -4709,8 +4680,7 @@ export const,
   n: 'Competes with AWS Professional Services ($200/hour), Microsoft Consulting ($250/hour), and Google Cloud ($180/hour). Our,
   advantage: Fixed pricing and guaranteed cost reduction.'
     targetAudienc,
-  e:
-      'Enterprises planning cloud migration, Legacy system modernization, Digital transformation projects, Cost optimization initiatives'
+  e: 'Enterprises planning cloud migration, Legacy system modernization, Digital transformation projects, Cost optimization initiatives'
     trialDay,
   s: 0,
     setupTim,
@@ -4762,7 +4732,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post - migration support.',
@@ -4804,7 +4774,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -4817,7 +4787,7 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 12},
+  s: 12,},
   // Cybersecurity Operations Center,
   id: 'cybersecurity-operations-center'
     nam,
@@ -4829,8 +4799,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.'
+  n: 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.'
     feature,
   s: [,
       'Incident response automation',
@@ -4905,7 +4874,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional cybersecurity operations center with 24 / 7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.',
@@ -4939,7 +4908,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -4952,7 +4921,7 @@ export const,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 24},
+  s: 24,},
   // Data Center Management Services;
     i,
   d: 'data - center - management',
@@ -4980,8 +4949,7 @@ export const,
   n: 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
   advantage: Comprehensive management and AI optimization.'
     targetAudienc,
-  e:
-      'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies'
+  e: 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies'
     trialDay,
   s: 0,
     setupTim,
@@ -5032,7 +5000,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24 / 7 operations center and strategic consulting.',
@@ -5077,7 +5045,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5090,7 +5058,7 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 11},
+  s: 11,},
   // Network Security & SD-WAN Services,
   id: 'network-security-sdwan'
     nam,
@@ -5102,8 +5070,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Network security management',
+  n: 'Network security management',
       'Threat protection',
       'Traffic optimization',
       'Centralized management',
@@ -5124,8 +5091,7 @@ export const,
   n: 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our,
   advantage: Comprehensive security integration and competitive pricing.'
     targetAudienc,
-  e:
-      'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions'
+  e: 'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions'
     trialDay,
   s: 0,
     setupTim,
@@ -5176,7 +5142,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional network security and SD - WAN management service with comprehensive security integration and network optimization capabilities. Includes 24 / 7 network support and monitoring.',
@@ -5218,7 +5184,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5231,7 +5197,7 @@ export const,
     ratin,
   g: 4 && 4.6,
     review,
-  s: 19},
+  s: 19,},
   // IT Project Management Services,
   id: 'it-project-management'
     nam,
@@ -5243,8 +5209,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.'
+  n: 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.'
     feature,
   s: [,
       'Project planning and management',
@@ -5269,8 +5234,7 @@ export const,
   n: 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
   advantage: Specialized IT focus and competitive pricing.'
     targetAudienc,
-  e:
-      'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery'
+  e: 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery'
     trialDay,
   s: 0,
     setupTim,
@@ -5316,7 +5280,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',
@@ -5354,7 +5318,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5367,7 +5331,7 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 32},
+  s: 32,},
   // IT Training & Certification Services,
   id: 'it-training-certification'
     nam,
@@ -5379,8 +5343,7 @@ export const,
     perio,
   d: '/month'
     descriptio,
-  n:
-      'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.'
+  n: 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.'
     feature,
   s: [,
       'Comprehensive IT training',
@@ -5405,8 +5368,7 @@ export const,
   n: 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
   advantage: Comprehensive training and competitive pricing.'
     targetAudienc,
-  e:
-      'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions'
+  e: 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions'
     trialDay,
   s: 7,
     setupTim,
@@ -5457,7 +5419,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24 / 7 support.',
@@ -5491,7 +5453,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5504,7 +5466,7 @@ export const,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 89},
+  s: 89,},
       'Quantum computing resources',
       'Quantum - secured networking',
       'Quantum encryption at rest and in transit',
@@ -5580,7 +5542,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',
@@ -5613,7 +5575,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5626,7 +5588,7 @@ export const,
     ratin,
   g: 4 && 4.9,
     review,
-  s: 32},
+  s: 32,},
       'Intelligent infrastructure scaling',
       'Predictive failure detection',
       'Automated performance tuning',
@@ -5653,8 +5615,7 @@ export const,
     marketPositio,
   n: 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.'
     targetAudienc,
-  e:
-      'DevOps teams, Engineering organizations, Tech companies, Enterprisestups'
+  e: 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups'
     trialDay,
   s: 21,
     setupTim,
@@ -5704,7 +5665,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Comprehensive AI - powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.',
@@ -5734,7 +5695,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5747,7 +5708,7 @@ export const,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 245},
+  s: 245,},
       'Quantum encryption algorithms',
       'AI - powered threat detection',
       'Quantum key distribution',
@@ -5824,7 +5785,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
+      website: 'https://ziontechgroup && ziontechgroup.com',},
     real_implementation: true
     implementation_details: unknown,
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
@@ -5860,7 +5821,7 @@ export const,
 export const comprehensiveITServices: ComprehensiveITService[] = [,
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 156,
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com',}
     real_implementation: true,
     implementation_details: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launch_date: '2024 - 09 - 15'
@@ -5877,8 +5838,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
       'Traditional security tools'
     ]
     marketSiz,
-  e:
-      '$150B cybersecurity market, quantum segment growing 400% annually'
+  e: '$150B cybersecurity market, quantum segment growing 400% annually'
     growthRat,
   e: '400% annual growth'
     varian,
@@ -5893,7 +5853,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
+  s: //ziontechgroup && ziontechgroup.com',},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5906,7 +5866,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     ratin,
   g: 4 && 4.9,
     review,
-  s: 156}];      mobil,
+  s: 156,}];      mobil,
   e: '+1 302 464 0950'
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'
@@ -5957,7 +5917,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     addres,
   s: string,
     websit,
-  e: string},
+  e: string,},
     realImplementatio,
   n: boolean, implementationDetail,
   s: string,
@@ -5967,7 +5927,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number,}
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
       addres,
@@ -5976,7 +5936,7 @@ export const,
   s: 156,
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com',
     }
     real_implementatio,
   n: true,
@@ -5989,7 +5949,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 156}
+  s: 156,}
 export interface ComprehensiveITService,
   id: string, nam,
   e: string, taglin,
@@ -6026,21 +5986,21 @@ export interface ComprehensiveITService,
   e: 'Next - generation quantum - powered cloud infrastructure',' pric,
   e: '$45, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' colo,
+  n: ,' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - cloud - infrastructure', market_positio,
-  n:  ,' 'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.',' 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24 / 7 monitoring and support.',' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24 / 7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' 'Strategic IT consulting'], popula,
+  s: //ziontechgroup.com / quantum - cloud - infrastructure', market_positio,
+  n: ,' 'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.',' 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24 / 7 monitoring and support.',' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24 / 7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' 'Strategic IT consulting'], popula,
   r: true,' ico,
   n: '🏢',' colo,
   r: 'from - gray - 600 to - blue - 700',' text_colo,
   r: 'text - gray - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / enterprise - it - infrastructure', market_positio,
-  n:  ,' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
+  s: //ziontechgroup.com / enterprise - it - infrastructure', market_positio,
+  n: ,' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.', target_audienc,
-  e:  ,' 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies', trial_day,
+  e: ,' 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies', trial_day,
   s: 30,' setup_tim,
   e: '2 weeks',' categor,
   y: 'Quantum IT Infrastructure', real_servic,
@@ -6058,13 +6018,13 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',' launch_dat,
+  s: ,' 'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',' launch_dat,
   e: '2024 - 11 - 15', customer,
   s: 45, ratin,
   g: 4 && 4.9, review,
-  s: 32},' i,
+  s: 32,},' i,
   d: 'ai - powered - devops - automation',' nam,
   e: 'AI - Powered DevOps Automation',' taglin,
   e: 'Intelligent DevOps automation with AI - driven optimization',' pric,
@@ -6074,14 +6034,14 @@ export interface ComprehensiveITService,
   e: 'Seamless cloud migration with 50% cost reduction guarantee',' pric,
   e: '$15, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.', feature,
+  n: ,' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.', feature,
   s: [,' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - devops - automation', market_positio,
-  n:  ,' 'Advanced AI - powered DevOps automation. Competitors like GitLab CI / CD and Jenkins lack AI optimization capabilities.', target_audienc,
-  e:  ,' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups', trial_day,
+  s: //ziontechgroup.com / ai - powered - devops - automation', market_positio,
+  n: ,' 'Advanced AI - powered DevOps automation. Competitors like GitLab CI / CD and Jenkins lack AI optimization capabilities.', target_audienc,
+  e: ,' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups', trial_day,
   s: 21,' setup_tim,
   e: '1 day',' categor,
   y: 'AI & DevOps Automation', real_servic,
@@ -6100,10 +6060,10 @@ export interface ComprehensiveITService,
   r: 'from - blue - 600 to - cyan - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / cloud - migration - optimization', market_positio,
-  n:  ,' 'Competes with AWS Professional Services ($200 / hour), Microsoft Consulting ($250 / hour), and Google Cloud ($180 / hour). Our,
+  s: //ziontechgroup.com / cloud - migration - optimization', market_positio,
+  n: ,' 'Competes with AWS Professional Services ($200 / hour), Microsoft Consulting ($250 / hour), and Google Cloud ($180 / hour). Our,
   advantage: Fixed pricing and guaranteed cost reduction.', target_audienc,
-  e:  ,' 'Enterprises planning cloud migration, Legacy system modernization, Digital transformation projects, Cost optimization initiatives', trial_day,
+  e: ,' 'Enterprises planning cloud migration, Legacy system modernization, Digital transformation projects, Cost optimization initiatives', trial_day,
   s: 0,' setup_tim,
   e: '12 - 16 weeks',' categor,
   y: 'Cloud Migration & Optimization', real_servic,
@@ -6121,24 +6081,24 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' i,
+  s: ,' i,
   d: 'quantum - cybersecurity - suite',' nam,
   e: 'Quantum Cybersecurity Suite',' taglin,
   e: 'Unhackable quantum - secured cybersecurity platform',' pric,
   e: '$18, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.', feature,
+  n: ,' 'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.', feature,
   s: [, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
   r: true,' ico,
   n: '🔒', ' colo,
   r: 'from - red - 600 to - pink - 700',' text_colo,
   r: 'text - red - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - cybersecurity - suite', market_positio,
-  n:  ,' 'First - to - market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.', target_audienc,
-  e:  ,' 'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies', trial_day,
+  s: //ziontechgroup.com / quantum - cybersecurity - suite', market_positio,
+  n: ,' 'First - to - market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.', target_audienc,
+  e: ,' 'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies', trial_day,
   s: 30,' setup_tim,
   e: '1 week',' categor,
   y: 'Quantum Cybersecurity', real_servic,
@@ -6148,30 +6108,30 @@ export interface ComprehensiveITService,
   s: [,' 'Network security',' 'Endpoint protection',' 'Data encryption',' 'Threat detection',' 'Incident response',' 'Compliance management'],' ro,
   i: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.', competitor,
   s: [,' 'Palo Alto Networks',' 'CrowdStrike',' 'Symantec',' 'Traditional security tools'], market_siz,
-  e:  ,' '$150B cybersecurity market, quantum segment growing 400% annually',' growth_rat,
+  e: ,' '$150B cybersecurity market, quantum segment growing 400% annually',' growth_rat,
   e: '400% annual growth',' varian,
   t: 'quantum - cyberpunk', contact_inf,
   o: ' 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post - migration support.',' launch_dat,
   e: '2024 - 02 - 01', customer,
   s: 18, ratin,
   g: 4 && 4.7, review,
-  s: 12},' '24/7 threat monitoring',' 'AI-powered threat detection', // Cybersecurity Operations Center; ' i,
+  s: 12,},' '24/7 threat monitoring',' 'AI-powered threat detection', // Cybersecurity Operations Center; ' i,
   d: 'cybersecurity - operations - center',' nam,
   e: 'Cybersecurity Operations Center (SOC)',' taglin,
   e: '24 / 7 cybersecurity monitoring with AI - powered threat detection',' pric,
   e: '$18, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced cybersecurity operations center providing 24 / 7 threat monitoring, incident response, and security management. Features AI - powered threat detection and automated response capabilities.', feature,
+  n: ,' 'Advanced cybersecurity operations center providing 24 / 7 threat monitoring, incident response, and security management. Features AI - powered threat detection and automated response capabilities.', feature,
   s: [,' '24 / 7 threat monitoring',' 'AI - powered threat detection',' 'Incident response automation',' 'Security analytics dashboard',' 'Threat intelligence',' 'Vulnerability management',' 'Security compliance',' 'Security awareness training',' 'Penetration testing',' 'Security consulting'], popula,
   r: true,' ico,
   n: '🛡️',' colo,
   r: 'from - red - 600 to - pink - 700',' text_colo,
   r: 'text - red - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / cybersecurity - operations - center', market_positio,
-  n:  ,' 'Competes with CrowdStrike Falcon Complete ($8.99 / user / month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6 / user / month). Our,
+  s: //ziontechgroup.com / cybersecurity - operations - center', market_positio,
+  n: ,' 'Competes with CrowdStrike Falcon Complete ($8.99 / user / month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6 / user / month). Our,
   advantage: Comprehensive SOC services and AI threat detection.', target_audienc,
-  e:  ,' 'Enterprises requiring 24 / 7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High - security organizations', trial_day,
+  e: ,' 'Enterprises requiring 24 / 7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High - security organizations', trial_day,
   s: 0,' setup_tim,
   e: '4 - 6 weeks',' categor,
   y: 'Cybersecurity Operations', real_servic,
@@ -6189,9 +6149,9 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  , i,
+  s: , i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -6222,13 +6182,13 @@ export interface ComprehensiveITService,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string }, realImplementatio,
+  e: string,}, realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } export const,
+  s: number,} export const,
   comprehensiveITServices: ComprehensiveITService[] = [ // Enterprise IT Infrastructure Services ' i,
   d: 'enterprise-it-infrastructure', nam,
   e: 'Enterprise IT Infrastructure Management',' taglin,
@@ -6242,7 +6202,7 @@ export interface ComprehensiveITService,
   r: 'from-gray-600 to-blue-700', textColo,
   r: 'text-gray-400',' lin,
   k: 'http,
-  s://ziontechgroup.com/enterprise-it-infrastructure',' marketPositio,
+  s: //ziontechgroup.com/enterprise-it-infrastructure',' marketPositio,
   n: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.',' targetAudienc,
   e: 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions',' trialDay,
@@ -6265,23 +6225,23 @@ export interface ComprehensiveITService,
   e: '2024 - 01 - 15', customer,
   s: 32, ratin,
   g: 4 && 4.8, review,
-  s: 24}, // Data Center Management Services; ' i,
+  s: 24,}, // Data Center Management Services; ' i,
   d: 'data - center - management',' nam,
   e: 'Data Center Management & Optimization',' taglin,
   e: 'Complete data center management with 99.999% uptime guarantee',' pric,
   e: '$22, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI - powered optimization.', feature,
+  n: ,' 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI - powered optimization.', feature,
   s: [,' 'Data center infrastructure management',' 'Power and cooling optimization',' 'Network performance optimization',' 'Storage management',' 'Backup and disaster recovery',' 'Security management',' 'Performance monitoring',' 'Capacity planning',' 'Energy efficiency optimization',' '24 / 7 operations center'], popula,
   r: true,' ico,
   n: '🏗️',' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / data - center - management', market_positio,
-  n:  ,' 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
+  s: //ziontechgroup.com / data - center - management', market_positio,
+  n: ,' 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
   advantage: Comprehensive management and AI optimization.', target_audienc,
-  e:  ,' 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies', trial_day,
+  e: ,' 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies', trial_day,
   s: 0,' setup_tim,
   e: '8 - 12 weeks',' categor,
   y: 'Data Center Management', real_servic,
@@ -6299,30 +6259,30 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24 / 7 operations center and strategic consulting.',' launch_dat,
+  s: ,' 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24 / 7 operations center and strategic consulting.',' launch_dat,
   e: '2024 - 01 - 20', customer,
   s: 15, ratin,
   g: 4 && 4.7, review,
-  s: 11},' 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99 && 99.9% network availability.', feature,
+  s: 11,},' 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99 && 99.9% network availability.', feature,
   s: [' 'SD-WAN implementation', // Network Security & SD - WAN Services; ' i,
   d: 'network - security - sdwan',' nam,
   e: 'Network Security & SD - WAN Management', taglin,
-  e:  ,' 'Advanced network security with software - defined wide area networking',' pric,
+  e: ,' 'Advanced network security with software - defined wide area networking',' pric,
   e: '$12, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive network security and SD - WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.', feature,
+  n: ,' 'Comprehensive network security and SD - WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.', feature,
   s: [,' 'SD - WAN implementation',' 'Network security management',' 'Threat protection',' 'Traffic optimization',' 'Centralized management',' 'Performance monitoring',' 'Bandwidth optimization',' 'Security compliance',' 'Network automation',' '24 / 7 network support'], popula,
   r: true,' ico,
   n: '🌐',' colo,
   r: 'from - indigo - 600 to - purple - 700',' text_colo,
   r: 'text - indigo - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / network - security - sdwan', market_positio,
-  n:  ,' 'Competes with Cisco SD - WAN ($50K+), VMware SD - WAN ($40K+), and Fortinet ($35K+). Our,
+  s: //ziontechgroup.com / network - security - sdwan', market_positio,
+  n: ,' 'Competes with Cisco SD - WAN ($50K+), VMware SD - WAN ($40K+), and Fortinet ($35K+). Our,
   advantage: Comprehensive security integration and competitive pricing.', target_audienc,
-  e:  ,' 'Enterprises with distributed networks, Multi - location businesses, Remote work organizations, Healthcare systems, Financial institutions', trial_day,
+  e: ,' 'Enterprises with distributed networks, Multi - location businesses, Remote work organizations, Healthcare systems, Financial institutions', trial_day,
   s: 0,' setup_tim,
   e: '6 - 8 weeks',' categor,
   y: 'Network Security & SD - WAN', real_servic,
@@ -6340,29 +6300,29 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional network security and SD - WAN management service with comprehensive security integration and network optimization capabilities. Includes 24 / 7 network support and monitoring.',' launch_dat,
+  s: ,' 'Fully functional network security and SD - WAN management service with comprehensive security integration and network optimization capabilities. Includes 24 / 7 network support and monitoring.',' launch_dat,
   e: '2024 - 02 - 15', customer,
   s: 28, ratin,
   g: 4 && 4.6, review,
-  s: 19}, // IT Project Management Services; ' i,
+  s: 19,}, // IT Project Management Services; ' i,
   d: 'it - project - management',' nam,
   e: 'IT Project Management & Consulting',' taglin,
   e: 'Expert IT project management with guaranteed delivery',' pric,
   e: '$8, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on - time delivery.', feature,
+  n: ,' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on - time delivery.', feature,
   s: [,' 'Project planning and management',' 'Resource allocation',' 'Risk management',' 'Quality assurance',' 'Stakeholder communication',' 'Project reporting',' 'Change management',' 'Strategic consulting',' 'Technology advisory',' 'Project recovery'], popula,
   r: true,' ico,
   n: '📋',' colo,
   r: 'from - orange - 600 to - red - 700',' text_colo,
   r: 'text - orange - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / it - project - management', market_positio,
-  n:  ,' 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
+  s: //ziontechgroup.com / it - project - management', market_positio,
+  n: ,' 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
   advantage: Specialized IT focus and competitive pricing.', target_audienc,
-  e:  ,' 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery', trial_day,
+  e: ,' 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery', trial_day,
   s: 0,' setup_tim,
   e: '2 - 4 weeks',' categor,
   y: 'IT Project Management', real_servic,
@@ -6380,29 +6340,29 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',' launch_dat,
+  s: ,' 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',' launch_dat,
   e: '2024 - 01 - 10', customer,
   s: 45, ratin,
   g: 4 && 4.7, review,
-  s: 32}, // IT Training & Certification Services; ' i,
+  s: 32,}, // IT Training & Certification Services; ' i,
   d: 'it - training - certification',' nam,
   e: 'IT Training & Certification Programs',' taglin,
   e: 'Comprehensive IT training with industry certifications',' pric,
   e: '$2, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive IT training and certification service providing expert instruction, hands - on labs, and industry - recognized certifications. Covers all major IT domains and technologies.', feature,
+  n: ,' 'Comprehensive IT training and certification service providing expert instruction, hands - on labs, and industry - recognized certifications. Covers all major IT domains and technologies.', feature,
   s: [,' 'Comprehensive IT training',' 'Industry certifications',' 'Hands - on labs',' 'Expert instructors',' 'Flexible learning options',' 'Certification preparation',' 'Career guidance',' 'Learning management system',' 'Progress tracking',' '24 / 7 learning support'], popula,
   r: true,' ico,
   n: '🎓',' colo,
   r: 'from - purple - 600 to - pink - 700',' text_colo,
   r: 'text - purple - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / it - training - certification', market_positio,
-  n:  ,' 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
+  s: //ziontechgroup.com / it - training - certification', market_positio,
+  n: ,' 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
   advantage: Comprehensive training and competitive pricing.', target_audienc,
-  e:  ,' 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions', trial_day,
+  e: ,' 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions', trial_day,
   s: 7,' setup_tim,
   e: '1 week',' categor,
   y: 'IT Training & Certification', real_servic,
@@ -6420,19 +6380,19 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24 / 7 support.',' launch_dat,
+  s: ,' 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24 / 7 support.',' launch_dat,
   e: '2024 - 01 - 05', customer,
   s: 120, ratin,
   g: 4 && 4.8, review,
-  s: 89}, ' i,
+  s: 89,}, ' i,
   d: 'quantum - cloud - infrastructure',' nam,
   e: 'Quantum Cloud Infrastructure',' taglin,
   e: 'Next - generation quantum - powered cloud infrastructure',' pric,
   e: '$45, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.', feature,
+  n: ,' 'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.', feature,
   s: [, ' 'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.', feature,
   s: [, ' 'Quantum computing resources',' 'Quantum - secured networking',' 'Quantum encryption at rest and in transit',' 'Quantum load balancing',' 'Quantum database optimization',' 'Quantum machine learning acceleration',' 'Quantum blockchain integration',' 'Quantum IoT platform',' 'Quantum analytics engine',' '24 / 7 quantum operations center'], popula,
   r: true,' ico,
@@ -6440,9 +6400,9 @@ export interface ComprehensiveITService,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - cloud - infrastructure', market_positio,
-  n:  ,' 'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.', target_audienc,
-  e:  ,' 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies', trial_day,
+  s: //ziontechgroup.com / quantum - cloud - infrastructure', market_positio,
+  n: ,' 'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.', target_audienc,
+  e: ,' 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies', trial_day,
   s: 30,' setup_tim,
   e: '2 weeks',' categor,
   y: 'Quantum IT Infrastructure', real_servic,
@@ -6460,28 +6420,28 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',' launch_dat,
+  s: ,' 'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',' launch_dat,
   e: '2024 - 11 - 15', customer,
   s: 45, ratin,
   g: 4 && 4.9, review,
-  s: 32}, ' 'AI-powered deployment optimization',' i,
+  s: 32,}, ' 'AI-powered deployment optimization',' i,
   d: 'ai - powered - devops - automation',' nam,
   e: 'AI - Powered DevOps Automation',' taglin,
   e: 'Intelligent DevOps automation with AI - driven optimization',' pric,
   e: '$8, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.', feature,
+  n: ,' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.', feature,
   s: [,' 'AI - powered deployment optimization', ' 'Intelligent infrastructure scaling',' 'Predictive failure detection',' 'Automated performance tuning',' 'Smart resource allocation',' 'AI - driven security scanning',' 'Automated compliance checks',' 'Real - time performance monitoring',' 'Predictive analytics dashboard',' '24 / 7 AI operations center'], popula,
   r: true,' ico,
   n: '🤖', ' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / ai - powered - devops - automation', market_positio,
-  n:  ,' 'Advanced AI - powered DevOps automation. Competitors like GitLab CI / CD and Jenkins lack AI optimization capabilities.', target_audienc,
-  e:  ,' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups', trial_day,
+  s: //ziontechgroup.com / ai - powered - devops - automation', market_positio,
+  n: ,' 'Advanced AI - powered DevOps automation. Competitors like GitLab CI / CD and Jenkins lack AI optimization capabilities.', target_audienc,
+  e: ,' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups', trial_day,
   s: 21,' setup_tim,
   e: '1 day',' categor,
   y: 'AI & DevOps Automation', real_servic,
@@ -6499,28 +6459,28 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Comprehensive AI - powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.',' launch_dat,
+  s: ,' 'Comprehensive AI - powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.',' launch_dat,
   e: '2024 - 10 - 01', customer,
   s: 320, ratin,
   g: 4 && 4.8, review,
-  s: 245}, ' i,
+  s: 245,}, ' i,
   d: 'quantum - cybersecurity - suite',' nam,
   e: 'Quantum Cybersecurity Suite',' taglin,
   e: 'Unhackable quantum - secured cybersecurity platform',' pric,
   e: '$18, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.', feature,
+  n: ,' 'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.', feature,
   s: [, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
   r: true,' ico,
   n: '🔒', ' colo,
   r: 'from - red - 600 to - pink - 700',' text_colo,
   r: 'text - red - 400',' lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - cybersecurity - suite', market_positio,
-  n:  ,' 'First - to - market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.', target_audienc,
-  e:  ,' 'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies', trial_day,
+  s: //ziontechgroup.com / quantum - cybersecurity - suite', market_positio,
+  n: ,' 'First - to - market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.', target_audienc,
+  e: ,' 'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies', trial_day,
   s: 30,' setup_tim,
   e: '1 week',' categor,
   y: 'Quantum Cybersecurity', real_servic,
@@ -6530,7 +6490,7 @@ export interface ComprehensiveITService,
   s: [,' 'Network security',' 'Endpoint protection',' 'Data encryption',' 'Threat detection',' 'Incident response',' 'Compliance management'],' ro,
   i: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.', competitor,
   s: [,' 'Palo Alto Networks',' 'CrowdStrike',' 'Symantec',' 'Traditional security tools'], market_siz,
-  e:  ,' '$150B cybersecurity market, quantum segment growing 400% annually',' growth_rat,
+  e: ,' '$150B cybersecurity market, quantum segment growing 400% annually',' growth_rat,
   e: '400% annual growth',' varian,
   t: 'quantum - cyberpunk', contact_inf,
   o: ' mobil,
@@ -6538,13 +6498,13 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',' launch_dat,
+  s: ,' 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',' launch_dat,
   e: '2024 - 09 - 15', customer,
   s: 180, ratin,
   g: 4 && 4.9, review,
-  s: 156},' ]; mobil,
+  s: 156,},' ]; mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com' i,
   d: string, nam,
@@ -6603,13 +6563,13 @@ export interface ComprehensiveITService,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string }, realImplementatio,
+  e: string,}, realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } export const,
+  s: number,} export const,
   comprehensiveITServices: ComprehensiveITService[] = [ // Enterprise IT Infrastructure Services ' pric,
   e: '$25,999',' perio,
   d: '/month', descriptio,
@@ -6619,7 +6579,7 @@ export interface ComprehensiveITService,
   r: 'from-gray-600 to-blue-700',' textColo,
   r: 'text-gray-400',' lin,
   k: 'http,
-  s://ziontechgroup && ziontechgroup.com/enterprise-it-infrastructure', marketPositio,
+  s: //ziontechgroup && ziontechgroup.com/enterprise-it-infrastructure', marketPositio,
   n: ' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.', targetAudienc,
   e: ' 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions', trialDay,
@@ -6666,48 +6626,48 @@ export interface ComprehensiveITService,
   e: string, growthRat,
   e: string, varian,
   t: string, contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string} } realImplementatio,
+  o: {/* TODO: Fix JSX expression */,}
+  s: string,} websit,
+  e: string,} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number} export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services, {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: number,} export const,
+  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services, {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } real_implementatio,
+  s: //ziontechgroup.com',} real_implementatio,
   n: true,' implementation_detail,
   s: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'' launch_dat,
   e: '2024 - 09 - 15' customer,
   s: 180, ratin,
   g: 4.9, review,
-  s: 156} export interface ComprehensiveITService { } ]; ; } ]; realImplementatio,
+  s: 156,} export interface ComprehensiveITService { } ]; ; } ]; realImplementatio,
   n: true,
-  implementationDetails:' 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'' launchDat,
+  implementationDetails: ' 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'' launchDat,
   e: '2024-02-01' customer,
   s: 18,
   rating: 4.7,
-  reviews: 12 } // Cybersecurity Operations Center ' i,
+  reviews: 12,} // Cybersecurity Operations Center ' i,
   d: 'cybersecurity-operations-center'' nam,
   e: 'Cybersecurity Operations Center (SOC)'' taglin,
   e: '24/7 cybersecurity monitoring with AI-powered threat detection'' pric,
   e: '$18,999'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.' feature,
+  n: ' 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.' feature,
   s: [' '24/7 threat monitoring'' 'AI-powered threat detection'' 'Incident response automation'' 'Security analytics dashboard'' 'Threat intelligence'' 'Vulnerability management'' 'Security compliance'' 'Security awareness training'' 'Penetration testing'' 'Security consulting' ] popula,
   r: true' ico,
   n: '🛡️'' colo,
   r: 'from-red-600 to-pink-700'' textColo,
   r: 'text-red-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/cybersecurity-operations-center' marketPositio,
-  n:' 'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6/user/month). Our,
+  s: //ziontechgroup.com/cybersecurity-operations-center' marketPositio,
+  n: ' 'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6/user/month). Our,
   advantage: Comprehensive SOC services and AI threat detection.' targetAudienc,
-  e:' 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations' trialDay,
+  e: ' 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations' trialDay,
   s: 0' setupTim,
   e: '4-6 weeks'' categor,
   y: 'Cybersecurity Operations' realServic,
@@ -6725,29 +6685,29 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.'' launchDat,
+  implementationDetails: ' 'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.'' launchDat,
   e: '2024-01-15' customer,
   s: 32,
   rating: 4.8,
-  reviews: 24 } // Data Center Management Services ' i,
+  reviews: 24,} // Data Center Management Services ' i,
   d: 'data-center-management'' nam,
   e: 'Data Center Management & Optimization'' taglin,
   e: 'Complete data center management with 99.999% uptime guarantee'' pric,
   e: '$22,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.' feature,
+  n: ' 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.' feature,
   s: [' 'Data center infrastructure management'' 'Power and cooling optimization'' 'Network performance optimization'' 'Storage management'' 'Backup and disaster recovery'' 'Security management'' 'Performance monitoring'' 'Capacity planning'' 'Energy efficiency optimization'' '24/7 operations center' ] popula,
   r: true' ico,
   n: '🏗️'' colo,
   r: 'from-green-600 to-emerald-700'' textColo,
   r: 'text-green-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/data-center-management' marketPositio,
-  n:' 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
+  s: //ziontechgroup.com/data-center-management' marketPositio,
+  n: ' 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
   advantage: Comprehensive management and AI optimization.' targetAudienc,
-  e:' 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies' trialDay,
+  e: ' 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies' trialDay,
   s: 0' setupTim,
   e: '8-12 weeks'' categor,
   y: 'Data Center Management' realServic,
@@ -6765,29 +6725,29 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.'' launchDat,
+  implementationDetails: ' 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.'' launchDat,
   e: '2024-01-20' customer,
   s: 15,
   rating: 4.7,
-  reviews: 11 } // Network Security & SD-WAN Services ' i,
+  reviews: 11,} // Network Security & SD-WAN Services ' i,
   d: 'network-security-sdwan'' nam,
   e: 'Network Security & SD-WAN Management' taglin,
-  e:' 'Advanced network security with software-defined wide area networking'' pric,
+  e: ' 'Advanced network security with software-defined wide area networking'' pric,
   e: '$12,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.' feature,
+  n: ' 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.' feature,
   s: [' 'SD-WAN implementation'' 'Network security management'' 'Threat protection'' 'Traffic optimization'' 'Centralized management'' 'Performance monitoring'' 'Bandwidth optimization'' 'Security compliance'' 'Network automation'' '24/7 network support' ] popula,
   r: true' ico,
   n: '🌐'' colo,
   r: 'from-indigo-600 to-purple-700'' textColo,
   r: 'text-indigo-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/network-security-sdwan' marketPositio,
-  n:' 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our,
+  s: //ziontechgroup.com/network-security-sdwan' marketPositio,
+  n: ' 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our,
   advantage: Comprehensive security integration and competitive pricing.' targetAudienc,
-  e:' 'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions' trialDay,
+  e: ' 'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions' trialDay,
   s: 0' setupTim,
   e: '6-8 weeks'' categor,
   y: 'Network Security & SD-WAN' realServic,
@@ -6805,29 +6765,29 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.'' launchDat,
+  implementationDetails: ' 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.'' launchDat,
   e: '2024-02-15' customer,
   s: 28,
   rating: 4.6,
-  reviews: 19 } // IT Project Management Services ' i,
+  reviews: 19,} // IT Project Management Services ' i,
   d: 'it-project-management'' nam,
   e: 'IT Project Management & Consulting'' taglin,
   e: 'Expert IT project management with guaranteed delivery'' pric,
   e: '$8,999'' perio,
   d: '/month' descriptio,
-  n:' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.' feature,
+  n: ' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.' feature,
   s: [' 'Project planning and management'' 'Resource allocation'' 'Risk management'' 'Quality assurance'' 'Stakeholder communication'' 'Project reporting'' 'Change management'' 'Strategic consulting'' 'Technology advisory'' 'Project recovery' ] popula,
   r: true' ico,
   n: '📋'' colo,
   r: 'from-orange-600 to-red-700'' textColo,
   r: 'text-orange-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/it-project-management' marketPositio,
-  n:' 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
+  s: //ziontechgroup.com/it-project-management' marketPositio,
+  n: ' 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
   advantage: Specialized IT focus and competitive pricing.' targetAudienc,
-  e:' 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery' trialDay,
+  e: ' 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery' trialDay,
   s: 0' setupTim,
   e: '2-4 weeks'' categor,
   y: 'IT Project Management' realServic,
@@ -6845,29 +6805,29 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.'' launchDat,
+  implementationDetails: ' 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.'' launchDat,
   e: '2024-01-10' customer,
   s: 45,
   rating: 4.7,
-  reviews: 32 } // IT Training & Certification Services ' i,
+  reviews: 32,} // IT Training & Certification Services ' i,
   d: 'it-training-certification'' nam,
   e: 'IT Training & Certification Programs'' taglin,
   e: 'Comprehensive IT training with industry certifications'' pric,
   e: '$2,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.' feature,
+  n: ' 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.' feature,
   s: [' 'Comprehensive IT training'' 'Industry certifications'' 'Hands-on labs'' 'Expert instructors'' 'Flexible learning options'' 'Certification preparation'' 'Career guidance'' 'Learning management system'' 'Progress tracking'' '24/7 learning support' ] popula,
   r: true' ico,
   n: '🎓'' colo,
   r: 'from-purple-600 to-pink-700'' textColo,
   r: 'text-purple-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/it-training-certification' marketPositio,
-  n:' 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
+  s: //ziontechgroup.com/it-training-certification' marketPositio,
+  n: ' 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
   advantage: Comprehensive training and competitive pricing.' targetAudienc,
-  e:' 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions' trialDay,
+  e: ' 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions' trialDay,
   s: 7' setupTim,
   e: '1 week'' categor,
   y: 'IT Training & Certification' realServic,
@@ -6885,27 +6845,27 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.'' launchDat,
+  implementationDetails: ' 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.'' launchDat,
   e: '2024-01-05' customer,
   s: 120,
   rating: 4.8,
-  reviews: 89 } ' i,
+  reviews: 89,} ' i,
   d: 'quantum-cloud-infrastructure'' nam,
   e: 'Quantum Cloud Infrastructure'' taglin,
   e: 'Next-generation quantum-powered cloud infrastructure'' pric,
   e: '$45,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.' feature,
+  n: ' 'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.' feature,
   s: [' 'Quantum computing resources'' 'Quantum-secured networking'' 'Quantum encryption at rest and in transit'' 'Quantum load balancing'' 'Quantum database optimization'' 'Quantum machine learning acceleration'' 'Quantum blockchain integration'' 'Quantum IoT platform'' 'Quantum analytics engine'' '24/7 quantum operations center' ] popula,
   r: true' ico,
   n: '☁️'' colo,
   r: 'from-blue-600 to-indigo-700'' textColo,
   r: 'text-blue-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-cloud-infrastructure' marketPositio,
-  n:' 'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.' targetAudienc,
+  s: //ziontechgroup.com/quantum-cloud-infrastructure' marketPositio,
+  n: ' 'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.' targetAudienc,
   e: ' 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies' trialDay,
   s: 30' setupTim,
   e: '2 weeks'' categor,
@@ -6924,28 +6884,28 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.'' launchDat,
+  implementationDetails: ' 'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.'' launchDat,
   e: '2024-11-15' customer,
   s: 45,
   rating: 4.9,
-  reviews: 32 } ' i,
+  reviews: 32,} ' i,
   d: 'ai-powered-devops-automation'' nam,
   e: 'AI-Powered DevOps Automation'' taglin,
   e: 'Intelligent DevOps automation with AI-driven optimization'' pric,
   e: '$8,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.' feature,
+  n: ' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.' feature,
   s: [' 'AI-powered deployment optimization'' 'Intelligent infrastructure scaling'' 'Predictive failure detection'' 'Automated performance tuning'' 'Smart resource allocation'' 'AI-driven security scanning'' 'Automated compliance checks'' 'Real-time performance monitoring'' 'Predictive analytics dashboard'' '24/7 AI operations center' ] popula,
   r: true' ico,
   n: '🤖'' colo,
   r: 'from-green-600 to-emerald-700'' textColo,
   r: 'text-green-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-powered-devops-automation' marketPositio,
-  n:' 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.' targetAudienc,
-  e:' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups' trialDay,
+  s: //ziontechgroup.com/ai-powered-devops-automation' marketPositio,
+  n: ' 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.' targetAudienc,
+  e: ' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups' trialDay,
   s: 21' setupTim,
   e: '1 day'' categor,
   y: 'AI & DevOps Automation' realServic,
@@ -6963,27 +6923,27 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.'' launchDat,
+  implementationDetails: ' 'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.'' launchDat,
   e: '2024-10-01' customer,
   s: 320,
   rating: 4.8,
-  reviews: 245 } ' i,
+  reviews: 245,} ' i,
   d: 'quantum-cybersecurity-suite'' nam,
   e: 'Quantum Cybersecurity Suite'' taglin,
   e: 'Unhackable quantum-secured cybersecurity platform'' pric,
   e: '$18,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.' feature,
+  n: ' 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.' feature,
   s: [' 'Quantum encryption algorithms'' 'AI-powered threat detection'' 'Quantum key distribution'' 'Post-quantum cryptography'' 'Real-time threat intelligence'' 'Automated incident response'' 'Quantum-secured communication'' 'Advanced security analytics'' 'Compliance automation'' '24/7 quantum security operations' ] popula,
   r: true' ico,
   n: '🔒'' colo,
   r: 'from-red-600 to-pink-700'' textColo,
   r: 'text-red-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-cybersecurity-suite' marketPositio,
-  n:' 'First-to-market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.' targetAudienc,
+  s: //ziontechgroup.com/quantum-cybersecurity-suite' marketPositio,
+  n: ' 'First-to-market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.' targetAudienc,
   e: ' 'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies' trialDay,
   s: 30' setupTim,
   e: '1 week'' categor,
@@ -6994,7 +6954,7 @@ export interface ComprehensiveITService,
   s: [' 'Network security'' 'Endpoint protection'' 'Data encryption'' 'Threat detection'' 'Incident response'' 'Compliance management' ]' ro,
   i: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.' competitor,
   s: [' 'Palo Alto Networks'' 'CrowdStrike'' 'Symantec'' 'Traditional security tools' ] marketSiz,
-  e:' '$150B cybersecurity market, quantum segment growing 400% annually'' growthRat,
+  e: ' '$150B cybersecurity market, quantum segment growing 400% annually'' growthRat,
   e: '400% annual growth'' varian,
   t: 'quantum-cyberpunk' contactInf,
   o: ' mobil,
@@ -7002,142 +6962,142 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'' launchDat,
+  implementationDetails: ' 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'' launchDat,
   e: '2024-09-15' customer,
   s: 180,
   rating: 4.9,
-  reviews: 156 }' 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',' launchDat,
+  reviews: 156,}' 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',' launchDat,
   e: '2024-09-15', customer,
   s: 180, ratin,
   g: 4.9, review,
-  s: 156}' ]; mobil,
+  s: 156,}' ]; mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true' implementationDetail,
   s: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'' launchDat,
   e: '2024-09-15' customer,
   s: 180, ratin,
   g: 4.9,
-  reviews: 156 } ]; export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  s: string} websit,
-  e: string} } realImplementatio,
+  reviews: 156,} ]; export interface ComprehensiveITService {/* TODO: Fix JSX expression */,}
+  s: string,} websit,
+  e: string,} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number} export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services, {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: number,} export const,
+  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services, {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.';' launchDat,
   e: '2024-01-01', customer,
   s: 25, ratin,
   g: 4.8, review,
-  s: 18} // Cloud Migration & Optimization Services; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 18,} // Cloud Migration & Optimization Services; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.';' launchDat,
   e: '2024-02-01', customer,
   s: 18, ratin,
   g: 4.7, review,
-  s: 12} // Cybersecurity Operations Center; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 12,} // Cybersecurity Operations Center; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.';' launchDat,
   e: '2024-01-15', customer,
   s: 32, ratin,
   g: 4.8, review,
-  s: 24} // Data Center Management Services; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 24,} // Data Center Management Services; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.',' launchDat,
   e: '2024-01-20', customer,
   s: 15, ratin,
   g: 4.7, review,
-  s: 11} // Network Security & SD-WAN Services; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 11,} // Network Security & SD-WAN Services; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.',' launchDat,
   e: '2024-02-15', customer,
   s: 28, ratin,
   g: 4.6, review,
-  s: 19} // IT Project Management Services; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 19,} // IT Project Management Services; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',' launchDat,
   e: '2024-01-10', customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32} // IT Training & Certification Services; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 32,} // IT Training & Certification Services; {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.',' launchDat,
   e: '2024-01-05', customer,
   s: 120, ratin,
   g: 4.8, review,
-  s: 89} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 89,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.';' launchDat,
   e: '2024-11-15', customer,
   s: 45, ratin,
   g: 4.9, review,
-  s: 32} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 32,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.';' launchDat,
   e: '2024-10-01', customer,
   s: 320, ratin,
   g: 4.8, review,
-  s: 245} {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
+  s: 245,} {/* TODO: Fix JSX expression */,}
+  l: 'kleber@ziontechgroup.com',}' addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709',}' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.';' launchDat,
   e: '2024-09-15', customer,
   s: 180, ratin,
   g: 4.9, review,
-  s: 156} ]; } ]; websit,
-  e: string}' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24 / 7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' 'Strategic IT consulting'], popula,
+  s: 156,} ]; } ]; websit,
+  e: string,}' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24 / 7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' 'Strategic IT consulting'], popula,
   r: true,' ico,
   n: '🏢',' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.', target_audienc,
-  e:  ,' 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions', trial_day,
+  e: ,' 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions', trial_day,
   s: 0,' setup_tim,
   e: '8 - 12 weeks',' categor,
   y: 'Enterprise IT Infrastructure', real_servic,
@@ -7151,28 +7111,28 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24 / 7 operations center and strategic consulting.',' launch_dat,
+  s: ,' 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24 / 7 operations center and strategic consulting.',' launch_dat,
   e: '2024 - 01 - 01', customer,
   s: 25, ratin,
   g: 4 && 4.8, review,
-  s: 18}, ' i,
+  s: 18,}, ' i,
   d: 'enterprise-it-infrastructure'' nam,
   e: 'Enterprise IT Infrastructure Management' taglin,
-  e:' 'Complete enterprise IT infrastructure with 99.99% uptime guarantee'' pric,
+  e: ' 'Complete enterprise IT infrastructure with 99.99% uptime guarantee'' pric,
   e: '$25,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.'' 'Network infrastructure management'' 'Server and storage management'' 'Security monitoring and management'' '24/7 infrastructure monitoring'' 'Performance optimization'' 'Disaster recovery planning'' 'Compliance management'' 'IT asset management'' 'Help desk support'' 'Strategic IT consulting' ] popula,
+  n: ' 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.'' 'Network infrastructure management'' 'Server and storage management'' 'Security monitoring and management'' '24/7 infrastructure monitoring'' 'Performance optimization'' 'Disaster recovery planning'' 'Compliance management'' 'IT asset management'' 'Help desk support'' 'Strategic IT consulting' ] popula,
   r: true' ico,
   n: '🏢'' colo,
   r: 'from-gray-600 to-blue-700'' textColo,
   r: 'text-gray-400'' lin,
   k: 'http,
-  s://ziontechgroup.com/enterprise-it-infrastructure' marketPositio,
-  n:' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
+  s: //ziontechgroup.com/enterprise-it-infrastructure' marketPositio,
+  n: ' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.' targetAudienc,
-  e:' 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions' trialDay,
+  e: ' 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions' trialDay,
   s: 0' setupTim,
   e: '8-12 weeks'' categor,
   y: 'Enterprise IT Infrastructure' realServic,
@@ -7190,25 +7150,25 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' } realImplementatio,
+  s: //ziontechgroup.com',} realImplementatio,
   n: true,
-  implementationDetails:' 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'' launchDat,
+  implementationDetails: ' 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'' launchDat,
   e: '2024-01-01' customer,
   s: 25,
   rating: 4.8,
-  reviews: 18 } // Cloud Migration & Optimization Services ' i,
+  reviews: 18,} // Cloud Migration & Optimization Services ' i,
   d: 'cloud-migration-optimization'' nam,
   e: 'Cloud Migration & Optimization Service'' taglin,
   e: 'Seamless cloud migration with 50% cost reduction guarantee'' pric,
   e: '$15,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and performance. Guarantees 50% cost reduction and improved scalability.' feature,
+  n: ' 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and performance. Guarantees 50% cost reduction and improved scalability.' feature,
   s: [' 'Cloud migration planning',' 'Workload assessment',' 'Cost optimization',' 'Performance optimization',' 'Security migration',' 'Data migration',' 'Application modernization',' 'Cloud governance',' 'Training and support',' 'Post - migration optimization'], popula,
   r: true,' ico,
   n: '☁️', marketPositio,
   n: ' 'Competes with AWS Professional Services ($200/hour), Microsoft Consulting ($250/hour), and Google Cloud ($180/hour). Our,
   advantage: Fixed pricing and guaranteed cost reduction.' targetAudienc,
-  e:' 'Enterprises planning cloud migration, Legacy system modernization, Digital transformation projects, Cost optimization initiatives' trialDay,
+  e: ' 'Enterprises planning cloud migration, Legacy system modernization, Digital transformation projects, Cost optimization initiatives' trialDay,
   s: 0' setupTim,
   e: '12-16 weeks'' categor,
   y: 'Cloud Migration & Optimization' realServic,
@@ -7226,19 +7186,19 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post - migration support.',' launch_dat,
+  s: ,' 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post - migration support.',' launch_dat,
   e: '2024 - 02 - 01', customer,
   s: 18, ratin,
   g: 4 && 4.7, review,
-  s: 12}, // Cybersecurity Operations Center ' i,
+  s: 12,}, // Cybersecurity Operations Center ' i,
   d: 'cybersecurity-operations-center'' nam,
   e: 'Cybersecurity Operations Center (SOC)'' taglin,
   e: '24/7 cybersecurity monitoring with AI-powered threat detection'' pric,
   e: '$18,999'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.' feature,
+  n: ' 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.' feature,
   s: [' 'Incident response automation',' 'Security analytics dashboard',' 'Threat intelligence',' 'Vulnerability management',' 'Security compliance',' 'Security awareness training',' 'Penetration testing',' 'Security consulting'], popula,
   r: true,' ico,
   n: '🛡️', targetAudienc,
@@ -7260,20 +7220,20 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional cybersecurity operations center with 24 / 7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.',' launch_dat,
+  s: ,' 'Fully functional cybersecurity operations center with 24 / 7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.',' launch_dat,
   e: '2024 - 01 - 15', customer,
   s: 32, ratin,
   g: 4 && 4.8, review,
-  s: 24}, // Data Center Management Services; ' i,
+  s: 24,}, // Data Center Management Services; ' i,
   d: 'data - center - management',' nam,
   e: 'Data Center Management & Optimization',' 'Data center infrastructure management',' 'Power and cooling optimization',' 'Network performance optimization',' 'Storage management',' 'Backup and disaster recovery',' 'Security management',' 'Performance monitoring',' 'Capacity planning',' 'Energy efficiency optimization',' '24 / 7 operations center'], popula,
   r: true,' ico,
   n: '🏗️', marketPositio,
   n: ' 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
   advantage: Comprehensive management and AI optimization.' targetAudienc,
-  e:' 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies' trialDay,
+  e: ' 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies' trialDay,
   s: 0' setupTim,
   e: '8-12 weeks'' categor,
   y: 'Data Center Management' realServic,
@@ -7291,24 +7251,24 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24 / 7 operations center and strategic consulting.',' launch_dat,
+  s: ,' 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24 / 7 operations center and strategic consulting.',' launch_dat,
   e: '2024 - 01 - 20', customer,
   s: 15, ratin,
   g: 4 && 4.7, review,
-  s: 11}, // Network Security & SD-WAN Services ' i,
+  s: 11,}, // Network Security & SD-WAN Services ' i,
   d: 'network-security-sdwan'' nam,
   e: 'Network Security & SD-WAN Management' taglin,
-  e:' 'Advanced network security with software-defined wide area networking'' pric,
+  e: ' 'Advanced network security with software-defined wide area networking'' pric,
   e: '$12,999'' perio,
   d: '/month' descriptio,
-  n:' 'Network security management',' 'Threat protection',' 'Traffic optimization',' 'Centralized management',' 'Performance monitoring',' 'Bandwidth optimization',' 'Security compliance',' 'Network automation',' '24 / 7 network support'], popula,
+  n: ' 'Network security management',' 'Threat protection',' 'Traffic optimization',' 'Centralized management',' 'Performance monitoring',' 'Bandwidth optimization',' 'Security compliance',' 'Network automation',' '24 / 7 network support'], popula,
   r: true,' ico,
   n: '🌐', marketPositio,
   n: ' 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our,
   advantage: Comprehensive security integration and competitive pricing.' targetAudienc,
-  e:' 'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions' trialDay,
+  e: ' 'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions' trialDay,
   s: 0' setupTim,
   e: '6-8 weeks'' categor,
   y: 'Network Security & SD-WAN' realServic,
@@ -7326,25 +7286,25 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional network security and SD - WAN management service with comprehensive security integration and network optimization capabilities. Includes 24 / 7 network support and monitoring.',' launch_dat,
+  s: ,' 'Fully functional network security and SD - WAN management service with comprehensive security integration and network optimization capabilities. Includes 24 / 7 network support and monitoring.',' launch_dat,
   e: '2024 - 02 - 15', customer,
   s: 28, ratin,
   g: 4 && 4.6, review,
-  s: 19}, // IT Project Management Services ' i,
+  s: 19,}, // IT Project Management Services ' i,
   d: 'it-project-management'' nam,
   e: 'IT Project Management & Consulting'' taglin,
   e: 'Expert IT project management with guaranteed delivery'' pric,
   e: '$8,999'' perio,
   d: '/month' descriptio,
-  n:' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.' feature,
+  n: ' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.' feature,
   s: [' 'Project planning and management',' 'Resource allocation',' 'Risk management',' 'Quality assurance',' 'Stakeholder communication',' 'Project reporting',' 'Change management',' 'Strategic consulting',' 'Technology advisory',' 'Project recovery'], popula,
   r: true,' ico,
   n: '📋', marketPositio,
   n: ' 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
   advantage: Specialized IT focus and competitive pricing.' targetAudienc,
-  e:' 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery' trialDay,
+  e: ' 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery' trialDay,
   s: 0' setupTim,
   e: '2-4 weeks'' categor,
   y: 'IT Project Management' realServic,
@@ -7362,25 +7322,25 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',' launch_dat,
+  s: ,' 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',' launch_dat,
   e: '2024 - 01 - 10', customer,
   s: 45, ratin,
   g: 4 && 4.7, review,
-  s: 32}, // IT Training & Certification Services ' i,
+  s: 32,}, // IT Training & Certification Services ' i,
   d: 'it-training-certification'' nam,
   e: 'IT Training & Certification Programs'' taglin,
   e: 'Comprehensive IT training with industry certifications'' pric,
   e: '$2,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.' feature,
+  n: ' 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.' feature,
   s: [' 'Comprehensive IT training',' 'Industry certifications',' 'Hands - on labs',' 'Expert instructors',' 'Flexible learning options',' 'Certification preparation',' 'Career guidance',' 'Learning management system',' 'Progress tracking',' '24 / 7 learning support'], popula,
   r: true,' ico,
   n: '🎓', marketPositio,
   n: ' 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
   advantage: Comprehensive training and competitive pricing.' targetAudienc,
-  e:' 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions' trialDay,
+  e: ' 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions' trialDay,
   s: 7' setupTim,
   e: '1 week'' categor,
   y: 'IT Training & Certification' realServic,
@@ -7398,13 +7358,13 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24 / 7 support.',' launch_dat,
+  s: ,' 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24 / 7 support.',' launch_dat,
   e: '2024 - 01 - 05', customer,
   s: 120, ratin,
   g: 4 && 4.8, review,
-  s: 89}, ' 'Quantum computing resources',' 'Quantum - secured networking',' 'Quantum encryption at rest and in transit',' 'Quantum load balancing',' 'Quantum database optimization',' 'Quantum machine learning acceleration',' 'Quantum blockchain integration',' 'Quantum IoT platform',' 'Quantum analytics engine',' '24 / 7 quantum operations center'], popula,
+  s: 89,}, ' 'Quantum computing resources',' 'Quantum - secured networking',' 'Quantum encryption at rest and in transit',' 'Quantum load balancing',' 'Quantum database optimization',' 'Quantum machine learning acceleration',' 'Quantum blockchain integration',' 'Quantum IoT platform',' 'Quantum analytics engine',' '24 / 7 quantum operations center'], popula,
   r: true,' ico,
   n: '☁️', marketPositio,
   n: ' 'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.' targetAudienc,
@@ -7426,17 +7386,17 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',' launch_dat,
+  s: ,' 'Advanced quantum cloud infrastructure with quantum computing resources, quantum - secured networking, and comprehensive enterprise features.',' launch_dat,
   e: '2024 - 11 - 15', customer,
   s: 45, ratin,
   g: 4 && 4.9, review,
-  s: 32}, ' 'Intelligent infrastructure scaling',' 'Predictive failure detection',' 'Automated performance tuning',' 'Smart resource allocation',' 'AI - driven security scanning',' 'Automated compliance checks',' 'Real - time performance monitoring',' 'Predictive analytics dashboard',' '24 / 7 AI operations center'], popula,
+  s: 32,}, ' 'Intelligent infrastructure scaling',' 'Predictive failure detection',' 'Automated performance tuning',' 'Smart resource allocation',' 'AI - driven security scanning',' 'Automated compliance checks',' 'Real - time performance monitoring',' 'Predictive analytics dashboard',' '24 / 7 AI operations center'], popula,
   r: true,' ico,
   n: '🤖', marketPositio,
   n: ' 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.' targetAudienc,
-  e:' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups' trialDay,
+  e: ' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups' trialDay,
   s: 21' setupTim,
   e: '1 day'' categor,
   y: 'AI & DevOps Automation' realServic,
@@ -7454,13 +7414,13 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Comprehensive AI - powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.',' launch_dat,
+  s: ,' 'Comprehensive AI - powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.',' launch_dat,
   e: '2024 - 10 - 01', customer,
   s: 320, ratin,
   g: 4 && 4.8, review,
-  s: 245}, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
+  s: 245,}, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
   r: true,' ico,
   n: '🔒', marketPositio,
   n: ' 'First-to-market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.' targetAudienc,
@@ -7474,7 +7434,7 @@ export interface ComprehensiveITService,
   s: [' 'Network security'' 'Endpoint protection'' 'Data encryption'' 'Threat detection'' 'Incident response'' 'Compliance management' ]' ro,
   i: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.' competitor,
   s: [' 'Palo Alto Networks'' 'CrowdStrike'' 'Symantec'' 'Traditional security tools' ] marketSiz,
-  e:' '$150B cybersecurity market, quantum segment growing 400% annually'' growthRat,
+  e: ' '$150B cybersecurity market, quantum segment growing 400% annually'' growthRat,
   e: '400% annual growth'' varian,
   t: 'quantum-cyberpunk' contactInf,
   o: ' mobil,
@@ -7482,13 +7442,13 @@ export interface ComprehensiveITService,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
+  s: //ziontechgroup && ziontechgroup.com',}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',' launch_dat,
+  s: ,' 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',' launch_dat,
   e: '2024 - 09 - 15', customer,
   s: 180, ratin,
   g: 4 && 4.9, review,
-  s: 156},' ]; mobil,
+  s: 156,},' ]; mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com' i,
   d: string, nam,
@@ -7521,21 +7481,21 @@ export interface ComprehensiveITService,
   e: string, emai,
   l: string, addres,
   s: string, websit,
-  e: string }, realImplementatio,
+  e: string,}, realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } export const,
+  s: number,} export const,
   comprehensiveITServices: ComprehensiveITService[] = [' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', review,
   s: 156' websit,
   e: 'http,
-  s://ziontechgroup.com' } real_implementatio,
+  s: //ziontechgroup.com',} real_implementatio,
   n: true,' implementation_detail,
   s: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'' launch_dat,
   e: '2024 - 09 - 15' customer,
   s: 180, ratin,
   g: 4.9, review,
-  s: 156} '
+  s: 156,} '

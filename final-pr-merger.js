@@ -5,16 +5,16 @@ import fs from 'fs';
 // // //Function to safely execute git commands;
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe',});
 //     return { success: true, result }
   } catch (error) {
-//     return { success: false, error: error.message }
-function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
-//     return {/* TODO: Fix JSX expression */}
+//     return { success: false, error: error.message,}
+function safeGitCommand(command, description) {/* TODO: Fix JSX expression */,}
+  o: 'pipe',});
+//     return {/* TODO: Fix JSX expression */,}
   s: true, result }
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.message }
+  } catch (error) {/* TODO: Fix JSX expression */,}
+  r: error.message,}
   }
 }
 
@@ -22,14 +22,14 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 function branchExists(branchName) {
   try {
     execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`)
-      { stdio: 'pipe' }
-function branchExists(branchName) {/* TODO: Fix JSX expression */}
+      { stdio: 'pipe',}
+function branchExists(branchName) {/* TODO: Fix JSX expression */,}
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
-      {/* TODO: Fix JSX expression */}
-  o: 'pipe' }
+      {/* TODO: Fix JSX expression */,}
+  o: 'pipe',}
     );
     return true;
-  } catch {/* TODO: Fix JSX expression */}
+  } catch {/* TODO: Fix JSX expression */,}
   }
 }
 
@@ -41,21 +41,21 @@ const allPRs = [
     branch: 'cursor/fix-web-application-console-errors-0bf5'
     sha: 'd4e66d09ceb2c6c48f1f522df7030a5261c4c661',
     priority: 'critical',
-    description: 'Critical console errors and PWA fixes'},
+    description: 'Critical console errors and PWA fixes',},
   {
     number: 25063,
     title: 'Build and deploy with vite and netlify'
     branch: 'cursor/build-and-deploy-with-vite-and-netlify-8b37'
     sha: 'd2deed6f7d4ef805058d58bdadeb11ca5a746580',
     priority: 'high',
-    description: 'Netlify configuration updates'},
+    description: 'Netlify configuration updates',},
   {
     number: 25062,
     title: 'Fix errors and merge to main'
     branch: 'cursor/fix-errors-and-merge-to-main-fcbd'
     sha: 'a5f35d4a9ddcf46941c797da316bb3a2b7b05b56',
     priority: 'high',
-    description: 'Remove unused PerformanceOptimizer import'},
+    description: 'Remove unused PerformanceOptimizer import',},
   {
     number: 25061,
     title: 'Fix errors and merge to main'
@@ -63,13 +63,13 @@ const allPRs = [
     sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db',
     priority: 'high',
     description: 'Remove unused PerformanceOptimizer import',
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   }];
 
 //Ensure we're on main branch;
@@ -82,7 +82,7 @@ safeGitCommand('git pull origin main', 'Pull latest changes from main');
 //Process each PR;
 for (const pr of allPRs) {
 //   // console.log(
-    `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority}) ---`
+    `\n--- Processing PR #${pr.number}: ${pr.title} (Priority: ${pr.priority,}) ---`
   );
 //   //Check if branch exists;
   if (!branchExists(pr.branch)) {
@@ -93,12 +93,12 @@ for (const pr of allPRs) {
       status: 'not_found'),
       branch: pr.branch),
       priority: pr.priority),
-for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
+for (const pr of allPRs) {/* TODO: Fix JSX expression */,}`
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priorit)`
-  y: ${pr.priority}) ---`
+  y: ${pr.priority,}) ---`
   );
 //   //Check if branch exists;
-  if (!branchExists(pr.branch)) {/* TODO: Fix JSX expression */}
+  if (!branchExists(pr.branch)) {/* TODO: Fix JSX expression */,}
     });
     continue;
   }
@@ -115,7 +115,7 @@ for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
       title: pr.title,)
       status: 'merged'),
       branch: pr.branch),
-      priority: pr.priority)});
+      priority: pr.priority),});
   } else {
     conflictCount++;
 //     //Try to abort the merge if there was a conflict;
@@ -133,12 +133,12 @@ for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
     `Merge ${pr.branch}`)
   );
 
-  if (mergeResult.success) {/* TODO: Fix JSX expression */}
+  if (mergeResult.success) {/* TODO: Fix JSX expression */,}
     });
-  } else {/* TODO: Fix JSX expression */}`
+  } else {/* TODO: Fix JSX expression */,}`
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
 
-    results.push({/* TODO: Fix JSX expression */})
+    results.push({/* TODO: Fix JSX expression */,})
     });
   }
 }
@@ -160,13 +160,13 @@ if (mergedCount > 0) {
   'TypeScript type checking')
 );
 const buildCheck = safeGitCommand('pnpm run,
-  build:no-check',
+  build: no-check',
   'Production build')
 );
 
 //Push changes if any were merged;
-if (mergedCount > 0) {/* TODO: Fix JSX expression */}
-//     } else {/* TODO: Fix JSX expression */}
+if (mergedCount > 0) {/* TODO: Fix JSX expression */,}
+//     } else {/* TODO: Fix JSX expression */,}
 //     }
 }
 
@@ -179,7 +179,7 @@ const finalReport = {
     conflicts: conflictCount
     notFound: notFoundCount
     skipped: skippedCount,
-    successRate: `${Math.round((mergedCount / allPRs.length) * 100)}%`},
+    successRate: `${Math.round((mergedCount / allPRs.length) * 100),}%`},
   systemChecks: {
     typeCheck: typeCheck.success;
     lintCheck: lintCheck.success
@@ -195,19 +195,19 @@ const finalReport = {
   repository: {,
     branch: 'main',
     status: 'clean',
-    lastCommit: execSync('git log --oneline -1', { encoding: 'utf8' }).trim(),
-const finalReport = {/* TODO: Fix JSX expression */}`
-  e: `${Math.round((mergedCount / allPRs.length) * 100)}%`},
+    lastCommit: execSync('git log --oneline -1', { encoding: 'utf8',}).trim(),
+const finalReport = {/* TODO: Fix JSX expression */,}`
+  e: `${Math.round((mergedCount / allPRs.length) * 100),}%`},
   systemCheck,
-  s: {/* TODO: Fix JSX expression */}
+  s: {/* TODO: Fix JSX expression */,}
   },
   result,
   s: results,
   statu,
   s: mergedCount > 0 ? 'success' : 'no-changes',
   repositor,
-  y: {/* TODO: Fix JSX expression */}
-  g: 'utf8' }).trim()}}
+  y: {/* TODO: Fix JSX expression */,}
+  g: 'utf8',}).trim()}}
 
 //Save detailed final report;
 fs.writeFileSync('final-pr-merge-report.json')
@@ -215,8 +215,8 @@ fs.writeFileSync('final-pr-merge-report.json')
   JSON.stringify(finalReport, null, 2)
 );
 
-// // // // // // // // // // // if (finalReport.systemChecks.allPassed) {/* TODO: Fix JSX expression */}
-//   } else {/* TODO: Fix JSX expression */}
+// // // // // // // // // // // if (finalReport.systemChecks.allPassed) {/* TODO: Fix JSX expression */,}
+//   } else {/* TODO: Fix JSX expression */,}
 //   }
 
 // // // "`

@@ -7,45 +7,45 @@ function fixPageJSX() {
     // Fix specific malformed patterns
     const fixes = [
       // Fix malformed closing tags
-      { pattern: /<\/Navigatio>/g, replacement: '</Navigation>' },
-      { pattern: /<\/sectio>/g, replacement: '</section>' },
-      { pattern: /<\/div>/g, replacement: '</div>' },
-      { pattern: /<\/h1>/g, replacement: '</h1>' },
-      { pattern: /<\/h2>/g, replacement: '</h2>' },
-      { pattern: /<\/h3>/g, replacement: '</h3>' },
-      { pattern: /<\/p>/g, replacement: '</p>' },
-      { pattern: /<\/span>/g, replacement: '</span>' },
-      { pattern: /<\/a>/g, replacement: '</a>' },
-      { pattern: /<\/button>/g, replacement: '</button>' },
-      { pattern: /<\/ul>/g, replacement: '</ul>' },
-      { pattern: /<\/li>/g, replacement: '</li>' },
-      { pattern: /<\/main>/g, replacement: '</main>' },
-      { pattern: /<\/footer>/g, replacement: '</footer>' },
+      { pattern: /<\/Navigatio>/g, replacement: '</Navigation>',},
+      { pattern: /<\/sectio>/g, replacement: '</section>',},
+      { pattern: /<\/div>/g, replacement: '</div>',},
+      { pattern: /<\/h1>/g, replacement: '</h1>',},
+      { pattern: /<\/h2>/g, replacement: '</h2>',},
+      { pattern: /<\/h3>/g, replacement: '</h3>',},
+      { pattern: /<\/p>/g, replacement: '</p>',},
+      { pattern: /<\/span>/g, replacement: '</span>',},
+      { pattern: /<\/a>/g, replacement: '</a>',},
+      { pattern: /<\/button>/g, replacement: '</button>',},
+      { pattern: /<\/ul>/g, replacement: '</ul>',},
+      { pattern: /<\/li>/g, replacement: '</li>',},
+      { pattern: /<\/main>/g, replacement: '</main>',},
+      { pattern: /<\/footer>/g, replacement: '</footer>',},
       
       // Fix malformed opening tags
-      { pattern: /<h1>/g, replacement: '<h1>' },
-      { pattern: /<h2>/g, replacement: '<h2>' },
-      { pattern: /<h3>/g, replacement: '<h3>' },
-      { pattern: /<div>/g, replacement: '<div>' },
-      { pattern: /<section>/g, replacement: '<section>' },
-      { pattern: /<p>/g, replacement: '<p>' },
-      { pattern: /<span>/g, replacement: '<span>' },
-      { pattern: /<a>/g, replacement: '<a>' },
-      { pattern: /<button>/g, replacement: '<button>' },
-      { pattern: /<ul>/g, replacement: '<ul>' },
-      { pattern: /<li>/g, replacement: '<li>' },
-      { pattern: /<main>/g, replacement: '<main>' },
-      { pattern: /<footer>/g, replacement: '<footer>' },
+      { pattern: /<h1></h1>/g, replacement: '<h1></h1>',},
+      { pattern: /<h2></h2>/g, replacement: '<h2></h2>',},
+      { pattern: /<h3></h3>/g, replacement: '<h3></h3>',},
+      { pattern: /<div></div>/g, replacement: '<div></div>',},
+      { pattern: /<section></section>/g, replacement: '<section></section>',},
+      { pattern: /<p></p>/g, replacement: '<p></p>',},
+      { pattern: /<span>/g, replacement: '<span>',},
+      { pattern: /<a>/g, replacement: '<a>',},
+      { pattern: /<button></button>/g, replacement: '<button></button>',},
+      { pattern: /<ul>/g, replacement: '<ul>',},
+      { pattern: /<li>/g, replacement: '<li>',},
+      { pattern: /<main></main>/g, replacement: '<main></main>',},
+      { pattern: /<footer>/g, replacement: '<footer>',},
       
       // Fix specific broken patterns
-      { pattern: /<\/<</g, replacement: '</' },
-      { pattern: /<</g, replacement: '<' },
-      { pattern: />>/g, replacement: '>' },
-      { pattern: /<<</g, replacement: '<' },
-      { pattern: />>>/g, replacement: '>' },
+      { pattern: /<\/<</g, replacement: '</',},
+      { pattern: /<</g, replacement: '<',},
+      { pattern: />>/g, replacement: '>',},
+      { pattern: /<<</g, replacement: '<',},
+      { pattern: />>>/g, replacement: '>',},
       
       // Fix malformed JSX expressions
-      { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1>' },
+      { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1>',},
       
       // Fix broken closing tags
       { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {
@@ -74,7 +74,7 @@ function fixPageJSX() {
     
     return false;
   } catch (error) {
-    console.error('Error fixing app/page.tsx:', error.message);
+    console.error('Error fixing app/page.tsx: ', error.message);
     return false;
   }
 }

@@ -28,7 +28,7 @@ export class PerformanceMonitor {
           this.recordMetric('navigation', entry.duration)
   }
       });
-      navObserver.observe({ entryTypes: ['navigation'] });
+      navObserver.observe({ entryTypes: ['navigation'],});
       this.observers.push(navObserver);
     }
     
@@ -39,7 +39,7 @@ export class PerformanceMonitor {
           this.recordMetric('resource', entry.duration)
   }
       });
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      resourceObserver.observe({ entryTypes: ['resource'],});
       this.observers.push(resourceObserver);
     }
     
@@ -50,7 +50,7 @@ export class PerformanceMonitor {
           this.recordMetric(entry.name, entry.startTime)
   }
       });
-      paintObserver.observe({ entryTypes: ['paint'] });
+      paintObserver.observe({ entryTypes: ['paint'],});
       this.observers.push(paintObserver);
     }
     
@@ -63,7 +63,7 @@ export class PerformanceMonitor {
           this.recordMetric('lcp', lastEntry.startTime)
   }
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'],});
       this.observers.push(lcpObserver);
     }
     
@@ -76,7 +76,7 @@ export class PerformanceMonitor {
           this.recordMetric('fid', fid)
   }
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ['first-input'],});
       this.observers.push(fidObserver);
     }
     
@@ -92,7 +92,7 @@ export class PerformanceMonitor {
   }
         }
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'],});
       this.observers.push(clsObserver);
     }
   }
@@ -115,7 +115,7 @@ export class PerformanceMonitor {
       lcp: this.getMetric('lcp'),
       fid: this.getMetric('fid'),
       cls: this.getMetric('cls'),
-      ttfb: this.getTTFB()}
+      ttfb: this.getTTFB(),}
   }
   
   /**
@@ -172,7 +172,7 @@ export class PerformanceMonitor {
       const measures = performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0
   } catch (error) {
-    //       // console.error('Performance measurement failed:', error);
+    //       // console.error('Performance measurement failed: ', error);
       return 0
   }
   }
@@ -198,7 +198,7 @@ export class PerformanceMonitor {
       webVitals,
       resources: this.getResourceStats(),
       memory: this.getMemoryStats(),
-      timestamp: Date.now()}
+      timestamp: Date.now(),}
   }
   
   /**
@@ -206,7 +206,7 @@ export class PerformanceMonitor {
    */
   private getResourceStats(): ResourceStats {
     if (typeof performance === 'undefined') {
-      return { total: 0, scripts: 0, styles: 0, images: 0, fonts: 0 }
+      return { total: 0, scripts: 0, styles: 0, images: 0, fonts: 0,}
     }
     
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
@@ -216,7 +216,7 @@ export class PerformanceMonitor {
       scripts: resources.filter(r => r.initiatorType === 'script').length,
       styles: resources.filter(r => r.initiatorType === 'css' || r.initiatorType === 'link').length,
       images: resources.filter(r => r.initiatorType === 'img').length,
-      fonts: resources.filter(r => r.initiatorType === 'font').length}
+      fonts: resources.filter(r => r.initiatorType === 'font').length,}
   }
   
   /**
@@ -232,7 +232,7 @@ export class PerformanceMonitor {
     return {
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
-      jsHeapSizeLimit: memory.jsHeapSizeLimit}
+      jsHeapSizeLimit: memory.jsHeapSizeLimit,}
   }
   
   /**
@@ -335,7 +335,7 @@ export const performanceMonitor = new PerformanceMonitor();
 export default PerformanceMonitor;
 
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
-import type {/* TODO: Fix JSX expression */}
+import type {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 /**
@@ -343,7 +343,7 @@ import type {/* TODO: Fix JSX expression */}
  * Comprehensive performance tracking and optimization utilities;
  */
  * Performance Observer Wrapper;
-export class PerformanceMonitor {/* TODO: Fix JSX expression */}
+export class PerformanceMonitor {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   private,
@@ -351,16 +351,16 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
           <string, number[]> = new Map();
   private,
   observers: PerformanceObserver[] = [],
-  constructor() {/* TODO: Fix JSX expression */}
+  constructor() {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       this.initializeObservers();
     }
    * Initialize performance observers;
-  private initializeObservers(): void {/* TODO: Fix JSX expression */}
+  private initializeObservers(): void {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     // Monitor navigation timing;
@@ -370,22 +370,22 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
           this.recordMetric('navigation', entry.duration);
       });
-      navObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
+      navObserver.observe({/* TODO: Fix JSX expression */,})
+  s: ['navigation'],});
       this.observers.push(navObserver);
           this.recordMetric('resource', entry.duration);
-      resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
+      resourceObserver.observe({/* TODO: Fix JSX expression */,})
+  s: ['resource'],});
       this.observers.push(resourceObserver);
           this.recordMetric(entry.name, entry.startTime);
-      paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+      paintObserver.observe({/* TODO: Fix JSX expression */,})
+  s: ['paint'],});
       this.observers.push(paintObserver);
           const fidEntry = entry as PerformanceEventTiming;
           const fid = fidEntry.processingStart - fidEntry.startTime;
           this.recordMetric('fid', fid);
-      fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+      fidObserver.observe({/* TODO: Fix JSX expression */,})
+  s: ['first-input'],});
       this.observers.push(fidObserver);
 // Types;
 //   PerformanceReport,
@@ -400,17 +400,17 @@ export function throttle;
           <T extends (...arg)
   s: unknown[]) => any>(* Request idle callback wrapper,
 export function runWhenIdle(callbac)
-  k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */}
+  k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   if (typeof window === 'undefined') {
     return
   }
-  if ('requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
+  if ('requestIdleCallback' in window) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     window.requestIdleCallback(callback, { timeout });
-  } else {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
     setTimeout(callback, 0);

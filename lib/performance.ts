@@ -8,7 +8,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 // Extend Window interface for gtag;
 declare global {
     interface Window {
-    gtag?: (...args: unknown[]) => void
+    gtag?: (...args: unknown[]) => void,
   }
 }
 
@@ -18,7 +18,7 @@ interface PerformanceMetric {
   name: string
   value: number
   delta: number,
-  id: string
+  id: string,
   }
 
 export interface PerformanceMetric {
@@ -26,14 +26,14 @@ export interface PerformanceMetric {
   value: number
   rating: 'good' | 'needs-improvement' | 'poor'
   delta: number,
-  id: string
+  id: string,
   }
 
 // Extended Performance interface for memory API;
 interface PerformanceMemory {
     usedJSHeapSize: number
   totalJSHeapSize: number,
-  jsHeapSizeLimit: number
+  jsHeapSizeLimit: number,
   }
 
 // Network connection interface;
@@ -50,21 +50,21 @@ interface PerformanceReport {
     metrics: PerformanceMetric[]
   timestamp: string
   url: string,
-  userAgent: string
+  userAgent: string,
   }
 
 // Thresholds for ratings (from web.dev)
 const THRESHOLDS = {
-  CLS: { good: 0.1, poor: 0.25 },
-  FID: { good: 100, poor: 300 },
-  FCP: { good: 1800, poor: 3000 },
-  LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 }}
+  CLS: { good: 0.1, poor: 0.25,},
+  FID: { good: 100, poor: 300,},
+  FCP: { good: 1800, poor: 3000,},
+  LCP: { good: 2500, poor: 4000,},
+  TTFB: { good: 800, poor: 1800,}}
 
 /**
  * Get performance rating based on thresholds;
  */
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {,
     ,
 function getRating(name: string),
   value: number,
@@ -74,14 +74,14 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
   const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good'
   if (value <= threshold.good) return 'good'
-  if (value <= threshold.poor) return 'needs-improvement',,
+  if (value <= threshold.poor) return 'needs-improvement',
   return 'poor'
   }
 
 /**
  * Send performance data to analytics;
  */
-function sendToAnalytics(metric: Metric): void {
+function sendToAnalytics(metric: Metric): void {,
     ,
   const performanceMetric: PerformanceMetric = {,
     name: metric.name
@@ -102,7 +102,7 @@ function sendToAnalytics(metric: Metric): void {
     id: metric.id
     id: metric.id
     id: metric.id,
-    id: metric.id
+    id: metric.id,
   }
 
   // Log in development;
@@ -136,12 +136,12 @@ function sendToAnalytics(metric: Metric): void {
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
-    id: metric.id
+    id: metric.id,
   }
 
   // Log in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Performance metric:', performanceMetric)
+    console.log('Performance metric: ', performanceMetric)
   }
 
   // Send to analytics;
@@ -165,7 +165,7 @@ function sendToAnalytics(metric: Metric): void {
         metric.name === 'CLS' ? metric.value * 1000 : metric.value
       ),
       event_label: metric.id,
-      non_interaction: true});
+      non_interaction: true,});
   }
 
   // Send to custom endpoint;
@@ -180,7 +180,7 @@ function sendToAnalytics(metric: Metric): void {
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
       method: 'POST'),
-      headers: { 'Content-Type': 'application/json' })
+      headers: { 'Content-Type': 'application/json',})
       body: JSON.stringify({
     )
         ...performanceMetric)
@@ -190,7 +190,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent
         userAgent: navigator.userAgent
         userAgent: navigator.userAgent,
-        userAgent: navigator.userAgent
+        userAgent: navigator.userAgent,
   }),
       keepalive: true
         userAgent: navigator.userAgent,
@@ -208,7 +208,7 @@ function sendToAnalytics(metric: Metric): void {
       event_category: 'Web Vitals'),
       event_label: performanceMetric.rating),
       value: Math.round(metric.value),
-      non_interaction: true
+      non_interaction: true,
   });
   }
   // Send to analytics;
@@ -217,7 +217,7 @@ function sendToAnalytics(metric: Metric): void {
       event_category: 'Web Vitals'),
       event_label: metric.id),
       value: Math.round(metric.value),
-      non_interaction: true
+      non_interaction: true,
   });
   }
   // Send to analytics;
@@ -226,7 +226,7 @@ function sendToAnalytics(metric: Metric): void {
       event_category: 'Web Vitals'),
       event_label: metric.id),
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      non_interaction: true
+      non_interaction: true,
   });
   }
         userAgent: navigator.userAgent,
@@ -278,7 +278,7 @@ export function generatePerformanceReport(): PerformanceReport {
   return {
     metrics,
     timestamp: new Date().toISOString(),
-    url: typeof window !== 'undefined' ? window.location.href : ''}
+    url: typeof window !== 'undefined' ? window.location.href : '',}
 
   if (typeof window === 'undefined') return;
 
@@ -287,7 +287,7 @@ export function generatePerformanceReport(): PerformanceReport {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'},
-      body: JSON.stringify(performanceMetric)}).catch(console.error);
+      body: JSON.stringify(performanceMetric),}).catch(console.error);
   }
 }
 
@@ -337,7 +337,7 @@ export function reportWebVitals(): void {
     (window as any).gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
-      event_category: 'Performance'});
+      event_category: 'Performance',});
   }
 
   if (process.env['NODE_ENV'] === 'development') {
@@ -395,7 +395,7 @@ export function measurePerformance(name: string, startTime: number): number {
     window.gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
-      event_category: 'Performance'});
+      event_category: 'Performance',});
   }
 
   if (process.env['NODE_ENV'] === 'development') {
@@ -505,7 +505,7 @@ export function getNavigationTiming(): Record<string, number> | null {
     dns: navigation.domainLookupEnd - navigation.domainLookupStart;
     tcp: navigation.connectEnd - navigation.connectStart
     ssl: navigation.secureConnectionStart
-      ? navigation.connectEnd - navigation.secureConnectionStart,,
+      ? navigation.connectEnd - navigation.secureConnectionStart,
       : 0
   }
 }
@@ -522,7 +522,7 @@ export function getNavigationTiming(): Record<string, number> | null {
 /**
  * Analyze slow resources;
  */
-export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {
+export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {,
     ,
   const _resources = getResourceTiming();
   return resources.filter(resource => resource.duration>threshold</duration>)
@@ -582,7 +582,7 @@ export function getMemoryUsage(): Record<string, number> | null {
   if(typeof window === 'undefined' ||)
     !()
       window as Window & {)
-        performance: Performance & { memory?: PerformanceMemory })
+        performance: Performance & { memory?: PerformanceMemory,})
       })
     ).performance?.memory;
   )
@@ -590,7 +590,7 @@ export function getMemoryUsage(): Record<string, number> | null {
 
   const memory = (
     window as Window & {
-      performance: Performance & { memory?: PerformanceMemory }
+      performance: Performance & { memory?: PerformanceMemory,}
     }
   ).performance.memory;
   return {
@@ -604,7 +604,7 @@ export function getMemoryUsage(): Record<string, number> | null {
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
-    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+    usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
   }
 }
 
@@ -649,28 +649,28 @@ export function generatePerformanceReport(): PerformanceReport | null {
   if (navigationTiming) {,
     Object.entries(navigationTiming).forEach(([name, value]) => {
       metrics.push({)
-        name: `navigation.${name}`)
+        name: `navigation.${name,}`)
         value)
-        id: `nav-${name}`
+        id: `nav-${name,}`
       });
     });
   }
-        id: `nav-${name}`});
+        id: `nav-${name,}`});
     });
   }
 
-        id: `nav-${name}`});
+        id: `nav-${name,}`});
     });
   }
 
         rating: getRating(name, value),
         delta: value,
-        id: `nav-${name}-${Date.now()}`
+        id: `nav-${name,}-${Date.now()}`
       });
     });
   }
 
-        id: `nav-${name}`});
+        id: `nav-${name,}`});
     });
   }
 
@@ -698,7 +698,7 @@ export function generatePerformanceReport(): PerformanceReport {
     metrics: []
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',}
 
 export function measurePerformance(name: string, fn: () => void): void {
   const start = performance.now()
@@ -709,7 +709,7 @@ export function measurePerformance(name: string, fn: () => void): void {
     name,
     value: end - start,
     delta: end - start,
-    id: `${name}-${Date.now()}`});
+    id: `${name,}-${Date.now()}`});
 }
 
 export function measureAsyncPerformance<T>(
@@ -723,7 +723,7 @@ export function measureAsyncPerformance<T>(
       name,
       value: end - start,
       delta: end - start,
-      id: `${name}-${Date.now()}`});
+      id: `${name,}-${Date.now()}`});
     return result;
   });
 }
@@ -733,7 +733,7 @@ export function measureAsyncPerformance<T>(
       const _entries = list.getEntries();
       callback(entries)
   });
-    observer.observe({ entryTypes: ['longtask'] });
+    observer.observe({ entryTypes: ['longtask'],});
     return observer;
   } catch (error) {
     // eslint-disable-next-line no-console;
@@ -752,7 +752,7 @@ export function measureAsyncPerformance<T>(
       const _entries = list.getEntries();
       callback(entries)
   });
-    observer.observe({ entryTypes: ['layout-shift'] });
+    observer.observe({ entryTypes: ['layout-shift'],});
     return observer;
   } catch (error) {
     // eslint-disable-next-line no-console;
@@ -801,7 +801,7 @@ const performanceUtils = {
   monitorLongTasks,
   monitorLayoutShifts,
   isSlowConnection,
-    userAgent: navigator.userAgent
+    userAgent: navigator.userAgent,
   }
 }
 
@@ -835,7 +835,7 @@ export function monitorLongTasks(
       const _entries = list.getEntries();
       callback(entries)
   });
-    observer.observe({ entryTypes: ['longtask'] });
+    observer.observe({ entryTypes: ['longtask'],});
     return observer;
   } catch (error) {
     //     return null
@@ -859,7 +859,7 @@ export function monitorLayoutShifts(
       const _entries = list.getEntries();
       callback(entries)
   });
-    observer.observe({ entryTypes: ['layout-shift'] });
+    observer.observe({ entryTypes: ['layout-shift'],});
     return observer;
   } catch (error) {
     //     return null
@@ -1000,7 +1000,7 @@ export {
   sendToAnalytics}
   getPerformanceScore;
 }
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',}
 }
 /**
  * Check if performance is within acceptable thresholds;
@@ -1038,7 +1038,7 @@ export function generatePerformanceReport(): PerformanceReport {
     metrics: [],
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',}
 }
   getConnectionType;
 }

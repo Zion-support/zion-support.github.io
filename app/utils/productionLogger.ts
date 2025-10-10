@@ -17,7 +17,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
       level
   }
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
-    const entry: LogEntry = {}
+    const entry: LogEntry = {,}
       level,;
       message,;
       data,;
@@ -49,7 +49,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
       this.sendToMonitoring(entry);
     }
   }
-private sendToMonitoring(entry: LogEntry): void {
+private sendToMonitoring(entry: LogEntry): void {,
     ,
     // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {,;
@@ -60,7 +60,7 @@ private sendToMonitoring(entry: LogEntry): void {
         event_category: 'Error',
 ,
   }
-  private sendToMonitoring(entry: LogEntry): void {}
+  private sendToMonitoring(entry: LogEntry): void {,}
     // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {)}

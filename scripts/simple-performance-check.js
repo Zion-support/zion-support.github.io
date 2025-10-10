@@ -7,52 +7,52 @@ import { execSync } from 'child_process';
 try {
   const _distPath = path.join(process.cwd(), 'dist');
   if (fs.existsSync(distPath)) {
-    const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
+    const _stats = execSync('du -sh dist/*', { encoding: 'utf8',});
 
     // Check total size;
-    const _totalSize = execSync('du -sh dist', { encoding: 'utf8' }).trim();
+    const _totalSize = execSync('du -sh dist', { encoding: 'utf8',}).trim();
 
     // Check for large files;
-    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8' });
+    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8',});
     if (largeFiles.trim()) {} else {}
   } else {
-try {/* TODO: Fix JSX expression */}
-  g: 'utf8' });
+try {/* TODO: Fix JSX expression */,}
+  g: 'utf8',});
 
     // Check total size;
-    const _totalSize = execSync('du -sh dist', {/* TODO: Fix JSX expression */})
-  g: 'utf8' }).trim();
+    const _totalSize = execSync('du -sh dist', {/* TODO: Fix JSX expression */,})
+  g: 'utf8',}).trim();
 
     // Check for large files;
-    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', {/* TODO: Fix JSX expression */})
-  g: 'utf8' });
-    if (largeFiles.trim()) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', {/* TODO: Fix JSX expression */,})
+  g: 'utf8',});
+    if (largeFiles.trim()) {/* TODO: Fix JSX expression */,}
+    } else {/* TODO: Fix JSX expression */,}
     }
-  } else {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */,}
   }
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }
 
 // 2. Functions count;
 try {
-  const _functionsCount = execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim();
+  const _functionsCount = execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8',}).trim();
 
   if (parseInt(functionsCount) < 100) {} else {
-try {/* TODO: Fix JSX expression */}
-  g: 'utf8' }).trim();
+try {/* TODO: Fix JSX expression */,}
+  g: 'utf8',}).trim();
 
-  if (parseInt(functionsCount) < 100) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
+  if (parseInt(functionsCount) < 100) {/* TODO: Fix JSX expression */,}
+  } else {/* TODO: Fix JSX expression */,}
   }
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }
 
 // 3. Check for performance issues;
 // Check for unused dependencies;
 try {
   const _packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-try {/* TODO: Fix JSX expression */}
+try {/* TODO: Fix JSX expression */,}
   const _dependencies = Object.keys(packageJson.dependencies || {});
   const _devDependencies = Object.keys(packageJson.devDependencies || {});
 
@@ -63,12 +63,12 @@ try {/* TODO: Fix JSX expression */}
   );
   
   if (foundHeavyDeps.length > 0) {
-    // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '))
+    // console.log('⚠️  Heavy dependencies detected: ', foundHeavyDeps.join(', '))
   } else {
-  if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
+  if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */,}
+  } else {/* TODO: Fix JSX expression */,}
   }
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }
 
 // 4. Check build configuration;
@@ -79,28 +79,28 @@ try {
   if (viteConfig.includes('maxParallelFileOps')) {} else {}
   
   if (netlifyToml.includes('NODE_OPTIONS')) {} else {
-try {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
+try {/* TODO: Fix JSX expression */,}
+  } else {/* TODO: Fix JSX expression */,}
   }
   
-  if (netlifyToml.includes('NODE_OPTIONS')) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
+  if (netlifyToml.includes('NODE_OPTIONS')) {/* TODO: Fix JSX expression */,}
+  } else {/* TODO: Fix JSX expression */,}
   }
-} catch (error) {/* TODO: Fix JSX expression */}
+} catch (error) {/* TODO: Fix JSX expression */,}
 }
 
 // 5. Generate performance report;
 const report = {
   timestamp: new Date().toISOString(),
-  buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),
-  functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
+  buildSize: execSync('du -sh dist', { encoding: 'utf8',}).trim(),
+  functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8',}).trim(),
   optimizationStatus: 'Completed',
   improvements: [,
-const report = {/* TODO: Fix JSX expression */}
-  g: 'utf8' }).trim(),
+const report = {/* TODO: Fix JSX expression */,}
+  g: 'utf8',}).trim(),
   functionsCoun,
-  t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */})
-  g: 'utf8' }).trim(),
+  t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */,})
+  g: 'utf8',}).trim(),
   optimizationStatu,
   s: 'Completed',
   improvement,

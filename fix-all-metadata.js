@@ -29,8 +29,8 @@ function processFile(filePath) {
         metadata = {
           title: 'Zion Tech Group',
           description: 'Advanced AI and IT Solutions',
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-      } catch (e) {/* TODO: Fix JSX expression */}
+function processFile(filePath) {/* TODO: Fix JSX expression */,}
+      } catch (e) {/* TODO: Fix JSX expression */,}
         };
       }
     }
@@ -48,7 +48,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }
 
       if(skipUntilSemicolon &&)
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
+    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */,}
       }
 
       if (skipUntilSemicolon &&)
@@ -56,12 +56,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           line.trim() === '}' ||
           line.includes('const ') ||
           line.includes('function '))
-      ) {/* TODO: Fix JSX expression */}
+      ) {/* TODO: Fix JSX expression */,}
         }
         continue;
       }
 
-      if (!skipUntilSemicolon) {/* TODO: Fix JSX expression */}
+      if (!skipUntilSemicolon) {/* TODO: Fix JSX expression */,}
       }
     }
 
@@ -81,7 +81,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
       if (componentName) {,
     content = content.replace()
-      /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
+      /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */,}
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
@@ -92,13 +92,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);
       if (helmetMatch) {
         const newHelmet = `<Helmet>
-    if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
+    if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */,}
         <title>${metadata.title || 'Zion Tech Group'}</title>
         <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" /></meta>
-        ${/* TODO: Fix JSX expression */}"`
-  g:type" content="${metadata.type}" />` : ''}
-        ${/* TODO: Fix JSX expression */}"`
-  g:url" content="${metadata.url}" />` : ''}`
+        ${/* TODO: Fix JSX expression */,}"`
+  g: type" content="${metadata.type,}" />` : ''}
+        ${/* TODO: Fix JSX expression */,}"`
+  g: url" content="${metadata.url,}" />` : ''}`
       </Helmet>`;
 
         content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
@@ -106,11 +106,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }
     }
 
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */,}
     }
 
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
@@ -119,7 +119,7 @@ filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+filesToFix.forEach(file => {/* TODO: Fix JSX expression */,}
   })
 });
 

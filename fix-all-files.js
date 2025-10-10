@@ -19,13 +19,13 @@ function createProperComponent(filePath) {
     content = `import React from 'react';
 
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {
-  return(<div className="min-h-screen bg-gray-50">)
-      <div className="container mx-auto px-4 py-8">)
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">)
+  return(<div className="min-h-screen bg-gray-50"></div>)
+      <div className="container mx-auto px-4 py-8"></div>)
+        <h1 className="text-3xl font-bold text-gray-900 mb-6"></h1>)
           ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ')}
         </h1>
-        <div className="bg-white rounded-lg shadow-md p-6"></div>
-          <p className="text-gray-600">
+        <div className="bg-white rounded-lg shadow-md p-6"></div></div>
+          <p className="text-gray-600"></p>
             This page is under development. Content will be added soon.
           </p>
         </div>
@@ -46,13 +46,13 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
   children;
 }: ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props) {
   return (
-    <div className={\`${fileName.toLowerCase()} \${className}\`}></div>
+    <div className={\`${fileName.toLowerCase()} \${className}\`}></div></div>
       {children || (
-        <div className="p-4"></div>
-          <h3 className="text-lg font-semibold mb-2"></h>
+        <div className="p-4"></div></div>
+          <h3 className="text-lg font-semibold mb-2"></h3></h>
             ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim()}
           </h3>
-          <p className="text-gray-600">
+          <p className="text-gray-600"></p>
             Component content will be added here.
           </p>
         </div>
@@ -95,7 +95,7 @@ function fixFile(filePath) {
   try {
     const content = createProperComponent(filePath);
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed: ${filePath}`);
+    console.log(`✅ Fixed: ${filePath,}`);
     return true;
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
@@ -157,9 +157,9 @@ for (const file of files) {
 }
 
 console.log(`\n📊 Summary: `);
-console.log(`✅ Files fixed: ${fixedCount}`);
-console.log(`❌ Errors: ${errorCount}`);
-console.log(`📁 Total files processed: ${files.length}`);
+console.log(`✅ Files fixed: ${fixedCount,}`);
+console.log(`❌ Errors: ${errorCount,}`);
+console.log(`📁 Total files processed: ${files.length,}`);
 
 if (fixedCount > 0) {
   console.log('\n🎉 All files fixed successfully!');

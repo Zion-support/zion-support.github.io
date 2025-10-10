@@ -4,7 +4,7 @@ import React from 'react';
  * SEO Component;
  * Provides comprehensive SEO meta tags and structured data;
  *
-export interface SEOProps {/* TODO: Fix JSX expression */}
+export interface SEOProps {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   title?: string;
@@ -22,14 +22,13 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
           <string>
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
-  alternateLocales?: {/* TODO: Fix JSX expression */}
-  l: string }[];
+  alternateLocales?: {/* TODO: Fix JSX expression */,}
+  l: string,}[];
 }
   titl,
   e: 'Zion Tech Group - AI & IT Solutions',
   descriptio,
-  n:
-// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  n: // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keyword,
   s: [
   // TOD,
@@ -42,19 +41,19 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
 //   ],
   imag,
   e: 'http,
-  s://ziontechgroup.com/og-image.jpg',
+  s: //ziontechgroup.com/og-image.jpg',
   ur,
   l: 'http,
-  s://ziontechgroup.com',
+  s: //ziontechgroup.com',
   typ,
   e: 'website' as const,
   local,
   e: 'en_US',
   twitterCar,
-  d: 'summary_large_image' as const}
+  d: 'summary_large_image' as const,}
 export const,
   SEO: React.FC,
-          <SEOProps> = ({/* TODO: Fix JSX expression */}
+          <SEOProps> = ({/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
 //   title,
@@ -72,14 +71,14 @@ export const,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
   alternateLocales = [])
-}) => {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-  const seo = {/* TODO: Fix JSX expression */}
+  const seo = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   titl,
-  e: title ? `${title} | Zion Tech Group` : defaultSEO.title,
+  e: title ? `${title,} | Zion Tech Group` : defaultSEO.title,
     descriptio,
   n: description || defaultSEO.description,
     keyword,
@@ -92,21 +91,21 @@ export const,
 //     twitterCard,
 //     locale}
   // Generate structured data;
-const generateStructuredData = () => {/* TODO: Fix JSX expression */}
+const generateStructuredData = () => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-    if (structuredData) {/* TODO: Fix JSX expression */}
+    if (structuredData) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       return structuredData;
     }
     const,
   baseStructuredData: Record,
-          <string, unknown> = {/* TODO: Fix JSX expression */}
+          <string, unknown> = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       '@context': 'http,
-  s://schema.org',
+  s: //schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headlin,
   e: seo.title,
@@ -115,23 +114,23 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
       ur,
   l: seo.url,
       imag,
-  e: seo.image}
-    if (author) {/* TODO: Fix JSX expression */}
+  e: seo.image,}
+    if (author) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
-      baseStructuredData.author = {/* TODO: Fix JSX expression */}
+      baseStructuredData.author = {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
         '@type': 'Person',
         nam,
-  e: author}
+  e: author,}
     }
-    if (publishDate) {/* TODO: Fix JSX expression */}
+    if (publishDate) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       baseStructuredData.datePublished = publishDate;
     }
-    if (modifiedDate) {/* TODO: Fix JSX expression */}
+    if (modifiedDate) {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
       baseStructuredData.dateModified = modifiedDate;

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 export default function BlogPost(): React.JSX.Element {
   return(<React.Fragment>
       <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div></div>
         <Helmet>
           <title>Ai 2025 Oct 02 Agent Safety Scorecards - Zion Tech Group</title>
           <meta;
@@ -11,16 +11,16 @@ export default function BlogPost(): React.JSX.Element {
             content="Ai 2025 Oct 02 Agent Safety Scorecards - Latest insights from Zion Tech Group"
           /></meta>
         </Helmet>
-        <div className="max-w-4xl mx-auto px-4 py-20">
-          <div className="mb-12">
-            <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
-              Ai 2025 Oct 02 Agent Safety Scorecards
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight"></h1>
+              Ai 2025 Oct 02 Agent Safety Scorecards
+        <div className="max-w-4xl mx-auto px-4 py-20"></div></div>
+          <div className="mb-12"></div></div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight"></h1>
               Ai 2025 Oct 02 Agent Safety Scorecards
   </
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div></div>
               <span>By Zion Tech Group Team</span>
               <span>•</span>
               <span>2025-10-03</span>
@@ -28,51 +28,51 @@ export default function BlogPost(): React.JSX.Element {
               <span>5 min read</span>
             </div>
           </div>
-          <div className="prose prose-lg prose-invert max-w-none"></div>
-            <div className="text-gray-200 leading-relaxed"></div>
-              <h2>Introduction</h2>
-              <p>
+          <div className="prose prose-lg prose-invert max-w-none"></div></div>
+            <div className="text-gray-200 leading-relaxed"></div></div>
+              <h2></h2>Introduction</h2>
+              <p></p>
                 This is a placeholder blog post. The content for "Ai 2025 Oct 02 Agent Safety,
                 Scorecards" will be added here.
               </p>
 ,
-              <h2>Main Content</h2>,
-              <p>,
+              <h2></h2>Main Content</h2>,
+              <p></p>,
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
                 incididunt ut labore et dolore magna aliqua.
               </p>
-              <h2>Conclusion</h2>
-              <p>
+              <h2></h2>Conclusion</h2>
+              <p></p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
                 ex ea commodo consequat.
               </p>
             </div>
           </div>
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
-              <div>)
-                <h3 className="text-xl font-bold mb-2">Share this article</h3>)
-                <div className="flex gap-4">)
-                  <a,),
           <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
-              <div></div>
-                <h3 className="text-xl font-bold mb-2">Share this article</h3>
-                <div className="flex gap-4"></div>
+            <div className="flex flex-col sm: flex-row justify-between items-center gap-6"></div>
+              <div></div>)
+                <h3 className="text-xl font-bold mb-2"></h3>Share this article</h3>)
+                <div className="flex gap-4"></div>)
+                  <a,),
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div></div>
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div></div>
+              <div></div></div>
+                <h3 className="text-xl font-bold mb-2"></h3>Share this article</h3>
+                <div className="flex gap-4"></div></div>
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Oct 02 Agent Safety Scorecards')}&url=${encodeURIComponent(window.location.href)}`}
+                    href={`https: //twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Oct 02 Agent Safety Scorecards'),}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     Twitter,
                   </a>,
                   <a;
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    href={`https: //www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href),}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
-  s://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Oct 02 Agent Safety Scorecards')}&url=${encodeURIComponent(window.location.href)}`}
+export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */,}
+  s: //twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Oct 02 Agent Safety Scorecards'),}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
@@ -81,8 +81,8 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     Twitter,
                   </a>
                   <a></a>
-                    href={/* TODO: Fix JSX expression */}`
-  s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
+                    href={/* TODO: Fix JSX expression */,}`
+  s: //www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href),}`}"
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"

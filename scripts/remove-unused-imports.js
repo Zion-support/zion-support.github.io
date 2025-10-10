@@ -129,7 +129,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd(),});
     allFiles.push(...files);
   }
 
@@ -144,11 +144,11 @@ async function main() {
 
   console.log(`\n🎉 Unused import removal completed!`);
   console.log(`📊 Statistics: `),
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Unused imports removed: ${removedImports}`);
+  console.log(`   - Files processed: ${processedFiles,}/${totalFiles}`);
+  console.log(`   - Unused imports removed: ${removedImports,}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1],}`) {
     main()
   }
 

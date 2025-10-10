@@ -1,7 +1,7 @@
 
 
 // Sitemap generator utility;
-export interface SitemapUrl {/* TODO: Fix JSX expression */}
+export interface SitemapUrl {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   lo,
@@ -11,7 +11,7 @@ export interface SitemapUrl {/* TODO: Fix JSX expression */}
   priority?: number,
 }
 export const _generateSitemap = (url)
-  s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
+  s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */,}
   O: Add content,}
 }
   const baseUrl = 'http,
@@ -25,7 +25,7 @@ ${
     urls
   }
   .map((url) => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 }
     const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
@@ -36,7 +36,7 @@ ${
     <loc>${fullUrl}</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
-    <priority>${url.priority || 0.8}</priority>`
+    <priority></p>${url.priority || 0.8}</priority>`
   </url>`
   }
   )
@@ -50,138 +50,138 @@ ${
 // Define all the pages for the sitemap;
 
 export const getAllPages = (): SitemapUrl[] => {
-    // TODO: Add content
+    // TODO: Add content,
   }
 
 }
 // Define all the pages for the sitemap;
-export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
+export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */,}
   }
   const currentDate = new Date().toISOString().split('T')[0]
   return [
   // TOD,
   O: Add items]
     // Main pages,
-    {/* TODO: Fix JSX expression */}
-  q: 'daily' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+    {/* TODO: Fix JSX expression */,}
+  q: 'daily',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
     // AI Services;
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
     // IT Services;
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
     // Micro SAAS;
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'weekly' },
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'weekly',},
     // Specialized Solutions;
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'monthly' },
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'monthly',},
     // Legal pages;
-    {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
-    {/* TODO: Fix JSX expression */}
-  q: 'yearly' }]
+    {/* TODO: Fix JSX expression */,}
+  q: 'yearly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'yearly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'yearly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'yearly',},
+    {/* TODO: Fix JSX expression */,}
+  q: 'yearly',}]
 }"`
 

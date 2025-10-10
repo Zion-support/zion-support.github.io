@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {/* TODO: Fix JSX expression */}
+interface SEOHeadProps {/* TODO: Fix JSX expression */,}
 }
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -14,7 +14,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;
-    : `https://zion.app${canonicalUrl}`;
+    : `https: //zion.app${canonicalUrl,}`;
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
@@ -22,25 +22,25 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
     description: description,
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']}
+    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'],}
   return(<Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={fullCanonicalUrl} />
-      <meta property="og:type" content={ogType} />
+      <meta property="og: title" content={fullTitle,} />
+      <meta property="og: description" content={description,} />
+      <meta property="og: image" content={ogImage,} />
+      <meta property="og: url" content={fullCanonicalUrl,} />
+      <meta property="og: type" content={ogType,} />
       <meta property="og: site_name" content="Zion Tech Group" />,
 ,
       {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: card" content={twitterCard,} />
+      <meta name="twitter: title" content={fullTitle,} />
+      <meta name="twitter: description" content={description,} />
+      <meta name="twitter: image" content={ogImage,} />
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
@@ -54,14 +54,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       {/* Structured Data */}
       <script type="application/ld+json">
 const,
-  SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */,})
+}) => {/* TODO: Fix JSX expression */,}
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
-  s://zion.app${canonicalUrl}`;
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
+  s: //zion.app${canonicalUrl,}`;
+  const defaultStructuredData = {/* TODO: Fix JSX expression */,}
   }
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>
@@ -70,26 +70,26 @@ const,
       <link rel="canonical" href={fullCanonicalUrl} /></link>
       {/* Open Graph */}"
       <meta property="o,"
-  g:title" content={fullTitle} /></meta>"
+  g: title" content={fullTitle,} /></meta>"
       <meta property="o,"
-  g:description" content={description} /></meta>"
+  g: description" content={description,} /></meta>"
       <meta property="o,"
-  g:image" content={ogImage} /></meta>"
+  g: image" content={ogImage,} /></meta>"
       <meta property="o,"
-  g:url" content={fullCanonicalUrl} /></meta>"
+  g: url" content={fullCanonicalUrl,} /></meta>"
       <meta property="o,"
-  g:type" content={ogType} /></meta>"
+  g: type" content={ogType,} /></meta>"
       <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>
       {/* Twitter */}"
       <meta name="twitte,"
-  r:card" content={twitterCard} /></meta>"
+  r: card" content={twitterCard,} /></meta>"
       <meta name="twitte,"
-  r:title" content={fullTitle} /></meta>"
+  r: title" content={fullTitle,} /></meta>"
       <meta name="twitte,"
-  r:description" content={description} /></meta>"
+  r: description" content={description,} /></meta>"
       <meta name="twitte,"
-  r:image" content={ogImage} /></meta>
+  r: image" content={ogImage,} /></meta>
       {/* Additional SEO */}"
       <meta name="robots" content="index, follow" /></meta>"
       <meta name="author" content="Zion Tech Group" /></meta>"

@@ -119,7 +119,7 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
-          <div className="App">
+          <div className="App"></div>
             <PerformanceMonitor>
               <AccessibilityEnhancer />
             </PerformanceMonitor>

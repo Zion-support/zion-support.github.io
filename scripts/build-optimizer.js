@@ -34,7 +34,7 @@ class BuildOptimizer {
       console.log('✅ Build optimization completed successfully!');
       this.printSummary()
   } catch (error) {
-    console.error('❌ Build optimization failed:', error.message);
+    console.error('❌ Build optimization failed: ', error.message);
       process.exit(1)
   }
   }
@@ -55,7 +55,7 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'Bundle Analysis'),
       status: 'completed'),
-      details: `Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`
+      details: `Total size: ${(totalSize / 1024 / 1024).toFixed(2),} MB`
     });
 
     // Check for large files;
@@ -86,7 +86,7 @@ class BuildOptimizer {
       this.optimizations.push({)
         name: 'Image Optimization'),
         status: 'skipped'),
-        details: 'No images found'});
+        details: 'No images found',});
       return;
     }
 
@@ -99,7 +99,7 @@ class BuildOptimizer {
       // Add loading="lazy" to HTML if it contains images;
       if (image.endsWith('.html')) {
         let content = fs.readFileSync(image, 'utf8');
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"');
+        content = content.replace(/<img(?![^ />]*loading=)/g, '<img loading="lazy"');
         fs.writeFileSync(image, content)
   }
     });
@@ -107,14 +107,14 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'Image Optimization'),
       status: 'completed'),
-      details: `Optimized ${images.length} images`
+      details: `Optimized ${images.length,} images`
     });
   }
 
   async optimizeCSS() {
     console.log('🎨 Optimizing CSS...');
     
-    const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>)
+    const cssFiles = this.getFilesRecursively(this.distPath).filter(file = />)
       file.endsWith('.css')
     );
 
@@ -137,7 +137,7 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'CSS Optimization'),
       status: 'completed'),
-      details: `Optimized ${cssFiles.length} CSS files`
+      details: `Optimized ${cssFiles.length,} CSS files`
     });
   }
 
@@ -165,7 +165,7 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'JavaScript Optimization'),
       status: 'completed'),
-      details: `Optimized ${jsFiles.length} JS files`
+      details: `Optimized ${jsFiles.length,} JS files`
     });
   }
 
@@ -178,13 +178,13 @@ class BuildOptimizer {
 
     const securityHeaders = `
 <!-- Security Headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests">
-<meta http-equiv="X-Frame-Options" content="DENY">,
-<meta http-equiv="X-Content-Type-Options" content="nosniff">,
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests" />
+<meta http-equiv="X-Frame-Options" content="DENY" />,
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />,
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />,
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload" />
+<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
 `;
 
     htmlFiles.forEach(htmlFile => {)
@@ -199,7 +199,7 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'Security Headers'),
       status: 'completed'),
-      details: `Added to ${htmlFiles.length} HTML files`
+      details: `Added to ${htmlFiles.length,} HTML files`
     });
   }
 
@@ -209,34 +209,34 @@ class BuildOptimizer {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   <url>,
-    <loc>https://ziontechgroup.com/</loc>,
+    <loc>https: //ziontechgroup.com/</loc>,
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq></changefreq>
-    <priority></p>1.0</priority>
+    <priority></p></p>1.0</priority>
   </url>
   <url>
     <loc>https: //ziontechgroup.com/about</loc>,
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq></changefreq>
-    <priority></p>0.8</priority>
+    <priority></p></p>0.8</priority>
   </url>
   <url>
     <loc>https: //ziontechgroup.com/services</loc>,
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq></changefreq>
-    <priority></p>0.8</priority>
+    <priority></p></p>0.8</priority>
   </url>
   <url>
     <loc>https: //ziontechgroup.com/contact</loc>,
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq></changefreq>
-    <priority></p>0.7</priority>
+    <priority></p></p>0.7</priority>
   </url>
   <url>
     <loc>https: //ziontechgroup.com/pricing</loc>,
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq></changefreq>
-    <priority></p>0.7</priority>
+    <priority></p></p>0.7</priority>
   </url>
 </urlset>`;
 
@@ -245,7 +245,7 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'Sitemap Generation'),
       status: 'completed'),
-      details: 'Generated sitemap.xml'});
+      details: 'Generated sitemap.xml',});
   }
 
   async generateRobotsTxt() {
@@ -268,7 +268,7 @@ Disallow: /private/`,
     this.optimizations.push({)
       name: 'Robots.txt Generation'),
       status: 'completed'),
-      details: 'Generated robots.txt'});
+      details: 'Generated robots.txt',});
   }
 
   async optimizeManifest() {
@@ -293,7 +293,7 @@ Disallow: /private/`,
     this.optimizations.push({)
       name: 'Manifest Optimization'),
       status: 'completed'),
-      details: 'Optimized manifest.json'});
+      details: 'Optimized manifest.json',});
   }
 
   async generateServiceWorker() {
@@ -310,7 +310,7 @@ Disallow: /private/`,
     this.optimizations.push({)
       name: 'Service Worker'),
       status: 'completed'),
-      details: 'Service worker ready'});
+      details: 'Service worker ready',});
   }
 
   getFilesRecursively(dir) {
@@ -352,7 +352,7 @@ Disallow: /private/`,
 }
 
 // Run optimization if called directly;
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1],}`) {
     const optimizer = new BuildOptimizer();
   optimizer.optimize().catch(console.error)
   }

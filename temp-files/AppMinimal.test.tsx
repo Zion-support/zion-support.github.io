@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import App from '../App';
 describe('App Minimal', () => {
   it('renders without crashing', () => {
-    const MockAppMinimal = () => <div>Zion Tech Group</div>;
+    const MockAppMinimal = () => <div></div>Zion Tech Group</div>;
     render(<MockAppMinimal />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
     render(<App />);

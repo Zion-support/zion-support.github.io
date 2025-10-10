@@ -14,7 +14,7 @@ const NewsPage: React.FC = () => {
       category: 'Product Launch',
       image: '📊',
       featured: true,
-      readTime: '5 min read'
+      readTime: '5 min read',
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const NewsPage: React.FC = () => {
       category: 'Success Story',
       image: '💰',
       featured: true,
-      readTime: '8 min read'
+      readTime: '8 min read',
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const NewsPage: React.FC = () => {
       category: 'Technology',
       image: '⚡',
       featured: false,
-      readTime: '6 min read'
+      readTime: '6 min read',
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ const NewsPage: React.FC = () => {
       category: 'Innovation',
       image: '🤖',
       featured: false,
-      readTime: '7 min read'
+      readTime: '7 min read',
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const NewsPage: React.FC = () => {
       category: 'Security',
       image: '🔒',
       featured: false,
-      readTime: '4 min read'
+      readTime: '4 min read',
     },
     {
       id: 6,
@@ -64,15 +64,15 @@ const NewsPage: React.FC = () => {
       category: 'Product Launch',
       image: '🛠️',
       featured: false,
-      readTime: '5 min read'
+      readTime: '5 min read',
     }
   ];
   const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
   const stats = [
-    { icon: Users, number: '100+', label: 'Happy Clients' },
-    { icon: Award, number: '50+', label: 'Awards Won' },
-    { icon: TrendingUp, number: '300%', label: 'Average ROI' },
-    { icon: Globe, number: '25+', label: 'Countries Served' }
+    { icon: Users, number: '100+', label: 'Happy Clients',},
+    { icon: Award, number: '50+', label: 'Awards Won',},
+    { icon: TrendingUp, number: '300%', label: 'Average ROI',},
+    { icon: Globe, number: '25+', label: 'Countries Served',}
   ];
   return (
     <React.Fragment>
@@ -82,65 +82,65 @@ const NewsPage: React.FC = () => {
         keywords={['AI news', 'technology updates', 'product launches', 'success stories', 'enterprise AI', 'innovation']}
         canonicalUrl="https://ziontechgroup.com/news"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <main className="container mx-auto px-4 py-16 pt-24"></main>
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+          <section className="text-center mb-16"></section>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text"></h1>
               News & Updates
   </
-            <p className="text-xl text-cyan-400 mb-8">
+            <p className="text-xl text-cyan-400 mb-8"></p>
               Stay informed with our latest innovations and success stories,
   </
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto"></p>
               Discover the latest developments in AI technology, product launches, 
               client success stories, and industry insights from Zion Tech Group.
             </p>
           </section>
           {/* Stats Section */}
-          <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <section className="mb-16"></section>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
               {stats.map((stat, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-3xl font-bold text-white mb-2"></div>{stat.number}</div>
+                  <div className="text-gray-300"></div>{stat.label}</div>
                 </div>
               ))}
             </div>
           </section>
           {/* Featured Articles */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Featured News;
   </
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {newsArticles.filter(article => article.featured).map((article) => (
                 <article key={article.id} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="text-4xl mr-4">{article.image}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center mb-4"></div>
+                    <div className="text-4xl mr-4"></div>{article.image}</div>
+                    <div className="flex-1"></div>
+                      <div className="flex items-center gap-2 mb-2"></div>
                         <span className="bg-cyan-500 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
                           {article.category}
                         </span>
                         <span className="text-gray-400 text-sm">{article.readTime}</span>
                       </div>
-                      <div className="flex items-center text-gray-400 text-sm">
+                      <div className="flex items-center text-gray-400 text-sm"></div>
                         <Calendar className="w-4 h-4 mr-2" />
                         {new Date(article.date).toLocaleDateString('en-US', { 
                           year: 'numeric', 
                           month: 'long', 
-                          day: 'numeric' 
+                          day: 'numeric',
                         })}
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors"></h3>
                     {article.title}
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed"></p>
                     {article.excerpt}
                   </p>
                   <Link
@@ -154,36 +154,36 @@ const NewsPage: React.FC = () => {
             </div>
           </section>
           {/* All Articles */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+          <section className="mb-16"></section>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
               Latest Updates;
   </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {newsArticles.map((article) => (
                 <article key={article.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="text-3xl mr-3">{article.image}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center mb-4"></div>
+                    <div className="text-3xl mr-3"></div>{article.image}</div>
+                    <div className="flex-1"></div>
+                      <div className="flex items-center gap-2 mb-2"></div>
                         <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">
                           {article.category}
                         </span>
                         <span className="text-gray-400 text-xs">{article.readTime}</span>
                       </div>
-                      <div className="flex items-center text-gray-400 text-xs">
+                      <div className="flex items-center text-gray-400 text-xs"></div>
                         <Calendar className="w-3 h-3 mr-1" />
                         {new Date(article.date).toLocaleDateString('en-US', { 
                           month: 'short', 
                           day: 'numeric',
-                          year: 'numeric'
+                          year: 'numeric',
                         })}
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors"></h3>
                     {article.title}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed"></p>
                     {article.excerpt}
                   </p>
                   <Link
@@ -197,25 +197,25 @@ const NewsPage: React.FC = () => {
             </div>
           </section>
           {/* Newsletter Signup */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6 neon-text">
+          <section className="text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text"></h2>
                 Stay Updated;
   </
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Subscribe to our newsletter for the latest AI insights and company updates;
   </
-              <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto"></div>
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
-                <button className="cyber-button px-8 py-3 font-semibold">
+                <button className="cyber-button px-8 py-3 font-semibold"></button>
                   Subscribe,
   </
               </div>
-              <p className="text-gray-400 text-sm mt-4">
+              <p className="text-gray-400 text-sm mt-4"></p>
                 No spam, unsubscribe at any time.
               </p>
             </div>

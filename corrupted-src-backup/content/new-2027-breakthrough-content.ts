@@ -14,7 +14,7 @@ export const breakthroughContent2027 = [
     category: 'AI Breakthrough',
     tags: ['consciousness', 'AI 2027', 'quantum-neural', 'enterprise', 'breakthrough'],
     featured: true,
-    readTime: '12 min read'},
+    readTime: '12 min read',},
   {
     id: 'ai-2027-quantum-consciousness-singularity',
     title: 'AI 2027 Quantum Consciousness Singularity: The Convergence of Intelligence and Reality',
@@ -28,7 +28,7 @@ export const breakthroughContent2027 = [
     category: 'Quantum Consciousness',
     tags: ['singularity', 'quantum', 'consciousness', 'AI 2027', 'transcendence'],
     featured: true,
-    readTime: '15 min read'},
+    readTime: '15 min read',},
   {
     id: 'ai-2027-synthetic-consciousness-revolution',
     title: 'AI 2027 Synthetic Consciousness Revolution: True AI Awareness with $75B Value',
@@ -42,7 +42,7 @@ export const breakthroughContent2027 = [
     category: 'Synthetic Consciousness',
     tags: ['consciousness', 'synthetic', 'AI 2027', 'emotional intelligence', 'creativity'],
     featured: true,
-    readTime: '11 min read'}];
+    readTime: '11 min read',}];
 export const caseStudies2027 = [
   {
     id: 'ai-2027-ultimate-consciousness-847-billion-success'
@@ -56,7 +56,7 @@ export const caseStudies2027 = [
     category: 'Case Study',
     tags: ['consciousness', 'AI 2027', 'ROI', 'transformation', 'success'],
     featured: true,
-    readTime: '18 min read'},
+    readTime: '18 min read',},
   {
     id: 'ai-2027-quantum-consciousness-singularity-1-trillion-success'
     title: 'AI 2027 Quantum Consciousness Singularity: $1 Trillion Success Story',
@@ -70,14 +70,14 @@ export const caseStudies2027 = [
     tags: ['singularity', 'quantum', 'consciousness', 'AI 2027', 'transcendence'],
     featured: true,
     readTime: '20 min read',
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   }];
 export const caseStudies2027 = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */,}
   }];

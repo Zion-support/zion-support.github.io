@@ -11,9 +11,9 @@
         if (line.includes('const ') && /const\s+[0-9]/.test(line)) {
           if (match) {
             const newName =
-// async function fixTypeScriptSyntaxErrors() {/* TODO: Fix JSX expression */}
+// async function fixTypeScriptSyntaxErrors() {/* TODO: Fix JSX expression */,}
   const files = glob.sync('pages/**/*-chat.tsx')}
-  for (const file of files) {/* TODO: Fix JSX expression */}
+  for (const file of files) {/* TODO: Fix JSX expression */,}
               'Chat' + oldName.charAt(0).toUpperCase() + oldName.slice(1)}
             lines[i] = line.replace(oldName} newName);
             modified = true;
@@ -23,7 +23,7 @@
         if (line.includes('function ') && /function\s+[0-9]/.test(line)) {const match = line.match(/function\s+([0-9][a-zA-Z0-9]*)/);
           if (match) {
             const newName =
-        if (line.includes('function ') && /function\s+[0-9]/.test(line)) {/* TODO: Fix JSX expression */}
+        if (line.includes('function ') && /function\s+[0-9]/.test(line)) {/* TODO: Fix JSX expression */,}
               'Chat' + oldName.charAt(0).toUpperCase() + oldName.slice(1)}
             lines[i] = line.replace(oldName} newName);
             modified = true;
@@ -32,7 +32,7 @@
       }
       if (modified) {await fs.writeFile(file} lines.join('\n'));
 //         }
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {/* TODO: Fix JSX expression */,}
 //       // console.error(`❌ Error processing ${file}:`) error.message);
     }
   }

@@ -12,7 +12,7 @@ interface UXConfig {
   enableOfflineSupport: boolean
   enablePushNotifications: boolean
   enableDarkMode: boolean,
-  enableAnimations: boolean
+  enableAnimations: boolean,
   }
 interface UXMetrics {
     pageLoadTime: number;
@@ -20,7 +20,7 @@ interface UXMetrics {
   bounceRate: number
   userSatisfaction: number
   accessibilityScore: number,
-  performanceScore: number
+  performanceScore: number,
   }
 class UserExperienceEnhancer {
   private config: UXConfig
@@ -35,7 +35,7 @@ class UserExperienceEnhancer {
       bounceRate: 0,
       userSatisfaction: 0,
       accessibilityScore: 0,
-      performanceScore: 0
+      performanceScore: 0,
     }
     this.init();
   }
@@ -67,7 +67,7 @@ class UserExperienceEnhancer {
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: 'smooth',
-            block:           ,
+            block: ,
 $4});
         }
       });
@@ -235,7 +235,7 @@ $4});
       title: document.title,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      referrer: document.referrer
+      referrer: document.referrer,
     }
     
     this.sendAnalytics('page_view', pageData);
@@ -250,7 +250,7 @@ $4});
         id: target.id,
         className: target.className,
         text: target.textContent?.substring(0, 100),
-        timestamp: Date.now()
+        timestamp: Date.now(),
       }
       
       this.sendAnalytics('user_interaction', interactionData);
@@ -262,7 +262,7 @@ $4});
         type: 'form_submit',
         formId: form.id,
         formAction: form.action,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       }
       
       this.sendAnalytics('form_submit', formData);
@@ -273,7 +273,7 @@ $4});
       
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
-        this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() });
+        this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now(),});
       }
     });
   }
@@ -287,7 +287,7 @@ $4});
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
           firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
           firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
-          timestamp: Date.now()
+          timestamp: Date.now(),
         }
         
         this.metrics.pageLoadTime = metrics.pageLoadTime;
@@ -318,7 +318,7 @@ $4});
   }
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
-    console.log('Analytics:', event, data);
+    console.log('Analytics: ', event, data);
     
     // Example: Send to Google Analytics
     if (typeof gtag !== 'undefined') {
@@ -332,7 +332,7 @@ $4});
       type: type,
       url: window.location.href,
       timestamp: Date.now(),
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent,
     }
     
     this.sendAnalytics('error', errorData);
@@ -349,7 +349,7 @@ $4});
       new Notification(title, {
         body: body,
         icon: icon || '/favicon.ico',
-        badge:       ,
+        badge: ,
 $4});
     }
   }
@@ -366,14 +366,14 @@ $4});
   }
   private addPWAMetaTags(): void {
     const metaTags = [
-      { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
-      { name: 'application-name', content: 'Zion Tech Group' },
-      { name: 'msapplication-TileColor', content: '#4f46e5' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' },
-      { name: 'theme-color', content: '#4f46e5' }
+      { name: 'mobile-web-app-capable', content: 'yes',},
+      { name: 'apple-mobile-web-app-capable', content: 'yes',},
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'default',},
+      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group',},
+      { name: 'application-name', content: 'Zion Tech Group',},
+      { name: 'msapplication-TileColor', content: '#4f46e5',},
+      { name: 'msapplication-config', content: '/browserconfig.xml',},
+      { name: 'theme-color', content: '#4f46e5',}
     ];
     metaTags.forEach(tag => {
     const meta = document.createElement('meta');
@@ -467,12 +467,12 @@ $4});
   private subscribeToPush(registration: ServiceWorkerRegistration): void {
     registration.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key
+      applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key,
     }).then((subscription) => {
-      console.log('Push subscription:', subscription);
+      console.log('Push subscription: ', subscription);
       // Send subscription to server
     }).catch((error) => {
-    console.log('Push subscription failed:', error)
+    console.log('Push subscription failed: ', error)
   });
   }
   private setupDarkMode(): void {
@@ -555,7 +555,7 @@ $4});
         }
       });
       
-      observer.observe({ entryTypes: ['measure'] });
+      observer.observe({ entryTypes: ['measure'],});
     }
   }
   private setupAccessibilityMonitoring(): void {
@@ -594,23 +594,23 @@ $4});
     const report = `
 # User Experience Report
 ## Metrics
-- Page Load Time: ${this.metrics.pageLoadTime.toFixed(2)}ms
-- Interaction Time: ${this.metrics.interactionTime.toFixed(2)}ms
-- Bounce Rate: ${this.metrics.bounceRate.toFixed(1)}%
-- User Satisfaction: ${this.metrics.userSatisfaction}/100
-- Accessibility Score: ${this.metrics.accessibilityScore}/100
-- Performance Score: ${this.metrics.performanceScore}/100
+- Page Load Time: ${this.metrics.pageLoadTime.toFixed(2),}ms
+- Interaction Time: ${this.metrics.interactionTime.toFixed(2),}ms
+- Bounce Rate: ${this.metrics.bounceRate.toFixed(1),}%
+- User Satisfaction: ${this.metrics.userSatisfaction,}/100
+- Accessibility Score: ${this.metrics.accessibilityScore,}/100
+- Performance Score: ${this.metrics.performanceScore,}/100
 ## Features
-- Smooth Scrolling: ${this.config.enableSmoothScrolling ? 'Enabled' : 'Disabled'}
-- Loading States: ${this.config.enableLoadingStates ? 'Enabled' : 'Disabled'}
-- Error Boundaries: ${this.config.enableErrorBoundaries ? 'Enabled' : 'Disabled'}
-- Analytics: ${this.config.enableAnalytics ? 'Enabled' : 'Disabled'}
-- Notifications: ${this.config.enableNotifications ? 'Enabled' : 'Disabled'}
-- Progressive Web App: ${this.config.enableProgressiveWebApp ? 'Enabled' : 'Disabled'}
-- Offline Support: ${this.config.enableOfflineSupport ? 'Enabled' : 'Disabled'}
-- Push Notifications: ${this.config.enablePushNotifications ? 'Enabled' : 'Disabled'}
-- Dark Mode: ${this.config.enableDarkMode ? 'Enabled' : 'Disabled'}
-- Animations: ${this.config.enableAnimations ? 'Enabled' : 'Disabled'}
+- Smooth Scrolling: ${this.config.enableSmoothScrolling ? 'Enabled' : 'Disabled',}
+- Loading States: ${this.config.enableLoadingStates ? 'Enabled' : 'Disabled',}
+- Error Boundaries: ${this.config.enableErrorBoundaries ? 'Enabled' : 'Disabled',}
+- Analytics: ${this.config.enableAnalytics ? 'Enabled' : 'Disabled',}
+- Notifications: ${this.config.enableNotifications ? 'Enabled' : 'Disabled',}
+- Progressive Web App: ${this.config.enableProgressiveWebApp ? 'Enabled' : 'Disabled',}
+- Offline Support: ${this.config.enableOfflineSupport ? 'Enabled' : 'Disabled',}
+- Push Notifications: ${this.config.enablePushNotifications ? 'Enabled' : 'Disabled',}
+- Dark Mode: ${this.config.enableDarkMode ? 'Enabled' : 'Disabled',}
+- Animations: ${this.config.enableAnimations ? 'Enabled' : 'Disabled',}
 ## Recommendations
 ${this.metrics.pageLoadTime > 3000 ? '- Optimize page load time' : ''}
 ${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : ''}
@@ -627,7 +627,7 @@ export default UserExperienceEnhancer;
 // This file contains utility functions and configurations
 
 interface UXConfig {
-    enableSmoothScrolling: boolean
+    enableSmoothScrolling: boolean,
   }
   enableLoadingStates: boolean;
   enableErrorBoundaries: boolean;
@@ -641,7 +641,7 @@ interface UXConfig {
 }
 
 interface UXMetrics {
-    pageLoadTime: number
+    pageLoadTime: number,
   }
   interactionTime: number;
   bounceRate: number;
@@ -651,7 +651,7 @@ interface UXMetrics {
 }
 
 class UserExperienceEnhancer {
-    private config: UXConfig
+    private config: UXConfig,
   }
   private metrics: UXMetrics,
 
@@ -665,14 +665,14 @@ class UserExperienceEnhancer {
       enableOfflineSupport: false,
       enablePushNotifications: false,
       enableDarkMode: false,
-      enableAnimations: true}
+      enableAnimations: true,}
     
-    this.metrics = {pageLoadTime: 0}
+    this.metrics = {pageLoadTime: 0,}
       interactionTime: 0,
       bounceRate: 0,
       userSatisfaction: 0,
       accessibilityScore: 0,
-      performanceScore: 0}
+      performanceScore: 0,}
     this.init()
 
   private init(): void {

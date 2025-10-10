@@ -5,7 +5,7 @@ interface GtagEvent {
     event_category?: string;
   event_label?: string;
   value?: number;
-  [key: string]: unknown
+  [key: string]: unknown,
   }
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js';

@@ -6,13 +6,13 @@ export function cn(...inputs: ClassValue[]) {,
 export function formatPhoneNumber(phone: string): string {,
   const _cleaned = phone.replace(/\D/g, '');
 export function cn(...input)
-  s: ClassValue[]) {/* TODO: Fix JSX expression */}
+  s: ClassValue[]) {/* TODO: Fix JSX expression */,}
 }
 
 export function formatPhoneNumber(phon)
-  e: string): string {/* TODO: Fix JSX expression */}
+  e: string): string {/* TODO: Fix JSX expression */,}
   const _match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
-  if (match) {/* TODO: Fix JSX expression */}
+  if (match) {/* TODO: Fix JSX expression */,}
     return `(${match[1]}) ${match[2]}-${match[3]}`;
   }
   return phone;
@@ -44,7 +44,7 @@ export function throttle<T extends (...args: unknown[]) => any>(
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
 export function formatEmail(emai)
-  l: string): string {/* TODO: Fix JSX expression */}
+  l: string): string {/* TODO: Fix JSX expression */,}
 }
 
 export function debounce<T extends (...arg)
@@ -53,7 +53,7 @@ export function debounce<T extends (...arg)
   wai,
   t: number;)
 ): (...arg)
-  s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
+  s: Parameters<T>) => void {/* TODO: Fix JSX expression */,}
   };
 }
 
@@ -63,7 +63,7 @@ export function throttle<T extends (...arg)
   limi,
   t: number;)
 ): (...arg)
-  s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
+  s: Parameters<T>) => void {/* TODO: Fix JSX expression */,}
     }
   };
 }`

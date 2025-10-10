@@ -49,12 +49,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ${title}Page: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Navigation />)
-      <div className="flex items-center justify-center min-h-screen">)
-        <div className="text-center">),
-          <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions</p>
+      <div className="flex items-center justify-center min-h-screen"></div>)
+        <div className="text-center"></div>),
+          <h1 className="text-4xl font-bold text-white mb-4"></h1>${title}</h1>
+          <p className="text-gray-300 mb-8"></p>Coming Soon - Advanced ${title.toLowerCase()} solutions</p>
           <Link;
             to="/contact" 
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors"
@@ -83,10 +83,10 @@ function fixSyntaxErrors(filePath) {
     
     // Check for common syntax error patterns;
     const errorPatterns = [
-      /\/\/ TODO: Add content\s*}/,
+      /\/\/ TODO: Add content\s*,}/,
       /\/\/ TODO: Add parameters,\s*\)/,
       /\/\/ TODO: Add items,\s*]/,
-      /{\s*\/\/ TODO: Add content\s*}/,
+      /{\s*\/\/ TODO: Add content\s*,}/,
       /{\s*\/\/ TODO: Add parameters,\s*\)/,
       /{\s*\/\/ TODO: Add items,\s*]/,
       /^\s*}\s*$/m,
@@ -125,62 +125,62 @@ const fixAllFiles = () => {
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3: ',
       },
       // Fix malformed metadata objects
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: \'$2\',
-  $3:'
+  $3: ',
       },
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: "$2",
-  $3:'
+  $3: ',
       },
       // Fix malformed function parameters
       {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*,}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*,}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({
-  $2:'
+  $2: ',
       },
       // Fix malformed object literals
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3: ',
       },
       // Fix missing semicolons in exports
       {
         pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const $1 = {
   $2: \'$3\',
-  $4:'
+  $4: ',
       },
       // Fix malformed function declarations
       {
-        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
+        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*,}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*,}\s*;\s*(\w+):/g,
         replacement: 'function $1({
-  $2:'
+  $2: ',
       },
       // Fix missing commas in arrays
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3: ',
       },
       // Fix malformed JSX attributes
       {
         pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
-        replacement: '$1="$2" $3'
+        replacement: '$1="$2" $3',
       },
       // Fix missing closing braces
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3: ',
       }
     ];
     
@@ -198,20 +198,20 @@ const fixAllFiles = () => {
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3: ',
       },
       // Fix malformed metadata
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: \'$2\',
-  $3:'
+  $3: ',
       },
       // Fix malformed function parameters
       {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*,}\s*}\s*:\s*{\s*\/\/\s*TODO: \s*Add\s+content;\s*,}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({
-  $2:'
+  $2: ',
       }
     ];
     
@@ -225,7 +225,7 @@ const fixAllFiles = () => {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath,}`);
       return true;
     }
     
@@ -239,11 +239,11 @@ const fixAllFiles = () => {
 // Function to find files with syntax errors
 function findFilesWithSyntaxErrors() {
   try {
-    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
+    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8',});
     return result.trim().split('
 ').filter(file => file.length > 0);
   } catch (error) {
-    console.error('Error finding files with syntax errors:', error.message);
+    console.error('Error finding files with syntax errors: ', error.message);
     return [];
   }
 }
@@ -265,7 +265,7 @@ console.log(`Fixed syntax errors in ${fixedCount} files`);
 
 // Verify no more syntax errors exist
 try {
-  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
+  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8',});
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
     console.log('✅ All syntax errors resolved!');

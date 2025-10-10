@@ -42,7 +42,7 @@ function fixReactMemo(content) {
     fixed = true
   }
 
-  // Pattern 2: const Component = React.memo(() => {
+  // Pattern 2: const Component = React.memo(() => {,
     ,
   const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
   if (pattern2.test(newContent)) {,
@@ -50,7 +50,7 @@ function fixReactMemo(content) {
     fixed = true
   }
 
-  // Pattern 3: const Component: React.FC = React.memo((props) => {
+  // Pattern 3: const Component: React.FC = React.memo((props) => {,
     ,
   const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   if (pattern3.test(newContent)) {,
@@ -58,7 +58,7 @@ function fixReactMemo(content) {
     fixed = true
   }
 
-  // Pattern 4: const Component = React.memo((props) => {
+  // Pattern 4: const Component = React.memo((props) => {,
     ,
   const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   if (pattern4.test(newContent)) {,
@@ -67,7 +67,7 @@ function fixReactMemo(content) {
   }
 
   // Remove React.memo closing parentheses;
-  // Pattern: }); at the end of component;
+  // Pattern: ,}); at the end of component;
   const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g;
   if (closingPattern.test(newContent)) {
     newContent = newContent.replace(closingPattern, '$1.displayName = \'$1\';');
@@ -109,7 +109,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd(),});
     allFiles.push(...files);
   }
 
@@ -124,11 +124,11 @@ async function main() {
 
   console.log(`\n🎉 React.memo syntax fixes completed!`);
   console.log(`📊 Statistics: `),
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Files fixed: ${fixedFiles}`);
+  console.log(`   - Files processed: ${processedFiles,}/${totalFiles}`);
+  console.log(`   - Files fixed: ${fixedFiles,}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file: //${process.argv[1],}`) {
     main()
   }
 

@@ -14,10 +14,10 @@ const CaseStudiesPage: React.FC = () => {
         roi: '340%',
         conversion: '+85%',
         costReduction: '-65%',
-        revenue: '+$2.3M'
+        revenue: '+$2.3M',
       },
       image: '🛒',
-      description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
+      description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.',
     },
     {
       id: 2,
@@ -30,10 +30,10 @@ const CaseStudiesPage: React.FC = () => {
         roi: '280%',
         processingTime: '-80%',
         accuracy: '+95%',
-        costSavings: '$1.8M'
+        costSavings: '$1.8M',
       },
       image: '🏦',
-      description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
+      description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.',
     },
     {
       id: 3,
@@ -46,10 +46,10 @@ const CaseStudiesPage: React.FC = () => {
         roi: '420%',
         patientOutcomes: '+70%',
         efficiency: '+90%',
-        costSavings: '$3.2M'
+        costSavings: '$3.2M',
       },
       image: '🏥',
-      description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
+      description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.',
     },
     {
       id: 4,
@@ -62,10 +62,10 @@ const CaseStudiesPage: React.FC = () => {
         roi: '310%',
         efficiency: '+75%',
         defects: '-90%',
-        downtime: '-85%'
+        downtime: '-85%',
       },
       image: '🏭',
-      description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
+      description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.',
     }
   ];
   return (
@@ -74,10 +74,10 @@ const CaseStudiesPage: React.FC = () => {
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4"></div>
             <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home,
@@ -85,16 +85,16 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </header>
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+            <div className="text-center"></div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6"></h1>
                 Success Stories
   </
-              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto"></p>
                 Real results from real companies using our AI solutions,
   </
-              <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
+              <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto"></p>
                 Discover how leading companies across industries have transformed their operations 
                 and achieved remarkable ROI with our cutting-edge AI technology.
               </p>
@@ -102,53 +102,53 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
         {/* Case Studies Grid */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <section className="py-16"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
-                  <div className="p-8">
-                    <div className="flex items-center mb-4">
-                      <div className="text-4xl mr-4">{study.image}</div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-1">{study.title}</h3>
-                        <p className="text-blue-600 font-semibold">{study.company}</p>
-                        <p className="text-gray-500 text-sm">{study.industry}</p>
+                <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200"></div>
+                  <div className="p-8"></div>
+                    <div className="flex items-center mb-4"></div>
+                      <div className="text-4xl mr-4"></div>{study.image}</div>
+                      <div></div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-1"></h3>{study.title}</h3>
+                        <p className="text-blue-600 font-semibold"></p>{study.company}</p>
+                        <p className="text-gray-500 text-sm"></p>{study.industry}</p>
                       </div>
                     </div>
-                    <p className="text-gray-600 mb-6">{study.description}</p>
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
-                      <p className="text-gray-600 text-sm">{study.challenge}</p>
+                    <p className="text-gray-600 mb-6"></p>{study.description}</p>
+                    <div className="mb-6"></div>
+                      <h4 className="font-semibold text-gray-900 mb-2"></h4>Challenge:</h4>
+                      <p className="text-gray-600 text-sm"></p>{study.challenge}</p>
                     </div>
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
-                      <p className="text-gray-600 text-sm">{study.solution}</p>
+                    <div className="mb-6"></div>
+                      <h4 className="font-semibold text-gray-900 mb-2"></h4>Solution:</h4>
+                      <p className="text-gray-600 text-sm"></p>{study.solution}</p>
                     </div>
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-4">Results:</h4>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="text-center p-3 bg-green-50 rounded-lg">
-                          <div className="text-2xl font-bold text-green-600">{study.results.roi}</div>
-                          <div className="text-sm text-gray-600">ROI</div>
+                    <div className="mb-6"></div>
+                      <h4 className="font-semibold text-gray-900 mb-4"></h4>Results:</h4>
+                      <div className="grid grid-cols-2 gap-4"></div>
+                        <div className="text-center p-3 bg-green-50 rounded-lg"></div>
+                          <div className="text-2xl font-bold text-green-600"></div>{study.results.roi}</div>
+                          <div className="text-sm text-gray-600"></div>ROI</div>
                         </div>
-                        <div className="text-center p-3 bg-blue-50 rounded-lg">
-                          <div className="text-2xl font-bold text-blue-600">
+                        <div className="text-center p-3 bg-blue-50 rounded-lg"></div>
+                          <div className="text-2xl font-bold text-blue-600"></div>
                             {Object.values(study.results)[1]}
                           </div>
-                          <div className="text-sm text-gray-600">
+                          <div className="text-sm text-gray-600"></div>
                             {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between"></div>
                       <Link 
                         to="/contact"
                         className="bg-blue-600 hover: bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200">
                         Learn More,
   </
-                      <div className="flex items-center text-green-600">
+                      <div className="flex items-center text-green-600"></div>
                         <CheckCircle className="w-4 h-4 mr-1" />
                         <span className="text-sm font-semibold">Verified Results</span>
                       </div>
@@ -160,46 +160,46 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
         {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="py-16 bg-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Proven Track Record,
   </
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600"></p>
                 Our AI solutions deliver consistent, measurable results;
   </
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">300%+</div>
-                <div className="text-gray-600">Average ROI</div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8"></div>
+              <div className="text-center"></div>
+                <div className="text-4xl font-bold text-blue-600 mb-2"></div>300%+</div>
+                <div className="text-gray-600"></div>Average ROI</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">150+</div>
-                <div className="text-gray-600">Projects Completed</div>
+              <div className="text-center"></div>
+                <div className="text-4xl font-bold text-green-600 mb-2"></div>150+</div>
+                <div className="text-gray-600"></div>Projects Completed</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
-                <div className="text-gray-600">Client Satisfaction</div>
+              <div className="text-center"></div>
+                <div className="text-4xl font-bold text-purple-600 mb-2"></div>95%</div>
+                <div className="text-gray-600"></div>Client Satisfaction</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">$50M+</div>
-                <div className="text-gray-600">Cost Savings Generated</div>
+              <div className="text-center"></div>
+                <div className="text-4xl font-bold text-orange-600 mb-2"></div>$50M+</div>
+                <div className="text-gray-600"></div>Cost Savings Generated</div>
               </div>
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
               Ready to Create Your Success Story?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-100"></p>
               Join the companies that have transformed their business with our AI solutions
   </
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link 
                 to="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center">

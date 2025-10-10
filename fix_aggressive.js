@@ -18,9 +18,9 @@ function fixCorruptedSyntax(text) {
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim();
-function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
+function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */,}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
-    (match, imports) => {/* TODO: Fix JSX expression */}
+    (match, imports) => {/* TODO: Fix JSX expression */,}
     }
   );
 
@@ -34,7 +34,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
         .trim();
   fixed = fixed.replace(")
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, module) => {/* TODO: Fix JSX expression */}
+    (match, imports, module) => {/* TODO: Fix JSX expression */,}
     }
   );
 
@@ -70,7 +70,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(
   fixed = fixed.replace()
     /\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^}]+),\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^}]+)\s*\}/g,
-    '{ $1: $2, $3: $4 }'
+    '{ $1: $2, $3: $4,}'
   );
 
   //Fix corrupted array syntax;
@@ -86,7 +86,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   });
 
   //Fix corrupted string literals;
-  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */}
+  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */,}
   });
 
   //Fix corrupted string literals;"
@@ -158,7 +158,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   //Fix corrupted spaces;
   fixed = fixed.replace(/\s+/g, ' ');
   fixed = fixed.replace(/\s*{\s*/g, ' {');
-  fixed = fixed.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{/* TODO: Fix JSX expression */}
+  fixed = fixed.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{/* TODO: Fix JSX expression */,}
   fixed = fixed.replace(/\s*}\s*/g, ' }');
   fixed = fixed.replace(/\s*\(\s*/g, ' (');
   fixed = fixed.replace(/\s*\)\s*/g, ') ');
@@ -213,10 +213,10 @@ function processFile(filePath) {
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
+function processFile(filePath) {/* TODO: Fix JSX expression */,}
     }
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
   }
 }
 
@@ -233,18 +233,18 @@ function processDirectory(dirPath) {
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
-function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
+function processDirectory(dirPath) {/* TODO: Fix JSX expression */,}
         }
       } else if ()
         item.endsWith('.ts') ||
         item.endsWith('.tsx') ||
         item.endsWith('.js') ||
         item.endsWith('.jsx')
-      ) {/* TODO: Fix JSX expression */}
+      ) {/* TODO: Fix JSX expression */,}
         }
       }
     }
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */,}
     //     }
 
   return processedCount;

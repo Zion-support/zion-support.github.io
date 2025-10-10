@@ -7,22 +7,22 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Secure Blockchain Integration',
-      description: 'Advanced blockchain technology integration with enterprise-grade security'
+      description: 'Advanced blockchain technology integration with enterprise-grade security',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast blockchain transactions and smart contract execution'
+      description: 'Lightning-fast blockchain transactions and smart contract execution',
     },
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Intelligent blockchain solutions powered by advanced AI technology'
+      description: 'Intelligent blockchain solutions powered by advanced AI technology',
     },
     {
       icon: Globe,
       title: 'Multi-Chain Support',
-      description: 'Support for multiple blockchain networks and protocols'
+      description: 'Support for multiple blockchain networks and protocols',
     }
   ];
   const benefits = [
@@ -36,62 +36,59 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     'Proven track record of success'
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Blockchain Integration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
 <meta name="keywords" content="blockchain integration, blockchain services, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>
             Blockchain Integration Services
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             Transform your business with our advanced blockchain integration solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose Our Blockchain Integration Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our blockchain integration solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3>{feature.title}</h3>
+                <p className="text-gray-300"></p>{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Key Benefits,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience the power of our blockchain integration solutions for your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
+              <div key={index} className="flex items-center space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
@@ -104,7 +101,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     </div>
   ),
 };
-
 export default BlockchainIntegrationServicesPage
   </button>
   </button>

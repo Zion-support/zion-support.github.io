@@ -1,5 +1,5 @@
 expor,
-  t: interface AIFuturisticService {/* TODO: Fix JSX expression */}
+  t: interface AIFuturisticService {/* TODO: Fix JSX expression */,}
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:} "https": //ziontechgroup.com }, "realImplementation": true, implementationDetail,
   s:,' Advance,
@@ -8,7 +8,7 @@ expor,
   s: 28,0, ratin,
   g: 4.,8, review,
   s: 14,5}, // AI-Powere,
-  d: Quantum Evaluations{/* TODO: Fix JSX expression */}
+  d: Quantum Evaluations{/* TODO: Fix JSX expression */,}
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,"
   e:} "https": //ziontechgroup.com }, "realImplementation": true, implementationDetail,
   s:,' Advance,
@@ -17,7 +17,7 @@ expor,
   s: 19,5, ratin,
   g: 4.,8, review,
   s: 10,2}, // AI-Powere,
-  d: Quantum Guardrails{/* TODO: Fix JSX expression */}
+  d: Quantum Guardrails{/* TODO: Fix JSX expression */,}
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,"
   e:} "https": //ziontechgroup.com }, "realImplementation": true, implementationDetail,
   s:,' Advance,
@@ -26,7 +26,7 @@ expor,
   s: 8,5, ratin,
   g: 4.,9, review,
   s: 4,8}, // AI-Powere,
-  d: Quantum HR Recruitment{/* TODO: Fix JSX expression */}
+  d: Quantum HR Recruitment{/* TODO: Fix JSX expression */,}
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,"
   e:} "https": //ziontechgroup.com }, "realImplementation": true, implementationDetail,
   s:,' Advance,
@@ -35,7 +35,7 @@ expor,
   s: 32,0, ratin,
   g: 4.,7, review,
   s: 16,7}, // AI-Powere,
-  d: Quantum IoT Platform{/* TODO: Fix JSX expression */}
+  d: Quantum IoT Platform{/* TODO: Fix JSX expression */,}
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,"
   e:} "https": //ziontechgroup.com }, "realImplementation": true, implementationDetail,
   s:,' Advance,
@@ -44,7 +44,7 @@ expor,
   s: 45,0, ratin,
   g: 4.,8, review,
   s: 23,4}, // AI-Powere,
-  d: Quantum Legal Contract Analyzer{/* TODO: Fix JSX expression */}
+  d: Quantum Legal Contract Analyzer{/* TODO: Fix JSX expression */,}
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,"
   e:} "https": //ziontechgroup.com }, "realImplementation": true, implementationDetail,
   s:,' Advance,
@@ -53,7 +53,7 @@ expor,
   s: 16,5, ratin,
   g: 4.,8, review,
   s: 8,9}, // AI-Powere,
-  d: Quantum Market Research{/* TODO: Fix JSX expression */}
+  d: Quantum Market Research{/* TODO: Fix JSX expression */,}
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,"
   e:} "https": //ziontechgroup.com }, "realImplementation": true, implementationDetail,
   s:,' Advance,
@@ -62,7 +62,7 @@ expor,
   s: 28,0, ratin,
   g: 4.,7, review,
   s: 14,5}, // AI-Powere,
-  d: Quantum Phone Agent{/* TODO: Fix JSX expression */}
+  d: Quantum Phone Agent{/* TODO: Fix JSX expression */,}
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,"
   e:} "https": //ziontechgroup.com }, "realImplementation": true, implementationDetail,
   s:,' Advance,
@@ -70,4 +70,4 @@ expor,
   e: '2024-03-1,5'; customer,
   s: 19,5, ratin,
   g: 4.,8, review,
-  s: 102]}} '"
+  s: 102],}} '"
