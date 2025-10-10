@@ -517,7 +517,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
 /* Quantum Pulse Enhanced */
 .quantum-pulse-enhanced {
   position: relative;
@@ -547,10 +546,7 @@ body {
   }
 }
 
-/* Cyber Scan Line Effect */
-=======
 /* Advanced Cyber Scan Lines */
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
 .cyber-scan-line {
   position: relative;
   overflow: hidden;
@@ -582,10 +578,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: holographicShift 4s ease-in-out infinite;
-<<<<<<< HEAD
-=======
   text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
 }
 
 @keyframes holographicShift {
@@ -593,10 +586,7 @@ body {
   50% { background-position: 100% 50%; }
 }
 
-<<<<<<< HEAD
-/* Cyber Text Effect */
-=======
-/* Matrix Code Rain Effect */
+/* Cyber Text Effect & Matrix Code Rain Effect */
 .matrix-code-rain {
   position: fixed;
   top: 0;
@@ -667,7 +657,6 @@ body {
 }
 
 /* Cyber Glitch Text */
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
 .cyber-text {
   position: relative;
   color: var(--neon-cyan);
@@ -676,7 +665,6 @@ body {
     0 0 10px var(--neon-cyan),
     0 0 15px var(--neon-cyan),
     0 0 20px var(--neon-cyan);
-<<<<<<< HEAD
   animation: cyberFlicker 2s ease-in-out infinite alternate;
 }
 
@@ -696,7 +684,10 @@ body {
       0 0 5px var(--neon-cyan),
       0 0 8px var(--neon-cyan),
       0 0 12px var(--neon-cyan);
-=======
+  }
+}
+
+.cyber-text-glitch {
   animation: cyberGlitch 2s ease-in-out infinite;
 }
 
@@ -823,7 +814,6 @@ body {
   50% { 
     transform: scale(1.2) rotate(180deg);
     opacity: 0.6;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-228f
   }
 }
 
