@@ -266,6 +266,105 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
       category: 'Computer Vision',
       popular: false
+    },
+    {
+      icon: Cpu,
+      title: 'AI Quantum Computing',
+      description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning problems',
+      price: '$2,999/month',
+      marketPrice: '$5000-15000/month',
+      features: ['Quantum machine learning algorithms', 'Quantum optimization for logistics', 'Quantum neural networks', 'Cryptographic security', 'Drug discovery acceleration', 'Financial modeling', 'Climate simulation', 'Quantum error correction'],
+      benefits: ['Exponential speed improvements', 'Breakthrough problem solving', 'Future-proof technology', 'Competitive advantage'],
+      category: 'Quantum AI',
+      popular: true
+    },
+    {
+      icon: Globe,
+      title: 'AI Autonomous Systems',
+      description: 'Self-operating AI systems for robotics, vehicles, and industrial automation',
+      price: '$1,299/month',
+      marketPrice: '$2000-8000/month',
+      features: ['Autonomous vehicle AI', 'Industrial robotics control', 'Drone navigation systems', 'Smart city management', 'Predictive maintenance', 'Real-time decision making', 'Safety monitoring', 'Adaptive learning'],
+      benefits: ['24/7 autonomous operation', 'Reduced human intervention', 'Improved safety', 'Cost efficiency'],
+      category: 'Autonomous Systems',
+      popular: true
+    },
+    {
+      icon: Shield,
+      title: 'AI Blockchain Security',
+      description: 'AI-powered blockchain security and smart contract analysis for DeFi and Web3',
+      price: '$899/month',
+      marketPrice: '$1500-5000/month',
+      features: ['Smart contract vulnerability detection', 'DeFi risk assessment', 'NFT fraud prevention', 'Cryptocurrency transaction analysis', 'Decentralized identity verification', 'Cross-chain security monitoring', 'MEV protection', 'Governance optimization'],
+      benefits: ['Enhanced blockchain security', 'Reduced DeFi risks', 'Automated threat detection', 'Regulatory compliance'],
+      category: 'Blockchain AI',
+      popular: true
+    },
+    {
+      icon: Heart,
+      title: 'AI Climate Solutions',
+      description: 'AI-powered environmental monitoring and climate change mitigation technologies',
+      price: '$1,199/month',
+      marketPrice: '$2000-6000/month',
+      features: ['Carbon footprint tracking', 'Renewable energy optimization', 'Climate prediction models', 'Environmental monitoring', 'Sustainable supply chain', 'Green building management', 'Emission reduction strategies', 'Biodiversity protection'],
+      benefits: ['Environmental impact reduction', 'Sustainability compliance', 'Cost savings', 'ESG reporting'],
+      category: 'Climate AI',
+      popular: false
+    },
+    {
+      icon: Users,
+      title: 'AI Metaverse Solutions',
+      description: 'AI-powered virtual worlds, avatars, and immersive experiences for the metaverse',
+      price: '$1,599/month',
+      marketPrice: '$3000-10000/month',
+      features: ['AI-generated virtual environments', 'Intelligent avatar creation', 'Virtual event management', 'Spatial computing', 'Haptic feedback systems', 'Virtual commerce', 'Social interaction AI', 'Content moderation'],
+      benefits: ['Immersive experiences', 'Virtual presence', 'New revenue streams', 'Future-ready technology'],
+      category: 'Metaverse AI',
+      popular: true
+    },
+    {
+      icon: Database,
+      title: 'AI Data Fabric',
+      description: 'Intelligent data management and integration across hybrid cloud environments',
+      price: '$1,399/month',
+      marketPrice: '$2500-8000/month',
+      features: ['Automated data discovery', 'Real-time data integration', 'Data quality management', 'Privacy-preserving analytics', 'Cross-platform synchronization', 'Data lineage tracking', 'Automated governance', 'Self-healing data pipelines'],
+      benefits: ['Unified data access', 'Improved data quality', 'Reduced integration time', 'Better compliance'],
+      category: 'Data Management',
+      popular: false
+    },
+    {
+      icon: Zap,
+      title: 'AI Edge Intelligence',
+      description: 'Distributed AI processing for IoT devices and edge computing environments',
+      price: '$799/month',
+      marketPrice: '$1200-4000/month',
+      features: ['Edge AI model deployment', 'Real-time inference', 'Federated learning', 'Edge-to-cloud synchronization', 'Resource optimization', 'Offline AI capabilities', 'Device management', 'Performance monitoring'],
+      benefits: ['Ultra-low latency', 'Reduced bandwidth usage', 'Offline operation', 'Scalable deployment'],
+      category: 'Edge AI',
+      popular: true
+    },
+    {
+      icon: Target,
+      title: 'AI Personalization Engine',
+      description: 'Advanced personalization and recommendation systems for e-commerce and content',
+      price: '$699/month',
+      marketPrice: '$1200-3500/month',
+      features: ['Real-time personalization', 'Multi-channel recommendations', 'Behavioral analysis', 'A/B testing automation', 'Dynamic pricing', 'Content optimization', 'Customer journey mapping', 'Predictive personalization'],
+      benefits: ['Increased conversion rates', 'Better customer experience', 'Higher engagement', 'Revenue optimization'],
+      category: 'Personalization',
+      popular: true
+    },
+    {
+      icon: Settings,
+      title: 'AI Process Mining',
+      description: 'Intelligent process discovery and optimization for business operations',
+      price: '$999/month',
+      marketPrice: '$1800-5000/month',
+      features: ['Process discovery and mapping', 'Bottleneck identification', 'Process optimization', 'Compliance monitoring', 'Resource allocation', 'Performance analytics', 'Automated improvement', 'ROI measurement'],
+      benefits: ['Process efficiency gains', 'Cost reduction', 'Better compliance', 'Data-driven optimization'],
+      category: 'Process Intelligence',
+      popular: false
     }
   ];
 
@@ -419,6 +518,105 @@ description: 'Custom API development, third-party integrations, and microservice
       features: ['Project planning and execution', 'Resource allocation', 'Timeline management', 'Risk assessment', 'Quality assurance', 'Stakeholder communication', 'Change management', 'Project documentation'],
       benefits: ['On-time delivery', 'Budget control', 'Quality assurance', 'Risk mitigation'],
       category: 'Project Management',
+      popular: false
+    },
+    {
+      icon: Cpu,
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, integration, and optimization for enterprise applications',
+      price: '$5,999/month',
+      marketPrice: '$10000-50000/month',
+      features: ['Quantum hardware integration', 'Quantum algorithm development', 'Hybrid quantum-classical systems', 'Quantum error correction', 'Quantum networking', 'Quantum security protocols', 'Performance optimization', 'Training and support'],
+      benefits: ['Exponential computational power', 'Future-proof technology', 'Competitive advantage', 'Breakthrough capabilities'],
+      category: 'Quantum Computing',
+      popular: true
+    },
+    {
+      icon: Globe,
+      title: '5G Network Implementation',
+      description: 'Complete 5G network design, deployment, and optimization for businesses',
+      price: '$3,500/month',
+      marketPrice: '$6000-20000/month',
+      features: ['5G network architecture', 'Small cell deployment', 'Network slicing', 'Edge computing integration', 'IoT connectivity', 'Performance optimization', 'Security implementation', 'Compliance management'],
+      benefits: ['Ultra-fast connectivity', 'Low latency', 'Massive IoT support', 'Enhanced mobile experience'],
+      category: '5G Networks',
+      popular: true
+    },
+    {
+      icon: Monitor,
+      title: 'AR/VR Development',
+      description: 'Immersive augmented and virtual reality solutions for training, marketing, and entertainment',
+      price: '$2,800/month',
+      marketPrice: '$5000-15000/month',
+      features: ['AR/VR application development', '3D content creation', 'Haptic feedback systems', 'Spatial computing', 'Multi-platform deployment', 'User experience design', 'Performance optimization', 'Integration services'],
+      benefits: ['Immersive experiences', 'Enhanced engagement', 'New revenue streams', 'Competitive differentiation'],
+      category: 'AR/VR',
+      popular: true
+    },
+    {
+      icon: Wifi,
+      title: 'IoT Platform Development',
+      description: 'Comprehensive Internet of Things solutions for smart cities, homes, and industries',
+      price: '$2,200/month',
+      marketPrice: '$4000-12000/month',
+      features: ['IoT device integration', 'Real-time data processing', 'Edge computing', 'Predictive analytics', 'Remote monitoring', 'Automated control systems', 'Security implementation', 'Scalable architecture'],
+      benefits: ['Operational efficiency', 'Real-time insights', 'Automated processes', 'Cost reduction'],
+      category: 'IoT Solutions',
+      popular: false
+    },
+    {
+      icon: Link,
+      title: 'Blockchain Development',
+      description: 'Custom blockchain solutions, smart contracts, and DeFi applications',
+      price: '$2,500/month',
+      marketPrice: '$4000-15000/month',
+      features: ['Custom blockchain development', 'Smart contract creation', 'DeFi protocol development', 'NFT marketplace', 'Tokenization services', 'Cross-chain integration', 'Security auditing', 'Compliance solutions'],
+      benefits: ['Decentralized solutions', 'Enhanced security', 'Transparency', 'New business models'],
+      category: 'Blockchain',
+      popular: true
+    },
+    {
+      icon: Shield,
+      title: 'Zero Trust Security',
+      description: 'Comprehensive zero trust architecture implementation and management',
+      price: '$2,800/month',
+      marketPrice: '$5000-15000/month',
+      features: ['Identity and access management', 'Network segmentation', 'Continuous monitoring', 'Threat detection', 'Policy enforcement', 'Compliance automation', 'Incident response', 'Security training'],
+      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Compliance assurance', 'Proactive protection'],
+      category: 'Security',
+      popular: true
+    },
+    {
+      icon: Database,
+      title: 'Data Lake & Warehouse',
+      description: 'Modern data architecture with data lakes, warehouses, and real-time analytics',
+      price: '$1,800/month',
+      marketPrice: '$3000-10000/month',
+      features: ['Data lake architecture', 'Data warehouse design', 'ETL/ELT pipelines', 'Real-time streaming', 'Data governance', 'Quality management', 'Analytics platforms', 'Machine learning integration'],
+      benefits: ['Unified data access', 'Real-time insights', 'Scalable storage', 'Better decision making'],
+      category: 'Data Architecture',
+      popular: false
+    },
+    {
+      icon: Settings,
+      title: 'MLOps & AI Operations',
+      description: 'Machine learning operations and AI model deployment at scale',
+      price: '$2,100/month',
+      marketPrice: '$4000-12000/month',
+      features: ['Model deployment automation', 'A/B testing frameworks', 'Model monitoring', 'Retraining pipelines', 'Version control', 'Performance optimization', 'Scalability management', 'Compliance tracking'],
+      benefits: ['Faster AI deployment', 'Better model performance', 'Reduced operational overhead', 'Scalable AI operations'],
+      category: 'MLOps',
+      popular: true
+    },
+    {
+      icon: Zap,
+      title: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for real-time processing and low-latency applications',
+      price: '$1,900/month',
+      marketPrice: '$3500-10000/month',
+      features: ['Edge infrastructure setup', 'Content delivery networks', 'Real-time processing', 'IoT integration', 'Latency optimization', 'Bandwidth management', 'Security implementation', 'Monitoring and maintenance'],
+      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Improved performance', 'Better user experience'],
+      category: 'Edge Computing',
       popular: false
     }
   ];
@@ -856,6 +1054,138 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Social Media',
       popular: true,
       users: 'Up to 5 users'
+    },
+    {
+      icon: Cpu,
+      title: 'Zion Quantum Optimizer',
+      description: 'Quantum-inspired optimization algorithms for complex business problems',
+      price: '$299/month',
+      marketPrice: '$500-1500/month',
+      features: ['Quantum-inspired algorithms', 'Supply chain optimization', 'Portfolio optimization', 'Resource allocation', 'Scheduling optimization', 'Route planning', 'Pricing optimization', 'Risk assessment'],
+      benefits: ['Solve complex optimization problems', 'Exponential performance gains', 'Better resource utilization', 'Competitive advantage'],
+      category: 'Quantum Computing',
+      popular: true,
+      users: 'Up to 10 users'
+    },
+    {
+      icon: Monitor,
+      title: 'Zion Metaverse Builder',
+      description: 'AI-powered virtual world creation and management platform',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: ['3D world generation', 'Avatar creation', 'Virtual event hosting', 'Spatial audio integration', 'Multi-user collaboration', 'Asset marketplace', 'Analytics dashboard', 'Monetization tools'],
+      benefits: ['Create immersive experiences', 'Engage audiences', 'New revenue streams', 'Future-ready platform'],
+      category: 'Metaverse',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      icon: Shield,
+      title: 'Zion Zero Trust Manager',
+      description: 'Comprehensive zero trust security implementation and monitoring',
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      features: ['Identity verification', 'Device trust scoring', 'Network segmentation', 'Threat detection', 'Policy enforcement', 'Compliance monitoring', 'Incident response', 'Security training'],
+      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Compliance assurance', 'Proactive protection'],
+      category: 'Security',
+      popular: true,
+      users: 'Up to 50 users'
+    },
+    {
+      icon: Wifi,
+      title: 'Zion IoT Commander',
+      description: 'Intelligent IoT device management and automation platform',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: ['Device discovery and onboarding', 'Real-time monitoring', 'Automated control rules', 'Predictive maintenance', 'Energy optimization', 'Security management', 'Data analytics', 'Integration APIs'],
+      benefits: ['Centralized IoT management', 'Automated operations', 'Energy savings', 'Predictive insights'],
+      category: 'IoT Management',
+      popular: false,
+      users: 'Up to 100 devices'
+    },
+    {
+      icon: Link,
+      title: 'Zion Blockchain Manager',
+      description: 'Comprehensive blockchain and DeFi management platform',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: ['Multi-chain wallet management', 'DeFi protocol integration', 'NFT marketplace', 'Smart contract deployment', 'Token management', 'Yield farming automation', 'Security monitoring', 'Tax reporting'],
+      benefits: ['Unified blockchain access', 'Automated DeFi strategies', 'Enhanced security', 'Simplified management'],
+      category: 'Blockchain',
+      popular: true,
+      users: 'Up to 20 wallets'
+    },
+    {
+      icon: Heart,
+      title: 'Zion Climate Tracker',
+      description: 'AI-powered environmental impact monitoring and sustainability management',
+      price: '$99/month',
+      marketPrice: '$200-600/month',
+      features: ['Carbon footprint tracking', 'Sustainability reporting', 'Energy optimization', 'Waste reduction analytics', 'ESG compliance', 'Green supply chain', 'Environmental monitoring', 'Impact visualization'],
+      benefits: ['Reduce environmental impact', 'ESG compliance', 'Cost savings', 'Sustainability insights'],
+      category: 'Sustainability',
+      popular: false,
+      users: 'Up to 30 locations'
+    },
+    {
+      icon: Users,
+      title: 'Zion Virtual Assistant Pro',
+      description: 'Advanced AI virtual assistant for business operations and customer service',
+      price: '$129/month',
+      marketPrice: '$250-700/month',
+      features: ['Natural language processing', 'Multi-channel support', 'Task automation', 'Calendar management', 'Email handling', 'Customer support', 'Voice integration', 'Learning capabilities'],
+      benefits: ['24/7 availability', 'Reduced operational costs', 'Improved efficiency', 'Better customer experience'],
+      category: 'Virtual Assistant',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      icon: Database,
+      title: 'Zion Data Intelligence',
+      description: 'Advanced data analytics and business intelligence platform',
+      price: '$189/month',
+      marketPrice: '$400-1200/month',
+      features: ['Real-time analytics', 'Predictive modeling', 'Data visualization', 'Automated reporting', 'Machine learning insights', 'Data quality management', 'Integration capabilities', 'Custom dashboards'],
+      benefits: ['Data-driven decisions', 'Predictive insights', 'Automated reporting', 'Better performance'],
+      category: 'Analytics',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      icon: Settings,
+      title: 'Zion Process Intelligence',
+      description: 'AI-powered process mining and optimization platform',
+      price: '$159/month',
+      marketPrice: '$300-900/month',
+      features: ['Process discovery', 'Bottleneck identification', 'Performance analytics', 'Optimization recommendations', 'Compliance monitoring', 'Resource allocation', 'ROI measurement', 'Automated improvements'],
+      benefits: ['Process efficiency gains', 'Cost reduction', 'Better compliance', 'Data-driven optimization'],
+      category: 'Process Management',
+      popular: false,
+      users: 'Up to 20 processes'
+    },
+    {
+      icon: Zap,
+      title: 'Zion Edge Computing Manager',
+      description: 'Distributed computing and edge AI management platform',
+      price: '$139/month',
+      marketPrice: '$250-700/month',
+      features: ['Edge device management', 'Real-time processing', 'Load balancing', 'Latency optimization', 'Security monitoring', 'Performance analytics', 'Automated scaling', 'Integration APIs'],
+      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Better performance', 'Scalable deployment'],
+      category: 'Edge Computing',
+      popular: true,
+      users: 'Up to 50 devices'
+    },
+    {
+      icon: Target,
+      title: 'Zion Personalization Engine',
+      description: 'Advanced AI personalization and recommendation platform',
+      price: '$119/month',
+      marketPrice: '$250-600/month',
+      features: ['Real-time personalization', 'Multi-channel recommendations', 'Behavioral analysis', 'A/B testing', 'Dynamic pricing', 'Content optimization', 'Customer journey mapping', 'ROI tracking'],
+      benefits: ['Increased conversions', 'Better customer experience', 'Higher engagement', 'Revenue optimization'],
+      category: 'Personalization',
+      popular: true,
+      users: 'Up to 40,000 customers'
     }
   ];
 
@@ -984,6 +1314,30 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
+              
+              {/* Additional Key Benefits */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">🧠</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Quantum Computing</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Revolutionary quantum-enhanced AI algorithms for exponential performance gains</p>
+                </div>
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">🌍</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Climate Solutions</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">AI-powered environmental monitoring and sustainability solutions</p>
+                </div>
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">🎮</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Metaverse Ready</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Cutting-edge virtual world and immersive experience technologies</p>
+                </div>
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                  <div className="text-2xl sm:text-3xl mb-3">🔗</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Blockchain AI</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Advanced blockchain security and DeFi solutions powered by AI</p>
+                </div>
+              </div>
               {/* CTA Buttons */}
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
@@ -1046,12 +1400,12 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {aiServices.map((service, index) => (
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
-                  <div className="p-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <service.icon className="w-8 h-8 text-white" />
+                  <div className="p-4 sm:p-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-300 mb-4 text-xs sm:text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">
@@ -1105,12 +1459,12 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {itServices.map((service, index) => (
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
-                  <div className="p-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <service.icon className="w-8 h-8 text-white" />
+                  <div className="p-4 sm:p-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-300 mb-4 text-xs sm:text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">
@@ -1164,12 +1518,12 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {microSaasServices.map((service, index) => (
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
-                  <div className="p-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <service.icon className="w-8 h-8 text-white" />
+                  <div className="p-4 sm:p-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-300 mb-4 text-xs sm:text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between">

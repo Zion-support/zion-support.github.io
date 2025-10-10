@@ -73,6 +73,15 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu, description: 'Quantum-enhanced AI algorithms' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Globe, description: 'Self-operating AI systems' },
+    { name: 'AI Blockchain Security', href: '/ai-blockchain-security', icon: Shield, description: 'Blockchain & DeFi security' },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions', icon: Heart, description: 'Environmental AI' },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions', icon: Users, description: 'Virtual world AI' },
+    { name: 'AI Data Fabric', href: '/ai-data-fabric', icon: Database, description: 'Intelligent data management' },
+    { name: 'AI Edge Intelligence', href: '/ai-edge-intelligence', icon: Zap, description: 'Distributed AI processing' },
+    { name: 'AI Personalization Engine', href: '/ai-personalization-engine', icon: Target, description: 'Advanced personalization' },
+    { name: 'AI Process Mining', href: '/ai-process-mining', icon: Settings, description: 'Process optimization' },
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -113,6 +122,15 @@ const Navigation: React.FC = () => {
   ];
 
   const itServices = [
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure', icon: Cpu, description: 'Quantum computing setup' },
+    { name: '5G Network Implementation', href: '/5g-network-implementation', icon: Globe, description: '5G network deployment' },
+    { name: 'AR/VR Development', href: '/ar-vr-development', icon: Monitor, description: 'Immersive solutions' },
+    { name: 'IoT Platform Development', href: '/iot-platform-development', icon: Wifi, description: 'IoT solutions' },
+    { name: 'Blockchain Development', href: '/blockchain-development', icon: Link, description: 'Smart contracts & DeFi' },
+    { name: 'Zero Trust Security', href: '/zero-trust-security', icon: Shield, description: 'Zero trust architecture' },
+    { name: 'Data Lake & Warehouse', href: '/data-lake-warehouse', icon: Database, description: 'Modern data architecture' },
+    { name: 'MLOps & AI Operations', href: '/machine-learning-ops', icon: Settings, description: 'ML model deployment' },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Zap, description: 'Distributed computing' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
@@ -129,7 +147,6 @@ const Navigation: React.FC = () => {
     { name: 'IT Project Management', href: '/it-project-management', icon: Calendar, description: 'Professional project management' },
     { name: 'Cloud-Native Development', href: '/cloud-native-development', icon: Cloud, description: 'Microservices & containers' },
     { name: 'AI Integration Services', href: '/ai-integration-services', icon: Brain, description: 'AI model integration' },
-    { name: 'Blockchain Development', href: '/blockchain-development', icon: Link, description: 'Smart contracts & DeFi' },
     { name: 'IoT Development', href: '/iot-development', icon: Wifi, description: 'Connected device solutions' },
     { name: 'E-commerce Development', href: '/e-commerce-development', icon: ShoppingCart, description: 'Online store platforms' },
     { name: 'Advanced API Development', href: '/api-development-advanced', icon: Code, description: 'Enterprise-grade APIs' },
@@ -137,7 +154,6 @@ const Navigation: React.FC = () => {
     { name: 'Advanced Cybersecurity', href: '/cybersecurity-advanced', icon: Shield, description: 'Threat hunting & response' },
     { name: 'Cloud Migration', href: '/cloud-migration-advanced', icon: Cloud, description: 'Zero-downtime migration' },
     { name: 'Advanced DevOps & SRE', href: '/devops-advanced', icon: Settings, description: 'Site reliability engineering' },
-    { name: 'MLOps & AI Operations', href: '/machine-learning-ops', icon: Cpu, description: 'ML model deployment' },
     { name: 'Enterprise Integration', href: '/enterprise-integration', icon: Link, description: 'System integration' },
     { name: 'Performance Optimization', href: '/performance-optimization', icon: Zap, description: 'App & infrastructure optimization' },
     { name: 'Disaster Recovery', href: '/disaster-recovery-advanced', icon: Shield, description: 'Business continuity' },
@@ -150,6 +166,17 @@ const Navigation: React.FC = () => {
   ];
 
   const microSaasServices = [
+    { name: 'Zion Quantum Optimizer', href: '/zion-quantum-optimizer', icon: Cpu, description: 'Quantum-inspired optimization' },
+    { name: 'Zion Metaverse Builder', href: '/zion-metaverse-builder', icon: Monitor, description: 'Virtual world creation' },
+    { name: 'Zion Zero Trust Manager', href: '/zion-zero-trust-manager', icon: Shield, description: 'Zero trust security' },
+    { name: 'Zion IoT Commander', href: '/zion-iot-commander', icon: Wifi, description: 'IoT device management' },
+    { name: 'Zion Blockchain Manager', href: '/zion-blockchain-manager', icon: Link, description: 'Blockchain & DeFi management' },
+    { name: 'Zion Climate Tracker', href: '/zion-climate-tracker', icon: Heart, description: 'Environmental monitoring' },
+    { name: 'Zion Virtual Assistant Pro', href: '/zion-virtual-assistant-pro', icon: Users, description: 'AI virtual assistant' },
+    { name: 'Zion Data Intelligence', href: '/zion-data-intelligence', icon: Database, description: 'Advanced analytics' },
+    { name: 'Zion Process Intelligence', href: '/zion-process-intelligence', icon: Settings, description: 'Process optimization' },
+    { name: 'Zion Edge Computing Manager', href: '/zion-edge-computing-manager', icon: Zap, description: 'Edge AI management' },
+    { name: 'Zion Personalization Engine', href: '/zion-personalization-engine', icon: Target, description: 'AI personalization' },
     { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
     { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
@@ -189,16 +216,21 @@ const Navigation: React.FC = () => {
   ];
 
   const emergingTech = [
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
     { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
     { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
-    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
+    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' },
+    { name: 'Digital Twin Technology', href: '/digital-twin-technology', icon: Globe, description: 'Virtual replicas' },
+    { name: 'Neural Interfaces', href: '/neural-interfaces', icon: Brain, description: 'Brain-computer interfaces' },
+    { name: 'Swarm Intelligence', href: '/swarm-intelligence', icon: Users, description: 'Collective AI systems' },
+    { name: 'Biometric AI', href: '/biometric-ai', icon: Eye, description: 'Biometric recognition' },
+    { name: 'Space Technology', href: '/space-technology', icon: Globe, description: 'Space-based solutions' }
   ];
 
   return (

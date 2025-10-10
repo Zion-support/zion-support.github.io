@@ -7,6 +7,15 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
+    { name: 'AI Quantum Computing', url: '/ai-quantum-computing', description: 'Quantum-enhanced AI' },
+    { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Self-operating AI' },
+    { name: 'AI Blockchain Security', url: '/ai-blockchain-security', description: 'Blockchain & DeFi AI' },
+    { name: 'AI Climate Solutions', url: '/ai-climate-solutions', description: 'Environmental AI' },
+    { name: 'AI Metaverse Solutions', url: '/ai-metaverse-solutions', description: 'Virtual world AI' },
+    { name: 'AI Data Fabric', url: '/ai-data-fabric', description: 'Intelligent data management' },
+    { name: 'AI Edge Intelligence', url: '/ai-edge-intelligence', description: 'Distributed AI processing' },
+    { name: 'AI Personalization Engine', url: '/ai-personalization-engine', description: 'Advanced personalization' },
+    { name: 'AI Process Mining', url: '/ai-process-mining', description: 'Process optimization' },
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
@@ -42,6 +51,15 @@ const Footer: React.FC = memo(() => {
   ];
 
   const itServices = [
+    { name: 'Quantum Computing Infrastructure', url: '/quantum-computing-infrastructure', description: 'Quantum computing setup' },
+    { name: '5G Network Implementation', url: '/5g-network-implementation', description: '5G network deployment' },
+    { name: 'AR/VR Development', url: '/ar-vr-development', description: 'Immersive solutions' },
+    { name: 'IoT Platform Development', url: '/iot-platform-development', description: 'IoT solutions' },
+    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Smart contracts & DeFi' },
+    { name: 'Zero Trust Security', url: '/zero-trust-security', description: 'Zero trust architecture' },
+    { name: 'Data Lake & Warehouse', url: '/data-lake-warehouse', description: 'Modern data architecture' },
+    { name: 'MLOps & AI Operations', url: '/machine-learning-ops', description: 'ML model deployment' },
+    { name: 'Edge Computing Solutions', url: '/edge-computing-solutions', description: 'Distributed computing' },
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
@@ -56,7 +74,6 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' },
     { name: 'Cloud-Native Development', url: '/cloud-native-development', description: 'Microservices & containers' },
     { name: 'AI Integration Services', url: '/ai-integration-services', description: 'AI model integration' },
-    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Smart contracts & DeFi' },
     { name: 'IoT Development', url: '/iot-development', description: 'Connected device solutions' },
     { name: 'E-commerce Development', url: '/e-commerce-development', description: 'Online store platforms' },
     { name: 'Advanced API Development', url: '/api-development-advanced', description: 'Enterprise-grade APIs' },
@@ -64,7 +81,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Advanced Cybersecurity', url: '/cybersecurity-advanced', description: 'Threat hunting & response' },
     { name: 'Cloud Migration', url: '/cloud-migration-advanced', description: 'Zero-downtime migration' },
     { name: 'Advanced DevOps & SRE', url: '/devops-advanced', description: 'Site reliability engineering' },
-    { name: 'MLOps & AI Operations', url: '/machine-learning-ops', description: 'ML model deployment' },
     { name: 'Enterprise Integration', url: '/enterprise-integration', description: 'System integration' },
     { name: 'Performance Optimization', url: '/performance-optimization', description: 'App & infrastructure optimization' },
     { name: 'Disaster Recovery', url: '/disaster-recovery-advanced', description: 'Business continuity' },
@@ -77,6 +93,17 @@ const Footer: React.FC = memo(() => {
   ];
 
   const microSaasServices = [
+    { name: 'Zion Quantum Optimizer', url: '/zion-quantum-optimizer', description: 'Quantum-inspired optimization' },
+    { name: 'Zion Metaverse Builder', url: '/zion-metaverse-builder', description: 'Virtual world creation' },
+    { name: 'Zion Zero Trust Manager', url: '/zion-zero-trust-manager', description: 'Zero trust security' },
+    { name: 'Zion IoT Commander', url: '/zion-iot-commander', description: 'IoT device management' },
+    { name: 'Zion Blockchain Manager', url: '/zion-blockchain-manager', description: 'Blockchain & DeFi management' },
+    { name: 'Zion Climate Tracker', url: '/zion-climate-tracker', description: 'Environmental monitoring' },
+    { name: 'Zion Virtual Assistant Pro', url: '/zion-virtual-assistant-pro', description: 'AI virtual assistant' },
+    { name: 'Zion Data Intelligence', url: '/zion-data-intelligence', description: 'Advanced analytics' },
+    { name: 'Zion Process Intelligence', url: '/zion-process-intelligence', description: 'Process optimization' },
+    { name: 'Zion Edge Computing Manager', url: '/zion-edge-computing-manager', description: 'Edge AI management' },
+    { name: 'Zion Personalization Engine', url: '/zion-personalization-engine', description: 'AI personalization' },
     { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
     { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
     { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
