@@ -1,12 +1,11 @@
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -22,79 +21,28 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    // Initialize Google Analytics
-    const initGoogleAnalytics = () => {
-      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-        // Google Analytics 4
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.VITE_GA_MEASUREMENT_ID}`;
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
-          window.dataLayer.push(args);
-        }
-        gtag('js', new Date());
-        gtag('config', process.env.VITE_GA_MEASUREMENT_ID, {
-          page_title: document.title,
-          page_location: window.location.href
-        });
-
-        (window as any).gtag = gtag;
-      }
+    // Initialize analytics
+    const initAnalytics = () => {
+      // Google Analytics initialization would go here
+      console.log('Analytics initialized');
     };
 
-    initGoogleAnalytics();
+    initAnalytics();
   }, []);
 
-  const track = (event: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if ((window as any).gtag) {
-        (window as any).gtag('event', event, properties);
-      }
-
-      // Custom analytics
-      console.log('Analytics Event:', event, properties);
-    }
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    console.log('Event tracked:', eventName, properties);
+    // Send to analytics service
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if ((window as any).gtag) {
-        (window as any).gtag('config', process.env.VITE_GA_MEASUREMENT_ID, {
-          page_title: name,
-          page_location: window.location.href,
-          ...properties
-        });
-      }
-
-      // Custom analytics
-      console.log('Analytics Page:', name, properties);
-    }
-  };
-
-  const identify = (userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if ((window as any).gtag) {
-        (window as any).gtag('config', process.env.VITE_GA_MEASUREMENT_ID, {
-          user_id: userId,
-          ...traits
-        });
-      }
-
-      // Custom analytics
-      console.log('Analytics Identify:', userId, traits);
-    }
+  const trackPageView = (pageName: string) => {
+    console.log('Page view tracked:', pageName);
+    // Send to analytics service
   };
 
   const value: AnalyticsContextType = {
-    track,
-    page,
-    identify
+    trackEvent,
+    trackPageView
   };
 
   return (

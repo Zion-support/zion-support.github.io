@@ -7,32 +7,25 @@ export const usePerformanceMonitor = () => {
       try {
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
         
-        getCLS((metric) => {
-          console.log('CLS:', metric);
-          // Send to analytics service
-        });
+        const logMetric = (metric: any, type: string) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`${type}:`, metric);
+          }
+          // Send to analytics service in production
+          if (process.env.NODE_ENV === 'production') {
+            // Send to analytics service
+          }
+        };
         
-        getFID((metric) => {
-          console.log('FID:', metric);
-          // Send to analytics service
-        });
-        
-        getFCP((metric) => {
-          console.log('FCP:', metric);
-          // Send to analytics service
-        });
-        
-        getLCP((metric) => {
-          console.log('LCP:', metric);
-          // Send to analytics service
-        });
-        
-        getTTFB((metric) => {
-          console.log('TTFB:', metric);
-          // Send to analytics service
-        });
+        getCLS((metric) => logMetric(metric, 'CLS'));
+        getFID((metric) => logMetric(metric, 'FID'));
+        getFCP((metric) => logMetric(metric, 'FCP'));
+        getLCP((metric) => logMetric(metric, 'LCP'));
+        getTTFB((metric) => logMetric(metric, 'TTFB'));
       } catch (error) {
-        console.log('Web Vitals not available:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Web Vitals not available:', error);
+        }
       }
     };
 
@@ -42,11 +35,13 @@ export const usePerformanceMonitor = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation timing:', {
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              totalTime: navEntry.loadEventEnd - navEntry.fetchStart
-            });
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Navigation timing:', {
+                domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+                totalTime: navEntry.loadEventEnd - navEntry.fetchStart
+              });
+            }
           }
         }
       });
@@ -60,11 +55,13 @@ export const usePerformanceMonitor = () => {
     const monitorMemoryUsage = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
-        });
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Memory usage:', {
+            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+          });
+        }
       }
     };
 
