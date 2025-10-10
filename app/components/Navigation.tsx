@@ -57,6 +57,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Process Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
     { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Brain, description: 'Voice AI Platform' },
     { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, description: 'Maintenance AI' },
+    { name: 'AI Recruitment Assistant', href: '/ai-recruitment-assistant', icon: Users, description: 'HR & Recruitment AI' },
     { name: 'AI Supply Chain', href: '/ai-supply-chain', icon: BarChart, description: 'Supply Chain AI' },
     { name: 'AI Quality Control', href: '/ai-quality-control', icon: Shield, description: 'Quality AI' },
     { name: 'AI Energy Management', href: '/ai-energy-management', icon: Zap, description: 'Energy AI' },
@@ -72,8 +73,8 @@ const Navigation: React.FC = () => {
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
   const itServices = [
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Zero-Downtime Migration' },
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
     { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
@@ -113,6 +114,9 @@ const Navigation: React.FC = () => {
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, description: 'SEO Tools' },
     { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: BarChart, description: 'Invoice Management' },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'Writing Tools' },
+    { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Brain, description: 'Voice AI Platform' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, description: 'Maintenance AI' },
+    { name: 'AI Recruitment Assistant', href: '/ai-recruitment-assistant', icon: Users, description: 'HR & Recruitment' },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Analytics Platform' },
     { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Scheduling Tools' },
     { name: 'Expense Tracker', href: '/expense-tracker', icon: BarChart, description: 'Expense Management' },
@@ -128,7 +132,6 @@ const Navigation: React.FC = () => {
     { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
     { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Tracking' },
     { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' },
-    { name: 'AI Recruitment Assistant', href: '/ai-recruitment-assistant', icon: Users, description: 'HR & Recruitment' },
     { name: 'Medical Records Manager', href: '/medical-records-manager', icon: Shield, description: 'Healthcare' },
     { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', icon: BarChart, description: 'Finance & Accounting' },
     { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
