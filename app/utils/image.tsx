@@ -1,7 +1,7 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 'use client';
-import React, {useState, useCallback}from 'react';
+import React, {useState, useCallback from 'react';
 interface ImageProps {src: string,}
     alt: string;,}interface ImageProps {}}src: string;,
   alt: string;,
@@ -69,7 +69,7 @@ export const Image: React.FC<ImageProps> = ({,
     return(</ImageProps>)}if (hasError) {}return(<div)}
   if (hasError) {}return(<div)}
 'use client';
-import React, {useState, useCallback}from 'react';
+import React, {useState, useCallback from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */,}}}
 export const,
   Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */,</div>})

@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
-import {Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight}}from 'lucide-react';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
+import {Link from 'react-router-dom';
+import {Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight from 'lucide-react';
 
-const CareersPage: React.FC = () => {,
+const CareersPage: React.FC = () => {
   const openPositions = [
     {
       title: 'Senior AI Engineer',

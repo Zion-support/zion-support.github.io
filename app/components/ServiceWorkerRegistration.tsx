@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-const ServiceWorkerRegistrationPage: React.FC = () => {,
-    const features = [
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
+const ServiceWorkerRegistrationPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

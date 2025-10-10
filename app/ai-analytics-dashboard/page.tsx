@@ -1,11 +1,11 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiAnalyticsDashboardPage: React.FC = () => {,
-    const features = [
+import Footer  from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings from 'lucide-react';
+const AiAnalyticsDashboardPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -127,12 +127,12 @@ return(<>)
 }
 export default AiAnalyticsDashboardPage;
 
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {BarChart, TrendingUp, Users, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Database, Target, Globe}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {BarChart, TrendingUp, Users, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Database, Target, Globe from 'lucide-react';
 
-const AIAnalyticsDashboard: React.FC = () => {,
+const AIAnalyticsDashboard: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {

@@ -1,9 +1,9 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database}}from 'lucide-react';
+import React, {useState from 'react';
+import {Helmet from 'react-helmet-async';
+import {Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database from 'lucide-react';
 
-const DocsPage: React.FC = () => {,
+const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

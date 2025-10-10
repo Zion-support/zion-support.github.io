@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect, useCallback}from 'react';
-import {Link}}from 'react-router-dom';
-import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart}}from 'lucide-react';
+import React, {useState, useEffect, useCallback} from 'react';
+import {Link} from 'react-router-dom';
+import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart} from 'lucide-react';
 
-const Navigation: React.FC = () => {,
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -14,45 +14,62 @@ const Navigation: React.FC = () => {,
   // Handle scroll effect;
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);}window.addEventListener('scroll', handleScroll);
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when clicking outside;
-  useEffect(() => {const handleClickOutside = (event: MouseEvent) => {,
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
-        setIsOpen(false);}}
+        setIsOpen(false);
+      }
+    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
-  const toggleMenu = useCallback(() => {setIsOpen(!isOpen);}, [isOpen]);
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
 
-  const toggleServices = useCallback(() => {setServicesOpen(!servicesOpen);
+  const toggleServices = useCallback(() => {
+    setServicesOpen(!servicesOpen);
     setAiServicesOpen(false);
     setItServicesOpen(false);
-    setMicroSaasOpen(false);}, [servicesOpen]);
+    setMicroSaasOpen(false);
+  }, [servicesOpen]);
 
-  const toggleAiServices = useCallback(() => {setAiServicesOpen(!aiServicesOpen);
+  const toggleAiServices = useCallback(() => {
+    setAiServicesOpen(!aiServicesOpen);
     setServicesOpen(false);
     setItServicesOpen(false);
-    setMicroSaasOpen(false);}, [aiServicesOpen]);
+    setMicroSaasOpen(false);
+  }, [aiServicesOpen]);
 
-  const toggleItServices = useCallback(() => {setItServicesOpen(!itServicesOpen);
+  const toggleItServices = useCallback(() => {
+    setItServicesOpen(!itServicesOpen);
     setServicesOpen(false);
     setAiServicesOpen(false);
-    setMicroSaasOpen(false);}, [itServicesOpen]);
+    setMicroSaasOpen(false);
+  }, [itServicesOpen]);
 
-  const toggleMicroSaas = useCallback(() => {setMicroSaasOpen(!microSaasOpen);
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);}, [microSaasOpen]);
-
-  const closeAllMenus = useCallback(() => {setIsOpen(false);
+  const toggleMicroSaas = useCallback(() => {
+    setMicroSaasOpen(!microSaasOpen);
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
-    setMicroSaasOpen(false);}, []);
+  }, [microSaasOpen]);
+
+  const closeAllMenus = useCallback(() => {
+    setIsOpen(false);
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  }, []);
 
   // Service data;
   const aiServices = [
@@ -180,10 +197,14 @@ const Navigation: React.FC = () => {,
     {name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' ,},
     {name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' ,}]
 
-  return(<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${)
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
-        <div className="flex items-center justify-between h-20">{/* Logo */</div>} <div className="flex-shrink-0">
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover: scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">,</div>
                 <Brain className="w-6 h-6 text-white" />

@@ -1,7 +1,7 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle}}from 'lucide-react';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
+import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle from 'lucide-react';
   const dataTypes = [
     {category: 'Personal Information',
       icon: User,},

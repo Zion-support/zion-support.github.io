@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 'use client';
-import React, {useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React, {useState, useCallback from 'react';
+import {Helmet from 'react-helmet-async';
 import {Phone,}
   Mail,
 
@@ -13,8 +13,8 @@ import {Phone,}
   Send,
 
   CheckCircle;}} from 'lucide-react'
-const ContactPage: React.FC = () => {,
-    const [formData, setFormData] = useState({)
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({)
     name: '',
     email: '',
     company: '',

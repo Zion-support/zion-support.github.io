@@ -1,6 +1,6 @@
 'use client';
 
-const MicroSaasPage: React.FC = () => {,
+const MicroSaasPage: React.FC = () => {
   const products = [
     {
       title: 'Zion Analytics Pro',
@@ -207,9 +207,9 @@ const MicroSaasPage: React.FC = () => {,
       <Helmet />
               </div>
             </div>
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare, Brain, Target, Rocket}}from 'lucide-react';
+import React, {useState from 'react';
+import {Helmet from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare, Brain, Target, Rocket from 'lucide-react';
 
 interface MicroSaasProduct {id: string;,}
   name: string;,
@@ -218,7 +218,7 @@ interface MicroSaasProduct {id: string;,}
   features: string[];,
   category: string;,
   popular: boolean;,
-  icon: React.ComponentType<any>;,}const MicroSaasPage: React.FC = () => {,
+  icon: React.ComponentType<any>;,}const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const microSaasProducts: MicroSaasProduct[] = [,

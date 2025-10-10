@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud}}from 'lucide-react';
-const BusinessAppsPage: React.FC = () => {,
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud from 'lucide-react';
+const BusinessAppsPage: React.FC = () => {
   const features = [
     {
       icon: Smartphone,

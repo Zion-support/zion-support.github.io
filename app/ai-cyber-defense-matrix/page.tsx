@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Shield, Zap, Eye, Target, BarChart, Lock, Clock, Users, ArrowRight, Star, TrendingUp, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, MessageSquare, CheckSquare, Cpu, Brain, Globe, AlertTriangle, Activity}}from 'lucide-react';
+import React, {useState, useEffect from 'react';
+import {Helmet from 'react-helmet-async';
+import {Shield, Zap, Eye, Target, BarChart, Lock, Clock, Users, ArrowRight, Star, TrendingUp, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, MessageSquare, CheckSquare, Cpu, Brain, Globe, AlertTriangle, Activity from 'lucide-react';
 
-const AICyberDefenseMatrix: React.FC = () => {,
+const AICyberDefenseMatrix: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

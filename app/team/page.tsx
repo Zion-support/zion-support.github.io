@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const TeamPage: React.FC = () => {,
-    return(<>)
+import Footer  from '../components/Footer';
+const TeamPage: React.FC = () => {
+  return(<>)
       <Helmet />
         <title>Our Team - Zion Tech Group</title>
         <meta />

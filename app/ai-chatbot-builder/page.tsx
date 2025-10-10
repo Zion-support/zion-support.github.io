@@ -1,11 +1,11 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiChatbotBuilderPage: React.FC = () => {,
-    const features = [
+import Footer  from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings from 'lucide-react';
+const AiChatbotBuilderPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -75,12 +75,12 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart from 'lucide-react';
 
-const AIChatbotBuilder: React.FC = () => {,
+const AIChatbotBuilder: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {

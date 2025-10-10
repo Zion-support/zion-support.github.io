@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
 import {Shield,}
   Eye,
   AlertTriangle,
@@ -24,8 +24,8 @@ import {Shield,}
   Settings,
 
   Database;}} from 'lucide-react'
-const SecurityMonitoringPage: React.FC = () => {,
-    const features = [
+const SecurityMonitoringPage: React.FC = () => {
+  const features = [
     {
       icon: Eye,
       title: '24/7 Real-time Monitoring',

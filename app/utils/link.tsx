@@ -37,7 +37,7 @@ export const Link: React.FC<LinkProps> = ({,
   }</LinkProps>
   return(<a;)}
   return(<a;)
-import React from 'react';
+import React  from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */,}}}
 export const,
   Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */,})

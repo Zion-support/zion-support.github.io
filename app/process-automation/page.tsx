@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
 import {Zap,}
   Settings,
   CheckCircle,
@@ -25,8 +25,8 @@ import {Zap,}
   Workflow,
 
   Bot;}} from 'lucide-react'
-const ProcessAutomationPage: React.FC = () => {,
-    const features = [
+const ProcessAutomationPage: React.FC = () => {
+  const features = [
     {
       icon: Zap,
       title: 'Workflow Automation',

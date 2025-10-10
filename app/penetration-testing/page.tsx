@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
 import {Shield,}
   Search,
   AlertTriangle,
@@ -26,8 +26,8 @@ import {Shield,}
   Target,
 
   Eye;}} from 'lucide-react'
-const PenetrationTestingPage: React.FC = () => {,
-    const features = [
+const PenetrationTestingPage: React.FC = () => {
+  const features = [
     {
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',

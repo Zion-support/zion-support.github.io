@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
 import {Mail,}
   Target,
   CheckCircle,
@@ -24,8 +24,8 @@ import {Mail,}
   Send,
 
   PieChart;}} from 'lucide-react'
-const EmailMarketingAutomationPage: React.FC = () => {,
-    const features = [
+const EmailMarketingAutomationPage: React.FC = () => {
+  const features = [
     {
       icon: Mail,
       title: 'Automated Campaigns',

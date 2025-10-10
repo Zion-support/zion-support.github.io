@@ -1,5 +1,5 @@
 'use client';
-import React, {createContext, useContext, useEffect, useCallback}from 'react';
+import React, {createContext, useContext, useEffect, useCallback from 'react';
 
 interface AnalyticsContextType {track: (event: string, parameters?: Record<string, any>) => void;}
   page: (pageName: string, parameters?: Record<string, any>) => void;

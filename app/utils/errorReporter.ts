@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 /**;
  * Enhanced Error Reporting Utility;

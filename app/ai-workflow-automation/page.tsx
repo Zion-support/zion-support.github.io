@@ -1,11 +1,11 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiWorkflowAutomationPage: React.FC = () => {,
-    const features = [
+import Footer  from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings from 'lucide-react';
+const AiWorkflowAutomationPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -75,13 +75,13 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import {Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users}}from 'lucide-react';
+import SEOOptimizer  from '../components/SEOOptimizer';
+import {Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users from 'lucide-react';
 
-const AIWorkflowAutomation: React.FC = () => {,
+const AIWorkflowAutomation: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {

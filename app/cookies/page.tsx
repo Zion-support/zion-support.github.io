@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info}}from 'lucide-react';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
+import {Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info from 'lucide-react';
 
-const CookiesPage: React.FC = () => {,
+const CookiesPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
   
   const cookieTypes = [

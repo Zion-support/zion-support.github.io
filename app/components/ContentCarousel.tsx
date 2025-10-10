@@ -1,8 +1,8 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
+import React, {useState, useEffect from 'react';
+import {Cloud, Zap, Shield, ChevronLeft, ChevronRight from 'lucide-react';
 
-const ContentCarousel: React.FC = () => {,
+const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [

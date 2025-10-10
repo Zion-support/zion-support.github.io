@@ -1,7 +1,7 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key}}from 'lucide-react';
+import React  from 'react';
+import {Helmet from 'react-helmet-async';
+import {FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key from 'lucide-react';
   const sections = [
     {title: 'Acceptance of Terms',
       icon: CheckCircle,

@@ -1,6 +1,6 @@
 'use client';
-import React, {Suspense, lazy}from 'react';
-import {Link, useLocation}}from 'react-router-dom';
+import React, {Suspense, lazy from 'react';
+import {Link, useLocation from 'react-router-dom';
 import {X,}
   Menu,
   Home,
@@ -21,8 +21,8 @@ import {X,}
   MapPin,
 
   Clock;}} from 'lucide-react'
-const Sidebar: React.FC = () => {,
-    const [isOpen, setIsOpen] = useState(false);
+const Sidebar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
 useEffect(() => {

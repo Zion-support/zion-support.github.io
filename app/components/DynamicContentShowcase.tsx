@@ -1,8 +1,8 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Cloud, Zap, Shield, Globe, Brain, Star}}from 'lucide-react';
+import React, {useState, useEffect from 'react';
+import {Cloud, Zap, Shield, Globe, Brain, Star from 'lucide-react';
 
-const DynamicContentShowcase: React.FC = () => {,
+const DynamicContentShowcase: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
 
   const features = [

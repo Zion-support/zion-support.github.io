@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Cpu, Zap, Brain, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, Eye, MessageSquare, CheckSquare}}from 'lucide-react';
+import React, {useState, useEffect from 'react';
+import {Helmet from 'react-helmet-async';
+import {Cpu, Zap, Brain, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, Eye, MessageSquare, CheckSquare from 'lucide-react';
 
-const AIQuantumComputingSimulator: React.FC = () => {,
+const AIQuantumComputingSimulator: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

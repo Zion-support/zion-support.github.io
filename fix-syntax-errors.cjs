@@ -2,122 +2,93 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const glob = require('glob');
 
-// Get list of files with errors
-const lintOutput = execSync('cd /workspace && pnpm run lint 2>&1', { encoding: 'utf8' });
-const errorFiles = [...new Set(
-  lintOutput
-    .split('\n')
-    .filter(line => line.includes('error') && line.includes('.tsx:'))
-    .map(line => line.split(':')[0])
-    .filter(file => file.startsWith('/workspace/'))
-)];
-
-console.log(`Found ${errorFiles.length} files with errors`);
-
-// Common fixes
-const fixes = [
-  // Fix array syntax with semicolons
-  {
-    pattern: /(\s+)([^;]+),;/g,
-    replacement: '$1$2,'
-  },
-  // Fix array closing with semicolon
-  {
-    pattern: /(\s+)\];\s*$/gm,
-    replacement: '$1];'
-  },
-  // Fix JSX self-closing tags
-  {
-    pattern: /<meta>\s*<meta>/g,
-    replacement: '<meta name="description" content="AI-powered solution" />\n        <meta name="keywords" content="AI, artificial intelligence, business solutions" />'
-  },
-  // Fix Navigation component
-  {
-    pattern: /<Navigation>\s*<div/g,
-    replacement: '<Navigation />\n      <div'
-  },
-  // Fix malformed JSX elements
-  {
-    pattern: /<(\w+)>\s*<\/div>/g,
-    replacement: '<$1 />'
-  },
-  // Fix text content with semicolons
-  {
-    pattern: /([^>])\s*;(\s*<\/[^>]+>)/g,
-    replacement: '$1$2'
-  },
-  // Fix malformed feature mapping
-  {
-    pattern: /{\s*features\.map\(\(feature, index\) => \(\s*}\s*<div/g,
-    replacement: '{features.map((feature, index) => (\n                <div'
-  },
-  // Fix malformed benefits mapping
-  {
-    pattern: /{\s*benefits\.map\(\(benefit, index\) => \(\s*}\s*<div/g,
-    replacement: '{benefits.map((benefit, index) => (\n                <div'
-  },
-  // Fix feature.icon usage
-  {
-    pattern: /<feature>\s*<\/div>/g,
-    replacement: '<feature.icon className="w-8 h-8 text-white" />'
-  },
-  // Fix CheckCircle usage
-  {
-    pattern: /<CheckCircle>\s*<\/div>/g,
-    replacement: '<CheckCircle className="w-8 h-8 text-white" />'
-  },
-  // Fix malformed JSX structure
-  {
-    pattern: /<(\w+)>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
-    replacement: '</div>\n          </div>\n        </section>'
-  },
-  // Fix return statement
-  {
-    pattern: /return \(\s*<>\s*<Helmet>/g,
-    replacement: 'return (\n    <>\n      <Helmet>'
-  },
-  // Fix export statement
-  {
-    pattern: /}\s*export default/g,
-    replacement: '};\n\nexport default'
-  },
-  // Fix function closing
-  {
-    pattern: /,\s*}\s*$/g,
-    replacement: ';\n};'
-  }
-];
-
-let fixedCount = 0;
-
-errorFiles.forEach(filePath => {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Additional specific fixes
-    // Fix array syntax issues
-    content = content.replace(/(\s+)([^,;]+),;(\s*[^,;]+),;(\s*[^,;]+),;(\s*[^,;]+),;(\s*[^,;]+);/g, 
-      '$1$2,\n$3,\n$4,\n$5,\n$6');
-    
-    // Fix JSX structure issues
-    content = content.replace(/<section[^>]*>\s*<\/section>/g, '<section className="py-20 px-4">\n          <div className="max-w-7xl mx-auto">\n            <div className="text-center mb-16">\n              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>\n              <p className="text-xl text-gray-300">Section description</p>\n            </div>\n          </div>\n        </section>');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      fixedCount++;
-      console.log(`Fixed: ${filePath}`);
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix missing space before 'from' in import statements
+  fixed = fixed.replace(/import\s+([^}]+)from\s+/g, 'import $1 from ');
+  
+  // Fix extra closing braces in import statements
+  fixed = fixed.replace(/import\s+([^}]+)}\s*from\s+/g, 'import $1 from ');
+  
+  // Fix extra closing braces in import statements (multiple occurrences)
+  fixed = fixed.replace(/import\s+([^}]+)}}from\s+/g, 'import $1 from ');
+  
+  // Fix extra commas in function declarations
+  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{,\s*/g, 'const $1: React.FC = () => {\n  ');
+  
+  // Fix missing semicolons after lazy load comments
+  fixed = fixed.replace(/\/\/ Lazy load pages for better performance;\s*\n/g, '// Lazy load pages for better performance\n');
+  
+  // Fix missing semicolons after variable declarations
+  fixed = fixed.replace(/(\w+)\s*=\s*useState\([^)]+\)\s*\n/g, '$1 = useState($2);\n');
+  
+  // Fix JSX fragment syntax issues
+  fixed = fixed.replace(/<>([^<]*?)<\/>/g, (match, content) => {
+    if (content.trim().includes('{') && content.trim().includes('}')) {
+      return `<>${content}</>`;
     }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-});
+    return match;
+  });
+  
+  // Fix missing spaces in object destructuring
+  fixed = fixed.replace(/\{([^}]+)\}from/g, '{ $1 } from');
+  
+  // Fix extra commas in object destructuring
+  fixed = fixed.replace(/\{([^}]+),\s*\}from/g, '{ $1 } from');
+  
+  return fixed;
+}
 
-console.log(`Fixed ${fixedCount} files`);
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Main function
+function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    
+    files.forEach(file => {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
+      }
+    });
+  });
+  
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixSyntaxErrors, processFile };

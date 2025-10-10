@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
+import React  from 'react';
+import {Zap, Shield, Star, Users, ArrowRight from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {,
+const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
       title: 'AI-Powered Solutions',

@@ -1,10 +1,10 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
-import {Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight}}from 'lucide-react';
+import React, {useState from 'react';
+import {Helmet from 'react-helmet-async';
+import {Link from 'react-router-dom';
+import {Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight from 'lucide-react';
 
-const SupportPage: React.FC = () => {,
+const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const faqs = [

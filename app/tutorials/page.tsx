@@ -1,9 +1,9 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download}}from 'lucide-react';
+import React, {useState from 'react';
+import {Helmet from 'react-helmet-async';
+import {Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download from 'lucide-react';
 
-const TutorialsPage: React.FC = () => {,
+const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
