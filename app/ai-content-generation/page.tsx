@@ -47,7 +47,8 @@ const AIContentGenerationPage: React.FC = () => {,
       marketPrice: '$300-600/month',
       technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'}
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">{/* Hero Section */}</div>
@@ -56,13 +57,14 @@ const AIContentGenerationPage: React.FC = () => {,
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">AI Content Generation</h1><span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Services</span><p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your content strategy with our AI-powered content generation services.</p>
               Create high-quality blog posts, social media content, and marketing copy 10x faster.</p>
-  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              AI Content Generation;
+              AI Content Generation,
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">)
                 Services;)
               </span>)
@@ -72,8 +74,8 @@ const AIContentGenerationPage: React.FC = () => {,
               Create high-quality blog posts, social media content, and marketing copy 10x faster.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
         className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
@@ -85,11 +87,11 @@ const AIContentGenerationPage: React.FC = () => {,
                 className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
               >Get Free Consultation</a>
               </a>
-              <a;
+              <a,
                 href="/contact"
-                className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+                className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover: bg-gray-50 transition-colors"
               >
-                Get Free Consultation;
+                Get Free Consultation,
               </a>
             </div>
           </div>
@@ -101,10 +103,10 @@ const AIContentGenerationPage: React.FC = () => {,
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Content Services<p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive suite of AI-powered content generation services<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{contentServices.map((service, index) => (</div>
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">
                 <div className="flex items-center mb-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our AI Content Services;
+              Our AI Content Services,
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose from our comprehensive suite of AI-powered content generation services;

@@ -11,9 +11,10 @@ const,
     },
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }};
+    }},
 
   const finalStructuredData = structuredData || defaultStructuredData;
+const Component = () => {
 
   return (<>
       <Helmet></Helmet>
@@ -78,7 +79,7 @@ const,
         <link rel="preconnect" href="http,"
   s://www.google-analytics.com" /></link>"
         <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
+  s: //www.googletagmanager.com" /></link>
         {/* DNS Prefetch */}"
         <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
         <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
@@ -86,7 +87,7 @@ const,
       </Helmet>
       {children}
     </>
-  );
+  ),
 };
 
 export default SEOEnhancer;

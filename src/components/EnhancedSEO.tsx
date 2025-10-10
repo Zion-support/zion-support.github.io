@@ -23,7 +23,7 @@ interface SEOProps {// TODO: Add content;}
   tags?: string[];
 }
 
-const EnhancedSEO: React.FC;
+const EnhancedSEO: React.FC,
           <SEOProps> = ({// TODO: Add content;}
 }
 
@@ -47,6 +47,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   section,
   tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+const Component = () => {
   return (
     
     // Update meta description
@@ -92,7 +93,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="preconnect" href="http,"
   s:// www.google-analytics.com" /></link>"
           <link rel="preconnect" href="http,"
-  s:// www.googletagmanager.com" /></link>
+  s: // www.googletagmanager.com" /></link>
       {/* DNS Prefetch */}
       
           
@@ -107,7 +108,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
           <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
           </Helmet>
-  );
+  ),
 };
 
 export default EnhancedSEO;"`

@@ -8,10 +8,11 @@ interface ServiceCardProps {/* TODO: Fix JSX expression */}
 const,
   ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  };
+  },
 
   const bgColorClasses = {/* TODO: Fix JSX expression */}
-  };
+  },
+const Component = () => {
 
   return (<article></article>
       className="quantum-card p-4,"
@@ -45,7 +46,7 @@ const,
       "
       <div className="mb-4"></div>"
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
-  Features:</h4>"
+  Features: </h4>"
         <ul className="text-sm text-gray-300 space-y-1"></ul>
           {/* TODO: Fix JSX expression */}"
             <li key={idx} className="flex items-center"></li>"
@@ -54,7 +55,7 @@ const,
             </li>
           ))}
           {/* TODO: Fix JSX expression */}
-              +{features.length - 3} more features;
+              +{features.length - 3} more features,
             </li>
           )}
         </ul>

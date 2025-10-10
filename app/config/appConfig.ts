@@ -5,31 +5,31 @@
 
 export interface AppConfig {
   app: {
-    name: string;
-    version: string;
-    environment: 'development' | 'production' | 'test';
+    name: string,
+    version: string,
+    environment: 'development' | 'production' | 'test',
   };
   api: {
-    baseUrl: string;
-    timeout: number;
-    retryAttempts: number;
+    baseUrl: string,
+    timeout: number,
+    retryAttempts: number,
   };
   features: {
-    analytics: boolean;
-    monitoring: boolean;
-    errorTracking: boolean;
-    performanceOptimization: boolean;
+    analytics: boolean,
+    monitoring: boolean,
+    errorTracking: boolean,
+    performanceOptimization: boolean,
   };
   performance: {
-    enableLazyLoading: boolean;
-    imageLazyLoadThreshold: number;
-    componentLazyLoadThreshold: number;
-    cacheMaxAge: number;
+    enableLazyLoading: boolean,
+    imageLazyLoadThreshold: number,
+    componentLazyLoadThreshold: number,
+    cacheMaxAge: number,
   };
   security: {
-    enableCSP: boolean;
-    enableHSTS: boolean;
-    enableXSSProtection: boolean;
+    enableCSP: boolean,
+    enableHSTS: boolean,
+    enableXSSProtection: boolean,
   };
 }
 
@@ -68,7 +68,7 @@ const config: AppConfig = {
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
-export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config;
+export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config,
 
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {

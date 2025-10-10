@@ -9,7 +9,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Quantum Computing Solutions'
       description: 'Revolutionary quantum algorithms and computing infrastructure for complex problem solving'
-      icon: Cpu;
+      icon: Cpu,
       price: 'Custom Pricing',
       features: [,
         'Quantum Algorithm Development',
@@ -32,7 +32,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Autonomous Systems'
       description: 'Self-managing intelligent systems that operate independently with minimal human intervention'
-      icon: Settings;
+      icon: Settings,
       price: 'Custom Pricing',
       features: [,
         'Autonomous Decision Making',
@@ -55,7 +55,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Blockchain & Web3 Solutions',
       description: 'Decentralized applications, smart contracts, and Web3 infrastructure development',
-      icon: Lock;
+      icon: Lock,
       price: 'Custom Pricing',
       features: [,
         'Smart Contract Development',
@@ -78,7 +78,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'IoT & Edge Computing'
       description: 'Connected devices and edge computing solutions for real-time data processing'
-      icon: Globe;
+      icon: Globe,
       price: 'Custom Pricing',
       features: [,
         'IoT Device Development',
@@ -101,7 +101,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Business Intelligence Platform'
       description: 'Advanced analytics and business intelligence solutions for data-driven decision making'
-      icon: BarChart;
+      icon: BarChart,
       price: 'Custom Pricing',
       features: [,
         'Advanced Analytics',
@@ -124,7 +124,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Robotics Solutions'
       description: 'Intelligent robotics and automation systems for industrial and commercial applications'
-      icon: Settings;
+      icon: Settings,
       price: 'Custom Pricing',
       features: [,
         'Robotic Process Automation',
@@ -147,7 +147,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Enterprise Solutions'
       description: 'Comprehensive enterprise-grade solutions for large organizations and complex requirements'
-      icon: Building;
+      icon: Building,
       price: 'Custom Pricing',
       features: [,
         'Enterprise Architecture',
@@ -170,7 +170,7 @@ const SpecializedServicesPage: React.FC = () => {
     {
       title: 'Analytics Tools Suite'
       description: 'Comprehensive suite of advanced analytics tools for business intelligence and insights'
-      icon: BarChart;
+      icon: BarChart,
       price: 'Custom Pricing',
       features: [,
         'Advanced Analytics',
@@ -190,40 +190,42 @@ const SpecializedServicesPage: React.FC = () => {
       bgColor: 'bg-indigo-500/20',
       borderColor: 'border-indigo-400/30',
       category: 'Analytics'}
-  ];
+  ],
 
   const businessApps = [
     {
       title: 'Expense Tracker Pro',
       description: 'AI-powered expense management and financial tracking',
-      icon: DollarSign;
+      icon: DollarSign,
       price: '$99/month',
       features: ['AI Receipt Scanning', 'Automatic Categorization', 'Expense Analytics', 'Budget Planning'],
       color: 'text-green-400'},
     {
       title: 'Task Manager Pro',
       description: 'Intelligent task management and project coordination',
-      icon: CheckCircle;
+      icon: CheckCircle,
       price: '$79/month',
       features: ['AI Task Prioritization', 'Team Collaboration', 'Progress Tracking', 'Deadline Management'],
       color: 'text-blue-400'},
     {
       title: 'Smart Analytics',
       description: 'Advanced business analytics and reporting platform',
-      icon: BarChart;
+      icon: BarChart,
       price: '$149/month',
       features: ['Real-time Dashboards', 'Predictive Analytics', 'Custom Reports', 'Data Visualization'],
       color: 'text-purple-400'}
-  ];
+  ],
 
   const stats = [
     { label: 'Specialized Projects', value: '200+', icon: Star },
     { label: 'Success Rate', value: '98%', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '99%', icon: Users },
     { label: 'Average ROI', value: '400%', icon: DollarSign }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -238,14 +240,14 @@ const SpecializedServicesPage: React.FC = () => {
         {/* Stats Section */}
         <section className="mb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">{stats.map((stat, index) => (</section>
-              <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
+              <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300"></div>
                 <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-white mb-2 neon-text">{stat.value}<div className="text-gray-300">{stat.label}</div>
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Specialized Solutions;
+            Specialized Solutions,
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Cutting-edge technologies and specialized solutions for complex business challenges.
@@ -271,7 +273,7 @@ const SpecializedServicesPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Advanced Technology Solutions<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{specializedServices.map((service, index) => (</div>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-            Advanced Technology Solutions;
+            Advanced Technology Solutions,
           </h2>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -317,16 +319,16 @@ const SpecializedServicesPage: React.FC = () => {
                 <div className="text-center"></div>
                   <div className={`text-lg font-bold mb-4 neon-text ${service.color}`}>{service.price}</div><a
                     href="/contact"
-                    className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
+                    className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover: scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                   >Learn More</a>
                   <div className={`text-lg font-bold mb-4 neon-text ${service.color}`}>
                     {service.price}
                   </div>
-                  <a;
+                  <a,
                     href="/contact"
-                    className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
+                    className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 hover: scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                   >
-                    Learn More;
+                    Learn More,
                   </a>
                 </div>
               </article>
@@ -337,9 +339,9 @@ const SpecializedServicesPage: React.FC = () => {
         {/* Business Apps Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Business Applications<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{businessApps.map((app, index) => (</div>
-              <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-            Business Applications;
+            Business Applications,
           </h2>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
@@ -356,18 +358,18 @@ const SpecializedServicesPage: React.FC = () => {
                 <div className={`text-2xl font-bold mb-4 neon-text ${app.color}`}>{app.price}<a
                 <div className={`text-2xl font-bold mb-4 neon-text ${app.color}`}>{app.price}</div><a
                   href="/contact"
-                  className={`px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${app.color} border border-current hover:bg-current hover:text-slate-900`}
+                  className={`px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover: scale-105 ${app.color} border border-current hover:bg-current hover:text-slate-900`}
                 >Get Started</a>
                 </ul>
 
                 <div className={`text-2xl font-bold mb-4 neon-text ${app.color}`}>
                   {app.price}
                 </div>
-                <a;
+                <a,
                   href="/contact"
-                  className={`px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${app.color} border border-current hover:bg-current hover:text-slate-900`}
+                  className={`px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover: scale-105 ${app.color} border border-current hover:bg-current hover:text-slate-900`}
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -456,9 +458,9 @@ const SpecializedServicesPage: React.FC = () => {
               Contact our specialized solutions team to discuss your unique requirements and discover how we can help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
+              <a,
           <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Explore Specialized Solutions?</h2><p className="text-xl text-gray-300 mb-8">Contact our specialized solutions team to discuss your unique requirements and discover how we can help.</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Explore Specialized Solutions?</h2><p className="text-xl text-gray-300 mb-8">Contact our specialized solutions team to discuss your unique requirements and discover how we can help.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
@@ -469,13 +471,13 @@ const SpecializedServicesPage: React.FC = () => {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950</a>
               >
-                Discuss Your Project;
+                Discuss Your Project,
               </a>
               <a;
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Call +1 302 464 0950;
+                Call +1 302 464 0950,
               </a>
             </div>
           </div>

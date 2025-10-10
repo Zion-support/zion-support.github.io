@@ -1,8 +1,8 @@
 'use client';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   className?: string;
@@ -15,6 +15,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
 }) => {
+const Component = () => {
   return (
     <img
       src={src}

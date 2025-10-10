@@ -115,7 +115,7 @@ function generateMetaTags() {
       title: "Zion Tech Group - Advanced AI and IT Solutions",
       description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
       image: "https://ziontechgroup.com/og-image.jpg"}
-  };
+  },
 
   fs.writeFileSync(
     path.join(__dirname, '../public/meta-tags.json'), 

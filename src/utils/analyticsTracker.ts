@@ -4,26 +4,26 @@
  * Provides comprehensive tracking for user interactions, performance metrics, and errors
  */
 interface AnalyticsEvent {
-  category: string;
-  action: string;
+  category: string,
+  action: string,
   label?: string;
   value?: number;
   nonInteraction?: boolean;
 }
 interface PerformanceMetrics {
-  metric: string;
-  value: number;
+  metric: string,
+  value: number,
   rating?: 'good' | 'needs-improvement' | 'poor';
 }
 interface ErrorReport {
-  message: string;
+  message: string,
   stack?: string;
   componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity: 'low' | 'medium' | 'high' | 'critical',
 }
 class AnalyticsTracker {
   private isInitialized = false;
-  private queue: Array<() => void> = [];
+  private queue: Array<() => void> = [],
   /**
    * Initialize the analytics tracker
    */
@@ -47,7 +47,7 @@ class AnalyticsTracker {
           event_label: event.label,
           value: event.value,
           non_interaction: event.nonInteraction
-        });
+        }),
       }
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {}
@@ -78,7 +78,7 @@ interface ErrorReport {// TODO: Add content;}
 
 };
   messag,
-  e: string;
+  e: string,
   stack?: string;
   componentStack?: string;,
     severit,
@@ -90,7 +90,7 @@ class AnalyticsTracker {// TODO: Add content;}
 }
   private isInitialized = false;
   private,
-  queue: Array;
+  queue: Array,
           <() => void> = [];
   /**
    * Initialize the analytics tracker;
@@ -155,7 +155,7 @@ class AnalyticsTracker {// TODO: Add content;}
           page_path: path,
           page_title: document.title,
           page_location: window.location.href
-        });
+        }),
       }
       if (process.env.NODE_ENV === 'development') {}
     };
@@ -183,7 +183,7 @@ class AnalyticsTracker {// TODO: Add content;}
           valu)
   e: Math.round(metrics.value),
           metric_ratin,
-  g: metrics.rating;
+  g: metrics.rating,
         });
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
@@ -210,7 +210,7 @@ class AnalyticsTracker {// TODO: Add content;}
           event_label: metrics.metric,
           value: Math.round(metrics.value),
           metric_rating: metrics.rating
-        });
+        }),
       }
       if (process.env.NODE_ENV === 'development') {}
     };
@@ -229,7 +229,7 @@ class AnalyticsTracker {// TODO: Add content;}
           description: error.message,
           fatal: error.severity === 'critical',
           error_severity: error.severity
-        });
+        }),
       }
       // Always log errors to console
       // // console.error('[Analytics Error]', error);
@@ -250,7 +250,7 @@ class AnalyticsTracker {// TODO: Add content;}
           value: Math.round(value),
           event_category: category,
           event_label: label
-        });
+        }),
       }
       if (process.env.NODE_ENV === 'development') {}
     };
@@ -297,7 +297,7 @@ $4});
           event_categor,
   y: category,
           event_labe,
-  l: label;
+  l: label,
         });
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}

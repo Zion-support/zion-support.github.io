@@ -139,8 +139,10 @@ const AIFintechPage: React.FC = () => {,
     }
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
-  return(<>
+const Component = () => {
+  return (<>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -150,7 +152,7 @@ const AIFintechPage: React.FC = () => {,
             <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Fintech Solutions</h1><p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">Start Fintech AI<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">View Trading Demo</button>
       <Navigation />
         {/* Hero Section */}
@@ -159,17 +161,17 @@ const AIFintechPage: React.FC = () => {,
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Fintech Solutions;
+                AI Fintech Solutions,
               </h1>,
               <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">,
                 Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions;
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
-                  Start Fintech AI;
+                  Start Fintech AI,
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-                  View Trading Demo;
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-colors">
+                  View Trading Demo,
                 </button>
               </div>
             </div>,
@@ -184,7 +186,7 @@ const AIFintechPage: React.FC = () => {,
                 Why Choose AI Fintech?
               </h2>
               <p className="text-xl text-gray-600">
-                Revolutionary AI technology that transforms financial services and maximizes returns;
+                Revolutionary AI technology that transforms financial services and maximizes returns,
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose AI Fintech?</h2><p className="text-xl text-gray-600">Revolutionary AI technology that transforms financial services and maximizes returns</p>
@@ -292,13 +294,13 @@ const AIFintechPage: React.FC = () => {,
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" >{benefit}</Star>
                             </Star>
                           ))}
-                        <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">Get Fintech Consultation</button>
+                        <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">Get Fintech Consultation</button>
                       </button>
                     </div>
                         </ul>
                       </div>
                       <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
-                        Get Fintech Consultation;
+                        Get Fintech Consultation,
                       </button>,
                     </div>))}
               </div>
@@ -311,7 +313,7 @@ const AIFintechPage: React.FC = () => {,
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Fintech Capabilities<p className="text-xl text-gray-600">Cutting-edge AI technologies that power the future of financial services</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                AI Fintech Capabilities;
+                AI Fintech Capabilities,
               </h2>
               <p className="text-xl text-gray-600">
                 Cutting-edge AI technologies that power the future of financial services;
@@ -350,18 +352,18 @@ const AIFintechPage: React.FC = () => {,
         </section>,
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Financial Services?<p className="text-xl mb-8 text-indigo-100">Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform Financial Services?
             </h2>
             <p className="text-xl mb-8 text-indigo-100">
-              Contact our AI fintech experts for a free consultation and custom financial AI strategy;
+              Contact our AI fintech experts for a free consultation and custom financial AI strategy,
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Financial Services?</h2><p className="text-xl mb-8 text-indigo-100">Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -376,13 +378,13 @@ const AIFintechPage: React.FC = () => {,
             </div>
             <div className="mt-8 text-sm text-indigo-200">
               >
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com,
               </a>,
             </div>,
             <div className="mt-8 text-sm text-indigo-200">,
@@ -391,7 +393,7 @@ const AIFintechPage: React.FC = () => {,
             </div>
           </div>
         </section>
-        <Footer /></Foote>
+        <Footer /></Footer>
       </div>
     
   );

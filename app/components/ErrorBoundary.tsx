@@ -2,12 +2,12 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -15,7 +15,7 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -41,7 +41,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined }),
   };
 
   handleGoHome = () => {
@@ -53,6 +53,7 @@ class ErrorBoundary extends Component<Props, State> {
       if (this.props.fallback) {
         return this.props.fallback;
       }
+const Component = () => {
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
@@ -104,7 +105,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem persists, please contact us:</p>
+              <p>If this problem persists, please contact us: </p>
               <a 
                 href="tel:+13024640950" 
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -114,7 +115,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      ),
     }
 
     return this.props.children;

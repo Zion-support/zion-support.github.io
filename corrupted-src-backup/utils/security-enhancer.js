@@ -6,9 +6,9 @@
 class SecurityEnhancer {
   constructor() {
     this.securityConfig = {
-      cspEnabled: true;
-      xssProtection: true;
-      csrfProtection: true;
+      cspEnabled: true,
+      xssProtection: true,
+      csrfProtection: true,
       contentSecurityPolicy: {,
         'default-src': ["'self'"],
         'script-src': [,
@@ -128,7 +128,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   addCSRFTokenToForms() {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
   }
 
   addCSRFTokenToAJAX() {
@@ -142,7 +142,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
           'X-CSRF-Token': token,
   addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */}
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
-        };
+        },
       }
       return originalFetch(url, options);
     };
@@ -151,7 +151,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     const _originalXHROpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */}
         }
-      });
+      }),
       return originalXHROpen.call(this, method, url, ...args);
     };
   }
@@ -174,7 +174,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   setupFormValidation() {/* TODO: Fix JSX expression */}
         }
-      });
+      }),
     });
   }
 
@@ -191,7 +191,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   validateForm(form) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
 
     return isValid;
   }
@@ -201,14 +201,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
     switch (type) {
       case 'email':
-        return this.validateEmail(value);
+        return this.validateEmail(value),
       case 'url':
         return this.validateURL(value);
       case 'tel':
         return this.validatePhone(value);
       case 'password':
         return this.validatePassword(value);
-      default: return this.validateText(value);
+      default: return this.validateText(value),
     switch (type) {/* TODO: Fix JSX expression */}
     }
   }
@@ -218,7 +218,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   validateURL(url) {
     try {
-      const _urlObj = new URL(url);
+      const _urlObj = new URL(url),
       return this.securityConfig.trustedDomains.some(domain =>)
           urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
       );
@@ -238,7 +238,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character;
     const passwordRegex =
   validatePassword(password) {/* TODO: Fix JSX expression */}
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
     return passwordRegex.test(password);
   }
 
@@ -269,7 +269,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   setupURLValidation() {/* TODO: Fix JSX expression */}
         }
       }
-    });
+    }),
   }
 
   setupFileUploadValidation() {
@@ -281,7 +281,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
           if (!this.validateFile(file)) {
             event.preventDefault();
   setupFileUploadValidation() {/* TODO: Fix JSX expression */}`
-            this.showSecurityWarning(`File ${file.name} is not allowed`);
+            this.showSecurityWarning(`File ${file.name} is not allowed`),
             return;
           }
         }
@@ -318,7 +318,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 //         const encoded = this.encodeHTML(value);
         originalInnerHTML.set.call(this, encoded);
       },
-      get: originalInnerHTML.get;
+      get: originalInnerHTML.get,
     });
   }
 
@@ -349,18 +349,18 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   setupTextEncoding() {/* TODO: Fix JSX expression */}
       },
       ge,
-  t: originalInnerHTML.get});
+  t: originalInnerHTML.get}),
   }
 
   setupHTMLEncoding() {/* TODO: Fix JSX expression */}
-    };
+    },
   }
 
   setupSecureHeaders() {/* TODO: Fix JSX expression */}
-    };
+    },
 
     Object.entries(headers).forEach(([name, value]) => {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
 
   setupSecurityMonitoring() {
@@ -408,7 +408,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
               this.checkForMaliciousContent(node);
   monitorDOMChanges() {/* TODO: Fix JSX expression */}
             }
-          });
+          }),
         }
       });
     });
@@ -417,7 +417,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       childList: true),
       subtree: true),
     observer.observe(document.body, {/* TODO: Fix JSX expression */})
-    });
+    }),
   }
 
   isSecurityError(message) {/* TODO: Fix JSX expression */}
@@ -446,7 +446,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   checkForMaliciousContent(node) {/* TODO: Fix JSX expression */}
-      });
+      }),
       node.remove();
     }
   }
@@ -456,8 +456,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       type,
       data,
       timestamp: new Date().toISOString(),
-      url: window.location.href;
-      userAgent: navigator.userAgent;
+      url: window.location.href,
+      userAgent: navigator.userAgent,
     };
 
     // Send to security monitoring service;
@@ -468,14 +468,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         'X-CSRF-Token': sessionStorage.getItem('csrf_token')},
       body: JSON.stringify(event)}).catch(error => {)
   reportSecurityEvent(type, data) {/* TODO: Fix JSX expression */}
-    };
+    },
 
     // Send to security monitoring service;
     fetch('/api/security-events', {/* TODO: Fix JSX expression */}
       },
       bod)
   y: JSON.stringify(event)}).catch(error => {/* TODO: Fix JSX expression */})
-//       });
+//       }),
   }
 
   showInputError(input, message) {/* TODO: Fix JSX expression */}
@@ -483,7 +483,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   clearInputError(input) {/* TODO: Fix JSX expression */}
     }
-    input.style.borderColor = '';
+    input.style.borderColor = '',
   }
 
   showSecurityWarning(message) {
@@ -491,12 +491,12 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     warning.className = 'security-warning';
     warning.innerHTML = `
       <div style="
-        position: fixed;
-        top: 20 px;
-        right: 20 px;
-        background: #ff6 b6 b;
-        color: white;
-        padding: 15 px;
+        position: fixed,
+        top: 20 px,
+        right: 20 px,
+        background: #ff6 b6 b,
+        color: white,
+        padding: 15 px,
         border-radius: 4 px;
         z-index: 9999;
         max-width: 300px;
@@ -506,13 +506,13 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   Warning:</strong> ${message}
         <button onclick="this.parentElement.parentElement.remove()" style="
           backgroun,
-  d: none;
+  d: none,
           borde,
-  r: none;
+  r: none,
           colo,
-  r: white;
+  r: white,
           floa,
-  t: right;
+  t: right,
           curso,
   r: pointer;"
         ">×</button>
@@ -549,7 +549,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         return this.sanitizeURL(input);
       case 'email':
         return this.sanitizeEmail(input);
-      default: return this.sanitizeText(input);
+      default: return this.sanitizeText(input),
   sanitizeInput(input, type) {/* TODO: Fix JSX expression */}
     }
   }
@@ -569,7 +569,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 }
 
-// Initialize security enhancer;
+// Initialize security enhancer,
 // const securityEnhancer = new SecurityEnhancer();
 
 // Export for use in other modules;

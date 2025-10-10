@@ -8,7 +8,7 @@ const SecurityPage: React.FC = () => {
   const securityMeasures = [
     {
       title: 'Data Encryption'
-      icon: Lock;
+      icon: Lock,
       description: 'All data is encrypted both in transit and at rest using industry-standard encryption protocols.',
       details: [,
         'AES-256 encryption for data at rest',
@@ -19,7 +19,7 @@ const SecurityPage: React.FC = () => {
     },
     {
       title: 'Access Controls'
-      icon: UserCheck;
+      icon: UserCheck,
       description: 'Multi-layered access controls ensure only authorized personnel can access your data.',
       details: [,
         'Role-based access control (RBAC)',
@@ -30,7 +30,7 @@ const SecurityPage: React.FC = () => {
     },
     {
       title: 'Network Security'
-      icon: Shield;
+      icon: Shield,
       description: 'Advanced network security measures protect against external threats and unauthorized access.',
       details: [,
         'Firewall protection and intrusion detection',
@@ -41,7 +41,7 @@ const SecurityPage: React.FC = () => {
     },
     {
       title: 'Infrastructure Security'
-      icon: Database;
+      icon: Database,
       description: 'Secure infrastructure with physical and logical security controls.',
       details: [,
         'SOC 2 Type II certified data centers',
@@ -57,37 +57,37 @@ const SecurityPage: React.FC = () => {
       name: 'SOC 2 Type II',
       description: 'Audited controls for security, availability, and confidentiality',
       status: 'Certified',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'ISO 27001',
       description: 'International standard for information security management',
       status: 'Certified',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance',
       status: 'Compliant',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'CCPA',
       description: 'California Consumer Privacy Act compliance',
       status: 'Compliant',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
       status: 'Compliant',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       name: 'PCI DSS',
       description: 'Payment Card Industry Data Security Standard',
       status: 'Compliant',
-      icon: CheckCircle;
+      icon: CheckCircle,
     }
   ];
 
@@ -133,20 +133,22 @@ const SecurityPage: React.FC = () => {
       ]
     }
   ];
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Security & Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.</p>
+          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Security & Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.</p>
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Security & Compliance;
+            Security & Compliance,
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.
@@ -414,6 +416,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SecurityPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -475,7 +478,7 @@ const SecurityPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
 
 export default SecurityPage;

@@ -14,7 +14,7 @@ for (const filePath of files) {
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
 for (const filePath of files) {/* TODO: Fix JSX expression */}
-        return `${prop}: '${value.substring(1)}'`;
+        return `${prop}: '${value.substring(1)}'`,
       }
       return match;
     });
@@ -45,7 +45,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`;
+        return `${prop}: '${value.substring(1)}'`,
       }
       return match;
     });
@@ -60,7 +60,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`;
+        return `${prop}: '${value.substring(1)}'`,
       }
       return match;
     });
@@ -84,7 +84,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
       if (!match.includes('}')) {
     content = content.replace(/(\w+)=\{[^}]*$/gm, match => {/* TODO: Fix JSX expression */}
       if (!match.includes('}')) {/* TODO: Fix JSX expression */}
-        return match + '}';
+        return match + '}',
       }
       return match;
     });
@@ -93,7 +93,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`;
+        return `${prop}: '${value.substring(1)}'`,
       }
       return match;
     });

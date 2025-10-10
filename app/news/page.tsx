@@ -3,7 +3,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const NewsPage: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -18,11 +20,11 @@ const NewsPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             This page is under construction. Please check back soon for updates.
           </p>
-          <a;
+          <a,
             href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all"
           >
-            Contact Us;
+            Contact Us,
           </a>
         </section>
       </main>)

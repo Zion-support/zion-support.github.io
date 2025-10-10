@@ -28,8 +28,10 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
-  return(<moti, o, n.d, i, v;
+  ],
+const Component = () => {
+  return (<moti, o, n.d, i, v;
+const Component = () => {
   return (<moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 40 }}
       anima, t, e={{ opaci, t, y: 1, y: 0 }}
@@ -50,7 +52,7 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>";
       </d, i, v>
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">"</div>
-      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">";
+      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">",
         {/* Header, Sectio, n */}</div>
         <div, className="text-center mb-12">";</div>
           <moti, o, n.d, i, v
@@ -62,7 +64,7 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>";
       </d, i, v>"
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">""
-      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">";
+      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">",
         {/* Header, Sectio, n */}"
         <div, className="text-center mb-12">";
           <moti, o, n.d, i, v;
@@ -80,7 +82,7 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-black, tex, t-white, m, b-6, leadin, g-tig, h, t">"
             🚀</h2> <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%"></span>
             <div, className="flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-oran, g, e-500, t, o-r, e, d-500, rounde, d-full, shado, w-2xl, animat, e-pul, s, e">";</div>
-              <Sparkles, className="w-6 h-6, tex, t-white, animat, e-sp, i, n" sty, l, e={{ animationDurati, o, n: "3s" }} />";
+              <Sparkles, className="w-6 h-6, tex, t-white, animat, e-sp, i, n" sty, l, e={{ animationDurati, o, n: "3s" }} />",
               <span, className="te, x, t-white, fon, t-black, tex, t-base, trackin, g-wi, d, e">SEPTEMBER, 3, 0, 20, 2, 5 — 8, REVOLUTIONARY, BREAKTHROUGHS</sp, a, n>";
               <Rocket, className="w-6 h-6, tex, t-white, animat, e-boun, c, e" />";
             </d, i, v>
@@ -415,7 +417,7 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
               <span, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">"</span>
         <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">";</div>
-          <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>";
+          <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>",
           <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r"></div>";
             {[
               "Re, a, l-Time, A, I",";

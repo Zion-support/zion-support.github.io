@@ -15,7 +15,7 @@ const fixes = [
   keywords: '$3'};`},
   //Fix missing commas in metadata;
   {
-    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g;
+    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g,
     replacement: "$1: '$2',\n  $3: "},
   //Fix malformed JSX - unclosed tags;
   {
@@ -33,7 +33,7 @@ const fixes = [
   {)
     pattern: /export const metadata: Metadata = \{\/\* content \*\/\}/g)
     replacement: 'export const metadata: Metadata = {')})
-  //Fix missing closing braces in metadata;
+  //Fix missing closing braces in metadata,
   {
     pattern: /(\s+);\s*;\s*\}/g,
     replacement: '$1\n};'},
@@ -100,11 +100,11 @@ const fixes = [
   t: '<div>{/* content */}</div>'},
   //Fix malformed property assignments;
   {
-    pattern: /(\w+):\s*'([^']+)'\s*(\w+):/g;
+    pattern: /(\w+):\s*'([^']+)'\s*(\w+):/g,
     replacement: "$1: '$2',\n  $3: "},
   //Fix missing commas in object properties;
   {
-    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g;
+    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g,
     replacement: "$1: '$2',\n  $3: "},
   //Fix malformed JSX structure;
   {
@@ -123,7 +123,7 @@ const fixes = [
     pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g)
     replacement: 'return (\n    <div>{/* content */}')
   })
-];
+],
 
 function fixFile(filePath) {
   try {
@@ -156,16 +156,16 @@ function fixFile(filePath) {
   {/* TODO: Fix JSX expression */}
   n: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g,
     replacemen,
-  t: 'return (\n    <div>{/* content */}'}];
+  t: 'return (\n    <div>{/* content */}'}],
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
@@ -177,7 +177,7 @@ async function main() {/* TODO: Fix JSX expression */}
   if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */}
   }
 
-  //Find all .tsx and .jsx files in blog directory;
+  //Find all .tsx and .jsx files in blog directory,
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
 
   //   let fixedCount = 0;
@@ -187,7 +187,7 @@ async function main() {/* TODO: Fix JSX expression */}
     }
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
-  });
+  }),
 
   //   }
 

@@ -14,7 +14,7 @@ for (const filePath of files) {
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
 for (const filePath of files) {/* TODO: Fix JSX expression */}
-        return `${prop}: '${value.substring(1)}'`;
+        return `${prop}: '${value.substring(1)}'`,
       }
       return match;
     });

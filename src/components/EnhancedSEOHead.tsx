@@ -57,6 +57,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "Automation"
     ]
   };
+const Component = () => {
 
   return (
     <Helmet></Helmet>

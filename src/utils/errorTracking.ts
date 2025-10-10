@@ -19,13 +19,13 @@ export const initErrorReporting = () => {
       reportError(event.error, {
         filename: event.filename,
         lineno: event.lineno,
-        colno: event.colno});
+        colno: event.colno}),
     });
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       reportError(new Error(event.reason), {
-        type: 'unhandledrejection'});
+        type: 'unhandledrejection'}),
     });
   }
 };
@@ -62,14 +62,14 @@ export interface ErrorMetadata {// TODO: Add content;}
   categor,
   y: ErrorCategory;,
     severit,
-  y: ErrorSeverity;
+  y: ErrorSeverity,
   userId?: string;
   sessionId?: string;
   context?: Record;
           <string, unknown>;
   tags?: string[];
   timestam,
-  p: number;
+  p: number,
   stackTrace?: string;
   userAgent?: string;
   url?: string;
@@ -89,13 +89,13 @@ class ErrorTrackingService {// TODO: Add content;}
 
 }
   private static,
-  instance: ErrorTrackingService;
+  instance: ErrorTrackingService,
   private,
-  errors: Map;
+  errors: Map,
           <string, TrackedError> = new Map();
   private,
   errorListeners: Array<(erro)
-  r: TrackedError) => void> = [];
+  r: TrackedError) => void> = [],
   private maxStoredErrors = 1000;
   private constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -138,7 +138,7 @@ class ErrorTrackingService {// TODO: Add content;}
 
   filename: event.filename,
           lineno: event.lineno,
-          colno: event.colno;
+          colno: event.colno,
 
         }
       });
@@ -162,19 +162,19 @@ class ErrorTrackingService {// TODO: Add content;}
   )
   }
   /**
-   * Track an error with metadata;
+   * Track an error with metadata,
    */
 //   trackError()
 
     error: Error,
-    metadata: Partial;
+    metadata: Partial,
           <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {const timestamp = Date.now();}
       ...metadata,
       timestamp,
       stackTrace: error.stack,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined;
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
 
     };
     const existingError = this.errors.get(errorId);
@@ -199,7 +199,7 @@ const,
         metadata: fullMetadata,
         occurrences: 1,
         firstSeen: timestamp,
-        lastSeen: timestamp;
+        lastSeen: timestamp,
 
       };
       this.errors.set(errorId, trackedError);
@@ -357,12 +357,12 @@ const,
   tota,
   l: number;,
     byCategor,
-  y: Record;
+  y: Record,
           <ErrorCategory, number>;
     bySeverit,
   y: Record<ErrorSeverity, number>;
     topError,
-  s: TrackedError[];
+  s: TrackedError[],
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

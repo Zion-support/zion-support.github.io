@@ -13,34 +13,34 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Shield;
+      icon: Shield,
     {}
       icon: Shield,
       title: 'Real-time Threat Detection',
       description: 'AI-powered monitoring that detects and responds to threats in real-time with 99.9% accuracy',
       color: 'text-purple-400'},
     {
-      icon: Brain;
+      icon: Brain,
     {}
       icon: Brain,
       title: 'Machine Learning Analysis',
       description: 'Advanced ML algorithms learn from your environment to identify unusual patterns and behaviors',
       color: 'text-blue-400'},
     {
-      icon: AlertTriangle;
+      icon: AlertTriangle,
     {}
       icon: AlertTriangle,
       title: 'Automated Response',
       description: 'Automatically block threats, isolate compromised systems, and alert security teams',
       color: 'text-green-400'},
     {
-      icon: Lock;
+      icon: Lock,
     {}
       icon: Lock,
       title: 'Zero Trust Architecture',
       description: 'Implement zero trust security model with continuous verification and least privilege access',
       color: 'text-orange-400'}
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -59,7 +59,7 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
         '1 security analyst'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional'
@@ -78,7 +78,7 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
         '3 security analysts'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
     {}
@@ -96,7 +96,7 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
         '10+ security analysts'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -104,33 +104,35 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
     {}
       title: 'Threat Prevention',
       description: 'Prevent cyber attacks before they happen with predictive threat analysis',
-      icon: Shield;
+      icon: Shield,
       result: '99.9% prevention'},
     {}
       title: 'Incident Response',
       description: 'Rapidly detect and respond to security incidents with automated workflows',
-      icon: AlertTriangle;
+      icon: AlertTriangle,
       result: '90% faster'},
     {}
       title: 'Compliance',
       description: 'Maintain compliance with GDPR, HIPAA, SOX, and other regulations',
-      icon: Lock;
+      icon: Lock,
       result: '100% compliant'},
     {}
       title: 'Cost Reduction',
       description: 'Reduce security costs while improving protection with AI automation',
-      icon: DollarSign;
+      icon: DollarSign,
       result: '60% savings'}
-  ];
+  ],
 
   const securityMetrics = [
     { metric: '99.9%', label: 'Threat Detection Accuracy', color: 'text-green-400' },
     { metric: '< 1 min', label: 'Response Time', color: 'text-blue-400' },
     { metric: '24/7', label: 'Monitoring', color: 'text-purple-400' },
     { metric: 'Zero', label: 'False Positives', color: 'text-orange-400' }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -160,7 +162,7 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
           </div>
 
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            AI Cybersecurity Monitor;
+            AI Cybersecurity Monitor,
           </h1>)
 )
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
@@ -169,8 +171,8 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
           </p>
 
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
@@ -180,13 +182,13 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
             >Get Security Assessment</a>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="/contact"
-              className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover: bg-red-400 hover:text-slate-900 transition-all duration-300"
             >
-              Get Security Assessment;
+              Get Security Assessment,
             </a>
           </div>,
         </section>,
@@ -285,11 +287,11 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
             {pricingPlans.map((plan, index) => (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover:border-red-500/50 transition-all duration-300`}>
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover: border-red-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular,
                     </div>
                   </div>
                 )}
@@ -326,7 +328,7 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
                   }`}
                 >Get Protected</a>
                 >
-                  Get Protected;
+                  Get Protected,
                 </a>
               </div>
             ))}
@@ -338,8 +340,8 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
           <h2 className="text-3xl font-bold text-white mb-4">Don't Wait for a Breach</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ organizations already protected by our AI Cybersecurity Monitor.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
@@ -352,14 +354,14 @@ const AICybersecurityMonitor: React.FC = memo(() => {}
             </MessageSquare>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-        className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+        className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover: bg-red-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
       >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Email Us;
+              Email Us,
             </a>
           </div>
         </section>

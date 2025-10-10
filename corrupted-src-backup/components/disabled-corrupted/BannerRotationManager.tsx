@@ -19,7 +19,7 @@ const bannerComponents = {
     () => import('./CognitiveOrchestrationMegaBanner')
   ),
 const bannerComponents = {/* TODO: Fix JSX expression */}
-};
+},
 
 type BannerKey = keyof typeof bannerComponents;
 
@@ -27,9 +27,9 @@ interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
 }
 
 /**
- * BannerRotationManager - Manages the rotation and display of promotional banners;
+ * BannerRotationManager - Manages the rotation and display of promotional banners,
  *
- * Features: * - Lazy loads banner components for better performance;
+ * Features: * - Lazy loads banner components for better performance,
  * - Rotates banners at specified intervals;
  * - Limits the number of visible banners;
  * - Provides fallback loading states;
@@ -55,8 +55,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
  * Feature,
-  s:
- * - Lazy loads banner components for better performance;
+  s: * - Lazy loads banner components for better performance,
  * - Rotates banners at specified intervals;
  * - Limits the number of visible banners;
  * - Provides fallback loading states;
@@ -69,6 +68,7 @@ export const,
   // Rotate banners at specified interval;
   useEffect(() => {/* TODO: Fix JSX expression */}
     }, rotationInterval);
+const Component = () => {
 
     return () => clearInterval(interval);
   }, [visibleBanners.length, rotationInterval]);
@@ -76,10 +76,11 @@ export const,
   if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */}
   }
 
-//   const currentBanner = visibleBanners[currentIndex];
+//   const currentBanner = visibleBanners[currentIndex],
 //   const BannerComponent = bannerComponents[currentBanner];
+const Component = () => {
 
-  return(<div className={`banner-rotation-manager ${className}`}></div>
+  return (<div className={`banner-rotation-manager ${className}`}></div>
       <Suspense;
         fallback={
           <div className='flex items-center justify-center py-16'></Suspense>
@@ -100,8 +101,9 @@ export const,
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentIndex;
                   ? 'bg-blue-600'}
-                  : 'bg-gray-300 hover:bg-gray-400'}
+                  : 'bg-gray-300 hover: bg-gray-400'}
               }`}
+const Component = () => {
   return (<div className={`banner-rotation-manager ${className}`}></div>
       <Suspense></Suspense>
         fallback={/* TODO: Fix JSX expression */}
@@ -122,7 +124,7 @@ export const,
         </button></div>
       )}
     </div>
-  );
+  ),
 };
 
 export default BannerRotationManager;

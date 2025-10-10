@@ -12,7 +12,7 @@ const WebDevelopmentPage: React.FC = () => {,
     {,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
-      icon: Code;
+      icon: Code,
       price: '$1,200/month',
       features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],
       benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],
@@ -20,7 +20,7 @@ const WebDevelopmentPage: React.FC = () => {,
     {
       title: 'Backend Development',
       description: 'Scalable server-side solutions and API development',
-      icon: Database;
+      icon: Database,
       price: '$1,500/month',
       features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Design'],
       benefits: ['99.9% uptime', 'Scalable architecture', 'Secure APIs'],
@@ -28,7 +28,7 @@ const WebDevelopmentPage: React.FC = () => {,
     {
       title: 'Full-Stack Development',
       description: 'Complete web solutions from frontend to backend',
-      icon: Globe;
+      icon: Globe,
       price: '$2,200/month',
       features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],
       benefits: ['Unified solution', 'Faster development', 'Better performance'],
@@ -36,7 +36,7 @@ const WebDevelopmentPage: React.FC = () => {,
     {
       title: 'E-commerce Development',
       description: 'Custom e-commerce platforms and online stores',
-      icon: Smartphone;
+      icon: Smartphone,
       price: '$1,800/month',
       features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],
       benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],
@@ -44,11 +44,11 @@ const WebDevelopmentPage: React.FC = () => {,
     {
       title: 'Maintenance & Support',
       description: 'Ongoing maintenance and support for your web applications',
-      icon: Users;
+      icon: Users,
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'}
-  ];
+  ],
 
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
@@ -57,36 +57,37 @@ const WebDevelopmentPage: React.FC = () => {,
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
+  ],
 
   const process = [
     {
       step: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart;
+      icon: BarChart,
     },
     {
       step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code;
+      icon: Code,
     },
     {
       step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
-      icon: Globe;
+      icon: Globe,
     },
     {
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield;
+      icon: Shield,
     }
   ];
+const Component = () => {
 
-  return(<>
+  return (<>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
@@ -125,15 +126,15 @@ const WebDevelopmentPage: React.FC = () => {,
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-              Web Development Services;
+              Web Development Services,
             </h1>,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -142,13 +143,13 @@ const WebDevelopmentPage: React.FC = () => {,
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950</a>
               >
-                Start Your Project;
+                Start Your Project,
               </a>
               <a;
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Call +1 302 464 0950;
+                Call +1 302 464 0950,
               </a>
             </div>,
           </section>,
@@ -212,13 +213,13 @@ const WebDevelopmentPage: React.FC = () => {,
 
                   <a;
                     href="/contact"
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >Get Started</a>
                   </a>
                 </div>
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >
-                    Get Started;
+                    Get Started,
                   </a>,
                 </div>))}
             </div>
@@ -227,11 +228,11 @@ const WebDevelopmentPage: React.FC = () => {,
           {/* Technologies */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Technologies We Use;
+              Technologies We Use,
             </h2>,
 ,
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">,
@@ -252,11 +253,11 @@ const WebDevelopmentPage: React.FC = () => {,
           {/* Process */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Our Development Process;
+              Our Development Process,
             </h2>,
 ,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -268,7 +269,7 @@ const WebDevelopmentPage: React.FC = () => {,
                   <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</section>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
+                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
@@ -287,9 +288,9 @@ const WebDevelopmentPage: React.FC = () => {,
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
+                <a,
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
@@ -300,13 +301,13 @@ const WebDevelopmentPage: React.FC = () => {,
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >Call +1 302 464 0950</a>
                 >
-                  Start Your Project;
+                  Start Your Project,
                 </a>
                 <a;
                   href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  Call +1 302 464 0950;
+                  Call +1 302 464 0950,
                 </a>
               </div>
             </div>

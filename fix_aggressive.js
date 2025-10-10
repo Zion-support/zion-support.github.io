@@ -22,7 +22,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
     (match, imports) => {/* TODO: Fix JSX expression */}
     }
-  );
+  ),
 
   //Fix corrupted import statements;
   fixed = fixed.replace(
@@ -36,7 +36,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
     (match, imports, module) => {/* TODO: Fix JSX expression */}
     }
-  );
+  ),
 
   //Fix corrupted variable declarations;
   fixed = fixed.replace(
@@ -86,7 +86,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
 
   //Fix corrupted string literals;
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */}
-  });
+  }),
 
   //Fix corrupted string literals;"
   fixed = fixed.replace(/['"]([^'"]*),\s*([^'"]*)['"]/g, '"$1$2"');
@@ -214,12 +214,12 @@ function processFile(filePath) {
       //       return true;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-//Function to recursively find and process files;
+//Function to recursively find and process files,
 function processDirectory(dirPath) {
 
   try {
@@ -246,7 +246,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 
-  return processedCount;
+  return processedCount,
 }
 
 //Main execution;

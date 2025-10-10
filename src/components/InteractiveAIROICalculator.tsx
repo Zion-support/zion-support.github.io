@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const,
   InteractiveAIROICalculator: React.FC = () => {return (}
     <div>Coming Soon</div>)
-  );
+  ),
 };
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
@@ -32,7 +32,7 @@ const,
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg,
   focus:ring-2,
   focus:ring-blue-500,
-  focus:border-transparent'
+  focus: border-transparent'
 // />
               
           
@@ -65,7 +65,7 @@ Expected Efficiency Gain (%)
                 </select>
             <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'></div>
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'></h3>
-// Your ROI Projection;
+// Your ROI Projection,
           </h3>
               <div className='text-center'></div>
                 <div className='text-6xl font-bold text-blue-600 mb-4'></div>

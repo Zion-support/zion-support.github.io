@@ -15,21 +15,23 @@ const AIContentGenerator: React.FC = () => {,
       setIsGenerating(false);
     }, 2000);
   };
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Content Generator<p className="text-xl text-gray-300 text-center mb-12">Generate high-quality content using advanced AI technology</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">AI Content Generator<p className="text-xl text-gray-300 text-center mb-12">Generate high-quality content using advanced AI technology</p>
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            AI Content Generator;
+            AI Content Generator,
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Generate high-quality content using advanced AI technology;
         <div className="max-w-4xl mx-auto"></div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Content Generator</h1><p className="text-xl text-gray-300 text-center mb-12">Generate high-quality content using advanced AI technology</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">AI Content Generator</h1><p className="text-xl text-gray-300 text-center mb-12">Generate high-quality content using advanced AI technology</p>
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -69,7 +71,7 @@ const AIContentGenerator: React.FC = () => {,
           <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Try It Now</h2>
             <div className="space-y-4">
-              <textarea;
+              <textarea,
             <div className="space-y-4"></div>
               <textarea
                 className="w-full h-32 p-4 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
@@ -146,13 +148,13 @@ const AIContentGenerator: React.FC = () => {,
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >Get Started</a>
             >
-              📞 Call: (302) 464-0950;
+              📞 Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Get Started;
+              Get Started,
             </a>
           </div>
         </div>

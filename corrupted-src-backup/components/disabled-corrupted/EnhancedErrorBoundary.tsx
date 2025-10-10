@@ -13,23 +13,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: null;
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     // Update state so the next render will show the fallback UI;
     return {,
-      hasError: true;
+      hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error details;
+    // Log error details,
 //     this.setState({),
       error),
       errorInfo)});
@@ -38,7 +38,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-    };
+    },
   }
 
   static getDerivedStateFromError(erro)
@@ -49,26 +49,26 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   override componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
 
-    // Report error to monitoring service;
+    // Report error to monitoring service,
     this.reportError(error, errorInfo);
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport = {
-      errorId: this.state.errorId;
-      message: error.message;
-      stack: error.stack;
-      componentStack: errorInfo.componentStack;
+      errorId: this.state.errorId,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString()
-      userAgent: navigator.userAgent;
-      url: window.location.href;
-      retryCount: this.retryCount;
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      retryCount: this.retryCount,
     };
 
     // Send to error reporting service;
@@ -81,7 +81,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   private reportError = (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
-    };
+    },
 
     // Send to error reporting service;
     if (typeof window !== 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
@@ -105,7 +105,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       localStorage.setItem('errorLogs', JSON.stringify(existingErrors));
     } catch (e) {/* TODO: Fix JSX expression */}
 //       }
-  };
+  },
 
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {
@@ -116,29 +116,29 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
         errorInfo: null),
         errorId: null),
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-      });
+      }),
     }
   };
 
   private handleReload = () => {/* TODO: Fix JSX expression */}
-  };
+  },
 
   private handleReportBug = () => {
     const errorDetails = {
-      errorId: this.state.errorId;
-      message: this.state.error?.message;
-      stack: this.state.error?.stack;
-      componentStack: this.state.errorInfo?.componentStack;
+      errorId: this.state.errorId,
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
-      url: window.location.href;
+      url: window.location.href,
     };
 
     // Create a mailto link with error details;
-//     const subject = `Bug Report - Error ID: ${this.state.errorId}`;
+//     const subject = `Bug Report - Error ID: ${this.state.errorId}`,
 //     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
 //     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   private handleReportBug = () => {/* TODO: Fix JSX expression */}
-    };
+    },
 
     // Create a mailto link with error details;`
 //     const subject = `Bug Report - Error,`
@@ -146,7 +146,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 //     const body = `Error,`
   Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`
 //     const mailtoLink = `mailt,`
-  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  o: support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
 
     window.open(mailtoLink);
   };
@@ -159,7 +159,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       }
 
       // Default error UI;
-      return(<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
+const Component = () => {
+      return (<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
           <div className='max-w-md w-full space-y-8'>
             <div className='text-center'>)
               <div className='mx-auto h-12 w-12 text-red-500'>)
@@ -168,8 +169,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                     strokeLinecap='round'),
                     strokeLinejoin='round'),
       // Default error UI
+const Component = () => {
       return (
-        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'></div>
+        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'></div>
           <div className='max-w-md w-full space-y-8'></div>
             <div className='text-center'></div>
               <div className='mx-auto h-12 w-12 text-red-500'></div>
@@ -178,10 +180,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   override render() {/* TODO: Fix JSX expression */}
       }
 
-      // Default error UI;
+      // Default error UI,
+const Component = () => {
       return (<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,
   sm:px-6,
-  lg:px-8'></div>
+  lg: px-8'></div>
           <div className='max-w-md w-full space-y-8'></div>
             <div className='text-center'></div>
               <div className='mx-auto h-12 w-12 text-red-500'></div>
@@ -195,7 +198,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 </svg>
               </div>
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
-                Oops! Something went wrong;
+                Oops! Something went wrong,
               </h2>
               <p className='mt-2 text-sm text-gray-600'>
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>
@@ -214,7 +217,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             <div className='space-y-4'></div>
               <div className='flex space-x-4'>
                 {this.retryCount < this.maxRetries && (
-                  <button;
+                  <button,
                 {this.retryCount</div> < this.maxRetries && (
                   <button
                     onClick={this.handleRetry}
@@ -248,9 +251,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   focus:outline-none,
   focus:ring-2,
   focus:ring-offset-2,
-  focus:ring-indigo-500'
+  focus: ring-indigo-500'
                 >
-                  Reload Page;
+                  Reload Page,
                 </button>
               </div>
 ,
@@ -262,7 +265,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                   onClick={this.handleReportBug}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
-                  Report Bug;
+                  Report Bug,
                 </button>,
                 <button;
                   onClick={() => window.history.back()}
@@ -274,9 +277,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   focus:outline-none,
   focus:ring-2,
   focus:ring-offset-2,
-  focus:ring-indigo-500'
+  focus: ring-indigo-500'
                 >
-                  Report Bug;
+                  Report Bug,
                 </button>
                 <button></button>
                   onClick={() => window.history.back()}
@@ -285,17 +288,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   focus:outline-none,
   focus:ring-2,
   focus:ring-offset-2,
-  focus:ring-indigo-500'
+  focus: ring-indigo-500'
                 >
-                  Go Back;
+                  Go Back,
                 </button>
               </div>
             </div>
 
             {this.props.showDetails && this.state.error && (
               <details className='mt-8'>
-                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
-                  Technical Details;
+                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover: text-gray-900'>
+                  Technical Details,
                 </summary>,
                 <div className='mt-2 p-4 bg-gray-100 rounded-md'>,
                   <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,
@@ -315,7 +318,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             )}
           </div>
         </div>
-      );
+      ),
     }
 
     return this.props.children;

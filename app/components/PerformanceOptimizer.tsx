@@ -96,8 +96,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   useEffect(() => {
     const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
+const Component = () => {
     return () => clearInterval(interval);
   }, [optimizeMemory]);
+const Component = () => {
 
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
@@ -153,7 +155,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       )}
     </div>
-  );
+  ),
 };
 
 export default PerformanceOptimizer;

@@ -11,21 +11,23 @@ const AIAnalyticsDashboard: React.FC = () => {,
     { id: 'users', name: 'Active Users', value: '8,432', change: '+8.2%' },
     { id: 'conversion', name: 'Conversion Rate', value: '3.24%', change: '+0.8%' },
     { id: 'engagement', name: 'Engagement', value: '67.8%', change: '+5.1%' }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard<p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard<p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
           </p>
 
           <div className="cyber-card p-8 mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Live Dashboard Preview<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">{metrics.map((metric) => (<div
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            AI Analytics Dashboard;
+            AI Analytics Dashboard,
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Get intelligent insights from your data with AI-powered analytics;
@@ -37,7 +39,7 @@ const AIAnalyticsDashboard: React.FC = () => {,
               {metrics.map((metric) => (,
                 <div;
         <div className="max-w-6xl mx-auto"></div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard</h1><p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard</h1><p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
           </p>
 
           <div className="cyber-card p-8 mb-8"></div>
@@ -120,7 +122,7 @@ const AIAnalyticsDashboard: React.FC = () => {,
           </div>
 
           <div className="text-center">
-            <a;
+            <a,
           <div className="text-center"></div>
             <a
               href="tel:+13024640950"
@@ -130,13 +132,13 @@ const AIAnalyticsDashboard: React.FC = () => {,
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >Start Analytics</a>
             >
-              📞 Call: (302) 464-0950;
+              📞 Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Analytics;
+              Start Analytics,
             </a>
           </div>
         </div>

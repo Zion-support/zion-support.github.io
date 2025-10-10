@@ -29,7 +29,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIAnalyticsPage: React.FC = () => {
-  const features = [];
+  const features = [],
+const Component = () => {
   return (
     {// TODO: Add content;}
 
@@ -43,7 +44,7 @@ const AIAnalyticsPage: React.FC = () => {
       benefit,
   s: [
   // TOD,
-  O: Add items];
+  O: Add items],
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
 //         'Automated trend detection',
@@ -162,6 +163,7 @@ icon$5: Award,
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
       color: 'text-green-400',
+const Component = () => {
 
   return (
     <>
@@ -307,7 +309,7 @@ icon$5: Award,
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey with AI analytics today. Get a free consultation and discover 
               how our platform can revolutionize your business intelligence.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Consultation
                 href="tel:+13024640950"
@@ -320,7 +322,7 @@ icon$5: Award,
                 Email Us
       <Footer />
     </>
-  );
+  ),
 };
 
 export default AIAnalyticsPage;
@@ -361,17 +363,17 @@ export default AIAnalyticsPage;
 
                   <a
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content;
+  // TODO: Add content,
 
 }
 //                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
                         : 'bg-slate-700 text-white,
-  hover:bg-slate-600'`
+  hover: bg-slate-600'`
                     }`}
 //                   >
-//                     Get Started;
+//                     Get Started,
           </a>
 {/* Benefits */}
               Why Choose Our AI Analytics?
@@ -389,14 +391,14 @@ export default AIAnalyticsPage;
               Start your journey with AI analytics today. Get a free consultation and discover;
 
               how our platform can revolutionize your business intelligence.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation,
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                (302) 464-0950,
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us,
       <Footer />
 
     </div>

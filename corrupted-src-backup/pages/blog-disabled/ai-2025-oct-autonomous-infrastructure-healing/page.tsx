@@ -2,7 +2,8 @@ impo, r, t { ArrowLe, f, t, Serv, e, r, Shie, l, d, Trending, U, p, Z, a, p } fr
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function AutonomousInfrastructureHealing20, 2, 5() {  
-  return(:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
+const Component = () => {
+  return (:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
     <>
       <Helm, e, t>
         <title>
@@ -29,7 +30,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />,
         <meta name="description",
-  content: "Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation.", /><meta name: "keywords;
+  content: "Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation.", /><meta name: "keywords,
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing/>",
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience;
         />
@@ -309,7 +310,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                 <Zap className="ml-2 h-5 w-5 ">,
                 <Zap className="ml-2 h-5 w-5" />);
 export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+},
   </div>
   </div>
   </div>

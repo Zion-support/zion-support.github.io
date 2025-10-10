@@ -6,31 +6,31 @@ import Link from 'next/link';
 const SEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Search;
+      icon: Search,
       title: 'Keyword Research',
       description: 'Find high-value keywords with AI-powered research tools'},
     {
-      icon: Target;
+      icon: Target,
       title: 'On-Page Optimization',
       description: 'Optimize titles, meta descriptions, and content structure'
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Rank Tracking',
       description: 'Monitor your search rankings across multiple keywords'},
     {
-      icon: Globe;
+      icon: Globe,
       title: 'Technical SEO',
       description: 'Fix technical issues that impact search visibility'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Content Optimization',
       description: 'AI-powered content suggestions for better rankings'},
     {
-      icon: Users;
+      icon: Users,
       title: 'Competitor Analysis',
       description: 'Analyze competitors and discover new opportunities'}
-  ];
+  ],
 
   const benefits = [
     {
@@ -45,11 +45,13 @@ const SEOOptimizerPage: React.FC = () => {
     {
       title: '24/7 Monitoring',
       description: 'Continuous tracking and optimization of your SEO performance'}
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -60,7 +62,7 @@ const SEOOptimizerPage: React.FC = () => {
             Get more organic traffic, higher rankings, and better visibility in search results.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link;
+            <Link,
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
@@ -83,20 +85,20 @@ const SEOOptimizerPage: React.FC = () => {
             Powerful</h2> <span className="text-cyan-400">SEO Tools</span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               ></div>
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
               <Search className="w-5 h-5 mr-2" />
-              Get Started;
+              Get Started,
             </Link>
             <Link;
               href="/demo"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
               <BarChart className="w-5 h-5 mr-2" />
-              View Demo;
+              View Demo,
             </Link>
           </div>,
         </div>,
@@ -148,8 +150,8 @@ const SEOOptimizerPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Dominate Search Results?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using our SEO optimizer to rank higher and get more traffic.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -163,14 +165,14 @@ const SEOOptimizerPage: React.FC = () => {
               <Target className="w-5 h-5 mr-2" >View Pricing</Targe>
             </Target>
               <ArrowRight className="w-5 h-5 mr-2" />
-              Start Optimizing;
+              Start Optimizing,
             </Link>
             <Link;
               href="/pricing"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
               <Target className="w-5 h-5 mr-2" />
-              View Pricing;
+              View Pricing,
             </Link>
           </div>
         </div>

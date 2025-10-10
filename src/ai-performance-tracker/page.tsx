@@ -7,7 +7,8 @@ import Footer from '../components/Footer';
 
 import { BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings } from 'lucide-react';
 const AIPerformanceTrackerPage: React.FC = () => {
-  const features = [];
+  const features = [],
+const Component = () => {
   return (
     {// TODO: Add content;}
 
@@ -39,15 +40,16 @@ const AIPerformanceTrackerPage: React.FC = () => {
   s: ['Custom metrics', 'Visualization', 'Reporting']
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 
-// AI Performance Tracker;
+// AI Performance Tracker,
           </h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
 // Comprehensive Performance Tracking;
@@ -56,22 +58,22 @@ const AIPerformanceTrackerPage: React.FC = () => {
             Track and optimize performance with AI-powered analytics.
 
             Monitor KPIs, set goals, and achieve better results with intelligent performance tracking.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started;
+//               Get Started,
           </a>
-              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <BarChart className="w-5 h-5" />
 
-              +1 302 464 0950;
+              +1 302 464 0950,
           </div>
         </section>"
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
-// Performance Tracking Features;
+  md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
+// Performance Tracking Features,
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"

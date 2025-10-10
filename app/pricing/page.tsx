@@ -76,7 +76,7 @@ const PricingPage: React.FC = () => {
       cta: 'Contact Sales',
       link: '/contact'
     }
-  ];
+  ],
 
   const microSaasPricing = [
     {
@@ -143,7 +143,7 @@ const PricingPage: React.FC = () => {
       cta: 'Contact Sales',
       link: '/contact'
     }
-  ];
+  ],
 
   const itServicesPricing = [
     {
@@ -210,7 +210,7 @@ const PricingPage: React.FC = () => {
       cta: 'Contact Sales',
       link: '/contact'
     }
-  ];
+  ],
 
   const cloudServicesPricing = [
     {
@@ -278,7 +278,7 @@ const PricingPage: React.FC = () => {
       cta: 'Contact Sales',
       link: '/contact'
     }
-  ];
+  ],
 
   const cybersecurityPricing = [
     {
@@ -346,7 +346,7 @@ const PricingPage: React.FC = () => {
       cta: 'Contact Sales',
       link: '/contact'
     }
-  ];
+  ],
 
   const getCurrentPricing = () => {
     switch (selectedPlan) {
@@ -360,8 +360,7 @@ const PricingPage: React.FC = () => {
         return cloudServicesPricing;
       case 'cybersecurity':
         return cybersecurityPricing;
-      default:
-        return aiServicesPricing;
+      default: return aiServicesPricing,
     }
   };
 
@@ -371,7 +370,8 @@ const PricingPage: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: Headphones },
     { id: 'cloud-services', name: 'Cloud Services', icon: Cloud },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>
@@ -555,7 +555,7 @@ const PricingPage: React.FC = () => {
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-12 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -584,5 +584,5 @@ const PricingPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };

@@ -1,9 +1,11 @@
 
 export default function October2025SelfHealingSpotlightBann, e, r() { 
-  return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
+const Component = () => {
+  return (<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
       <div, className='m, a, x-w-6xl, m, x-au, t, o'>
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'>
           <div, className='fl, e, x-1'>
+const Component = () => {
   return (
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'></div>
       <div, className='m, a, x-w-6xl, m, x-au, t, o'></div>

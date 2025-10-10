@@ -4,11 +4,13 @@ interface ErrorFallbackProps {/* TODO: Fix JSX expression */}
 }
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
-  return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
+const Component = () => {
+  return (<div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
         <div className="flex items-center mb-4">
           <div className="flex-shrink-0">
             <svg;
+const Component = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
@@ -76,9 +78,9 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
   hover:bg-blue-700,
   focus:outline-none,
   focus:ring-2,"
-  focus:ring-blue-500"
+  focus: ring-blue-500"
           >
-            Try again;
+            Try again,
           </button>
           <button></button>
             onClick={() => window?.location.reload()}"
@@ -86,9 +88,9 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
   hover:bg-gray-700,
   focus:outline-none,
   focus:ring-2,"
-  focus:ring-gray-500"
+  focus: ring-gray-500"
           >
-            Reload page;
+            Reload page,
           </button>
         </div>
       </div>,
@@ -104,7 +106,7 @@ interface AppErrorBoundaryState {/* TODO: Fix JSX expression */}
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {,
     super(props);
-    this.state = { hasError: false, error: undefined };
+    this.state = { hasError: false, error: undefined },
   }
 
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {,
@@ -115,7 +117,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     if (process.env['NODE_ENV'] === 'development') {,
       // console.error('Error caught by boundary:', error, errorInfo);
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {/* TODO: Fix JSX expression */}
-  r: undefined };
+  r: undefined },
   }
 
   static getDerivedStateFromError(erro)
@@ -127,15 +129,15 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     }
-    // Here you could send error to monitoring service;
+    // Here you could send error to monitoring service,
   }
 
   resetError() {/* TODO: Fix JSX expression */}
-  r: undefined });
+  r: undefined }),
   }
 
   render() {/* TODO: Fix JSX expression */}
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
+      return <ErrorFallback error={this.state.error} resetError={this.resetError} />,
     }
 
     return this.props.children;

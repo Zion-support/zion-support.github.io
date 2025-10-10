@@ -10,7 +10,7 @@ interface SkeletonProps {// TODO: Add content;}
   animated?: boolean;
 }
 const,
-  Skeleton: React.FC;
+  Skeleton: React.FC,
           <SkeletonProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -21,6 +21,7 @@ const,
   animated = true;)
 }) => {const roundedClasses = rounded ? 'rounded' : '';}
   const animatedClasses = animated ? 'animate-pulse' : '';
+const Component = () => {
 
   return (
     <div className="loadingskeleton">

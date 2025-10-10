@@ -2,7 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function CloudInfrastructurePage() {
-  return(<div><Helmet>
+const Component = () => {
+  return (<div><Helmet>
+const Component = () => {
   return (
     <div></div><Helmet>
         <title>Cloud Infrastructure Solutions - Zion Tech Group</title>
@@ -26,7 +28,7 @@ export default function CloudInfrastructurePage() {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              Cloud Infrastructure;
+              Cloud Infrastructure,
             </h1>,
             <p className="text-xl text-cyan-400 mb-8 font-medium">,
               Scalable, secure, and reliable cloud solutions;
@@ -210,15 +212,15 @@ export default function CloudInfrastructurePage() {
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,500+ companies using our cloud infrastructure solutions to scale their business and reduce costs.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Consultation</a>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Consultation;
+              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300">
+                Get Free Consultation,
               </a>
             </div>
           </section>
@@ -228,6 +230,7 @@ export default function CloudInfrastructurePage() {
       </div>,
     </div>,
 const CloudInfrastructurePage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -289,7 +292,7 @@ const CloudInfrastructurePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
 
 export default CloudInfrastructurePage;

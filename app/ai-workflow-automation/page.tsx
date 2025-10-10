@@ -6,37 +6,37 @@ import { Helmet } from 'react-helmet-async';
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Workflow;
+      icon: Workflow,
       title: 'Intelligent Process Automation',
       description: 'AI-powered workflow automation that learns from your processes and optimizes them automatically.',
       benefits: ['90% time savings', 'Error reduction', 'Process optimization']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: '500+ Integrations',
       description: 'Connect with 500+ popular business tools and platforms for seamless automation.',
       benefits: ['Wide compatibility', 'Easy setup', 'Unified workflow']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Real-time Monitoring',
       description: 'Monitor workflow performance in real-time with detailed analytics and insights.',
       benefits: ['Live tracking', 'Performance metrics', 'Instant alerts']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Team Collaboration',
       description: 'Enable seamless collaboration with role-based access and approval workflows.',
       benefits: ['Role management', 'Approval chains', 'Team coordination']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption, audit trails, and compliance features.',
       benefits: ['Data protection', 'Audit compliance', 'Secure access']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics to track workflow performance and identify optimization opportunities.',
       benefits: ['Performance insights', 'ROI tracking', 'Optimization suggestions']
@@ -56,7 +56,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
         'Email support',
         'Basic analytics'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional'
@@ -72,7 +72,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
         'Team collaboration',
         'API access'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -88,30 +88,31 @@ const AIWorkflowAutomationPage: React.FC = () => {
         'Advanced security',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
   const benefits = [
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Save 20+ Hours/Week',
       description: 'Automate repetitive tasks and focus on high-value activities'},
     {
-      icon: Zap;
+      icon: Zap,
       title: '90% Process Efficiency',
       description: 'Dramatically improve process efficiency with intelligent automation'},
     {
-      icon: Users;
+      icon: Users,
       title: 'Better Team Coordination',
       description: 'Streamline team workflows and improve collaboration'},
     {
-      icon: Star;
+      icon: Star,
       title: 'Scalable Solutions',
       description: 'Scale your automation as your business grows'}
-  ];
+  ],
+const Component = () => {
 
-  return(<>
+  return (<>
       <SEOOptimizer;
         title="AI Workflow Automation - Zion Tech Group"
         description="Automate any business process with intelligent workflows, 90% time savings, and 500+ integrations. Transform your business operations with AI-powered automation."
@@ -133,7 +134,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              AI Workflow Automation;
+              AI Workflow Automation,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Automate any business process with intelligent workflows;
@@ -143,8 +144,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
               adapts, and optimizes your processes for maximum efficiency and productivity.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
@@ -153,13 +154,13 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Get Quote</a>
               >
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Get Quote;
+                ✉️ Get Quote,
               </a>
             </div>,
           </section>,
@@ -227,20 +228,20 @@ const AIWorkflowAutomationPage: React.FC = () => {
                     href="mailto:kleber@ziontechgroup.com"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                     }`}
                   >Get Started</a>
                   </ul>
-                  <a;
+                  <a,
                     href="mailto: kleber@ziontechgroup.com",
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
                       plan.popular;
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}
                     }`}
                   >
-                    Get Started;
+                    Get Started,
                   </a>
                 </div>
               ))}
@@ -278,8 +279,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
               and custom implementation plan.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
@@ -288,13 +289,13 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Email Us</a>
               >
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Email Us;
+                ✉️ Email Us,
               </a>
             </div>
           </section>

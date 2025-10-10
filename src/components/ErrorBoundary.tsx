@@ -9,7 +9,7 @@ interface State {/* TODO: Fix JSX expression */}
 }
 
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
+  r: false },
   }
 
   static getDerivedStateFromError(erro)
@@ -20,7 +20,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     // Log error to monitoring service;
     // console.error('ErrorBoundary caught an)
@@ -28,19 +28,20 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     
     // You can also log to external services here;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
-      });
+      }),
     }
   }
 
   handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
+  o: undefined }),
   };
 
   handleReload = () => {/* TODO: Fix JSX expression */}
-  };
+  },
 
   render() {/* TODO: Fix JSX expression */}
       }
+const Component = () => {
 
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20"></div>"
@@ -67,28 +68,28 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               <button></button>
                 onClick={this.handleRetry}"
                 className="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2"
+  hover: bg-cyan-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Try Again;
+                Try Again,
               </button>
               
               <button></button>
                 onClick={this.handleReload}"
                 className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
+  hover: bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Reload Page;
+                Reload Page,
               </button>
               
               <a></a>"
                 href="/""
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
+  hover: bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
-                Go Home;
+                Go Home,
               </a>
               
               <a></a>"
@@ -96,10 +97,10 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   o:support@ziontechgroup.com?subject=Error Report""
                 className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,
   hover:bg-cyan-400,"
-  hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
+  hover: text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
                 <Mail className="w-4 h-4" /></Mail>
-                Report Issue;
+                Report Issue,
               </a>
             </div>
 "
@@ -109,15 +110,15 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               <p className="mt-1"></p>"
                 <a href="mailt,"
   o:support@ziontechgroup.com" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
-                  support@ziontechgroup.com;
+  hover: text-cyan-300"></a>
+                  support@ziontechgroup.com,
                 </a>
               </p>"
               <p className="mt-1"></p>"
                 <a href="te,"
   l:+13024640950" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
-                  (302) 464-0950;
+  hover: text-cyan-300"></a>
+                  (302) 464-0950,
                 </a>
               </p>
             </div>

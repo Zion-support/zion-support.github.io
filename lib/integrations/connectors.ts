@@ -2,8 +2,8 @@ import { ProviderConnection, SyncLogEntry } from './types';
 
 
 export async function simulateAction<T = unknown>(
-  connection: ProviderConnection;
-  action: string;
+  connection: ProviderConnection,
+  action: string,
   details: Record<string, unknown> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {,
@@ -19,8 +19,8 @@ const generateId = (): string => {
 };
 
 export async function simulateAction<T = any>(
-  connection: ProviderConnection;
-  action: string;
+  connection: ProviderConnection,
+  action: string,
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {,
@@ -37,9 +37,9 @@ export async function simulateAction<T = any>(
     id: uuidv4()
     id: uuidv4()
     timestamp: Date.now()
-    providerId: connection.providerId;
+    providerId: connection.providerId,
     level: 'info',
-    connectionId: connection.id;
+    connectionId: connection.id,
 
 
 export async function simulateAction<T = any>(connectio,
@@ -88,15 +88,15 @@ export async function simulateAction<T = any>(connectio,
   e: `Action ${action} completed successfully`,
     details,
     timestam,
-  p: new Date()};
+  p: new Date()},
 
   // Simulate occasional errors;
   if (Math.random() < 0.1) {
     log.status = 'error';
-    log.message = `Action ${action} failed: Simulated error`;
+    log.message = `Action ${action} failed: Simulated error`,
   if (Math.random() < 0.1) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} faile,`
-  d: Simulated error`;
+  d: Simulated error`,
     throw new Error(log.message);
   }
 
@@ -107,15 +107,15 @@ export async function simulateAction<T = any>(connectio,
   }
 
   const result = {
-    success: true;
-    data: details;
+    success: true,
+    data: details,
     timestamp: new Date().toISOString(),
   if (Math.random() < 0.2) {/* TODO: Fix JSX expression */}`
-    log.message = `Action ${action} completed with warnings`;
+    log.message = `Action ${action} completed with warnings`,
   }
 
   const result = {/* TODO: Fix JSX expression */}
-  } as T;
+  } as T,
 
   return { log, result };
 }
@@ -176,7 +176,7 @@ export async function testConnection(connection: ProviderConnection;)): Promise<
 
 export async function syncData(connection: ProviderConnection;)
 ): Promise<SyncLogEntry[]> {,
-  const logs: SyncLogEntry[] = [];
+  const logs: SyncLogEntry[] = [],
 ,
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 
@@ -250,16 +250,16 @@ export async function syncData(connectio,
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   try {
     const { log } = await simulateAction(connection, 'sync_data', {)
-      lastSync: connection.lastSync?.toISOString()});
+      lastSync: connection.lastSync?.toISOString()}),
     logs.push(log);
   } catch (error) {
     logs.push({)
       id: Math.random().toString(36).substr(2, 9),
-      connectionId: connection.id;
+      connectionId: connection.id,
       action: 'sync_data'
       status: 'error',
       message: error instanceof Error ? error.message : 'Unknown error',
-      timestamp: new Date()});
+      timestamp: new Date()}),
   }
 
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
@@ -275,10 +275,10 @@ export async function syncData(connectio,
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   try {/* TODO: Fix JSX expression */}
     const { log } = await simulateAction(connection, 'sync_data', {/* TODO: Fix JSX expression */})
-    });
+    }),
     logs.push(log);
   } catch (error) {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
 
 

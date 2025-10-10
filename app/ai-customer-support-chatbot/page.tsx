@@ -6,37 +6,37 @@ import { CheckCircle, Star, Shield, Clock, Users, TrendingUp, Brain, Target, Bar
 const AICustomerSupportChatbotPage: React.FC = () => {
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
       title: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for understanding customer intent and providing accurate responses',
       benefits: ['95% accuracy in understanding queries', 'Multi-language support', 'Context awareness', 'Sentiment analysis']
     },
     {
-      icon: MessageSquare;
+      icon: MessageSquare,
       title: '24/7 Availability',
       description: 'Round-the-clock customer support with instant responses and escalation to human agents',
       benefits: ['Instant response time', 'No waiting queues', 'Consistent service quality', 'Reduced support costs']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Multi-Channel Support',
       description: 'Deploy across websites, mobile apps, social media, and messaging platforms',
       benefits: ['Website chat widget', 'Mobile app integration', 'Social media support', 'WhatsApp integration']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with customer insights and performance metrics',
       benefits: ['Real-time analytics', 'Customer satisfaction tracking', 'Response time metrics', 'Conversion tracking']
     },
     {
-      icon: Bot;
+      icon: Bot,
       title: 'Smart Escalation',
       description: 'Intelligent routing to human agents when complex issues require human intervention',
       benefits: ['Seamless handoff', 'Context preservation', 'Priority queuing', 'Agent workload balancing']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption and compliance with industry standards',
       benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Data privacy protection']
@@ -47,37 +47,37 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     {
       name: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns',
-      icon: ShoppingCart;
+      icon: ShoppingCart,
       benefits: ['Order status updates', 'Product recommendations', 'Return processing', 'Shipping inquiries']
     },
     {
       name: 'Technical Support',
       description: 'Provide technical assistance and troubleshooting',
-      icon: Settings;
+      icon: Settings,
       benefits: ['Troubleshooting guides', 'FAQ responses', 'Ticket creation', 'Escalation to specialists']
     },
     {
       name: 'Lead Qualification',
       description: 'Qualify leads and schedule demos or consultations',
-      icon: Target;
+      icon: Target,
       benefits: ['Lead scoring', 'Appointment scheduling', 'Qualification questions', 'CRM integration']
     },
     {
       name: 'FAQ Automation',
       description: 'Answer frequently asked questions instantly',
-      icon: HelpCircle;
+      icon: HelpCircle,
       benefits: ['Instant responses', 'Knowledge base integration', 'Self-service options', 'Reduced ticket volume']
     },
     {
       name: 'Appointment Booking',
       description: 'Schedule appointments and manage calendars',
-      icon: Calendar;
+      icon: Calendar,
       benefits: ['Calendar integration', 'Availability checking', 'Confirmation emails', 'Reminder notifications']
     },
     {
       name: 'Complaint Handling',
       description: 'Process complaints and escalate when necessary',
-      icon: AlertTriangle;
+      icon: AlertTriangle,
       benefits: ['Issue categorization', 'Priority assessment', 'Resolution tracking', 'Follow-up automation']
     }
   ];
@@ -96,7 +96,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
         'Basic analytics',
         'Standard templates'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -113,7 +113,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
         'API access',
         'Integrations'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -130,7 +130,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
         'SLA guarantee',
         'Training & onboarding'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -140,21 +140,21 @@ const AICustomerSupportChatbotPage: React.FC = () => {
       role: 'Customer Success Manager',
       company: 'Retail Plus',
       content: 'AI Customer Support Chatbot reduced our support tickets by 60% and improved customer satisfaction by 40%. Amazing results!',
-      rating: 5;
+      rating: 5,
     },
     {
       name: 'Robert Martinez',
       role: 'Operations Director',
       company: 'Tech Solutions',
       content: 'The chatbot handles 80% of our customer inquiries automatically. Our support team can now focus on complex issues.',
-      rating: 5;
+      rating: 5,
     },
     {
       name: 'Lisa Wang',
       role: 'Head of Customer Experience',
       company: 'E-commerce Giant',
       content: 'Best customer support solution we\'ve implemented. The AI understanding and response quality is exceptional.',
-      rating: 5;
+      rating: 5,
     }
   ];
 
@@ -163,9 +163,11 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     { icon: Users, value: '1 M+', label: 'Conversations Handled' },
     { icon: TrendingUp, value: '60%', label: 'Ticket Reduction' },
     { icon: Clock, value: '24/7', label: 'Availability' }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Helmet>
@@ -191,7 +193,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
             AI-Powered Customer Support;
           </div>
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Customer Support Chatbot;
+            AI Customer Support Chatbot,
           </h1>,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
             Transform your customer support with AI-powered chatbots that provide instant, accurate responses 24/7.
@@ -211,8 +213,8 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center justify-center"
@@ -222,13 +224,13 @@ const AICustomerSupportChatbotPage: React.FC = () => {
               className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
             >Get Free Demo</a>
               <Phone className="w-4 h-4 mr-2" />
-              Call (302) 464-0950;
+              Call (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com?subject=AI Customer Support Chatbot Demo"
-              className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover: bg-green-400 hover:text-slate-900 transition-all duration-300"
             >
-              Get Free Demo;
+              Get Free Demo,
             </a>
           </div>
         </div>,
@@ -242,7 +244,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 <useCase.icon className="w-12 h-12 text-green-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{useCase.name}<p className="text-gray-300 mb-4">{useCase.description}<ul className="space-y-2">{useCase.benefits.map((benefit, benefitIndex) => (</ul>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            Powerful Use Cases;
+            Powerful Use Cases,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {useCases.map((useCase, index) => (
@@ -276,7 +278,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 <feature.icon className="w-12 h-12 text-green-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            Advanced AI Features;
+            Advanced AI Features,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (
@@ -343,7 +345,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                   }`}
                 >Get Started</a>
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -356,7 +358,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">What Our Customers Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            What Our Customers Say;
+            What Our Customers Say,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {testimonials.map((testimonial, index) => (
@@ -380,7 +382,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?<p className="text-xl text-green-100 mb-8">Join thousands of businesses already using AI Customer Support Chatbot to improve their customer experience.</p>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?<p className="text-xl text-green-100 mb-8">Join thousands of businesses already using AI Customer Support Chatbot to improve their customer experience.</p>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Customer Support?
           </h2>
@@ -388,9 +390,9 @@ const AICustomerSupportChatbotPage: React.FC = () => {
             Join thousands of businesses already using AI Customer Support Chatbot to improve their customer experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a;
+            <a,
         <div className="max-w-4xl mx-auto text-center"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2><p className="text-xl text-green-100 mb-8">Join thousands of businesses already using AI Customer Support Chatbot to improve their customer experience.</p>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2><p className="text-xl text-green-100 mb-8">Join thousands of businesses already using AI Customer Support Chatbot to improve their customer experience.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
@@ -401,13 +403,13 @@ const AICustomerSupportChatbotPage: React.FC = () => {
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-green-600 transition-colors"
             >Email Us</a>
             >
-              Call (302) 464-0950;
+              Call (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-green-600 transition-colors"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover: bg-white hover:text-green-600 transition-colors"
             >
-              Email Us;
+              Email Us,
             </a>
           </div>
         </div>

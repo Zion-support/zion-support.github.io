@@ -9,32 +9,32 @@ const AITaskManagerPage: React.FC = () => {,
     {,
       title: 'Smart Task Prioritization',
       description: 'AI automatically prioritizes tasks based on deadlines, importance, and dependencies.',
-      icon: Target;
+      icon: Target,
     },
     {
       title: 'Intelligent Scheduling',
       description: 'Automatically schedule tasks based on your availability and workload capacity.',
-      icon: Calendar;
+      icon: Calendar,
     },
     {
       title: 'Progress Tracking',
       description: 'Real-time progress monitoring with predictive analytics and completion estimates.',
-      icon: BarChart;
+      icon: BarChart,
     },
     {
       title: 'Team Collaboration',
       description: 'Seamless team coordination with automated task assignment and communication.',
-      icon: Users;
+      icon: Users,
     },
     {
       title: 'Time Optimization',
       description: 'AI learns your work patterns to suggest optimal time blocks for different task types.',
-      icon: Clock;
+      icon: Clock,
     },
     {
       title: 'Performance Analytics',
       description: 'Detailed insights into productivity patterns and efficiency improvements.',
-      icon: TrendingUp;
+      icon: TrendingUp,
     }
   ];
 
@@ -46,6 +46,7 @@ const AITaskManagerPage: React.FC = () => {,
     'Smart Notifications',
     'Mobile & Desktop Sync'
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -59,7 +60,8 @@ const AITaskManagerPage: React.FC = () => {,
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -74,7 +76,7 @@ const AITaskManagerPage: React.FC = () => {,
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Free Trial;
+                Start Free Trial,
               </a>
               <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                 Call +1 302 464 0950;
@@ -201,12 +203,12 @@ const AITaskManagerPage: React.FC = () => {,
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Productivity?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of teams already using AI Task Manager Pro to boost their productivity and achieve more.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-              Start Free Trial;
+              Start Free Trial,
             </a>
             <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
               Call +1 302 464 0950;

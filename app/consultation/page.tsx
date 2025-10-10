@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ConsultationPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -44,7 +45,7 @@ const ConsultationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default ConsultationPage;

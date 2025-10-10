@@ -11,7 +11,7 @@ interface NewContentPromotionBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-   };
+   },
   if (!isVisib, l, e) return, nul, l;
   const variantClasse, s = {
       in, f, o: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-1, 0, 0",

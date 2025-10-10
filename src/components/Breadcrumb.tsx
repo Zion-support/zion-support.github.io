@@ -3,19 +3,19 @@ import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
 interface BreadcrumbItem {
-  name: string;
-  href: string;
+  name: string,
+  href: string,
   current?: boolean;
 }
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
+  const location = useLocation(),
   
   const generateBreadcrumbs = (): BreadcrumbItem[] => {,
     const pathSegments = location.pathname.split('/').filter(Boolean);
     const breadcrumbs: BreadcrumbItem[] = [,
       { name: 'Home', href: '/' }
-    ];
+    ],
 
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
@@ -31,7 +31,7 @@ const Breadcrumb: React.FC = () => {
       breadcrumbs.push({)
         name)
         href: currentPath),
-        current: isLast;
+        current: isLast,
       });
     });
 
@@ -55,11 +55,13 @@ const Breadcrumb: React.FC = () => {
       "item": `https://ziontechgroup.com${item.href}`
     }))
   };
+const Component = () => {
 
-  return(<>)
+  return (<>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
           <ol className="flex items-center space-x-2 text-sm">),
+const Component = () => {
   return (
     <>
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
@@ -96,7 +98,7 @@ const Breadcrumb: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       /></script>
     
-  );
+  ),
 };
 
 export default Breadcrumb;

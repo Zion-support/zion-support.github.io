@@ -26,17 +26,17 @@ const CybersecurityPage: React.FC = () => {,
     {
       title: 'Network Security',
       description: 'Comprehensive network protection with firewalls, intrusion detection, and monitoring',
-      icon: Shield;
+      icon: Shield,
     },
     {
       title: 'Endpoint Protection',
       description: 'Advanced endpoint security for all devices and workstations',
-      icon: Lock;
+      icon: Lock,
     },
     {
       title: 'Security Training',
       description: 'Employee security awareness training and phishing simulation',
-      icon: Eye;
+      icon: Eye,
     }
   ];return (
     <>
@@ -106,7 +106,7 @@ const CybersecurityPage: React.FC = () => {,
 
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Secure Your Business Today</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300"
@@ -126,7 +126,7 @@ const CybersecurityPage: React.FC = () => {,
       
       <Footer />
     </>
-  );
+  ),
 };
 
 export default CybersecurityPage;

@@ -15,7 +15,7 @@ function fixUnusedVariables(content) {
       if (trimmed && !trimmed.startsWith('_') && !trimmed.includes(':')) {
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
-        return `_${trimmed}`;
+        return `_${trimmed}`,
       }
       return trimmed;
     }).join(', ');`
@@ -27,7 +27,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression */}`
-        return `_${varName}`;
+        return `_${varName}`,
       }
       return varName;
     });
@@ -38,7 +38,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}`
-        return `_${varName}`;
+        return `_${varName}`,
       }
       return varName;
     });
@@ -70,14 +70,14 @@ function fixJSXErrors(content) {
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
 
-// Function to fix any types;
+// Function to fix any types,
 function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
 }
 
-// Function to fix JSX parsing errors;
+// Function to fix JSX parsing errors,
 function fixJSXErrors(content) {/* TODO: Fix JSX expression */}
     }
-    return match;
+    return match,
   });
 
   // Fix JSX expressions with multiple parent elements;
@@ -111,9 +111,9 @@ function removeUnusedImports(content) {
 function removeUnusedImports(content) {/* TODO: Fix JSX expression */}
   }
   
-  // Filter import lines;
+  // Filter import lines,
   const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */})
-      const importMatch = line.match(/import\s*{([^}]+)}/);
+      const importMatch = line.match(/import\s*{([^}]+)}/),
       if (importMatch) {/* TODO: Fix JSX expression */}
       }
       return true; // Keep default imports and other patterns;
@@ -144,7 +144,7 @@ function processFile(filePath) {
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
-    return modified;
+    return modified,
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
@@ -179,7 +179,7 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
     }
   }
   
-  walkDir(dir);
+  walkDir(dir),
   return files;
 }
 
@@ -194,7 +194,7 @@ console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+  d: ${file}`),
   }
 }
 `
@@ -203,7 +203,7 @@ console.log(`Processed ${processedCount} files`);
 // Also process root level files;
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+  d: ${file}`),
     }
   }
 }

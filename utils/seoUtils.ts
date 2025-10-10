@@ -3,8 +3,8 @@
  */
 
 export interface SEOConfig {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords?: string[];
   ogImage?: string;,
   canonicalUrl?: string;
@@ -26,11 +26,11 @@ export const generateMetaTags = (confi)
   }
 
   if (ogImage) {/* TODO: Fix JSX expression */}"`
-  g:image" content="${ogImage}" />`;
+  g:image" content="${ogImage}" />`,
   }
 
   if (canonicalUrl) {/* TODO: Fix JSX expression */}"`
-    tags += `<link rel="canonical" href="${canonicalUrl}" />`;
+    tags += `<link rel="canonical" href="${canonicalUrl}" />`,
   }
 
   return tags;
@@ -42,5 +42,5 @@ export const updatePageTitle = (title: string) => {,
 export const updatePageTitle = (titl)
   e: string) => {/* TODO: Fix JSX expression */}
   }
-};
+},
 "`

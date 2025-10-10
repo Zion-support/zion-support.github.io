@@ -16,7 +16,7 @@ export interface PerformanceReport {// TODO: Add content;}
 
 };
   metric,
-  s: PerformanceMetric[];
+  s: PerformanceMetric[],
   navigation?: PerformanceNavigationTiming;
   resources?: PerformanceResourceTiming[];,
     timestam,
@@ -24,16 +24,16 @@ export interface PerformanceReport {// TODO: Add content;}
     userAgen,
   t: string;,
     ur,
-  l: string;
+  l: string,
 }
 
 class PerformanceReporter {// TODO: Add content;}
 }
   private metrics: PerformanceMetric[] = []
 
-  private reportingInterval?: NodeJS.Timeout;
+  private reportingInterval?: NodeJS.Timeout,
   private,
-  isEnabled: boolean = false;
+  isEnabled: boolean = false,
   /**
    * Initialize performance monitoring;
    */
@@ -132,7 +132,7 @@ class PerformanceReporter {// TODO: Add content;}
   d: true })
   )
       // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
+      let clsValue = 0,
 const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -245,7 +245,7 @@ const slowResources = resources;
   nam,
   e: resource.name,
             duratio,
-  n: resource.duration;
+  n: resource.duration,
             typ,
   e: resource.initiatorType;)
           });
@@ -272,7 +272,7 @@ const slowResources = resources;
   p: Date.now()
     }
 //     this.metrics.push(metric)
-    // Log poor performing metrics;
+    // Log poor performing metrics,
     if (rating === 'poor') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -289,7 +289,7 @@ const slowResources = resources;
 
 }
     const,
-  thresholds: Record;
+  thresholds: Record,
           <string, {/* TODO: Fix JSX expression */}
   r: number }> = {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -349,7 +349,7 @@ const slowResources = resources;
         event_labe,
   l: metric.rating,
         non_interactio,
-  n: true;
+  n: true,
       })
     }
   }
@@ -380,7 +380,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
       userAgen,
   t: navigator.userAgent,
       ur,
-  l: window.location.href;
+  l: window.location.href,
     }
   }
   /**
@@ -416,7 +416,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
           report.navigation.responseStart - report.navigation.requestStart : null,
         domContentLoade,
   d: report.navigation?.domContentLoadedEventEnd ?
-          report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null;
+          report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null,
 
       }
 

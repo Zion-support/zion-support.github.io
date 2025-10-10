@@ -85,7 +85,8 @@ $4];
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
-  })).filter(category => category.questions.length > 0);
+  })).filter(category => category.questions.length > 0),
+const Component = () => {
 
   return (
     <>
@@ -128,7 +129,7 @@ $4];
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
+                          className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/50 transition-colors"
                         >
                           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? (
@@ -167,7 +168,7 @@ $4];
       <Footer />
     </>
 
-export default FAQPage;
+export default FAQPage,
 
 
 import { Link } from 'react-router-dom';
@@ -175,10 +176,11 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
+const Component = () => {
   return (
     <div>Coming Soon</div>
 
-  );
+  ),
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -191,7 +193,7 @@ const toggleItem = (inde)
   };
   const faqData = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -312,7 +314,7 @@ const toggleItem = (inde)
   n: 'How quickly do you respond to support requests?',
           answe,
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
-  ];
+  ],
   const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -322,7 +324,8 @@ const toggleItem = (inde)
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
-  })).filter(category => category.questions.length > 0);
+  })).filter(category => category.questions.length > 0),
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -333,8 +336,8 @@ const toggleItem = (inde)
           {/* Header */}"
           <div className="text-center mb-12"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Frequently Asked Questions;
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+// Frequently Asked Questions,
           </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Find answers to common questions about our AI and IT services, pricing, and support.
@@ -383,7 +386,7 @@ type="text" placeholder="Search FAQs..."
                 <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
@@ -400,7 +403,7 @@ type="text" placeholder="Search FAQs..."
                         <button></button>
                           onClick={() => toggleItem(globalIndex)}"
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
-  hover:bg-slate-700/50 transition-colors"
+  hover: bg-slate-700/50 transition-colors"
 // >
                           
           
@@ -435,15 +438,15 @@ type="text" placeholder="Search FAQs..."
               <a
                 href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />
-// Call (302) 464-0950;
+// Call (302) 464-0950,
           </a>
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
-                href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                Email Us,
+                href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" />
 
-                Contact Form;
+                Contact Form,
       <Footer /></Footer>
     </>
 export default FAQPage;

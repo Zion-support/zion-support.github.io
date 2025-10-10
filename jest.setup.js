@@ -1,5 +1,5 @@
 // Learn more: https://github.com/testing-library/jest-dom
-require('@testing-library/jest-dom');
+require('@testing-library/jest-dom'),
 const React = require('react');
 const { TextEncoder, TextDecoder } = require('util');
 
@@ -116,7 +116,7 @@ beforeAll(() => {
       (args[0].includes('Warning: ReactDOM.render') ||
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
     ) {
-      return;
+      return,
     }
     originalError.call(console, ...args);
   });

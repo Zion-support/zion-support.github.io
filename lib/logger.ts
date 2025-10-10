@@ -11,23 +11,23 @@ interface LoggerConfig {/* TODO: Fix JSX expression */}
 }
 
 class Logger {
-  private config: LoggerConfig;
-  private static instance: Logger;
+  private config: LoggerConfig,
+  private static instance: Logger,
 ,
   private constructor(config: Partial<LoggerConfig> = {}) {
     this.config = {
       level: this.getLogLevelFromEnv(),
       prefix: config.prefix || 'APP',
-      timestamp: config.timestamp !== false;
+      timestamp: config.timestamp !== false,
       colorize: config.colorize !== false && typeof window !== 'undefined',
 class Logger {/* TODO: Fix JSX expression */}
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
-    };
+    },
   }
 
   public static getInstance(config?: Partial<LoggerConfig>): Logger {/* TODO: Fix JSX expression */}
     }
-    return Logger.instance;
+    return Logger.instance,
   }
 
   private getLogLevelFromEnv(): LogLevel {/* TODO: Fix JSX expression */}
@@ -74,7 +74,7 @@ class Logger {/* TODO: Fix JSX expression */}
   public error(message: string, error?: Error | any, ...args: unknown[]): void {,
     if (this.shouldLog(LogLevel.ERROR)) {,
       const errorDetails =,
-        error instanceof Error ? { message: error.message, stack: error.stack } : error;
+        error instanceof Error ? { message: error.message, stack: error.stack } : error,
       //       // );
     }
   }
@@ -110,7 +110,7 @@ class Logger {/* TODO: Fix JSX expression */}
   public error(messag,
   e: string, error?: Error | any, ...arg)
   s: unknown[]): void {/* TODO: Fix JSX expression */}
-  k: error.stack } : error;
+  k: error.stack } : error,
       //       // console.error(this.formatMessage('ERROR', message, errorDetails, ...args));
     }
   }
@@ -124,7 +124,7 @@ class Logger {/* TODO: Fix JSX expression */}
   }
 }
 
-// Export singleton instance;
+// Export singleton instance,
 export const logger = Logger.getInstance();
 
 // Export convenience functions;

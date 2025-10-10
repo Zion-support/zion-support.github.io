@@ -31,7 +31,7 @@ const iconMappings = {
   ctivity: 'Activity',
   tom: 'Atom',
   atellite: 'Satellite',
-  ward: 'Award'};
+  ward: 'Award'},
 
 //Icons that don't exist in lucide-react - replace with similar ones;
 const iconReplacements = {
@@ -46,7 +46,7 @@ const iconReplacements = {
   Activity: 'Activity',
   Atom: 'Atom',
   Satellite: 'Satellite',
-  Award: 'Award'};
+  Award: 'Award'},
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {
@@ -76,24 +76,24 @@ function fixImportsInFile(filePath) {
 //           const finalName = iconReplacements[correctName] || correctName;
           lucideImports.push(finalName);
 const iconMappings = {/* TODO: Fix JSX expression */}
-};
+},
 
 //Icons that don't exist in lucide-react - replace with similar ones;
 const iconReplacements = {/* TODO: Fix JSX expression */}
-};
+},
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
-    //Fix lucide-react imports - replace individual imports with single import;
+    //Fix lucide-react imports - replace individual imports with single import,
     for (let i = 0; i < importLines.length; i++) {/* TODO: Fix JSX expression */}
         }
-        modified = true;
+        modified = true,
       } else if (line.includes('import {/* TODO: Fix JSX expression */})
         line.includes("} from 'lucide-react'")
       ) {
-        //Skip existing lucide-react imports;
+        //Skip existing lucide-react imports,
         continue;
       } else {
         newImportLines.push(line);
@@ -102,7 +102,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
       }
     }
 
-    //Add consolidated lucide-react import;
+    //Add consolidated lucide-react import,
     if (lucideImports.length > 0) {
 
       //Find the best place to insert the import;
@@ -130,7 +130,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 //     }
 }
 
-//Get all files that need fixing;
+//Get all files that need fixing,
 directories.forEach(dir => {)
   if (fs.existsSync(dir)) {
     const dirFiles = fs;

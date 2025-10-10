@@ -9,32 +9,32 @@ const AIStockPortfolioManagerPage: React.FC = () => {
     {,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms analyze market trends and provide investment recommendations.',
-      icon: TrendingUp;
+      icon: TrendingUp,
     },
     {
       title: 'Portfolio Optimization',
       description: 'Automatically optimize your portfolio allocation based on risk tolerance and goals.',
-      icon: Target;
+      icon: Target,
     },
     {
       title: 'Real-time Monitoring',
       description: 'Track your investments in real-time with instant alerts and notifications.',
-      icon: BarChart;
+      icon: BarChart,
     },
     {
       title: 'Risk Assessment',
       description: 'Comprehensive risk analysis to help you make informed investment decisions.',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {
       title: 'Performance Tracking',
       description: 'Detailed performance metrics and historical analysis of your investments.',
-      icon: DollarSign;
+      icon: DollarSign,
     },
     {
       title: 'Market Insights',
       description: 'Get expert market insights and trend analysis to stay ahead of the market.',
-      icon: Zap;
+      icon: Zap,
     }
   ];
 
@@ -46,6 +46,7 @@ const AIStockPortfolioManagerPage: React.FC = () => {
     'Portfolio Optimization',
     'Market Insights'
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -59,7 +60,8 @@ const AIStockPortfolioManagerPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -74,7 +76,7 @@ const AIStockPortfolioManagerPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Free Trial;
+                Start Free Trial,
               </a>
               <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                 Call +1 302 464 0950;
@@ -201,12 +203,12 @@ const AIStockPortfolioManagerPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your Portfolio?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of investors already using AI Stock Portfolio Manager to maximize their returns.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Free Trial<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-              Start Free Trial;
+              Start Free Trial,
             </a>
             <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
               Call +1 302 464 0950;

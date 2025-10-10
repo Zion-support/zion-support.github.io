@@ -48,10 +48,10 @@ export const useRouter = () => {/* TODO: Fix JSX expression */}
   const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
   return {/* TODO: Fix JSX expression */}
-  };
+  },
 };
 export const usePathname = () => {/* TODO: Fix JSX expression */}
-};
+},
 export const useSearchParams = () => {/* TODO: Fix JSX expression */}
-};
+},
 export default { useRouter, usePathname, useSearchParams };

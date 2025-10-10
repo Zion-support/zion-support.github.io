@@ -9,11 +9,11 @@ interface BannerModule {/* TODO: Fix JSX expression */}
 }
 
 /**
- * Lazy load a banner component with retry logic;
+ * Lazy load a banner component with retry logic,
  */
 export const lazyLoadBanner = (
   importFn: () => Promise<BannerModule>
-      // Retry once after a delay;
+      // Retry once after a delay,
       return new Promise<BannerModule>(resolve => {
         setTimeout(() => {
           importFn()
@@ -23,7 +23,7 @@ export const lazyLoadBanner = (importF)
   n: () => Promise<BannerModule>,
       // Retry once after a delay;
       return new Promise<BannerModule>(resolve => {/* TODO: Fix JSX expression */})
-            });
+            }),
         }, 1000);
       });
     })
@@ -42,7 +42,7 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
           // Silently fail for preload;
 export const preloadBanner = (importF)
   n: () => Promise<BannerModule>): void => {/* TODO: Fix JSX expression */}
-        });
+        }),
       });
   }
 };
@@ -61,12 +61,12 @@ export const createBannerLoader = () => {
 export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
           }
         }
-      });
+      }),
     },
     {/* TODO: Fix JSX expression */}
   n: '50px' }
-  );
+  ),
 
   return {/* TODO: Fix JSX expression */}
-  };
+  },
 };

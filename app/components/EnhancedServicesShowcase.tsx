@@ -35,7 +35,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
       stats: '95% Efficiency'
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <section className="py-16">
@@ -73,7 +74,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               
               <a
                 href="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
+                className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
               >
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
@@ -92,7 +93,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
       </div>
     </section>
-  );
+  ),
 };
 
 export default EnhancedServicesShowcase;

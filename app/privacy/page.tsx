@@ -47,7 +47,7 @@ export default function PrivacyPage() {
       icon: Shield,
       description: 'To protect against fraud and abuse'
     }
-  ];
+  ],
 
   const rights = [
     {
@@ -70,7 +70,8 @@ export default function PrivacyPage() {
       description: 'Receive your data in a structured format',
       icon: Database
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-white">
@@ -184,8 +185,7 @@ export default function PrivacyPage() {
             <section className="bg-gray-50 rounded-lg p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
               <p className="text-gray-700 mb-6">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
-              </p>
+                If you have any questions about this Privacy Policy or our data practices, please contact us: </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
@@ -224,5 +224,5 @@ export default function PrivacyPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

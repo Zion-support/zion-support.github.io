@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface AnimatedCounterProps {
-  end: number;
+  end: number,
   duration?: number;
   prefix?: string;
   suffix?: string;
@@ -18,8 +18,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
+    let startTime: number,
+    let animationFrame: number,
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
@@ -37,6 +37,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     };
 
     animationFrame = requestAnimationFrame(animate);
+const Component = () => {
 
     return () => {
       if (animationFrame) {
@@ -44,6 +45,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     };
   }, [end, duration]);
+const Component = () => {
 
   return (
     <span className={className}>

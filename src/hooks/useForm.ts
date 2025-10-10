@@ -22,12 +22,12 @@ export interface UseFormConfig;
   O: Add content;}
 };
   initialValue,
-  s: T;
+  s: T,
   validationSchema?: Partial;
           <Record<keyof T, ValidationRule[]>>;
   onSubmi,
   t: (value)
-  s: T) => void | Promise<void>;
+  s: T) => void | Promise<void>,
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
 }
@@ -37,7 +37,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {/* TODO: Fix 
   value,
   s: T;,
     error,
-  s: Record;
+  s: Record,
           <keyof T, string[]>;
 
   touched: Record<keyof T, boolean>;
@@ -51,7 +51,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {/* TODO: Fix 
     setFieldTouched: (field: keyof T, touched: boolean) => void;,
     resetForm: () => void;,
     validateField: (field: keyof T) => void;,
-    validateAllFields: () => boolean;
+    validateAllFields: () => boolean,
 export function useForm<T extends Record<string, unknown>>({// TODO: Add content;}
 
 }
@@ -106,7 +106,7 @@ const handleChange = useCallback()
       const fieldName = name as keyof T;
       // Handle checkbox inputs;
 let,
-  fieldValue: unknown = value;
+  fieldValue: unknown = value,
       if (type === 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

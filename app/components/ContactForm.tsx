@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string,
 }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error';
-  message: string;
+  type: 'idle' | 'loading' | 'success' | 'error',
+  message: string,
 }
 
 const ContactForm: React.FC = () => {,
@@ -22,11 +22,11 @@ const ContactForm: React.FC = () => {,
     company: '',
     phone: '',
     service: '',
-    message: ''});
+    message: ''}),
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
-    message: ''});
+    message: ''}),
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     const { name, value } = e.target;
@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {,
 
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' });
+    setStatus({ type: 'loading', message: 'Sending message...' }),
 
     try {
       // Simulate API call;
@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {,
 
       setStatus({)
         type: 'success'),
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'});
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'}),
 
       // Reset form;
       setFormData({)
@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {,
         company: ''),
         phone: ''),
         service: ''),
-        message: ''});
+        message: ''}),
 
     } catch (error) {
       setStatus({)
@@ -74,20 +74,22 @@ const ContactForm: React.FC = () => {,
     'Blockchain Solutions',
     'Other'
   ];
+const Component = () => {
 
-  return(<div className="max-w-4xl mx-auto">)
+  return (<div className="max-w-4xl mx-auto">)
       <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">),
         {/* Contact Information */}
         <div className="space-y-8">
           <div>
+const Component = () => {
   return (
     <div className="max-w-4xl mx-auto"></div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
         {/* Contact Information */}</div>
         <div className="space-y-8"></div>
           <div></div>
             <h2 className="text-3xl font-bold text-white mb-4">
-              Get in Touch;
+              Get in Touch,
             </h2>
             <p className="text-gray-300 text-lg">
               Ready to transform your business with AI? Let's discuss your project and how we can help you achieve your goals.
@@ -101,8 +103,8 @@ const ContactForm: React.FC = () => {,
               </div>
               <div></div>
                 <h3 className="text-white font-semibold mb-1">Phone</h3>
-                <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  +1 (302) 464-0950;
+                <a href="tel: +13024640950" className="text-cyan-400 hover: text-cyan-300 transition-colors">
+                  +1 (302) 464-0950,
                 </a>
                 <p className="text-gray-400 text-sm mt-1">Mon-Fri 9 AM-6 PM EST</p>
               </div>
@@ -114,8 +116,8 @@ const ContactForm: React.FC = () => {,
               </div>
               <div></div>
                 <h3 className="text-white font-semibold mb-1">Email</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  kleber@ziontechgroup.com;
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover: text-cyan-300 transition-colors">
+                  kleber@ziontechgroup.com,
                 </a>
                 <p className="text-gray-400 text-sm mt-1">We'll respond within 24 hours</p>
               </div>
@@ -152,7 +154,7 @@ const ContactForm: React.FC = () => {,
                 <label htmlFor="name" className="block text-white font-medium mb-2">
                   Full Name *
                 </label>
-                <input;
+                <input,
                   type="text",
                   id="name",
                   name="name",
@@ -168,7 +170,7 @@ const ContactForm: React.FC = () => {,
                 <label htmlFor="email" className="block text-white font-medium mb-2">
                   Email Address *
                 </label>
-                <input;
+                <input,
                   type="email",
                   id="email",
                   name="email",
@@ -184,7 +186,7 @@ const ContactForm: React.FC = () => {,
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <label htmlFor="company" className="block text-white font-medium mb-2">
-                  Company;
+                  Company,
                 </label>
                 <input;
                   type="text",
@@ -199,7 +201,7 @@ const ContactForm: React.FC = () => {,
 
               <div></div>
                 <label htmlFor="phone" className="block text-white font-medium mb-2">
-                  Phone Number;
+                  Phone Number,
                 </label>
                 <input;
                   type="tel",
@@ -215,7 +217,7 @@ const ContactForm: React.FC = () => {,
 
             <div></div>
               <label htmlFor="service" className="block text-white font-medium mb-2">
-                Service Interest;
+                Service Interest,
               </label>
               <select;
                 id="service",
@@ -276,7 +278,7 @@ const ContactForm: React.FC = () => {,
                 </>
               ) : (
                 <>
-                  Send Message;
+                  Send Message,
                   <Send className="w-5 h-5 ml-2" />,
                 </>)}
             </button>

@@ -44,7 +44,7 @@ Object.defineProperty(window, 'matchMedia', {// TODO: Add content;}
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
-});
+}),
 // Mock requestAnimationFrame;
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
@@ -57,12 +57,12 @@ const localStorageMock = {// TODO: Add content;}
   clear: jest.fn()
 Object.defineProperty(window, 'localStorage', {// TODO: Add content;}
 };
-  value: localStorageMock;
+  value: localStorageMock,
 // Mock sessionStorage;
 const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
-  // TODO: Add content;
+  // TODO: Add content,
 };
-  value: sessionStorageMock;
+  value: sessionStorageMock,
 // Mock fetch;
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output;
@@ -77,7 +77,7 @@ console.warn = (...args) => {// TODO: Add content;}
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
-  // TODO: Add content;
+  // TODO: Add content,
 }
     return; // Suppress JSDOM navigation warnings;
 // Mock window.location;
@@ -100,7 +100,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   observe() {}
   disconnect() {}
   takeRecords() {
-    return [];
+    return [],
   }
 };
 // Suppress JSDOM navigation warnings

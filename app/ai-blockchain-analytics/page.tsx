@@ -8,6 +8,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIBlockchainAnalyticsPage: React.FC = () => {
+const Component = () => {
   return (
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
@@ -438,7 +439,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

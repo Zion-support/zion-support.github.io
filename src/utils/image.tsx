@@ -3,8 +3,8 @@ import React, { useState, useCallback } from 'react';
 
 const Image: React.FC = () => {
 interface ImageProps {
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   className?: string;
@@ -57,6 +57,7 @@ export const Image: React.FC<ImageProps> = ({
 $4})
   };
   if (hasError) {
+const Component = () => {
     return (
       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
@@ -67,6 +68,7 @@ $4})
       </div>
     );
   }
+const Component = () => {
   return (
     <img
       src={src}
@@ -91,7 +93,7 @@ import React, { useState, useCallback } from 'react';
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
-  O: Add content;
+  O: Add content,
 };
 
   src: string;,
@@ -103,7 +105,7 @@ const,
   _quality?: number
 
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string;
+  _blurDataURL?: string,
   fill?: boolean;
   sizes?: string;
   style?: React.CSSProperties;
@@ -111,7 +113,7 @@ const,
   onError?: () => void;
 }
 
-export const Image: React.FC;
+export const Image: React.FC,
           <ImageProps> = ({// TODO: Add content;}
 
 }
@@ -165,10 +167,11 @@ quality = 75,
       objectFit: 'cover'
 
     })
-  };
+  },
   if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
 
     return (
     
@@ -201,6 +204,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
       </div>
     )
   }
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle, ArrowUp } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -18,7 +18,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
     { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
     { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' }
-  ];
+  ],
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
@@ -33,7 +33,7 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Support', url: '/it-support', description: '24/7 IT support' },
     { name: 'IT Training', url: '/it-training', description: 'Professional IT training' },
     { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Disaster recovery solutions' }
-  ];
+  ],
 
   const microSaasServices = [
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time business intelligence' },
@@ -44,7 +44,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Creator', url: '/ai-content-generation', description: 'AI-powered content generation' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns' },
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project management' }
-  ];
+  ],
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
@@ -55,7 +55,7 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Partners', url: '/partners' },
     { name: 'Contact', url: '/contact' }
-  ];
+  ],
 
   const supportLinks = [
     { name: 'Help Center', url: '/help' },
@@ -66,7 +66,7 @@ const Footer: React.FC = memo(() => {
     { name: 'FAQ', url: '/faq' },
     { name: 'Support', url: '/support' },
     { name: 'Request Quote', url: '/request-quote' }
-  ];
+  ],
 
   const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
@@ -75,7 +75,7 @@ const Footer: React.FC = memo(() => {
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
     { name: 'Compliance', url: '/compliance' }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
@@ -84,11 +84,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', url: 'https://youtube.com/ziontechgroup', icon: Youtube },
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
-  ];
+  ],
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
   };
+const Component = () => {
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -271,7 +272,7 @@ const Footer: React.FC = memo(() => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-gray-400 hover: text-white transition-colors duration-200"
                     aria-label={social.name}
                   >
                     <social.icon className="h-5 w-5" />
@@ -332,7 +333,7 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  );
+  ),
 };
 
 Footer.displayName = 'Footer';

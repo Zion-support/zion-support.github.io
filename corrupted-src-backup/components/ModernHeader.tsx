@@ -60,9 +60,11 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' }
   ];
-  return(<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+const Component = () => {
+  return (<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
+const Component = () => {
   return (
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -73,6 +75,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       na, m, e: 'Solutio, n, s', ';
       hr, e, f: '/solutio, n, s',';
       dropdo, w, n: [,
+const Component = () => {
   return ("
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50"></header>"
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -130,10 +133,12 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' },';
   ];
+const Component = () => {
   return ()
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";)
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;)
   g:px-8">";),
+const Component = () => {
   return (</div>
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -142,6 +147,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           {/* Lo, g, o */}</div>
           <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";
             <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";</div>
+const Component = () => {
   return ("
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";"
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"

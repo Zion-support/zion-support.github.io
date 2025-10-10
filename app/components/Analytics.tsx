@@ -21,14 +21,14 @@ const Analytics: React.FC = () => {
     gtag('js', new Date());
     gtag('config', GA_TRACKING_ID, {
       page_title: document.title,
-      page_location: window.location.href});
+      page_location: window.location.href}),
 
     // Track page views
     const trackPageView = () => {
       gtag('event', 'page_view', {
         page_title: document.title,
         page_location: window.location.href,
-        page_path: window.location.pathname});
+        page_path: window.location.pathname}),
     };
 
     // Track scroll depth
@@ -40,7 +40,7 @@ const Analytics: React.FC = () => {
         gtag('event', 'scroll', {
           event_category: 'engagement',
           event_label: `${scrollPercent}%`,
-          value: scrollPercent});
+          value: scrollPercent}),
       }
     };
 
@@ -50,7 +50,7 @@ const Analytics: React.FC = () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       gtag('event', 'timing_complete', {
         name: 'time_on_page',
-        value: timeOnPage});
+        value: timeOnPage}),
     };
 
     // Track clicks on important elements
@@ -63,11 +63,11 @@ const Analytics: React.FC = () => {
         gtag('event', 'click', {
           event_category: 'engagement',
           event_label: link.href,
-          link_url: link.href});
+          link_url: link.href}),
       } else if (button) {
         gtag('event', 'click', {
           event_category: 'engagement',
-          event_label: button.textContent || 'button'});
+          event_label: button.textContent || 'button'}),
       }
     };
 
@@ -76,7 +76,7 @@ const Analytics: React.FC = () => {
       const form = event.target as HTMLFormElement;
       gtag('event', 'form_submit', {
         event_category: 'engagement',
-        event_label: form.action || 'form'});
+        event_label: form.action || 'form'}),
     };
 
     // Track phone number clicks
@@ -85,7 +85,7 @@ const Analytics: React.FC = () => {
       if (target.href && target.href.startsWith('tel:')) {
         gtag('event', 'phone_click', {
           event_category: 'engagement',
-          event_label: target.href});
+          event_label: target.href}),
       }
     };
 
@@ -95,7 +95,7 @@ const Analytics: React.FC = () => {
       if (target.href && target.href.startsWith('mailto:')) {
         gtag('event', 'email_click', {
           event_category: 'engagement',
-          event_label: target.href});
+          event_label: target.href}),
       }
     };
 
@@ -113,6 +113,7 @@ const Analytics: React.FC = () => {
     window.addEventListener('beforeunload', trackTimeOnPage);
 
     // Cleanup
+const Component = () => {
     return () => {
       window.removeEventListener('scroll', trackScrollDepth);
       document.removeEventListener('click', trackClicks);
@@ -129,8 +130,8 @@ const Analytics: React.FC = () => {
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: any[],
+    gtag: (...args: any[]) => void,
   }
 }
 
@@ -197,11 +198,11 @@ const Analytics: React.FC<AnalyticsProps> = ({,
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-    });
+    }),
     gtag('config', 'GA_MEASUREMENT_ID', {)
       page_title: document.title),
       page_location: window.location.href),
-      send_page_view: true;
+      send_page_view: true,
   };
 )
     const initializePerformanceMonitoring = () => {
@@ -257,7 +258,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     gtag('config', trackingId, {
       page_title: document.title,
       page_location: window.location.href
-    });
+    }),
   };
 
   const initializePerformanceMonitoring = () => {
@@ -305,7 +306,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         lineno: event.lineno,
         colno: event.colno,
         error: event.error?.stack
-      });
+      }),
     });
 
     // Track unhandled promise rejections)
@@ -317,7 +318,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       trackEvent('error', 'unhandled_promise_rejection', {)}
         reason: event.reason,
         promise: event.promise
-      });
+      }),
     });
 
     // Track resource loading errors)
@@ -333,25 +334,25 @@ const Analytics: React.FC<AnalyticsProps> = ({
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
-        });
+        }),
       trackEvent('error', 'javascript_error', {)
         message: event.message;)
         filename: event.filename;)
         lineno: event.lineno)
         colno: event.colno),
-        error: event.error?.stack;
+        error: event.error?.stack,
     // Track unhandled promise rejections;
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {)
         reason: event.reason),
-        promise: event.promise;
+        promise: event.promise,
     // Track resource loading errors;
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         trackEvent('error', 'resource_error', {)
-          type: (event.target as any).tagName;
-          src: (event.target as any).src || (event.target as any).href;
-          error: event.type;
+          type: (event.target as any).tagName,
+          src: (event.target as any).src || (event.target as any).href,
+          error: event.type,
   const initializeErrorTracking = () => {
     // Track JavaScript errors
     window.addEventListener('error', (event) => {
@@ -378,7 +379,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_title: document.title,
       page_location: window.location.href,
       page_path: window.location.pathname
-    });
+    }),
 
     // Track scroll depth
     let maxScroll = 0;)
@@ -386,7 +387,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     trackEvent('page_view', 'page_view', {)
       page_title: document.title)
       page_location: window.location.href)
-      page_path: window.location.pathname;
+      page_path: window.location.pathname,
     // Track scroll depth;
     let maxScroll = 0;
     window.addEventListener('scroll', () => {
@@ -422,7 +423,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
           link_url: href,
           link_text: target.textContent?.trim()
-        });
+        }),
       } else if (tagName === 'button') {
         trackEvent('engagement', 'button_click', {)
     button_text: target.textContent?.trim(),
@@ -434,14 +435,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
         trackEvent('engagement', 'button_click', {)}
           button_text: target.textContent?.trim(),
           button_class: target.className
-        });
+        }),
         trackEvent('engagement', 'link_click', {)
           link_url: href),
           link_text: target.textContent?.trim(),
 } else if (tagName === 'button') {
         trackEvent('engagement', 'button_click', {)
           button_text: target.textContent?.trim(),
-          button_class: target.className;
+          button_class: target.className,
       }
     });
 
@@ -462,7 +463,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       (window as any).gtag('event', 'page_view', {
         page_title: document.title,
         page_location: window.location.href
-      });
+      }),
     }
 
     // Track scroll depth
@@ -501,7 +502,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       trackEvent('engagement', 'form_submit', {)
         form_id: form.id),
         form_class: form.className),
-        form_action: form.action;
+        form_action: form.action,
   };
 )
     const trackEvent = (category: string, action: string, value?: any) => {
@@ -521,11 +522,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
       (window as any).gtag('event', action, {
         event_category: category,
         value: value
-      });
+      }),
       (window as any).gtag('event', action, {)
         event_category: category),
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value;
-        value: typeof value === 'number' ? value : undefined;
+        event_label: typeof value === 'object' ? JSON.stringify(value) : value,
+        value: typeof value === 'number' ? value : undefined,
   trackingId?: string;
   children?: React.ReactNode;
 }

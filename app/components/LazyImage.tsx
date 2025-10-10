@@ -3,10 +3,10 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface LazyImageProps {
   src: string;,
-    alt: string;
+    alt: string,
 interface LazyImageProps {}
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
@@ -58,12 +58,16 @@ const LazyImage: React.FC<LazyImageProps> = ({,
     onError?.();
   };
 </HTMLImageElement>
+const Component = () => {
   return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (<img
+const Component = () => {
 
-  return(<div ref={setNode} className={`relative overflow-hidden ${className}`}>
+  return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>
       {isInView && (
         <img;
+const Component = () => {
   return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (</div><img
+const Component = () => {
   return (
     <div ref={setNode} className={`relative overflow-hidden ${className}`}>
       {isInView && (}

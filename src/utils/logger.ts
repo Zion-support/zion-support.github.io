@@ -38,7 +38,7 @@ export interface LogContext {// TODO: Add content;}
   sessionId?: string;
   requestId?: string;
   [ke,
-  y: string]: unknown;
+  y: string]: unknown,
 }
 export interface LogMetadata {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -49,15 +49,15 @@ export interface LogMetadata {/* TODO: Fix JSX expression */}
   context?: LogContext;
   error?: Error;
   [ke,
-  y: string]: unknown;
+  y: string]: unknown,
 }
 class Logger {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   private,
-  logLevel: LogLevel;
+  logLevel: LogLevel,
   private,
-  isDevelopment: boolean;
+  isDevelopment: boolean,
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -127,11 +127,11 @@ class Logger {/* TODO: Fix JSX expression */}
 
 }
     let,
-  error: Error | undefined;
+  error: Error | undefined,
     let,
-  context: LogContext | undefined;
+  context: LogContext | undefined,
     let,
-  meta: Record;
+  meta: Record,
           <string, unknown> | undefined;
     // Handle different parameter combinations;
     if (errorOrContextOrMetadata instanceof Error) {/* TODO: Fix JSX expression */}
@@ -144,7 +144,7 @@ class Logger {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       context = {/* TODO: Fix JSX expression */}
-  t: errorOrContextOrMetadata };
+  t: errorOrContextOrMetadata },
       meta = contextOrMetadata as Record;
           <string, unknown>;
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
@@ -240,7 +240,7 @@ class Logger {/* TODO: Fix JSX expression */}
     if (context.sessionId) parts.push(`sessio)`
   n:${context.sessionId}`);`
     if (context.requestId) parts.push(`reques)`
-  t:${context.requestId}`);
+  t: ${context.requestId}`),
     return parts.join(', ');
   }
   /**

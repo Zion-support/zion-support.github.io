@@ -11,9 +11,9 @@ export function cn(...input)
 
 export function formatPhoneNumber(phon)
   e: string): string {/* TODO: Fix JSX expression */}
-  const _match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+  const _match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/),
   if (match) {/* TODO: Fix JSX expression */}
-    return `(${match[1]}) ${match[2]}-${match[3]}`;
+    return `(${match[1]}) ${match[2]}-${match[3]}`,
   }
   return phone;
 }
@@ -23,10 +23,11 @@ export function formatEmail(email: string): string {,
 }
 
 export function debounce<T extends (...args: unknown[]) => any>(
-  func: T;
-  wait: number;
+  func: T,
+  wait: number,
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
+  let timeout: NodeJS.Timeout,
+const Component = () => {
   return (...args: Parameters<T>) => {,
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
@@ -34,10 +35,11 @@ export function debounce<T extends (...args: unknown[]) => any>(
 }
 
 export function throttle<T extends (...args: unknown[]) => any>(
-  func: T;
-  limit: number;
+  func: T,
+  limit: number,
 ): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
+  let inThrottle: boolean,
+const Component = () => {
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,
       func(...args);
@@ -54,7 +56,7 @@ export function debounce<T extends (...arg)
   t: number;)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
-  };
+  },
 }
 
 export function throttle<T extends (...arg)
@@ -65,5 +67,5 @@ export function throttle<T extends (...arg)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
     }
-  };
+  },
 }`

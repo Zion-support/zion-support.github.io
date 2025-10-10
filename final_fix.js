@@ -30,7 +30,7 @@ blogPages.forEach(pagePath => {)
     //         }
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
-});
+}),
 
 // 3. Fix OpenGraph authors - use string array instead of object array;
 // const openGraphPages = [
@@ -47,7 +47,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
   e: 'Zion Tech Group' \}\]/g,
       "author,"
   s: ['Zion Tech Group']")
-    );
+    ),
 ,
     fs.writeFileSync(pagePath, content);
     //         }
@@ -76,7 +76,7 @@ if (fs.existsSync(analyticsTrackerPath)) {
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
   //     }
 
-// 6. Fix SystemMonitor - remove performanceEnhancer calls;
+// 6. Fix SystemMonitor - remove performanceEnhancer calls,
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
 if (fs.existsSync(systemMonitorPath)) {
 
@@ -93,7 +93,7 @@ if (fs.existsSync(systemMonitorPath)) {
   content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder');
 
   // Fix the exportData variable declaration issue;
-  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {');
+  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {'),
 ,
   fs.writeFileSync(systemMonitorPath, content);
 if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}

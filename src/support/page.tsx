@@ -17,7 +17,7 @@ const SupportPage: React.FC = () => {
     { id: 'technical', name: 'Technical Support', icon: Code, count: 10 },
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
-  ];
+  ],
 
   const faqs = [
     {
@@ -56,7 +56,7 @@ const SupportPage: React.FC = () => {
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
       category: 'getting-started'
     }
-  ];
+  ],
 
   const supportChannels = [
     {
@@ -91,7 +91,7 @@ const SupportPage: React.FC = () => {
       availability: 'Flexible scheduling',
       color: 'text-cyan-400'
     }
-  ];
+  ],
 
   const resources = [
     {
@@ -130,7 +130,7 @@ const SupportPage: React.FC = () => {
       icon: Users,
       link: '/community'
     }
-  ];
+  ],
 
   const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
@@ -142,6 +142,7 @@ const SupportPage: React.FC = () => {
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFaqs;
+const Component = () => {
 
   return (
     <>
@@ -252,7 +253,7 @@ const SupportPage: React.FC = () => {
                 <Link
                   key={index}
                   to={resource.link}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                  className="cyber-card p-6 hover: scale-105 transition-all duration-300 group"
                 >
                   <div className="flex items-center mb-4">
                     <resource.icon className="w-8 h-8 text-cyan-400 mr-4" />
@@ -299,7 +300,7 @@ const SupportPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default SupportPage;

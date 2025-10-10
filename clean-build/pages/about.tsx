@@ -1,6 +1,7 @@
 
 export default function About() {
-  return(<>
+const Component = () => {
+  return (<>
       <Head>
         <title>About Us - Zion Tech Group</title>
         <meta;
@@ -23,7 +24,7 @@ export default function About() {
                 About</h1> <span className="text-yellow-300">Zion Tech Group</span>
               </h1>
               <p className="text-xl">
-                We are a leading technology solutions provider dedicated to transforming businesses;
+                We are a leading technology solutions provider dedicated to transforming businesses,
                 through innovative digital solutions and cutting-edge technology.
               </p>
             </div>)
@@ -136,6 +137,7 @@ export default function About() {
                   <p className="text-gray-600">
 export default function About() {/* TODO: Fix JSX expression */}
 }
+const Component = () => {
   return (<>
       <Head></Head>
         <title>About Us - Zion Tech Group</title>
@@ -152,11 +154,11 @@ export default function About() {/* TODO: Fix JSX expression */}
           <div className="container mx-auto px-4"></div>"
             <div className="max-w-4xl mx-auto text-center"></div>"
               <h1 className="text-4xl,"
-  md:text-5xl font-bold mb-6"></h1>"
+  md: text-5xl font-bold mb-6"></h1>"
                 About <span className="text-yellow-300">Zion Tech Group</span>
               </h1>"
               <p className="text-xl"></p>
-                We are a leading technology solutions provider dedicated to transforming businesses;
+                We are a leading technology solutions provider dedicated to transforming businesses,
                 through innovative digital solutions and cutting-edge technology.
               </p>
             </div>
@@ -183,7 +185,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                 </p>
               </div>"
               <div className="grid,"
-  md:grid-cols-4 gap-8"></div>"
+  md: grid-cols-4 gap-8"></div>"
                 <div className="text-center"></div>"
                   <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>"
                   <div className="text-gray-600">Projects Completed</div>
@@ -214,7 +216,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   Our <span className="text-blue-600">Values</span>
                 </h2>"
                 <p className="text-lg text-gray-600"></p>
-                  The principles that guide everything we do and shape our approach to technology;
+                  The principles that guide everything we do and shape our approach to technology,
                   solutions.
                 </p>
               </div>"
@@ -394,13 +396,13 @@ export default function About() {/* TODO: Fix JSX expression */}
               technology solutions.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get In Touch;
+                Get In Touch,
               </a>
               <a;
                 href="/services"
@@ -418,17 +420,17 @@ export default function About() {/* TODO: Fix JSX expression */}
               <a></a>"
                 href="/contact""
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-100 transition-colors"
+  hover: bg-gray-100 transition-colors"
               >
-                Get In Touch;
+                Get In Touch,
               </a>
               <a></a>"
                 href="/services""
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-blue-600 transition-colors"
+  hover: text-blue-600 transition-colors"
               >
-                View Our Services;
+                View Our Services,
               </a>
             </div>
           </div>

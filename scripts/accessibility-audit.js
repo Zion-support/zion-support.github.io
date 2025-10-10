@@ -154,7 +154,7 @@ function generateAccessibilityReport() {
   
   const report = {
     timestamp: new Date().toISOString()
-    checklist: accessibilityChecklist;
+    checklist: accessibilityChecklist,
     recommendations: [,
       'Add ARIA labels to interactive elements',
       'Implement focus management for modals',
@@ -275,12 +275,11 @@ const trapFocus = (element) => {
   role="img"
 />
 // 9. Color contrast considerations;
-// Ensure sufficient contrast ratios: // - Normal text: 4.5:1;
-// - Large text: 3:1;
-// - UI components: 3:1;
+// Ensure sufficient contrast ratios: // - Normal text: 4.5:1,
+// - Large text: 3:1,
+// - UI components: 3:1,
 // 10. Keyboard navigation;
-// All interactive elements should be:
-// - Focusable with Tab key;
+// All interactive elements should be: // - Focusable with Tab key,
 // - Activable with Enter/Space;
 // - Have visible focus indicators;
 // - Follow logical tab order;

@@ -14,16 +14,16 @@ const newestCursorBranches = [
 // //Function to safely execute git commands;
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' }),
 //     return { success: true, result };
   } catch (error) {
-//     return { success: false, error: error.message };
+//     return { success: false, error: error.message },
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+  o: 'pipe' }),
 //     return {/* TODO: Fix JSX expression */}
   s: true, result };
   } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.message };
+  r: error.message },
   }
 }
 
@@ -36,13 +36,13 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
       {/* TODO: Fix JSX expression */}
   o: 'pipe' }
-    );
+    ),
     return true;
   } catch {/* TODO: Fix JSX expression */}
   }
 }
 
-//Ensure we're on main branch;
+//Ensure we're on main branch,
 // safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
@@ -57,7 +57,7 @@ for (const branch of newestCursorBranches) {
       branch)
       status: 'not_found'),
 for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */}
-    });
+    }),
     continue;
   }
 
@@ -70,7 +70,7 @@ for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */}
     mergedCount++;
 //     results.push({)
       branch)
-      status: 'merged')});
+      status: 'merged')}),
   } else {
 //     //Try to abort the merge if there was a conflict;
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
@@ -85,12 +85,12 @@ for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */}
   );
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
-    });
+    }),
   } else {/* TODO: Fix JSX expression */}`
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
 
     results.push({/* TODO: Fix JSX expression */})
-    });
+    }),
   }
 }
 
@@ -100,7 +100,7 @@ for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */}
 );
 const buildCheck = safeGitCommand('pnpm run build: no-check')
   'Production build'
-);
+),
 
 //Push changes if any were merged;
 if (mergedCount > 0) {
@@ -122,26 +122,26 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 //     }
 }
 
-//Generate comprehensive report;
+//Generate comprehensive report,
 const report = {
   timestamp: new Date().toISOString()
   summary: {
-    totalBranches: newestCursorBranches.length;
-    merged: mergedCount;
-    notFound: notFoundCount;
+    totalBranches: newestCursorBranches.length,
+    merged: mergedCount,
+    notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / newestCursorBranches.length) * 100)}%`},
   systemChecks: {
-    typeCheck: typeCheck.success;
-    lintCheck: lintCheck.success;
-    testCheck: testCheck.success;
-    buildCheck: buildCheck.success;
+    typeCheck: typeCheck.success,
+    lintCheck: lintCheck.success,
+    testCheck: testCheck.success,
+    buildCheck: buildCheck.success,
     allPassed: typeCheck.success &&
       lintCheck.success &&,
       testCheck.success &&,
       buildCheck.success;
   },
-  results: results;
-  status: mergedCount > 0 ? 'success' : 'no-changes'};
+  results: results,
+  status: mergedCount > 0 ? 'success' : 'no-changes'},
 
 // Save detailed report;
 fs.writeFileSync('newest-cursor-branches-merge-report.json')
@@ -153,7 +153,7 @@ const report = {/* TODO: Fix JSX expression */}`
   result,
   s: results,
   statu,
-  s: mergedCount > 0 ? 'success' : 'no-changes'};
+  s: mergedCount > 0 ? 'success' : 'no-changes'},
 
 // Save detailed report;
 fs.writeFileSync('newest-cursor-branches-merge-report.json')

@@ -22,14 +22,14 @@ const AboutPage: React.FC = () => {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
+      bio: 'AI researcher and developer with expertise in deep learning and NLP.'}],
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
-  ];
+  ],
 
   const values = [
     {
@@ -47,7 +47,8 @@ const AboutPage: React.FC = () => {
     {
       icon: Users,
       title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.'}];
+      description: 'We work closely with our clients as strategic technology partners.'}],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -116,7 +117,7 @@ export default function AboutPage() {
     { number: '100+', label: 'Enterprise Clients', icon: Users },
     { number: '300%', label: 'Average ROI', icon: TrendingUp },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
-  ];
+  ],
   const timeline = [
     {
       year: '2018',
@@ -153,7 +154,8 @@ export default function AboutPage() {
       title: 'Industry Recognition',
       description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.'
     }
-  ];
+  ],
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -570,7 +572,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
@@ -595,5 +597,5 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

@@ -6,13 +6,15 @@ export const metadata: Metadata = {,
   openGraph: {,
     title: 'About',
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article'}};
+    type: 'article'}},
 
 export default function about() {
-  return(<div className="min-h-screen bg-gray-50">
+const Component = () => {
+  return (<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gray-50"></div>
       <div className="max-w-4xl mx-auto px-4 py-8"></div>
@@ -42,10 +44,11 @@ export default function about() {
       </div>)
 export const,
   metadata: Metadata = {/* TODO: Fix JSX expression */}
-  }};
+  }},
 
 export default function about() {/* TODO: Fix JSX expression */}
 }
+const Component = () => {
   return (<div className="min-h-screen bg-gray-50"></div>"
       <div className="max-w-4xl mx-auto px-4 py-8"></div>"
         <div className="bg-white rounded-lg shadow-lg p-8"></div>"
@@ -54,7 +57,7 @@ export default function about() {/* TODO: Fix JSX expression */}
             <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>"
             <div className="flex justify-center space-x-4"></div>"
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-                BREAKTHROUGH;
+                BREAKTHROUGH,
               </span>"
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"></span>
                 AI;

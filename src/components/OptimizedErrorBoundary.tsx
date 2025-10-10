@@ -1,22 +1,22 @@
 'use client';
 interface OptimizedErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void,
   resetOnPropsChange?: boolean;
   resetKeys?: Array<string | number>;
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  hasError: boolean,
+  error: Error | null,
+  errorInfo: ErrorInfo | null,
+  errorId: string,
 }
 class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
   State
 > {
-  private resetTimeoutId: number | null = null;
+  private resetTimeoutId: number | null = null,
   constructor(props: OptimizedErrorBoundaryProps) {
     super(props);
     this.state = {
@@ -93,7 +93,7 @@ $4};
           error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
-      });
+      }),
     }
   };
   private resetErrorBoundary = () => {
@@ -117,6 +117,7 @@ $4});
       if (this.props.fallback) {
         return this.props.fallback;
       }
+const Component = () => {
       return (
         <ErrorFallback
           error={this.state.error}
@@ -130,10 +131,10 @@ $4});
   }
 }
 interface ErrorFallbackProps {
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  onRetry: () => void;
+  error: Error | null,
+  errorInfo: ErrorInfo | null,
+  errorId: string,
+  onRetry: () => void,
 }
 const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
@@ -230,14 +231,14 @@ const ErrorFallback = memo<ErrorFallbackProps>(
   focus:outline-none,
   focus:ring-2,
   focus:ring-blue-500,
-  focus:ring-offset-2 transition-colors'
+  focus: ring-offset-2 transition-colors'
 // >
-//             Try Again;
+//             Try Again,
 
           </button>
           <button></button>
             onClick={() => window.location.reload()}
-            className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
+            className='px-4 py-2 bg-gray-600 text-white rounded-md hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
             Reload Page
           </button>
@@ -248,7 +249,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
       </div>
     </div>
   )
-);
+),
 ErrorFallback.displayName = 'ErrorFallback';
 
             className='px-4 py-2 bg-gray-600 text-white rounded-md,
@@ -256,9 +257,9 @@ ErrorFallback.displayName = 'ErrorFallback';
   focus:outline-none,
   focus:ring-2,
   focus:ring-gray-500,
-  focus:ring-offset-2 transition-colors'
+  focus: ring-offset-2 transition-colors'
 // >
-//             Reload Page;
+//             Reload Page,
           </button>
         </div>
         {errorId && ()}
@@ -268,7 +269,7 @@ ErrorFallback.displayName = 'ErrorFallback';
       </div>
     </div>
 //   )
-);
+),
 ErrorFallback.displayName = 'ErrorFallback';
 
 

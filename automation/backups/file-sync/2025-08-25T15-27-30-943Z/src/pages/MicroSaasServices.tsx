@@ -7,7 +7,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Productivity"
       pricing: "Freemium"
       description: "Simple yet powerful task management and project collaboration tool for small teams"
-      price: 15;
+      price: 15,
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
       features: ["Task management", "Team collaboration", "Time tracking", "Progress reports"],
@@ -24,7 +24,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Development"
       pricing: "Freemium"
       description: "AI-powered code generation and development assistance for developers and teams"
-      price: 45;
+      price: 45,
       pricingModel: "monthly",
       userLimit: "Up to 8 developers",
       features: ["AI code generation", "Code review", "Bug detection", "Documentation auto-generation"],
@@ -41,7 +41,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Analytics"
       pricing: "Freemium"
       description: "Advanced predictive analytics and business intelligence using quantum computing principles"
-      price: 55;
+      price: 55,
       pricingModel: "monthly",
       userLimit: "Up to 12 users",
       features: ["Predictive modeling", "Real-time analytics", "AI insights", "Custom dashboards"],
@@ -58,7 +58,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Blockchain"
       pricing: "Freemium"
       description: "Complete blockchain solution for business operations and smart contract management"
-      price: 65;
+      price: 65,
       pricingModel: "monthly",
       userLimit: "Up to 20 users",
       features: ["Smart contracts", "Token management", "DeFi integration", "Blockchain analytics"],
@@ -75,7 +75,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "IoT"
       pricing: "Freemium"
       description: "Comprehensive IoT platform for enterprise device management and data collection"
-      price: 75;
+      price: 75,
       pricingModel: "monthly",
       userLimit: "Up to 1000 devices",
       features: ["Device management", "Real-time monitoring", "Data analytics", "Automation rules"],
@@ -92,7 +92,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Immersive Tech"
       pricing: "Freemium"
       description: "Professional AR/VR development platform for immersive experiences and training"
-      price: 85;
+      price: 85,
       pricingModel: "monthly",
       userLimit: "Up to 15 developers",
       features: ["3 D modeling", "VR development", "AR integration", "Analytics dashboard"],
@@ -109,7 +109,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Finance"
       pricing: "Freemium"
       description: "AI-powered invoice generation and financial management for small businesses"
-      price: 25;
+      price: 25,
       pricingModel: "monthly",
       userLimit: "Unlimited users",
       features: ["AI invoice generation", "Expense tracking", "Financial reports", "Tax preparation"],
@@ -126,7 +126,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Marketing"
       pricing: "Freemium"
       description: "Comprehensive social media management and analytics platform for businesses"
-      price: 30;
+      price: 30,
       pricingModel: "monthly",
       userLimit: "Up to 5 users",
       features: ["Multi-platform posting", "Content scheduling", "Analytics dashboard", "Engagement tracking"],
@@ -143,7 +143,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "CRM"
       pricing: "Freemium"
       description: "Lightweight customer relationship management system for growing businesses"
-      price: 20;
+      price: 20,
       pricingModel: "monthly",
       userLimit: "Up to 15 users",
       features: ["Contact management", "Sales pipeline", "Email integration", "Reporting tools"],
@@ -160,7 +160,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Analytics"
       pricing: "Freemium"
       description: "Easy-to-use data visualization and analytics platform for business insights"
-      price: 35;
+      price: 35,
       pricingModel: "monthly",
       userLimit: "Up to 8 users",
       features: ["Interactive dashboards", "Data connectors", "Custom charts", "Real-time updates"],
@@ -177,7 +177,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Scheduling"
       pricing: "Freemium"
       description: "Intelligent scheduling and appointment booking system for service businesses"
-      price: 18;
+      price: 18,
       pricingModel: "monthly",
       userLimit: "Up to 12 users",
       features: ["Online booking", "Calendar integration", "Automated reminders", "Payment processing"],
@@ -194,7 +194,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Content"
       pricing: "Freemium"
       description: "AI-powered content creation and optimization tool for marketers and creators"
-      price: 40;
+      price: 40,
       pricingModel: "monthly",
       userLimit: "Up to 6 users",
       features: ["AI content generation", "SEO optimization", "Content planning", "Performance analytics"],
@@ -211,7 +211,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Security"
       pricing: "Freemium"
       description: "Enterprise-grade security and compliance management for small businesses"
-      price: 45;
+      price: 45,
       pricingModel: "monthly",
       userLimit: "Up to 20 users",
       features: ["Password management", "Access control", "Compliance monitoring", "Security audits"],
@@ -228,7 +228,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Media"
       pricing: "Freemium"
       description: "Digital asset management and media organization platform for creative teams"
-      price: 28;
+      price: 28,
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
       features: ["Asset organization", "Version control", "Collaboration tools", "Search & filtering"],
@@ -245,7 +245,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Education"
       pricing: "Freemium"
       description: "Learning management system for corporate training and online education"
-      price: 32;
+      price: 32,
       pricingModel: "monthly",
       userLimit: "Up to 100 learners",
       features: ["Course creation", "Progress tracking", "Assessment tools", "Mobile learning"],
@@ -262,7 +262,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Sustainability"
       pricing: "Freemium"
       description: "Sustainability tracking and environmental impact management for businesses"
-      price: 38;
+      price: 38,
       pricingModel: "monthly",
       userLimit: "Up to 25 users",
       features: ["Carbon footprint tracking", "Sustainability reporting", "Goal setting", "Progress monitoring"],
@@ -279,7 +279,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Legal"
       pricing: "Freemium"
       description: "AI-powered legal document generation and contract management for small businesses"
-      price: 50;
+      price: 50,
       pricingModel: "monthly",
       userLimit: "Up to 8 users",
       features: ["Document templates", "AI generation", "Contract management", "Legal compliance"],
@@ -296,7 +296,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Healthcare"
       pricing: "Freemium"
       description: "Health monitoring and wellness tracking platform for individuals and small clinics"
-      price: 22;
+      price: 22,
       pricingModel: "monthly",
       userLimit: "Up to 50 patients",
       features: ["Health monitoring", "Wellness tracking", "Patient portal", "Health reports"],
@@ -313,7 +313,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Events"
       pricing: "Freemium"
       description: "Comprehensive event management and ticketing platform for event organizers"
-      price: 35;
+      price: 35,
       pricingModel: "monthly",
       userLimit: "Up to 1000 attendees",
       features: ["Event planning", "Ticket sales", "Attendee management", "Analytics dashboard"],
@@ -330,7 +330,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Inventory"
       pricing: "Freemium"
       description: "Intelligent inventory management and supply chain optimization for small businesses"
-      price: 25;
+      price: 25,
       pricingModel: "monthly",
       userLimit: "Up to 15 users",
       features: ["Inventory tracking", "Demand forecasting", "Reorder alerts", "Analytics reports"],
@@ -347,7 +347,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Security"
       pricing: "Freemium"
       description: "Advanced cybersecurity platform with AI-powered threat detection and response"
-      price: 95;
+      price: 95,
       pricingModel: "monthly",
       userLimit: "Up to 50 users",
       features: ["Threat detection", "AI monitoring", "Incident response", "Compliance reporting"],
@@ -364,7 +364,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Sustainability"
       pricing: "Freemium"
       description: "Environmental impact tracking and sustainability reporting for eco-conscious businesses"
-      price: 42;
+      price: 42,
       pricingModel: "monthly",
       userLimit: "Up to 30 users",
       features: ["Carbon tracking", "ESG reporting", "Sustainability goals", "Green certifications"],
@@ -381,7 +381,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "AI"
       pricing: "Freemium"
       description: "Voice-powered AI assistant for business automation and customer interaction"
-      price: 38;
+      price: 38,
       pricingModel: "monthly",
       userLimit: "Up to 25 users",
       features: ["Voice commands", "AI automation", "Multi-language", "Integration APIs"],
@@ -398,7 +398,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Finance"
       pricing: "Freemium"
       description: "Quantum computing-powered financial modeling and risk assessment platform"
-      price: 120;
+      price: 120,
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
       features: ["Quantum modeling", "Risk assessment", "Portfolio optimization", "Real-time analysis"],
@@ -415,7 +415,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       category: "Infrastructure"
       pricing: "Freemium"
       description: "Edge computing platform for distributed applications and real-time processing"
-      price: 68;
+      price: 68,
       pricingModel: "monthly",
       userLimit: "Up to 100 nodes",
       features: ["Edge deployment", "Real-time processing", "Load balancing", "Monitoring tools"],
@@ -598,10 +598,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
     }
-  ];
+  ],
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
     <div className="text-left">
@@ -799,7 +799,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left"></div>
                 <h4 className="text-left">
                   <Zap className="text-left" />
-                  Key Features;
+                  Key Features,
                 </h4>
                 <div className="text-left">
                   {service.features.slice(0) 3).map((feature} index) => (</div>
@@ -985,7 +985,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
   o: kleber@ziontechgroup.<com" className="text-left"
                 ></com>"
                   <Mail className="text-left" /></Mail>
-                  Get Started Today;
+                  Get Started Today,
                 </a>
                 <a></a>"
                   href="te,"

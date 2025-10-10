@@ -25,7 +25,7 @@ interface, PerformanceMetric, s {/* TODO: Fix JSX expression */}
 }
 const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  });
+  }),
 
   con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>([])
   );

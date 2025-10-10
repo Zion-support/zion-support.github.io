@@ -46,13 +46,13 @@ export const seoUtils = {/* content */}
 
   // Generate article structured data;
   generateArticleSchema: (article: {/* content */}
-    title: string;
-    description: string;
-    author: string;
-    datePublished: string;
-    dateModified: string;
+    title: string,
+    description: string,
+    author: string,
+    datePublished: string,
+    dateModified: string,
     image?: string;
-    url: string;
+    url: string,
   }) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "Article",
@@ -117,15 +117,15 @@ export const seoUtils = {/* content */}
   generateArticleSchema: (articl,
   e: {/* content */}
     titl,
-  e: string;
+  e: string,
     descriptio,
-  n: string;
+  n: string,
     autho,
-  r: string;
+  r: string,
     datePublishe,
-  d: string;
+  d: string,
     dateModifie,
-  d: string;
+  d: string,
     image?: string;
     ur,
   l: string;)
@@ -141,10 +141,10 @@ export const seoUtils = {/* content */}
     },"
     "image": {/* content */}"
       "url": article.image || "http,"
-  s://zion.app/logo.png"
+  s: //zion.app/logo.png"
     })
   })
-});
+}),
 };
 
 // Sitemap generation utilities;
@@ -155,7 +155,7 @@ export const sitemapUtils = {/* content */}
       url,
       lastmod: lastmod || new Date().toISOString().split('T')[0],
       changefreq: changefreq || 'weekly',
-      priority: priority || '0.8'};
+      priority: priority || '0.8'},
   },
 
   // Generate robots.txt content;
@@ -163,7 +163,7 @@ export const sitemapUtils = {/* content */}
     return `User-agent: *,
 Allow: /,
 ,
-Sitemap: ${sitemapUrl}`;
+Sitemap: ${sitemapUrl}`,
   // Generate sitemap entries,
   generateSitemapEntry: (ur)
   l: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
@@ -175,7 +175,7 @@ Sitemap: ${sitemapUrl}`;
   q: changefreq || 'weekly',
       priorit,
   y: priority || '0.8'
-    };
+    },
   },
 
   // Generate robots.txt content,
@@ -188,7 +188,7 @@ Allo,
   w: /
 
 Sitema,`
-  p: ${sitemapUrl}`;
+  p: ${sitemapUrl}`,
   }
 };
 
@@ -196,12 +196,12 @@ Sitema,`
 export const urlUtils = {/* content */}
   // Generate canonical URL;
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-    return `${baseUrl}${path}`;
+    return `${baseUrl}${path}`,
   },
 
   // Generate Open Graph URL;
   generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-    return `${baseUrl}${path}`;
+    return `${baseUrl}${path}`,
   },
 
   // Generate Twitter Card URL;
@@ -211,7 +211,7 @@ export const urlUtils = {/* content */}
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
+    return `${baseUrl}${path}`,
   },
 
   // Generate Open Graph URL,
@@ -219,7 +219,7 @@ export const urlUtils = {/* content */}
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
+    return `${baseUrl}${path}`,
   },
 
   // Generate Twitter Card URL,
@@ -227,7 +227,7 @@ export const urlUtils = {/* content */}
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
+    return `${baseUrl}${path}`,
   }
 };
 
@@ -272,7 +272,7 @@ export const contentOptimization = {/* content */}
   e: string, siteNam,
   e: string = 'Zion Tech Group', separato)
   r: string = ' | '): string => {/* content */}`
-    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
+    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName,
   }
 };
 
@@ -288,7 +288,7 @@ export const performanceSEO = {/* content */}
   s: 'style' },
       {/* TODO: Fix JSX expression */}
   s: 'image' }
-    ];
+    ],
 
     criticalResources.forEach(resource => {/* content */})
       const _link = document.createElement('link');
@@ -302,20 +302,20 @@ export const performanceSEO = {/* content */}
 
   // Optimize images for SEO;
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
-    src: string;
-    alt: string;
+    src: string,
+    alt: string,
   // Optimize images for SEO,
   optimizeImageSEO: (sr,
   c: string, al)
   t: string, width?: number, height?: number): {/* content */}
     sr,
-  c: string;
+  c: string,
     al,
-  t: string;
+  t: string,
     width?: number;
     height?: number;
     loadin,
-  g: 'lazy';
+  g: 'lazy',
   } => {/* content */}
     return {/* content */}
       sr,`
@@ -323,9 +323,9 @@ export const performanceSEO = {/* content */}
       alt,
       width,
       height,
-      loading: 'lazy' as const;
+      loading: 'lazy' as const,
       loadin,
-  g: 'lazy' as const;
+  g: 'lazy' as const,
     };
   }
 };
@@ -337,7 +337,7 @@ export const analyticsUtils = {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */})
         page_title: title),
-        page_location: url;
+        page_location: url,
   // Track page views,
   trackPageView: (ur,
   l: string, titl)
@@ -369,7 +369,7 @@ export const analyticsUtils = {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {/* content */})
         send_to: conversionId),
-        value: value;
+        value: value,
   // Track conversion events,
   trackConversion: (conversionI)
   d: string, value?: number) => {/* content */}
@@ -389,17 +389,17 @@ export const analyticsUtils = {/* content */}
 export const coreWebVitals = {/* content */}
   // Track Core Web Vitals;
   trackCoreWebVitals: () => {/* content */}
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return,
 
     const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */})
         metric_name: metric.name),
         metric_value: Math.round(metric.value),
-        metric_id: metric.id;
-        metric_delta: metric.delta;
+        metric_id: metric.id,
+        metric_delta: metric.delta,
   // Track Core Web Vitals,
   trackCoreWebVitals: () => {/* content */}
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return,
 
     const trackMetric = (metri,
   c: {/* TODO: Fix JSX expression */})
@@ -412,7 +412,7 @@ export const coreWebVitals = {/* content */}
         metric_i,
   d: metric.id,
         metric_delt,
-  a: metric.delta;
+  a: metric.delta,
       });
     };
 
@@ -454,8 +454,9 @@ export const SEOComponent = ({/* content */}
 //   const fullTitle = title ? `${title} | ${siteName}` : siteName;`
 //   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;`
 //   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
+const Component = () => {
 
-  return(<div> </div><Helmet>
+  return (<div> </div><Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>
       <meta name="keywords" content={keywords} /></meta>
@@ -472,6 +473,7 @@ export const SEOComponent = ({/* content */}
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
+const Component = () => {
   return (<div> </div><Helmet></Helmet>
       <title>{fullTitle}</title>"
       <meta name="description" content={description} /></meta>"
@@ -498,14 +500,14 @@ export const SEOComponent = ({/* content */}
       <meta name="twitte,"
   r:description" content={description} /></meta>"
       <meta name="twitte,"
-  r:image" content={fullImage} /></meta>
+  r: image" content={fullImage} /></meta>
       {/* Structured Data */}
       {/* TODO: Fix JSX expression */})
           {JSON.stringify(structuredData)}
         </script>
       )}
     </Helmet>
-  );
+  ),
 };
 
 // Initialize SEO optimizations;

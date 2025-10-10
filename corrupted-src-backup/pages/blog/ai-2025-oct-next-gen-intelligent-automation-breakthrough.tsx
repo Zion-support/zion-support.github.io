@@ -3,7 +3,8 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 const NextGenIntelligentAutomationBreakthroug, h = () => { 
-  return(<>
+const Component = () => {
+  return (<>
       <Helm, e, t>
         <title>
           Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group;

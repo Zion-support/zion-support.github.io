@@ -10,7 +10,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
     isOperationa,
   l: boolean;,
     timestam,
-  p: string;
+  p: string,
   constructor(messag)
   e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -30,7 +30,7 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;
 // console.error({message: appError.message}
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
-    statusCode: appError.statusCode || 500;
+    statusCode: appError.statusCode || 500,
 
   });
   return {/* TODO: Fix JSX expression */}
@@ -39,7 +39,7 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;
   messag,
   e: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCod,
-  e: appError.statusCode || 500;
+  e: appError.statusCode || 500,
   };
 };
 export const asyncHandler = (f,

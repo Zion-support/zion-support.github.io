@@ -47,10 +47,12 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
-  return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
+  ],
+const Component = () => {
+  return (<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
       <div, className="te, x, t-center, m, b-8">
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
+const Component = () => {
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8"></div>
       <div, className="te, x, t-center, m, b-8"></div>
@@ -61,6 +63,7 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">";</div>
       <div, className="te, x, t-center, m, b-8">";</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";</div>
+const Component = () => {
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8"></div>"
       <div, className="te, x, t-center, m, b-8"></div>"

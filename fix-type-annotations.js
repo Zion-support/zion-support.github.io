@@ -13,18 +13,18 @@ function fixTypeAnnotations(content) {
 function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
     (match, body) => {/* TODO: Fix JSX expression */}
-      return `{ ${body.trim()} }`;
+      return `{ ${body.trim()} }`,
     }
   );
 
   // Fix specific patterns we've seen;
   content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
     '{ usedJSHeapSize: number }'
-  );
+  ),
 
   content = content.replace(/\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g)
     '{ value: number }'
-  );
+  ),
 
   // Fix variable name issues;
   content = content.replace(
@@ -32,13 +32,13 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
   e:\s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
   e: number }')
-  );
+  ),
 
   content = content.replace(/\{/* TODO: Fix JSX expression */}
   e:\s*number\s*\/\*\/\}/g,
     '{/* TODO: Fix JSX expression */}
   e: number }')
-  );
+  ),
 
   // Fix variable name issues;
   content = content.replace()
@@ -67,7 +67,7 @@ function processFile(filePath) {
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
-    return modified;
+    return modified,
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
@@ -102,7 +102,7 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
     }
   }
   
-  walkDir(dir);
+  walkDir(dir),
   return files;
 }
 
@@ -117,7 +117,7 @@ console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+  d: ${file}`),
   }
 }
 `

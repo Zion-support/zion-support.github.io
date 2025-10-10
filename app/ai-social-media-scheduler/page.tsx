@@ -13,34 +13,34 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Calendar;
+      icon: Calendar,
     {}
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-powered optimal posting times based on your audience engagement patterns',
       color: 'text-purple-400'},
     {
-      icon: Brain;
+      icon: Brain,
     {}
       icon: Brain,
       title: 'Content Generation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI technology',
       color: 'text-blue-400'},
     {
-      icon: BarChart;
+      icon: BarChart,
     {}
       icon: BarChart,
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics and insights to track performance across all platforms',
       color: 'text-green-400'},
     {
-      icon: Share2;
+      icon: Share2,
     {}
       icon: Share2,
       title: 'Multi-Platform Support',
       description: 'Schedule and manage content across Instagram, Facebook, Twitter, LinkedIn, and TikTok',
       color: 'text-orange-400'}
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -59,7 +59,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
         '1 user'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional'
@@ -78,7 +78,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
         'Custom branding'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -97,7 +97,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
         'Advanced reporting'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -105,24 +105,24 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
     {}
       title: 'Content Planning',
       description: 'Plan and schedule your content calendar weeks in advance',
-      icon: Calendar;
+      icon: Calendar,
       result: '3x efficiency'},
     {}
       title: 'Engagement Boost',
       description: 'Increase engagement with AI-optimized posting times and content',
-      icon: TrendingUp;
+      icon: TrendingUp,
       result: '150% more'},
     {}
       title: 'Brand Consistency',
       description: 'Maintain consistent brand voice across all platforms',
-      icon: Target;
+      icon: Target,
       result: '100% consistent'},
     {}
       title: 'Time Saving',
       description: 'Save hours every week with automated scheduling and content generation',
-      icon: Clock;
+      icon: Clock,
       result: '10 hours/week'}
-  ];
+  ],
 
   const supportedPlatforms = [
     { name: 'Instagram', icon: '📸', color: 'text-pink-400' },
@@ -131,9 +131,11 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
     { name: 'LinkedIn', icon: 'briefcase', color: 'text-blue-600' },
     { name: 'TikTok', icon: 'music', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-400' }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -172,8 +174,8 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
           </p>
 
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -183,13 +185,13 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
             >Start Scheduling</a>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="/contact"
-              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
             >
-              Start Scheduling;
+              Start Scheduling,
             </a>
           </div>,
         </section>,
@@ -320,11 +322,11 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
             {pricingPlans.map((plan, index) => (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover: border-purple-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular,
                     </div>
                   </div>
                 )}
@@ -361,7 +363,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
                   }`}
                 >Get Started</a>
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -373,8 +375,8 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Social Media?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 5,000+ businesses already using our AI Social Media Scheduler to grow their presence.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -387,14 +389,14 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
             </MessageSquare>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
       >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Email Us;
+              Email Us,
             </a>
           </div>
         </section>

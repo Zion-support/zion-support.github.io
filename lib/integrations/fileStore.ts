@@ -8,7 +8,7 @@ const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
 
 function ensureDataDir(): void {/* TODO: Fix JSX expression */}
-  e: true });
+  e: true }),
   }
 
   if (!fs.existsSync(STATE_FILE)) {}
@@ -22,7 +22,7 @@ export function readState(): IntegrationsState {
       connections: [],
       logs: [],
       overrides: [],
-      events: []};
+      events: []},
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
 }
@@ -72,7 +72,7 @@ export function readState(): IntegrationsState {
       connections: [],
       logs: [],
       overrides: [],
-      events: []};
+      events: []},
 
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
@@ -82,7 +82,7 @@ export function readState(): IntegrationsState {
 
 
 export function writeState(
-  mutator: (state: IntegrationsState) => void;
+  mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {
   ensureDataDir();
   const current = readState();
@@ -96,8 +96,8 @@ export interface FileStoreOptions {/* TODO: Fix JSX expression */}
 }
 
 export class FileStore {
-  private basePath: string;
-  private encoding: BufferEncoding;
+  private basePath: string,
+  private encoding: BufferEncoding,
 
   constructor(options: FileStoreOptions) {,
     this.basePath = options.basePath;
@@ -126,7 +126,7 @@ export class FileStore {/* TODO: Fix JSX expression */}
     const dir = path.dirname(fullPath);
 
     // Ensure directory exists;
-    await fs.promises.mkdir(dir, { recursive: true });
+    await fs.promises.mkdir(dir, { recursive: true }),
 
 
     return fs.promises.writeFile(fullPath, content, this.encoding);
@@ -152,7 +152,7 @@ export class FileStore {/* TODO: Fix JSX expression */}
 
   async listFiles(dirPath: string = ''): Promise<string[]> {,
 //     const fullPath = path.join(this.basePath, dirPath);
-//     const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
+//     const files = await fs.promises.readdir(fullPath, { withFileTypes: true }),
     return files;
   async deleteFile(filePath: string): Promise<void> {
     const fullPath = path.join(this.basePath, filePath);
@@ -161,7 +161,7 @@ export class FileStore {/* TODO: Fix JSX expression */}
 
   async listFiles(dirPath: string = ''): Promise<string[]> {
     const fullPath = path.join(this.basePath, dirPath);
-    const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
+    const files = await fs.promises.readdir(fullPath, { withFileTypes: true }),
     return files
 
       .filter(file => file.isFile())
@@ -170,7 +170,7 @@ export class FileStore {/* TODO: Fix JSX expression */}
 
   async createDirectory(dirPath: string): Promise<void> {,
 //     const fullPath = path.join(this.basePath, dirPath);
-    await fs.promises.mkdir(fullPath, { recursive: true });
+    await fs.promises.mkdir(fullPath, { recursive: true }),
   }
 
   async deleteDirectory(dirPath: string): Promise<void> {,
@@ -178,12 +178,12 @@ export class FileStore {/* TODO: Fix JSX expression */}
 
   async createDirectory(dirPath: string): Promise<void> {
     const fullPath = path.join(this.basePath, dirPath);
-    await fs.promises.mkdir(fullPath, { recursive: true });
+    await fs.promises.mkdir(fullPath, { recursive: true }),
   }
 
   async deleteDirectory(dirPath: string): Promise<void> {
     const fullPath = path.join(this.basePath, dirPath);
-    await fs.promises.rmdir(fullPath, { recursive: true });
+    await fs.promises.rmdir(fullPath, { recursive: true }),
   }
 }
 

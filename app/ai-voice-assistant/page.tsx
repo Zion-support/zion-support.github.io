@@ -49,36 +49,36 @@ const AIVoiceAssistantPage: React.FC = () => {,
 
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
       title: 'Natural Language Processing',
       description: 'Advanced NLP with 99.5% accuracy in understanding context and intent',
       stats: '99.5% accuracy'},
     {
-      icon: Languages;
+      icon: Languages,
       title: 'Multi-Language Support',
       description: 'Support for 50+ languages with real-time translation capabilities',
       stats: '50+ languages'},
     {
-      icon: Headphones;
+      icon: Headphones,
       title: 'Custom Voice Training',
       description: 'Train the AI with your voice patterns and speaking style',
       stats: 'Custom voices'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Real-Time Processing',
       description: 'Ultra-low latency voice processing for natural conversations',
       stats: '<100ms latency'},
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Privacy & Security',
       description: 'End-to-end encryption with local processing options',
       stats: 'Bank-level security'},
     {
-      icon: Globe;
+      icon: Globe,
       title: 'Cloud & Edge Computing',
       description: 'Hybrid processing for optimal performance and privacy',
       stats: 'Hybrid processing'}
-  ];
+  ],
 
   const capabilities = [
     {
@@ -141,7 +141,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'Email support',
         'Mobile app access'
       ],
-      popular: false;
+      popular: false,
       cta: 'Start Free Trial'},
     {
       name: 'Professional'
@@ -157,7 +157,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'API access',
         'Team collaboration'
       ],
-      popular: true;
+      popular: true,
       cta: 'Start Free Trial'},
     {
       name: 'Enterprise'
@@ -173,9 +173,9 @@ const AIVoiceAssistantPage: React.FC = () => {,
         'Advanced analytics',
         'White-label options'
       ],
-      popular: false;
+      popular: false,
       cta: 'Contact Sales'}
-  ];
+  ],
 
   const testimonials = [
     {
@@ -183,30 +183,32 @@ const AIVoiceAssistantPage: React.FC = () => {,
       role: 'Product Manager',
       company: 'TechCorp',
       content: 'The AI Voice Assistant has revolutionized how I manage my daily tasks. The natural conversation flow is incredible.',
-      rating: 5;
+      rating: 5,
       avatar: 'SC'},
     {
       name: 'Michael Rodriguez'
       role: 'CEO',
       company: 'StartupXYZ',
       content: 'We use it for our international team meetings. The real-time translation feature is a game-changer.',
-      rating: 5;
+      rating: 5,
       avatar: 'MR'},
     {
       name: 'Emily Johnson'
       role: 'Executive Assistant',
       company: 'Global Inc',
       content: 'Scheduling and managing my executive\'s calendar has never been easier. The AI understands context perfectly.',
-      rating: 5;
+      rating: 5,
       avatar: 'EJ'}
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">{/* Animated Background */}</100ms>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3)_0%,transparent_50%)] animate-pulse" /></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} >{/* Floating Particles */}</div>
       </div><div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}><div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '2s' }}><div className="relative z-10">{/* Header */}</div>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">)
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">)
       {/* Animated Background */})
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -234,7 +236,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
             </div>
             
             <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Voice Assistant Pro;
+              AI Voice Assistant Pro,
             </h1>
             ,
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,
@@ -265,10 +267,10 @@ const AIVoiceAssistantPage: React.FC = () => {,
                 <div className="space-y-3">
                 <div className="space-y-3"></div>
                   <button 
-                    onClick={() =>setIsListening(!isListening)}</button></<<<butto>className</butto></butto>="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    onClick={() =>setIsListening(!isListening)}</button></<<<butto>className</butto></butto>="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                   ></button>
                     {isListening ? 'Stop Listening' : 'Start Listening'}</button>
-                  <button;
+                  <button,
                     onClick={() => setIsListening(!isListening)}
                     className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105",
                   >,
@@ -306,17 +308,17 @@ const AIVoiceAssistantPage: React.FC = () => {,
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 group"></div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/40 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-6 h-6 text-white" />
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
-                Start Free Trial;
+                Start Free Trial,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
+              <button className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
                 <Play className="w-5 h-5 mr-2" />
-                Watch Demo;
+                Watch Demo,
               </button>
             </div>,
           </div>,
@@ -381,7 +383,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular;
+                        Most Popular,
                       </div>
                     </div>
                   )}
@@ -397,10 +399,10 @@ const AIVoiceAssistantPage: React.FC = () => {,
                     ))}
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white' 
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white' 
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>{plan.cta}</button>
-                    plan.popular;
+                    plan.popular,
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white' }
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}
                   }`}>
@@ -443,7 +445,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
           <div className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-400/30"></div>
             <h2 className="text-3xl font-bold mb-4 text-white">Ready to Transform Your Voice Experience?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of users who have revolutionized their productivity with AI Voice Assistant Pro.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">Start Your Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -453,12 +455,12 @@ const AIVoiceAssistantPage: React.FC = () => {,
               </Phone>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">
-                Start Your Free Trial;
+                Start Your Free Trial,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
+              <button className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
                 <Phone className="w-5 h-5 mr-2" />
-                Contact Sales;
+                Contact Sales,
               </button>
             </div>
           </div>

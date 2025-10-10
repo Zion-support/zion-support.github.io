@@ -1,12 +1,12 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-const PROD_DOMAIN = 'https://ziontechgroup.com';
+// const PROD_DOMAIN = 'https://ziontechgroup.com';
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed' })),
     return;
   }
 
@@ -15,7 +15,7 @@ async function handler(req, res) {
   if (!productId) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
+    res.end(JSON.stringify({ error: 'Product ID is required' })),
     return;
   }
 
@@ -27,17 +27,17 @@ async function handler(req, res) {
       sessionId: 'cs_' + Date.now(),
       status: 'created',
       createdAt: new Date().toISOString()
-    };
+    },
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ session: sessionData }));
+    res.end(JSON.stringify({ session: sessionData })),
   } catch (err) {
     console.error("Error:", err);
     console.error('Error creating checkout session:', err);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
+    res.end(JSON.stringify({ error: 'Failed to create checkout session' })),
   }
 }
 

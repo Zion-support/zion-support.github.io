@@ -8,37 +8,37 @@ import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye, Database, Zap,
 const AIDataVisualizationPage: React.FC = () => {,
   const features = [,
     {,
-      icon: BarChart3;
+      icon: BarChart3,
       title: 'Interactive Dashboards',
       description: 'Create stunning, interactive dashboards that bring your data to life with real-time updates and drill-down capabilities.',
       benefits: ['Real-time updates', 'Interactive charts', 'Custom layouts']
     },
     {
-      icon: PieChart;
+      icon: PieChart,
       title: 'Advanced Chart Types',
       description: 'Access to 50+ chart types including heatmaps, treemaps, sankey diagrams, and more for comprehensive data representation.',
       benefits: ['50+ chart types', 'Custom styling', 'Responsive design']
     },
     {
-      icon: TrendingUp;
+      icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'AI-powered predictive models that forecast trends and patterns to help you make data-driven decisions.',
       benefits: ['Trend forecasting', 'Pattern recognition', 'Predictive insights']
     },
     {
-      icon: Eye;
+      icon: Eye,
       title: 'Visual Storytelling',
       description: 'Transform complex data into compelling visual narratives that engage and inform your audience.',
       benefits: ['Story-driven insights', 'Engaging presentations', 'Clear communication']
     },
     {
-      icon: Database;
+      icon: Database,
       title: 'Multi-Source Integration',
       description: 'Connect to 100+ data sources including databases, APIs, cloud services, and file formats.',
       benefits: ['100+ integrations', 'Real-time sync', 'Data transformation']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Automated Insights',
       description: 'AI automatically identifies key insights, anomalies, and trends in your data without manual analysis.',
       benefits: ['Auto-discovery', 'Anomaly detection', 'Smart recommendations']
@@ -58,7 +58,7 @@ const AIDataVisualizationPage: React.FC = () => {,
         'Standard templates',
         'Email support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional'
@@ -74,7 +74,7 @@ const AIDataVisualizationPage: React.FC = () => {,
         'API access',
         'Team collaboration'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -90,31 +90,32 @@ const AIDataVisualizationPage: React.FC = () => {,
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
   const benefits = [
     {
-      icon: Users;
+      icon: Users,
       title: 'Better Decision Making',
       description: 'Make informed decisions with clear, actionable insights from your data'
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Secure & Compliant',
       description: 'Enterprise-grade security with compliance to industry standards'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Time Saving',
       description: 'Reduce time spent on data analysis by up to 80% with automated insights'},
     {
-      icon: Star;
+      icon: Star,
       title: 'User Friendly',
       description: 'Intuitive interface that requires no technical expertise to create stunning visualizations'}
-  ];
+  ],
+const Component = () => {
 
-  return(<>
+  return (<>
       <SEOOptimizer;
         title="AI Data Visualization - Zion Tech Group"
         description="Transform data into actionable insights with AI-powered visualization, interactive dashboards, and predictive analytics. Make better decisions with stunning data visualizations."
@@ -136,7 +137,7 @@ const AIDataVisualizationPage: React.FC = () => {,
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              AI Data Visualization;
+              AI Data Visualization,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">)
               Transform data into actionable insights;)
@@ -146,8 +147,8 @@ const AIDataVisualizationPage: React.FC = () => {,
               predictive analytics, and automated discovery of key trends and patterns.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
@@ -156,13 +157,13 @@ const AIDataVisualizationPage: React.FC = () => {,
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Get Quote</a>
               >
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Get Quote;
+                ✉️ Get Quote,
               </a>
             </div>,
           </section>,
@@ -201,6 +202,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function AIDataVisualizationPage() {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -272,20 +274,20 @@ export default function AIDataVisualizationPage() {
                     href="mailto:kleber@ziontechgroup.com"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                     }`}
                   >Get Started</a>
                   </ul>
-                  <a;
+                  <a,
                     href="mailto: kleber@ziontechgroup.com",
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
                       plan.popular;
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}
                     }`}
                   >
-                    Get Started;
+                    Get Started,
                   </a>
                 </div>
               ))}
@@ -345,8 +347,8 @@ export default function AIDataVisualizationPage() {
               and custom implementation plan.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
@@ -355,13 +357,13 @@ export default function AIDataVisualizationPage() {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Email Us</a>
               >
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Email Us;
+                ✉️ Email Us,
               </a>
             </div>
           </section>
@@ -373,7 +375,7 @@ export default function AIDataVisualizationPage() {
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Visualize Your Data?</h2>
             <p className="text-xl text-blue-100 mb-8">Let our AI tools transform your data into actionable insights</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
@@ -395,7 +397,7 @@ export default function AIDataVisualizationPage() {
       
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default AIDataVisualizationPage;

@@ -8,37 +8,37 @@ import Footer from '../components/Footer';
 const AIWebsiteBuilderPage: React.FC = () => {,
   const features = [,
     {,
-      icon: Code;
+      icon: Code,
       title: 'AI Code Generation',
       description: 'Generate clean, optimized code automatically from your descriptions',
       benefits: ['Clean code', 'Best practices', 'Auto-optimization']
     },
     {
-      icon: Palette;
+      icon: Palette,
       title: 'Smart Design System',
       description: 'AI-powered design suggestions that match your brand and industry',
       benefits: ['Brand consistency', 'Industry standards', 'Visual harmony']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Instant Deployment',
       description: 'Deploy your website in minutes with our automated hosting and CDN',
       benefits: ['Fast deployment', 'Global CDN', 'Auto-scaling']
     },
     {
-      icon: Smartphone;
+      icon: Smartphone,
       title: 'Mobile-First Design',
       description: 'Every website is automatically optimized for all devices and screen sizes',
       benefits: ['Responsive design', 'Touch optimization', 'Performance']
     },
     {
-      icon: Globe;
+      icon: Globe,
       title: 'SEO Optimization',
       description: 'Built-in SEO tools and optimization for better search engine rankings',
       benefits: ['Meta optimization', 'Schema markup', 'Performance scores']
     },
     {
-      icon: Monitor;
+      icon: Monitor,
       title: 'Analytics Integration',
       description: 'Comprehensive analytics and performance monitoring built-in',
       benefits: ['Real-time analytics', 'Performance tracking', 'User insights']
@@ -58,7 +58,7 @@ const AIWebsiteBuilderPage: React.FC = () => {,
       title: 'Professional Quality',
       description: 'Enterprise-grade websites that rival custom development',
       percentage: '99%'}
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -74,7 +74,7 @@ const AIWebsiteBuilderPage: React.FC = () => {,
         'Basic analytics',
         'Mobile optimization'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional'
@@ -90,7 +90,7 @@ const AIWebsiteBuilderPage: React.FC = () => {,
         'Custom domains',
         'E-commerce integration'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -107,11 +107,13 @@ const AIWebsiteBuilderPage: React.FC = () => {,
         'Custom integrations',
         'Dedicated support'
       ],
-      popular: false;
+      popular: false,
     }
   ];
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -140,8 +142,8 @@ const AIWebsiteBuilderPage: React.FC = () => {,
               No coding required, mobile-first design, and instant deployment.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
@@ -152,7 +154,7 @@ const AIWebsiteBuilderPage: React.FC = () => {,
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
               >View Demo</a>
               >
-                Start Building;
+                Start Building,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a;
@@ -260,14 +262,14 @@ const AIWebsiteBuilderPage: React.FC = () => {,
                       ))}
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}>Get Started</button>
-                      plan.popular;
+                      plan.popular,
                         ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover: from-purple-600 hover:to-pink-700'}
                         : 'bg-slate-700 text-white hover:bg-slate-600'}
                     }`}>
-                      Get Started;
+                      Get Started,
                     </button>
                   </div>
                 ))}
@@ -281,14 +283,14 @@ const AIWebsiteBuilderPage: React.FC = () => {,
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Website?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of businesses that have already created stunning websites with our AI builder.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center"
                 >Start Building Now</a>
                 >
-                  Start Building Now;
+                  Start Building Now,
                 </a>
                 <a;
                   href="tel:+13024640950"

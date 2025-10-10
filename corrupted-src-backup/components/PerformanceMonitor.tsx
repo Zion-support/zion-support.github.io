@@ -21,7 +21,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
         { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-      ];
+      ],
       
       hints.forEach(hint => {)
         const _link = document.createElement('link');
@@ -44,11 +44,11 @@ const,
   s://fonts.googleapis.com' },
         {/* TODO: Fix JSX expression */}
   n: 'anonymous' }
-      ];
+      ],
       
       hints.forEach(hint => {/* TODO: Fix JSX expression */}
         })
-        document.head.appendChild(link);
+        document.head.appendChild(link),
       });
     }
     
@@ -58,16 +58,17 @@ const,
       }
     }
 
-    // Monitor long tasks if enabled;
+    // Monitor long tasks if enabled,
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries]);
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
-//         });
+//         }),
+const Component = () => {
       
       return () => {/* TODO: Fix JSX expression */}
         }
-      };
+      },
     }
   }, [enableReporting, enableLongTaskMonitoring]);
 
@@ -80,27 +81,27 @@ const,
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
 //           const lcp = entry.startTime;
-          setMetrics(prev => ({ ...prev, LCP: lcp }));
+          setMetrics(prev => ({ ...prev, LCP: lcp })),
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ LCP: lcp });
+            performanceOptimizer.reportWebVitals({ LCP: lcp }),
   useEffect(() => {/* TODO: Fix JSX expression */}
-  P: lcp }));
+  P: lcp })),
           if (enableReporting) {/* TODO: Fix JSX expression */}
-  P: lcp });
+  P: lcp }),
           }
         }
         
         if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-  D: fid }));
+  D: fid })),
           if (enableReporting) {/* TODO: Fix JSX expression */}
-  D: fid });
+  D: fid }),
           }
         }
         
         if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
-  S: cls }));
+  S: cls })),
           if (enableReporting) {/* TODO: Fix JSX expression */}
-  S: cls });
+  S: cls }),
           }
         }
       });
@@ -110,16 +111,17 @@ const,
   s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (e) {/* TODO: Fix JSX expression */}
 //       }
+const Component = () => {
 
     return () => {/* TODO: Fix JSX expression */}
-    };
+    },
   }, [enableReporting]);
 
-  // Development mode: Log performance metrics;
+  // Development mode: Log performance metrics,
   useEffect(() => {,
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
   // Development,
-  mode: Log performance metrics;
+  mode: Log performance metrics,
   useEffect(() => {/* TODO: Fix JSX expression */}
 //       }
   }, [metrics]);
@@ -136,7 +138,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
     maxBundleSize: 500, // 500KB;
     maxImageSize: 100, // 100KB;
     maxFirstLoad: 3000, // 3 seconds;
-    maxInteractive: 2000 // 2 seconds;
+    maxInteractive: 2000 // 2 seconds,
   },
   onMetricsUpdate,
   onBudgetViolation;
@@ -151,7 +153,7 @@ const,
   const [isVisible, setIsVisible] = useState(false);
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
   s: string[] }>({/* TODO: Fix JSX expression */})
-  s: [] });
+  s: [] }),
 
   const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
@@ -179,7 +181,7 @@ const,
     // Monitor Web Vitals;
     const reportVitals = (newMetrics: WebVitalsMetrics) => {,
   useEffect(() => {/* TODO: Fix JSX expression */}
-//       });
+//       }),
 
     // Monitor Web Vitals;
     const reportVitals = (newMetric)
@@ -195,33 +197,37 @@ const,
           if (entry.entryType === 'paint') {
             const _paintEntry = entry as PerformancePaintTiming;
             if (paintEntry.name === 'first-contentful-paint') {
-              reportVitals({ FCP: paintEntry.startTime });
+              reportVitals({ FCP: paintEntry.startTime }),
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  P: paintEntry.startTime });
+  P: paintEntry.startTime }),
             }
           }
           if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
-  P: lcpEntry.startTime });
+  P: lcpEntry.startTime }),
           }
         });
       });
 
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['paint', 'largest-contentful-paint'] });
+const Component = () => {
 
       return () => {/* TODO: Fix JSX expression */}
-      };
+      },
     }
+const Component = () => {
 
     return () => {/* TODO: Fix JSX expression */}
-    };
+    },
   }, [enabled, updateMetrics]);
 
   if (!enabled) return null;
+const Component = () => {
 
-  return(<div className="performance-monitor">)
+  return (<div className="performance-monitor">)
       {/* Toggle button */})
       <button;)
+const Component = () => {
   return (
     <div className="performance-monitor">
       {/* Toggle button */}</div>
@@ -275,6 +281,7 @@ const,
             <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">TTFB:</span>
               <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>
+const Component = () => {
   return (<div className="performance-monitor"></div>
       {/* Toggle button */}
       <button></button>)
@@ -395,7 +402,7 @@ const,
             <div className="text-sm"></div>"
               <span className="font-medium text-gray-700,"
   dark:text-gray-300">WebP,
-  Support:</span>"
+  Support: </span>"
               <span className="ml-2 text-blue-600"></span>
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'}
               </span>
@@ -404,7 +411,7 @@ const,
         </div>
       )}
     </div>
-  );
+  ),
 };
 
 export default PerformanceMonitor;

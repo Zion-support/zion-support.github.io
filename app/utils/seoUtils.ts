@@ -1,10 +1,10 @@
 // SEO utilities for optimizing search engine visibility and performance
 
 export interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
+  title: string,
+  description: string,
+  keywords: string[],
+  canonicalUrl: string,
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;,
@@ -36,20 +36,20 @@ export const generateMetaTags = (data: SEOData): string => {
 };
 
 export const generateStructuredData = (data: {
-  name: string;
-  description: string;
-  url: string;
+  name: string,
+  description: string,
+  url: string,
   logo?: string;
   address?: {
-    streetAddress: string;
-    addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
-    addressCountry: string;
+    streetAddress: string,
+    addressLocality: string,
+    addressRegion: string,
+    postalCode: string,
+    addressCountry: string,
   };
   contactPoint?: {
-    telephone: string;
-    contactType: string;
+    telephone: string,
+    contactType: string,
   };
 }): string => {
   const structuredData = {
@@ -67,10 +67,10 @@ export const generateStructuredData = (data: {
 };
 
 export const generateSitemap = (pages: Array<{
-  url: string;
-  lastModified: string;
-  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority: number;
+  url: string,
+  lastModified: string,
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',
+  priority: number,
 }>): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -90,38 +90,38 @@ export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true):
     return `User-agent: *
 Allow: /
 
-Sitemap: ${sitemapUrl}`;
+Sitemap: ${sitemapUrl}`,
   } else {
     return `User-agent: *
 Disallow: /
 
-Sitemap: ${sitemapUrl}`;
+Sitemap: ${sitemapUrl}`,
   }
 };
 
 export const optimizeImages = (images: Array<{
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
 }>): Array<{
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
-  loading: 'lazy' | 'eager';
-  decoding: 'async' | 'sync' | 'auto';
+  loading: 'lazy' | 'eager',
+  decoding: 'async' | 'sync' | 'auto',
 }> => {
   return images.map((image, index) => ({
     ...image,
     loading: index < 3 ? 'eager' as const : 'lazy' as const,
     decoding: 'async' as const
-  }));
+  })),
 };
 
 export const generateBreadcrumbs = (items: Array<{
-  name: string;
-  url: string;
+  name: string,
+  url: string,
 }>): string => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -138,7 +138,7 @@ export const generateBreadcrumbs = (items: Array<{
 };
 
 export const validateSEO = (data: SEOData): string[] => {
-  const errors: string[] = [];
+  const errors: string[] = [],
   
   if (data.title.length < 30 || data.title.length > 60) {
     errors.push('Title should be between 30-60 characters');
@@ -160,10 +160,10 @@ export const validateSEO = (data: SEOData): string[] => {
 };
 
 export const generatePageSpeedInsights = (url: string): Promise<{
-  performance: number;
-  accessibility: number;
-  bestPractices: number;
-  seo: number;
+  performance: number,
+  accessibility: number,
+  bestPractices: number,
+  seo: number,
 }> => {
   // This would typically call the PageSpeed Insights API
   return Promise.resolve({
@@ -171,5 +171,5 @@ export const generatePageSpeedInsights = (url: string): Promise<{
     accessibility: 90,
     bestPractices: 88,
     seo: 92
-  });
+  }),
 };

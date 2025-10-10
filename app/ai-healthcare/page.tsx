@@ -13,34 +13,34 @@ const AIHealthcarePage: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Heart;
+      icon: Heart,
     {}
       icon: Heart,
       title: 'Medical Image Analysis',
       description: 'AI-powered analysis of X-rays, MRIs, CT scans, and ultrasounds with 95% accuracy',
       color: 'text-purple-400'},
     {
-      icon: Brain;
+      icon: Brain,
     {}
       icon: Brain,
       title: 'Diagnostic Assistance',
       description: 'AI algorithms that assist doctors in making accurate diagnoses and treatment recommendations',
       color: 'text-blue-400'},
     {
-      icon: Stethoscope;
+      icon: Stethoscope,
     {}
       icon: Stethoscope,
       title: 'Patient Monitoring',
       description: 'Continuous monitoring of patient vital signs and health metrics with predictive alerts',
       color: 'text-green-400'},
     {
-      icon: Shield;
+      icon: Shield,
     {}
       icon: Shield,
       title: 'HIPAA Compliance',
       description: 'Enterprise-grade security and compliance with healthcare regulations and data protection',
       color: 'text-orange-400'}
-  ];
+  ],
 
   const pricingPlans = [
     {}
@@ -57,7 +57,7 @@ const AIHealthcarePage: React.FC = memo(() => {}
         '1 medical professional'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
     {}
@@ -75,7 +75,7 @@ const AIHealthcarePage: React.FC = memo(() => {}
         '5 medical professionals'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
     {}
@@ -93,7 +93,7 @@ const AIHealthcarePage: React.FC = memo(() => {}
         'Unlimited professionals'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -101,33 +101,35 @@ const AIHealthcarePage: React.FC = memo(() => {}
     {}
       title: 'Radiology',
       description: 'AI-powered analysis of medical images for faster and more accurate diagnoses',
-      icon: Eye;
+      icon: Eye,
       result: '95% accuracy'},
     {}
       title: 'Cardiology',
       description: 'Heart disease detection and monitoring with AI-powered ECG analysis',
-      icon: Heart;
+      icon: Heart,
       result: '90% faster'},
     {}
       title: 'Oncology',
       description: 'Cancer detection and treatment planning with advanced AI algorithms',
-      icon: Target;
+      icon: Target,
       result: '80% improvement'},
     {}
       title: 'Emergency Care',
       description: 'Rapid triage and critical care decision support in emergency situations',
-      icon: AlertTriangle;
+      icon: AlertTriangle,
       result: '60% faster'}
-  ];
+  ],
 
   const benefits = [
     { metric: '95%', label: 'Diagnostic Accuracy', color: 'text-green-400' },
     { metric: '50%', label: 'Faster Diagnosis', color: 'text-blue-400' },
     { metric: 'HIPAA', label: 'Compliant', color: 'text-purple-400' },
     { metric: '24/7', label: 'Monitoring', color: 'text-orange-400' }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -166,8 +168,8 @@ const AIHealthcarePage: React.FC = memo(() => {}
           </p>
 
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -177,13 +179,13 @@ const AIHealthcarePage: React.FC = memo(() => {}
             >Get Healthcare Demo</a>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="/contact"
-              className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover: bg-green-400 hover:text-slate-900 transition-all duration-300"
             >
-              Get Healthcare Demo;
+              Get Healthcare Demo,
             </a>
           </div>,
         </section>,
@@ -282,11 +284,11 @@ const AIHealthcarePage: React.FC = memo(() => {}
             {pricingPlans.map((plan, index) => (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-green-500 ring-2 ring-green-500/20' : 'border-gray-700'} hover:border-green-500/50 transition-all duration-300`}>
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-green-500 ring-2 ring-green-500/20' : 'border-gray-700'} hover: border-green-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular,
                     </div>
                   </div>
                 )}
@@ -323,7 +325,7 @@ const AIHealthcarePage: React.FC = memo(() => {}
                   }`}
                 >Get Started</a>
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -335,8 +337,8 @@ const AIHealthcarePage: React.FC = memo(() => {}
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Healthcare?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 500+ healthcare providers already using our AI solutions to improve patient care.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -349,14 +351,14 @@ const AIHealthcarePage: React.FC = memo(() => {}
             </Mail>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-        className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+        className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover: bg-green-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
       >
               <Mail className="w-5 h-5 mr-2" />
-              Email Us;
+              Email Us,
             </a>
           </div>
         </section>

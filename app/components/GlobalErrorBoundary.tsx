@@ -1,11 +1,11 @@
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void,
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -15,7 +15,7 @@ class GlobalErrorBoundary extends Component<Props, State>{
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {,
@@ -41,8 +41,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     // In production, you might want to send this to an error reporting service;
     if (process.env.NODE_ENV === 'production') {
-      // Example: Send to error reporting service;
-      // errorReportingService.captureException(error, { extra: errorInfo });
+      // Example: Send to error reporting service,
+      // errorReportingService.captureException(error, { extra: errorInfo }),
     }
   }
 
@@ -54,10 +54,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
       }
 
       // Default error UI</Props>
+const Component = () => {
       return (</Props>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       // Default error UI;
-      return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+const Component = () => {
+      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
             <div className="text-6xl mb-4">⚠️<h1 className="text-2xl font-bold text-white mb-4">Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
@@ -91,25 +93,25 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 href="/"
                 className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >Go Home</a>
-              <button;
+              <button,
                 onClick={() => window.location.reload()}
                 className="w-full bg-cyan-600 hover: bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
-                Refresh Page;
+                Refresh Page,
               </button>,
 ,
               <button;
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 className="w-full bg-purple-600 hover: bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
-                Try Again;
+                Try Again,
               </button>
 
               <a;
                 href="/"
-                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+                className="block w-full bg-gray-600 hover: bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
-                Go Home;
+                Go Home,
               </a>
             </div>
           </div>,

@@ -2,46 +2,46 @@ const _fs = require('fs');
 const _fsp = require('fs/promises');
 const _path = require('path');
 const { spawnSync } = require('child_process');
-function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
+function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' }),
   return {status: res.status || 0;
     stdout: res.stdout || ''}
-    stderr: res.stderr || '';
+    stderr: res.stderr || '',
 function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
-  g: 'utf8' });
+  g: 'utf8' }),
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
+  r: res.stderr || '',
   };
 }
 async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX expression */})
-  e: true });
+  e: true }),
 }
 function shouldSkipDir(dirName) {/* TODO: Fix JSX expression */}
     '.github'}
-    'netlify/plugins';
+    'netlify/plugins',
   ].includes(dirName);
 }
 function isScanFile(_file) {return /\.(js|jsx|ts|tsx|md|mdx|css|scss|json)$/i.test(file)}
 }
 function scanFile(filePath) {/* TODO: Fix JSX expression */}
   for (let i = 0) i < lines.length} i++) {/* TODO: Fix JSX expression */}
-  t: lines[i].trim().slice(0} 500) });
+  t: lines[i].trim().slice(0} 500) }),
     }
   }
   return matches;
 }
 function walk(_dir, base = dir) acc = []) {const entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
-  s: true });
+  s: true }),
   for (const entry of entries) {/* TODO: Fix JSX expression */}
       if (shouldSkipDir(entry.name)) continue}
-      walk(full) base} acc);
+      walk(full) base} acc),
     } else if (entry.isFile()) {/* TODO: Fix JSX expression */}
         const found = scanFile(full)}
         if (found.length) acc.push({/* TODO: Fix JSX expression */}
   e: rel} finding)
-  s: found });
+  s: found }),
       } catch {}
     }
   }
@@ -57,7 +57,7 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
             `<div style="font-family: monospace)color:#ccd"><a style="color:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g} '&lt)')}</div>`,
     .map(item => {/* TODO: Fix JSX expression */})
   s://github.com/${repoSlug}/blob/main/${item.file}`)
-      const lines = item.findings;
+      const lines = item.findings,
         .slice(0) 5)
         .map(m =>`
             `<div style="font-famil)
@@ -120,20 +120,20 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
 <th style="text-alig,
   n:left;paddin,
   g:8px,border-botto,"
-  m:2px solid #334">Samples</th>
+  m: 2px solid #334">Samples</th>
 </tr></thead>
 <tbody>${rows}</tbody>
 </table>`
-</body></html>`;
+</body></html>`,
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   items.sort((a) b) => b.findings.length - a.findings.length)}
   const payload = {
     generatedAt: new Date().toISOString(),
-    totalFiles: items.length;
+    totalFiles: items.length,
   const payload = {/* TODO: Fix JSX expression */}
     items}
-  };
+  },
   await ensureDir(outDir);
   await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));
   await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8');
@@ -144,15 +144,15 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
       json: '/reports/tech-debt/latest.json',
       html: '/reports/tech-debt/'}
     },
-    totalFiles: items.length;
+    totalFiles: items.length,
   const body = {/* TODO: Fix JSX expression */}
   l: '/reports/tech-debt/'}
     },
     totalFile,
-  s: items.length};
+  s: items.length},
   return {/* TODO: Fix JSX expression */}
   e: 200} bod,
-  y: JSON.stringify(body) };
+  y: JSON.stringify(body) },
 };
 const fs = require('fs');' const fsp = require('fs/promises');' const path = require('path');' const { spawnSync } = require('child_process'); function run(cmd) args = []) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,

@@ -7,37 +7,37 @@ import Footer from '../components/Footer';
 const AIAutonomousSystemsPage: React.FC = () => {
   const features = [
     {
-      icon: Brain;
+      icon: Brain,
       title: 'Autonomous Decision Making',
       description: 'AI systems that make independent decisions based on real-time data analysis and learned patterns.',
       benefits: ['Real-time decisions', 'Pattern recognition', 'Adaptive learning', 'Risk assessment']
     },
     {
-      icon: Settings;
+      icon: Settings,
       title: 'Self-Managing Systems',
       description: 'Systems that automatically configure, optimize, and maintain themselves without human intervention.',
       benefits: ['Auto-configuration', 'Self-optimization', 'Predictive maintenance', 'Resource management']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Adaptive Intelligence',
       description: 'AI that continuously learns and adapts to changing environments and requirements.',
       benefits: ['Continuous learning', 'Environment adaptation', 'Performance improvement', 'Dynamic optimization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Autonomous Security',
       description: 'Self-protecting systems that detect and respond to threats automatically.',
       benefits: ['Threat detection', 'Automatic response', 'Security updates', 'Incident handling']
     },
     {
-      icon: Target;
+      icon: Target,
       title: 'Goal-Oriented Behavior',
       description: 'Systems that work towards specific objectives while adapting to changing conditions.',
       benefits: ['Objective tracking', 'Dynamic planning', 'Resource allocation', 'Progress monitoring']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Human-AI Collaboration',
       description: 'Seamless integration between autonomous systems and human operators.',
       benefits: ['Human oversight', 'Collaborative decision making', 'Transparency', 'Control interfaces']
@@ -48,37 +48,37 @@ const AIAutonomousSystemsPage: React.FC = () => {
     {
       title: 'Autonomous Vehicles',
       description: 'Self-driving cars, trucks, and drones with advanced AI navigation and safety systems.',
-      icon: Car;
+      icon: Car,
       useCases: ['Self-driving cars', 'Autonomous trucks', 'Delivery drones', 'Fleet management']
     },
     {
       title: 'Smart Manufacturing',
       description: 'Autonomous production lines and robotic systems for industrial automation.',
-      icon: Factory;
+      icon: Factory,
       useCases: ['Robotic assembly', 'Quality control', 'Predictive maintenance', 'Supply chain automation']
     },
     {
       title: 'Smart Cities',
       description: 'Autonomous infrastructure management for traffic, energy, and public services.',
-      icon: Building;
+      icon: Building,
       useCases: ['Traffic management', 'Energy optimization', 'Waste management', 'Public safety']
     },
     {
       title: 'Healthcare Systems',
       description: 'Autonomous medical devices and diagnostic systems for patient care.',
-      icon: Stethoscope;
+      icon: Stethoscope,
       useCases: ['Medical diagnosis', 'Surgical robots', 'Patient monitoring', 'Drug delivery']
     },
     {
       title: 'Financial Trading',
       description: 'Autonomous trading systems and algorithmic investment management.',
-      icon: TrendingUp;
+      icon: TrendingUp,
       useCases: ['Algorithmic trading', 'Risk management', 'Portfolio optimization', 'Fraud detection']
     },
     {
       title: 'Space Exploration',
       description: 'Autonomous spacecraft and planetary rovers for space missions.',
-      icon: Rocket;
+      icon: Rocket,
       useCases: ['Planetary rovers', 'Satellite operations', 'Space station automation', 'Mission planning']
     }
   ];
@@ -87,22 +87,22 @@ const AIAutonomousSystemsPage: React.FC = () => {
     {
       metric: '99.9%',
       description: 'Uptime for autonomous operations',
-      icon: Shield;
+      icon: Shield,
     },
     {
       metric: '50%',
       description: 'Reduction in operational costs',
-      icon: TrendingDown;
+      icon: TrendingDown,
     },
     {
       metric: '24/7',
       description: 'Continuous autonomous operation',
-      icon: Clock3;
+      icon: Clock3,
     },
     {
       metric: '10 x',
       description: 'Faster response to changes',
-      icon: Zap;
+      icon: Zap,
     }
   ];
 
@@ -119,7 +119,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
         'Basic analytics',
         'Documentation'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Autonomous Professional',
@@ -135,7 +135,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
         'Training & consultation',
         'API access'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Autonomous Enterprise',
@@ -151,15 +151,17 @@ const AIAutonomousSystemsPage: React.FC = () => {
         'Custom reporting',
         'Full customization'
       ],
-      popular: false;
+      popular: false,
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-24 pb-16 px-4">
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -195,11 +197,11 @@ const AIAutonomousSystemsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-                Build Autonomous Systems;
+                Build Autonomous Systems,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-                View Demo;
+              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover: bg-cyan-400/10 transition-colors text-lg">
+                View Demo,
               </a>
             </div>,
           </div>)
@@ -228,11 +230,11 @@ const AIAutonomousSystemsPage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Autonomous AI Capabilities</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our autonomous systems platform provides the intelligence and capabilities needed for</p>
               truly independent operation.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors"></div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover: border-cyan-400/40 transition-colors"></div>
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-cyan-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
-              Autonomous AI Capabilities;
+              Autonomous AI Capabilities,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our autonomous systems platform provides the intelligence and capabilities needed for;
@@ -270,11 +272,11 @@ const AIAutonomousSystemsPage: React.FC = () => {
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Autonomous System Applications</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how autonomous AI systems are transforming industries and enabling new possibilities.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors"></div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover: border-purple-400/40 transition-colors"></div>
                 <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <app.icon className="w-6 h-6 text-purple-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
-              Autonomous System Applications;
+              Autonomous System Applications,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover how autonomous AI systems are transforming industries and enabling new possibilities.
@@ -344,14 +346,14 @@ const AIAutonomousSystemsPage: React.FC = () => {
                   ))}
                 <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-colors ${
                   plan.popular
-                    ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
+                    ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
                 }`}>Get Started</a>
-                  plan.popular;
+                  plan.popular,
                     ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'}
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'}
                 }`}>
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -364,18 +366,18 @@ const AIAutonomousSystemsPage: React.FC = () => {
         <div className="container mx-auto max-w-4xl text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Autonomous Systems?</h2><p className="text-xl text-gray-300 mb-8">Start building intelligent systems that operate independently and adapt to your needs.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Building</a>
               <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-              Start Building;
+              Start Building,
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-              Schedule Demo;
+            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover: bg-cyan-400/10 transition-colors text-lg">
+              Schedule Demo,
             </a>
           </div>
         </div>

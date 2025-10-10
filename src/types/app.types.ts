@@ -23,7 +23,7 @@ export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
 
 export interface PerformanceReport {// TODO: Add content;}
 };
-  webVitals: Partial;
+  webVitals: Partial,
 
           <PerformanceMetrics>;,
     resource,
@@ -31,7 +31,7 @@ export interface PerformanceReport {// TODO: Add content;}
     memor,
   y: MemoryStats | null;,
     timestam,
-  p: number;
+  p: number,
 }
 /**
  * Resource Statistics Interface;
@@ -48,7 +48,7 @@ export interface ResourceStats {// TODO: Add content;}
 
 }
 /**
- * Memory Statistics Interface;
+ * Memory Statistics Interface,
  * Browser memory usage statistics;
  */
 
@@ -60,7 +60,7 @@ export interface MemoryStats {// TODO: Add content;}
 
 }
 /**
- * Performance Alert Interface;
+ * Performance Alert Interface,
  * Structure for performance alerts and warnings;
  */
 
@@ -75,7 +75,7 @@ export interface PerformanceAlert {// TODO: Add content;}
 
 }
 /**
- * Layout Shift Interface;
+ * Layout Shift Interface,
  * Extends PerformanceEntry for layout shift tracking;
  */
 
@@ -86,7 +86,7 @@ export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
 
 }
 /**
- * Performance with Memory Interface;
+ * Performance with Memory Interface,
  * Extends Performance API with memory information;
  */
 

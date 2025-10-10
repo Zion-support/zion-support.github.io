@@ -15,7 +15,7 @@ interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   className?: string;
 }
 const,
-  OptimizedLoadingSpinner: React.FC;
+  OptimizedLoadingSpinner: React.FC,
           <OptimizedLoadingSpinnerProps> = memo()
   ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
@@ -23,7 +23,7 @@ const,
   d: 'w-8 h-8',
       l,
   g: 'w-12 h-12'
-    };
+    },
     const colorClasses = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -33,7 +33,8 @@ const,
   y: 'text-purple-400',
       whit,
   e: 'text-white'
-    };
+    },
+const Component = () => {
     return (<div>Coming Soon</div>)
   )
       
@@ -56,7 +57,7 @@ className="animate-spin""
           fill="none""
           viewBox="0 0 24 24""
           xmlns="htt,"
-  p:// www.w3.org/2000/svg"
+  p: // www.w3.org/2000/svg"
 //         >
           
           
@@ -100,7 +101,7 @@ className="opacity-75""
           
           </svg>
       </div>
-    );
+    ),
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
@@ -120,6 +121,7 @@ $4};
       secondary: 'text-purple-400',
       white:     ,
 $4};
+const Component = () => {
 
     return (
       <div

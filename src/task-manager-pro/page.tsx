@@ -97,6 +97,7 @@ $4}
       company: 'Consulting Firm',
       role: 'Operations Director',
       content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -226,7 +227,8 @@ $4}
 
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
-  const features = [];
+  const features = [],
+const Component = () => {
   return (
     {// TODO: Add content;}
 
@@ -252,6 +254,7 @@ import Footer from '../components/Footer';
 
 
 const PagePage: React.FC = () => {
+const Component = () => {
   return (
     
           
@@ -273,12 +276,12 @@ const PagePage: React.FC = () => {
             <CheckSquare className="w-10 h-10 text-white" /></CheckSquare>
           </div>"
           <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-// Task Manager Pro;
+  md: text-6xl font-bold text-white mb-6"></h1>
+// Task Manager Pro,
           </h1>"
           <p className="text-xl,"
-  md:text-2xl text-cyan-400 mb-8 font-medium"></p>
-// AI-Powered Productivity Platform;
+  md: text-2xl text-cyan-400 mb-8 font-medium"></p>
+// AI-Powered Productivity Platform,
           </p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Supercharge your productivity with our AI-powered task management platform.
@@ -301,13 +304,13 @@ Supercharge your productivity with our AI-powered task management platform.
           "
           <Phone className="w-5 h-5 mr-2" />,
  Cal,
-  l: (302) 464-0950;
+  l: (302) 464-0950,
             </a>
 
             <Link
-              href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300"
 
-Start Free Trial;
+Start Free Trial,
             </Link>
         {/* Key Benefits */}"
         <div className="grid grid-cols-1,"
@@ -328,8 +331,8 @@ Start Free Trial;
         {/* Features Section */}"
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-12 text-center"></h2>
-// Powerful Task Management Features;
+  md: text-4xl font-bold text-white mb-12 text-center"></h2>
+// Powerful Task Management Features,
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -360,16 +363,16 @@ Works with Your Tools;"
             {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
 //                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
-  hover:border-cyan-500/50'`
+  hover: border-cyan-500/50'`
               }`}></div>
                 {plan.popular && ()}"
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
-Most Popular;
+Most Popular,
                 )}"
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                 <p className="text-gray-300 mb-6">{plan.description}</p>"
@@ -389,8 +392,8 @@ Most Popular;
   hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
-  hover:text-white'
-                  Get Started;
+  hover: text-white'
+                  Get Started,
                 </button></button>
         {/* Testimonials */}
             What Our Users Say;"

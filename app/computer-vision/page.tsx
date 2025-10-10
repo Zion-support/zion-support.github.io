@@ -13,27 +13,27 @@ const ComputerVisionPage: React.FC = () => {,
       title: 'Object Detection',
       description: 'Identify and locate objects in images and videos with high precision',
       features: ['Real-time Detection', 'Multi-class Recognition', 'Bounding Box Localization', 'Confidence Scoring'],
-      icon: Search;
+      icon: Search,
       color: 'text-blue-400'},
     {
       title: 'Image Classification',
       description: 'Automatically categorize images into predefined classes or categories',
       features: ['Custom Categories', 'High Accuracy', 'Batch Processing', 'API Integration'],
-      icon: Eye;
+      icon: Eye,
       color: 'text-green-400'},
     {
       title: 'Facial Recognition',
       description: 'Identify and verify individuals using facial biometrics',
       features: ['Face Detection', 'Identity Verification', 'Emotion Recognition', 'Privacy Protection'],
-      icon: Camera;
+      icon: Camera,
       color: 'text-purple-400'},
     {
       title: 'Video Analysis',
       description: 'Extract insights from video content using advanced computer vision',
       features: ['Motion Detection', 'Activity Recognition', 'Scene Analysis', 'Real-time Processing'],
-      icon: Shield;
+      icon: Shield,
       color: 'text-cyan-400'}
-  ];
+  ],
 
   const benefits = [
     'Process 1000+ images per second',
@@ -42,8 +42,9 @@ const ComputerVisionPage: React.FC = () => {,
     'Enable real-time video analysis',
     'Support multiple image formats'
   ];
+const Component = () => {
 
-  return(<>
+  return (<>
       <SEOOptimizer;
         title="Computer Vision Solutions - Zion Tech Group"
         description="Advanced computer vision solutions including object detection, image classification, facial recognition, and video analysis. Transform visual data into actionable insights."
@@ -85,12 +86,12 @@ const ComputerVisionPage: React.FC = () => {,
           {/* Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our Computer Vision Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Computer Vision">
-              Computer Vision;
+              Computer Vision,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Advanced Visual Intelligence Solutions;
@@ -184,23 +185,23 @@ const ComputerVisionPage: React.FC = () => {,
                 Contact us today for a free consultation and discover the potential of visual intelligence.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >Get Free Consultation</a>
                 >
-                  Get Free Consultation;
+                  Get Free Consultation,
                 </a>
                 <a;
                   href="tel:+13024640950"
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" >Call +1 302 464 0950</Phone>
                 </Phone>
                   <Phone className="w-5 h-5" />
-                  Call +1 302 464 0950;
+                  Call +1 302 464 0950,
                 </a>
               </div>
             </div>

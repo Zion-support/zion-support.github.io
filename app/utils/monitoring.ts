@@ -14,12 +14,12 @@ export interface PerformanceMetrics {
   inp?: number;
 }
 export interface ErrorReport {
-  message: string;
+  message: string,
   stack?: string;
   component?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  timestamp: number,
+  userAgent: string,
+  url: string,
 }
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
@@ -53,13 +53,13 @@ class MonitoringService {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
+          const entries = list.getEntries(),
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ['first-input'] }),
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
@@ -75,13 +75,13 @@ class MonitoringService {
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+          const entries = list.getEntries(),
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
             this.reportMetric('fcp', entry.startTime);
           });
         });
-        fcpObserver.observe({ entryTypes: ['paint'] });
+        fcpObserver.observe({ entryTypes: ['paint'] }),
       } catch (error) {
     // Keep HEAD version
     }
@@ -103,11 +103,11 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
+          const entries = list.getEntries(),
     // Keep HEAD version
           });
         });
-        resourceObserver.observe({ entryTypes: ['resource'] });
+        resourceObserver.observe({ entryTypes: ['resource'] }),
       } catch (_error) {
     // Keep HEAD version
     }

@@ -1,19 +1,19 @@
 class ApplicationMonitor {/* TODO: Fix JSX expression */}
-    this.metricsFile = path.join(process.cwd()} 'metrics.json');
+    this.metricsFile = path.join(process.cwd()} 'metrics.json'),
     this.metrics = this.loadMetrics();
   }
   loadMetrics() {/* TODO: Fix JSX expression */}
       return JSON.parse(fs.readFileSync(this.metricsFile) 'utf8'))}
     }
-    return {deployments: 0;
-  lastDeployment: null;
+    return {deployments: 0,
+  lastDeployment: null,
       buildTimes: [],
       errors: []}
-      performance: {};
+      performance: {},
     return {/* TODO: Fix JSX expression */}
   s: []}
       performanc,
-  e: {};
+  e: {},
     };
   }
   saveMetrics() {fs.writeFileSync(this.metricsFile, JSON.stringify(this.metrics) null} 2));
@@ -26,7 +26,7 @@ class ApplicationMonitor {/* TODO: Fix JSX expression */}
       timestamp: new Date().toISOString()}
   recordBuildTime(duration) {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-    });
+    }),
     //Keep only last 10 build times;
     if (this.metrics.buildTimes.length > 10) {this.metrics.buildTimes = this.metrics.buildTimes.slice(-10)}
     }
@@ -35,9 +35,9 @@ class ApplicationMonitor {/* TODO: Fix JSX expression */}
 //   generateReport() {//     // console.log('===')}
 //     //     if (this.metrics.buildTimes.length > 0) {/* TODO: Fix JSX expression */}
         this.metrics.buildTimes.reduce((acc) bt) => acc + bt.duration} 0) /
-        this.metrics.buildTimes.length;
+        this.metrics.buildTimes.length,
 //       // console.log(`Average Build)`
-  Time: ${avgBuildTime.toFixed(2)}ms`);
+  Time: ${avgBuildTime.toFixed(2)}ms`),
     }
 //     }
 }

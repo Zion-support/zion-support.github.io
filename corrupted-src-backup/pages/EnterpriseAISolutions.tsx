@@ -22,8 +22,10 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         'Workflow Optimization',
         'Intelligent Routing',
         'Performance Monitoring']}];
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet>
@@ -59,12 +61,13 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
           {solutions.map((solution, index) => (</div>
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow"
             ></div>
               <div className="flex items-center mb-4"></div>
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
     {/* TODO: Fix JSX expression */}
-    }];
+    }],
+const Component = () => {
 
   return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet></Helmet>
@@ -90,7 +93,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
           {/* TODO: Fix JSX expression */}
               key={index}"
               className="bg-white rounded-lg shadow-lg p-6,"
-  hover:shadow-xl transition-shadow"
+  hover: shadow-xl transition-shadow"
             >"
               <div className="flex items-center mb-4"></div>"
                 <div className="text-blue-600 mr-3">{solution.icon}</div>"
@@ -112,6 +115,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>
       </div>
     </div>
-  );
+  ),
 }
 "

@@ -1,5 +1,5 @@
 export interface BreakthroughContent {/* TODO: Fix JSX expression */}
-  };
+  },
 }
 
 export const newBreakthroughContent2025: BreakthroughContent[] = [
@@ -8,7 +8,7 @@ export const newBreakthroughContent2025: BreakthroughContent[] = [
     title: 'AI Platform Optimization 2025: Maximizing ROI with Intelligent Scorecards'
     description: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.'
     content: `
-# AI Platform Optimization 2025;
+# AI Platform Optimization 2025,
 Transform your AI platform with intelligent scorecards and performance monitoring that deliver measurable ROI.
 
 ## Key Features;
@@ -21,7 +21,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
     publishedAt: '2025-10-03',
     category: 'AI Strategy',
     tags: ['Platform', 'ROI', 'Scorecards', 'Optimization'],
-    featured: true;
+    featured: true,
     readTime: '12 min read'
     image: '/images/ai-platform-optimization-2025.jpg'
     valueProposition: '300% ROI improvement'
@@ -35,7 +35,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
     title: 'Quantum AI Security 2025: Next-Generation Protection'
     description: 'Advanced quantum AI security framework providing unprecedented protection against emerging threats.'
     content: `
-# Quantum AI Security 2025;
+# Quantum AI Security 2025,
 Protect your AI systems with next-generation quantum security frameworks.
 
 ## Security Features;
@@ -48,7 +48,7 @@ Protect your AI systems with next-generation quantum security frameworks.
     publishedAt: '2025-10-04',
     category: 'AI Security',
     tags: ['Security', 'Quantum', 'AI', 'Protection'],
-    featured: true;
+    featured: true,
     readTime: '15 min read'
     image: '/images/quantum-ai-security-2025.jpg'
     valueProposition: '99.99% threat prevention'
@@ -62,4 +62,4 @@ export const,
   {/* TODO: Fix JSX expression */}
     }},
   {/* TODO: Fix JSX expression */}
-    }}];
+    }}],

@@ -70,7 +70,8 @@ function createPageComponent(pageName) {
   return `import React from 'react';
 
 const ${componentName}: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)
       <div className="text-center">)
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>)
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>
@@ -80,8 +81,8 @@ const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-          Contact Us;
+  hover: bg-cyan-600 transition-colors"></a>
+          Contact Us,
         </a>
       </div>,
     </div>);
@@ -97,9 +98,9 @@ function restorePageFile(pagePath) {
   
   // Create directory if it doesn't exist;
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(dir, { recursive: true }),
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
-  e: true });
+  e: true }),
   }
   
   const pageName = pagePath.replace('.tsx', '');
@@ -107,7 +108,7 @@ function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
   
   fs.writeFileSync(fullPath, content, 'utf8');`
   console.log(`Restore)`
-  d: ${pagePath}`);
+  d: ${pagePath}`),
 }
 
 // Main execution;

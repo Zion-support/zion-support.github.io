@@ -42,7 +42,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }
     }
 
-    // Fix function declarations;
+    // Fix function declarations,
     content = content.replace(
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
@@ -70,18 +70,18 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Process all files;
+// Process all files,
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
+}),
 
 // "`

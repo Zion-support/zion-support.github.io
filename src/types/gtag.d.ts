@@ -10,7 +10,7 @@ interface GtagEvent {// TODO: Add content;}
   event_label?: string;
   value?: number;
   [ke,
-  y: string]: unknown;
+  y: string]: unknown,
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
 interface Window {/* TODO: Fix JSX expression */}

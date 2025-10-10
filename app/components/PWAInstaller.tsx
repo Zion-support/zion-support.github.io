@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;</void></<<<void>userChoice</void></void>: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  prompt(): Promise<void>;</void></<<<void>userChoice</void></void>: Promise<{ outcome: 'accepted' | 'dismissed' }>,
 }
 
 const PWAInstaller: React.FC = () => {,
@@ -32,6 +32,7 @@ const PWAInstaller: React.FC = () => {,
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
+const Component = () => {
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -66,10 +67,12 @@ const PWAInstaller: React.FC = () => {,
     return null;
   }
 </BeforeInstallPromptEvent>
+const Component = () => {
   return (</BeforeInstallPromptEvent>
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+const Component = () => {
 
-  return(<div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+  return (<div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0">
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>
@@ -107,7 +110,7 @@ const PWAInstaller: React.FC = () => {,
               onClick={() => setShowInstallButton(false)}
               className="text-white/70 text-xs px-3 py-1.5 hover: text-white transition-colors duration-200"
             >
-              Maybe later;
+              Maybe later,
             </button>
           </div>
         </div>,

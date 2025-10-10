@@ -141,7 +141,7 @@ function shouldRemoveFunction(filename) {
 function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
   }
   
-  // Remove functions that match any of the patterns;
+  // Remove functions that match any of the patterns,
   return functionsToRemove.some(pattern => filename.includes(pattern));
 }
 
@@ -150,7 +150,7 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */}
   }
 
-  const _files = fs.readdirSync(functionsDir);
+  const _files = fs.readdirSync(functionsDir),
   let _removedCount = 0;
   let _keptCount = 0;
 
@@ -172,7 +172,7 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
     }
-  });
+  }),
 
 
 

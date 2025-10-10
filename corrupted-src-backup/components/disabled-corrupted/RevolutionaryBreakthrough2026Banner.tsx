@@ -2,7 +2,7 @@ import React from 'react';
 const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {,
   const breakthroughConten, t = [
     {
-      id: 1;
+      id: 1,
       title: 'AI, Revolutionary, Breakthrough: 10x, Performance, Gain, s',
       slug: 'ai-revolutiona, r, y-breakthrou, g, h-janua, r, y-2, 0, 2, 6',
       excerpt: 'Discover, the, groundbreaking AI, innovations, delivering 10 x, performance, gain, s, 95% cost, reductio, n, a, n, d $50, 0, M+ ROI, for, Fortune 500, companie, s.',

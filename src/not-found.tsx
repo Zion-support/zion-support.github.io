@@ -38,6 +38,7 @@ export default function NotFound() {
       icon: '📞'
     },
   ];
+const Component = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
@@ -64,7 +65,7 @@ export default function NotFound() {
             <Link
               key={index}
               to={page.href}
-              className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
+              className="block p-6 bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow duration-300 text-left"
             >
               <div className="text-3xl mb-3">{page.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -95,5 +96,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

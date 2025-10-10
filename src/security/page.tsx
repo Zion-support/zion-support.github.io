@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
-  const _features = [];
+  const _features = [],
+const Component = () => {
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -24,6 +25,7 @@ const Pagetsx: React.FC = () => {
 
     }
   ]
+const Component = () => {
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
       <Helmet></Helmet>
         <title>tsx - Zion Tech Group</title>"
@@ -42,13 +44,13 @@ const Pagetsx: React.FC = () => {
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-                Get Started;
+  hover: bg-cyan-600 transition-colors"></a>
+                Get Started,
               </a>"
               <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-500,"
-  hover:text-white transition-colors"></a>
-                View Demo;
+  hover: text-white transition-colors"></a>
+                View Demo,
               </a>
             </div>
           </div>
@@ -84,8 +86,8 @@ const Pagetsx: React.FC = () => {
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>"
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-              Contact Us;
+  hover: bg-cyan-600 transition-colors"></a>
+              Contact Us,
             </a>
           </div>
         </section>

@@ -1,7 +1,9 @@
 const, October2025LatestBreakthroughBanne, r = () => {
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
+const Component = () => {
+  return (<div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-20">
+const Component = () => {
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};</div>

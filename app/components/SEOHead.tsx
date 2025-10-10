@@ -51,6 +51,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "https://twitter.com/ziontechgroup"
     ]
   };
+const Component = () => {
 
   return (
     <Helmet>

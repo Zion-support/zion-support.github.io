@@ -20,26 +20,28 @@ const ContentNewsletterSignup: React.FC = () => {,
 
   const benefits = [
     {
-      icon: Star;
+      icon: Star,
       title: 'Exclusive AI Insights',
       description: 'Get the latest AI trends and industry updates'},
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Early Access',
       description: 'Be the first to know about new features and services'},
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Security Tips',
       description: 'Weekly cybersecurity tips and best practices'}
-  ];
+  ],
 
   if (isSubscribed) {
-    return(<section className="py-16" aria-labelledby="newsletter-success">
+const Component = () => {
+    return (<section className="py-16" aria-labelledby="newsletter-success">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 cyber-card">
               <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
               <h2 id="newsletter-success" className="text-3xl font-bold text-white mb-4">Welcome to Zion Tech Group!<p className="text-white/90 text-lg mb-6">Thank you for subscribing! You'll receive our latest updates and exclusive content.<button
+const Component = () => {
     return (
       <section className="py-16" aria-labelledby="newsletter-success">
         <div className="container mx-auto px-4"></section>
@@ -61,18 +63,20 @@ const ContentNewsletterSignup: React.FC = () => {,
                 onClick={() => setIsSubscribed(false)}
                 className="bg-white/20 hover: bg-white/30 text-white px-6 py-2 rounded-lg transition-all duration-300"
               >
-                Subscribe Another Email;
+                Subscribe Another Email,
               </button>
             </div>
           </div>
         </div>,
       </section>);
   }
+const Component = () => {
 
-  return(<section className="py-16" aria-labelledby="newsletter-heading">
+  return (<section className="py-16" aria-labelledby="newsletter-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
+const Component = () => {
   return (
     <section className="py-16" aria-labelledby="newsletter-heading">
       <div className="container mx-auto px-4"></section>
@@ -142,7 +146,7 @@ const ContentNewsletterSignup: React.FC = () => {,
                       value={email}
                       onChange={(e) =>setEmail(e.target.value)}
                       placeholder="Enter your email address"
-                      className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
                       required</input>
                     /><button
                     type="submit"
@@ -150,7 +154,7 @@ const ContentNewsletterSignup: React.FC = () => {,
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >{isLoading ? (</button>
                       className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
-                      required;
+                      required,
                     />
                   </div>
 ,
@@ -186,6 +190,7 @@ const ContentNewsletterSignup: React.FC = () => {
     setEmail('');
     setTimeout(() => setIsSubscribed(false), 3000);
   };
+const Component = () => {
 
   return (
     <section className="py-16">
@@ -202,7 +207,7 @@ const ContentNewsletterSignup: React.FC = () => {
               <span className="text-lg">Thank you for subscribing!</span>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 value={email}
@@ -227,7 +232,7 @@ const ContentNewsletterSignup: React.FC = () => {
         </div>
       </div>
     </section>
-  );
+  ),
 };
 
 export default ContentNewsletterSignup;

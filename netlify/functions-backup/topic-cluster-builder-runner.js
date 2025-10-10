@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('topic-cluster-builder-runner function triggered')}
-    // Topic cluster building simulation;
+    // Topic cluster building simulation,
     const result = {
-      statusCode: 200;
+      statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         source: event.source || 'unknown',
         building: {,
           status: 'active',
-          clusters: 0;
+          clusters: 0,
           lastBuilt: new Date().toISOString()}
     const result = {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
@@ -21,12 +21,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
-        }})};
+        }})},
     return result;
 //   } catch (error) {// console.error('Error in topic-cluster-builder-runner: ') error;
       }
     return {
-      statusCode: 500;
+      statusCode: 500,
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
@@ -42,11 +42,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'topic-cluster-builder-runner'})
-      });
+      }),
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'topic-cluster-builder-runner',' source: event.source || 'unknown', building: {' status: 'active', clusters: 0;
+        timestamp: new Date().toISOString(),' function: 'topic-cluster-builder-runner',' source: event.source || 'unknown', building: {' status: 'active', clusters: 0,
         lastBuilt: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in topic-cluster-builder-runner: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'topic-cluster-builder-runner' }) }; } };'
         timestam,

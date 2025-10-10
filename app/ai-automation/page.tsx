@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 const AIAutomationPage: React.FC = () => {
   const automationServices = [
     {
-      icon: Settings;
+      icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
@@ -36,7 +36,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Process Automation',
       description: 'Automate repetitive tasks and workflows with intelligent AI systems',
       icon: Zap,
@@ -56,13 +56,13 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       price: 'Starting at $299/month'
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
@@ -91,7 +91,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         '1 user account'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -107,7 +107,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         'Real-time monitoring'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -124,7 +124,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         'SLA guarantee'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -154,8 +154,9 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       examples: ['Resume screening', 'Interview scheduling', 'Onboarding workflows', 'Performance tracking']
     }
   ];
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       title: 'Customer Service Automation',
       description: 'AI-powered chatbots and support systems for enhanced customer experience',
       icon: Users,
@@ -179,7 +180,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       benefits: ['Higher conversion', 'Better targeting', 'Reduced costs', 'Improved ROI'],
       price: 'Starting at $249/month'
     }
-  ];
+  ],
 
   const features = [
     {
@@ -202,7 +203,8 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       title: "Custom Integration",
       description: "Seamless integration with your existing systems"
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>
@@ -340,7 +342,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                 Our AI automation solutions are designed to deliver measurable results. 
                 All implementations include free trials, dedicated support, and ongoing optimization.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
@@ -362,7 +364,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default AIAutomationPage;

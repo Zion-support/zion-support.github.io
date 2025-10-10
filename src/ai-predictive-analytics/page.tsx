@@ -32,6 +32,7 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
       benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

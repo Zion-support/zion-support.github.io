@@ -6,7 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function AICustomerServicePage() {
-  return(<div><Helmet>
+const Component = () => {
+  return (<div><Helmet>
+const Component = () => {
   return (
     <div></div><Helmet>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -32,7 +34,7 @@ export default function AICustomerServicePage() {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              AI Customer Service Solutions;
+              AI Customer Service Solutions,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Revolutionary 24/7 AI-powered customer support;
@@ -192,7 +194,7 @@ export default function AICustomerServicePage() {
                 <h3 className="text-xl font-bold text-white mb-4">Instant Scalability</h3><p className="text-gray-300">Handle traffic spikes effortlessly with AI that scales automatically to meet demand.</p>
                 </p>
             <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                 <MessageSquare className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">Smart Chatbots</h3>
@@ -225,10 +227,10 @@ export default function AICustomerServicePage() {
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Demo</a>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Demo;
+              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300">
+                Get Free Demo,
               </a>
             </div>
           </section>
@@ -240,7 +242,7 @@ export default function AICustomerServicePage() {
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Service?</h2>
             <p className="text-xl text-blue-100 mb-8">Let our AI solutions handle your customer support needs</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
@@ -262,5 +264,5 @@ export default function AICustomerServicePage() {
       
       <Footer />
     </div>
-  );
+  ),
 }

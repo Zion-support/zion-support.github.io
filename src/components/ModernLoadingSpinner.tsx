@@ -33,6 +33,7 @@ $4};
   const containerClasses = fullScreen
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
+const Component = () => {
   return (
     <div className={containerClasses} role="status" aria-label="Loading">
       <div className="flex flex-col items-center space-y-4">
@@ -56,7 +57,7 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   fullScreen?: boolean;
 }
 const,
-  ModernLoadingSpinner: React.FC;
+  ModernLoadingSpinner: React.FC,
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -72,7 +73,7 @@ const,
   g: 'w-12 h-12',
     x,
   l: 'w-16 h-16'
-  };
+  },
   const colorClasses = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -82,7 +83,7 @@ const,
   y: 'text-purple-400',
     accen,
   t: 'text-pink-400'
-  };
+  },
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
@@ -95,6 +96,7 @@ const,
   const containerClasses = fullScreen;
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     

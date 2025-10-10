@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
 interface AccessibilitySettings {
-  fontSize: 'small' | 'medium' | 'large';
-  highContrast: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
+  fontSize: 'small' | 'medium' | 'large',
+  highContrast: boolean,
+  reducedMotion: boolean,
+  screenReader: boolean,
+  keyboardNavigation: boolean,
 }
 
 const EnhancedAccessibility: React.FC = () => {
@@ -15,7 +15,7 @@ const EnhancedAccessibility: React.FC = () => {
     reducedMotion: false,
     screenReader: false,
     keyboardNavigation: false
-  });
+  }),
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -41,7 +41,7 @@ const EnhancedAccessibility: React.FC = () => {
         window.navigator.userAgent.includes('JAWS') ||
         window.navigator.userAgent.includes('VoiceOver');
       
-      setSettings(prev => ({ ...prev, screenReader: !!hasScreenReader }));
+      setSettings(prev => ({ ...prev, screenReader: !!hasScreenReader })),
     };
 
     detectScreenReader();
@@ -58,7 +58,7 @@ const EnhancedAccessibility: React.FC = () => {
       small: '0.875rem',
       medium: '1rem',
       large: '1.125rem'
-    };
+    },
     
     root.style.setProperty('--font-size', fontSizeMap[settings.fontSize]);
     
@@ -123,6 +123,7 @@ const EnhancedAccessibility: React.FC = () => {
       setIsVisible(false);
     }
   };
+const Component = () => {
 
   return (
     <>

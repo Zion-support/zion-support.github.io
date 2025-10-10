@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 interface AnimatedCounterProps {
-  end: number;
+  end: number,
   duration?: number;
   prefix?: string;
   suffix?: string;
@@ -25,11 +25,12 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
         }
       },
       { threshold: 0.1 }
-    );
+    ),
 
     if (counterRef.current) {
       observer.observe(counterRef.current);
     }
+const Component = () => {
 
     return () => observer.disconnect();
   }, [isVisible]);
@@ -37,8 +38,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
   useEffect(() => {
     if (!isVisible) return;
 
-    let startTime: number;
-    let animationFrame: number;
+    let startTime: number,
+    let animationFrame: number,
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
@@ -56,6 +57,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
     };
 
     animationFrame = requestAnimationFrame(animate);
+const Component = () => {
 
     return () => {
       if (animationFrame) {
@@ -63,6 +65,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
       }
     };
   }, [isVisible, end, duration]);
+const Component = () => {
 
   return (
     <div ref={counterRef} className={className}></di>

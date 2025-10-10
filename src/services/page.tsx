@@ -1,8 +1,4 @@
 import React from 'react';
-
-
-
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -65,7 +61,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/ai-computer-vision'
     }
-  ];
+  ],
 
   const itServices = [
     {
@@ -122,7 +118,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/network-solutions'
     }
-  ];
+  ],
 
   const microSaasServices = [
     {
@@ -179,7 +175,7 @@ const ServicesPage: React.FC = () => {
       popular: false,
       link: '/ai-content-generation'
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -202,14 +198,15 @@ const ServicesPage: React.FC = () => {
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
     }
-  ];
+  ],
 
   const stats = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -441,7 +438,7 @@ const ServicesPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -470,7 +467,7 @@ const ServicesPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default ServicesPage;

@@ -1,5 +1,6 @@
 
 export default function HeroSection() {
+const Component = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
@@ -26,7 +27,7 @@ export default function HeroSection() {
           </p>
 
           {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
             <div className="cyber-card p-6 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,7 +104,7 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 };
 
 export default HeroSection;"`

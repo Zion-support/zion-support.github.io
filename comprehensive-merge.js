@@ -5,16 +5,16 @@ import fs from 'fs';
 // //Function to safely execute git commands;
 function safeGitCommand(command, description) {
   try {
-    //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+    //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' }),
     //     return { success: true, result };
   } catch (error) {
-    //     return { success: false, error: error.message };
+    //     return { success: false, error: error.message },
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+  o: 'pipe' }),
     //     return {/* TODO: Fix JSX expression */}
   s: true, result };
   } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.message };
+  r: error.message },
   }
 }
 
@@ -42,7 +42,7 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
   if (!branchCheck.success) {/* TODO: Fix JSX expression */}
   }
 
-  //Try to merge the branch;
+  //Try to merge the branch,
   const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`)
     `Merge ${branch}`
   );
@@ -72,15 +72,15 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
     //     }
 }
 
-// // Generate a summary report;
+// // Generate a summary report,
 const summary = {
   timestamp: new Date().toISOString()
-  mergedBranches: mergedCount;
-  conflictedBranches: conflictCount;
-  totalProcessed: prBranches.length;
+  mergedBranches: mergedCount,
+  conflictedBranches: conflictCount,
+  totalProcessed: prBranches.length,
   status: mergedCount > 0 ? 'success' : 'no-changes',
 const summary = {/* TODO: Fix JSX expression */}
-};
+},
 
 fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2));
 // "`

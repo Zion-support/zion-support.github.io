@@ -49,11 +49,11 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
   enableErrorReporting = true,
   enablePerformanceBudget = true,
   performanceBudget = {
-    lcp: 2500;
-    fid: 100;
-    cls: 0.1;
-    fcp: 1800;
-    ttfb: 600;
+    lcp: 2500,
+    fid: 100,
+    cls: 0.1,
+    fcp: 1800,
+    ttfb: 600,
   }
 }) => {
 
@@ -86,12 +86,12 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
 
     const errorData = {
       message: error.message || 'Unknown error'
-      stack: error.stack;
+      stack: error.stack,
       context: context || 'PerformanceEnhancer'
       timestamp: Date.now()
-      url: window.location.href;
-      userAgent: navigator.userAgent;
-      performanceMetrics: performanceMetrics;
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      performanceMetrics: performanceMetrics,
   // Enhanced error reporting
   const reportError = useCallback((error: any, context?: string) => {}
     if (!enableErrorReporting) return;
@@ -104,7 +104,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
       url: window.location.href,
       userAgent: navigator.userAgent,
       performanceMetrics: performanceMetrics
-    };
+    },
 
     performanceMetrics.errors.push(errorData);
 
@@ -115,7 +115,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         event_label: context || 'PerformanceEnhancer')
         value: 1),
         custom_parameter_1: error.message),
-        custom_parameter_2: error.stack;
+        custom_parameter_2: error.stack,
     }
 
     // Send to custom endpoint)
@@ -177,9 +177,9 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             event_category: 'Performance')
             event_label: metric.name)
             value: Math.round(metric.value)
-            non_interaction: true;
-            custom_parameter_1: metric.delta;
-            custom_parameter_2: metric.id;
+            non_interaction: true,
+            custom_parameter_1: metric.delta,
+            custom_parameter_2: metric.id,
         }
 
         // Send to custom endpoint;
@@ -205,9 +205,9 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             id: metric.id)
             navigationType: metric.navigationType)
             timestamp: Date.now()
-            url: window.location.href;
-            userAgent: navigator.userAgent;
-            performanceMetrics: performanceMetrics;
+            url: window.location.href,
+            userAgent: navigator.userAgent,
+            performanceMetrics: performanceMetrics,
           navigator.sendBeacon('/api/analytics/performance', data);
         }
 
@@ -287,6 +287,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
     } else {}
       window.addEventListener('load', measureResourceTiming);
     }
+const Component = () => {
 
     return () => {}
       window.removeEventListener('load', measureResourceTiming);
@@ -304,10 +305,10 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         if ('memory' in performance) {}
           const memory = (performance as any).memory;
           performanceMetrics.memoryUsage = {
-            usedJSHeapSize: memory.usedJSHeapSize;
-            totalJSHeapSize: memory.totalJSHeapSize;
-            jsHeapSizeLimit: memory.jsHeapSizeLimit;
-            timestamp: Date.now()};
+            usedJSHeapSize: memory.usedJSHeapSize,
+            totalJSHeapSize: memory.totalJSHeapSize,
+            jsHeapSizeLimit: memory.jsHeapSizeLimit,
+            timestamp: Date.now()},
 
           // Check for memory leaks;
           if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
@@ -316,7 +317,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             totalJSHeapSize: memory.totalJSHeapSize,
             jsHeapSizeLimit: memory.jsHeapSizeLimit,
             timestamp: Date.now()
-          };
+          },
 
           // Check for memory leaks
           if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {}
@@ -334,6 +335,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
     // Measure memory every 30 seconds;
     const memoryInterval = setInterval(measureMemory, 30000);
     measureMemory(); // Initial measurement;
+const Component = () => {
     return () => clearInterval(memoryInterval);
   }, [enableMemoryMonitoring, enableConsoleLogging, performanceMetrics, reportError]);
 
@@ -348,10 +350,10 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         if ('connection' in navigator) {}
           const connection = (navigator as any).connection;
           performanceMetrics.networkInfo = {
-            effectiveType: connection.effectiveType;
-            downlink: connection.downlink;
-            rtt: connection.rtt;
-            saveData: connection.saveData;
+            effectiveType: connection.effectiveType,
+            downlink: connection.downlink,
+            rtt: connection.rtt,
+            saveData: connection.saveData,
             timestamp: Date.now(),
           performanceMetrics.networkInfo = {}
             effectiveType: connection.effectiveType,
@@ -359,7 +361,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
             rtt: connection.rtt,
             saveData: connection.saveData,
             timestamp: Date.now()
-          };
+          },
 
           if (enableConsoleLogging) {}
             }
@@ -400,7 +402,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         reportError(error, 'LongTaskMonitoring');
       }
 
-    observer.observe({ entryTypes: ['longtask'] });
+    observer.observe({ entryTypes: ['longtask'] }),
+const Component = () => {
 
     return () => observer.disconnect();
   }, [enableLongTaskMonitoring, enableConsoleLogging, performanceMetrics, reportError]);
@@ -433,7 +436,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         reportError(error, 'LayoutShiftMonitoring');
       }
 
-    observer.observe({ entryTypes: ['layout-shift'] });
+    observer.observe({ entryTypes: ['layout-shift'] }),
+const Component = () => {
 
     return () => observer.disconnect();
   }, [enableLayoutShiftMonitoring, enableConsoleLogging, performanceMetrics, reportError]);
@@ -461,6 +465,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
     } else {}
       window.addEventListener('load', measureUserTiming);
     }
+const Component = () => {
 
     return () => {}
       window.removeEventListener('load', measureUserTiming);
@@ -472,13 +477,13 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
     const reportPerformanceSummary = () => {
       try {
         const summary = {
-          webVitals: performanceMetrics.webVitals;
-          resourceCount: performanceMetrics.resourceTiming.length;
-          longTaskCount: performanceMetrics.longTasks.length;
-          layoutShiftCount: performanceMetrics.layoutShifts.length;
-          memoryUsage: performanceMetrics.memoryUsage;
-          networkInfo: performanceMetrics.networkInfo;
-          errorCount: performanceMetrics.errors.length;
+          webVitals: performanceMetrics.webVitals,
+          resourceCount: performanceMetrics.resourceTiming.length,
+          longTaskCount: performanceMetrics.longTasks.length,
+          layoutShiftCount: performanceMetrics.layoutShifts.length,
+          memoryUsage: performanceMetrics.memoryUsage,
+          networkInfo: performanceMetrics.networkInfo,
+          errorCount: performanceMetrics.errors.length,
   // Performance summary reporting
   useEffect(() => {}
     const reportPerformanceSummary = () => {}
@@ -492,7 +497,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
           networkInfo: performanceMetrics.networkInfo,
           errorCount: performanceMetrics.errors.length,
           timestamp: Date.now(),
-          url: window.location.href;
+          url: window.location.href,
         };
 
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
@@ -520,6 +525,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
 
     // Report summary after 10 seconds;
     const timeout = setTimeout(reportPerformanceSummary, 10000);
+const Component = () => {
 
     return () => clearTimeout(timeout);
   }, [enableAnalytics, enableConsoleLogging, performanceMetrics, reportError]);

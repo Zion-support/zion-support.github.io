@@ -399,7 +399,7 @@ const ITConsultingPage: React.FC = () => {
       link: 'https://ziontechgroup.com/compliance-auditing',
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
     }
-  ];
+  ],
 
   const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
@@ -413,7 +413,7 @@ const ITConsultingPage: React.FC = () => {
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ];
+  ],
 
   const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -421,6 +421,7 @@ const ITConsultingPage: React.FC = () => {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -606,7 +607,7 @@ const ITConsultingPage: React.FC = () => {
             Our certified IT professionals deliver reliable, secure, and scalable solutions. 
             All services include free consultations and ongoing support.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
@@ -625,7 +626,7 @@ const ITConsultingPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  ),
 };
 
 export default ITConsultingPage;

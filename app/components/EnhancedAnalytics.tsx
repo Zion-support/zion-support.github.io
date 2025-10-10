@@ -50,7 +50,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-    });
+    }),
 
     // Enhanced ecommerce tracking
     gtag('config', GA_MEASUREMENT_ID, {)
@@ -127,7 +127,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
 
     // Facebook Pixel initialization
     (function(f: Window, b: Document, e: string, v: string, n: unknown, t: HTMLScriptElement, s: HTMLScriptElement | null) {}
-      if (f.fbq) return;
+      if (f.fbq) return,
       n = f.fbq = function() {}
         n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
       };

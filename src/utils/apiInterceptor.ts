@@ -9,7 +9,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   private static,
-  instance: ErrorHandler;
+  instance: ErrorHandler,
   static getInstance(): ErrorHandler {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -35,7 +35,7 @@ export interface APIConfig {// TODO: Add content;}
     retryAttempts: number;,
     retryDelay: number;,
     enableCaching: boolean;,
-    cacheTimeout: number;
+    cacheTimeout: number,
 
   headers?: Record;
           <string, string>;
@@ -43,12 +43,12 @@ export interface APIConfig {// TODO: Add content;}
   O: Add content;}
 }
     request?: (confi)
-  g: RequestConfig) => RequestConfig | Promise;
+  g: RequestConfig) => RequestConfig | Promise,
           <RequestConfig>;
     response?: (respons)
-  e: Response) => Response | Promise<Response>;
+  e: Response) => Response | Promise<Response>,
     error?: (erro)
-  r: Error) => Error | Promise<Error>;
+  r: Error) => Error | Promise<Error>,
   };
 }
 export interface RequestConfig {/* TODO: Fix JSX expression */}
@@ -57,7 +57,7 @@ export interface RequestConfig {/* TODO: Fix JSX expression */}
   ur,
   l: string;,
     metho,
-  d: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  d: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH',
   headers?: Record;
           <string, string>;
   body?: unknown;
@@ -84,21 +84,21 @@ export interface CacheEntry {// TODO: Add content;}
   timestam,
   p: number;,
     expiresA,
-  t: number;
+  t: number,
 }
 
 export class APIInterceptor {// TODO: Add content;}
 
 }
   private static,
-  instance: APIInterceptor;
+  instance: APIInterceptor,
   private,
-  config: APIConfig;
+  config: APIConfig,
   private,
-  cache: Map;
+  cache: Map,
           <string, CacheEntry> = new Map();
   private,
-  errorHandler: ErrorHandler;
+  errorHandler: ErrorHandler,
   private,
   pendingRequests: Map<string, Promise<APIResponse>> = new Map();
   constructor(confi)
@@ -120,7 +120,7 @@ export class APIInterceptor {// TODO: Add content;}
     }
     this.errorHandler = ErrorHandler.getInstance()
   }
-  static getInstance(config?: Partial;
+  static getInstance(config?: Partial,
           <APIConfig>): APIInterceptor {// TODO: Add content;}
 
 }
@@ -194,7 +194,7 @@ const requestPromise = this.executeRequest;
   y: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,
         signa,
   l: this.createAbortSignal(finalConfig.timeout || this.config.timeout)
-      };
+      },
       const response = await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
       // Record performance metric;
@@ -223,7 +223,7 @@ const data = await this.parseResponse;
         status: finalResponse.status,
         statusText: finalResponse.statusText,
         headers: finalResponse.headers,
-        config: finalConfig;
+        config: finalConfig,
 
       };
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -262,13 +262,13 @@ const data = await this.parseResponse;
     ur,
   l: string,
     confi,
-  g: Partial;
+  g: Partial,
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
-          <T>({ ...config, url, method: 'GET' });
+          <T>({ ...config, url, method: 'GET' }),
 
   }
   /**
@@ -279,7 +279,7 @@ const data = await this.parseResponse;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial,
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {// TODO: Add content;}
@@ -296,7 +296,7 @@ const data = await this.parseResponse;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial,
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {// TODO: Add content;}
@@ -312,13 +312,13 @@ const data = await this.parseResponse;
     ur,
   l: string,
     confi,
-  g: Partial;
+  g: Partial,
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
-          <T>({ ...config, url, method: 'DELETE' });
+          <T>({ ...config, url, method: 'DELETE' }),
 
   }
   /**
@@ -329,7 +329,7 @@ const data = await this.parseResponse;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial,
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {// TODO: Add content;}
@@ -359,7 +359,7 @@ const data = await this.parseResponse;
 
       timeout: config.timeout || this.config.timeout,
       retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
-      cache: config.cache ?? this.config.enableCaching;
+      cache: config.cache ?? this.config.enableCaching,
 
     };
   }
@@ -430,8 +430,10 @@ const data = await this.parseResponse;
     if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
       return (await response.text()) as T;
     }
+const Component = () => {
     return (await response.blob()) as T;
   }
   /**
@@ -476,7 +478,7 @@ const data = await this.parseResponse;
       timestam)
   p: Date.now(),
       expiresA,
-  t: Date.now() + this.config.cacheTimeout;
+  t: Date.now() + this.config.cacheTimeout,
     });
   }
   /**

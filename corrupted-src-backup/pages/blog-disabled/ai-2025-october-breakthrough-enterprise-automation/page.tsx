@@ -1,6 +1,7 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 const EnterpriseAutomation202, 5 = () => { 
-  return(:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
+const Component = () => {
+  return (:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
     <>
       <Helm, e, t>
         <title>
@@ -222,16 +223,16 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
       </Helmet>
 
         <div></div>
-            <Link to="/", className="text-white hover:text-zion-cyan transition-colors">← Back to Home</Link>
+            <Link to="/", className="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>
   </div>
   </div>
           <div></div>
               <Zap className="w-4 h-4 mr-2" />
-  October 2025 • Enterprise AI;
+  October 2025 • Enterprise AI,
   </div>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
-  Complete Implementation Guide;
+  Complete Implementation Guide,
               </span>,
             </h1>,
             ,
@@ -347,18 +348,18 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
 
         <div></div>"
             <Link to="/", className="text-white,"
-  hover:text-zion-cyan transition-colors">← Back to Home</Link>
+  hover: text-zion-cyan transition-colors">← Back to Home</Link>
   </div>
   </div>
           <div></div>"
               <Zap className="w-4 h-4 mr-2" /></Zap>
-  October 2025 • Enterprise AI;
+  October 2025 • Enterprise AI,
   </div>"
             <h1 className="text-4xl,"
   md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation,"
   2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
-  Complete Implementation Guide;
+  Complete Implementation Guide,
               </span>
             </h1>
             "
@@ -635,11 +636,11 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5 " />
                       <Link className="w-5 h-5" />
                     </Link>
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx,
                     <Link to="/case-studies"
   className= " />
                     <Link to="/case-studies>"
-  className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors;
+  className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover: bg-emerald-400 hover:text-white transition-colors,
                   <div></div>"
                     to="/contact""
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold,"
@@ -672,7 +673,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                     <Link to="/case-studies>""
   className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold,
   hover:bg-emerald-400,
-  hover:text-white transition-colors;
+  hover: text-white transition-colors,
                     >
                       View Case Studies;
                     </Link>

@@ -66,7 +66,7 @@ function processFile(filePath) {
         newContent = newContent.replace(pattern, '');
 // Function to remove console statements from a file;
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
-  from: ${filePath}`);
+  from: ${filePath}`),
     }
     
     return modified;
@@ -79,7 +79,7 @@ function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
 // Main function;
 async function main() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🧹 Removing console statements from production code...\n');
+  // console.log('🧹 Removing console statements from production code...\n'),
   
   // Get all TypeScript and JavaScript files in the app directory;
   const patterns = [
@@ -96,7 +96,7 @@ async function main() {/* TODO: Fix JSX expression */}
   
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
 
     // Clean up empty lines that might be left behind;
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -121,7 +121,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd()}),
     allFiles.push(...files);
   }
 
@@ -135,9 +135,9 @@ async function main() {
   uniqueFiles.forEach(processFile);
 
   console.log(`\n🎉 Console statement removal completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Console statements removed: ${removedStatements}`);
+  console.log(`📊 Statistics: `),
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`),
+  console.log(`   - Console statements removed: ${removedStatements}`),
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -154,14 +154,14 @@ export { processFile, consolePatterns };
   // console.log(`   Files)`
   modified: ${modifiedFiles}`);`
   // console.log(`   Console statements)`
-  removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
+  removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`),
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
 }
 
-// Run the script;
+// Run the script,
 main().catch(console.error);
 
 export { removeConsoleStatements };`

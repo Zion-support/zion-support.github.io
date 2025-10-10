@@ -4,34 +4,34 @@
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
 export interface ErrorReport {
-  message: string;
+  message: string,
   stack?: string;
   componentStack?: string;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  timestamp: string,
+  userAgent: string,
+  url: string,
+  severity: 'low' | 'medium' | 'high' | 'critical',
   context?: Record<string, unknown>;
 }
 export interface ErrorReporterConfig {
-  enableConsoleLogging: boolean;
-  enableRemoteLogging: boolean;
+  enableConsoleLogging: boolean,
+  enableRemoteLogging: boolean,
   remoteEndpoint?: string;
-  maxErrorsInMemory: number;
-  captureContext: boolean;
+  maxErrorsInMemory: number,
+  captureContext: boolean,
 }
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
   captureContext: true
-};
+},
 /**
  * ErrorReporter class for comprehensive error handling
  */
 export class ErrorReporter {
-  private static instance: ErrorReporter;
-  private config: ErrorReporterConfig;
-  private errorQueue: ErrorReport[] = [];
+  private static instance: ErrorReporter,
+  private config: ErrorReporterConfig,
+  private errorQueue: ErrorReport[] = [],
   private errorCount: Map<string, number> = new Map();
   private constructor(config: Partial<ErrorReporterConfig> = {}) {
     this.config = { ...defaultConfig, ...config };
@@ -53,14 +53,14 @@ export interface ErrorReport {// TODO: Add content;}
 
 };
   messag,
-  e: string;
+  e: string,
   stack?: string;
   componentStack?: string;,
 
     timestamp: string;,
     userAgent: string;,
     url: string;,
-    severity: 'low' | 'medium' | 'high' | 'critical';
+    severity: 'low' | 'medium' | 'high' | 'critical',
 
   context?: Record;
           <string, unknown>;
@@ -76,13 +76,13 @@ export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
     maxErrorsInMemor,
   y: number;,
     captureContex,
-  t: boolean;
+  t: boolean,
 }
 
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
-  captureContext: true;
+  captureContext: true,
 
 };
 /**
@@ -93,13 +93,13 @@ export class ErrorReporter {// TODO: Add content;}
 
 }
   private static,
-  instance: ErrorReporter;
+  instance: ErrorReporter,
   private,
-  config: ErrorReporterConfig;
+  config: ErrorReporterConfig,
   private,
-  errorQueue: ErrorReport[] = [];
+  errorQueue: ErrorReport[] = [],
   private,
-  errorCount: Map;
+  errorCount: Map,
           <string, number> = new Map();
   private constructor(confi)
   g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
@@ -157,7 +157,7 @@ export class ErrorReporter {// TODO: Add content;}
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       severity,
       context: this.config.captureContext ? context : undefined
-    };
+    },
     // Track error frequency
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
     // Add to queue (with size limit)
@@ -172,7 +172,7 @@ export class ErrorReporter {// TODO: Add content;}
     // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
 //       severity,
-      context: this.config.captureContext ? context : undefined;
+      context: this.config.captureContext ? context : undefined,
 
     };
     // Track error frequency;
@@ -238,7 +238,7 @@ $4};
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(report)
-      });
+      }),
     } catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
@@ -325,7 +325,7 @@ $4};
         },
         bod)
   y: JSON.stringify(report)
-      });
+      }),
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -349,15 +349,15 @@ $4};
    * Get error statistics
    */
   getErrorStats(): {
-    totalErrors: number;
-    uniqueErrors: number;
+    totalErrors: number,
+    uniqueErrors: number,
     errorsByType: Record<string, number>;
   } {
     return {
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
       errorsByType: Object.fromEntries(this.errorCount)
-    };
+    },
   }
   /**
    * Clear error queue
@@ -383,7 +383,7 @@ $4};
     uniqueError,
   s: number;,
     errorsByTyp,
-  e: Record;
+  e: Record,
           <string, number>;
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -399,7 +399,7 @@ $4};
     }
   }
   /**
-   * Clear error queue;
+   * Clear error queue,
    */
 
   clearQueue(): void {// TODO: Add content;}
@@ -441,11 +441,11 @@ export const captureComponentError = (
   errorInfo: { componentStack: string },
   componentName: string
 ): void => {
-  const report = ErrorReporter.getInstance();
+  const report = ErrorReporter.getInstance(),
   report.reportError(error, 'high', {
     componentName,
     componentStack: errorInfo.componentStack
-  });
+  }),
 };
 export default ErrorReporter;
    * Export errors as JSON;
@@ -461,7 +461,7 @@ export default ErrorReporter;
 
   timestamp: new Date().toISOString(),
         stats: this.getErrorStats(),
-        errors: this.errorQueue;
+        errors: this.errorQueue,
 
       },
 //       null,

@@ -2,10 +2,12 @@ import React from 'react';
 import { Brain, Zap, Target, BarChart, Shield, Settings, Navigation, Zap, Target, Shield } from 'lucide-react';
 
 const AITelepathicInterfacePage: React.FC = () => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Navigation */}</div>
 const AITelepathicInterfacePage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       {/* Navigation */}
       <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
         <div className="container mx-auto px-4"></div>
@@ -29,7 +31,7 @@ const AITelepathicInterfacePage: React.FC = () => {,
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Telepathic Interface<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Control your digital world with the power of thought. Our revolutionary telepathic interface technology enables direct brain-computer interaction for unprecedented control and efficiency.</p>
+            <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Telepathic Interface<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Control your digital world with the power of thought. Our revolutionary telepathic interface technology enables direct brain-computer interaction for unprecedented control and efficiency.</p>
         <div className="container mx-auto text-center"></section>
           <div className="max-w-4xl mx-auto"></div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Telepathic Interface</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Control your digital world with the power of thought. Our revolutionary telepathic interface technology enables direct brain-computer interaction for unprecedented control and efficiency.</p>
@@ -37,14 +39,14 @@ const AITelepathicInterfacePage: React.FC = () => {,
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Experience Telepathy<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">View Demo</a>
             <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Telepathic Interface;
+              AI Telepathic Interface,
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md: text-2xl text-gray-300 mb-8 leading-relaxed">
               Control your digital world with the power of thought. Our revolutionary telepathic interface technology enables direct brain-computer interaction for unprecedented control and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Experience Telepathy;
+                Experience Telepathy,
               </a>
               <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                 View Demo;
@@ -58,9 +60,9 @@ const AITelepathicInterfacePage: React.FC = () => {,
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Mind-Controlled Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of human-computer interaction with direct neural interface technology.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Mind-Controlled Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of human-computer interaction with direct neural interface technology.</p>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
-              Mind-Controlled Features;
+              Mind-Controlled Features,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of human-computer interaction with direct neural interface technology.
@@ -130,15 +132,15 @@ const AITelepathicInterfacePage: React.FC = () => {,
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Telepathic Interface Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect telepathic interface plan for your mind-control needs.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Telepathic Interface Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect telepathic interface plan for your mind-control needs.</p>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
-              Telepathic Interface Pricing;
+              Telepathic Interface Pricing,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the perfect telepathic interface plan for your mind-control needs.
         <div className="container mx-auto"></section>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Telepathic Interface Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect telepathic interface plan for your mind-control needs.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Telepathic Interface Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect telepathic interface plan for your mind-control needs.</p>
             </p>
           </div>
 
@@ -159,7 +161,7 @@ const AITelepathicInterfacePage: React.FC = () => {,
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Basic training<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
                   <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Basic thought commands;
+                  Basic thought commands,
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" />
@@ -281,7 +283,7 @@ const AITelepathicInterfacePage: React.FC = () => {,
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Control with Your Mind?<p className="text-xl text-gray-300 mb-8">Join the telepathic revolution and experience the future of human-computer interaction.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Ready to Control with Your Mind?<p className="text-xl text-gray-300 mb-8">Join the telepathic revolution and experience the future of human-computer interaction.</p>
         <div className="container mx-auto text-center"></section>
           <div className="max-w-4xl mx-auto"></div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Control with Your Mind?</h2><p className="text-xl text-gray-300 mb-8">Join the telepathic revolution and experience the future of human-computer interaction.</p>
@@ -296,7 +298,7 @@ const AITelepathicInterfacePage: React.FC = () => {,
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Telepathic Control;
+                Start Telepathic Control,
               </a>
               <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                 Schedule Demo;

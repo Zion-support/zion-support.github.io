@@ -7,7 +7,7 @@ const Footer = lazy(() => import('../components/Footer'));
 const CloudMigrationPage: React.FC = () => {}
   const features = [
     {
-      icon: Cloud;
+      icon: Cloud,
     {}
       icon: Cloud,
       title: 'Seamless Migration',
@@ -15,7 +15,7 @@ const CloudMigrationPage: React.FC = () => {}
       benefits: ['Zero downtime', 'Data integrity', 'Rollback capability']
     },
     {
-      icon: Database;
+      icon: Database,
     {}
       icon: Database,
       title: 'Data Migration',
@@ -23,7 +23,7 @@ const CloudMigrationPage: React.FC = () => {}
       benefits: ['Data validation', 'Incremental sync', 'Backup & recovery']
     },
     {
-      icon: Server;
+      icon: Server,
     {}
       icon: Server,
       title: 'Infrastructure Setup',
@@ -31,7 +31,7 @@ const CloudMigrationPage: React.FC = () => {}
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
     },
     {
-      icon: Shield;
+      icon: Shield,
     {}
       icon: Shield,
       title: 'Security First',
@@ -39,7 +39,7 @@ const CloudMigrationPage: React.FC = () => {}
       benefits: ['Data encryption', 'Access controls', 'Compliance']
     },
     {
-      icon: Zap;
+      icon: Zap,
     {}
       icon: Zap,
       title: 'Performance Optimization',
@@ -47,7 +47,7 @@ const CloudMigrationPage: React.FC = () => {}
       benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
     },
     {
-      icon: Target;
+      icon: Target,
     {}
       icon: Target,
       title: 'Multi-Cloud Strategy',
@@ -62,7 +62,7 @@ const CloudMigrationPage: React.FC = () => {}
       title: 'Assessment',
       description: 'Comprehensive analysis of your current infrastructure and migration requirements',
       duration: '1-2 weeks',
-      icon: CheckCircle;
+      icon: CheckCircle,
     },
     {}
       step: '02',
@@ -74,15 +74,15 @@ const CloudMigrationPage: React.FC = () => {}
       title: 'Migration',
       description: 'Execute the migration with zero downtime and data integrity',
       duration: '2-4 weeks',
-      icon: Cloud;
+      icon: Cloud,
     },
     {}
       step: '04',
       title: 'Optimization',
       description: 'Optimize performance and provide ongoing support and monitoring.',
-      icon: TrendingUp;
+      icon: TrendingUp,
       duration: 'Ongoing'}
-  ];
+  ],
 
   const pricingPlans = [
     {}
@@ -96,7 +96,7 @@ const CloudMigrationPage: React.FC = () => {}
         'Timeline planning',
         'Risk assessment'
       ],
-      popular: false;
+      popular: false,
     },
     {}
       name: 'Standard Migration',
@@ -109,7 +109,7 @@ const CloudMigrationPage: React.FC = () => {}
         'Testing and validation',
         '30 days support'
       ],
-      popular: true;
+      popular: true,
     },
     {}
       name: 'Enterprise Migration',
@@ -123,7 +123,7 @@ const CloudMigrationPage: React.FC = () => {}
         '6 months support',
         'Dedicated team'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -144,9 +144,11 @@ const CloudMigrationPage: React.FC = () => {}
       title: 'Scalability',
       description: 'Scale resources up or down based on demand automatically.',
       percentage: 'Unlimited'}
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -169,8 +171,8 @@ const CloudMigrationPage: React.FC = () => {}
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg"
@@ -185,7 +187,7 @@ const CloudMigrationPage: React.FC = () => {}
           </section>
 
               >
-                Start Migration;
+                Start Migration,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a;
@@ -389,14 +391,14 @@ const CloudMigrationPage: React.FC = () => {}
                     </ul>
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${}
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}>Get Started</button>
-                      plan.popular;
+                      plan.popular,
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700'}
                         : 'bg-slate-700 text-white hover:bg-slate-600'}
                     }`}>
-                      Get Started;
+                      Get Started,
                     </button>
                   </div>
                 ))}
@@ -409,12 +411,12 @@ const CloudMigrationPage: React.FC = () => {}
             <div className="max-w-4xl mx-auto text-center"></section>
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2><p className="text-xl text-gray-300 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert team.</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="cyber-button px-8 py-4 text-lg">Start Your Migration<button className="cyber-button-outline px-8 py-4 text-lg">Contact Our Experts</button>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="cyber-button px-8 py-4 text-lg">
-                  Start Your Migration;
+                  Start Your Migration,
                 </button>
                 <button className="cyber-button-outline px-8 py-4 text-lg">
                   Contact Our Experts;
@@ -424,12 +426,13 @@ const CloudMigrationPage: React.FC = () => {}
           </section>
         </div>
       </main>
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const CloudMigrationPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -491,7 +494,7 @@ const CloudMigrationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ),
 };
 
 CloudMigrationPage.displayName = 'CloudMigrationPage';

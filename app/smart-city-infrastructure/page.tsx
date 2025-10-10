@@ -101,7 +101,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
       description: "Virtual replicas of city infrastructure for simulation and planning",
       icon: Building
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -152,7 +152,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -176,7 +176,8 @@ const SmartCityInfrastructurePage: React.FC = () => {
       avatar: "SW",
       content: "Our smart security systems have reduced crime by 30% and improved emergency response times by 50%. Citizens feel safer and more connected to their city."
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -421,7 +422,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             Join the smart city revolution and create a more sustainable, efficient, and livable urban environment.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Start Planning
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -432,9 +433,9 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
-  );
+  ),
 };
 
 SmartCityInfrastructurePage.displayName = 'SmartCityInfrastructurePage';

@@ -236,7 +236,7 @@ const results = {
   working: [],
   broken: [],
   errors: [],
-  total: 0;
+  total: 0,
 };
 
 // Helper function to make HTTP requests;
@@ -247,9 +247,9 @@ function makeRequest(url) {
     const client = isHttps ? https : http;
     
     const requestOptions = {
-      hostname: urlObj.hostname;
+      hostname: urlObj.hostname,
       port: urlObj.port || (isHttps ? 443 : 80)
-      path: urlObj.pathname + urlObj.search;
+      path: urlObj.pathname + urlObj.search,
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT;
@@ -259,7 +259,7 @@ function makeRequest(url) {
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1'
       },
-      timeout: TIMEOUT;
+      timeout: TIMEOUT,
     };
 
     const req = client.request(requestOptions, (res) => {
@@ -274,7 +274,7 @@ function makeRequest(url) {
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
-          url: url;
+          url: url,
         });
       });
     });
@@ -306,7 +306,7 @@ async function analyzeRoute(route) {
       results.working.push({)
         route: route),
         url: url),
-        statusCode: response.statusCode;
+        statusCode: response.statusCode,
       });
       console.log(`✅ ${route} - ${response.statusCode}`);
     } else {
@@ -315,24 +315,24 @@ async function analyzeRoute(route) {
         url: url),
         statusCode: response.statusCode),
         reason: `HTTP ${response.statusCode}`
-      });
+      }),
       console.log(`❌ ${route} - ${response.statusCode}`);
     }
   } catch (error) {
     results.errors.push({)
       route: route),
       url: url),
-      error: error.message;
+      error: error.message,
     });
-    console.log(`⚠️  ${route} - Error: ${error.message}`);
+    console.log(`⚠️  ${route} - Error: ${error.message}`),
   }
 }
 
 // Main analysis function;
 async function analyzeAllRoutes() {
   console.log('Starting comprehensive route analysis...');
-  console.log(`Base URL: ${BASE_URL}`);
-  console.log(`Total routes to check: ${definedRoutes.length}`);
+  console.log(`Base URL: ${BASE_URL}`),
+  console.log(`Total routes to check: ${definedRoutes.length}`),
   console.log('---');
 
   // Process routes in batches to avoid overwhelming the server;
@@ -344,7 +344,7 @@ async function analyzeAllRoutes() {
     try {
       await Promise.all(promises);
     } catch (error) {
-      console.log(`Batch error: ${error.message}`);
+      console.log(`Batch error: ${error.message}`),
     }
     
     // Small delay between batches;
@@ -356,16 +356,16 @@ async function analyzeAllRoutes() {
   // Generate report;
   const report = {
     timestamp: new Date().toISOString()
-    baseUrl: BASE_URL;
+    baseUrl: BASE_URL,
     summary: {
-      total: results.total;
-      working: results.working.length;
-      broken: results.broken.length;
-      errors: results.errors.length;
+      total: results.total,
+      working: results.working.length,
+      broken: results.broken.length,
+      errors: results.errors.length,
     },
-    working: results.working;
-    broken: results.broken;
-    errors: results.errors;
+    working: results.working,
+    broken: results.broken,
+    errors: results.errors,
   };
 
   // Save detailed report;
@@ -373,10 +373,10 @@ async function analyzeAllRoutes() {
   
   // Generate summary;
   console.log('\n=== ROUTE ANALYSIS SUMMARY ===');
-  console.log(`Total Routes Checked: ${results.total}`);
-  console.log(`Working Routes: ${results.working.length}`);
-  console.log(`Broken Routes: ${results.broken.length}`);
-  console.log(`Error Routes: ${results.errors.length}`);
+  console.log(`Total Routes Checked: ${results.total}`),
+  console.log(`Working Routes: ${results.working.length}`),
+  console.log(`Broken Routes: ${results.broken.length}`),
+  console.log(`Error Routes: ${results.errors.length}`),
   
   if (results.broken.length > 0) {
     console.log('\n=== BROKEN ROUTES ===');
@@ -392,7 +392,7 @@ async function analyzeAllRoutes() {
     });
   }
 
-  console.log('\nDetailed report saved to: route-analysis-report.json');
+  console.log('\nDetailed report saved to: route-analysis-report.json'),
 }
 
 // Run the analysis;

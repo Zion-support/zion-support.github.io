@@ -72,7 +72,7 @@ const AccessibilityEnhancer: React.FC = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.className = 'skip-link sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
   }, []);
@@ -124,7 +124,7 @@ const AccessibilityEnhancer: React.FC = () => {
           if (addedNode.nodeType === Node.ELEMENT_NODE) {
             const heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
             if (heading) {
-              announce(`New section: ${heading.textContent}`);
+              announce(`New section: ${heading.textContent}`),
             }
           }
         }
@@ -134,7 +134,7 @@ const AccessibilityEnhancer: React.FC = () => {
     observer.observe(document.body, {
       childList: true,
       subtree: true
-    });
+    }),
   }, []);
 
   useEffect(() => {
@@ -156,7 +156,8 @@ const AccessibilityEnhancer: React.FC = () => {
     observer.observe(document.body, {
       childList: true,
       subtree: true
-    });
+    }),
+const Component = () => {
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -173,16 +174,16 @@ const AccessibilityEnhancer: React.FC = () => {
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #0891b2;
-      color: white;
-      padding: 8px;
+      position: absolute,
+      top: -40px,
+      left: 6px,
+      background: #0891b2,
+      color: white,
+      padding: 8px,
       text-decoration: none;
       border-radius: 4px;
       z-index: 1000;
-      transition: top 0.3s;
+      transition: top 0.3s,
     `;
     
     skipLink.addEventListener('focus', () => {
@@ -203,16 +204,16 @@ const AccessibilityEnhancer: React.FC = () => {
     const style = document.createElement('style');
     style.textContent = `
       .skip-link:focus {
-        top: 6px !important;
+        top: 6px !important,
       }
       
       .keyboard-navigation *:focus {
-        outline: 2px solid #0891b2 !important;
+        outline: 2px solid #0891b2 !important,
         outline-offset: 2px !important;
       }
       
       .high-contrast {
-        filter: contrast(150%) brightness(1.2);
+        filter: contrast(150%) brightness(1.2),
       }
       
       .reduced-motion * {
@@ -226,15 +227,15 @@ const AccessibilityEnhancer: React.FC = () => {
       }
       
       .color-blind {
-        filter: hue-rotate(180deg);
+        filter: hue-rotate(180deg),
       }
       
       .text-gray-300 {
-        color: #d1d5db !important;
+        color: #d1d5db !important,
       }
       
       .text-gray-400 {
-        color: #9ca3af !important;
+        color: #9ca3af !important,
       }
       
       .bg-slate-900 {
@@ -247,6 +248,7 @@ const AccessibilityEnhancer: React.FC = () => {
     `;
     
     document.head.appendChild(style);
+const Component = () => {
     
     return () => {
       document.head.removeChild(style);

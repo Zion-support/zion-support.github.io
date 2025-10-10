@@ -9,5 +9,5 @@ const,
       {/* Component content */}
 
     </div>
-  );
+  ),
 }

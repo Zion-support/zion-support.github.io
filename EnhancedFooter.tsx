@@ -26,6 +26,7 @@ const EnhancedFooter: React.FC = () => {const services = [
     { name: 'Privacy Policy', href: '/legal/privacy' },
     { name: 'Terms of Service', href: '/legal/terms' },
   ];
+const Component = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -142,7 +143,7 @@ const EnhancedFooter: React.FC = () => {const services = [
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md: mt-0">
               <Link to="/legal/privacy">
                 <span className="text-gray-400 hover:text-white text-sm transition-colors">
                   Privacy Policy
@@ -163,7 +164,7 @@ const EnhancedFooter: React.FC = () => {const services = [
         </div>
       </div>
     </footer>
-  );
+  ),
 };
 
 export default EnhancedFooter;

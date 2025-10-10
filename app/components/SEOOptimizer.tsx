@@ -5,7 +5,7 @@ const SEOOptimizer: React.FC = () => {
   useEffect(() => {
     // Add canonical URL if not present
     if (!document.querySelector('link[rel="canonical"]')) {
-      const canonical = document.createElement('link');
+      const canonical = document.createElement('link'),
       canonical.rel = 'canonical';
       canonical.href = window.location.href;
       document.head.appendChild(canonical);
@@ -42,7 +42,7 @@ const SEOOptimizer: React.FC = () => {
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
       { property: 'og:image:alt', content: 'Zion Tech Group - AI & IT Solutions' }
-    ];
+    ],
 
     ogTags.forEach(tag => {
       if (!document.querySelector(`meta[property="${tag.property}"]`)) {
@@ -58,7 +58,7 @@ const SEOOptimizer: React.FC = () => {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@ziontechgroup' },
       { name: 'twitter:creator', content: '@ziontechgroup' }
-    ];
+    ],
 
     twitterTags.forEach(tag => {
       if (!document.querySelector(`meta[name="${tag.name}"]`)) {
@@ -94,7 +94,7 @@ const SEOOptimizer: React.FC = () => {
       { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ];
+    ],
 
     performanceHints.forEach(hint => {
       if (!document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`)) {

@@ -13,27 +13,27 @@ const NLPPage: React.FC = () => {,
       title: 'Text Analysis',
       description: 'Extract insights from unstructured text data with advanced NLP techniques',
       features: ['Sentiment Analysis', 'Entity Recognition', 'Topic Modeling', 'Text Classification'],
-      icon: FileText;
+      icon: FileText,
       color: 'text-blue-400'},
     {
       title: 'Language Translation',
       description: 'Real-time translation across 100+ languages with high accuracy',
       features: ['Multi-language Support', 'Context-aware Translation', 'Custom Models', 'API Integration'],
-      icon: Globe;
+      icon: Globe,
       color: 'text-green-400'},
     {
       title: 'Chatbot Development',
       description: 'Intelligent conversational AI that understands and responds naturally',
       features: ['Natural Language Understanding', 'Context Management', 'Multi-turn Conversations', 'Integration APIs'],
-      icon: Bot;
+      icon: Bot,
       color: 'text-purple-400'},
     {
       title: 'Document Processing',
       description: 'Automated extraction and analysis of information from documents',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Knowledge Graphs'],
-      icon: Search;
+      icon: Search,
       color: 'text-cyan-400'}
-  ];
+  ],
 
   const benefits = [
     'Process 10,000+ documents per hour',
@@ -42,8 +42,9 @@ const NLPPage: React.FC = () => {,
     'Reduce manual processing by 80%',
     'Enable 24/7 multilingual customer support'
   ];
+const Component = () => {
 
-  return(<>
+  return (<>
       <SEOOptimizer;
         title="Natural Language Processing - Zion Tech Group"
         description="Advanced NLP solutions including text analysis, language translation, chatbot development, and document processing. Transform text data into actionable insights."
@@ -85,12 +86,12 @@ const NLPPage: React.FC = () => {,
           {/* Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our NLP Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Natural Language Processing">
-              Natural Language Processing;
+              Natural Language Processing,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Advanced Text Intelligence Solutions;
@@ -184,23 +185,23 @@ const NLPPage: React.FC = () => {,
                 Contact us today for a free consultation and discover the potential of natural language processing.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >Get Free Consultation</a>
                 >
-                  Get Free Consultation;
+                  Get Free Consultation,
                 </a>
                 <a;
                   href="tel:+13024640950"
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" >Call +1 302 464 0950</Phone>
                 </Phone>
                   <Phone className="w-5 h-5" />
-                  Call +1 302 464 0950;
+                  Call +1 302 464 0950,
                 </a>
               </div>
             </div>

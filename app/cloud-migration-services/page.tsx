@@ -6,37 +6,37 @@ import { CheckCircle, Star, Shield, Clock, TrendingUp, Globe, BarChart, Sparkles
 const CloudMigrationServicesPage: React.FC = () => {,
   const features = [,
     {,
-      icon: Cloud;
+      icon: Cloud,
       title: 'Multi-Cloud Strategy',
       description: 'Comprehensive cloud migration strategy supporting AWS, Azure, Google Cloud, and hybrid environments',
       benefits: ['Vendor-agnostic approach', 'Cost optimization', 'Risk mitigation', 'Flexibility & scalability']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Security-First Migration',
       description: 'Bank-level security throughout the migration process with zero-downtime deployment',
       benefits: ['End-to-end encryption', 'Compliance adherence', 'Zero data loss', 'Audit trail maintenance']
     },
     {
-      icon: RefreshCw;
+      icon: RefreshCw,
       title: 'Automated Migration',
       description: 'AI-powered migration automation with intelligent workload assessment and optimization',
       benefits: ['90% automation rate', 'Faster migration', 'Reduced errors', 'Cost savings']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Performance Optimization',
       description: 'Continuous monitoring and optimization of cloud resources for maximum efficiency',
       benefits: ['Real-time monitoring', 'Auto-scaling', 'Cost optimization', 'Performance tuning']
     },
     {
-      icon: Database;
+      icon: Database,
       title: 'Database Migration',
       description: 'Seamless database migration with minimal downtime and data integrity guarantees',
       benefits: ['Zero-downtime migration', 'Data validation', 'Backup & recovery', 'Performance optimization']
     },
     {
-      icon: Lock;
+      icon: Lock,
       title: 'Compliance & Governance',
       description: 'Ensure compliance with industry standards and implement robust governance frameworks',
       benefits: ['GDPR compliance', 'SOC 2 certification', 'HIPAA compliance', 'Governance frameworks']
@@ -47,37 +47,37 @@ const CloudMigrationServicesPage: React.FC = () => {,
     {
       name: 'Lift & Shift',
       description: 'Move applications to cloud with minimal changes',
-      icon: ArrowUp;
+      icon: ArrowUp,
       benefits: ['Fastest migration', 'Minimal risk', 'Quick ROI', 'Preserve existing architecture']
     },
     {
       name: 'Replatforming',
       description: 'Optimize applications for cloud-native features',
-      icon: RefreshCw;
+      icon: RefreshCw,
       benefits: ['Cloud optimization', 'Better performance', 'Cost reduction', 'Enhanced scalability']
     },
     {
       name: 'Refactoring',
       description: 'Completely redesign applications for cloud',
-      icon: Settings;
+      icon: Settings,
       benefits: ['Maximum cloud benefits', 'Modern architecture', 'Best performance', 'Future-proof design']
     },
     {
       name: 'Hybrid Cloud',
       description: 'Combine on-premises and cloud infrastructure',
-      icon: Server;
+      icon: Server,
       benefits: ['Flexibility', 'Gradual migration', 'Risk mitigation', 'Cost control']
     },
     {
       name: 'Multi-Cloud',
       description: 'Distribute workloads across multiple cloud providers',
-      icon: Globe;
+      icon: Globe,
       benefits: ['Vendor independence', 'Risk distribution', 'Best-of-breed services', 'Cost optimization']
     },
     {
       name: 'Cloud-Native',
       description: 'Build new applications using cloud-native technologies',
-      icon: Sparkles;
+      icon: Sparkles,
       benefits: ['Microservices architecture', 'Containerization', 'DevOps integration', 'Auto-scaling']
     }
   ];
@@ -96,7 +96,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
         'Risk assessment',
         'Recommendations report'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Standard Migration',
@@ -111,7 +111,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
         'Testing & validation',
         '30 days support'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise Migration'
@@ -126,7 +126,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
         'SLA guarantee',
         'Ongoing optimization'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -136,21 +136,21 @@ const CloudMigrationServicesPage: React.FC = () => {,
       role: 'CTO',
       company: 'Financial Services Inc.',
       content: 'Cloud migration services reduced our infrastructure costs by 40% and improved performance by 60%. Excellent work!',
-      rating: 5;
+      rating: 5,
     },
     {
       name: 'Sarah Johnson',
       role: 'IT Director',
       company: 'Healthcare Solutions',
       content: 'Zero-downtime migration with complete data integrity. Our business never missed a beat during the transition.',
-      rating: 5;
+      rating: 5,
     },
     {
       name: 'David Chen',
       role: 'VP of Engineering',
       company: 'E-commerce Platform',
       content: 'The automated migration process was flawless. We saved months of manual work and achieved 99.9% uptime.',
-      rating: 5;
+      rating: 5,
     }
   ];
 
@@ -159,9 +159,11 @@ const CloudMigrationServicesPage: React.FC = () => {,
     { icon: Database, value: '100+', label: 'Databases Migrated' },
     { icon: TrendingUp, value: '40%', label: 'Average Cost Reduction' },
     { icon: Clock, value: '99.9%', label: 'Uptime Guarantee' }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Helmet>
@@ -207,8 +209,8 @@ const CloudMigrationServicesPage: React.FC = () => {,
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center justify-center"
@@ -218,13 +220,13 @@ const CloudMigrationServicesPage: React.FC = () => {,
               className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >Get Free Consultation</a>
               <Phone className="w-4 h-4 mr-2" />
-              Call (302) 464-0950;
+              Call (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Consultation"
-              className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover: bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >
-              Get Free Consultation;
+              Get Free Consultation,
             </a>
           </div>
         </div>,
@@ -238,7 +240,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
                 <type.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{type.name}<p className="text-gray-300 mb-4">{type.description}<ul className="space-y-2">{type.benefits.map((benefit, benefitIndex) => (</ul>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            Migration Strategies;
+            Migration Strategies,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {migrationTypes.map((type, index) => (
@@ -272,7 +274,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
                 <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Expertise;
+            Our Expertise,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (
@@ -308,7 +310,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-blue-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            Transparent Pricing;
+            Transparent Pricing,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (
@@ -339,7 +341,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
                   }`}
                 >Get Started</a>
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -352,7 +354,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">What Our Clients Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            What Our Clients Say;
+            What Our Clients Say,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {testimonials.map((testimonial, index) => (
@@ -376,7 +378,7 @@ const CloudMigrationServicesPage: React.FC = () => {,
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?<p className="text-xl text-blue-100 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert services.</p>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?<p className="text-xl text-blue-100 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert services.</p>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Migrate to the Cloud?
           </h2>
@@ -384,9 +386,9 @@ const CloudMigrationServicesPage: React.FC = () => {,
             Join hundreds of businesses that have successfully migrated to the cloud with our expert services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a;
+            <a,
         <div className="max-w-4xl mx-auto text-center"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2><p className="text-xl text-blue-100 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert services.</p>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2><p className="text-xl text-blue-100 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert services.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
@@ -397,13 +399,13 @@ const CloudMigrationServicesPage: React.FC = () => {,
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >Email Us</a>
             >
-              Call (302) 464-0950;
+              Call (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover: bg-white hover:text-blue-600 transition-colors"
             >
-              Email Us;
+              Email Us,
             </a>
           </div>
         </div>

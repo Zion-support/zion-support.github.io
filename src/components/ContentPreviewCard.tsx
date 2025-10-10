@@ -3,9 +3,9 @@ interface ContentPreviewCardProps {// TODO: Add content;}
 
 };
   i,
-  d: string;
+  d: string,
     titl,
-  e: string;
+  e: string,
     descriptio,
   n: string;,
     categor,
@@ -17,7 +17,7 @@ interface ContentPreviewCardProps {// TODO: Add content;}
     pat,
   h: string;,
     imag,
-  e: string;
+  e: string,
   featured?: boolean;
   stats?: {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -25,12 +25,12 @@ interface ContentPreviewCardProps {// TODO: Add content;}
   view,
   s: number;,
     engagemen,
-  t: number;
+  t: number,
   };
   excerpt?: string;
 }
 const,
-  ContentPreviewCard: React.FC;
+  ContentPreviewCard: React.FC,
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -47,8 +47,9 @@ const,
 //   excerpt;)
 }) => {if (num >= 1000) {}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
+const Component = () => {
       return (num / 1000).toFixed(1) + 'k';
     }
     return num.toString();
@@ -73,13 +74,14 @@ const,
     };
     return colors[category] || colors.default;
   };
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
           <article className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}></article>

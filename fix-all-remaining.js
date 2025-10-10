@@ -8,7 +8,7 @@ const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xarg
   g: 'utf8' })
   .trim()
   .split('\n')
-  .filter(file => file.length > 0);
+  .filter(file => file.length > 0),
 
 // // Function to process a single file;
 function processFile(filePath) {
@@ -29,7 +29,7 @@ function processFile(filePath) {
           description: 'Advanced AI and IT Solutions',
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       } catch (e) {/* TODO: Fix JSX expression */}
-        };
+        },
       }
     }
     
@@ -63,7 +63,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
     }
     
-    // Close the component properly;
+    // Close the component properly,
     content = content.replace(/^\s*}\s*$/, '  );\n};\n\nexport default Page;');
     
     // Fix any remaining syntax issues;

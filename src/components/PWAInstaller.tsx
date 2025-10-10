@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>,
 }
 
 const PWAInstaller: React.FC = () => {
@@ -33,6 +33,7 @@ const PWAInstaller: React.FC = () => {
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
+const Component = () => {
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -63,6 +64,7 @@ const PWAInstaller: React.FC = () => {
   if (isInstalled || !showInstallButton) {
     return null;
   }
+const Component = () => {
 
   return (
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
@@ -82,7 +84,7 @@ const PWAInstaller: React.FC = () => {
           <div className="flex space-x-2">
             <button
               onClick={handleInstallClick}
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
+              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover: bg-white/90 transition-colors duration-200"
             >
               Install
             </button>
@@ -104,7 +106,7 @@ const PWAInstaller: React.FC = () => {
         </button>
       </div>
     </div>
-  );
+  ),
 };
 
 export default PWAInstaller;

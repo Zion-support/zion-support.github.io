@@ -42,7 +42,7 @@ const optimizations = {
 
   // Optimize React components;
   optimizeReactComponents: (content) => {
-    // Add React.memo to functional components;
+    // Add React.memo to functional components,
     if (content.includes('const ') && content.includes(': React.FC')) {
       content = content.replace(
         /const (\w+): React\.FC = \(/g;
@@ -59,7 +59,7 @@ const optimizations = {
 
   // Add performance hints;
   addPerformanceHints: (content) => {
-    // Add preload hints for critical resources;
+    // Add preload hints for critical resources,
     if (content.includes('<head>')) {
       const preloadHints = `
     <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,
@@ -138,7 +138,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd()}),
     allFiles.push(...files);
   }
 
@@ -152,9 +152,9 @@ async function main() {
   uniqueFiles.forEach(processFile);
 
   console.log(`\n🎉 Enhanced performance optimization completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Optimizations applied: ${optimizationsApplied}`);
+  console.log(`📊 Statistics: `),
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`),
+  console.log(`   - Optimizations applied: ${optimizationsApplied}`),
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

@@ -4,6 +4,7 @@ import { Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, Me
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 const HomePage: React.FC = () => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -71,7 +72,7 @@ const HomePage: React.FC = () => {
               </ul>
             </div>
             {/* IT Services */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
                 <Cpu className="h-8 w-8 text-green-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">IT Infrastructure</h3>
@@ -148,7 +149,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-import React from 'react';
+import React from 'react',
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
@@ -156,6 +157,7 @@ import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 export default function HomePage() {
+const Component = () => {
   return (
     <div className="min-h-screen cyber-grid neural-network-bg">
       <Navigation />
@@ -169,6 +171,7 @@ export default function HomePage() {
   );
 };
 export default HomePage;
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Skip to main content for accessibility */}
@@ -430,7 +433,7 @@ export default HomePage;
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                 Scale your infrastructure with secure, reliable, and efficient cloud solutions.
               </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
+              <ul className="text-xs sm: text-sm text-gray-400 space-y-1">
                 <li>• Cloud Migration</li>
                 <li>• Infrastructure as Code</li>
                 <li>• Auto-scaling</li>
@@ -457,7 +460,7 @@ export default HomePage;
         </Suspense>
       </main>
     </div>
-  );
+  ),
 };
 export default HomePage;
 'use client';
@@ -497,7 +500,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
+)),
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -508,6 +511,7 @@ const HomePage: React.FC = () => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
+const Component = () => {
     return () => clearTimeout(timer);
   }, []);
   // Analytics tracking for phone clicks - optimized
@@ -519,6 +523,7 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
 'use client';
@@ -548,7 +553,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
+)),
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
@@ -561,6 +566,7 @@ const HomePage: React.FC = () => {
     
     // Initialize performance optimizations
     initializePerformanceOptimizations();
+const Component = () => {
     
     return () => clearTimeout(timer);
   }, []);
@@ -570,9 +576,10 @@ const HomePage: React.FC = () => {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      }),
     }
   }, []);
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network particle-system">
       {/* Navigation */}
@@ -850,7 +857,7 @@ const HomePage: React.FC = () => {
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                 Scale your infrastructure with secure, reliable, and efficient cloud solutions.
               </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
+              <ul className="text-xs sm: text-sm text-gray-400 space-y-1">
                 <li>• Cloud Migration</li>
                 <li>• Infrastructure as Code</li>
                 <li>• Auto-scaling</li>
@@ -879,6 +886,6 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-  );
+  ),
 };
 export default HomePage;

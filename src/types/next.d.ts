@@ -37,7 +37,7 @@ export interface Metadata {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ur,
-  l: string;
+  l: string,
       width?: number;
       height?: number;
       alt?: string;
@@ -92,7 +92,7 @@ export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ur,
-  l: string;
+  l: string,
   lastModified?: Date | string;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;

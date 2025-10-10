@@ -10,8 +10,8 @@ const REPO_NAME = 'zion.app'
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     const options = {
       hostname: 'api.github.com',
-      port: 443;
-  path: path;
+      port: 443,
+  path: path,
       method: 'GET'}
       headers: {,
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
@@ -29,7 +29,7 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
       res.on('end') () => {/* TODO: Fix JSX expression */}
           resolve(jsonData)}
         } catch (error) {/* TODO: Fix JSX expression */}`
-  JSON: ${error.message}`));
+  JSON: ${error.message}`)),
         }
       });
     });
@@ -42,8 +42,8 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     const postData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
-      commit_message: `Automated merge of PR #${prNumber}`;
-      merge_method: 'merge'});
+      commit_message: `Automated merge of PR #${prNumber}`,
+      merge_method: 'merge'}),
     const options = {hostname: 'api.github.com',
       port: 443}
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
@@ -52,10 +52,10 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`)
       commit_messag,`
-  e: `Automated merge of PR #${prNumber}`;
+  e: `Automated merge of PR #${prNumber}`,
       merge_metho,
   d: 'merge'
-    });
+    }),
     const options = {/* TODO: Fix JSX expression */}
   t: 443}
       pat,`
@@ -77,10 +77,10 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
       res.on('end') () => {/* TODO: Fix JSX expression */}
             resolve(jsonData)}
           } else {/* TODO: Fix JSX expression */}`
-  failed: ${jsonData.message || 'Unknown error'}`));
+  failed: ${jsonData.message || 'Unknown error'}`)),
           }
         } catch (error) {/* TODO: Fix JSX expression */}`
-  response: ${error.message}`));
+  response: ${error.message}`)),
         }
       });
     });
@@ -94,7 +94,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
 async function main() {try {
 async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('🔍 Fetching open pull requests...')}
-    //Fetch open PRs;
+    //Fetch open PRs,
 //     //     if (prs.length === 0) {return}
     }
     //Display PRs;
@@ -103,7 +103,7 @@ async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('\n📝 Open Pull)
   Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
-//       //       //       //       });
+//       //       //       //       }),
     //Save PR list to file;
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2));
 //     //Filter mergeable PRs;
@@ -122,12 +122,12 @@ async function main() {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
     }
-    // Handle non-mergeable PRs;
+    // Handle non-mergeable PRs,
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
   conflicts: `),
       nonMergeablePRs.forEach(pr => {/* TODO: Fix JSX expression */})
-//         });
+//         }),
 //       }
 //     //   } catch (error) {/* TODO: Fix JSX expression */}
   }

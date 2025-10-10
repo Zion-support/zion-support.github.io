@@ -3,7 +3,8 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 const AutonomousBusinessOperation, s = () => { 
-  return(<>
+const Component = () => {
+  return (<>
       <Helm, e, t>
         <title>
           Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group;

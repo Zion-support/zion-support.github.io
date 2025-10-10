@@ -20,7 +20,7 @@ function fixMergeConflicts(filePath) {
       modified = true;
       return headContent.trim();
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     // Remove any remaining conflict markers;
     content = content;
@@ -40,7 +40,7 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
-  d: ${filePath}`);
+  d: ${filePath}`),
       return true;
     }
     
@@ -72,7 +72,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
     }
   }
   
-  traverse(dir);
+  traverse(dir),
   return files;
 }
 
@@ -100,25 +100,25 @@ console.log(`- Files)`
 console.log(`- Files)`
   fixed: ${fixedCount}`);`
 console.log(`- Error)`
-  s: ${errorCount}`);
+  s: ${errorCount}`),
 
-console.log(`\nMerge conflict resolution complete: `);
-console.log(`- Files processed: ${files.length}`);
-console.log(`- Files fixed: ${fixedCount}`);
-console.log(`- Errors: ${errorCount}`);
+console.log(`\nMerge conflict resolution complete: `),
+console.log(`- Files processed: ${files.length}`),
+console.log(`- Files fixed: ${fixedCount}`),
+console.log(`- Errors: ${errorCount}`),
 
 // Run linting to check for remaining issues;
 console.log('\nRunning linting to check for remaining issues...');
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+  o: 'inherit' }),
   console.log('Linting passed!');
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-// Try building;
+// Try building,
 console.log('\nTrying to build...');
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+  o: 'inherit' }),
   console.log('Build successful!');
 } catch (error) {/* TODO: Fix JSX expression */}
 }`

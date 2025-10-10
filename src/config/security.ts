@@ -43,7 +43,7 @@ export const _securityHeaders = {// TODO: Add content;}
 // objectSr,"
   c: ["'none'"],
 // upgradeInsecureRequest,
-  s: true;
+  s: true,
     }
   },
   // Security Headers,
@@ -98,7 +98,7 @@ export const sessionConfig = {/* TODO: Fix JSX expression */}
 maxAg,
   e: 24 * 60 * 60 * 1000, // 24 hours;
     sameSit,
-  e: 'strict' as const;
+  e: 'strict' as const,
  * Input validation patterns;
 export const validationPatterns = {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -110,7 +110,7 @@ export const validationPatterns = {/* TODO: Fix JSX expression */}
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/
 
- * Sanitize user input;
+ * Sanitize user input,
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -128,7 +128,7 @@ export function sanitizeInput(inpu)
           <>]/g, '') // Remove;
           < and >
 
-    .replace(/javascript:/gi, '') // Remove javascript: protocol;
+    .replace(/javascript:/gi, '') // Remove javascript: protocol,
 
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim();

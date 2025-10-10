@@ -10,11 +10,11 @@ function fixArraySemicolons(filePath) {
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
       return match.replace(';', '');
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
-    });
+    }),
     
     fs.writeFileSync(filePath, content);
     console.log(`Fixed array semicolons)`
-  in: ${filePath}`);
+  in: ${filePath}`),
     return true;
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -50,7 +50,7 @@ function main() {/* TODO: Fix JSX expression */}
   files.forEach(file => {/* TODO: Fix JSX expression */}
       }
     })
-  });
+  }),
   `
   console.log(`Fixed ${fixedCount} files`);
 }

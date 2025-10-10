@@ -8,7 +8,7 @@ const getAllPages = () => {return [}
     { url: '/it-services', priority: 0.9, changefreq: 'weekly' },
     { url: '/contact', priority: 0.8, changefreq: 'monthly' },
     { url: '/about', priority: 0.7, changefreq: 'monthly' },
-    { url: '/blog', priority: 0.8, changefreq: 'weekly' }];
+    { url: '/blog', priority: 0.8, changefreq: 'weekly' }],
 };
 const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {const baseUrl = 'https:// ziontechgroup.com';}
   const sitemap = `
@@ -31,12 +31,13 @@ ${pages.map(page => `}
 ')}
 </urlset>`;
   return sitemap;
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Sitemap
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
@@ -50,7 +51,7 @@ ${pages.map(page => `}
       <Footer />
 
     </div>
-  );
+  ),
 };
 
 export default SitemapPage;

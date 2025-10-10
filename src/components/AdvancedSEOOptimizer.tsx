@@ -21,7 +21,7 @@ const,
       ...seoData.structuredData};
 
     if (seoData.author) {/* TODO: Fix JSX expression */}
-      };
+      },
     }
 
     if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
@@ -36,7 +36,7 @@ const,
     if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
     }
 
-    return baseStructuredData;
+    return baseStructuredData,
   }, [seoData, enableStructuredData]);
 
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -44,7 +44,7 @@ const,
 
     return {/* TODO: Fix JSX expression */}
       }))
-    };
+    },
   }, [seoData, enableStructuredData]);
 
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -53,23 +53,23 @@ const,
     return {/* TODO: Fix JSX expression */}
         }
       }))
-    };
+    },
   }, [seoData, enableStructuredData]);
 
   // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableOpenGraph) return {};
+    if (!enableOpenGraph) return {},
 
     return {/* TODO: Fix JSX expression */}
-    };
+    },
   }, [seoData, enableOpenGraph]);
 
   // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableTwitterCards) return {};
+    if (!enableTwitterCards) return {},
 
     return {/* TODO: Fix JSX expression */}
-    };
+    },
   }, [seoData, enableTwitterCards]);
 
   // Generate meta tags;
@@ -88,7 +88,7 @@ const,
       {/* TODO: Fix JSX expression */}
   t: '#3B82F6' },
       {/* TODO: Fix JSX expression */}
-  t: '/browserconfig.xml' }];
+  t: '/browserconfig.xml' }],
     return metaTags;
   }, [seoData]);
 
@@ -97,7 +97,7 @@ const,
 
     return {/* TODO: Fix JSX expression */}
       }))
-    };
+    },
   }, [seoData.breadcrumbs]);
 
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -106,7 +106,7 @@ const,
     return {/* TODO: Fix JSX expression */}
         }
       }))
-    };
+    },
   }, [seoData.faqs]);
 
   const structuredData = generateStructuredData();
@@ -130,7 +130,7 @@ const,
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
     
-    const script = document.createElement('script');
+    const script = document.createElement('script'),
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
@@ -143,11 +143,12 @@ const,
 
 
   useEffect(() => {/* TODO: Fix JSX expression */}
-          });
+          }),
         }
       }
     }
   }, []);
+const Component = () => {
 
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -191,13 +192,13 @@ const,
       <link rel="preconnect" href="http,"
   s://www.google-analytics.com" /></link>"
       <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
+  s: //www.googletagmanager.com" /></link>
       {/* DNS Prefetch */}"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
     </Helmet>
-  );
+  ),
 };
 
 

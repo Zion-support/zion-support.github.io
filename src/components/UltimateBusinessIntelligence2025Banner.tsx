@@ -44,6 +44,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
+const Component = () => {
     return () => clearInterval(timer);
   }, [content.length]);
   const handleClose = () => {
@@ -161,7 +162,7 @@ export default UltimateBusinessIntelligence2025Banner;
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom',
 const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -169,7 +170,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   const [isVisible, setIsVisible] = useState(true);
   const content = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -182,7 +183,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       ur,
-  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough';
+  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       typ,
   e: 'Blog Post',
       metric,
@@ -218,7 +219,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
       ur,
-  l: '/services/automation';
+  l: '/services/automation',
       typ,
   e: 'Service',
                   {tag}

@@ -23,10 +23,10 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     if (modified) {/* TODO: Fix JSX expression */}`
-      console.log(`✓ Fixed ${filePath}`);
+      console.log(`✓ Fixed ${filePath}`),
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`✗ Error processing ${filePath}: ${error.message}`);
+    console.log(`✗ Error processing ${filePath}: ${error.message}`),
   }
 }
 

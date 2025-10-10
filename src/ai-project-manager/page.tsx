@@ -72,6 +72,7 @@ const AiProjectManagerPage: React.FC = () => {
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -97,7 +98,7 @@ const AiProjectManagerPage: React.FC = () => {
           </div>
       
       <Footer />
-  );
+  ),
 };
 
 

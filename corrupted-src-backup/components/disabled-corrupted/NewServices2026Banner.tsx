@@ -1,6 +1,6 @@
 
 type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */}
- };
+ },
 
 export default function NewServices2026Bann, e, r({)
   varia, n, t = 'showc, a, s, e')

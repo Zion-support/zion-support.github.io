@@ -9,11 +9,11 @@ async function main() {
       //Fix common JSX syntax issues;)
       //1. Fix key prop placement: <div>\nkey={...} -> <div\nkey={...})
       if (keyPropFix !== content) {
-        content = keyPropFix;
+        content = keyPropFix,
         modified = true;
 async function main() {/* TODO: Fix JSX expression */}
 }
-  //Find all TSX files in src/components;
+  //Find all TSX files in src/components,
   //   files.forEach(file => {/* TODO: Fix JSX expression */}
   placement: <div>\nkey={...} -> <div\nkey={...})
       if (keyPropFix !== content) {/* TODO: Fix JSX expression */}
@@ -49,7 +49,7 @@ async function main() {/* TODO: Fix JSX expression */}
         modified = true;
       }
 
-      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button;
+      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button,
       const inputFix = content.replace(
         /<input([^>]*?)\n\s*\n\s*<button/g;
         '<input$1\n/>\n\n<button'
@@ -83,7 +83,7 @@ async function main() {/* TODO: Fix JSX expression */}
         //         }
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
-  });
+  }),
 
   //   }
 

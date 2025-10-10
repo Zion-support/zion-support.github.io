@@ -40,6 +40,7 @@ export function useEnhancedPerformance(__option)
   O: Add content;}
 }
       analytics.trackCustomEvent('Component', 'Mounted', component);
+const Component = () => {
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

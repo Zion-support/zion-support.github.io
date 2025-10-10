@@ -121,7 +121,7 @@ function fixSyntaxErrors(filePath) {
         pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
         replacement: '<$1$2>$3</$1>'
       }
-    ];
+    ],
     
     for (const fix of jsxFixes) {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -133,7 +133,7 @@ function fixSyntaxErrors(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath}`),
       return true;
     }
     

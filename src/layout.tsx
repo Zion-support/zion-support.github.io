@@ -11,7 +11,7 @@ import Analytics from './components/Analytics';
 
 export default function RootLayout({
   children}: {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -95,6 +95,7 @@ name$5: 'Cloud Infrastructure',
             description:       ,
 $4]
   };
+const Component = () => {
   return (
     <html lang='en'>
       <head>
@@ -175,14 +176,14 @@ $4]
         </ErrorBoundary>
       </body>
     </html>
-  );
+  ),
 
 export default RootLayout;
         priceSpecification: {// TODO: Add content;}
 }
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
-        };
+        },
   itemOffered: {// TODO: Add content;}
 }
             '@type': 'Service',
@@ -191,7 +192,7 @@ export default RootLayout;
 
 
 
-export default SrcPage;
+export default SrcPage,
 
 
 }

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Target, Zap, ArrowRight } from 'lucide-react';
 
 const AIMarketingAutomationPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -26,7 +27,7 @@ const AIMarketingAutomationPage: React.FC = () => {
               Automate your marketing with AI-powered solutions that deliver personalized, 
               intelligent campaigns and maximize your ROI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
@@ -50,7 +51,7 @@ const AIMarketingAutomationPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 
 export default AIMarketingAutomationPage;

@@ -32,6 +32,7 @@ const AIHRAssistantPage: React.FC = () => {
       benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

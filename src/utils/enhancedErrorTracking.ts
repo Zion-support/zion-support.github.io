@@ -21,17 +21,17 @@ export interface ErrorContext {// TODO: Add content;}
   metadata?: Record<string, unknown>;
 }
 export interface TrackedError {
-  message: string;
+  message: string,
   stack?: string;
-  context: ErrorContext;
-  timestamp: string;
-  userAgent: string;
-  url: string;
+  context: ErrorContext,
+  timestamp: string,
+  userAgent: string,
+  url: string,
 }
 class EnhancedErrorTracker {
-  private errors: TrackedError[] = [];
+  private errors: TrackedError[] = [],
   private maxErrors = 100;
-  private sessionId: string;
+  private sessionId: string,
   constructor() {
     this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();
@@ -56,7 +56,7 @@ $4});
     }
   }
   public trackError(error: Error, _context: ErrorContext = {}): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return,
     const trackedError: TrackedError = {
       message: error.message,
       stack: error.stack,
@@ -67,7 +67,7 @@ $4});
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    };
+    },
     this.errors.push(trackedError);
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
@@ -97,7 +97,7 @@ $4});
         description: error.message,
         fatal: false,
         component: error.context.component
-      });
+      }),
     }
   }
   public getErrors(): TrackedError[] {
@@ -107,9 +107,9 @@ $4});
     this.errors = [];
   }
   public getErrorStats(): {
-    total: number;
+    total: number,
     byComponent: Record<string, number>;
-    recent: TrackedError[];
+    recent: TrackedError[],
   } {
     const byComponent: Record<string, number> = {};
     this.errors.forEach(error => {
@@ -119,7 +119,7 @@ $4});
       total: this.errors.length,
       byComponent,
       recent: this.errors.slice(-10)
-    };
+    },
   }
 }
 // Export singleton instance
@@ -132,7 +132,7 @@ export interface TrackedError {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
-  message: string;
+  message: string,
 
   stack?: string;,
     contex,
@@ -142,17 +142,17 @@ export interface TrackedError {/* TODO: Fix JSX expression */}
     userAgen,
   t: string;,
     ur,
-  l: string;
+  l: string,
 }
 
 class EnhancedErrorTracker {// TODO: Add content;}
 
 }
   private,
-  errors: TrackedError[] = [];
+  errors: TrackedError[] = [],
   private maxErrors = 100;
   private,
-  sessionId: string;
+  sessionId: string,
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -180,7 +180,7 @@ class EnhancedErrorTracker {// TODO: Add content;}
   t: 'Global',
           actio,
   n: 'Uncaught Error')
-        });
+        }),
       });
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -217,12 +217,12 @@ class EnhancedErrorTracker {// TODO: Add content;}
 }
 //         ...context,
         sessionI,
-  d: this.sessionId;
+  d: this.sessionId,
       },
 
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href;
+      url: window.location.href,
 
     };
     this.errors.push(trackedError);
@@ -297,15 +297,15 @@ class EnhancedErrorTracker {// TODO: Add content;}
   tota,
   l: number;,
     byComponen,
-  t: Record;
+  t: Record,
           <string, number>;
     recen,
-  t: TrackedError[];
+  t: TrackedError[],
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const,
-  byComponent: Record;
+  byComponent: Record,
           <string, number> = {};
     this.errors.forEach(error => {byComponent[component] = (byComponent[component] || 0) + 1;}
     });
@@ -321,7 +321,7 @@ class EnhancedErrorTracker {// TODO: Add content;}
     }
   }
 }
-// Export singleton instance;
+// Export singleton instance,
 export const errorTracker = new EnhancedErrorTracker()
 export default errorTracker;`
 

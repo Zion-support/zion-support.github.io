@@ -9,7 +9,7 @@ interface LinkProps {// TODO: Add content;}
   onClick?: () => void
   'aria-label'?: string
 }
-export const Link: React.FC;
+export const Link: React.FC,
           <LinkProps> = ({// TODO: Add content;}
 
 }
@@ -31,6 +31,7 @@ export const Link: React.FC;
       window.location.href = href;
     }
   }
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     

@@ -13,34 +13,34 @@ const AIVideoGenerator: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Video;
+      icon: Video,
     {}
       icon: Video,
       title: 'AI-Powered Video Creation',
       description: 'Generate professional videos from text prompts in minutes with advanced AI technology',
       color: 'text-purple-400'},
     {
-      icon: Play;
+      icon: Play,
     {}
       icon: Play,
       title: 'Multiple Video Formats',
       description: 'Create videos in 4K, HD, social media formats, and custom dimensions for any platform',
       color: 'text-blue-400'},
     {
-      icon: Brain;
+      icon: Brain,
     {}
       icon: Brain,
       title: 'Smart Content Generation',
       description: 'AI automatically generates scripts, selects music, and creates engaging visual content',
       color: 'text-green-400'},
     {
-      icon: Target;
+      icon: Target,
     {}
       icon: Target,
       title: 'Brand Customization',
       description: 'Maintain consistent branding with custom templates, colors, fonts, and logos',
       color: 'text-orange-400'}
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -59,7 +59,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'Commercial license'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional'
@@ -78,7 +78,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'API access'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -97,7 +97,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
         'Team collaboration'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -105,26 +105,28 @@ const AIVideoGenerator: React.FC = memo(() => {}
     {}
       title: 'Marketing Videos',
       description: 'Create compelling product demos and promotional content',
-      icon: Target;
+      icon: Target,
       result: '10x faster'},
     {}
       title: 'Social Media Content',
       description: 'Generate engaging videos for Instagram, TikTok, and YouTube',
-      icon: Globe;
+      icon: Globe,
       result: '95% engagement'},
     {}
       title: 'Training Materials',
       description: 'Produce educational and training videos for your team',
-      icon: Users;
+      icon: Users,
       result: '80% retention'},
     {}
       title: 'Explainer Videos',
       description: 'Create clear, concise explainer videos for complex topics',
-      icon: Brain;
+      icon: Brain,
       result: '3x clarity'}
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -154,7 +156,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
           </div>
 
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            AI Video Generator;
+            AI Video Generator,
           </h1>)
 )
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
@@ -163,8 +165,8 @@ const AIVideoGenerator: React.FC = memo(() => {}
           </p>
 
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -174,13 +176,13 @@ const AIVideoGenerator: React.FC = memo(() => {}
             >Start Creating Videos</a>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="/contact"
-              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
             >
-              Start Creating Videos;
+              Start Creating Videos,
             </a>
           </div>,
         </section>,
@@ -291,11 +293,11 @@ const AIVideoGenerator: React.FC = memo(() => {}
             {pricingPlans.map((plan, index) => (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover: border-purple-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular,
                     </div>
                   </div>
                 )}
@@ -332,7 +334,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
                   }`}
                 >Get Started</a>
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -344,8 +346,8 @@ const AIVideoGenerator: React.FC = memo(() => {}
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing Videos?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ creators and businesses already using our AI Video Generator to create professional content.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -358,14 +360,14 @@ const AIVideoGenerator: React.FC = memo(() => {}
             </MessageSquare>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
       >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Email Us;
+              Email Us,
             </a>
           </div>
         </section>

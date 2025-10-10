@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const AboutPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>

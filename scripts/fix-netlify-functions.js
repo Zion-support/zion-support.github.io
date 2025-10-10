@@ -46,7 +46,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
   } catch (error) {
 
     return {
-      statusCode: 500;
+      statusCode: 500,
       body: JSON.stringify({)
         error: 'Function failed'),
         message: error.message),
@@ -54,9 +54,9 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
   if (!fixed.includes('exports.handler = async function')) {/* TODO: Fix JSX expression */}
   }
 
-  // Add proper error handling if missing;
+  // Add proper error handling if missing,
   if (!fixed.includes('try {/* TODO: Fix JSX expression */})
-    const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
+    const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/),
     if (handlerMatch) {/* TODO: Fix JSX expression */}
         /exports\.handler = async function[^{]*{[^}]*}/,
         `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
@@ -65,7 +65,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
       }),
       header,
   s: {'Content-Type': 'application/json'}
-    };
+    },
   }`
 }`
       );
@@ -79,7 +79,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
 async function main() {
 async function main() {/* TODO: Fix JSX expression */}
 }
-  const _functionsDir = 'netlify/functions';
+  const _functionsDir = 'netlify/functions',
   const _pattern = path.join(functionsDir, '*.js');
 
   const files = (await readdir(functionsDir))
@@ -95,16 +95,16 @@ async function main() {/* TODO: Fix JSX expression */}
       
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8');
-        // console.log(`✅ Fixed: ${path.basename(filePath)}`);
+        // console.log(`✅ Fixed: ${path.basename(filePath)}`),
   files.forEach(filePath => {/* TODO: Fix JSX expression */})`
-  d: ${path.basename(filePath)}`);
+  d: ${path.basename(filePath)}`),
         fixedCount++;
       } else {/* TODO: Fix JSX expression */}`
-  d: ${path.basename(filePath)} (no changes needed)`);
+  d: ${path.basename(filePath)} (no changes needed)`),
       }
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
 
 
 

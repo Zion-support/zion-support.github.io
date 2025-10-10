@@ -5,24 +5,24 @@
 
 interface EnvConfig {
   // App Configuration;
-  NODE_ENV: 'development' | 'production' | 'test';
-  APP_URL: string;
-  APP_NAME: string;
+  NODE_ENV: 'development' | 'production' | 'test',
+  APP_URL: string,
+  APP_NAME: string,
 
   // Analytics;
   GOOGLE_ANALYTICS_ID?: string;
 
   // API Configuration;
-  API_BASE_URL: string;
-  API_TIMEOUT: number;
+  API_BASE_URL: string,
+  API_TIMEOUT: number,
 
   // Feature Flags;
-  ENABLE_ANALYTICS: boolean;
-  ENABLE_ERROR_TRACKING: boolean;
-  ENABLE_PERFORMANCE_MONITORING: boolean;
+  ENABLE_ANALYTICS: boolean,
+  ENABLE_ERROR_TRACKING: boolean,
+  ENABLE_PERFORMANCE_MONITORING: boolean,
 
   // Logging;
-  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE';
+  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE',
 
   // Build Configuration;
   BUILD_ID?: string;
@@ -30,8 +30,8 @@ interface EnvConfig {
 }
 
 class EnvironmentConfig {
-  private static instance: EnvironmentConfig;
-  private config: EnvConfig;
+  private static instance: EnvironmentConfig,
+  private config: EnvConfig,
 
   private constructor() {,
     this.config = this.loadConfig();
@@ -44,7 +44,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
   public static getInstance(): EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
-    return EnvironmentConfig.instance;
+    return EnvironmentConfig.instance,
   }
 
   private getEnvVar(key: string, defaultValue?: string): string {
@@ -52,7 +52,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       // Check both regular and NEXT_PUBLIC_ prefixed versions;
   private getEnvVar(ke)
   y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
-      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
+      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '',
     }
     return defaultValue || '';
   }
@@ -95,41 +95,41 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   private validate(): void {
-    const errors: string[] = [];
+    const errors: string[] = [],
 ,
     // Validate NODE_ENV;
     if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
-      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`);
+      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`),
     }
 
     // Validate URLs;
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
-      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
+      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`),
   private getNumberEnvVar(ke,
   y: string, defaultValu)
   e: number): number {/* TODO: Fix JSX expression */}
   }
 
   private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-    };
+    },
   }
 
   private validate(): void {/* TODO: Fix JSX expression */}`
-  NODE_ENV: ${this.config.NODE_ENV}`);
+  NODE_ENV: ${this.config.NODE_ENV}`),
     }
 
     // Validate URLs;
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {/* TODO: Fix JSX expression */}`
-  APP_URL: ${this.config.APP_URL}`);
+  APP_URL: ${this.config.APP_URL}`),
     }
 
     if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {/* TODO: Fix JSX expression */}`
-  API_BASE_URL: ${this.config.API_BASE_URL}`);
+  API_BASE_URL: ${this.config.API_BASE_URL}`),
     }
 
     // Validate timeout;
     if (this.config.API_TIMEOUT < 0) {
-      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`);
+      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`),
     }
 
     if (errors.length > 0) {
@@ -137,7 +137,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       if (this.config.NODE_ENV === 'production') {
         throw new Error(`Environment validation failed: ${errors.join(', ')}`);
     if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
-  positive: ${this.config.API_TIMEOUT}`);
+  positive: ${this.config.API_TIMEOUT}`),
     }
 
     if (errors.length > 0) {/* TODO: Fix JSX expression */}`
@@ -159,7 +159,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   public get(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return { ...this.config };
+    return { ...this.config },
   }
 
   public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
@@ -171,7 +171,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   public isTest(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  // Convenience getters;
+  // Convenience getters,
   public getAppUrl(): string {
     return this.config.APP_URL;
   public getAppUrl(): string {/* TODO: Fix JSX expression */}
@@ -193,7 +193,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 }
 
-// Export singleton instance;
+// Export singleton instance,
 export const env = EnvironmentConfig.getInstance();
 
 // Export typed config;

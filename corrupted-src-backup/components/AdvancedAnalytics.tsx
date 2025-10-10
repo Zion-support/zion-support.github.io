@@ -8,11 +8,11 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
   enablePerformanceTracking = true,
   enableErrorTracking = true}) => {
   const [analytics] = useState({
-    pageViews: 0;
-    uniqueVisitors: 0;
-    bounceRate: 0;
-    conversionRate: 0;
-    avgSessionDuration: 0;
+    pageViews: 0,
+    uniqueVisitors: 0,
+    bounceRate: 0,
+    conversionRate: 0,
+    avgSessionDuration: 0,
     topPages: []
     trafficSources: []
     deviceBreakdown: []
@@ -22,9 +22,9 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       largestContentfulPaint: 0;)
       cumulativeLayoutShift: 0;)
     })
-    conversions: 0;
+    conversions: 0,
     performance: 0),
-    errors: 0)});
+    errors: 0)}),
 
   useEffect(() => {
     // Initialize analytics tracking;
@@ -40,12 +40,14 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       // Track errors;
       //       }
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
+const Component = () => {
 
-  return(<div className="advanced-analytics">)
+  return (<div className="advanced-analytics">)
       <h2>Advanced Analytics Dashboard</h2>)
       <div className="metrics-grid">)
         <div className="metric-card">)
           <h3>Page Views</h3>)
+const Component = () => {
   return (
     <div className="advanced-analytics"></div>
       <h2>Advanced Analytics Dashboard</h2>
@@ -73,7 +75,7 @@ const,
     performanc,
   e: 0,
     error,
-  s: 0});
+  s: 0}),
 
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
@@ -84,6 +86,7 @@ const,
     if (enableErrorTracking) {/* TODO: Fix JSX expression */}
       //       }
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
+const Component = () => {
 
   return (<div className="advanced-analytics"></div>
       <h2>Advanced Analytics Dashboard</h2>"

@@ -1,7 +1,9 @@
 const, October2025UltimateBreakthroughBanne, r = () => {
-  return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">)
+const Component = () => {
+  return (<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">)
       {/* Animated, Backgroun, d */};)
       <div, className="absolute, inse, t-0, opacit, y-20">)
+const Component = () => {
   return (
     <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">
       {/* Animated, Backgroun, d */};</div>
@@ -11,7 +13,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {
       {/* Glowing, Orb, s */}
       <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">"
         {/* Header, Badg, e */}</div>
         <div, className="flex, justif, y-center, m, b-6"></div>
@@ -43,7 +45,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
       {/* Glowing, Orb, s */}
       <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>";
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">";
         {/* Header, Badg, e */}</div>
         <div, className="flex, justif, y-center, m, b-6">";</div>

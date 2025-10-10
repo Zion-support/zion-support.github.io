@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -17,11 +18,12 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
   sm:px-6,"
   lg:px-8 py-4"></div>"
           <Link href="/" className="inline-flex items-center text-blue-600,"
-  hover:text-blue-800 transition-colors duration-200"></Link>"
+  hover: text-blue-800 transition-colors duration-200"></Link>"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-// Back to Home;
+// Back to Home,
 import React from 'react';
 export default function ServicesAdvertisingPage() {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -44,12 +46,12 @@ export default function ServicesAdvertisingPage() {
               <Target className="w-4 h-4 mr-2" /></Target>
 AI-Powered Advertising Solutions;"
             <h1 className="text-4xl,"
-  md:text-6xl font-bold mb-6"></h1>
-// AI Advertising Services;
+  md: text-6xl font-bold mb-6"></h1>
+// AI Advertising Services,
           </h1>"
             <p className="text-xl,"
-  md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto"></p>
-// Revolutionize Your Marketing with 300% ROI Guaranteed;
+  md: text-2xl mb-8 text-gray-200 max-w-3xl mx-auto"></p>
+// Revolutionize Your Marketing with 300% ROI Guaranteed,
           </p>"
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto"></p>
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
@@ -65,15 +67,15 @@ AI-Powered Advertising Solutions;"
           
 
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
 // >
-//                 Start Free Consultation;
+//                 Start Free Consultation,
           <ArrowRight className="w-4 h-4 ml-2" />
-href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+href="#services" className="border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
 
-                View Our Services;
+                View Our Services,
       </section>
       {/* Key Metrics */}"
       <section className="py-16 bg-white"></section>"
@@ -82,14 +84,14 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
   lg:px-8"></div>"
           <div className="text-center mb-12"></div>"
             <h2 className="text-3xl,"
-  md:text-4xl font-bold text-gray-900 mb-4"></h2>
-// Proven Advertising Results;
+  md: text-4xl font-bold text-gray-900 mb-4"></h2>
+// Proven Advertising Results,
           </h2>"
             <p className="text-xl text-gray-600"></p>
 Our AI-powered advertising delivers measurable business impact;"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
+  lg: grid-cols-4 gap-8"></div>"
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>"
               <div className="text-gray-600">Average ROI</div>"
               <div className="text-4xl font-bold text-green-600 mb-2">95%</div>"
@@ -100,7 +102,7 @@ Our AI-powered advertising delivers measurable business impact;"
               <div className="text-gray-600">Campaign Optimization</div>
       {/* Services Section */}"
       <section id="services" className="py-16 bg-gray-50"></section>
-AI Advertising Solutions;
+AI Advertising Solutions,
               Comprehensive AI-powered advertising services for maximum impact;"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -173,7 +175,7 @@ Advanced machine learning algorithms that identify and target your ideal custome
                 <li>• Competitive analysis</li>
                 Market,
   Price: $1,000-3,000/month | Our,
-  Price: $600/month;
+  Price: $600/month,
       {/* Pricing Section */}
 Transparent Pricing;
               Choose the plan that fits your advertising needs;"
@@ -194,8 +196,8 @@ Transparent Pricing;
                   <span>Email support</span>
                   <span>2 platforms included</span>"
               <button className="w-full bg-blue-600,"
-  hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"></button>
-// Get Started;
+  hover: bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"></button>
+// Get Started,
           </button>"
             <div className="bg-blue-600 text-white rounded-lg p-8 relative"></div>"
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
@@ -225,15 +227,15 @@ Transparent Pricing;
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
 Ready to Transform Your Advertising?
           <p className="text-xl mb-8 text-blue-100">
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment;
-              href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment,
+              href="/case-studies" className="border-2 border-white text-white hover: bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
 
-              View Success Stories;
+              View Success Stories,
   );
 };
 

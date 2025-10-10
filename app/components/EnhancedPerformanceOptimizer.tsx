@@ -58,6 +58,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     } else {}
       window.addEventListener('load', optimizeImages);
     }
+const Component = () => {
 
     return () => {}
       window.removeEventListener('load', optimizeImages);
@@ -69,7 +70,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     if (!enableLazyLoading || typeof window === 'undefined') return;
 
     const observerOptions = {
-      root: null;
+      root: null,
   // Lazy loading for images and components
   useEffect(() => {}
     if (!enableLazyLoading || typeof window === 'undefined') return;
@@ -77,7 +78,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     const observerOptions = {}
       root: null,
       rootMargin: '50px',
-      threshold: 0.1;
+      threshold: 0.1,
     };
 
     const imageObserver = new IntersectionObserver((entries) => {}
@@ -96,6 +97,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     // Observe all images with data-src;
     const lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach((img) => imageObserver.observe(img));
+const Component = () => {
 
     return () => {}
       imageObserver.disconnect();
@@ -239,7 +241,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
               event_category: 'Performance'),
               event_label: metric.name),
               value: Math.round(metric.value),
-              non_interaction: true;
+              non_interaction: true,
           }
         };
 
@@ -314,7 +316,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
           -moz-transform: translateZ(0);
           -ms-transform: translateZ(0);
           -o-transform: translateZ(0);,
-    transform: translateZ(0);
+    transform: translateZ(0),
         }
 
         /* Optimize repaints */
@@ -357,6 +359,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
       // Run cleanup every 5 minutes;
       const interval = setInterval(cleanup, 300000);
+const Component = () => {
 
       return () => clearInterval(interval);
     };
@@ -375,10 +378,10 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
     if (navigation) {
       const metrics = {
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart;
-        loadComplete: navigation.loadEventEnd - navigation.fetchStart;
-        firstByte: navigation.responseStart - navigation.fetchStart;
-        domInteractive: navigation.domInteractive - navigation.fetchStart;
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+        loadComplete: navigation.loadEventEnd - navigation.fetchStart,
+        firstByte: navigation.responseStart - navigation.fetchStart,
+        domInteractive: navigation.domInteractive - navigation.fetchStart,
       };
 
       // Performance metrics collected;
@@ -392,7 +395,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         loadComplete: navigation.loadEventEnd - navigation.fetchStart,
         firstByte: navigation.responseStart - navigation.fetchStart,
         domInteractive: navigation.domInteractive - navigation.fetchStart
-      };
+      },
 
       // Performance metrics collected
 
@@ -410,7 +413,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
             event_category: 'Performance'),
             event_label: key),
             value: Math.round(value),
-            non_interaction: true;
+            non_interaction: true,
       }
     }
   }, []);

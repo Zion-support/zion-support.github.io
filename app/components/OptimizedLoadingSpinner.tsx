@@ -54,6 +54,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
 
     const renderSpinner = useMemo(() => {switch (variant) {
         case 'dots':
+const Component = () => {
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => (
@@ -64,9 +65,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 />
               ))}
             </div>
-          );
+          ),
 
         case 'pulse':
+const Component = () => {
           return (
             <div
               className={`${baseClasses} rounded-full animate-pulse`}
@@ -76,6 +78,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           );
 
         case 'skeleton':
+const Component = () => {
           return (
             <div className='space-y-2' role='status' aria-label='Loading'>
               <div
@@ -90,9 +93,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 style={{ width: '50%' }}
               />
             </div>
-          );
+          ),
 
         case 'bars':
+const Component = () => {
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2, 3].map(i => (
@@ -109,19 +113,19 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           );
 
         case 'spinner':
-        default:
-          return (
+        default: return (
             <div
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
               aria-label='Loading'
             />
-          );
+          ),
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
 
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
+const Component = () => {
 
     return (
       <div className={containerClasses}>

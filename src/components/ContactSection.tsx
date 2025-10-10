@@ -7,7 +7,7 @@ export default function ContactSection() {
     company: '',
     service: '',
     message: ''
-  });
+  }),
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -54,7 +54,7 @@ export default function ContactSection() {
       details: '123 Tech Street, Innovation City, IC 12345',
       link: '#'
     }
-  ];
+  ],
 
   const services = [
     'AI & Machine Learning',
@@ -66,6 +66,7 @@ export default function ContactSection() {
     'IT Consulting',
     'Other'
   ];
+const Component = () => {
 
   return (
     <section id="contact" className="py-20 relative">
@@ -235,7 +236,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -251,5 +252,5 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

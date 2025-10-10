@@ -8,6 +8,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AICybersecuritySuitePage: React.FC = () => {
+const Component = () => {
   return (
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
@@ -440,7 +441,7 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

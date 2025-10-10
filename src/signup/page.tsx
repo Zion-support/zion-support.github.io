@@ -20,7 +20,7 @@ const SignupPage: React.FC = () => {
     confirmPassword: '',
     agreeToTerms: false,
     subscribeNewsletter: false
-  });
+  }),
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -74,6 +74,7 @@ $4];
     'Custom integrations',
     'Scalable solutions',
     'Regular updates'
+const Component = () => {
 
   return (
     <>
@@ -138,7 +139,7 @@ const handleInputChange = (e: React.ChangeEvent;)
     window.location.href = '/';
   const features = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -156,6 +157,7 @@ icon: Award,
       description: '300% average ROI and 95% process automation for our clients',
 
 const PagePage: React.FC = () => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -247,7 +249,7 @@ const PagePage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
               <div className="text-center mb-8"></div>"
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
-// Create Your Account;
+// Create Your Account,
           </h1>"
                 <p className="text-gray-300"></p>
 // Join thousands of businesses transforming with AI and IT solutions;
@@ -255,10 +257,10 @@ const PagePage: React.FC = () => {
               </div>"
               <form onSubmit={handleSubmit} className="space-y-6"></form>"
                 <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-4"></div>
+  md: grid-cols-2 gap-4"></div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// First Name;
+// First Name,
 
           </label>
                     <div className="relative">
@@ -268,9 +270,9 @@ type="text" name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
 // required
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
 />
-                      Last Name;
+                      Last Name,
                         name="lastName" value={formData.lastName}
                         placeholder="Enter your last name" Email Address;
           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -287,7 +289,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type={showPassword ? 'text' : 'password'}
                       name="password" value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
+                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
                     <button
                       type="button" onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
@@ -296,7 +298,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       {showPassword ?}"
           <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
-Confirm Password;
+Confirm Password,
 
                       type={showConfirmPassword ? 'text' : 'password'}
                       name="confirmPassword" value={formData.confirmPassword}
@@ -383,15 +385,15 @@ Confirm Password;
           </a>{' '}
                       and{' '}"
                       <a href="/privacy" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
-// Privacy Policy;
+  hover: text-cyan-300"></a>
+// Privacy Policy,
           </a>
 
                     </span>
 name="subscribeNewsletter" checked={formData.subscribeNewsletter}
                       Subscribe to our newsletter for updates and tips;
                   type="submit" disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? ()}
           <div className="flex items-center justify-center">
 
@@ -416,7 +418,7 @@ Creating Account...
                   <a
                     href="/login" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 
-Sign in here;
+Sign in here,
             {/* Right Side - Features and Benefits */}"
             <div className="space-y-8"></div>"
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>

@@ -16,7 +16,7 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
   //Fix export statements;
   content = content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {
   content = content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {/* TODO: Fix JSX expression */}`
-    return `export const ${cleaned} =`;
+    return `export const ${cleaned} =`,
   });
 
   //Fix string literals in metadata;
@@ -24,11 +24,11 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
     //     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `title: '${cleaned}'`;
   content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {/* TODO: Fix JSX expression */}`
-  e: '${cleaned}'`;
+  e: '${cleaned}'`,
   });
 
   content = content.replace(/desc r i p t, i, o, n:\s*'([^']+)'/g, (match, description) => {/* TODO: Fix JSX expression */}`
-  n: '${cleaned}'`;
+  n: '${cleaned}'`,
   });
 
   //Fix other common patterns;
@@ -54,7 +54,7 @@ function findCorruptedFiles() {/* TODO: Fix JSX expression */}
     }
   }
 
-  walkDir(blogDir);
+  walkDir(blogDir),
   return corruptedFiles;
 }
 
@@ -62,7 +62,7 @@ function findCorruptedFiles() {/* TODO: Fix JSX expression */}
 function main() {
 function main() {/* TODO: Fix JSX expression */}
 }
-  //   const corruptedFiles = findCorruptedFiles();
+  //   const corruptedFiles = findCorruptedFiles(),
 
   //   if (corruptedFiles.length === 0) {/* TODO: Fix JSX expression */}
   }

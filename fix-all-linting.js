@@ -84,18 +84,18 @@ function applyFixes() {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
 
 }
 
 // Apply fixes;
 // Run linter to check results;
 try {
-  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
+  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' }),
 
 } catch (error) {
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+  o: 'inherit' }),
 
 } catch (error) {/* TODO: Fix JSX expression */}
 }

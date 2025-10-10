@@ -17,7 +17,7 @@ export function announceToScreenReader(
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
-  const announcement = document.createElement('div');
+  const announcement = document.createElement('div'),
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -59,6 +59,7 @@ export function trapFocus(element: HTMLElement): () => void {
 
   element.addEventListener('keydown', handleKeyDown);
   firstFocusable?.focus();
+const Component = () => {
 
   return () => {
     element.removeEventListener('keydown', handleKeyDown);
@@ -80,7 +81,7 @@ export function makeKeyboardAccessible(
   element: HTMLElement,
   onClick: (e: Event) => void,
   options: {
-    role?: string;
+    role?: string,
     tabindex?: number;
   } = {}
 ): () => void {
@@ -98,6 +99,7 @@ export function makeKeyboardAccessible(
 
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
+const Component = () => {
 
   return () => {
     element.removeEventListener('click', onClick);
@@ -122,6 +124,7 @@ export function getContrastRatio(color1: string, color2: string): number {
   const lum2 = getLuminance(color2);
   const brightest = Math.max(lum1, lum2);
   const darkest = Math.min(lum1, lum2);
+const Component = () => {
   
   return (brightest + 0.05) / (darkest + 0.05);
 }
@@ -198,7 +201,7 @@ export function createAccessibleTooltip(
   content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
 ): () => void {
-  const tooltip = document.createElement('div');
+  const tooltip = document.createElement('div'),
   tooltip.textContent = content;
   tooltip.className = 'tooltip';
   tooltip.setAttribute('role', 'tooltip');
@@ -245,6 +248,7 @@ export function createAccessibleTooltip(
   trigger.addEventListener('mouseleave', hideTooltip);
   trigger.addEventListener('focus', showTooltip);
   trigger.addEventListener('blur', hideTooltip);
+const Component = () => {
   
   return () => {
     trigger.removeEventListener('mouseenter', showTooltip);
@@ -259,7 +263,7 @@ export function createAccessibleTooltip(
  * Manage focus restoration (useful for modals)
  */
 export class FocusManager {
-  private previousActiveElement: HTMLElement | null = null;
+  private previousActiveElement: HTMLElement | null = null,
 
   saveFocus(): void {
     this.previousActiveElement = document.activeElement as HTMLElement;

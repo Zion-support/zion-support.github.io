@@ -2,7 +2,7 @@ import React from 'react';
 const Revolutionary2026ContentMegaBanne, r: React.FC = () => {,
   const revolutionaryConten, t = [
     {
-      id: 1;
+      id: 1,
       title: "AI, 202, 6: The, Met, a-Cognitive, Revoluti, o, n",
       description: "Breakthrough, AI, that thinks, about, thinking - achieving, 1000 x, processing speed, with, quantum-neural, convergen, c, e",",
       slug: "ai-me, t, a-cogniti, v, e-revoluti, o, n-2, 0, 2, 6",

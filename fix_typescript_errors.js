@@ -5,7 +5,7 @@ import fs from 'fs';
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  };
+  },
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;`
@@ -40,7 +40,7 @@ if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
 if (fs.existsSync(advancedComponentsTestPath)) {/* TODO: Fix JSX expression */}
   //     }
 
-// 4. Fix blog page metadata issues;
+// 4. Fix blog page metadata issues,
 // const blogPages = [
   'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
@@ -48,7 +48,7 @@ if (fs.existsSync(advancedComponentsTestPath)) {/* TODO: Fix JSX expression */}
 
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
-});
+}),
 
 // 5. Fix OpenGraph authors issue;
 // const openGraphPages = [
@@ -59,7 +59,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
   e: ['"][^'"]*['"]\s*\}\s*\]/g,"
       "author,"
   s: ['Zion Tech Group']")
-    );
+    ),
 
     fs.writeFileSync(pagePath, content);
     //         }
@@ -78,7 +78,7 @@ if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}`
   }`
-  );
+  ),
 
   fs.writeFileSync(analyticsTrackerPath, content);
   //     }
@@ -96,7 +96,7 @@ import { performanceEnhancer } from '../utils/performanceEnhancer';`
 // // const performancePath = '/workspace/lib/performance.ts';
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}`
   }`
-  );
+  ),
 
   fs.writeFileSync(performancePath, content);
   //     }

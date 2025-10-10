@@ -41,7 +41,7 @@ const DigitalTwinPlatformPage: React.FC = () => {
       title: "Advanced Visualization",
       description: "Interactive 3 D models with real-time data overlays and analytics"
     }
-  ];
+  ],
 
   const useCases = [
     {
@@ -157,7 +157,7 @@ const DigitalTwinPlatformPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -182,6 +182,7 @@ const DigitalTwinPlatformPage: React.FC = () => {
       content: "Our hospital's digital twin allows us to optimize patient flow, predict equipment maintenance needs, and improve overall operational efficiency. Patient satisfaction has increased by 40%."
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -431,7 +432,7 @@ const DigitalTwinPlatformPage: React.FC = () => {
             Transform your physical assets into intelligent, connected digital twins that drive efficiency and innovation.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -442,9 +443,9 @@ const DigitalTwinPlatformPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
-  );
+  ),
 };
 
 DigitalTwinPlatformPage.displayName = 'DigitalTwinPlatformPage';

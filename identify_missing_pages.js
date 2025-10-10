@@ -44,12 +44,12 @@ const navigationPages = navigationLinks.map(link => link.substring(1));
 // Find missing pages;
 const missingPages = navigationPages.filter(page => !existingPages.includes(page));
 
-console.log('Missing pages: ');
+console.log('Missing pages: '),
 missingPages.forEach(page => console.log(`- ${page}`));
 
-console.log(`\nTotal missing pages: ${missingPages.length}`);
-console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Total navigation links: ${navigationPages.length}`);
+console.log(`\nTotal missing pages: ${missingPages.length}`),
+console.log(`Total existing pages: ${existingPages.length}`),
+console.log(`Total navigation links: ${navigationPages.length}`),
 
 // Write missing pages to file;
 fs.writeFileSync('missing_pages.txt', missingPages.join('\n'));

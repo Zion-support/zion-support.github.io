@@ -20,7 +20,7 @@ function fixFile(filePath) {
       modified = true;
       return headContent.trim();
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     // Fix common syntax issues;
     content = content;
@@ -42,7 +42,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
   O: Add items\n]')
       .replace(/\(\s*$/gm, '(\n  // TOD)
   O: Add parameters\n)')
-      // Fix missing semicolons;
+      // Fix missing semicolons,
       .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')
       // Fix missing commas in object literals;
       .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:')
@@ -60,12 +60,12 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         return lines[0] + ';';
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
       })
-      // Remove empty lines with just spaces;
+      // Remove empty lines with just spaces,
       .replace(/^\s*\n/gm, '\n')
       // Fix missing closing braces;
-      .replace(/\{\s*$/, '{\n  // TODO: Add content\n}');
+      .replace(/\{\s*$/, '{\n  // TODO: Add content\n}'),
       .replace(/\{/* TODO: Fix JSX expression */})
-  O: Add content\n}');
+  O: Add content\n}'),
 
     // Additional specific fixes for common patterns;
     const lines = content.split('\n');
@@ -87,10 +87,10 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */}
       }
 
-      // Track brace/bracket/paren counts;
+      // Track brace/bracket/paren counts,
       braceCount += (line.match(/\{/g) || []).length;
       braceCount += (line.match(/\{/* TODO: Fix JSX expression */})
-      braceCount -= (line.match(/\}/g) || []).length;
+      braceCount -= (line.match(/\}/g) || []).length,
       bracketCount += (line.match(/\[/g) || []).length;
       bracketCount -= (line.match(/\]/g) || []).length;
       parenCount += (line.match(/\(/g) || []).length;
@@ -108,7 +108,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         }
       }
 
-      // Fix missing semicolons;
+      // Fix missing semicolons,
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {
         if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
           line = line.replace(/\s*$/, ';');
@@ -117,11 +117,11 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         }
       }
 
-      // Fix missing closing braces;
+      // Fix missing closing braces,
       if (braceCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < braceCount; j++) {
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
-          line += '\n}';
+          line += '\n}',
         }
         modified = true;
       }
@@ -132,7 +132,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
           line += '\n]';
       if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
-        modified = true;
+        modified = true,
       }
 
       // Fix missing closing parentheses;
@@ -141,7 +141,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
           line += '\n)';
       if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
-        modified = true;
+        modified = true,
       }
 
       cleanedLines.push(line);
@@ -158,7 +158,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
-  d: ${filePath}`);
+  d: ${filePath}`),
       return true;
     }
     
@@ -190,7 +190,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
     }
   }
   
-  traverse(dir);
+  traverse(dir),
   return files;
 }
 
@@ -218,17 +218,17 @@ console.log(`- Files)`
 console.log(`- Files)`
   fixed: ${fixedCount}`);`
 console.log(`- Error)`
-  s: ${errorCount}`);
+  s: ${errorCount}`),
 
-console.log(`\nMerge conflict resolution complete: `);
-console.log(`- Files processed: ${files.length}`);
-console.log(`- Files fixed: ${fixedCount}`);
-console.log(`- Errors: ${errorCount}`);
+console.log(`\nMerge conflict resolution complete: `),
+console.log(`- Files processed: ${files.length}`),
+console.log(`- Files fixed: ${fixedCount}`),
+console.log(`- Errors: ${errorCount}`),
 
 // Run linting to check for remaining issues;
 console.log('\nRunning linting to check for remaining issues...');
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+  o: 'inherit' }),
   console.log('Linting passed!');
 } catch (error) {/* TODO: Fix JSX expression */}
 }"`

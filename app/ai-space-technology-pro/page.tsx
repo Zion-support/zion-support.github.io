@@ -10,7 +10,7 @@ export default function AISpaceTechnologyProPage() {
     {
       title: 'Satellite Operations Management'
       description: 'AI-powered satellite constellation management with autonomous operations and predictive maintenance'
-      icon: Satellite;
+      icon: Satellite,
       benefits: [,
         'Autonomous satellite operations',
         'Predictive maintenance alerts',
@@ -21,7 +21,7 @@ export default function AISpaceTechnologyProPage() {
     {
       title: 'Space Mission Planning'
       description: 'Intelligent mission planning with trajectory optimization and resource allocation for space missions'
-      icon: Rocket;
+      icon: Rocket,
       benefits: [,
         'Optimal trajectory planning',
         'Resource optimization',
@@ -32,7 +32,7 @@ export default function AISpaceTechnologyProPage() {
     {
       title: 'Astronomical Data Analysis'
       description: 'Advanced AI analysis of astronomical data with pattern recognition and discovery algorithms'
-      icon: Telescope;
+      icon: Telescope,
       benefits: [,
         'Automated data processing',
         'Pattern recognition',
@@ -43,7 +43,7 @@ export default function AISpaceTechnologyProPage() {
     {
       title: 'Orbital Mechanics Optimization'
       description: 'AI-driven orbital mechanics calculations and optimization for spacecraft navigation'
-      icon: Orbit;
+      icon: Orbit,
       benefits: [,
         'Precise orbital calculations',
         'Navigation optimization',
@@ -51,7 +51,7 @@ export default function AISpaceTechnologyProPage() {
         'Fuel efficiency optimization'
       ],
       image: '/images/ai-space-technology/orbital-mechanics.webp'}
-  ];
+  ],
 
   const capabilities = [
     {
@@ -101,8 +101,8 @@ export default function AISpaceTechnologyProPage() {
   ];
 
   const pricing = {
-    monthly: 5500;
-    yearly: 55000;
+    monthly: 5500,
+    yearly: 55000,
     features: [,
       'Unlimited satellite operations',
       'Advanced AI algorithms',
@@ -116,18 +116,18 @@ export default function AISpaceTechnologyProPage() {
     addOns: [,
       {,
         name: 'Custom Space Models',
-        price: 2500;
+        price: 2500,
         description: 'Train AI models on your specific space data'},
       {
         name: 'Dedicated Support',
-        price: 1500;
+        price: 1500,
         description: 'Dedicated space technology specialist'},
       {
         name: 'On-premise Deployment',
-        price: 8000;
+        price: 8000,
         description: 'Deploy on your infrastructure'}
     ]
-  };
+  },
 
   const testimonials = [
     {
@@ -135,36 +135,37 @@ export default function AISpaceTechnologyProPage() {
       role: 'Mission Director',
       company: 'SpaceX',
       content: 'AI Space Technology Pro revolutionized our satellite operations. We achieved 99.9% uptime and reduced operational costs by 60% while improving mission success rates.',
-      rating: 5;
+      rating: 5,
       avatar: 'SJ'},
     {
       name: 'Michael Chen'
       role: 'Chief Technology Officer',
       company: 'Blue Origin',
       content: 'The mission planning capabilities are incredible. We optimized our launch trajectories and reduced fuel consumption by 40% while maintaining mission success rates.',
-      rating: 5;
+      rating: 5,
       avatar: 'MC'},
     {
       name: 'Dr. Emily Rodriguez'
       role: 'Research Director',
       company: 'NASA',
       content: 'The astronomical data analysis helped us discover 3 new exoplanets and identify 15 potential habitable zones. This is exactly what we needed for our research missions.',
-      rating: 5;
+      rating: 5,
       avatar: 'ER'}
-  ];
+  ],
 
   const stats = [
     { number: '99.9%', label: 'Satellite Uptime', icon: Satellite },
     { number: '60%', label: 'Cost Reduction', icon: DollarSign },
     { number: '40%', label: 'Fuel Efficiency', icon: Rocket },
     { number: '25+', label: 'Space Agencies', icon: Building }
-  ];
+  ],
 
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   };
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -176,7 +177,8 @@ export default function AISpaceTechnologyProPage() {
               <Rocket className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">AI Space Technology Pro</span><h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">AI-Powered Space Technology</h1><span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Exploring the Universe</span><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Advanced space exploration and satellite management with AI-powered mission planning,</p>
               orbital mechanics optimization, and astronomical data analysis. Reach for the stars.</p>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">
@@ -189,7 +191,7 @@ export default function AISpaceTechnologyProPage() {
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              AI-Powered Space Technology;
+              AI-Powered Space Technology,
               <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Exploring the Universe;
               </span>)
@@ -201,8 +203,8 @@ export default function AISpaceTechnologyProPage() {
             </p>
 
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <a
                 href="#features"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
@@ -216,14 +218,14 @@ export default function AISpaceTechnologyProPage() {
                 <Calendar className="w-5 h-5 mr-2" >Schedule Demo</Calenda>
               </Calendar>
                 <Play className="w-5 h-5 mr-2" />
-                Explore Features;
+                Explore Features,
               </a>
               <a;
                 href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Schedule Demo;
+                Schedule Demo,
               </a>
             </div>
           </div>
@@ -272,7 +274,7 @@ export default function AISpaceTechnologyProPage() {
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}<p className="text-gray-300">{feature.description}<div className="space-y-3">{feature.benefits.map((benefit, benefitIndex) => (</div>
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Advanced Space AI Capabilities;
+              Advanced Space AI Capabilities,
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Cutting-edge AI technology designed specifically for space exploration and satellite operations;
@@ -323,7 +325,7 @@ export default function AISpaceTechnologyProPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Comprehensive Space Technology Platform<p className="text-lg text-gray-300 max-w-3xl mx-auto">End-to-end AI-powered solutions for space exploration and satellite operations<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">{capabilities.map((capability, index) => (</div>
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Comprehensive Space Technology Platform;
+              Comprehensive Space Technology Platform,
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               End-to-end AI-powered solutions for space exploration and satellite operations;
@@ -355,9 +357,9 @@ export default function AISpaceTechnologyProPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Enterprise Pricing<p className="text-lg text-gray-300 max-w-3xl mx-auto">Flexible pricing options for space agencies and aerospace companies</p>
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">Enterprise Pricing<p className="text-lg text-gray-300 max-w-3xl mx-auto">Flexible pricing options for space agencies and aerospace companies</p>
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Enterprise Pricing;
+              Enterprise Pricing,
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options for space agencies and aerospace companies;
@@ -438,7 +440,7 @@ export default function AISpaceTechnologyProPage() {
                   <MessageSquare className="w-5 h-5 mr-2" >Get Started Today</MessageSquare>
                 </MessageSquare>
                   <MessageSquare className="w-5 h-5 mr-2" />
-                  Get Started Today;
+                  Get Started Today,
                 </a>
               </div>
             </div>
@@ -452,7 +454,7 @@ export default function AISpaceTechnologyProPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Trusted by Leading Space Agencies<p className="text-lg text-gray-300 max-w-3xl mx-auto">See how our AI technology is transforming space exploration<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{testimonials.map((testimonial, index) => (</div>
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Trusted by Leading Space Agencies;
+              Trusted by Leading Space Agencies,
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               See how our AI technology is transforming space exploration;
@@ -487,7 +489,7 @@ export default function AISpaceTechnologyProPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Explore the Universe?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading space agencies using AI to advance space exploration and satellite operations.</p>
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">Ready to Explore the Universe?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading space agencies using AI to advance space exploration and satellite operations.</p>
           <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Ready to Explore the Universe?
           </h2>
@@ -496,9 +498,9 @@ export default function AISpaceTechnologyProPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a;
+            <a,
         <div className="container mx-auto px-4 text-center"></section>
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Explore the Universe?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading space agencies using AI to advance space exploration and satellite operations.</p>
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">Ready to Explore the Universe?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading space agencies using AI to advance space exploration and satellite operations.</p>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"></div>
@@ -520,14 +522,14 @@ export default function AISpaceTechnologyProPage() {
             <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a>
             <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com<p>📍 Address: {contactInfo.address}</p>
               <MessageSquare className="w-5 h-5 mr-2" />
-              Start Free Trial;
+              Start Free Trial,
             </a>
             <a;
               href="/consultation"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover: bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
               <Calendar className="w-5 h-5 mr-2" />
-              Schedule Demo;
+              Schedule Demo,
             </a>
           </div>
 
@@ -542,7 +544,7 @@ export default function AISpaceTechnologyProPage() {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
-  );
+  ),
 }

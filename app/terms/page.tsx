@@ -46,7 +46,8 @@ export default function TermsPage() {
       icon: Scale,
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-white">

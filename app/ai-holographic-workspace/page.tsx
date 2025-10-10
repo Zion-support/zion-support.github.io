@@ -2,10 +2,12 @@ import React from 'react';
 import { Brain, Target, BarChart, Users, Settings, Navigation, Target, Users, Cube } from 'lucide-react';
 
 const AIHolographicWorkspacePage: React.FC = () => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Navigation */}</div>
 const AIHolographicWorkspacePage: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       {/* Navigation */}
       <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
         <div className="container mx-auto px-4"></div>
@@ -29,7 +31,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Holographic Workspace<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.</p>
+            <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Holographic Workspace<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.</p>
         <div className="container mx-auto text-center"></section>
           <div className="max-w-4xl mx-auto"></div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Holographic Workspace</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.</p>
@@ -37,14 +39,14 @@ const AIHolographicWorkspacePage: React.FC = () => {,
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Enter Holographic Space<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">View Demo</a>
             <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Holographic Workspace;
+              AI Holographic Workspace,
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md: text-2xl text-gray-300 mb-8 leading-relaxed">
               Step into the future with our immersive 3D holographic workspace that revolutionizes how you interact with digital content and collaborate with your team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Enter Holographic Space;
+                Enter Holographic Space,
               </a>
               <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                 View Demo;
@@ -58,9 +60,9 @@ const AIHolographicWorkspacePage: React.FC = () => {,
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Immersive 3D Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the next generation of workspace technology with holographic displays and spatial computing.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Immersive 3D Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the next generation of workspace technology with holographic displays and spatial computing.</p>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
-              Immersive 3D Features;
+              Immersive 3D Features,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the next generation of workspace technology with holographic displays and spatial computing.
@@ -125,15 +127,15 @@ const AIHolographicWorkspacePage: React.FC = () => {,
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Holographic Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect holographic workspace plan for your needs.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Holographic Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect holographic workspace plan for your needs.</p>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">
-              Holographic Pricing;
+              Holographic Pricing,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the perfect holographic workspace plan for your needs.
         <div className="container mx-auto"></section>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Holographic Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect holographic workspace plan for your needs.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Holographic Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect holographic workspace plan for your needs.</p>
             </p>
           </div>
 
@@ -154,7 +156,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Email support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
                   <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Basic 3D workspace;
+                  Basic 3D workspace,
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" />
@@ -268,7 +270,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Enter the Holographic Future?<p className="text-xl text-gray-300 mb-8">Join the revolution in workspace technology and experience productivity like never before.</p>
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 text-white">Ready to Enter the Holographic Future?<p className="text-xl text-gray-300 mb-8">Join the revolution in workspace technology and experience productivity like never before.</p>
         <div className="container mx-auto text-center"></section>
           <div className="max-w-4xl mx-auto"></div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Enter the Holographic Future?</h2><p className="text-xl text-gray-300 mb-8">Join the revolution in workspace technology and experience productivity like never before.</p>
@@ -283,7 +285,7 @@ const AIHolographicWorkspacePage: React.FC = () => {,
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Your Holographic Journey;
+                Start Your Holographic Journey,
               </a>
               <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                 Schedule Demo;

@@ -1,11 +1,11 @@
 
 
-  children: ReactNode;
+  children: ReactNode,
 
   fallback?: ReactNode;
   onError?: (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => void;
+  o: ErrorInfo) => void,
   enableErrorReporting?: boolean;
   maxRetries?: number;
   showRetryButton?: boolean;
@@ -15,21 +15,21 @@ interface State {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   hasErro,
-  r: boolean;
+  r: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;,
     retryCoun,
   t: number;,
     isRetryin,
-  g: boolean;
+  g: boolean,
 }
 class ComprehensiveErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
-  private maxRetries: number;
+  private maxRetries: number,
   constructor(props: Props) {// TODO: Add content;}
 }
 
@@ -51,7 +51,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     this.maxRetries = props.maxRetries || 3;
   }
   static getDerivedStateFromError(erro)
-  r: Error): Partial;
+  r: Error): Partial,
           <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -66,7 +66,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       retryCoun,
   t: 0,
       isRetryin,
-  g: false;
+  g: false,
     };
   }
   componentDidCatch(erro,
@@ -111,7 +111,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       ur,
   l: window.location.href,
       retryCoun,
-  t: this.state.retryCount;
+  t: this.state.retryCount,
     };
     // Send to error reporting service;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
@@ -131,7 +131,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   error_i,
   d: this.state.errorId,
           retry_coun,
-  t: this.state.retryCount;
+  t: this.state.retryCount,
         })
       });
     }
@@ -149,7 +149,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   O: Add content;}
 }
       this.setState({/* TODO: Fix JSX expression */})
-  g: true });
+  g: true }),
       // Simulate retry delay;
       await new Promise(resolve => setTimeout(resolve, 1000));
       this.setState(prevState => ({/* TODO: Fix JSX expression */}
@@ -187,6 +187,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       if (this.state.isRetrying) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
         return (<div>Coming Soon</div>)
   )
           
@@ -198,6 +199,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 //           />
         );
       }
+const Component = () => {
 
       return (<div>Coming Soon</div>)
   )
@@ -237,7 +239,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
               </p>
             </div>"
             <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>
+  sm: flex-row gap-4 justify-center"></div>
               {this.state.retryCount < this.maxRetries && ()}
           <button></button>
                   onClick={this.handleRetry}"
@@ -254,7 +256,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 aria-label="Reload the entire page"
 
 // >
-//                  Reload Page;
+//                  Reload Page,
           </button>
               <a></a>"
                 href="/contact""
@@ -269,7 +271,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}"
           <details className="mt-6 text-left"></details>"
                 <summary className="text-white cursor-pointer,"
-  hover:text-cyan-400"></summary>
+  hover: text-cyan-400"></summary>
 // Technical Details (Development)
                 
           
@@ -290,7 +292,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           </div>
         </div>
 
-      );
+      ),
     }
 
     return this.props.children;

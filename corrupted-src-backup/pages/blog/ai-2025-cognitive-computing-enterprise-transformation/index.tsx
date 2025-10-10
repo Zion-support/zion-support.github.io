@@ -9,7 +9,8 @@ impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Lightbu, l, b } fr, o, m 'luci, d, e-rea, c, t';
 
 const CognitiveComputingTransformatio, n: React.FC = () => { ,
-  return(<>,
+const Component = () => {
+  return (<>,
       <Helm, e, t>
         <title>
           Cognitive, Computing, Enterprise Transformati, o, n | Hum, a, n-Like, AI, Intelligence | Zion, Tech, Group;

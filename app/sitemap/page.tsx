@@ -28,6 +28,7 @@ const SitemapPage: React.FC = () => {
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
@@ -71,7 +72,7 @@ const SitemapPage: React.FC = () => {
           <p className="text-gray-600 mb-6">
             If you can't find what you're looking for, feel free to contact us directly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm: flex-row gap-4">
             <a 
               href="/contact"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
@@ -88,7 +89,7 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  ),
 };
 
 export default SitemapPage;

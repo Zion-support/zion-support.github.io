@@ -16,7 +16,7 @@ export interface AppConfig {// TODO: Add content;}
     versio,
   n: string;,
     environmen,
-  t: 'development' | 'production' | 'test';
+  t: 'development' | 'production' | 'test',
   };
   ap,
   i: {/* TODO: Fix JSX expression */}
@@ -71,7 +71,7 @@ export interface AppConfig {// TODO: Add content;}
 // enableHST,
   S: true,
 // enableXSSProtectio,
-  n: true;
+  n: true,
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group'
 export function getConfig;
@@ -79,7 +79,7 @@ export function getConfig;
   h: string): T {const keys = keyPath.split('.');}
   const __keys = keyPath.split('.');
   let,
-  value: unknown = config;
+  value: unknown = config,
   for (const key of keys) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

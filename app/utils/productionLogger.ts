@@ -5,10 +5,10 @@
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
 interface LogEntry {}
-  level: LogLevel;
-  message: string;
+  level: LogLevel,
+  message: string,
   data?: unknown;
-  timestamp: string;
+  timestamp: string,
   context?: string;
 }
 

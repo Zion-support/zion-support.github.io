@@ -11,16 +11,19 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
+  ],
+const Component = () => {
+  return (<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
       {/* Animated, background, effect */}
       <div, className="absolute, inse, t-0, opacit, y-20">";
+const Component = () => {
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
       {/* Animated, background, effect */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0 -le, f, t-4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-bl, o, b"></d, i, v>";
         <div, className="absolute, to, p-0 -rig, h, t-4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-blob, animatio, n-del, a, y-20, 0, 0"></d, i, v>";
+const Component = () => {
   return ("
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
       {/* Animated, background, effect */}"
@@ -241,10 +244,10 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           animati, o, n: blob, 7s, infinite;
         }
         .animati, o, n-del, a, y-20, 0, 0 {
-          animati, o, n-del, a, y: 2 s;
+          animati, o, n-del, a, y: 2 s,
         }
         .animati, o, n-del, a, y-40, 0, 0 {
-          animati, o, n-del, a, y: 4s;
+          animati, o, n-del, a, y: 4s,
           animati, o, n: blob, 7s, infinite;
         .anima, t, e-bl, o, b {/* TODO: Fix JSX expression */}
         }

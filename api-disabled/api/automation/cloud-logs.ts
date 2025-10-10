@@ -1,6 +1,6 @@
 
 async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${owner}/${repo}/contents/automation_logs`;
+  s://api.github.com/repos/${owner}/${repo}/contents/automation_logs`,
     const,
   headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };`
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
@@ -9,32 +9,32 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
     if (!resp.ok) return [];
     
     const _files = (await resp.json()) as Array<{/* TODO: Fix JSX expression */}
-  e: string}>;
+  e: string}>,
     const _jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'));
-    const results: unknown[] = [];
+    const results: unknown[] = [],
     ,
     for (const f of jsonFiles.slice(-50).reverse()) {,
       try {,
         const _r = await fetch(f.download_url, { headers });
         if (!r.ok) continue;
         const _j = await r.json();
-        results.push({id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights});
+        results.push({id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights}),
       } catch {
         // ignore;
     const,
-  results: unknown[] = [];
+  results: unknown[] = [],
     
     for (const f of jsonFiles.slice(-50).reverse()) {/* TODO: Fix JSX expression */}
         const _r = await fetch(f.download_url, { headers });
         if (!r.ok) continue;
         const _j = await r.json();
         results.push({/* TODO: Fix JSX expression */})
-  s: j.insights});
+  s: j.insights}),
       } catch {/* TODO: Fix JSX expression */}
       }
     }
     
-    return results;
+    return results,
   } catch {/* TODO: Fix JSX expression */}
   }
 }
@@ -48,15 +48,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       try {
 //         const raw = fs.readFileSync(path.join(dir, f), 'utf8');
         const _json = JSON.parse(raw);
-        return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights };
+        return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights },
       } catch {
-        return { id: f, file: f };
+        return { id: f, file: f },
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  s: json.insights };
+  s: json.insights },
       } catch {/* TODO: Fix JSX expression */}
-  e: f };
+  e: f },
       }
     });
     
@@ -66,7 +66,7 @@ export default async function handler(re,
   } catch {/* TODO: Fix JSX expression */}
   }
   
-//   const remote = await fetchFromGitHub();
+//   const remote = await fetchFromGitHub(),
   return res.status(200).json({/* TODO: Fix JSX expression */})
-  s: remote });
+  s: remote }),
 }`

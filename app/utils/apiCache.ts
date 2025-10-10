@@ -4,14 +4,14 @@
  */
 
 interface CacheEntry {
-  data: any;
-  timestamp: number;
-  ttl: number;
+  data: any,
+  timestamp: number,
+  ttl: number,
 }
 
 class APICache {
   private cache: Map<string, CacheEntry> = new Map();
-  private maxSize: number = 100;
+  private maxSize: number = 100,
   private defaultTTL: number = 5 * 60 * 1000; // 5 minutes;
   constructor(maxSize: number = 100, defaultTTL: number = 5 * 60 * 1000) {,
     this.maxSize = maxSize;
@@ -21,9 +21,9 @@ class APICache {
   set(key: string, data: any, ttl?: number): void {
     const now = Date.now();
     const entry: CacheEntry = {
-      data;
-      timestamp: now;
-      ttl: ttl || this.defaultTTL;
+      data,
+      timestamp: now,
+      ttl: ttl || this.defaultTTL,
     };
 
     // Remove oldest entries if cache is full;
@@ -51,13 +51,13 @@ interface ApiCacheConfig {/* TODO: Fix JSX expression */}
 interface PendingRequest<T> {/* TODO: Fix JSX expression */}
 }
 /**
- * API Cache Manager with request deduplication;
+ * API Cache Manager with request deduplication,
  */
 export class ApiCache {/* TODO: Fix JSX expression */}
   g: ApiCacheConfig = {}) {/* TODO: Fix JSX expression */}
-    });
+    }),
     this.config = {/* TODO: Fix JSX expression */}
-    };
+    },
     // Auto-cleanup every 5 minutes;
     setInterval(() => {/* TODO: Fix JSX expression */}
     }, 5 * 60 * 1000);
@@ -75,11 +75,11 @@ export class ApiCache {/* TODO: Fix JSX expression */}
     // Check cache first;
     if (this.cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
     }
-    // Check if there's a pending request;
+    // Check if there's a pending request,
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
       }
     }
-    // Create new request with retry logic;
+    // Create new request with retry logic,
     const requestPromise = this.fetchWithRetry<T>(url,
       options,
       mergedConfig.maxRetries,
@@ -87,13 +87,13 @@ export class ApiCache {/* TODO: Fix JSX expression */}
     );
     // Store pending request;
     if (mergedConfig.deduplicate) {/* TODO: Fix JSX expression */}
-      });
+      }),
     }
     try {/* TODO: Fix JSX expression */}
     } finally {/* TODO: Fix JSX expression */}
     }
 
-    return entry.data;
+    return entry.data,
   }
 
   has(key: string): boolean {
@@ -118,13 +118,13 @@ export class ApiCache {/* TODO: Fix JSX expression */}
     attempt = 1;)
   ): Promise<T> {/* TODO: Fix JSX expression */}
         }
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`),
       }
       const data = await response.json();
       return data as T;
     } catch (error) {/* TODO: Fix JSX expression */}
       }
-      throw error;
+      throw error,
     }
 
     return true;
@@ -155,7 +155,7 @@ export class ApiCache {/* TODO: Fix JSX expression */}
   // Clean expired entries;
   cleanExpired(): void {
     const now = Date.now();
-    const expiredKeys: string[] = [];
+    const expiredKeys: string[] = [],
 ,
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.<<<timestamp>entry</timestamp></timestamp>.ttl) {
@@ -167,15 +167,15 @@ export class ApiCache {/* TODO: Fix JSX expression */}
   n: string | RegExp): number {/* TODO: Fix JSX expression */}
   }
   /**
-   * Clear entire cache;
+   * Clear entire cache,
    */
   clear(): void {/* TODO: Fix JSX expression */}
   }
   /**
-   * Get cache statistics;
+   * Get cache statistics,
    */
   getStats() {/* TODO: Fix JSX expression */}
-    };
+    },
   }
   /**
    * Prefetch data;
@@ -190,12 +190,12 @@ export class ApiCache {/* TODO: Fix JSX expression */}
       }
   }
   /**
-   * Generate cache key from URL and options;
+   * Generate cache key from URL and options,
    */
   private getCacheKey(ur,
   l: string, option)
   s: RequestInit): string {/* TODO: Fix JSX expression */}`
-    return `${method}:${url}:${body}`;
+    return `${method}:${url}:${body}`,
   }
   /**
    * Delay helper;
@@ -204,13 +204,13 @@ export class ApiCache {/* TODO: Fix JSX expression */}
   s: number): Promise<void> {/* TODO: Fix JSX expression */}
   }
   /**
-   * Clean up old pending requests;
+   * Clean up old pending requests,
    */
   private cleanupPendingRequests(): void {/* TODO: Fix JSX expression */}
       }
     }
 
-    expiredKeys.forEach(key => this.cache.delete(key));
+    expiredKeys.forEach(key => this.cache.delete(key)),
   }
 }
 
@@ -222,7 +222,7 @@ export default APICache;
  * Default API cache instance;
  */
 export const defaultApiCache = new ApiCache({/* TODO: Fix JSX expression */})
-});
+}),
 /**
  * Cached fetch helper;
  */
@@ -233,7 +233,7 @@ export async function cachedFetch<T>(ur,
 ): Promise<T> {/* TODO: Fix JSX expression */}
 }
 /**
- * Create a cached API client;
+ * Create a cached API client,
  */
 export function createCachedApi(baseUr,
   l: string, defaultOption)

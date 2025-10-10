@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('broken-image-scanner function triggered')}
-    // Broken image scanning simulation;
+    // Broken image scanning simulation,
     const result = {
-      statusCode: 200;
+      statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
@@ -13,8 +13,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         source: event.source || 'unknown',
         scanning: {,
           status: 'active',
-          imagesScanned: 0;
-          brokenFound: 0;
+          imagesScanned: 0,
+          brokenFound: 0,
           lastScan: new Date().toISOString()}
     const result = {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
@@ -22,12 +22,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   n: new Date().toISOString()}
-        }})};
+        }})},
     return result;
 //   } catch (error) {// console.error('Error in broken-image-scanner: ') error;
       }
     return {
-      statusCode: 500;
+      statusCode: 500,
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
@@ -43,11 +43,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'broken-image-scanner'})
-      });
+      }),
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'broken-image-scanner',' source: event.source || 'unknown', scanning: {' status: 'active', imagesScanned: 0, brokenFound: 0;
+        timestamp: new Date().toISOString(),' function: 'broken-image-scanner',' source: event.source || 'unknown', scanning: {' status: 'active', imagesScanned: 0, brokenFound: 0,
         lastScan: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in broken-image-scanner: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'broken-image-scanner' }) }; } };'
         timestam,

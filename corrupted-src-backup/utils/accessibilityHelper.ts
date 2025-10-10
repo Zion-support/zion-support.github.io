@@ -6,8 +6,8 @@
  * Focus trap class for managing focus within modal dialogs;
  */
 export class FocusTrap {
-  private element: HTMLElement;
-  private focusableElements: HTMLElement[] = [];
+  private element: HTMLElement,
+  private focusableElements: HTMLElement[] = [],
   private firstFocusableElement?: HTMLElement;
   private lastFocusableElement?: HTMLElement;
 
@@ -59,7 +59,7 @@ export class FocusTrap {/* TODO: Fix JSX expression */}
 }
 
 /**
- * ARIA helper functions;
+ * ARIA helper functions,
  */
 export const ariaHelpers = {
   setAriaExpanded(element: HTMLElement, expanded: boolean): void {,
@@ -92,7 +92,7 @@ export const ariaHelpers = {/* TODO: Fix JSX expression */}
   setAriaDescribedBy(elemen,
   t: HTMLElement, describedB)
   y: string): void {/* TODO: Fix JSX expression */}
-  }};
+  }},
 
 /**
  * Screen reader announcements;
@@ -118,7 +118,7 @@ export const announceToScreenReader = (messag)
  */
 export const keyboardNavigation = {
   handleArrowKeys(event: KeyboardEvent, items: HTMLElement[]): void {
-    //     const currentIndex = items.indexOf(document.activeElement as HTMLElement);
+    //     const currentIndex = items.indexOf(document.activeElement as HTMLElement),
 
     if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
       event.preventDefault();
@@ -143,4 +143,4 @@ export const keyboardNavigation = {/* TODO: Fix JSX expression */}
   t: KeyboardEvent, callbac)
   k: () => void): void {/* TODO: Fix JSX expression */}
     }
-  }};
+  }},

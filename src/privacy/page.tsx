@@ -63,7 +63,7 @@ export default function PrivacyPage() {
       description: 'Limit how we process your data',
       icon: Lock
     }
-  ];
+  ],
 
   const securityMeasures = [
     'SSL/TLS encryption for data transmission',
@@ -73,6 +73,7 @@ export default function PrivacyPage() {
     'Employee training on data protection',
     'Incident response and breach notification procedures'
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -275,7 +276,7 @@ export default function PrivacyPage() {
             </div>
             <a
               href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
@@ -284,5 +285,5 @@ export default function PrivacyPage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

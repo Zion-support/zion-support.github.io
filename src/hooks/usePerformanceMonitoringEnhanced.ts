@@ -50,6 +50,7 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] }
 
   )
+const Component = () => {
       return () => observer.disconnect()
   }, [reportWebVitals])
   return { reportWebVitals }

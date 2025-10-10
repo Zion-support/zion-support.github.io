@@ -24,10 +24,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-    description: description;
+    description: description,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
+const Component = () => {
 
-  return(<Helmet>
+  return (<Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -60,14 +61,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
-  s://zion.app${canonicalUrl}`;
+  s: //zion.app${canonicalUrl}`,
 
   const defaultStructuredData = {/* TODO: Fix JSX expression */}
-  };
+  },
+const Component = () => {
 
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>
@@ -105,14 +107,14 @@ const,
       <link rel="preconnect" href="http,"
   s://fonts.googleapis.com" /></link>"
       <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+  s: //fonts.gstatic.com" crossOrigin="anonymous" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       {/* Structured Data */}"
       <script type="application/ld+json"></script>)
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
+  ),
 };
 
 export default SEOHead;

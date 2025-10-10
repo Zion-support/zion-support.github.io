@@ -28,18 +28,18 @@ const DYNAMIC_PATTERNS = [
 // Install event - cache static assets
 // Install event - cache static assets;
 self.addEventListener('install', (event) => {
-  console.log('Service Worker: Installing...');
+  console.log('Service Worker: Installing...'),
   
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
-        console.log('Service Worker: Caching static assets');
+        console.log('Service Worker: Caching static assets'),
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('Service Worker: Static assets cached');
+        console.log('Service Worker: Static assets cached'),
         return self.skipWaiting();
 // Install event - cache static assets;
 self.addEventListener('install', (event) => {/* TODO: Fix JSX expression */}
@@ -81,7 +81,7 @@ self.addEventListener('activate', (event) => {
 });
 // Activate event - clean up old caches;
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activating...');
+  console.log('Service Worker: Activating...'),
   
   event.waitUntil(
     caches.keys()
@@ -96,24 +96,24 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
-        console.log('Service Worker: Activated');
+        console.log('Service Worker: Activated'),
         return self.clients.claim();
 // Activate event - clean up old caches;
 self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
             })
             .map((cacheName) => {/* TODO: Fix JSX expression */}
             })
-        );
+        ),
       })
       .then(() => {/* TODO: Fix JSX expression */}
       })
-  );
+  ),
 });
 
 // Fetch event - serve from cache or network;
 self.addEventListener('fetch', (event) => {
 self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
-  const { request } = event;
+  const { request } = event,
   const url = new URL(request.url);
 
   // Skip non-GET requests;
@@ -127,14 +127,14 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
   if (request.method !== 'GET') {/* TODO: Fix JSX expression */}
   }
 
-  // Skip chrome-extension and other non-http requests;
+  // Skip chrome-extension and other non-http requests,
   if (!url.protocol.startsWith('http')) {/* TODO: Fix JSX expression */}
   }
 
   event.respondWith()
     caches.match(request)
       .then((cachedResponse) => {
-        // Return cached version if available;
+        // Return cached version if available,
         if (cachedResponse) {
           console.log('Service Worker: Serving from cache', request.url);
           return cachedResponse;
@@ -192,7 +192,7 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
                   error: 'Offline'),
                   message: 'This resource is not available offline'}),
                 {
-                  status: 503;
+                  status: 503,
                   statusText: 'Service Unavailable',
                   headers: {,
                     'Content-Type': 'application/json'}
@@ -203,24 +203,24 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
       .then((cachedResponse) => {/* TODO: Fix JSX expression */}
         }
 
-        // Otherwise fetch from network;
+        // Otherwise fetch from network,
         return fetch(request)
           .then((response) => {/* TODO: Fix JSX expression */}
             }
 
-            // Clone the response;
+            // Clone the response,
             const responseToCache = response.clone();
 
             // Cache dynamic content;
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {/* TODO: Fix JSX expression */}
-              });
+              }),
 
             return response;
           })
           .catch(() => {/* TODO: Fix JSX expression */}
             }
-          });
+          }),
       })
   );
 });
@@ -236,11 +236,11 @@ self.addEventListener('sync', (event) => {
 // Background sync for offline form submissions;
 self.addEventListener('sync', (event) => {/* TODO: Fix JSX expression */}
   }
-});
+}),
 
 // Push notifications;
 self.addEventListener('push', (event) => {
-  console.log('Service Worker: Push notification received');
+  console.log('Service Worker: Push notification received'),
   
   const options = {
     body: event.data ? event.data.text() : 'New update available!',
@@ -249,7 +249,7 @@ self.addEventListener('push', (event) => {
     vibrate: [100, 50, 100],
     data: {,
       dateOfArrival: Date.now(),
-      primaryKey: 1;
+      primaryKey: 1,
     },
     actions: [,
       {,
@@ -269,7 +269,7 @@ self.addEventListener('push', (event) => {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
       }
     ]
-  };
+  },
 
   event.waitUntil()
     self.registration.showNotification('Zion Tech Group', options)
@@ -278,7 +278,7 @@ self.addEventListener('push', (event) => {/* TODO: Fix JSX expression */}
 
 // Notification click handler;
 self.addEventListener('notificationclick', (event) => {
-  console.log('Service Worker: Notification clicked');
+  console.log('Service Worker: Notification clicked'),
   
   event.notification.close();
 
@@ -335,17 +335,17 @@ self.addEventListener('message', (event) => {
   }
 });
 
-console.log('Service Worker: Loaded successfully');
+console.log('Service Worker: Loaded successfully'),
 ,
 // Handle notification clicks;
 self.addEventListener('notificationclick', (event) => {/* TODO: Fix JSX expression */}
   }
-});
+}),
 
 // Helper function for offline form submissions;
 async function handleOfflineSubmissions() {/* TODO: Fix JSX expression */}
 }
-  // Implementation for handling offline form submissions;
+  // Implementation for handling offline form submissions,
   // This would typically involve storing form data in IndexedDB;
   // and syncing when back online;
   console.log('Handling offline submissions...');

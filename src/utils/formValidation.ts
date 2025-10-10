@@ -31,7 +31,7 @@ export const _validationRules = {// TODO: Add content;}
    * Validate required field;
    */
 
-  required: (message = 'This field is required'): ValidationRule;
+  required: (message = 'This field is required'): ValidationRule,
           <string> => ({// TODO: Add content;}
 };
   validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
@@ -42,7 +42,7 @@ export const _validationRules = {// TODO: Add content;}
    * Validate email format;
    */
 
-  email: (message = 'Please enter a valid email address'): ValidationRule;
+  email: (message = 'Please enter a valid email address'): ValidationRule,
           <string> => ({// TODO: Add content;}
 
 };
@@ -74,7 +74,7 @@ export const _validationRules = {// TODO: Add content;}
   maxLength: (max: number, message?: string): ValidationRule;
           <string> => ({// TODO: Add content;}
 };
-  validate: (value: string) => value.length;
+  validate: (value: string) => value.length,
 
           <= max,
     messag,`
@@ -101,7 +101,7 @@ export const _validationRules = {// TODO: Add content;}
    * Validate URL format;
    */
 
-  url: (message = 'Please enter a valid URL'): ValidationRule;
+  url: (message = 'Please enter a valid URL'): ValidationRule,
           <string> => ({// TODO: Add content;}
 
 };
@@ -130,7 +130,7 @@ export const _validationRules = {// TODO: Add content;}
   numberRange: (min: number, max: number, message?: string): ValidationRule;
           <number> => ({// TODO: Add content;}
 };
-  validate: (value: number) => value >= min && value;
+  validate: (value: number) => value >= min && value,
 
           <= max,
     messag,`
@@ -203,7 +203,7 @@ export const _validationRules = {// TODO: Add content;}
    * Validate matching fields (e.g., password confirmation)
    */
 
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule;
+  matches: (otherFieldValue: string, fieldName: string): ValidationRule,
           <string> => ({// TODO: Add content;}
 };
   validate: (value: string) => value === otherFieldValue,
@@ -252,7 +252,7 @@ export function validateField;
   O: Add content;}
 }
   const,
-  errors: string[] = [];
+  errors: string[] = [],
   for (const rule of rules) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -277,7 +277,7 @@ export function validateForm;
           <T extends Record<string, unknown>>()
 
   formData: T,
-  validationSchema: Record;
+  validationSchema: Record,
           <keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {// TODO: Add content;}
 
@@ -303,7 +303,7 @@ export function validateForm;
 export function isFormValid;
           <T extends Record<string, unknown>>()
 
-  validationResults: Record;
+  validationResults: Record,
           <keyof T, ValidationResult>
 ): boolean {// TODO: Add content;}
 
@@ -316,7 +316,7 @@ export function isFormValid;
 export function getFormErrors;
           <T extends Record<string, unknown>>()
 
-  validationResults: Record;
+  validationResults: Record,
           <keyof T, ValidationResult>
 ): Record<keyof T, string[]> {// TODO: Add content;}
 
@@ -363,12 +363,12 @@ export function debounce;
 
           <T extends (...args: Parameters<T>) => ReturnType<T>>(),
     func: T,
-  wait: number): (...args: Parameters;
+  wait: number): (...args: Parameters,
           <T>) => void {// TODO: Add content;}
 
 }
   let,
-  timeout: NodeJS.Timeout | null = null;
+  timeout: NodeJS.Timeout | null = null,
   return function executedFunction(...arg,
   s: Parameters;)
           <T>) {/* TODO: Fix JSX expression */}

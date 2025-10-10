@@ -8,9 +8,11 @@ const, October2025NewBreakthroughBanne, r = () => {
     '💰': DollarSi, g, n,';
     '🎨': E, y, e';
   };
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
+const Component = () => {
+  return (<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-30">
+const Component = () => {
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
@@ -22,7 +24,8 @@ const, October2025NewBreakthroughBanne, r = () => {
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
 const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
-  };
+  },
+const Component = () => {
   return (<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, opacit, y-30"></div>"
@@ -86,12 +89,14 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";)
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
-            return(<Li, n, k;
+const Component = () => {
+            return (<Li, n, k;
         {/* Content, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
             const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
+const Component = () => {
             return (</div>
               <Li, n, k
   k, e, y={conte, n, t.id}

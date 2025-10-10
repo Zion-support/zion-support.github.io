@@ -8,7 +8,7 @@ import AdvancedPerformanceMonitor from '../src/components/AdvancedPerformanceMon
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');
+    throw new Error('Test error'),
   }
   return <div>Test content</div>;
 };
@@ -217,7 +217,7 @@ describe('AdvancedPerformanceMonitor', () => {
     constructor(callback: PerformanceObserverCallback) {
       this.callback = callback;
     }
-    callback: PerformanceObserverCallback;
+    callback: PerformanceObserverCallback,
     observe() {}
     disconnect() {}
     takeRecords() { return []; }
@@ -241,7 +241,7 @@ describe('AdvancedPerformanceMonitor', () => {
 
   it('renders nothing in production mode', () => {
     const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true }),
 
     const { container } = render(
       <MemoryRouter>
@@ -251,12 +251,12 @@ describe('AdvancedPerformanceMonitor', () => {
 
     expect(container.firstChild).toBeNull();
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true }),
   });
 
   it('renders performance monitor in development mode', () => {
     const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true }),
 
     render(
       <MemoryRouter>
@@ -266,15 +266,15 @@ describe('AdvancedPerformanceMonitor', () => {
 
     expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true }),
   });
 
   it('calls onMetricsUpdate when metrics change', async () => {
     const onMetricsUpdate = jest.fn();
     const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true }),
 
-    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }]);
+    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }]),
 
     render(
       <MemoryRouter>
@@ -289,12 +289,12 @@ describe('AdvancedPerformanceMonitor', () => {
       expect(onMetricsUpdate).toHaveBeenCalled();
     });
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true }),
   });
 
   it('shows performance recommendations when metrics are poor', () => {
     const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true }),
 
     // Mock poor performance metrics
     mockPerformance.getEntriesByName.mockReturnValue([
@@ -310,6 +310,6 @@ describe('AdvancedPerformanceMonitor', () => {
     // Should show recommendations for poor performance
     expect(screen.getByText('Recommendations:')).toBeInTheDocument();
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true }),
   });
 });

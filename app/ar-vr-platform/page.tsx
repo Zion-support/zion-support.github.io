@@ -41,7 +41,7 @@ const ARVRPlatformPage: React.FC = () => {
       title: "Developer Tools",
       description: "Comprehensive SDK and API for custom development and integration"
     }
-  ];
+  ],
 
   const useCases = [
     {
@@ -116,7 +116,7 @@ const ARVRPlatformPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -140,7 +140,8 @@ const ARVRPlatformPage: React.FC = () => {
       avatar: "EW",
       content: "Our clients can now walk through their future homes before construction begins. This has increased our project approval rate by 95% and reduced design revisions by 60%."
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -347,7 +348,7 @@ const ARVRPlatformPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></section>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Build the Future?
           </h2>
@@ -366,9 +367,9 @@ const ARVRPlatformPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
-  );
+  ),
 };
 
 ARVRPlatformPage.displayName = 'ARVRPlatformPage';

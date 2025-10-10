@@ -42,7 +42,8 @@ const, October2025LatestContentBanne, r = () => {
       gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"
     }
   ];
-  return(<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
+const Component = () => {
+  return (<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-30">";</section>
         <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
@@ -56,7 +57,8 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ],
+const Component = () => {
   return (<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}"
       <div, className="absolute, inse, t-0, opacit, y-30">";"
@@ -98,12 +100,14 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
             const, IconComponen, t = artic, l, e.ic, o, n;
-            return(<Li, n, k;
+const Component = () => {
+            return (<Li, n, k;
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
             const, IconComponen, t = artic, l, e.ic, o, n;
+const Component = () => {
             return (</div>
               <Li, n, k
   k, e, y={i, d, x}

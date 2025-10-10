@@ -2,28 +2,28 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
   e: string}
-  };
-  keyFeatures: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  },
+  keyFeatures: string[],
+  benefits: string[],
+  targetAudience: string[],
+  marketPosition: string,
+  competitors: string[],
+  techStack: string[],
+  realImplementation: boolean,
+  implementationDetails: string,
+  roi: string,
+  useCases: string[],
+  integrations: string[],
+  support: string,
+  compliance: string[],
+  link: string,
+  icon: string,
+  color: string,
+  popular: boolean,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
 }
 export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     id: 'multi-cloud-orchestration-platform',
@@ -31,53 +31,53 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     tagline: 'Unified management and orchestration across multiple cloud providers',
     description: 'Advanced multi-cloud platform that provides unified management, cost optimization, and seamless orchestration across AWS, Azure, Google Cloud, and other cloud providers.',
     category: 'Cloud Management'
-    pricing: unknown;
+    pricing: unknown,
       starter: '$399/month',
       professional: '$999/month',
       enterprise: '$2,999/month',
       currency: 'USD',
-      trialDays: 30;
+      trialDays: 30,
       setupTime: '1-2 weeks',
   keyFeature,
-  s: string[];
+  s: string[],
   benefit,
-  s: string[];
+  s: string[],
   targetAudienc,
-  e: string[];
+  e: string[],
   marketPositio,
-  n: string;
+  n: string,
   competitor,
-  s: string[];
+  s: string[],
   techStac,
-  k: string[];
+  k: string[],
   realImplementatio,
-  n: boolean;
+  n: boolean,
   implementationDetail,
-  s: string;
+  s: string,
   ro,
-  i: string;
+  i: string,
   useCase,
-  s: string[];
+  s: string[],
   integration,
-  s: string[];
+  s: string[],
   suppor,
-  t: string;
+  t: string,
   complianc,
-  e: string[];
+  e: string[],
   lin,
-  k: string;
+  k: string,
   ico,
-  n: string;
+  n: string,
   colo,
-  r: string;
+  r: string,
   popula,
-  r: boolean;
+  r: boolean,
   launchDat,
-  e: string;
+  e: string,
   customer,
-  s: number;
+  s: number,
   ratin,
-  g: number;
+  g: number,
   review,
   s: number}
 export const,
@@ -140,7 +140,7 @@ export const,
     marketPosition: 'Competitive with HashiCorp Terraform Cloud ($20/user/month), CloudHealth ($500/month), and RightScale ($1)000/month). Our advantage: Unified multi-cloud orchestration with cost optimization.',
     competitors: ['HashiCorp Terraform Cloud, CloudHealth, RightScale, Flexera, CloudCheckr'],
     techStack: ['Python, Go, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker, Terraform'],
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Multi-cloud orchestration platform with unified management, cost optimization, and automated operations. Includes training and customization.',
     roi: 'Organizations typically see 200-350% ROI within 6-12 months through cost optimization and operational efficiency.',
     useCases: [,
@@ -172,23 +172,23 @@ export const,
     link: 'https://ziontechgroup.com/multi-cloud-orchestration-platform'
     icon: ''
     color: 'from-blue-500 to-cyan-600'
-    popular: true;
+    popular: true,
     launchDate: '2024-12-01'
-    customers: 110;
-    rating: 4.8;
-    reviews: 167;
+    customers: 110,
+    rating: 4.8,
+    reviews: 167,
   },
     id: 'intelligent-devops-automation-suite',
     name: 'Intelligent DevOps Automation Suite',
     tagline: 'AI-powered DevOps automation with intelligent CI/CD and infrastructure management',
     description: 'Comprehensive DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment processes for maximum efficiency and reliability.',
     category: 'DevOps Automation'
-    pricing: unknown;
+    pricing: unknown,
       starter: '$299/month',
       professional: '$799/month',
       enterprise: '$2,499/month',
       currency: 'USD',
-      trialDays: 30;
+      trialDays: 30,
       setupTime: '1-2 weeks',
     integration,
   s: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible, REST APIs'],
@@ -271,7 +271,7 @@ export const,
     marketPosition: 'Competitive with GitLab ($19/user/month), Jenkins ($0), and CircleCI ($30/month). Our advantage: AI-powered optimization and comprehensive automation.',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps, AWS CodePipeline'],
     techStack: ['Python, Go, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker, Jenkins'],
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'AI-powered DevOps automation platform with intelligent CI/CD, infrastructure management, and comprehensive monitoring. Includes training and customization.',
     roi: 'Typical ROI of 300-500% within 6-12 months through faster deployments and improved reliability.',
     useCases: [,
@@ -303,23 +303,23 @@ export const,
     link: 'https://ziontechgroup.com/intelligent-devops-automation-suite'
     icon: ''
     color: 'from-green-500 to-emerald-600'
-    popular: true;
+    popular: true,
     launchDate: '2024-12-01'
-    customers: 95;
-    rating: 4.7;
-    reviews: 145;
+    customers: 95,
+    rating: 4.7,
+    reviews: 145,
   },
     id: 'enterprise-kubernetes-management-platform',
     name: 'Enterprise Kubernetes Management Platform',
     tagline: 'Enterprise-grade Kubernetes management with advanced monitoring and automation',
     description: 'Comprehensive Kubernetes management platform that provides advanced monitoring, security, automation, and governance for enterprise containerized applications.',
     category: 'Kubernetes Management',
-    pricing: unknown;
+    pricing: unknown,
       starter: '$599/month',
       professional: '$1,499/month',
       enterprise: '$3,999/month',
       currency: 'USD',
-      trialDays: 30;
+      trialDays: 30,
       setupTime: '2-3 weeks',
     integration,
   s: ['Git, Kubernetes, Docker, AWS, Azure, GCP, Monitoring tools, REST APIs'],
@@ -402,7 +402,7 @@ export const,
     marketPosition: 'Competitive with Rancher ($25/node/month), OpenShift ($0.24/core/hour), and VMware Tanzu ($0.05/vCPU/hour). Our advantage: Enterprise-grade management with advanced automation.',
     competitors: ['Rancher, OpenShift, VMware Tanzu, Google Anthos, AWS EKS, Azure AKS'],
     techStack: ['Go, Python, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker, Helm'],
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Enterprise Kubernetes management platform with advanced monitoring, security, and automation capabilities. Includes training and customization.',
     roi: 'Organizations typically see 200-400% ROI within 6-12 months through operational efficiency and resource optimization.',
     useCases: [,
@@ -434,23 +434,23 @@ export const,
     link: 'https://ziontechgroup.com/enterprise-kubernetes-management-platform'
     icon: ''
     color: 'from-purple-500 to-indigo-600'
-    popular: true;
+    popular: true,
     launchDate: '2024-11-15'
-    customers: 75;
-    rating: 4.8;
-    reviews: 112;
+    customers: 75,
+    rating: 4.8,
+    reviews: 112,
   },
     id: 'intelligent-infrastructure-monitoring',
     name: 'Intelligent Infrastructure Monitoring',
     tagline: 'AI-powered infrastructure monitoring with predictive analytics and automated alerting',
     description: 'Advanced infrastructure monitoring platform that uses AI to predict issues, optimize performance, and provide real-time insights into your entire technology stack.',
     category: 'Infrastructure Monitoring'
-    pricing: unknown;
+    pricing: unknown,
       starter: '$199/month',
       professional: '$499/month',
       enterprise: '$1,499/month',
       currency: 'USD',
-      trialDays: 30;
+      trialDays: 30,
       setupTime: '1 week',
     integration,
   s: ['Kubernetes, Docker, Helm, Monitoring tools, Security tools, REST APIs'],
@@ -533,7 +533,7 @@ export const,
     marketPosition: 'Competitive with Datadog ($15/host/month), New Relic ($99/month), and Splunk ($150/GB/month). Our advantage: AI-powered predictions and automated optimization.',
     competitors: ['Datadog, New Relic, Splunk, Dynatrace, AppDynamics, LogicMonitor'],
     techStack: ['Python, Go, React, Node.js, PostgreSQL, InfluxDB, Elasticsearch, AI/ML'],
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'AI-powered infrastructure monitoring platform with predictive analytics, automated alerting, and performance optimization. Includes training and customization.',
     roi: 'Typical ROI of 200-400% within 6-12 months through improved performance and reduced downtime.',
     useCases: [,
@@ -565,23 +565,23 @@ export const,
     link: 'https://ziontechgroup.com/intelligent-infrastructure-monitoring'
     icon: ''
     color: 'from-yellow-500 to-orange-600'
-    popular: true;
+    popular: true,
     launchDate: '2024-12-01'
-    customers: 160;
-    rating: 4.8;
-    reviews: 234;
+    customers: 160,
+    rating: 4.8,
+    reviews: 234,
   },
     id: 'cloud-security-posture-management',
     name: 'Cloud Security Posture Management',
     tagline: 'Comprehensive cloud security management with automated compliance and threat detection',
     description: 'Advanced cloud security platform that provides continuous monitoring, automated compliance checks, and proactive threat detection across all cloud environments.',
     category: 'Cloud Security',
-    pricing: unknown;
+    pricing: unknown,
       starter: '$499/month',
       professional: '$1,299/month',
       enterprise: '$3,499/month',
       currency: 'USD',
-      trialDays: 30;
+      trialDays: 30,
       setupTime: '2-3 weeks',
     integration,
   s: ['AWS, Azure, GCP, Kubernetes, Docker, Databases, Monitoring tools, REST APIs'],
@@ -664,7 +664,7 @@ export const,
     marketPosition: 'Competitive with Prisma Cloud ($0.50/container/month), Check Point CloudGuard ($0.25/hour), and Trend Micro Cloud One ($0.20/hour). Our advantage: Comprehensive security with automated compliance.',
     competitors: ['Prisma Cloud, Check Point CloudGuard, Trend Micro Cloud One, AWS Security Hub, Azure Security Center'],
     techStack: ['Python, Go, React, Node.js, PostgreSQL, Elasticsearch, AWS, Azure, GCP'],
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Comprehensive cloud security platform with continuous monitoring, automated compliance, and threat detection. Includes training and customization.',
     roi: 'Organizations typically see 200-300% ROI within 6-12 months through reduced security risks and automated compliance.',
     useCases: [,
@@ -696,11 +696,11 @@ export const,
     link: 'https://ziontechgroup.com/cloud-security-posture-management'
     icon: ''
     color: 'from-red-500 to-pink-600'
-    popular: true;
+    popular: true,
     launchDate: '2024-11-01'
-    customers: 85;
-    rating: 4.9;
-    reviews: 123;
+    customers: 85,
+    rating: 4.9,
+    reviews: 123,
     integration,
   s: ['AWS, Azure, GCP, Kubernetes, Docker, Security tools, SIEM systems, REST APIs'],
     suppor,
@@ -724,7 +724,7 @@ export const,
   g: 4.9,
     review,
   s: 123}
-];
+],
 export interface CloudDevOpsService,
   id: string; nam,
   e: string; taglin,

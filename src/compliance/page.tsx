@@ -9,7 +9,8 @@ import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileTe
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
-  const certifications = [];
+  const certifications = [],
+const Component = () => {
   return (
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -18,10 +19,10 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
 
-  ];
+  ],
   const complianceAreas = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -52,6 +53,7 @@ const CompliancePage: React.FC = () => {
       feature,
   s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -60,7 +62,7 @@ const CompliancePage: React.FC = () => {
         <Navigation />
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
             <div className="flex items-center">
               <Link
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
@@ -76,19 +78,19 @@ const CompliancePage: React.FC = () => {
           
           "
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-// Back to Privacy Policy;
+// Back to Privacy Policy,
           </Link>"
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
         </section>"
         <main className="max-w-7xl mx-auto px-4,
   sm:px-6,"
-  lg:px-8 py-12"></main>
+  lg: px-8 py-12"></main>
           {/* Overview */}"
           <section className="mb-16"></section>"
             <div className="text-center mb-12"></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
-// Our Commitment to Compliance;
+// Our Commitment to Compliance,
           </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
@@ -144,9 +146,9 @@ Compliance Areas;"
               security measures, or data protection practices.
 
             <a
-              href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover: bg-blue-700 transition-colors duration-200"
 
-              Contact Compliance Team;
+              Contact Compliance Team,
             </a>"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>

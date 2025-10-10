@@ -12,11 +12,13 @@ const,
     {/* TODO: Fix JSX expression */}
   f: '/about' },
     {/* TODO: Fix JSX expression */}
-  f: '/contact' }];
+  f: '/contact' }],
+const Component = () => {
 
-  return(<nav className={`bg-white shadow-md ${className}`}>
+  return (<nav className={`bg-white shadow-md ${className}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+const Component = () => {
   return (
     <nav className={`bg-white shadow-md ${className}`}>
       <div className="container mx-auto px-4"></div>
@@ -33,14 +35,15 @@ const,
                 href={item.href})
                 className="text-gray-700 hover: text-blue-600 transition-colors")
               >),
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md: flex space-x-8">
             {navigationItems.map(item => (</div>
               <Link
+const Component = () => {
   return (<nav className={`bg-white shadow-md ${className}`}></nav>
       <div className="container mx-auto px-4"></div>"
         <div className="flex justify-between items-center py-4"></div>"
           <Link href="/" className="text-xl font-bold text-blue-600"></Link>
-            Zion Tech Group;
+            Zion Tech Group,
           </Link>
 
           {/* Desktop Navigation */}"
@@ -84,7 +87,7 @@ const,
                 key={item.name}
                 href={item.href}"
                 className="block text-gray-700,"
-  hover:text-blue-600 py-2"
+  hover: text-blue-600 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -94,7 +97,7 @@ const,
         )}
       </div>
     </nav>
-  );
+  ),
 };
 
 export default ModernNavigation;

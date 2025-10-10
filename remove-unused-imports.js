@@ -20,7 +20,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     } else {/* TODO: Fix JSX expression */}
       }
     }
-  });
+  }),
   
   return results;
 }
@@ -38,7 +38,7 @@ function removeUnusedImports(filePath) {
         stdio: 'pipe',
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, {/* TODO: Fix JSX expression */})
-      });
+      }),
       
       const lintResults = JSON.parse(result);
       if (lintResults.length === 0) return false;
@@ -92,7 +92,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           );
           
           if (hasUnusedVar) {/* TODO: Fix JSX expression */}
-            const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
+            const importMatch = line.match(/import\s*{([^}]+)}\s*from/),
             if (importMatch) {/* TODO: Fix JSX expression */}
               } else {/* TODO: Fix JSX expression */}`
                 return line.replace(importMatch[0], `import { ${newImportList} } from`);
@@ -106,7 +106,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       
       const newContent = newLines.join('\n');
       if (newContent !== originalContent) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`),
         return true;
       }
       
@@ -142,7 +142,7 @@ files.forEach(file => {)
   }
 files.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
+}),
 `
 console.log(`Fixed ${fixedCount} files`);
 }"`

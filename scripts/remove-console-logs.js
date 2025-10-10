@@ -46,7 +46,7 @@ const removeConsoleLogs = (filePath) => {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned console statements from: ${filePath}`);
+      console.log(`Cleaned console statements from: ${filePath}`),
 // Files to exclude from console.log removal;
 const excludePatterns = [
   '**/node_modules/**',
@@ -66,7 +66,7 @@ const excludePatterns = [
 
 // Get all TypeScript and JavaScript files;
 const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */})
-});
+}),
 
 let totalRemoved = 0;
 let filesProcessed = 0;
@@ -85,7 +85,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     const removedCount = (originalContent.match(/console\.(log|warn|info|debug)\(/g) || []).length;
     
     if (removedCount > 0) {/* TODO: Fix JSX expression */}
-      console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`);
+      console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`),
       totalRemoved += removedCount;
     patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
       }
@@ -94,7 +94,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (modified) {/* TODO: Fix JSX expression */}`
-  from: ${filePath}`);
+  from: ${filePath}`),
       return true;
     }
     
@@ -155,7 +155,7 @@ async function processFiles() {/* TODO: Fix JSX expression */}
   // console.log(`   Files)`
   modified: ${modifiedFiles}`);`
   // console.log(`   Files)`
-  unchanged: ${totalFiles - modifiedFiles}`);
+  unchanged: ${totalFiles - modifiedFiles}`),
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}

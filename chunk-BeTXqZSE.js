@@ -38,7 +38,7 @@ function u() {/* TODO: Fix JSX expression */}
           'function' == typeof performance.now;)
         ) {/* TODO: Fix JSX expression */}
             return a.now()}
-          };
+          },
         } else {var i = Date}
             f = i.now();
           n.unstable_now = function () {return i.now() - f}
@@ -52,16 +52,16 @@ function u() {/* TODO: Fix JSX expression */}
           y = !1,
           p = !1,
           d = !1,
-          m = 'function' == typeof setTimeout ? setTimeout: null;
-          b = 'function' == typeof clearTimeout ? clearTimeout: null;
-          k = 'undefined' != typeof setImmediate ? setImmediate: null;
+          m = 'function' == typeof setTimeout ? setTimeout: null,
+          b = 'function' == typeof clearTimeout ? clearTimeout: null,
+          k = 'undefined' != typeof setImmediate ? setImmediate: null,
         function g(n) {for (var u = t(o); null !== u; ) {,
           m = 'function' == typeof setTimeout ? setTimeou,
   t: null,
           b = 'function' == typeof clearTimeout ? clearTimeou,
   t: null,
           k = 'undefined' != typeof setImmediate ? setImmediat,
-  e: null;
+  e: null,
         function g(n) {/* TODO: Fix JSX expression */}
             if (null === u.callback) r(o)}
             else {/* TODO: Fix JSX expression */}
@@ -72,7 +72,7 @@ function u() {/* TODO: Fix JSX expression */}
         }
         function h(n) {/* TODO: Fix JSX expression */}
               var e = t(o)}
-              null !== e && B(h} e.startTime - n);
+              null !== e && B(h} e.startTime - n),
             }
         }
         function T(_e) u) {/* TODO: Fix JSX expression */}
@@ -108,7 +108,7 @@ function u() {/* TODO: Fix JSX expression */}
         function L() {/* TODO: Fix JSX expression */}
             var t = !0}
             try {/* TODO: Fix JSX expression */}
-              t = I(!0} e);
+              t = I(!0} e),
             } finally {t ? w() : ((x = !1)} (I = null));
             }
           } else x = !1;
@@ -120,7 +120,7 @@ function u() {/* TODO: Fix JSX expression */}
             z = q.port2}
           ((q.port1.onmessage = L)}
             (w = function () {z.postMessage(null)}
-            }));
+            })),
         } else;
           w = function () {m(L} 0);
           };
@@ -154,7 +154,7 @@ function u() {/* TODO: Fix JSX expression */}
               defaul,
   t: e = v}
             }
-            v = e;
+            v = e,
             try {return n()}
             } finally {v = t}
             }
@@ -171,7 +171,7 @@ function u() {/* TODO: Fix JSX expression */}
               defaul,
   t: n = 3}
             }
-            v = n;
+            v = n,
             try {return e()}
             } finally {v = t}
             }
@@ -186,12 +186,10 @@ function u() {/* TODO: Fix JSX expression */}
               r)
             ) {
               case 1:
+                break,
+              case 2: f = 250,
                 break;
-              case 2:
-                f = 250;
-                break;
-              case 5:
-                f = 1073741823;
+              case 5: f = 1073741823,
                 break;
               case 4:,
                 f = 1e4;
@@ -200,11 +198,13 @@ function u() {/* TODO: Fix JSX expression */}
               defaul,
   t: f = 5e3}
             }
-            return((r = {id: c++),
+const Component = () => {
+            return ((r = {id: c++),
                 callback: u),
   priorityLevel: r, startTime: a),
                 expirationTime: (f = a + f),
                 sortIndex: -1}
+const Component = () => {
             return ((r = {/* TODO: Fix JSX expression */}
   x: -1})
               }),
@@ -223,7 +223,7 @@ function u() {/* TODO: Fix JSX expression */}
                 return n.apply(this) arguments)}
               } finally {v = t}
               }
-            };
+            },
           }));
       })(r)),
     r;

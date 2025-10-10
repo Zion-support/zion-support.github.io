@@ -7,10 +7,10 @@ import React, { useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
+  title: string,
+  description: string,
+  keywords: string[],
+  canonicalUrl: string,
 interface SEOData {
   title?: string;
   description?: string;
@@ -26,7 +26,7 @@ interface SEOData {
 }
 
 interface AdvancedSEOOptimizerProps {}
-  seoData: SEOData;
+  seoData: SEOData,
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
@@ -54,8 +54,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@context': 'https://schema.org',
       '@type': 'TechCompany',
       name: 'Zion Tech Group'
-      description: seoData.description;
-      url: seoData.canonicalUrl;
+      description: seoData.description,
+      url: seoData.canonicalUrl,
       logo: 'https://ziontechgroup.com/logo.webp'
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
@@ -64,7 +64,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       contactPoint: {,
       contactPoint: {}
 interface AdvancedSEOOptimizerProps {
-  seoData?: SEOData;
+  seoData?: SEOData,
   children?: React.ReactNode;
 }
 
@@ -85,7 +85,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
       twitterDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
       twitterImage: 'https://ziontechgroup.com/twitter-image.jpg'
-    };
+    },
     return { ...defaultSEO, ...seoData };
   }, [seoData]);
 
@@ -118,7 +118,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (seoData.author) {}
       baseStructuredData.author = {}
         '@type': 'Person',
-        name: seoData.author;
+        name: seoData.author,
       };
     }
 
@@ -143,8 +143,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 }
 
 interface AdvancedSEOOptimizerProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords?: string[];
   canonicalUrl?: string;
   ogTitle?: string;
@@ -195,7 +195,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         '@type': 'PostalAddress',
         addressCountry: 'US'
       }
-    };
+    },
 
     return baseStructuredData;
   }, []);
@@ -335,7 +335,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         document.head.appendChild(metaDescription);
     // Update meta tags dynamically
     const updateMetaTag = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement,
       if (!meta) {
         meta = document.createElement('meta');
         meta.name = name;
@@ -351,7 +351,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         canonicalLink.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalLink);
     const updatePropertyTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement,
       if (!meta) {
         meta = document.createElement('meta');
         meta.setAttribute('property', property);
@@ -400,7 +400,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
-          });
+          }),
           (window as any).gtag('event', 'page_load_performance', {)
             event_category: 'Performance'),
             event_label: 'Page Load'),
@@ -462,11 +462,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
     script.textContent = JSON.stringify(structuredData);
   }, [mergedSEO, generateStructuredData]);
+const Component = () => {
 
-  return(<Helmet>)
+  return (<Helmet>)
       {/* Basic Meta Tags */})
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
+const Component = () => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -538,6 +540,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       document.head.appendChild(link);
     }
   }, [seoData]);
+const Component = () => {
 
   return (
     <Helmet>

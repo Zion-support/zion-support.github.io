@@ -8,17 +8,19 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 export default function RootLayout({
   children}: {)
-    children: React.ReactNode;
+    children: React.ReactNode,
 export default function RootLayout({)
   children)
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }) {
-  return(<html lang="en" className="dark">
+const Component = () => {
+  return (<html lang="en" className="dark">
 export default function RootLayout({)}
   children}: {}
-  children: React.ReactNode;
+  children: React.ReactNode,
 }) {}
+const Component = () => {
   return (
     <html lang="en" className="dark">
       <head>
@@ -122,5 +124,5 @@ export default function RootLayout({)}
         <ServiceWorkerRegistration >{children}</ServiceWorkerRegistratio>
       </ServiceWorkerRegistration>
     </html>
-  );
+  ),
 }

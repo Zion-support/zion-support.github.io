@@ -6,37 +6,37 @@ import { CheckCircle, Star, Users, TrendingUp, Brain, Target, Sparkles, Phone, D
 const AIEmailMarketingAutomationPage: React.FC = () => {,
   const features = [,
     {,
-      icon: Brain;
+      icon: Brain,
       title: 'AI Content Generation',
       description: 'Generate compelling email content, subject lines, and CTAs using advanced AI algorithms',
       benefits: ['10 x faster content creation', 'Higher open rates', 'Personalized messaging', 'A/B testing automation']
     },
     {
-      icon: Target;
+      icon: Target,
       title: 'Smart Segmentation',
       description: 'AI-powered audience segmentation based on behavior, preferences, and engagement patterns',
       benefits: ['Dynamic segmentation', 'Behavioral triggers', 'Personalization at scale', 'Improved deliverability']
     },
     {
-      icon: BarChart3;
+      icon: BarChart3,
       title: 'Advanced Analytics',
       description: 'Comprehensive email analytics with AI insights, predictive modeling, and ROI tracking',
       benefits: ['Real-time performance metrics', 'Predictive analytics', 'Revenue attribution', 'Campaign optimization']
     },
     {
-      icon: Send;
+      icon: Send,
       title: 'Automated Workflows',
       description: 'Create complex email sequences with AI-powered triggers and intelligent automation',
       benefits: ['Drip campaigns', 'Welcome sequences', 'Abandoned cart recovery', 'Re-engagement campaigns']
     },
     {
-      icon: MailCheck;
+      icon: MailCheck,
       title: 'Deliverability Optimization',
       description: 'AI-powered deliverability optimization to ensure your emails reach the inbox',
       benefits: ['Inbox placement optimization', 'Spam score reduction', 'IP reputation management', 'Authentication setup']
     },
     {
-      icon: UserPlus;
+      icon: UserPlus,
       title: 'Lead Nurturing',
       description: 'Intelligent lead nurturing with AI-driven personalization and conversion optimization',
       benefits: ['Lead scoring', 'Behavioral triggers', 'Conversion optimization', 'Lifecycle management']
@@ -47,37 +47,37 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
     {
       name: 'Welcome Series',
       description: 'Automated welcome emails for new subscribers',
-      icon: UserPlus;
+      icon: UserPlus,
       benefits: ['Increase engagement by 50%', 'Build brand loyalty', 'Set expectations']
     },
     {
       name: 'Abandoned Cart',
       description: 'Recover lost sales with targeted follow-up emails',
-      icon: ShoppingCart;
+      icon: ShoppingCart,
       benefits: ['Recover 15-30% of lost sales', 'Personalized recommendations', 'Urgency creation']
     },
     {
       name: 'Re-engagement',
       description: 'Win back inactive subscribers with smart campaigns',
-      icon: RefreshCw;
+      icon: RefreshCw,
       benefits: ['Reactivate dormant users', 'Prevent unsubscribes', 'Improve list health']
     },
     {
       name: 'Birthday & Anniversaries',
       description: 'Personalized emails for special occasions',
-      icon: Gift;
+      icon: Gift,
       benefits: ['Increase customer loyalty', 'Drive repeat purchases', 'Personal touch']
     },
     {
       name: 'Product Recommendations',
       description: 'AI-powered product suggestions based on behavior',
-      icon: Target;
+      icon: Target,
       benefits: ['Increase average order value', 'Cross-sell opportunities', 'Personalized shopping']
     },
     {
       name: 'Post-Purchase',
       description: 'Follow-up emails after purchase completion',
-      icon: CheckCircle;
+      icon: CheckCircle,
       benefits: ['Improve customer satisfaction', 'Gather feedback', 'Upsell opportunities']
     }
   ];
@@ -96,7 +96,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
         'Basic analytics',
         'Email support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -113,7 +113,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
         'A/B testing',
         'Automation workflows'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -130,7 +130,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
         'API access',
         'Custom integrations'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -140,21 +140,21 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
       role: 'Marketing Manager',
       company: 'E-commerce Plus',
       content: 'AI Email Marketing Automation increased our open rates by 40% and revenue by 60%. The AI content suggestions are game-changing.',
-      rating: 5;
+      rating: 5,
     },
     {
       name: 'Michael Rodriguez',
       role: 'Digital Marketing Director',
       company: 'Tech Solutions Inc.',
       content: 'The automation workflows saved us 15 hours per week and improved our conversion rates by 35%. Highly recommended!',
-      rating: 5;
+      rating: 5,
     },
     {
       name: 'Emily Chen',
       role: 'Email Marketing Specialist',
       company: 'Growth Agency',
       content: 'Best email marketing platform we\'ve used. The AI segmentation and personalization features are incredible.',
-      rating: 5;
+      rating: 5,
     }
   ];
 
@@ -163,9 +163,11 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
     { icon: Send, value: '50 M+', label: 'Emails Sent' },
     { icon: TrendingUp, value: '40%', label: 'Avg. Open Rate Increase' },
     { icon: DollarSign, value: '60%', label: 'Revenue Increase' }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Helmet>
@@ -191,7 +193,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
             AI-Powered Email Marketing;
           </div>
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Email Marketing Automation;
+            AI Email Marketing Automation,
           </h1>,
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
             Transform your email marketing with AI-powered automation, personalization, and analytics.
@@ -211,8 +213,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center justify-center"
@@ -222,13 +224,13 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
               className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >Get Free Demo</a>
               <Phone className="w-4 h-4 mr-2" />
-              Call (302) 464-0950;
+              Call (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com?subject=AI Email Marketing Automation Demo"
-              className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover: bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >
-              Get Free Demo;
+              Get Free Demo,
             </a>
           </div>
         </div>,
@@ -242,7 +244,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
                 <type.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{type.name}<p className="text-gray-300 mb-4">{type.description}<ul className="space-y-2">{type.benefits.map((benefit, benefitIndex) => (</ul>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            Powerful Automation Types;
+            Powerful Automation Types,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {automationTypes.map((type, index) => (
@@ -276,7 +278,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
                 <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            Advanced AI Features;
+            Advanced AI Features,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (
@@ -343,7 +345,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
                   }`}
                 >Get Started</a>
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -356,7 +358,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">What Our Customers Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-            What Our Customers Say;
+            What Our Customers Say,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {testimonials.map((testimonial, index) => (
@@ -380,7 +382,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?<p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.</p>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?<p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.</p>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Email Marketing?
           </h2>
@@ -388,9 +390,9 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
             Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a;
+            <a,
         <div className="max-w-4xl mx-auto text-center"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?</h2><p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.</p>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?</h2><p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
@@ -401,13 +403,13 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >Email Us</a>
             >
-              Call (302) 464-0950;
+              Call (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover: bg-white hover:text-blue-600 transition-colors"
             >
-              Email Us;
+              Email Us,
             </a>
           </div>
         </div>

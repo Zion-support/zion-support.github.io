@@ -10,7 +10,8 @@ impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
 
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
-  return(<>,
+const Component = () => {
+  return (<>,
       <Helm, e, t>
         <title>
           Fortune, 20, Telecom: $4.7B, Cognitive, Computing Success, Stor, y | Zion, Tech, Group;

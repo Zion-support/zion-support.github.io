@@ -65,7 +65,8 @@ const, October2025NewContentBanner, 2 = () => {
       bad, g, e: "Automati, o, n"
     }
   ];
-  return(<section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
+const Component = () => {
+  return (<section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">";</section>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
@@ -83,7 +84,8 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ],
+const Component = () => {
   return ("
     <section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}"
@@ -126,12 +128,14 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";)
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li, n, k;
+const Component = () => {
+            return (<Li, n, k;
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
+const Component = () => {
             return (</div>
               <Li, n, k
   k, e, y={artic, l, e.sl, u, g}

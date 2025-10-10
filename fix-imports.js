@@ -25,7 +25,7 @@ const iconMappings = {
   hare2: 'Share2',
   ookmark: 'Bookmark',
   ot: 'Bot',
-  ookopen: 'BookOpen'};
+  ookopen: 'BookOpen'},
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {
@@ -34,7 +34,7 @@ function fixImportsInFile(filePath) {
     for (const [broken, correct] of Object.entries(iconMappings)) {
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
 const iconMappings = {/* TODO: Fix JSX expression */}
-};
+},
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
@@ -60,7 +60,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     //     }
 }
 
-//Get all blog files;
+//Get all blog files,
 // const blogDir = '/workspace/app/blog';
 const files = fs;
   .readdirSync(blogDir, { recursive: true })

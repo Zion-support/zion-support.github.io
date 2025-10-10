@@ -3,17 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface HeroStats {
   clients: number;,
-    savings: string;
+    savings: string,
   uptime: string;,
-    support: string;
+    support: string,
 }
 
 const EnhancedHero: React.FC = () => {,
 interface HeroStats {}
-  clients: number;
-  savings: string;
-  uptime: string;
-  support: string;
+  clients: number,
+  savings: string,
+  uptime: string,
+  support: string,
 }
 
 const EnhancedHero: React.FC = () => {}
@@ -24,13 +24,14 @@ const EnhancedHero: React.FC = () => {}
     { clients: 500, savings: '$2.5B+', uptime: '99.9%', support: '24/7' },
     { clients: 750, savings: '$3.2B+', uptime: '99.95%', support: '24/7' },
     { clients: 1000, savings: '$4.1B+', uptime: '99.99%', support: '24/7' }
-  ];
+  ],
 
   useEffect(() => {}
     setIsVisible(true);
     const interval = setInterval(() => {}
       setCurrentStat((prev) => (prev + 1) % stats.length);
     }, 3000);
+const Component = () => {
     return () => clearInterval(interval);
   }, [stats.length]);
 
@@ -64,11 +65,11 @@ const EnhancedHero: React.FC = () => {}
         duration: 0.8,
         staggerChildren: 0.2
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.2;
+        duration: 0.8,
+        staggerChildren: 0.2,
       }
     }
   };
@@ -80,11 +81,11 @@ const EnhancedHero: React.FC = () => {}
     visible: {}
       opacity: 1,
       y: 0,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  },
 
   const statVariants = {}
     hidden: { opacity: 0, scale: 0.8 },
@@ -103,18 +104,19 @@ const EnhancedHero: React.FC = () => {}
     exit: {}
       opacity: 0,
       scale: 0.8,
-      opacity: 1;
-      scale: 1;
+      opacity: 1,
+      scale: 1,
       transition: { duration: 0.5 }
     },
     exit: {,
-      opacity: 0;
-      scale: 0.8;
+      opacity: 0,
+      scale: 0.8,
       transition: { duration: 0.3 }
     }
-  };
+  },
+const Component = () => {
 
-  return(<motion.section;
+  return (<motion.section;
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
@@ -137,12 +139,12 @@ const EnhancedHero: React.FC = () => {}
             scale: [1, 1.1, 1]}
           }}
           transition={{
-            duration: 4;
+            duration: 4,
             repeat: Infinity;}
             ease: "easeInOut"}
           }}
         />
-        <motion.div;
+        <motion.div,
           className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500/20 rounded-full blur-xl")
           animate={{)
             y: [0, 20, 0])
@@ -175,18 +177,18 @@ const EnhancedHero: React.FC = () => {}
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16 pt-24">
-        <motion.div;
+        <motion.div,
       <div className="relative z-10 container mx-auto px-4 py-16 pt-24"></div>
         <motion.div
           className="text-center max-w-6xl mx-auto"
           variants={itemVariants}
         >{/* Main Heading */}<motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
+            className="text-4xl sm: text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
             variants={itemVariants}
           >Zion Tech Group</motion>
         >
           {/* Main Heading */}
-          <motion.h1;
+          <motion.h1,
             className="text-4xl sm: text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text",
             variants={itemVariants}
           >
@@ -317,7 +319,7 @@ const EnhancedHero: React.FC = () => {}
               whileTap={{ scale: 0.95 }}
             >📞 Call Now: (302) 464-0950</motion>
             >
-              📞 Call Now: (302) 464-0950;
+              📞 Call Now: (302) 464-0950,
             </motion.a>
 
             <motion.a;
@@ -328,7 +330,7 @@ const EnhancedHero: React.FC = () => {}
               whileTap={{ scale: 0.95 }}
             >Get Free Consultation</motion>
             >
-              Get Free Consultation;
+              Get Free Consultation,
             </motion.a>
           </motion.div>
 
@@ -350,7 +352,7 @@ const EnhancedHero: React.FC = () => {}
         transition={{ duration: 2, repeat: Infinity }}
       >
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <motion.div;
+          <motion.div,
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"></div>
           <motion.div
             className="w-1 h-3 bg-white/60 rounded-full mt-2"
@@ -360,7 +362,7 @@ const EnhancedHero: React.FC = () => {}
         </div>
       </motion.div>
     </motion.section>
-  );
+  ),
 };
 
 export default EnhancedHero;

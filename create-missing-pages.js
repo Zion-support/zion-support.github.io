@@ -20,7 +20,8 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer;
         title="${title} - Zion Tech Group"
         description="${description}"
@@ -47,11 +48,11 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
-              Get Started Today;
+              Get Started Today,
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Learn More;
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              Learn More,
             </button>
           </div>
         </div>,
@@ -105,10 +106,10 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-              Get Free Consultation;
+              Get Free Consultation,
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              View Pricing;
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              View Pricing,
             </button>
           </div>
         </div>
@@ -129,12 +130,12 @@ const createPage = (route, title, description, category) => {
   // Create directory if it doesn't exist;
   const dir = path.dirname(pagePath);
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(dir, { recursive: true }),
   }
   
   // Write the page file;
   fs.writeFileSync(pagePath, pageContent);
-  console.log(`Created page: ${route}`);
+  console.log(`Created page: ${route}`),
 };
 
 // Page configurations;
@@ -283,7 +284,7 @@ const pageConfigs = {
   '/space-technology': { title: 'Space Technology', description: 'Space technology solutions and satellite systems', category: 'Space' },
   '/climate-tech': { title: 'Climate Technology', description: 'Climate technology solutions and sustainability', category: 'Climate' },
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
-};
+},
 
 // Create pages in batches;
 let createdCount = 0;

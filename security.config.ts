@@ -20,7 +20,7 @@ export const securityConfig = {
       'frame-ancestors': ["'none'"],
       'base-uri': ["'self'"],
       'form-action': ["'self'"]},
-    reportOnly: false;
+    reportOnly: false,
   },
 
   // Security Headers;
@@ -34,7 +34,7 @@ export const securityConfig = {
 
   // Input validation;
   validation: {,
-    maxInputLength: 10000;
+    maxInputLength: 10000,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
     maxFileSize: 10 * 1024 * 1024, // 10MB;
   },
@@ -42,9 +42,9 @@ export const securityConfig = {
   // Rate limiting;
   rateLimit: {,
     windowMs: 15 * 60 * 1000, // 15 minutes;
-    maxRequests: 100;
-    skipSuccessfulRequests: false;
-    skipFailedRequests: false;
+    maxRequests: 100,
+    skipSuccessfulRequests: false,
+    skipFailedRequests: false,
   },
 
   // CORS configuration;
@@ -52,27 +52,27 @@ export const securityConfig = {
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true;
+    credentials: true,
     maxAge: 86400, // 24 hours;
   },
 
   // Authentication;
   auth: {,
     sessionTimeout: 3600000, // 1 hour;
-    maxLoginAttempts: 5;
+    maxLoginAttempts: 5,
     lockoutDuration: 900000, // 15 minutes;
-    passwordMinLength: 12;
-    requireSpecialChars: true;
-    requireNumbers: true;
-    requireUppercase: true;
+    passwordMinLength: 12,
+    requireSpecialChars: true,
+    requireNumbers: true,
+    requireUppercase: true,
   },
 
   // Data sanitization;
   sanitization: {
-    stripHtml: true;
-    encodeSpecialChars: true;
-    trimWhitespace: true;
-    removeNullBytes: true;
+    stripHtml: true,
+    encodeSpecialChars: true,
+    trimWhitespace: true,
+    removeNullBytes: true,
 export const securityConfig = {/* TODO: Fix JSX expression */}
     },
     reportOnl,
@@ -100,6 +100,6 @@ export const securityConfig = {/* TODO: Fix JSX expression */}
 
   // Data sanitization,
   sanitization: {/* TODO: Fix JSX expression */}
-  }};
+  }},
 
 export default securityConfig;

@@ -90,7 +90,7 @@ export const getOptimalQualit, y = (): number = > {
 export const isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f')
 ): Promi, s, e<boolean> => {/* TODO: Fix JSX expression */}
   }; return, new, Promise(resol, v, e = > {/* TODO: Fix JSX expression */})
-   });
+   }),
 export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {/* TODO: Fix JSX expression */}`
     const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t()`
       conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);

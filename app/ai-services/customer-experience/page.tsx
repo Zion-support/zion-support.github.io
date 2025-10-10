@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Users, Heart, MessageCircle, Star, ArrowRight, CheckCircle } from 'lucide-react';
 
 const AICustomerExperiencePage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -26,7 +27,7 @@ const AICustomerExperiencePage: React.FC = () => {
               Transform your customer interactions with AI-powered solutions that deliver personalized, 
               intelligent, and seamless experiences across all touchpoints.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
@@ -50,7 +51,7 @@ const AICustomerExperiencePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 
 export default AICustomerExperiencePage;

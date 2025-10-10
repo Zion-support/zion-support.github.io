@@ -17,7 +17,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   }
   
-  return files;
+  return files,
 }
 
 // Fix console statements;
@@ -45,10 +45,10 @@ function fixUnusedVariables(content) {
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
 
-// Fix unused variables;
+// Fix unused variables,
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
       }
-      return `_${param}`;
+      return `_${param}`,
     });
   });
   
@@ -65,7 +65,7 @@ function fixUnusedImports(content) {
       matches.forEach(match => usedIdentifiers.add(match));
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
   
   // Remove unused import lines;
   const filteredLines = lines.filter(line => {)
@@ -106,7 +106,7 @@ function main() {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
 
 }
 

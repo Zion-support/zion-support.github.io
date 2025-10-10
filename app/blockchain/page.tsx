@@ -139,6 +139,7 @@ const BlockchainPage: React.FC = () => {
   ];
 
   const categories = [...new Set(blockchainServices.map(service => service.category))];
+const Component = () => {
 
   return (
     <>

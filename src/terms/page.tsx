@@ -36,7 +36,7 @@ export default function TermsPage() {
       icon: Shield,
       content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
     }
-  ];
+  ],
 
   const prohibitedUses = [
     'Violating any applicable laws or regulations',
@@ -74,7 +74,8 @@ export default function TermsPage() {
       support: 'Business Hours',
       response: '4 hours'
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -308,7 +309,7 @@ export default function TermsPage() {
             </div>
             <a
               href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
@@ -317,5 +318,5 @@ export default function TermsPage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

@@ -87,6 +87,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     };
 
     document.addEventListener('keydown', handleKeyDown);
+const Component = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [enableKeyboardNavigation]);
 
@@ -171,6 +172,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     if (prefersHighContrast.matches) {}
       document.body.classList.add('high-contrast');
     }
+const Component = () => {
 
     return () => prefersHighContrast.removeEventListener('change', handleContrastChange);
   }, [enableHighContrast]);
@@ -185,21 +187,21 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const style = document.createElement('style');
     style.textContent = `
       *:focus {}
-        outline: 2px solid #3b82f6 !important;
+        outline: 2px solid #3b82f6 !important,
         outline-offset: 2px !important;
       }
 
       .focus-visible: focus {,
-    outline: 2px solid #3b82f6 !important;
+    outline: 2px solid #3b82f6 !important,
       .focus-visible:focus {}
-        outline: 2px solid #3b82f6 !important;
+        outline: 2px solid #3b82f6 !important,
         outline-offset: 2px !important;
       }
 
       .focus-visible: focus:not(:focus-visible) {,
-    outline: none !important;
+    outline: none !important,
       .focus-visible:focus:not(:focus-visible) {}
-        outline: none !important;
+        outline: none !important,
       }
     `;
     document.head.appendChild(style);
@@ -237,6 +239,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
       element.addEventListener('keydown', handleTabKey);
       firstElement?.focus();
+const Component = () => {
 
       return () => element.removeEventListener('keydown', handleTabKey);
     };
@@ -329,6 +332,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     if (prefersReducedMotion.matches) {}
       document.body.classList.add('reduce-motion');
     }
+const Component = () => {
 
     return () => prefersReducedMotion.removeEventListener('change', handleMotionChange);
   }, [enableReducedMotion]);
@@ -343,14 +347,14 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
       { href: '#footer', text: 'Skip to footer' }
-    ];
+    ],
 
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.style.cssText = `
       position: absolute;,
-    top: -40 px;
-      left: 6 px;
+    top: -40 px,
+      left: 6 px,
       z-index: 1000;
     `;,
 ,
@@ -364,14 +368,14 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       link.className = 'skip-link';
       link.style.cssText = `
         position: absolute;,
-    top: -40 px;
+    top: -40 px,
         left: 6 px;,
-    background: #000;
+    background: #000,
         color: #fff;,
-    padding: 8 px;
+    padding: 8 px,
         text-decoration: none;
         z-index: 1000;,
-    transition: top 0.3 s;
+    transition: top 0.3 s,
       `;
 ,
       link.addEventListener('focus', () => {
@@ -405,17 +409,17 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       }
 
       .high-contrast * {}
-        color: var(--text-primary) !important;
+        color: var(--text-primary) !important,
         background-color: var(--bg-primary) !important;
       }
 
       .high-contrast a {}
-        color: var(--accent) !important;
+        color: var(--accent) !important,
         text-decoration: underline !important;
       }
 
       .high-contrast button {}
-        border: 2px solid var(--accent) !important;
+        border: 2px solid var(--accent) !important,
         background-color: var(--bg-secondary) !important;
       }
     `;
@@ -473,6 +477,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       addSkipLinks(),
       enhanceColorContrast(),
       enhanceFontScaling()].filter(Boolean);
+const Component = () => {
 
     return () => {}
       cleanupFunctions.forEach(cleanup => cleanup && cleanup());

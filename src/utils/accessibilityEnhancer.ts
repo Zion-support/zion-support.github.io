@@ -3,10 +3,10 @@
 
 
 interface AccessibilityConfig {enableKeyboardNavigation: boolean;}
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableFocusIndicators: boolean;
-  enableAriaLabels: boolean;
+  enableScreenReaderSupport: boolean,
+  enableHighContrast: boolean,
+  enableFocusIndicators: boolean,
+  enableAriaLabels: boolean,
 }
 
 class AccessibilityEnhancer {private config: AccessibilityConfig;}

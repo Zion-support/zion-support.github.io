@@ -10,17 +10,17 @@ export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
    */
-  logErrors: boolean;
+  logErrors: boolean,
 
   /**
    * Whether to show detailed error messages
    */
-  showDetails: boolean;
+  showDetails: boolean,
 
   /**
    * Whether to send errors to external service
    */
-  reportErrors: boolean;
+  reportErrors: boolean,
 
   /**
    * Error reporting endpoint
@@ -30,12 +30,12 @@ export interface ErrorBoundaryConfig {
   /**
    * Whether to show error overlay in development
    */
-  showErrorOverlay: boolean;
+  showErrorOverlay: boolean,
 
   /**
    * Maximum number of errors to store
    */
-  maxStoredErrors: number;
+  maxStoredErrors: number,
 
   /**
    * Custom error messages by error type
@@ -46,9 +46,9 @@ export interface ErrorBoundaryConfig {
    * Fallback UI components
    */
   fallbackComponents: {
-    default: React.ComponentType<{ error: Error; resetError: () => void }>;
-    network: React.ComponentType<{ error: Error; resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
+    default: React.ComponentType<{ error: Error; resetError: () => void }>,
+    network: React.ComponentType<{ error: Error; resetError: () => void }>,
+    notFound: React.ComponentType<{ error: Error; resetError: () => void }>,
   };
 }
 
@@ -87,6 +87,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
  * Default error fallback component
  */
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
+const Component = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
@@ -130,13 +131,14 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </div>
       </div>
     </div>
-  );
+  ),
 }
 
 /**
  * Network error fallback component
  */
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
+const Component = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
@@ -169,13 +171,14 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </div>
       </div>
     </div>
-  );
+  ),
 }
 
 /**
  * Not found error fallback component
  */
 function NotFoundFallback(): JSX.Element {
+const Component = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full text-center">
@@ -187,7 +190,7 @@ function NotFoundFallback(): JSX.Element {
         <div className="mt-6 flex gap-4 justify-center">
           <button
             onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
             Go Home
           </button>
@@ -200,7 +203,7 @@ function NotFoundFallback(): JSX.Element {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 
 /**

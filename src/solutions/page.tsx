@@ -208,6 +208,7 @@ $4},
       description:     ,
 $4}
   ];
+const Component = () => {
 
   return (
     <>
@@ -216,7 +217,7 @@ $4}
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Our Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -248,12 +249,12 @@ $4}
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
 
-  );
+  ),
 };
   const [activeTab, setActiveTab] = useState('ai');
   const _solutionCategories = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -319,7 +320,7 @@ $4}
       descriptio,
   n: 'Streamline operations with intelligent automation'
     }
-  ];
+  ],
   const solutions = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -599,10 +600,10 @@ $4}
   r: 'text-green-400'
       }
 //     ]
-  };
+  },
   const benefits = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -644,7 +645,8 @@ $4}
       descriptio,
   n: 'Certified professionals with years of industry experience'
     }
-  ];
+  ],
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -655,8 +657,8 @@ $4}
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Our Solutions;
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+// Our Solutions,
           </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Comprehensive technology solutions designed to transform your business operations;
@@ -681,7 +683,7 @@ $4}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
@@ -839,7 +841,7 @@ $4}
               Get a free consultation and discover how our solutions can revolutionize your operations 
               and drive unprecedented growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -876,7 +878,7 @@ $4}
           
           </h2>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
-// Get a free consultation and discover how our solutions can revolutionize your operations;
+// Get a free consultation and discover how our solutions can revolutionize your operations,
 //               and drive unprecedented growth.
             
           
@@ -889,7 +891,7 @@ $4}
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
@@ -904,11 +906,11 @@ $4}
           
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
-// Get Free Consultation;
+// Get Free Consultation,
           </a>
 
               <a
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
                 
@@ -921,11 +923,11 @@ $4}
           
           "
           <Phone className="w-4 h-4 mr-2" /></Phone>
-// (302) 464-0950;
+// (302) 464-0950,
           </a>
 
               <a
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
                 
@@ -938,7 +940,7 @@ $4}
           
           "
           <Mail className="w-4 h-4 mr-2" /></Mail>
-// Email Us;
+// Email Us,
           </a>
             </div>
           </div>

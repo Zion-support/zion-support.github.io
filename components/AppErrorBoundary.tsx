@@ -1,11 +1,12 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface ErrorFallbackProps {
-  error: Error;
-  resetError: () => void;
+  error: Error,
+  resetError: () => void,
 }
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
+const Component = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -30,7 +31,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           </div>
         </div>
         <div className="mb-4">
-          <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
+          <p className="text-sm text-gray-600 mb-2">An unexpected error occurred: </p>
           <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
             {error.message}
           </pre>
@@ -51,22 +52,22 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 
 interface AppErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 interface AppErrorBoundaryState {
-  hasError: boolean;
-  error: Error | undefined;
+  hasError: boolean,
+  error: Error | undefined,
 }
 
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false, error: undefined };
+    this.state = { hasError: false, error: undefined },
   }
 
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
@@ -81,7 +82,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   }
 
   resetError = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, error: undefined }),
   };
 
   render() {

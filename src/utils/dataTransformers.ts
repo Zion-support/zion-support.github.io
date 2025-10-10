@@ -28,7 +28,7 @@ export function deepClone<T>(obj: T): T {// TODO: Add content;}
   }
   if (obj instanceof Object) {for (const key in obj) {}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
       if (Object.prototype.hasOwnProperty.call(obj, key)) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -92,7 +92,7 @@ export function deepMerge;
  */
 export function flattenObject()
   ob,
-  j: Record;
+  j: Record,
           <string, unknown>,
   prefix = '',
   separator = '.'
@@ -101,7 +101,7 @@ export function flattenObject()
 
 }
   const,
-  flattened: Record;
+  flattened: Record,
           <string, unknown> = {};
   for (const key in obj) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -133,7 +133,7 @@ export function flattenObject()
  */
 export function unflattenObject()
   ob,
-  j: Record;
+  j: Record,
           <string, unknown>,
   separator = '.'
 
@@ -141,7 +141,7 @@ export function unflattenObject()
 
 }
   const,
-  result: Record;
+  result: Record,
           <string, unknown> = {};
   for (const key in obj) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -179,7 +179,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
   obj: T,
   keys: K[]
 
-): Pick;
+): Pick,
           <T, K> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -206,7 +206,7 @@ export function omit;
   obj: T,
   keys: K[]
 
-): Omit;
+): Omit,
           <T, K> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -227,7 +227,7 @@ export function groupBy<T>()
   array: T[],
   key: keyof T | ((item: T) => string | number)
 
-): Record;
+): Record,
           <string, T[]> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -277,7 +277,7 @@ export function sortBy;
           <T>()
 
   array: T[],
-  keys: Array;
+  keys: Array,
           <keyof T | ((item: T) => unknown)>,
   orders: Array<'asc' | 'desc'> = []
 ): T[] {// TODO: Add content;}
@@ -326,7 +326,7 @@ export function chunk<T>(array: T[], size: number): T[][] {// TODO: Add content;
 
 }
   const,
-  chunks: T[][] = [];
+  chunks: T[][] = [],
   for (let i = 0; i;)
           < array.length; i += size) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -347,7 +347,7 @@ export function zip;
 }
   const length = Math.max(...arrays.map(arr => arr.length));
   const,
-  result: T[][] = [];
+  result: T[][] = [],
   for (let i = 0; i;)
           < length; i++) {/* TODO: Fix JSX expression */}
   O: Add content;}

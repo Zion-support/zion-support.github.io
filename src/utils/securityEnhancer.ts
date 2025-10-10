@@ -3,10 +3,10 @@
 
 
 interface SecurityConfig {enableCSP: boolean;}
-  enableHTTPS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
+  enableHTTPS: boolean,
+  enableXSSProtection: boolean,
+  enableCSRFProtection: boolean,
+  enableContentSecurityPolicy: boolean,
 }
 
 class SecurityEnhancer {private config: SecurityConfig;}
@@ -91,7 +91,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
       warn: console.warn.bind(console),
       error: console.error.bind(console),
       info: console.info.bind(console)
-    };
+    },
     // Override console methods to detect debugging
     Object.assign(console, originalConsole);
   }

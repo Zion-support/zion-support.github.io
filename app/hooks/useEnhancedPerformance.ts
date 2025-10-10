@@ -30,6 +30,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component);
     }
+const Component = () => {
 
     return () => {
       // Track component unmount duration
@@ -97,7 +98,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 
       return {
         end: () => {
-          const _duration = performance.now() - startTime;
+          const _duration = performance.now() - startTime,
           
           if (trackPerformance) {
             analytics.trackPerformance(

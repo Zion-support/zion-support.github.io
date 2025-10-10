@@ -8,37 +8,37 @@ import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3, Zap, Shield, C
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Target;
+      icon: Target,
       title: 'Lead Scoring & Qualification',
       description: 'AI-powered lead scoring that automatically identifies high-value prospects and prioritizes them for your sales team.',
       benefits: ['Automated scoring', 'Higher conversion rates', 'Time savings']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Automated Outreach',
       description: 'Intelligent email sequences and follow-ups that nurture leads through the sales funnel automatically.',
       benefits: ['Personalized messages', 'Optimal timing', 'Multi-channel approach']
     },
     {
-      icon: BarChart3;
+      icon: BarChart3,
       title: 'Sales Analytics',
       description: 'Comprehensive analytics and reporting that provide insights into sales performance and opportunities.',
       benefits: ['Real-time insights', 'Performance tracking', 'ROI analysis']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'CRM Integration',
       description: 'Seamless integration with popular CRM systems to streamline your sales workflow.',
       benefits: ['Unified data', 'Automated updates', 'Workflow optimization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Predictive Analytics',
       description: 'AI models that predict customer behavior, churn risk, and optimal sales strategies.',
       benefits: ['Predictive insights', 'Risk assessment', 'Strategy optimization']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Automated Scheduling',
       description: 'Smart scheduling that finds optimal meeting times and sends automated reminders.',
       benefits: ['Time optimization', 'Reduced no-shows', 'Calendar sync']
@@ -58,7 +58,7 @@ const AISalesAutomationPage: React.FC = () => {
         'Standard analytics',
         'Email support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -74,7 +74,7 @@ const AISalesAutomationPage: React.FC = () => {
         'CRM integration',
         'Team collaboration'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -90,31 +90,32 @@ const AISalesAutomationPage: React.FC = () => {
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp;
+      icon: TrendingUp,
       title: 'Increase Sales by 300%',
       description: 'Boost your sales performance with AI-powered automation and optimization'},
     {
-      icon: Clock;
+      icon: Clock,
       title: 'Save 20+ Hours/Week',
       description: 'Automate repetitive tasks and focus on high-value activities'},
     {
-      icon: Target;
+      icon: Target,
       title: 'Higher Conversion Rates',
       description: 'Convert more leads with intelligent targeting and personalization'},
     {
-      icon: Star;
+      icon: Star,
       title: 'Better Customer Experience',
       description: 'Deliver personalized, timely interactions that delight customers'
     }
   ];
+const Component = () => {
 
-  return(<>
+  return (<>
       <SEOOptimizer;
         title="AI Sales Automation - Zion Tech Group"
         description="Boost sales by 300% with intelligent lead scoring, automated outreach, and CRM integration. Transform your sales process with AI-powered automation."
@@ -136,7 +137,7 @@ const AISalesAutomationPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              AI Sales Automation;
+              AI Sales Automation,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">)
               Boost sales by 300% with intelligent automation;)
@@ -146,8 +147,8 @@ const AISalesAutomationPage: React.FC = () => {
               and intelligent CRM integration that drives results and maximizes efficiency.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
@@ -156,13 +157,13 @@ const AISalesAutomationPage: React.FC = () => {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Get Quote</a>
               >
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Get Quote;
+                ✉️ Get Quote,
               </a>
             </div>,
           </section>,
@@ -230,20 +231,20 @@ const AISalesAutomationPage: React.FC = () => {
                     href="mailto:kleber@ziontechgroup.com"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                     }`}
                   >Get Started</a>
                   </ul>
-                  <a;
+                  <a,
                     href="mailto: kleber@ziontechgroup.com",
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
                       plan.popular;
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}
                     }`}
                   >
-                    Get Started;
+                    Get Started,
                   </a>
                 </div>
               ))}
@@ -281,8 +282,8 @@ const AISalesAutomationPage: React.FC = () => {
               and custom implementation plan.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
@@ -291,13 +292,13 @@ const AISalesAutomationPage: React.FC = () => {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Email Us</a>
               >
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Email Us;
+                ✉️ Email Us,
               </a>
             </div>
           </section>

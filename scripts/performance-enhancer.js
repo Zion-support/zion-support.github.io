@@ -23,7 +23,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   s: {},
       recommendation,
   s: []
-    };
+    },
   }
 
   async enhance() {/* TODO: Fix JSX expression */}
@@ -34,10 +34,10 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 
   async analyzeBundle() {
 //     try {
-      // Build with analysis;
-      execSync('npm run build:analyze', { stdio: 'pipe' });
+      // Build with analysis,
+      execSync('npm run build:analyze', { stdio: 'pipe' }),
   async analyzeBundle() {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+  o: 'pipe' }),
       
 //       const distPath = path.join(process.cwd(), 'dist');
 //       const files = await fs.readdir(distPath);
@@ -49,7 +49,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
         }
       }
       
-      this.report.metrics.bundleSize = totalSize;
+      this.report.metrics.bundleSize = totalSize,
       this.report.metrics.fileSizes = fileSizes;
       
       // Add recommendations based on bundle size;
@@ -66,10 +66,10 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       
       this.report.optimizations.push({/* TODO: Fix JSX expression */})`
   size: ${(totalSize / 1024).toFixed(2)} KB`
-      });
+      }),
       `
 //       // console.log(`✅ Bundle analysis completed. Total)`
-  size: ${(totalSize / 1024).toFixed(2)} KB`);
+  size: ${(totalSize / 1024).toFixed(2)} KB`),
     } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
@@ -88,11 +88,11 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
       }
       
-      const _images = await fs.readdir(imagesPath);
+      const _images = await fs.readdir(imagesPath),
       let _optimizedCount = 0;
       
       for (const image of images) {/* TODO: Fix JSX expression */}`
-  detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`);
+  detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`),
           }
           
           optimizedCount++;
@@ -105,7 +105,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
         details: `Processed ${optimizedCount} images`
       this.report.optimizations.push({/* TODO: Fix JSX expression */}`
   s: `Processed ${optimizedCount} images`)
-      });
+      }),
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
@@ -113,7 +113,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 
   async optimizeCSS() {
 //     try {
-      // Generate critical CSS;
+      // Generate critical CSS,
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
 .min-h-screen { min-height: 100 vh; }
@@ -156,7 +156,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
         status: 'completed'),
         details: 'Critical CSS generated',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
-      });
+      }),
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
@@ -164,7 +164,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 
   async optimizeJavaScript() {
 //     try {
-      // Generate performance monitoring script;
+      // Generate performance monitoring script,
       const performanceScript = `
 // Performance monitoring script;
 (function() {
@@ -177,7 +177,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         const _lastEntry = entries[entries.length - 1];
-//         }).observe({ entryTypes: ['largest-contentful-paint'] });
+//         }).observe({ entryTypes: ['largest-contentful-paint'] }),
       
       // FID;
       new PerformanceObserver((list) => {
@@ -187,21 +187,21 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 }
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
 //         }).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] }),
       
       // FID;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
-//           });
+//           }),
       }).observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input'] }),
       
       // CLS;
       let _clsValue = 0;
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
           }
-        });
+        }),
 //         }).observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] }),
     }
   }
   
@@ -224,7 +224,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
         status: 'completed'),
         details: 'Performance monitoring script generated',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
-      });
+      }),
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
@@ -233,7 +233,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   async generateServiceWorker() {
 //     try {
       const serviceWorkerScript = `
-// Service Worker for caching and offline support;
+// Service Worker for caching and offline support,
 // const CACHE_NAME = 'zion-app-v1';
 const urlsToCache = [
   '/',
@@ -256,17 +256,17 @@ self.addEventListener('fetch', (event) => {
         // Return cached version or fetch from network;
         return response || fetch(event.request);
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
-});
+}),
 
 self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
       })
-  );
+  ),
 });
 
 self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
           }
         })
-      );
+      ),
     })
   );
 });`
@@ -280,7 +280,7 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         status: 'completed'),
         details: 'Service worker generated for offline support',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
-      });
+      }),
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
@@ -288,7 +288,7 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
 
   async optimizeBuild() {
 //     try {
-      // Check if vite.config.js exists;
+      // Check if vite.config.js exists,
 //       const viteConfigPath = path.join(process.cwd(), 'vite.config.js');
       
       try {
@@ -314,7 +314,7 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         status: 'completed'),
         details: 'Build configuration analyzed',
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
-      });
+      }),
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
@@ -340,7 +340,7 @@ Generated: ${this.report.timestamp}
   generateMarkdownReport() {/* TODO: Fix JSX expression */}
   Generated: ${this.report.timestamp}
 
-## Summary;
+## Summary,
 This report contains the results of the performance enhancement process.
 
 ## Optimizations Applied;
@@ -351,12 +351,12 @@ ${this.report.optimizations.map(opt => )
 ## Metrics;
 - Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
 
-## Recommendations;
+## Recommendations,
 ${/* TODO: Fix JSX expression */}`
   `- **${opt.type}**: ${opt.status} - ${opt.details}`
 ).join('\n')}
 
-## Metrics;
+## Metrics,
 - Bundle,`
   Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
 

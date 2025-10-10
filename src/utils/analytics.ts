@@ -7,7 +7,7 @@ export const trackPageView = (pagePath: string, pageTitle?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: pagePath,
-      page_title: pageTitle});
+      page_title: pageTitle}),
   }
 };
 
@@ -33,7 +33,7 @@ export const initAnalytics = (measurementId: string) => {
 // Declare global types
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: any[]) => void,
+    dataLayer: any[],
   }
 }

@@ -32,7 +32,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ],
   const, successStat, s = [
     { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s }"
     { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n }"
@@ -43,9 +43,11 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
     { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t },";"
     { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }";
   ];
-  return(<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
+const Component = () => {
+  return (<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
+const Component = () => {
   return (
     <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
@@ -56,6 +58,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
+const Component = () => {
   return ("
     <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"

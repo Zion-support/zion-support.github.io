@@ -11,7 +11,7 @@ export const _preloadCriticalResources = () => {// TODO: Add content;}
   // Preload critical fonts;
 const fontPreloads = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     'http,
   s://fonts.googleapis.com/css2?family=Inte,
@@ -35,7 +35,7 @@ const fontPreloads = [
   // Preload critical images;
 const criticalImages = [
 
-  // TODO: Add items;
+  // TODO: Add items,
 
 ];;
 //     '/images/hero-bg.jpg',

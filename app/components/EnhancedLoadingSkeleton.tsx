@@ -66,7 +66,7 @@ export const ServiceCardSkeleton: React.FC = React.memo(() => (
       <Skeleton className="h-8 w-24 mx-auto" />
     </div>
   </div>
-);
+),
 
 export const NavigationSkeleton: React.FC = React.memo(() => (
   <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20 sticky top-0 z-50">
@@ -148,6 +148,6 @@ export const PageSkeleton: React.FC = React.memo(() => (
     <ContentSkeleton />
     <FooterSkeleton />
   </div>
-);
+),
 ,
 export default Skeleton;

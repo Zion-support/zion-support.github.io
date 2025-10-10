@@ -6,42 +6,42 @@ import { Cpu, Wifi, Shield, Zap, CheckCircle, ArrowRight, Star, Database, Globe,
 const IoTEdgeComputingPage: React.FC = () => {
   const services = [
     {
-      icon: Cpu;
+      icon: Cpu,
       title: 'Edge AI Processing',
       description: 'Deploy AI models directly on edge devices for real-time decision making and reduced latency.',
       features: ['Real-time AI inference', 'Model optimization', 'Edge training', 'Federated learning'],
       benefits: ['Ultra-low latency', 'Reduced bandwidth', 'Offline capabilities', 'Privacy protection']
     },
     {
-      icon: Wifi;
+      icon: Wifi,
       title: 'IoT Device Management',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       features: ['Device provisioning', 'Remote monitoring', 'OTA updates', 'Fleet management'],
       benefits: ['Centralized control', 'Automated updates', 'Predictive maintenance', 'Cost optimization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Edge Security',
       description: 'Advanced security solutions for edge devices and IoT networks with zero-trust architecture.',
       features: ['Device authentication', 'Encrypted communication', 'Threat detection', 'Compliance management'],
       benefits: ['End-to-end security', 'Real-time monitoring', 'Automated response', 'Regulatory compliance']
     },
     {
-      icon: Database;
+      icon: Database,
       title: 'Edge Data Management',
       description: 'Intelligent data processing and storage at the edge with cloud synchronization.',
       features: ['Local data processing', 'Smart filtering', 'Cloud sync', 'Data analytics'],
       benefits: ['Reduced data transfer', 'Faster insights', 'Cost efficiency', 'Real-time analytics']
     },
     {
-      icon: Globe;
+      icon: Globe,
       title: '5G Integration',
       description: 'Seamless integration with 5G networks for ultra-fast connectivity and low latency.',
       features: ['5G connectivity', 'Network slicing', 'Edge computing', 'Mobile edge computing'],
       benefits: ['Ultra-fast speeds', 'Low latency', 'High reliability', 'Massive connectivity']
     },
     {
-      icon: Settings;
+      icon: Settings,
       title: 'Edge Infrastructure',
       description: 'Complete edge computing infrastructure setup and management for your IoT ecosystem.',
       features: ['Edge servers', 'Network setup', 'Monitoring systems', 'Backup solutions'],
@@ -56,14 +56,14 @@ const IoTEdgeComputingPage: React.FC = () => {
     { name: 'Agriculture', icon: Cpu, description: 'Precision farming and crop monitoring' },
     { name: 'Energy', icon: Zap, description: 'Smart grids and renewable energy' },
     { name: 'Retail', icon: Smartphone, description: 'Smart stores and inventory management' }
-  ];
+  ],
 
   const stats = [
     { number: '10 ms', label: 'Ultra-Low Latency', icon: Clock },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Bandwidth Reduction', icon: BarChart },
     { number: '1000+', label: 'Devices Managed', icon: Users }
-  ];
+  ],
 
   const solutions = [
     {
@@ -118,8 +118,9 @@ const IoTEdgeComputingPage: React.FC = () => {
       ]
     }
   ];
+const Component = () => {
 
-  return(<>
+  return (<>
       <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group | Smart Device Solutions</title>
         <meta name="description" content="Transform your business with IoT and edge computing solutions. Real-time processing, AI at the edge, device management, and smart infrastructure." />
@@ -313,7 +314,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" >{benefit}</Star>
                       </Star>
                     ))}
-                  <button className="w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-green-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">Learn More</button>
+                  <button className="w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover: from-green-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">Learn More</button>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
               </div>
@@ -321,7 +322,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                 </div>
 
                 <button className="w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover: from-green-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
-                  Learn More;
+                  Learn More,
                   <ArrowRight className="w-4 h-4 ml-2" />,
                 </button>,
               </div>))}
@@ -335,8 +336,8 @@ const IoTEdgeComputingPage: React.FC = () => {
               From concept to deployment, we've got you covered.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -345,13 +346,13 @@ const IoTEdgeComputingPage: React.FC = () => {
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >View Case Studies</a>
               >
-                Start Your Project;
+                Start Your Project,
               </a>
               <a;
                 href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-green-600 transition-colors"
               >
-                View Case Studies;
+                View Case Studies,
               </a>
             </div>
           </div>
@@ -439,6 +440,7 @@ const IotEdgeComputingPage: React.FC = () => {
     "Docker Edge",
     "MQTT Protocol"
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -600,7 +602,7 @@ const IotEdgeComputingPage: React.FC = () => {
                 </p>
                 <a
                   href="/contact"
-                  className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
+                  className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Get Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -641,7 +643,7 @@ const IotEdgeComputingPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default IotEdgeComputingPage;

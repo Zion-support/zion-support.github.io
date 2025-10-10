@@ -17,12 +17,13 @@ import Footer from '../components/Footer';
  */
 const,
   OfflinePage: React.FC = () => {const handleRetry = () => {}
-    window.location.reload();
+    window.location.reload(),
   };
   const handleGoHome = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.href = '/';
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -41,7 +42,7 @@ const,
           <button></button>
             onClick={handleRetry}"
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500,"
-  hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
+  hover: bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
 // >
             
           
@@ -53,7 +54,7 @@ const,
           
           "
           <RefreshCw className="w-4 h-4" /></RefreshCw>
-// Try Again;
+// Try Again,
           </button>
 onClick={handleGoHome}"
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"

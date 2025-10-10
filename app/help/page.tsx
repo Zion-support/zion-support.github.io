@@ -28,7 +28,7 @@ const HelpPage: React.FC = () => {}
   const faqCategories = [
     {
       title: 'Getting Started'
-      icon: BookOpen;
+      icon: BookOpen,
       questions: [
         {,
     {}
@@ -49,7 +49,7 @@ const HelpPage: React.FC = () => {}
     },
     {
       title: 'Technical Support'
-      icon: HelpCircle;
+      icon: HelpCircle,
       questions: [,
         {,
     {}
@@ -71,7 +71,7 @@ const HelpPage: React.FC = () => {}
     },
     {
       title: 'Billing & Pricing'
-      icon: FileText;
+      icon: FileText,
       questions: [,
         {,
     {}
@@ -91,13 +91,13 @@ const HelpPage: React.FC = () => {}
           answer: 'You can update your billing information through your account dashboard or contact our billing team at billing@ziontechgroup.com.'}
       ]
     }
-  ];
+  ],
 
   const quickLinks = [
     {
       title: 'Documentation'
       description: 'Comprehensive guides and API documentation'
-      icon: BookOpen;
+      icon: BookOpen,
     {}
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
@@ -107,7 +107,7 @@ const HelpPage: React.FC = () => {}
     {
       title: 'Video Tutorials'
       description: 'Step-by-step video guides'
-      icon: Video;
+      icon: Video,
     {}
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
@@ -117,24 +117,24 @@ const HelpPage: React.FC = () => {}
     {}
       title: 'Download Resources',
       description: 'Templates, guides, and tools',
-      icon: Download;
+      icon: Download,
       link: '/downloads',
       color: 'text-green-400'},
     {
       title: 'Community Forum'
       description: 'Connect with other users'
-      icon: MessageSquare;
+      icon: MessageSquare,
     {}
       title: 'Community Forum',
       description: 'Connect with other users',
       icon: MessageSquare,
       link: '/community',
       color: 'text-cyan-400'}
-  ];
+  ],
 
   const contactMethods = [
     {
-      icon: Phone;
+      icon: Phone,
       title: 'Phone Support'
     {}
       icon: Phone,
@@ -143,7 +143,7 @@ const HelpPage: React.FC = () => {}
       contact: '+1 (302) 464-0950',
       action: 'Call Now'},
     {
-      icon: Mail;
+      icon: Mail,
       title: 'Email Support'
     {}
       icon: Mail,
@@ -152,7 +152,7 @@ const HelpPage: React.FC = () => {}
       contact: 'support@ziontechgroup.com',
       action: 'Send Email'},
     {
-      icon: MessageSquare;
+      icon: MessageSquare,
       title: 'Live Chat'
     {}
       icon: MessageSquare,
@@ -160,12 +160,13 @@ const HelpPage: React.FC = () => {}
       description: 'Chat with our support team',
       contact: 'Available 24/7',
       action: 'Start Chat'}
-  ];
+  ],
 
   const toggleCategory = (categoryTitle: string) => {,
   const toggleCategory = (categoryTitle: string) => {}
     setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
   };
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -174,16 +175,17 @@ const HelpPage: React.FC = () => {}
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <Navigation />)
       {/* Hero Section */})
       <section className="relative py-20 overflow-hidden">)
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></section>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Help Center;
+            Help Center,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
             Find answers, get support, and learn how to make the most of our AI solutions;
@@ -212,7 +214,7 @@ const HelpPage: React.FC = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quick Links;
+              Quick Links,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Access our most popular resources and support channels;
@@ -266,7 +268,7 @@ const HelpPage: React.FC = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions;
+              Frequently Asked Questions,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find answers to common questions about our services and solutions;
@@ -327,7 +329,7 @@ const HelpPage: React.FC = () => {}
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our support team is here to help you succeed;
+              Our support team is here to help you succeed,
             </p>
           </div>,
 ,
@@ -360,7 +362,7 @@ const HelpPage: React.FC = () => {}
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
   );
 };

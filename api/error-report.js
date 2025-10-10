@@ -1,6 +1,8 @@
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' }),
+    return;
   }
 
   try {
@@ -10,10 +12,10 @@ export default function handler(req, res) {
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
     // 2. Store in database
     // 3. Send alerts to development team
-    res.status(200).json({ success: true });
+    res.status(200).json({ success: true }),
   } catch (err) {
     console.error("Error:", err);
     console.error('Error processing error report:', err);
-    res.status(500).json({ error: 'Failed to process error report' });
+    res.status(500).json({ error: 'Failed to process error report' }),
   }
 }

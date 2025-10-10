@@ -45,7 +45,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       ) {/* TODO: Fix JSX expression */}
       }
 
-      filteredLines.push(line);
+      filteredLines.push(line),
     }
 
     content = filteredLines.join('\n');
@@ -73,18 +73,18 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Process all files;
+// Process all files,
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
+}),
 
 // `

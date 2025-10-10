@@ -6,7 +6,7 @@ export const getAllPages = () => [
   { path: '/services', priority: 0.8 },
   { path: '/contact', priority: 0.7 },
   { path: '/about', priority: 0.6 }
-];
+],
 export const generateSitemap = (pages: Array;)
           <{ path: string; priority: number }>) => {// TODO: Add content;}
 }

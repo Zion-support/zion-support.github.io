@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const CaseStudiesPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -38,7 +39,7 @@ const CaseStudiesPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default CaseStudiesPage;

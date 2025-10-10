@@ -17,7 +17,7 @@ export interface EnvConfig {// TODO: Add content;}
   g: boolean;,
     logLeve,
   l: 'debug' | 'info' | 'warn' | 'error'
-  sentryDsn?: string;
+  sentryDsn?: string,
   gaTrackingId?: string;
 }
 
@@ -25,7 +25,7 @@ class EnvironmentConfig {// TODO: Add content;}
 
 }
   private,
-  config: EnvConfig;
+  config: EnvConfig,
   private isInitialized = false;
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -55,7 +55,7 @@ class EnvironmentConfig {// TODO: Add content;}
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
 
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID;
+      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,
 
     };
   }
@@ -115,12 +115,12 @@ class EnvironmentConfig {// TODO: Add content;}
   vali,
   d: boolean;,
     missin,
-  g: string[];
+  g: string[],
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const,
-  missing: string[] = [];
+  missing: string[] = [],
     for (const varName of requiredVars) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -146,7 +146,7 @@ class EnvironmentConfig {// TODO: Add content;}
   O: Add content;}
 }
     const,
-  headers: Record;
+  headers: Record,
           <string, string> = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -161,7 +161,7 @@ class EnvironmentConfig {// TODO: Add content;}
   }`
       headers['Authorization'] = `Bearer ${this.config.apiKey}`
     }
-    return headers;
+    return headers,
   }
   /**
    * Log configuration in development mode;

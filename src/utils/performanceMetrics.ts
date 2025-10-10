@@ -4,11 +4,11 @@
  * Advanced performance tracking and monitoring for web applications
  */
 export interface PerformanceMetric {
-  name: string;
-  value: number;
-  unit: string;
-  timestamp: Date;
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
+  name: string,
+  value: number,
+  unit: string,
+  timestamp: Date,
+  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
   metadata?: Record<string, unknown>;
 }
 export interface WebVitalsMetrics {
@@ -20,21 +20,21 @@ export interface WebVitalsMetrics {
   INP?: number; // Interaction to Next Paint
 }
 export interface PerformanceReport {
-  metrics: PerformanceMetric[];
-  webVitals: WebVitalsMetrics;
+  metrics: PerformanceMetric[],
+  webVitals: WebVitalsMetrics,
   summary: {
-    avgLoadTime: number;
-    totalMetrics: number;
-    performanceScore: number;
-    recommendations: string[];
+    avgLoadTime: number,
+    totalMetrics: number,
+    performanceScore: number,
+    recommendations: string[],
   };
-  timestamp: Date;
+  timestamp: Date,
 }
 export class PerformanceMetrics {
-  private static instance: PerformanceMetrics;
-  private metrics: PerformanceMetric[] = [];
-  private _webVitals: WebVitalsMetrics = {};
-  private observers: PerformanceObserver[] = [];
+  private static instance: PerformanceMetrics,
+  private metrics: PerformanceMetric[] = [],
+  private _webVitals: WebVitalsMetrics = {},
+  private observers: PerformanceObserver[] = [],
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeObservers();
@@ -55,7 +55,7 @@ export interface PerformanceMetric {// TODO: Add content;}
     value: number;,
     unit: string;,
     timestamp: Date;,
-    category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
+    category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
 
   metadata?: Record;
           <string, unknown>;
@@ -89,20 +89,20 @@ export interface PerformanceReport {/* TODO: Fix JSX expression */}
 
   }
   timestam,
-  p: Date;
+  p: Date,
 }
 
 export class PerformanceMetrics {// TODO: Add content;}
 
 }
   private static,
-  instance: PerformanceMetrics;
+  instance: PerformanceMetrics,
   private,
-  metrics: PerformanceMetric[] = [];
+  metrics: PerformanceMetric[] = [],
   private,
-  _webVitals: WebVitalsMetrics = {};
+  _webVitals: WebVitalsMetrics = {},
   private,
-  observers: PerformanceObserver[] = [];
+  observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -166,11 +166,11 @@ export class PerformanceMetrics {// TODO: Add content;}
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart
                 }
-              });
+              }),
             }
           }
         });
-        navObserver.observe({ entryTypes: ['navigation'] });
+        navObserver.observe({ entryTypes: ['navigation'] }),
         this.observers.push(navObserver);
         // Paint timing
         const paintObserver = new PerformanceObserver(list => {
@@ -187,7 +187,7 @@ $4});
             }
           }
         });
-        paintObserver.observe({ entryTypes: ['paint'] });
+        paintObserver.observe({ entryTypes: ['paint'] }),
         this.observers.push(paintObserver);
         // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver(list => {
@@ -204,7 +204,7 @@ $4});
 $4});
           }
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
         this.observers.push(lcpObserver);
         // Layout Shift
         const clsObserver = new PerformanceObserver(list => {
@@ -212,7 +212,7 @@ $4});
                 metadata: {// TODO: Add content;}
 };
   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
-                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart,
 
                 }
               }
@@ -221,7 +221,7 @@ $4});
           }
         });
         navObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
+  s: ['navigation'] }),
         this.observers.push(navObserver);
         // Paint timing;
 const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
@@ -248,9 +248,9 @@ const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expressi
   )
             }
           }
-        });
+        }),
         paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+  s: ['paint'] }),
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
@@ -275,14 +275,14 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
             }
   )
           }
-        });
+        }),
         lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] }),
         this.observers.push(lcpObserver);
 // Layout Shift;
         const clsObserver = new PerformanceObserver(list => {for (const entry of list.getEntries()) {}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
             if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;
@@ -296,7 +296,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
             category:           ,
 $4});
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] }),
         this.observers.push(clsObserver);
       } catch (error) {
           this.recordMetric({/* TODO: Fix JSX expression */}
@@ -309,10 +309,10 @@ $4});
             timestamp: new Date(),
             category: 'runtime'
 
-          });
+          }),
         });
         clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] }),
         this.observers.push(clsObserver);
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -374,7 +374,7 @@ $4});
         serverResponse: perfData.responseEnd - perfData.requestStart,
         domParsing: perfData.domComplete - perfData.domLoading
       }
-    });
+    }),
   }
   /**
    * Record network request timing
@@ -387,7 +387,7 @@ $4});
   dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart,
-        domParsing: perfData.domComplete - perfData.domLoading;
+        domParsing: perfData.domComplete - perfData.domLoading,
 
       }
     }
@@ -457,13 +457,13 @@ $4});
         limit: memory.jsHeapSizeLimit,
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       }
-    });
+    }),
   }
   /**
    * Measure function execution time
    */
   measureFunction<T>(name: string, fn: () => T): T {
-    const startTime = performance.now();
+    const startTime = performance.now(),
     const result = fn();
     const endTime = performance.now();
     this.recordMetric({
@@ -479,7 +479,7 @@ $4});
    * Measure async function execution time
    */
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const startTime = performance.now();
+    const startTime = performance.now(),
     const result = await fn();
     const endTime = performance.now();
     this.recordMetric({
@@ -511,7 +511,7 @@ $4});
 };
   total: memory.totalJSHeapSize,
         limit: memory.jsHeapSizeLimit,
-        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
 
       }
     }
@@ -541,7 +541,7 @@ $4});
 
     }
   )
-    return result;
+    return result,
   }
   /**
    * Measure async function execution time;
@@ -567,7 +567,7 @@ $4});
 
     }
   )
-    return result;
+    return result,
   }
   /**
    * Get all metrics;
@@ -627,7 +627,7 @@ $4});
    * Get performance recommendations
    */
   getRecommendations(): string[] {
-    const recommendations: string[] = [];
+    const recommendations: string[] = [],
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
       recommendations.push(
         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
@@ -696,7 +696,7 @@ $4});
 
 }
     const,
-  recommendations: string[] = [];
+  recommendations: string[] = [],
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -754,7 +754,7 @@ $4});
         recommendations: this.getRecommendations()
       },
       timestamp: new Date()
-    };
+    },
   }
   /**
    * Export metrics as JSON
@@ -798,7 +798,7 @@ $4});
     }
   }
   /**
-   * Export metrics as JSON;
+   * Export metrics as JSON,
    */
 
   exportMetrics(): string {// TODO: Add content;}
@@ -833,15 +833,15 @@ $4});
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {
   memory: {
-// usedJSHeapSize: number;
-// totalJSHeapSize: number;
-// jsHeapSizeLimit: number;
+// usedJSHeapSize: number,
+// totalJSHeapSize: number,
+// jsHeapSizeLimit: number,
   };
 }
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
+  value: number,
+  hadRecentInput: boolean,
 }
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance();
@@ -853,9 +853,9 @@ interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression
   y: {/* TODO: Fix JSX expression */}
   e: number;}
 // totalJSHeapSiz,
-  e: number;
+  e: number,
 // jsHeapSizeLimi,
-  t: number;
+  t: number,
   };
 }
 // Type for LayoutShift;
@@ -866,7 +866,7 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
   value: number;,
     hadRecentInput: boolean
 }
-// Export singleton instance;
+// Export singleton instance,
 export const performanceMetrics = PerformanceMetrics.getInstance();
 
 

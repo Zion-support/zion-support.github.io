@@ -25,7 +25,7 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Massive IoT Support',
       description: 'Support for millions of connected devices with efficient resource management'
     }
-  ];
+  ],
 
   const benefits = [
     'Reduce latency by 90% compared to 4G',
@@ -81,7 +81,8 @@ const FiveGImplementationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -224,7 +225,7 @@ const FiveGImplementationPage: React.FC = () => {
                 <button
                   className={`w-full py-4 px-6 rounded-xl font-semibold text-center transition-all ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover: from-purple-600 hover:to-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
                 >
@@ -262,7 +263,7 @@ const FiveGImplementationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  ),
 };
 
 export default FiveGImplementationPage;

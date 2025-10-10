@@ -194,9 +194,10 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ],
   useEffe, c, t(() => {/* TODO: Fix JSX expression */}
     }, 40, 0, 0);
+const Component = () => {
     return () => clearInterv, a, l(interv, a, l);
   }, [trendingIte, m, s.leng, t, h]);
   const, currentIte, m = trendingIte, m, s[currentInd, e, x];
@@ -216,7 +217,8 @@ defa, u, l;
 };
   };
   const, Ico, n = currentIt, e, m.ic, o, n;
-  return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
+const Component = () => {
+  return (<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
       <div, className="flex, item, s-center, justif, y-betwe, e, n">
         <div, className="fl, e, x-1">
           <div, className="flex, item, s-center, ga, p-3, m, b-3">
@@ -231,6 +233,7 @@ defa, u, l;
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />";)
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>";)
             </d, i, v>)
+const Component = () => {
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"</div>
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
@@ -270,9 +273,10 @@ defa, u, l;
               </d, i, v>
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
-};
+},
   };
   const, Ico, n = currentIt, e, m.ic, o, n;
+const Component = () => {
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">""
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>"

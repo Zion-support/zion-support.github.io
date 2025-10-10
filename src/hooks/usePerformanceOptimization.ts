@@ -32,7 +32,7 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
   O: Add content;}
 };
   loadTim,
-  e: navigation;
+  e: navigation,
 //         ? navigation.loadEventEnd - navigation.loadEventStart;
         : 0,
       firstContentfulPain,
@@ -42,7 +42,7 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
 
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
-      firstInputDelay: 0;
+      firstInputDelay: 0,
 
     };
     // Measure LCP;
@@ -57,7 +57,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
         metrics.largestContentfulPaint = lastEntry.startTime;
     });
     lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] }),
 // Measure CLS;
     const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -76,17 +76,17 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
           clsValue += layoutShiftEntry.value || 0;
       metrics.cumulativeLayoutShift = clsValue;
     clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] }),
 // Measure FID;
     const fidObserver = new PerformanceObserver(list => {const fidEntry = entry as PerformanceEntry & {}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
           processingStart?: number;
         metrics.firstInputDelay =)
           (fidEntry.processingStart || 0) - entry.startTime;
     fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input'] }),
     // Cleanup observers after a delay;
     setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -151,6 +151,7 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
     }, 1000);
     // Optimize images;
     // Preload critical resources;
+const Component = () => {
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
   return {measurePerformance}

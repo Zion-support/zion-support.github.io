@@ -60,43 +60,43 @@ export enum WCAGLevel {// TODO: Add content;}
  */
 export interface A11yIssue {
   /** Unique identifier for the issue */
-  id: string;
+  id: string,
   /** Issue type/category */
-  type: string;
+  type: string,
   /** Severity level */
-  severity: A11ySeverity;
+  severity: A11ySeverity,
   /** WCAG level this issue violates */
-  wcagLevel: WCAGLevel;
+  wcagLevel: WCAGLevel,
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */
-  wcagCriterion: string;
+  wcagCriterion: string,
   /** Description of the issue */
-  message: string;
+  message: string,
  * Accessibility issue interface;
  */
 
 export interface A11yIssue {// TODO: Add content;}
 }
   /** Unique identifier for the issue */;
-  id: string;
+  id: string,
 
   /** Issue type/category */,
     typ,
-  e: string;
+  e: string,
   /** Severity level */,
 
   severit,
-  y: A11ySeverity;
+  y: A11ySeverity,
   /** WCAG level this issue violates */,
 
   wcagLeve,
-  l: WCAGLevel;
+  l: WCAGLevel,
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */
   wcagCriterio,
-  n: string;
+  n: string,
   /** Description of the issue */,
 
   messag,
-  e: string;
+  e: string,
   /** Element selector or description */
   element?: string;
   /** Suggested fix */
@@ -109,15 +109,15 @@ export interface A11yIssue {// TODO: Add content;}
  */
 export interface A11yCheckResult {
   /** Whether the check passed */
-  passed: boolean;
+  passed: boolean,
   /** Number of issues found */
-  issueCount: number;
+  issueCount: number,
   /** List of issues */
-  issues: A11yIssue[];
+  issues: A11yIssue[],
   /** Timestamp of the check */
-  timestamp: Date;
+  timestamp: Date,
   /** Overall accessibility score (0-100) */
-  score: number;
+  score: number,
 }
 /**
  * Accessibility Checker class
@@ -131,7 +131,7 @@ export interface A11yCheckResult {
  * ```
  */
 export class AccessibilityChecker {
-  private issues: A11yIssue[] = [];
+  private issues: A11yIssue[] = [],
   /**
    * Check an element and its descendants for accessibility issues
    *
@@ -147,22 +147,22 @@ export class AccessibilityChecker {
 export interface A11yCheckResult {// TODO: Add content;}
 }
   /** Whether the check passed */;
-  passed: boolean;
+  passed: boolean,
 
   /** Number of issues found */,
     issueCoun,
-  t: number;
+  t: number,
   /** List of issues */,
     issue,
   s: A11yIssue[]
   /** Timestamp of the check */,
 
   timestam,
-  p: Date;
+  p: Date,
   /** Overall accessibility score (0-100) */,
 
   scor,
-  e: number;
+  e: number,
 }
 /**
  * Accessibility Checker class;
@@ -179,7 +179,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
-  private issues: A11yIssue[] = [];
+  private issues: A11yIssue[] = [],
 
   /**
    * Check an element and its descendants for accessibility issues;
@@ -224,7 +224,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         issues: [],
         timestamp: new Date(),
         score: 100
-      };
+      },
     }
     return this.checkElement(document.body);
   }
@@ -275,7 +275,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         issueCount: 0,
         issues: [],
         timestamp: new Date(),
-        score: 100;
+        score: 100,
 
       };
     }
@@ -313,7 +313,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
           codeExample: '<img src="..." alt="Description of image" />'
-        });
+        }),
       }
       // Check for empty alt on decorative images without role
       if (alt === '' && role !== 'presentation') {
@@ -334,7 +334,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         })
   )
       }
-      // Check for empty alt on decorative images without role;
+      // Check for empty alt on decorative images without role,
       if (alt === '' && role !== 'presentation') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -350,7 +350,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
           codeExample: '<img src="..." alt="" role="presentation" />'
-        });
+        }),
       }
     });
   }
@@ -388,7 +388,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
   )
   }
   /**
-   * Check heading hierarchy;
+   * Check heading hierarchy,
    *
    * @private;
    * @param element - Root element to check;
@@ -419,7 +419,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           element: heading.tagName.toLowerCase(),
           fix: 'Maintain sequential heading hierarchy',
           codeExample: `Use h${previousLevel + 1} instead of h${level}`
-        });
+        }),
       }
       // Check for empty headings
       if (!heading.textContent?.trim()) {
@@ -427,7 +427,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           type: 'empty-heading'}
   )
       }
-      // Check for empty headings;
+      // Check for empty headings,
       if (!heading.textContent?.trim()) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -456,7 +456,7 @@ $4});
         }
   )
       }
-      previousLevel = level;
+      previousLevel = level,
     });
     // Check for multiple h1s;
 const h1Count = element.querySelectorAll('h1').length;
@@ -493,7 +493,7 @@ $4});
     }
   }
   /**
-   * Check links for accessibility;
+   * Check links for accessibility,
    *
    * @private;
    * @param element - Root element to check;
@@ -530,7 +530,7 @@ $4});
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
           codeExample: '<Link to="..." aria-label="Description">...</Link>'
-        });
+        }),
       }
       // Check for generic link text
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {
@@ -551,7 +551,7 @@ $4});
         }
   )
       }
-      // Check for generic link text;
+      // Check for generic link text,
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -567,7 +567,7 @@ $4});
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Use descriptive link text that explains the destination',
           codeExample: 'Use "Read full article" instead of "Read more"'
-        });
+        }),
       }
       // Check for links opening in new window without warning
       const target = link.getAttribute('target');
@@ -580,7 +580,7 @@ $4});
           type: 'new-window-no-warning'}
   )
       }
-      // Check for links opening in new window without warning;
+      // Check for links opening in new window without warning,
 const target = link.getAttribute('target')
       if ()
         target === '_blank' &&
@@ -601,9 +601,8 @@ const target = link.getAttribute('target')
           message: `Link ${index + 1} opens in new window without warning`,
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
-          codeExample:
-            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
-        });
+          codeExample: '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
+        }),
       }
     });
   }
@@ -673,7 +672,7 @@ const target = link.getAttribute('target')
           element: 'button',
           fix: 'Add text content or aria-label to the button',
           codeExample: '<button aria-label="Close dialog">×</button>'
-        });
+        }),
       }
     });
   }
@@ -716,7 +715,7 @@ const target = link.getAttribute('target')
   )
   }
   /**
-   * Check form elements for accessibility;
+   * Check form elements for accessibility,
    *
    * @private;
    * @param element - Root element to check;
@@ -752,7 +751,7 @@ const target = link.getAttribute('target')
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
           codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
-        });
+        }),
       }
     });
           codeExample: '
@@ -766,7 +765,7 @@ const target = link.getAttribute('target')
           
           "
           <label for="email">Emai,"
-  l:</label><input id="email" name="email" />'
+  l: </label><input id="email" name="email" />'
         }
   )
       }
@@ -782,7 +781,7 @@ const target = link.getAttribute('target')
   private checkColors(element: Element): void {
     // This is a simplified check - full color contrast checking requires
     // computing actual rendered colors which is complex
-    const elementsWithColor = element.querySelectorAll('[style*="color"]');
+    const elementsWithColor = element.querySelectorAll('[style*="color"]'),
     elementsWithColor.forEach(el => {
       const style = el.getAttribute('style');
       if (style?.includes('color:') && !style.includes('background')) {
@@ -844,7 +843,7 @@ $4});
   )
   }
   /**
-   * Check keyboard accessibility;
+   * Check keyboard accessibility,
    *
    * @private;
    * @param element - Root element to check;
@@ -874,7 +873,7 @@ $4});
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
           codeExample: '<button tabindex="0">Accessible button</button>'
-        });
+        }),
       }
     });
     // Check for divs/spans with onclick but no keyboard handler
@@ -901,7 +900,7 @@ $4});
         }
   )
       }
-    });
+    }),
     // Check for divs/spans with onclick but no keyboard handler;
 const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
     clickableNonInteractive.forEach(el => {/* TODO: Fix JSX expression */}
@@ -981,7 +980,7 @@ $4});
   )
   }
   /**
-   * Check ARIA usage;
+   * Check ARIA usage,
    *
    * @private;
    * @param element - Root element to check;
@@ -1000,7 +999,7 @@ $4});
       // Check for invalid ARIA roles;
 const validRoles = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
 //         'alert',
 //         'button',
@@ -1047,7 +1046,7 @@ $4});
         }
   )
       }
-      // Check aria-labelledby references;
+      // Check aria-labelledby references,
 const labelledBy = el.getAttribute('aria-labelledby');
       if (labelledBy) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -1094,7 +1093,7 @@ $4});
   )
   }
   /**
-   * Check for proper use of landmark regions;
+   * Check for proper use of landmark regions,
    *
    * @private;
    * @param element - Root element to check;
@@ -1193,7 +1192,7 @@ $4});
     }
   }
 }
-        fix: 'Add a;
+        fix: 'Add a,
 
           <main> element or role="main"',
         codeExampl,
@@ -1203,7 +1202,7 @@ $4});
     }
   }
   /**
-   * Add an issue to the list;
+   * Add an issue to the list,
    *
    * @private;
    * @param issue - Partial issue object;

@@ -19,6 +19,7 @@ const FuturisticHero: React.FC = memo(() => {}
     const interval = setInterval(() => {}
       setCurrentText((prev) => (prev + 1) % heroTexts.length);
     }, 3000);
+const Component = () => {
     return () => clearInterval(interval);
   }, []);
 
@@ -27,21 +28,23 @@ const FuturisticHero: React.FC = memo(() => {}
     { icon: TrendingUp, value: "300%", label: "Average ROI" },
     { icon: Shield, value: "99.9%", label: "Uptime Guarantee" },
     { icon: Award, value: "50+", label: "Awards Won" }
-  ];
+  ],
 
   const features = [
     { icon: Brain, title: "AI Solutions", description: "Cutting-edge artificial intelligence" },
     { icon: Cloud, title: "Cloud Infrastructure", description: "Scalable cloud solutions" },
     { icon: Shield, title: "Cybersecurity", description: "Enterprise-grade security" },
     { icon: Code, title: "Custom Development", description: "Tailored software solutions" }
-  ];
+  ],
+const Component = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-network-bg">{/* Animated Background Elements */}</section>
       <div className="absolute inset-0 particle-field">
         <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-1000"><div className="absolute bottom-40 left-20 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-2000"><div className="absolute bottom-20 right-10 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-500"><div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">{/* Left Column - Main Content */}<div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{/* Badge */}</div>
-  return(<section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-network-bg">
+const Component = () => {
+  return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-network-bg">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 particle-field">
         <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
@@ -84,7 +87,7 @@ const FuturisticHero: React.FC = memo(() => {}
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm: flex-row gap-4">
-              <Link;
+              <Link,
             <div className="flex flex-col sm:flex-row gap-4"></div>
               <Link
                 to="/contact"
@@ -186,7 +189,7 @@ const FuturisticHero: React.FC = memo(() => {}
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"></div>
           <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
     </section>
-  );
+  ),
 
 FuturisticHero.displayName = 'FuturisticHero';
 export default FuturisticHero;

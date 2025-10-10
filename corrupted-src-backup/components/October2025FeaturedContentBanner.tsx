@@ -203,7 +203,9 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
       ]
     }
   ];
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";
+const Component = () => {
+  return (<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";
+const Component = () => {
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";</div>
       <div, className="container, m, x-auto, ma, x-w-7, x, l">";
@@ -217,6 +219,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">";</div>
+const Component = () => {
   return ("
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">";"
       <div, className="container, m, x-auto, ma, x-w-7, x, l">";
@@ -246,12 +249,14 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";)
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
             const, Ico, n = conte, n, t.ic, o, n;
-            return(<Li, n, k;
+const Component = () => {
+            return (<Li, n, k;
         {/* Featured, Content, Cards */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
             const, Ico, n = conte, n, t.ic, o, n;
+const Component = () => {
             return (</div>
               <Li, n, k
   k, e, y={ind, e, x}

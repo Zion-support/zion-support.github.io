@@ -41,7 +41,7 @@ const RoboticsIntegrationPage: React.FC = () => {
       title: "Custom Development",
       description: "Tailored solutions and custom programming for specific business needs"
     }
-  ];
+  ],
 
   const solutions = [
     {
@@ -156,7 +156,7 @@ const RoboticsIntegrationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -180,7 +180,8 @@ const RoboticsIntegrationPage: React.FC = () => {
       avatar: "MJ",
       content: "Our warehouse automation with mobile robots has increased efficiency by 50% and reduced labor costs by 30%. The system is incredibly reliable and easy to maintain."
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -422,7 +423,7 @@ const RoboticsIntegrationPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></section>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Automate Your Future
           </h2>
@@ -441,9 +442,9 @@ const RoboticsIntegrationPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
-  );
+  ),
 };
 
 RoboticsIntegrationPage.displayName = 'RoboticsIntegrationPage';

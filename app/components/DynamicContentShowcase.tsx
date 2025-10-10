@@ -16,7 +16,7 @@ const DynamicContentShowcase: React.FC = () => {,
     title: 'Revolutionary AI Solutions',
       id: 'ai-solutions'
       title: 'AI Solutions'
-      icon: Brain;
+      icon: Brain,
       color: 'text-purple-400'
       bgColor: 'bg-purple-500/10'
       content: {
@@ -45,7 +45,7 @@ const DynamicContentShowcase: React.FC = () => {,
     title: 'Enterprise IT Solutions',
       id: 'it-services'
       title: 'IT Services'
-      icon: Shield;
+      icon: Shield,
       color: 'text-blue-400'
       bgColor: 'bg-blue-500/10'
       content: {
@@ -74,7 +74,7 @@ const DynamicContentShowcase: React.FC = () => {,
     title: 'Digital Transformation',
       id: 'digital-transformation'
       title: 'Digital Transformation'
-      icon: Zap;
+      icon: Zap,
       color: 'text-green-400'
       bgColor: 'bg-green-500/10'
       content: {
@@ -93,9 +93,10 @@ const DynamicContentShowcase: React.FC = () => {,
         ]
       }
     }
-  ];
+  ],
 
   const currentTab = tabs[activeTab];
+const Component = () => {
 
   return (
     <section className="py-16" aria-labelledby="showcase-heading">
@@ -105,7 +106,8 @@ const DynamicContentShowcase: React.FC = () => {,
                 key={tab.id}
                 onClick={() =>setActiveTab(index)}</button></<<<butto>className</butto></butto>={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
                   activeTab === index
-  return(<section className="py-16" aria-labelledby="showcase-heading">
+const Component = () => {
+  return (<section className="py-16" aria-labelledby="showcase-heading">
       <div className="container mx-auto px-4">)
         <h2 id="showcase-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">)
           Our Solutions;)
@@ -186,7 +188,7 @@ const DynamicContentShowcase: React.FC = () => {,
                 <div className="pt-6"></div>
                   <a
                     href={`/${currentTab.id}`}
-                    className={`inline-flex items-center space-x-2 ${currentTab.color} hover:opacity-80 transition-opacity font-medium`}
+                    className={`inline-flex items-center space-x-2 ${currentTab.color} hover: opacity-80 transition-opacity font-medium`}
                   ></a>
                     <<<<span>Learn</span></<<span>More</span></span>
                     <ArrowRight className="w-4 h-4" /></ArrowRigh>
@@ -195,7 +197,7 @@ const DynamicContentShowcase: React.FC = () => {,
               </div>
             </div>
           </div>
-import React from 'react';
+import React from 'react',
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
@@ -229,6 +231,7 @@ const DynamicContentShowcase: React.FC = () => {
       features: ['Workflow Automation', 'RPA Solutions', 'Smart Scheduling', 'Task Optimization']
     }
   ];
+const Component = () => {
 
   return (
     <section className="py-16">
@@ -263,7 +266,7 @@ const DynamicContentShowcase: React.FC = () => {
               
               <a
                 href="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
+                className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
               >
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
@@ -272,7 +275,7 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </div>
     </section>
-  );
+  ),
 };
 
 export default DynamicContentShowcase;

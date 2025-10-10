@@ -51,7 +51,7 @@ const DemoPage: React.FC = () => {
       presenter: 'Kleber Santos',
       role: 'CEO & Founder'
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -74,9 +74,10 @@ const DemoPage: React.FC = () => {
       title: 'No Commitment',
       description: 'Free demo with no obligation to purchase our services'
     }
-  ];
+  ],
 
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo) || demos[0];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -208,7 +209,7 @@ const DemoPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Book a Demo?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300">
                   <benefit.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -244,7 +245,7 @@ const DemoPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default DemoPage;

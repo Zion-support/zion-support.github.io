@@ -1570,9 +1570,10 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$350-800/month',
       category: 'FinTech'
     }
-  ];
+  ],
 
   const categories = [...new Set(microSAASServices.map(service => service.category))];
+const Component = () => {
 
   return (
     <>

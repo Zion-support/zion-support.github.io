@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   className?: string;
   width?: number;
   height?: number;
@@ -38,13 +38,14 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       },
       {
         rootMargin: '50px 0px',
-        threshold: 0.01;
+        threshold: 0.01,
       }
     );
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
+const Component = () => {
 
     return () => observer.disconnect();
   }, [priority]);
@@ -79,7 +80,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   };
 
   if (hasError) {
-    return(<div;
+const Component = () => {
+    return (<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
         style={{ width, height }}
       ></div>
@@ -90,8 +92,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       </div>)
     );
   }
+const Component = () => {
 
-  return(<div;
+  return (<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
@@ -111,7 +114,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       
       {/* Actual Image */}
       {isInView && (
-        <img;
+        <img,
           src={src}
           alt={alt}
           className={`w-full h-full object-cover transition-opacity duration-300 ${}

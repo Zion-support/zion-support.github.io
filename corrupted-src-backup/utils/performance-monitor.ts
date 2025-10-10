@@ -5,37 +5,37 @@ interface UserInteraction {/* TODO: Fix JSX expression */}
 }
 
 class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private metrics: PerformanceMetrics;
-  private interactions: UserInteraction[] = [];
-  private isInitialized: boolean = false;
-  private observer: PerformanceObserver | null = null;
+  private static instance: PerformanceMonitor,
+  private metrics: PerformanceMetrics,
+  private interactions: UserInteraction[] = [],
+  private isInitialized: boolean = false,
+  private observer: PerformanceObserver | null = null,
 
   private constructor() {
     this.metrics = {
-      lcp: null;
-      fid: null;
-      cls: null;
-      fcp: null;
-      ttfb: null;
+      lcp: null,
+      fid: null,
+      cls: null,
+      fcp: null,
+      ttfb: null,
       navigationStart: performance.now()
-      loadTime: 0;
-      domContentLoaded: 0;
-      firstPaint: null;
-      firstContentfulPaint: null;
+      loadTime: 0,
+      domContentLoaded: 0,
+      firstPaint: null,
+      firstContentfulPaint: null,
 class PerformanceMonitor {/* TODO: Fix JSX expression */}
-    };
+    },
   }
 
   static getInstance(): PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
-    return PerformanceMonitor.instance;
+    return PerformanceMonitor.instance,
   }
 
   init(): void {/* TODO: Fix JSX expression */}
     }
 
-    this.setupPerformanceObserver();
+    this.setupPerformanceObserver(),
     this.trackUserInteractions();
     this.measureCoreWebVitals();
     this.trackPageLoadMetrics();
@@ -49,10 +49,10 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     try {
       this.observer = new PerformanceObserver(list => {)
         for (const entry of list.getEntries()) {
-          this.processPerformanceEntry(entry);
+          this.processPerformanceEntry(entry),
     try {/* TODO: Fix JSX expression */}
         }
-      });
+      }),
 
       // Observe different types of performance entries;
       this.observer.observe({)
@@ -63,7 +63,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           'layout-shift')
         ])
       this.observer.observe({/* TODO: Fix JSX expression */})
-      });
+      }),
     } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
@@ -80,7 +80,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   y: PerformanceEntry): void {/* TODO: Fix JSX expression */}
         } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
         }
-        break;
+        break,
       case 'largest-contentful-paint':
         this.metrics.lcp = entry.startTime;
         break;
@@ -90,7 +90,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       case 'layout-shift':
         if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
         }
-        break;
+        break,
     }
   }
 
@@ -112,7 +112,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
             timestamp: performance.now(),
             element: (event.target as Element)?.tagName?.toLowerCase(),
   private trackUserInteractions(): void {/* TODO: Fix JSX expression */}
-          };
+          },
 
           this.interactions.push(interaction);
 
@@ -124,7 +124,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         },
         {/* TODO: Fix JSX expression */}
   e: true }
-      );
+      ),
     });
   }
 
@@ -159,13 +159,13 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private measureCoreWebVitals(): void {/* TODO: Fix JSX expression */}
     }
 
-    // Measure page load time;
+    // Measure page load time,
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     // Measure DOM content loaded;
     document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
 
   private trackPageLoadMetrics(): void {/* TODO: Fix JSX expression */}
@@ -174,11 +174,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 //     // console.log(`Total resources,
   loaded: ${resources.length}, Total)`
   size: ${(totalResourceSize / 1024).toFixed(2)} KB`
-    );
+    ),
   }
 
   getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
-    return { ...this.metrics };
+    return { ...this.metrics },
   }
 
   getInteractions(): UserInteraction[] {/* TODO: Fix JSX expression */}
@@ -242,7 +242,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
 
   generateReport(): string {/* TODO: Fix JSX expression */}
-  Score: ${score}/100;
+  Score: ${score}/100,
 Core Web,
   Vitals:
 - LC,`
@@ -256,7 +256,7 @@ Core Web,
 
     return `
 Performance Report:
-Overall Score: ${score}/100;
+Overall Score: ${score}/100,
 Core Web Vitals:
 - LCP: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
 - FID: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
@@ -292,12 +292,12 @@ User,
   s: ${interactions.filter(i => i.type === 'keydown').length}
 - Resize,
   s: ${interactions.filter(i => i.type === 'resize').length}`
-    `.trim();
+    `.trim(),
   }
 
   cleanup(): void {/* TODO: Fix JSX expression */}
     }
-    this.isInitialized = false;
+    this.isInitialized = false,
 //     }
 }
 

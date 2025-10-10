@@ -31,7 +31,7 @@ function processFile(filePath) {
           description: 'Advanced AI and IT Solutions',
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       } catch (e) {/* TODO: Fix JSX expression */}
-        };
+        },
       }
     }
 
@@ -58,14 +58,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           line.includes('function '))
       ) {/* TODO: Fix JSX expression */}
         }
-        continue;
+        continue,
       }
 
       if (!skipUntilSemicolon) {/* TODO: Fix JSX expression */}
       }
     }
 
-    content = filteredLines.join('\n');
+    content = filteredLines.join('\n'),
 
     // Clean up extra empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -99,7 +99,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   g:type" content="${metadata.type}" />` : ''}
         ${/* TODO: Fix JSX expression */}"`
   g:url" content="${metadata.url}" />` : ''}`
-      </Helmet>`;
+      </Helmet>`,
 
         content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
         modified = true;
@@ -109,18 +109,18 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Process all files;
+// Process all files,
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
+}),
 
 // "`

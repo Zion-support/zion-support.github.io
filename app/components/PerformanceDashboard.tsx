@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  fps: number,
 }
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  fps: number,
   [key: string]: number;
 }
 
@@ -71,15 +71,17 @@ const PerformanceDashboard: React.FC = () => {
   }, []);
 
   if (!isVisible) {
+const Component = () => {
     return (
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover: bg-blue-700 transition-colors"
       >
         Show Performance
       </button>
-    );
+    ),
   }
+const Component = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
@@ -87,7 +89,7 @@ const PerformanceDashboard: React.FC = () => {
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
+          className="text-gray-500 hover: text-gray-700"
         >
           ×
         </button>
@@ -127,7 +129,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  ),
 };
 
 export default PerformanceDashboard;

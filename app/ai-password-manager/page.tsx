@@ -8,25 +8,25 @@ import Footer from '../components/Footer';
 const AIPasswordManagerPage: React.FC = () => {
   const features = [
     {
-      icon: Shield;
+      icon: Shield,
       title: 'AI-Powered Security',
       description: 'Advanced AI algorithms detect and prevent security threats in real-time',
       benefits: ['Threat detection', 'Real-time monitoring', 'Automated responses']
     },
     {
-      icon: Lock;
+      icon: Lock,
       title: 'Zero-Knowledge Architecture',
       description: 'Your passwords are encrypted and only you can access them',
       benefits: ['End-to-end encryption', 'Zero-knowledge design', 'Privacy protection']
     },
     {
-      icon: Eye;
+      icon: Eye,
       title: 'Password Health Monitoring',
       description: 'Continuous monitoring and analysis of your password security',
       benefits: ['Weak password detection', 'Breach monitoring', 'Security scoring']
     },
     {
-      icon: Key;
+      icon: Key,
       title: 'Auto-Generate & Fill',
       description: 'Intelligent password generation and automatic form filling',
       benefits: ['Smart generation', 'Auto-fill forms', 'Cross-platform sync']
@@ -46,7 +46,7 @@ const AIPasswordManagerPage: React.FC = () => {
       title: 'Peace of Mind',
       description: 'Never worry about password breaches or weak credentials again',
       percentage: '100%'}
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -61,7 +61,7 @@ const AIPasswordManagerPage: React.FC = () => {
         'Secure sharing',
         '24/7 support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Business'
@@ -76,7 +76,7 @@ const AIPasswordManagerPage: React.FC = () => {
         'Priority support',
         'Custom policies'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -91,11 +91,13 @@ const AIPasswordManagerPage: React.FC = () => {
         'Compliance tools',
         'White-label options'
       ],
-      popular: false;
+      popular: false,
     }
   ];
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -124,14 +126,14 @@ const AIPasswordManagerPage: React.FC = () => {
               intelligent threat detection, and seamless user experience.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
               >Get Started</a>
               >
-                Get Started;
+                Get Started,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a;
@@ -245,14 +247,14 @@ const AIPasswordManagerPage: React.FC = () => {
                       ))}
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover: from-green-600 hover:to-emerald-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}>Get Started</button>
-                      plan.popular;
+                      plan.popular,
                         ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover: from-green-600 hover:to-emerald-700'}
                         : 'bg-slate-700 text-white hover:bg-slate-600'}
                     }`}>
-                      Get Started;
+                      Get Started,
                     </button>
                   </div>
                 ))}
@@ -266,14 +268,14 @@ const AIPasswordManagerPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-6">Secure Your Digital Life Today</h2><p className="text-xl text-gray-300 mb-8">Don't wait for a security breach. Protect your accounts with our AI-powered password manager.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center"
                 >Start Free Trial</a>
                 >
-                  Start Free Trial;
+                  Start Free Trial,
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com"

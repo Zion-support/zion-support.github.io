@@ -32,7 +32,7 @@ function fixTsxFile(filePath) {
     let modified = false;
 
     // Fix 1: Fix malformed JSX with missing opening tags
-    const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;
+    const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g,
     content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
       if (text.trim()) {
         modified = true;
@@ -42,7 +42,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 2: Fix self-closing tags that should have content
-    const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;
+    const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g,
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
       if (text.trim() && !text.includes('<')) {
         modified = true;
@@ -52,7 +52,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 3: Fix missing closing braces in object literals
-    const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;
+    const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g,
     content = content.replace(missingBracePattern, (match, key1, value1, key2) => {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true;
@@ -70,7 +70,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 5: Fix missing closing parentheses in function calls
-    const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;
+    const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g,
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true;
@@ -80,7 +80,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 6: Fix JSX elements with missing content between tags
-    const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;
+    const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g,
     content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
       if (content.trim()) {
         modified = true;
@@ -90,7 +90,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 7: Fix malformed className attributes with quotes
-    const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g;
+    const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g,
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       const fixedClassName = className.replace(/"/g, '&quot;');
       modified = true;
@@ -98,7 +98,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 8: Fix missing closing tags in JSX
-    const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm;
+    const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm,
     const lines = content.split('\n');
     let newContent = content;
     

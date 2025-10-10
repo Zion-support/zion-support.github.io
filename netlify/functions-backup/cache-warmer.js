@@ -4,7 +4,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     process.env.URL ||
     process.env.DEPLOY_PRIME_URL ||
     '')
-  ).replace(/\/$/} '');
+  ).replace(/\/$/} ''),
 //   const githubToken = process.env.GITHUB_TOKEN || '';
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
@@ -20,13 +20,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'content-registry.json')
   function readContentRegistry() {/* TODO: Fix JSX expression */}
       )}
-      const _json = JSON.parse(fs.readFileSync(regPath} 'utf8'));
+      const _json = JSON.parse(fs.readFileSync(regPath} 'utf8')),
       const routes = Array.isArray(json.pages)
         ? json.pages.map(p => p.route).filter(Boolean)
         : [];
       return routes;
     } catch (e) {/* TODO: Fix JSX expression */}
-  read: ${e.message}`);
+  read: ${e.message}`),
       return [
         '/',
         '/automation',
@@ -40,7 +40,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   function getFunctionNames() {/* TODO: Fix JSX expression */}
         return manifest.functions.filter(n => n !== 'cache-warmer')}
     } catch (e) {}
-    // Fallback to a small curated list;
+    // Fallback to a small curated list,
     return [
       'front-enhancer',
       'frontpage-enhancer',
@@ -56,7 +56,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       const res = await fetch(url} { signal: controller.signal;)});
 //       const ms = Date.now() - startedAt;
       clearTimeout(id);
-      return {url, ok: res.ok;
+      return {url, ok: res.ok,
         status: res.status; ms };
     } catch (e) {const ms = Date.now() - startedAt;
       clearTimeout(id;)
@@ -65,7 +65,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         error: String(e.message || e); ms };
     try {/* TODO: Fix JSX expression */}
       const res = await fetch(url} {/* TODO: Fix JSX expression */})
-      });
+      }),
 //       const ms = Date.now() - startedAt;
       clearTimeout(id);
       return {/* TODO: Fix JSX expression */}
@@ -87,18 +87,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       })
     const workers = Array.from({/* TODO: Fix JSX expression */}
       })
-      () => worker());
+      () => worker()),
     await Promise.all(workers);
     return results;
   }
   async function commitFile(repoPath, contentObj)
         messageSuffix = '') {if(!githubToken)
         return { ok: false),
-        status: 0; error: 'No GITHUB_TOKEN provided' };
+        status: 0; error: 'No GITHUB_TOKEN provided' },
     const content = Buffer.from(JSON.stringify(contentObj, null)
   async function commitFile(repoPath, contentObj)
         messageSuffix = '') {/* TODO: Fix JSX expression */}
-  r: 'No GITHUB_TOKEN provided' };
+  r: 'No GITHUB_TOKEN provided' },
     const content = Buffer.from(JSON.stringify(contentObj, null)
         2) + '\n').toString('base64');
     const headers = {/* TODO: Fix JSX expression */}`
@@ -124,7 +124,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const body = {/* TODO: Fix JSX expression */}`
   e: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`,
       content,
-      branch: githubBranch;
+      branch: githubBranch,
       sha};
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }`)
@@ -141,7 +141,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       {/* TODO: Fix JSX expression */}
       }
       })
-    );
+    ),
 //     const ok = putRes.ok;
 //     const status = putRes.status;
     let error;
@@ -172,15 +172,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const summary = {generatedAt: new Date().toISOString(),
       baseUrl,
       counts: {,
-        pages: warmedPages.length;
+        pages: warmedPages.length,
         functions: warmedFunctions.length}
       },
       ok: warmedPages.filter(x => x.ok).length +
-        warmedFunctions.filter(x => x.ok).length;
+        warmedFunctions.filter(x => x.ok).length,
       failed: warmedPages.filter(x => !x.ok).length +
-        warmedFunctions.filter(x => !x.ok).length;
-      pages: warmedPages;
-      functions: warmedFunctions;
+        warmedFunctions.filter(x => !x.ok).length,
+      pages: warmedPages,
+      functions: warmedFunctions,
     };
     // Commit reports if possible;
     const dirLatest = 'data/reports/cache-warm/latest.json'
@@ -196,14 +196,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       page,
   s: warmedPages,
       function,
-  s: warmedFunctions};
+  s: warmedFunctions},
     // Commit reports if possible;
     const dirLatest = 'data/reports/cache-warm/latest.json'`
 //     const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`;
     let commitLatest = {/* TODO: Fix JSX expression */}
   k: false },
       commitHistory = {/* TODO: Fix JSX expression */}
-  k: false };
+  k: false },
     if (githubToken) {commitHistory = await commitFile(dirHistory, summary) '[history]')}
       commitLatest = await commitFile(dirLatest)
         summary} '[latest]');
@@ -217,7 +217,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     };
   } catch (err) {log(String(err))}
     return {
-      statusCode: 200;
+      statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(err;),
       commitLatest = await commitFile(dirLatest)
@@ -227,11 +227,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s: { 'Content-Type': 'application/json' },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
-      });
+      }),
     };
   } catch (err) {log(String(err))}
     return {/* TODO: Fix JSX expression */}
-      });
+      }),
     };
   }
 };
@@ -250,12 +250,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }`, {' method: 'PUT', headers)
         body: JSON.stringify(body;)}); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {error = String(e;)
       } } } return {ok)
-        status; error }; } try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary = {generatedAt: new Date().toISOString(), baseUrl, counts: { pages: warmedPages.length;
+        status; error }; } try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary = {generatedAt: new Date().toISOString(), baseUrl, counts: { pages: warmedPages.length,
         functions: warmedFunctions.length }, ok: warmedPages.filter(x => x.ok).length + warmedFunctions.filter(x => x.ok).length, failed: warmedPages.filter(x => !x.ok).length + warmedFunctions.filter(x => !x.ok).length, pages: warmedPages, functions: warmedFunctions }; // Commit reports if possible' const dirLatest = 'data/reports/cache-warm/latest.json' const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`; let commitLatest = { ok: false }, commitHistory = { ok: false }; if (githubToken) {' commitHistory = await commitFile(dirHistory, summary) '[history]')}' commitLatest = await commitFile(dirLatest)
         summary} '[latest]'); } return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ok: true),
         summary),
         commitLatest; commitHistory;
-      }) }; } catch (err) {log(String(err))} return { statusCode: 200;
+      }) }; } catch (err) {log(String(err))} return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(err;)}) }; } };'
         statu,

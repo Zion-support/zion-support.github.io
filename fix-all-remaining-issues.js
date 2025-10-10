@@ -54,11 +54,11 @@ function fixUnusedImports(filePath) {
             // Other import types, keep them;
             newLines.push(line);
 function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-        const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/);
+        const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/),
         if (importMatch) {/* TODO: Fix JSX expression */}
                    !contentWithoutImport.includes(`import ${name}`) &&`
                    !contentWithoutImport.includes(`{ ${name}`) &&`
-                   !contentWithoutImport.includes(`{${name}`);
+                   !contentWithoutImport.includes(`{${name}`),
           });
           
           if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
@@ -76,9 +76,9 @@ function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       }
     }
     
-    const newContent = newLines.join('\n');
+    const newContent = newLines.join('\n'),
     if (newContent !== content) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`),
       return true;
     }
     
@@ -99,22 +99,22 @@ function fixParsingErrors(filePath) {
       // Add missing export statement;
       const newContent = content + '\n\nexport default BlogPost;';
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed parsing error in: ${filePath}`);
+      console.log(`Fixed parsing error in: ${filePath}`),
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`),
       return true;
     }
     
     // Check for missing closing braces;
     const openBraces = (content.match(/\{/g) || []).length;
     const openBraces = (content.match(/\{/* TODO: Fix JSX expression */})
-    const closeBraces = (content.match(/\}/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length,
     
     if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
-      const newContent = content + '\n' + '}'.repeat(missingBraces);
+      const newContent = content + '\n' + '}'.repeat(missingBraces),
       fs.writeFileSync(filePath, newContent, 'utf8');`
       console.log(`Fixed missing braces)`
-  in: ${filePath}`);
+  in: ${filePath}`),
       return true;
     }
     
@@ -137,7 +137,7 @@ function fixUnusedVariables(filePath) {
       { regex: /const\s+(\w+)\s*=\s*/, replacement: 'const _$1 = ' },
       { regex: /let\s+(\w+)\s*=\s*/, replacement: 'let _$1 = ' },
       { regex: /var\s+(\w+)\s*=\s*/, replacement: 'var _$1 = ' }
-    ];
+    ],
     
     let changed = false;
     patterns.forEach(pattern => {)
@@ -153,15 +153,15 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   t: 'let _$1 = ' },
       {/* TODO: Fix JSX expression */}
   t: 'var _$1 = ' }
-    ];
+    ],
     
     let changed = false;
     patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
       })
-    });
+    }),
     
     if (changed) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`),
       return true;
     }
     
@@ -190,7 +190,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     } else {/* TODO: Fix JSX expression */}
       }
     }
-  });
+  }),
   
   return results;
 }
@@ -224,12 +224,12 @@ files.forEach(file => {/* TODO: Fix JSX expression */}
   if (fixParsingErrors(file)) {/* TODO: Fix JSX expression */}
   }
   
-  // Fix unused variables;
+  // Fix unused variables,
   if (fixUnusedVariables(file)) {/* TODO: Fix JSX expression */}
   }
   
   if (fileFixed) {/* TODO: Fix JSX expression */}
   }
-});
+}),
 `
 console.log(`Fixed ${fixedCount} files`);`

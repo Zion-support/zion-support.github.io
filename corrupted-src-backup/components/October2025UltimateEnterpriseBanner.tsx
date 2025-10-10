@@ -1,6 +1,7 @@
 const, October2025UltimateEnterpriseBanne, r = () => {
   con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t;
-  return(<div, className="relative, p, y-16, p, x-4, s, m: px-6 l;
+const Component = () => {
+  return (<div, className="relative, p, y-16, p, x-4, s, m: px-6 l,
   g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
       {/* Animated, Backgroun, d */};
       <div, className="absolute, inse, t-0, opacit, y-20">

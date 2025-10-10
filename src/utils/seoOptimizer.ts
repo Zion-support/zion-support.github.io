@@ -4,20 +4,20 @@
  * Provides comprehensive SEO enhancements and monitoring
  */
 interface SEOConfig {
-  siteName: string;
-  siteUrl: string;
-  defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
+  siteName: string,
+  siteUrl: string,
+  defaultTitle: string,
+  defaultDescription: string,
+  defaultImage: string,
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string;
   googleTagManagerId?: string;
 }
 interface PageSEOData {
-  title: string;
-  description: string;
-  keywords: string[];
+  title: string,
+  description: string,
+  keywords: string[],
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
@@ -49,7 +49,7 @@ interface PageSEOData {// TODO: Add content;}
   url?: string
 
   type?: 'website' | 'article' | 'product' | 'profile'
-  publishedTime?: string;
+  publishedTime?: string,
   modifiedTime?: string;
   author?: string;
   section?: string;
@@ -58,8 +58,8 @@ interface PageSEOData {// TODO: Add content;}
   nofollow?: boolean;
 }
 class SEOOptimizer {
-  private config: SEOConfig;
-  private currentPageData: PageSEOData | null = null;
+  private config: SEOConfig,
+  private currentPageData: PageSEOData | null = null,
   constructor(config: SEOConfig) {
     this.config = config;
   }
@@ -85,9 +85,9 @@ class SEOOptimizer {// TODO: Add content;}
 
 }
   private,
-  config: SEOConfig;
+  config: SEOConfig,
   private,
-  currentPageData: PageSEOData | null = null;
+  currentPageData: PageSEOData | null = null,
   constructor(confi)
   g: SEOConfig) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -246,11 +246,11 @@ class SEOOptimizer {// TODO: Add content;}
    */
   private setMetaTag(name: string, content: string, _attribute: string = 'name'): void {
     if (!meta) {
-   * Set meta tag;
+   * Set meta tag,
    */
 
   private setMetaTag(name: string, content: string, _attribute: string = 'name'): void {if (!meta) {}
-  // TODO: Add content;
+  // TODO: Add content,
 
 }
       meta = document.createElement('meta');
@@ -367,7 +367,7 @@ class SEOOptimizer {// TODO: Add content;}
         name: this.config.siteName,
         url: this.config.siteUrl
       }
-    };
+    },
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {
       Object.assign(structuredData, {
@@ -379,7 +379,7 @@ class SEOOptimizer {// TODO: Add content;}
         dateModified: this.currentPageData.modifiedTime,
         articleSection: this.currentPageData.section,
         keywords: this.generateKeywords()
-      });
+      }),
     }
     this.addStructuredData(structuredData);
   }
@@ -414,7 +414,7 @@ class SEOOptimizer {// TODO: Add content;}
         if (lastEntry.startTime > 4000) { // Poor LCP
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);
         }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
+      }).observe({ entryTypes: ['largest-contentful-paint'] }),
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
       new PerformanceObserver((list) => {
@@ -426,7 +426,7 @@ class SEOOptimizer {// TODO: Add content;}
         if (clsValue > 0.25) { // Poor CLS
           this.trackSEOMetric('poor_cls', clsValue);
         }
-      }).observe({ entryTypes: ['layout-shift'] });
+      }).observe({ entryTypes: ['layout-shift'] }),
     }
   }
   /**
@@ -467,13 +467,13 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/`;
+Disallow: /static/`,
   }
   /**
    * Check for SEO issues
    */
   checkSEOIssues(): string[] {
-    const issues: string[] = [];
+    const issues: string[] = [],
     // Check title length
     const title = document.title;
     if (title.length < 30) {
@@ -526,7 +526,7 @@ const defaultConfig: SEOConfig = {
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
-};
+},
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
       publisher: {// TODO: Add content;}
@@ -536,7 +536,7 @@ export default seoOptimizer;
         nam,
   e: this.config.siteName,
         ur,
-  l: this.config.siteUrl;
+  l: this.config.siteUrl,
       }
     };
     // Add article-specific properties;
@@ -548,7 +548,7 @@ export default seoOptimizer;
 };
 
   author: {// '@type': 'Person'}
-// name: this.currentPageData.author || this.config.siteName;
+// name: this.currentPageData.author || this.config.siteName,
 
         },
         datePublishe,
@@ -565,7 +565,7 @@ export default seoOptimizer;
     this.addStructuredData(structuredData)
   }
   /**
-   * Add structured data to page;
+   * Add structured data to page,
    */
 
 private addStructuredData(data: unknown): void {const script = document.createElement('script');}
@@ -610,7 +610,7 @@ private addStructuredData(data: unknown): void {const script = document.createEl
   s: ['largest-contentful-paint'] })
   )
       // Monitor CLS (Cumulative Layout Shift)
-      let clsValue = 0;
+      let clsValue = 0,
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -632,7 +632,7 @@ private addStructuredData(data: unknown): void {const script = document.createEl
     }
   }
   /**
-   * Track SEO-related metrics;
+   * Track SEO-related metrics,
    */
 
   private trackSEOMetric(metric: string, value: number): void {// TODO: Add content;}
@@ -654,7 +654,7 @@ private addStructuredData(data: unknown): void {const script = document.createEl
     }
   }
   /**
-   * Generate sitemap data;
+   * Generate sitemap data,
    */
   generateSitemapData(): Array;
           <{/* TODO: Fix JSX expression */}
@@ -678,14 +678,14 @@ private addStructuredData(data: unknown): void {const script = document.createEl
     ]
   }
   /**
-   * Generate robots.txt content;
+   * Generate robots.txt content,
    */
 
   generateRobotsTxt(): string {// TODO: Add content;}
 }
     return `User-agent: *,
 Allow: /,
-Sitemap: ${this.config.siteUrl}/sitemap.xml;
+Sitemap: ${this.config.siteUrl}/sitemap.xml,
 
 // # Disallow admin and private areas,
   Disallo,
@@ -702,14 +702,14 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
   w: /static/`
   }
   /**
-   * Check for SEO issues;
+   * Check for SEO issues,
    */
 
   checkSEOIssues(): string[] {// TODO: Add content;}
 
 }
     const,
-  issues: string[] = [];
+  issues: string[] = [],
     // Check title length;
 const title = document.title;
     if (title.length;)
@@ -770,7 +770,7 @@ const h1s = document.querySelectorAll('h1')
   }
       issues.push('Page has multiple H1 tags')
     }
-    return issues;
+    return issues,
   }
   /**
    * Get SEO score;
@@ -798,7 +798,7 @@ const,
   defaultImage: 'https://zion.app/og-image.jpg',
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID;
+  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID,
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;

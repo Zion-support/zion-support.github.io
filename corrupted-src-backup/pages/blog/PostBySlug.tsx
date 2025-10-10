@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
-  const { slug } = useParams();
+  const { slug } = useParams(),
 
   // Mock data - in a real app, this would come from an API or CMS;
   const latestArticles = [
@@ -17,7 +17,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '8 min read',
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
-    }];
+    }],
 
   const blogPosts = [
     {
@@ -51,7 +51,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }];
+    }],
 
   const featuredPosts = [
     {
@@ -85,14 +85,16 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }];
+    }],
 
   // Find the current post;
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   );
 
   if (!currentPost) {
-    return(<div className="min-h-screen bg-gray-50">
+const Component = () => {
+    return (<div className="min-h-screen bg-gray-50">
+const Component = () => {
     return (
       <div className="min-h-screen bg-gray-50"></div>
         <Header />
@@ -111,8 +113,10 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       </div>)
     );
   }
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gray-50">
+  return (<div className="min-h-screen bg-gray-50">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gray-50"></div>
       <Header />
@@ -129,6 +133,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
               <span>{currentPost.author}</span>
   if (!currentPost) {/* TODO: Fix JSX expression */}
   }
+const Component = () => {
 
   return (<div className="min-h-screen bg-gray-50"></div>
       <Header /></Header>
@@ -138,7 +143,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           <div className="max-w-4xl mx-auto"></div>"
             <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}</div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-gray-900 mb-4"></h1>
+  md: text-5xl font-bold text-gray-900 mb-4"></h1>
               {currentPost.title}
             </h1>"
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>"
@@ -167,7 +172,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <div className="prose prose-lg max-w-none"></div>
               <h2>Introduction</h2>
               <p></p>
-                Welcome to our comprehensive guide on {currentPost.title}. This article will provide;
+                Welcome to our comprehensive guide on {currentPost.title}. This article will provide,
                 you with detailed insights, practical implementation strategies, and real-world;
                 examples to help you understand and leverage this cutting-edge technology.
               </p>
@@ -227,7 +232,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
               {featuredPosts.slice(0, 3).map((post, index) => (</div>
                 <div
                   key={index}
-                  className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow"
                 ></div>
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
@@ -237,7 +242,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                     <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <a;
+                  <a,
                     href={`/blog/${post.slug}`}
                     className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
                   >,
@@ -267,7 +272,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                   <a></a>
                     href={`/blog/${post.slug}`}"
                     className="text-blue-600 font-semibold,"
-  hover:text-blue-800 transition-colors"
+  hover: text-blue-800 transition-colors"
                   >
                     Read More →
                   </a>
@@ -278,6 +283,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
         </div>
       </div>
     </div>
-  );
+  ),
 }
 "`

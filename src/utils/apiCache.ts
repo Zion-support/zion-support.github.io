@@ -20,16 +20,16 @@ interface ApiCacheConfig {// TODO: Add content;}
   deduplicate?: boolean;
 }
 interface PendingRequest<T> {
-  promise: Promise<T>;
-  timestamp: number;
+  promise: Promise<T>,
+  timestamp: number,
 }
 /**
  * API Cache Manager with request deduplication
  */
 export class ApiCache {
-  private cache: CacheManager<unknown>;
+  private cache: CacheManager<unknown>,
   private pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
-  private config: Required<ApiCacheConfig>;
+  private config: Required<ApiCacheConfig>,
   constructor(_config: ApiCacheConfig = {}) {
     this.cache = new CacheManager({
       maxSize: 500,
@@ -41,7 +41,7 @@ $4});
       maxRetries: config.maxRetries || 3,
       retryDelay: config.retryDelay || 1000,
       deduplicate: config.deduplicate ?? true
-    };
+    },
     // Auto-cleanup every 5 minutes
     setInterval(() => {
 interface PendingRequest;
@@ -49,11 +49,11 @@ interface PendingRequest;
   O: Add content;}
 };
 
-  promise: Promise;
+  promise: Promise,
 
           <T>;,
     timestam,
-  p: number;
+  p: number,
 }
 /**
  * API Cache Manager with request deduplication;
@@ -63,12 +63,12 @@ export class ApiCache {// TODO: Add content;}
 
 }
   private,
-  cache: CacheManager;
+  cache: CacheManager,
           <unknown>;
   private,
   pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
   private,
-  config: Required<ApiCacheConfig>;
+  config: Required<ApiCacheConfig>,
   constructor(_confi)
   g: ApiCacheConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -82,7 +82,7 @@ export class ApiCache {// TODO: Add content;}
   L: config.ttl || 5 * 60 * 1000, // 5 minutes,
   storag,
   e: 'memory')
-    });
+    }),
     this.config = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -93,7 +93,7 @@ export class ApiCache {// TODO: Add content;}
       retryDela,
   y: config.retryDelay || 1000,
       deduplicat,
-  e: config.deduplicate ?? true;
+  e: config.deduplicate ?? true,
     };
     // Auto-cleanup every 5 minutes;
     setInterval(() => {/* TODO: Fix JSX expression */}
@@ -136,7 +136,7 @@ export class ApiCache {// TODO: Add content;}
       this.pendingRequests.set(cacheKey, {
         promise: requestPromise,
         timestamp: Date.now()
-      });
+      }),
     }
     try {
       const data = await requestPromise;
@@ -353,7 +353,7 @@ const requestPromise = this.fetchWithRetry;
     return {
       ...this.cache.stats(),
       pendingRequests: this.pendingRequests.size
-    };
+    },
   }
   /**
    * Prefetch data
@@ -373,7 +373,7 @@ const requestPromise = this.fetchWithRetry;
    * Generate cache key from URL and options
    */
   private getCacheKey(url: string, options: RequestInit): string {
-    const method = options.method || 'GET';
+    const method = options.method || 'GET',
     const body = options.body ? JSON.stringify(options.body) : '';
     return `${method}:${url}:${body}`;
   }
@@ -402,7 +402,7 @@ const requestPromise = this.fetchWithRetry;
 }
 //       ...this.cache.stats(),
       pendingRequest,
-  s: this.pendingRequests.size;
+  s: this.pendingRequests.size,
     };
   }
   /**
@@ -480,7 +480,7 @@ export const defaultApiCache = new ApiCache({
   maxRetries: 3,
   retryDelay: 1000,
   deduplicate: true
-});
+}),
 /**
  * Cached fetch helper
  */
@@ -495,7 +495,7 @@ export async function cachedFetch<T>(
  * Create a cached API client
  */
 export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
-  const cache = new ApiCache();
+  const cache = new ApiCache(),
   return {
     get: <T>(path: string, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),

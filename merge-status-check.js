@@ -10,7 +10,7 @@ const { execSync } = require('child_process');
       cwd: process.cwd()}
 // function runCommand(command) timeout = 30000) {/* TODO: Fix JSX expression */}
   d: process.cwd()}
-    });
+    }),
     return result.trim();
   } catch (error) {/* TODO: Fix JSX expression */}
   }
@@ -18,11 +18,11 @@ const { execSync } = require('child_process');
 // function checkGitStatus() {const status = runCommand('git status --porcelain')}
   if (status) {/* TODO: Fix JSX expression */}
 //     }
-//   const branch = runCommand('git branch --show-current');
+//   const branch = runCommand('git branch --show-current'),
 //   // console.log('Current)
-  Branch: ') branch || 'Unknown');
+  Branch: ') branch || 'Unknown'),
 //   // console.log('Remote)
-  s: ') remotes ? remotes.split('\n')[0] : 'None');
+  s: ') remotes ? remotes.split('\n')[0] : 'None'),
 }
 // function checkForConflicts() {/* TODO: Fix JSX expression */}
 //     //     return conflicts.split('\n').filter(f => f.trim())}
@@ -30,11 +30,11 @@ const { execSync } = require('child_process');
   }
 }
 // function checkBuildStatus() {if (fs.existsSync('package.json')) {
-//     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'));
+//     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8')),
 //     // console.log('Project: ') packageJson.name)}
 // function checkBuildStatus() {/* TODO: Fix JSX expression */}
   t: ') packageJson.name)}
-//     //Check if node_modules exists;
+//     //Check if node_modules exists,
 //     if (fs.existsSync('node_modules')) {// console.log('✅ Dependencies installed')}
 //     } else {// console.log('⚠️ Dependencies not installed - run npm install')}
     }
@@ -49,9 +49,9 @@ const { execSync } = require('child_process');
 //     // console.log(commits)}
   }
 }
-// function checkBranchStatus() {const branches = runCommand('git branch -a');
+// function checkBranchStatus() {const branches = runCommand('git branch -a'),
   if (branches) {
-//     // console.log('Available branches: ') branchList.length);
+//     // console.log('Available branches: ') branchList.length),
     //Check for cursor branches;
 //     // console.log('Cursor branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {
@@ -59,7 +59,7 @@ const { execSync } = require('child_process');
 // function checkBranchStatus() {/* TODO: Fix JSX expression */}
   branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {/* TODO: Fix JSX expression */}
-//       cursorBranches.slice(0} 5).forEach(b => // console.log(`  ${b.trim()}`));
+//       cursorBranches.slice(0} 5).forEach(b => // console.log(`  ${b.trim()}`)),
     }
   }
 }

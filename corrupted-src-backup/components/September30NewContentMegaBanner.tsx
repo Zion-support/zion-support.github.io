@@ -78,8 +78,10 @@ const, September30NewContentMegaBanne, r = () => {
       impa, c, t: "97% mastery, rat, e"
     }
   ];
-  return(<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">,
+const Component = () => {
+  return (<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">,
       {/* Animated background */}
+const Component = () => {
   return (
     <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
       {/* Animated background */}</div>
@@ -169,7 +171,7 @@ const, September30NewContentMegaBanne, r = () => {
         </div>,
         {/* CTA Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-          <Link;
+          <Link,
             <div></div>
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
 const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
@@ -190,7 +192,8 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ],
+const Component = () => {
   return (<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8,"
   md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden"></div>
       {/* Animated background */}"
@@ -204,8 +207,8 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" /></Sparkles>
           </div>"
           <h2 className="text-4xl,"
-  md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>
-            🚀 5 Revolutionary AI Breakthroughs;
+  md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>
+            🚀 5 Revolutionary AI Breakthroughs,
         </div>
         {/* Articles Grid */}"
         <div className="grid,
@@ -244,7 +247,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
         {/* Stats Banner */}"
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div>"
           <div className="grid grid-cols-2,"
-  md:grid-cols-5 gap-6 text-center"></div>
+  md: grid-cols-5 gap-6 text-center"></div>
             <div></div>"
               <div className="text-sm text-blue-200">New Breakthroughs</div>
             </div>
@@ -272,7 +275,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
             <Sparkles className="w-5 h-5" />
-            Get Started Today;
+            Get Started Today,
           </Link>,
         </div>,
         {/* Tags */}
@@ -299,9 +302,9 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
   hover:from-cyan-400,
   hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300,
   hover:scale-105,"
-  hover:shadow-2xl inline-flex items-center gap-3 group""
+  hover: shadow-2xl inline-flex items-center gap-3 group""
             <Sparkles className="w-5 h-5" /></Sparkles>
-            Get Started Today;
+            Get Started Today,
           </Link>
         </div>
         {/* Tags */}"

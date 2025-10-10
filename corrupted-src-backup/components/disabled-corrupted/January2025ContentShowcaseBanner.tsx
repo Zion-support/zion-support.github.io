@@ -1,6 +1,7 @@
 import React from 'react';
 const January2025ContentShowcaseBanne, r: React.FC = () => { ,
-  return()
+const Component = () => {
+  return ()
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' })
       {/* Animated, Backgroun, d */})
       <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" />
@@ -9,6 +10,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
         <div, className='te, x, t-center, m, b-16'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-400, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-medium, m, b-8'>
 const January2025ContentShowcaseBanne, r: React.FC = () => { 
+const Component = () => {
   return (
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
       {/* Animated, Backgroun, d */}</div>

@@ -14,8 +14,8 @@ interface LinkProps {}
 export const Link: React.FC<LinkProps>= ({
 export const Link: React.FC<LinkProps> = ({}
   href,
-  href: string;
-  children: React.ReactNode;
+  href: string,
+  children: React.ReactNode,
   className?: string;
   target?: string;
   rel?: string;
@@ -44,9 +44,11 @@ export const Link: React.FC<LinkProps> = ({,
       window.location.href = href;}
     }
   }</LinkProps>
+const Component = () => {
   return (<a
   }
-  return(<a;
+const Component = () => {
+  return (<a;
 import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
@@ -54,10 +56,11 @@ export const,
   Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-    // Handle internal navigation;
+    // Handle internal navigation,
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
-  };
+  },
+const Component = () => {
   return (<a></a>
       href={href}
       className={className}

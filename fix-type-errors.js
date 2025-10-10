@@ -45,7 +45,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('<Link') && content.includes('href=')) {/* TODO: Fix JSX expression */}
     }
 
-    // Fix dynamic imports from Next.js to React lazy;
+    // Fix dynamic imports from Next.js to React lazy,
     if (content.includes('dynamic(')) {/* TODO: Fix JSX expression */}"
       if (!content.includes("import { lazy } from 'react';")) {/* TODO: Fix JSX expression */}"
           "import React, { lazy } from 'react';"
@@ -76,19 +76,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Process all files;
+// Process all files,
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
-});
+}),
 
 // 
 }}}}}}}}}}"

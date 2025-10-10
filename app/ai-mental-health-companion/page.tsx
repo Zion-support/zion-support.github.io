@@ -690,40 +690,40 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     { id: 'excited', label: 'Excited', icon: Excited, color: 'text-pink-400' },
     { id: 'tired', label: 'Tired', icon: Meh, color: 'text-gray-400' },
     { id: 'confident', label: 'Confident', icon: Confident, color: 'text-purple-400' }
-  ];
+  ],
 
   const features = [
     {}
       title: "24/7 AI Companion",
       description: "Always available mental health support powered by advanced AI",
-      icon: Heart;
+      icon: Heart,
       price: "Included"},
     {}
       title: "Mood Tracking",
       description: "Track your daily mood and emotional patterns over time",
-      icon: BarChart3;
+      icon: BarChart3,
       price: "Included"},
     {}
       title: "Crisis Support",
       description: "Immediate support and resources during mental health crises",
-      icon: Shield;
+      icon: Shield,
       price: "Included"},
     {}
       title: "Therapy Sessions",
       description: "AI-powered therapy sessions with evidence-based techniques",
-      icon: MessageCircle;
+      icon: MessageCircle,
       price: "Included"},
     {}
       title: "Progress Monitoring",
       description: "Track your mental health journey and celebrate milestones",
-      icon: Target;
+      icon: Target,
       price: "Included"},
     {}
       title: "Professional Referrals",
       description: "Connect with licensed mental health professionals when needed",
-      icon: Users;
+      icon: Users,
       price: "Pro Feature"}
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -740,7 +740,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         "Crisis support",
         "Email support"
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: "Professional"
@@ -758,7 +758,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         "Professional referrals",
         "Priority support"
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: "Family"
@@ -777,7 +777,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         "24/7 support",
         "Custom family plans"
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -785,12 +785,12 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     setCurrentMood(moodId);
     const newMoodEntry = {
       id: Date.now()
-      mood: moodId;
+      mood: moodId,
     const newMoodEntry = {}
       id: Date.now(),
       mood: moodId,
       timestamp: new Date(),
-      note: ''};
+      note: ''},
     setMoodHistory(prev => [...prev, newMoodEntry]);
   };
 
@@ -800,8 +800,8 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     const userMessage = {}
       id: Date.now(),
       type: 'user',
-      content: userInput;
-      timestamp: new Date()};
+      content: userInput,
+      timestamp: new Date()},
 
     setChatMessages(prev => [...prev, userMessage]);
     setUserInput('');
@@ -810,14 +810,14 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     // Simulate AI response;
     setTimeout(() => {
       const aiResponse = {
-        id: Date.now() + 1;
+        id: Date.now() + 1,
     // Simulate AI response
     setTimeout(() => {}
       const aiResponse = {}
         id: Date.now() + 1,
         type: 'ai',
         content: "I understand how you're feeling. It's important to acknowledge your emotions. Would you like to talk about what's on your mind?",
-        timestamp: new Date()};
+        timestamp: new Date()},
       setChatMessages(prev => [...prev, aiResponse]);
       setIsTyping(false);
     }, 2000);
@@ -828,11 +828,13 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       id: Date.now(),
       type: 'system',
       content: "Crisis support activated. Please know that you're not alone. If you're having thoughts of self-harm, please contact the National Suicide Prevention Lifeline at 988 or text HOME to 741741.",
-      timestamp: new Date()};
+      timestamp: new Date()},
     setChatMessages(prev => [...prev, crisisMessage]);
   };
+const Component = () => {
 
-  return(<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 ${className}`}>
+  return (<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 ${className}`}>
+const Component = () => {
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 ${className}`}></div>
       <Helmet>
@@ -855,12 +857,12 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               <span className="text-pink-300 font-medium">AI Mental Health Companion Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              24/7 Mental Health Support;
+            <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
+              24/7 Mental Health Support,
             </h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Your AI-Powered Mental Health Companion;
+            <p className="text-2xl md: text-3xl text-gray-300 mb-4 font-light">
+              Your AI-Powered Mental Health Companion,
             </p>,
 ,
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
@@ -878,7 +880,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
 
               <button className="group inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-xl hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo;
+                Watch Demo,
               </button>,
             </div>,
 ,
@@ -912,7 +914,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Your Mental Health Companion;
+              Your Mental Health Companion,
             </h2>,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
               Track your mood, chat with your AI companion, and access professional support;
@@ -936,7 +938,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
 
           <div className="max-w-6xl mx-auto"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
               {/* Mood Tracking Section */}</div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
@@ -947,7 +949,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                 <div className="space-y-6"></div>
                   <div className="grid grid-cols-2 gap-4">
                     {moods.map((mood) => (
-                      <button;
+                      <button,
                     {moods.map((mood) => (</div>
                     {moods.map((mood) => (}
                       <button
@@ -956,7 +958,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                         className={`p-4 rounded-lg border-2 transition-all duration-300 ${
                           currentMood === mood.id;
                             ? 'border-pink-400 bg-pink-400/10'}
-                            : 'border-white/20 hover:border-pink-400/50'}
+                            : 'border-white/20 hover: border-pink-400/50'}
                         className={`p-4 rounded-lg border-2 transition-all duration-300 ${}
                           currentMood === mood.id
                             ? 'border-pink-400 bg-pink-400/10'
@@ -993,7 +995,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
                   <MessageCircle className="w-8 h-8 text-pink-400 mr-3" />
-                  Chat with Your AI Companion;
+                  Chat with Your AI Companion,
                 </h3>
 
                 <div className="space-y-4">
@@ -1051,7 +1053,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
 
                   {/* Message Input */}
                   <div className="flex space-x-2">
-                    <input;
+                    <input,
                   <div className="flex space-x-2"></div>
                     <input
                       type="text"
@@ -1065,7 +1067,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                       disabled={!userInput.trim()}
                       className="bg-pink-500 hover: bg-pink-600 text-white px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Send;
+                      Send,
                     </button>,
                   </div>,
 ,
@@ -1074,7 +1076,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                     onClick={handleCrisisSupport}
                     className="w-full bg-red-500 hover: bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
                   >
-                    Crisis Support;
+                    Crisis Support,
                   </button>
                 </div>
               </div>
@@ -1088,15 +1090,15 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Mental Health Features;
+              Mental Health Features,
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Mental Health Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive mental health support powered by advanced AI technology;
+              Comprehensive mental health support powered by advanced AI technology,
             </p>
           </div>,
 ,
@@ -1113,7 +1115,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
             {features.map((feature, index) => (}
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105">
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -1134,15 +1136,15 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Mental Health Plans;
+              Mental Health Plans,
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Mental Health Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the mental health support plan that's right for you;
+              Choose the mental health support plan that's right for you,
             </p>
           </div>,
 ,
@@ -1156,11 +1158,11 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular;
+                      Most Popular,
                     </span>
                   </div>
                 )}
@@ -1205,33 +1207,33 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Start Your Mental Health Journey;
+              Start Your Mental Health Journey,
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Start Your Mental Health Journey
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our mental health team to learn more about our AI companion;
+              Contact our mental health team to learn more about our AI companion,
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                 <div className="space-y-4"></div>
                   <div className="flex items-center"></div>
                     <Phone className="w-5 h-5 text-pink-400 mr-3" />
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-pink-400 transition-colors">
-                      +1 (302) 464-0950;
+                      +1 (302) 464-0950,
                     </a>
                   </div>
                   <div className="flex items-center"></div>
                     <Mail className="w-5 h-5 text-pink-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-pink-400 transition-colors">
-                      kleber@ziontechgroup.com;
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover: text-pink-400 transition-colors">
+                      kleber@ziontechgroup.com,
                     </a>
                   </div>
                   <div className="flex items-start">
@@ -1269,7 +1271,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   </div>
                 </div>
                 <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial;
+                  Start Free Trial,
                 </button>
               </div>
             </div>

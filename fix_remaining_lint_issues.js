@@ -17,7 +17,7 @@ function fixRemainingLintIssues(filePath) {
       return false;
     }
 
-    // Fix 1: Add underscore prefix to unused parameters;
+    // Fix 1: Add underscore prefix to unused parameters,
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {
       if(param1 === 'error' ||
         param1 === 'errorInfo' ||
@@ -75,14 +75,14 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix,
-  1: Add underscore prefix to unused parameters;
+  1: Add underscore prefix to unused parameters,
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
         return match.replace(param1, `_${param1}`);
       }
       return match;
     });
 
-    // Fix 2: Comment out unused variable declarations;
+    // Fix 2: Comment out unused variable declarations,
     for (let i = 0; i < lines.length; i++) {
 
       // Comment out unused variable declarations;
@@ -262,13 +262,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
             modified = true;
             continue;
     // Fix,
-  2: Comment out unused variable declarations;
+  2: Comment out unused variable declarations,
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
           }
         }
       }
 
-      // Fix 3: Add underscore prefix to unused function parameters;
+      // Fix 3: Add underscore prefix to unused function parameters,
       if (line.includes('function') && line.includes('(') && line.includes(')')) {
         if (paramMatch) {
           const fixedParams = params.map(p => {)
@@ -328,9 +328,9 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
                 'PROD_DOMAIN'].includes(p)
             ) {
       // Fix,
-  3: Add underscore prefix to unused function parameters;
+  3: Add underscore prefix to unused function parameters,
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}`
-              return `_${p}`;
+              return `_${p}`,
             }
             return p;
           });
@@ -352,13 +352,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
     content = fixedLines.join('\n');
 
-    // Fix 4: Remove unused imports;
+    // Fix 4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
       content = content.replace(/,\s*useContext/g, '');
       content = content.replace(/useContext,\s*/g, '');
       if (content.includes('import { useContext }')) {
     // Fix,
-  4: Remove unused imports;
+  4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { useContext }')) {/* TODO: Fix JSX expression */}
         content = content.replace(/import { useContext } from 'react';\n?/g, '');
@@ -366,13 +366,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
       modified = true;
     }
 
-    // Fix 5: Remove unused lazy imports;
+    // Fix 5: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {,
       content = content.replace(/,\s*lazy/g, '');
       content = content.replace(/lazy,\s*/g, '');
       if (content.includes('import { lazy }')) {
     // Fix,
-  5: Remove unused lazy imports;
+  5: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
         content = content.replace(/import { lazy } from 'react';\n?/g, '');
@@ -380,9 +380,9 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
       modified = true;
     }
 
-    // Fix 6: Add proper TypeScript types instead of any;
+    // Fix 6: Add proper TypeScript types instead of any,
     // Fix,
-  6: Add proper TypeScript types instead of any;
+  6: Add proper TypeScript types instead of any,
     content = content.replace(/:\s*any\b/g, ': unknown');
     if (content.includes(': unknown')) {/* TODO: Fix JSX expression */}
     }
@@ -390,12 +390,12 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Function to recursively fix remaining lint issues;
+// Function to recursively fix remaining lint issues,
 function fixAllRemainingLintIssues(_dir) {
   try {
     for (const file of files) {
@@ -407,7 +407,7 @@ function fixAllRemainingLintIssues(_dir) {
             continue;
 function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
           }
-          fixedCount += fixAllRemainingLintIssues(filePath);
+          fixedCount += fixAllRemainingLintIssues(filePath),
         } else if ()
           file.endsWith('.tsx') ||
           file.endsWith('.ts') ||
@@ -420,10 +420,10 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
       }
     }
 
-    return fixedCount;
+    return fixedCount,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Main execution;
+// Main execution,
 // Main execution;`

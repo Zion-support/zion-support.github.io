@@ -42,8 +42,8 @@ const createRobotsTxt = () => {
   const robotsContent = `User-agent: *
 Allow: /
 
-# Sitemap;
-Sitemap: https://ziontechgroup.com/sitemap.xml;
+# Sitemap,
+Sitemap: https://ziontechgroup.com/sitemap.xml,
 # Crawl-delay;
 Crawl-delay: 1;
 # Disallow admin areas;
@@ -52,15 +52,15 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
 
-# Allow important pages;
-Allow: /ai-services;
-Allow: /it-services;
-Allow: /micro-saas;
-Allow: /about;
-Allow: /contact;
-Allow: /pricing;
-Allow: /case-studies;
-Allow: /blog`;
+# Allow important pages,
+Allow: /ai-services,
+Allow: /it-services,
+Allow: /micro-saas,
+Allow: /about,
+Allow: /contact,
+Allow: /pricing,
+Allow: /case-studies,
+Allow: /blog`,
 ,
   const robotsPath = path.join(__dirname, '..', 'public', 'robots.txt');
   fs.writeFileSync(robotsPath, robotsContent);
@@ -139,7 +139,7 @@ main();
 // Performance optimization script;
 function optimizePerformance() {/* TODO: Fix JSX expression */}
 }
-  console.log('🚀 Starting performance optimization...');
+  console.log('🚀 Starting performance optimization...'),
   
   // 1. Optimize images;
   console.log('📸 Optimizing images...');
@@ -169,7 +169,7 @@ function optimizeImages() {/* TODO: Fix JSX expression */}
   if (!fs.existsSync(publicDir)) {/* TODO: Fix JSX expression */}
   }
   
-  const files = getAllFiles(publicDir);
+  const files = getAllFiles(publicDir),
   const imageFiles = files.filter(file => )
     imageExtensions.some(ext => file.toLowerCase().endsWith(ext))
   );
@@ -230,14 +230,14 @@ function generatePerformanceReport() {/* TODO: Fix JSX expression */}
   const reportPath = path.join(__dirname, '../performance-report.json');
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`
   console.log(`Performance report)`
-  generated: ${reportPath}`);
+  generated: ${reportPath}`),
 }
 
 // Helper function to get all files recursively;
 function getAllFiles(dir, fileList = []) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
   
   return fileList;
 }

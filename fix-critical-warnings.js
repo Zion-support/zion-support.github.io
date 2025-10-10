@@ -17,7 +17,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   }
   
-  return files;
+  return files,
 }
 
 // Fix console statements by removing them;
@@ -38,10 +38,10 @@ function fixUnusedImports(content) {
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
 
-// Fix unused imports by removing them;
+// Fix unused imports by removing them,
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
   
   // Remove unused import lines;
   const filteredLines = lines.filter(line => {)
@@ -96,7 +96,7 @@ function main() {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
 
 }
 

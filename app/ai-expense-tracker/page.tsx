@@ -13,34 +13,34 @@ const AIExpenseTracker: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Receipt;
+      icon: Receipt,
     {}
       icon: Receipt,
       title: 'Smart Receipt Scanning',
       description: 'Automatically extract data from receipts using AI-powered OCR technology with 99% accuracy',
       color: 'text-purple-400'},
     {
-      icon: Brain;
+      icon: Brain,
     {}
       icon: Brain,
       title: 'AI Categorization',
       description: 'Intelligently categorize expenses and learn from your spending patterns over time',
       color: 'text-blue-400'},
     {
-      icon: BarChart;
+      icon: BarChart,
     {}
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Get detailed insights into your spending habits with beautiful charts and reports',
       color: 'text-green-400'},
     {
-      icon: Target;
+      icon: Target,
     {}
       icon: Target,
       title: 'Budget Management',
       description: 'Set budgets, track progress, and get alerts when approaching limits',
       color: 'text-orange-400'}
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -59,7 +59,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
         '1 user account'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
       name: 'Business'
@@ -78,7 +78,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
         '5 user accounts'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -97,7 +97,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
         'Unlimited users'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -105,33 +105,35 @@ const AIExpenseTracker: React.FC = memo(() => {}
     {}
       title: 'Personal Finance',
       description: 'Track personal expenses and build better financial habits',
-      icon: Receipt;
+      icon: Receipt,
       result: '30% savings'},
     {}
       title: 'Business Expenses',
       description: 'Manage business expenses and improve cash flow visibility',
-      icon: BarChart;
+      icon: BarChart,
       result: '50% faster'},
     {}
       title: 'Tax Preparation',
       description: 'Organize receipts and expenses for easy tax filing',
-      icon: Target;
+      icon: Target,
       result: '90% easier'},
     {}
       title: 'Team Management',
       description: 'Track team expenses and enforce spending policies',
-      icon: Users;
+      icon: Users,
       result: '100% control'}
-  ];
+  ],
 
   const benefits = [
     { metric: '99%', label: 'OCR Accuracy', color: 'text-green-400' },
     { metric: '5 min', label: 'Setup Time', color: 'text-blue-400' },
     { metric: '30%', label: 'Time Saved', color: 'text-purple-400' },
     { metric: '24/7', label: 'Available', color: 'text-orange-400' }
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -161,7 +163,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
           </div>
 
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            AI Expense Tracker;
+            AI Expense Tracker,
           </h1>)
 )
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
@@ -170,8 +172,8 @@ const AIExpenseTracker: React.FC = memo(() => {}
           </p>
 
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -181,13 +183,13 @@ const AIExpenseTracker: React.FC = memo(() => {}
             >Start Tracking</a>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="/contact"
-              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
             >
-              Start Tracking;
+              Start Tracking,
             </a>
           </div>,
         </section>,
@@ -286,11 +288,11 @@ const AIExpenseTracker: React.FC = memo(() => {}
             {pricingPlans.map((plan, index) => (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover: border-purple-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular,
                     </div>
                   </div>
                 )}
@@ -327,7 +329,7 @@ const AIExpenseTracker: React.FC = memo(() => {}
                   }`}
                 >Get Started</a>
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -339,8 +341,8 @@ const AIExpenseTracker: React.FC = memo(() => {}
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Simplify Your Finances?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 10,000+ users already saving time and money with our AI Expense Tracker.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -353,14 +355,14 @@ const AIExpenseTracker: React.FC = memo(() => {}
             </MessageSquare>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
       >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Email Us;
+              Email Us,
             </a>
           </div>
         </section>

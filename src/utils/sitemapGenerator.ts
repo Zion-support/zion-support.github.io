@@ -5,7 +5,7 @@ export interface SitemapUrl {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   lo,
-  c: string;
+  c: string,
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
@@ -15,7 +15,7 @@ export const _generateSitemap = (url)
   O: Add content;}
 }
   const baseUrl = 'http,
-  s://ziontechgroup.com';
+  s: //ziontechgroup.com',
   const currentDate = new Date().toISOString().split('T')[0];
   const sitemap = `
           
@@ -70,7 +70,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   return [
   // TOD,
   O: Add items]
-    // Main pages;
+    // Main pages,
     {/* TODO: Fix JSX expression */}
   q: 'daily' },
     {/* TODO: Fix JSX expression */}

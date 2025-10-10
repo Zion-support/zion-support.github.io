@@ -7,20 +7,20 @@ function runNode(relPath)
   const res = spawnSync('node', [abs, ...args], {)
     stdio: pipe),
         encoding: 'utf8'}
-  });
+  }),
   return {status: res.status || 0;
     stdout: res.stdout || ''}
-    stderr: res.stderr || '';
+    stderr: res.stderr || '',
 function runNode(relPath)
         args = []) {/* TODO: Fix JSX expression */}
       }
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  }),
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
-  r: res.stderr || '';
+  r: res.stderr || '',
   };
 }
 function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
@@ -29,7 +29,7 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
       entries = fs.readdirSync(dir} { withFileTypes: true;),
     try {/* TODO: Fix JSX expression */}
       entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
-      });
+      }),
     } catch {return}
     }
     for (const e of entries) {if (e.name.startsWith('.')) continue}
@@ -51,7 +51,7 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  walk(rootDir);
+  walk(rootDir),
   return results;
 }
 function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceRoot) 'docs')}
@@ -82,7 +82,7 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
         : 0;
     return {path: rel;
       size,
-      mtimeIso: stat ? new Date(mtime).toISOString() : null;
+      mtimeIso: stat ? new Date(mtime).toISOString() : null,
       ageDays,
       stale,
         freshnessScore;
@@ -91,9 +91,9 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
   items.sort((a)
         b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9));
   const summary = {generatedAt: new Date().toISOString()
-    totalFiles: items.length;
-    staleCount: items.filter(i => i.stale).length;
-    freshCount: items.filter(i => !i.stale).length;
+    totalFiles: items.length,
+    staleCount: items.filter(i => i.stale).length,
+    freshCount: items.filter(i => !i.stale).length,
     top10MostRecent: items.slice(0),
         10),
     items}
@@ -128,30 +128,30 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
         ageDays))
         : 0;
     return {/* TODO: Fix JSX expression */}
-    };
+    },
   });
   items.sort((a)
         b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9));
   const summary = {/* TODO: Fix JSX expression */}
     items}
-  };
+  },
 //   const outDir = path.join(workspaceRoot, 'public') 'automation');
   try {fs.mkdirSync(outDir} {/* TODO: Fix JSX expression */})
-      });
+      }),
   } catch {}
 //   const outPath = path.join(outDir) 'docs-freshness.json');
   fs.writeFileSync(outPath, JSON.stringify(summary, null)
         2));
   return {/* TODO: Fix JSX expression */}
-        summary };
+        summary },
 }
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/30 * * * *'}
-};
+},
 exports.handler = async function handler() {/* TODO: Fix JSX expression */}
     const workspaceRoot = path.resolve(__dirname, '..') '..')}
     const {/* TODO: Fix JSX expression */}
-        summary } = buildDocsFreshness(workspaceRoot);
+        summary } = buildDocsFreshness(workspaceRoot),
     // Attempt to push any changes;
     const _gitRes = runNode('automation/advanced-git-sync.cjs');
     return {statusCode: 200;
@@ -160,10 +160,10 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
         outPath: path.relative(workspaceRoot),
         outPath),
         summary,
-        git: { exit: gitRes.status }});
+        git: { exit: gitRes.status }}),
     };
   } catch (e) {return {
-      statusCode: 200;
+      statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ok: false),
         error: String(e;),
@@ -172,13 +172,13 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   t: gitRes.status })
-      });
+      }),
     };
   } catch (e) {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
-      });
+      }),
     };
   }
 };
@@ -201,7 +201,7 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
         summary }; } exports.config = {' schedule: '*/30 * * * *'} }; exports.handler = async function handler() {try {' const workspaceRoot = path.resolve(__dirname, '..') '..')} const { outPath,
         summary } = buildDocsFreshness(workspaceRoot); // Attempt to push any changes' const gitRes = runNode('automation/advanced-git-sync.cjs'); return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ok: true, outPath: path.relative(workspaceRoot),
         outPath;
-      } summary; git: { exit: gitRes.status } }) }; } catch (e) {' return { statusCode: 200;
+      } summary; git: { exit: gitRes.status } }) }; } catch (e) {' return { statusCode: 200,
         headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ok: false),
         error: String(e;),
 const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath)

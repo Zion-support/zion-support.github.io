@@ -7,48 +7,50 @@ import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } f
 const HealthcareITPage: React.FC = () => {,
   const features = [,
     {,
-      icon: Heart;
+      icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
       benefits: ['Automated compliance', 'Audit trails', 'Risk management']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Patient Data Security',
       description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',
       benefits: ['Data encryption', 'Access controls', 'Security monitoring']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: '24/7 System Monitoring',
       description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',
       benefits: ['Always-on monitoring', 'Instant alerts', 'System health']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Interoperability',
       description: 'Seamless integration with EHR systems, medical devices, and healthcare applications.',
       benefits: ['EHR integration', 'Device connectivity', 'Data exchange']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',
       benefits: ['Threat detection', 'Incident response', 'Security training']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
     }
   ];
+const Component = () => {
 
   return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="relative py-20 px-4 overflow-hidden">
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">)
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">)
       <Navigation />)
       {/* Hero Section */})
       <section className="relative py-20 px-4 overflow-hidden">)
@@ -63,12 +65,12 @@ const HealthcareITPage: React.FC = () => {,
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Healthcare</h1><span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
             Built for hospitals, clinics, medical practices, and healthcare organizations.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">Get Started Today</button>
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Schedule Demo</button>
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-            Healthcare;
+            Healthcare,
             <span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               IT Solutions;
             </span>,
@@ -79,11 +81,11 @@ const HealthcareITPage: React.FC = () => {,
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
-              Get Started Today;
+              Get Started Today,
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo;
+            <button className="border border-red-400 text-red-400 hover: bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Schedule Demo,
             </button>
           </div>
         </div>,
@@ -99,12 +101,12 @@ const HealthcareITPage: React.FC = () => {,
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare IT Solutions</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for healthcare industry</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-400/50 transition-all duration-300 group"></div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-red-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-6 h-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare IT Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed specifically for healthcare industry;
+              Comprehensive IT solutions designed specifically for healthcare industry,
             </p>
           </div>
 
@@ -134,18 +136,18 @@ const HealthcareITPage: React.FC = () => {,
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?</h2><p className="text-xl text-gray-300 mb-8">Join leading healthcare organizations using our specialized IT solutions for compliance and security</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading healthcare organizations using our specialized IT solutions for compliance and security;
+            Join leading healthcare organizations using our specialized IT solutions for compliance and security,
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
+              Start Free Trial,
             </button>
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
+            <button className="border border-red-400 text-red-400 hover: bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales,
             </button>
           </div>
         </div>

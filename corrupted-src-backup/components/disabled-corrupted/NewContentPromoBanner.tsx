@@ -32,11 +32,13 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     {/* TODO: Fix JSX expression */}
     }
   ]; if (isDismiss, e, d) return, nul, l;
-  return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
+const Component = () => {
+  return (<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" />
+const Component = () => {
   return (
     <div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}</div>
@@ -69,6 +71,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                   >
                     <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>
                       <Icon, className="w-4 h-4, tex, t-whi, t, e/80" />
+const Component = () => {
   return (<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}></div>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"

@@ -5,16 +5,16 @@ import fs from 'fs';
 // //Function to safely execute git commands;
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' }),
 //     return { success: true, result };
   } catch (error) {
-//     return { success: false, error: error.message };
+//     return { success: false, error: error.message },
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+  o: 'pipe' }),
 //     return {/* TODO: Fix JSX expression */}
   s: true, result };
   } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.message };
+  r: error.message },
   }
 }
 
@@ -27,34 +27,34 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
       {/* TODO: Fix JSX expression */}
   o: 'pipe' }
-    );
+    ),
     return true;
   } catch {/* TODO: Fix JSX expression */}
   }
 }
 
-//Current PRs to process;
+//Current PRs to process,
 const prs = [
   {
-    number: 11935;
+    number: 11935,
     title: 'Fix web application console errors'
     branch: 'cursor/fix-web-application-console-errors-0bf5',
     sha: 'd4e66d09ceb2c6c48f1f522df7030a5261c4c661',
     priority: 'high'},
   {
-    number: 25063;
+    number: 25063,
     title: 'Build and deploy with vite and netlify'
     branch: 'cursor/build-and-deploy-with-vite-and-netlify-8b37',
     sha: 'd2deed6f7d4ef805058d58bdadeb11ca5a746580',
     priority: 'medium'},
   {
-    number: 25062;
+    number: 25062,
     title: 'Fix errors and merge to main'
     branch: 'cursor/fix-errors-and-merge-to-main-fcbd',
     sha: 'a5 f35 d4 a9 ddcf46941 c797 da316 bb3 a2 b7 b05 b56',
     priority: 'high'},
   {
-    number: 25061;
+    number: 25061,
     title: 'Fix errors and merge to main'
     branch: 'cursor/fix-errors-and-merge-to-main-e6e1',
     sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db',
@@ -66,7 +66,7 @@ const prs = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }],
 
 //Ensure we're on main branch;
 // safeGitCommand('git checkout main', 'Switch to main branch');
@@ -91,11 +91,11 @@ for (const pr of prs) {
 for (const pr of prs) {/* TODO: Fix JSX expression */}`
     `\n--- Processing PR #${pr.number}: ${pr.title} (Priorit)`
   y: ${pr.priority}) ---`
-  );
+  ),
 
   //Check if branch exists;
   if (!branchExists(pr.branch)) {/* TODO: Fix JSX expression */}
-    });
+    }),
     continue;
   }
 
@@ -110,7 +110,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
       pr: pr.number;)
       title: pr.title;),
       status: 'merged'),
-      branch: pr.branch)});
+      branch: pr.branch)}),
   } else {
     conflictCount++;
 //     //Try to abort the merge if there was a conflict;
@@ -128,12 +128,12 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
   );
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
-    });
+    }),
   } else {/* TODO: Fix JSX expression */}`
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
 
     results.push({/* TODO: Fix JSX expression */})
-    });
+    }),
   }
 }
 
@@ -143,7 +143,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
 );
 const buildCheck = safeGitCommand('pnpm run build: no-check')
   'Production build'
-);
+),
 
 //Push changes if any were merged;
 if (mergedCount > 0) {
@@ -165,27 +165,27 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 //     }
 }
 
-//Generate comprehensive report;
+//Generate comprehensive report,
 const report = {
   timestamp: new Date().toISOString()
   summary: {
-    totalPRs: prs.length;
-    merged: mergedCount;
-    conflicts: conflictCount;
-    notFound: notFoundCount;
+    totalPRs: prs.length,
+    merged: mergedCount,
+    conflicts: conflictCount,
+    notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / prs.length) * 100)}%`},
   systemChecks: {
-    typeCheck: typeCheck.success;
-    lintCheck: lintCheck.success;
-    testCheck: testCheck.success;
-    buildCheck: buildCheck.success;
+    typeCheck: typeCheck.success,
+    lintCheck: lintCheck.success,
+    testCheck: testCheck.success,
+    buildCheck: buildCheck.success,
     allPassed: typeCheck.success &&
       lintCheck.success &&,
       testCheck.success &&,
       buildCheck.success;
   },
-  results: results;
-  status: mergedCount > 0 ? 'success' : 'no-changes'};
+  results: results,
+  status: mergedCount > 0 ? 'success' : 'no-changes'},
 
 //Save detailed report;
 fs.writeFileSync('enhanced-pr-merge-report.json')
@@ -197,7 +197,7 @@ const report = {/* TODO: Fix JSX expression */}`
   result,
   s: results,
   statu,
-  s: mergedCount > 0 ? 'success' : 'no-changes'};
+  s: mergedCount > 0 ? 'success' : 'no-changes'},
 
 //Save detailed report;
 fs.writeFileSync('enhanced-pr-merge-report.json')

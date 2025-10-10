@@ -65,22 +65,22 @@ export function middleware(request: NextRequest) {
 
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {
-    return new NextResponse(null, { status: 204, headers: response.headers });
+    return new NextResponse(null, { status: 204, headers: response.headers }),
 export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
-  };
+  },
 
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  });
+  }),
 
   // CORS headers for API routes;
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}
   }
 
-  // Handle preflight requests;
+  // Handle preflight requests,
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
-  s: response.headers });
+  s: response.headers }),
   }
 
   return response;
@@ -93,8 +93,8 @@ export const config = {
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
-     * - public folder;
+     * - public folder,
      */,
     '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
 export const config = {/* TODO: Fix JSX expression */}
-};
+},

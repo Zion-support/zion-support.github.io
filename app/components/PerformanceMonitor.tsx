@@ -3,10 +3,10 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Activity, Zap, Clock, Database } from 'lucide-react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  connectionSpeed: string;
-  renderTime: number;
+  loadTime: number,
+  memoryUsage: number,
+  connectionSpeed: string,
+  renderTime: number,
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -38,12 +38,13 @@ const PerformanceMonitor: React.FC = () => {
       memoryUsage,
       connectionSpeed,
       renderTime: Math.round(renderTime)
-    });
+    }),
   }, []);
 
   useEffect(() => {
     // Measure performance after component mount
     const timer = setTimeout(measurePerformance, 1000);
+const Component = () => {
     return () => clearTimeout(timer);
   }, [measurePerformance]);
 
@@ -57,10 +58,12 @@ const PerformanceMonitor: React.FC = () => {
     };
 
     window.addEventListener('keydown', handleKeyPress);
+const Component = () => {
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
 
   if (!isVisible || !metrics) return null;
+const Component = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg shadow-lg z-50 min-w-[200px]">
@@ -71,7 +74,7 @@ const PerformanceMonitor: React.FC = () => {
         </h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
+          className="text-gray-400 hover: text-white text-xs"
         >
           ×
         </button>
@@ -115,7 +118,7 @@ const PerformanceMonitor: React.FC = () => {
         Press Ctrl+Shift+P to toggle
       </div>
     </div>
-  );
+  ),
 };
 
 export default PerformanceMonitor;

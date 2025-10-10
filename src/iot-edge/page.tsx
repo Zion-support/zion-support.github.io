@@ -149,6 +149,7 @@ titl,
     }
   ];
   const categories = [...new Set(iotServices.map(service => service.category))];
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -161,8 +162,8 @@ titl,
   lg:px-8"></div>"
             <div className="text-center"></div>"
               <h1 className="text-4xl,"
-  md:text-6xl font-bold mb-6"></h1>
-// IoT & Edge Computing Services;
+  md: text-6xl font-bold mb-6"></h1>
+// IoT & Edge Computing Services,
           </h1>"
               <p className="text-xl,"
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
@@ -171,13 +172,13 @@ titl,
               <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-cyan-50 transition-colors"></button>
-// Explore IoT Solutions;
+  hover: bg-cyan-50 transition-colors"></button>
+// Explore IoT Solutions,
           </button>"
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-cyan-600 transition-colors"></button>
-Schedule Demo;
+  hover: text-cyan-600 transition-colors"></button>
+Schedule Demo,
               </div>
         </section>
         {/* Key Benefits */}"
@@ -203,7 +204,7 @@ Schedule Demo;
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
+  lg: grid-cols-4 gap-8"></div>"
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                   <Wifi className="w-8 h-8 text-cyan-600" /></Wifi>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>"
@@ -223,7 +224,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
         {/* Services by Category */}
         {categories.map(category => ()}"
           <section key={category} className="py-16 bg-gray-50"></section>
-                  {category} Solutions;
+                  {category} Solutions,
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -269,8 +270,8 @@ Save up to 40% vs market rates;"
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" /></Star>
                               {benefit}"
 <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,"
-  hover:bg-cyan-700 transition-colors"></button>
-                        Get IoT Consultation;
+  hover: bg-cyan-700 transition-colors"></button>
+                        Get IoT Consultation,
         {/* IoT Capabilities Showcase */}
                 Our IoT & Edge Capabilities;
                 Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
@@ -304,18 +305,18 @@ Save up to 40% vs market rates;"
   sm:px-6,"
   lg:px-8 text-center"></div>"
             <h2 className="text-3xl,"
-  md:text-4xl font-bold mb-4"></h2>
+  md: text-4xl font-bold mb-4"></h2>
 Ready to Connect Your World?"
             <p className="text-xl mb-8 text-cyan-100"></p>
-              Contact our IoT experts for a free consultation and custom connected solution strategy;
+              Contact our IoT experts for a free consultation and custom connected solution strategy,
 
               <a
-                href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
+                href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-50 transition-colors inline-flex items-center"
 // >
-//                  +1 302 464 0950;
+//                  +1 302 464 0950,
           </a>
-href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-                ✉️ kleber@ziontechgroup.com;
+href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-cyan-600 transition-colors"
+                ✉️ kleber@ziontechgroup.com,
             <div className="mt-8 text-sm text-cyan-200">
 
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>

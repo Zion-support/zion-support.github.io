@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  fps: number,
 }
 
 const PerformanceDashboard: React.FC = () => {
@@ -23,7 +23,7 @@ const PerformanceDashboard: React.FC = () => {
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory,
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
       setMetrics(prev => ({
@@ -38,6 +38,7 @@ const PerformanceDashboard: React.FC = () => {
 
     //Update metrics periodically
     const interval = setInterval(updateMetrics, 1000);
+const Component = () => {
 
     return () => clearInterval(interval);
   }, []);
@@ -46,12 +47,13 @@ const PerformanceDashboard: React.FC = () => {
   if (process.env['NODE_ENV'] !== 'development') {
     return null;
   }
+const Component = () => {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover: bg-blue-700 transition-colors"
         aria-label="Toggle performance dashboard"
       >
         Perf
@@ -77,7 +79,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       )}
     </div>
-  );
+  ),
 };
 
 export default PerformanceDashboard;

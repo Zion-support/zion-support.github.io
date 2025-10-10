@@ -29,13 +29,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
+const Component = () => {
 
       return () => {
         document.head.removeChild(script);
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      };
+      },
     }
   }, [structuredData]);
 
@@ -44,8 +45,8 @@ const,
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: canonicalUrl || window.location.origin;
+    description: description,
+    url: canonicalUrl || window.location.origin,
     logo: `${window.location.origin}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
     contactPoint: {,
@@ -61,11 +62,12 @@ const,
   s://twitter.com/ziontechgroup'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
-    }};
+    }},
 
   //   const finalStructuredData = structuredData || defaultStructuredData;
+const Component = () => {
 
-  return(<>)
+  return (<>)
       <Helmet>)
         {/* Basic Meta Tags */})
         <title>{title}</title>)
@@ -117,6 +119,7 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}
+const Component = () => {
   return (<>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
@@ -173,7 +176,7 @@ const,
         <link rel="preconnect" href="http,"
   s://fonts.googleapis.com" /></link>"
         <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>
+  s: //fonts.gstatic.com" crossOrigin="anonymous" /></link>
         {/* Favicon and Icons */}"
         <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
@@ -185,7 +188,7 @@ const,
       </Helmet>
       {children}
     
-  );
+  ),
 };
 
 export default SEOEnhancer;

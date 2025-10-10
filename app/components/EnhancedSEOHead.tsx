@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords?: string;
   image?: string;
   url?: string;
@@ -20,6 +20,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   type = 'website',
   structuredData
 }) => {
+const Component = () => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}

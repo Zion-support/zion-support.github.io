@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
@@ -29,7 +29,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       const style = document.createElement('style');
       style.textContent = `
         *:focus {
-          outline: 2px solid #06b6d4;
+          outline: 2px solid #06b6d4,
           outline-offset: 2px;
         }
       `;

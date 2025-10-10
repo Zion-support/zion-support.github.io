@@ -22,6 +22,7 @@ const Navigation: React.FC = memo(() => {
     };
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
+const Component = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
@@ -94,7 +95,8 @@ const Navigation: React.FC = memo(() => {
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery solutions' }
       ]
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -245,7 +247,7 @@ const Navigation: React.FC = memo(() => {
                         {category.services.length > 4 && (
                           <Link 
                             to={`/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-                            className="block text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+                            className="block text-cyan-400 hover: text-cyan-300 text-sm font-medium"
                             onClick={closeAllMenus}
                           >
                             View All →
@@ -301,7 +303,7 @@ const Navigation: React.FC = memo(() => {
         )}
       </div>
     </nav>
-  );
+  ),
 });
 
 Navigation.displayName = 'Navigation';

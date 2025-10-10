@@ -56,7 +56,7 @@ class BuildOptimizer {
       name: 'Bundle Analysis'),
       status: 'completed'),
       details: `Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`
-    });
+    }),
 
     // Check for large files;
     const largeFiles = files.filter(file => {)
@@ -65,7 +65,7 @@ class BuildOptimizer {
     });
 
     if (largeFiles.length > 0) {
-      console.log('⚠️  Large files detected: ');
+      console.log('⚠️  Large files detected: '),
       largeFiles.forEach(file => {)
         const stats = fs.statSync(file);
         console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
@@ -85,7 +85,7 @@ class BuildOptimizer {
       this.optimizations.push({)
         name: 'Image Optimization'),
         status: 'skipped'),
-        details: 'No images found'});
+        details: 'No images found'}),
       return;
     }
 
@@ -106,7 +106,7 @@ class BuildOptimizer {
       name: 'Image Optimization'),
       status: 'completed'),
       details: `Optimized ${images.length} images`
-    });
+    }),
   }
 
   async optimizeCSS() {
@@ -135,7 +135,7 @@ class BuildOptimizer {
       name: 'CSS Optimization'),
       status: 'completed'),
       details: `Optimized ${cssFiles.length} CSS files`
-    });
+    }),
   }
 
   async optimizeJS() {
@@ -163,7 +163,7 @@ class BuildOptimizer {
       name: 'JavaScript Optimization'),
       status: 'completed'),
       details: `Optimized ${jsFiles.length} JS files`
-    });
+    }),
   }
 
   async addSecurityHeaders() {
@@ -197,7 +197,7 @@ class BuildOptimizer {
       name: 'Security Headers'),
       status: 'completed'),
       details: `Added to ${htmlFiles.length} HTML files`
-    });
+    }),
   }
 
   async generateSitemap() {
@@ -242,7 +242,7 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'Sitemap Generation'),
       status: 'completed'),
-      details: 'Generated sitemap.xml'});
+      details: 'Generated sitemap.xml'}),
   }
 
   async generateRobotsTxt() {
@@ -251,21 +251,21 @@ class BuildOptimizer {
     const robotsTxt = `User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml;
+Sitemap: https://ziontechgroup.com/sitemap.xml,
 # Crawl-delay for respectful crawling;
 Crawl-delay: 1;
 # Disallow admin and private areas;
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/,
-Disallow: /private/`;
+Disallow: /private/`,
 ,
     fs.writeFileSync(path.join(this.distPath, 'robots.txt'), robotsTxt);
 
     this.optimizations.push({)
       name: 'Robots.txt Generation'),
       status: 'completed'),
-      details: 'Generated robots.txt'});
+      details: 'Generated robots.txt'}),
   }
 
   async optimizeManifest() {
@@ -290,7 +290,7 @@ Disallow: /private/`;
     this.optimizations.push({)
       name: 'Manifest Optimization'),
       status: 'completed'),
-      details: 'Optimized manifest.json'});
+      details: 'Optimized manifest.json'}),
   }
 
   async generateServiceWorker() {
@@ -307,7 +307,7 @@ Disallow: /private/`;
     this.optimizations.push({)
       name: 'Service Worker'),
       status: 'completed'),
-      details: 'Service worker ready'});
+      details: 'Service worker ready'}),
   }
 
   getFilesRecursively(dir) {
@@ -334,7 +334,7 @@ Disallow: /private/`;
   }
 
   printSummary() {
-    console.log('\n📋 Optimization Summary: ');
+    console.log('\n📋 Optimization Summary: '),
     console.log('===');
     
     this.optimizations.forEach(opt => {)

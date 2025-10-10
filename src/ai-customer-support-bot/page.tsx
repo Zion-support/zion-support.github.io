@@ -69,6 +69,7 @@ const AICustomerSupportBotPage: React.FC = () => {
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -126,7 +127,7 @@ const AICustomerSupportBotPage: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
-                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
                   Get Started
                 </button>
 
@@ -141,7 +142,7 @@ const AICustomerSupportBotPage: React.FC = () => {
               View Case Studies
       
       <Footer />
-  );
+  ),
 };
 
 

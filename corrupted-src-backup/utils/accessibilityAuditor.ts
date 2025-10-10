@@ -9,10 +9,10 @@ interface AccessibilityIssue {/* TODO: Fix JSX expression */}
 }
 
 /**
- * Accessibility auditor class;
+ * Accessibility auditor class,
  */
 export class AccessibilityAuditor {
-  private issues: AccessibilityIssue[] = [];
+  private issues: AccessibilityIssue[] = [],
 
   /**
    * Run comprehensive accessibility audit;
@@ -172,7 +172,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   private addIssue(severity: AccessibilityIssue['severity'])
     element: string)
     issue: string)
-    recommendation: string;
+    recommendation: string,
   ): void {,
     this.issues.push({)
       severity;)
@@ -188,7 +188,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     recommendatio,
   n: string;)
   ): void {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
 
   /**
@@ -201,24 +201,24 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Get summary of audit results;
+   * Get summary of audit results,
    */
   public getSummary(): {
-    total: number;
-    critical: number;
-    serious: number;
-    moderate: number;
-    minor: number;
+    total: number,
+    critical: number,
+    serious: number,
+    moderate: number,
+    minor: number,
   } {
     return {
-      total: this.issues.length;
-      critical: this.getIssuesBySeverity('critical').length;
-      serious: this.getIssuesBySeverity('serious').length;
-      moderate: this.getIssuesBySeverity('moderate').length;
-      minor: this.getIssuesBySeverity('minor').length;
+      total: this.issues.length,
+      critical: this.getIssuesBySeverity('critical').length,
+      serious: this.getIssuesBySeverity('serious').length,
+      moderate: this.getIssuesBySeverity('moderate').length,
+      minor: this.getIssuesBySeverity('minor').length,
   public getSummary(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-    };
+    },
   }
 }
 
@@ -226,5 +226,5 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
  * Utility function to run accessibility audit;
  */
 export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}
-};
+},
 "`

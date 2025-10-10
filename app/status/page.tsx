@@ -72,7 +72,7 @@ const StatusPage: React.FC = () => {
       icon: Shield,
       description: 'Authentication and security systems'
     }
-  ];
+  ],
 
   const incidents = [
     {
@@ -93,7 +93,7 @@ const StatusPage: React.FC = () => {
       endTime: null,
       description: 'Investigating reports of slower than usual database response times.'
     }
-  ];
+  ],
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -105,8 +105,7 @@ const StatusPage: React.FC = () => {
         return <XCircle className="w-5 h-5 text-red-400" />;
       case 'maintenance':
         return <Clock className="w-5 h-5 text-blue-400" />;
-      default:
-        return <AlertTriangle className="w-5 h-5 text-gray-400" />;
+      default: return <AlertTriangle className="w-5 h-5 text-gray-400" />,
     }
   };
 
@@ -120,8 +119,7 @@ const StatusPage: React.FC = () => {
         return 'text-red-400';
       case 'maintenance':
         return 'text-blue-400';
-      default:
-        return 'text-gray-400';
+      default: return 'text-gray-400',
     }
   };
 
@@ -133,8 +131,7 @@ const StatusPage: React.FC = () => {
         return 'bg-yellow-500/20 text-yellow-400';
       case 'high':
         return 'bg-red-500/20 text-red-400';
-      default:
-        return 'bg-gray-500/20 text-gray-400';
+      default: return 'bg-gray-500/20 text-gray-400',
     }
   };
 
@@ -142,9 +139,11 @@ const StatusPage: React.FC = () => {
     const interval = setInterval(() => {
       setLastUpdated(new Date());
     }, 60000); // Update every minute
+const Component = () => {
 
     return () => clearInterval(interval);
   }, []);
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -282,7 +281,7 @@ const StatusPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Subscribe to status updates and get notified about any service incidents or maintenance windows.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Subscribe to Updates
               </button>
@@ -296,7 +295,7 @@ const StatusPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default StatusPage;

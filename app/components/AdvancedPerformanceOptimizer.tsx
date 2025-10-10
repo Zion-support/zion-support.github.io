@@ -36,7 +36,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fid: 0,
     cls: 0,
     ttfb: 0
-  });
+  }),
 
   // Web Vitals monitoring)
     useEffect(() => {
@@ -45,7 +45,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     lcp: 0;)
     fid: 0),
     cls: 0),
-    ttfb: 0;
+    ttfb: 0,
   });
 
   // Web Vitals monitoring;
@@ -64,10 +64,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         new PerformanceObserver((list) => {}
           for (const entry of list.getEntries()) {}
             if (entry.name === 'first-contentful-paint') {}
-              setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+              setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime })),
             }
           }
-        }).observe({ entryTypes: ['paint'] });
+        }).observe({ entryTypes: ['paint'] }),
 
         // Largest Contentful Paint;
         new PerformanceObserver((list) => {
@@ -75,8 +75,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         new PerformanceObserver((list) => {}
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        }).observe({ entryTypes: ['largest-contentful-paint'] });
+          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime })),
+        }).observe({ entryTypes: ['largest-contentful-paint'] }),
 
         // First Input Delay;
         new PerformanceObserver((list) => {
@@ -84,9 +84,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         // First Input Delay
         new PerformanceObserver((list) => {}
           for (const entry of list.getEntries()) {}
-            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime })),
           }
-        }).observe({ entryTypes: ['first-input'] });
+        }).observe({ entryTypes: ['first-input'] }),
 
         // Cumulative Layout Shift;
         let clsValue = 0;
@@ -94,10 +94,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           for (const entry of list.getEntries()) {}
             if (!(entry as any).hadRecentInput) {}
               clsValue += (entry as any).value;
-              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }));
+              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue })),
             }
           }
-        }).observe({ entryTypes: ['layout-shift'] });
+        }).observe({ entryTypes: ['layout-shift'] }),
       };
 
       measureWebVitals();
@@ -184,7 +184,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         }
 
 interface AdvancedPerformanceOptimizerProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({ children }) => {
@@ -192,7 +192,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     // Advanced performance optimizations
     const optimizePerformance = () => {
       // Lazy load images
-      const images = document.querySelectorAll('img[data-src]');
+      const images = document.querySelectorAll('img[data-src]'),
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -238,7 +238,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
       { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ];
+    ],
 
     hints.forEach((hint) => {}
       const link = document.createElement('link');
@@ -300,7 +300,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 1000) / 1000;
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000,
         }
       });
     }

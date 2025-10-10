@@ -9,7 +9,7 @@ const fixes = [
     replacement: '$1 = { $2 }, $3'},
   //Fix JSX syntax issues;
   {
-    pattern: /<br\s*\/?>/g;
+    pattern: /<br\s*\/?>/g,
     replacement: '<br />'},
   //Fix unescaped > in JSX;
   {
@@ -29,11 +29,11 @@ const fixes = [
     replacement: '$1 = $2, $3'},
   //Fix JSX closing tags;
   {
-    pattern: /<(\w+)\s*([^>]*)\s*>\s*<\/\1>/g;
+    pattern: /<(\w+)\s*([^>]*)\s*>\s*<\/\1>/g,
     replacement: '<$1 $2 />'},
   //Fix missing commas in arrays;
   {
-    pattern: /(\w+)\s*(\w+)\s*(\w+)/g;
+    pattern: /(\w+)\s*(\w+)\s*(\w+)/g,
     replacement: '$1, $2, $3'},
   //Fix JSX attribute syntax;
   {
@@ -41,7 +41,7 @@ const fixes = [
     replacement: '$1={ $2 } $3'},
   //Fix template literal syntax;
   {
-    pattern: /`([^`]+)\s*>\s*([^`]+)`/g;
+    pattern: /`([^`]+)\s*>\s*([^`]+)`/g,
     replacement: '`$1 > $2`'},
   //Fix destructuring syntax;
   {
@@ -72,7 +72,7 @@ const fixes = [
     pattern: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(\w+)/g},
   //Fix export statements;
   {
-    pattern: /export\s+(\w+)\s*(\w+)/g;
+    pattern: /export\s+(\w+)\s*(\w+)/g,
     replacement: 'export $1; $2'},
   //Fix interface syntax;
   {
@@ -88,7 +88,7 @@ const fixes = [
     replacement: 'const $1 = () => { $2 }; $3'},
   //Fix JSX return statements;
   {
-    pattern: /return\s*\(\s*<([^>]+)>\s*([^<]+)\s*<\/\1>\s*\)\s*(\w+)/g;
+    pattern: /return\s*\(\s*<([^>]+)>\s*([^<]+)\s*<\/\1>\s*\)\s*(\w+)/g,
     replacement: 'return (<$1> $2 </$1>); $3'},
   //Fix event handlers;
   {
@@ -112,11 +112,11 @@ const fixes = [
     replacement: '{ $1 && <$2> $3 </$2> }'},
   //Fix map functions;
   {
-    pattern: /\.map\s*\(\s*\(([^)]+)\)\s*=>\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*\)\s*(\w+)/g;
+    pattern: /\.map\s*\(\s*\(([^)]+)\)\s*=>\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*\)\s*(\w+)/g,
     replacement: '.map(($1) => <$2> $3 </$2>) $4'},
   //Fix filter functions;
   {
-    pattern: /\.filter\s*\(\s*\(([^)]+)\)\s*=>\s*([^)]+)\s*\)\s*(\w+)/g;
+    pattern: /\.filter\s*\(\s*\(([^)]+)\)\s*=>\s*([^)]+)\s*\)\s*(\w+)/g,
     replacement: '.filter(($1) => $2) $3'},
   //Fix reduce functions;
   {
@@ -286,16 +286,16 @@ function fixFile(filePath) {
         modified = true;
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-//Main function;
+//Main function,
 async function main() {
   //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
@@ -305,11 +305,11 @@ async function main() {
     }
 async function main() {/* TODO: Fix JSX expression */}
 }
-  //Find all TypeScript/TSX files;
+  //Find all TypeScript/TSX files,
   //   let fixedCount = 0;
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
-  });
+  }),
 
   //   }
 

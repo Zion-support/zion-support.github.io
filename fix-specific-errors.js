@@ -46,18 +46,18 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
     }
 
-    // Fix malformed closing tags with commas;
+    // Fix malformed closing tags with commas,
     if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */}
     }
 
-    // Fix unterminated regular expressions;
+    // Fix unterminated regular expressions,
     if (content.includes('const regex = /')) {/* TODO: Fix JSX expression */}
     }
 
-    // Fix malformed object properties;
+    // Fix malformed object properties,
     if (content.includes('const config = {/* TODO: Fix JSX expression */}
         })
-        newLines.push(line);
+        newLines.push(line),
       }
       if (modified) {/* TODO: Fix JSX expression */}
       }
@@ -66,12 +66,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
+    return false,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Main execution;
+// Main execution,
 async function main() {
   // Find all TypeScript/JavaScript files in app directory;
   files.forEach(file => {)
@@ -80,10 +80,10 @@ async function main() {
     }
 async function main() {/* TODO: Fix JSX expression */}
 }
-  // Find all TypeScript/JavaScript files in app directory;
+  // Find all TypeScript/JavaScript files in app directory,
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
-  });
+  }),
 
 }
 

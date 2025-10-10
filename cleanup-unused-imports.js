@@ -14,7 +14,7 @@ function removeUnusedImports(filePath) {
     
     // Run ESLint with --fix to remove unused imports;
     try {
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' });
+      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' }),
       console.log(`✓ Fixed unused imports in ${filePath}`);
     } catch (error) {
       // If ESLint fails, try a simpler approach;
@@ -39,7 +39,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})
           const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim());
           if (importName) {/* TODO: Fix JSX expression */}
-            });
+            }),
             return isUsed;
           }
         }
@@ -47,11 +47,11 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       });
       
       if (newLines.length !== lines.length) {/* TODO: Fix JSX expression */}`
-        console.log(`✓ Manually cleaned ${filePath}`);
+        console.log(`✓ Manually cleaned ${filePath}`),
       }
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`✗ Error processing ${filePath}: ${error.message}`);
+    console.log(`✗ Error processing ${filePath}: ${error.message}`),
   }
 }
 
@@ -77,7 +77,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
     }
   }
   
-  traverse(dir);
+  traverse(dir),
   return files;
 }
 
@@ -91,7 +91,7 @@ console.log(`Found ${files.length} files to process\n`);
 
 let processed = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  s: ${processed}/${files.length} files processed`);
+  s: ${processed}/${files.length} files processed`),
   }
 }
 `

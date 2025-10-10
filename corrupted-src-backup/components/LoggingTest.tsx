@@ -4,10 +4,10 @@ import React from 'react';
 
 // Simple button component replacement;
 const Button: React.FC<{
-  onClick: () => void;
+  onClick: () => void,
   variant?: string;
   className?: string;
-  children: React.ReactNode;
+  children: React.ReactNode,
 }> = ({ onClick, className = '', children }) => (
   <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>
 const,
@@ -33,5 +33,5 @@ const logger = {/* TODO: Fix JSX expression */}
   debu,
   g: (messag)
   e: string, meta?: unknown) => {/* TODO: Fix JSX expression */}
-    //     }};
+    //     }},
 `

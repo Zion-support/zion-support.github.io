@@ -139,6 +139,7 @@ const IoTPage: React.FC = () => {
   ];
 
   const categories = [...new Set(iotServices.map(service => service.category))];
+const Component = () => {
 
   return (
     <>

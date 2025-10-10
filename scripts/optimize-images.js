@@ -10,7 +10,7 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
     }
 
     if (!fs.existsSync(this.outputDir)) {/* TODO: Fix JSX expression */}
-  e: true });
+  e: true }),
     }
 
     const _files = fs.readdirSync(this.inputDir);
@@ -30,7 +30,7 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
   t: true })
           .webp({/* TODO: Fix JSX expression */})
   y: 80 })
-          .toFile(outputPath);
+          .toFile(outputPath),
         
 //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
@@ -38,6 +38,6 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
   }
 }
 
-const _optimizer = new ImageOptimizer();
+const _optimizer = new ImageOptimizer(),
 optimizer.optimizeImages();
 `

@@ -33,7 +33,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
             'http,
   s://linkedin.com/company/ziontechgroup',
             'http,
-  s://twitter.com/ziontechgroup']}}};
+  s: //twitter.com/ziontechgroup']}}},
     this.init();
   }
 
@@ -41,7 +41,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   setupMetaTags() {
-    // Basic meta tags;
+    // Basic meta tags,
     this.addMetaTag('description', this.seoConfig.siteDescription);
     this.addMetaTag('keywords')
       'AI, artificial intelligence, machine learning, IT solutions, technology consulting, software development'
@@ -60,7 +60,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   setupStructuredData() {
-    // Add organization structured data;
+    // Add organization structured data,
     this.addStructuredData(this.seoConfig.structuredData.organization);
   setupStructuredData() {/* TODO: Fix JSX expression */}
   }
@@ -69,7 +69,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   setupSitemap() {
-    // Generate dynamic sitemap;
+    // Generate dynamic sitemap,
     this.generateSitemap();
   setupSitemap() {/* TODO: Fix JSX expression */}
   }
@@ -89,7 +89,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
   q: 'yearly' },
       {/* TODO: Fix JSX expression */}
-  q: 'yearly' }];
+  q: 'yearly' }],
 
     const _sitemap = this.buildSitemapXML(pages);
     this.createSitemapFile(sitemap);
@@ -129,7 +129,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     const robotsTxt = `User-agent: *,
 Allow: /,
 ,
-Sitemap: ${this.seoConfig.siteUrl}/sitemap.xml;
+Sitemap: ${this.seoConfig.siteUrl}/sitemap.xml,
 # Disallow admin and private areas;
 Disallow: /admin/
 Disallow: /api/
@@ -168,7 +168,7 @@ Disallow: /src/pages/blog-disabled/
 Disallow: /hooks/,
 Disallow: /lib_backup/,
 Disallow: /services/,
-Disallow: /middleware/`;
+Disallow: /middleware/`,
 ,
     document.documentElement.setAttribute('data-robots-txt', robotsTxt);
   }
@@ -194,7 +194,7 @@ Disallow: /middleware/`;
   }
 
   setupRobotsTxt() {/* TODO: Fix JSX expression */}
-  p: ${this.seoConfig.siteUrl}/sitemap.xml;
+  p: ${this.seoConfig.siteUrl}/sitemap.xml,
 # Disallow admin and private areas,
   Disallow: /admin/
 Disallo,
@@ -270,7 +270,7 @@ Disallo,
 Disallo,
   w: /services/
 Disallo,`
-  w: /middleware/`;
+  w: /middleware/`,
 
     document.documentElement.setAttribute('data-robots-txt', robotsTxt);
   }
@@ -287,7 +287,7 @@ Disallo,`
   }
 
   setupTwitterCards() {
-    // Twitter Card meta tags;
+    // Twitter Card meta tags,
     this.addTwitterTag('twitter:card', 'summary_large_image');
     this.addTwitterTag('twitter:site', this.seoConfig.twitterHandle);
     this.addTwitterTag('twitter:creator', this.seoConfig.twitterHandle);
@@ -303,7 +303,7 @@ Disallo,`
   }
 
   setupSchemaMarkup() {
-    // Add page-specific schema markup;
+    // Add page-specific schema markup,
     this.addPageSchema();
   setupSchemaMarkup() {/* TODO: Fix JSX expression */}
   }
@@ -320,8 +320,8 @@ Disallo,`
       '@context': 'https: //schema.org',
       '@type': 'WebSite',
       name: 'Zion Tech Group'
-      url: this.seoConfig.siteUrl;
-      description: this.seoConfig.siteDescription;
+      url: this.seoConfig.siteUrl,
+      description: this.seoConfig.siteDescription,
       potentialAction: {,
         '@type': 'SearchAction',
         target: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
@@ -337,7 +337,7 @@ Disallo,`
       name: 'About Zion Tech Group',
       description: 'Learn about Zion Tech Group, a leading AI and IT solutions company.',
       url: `${this.seoConfig.siteUrl}/about`,
-      mainEntity: this.seoConfig.structuredData.organization;
+      mainEntity: this.seoConfig.structuredData.organization,
     };
   }
 
@@ -347,9 +347,9 @@ Disallo,`
       '@type': 'Service',
       name: 'AI and IT Solutions'
       description: 'Comprehensive AI and IT consulting services'
-      provider: this.seoConfig.structuredData.organization;
+      provider: this.seoConfig.structuredData.organization,
       serviceType: 'Technology Consulting',
-      areaServed: 'Worldwide'};
+      areaServed: 'Worldwide'},
   }
 
   getContactPageSchema() {
@@ -359,7 +359,7 @@ Disallo,`
       name: 'Contact Zion Tech Group',
       description: 'Get in touch with our team for AI and IT solutions',
       url: `${this.seoConfig.siteUrl}/contact`,
-      mainEntity: this.seoConfig.structuredData.organization;
+      mainEntity: this.seoConfig.structuredData.organization,
     };
   }
 
@@ -370,7 +370,7 @@ Disallo,`
       name: 'Zion Tech Group Blog',
       description: 'Latest insights on AI, technology, and IT solutions',
       url: `${this.seoConfig.siteUrl}/blog`,
-      publisher: this.seoConfig.structuredData.organization;
+      publisher: this.seoConfig.structuredData.organization,
     };
   }
 
@@ -402,23 +402,23 @@ Disallo,`
   getAboutPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/about`,
       mainEntit,
-  y: this.seoConfig.structuredData.organization};
+  y: this.seoConfig.structuredData.organization},
   }
 
   getServicesPageSchema() {/* TODO: Fix JSX expression */}
-    };
+    },
   }
 
   getContactPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/contact`,
       mainEntit,
-  y: this.seoConfig.structuredData.organization};
+  y: this.seoConfig.structuredData.organization},
   }
 
   getBlogPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/blog`,
       publishe,
-  r: this.seoConfig.structuredData.organization};
+  r: this.seoConfig.structuredData.organization},
   }
 
   setupPerformanceSEO() {/* TODO: Fix JSX expression */}
@@ -427,13 +427,13 @@ Disallo,`
   optimizeImages() {/* TODO: Fix JSX expression */}
       }
 
-      // Add alt text if missing;
+      // Add alt text if missing,
       if (!img.alt) {/* TODO: Fix JSX expression */}
       }
 
-      // Add width and height attributes;
+      // Add width and height attributes,
       if (!img.width && !img.height) {/* TODO: Fix JSX expression */}
-        });
+        }),
       }
     });
   }
@@ -442,7 +442,7 @@ Disallo,`
   }
 
   optimizeFonts() {
-    // Preload critical fonts;
+    // Preload critical fonts,
     const criticalFonts = [
       'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     ];
@@ -455,7 +455,7 @@ Disallo,`
       link.onload = () => {,
         link.rel = 'stylesheet';
   optimizeFonts() {/* TODO: Fix JSX expression */}
-      };
+      },
       document.head.appendChild(link);
     });
   }
@@ -486,17 +486,17 @@ Disallo,`
   }
 
   getPageTitle() {/* TODO: Fix JSX expression */}
-    };
+    },
     return titles[currentPath] || this.seoConfig.siteName;
   }
 
   getPageDescription() {/* TODO: Fix JSX expression */}
-    };
+    },
     return descriptions[currentPath] || this.seoConfig.siteDescription;
   }
 
   getPageImage() {/* TODO: Fix JSX expression */}
-    };
+    },
     return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage);
   }
 
@@ -523,7 +523,7 @@ Disallo,`
   updatePageSEO(title, description, image) {/* TODO: Fix JSX expression */}
     }
 
-    // Update Twitter Card tags;
+    // Update Twitter Card tags,
     this.updateTwitterTag('twitte)
   r:title', title);
     this.updateTwitterTag('twitte)
@@ -533,21 +533,21 @@ Disallo,`
   }
 
   updateMetaTag(name, content) {/* TODO: Fix JSX expression */}"`
-    const _meta = document.querySelector(`meta[name="${name}"]`);
+    const _meta = document.querySelector(`meta[name="${name}"]`),
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }
 
   updateOGTag(property, content) {/* TODO: Fix JSX expression */}"`
-    const _meta = document.querySelector(`meta[property="${property}"]`);
+    const _meta = document.querySelector(`meta[property="${property}"]`),
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }
 
   updateTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`
-    const _meta = document.querySelector(`meta[name="${name}"]`);
+    const _meta = document.querySelector(`meta[name="${name}"]`),
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
@@ -559,11 +559,11 @@ Disallo,`
       '@type': 'BreadcrumbList',
       itemListElement: items.map((item, index) => ({
         '@type': 'ListItem',
-        position: index + 1;
-        name: item.name;
-        item: item.url;
+        position: index + 1,
+        name: item.name,
+        item: item.url,
   generateBreadcrumbs(items) {/* TODO: Fix JSX expression */}
-      }))};
+      }))},
 
     this.addStructuredData(breadcrumbSchema);
   }
@@ -573,9 +573,9 @@ Disallo,`
     if (window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: this.getPageTitle(),
-        page_location: window.location.href;
+        page_location: window.location.href,
   trackPageView() {/* TODO: Fix JSX expression */}
-      });
+      }),
     }
   }
 }

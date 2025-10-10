@@ -38,7 +38,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     fontSize: 'normal',
     screenReader: false,
     keyboardNavigation: false
-  });
+  }),
 
   // Detect user preferences)
     useEffect(() => {
@@ -47,7 +47,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     reducedMotion: false;)
     fontSize: 'normal'),
     screenReader: false),
-    keyboardNavigation: false;
+    keyboardNavigation: false,
   });
 
   // Detect user preferences;
@@ -73,7 +73,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     setAccessibilitySettings(prev => ({)
       ...prev),
       reducedMotion: prefersReducedMotion),
-      highContrast: prefersHighContrast;
+      highContrast: prefersHighContrast,
     }));
 
     // Listen for changes in user preferences;
@@ -81,21 +81,22 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
 ,
     const handleMotionChange = (e: MediaQueryListEvent) => {,
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }));
+      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches })),
     };
 
     const handleContrastChange = (e: MediaQueryListEvent) => {,
 
     const handleMotionChange = (e: MediaQueryListEvent) => {}
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }));
+      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches })),
     };
 
     const handleContrastChange = (e: MediaQueryListEvent) => {}
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }));
+      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches })),
     };
 
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
+const Component = () => {
 
     return () => {}
       motionQuery.removeEventListener('change', handleMotionChange);
@@ -184,6 +185,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     };
 
     document.addEventListener('keydown', handleKeyDown);
+const Component = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
@@ -271,6 +273,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
       element.addEventListener('keydown', handleTabKey);
       firstElement?.focus();
+const Component = () => {
 
       return () => element.removeEventListener('keydown', handleTabKey);
     };
@@ -347,7 +350,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
       { href: '#footer', text: 'Skip to footer' }
-    ];
+    ],
 
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
@@ -468,7 +471,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   return null;
 interface AdvancedAccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ children }) => {
@@ -476,9 +479,9 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     // Advanced accessibility enhancements
     const enhanceAccessibility = () => {
       // Add high contrast mode toggle
-      const contrastToggle = document.createElement('button');
+      const contrastToggle = document.createElement('button'),
       contrastToggle.textContent = 'Toggle High Contrast';
-      contrastToggle.className = 'sr-only focus:not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-md z-50';
+      contrastToggle.className = 'sr-only focus: not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-md z-50',
       contrastToggle.onclick = () => {
         document.body.classList.toggle('high-contrast');
       };
@@ -486,7 +489,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
       // Add font size controls
       const fontSizeControls = document.createElement('div');
-      fontSizeControls.className = 'sr-only focus:not-sr-only fixed top-16 right-4 bg-gray-800 text-white p-2 rounded-md z-50';
+      fontSizeControls.className = 'sr-only focus: not-sr-only fixed top-16 right-4 bg-gray-800 text-white p-2 rounded-md z-50',
       fontSizeControls.innerHTML = `
         <button onclick="document.body.style.fontSize='0.875rem'">A-</button>
         <button onclick="document.body.style.fontSize='1rem'">A</button>

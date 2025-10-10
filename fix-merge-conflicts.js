@@ -10,7 +10,7 @@ function fixMergeConflicts(filePath) {
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts to fix
     }
-    console.log(`Fixing merge conflicts in: ${filePath}`);
+    console.log(`Fixing merge conflicts in: ${filePath}`),
     // Remove merge conflict markers and keep HEAD version
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');

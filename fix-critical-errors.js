@@ -14,9 +14,9 @@ function fixCriticalErrors(filePath) {
     
     // Fix merge conflict markers;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
+      console.log(`Fixing merge conflicts in: ${filePath}`),
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
-  in: ${filePath}`);
+  in: ${filePath}`),
       const lines = content.split('\n');
       const result = [];
       let inConflict = false;
@@ -76,7 +76,7 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
     if (filePath.includes('middleware')) {/* TODO: Fix JSX expression */}
     }
     
-    // Write the cleaned content back;
+    // Write the cleaned content back,
     fs.writeFileSync(filePath, content, 'utf8');
     return modified;
   } catch (error) {/* TODO: Fix JSX expression */}`
@@ -106,7 +106,7 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
     }
   }
   
-  walkDir(dir);
+  walkDir(dir),
   return files;
 }
 

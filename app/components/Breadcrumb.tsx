@@ -3,8 +3,9 @@ import { useLocation, Link } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
+  const location = useLocation(),
   const pathnames = location.pathname.split('/').filter((x) => x);
+const Component = () => {
 
   return (
     <nav className="bg-gray-50 px-4 py-2 text-sm" aria-label="Breadcrumb">
@@ -18,6 +19,7 @@ const Breadcrumb: React.FC = () => {
         {pathnames.map((name, index) => {
           const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
           const isLast = index === pathnames.length - 1;
+const Component = () => {
           
           return (
             <li key={name} className="flex items-center">

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Share2, ArrowRight } from 'lucide-react';
 
 const SocialMediaManagerPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -26,7 +27,7 @@ const SocialMediaManagerPage: React.FC = () => {
               AI-powered social media management and automation. Schedule posts, analyze engagement, 
               and grow your social presence with intelligent automation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
@@ -50,7 +51,7 @@ const SocialMediaManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 
 export default SocialMediaManagerPage;

@@ -12,7 +12,7 @@ declare global {/* TODO: Fix JSX expression */}
 }
     __REACT_ERROR_HANDLER__?: (erro,
   r: Error, errorInf)
-  o: unknown) => void;
+  o: unknown) => void,
   }
 }
 export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
@@ -48,7 +48,7 @@ const handleUnhandledRejection = (even)
   O: Add content;}
 }
       const rejectionEvent = event as {/* TODO: Fix JSX expression */}
-  n: unknown };
+  n: unknown },
       const error =
 //         rejectionEvent.reason instanceof Error;
 //           ? rejectionEvent.reason;
@@ -64,7 +64,7 @@ const handleUnhandledRejection = (even)
       const componentStack =
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
       reportError(error, `react_error_boundar)`
-  y: ${componentStack}`);
+  y: ${componentStack}`),
     };
     // Add event listeners;
     window.addEventListener('error', handleError);
@@ -76,6 +76,7 @@ const handleUnhandledRejection = (even)
       }
     ).__REACT_ERROR_HANDLER__ = handleReactError;
     // Cleanup;
+const Component = () => {
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

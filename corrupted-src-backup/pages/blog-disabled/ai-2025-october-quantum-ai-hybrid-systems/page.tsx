@@ -3,7 +3,8 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 const QuantumAIHybrid202, 5 = () => { 
-  return(:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx;
+const Component = () => {
+  return (:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx;
     <>
       <Helm, e, t>
         <title>
@@ -196,16 +197,16 @@ const QuantumAIHybrid202, 5 = () => {
       </Helmet>
 
         <div></div>
-            <Link to="/", className="text-white hover:text-cyan-400 transition-colors">← Back to Home</Link>
+            <Link to="/", className="text-white hover: text-cyan-400 transition-colors">← Back to Home</Link>
   </div>
   </div>
           <div></div>
               <Brain className="w-4 h-4 mr-2" />
-  October 2025 • Quantum Computing;
+  October 2025 • Quantum Computing,
   </div>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">"
   Quantum-AI Hybrid Systems 2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">" />
-  Practical Near-Term Implementation;
+  Practical Near-Term Implementation,
               </span>,
             </h1>,
             ,
@@ -326,18 +327,18 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
 
         <div></div>"
             <Link to="/", className="text-white,"
-  hover:text-cyan-400 transition-colors">← Back to Home</Link>
+  hover: text-cyan-400 transition-colors">← Back to Home</Link>
   </div>
   </div>
           <div></div>"
               <Brain className="w-4 h-4 mr-2" /></Brain>
-  October 2025 • Quantum Computing;
+  October 2025 • Quantum Computing,
   </div>"
             <h1 className="text-4xl,"
   md: text-6xl font-bold text-white mb-6 leading-tight">"
   Quantum-AI Hybrid Systems,"
   2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">" />
-  Practical Near-Term Implementation;
+  Practical Near-Term Implementation,
               </span>
             </h1>
             "
@@ -615,7 +616,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
   sm:flex-row gap-4 justify-center"></div>"
                     to="/contact""
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,"
-  hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
+  hover: bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Explore Quantum-AI Solutions""
                       <Link className="w-5 h-5 " /></Link>"
@@ -623,7 +624,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
   className= " />
-  );
+  ),
 };
 
 export default QuantumAIHybrid2025;

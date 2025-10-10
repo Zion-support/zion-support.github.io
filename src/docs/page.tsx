@@ -16,7 +16,7 @@ const DocsPage: React.FC = () => {
     { id: 'api', name: 'API Reference', icon: Code, count: 15 },
     { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
-  ];
+  ],
 
   const documentation = [
     {
@@ -150,7 +150,7 @@ const DocsPage: React.FC = () => {
       link: '/community',
       color: 'text-cyan-400'
     }
-  ];
+  ],
 
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
@@ -169,9 +169,10 @@ const DocsPage: React.FC = () => {
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
+      default: return 'text-gray-400 bg-gray-500/20',
     }
   };
+const Component = () => {
 
   return (
     <>
@@ -225,7 +226,7 @@ const DocsPage: React.FC = () => {
                 <Link
                   key={index}
                   to={link.link}
-                  className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group"
+                  className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300 group"
                 >
                   <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} />
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -338,7 +339,7 @@ const DocsPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default DocsPage;

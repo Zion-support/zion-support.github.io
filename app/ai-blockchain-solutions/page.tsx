@@ -7,37 +7,37 @@ import Footer from '../components/Footer';
 const AIBlockchainSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: Lock;
+      icon: Lock,
       title: 'Smart Contract AI',
       description: 'AI-powered smart contracts that automatically execute based on complex conditions and machine learning predictions.',
       benefits: ['Automated execution', 'ML predictions', 'Complex conditions', 'Self-updating contracts']
     },
     {
-      icon: Brain;
+      icon: Brain,
       title: 'Decentralized AI Networks',
       description: 'Distributed AI networks that operate across blockchain nodes for enhanced security and performance.',
       benefits: ['Distributed computing', 'Enhanced security', 'Scalable AI', 'Decentralized governance']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'AI-Powered Consensus',
       description: 'Machine learning algorithms that optimize blockchain consensus mechanisms for better performance.',
       benefits: ['Optimized consensus', 'Faster transactions', 'Lower energy consumption', 'Improved scalability']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Cryptographic AI',
       description: 'AI-enhanced cryptography for advanced security and privacy protection in blockchain systems.',
       benefits: ['Advanced encryption', 'Privacy protection', 'Quantum resistance', 'Zero-knowledge proofs']
     },
     {
-      icon: Target;
+      icon: Target,
       title: 'Predictive Analytics',
       description: 'AI-driven analysis of blockchain data for market predictions and risk assessment.',
       benefits: ['Market predictions', 'Risk analysis', 'Pattern recognition', 'Investment insights']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'DAO Governance AI',
       description: 'AI systems that assist in decentralized autonomous organization governance and decision-making.',
       benefits: ['Automated governance', 'Voting optimization', 'Proposal analysis', 'Community management']
@@ -48,37 +48,37 @@ const AIBlockchainSolutionsPage: React.FC = () => {
     {
       title: 'DeFi Platforms',
       description: 'AI-enhanced decentralized finance platforms with intelligent trading and risk management.',
-      icon: CreditCard;
+      icon: CreditCard,
       useCases: ['Automated trading', 'Risk management', 'Yield farming', 'Liquidity optimization']
     },
     {
       title: 'NFT Marketplaces',
       description: 'AI-powered NFT platforms with intelligent pricing and recommendation systems.',
-      icon: Palette;
+      icon: Palette,
       useCases: ['Price optimization', 'Content recommendation', 'Fraud detection', 'Market analysis']
     },
     {
       title: 'Supply Chain',
       description: 'Blockchain-based supply chain with AI for tracking, verification, and optimization.',
-      icon: Truck;
+      icon: Truck,
       useCases: ['Product tracking', 'Quality verification', 'Logistics optimization', 'Counterfeit detection']
     },
     {
       title: 'Healthcare Records',
       description: 'Secure healthcare data management with AI analysis and blockchain security.',
-      icon: Stethoscope;
+      icon: Stethoscope,
       useCases: ['Medical records', 'Drug traceability', 'Clinical trials', 'Patient privacy']
     },
     {
       title: 'Digital Identity',
       description: 'AI-powered digital identity systems with blockchain security and verification.',
-      icon: Users;
+      icon: Users,
       useCases: ['Identity verification', 'KYC processes', 'Access control', 'Privacy protection']
     },
     {
       title: 'Energy Trading',
       description: 'Decentralized energy trading platforms with AI for grid optimization.',
-      icon: Zap;
+      icon: Zap,
       useCases: ['Energy trading', 'Grid optimization', 'Renewable energy', 'Carbon credits']
     }
   ];
@@ -87,22 +87,22 @@ const AIBlockchainSolutionsPage: React.FC = () => {
     {
       metric: '99.9%',
       description: 'Security improvement over traditional systems',
-      icon: Shield;
+      icon: Shield,
     },
     {
       metric: '50%',
       description: 'Reduction in transaction costs',
-      icon: TrendingDown;
+      icon: TrendingDown,
     },
     {
       metric: '10 x',
       description: 'Faster processing with AI optimization',
-      icon: Zap;
+      icon: Zap,
     },
     {
       metric: '24/7',
       description: 'Continuous autonomous operation',
-      icon: Clock3;
+      icon: Clock3,
     }
   ];
 
@@ -119,7 +119,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         'Basic analytics',
         'Documentation'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Blockchain Professional',
@@ -135,7 +135,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         'Training & consultation',
         'API access'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Blockchain Enterprise',
@@ -151,15 +151,17 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         'Custom reporting',
         'Full customization'
       ],
-      popular: false;
+      popular: false,
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-24 pb-16 px-4">
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -189,11 +191,11 @@ const AIBlockchainSolutionsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-                Build Blockchain Solutions;
+                Build Blockchain Solutions,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-                View Demo;
+              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover: bg-cyan-400/10 transition-colors text-lg">
+                View Demo,
               </a>
             </div>,
           </div>,
@@ -223,11 +225,11 @@ const AIBlockchainSolutionsPage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">AI-Enhanced Blockchain Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our platform combines cutting-edge AI with blockchain technology to deliver</p>
               unprecedented security, efficiency, and intelligence.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors"></div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover: border-cyan-400/40 transition-colors"></div>
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-cyan-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
-              AI-Enhanced Blockchain Features;
+              AI-Enhanced Blockchain Features,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our platform combines cutting-edge AI with blockchain technology to deliver;
@@ -264,11 +266,11 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Blockchain AI Applications</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how AI-enhanced blockchain is transforming industries and creating new possibilities.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors"></div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover: border-purple-400/40 transition-colors"></div>
                 <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <app.icon className="w-6 h-6 text-purple-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
-              Blockchain AI Applications;
+              Blockchain AI Applications,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover how AI-enhanced blockchain is transforming industries and creating new possibilities.
@@ -338,14 +340,14 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                   ))}
                 <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-colors ${
                   plan.popular
-                    ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
+                    ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
                 }`}>Get Started</a>
-                  plan.popular;
+                  plan.popular,
                     ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'}
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'}
                 }`}>
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -358,18 +360,18 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         <div className="container mx-auto max-w-4xl text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Build AI Blockchain Solutions?</h2><p className="text-xl text-gray-300 mb-8">Start building secure, intelligent, and decentralized solutions today.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Building</a>
               <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-              Start Building;
+              Start Building,
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-              Schedule Demo;
+            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover: bg-cyan-400/10 transition-colors text-lg">
+              Schedule Demo,
             </a>
           </div>
         </div>

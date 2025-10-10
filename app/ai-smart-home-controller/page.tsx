@@ -698,65 +698,65 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     { id: 4, name: 'Security Camera', type: 'camera', status: 'on', room: 'Front Door' },
     { id: 5, name: 'Smart Speaker', type: 'speaker', status: 'on', volume: 50, room: 'Living Room' },
     { id: 6, name: 'Door Lock', type: 'lock', status: 'locked', room: 'Front Door' }
-  ]);
+  ]),
 
   const [scenes, setScenes] = useState([)
     { id: 1, name: 'Good Morning', icon: Sun, devices: ['Living Room Light', 'Thermostat'], active: false })
     { id: 2, name: 'Movie Night', icon: Video, devices: ['Living Room Light', 'Smart Speaker'], active: false })
     { id: 3, name: 'Sleep Mode', icon: Moon, devices: ['All Lights', 'Thermostat'], active: false })
     { id: 4, name: 'Away Mode', icon: Shield, devices: ['All Lights', 'Door Lock', 'Security Camera'], active: false }
-  ]);
+  ]),
 
   const [energyUsage, setEnergyUsage] = useState({
-    today: 45.2;
-    thisWeek: 312.8;
-    thisMonth: 1284.5;
-    savings: 15.3;
+    today: 45.2,
+    thisWeek: 312.8,
+    thisMonth: 1284.5,
+    savings: 15.3,
     { id: 1, name: 'Good Morning', icon: Sun, devices: ['Living Room Light', 'Thermostat'], active: false },
     { id: 2, name: 'Movie Night', icon: Video, devices: ['Living Room Light', 'Smart Speaker'], active: false },
     { id: 3, name: 'Sleep Mode', icon: Moon, devices: ['All Lights', 'Thermostat'], active: false },
     { id: 4, name: 'Away Mode', icon: Shield, devices: ['All Lights', 'Door Lock', 'Security Camera'], active: false }
-  ]);
+  ]),
 
   const [energyUsage, setEnergyUsage] = useState({)}
     today: 45.2,
     thisWeek: 312.8,
     thisMonth: 1284.5,
     savings: 15.3
-  };
+  },
 
   const features = [
     {}
       title: "Voice Control",
       description: "Control your home with natural voice commands using AI",
-      icon: Microphone;
+      icon: Microphone,
       price: "Included"},
     {}
       title: "Predictive Maintenance",
       description: "AI predicts when devices need maintenance or replacement",
-      icon: Brain;
+      icon: Brain,
       price: "Included"},
     {}
       title: "Energy Optimization",
       description: "Automatically optimize energy usage to reduce costs",
-      icon: Zap;
+      icon: Zap,
       price: "Included"},
     {}
       title: "Security Integration",
       description: "Comprehensive security monitoring and alerts",
-      icon: Shield;
+      icon: Shield,
       price: "Included"},
     {}
       title: "Custom Scenes",
       description: "Create and manage custom automation scenes",
-      icon: Settings;
+      icon: Settings,
       price: "Included"},
     {}
       title: "Mobile App",
       description: "Control your home from anywhere with our mobile app",
-      icon: Smartphone;
+      icon: Smartphone,
       price: "Included"}
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -773,7 +773,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         "Email support",
         "Basic automation"
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: "Home"
@@ -791,7 +791,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         "Custom scenes",
         "Security monitoring"
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: "Mansion"
@@ -810,7 +810,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         "Professional installation")
         "SLA guarantee"
       ])
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -821,7 +821,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     setDevices(devices.map(device =>)
       device.id === deviceId
         ? { ...device, status: device.status === 'on' ? 'off' : 'on' }
-        : device;
+        : device,
     ));
   };
 
@@ -854,11 +854,13 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     setScenes(scenes.map(scene =>)
       scene.id === sceneId
         ? { ...scene, active: !scene.active }
-        : scene;
+        : scene,
     ));
   };
+const Component = () => {
 
-  return(<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 ${className}`}>
+  return (<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 ${className}`}>
+const Component = () => {
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 ${className}`}></div>
       <Helmet>
@@ -881,12 +883,12 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
               <span className="text-green-300 font-medium">AI Smart Home Controller Pro</span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              Intelligent Home Automation;
+            <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent neon-text">
+              Intelligent Home Automation,
             </h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Control Your Home with AI-Powered Intelligence;
+            <p className="text-2xl md: text-3xl text-gray-300 mb-4 font-light">
+              Control Your Home with AI-Powered Intelligence,
             </p>,
 ,
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
@@ -904,7 +906,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
 
               <button className="group inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo;
+                Watch Demo,
               </button>,
             </div>,
 ,
@@ -938,15 +940,15 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Dashboard;
+              Smart Home Dashboard,
       <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Smart Home Dashboard
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Control and monitor all your smart devices from one place;
+              Control and monitor all your smart devices from one place,
             </p>
           </div>
 ,
@@ -957,17 +959,17 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
 
           <div className="max-w-7xl mx-auto"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
               {/* Devices Control */}</div>
               <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
                   <Home className="w-8 h-8 text-green-400 mr-3" />
-                  Smart Devices;
+                  Smart Devices,
                 </h3>
 ,
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
                   {devices.map((device) => (,
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
                   {devices.map((device) => (}
                     <div key={device.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
                       <div className="flex items-center justify-between mb-3">
@@ -977,7 +979,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                     <div key={device.id} className="bg-white/5 rounded-lg p-4 border border-white/10"></div>
                       <div className="flex items-center justify-between mb-3"></div>
                         <h4 className="text-white font-semibold">{device.name}</h4>
-                        <button;
+                        <button,
                           onClick={() => toggleDevice(device.id)}
                           className={`w-12 h-6 rounded-full transition-colors ${}
                             device.status === 'on' ? 'bg-green-500' : 'bg-gray-600'}
@@ -1037,7 +1039,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                             max="100"
                             value={device.volume}
                             onChange={(e) => setDevices(devices.map(d =>})
-                              d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d;
+                              d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d,
                             onChange={(e) => setDevices(devices.map(d =>)}
                               d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d
                             ))}
@@ -1056,7 +1058,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center"></h3>
                     <Settings className="w-6 h-6 text-green-400 mr-2" />
-                    Scenes;
+                    Scenes,
                   </h3>
                   <div className="space-y-3">
                     {scenes.map((scene) => (
@@ -1069,7 +1071,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                         className={`w-full p-3 rounded-lg border transition-all ${
                           scene.active;
                             ? 'border-green-400 bg-green-400/10'}
-                            : 'border-white/20 hover:border-green-400/50'}
+                            : 'border-white/20 hover: border-green-400/50'}
                         className={`w-full p-3 rounded-lg border transition-all ${}
                           scene.active
                             ? 'border-green-400 bg-green-400/10'
@@ -1089,7 +1091,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center"></h3>
                     <Zap className="w-6 h-6 text-green-400 mr-2" />
-                    Energy Usage;
+                    Energy Usage,
                   </h3>
                   <div className="space-y-4"></div>
                     <div className="flex justify-between"></div>
@@ -1121,15 +1123,15 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Features;
+              Smart Home Features,
       <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Smart Home Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI-powered features for the ultimate smart home experience;
+              Advanced AI-powered features for the ultimate smart home experience,
             </p>
           </div>,
 ,
@@ -1146,7 +1148,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
             {features.map((feature, index) => (}
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -1167,15 +1169,15 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Plans;
+              Smart Home Plans,
       <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Smart Home Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the smart home plan that fits your needs;
+              Choose the smart home plan that fits your needs,
             </p>
           </div>,
 ,
@@ -1189,11 +1191,11 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 {plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-green-400/50 ring-2 ring-green-400/30' : 'border-white/10'}`}>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-green-400/50 ring-2 ring-green-400/30' : 'border-white/10'}`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-400 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular;
+                      Most Popular,
                     </span>
                   </div>
                 )}
@@ -1238,33 +1240,33 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Transform Your Home Today;
+              Transform Your Home Today,
       <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Transform Your Home Today
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our smart home experts to get started with your AI-powered home automation;
+              Contact our smart home experts to get started with your AI-powered home automation,
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                 <div className="space-y-4"></div>
                   <div className="flex items-center"></div>
                     <Phone className="w-5 h-5 text-green-400 mr-3" />
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-green-400 transition-colors">
-                      +1 (302) 464-0950;
+                      +1 (302) 464-0950,
                     </a>
                   </div>
                   <div className="flex items-center"></div>
                     <Mail className="w-5 h-5 text-green-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-green-400 transition-colors">
-                      kleber@ziontechgroup.com;
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover: text-green-400 transition-colors">
+                      kleber@ziontechgroup.com,
                     </a>
                   </div>
                   <div className="flex items-start">
@@ -1302,7 +1304,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                   </div>
                 </div>
                 <button className="w-full mt-6 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Schedule Consultation;
+                  Schedule Consultation,
                 </button>
               </div>
             </div>

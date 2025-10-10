@@ -34,16 +34,16 @@ function fixDuplicateDeclarations(filePath) {
 function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
       return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
-    });
+    }),
     
     // Fix duplicate const declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
       return `const ${name} = () => {/* TODO: Fix JSX expression */}
-    });
+    }),
     
     // Fix missing closing braces in simple cases;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-        closeBraces += (line.match(/}/g) || []).length;
+        closeBraces += (line.match(/}/g) || []).length,
       }
       
       if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
@@ -58,15 +58,15 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
         return match + ';';
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
       }
-      return match;
+      return match,
     });
     
     // Only write if content changed;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed duplicates in: ${filePath}`);
+      console.log(`Fixed duplicates in: ${filePath}`),
     if (content !== originalContent) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`),
       return true;
     }
     
@@ -99,12 +99,12 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
         }
       }
     } catch (error) {
-      // Skip directories that can't be read;
+      // Skip directories that can't be read,
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
   
-  walkDir(dir);
+  walkDir(dir),
   return files;
 }
 
@@ -120,12 +120,12 @@ for (const file of files) {/* TODO: Fix JSX expression */}
   }
 }
 `
-console.log(`✅ Fixed duplicates in ${fixedCount} files`);
+console.log(`✅ Fixed duplicates in ${fixedCount} files`),
 
 // Run linting to check results;
 console.log('\n🔍 Running linting to check results...');
 try {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+  o: 'pipe' }),
   console.log('✅ Linting passed!');
 } catch (error) {/* TODO: Fix JSX expression */}
 }

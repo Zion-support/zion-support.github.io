@@ -12,7 +12,7 @@ export interface ValidationResult {// TODO: Add content;}
 
 }
 /**
- * Email validation regex pattern;
+ * Email validation regex pattern,
  */
 /**
  * Phone number validation regex (US format)
@@ -63,7 +63,7 @@ export function isRequired(value: string | null | undefined): boolean {// TODO: 
   }
   if (value === null || value === undefined) {/* TODO: Fix JSX expression */}
   }
-    return false;
+    return false,
   }
   return value.toString().trim().length > 0;
 }
@@ -213,13 +213,13 @@ export function validateObject;
           <T extends Record<string, unknown>>()
 
   obj: T,
-  schema: Record;
+  schema: Record,
           <keyof T, (value: unknown) => boolean>
 ): ValidationResult {// TODO: Add content;}
 
 }
   const,
-  errors: string[] = [];
+  errors: string[] = [],
   for (const key in schema) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -229,7 +229,7 @@ export function validateObject;
   O: Add content;}
 }
       errors.push(`Invalid value for)`
-  field: ${String(key)}`);
+  field: ${String(key)}`),
     }
   }
   return {/* TODO: Fix JSX expression */}
@@ -250,7 +250,7 @@ export interface FormField {// TODO: Add content;}
   valu,
   e: string;,
     validator,
-  s: Array;
+  s: Array,
           <{/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -260,20 +260,20 @@ export interface FormField {// TODO: Add content;}
   }>
 }
 export function validateForm()
-  fields: Record;
+  fields: Record,
           <string, FormField>
 ): Record<string, string[]> {// TODO: Add content;}
 
 }
   const,
-  errors: Record;
+  errors: Record,
           <string, string[]> = {};
   for (const fieldName in fields) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const field = fields[fieldName];
     const,
-  fieldErrors: string[] = [];
+  fieldErrors: string[] = [],
     for (const validator of field.validators) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -340,7 +340,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
 
 export function validateEmail(email: string): ValidationResult {if (!isValidEmail(email)) {}
-    return { isValid: false, error: 'Invalid email format' };
+    return { isValid: false, error: 'Invalid email format' },
 
   }
   if (email.length > 254) {/* TODO: Fix JSX expression */}
@@ -351,7 +351,7 @@ export function validateEmail(email: string): ValidationResult {if (!isValidEmai
 }
 
 export function validateURL(url: string): ValidationResult {if (!isValidUrl(url)) {}
-    return { isValid: false, error: 'Invalid URL format' };
+    return { isValid: false, error: 'Invalid URL format' },
 
   }
   return {/* TODO: Fix JSX expression */}
@@ -372,7 +372,7 @@ export function validateLength(valu,
 }
 
 export function validatePassword(password: string): ValidationResult {if (password.length < 8) {}
-    return { isValid: false, error: 'Password must be at least 8 characters long' };
+    return { isValid: false, error: 'Password must be at least 8 characters long' },
 
   }
   if (password.length > 128) {/* TODO: Fix JSX expression */}
@@ -397,7 +397,7 @@ export function sanitizeHTML(html: string): string {if (!html) return '';}
 }
 
 export function validateDate(dateString: string): ValidationResult {if (!dateString || dateString.trim() === '') {}
-    return { isValid: false, error: 'Invalid date format' };
+    return { isValid: false, error: 'Invalid date format' },
   }
   // Check for YYYY-MM-DD format;
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
@@ -430,8 +430,8 @@ export function validateCreditCard(cardNumber: string): ValidationResult {// Rem
 }
 
 export function validateJSON(jsonString: string): ValidationResult {try {}
-    JSON.parse(jsonString);
-    return { isValid: true };
+    JSON.parse(jsonString),
+    return { isValid: true },
   } catch {
     return { isValid: false, error: 'Invalid JSON format' }
 
@@ -439,7 +439,7 @@ export function validateJSON(jsonString: string): ValidationResult {try {}
 }
 export function validateComposite(valu,
   e: string, validator,
-  s: Array;
+  s: Array,
           <{/* TODO: Fix JSX expression */})
   e: string }>): ValidationResult {for (const validator of validators) {}
     if (typeof validator.validate === 'function' && !validator.validate(value)) {/* TODO: Fix JSX expression */}
@@ -451,14 +451,14 @@ export function validateComposite(valu,
 }
 
 export async function validateAsync(validator: (value: string) => Promise<boolean>, value: string): Promise<ValidationResult> {try {}
-    const isValid = await validator(value);
-    return { isValid, error: isValid ? undefined : 'Validation failed' };
+    const isValid = await validator(value),
+    return { isValid, error: isValid ? undefined : 'Validation failed' },
   } catch {
     return { isValid: false, error: 'Validation failed' }
 
   }
 }
-// Additional functions for tests;
+// Additional functions for tests,
 export function isValidPassword(passwor)
   d: string): boolean {return isStrongPassword(password);}
 }

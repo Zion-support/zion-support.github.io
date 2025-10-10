@@ -6,20 +6,20 @@
 interface Props {
 
 
-  children: ReactNode;
+  children: ReactNode,
 
   fallback?: ReactNode;
   onError?: (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => void;
+  o: ErrorInfo) => void,
   resetKeys?: Array;
           <string | number>;
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorCount: number;
+  hasError: boolean,
+  error: Error | null,
+  errorInfo: ErrorInfo | null,
+  errorCount: number,
 }
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -29,7 +29,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorCount: 0
-    };
+    },
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -46,7 +46,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    });
+    }),
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -55,7 +55,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     this.setState((prevState) => ({
       errorInfo,
       errorCount: prevState.errorCount + 1
-    }));
+    })),
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {}
     // Send to external error tracking (if available)
@@ -74,7 +74,7 @@ interface State {/* TODO: Fix JSX expression */}
     errorInf,
   o: ErrorInfo | null;,
     errorCoun,
-  t: number;
+  t: number,
 }
 class ImprovedErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
@@ -97,11 +97,11 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       errorInf,
   o: null,
       errorCoun,
-  t: 0;
+  t: 0,
     };
   }
   static getDerivedStateFromError(erro)
-  r: Error): Partial;
+  r: Error): Partial,
           <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -134,7 +134,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       userAgen,
   t: navigator.userAgent,
       ur,
-  l: window.location.href;
+  l: window.location.href,
     });
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
@@ -174,7 +174,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   O: Add content;}
 };
   componentStac,
-  k: errorInfo.componentStack;
+  k: errorInfo.componentStack,
 
           }
         })
@@ -207,7 +207,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       hasError: false,
       error: null,
       errorInfo: null
-    });
+    }),
   };
   handleReload = (): void => {
     window.location.reload();
@@ -222,6 +222,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         return this.props.fallback;
       }
       // Default error UI
+const Component = () => {
       return (
         <div className="error-boundary-container" style={styles.container}>
           <div style={styles.content}>
@@ -270,6 +271,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         return this.props.fallback;
       }
       // Default error UI;
+const Component = () => {
       return (<div>Coming Soon</div>)
   )
         
@@ -306,7 +308,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                   {this.state.errorInfo?.componentStack && ()}
           <pre style={styles.stack}></pre>
                       <strong>Component,
-  Stack:</strong>
+  Stack: </strong>
 
                       {this.state.errorInfo.componentStack}
                     </pre>
@@ -325,7 +327,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
               <button
 
 // >
-//                 Try Again;
+//                 Try Again,
           </button>
               <button></button>
 
@@ -505,7 +507,7 @@ const styles = {// TODO: Add content;}
     boxShado,
   w: '0 4px 6px rgba(0, 0, 0, 0.1)',
     textAlig,
-  n: 'center' as const;
+  n: 'center' as const,
   },
   ico,
   n: {/* TODO: Fix JSX expression */}
@@ -570,7 +572,7 @@ const styles = {// TODO: Add content;}
     marginBotto,
   m: '12px',
     userSelec,
-  t: 'none' as const;
+  t: 'none' as const,
   },
   errorDetail,
   s: {/* TODO: Fix JSX expression */}
@@ -607,7 +609,7 @@ const styles = {// TODO: Add content;}
     whiteSpac,
   e: 'pre-wrap' as const,
     wordBrea,
-  k: 'break-all' as const;
+  k: 'break-all' as const,
   },
   action,
   s: {/* TODO: Fix JSX expression */}
@@ -620,7 +622,7 @@ const styles = {// TODO: Add content;}
     justifyConten,
   t: 'center',
     flexWra,
-  p: 'wrap' as const;
+  p: 'wrap' as const,
   },
   butto,
   n: {/* TODO: Fix JSX expression */}
@@ -663,7 +665,7 @@ const styles = {// TODO: Add content;}
     colo,
   r: '#999'
   }
-};
+},
 
 
 

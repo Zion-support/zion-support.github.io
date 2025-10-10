@@ -34,7 +34,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       title: 'Goal Tracking',
       description: 'Monitor KPIs and business objectives with automated alerts.'
     }
-  ];
+  ],
 
   const benefits = [
     'Real-time data visualization and reporting',
@@ -50,7 +50,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>
@@ -187,7 +188,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Join thousands of businesses already using our AI analytics dashboard 
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
@@ -201,7 +202,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 
 export default AIAnalyticsDashboardPage;

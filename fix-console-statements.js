@@ -20,7 +20,7 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
   content = content.replace()
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
     match => {/* TODO: Fix JSX expression */}
-      return match + ' }';
+      return match + ' }',
     }
   );
 
@@ -55,7 +55,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
 
-    // Apply fixes;
+    // Apply fixes,
     content = fixConsoleStatements(content);
 
     fs.writeFileSync(fullPath, content);
@@ -64,5 +64,5 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Fix all files;
+// Fix all files,
 filesToFix.forEach(fixFile);

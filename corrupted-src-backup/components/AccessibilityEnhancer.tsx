@@ -21,12 +21,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
 ,
       const _handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
       mediaQuery.addEventListener('change', handleChange);
+const Component = () => {
       return () => mediaQuery.removeEventListener('change', handleChange);
 const,
   AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-    return undefined;
+    return undefined,
   }, [enableHighContrast]);
 
   useEffect(() => {
@@ -37,10 +38,11 @@ const,
 ,
       const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
       mediaQuery.addEventListener('change', handleChange);
+const Component = () => {
       return () => mediaQuery.removeEventListener('change', handleChange);
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
-    return undefined;
+    return undefined,
   }, [enableReducedMotion]);
 
   useEffect(() => {
@@ -57,7 +59,7 @@ const,
           }
         }
 
-        // Escape key handling;
+        // Escape key handling,
         if (e.key === 'Escape') {
           const _activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
@@ -65,7 +67,7 @@ const,
         if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
           }
         }
-      };
+      },
 
       // Focus management;
       const handleFocusIn = (e: FocusEvent) => {
@@ -80,17 +82,18 @@ const,
       const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
           }
         }
-      };
+      },
 
       const handleFocusOut = () => {/* TODO: Fix JSX expression */}
-      };
+      },
 
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('focusin', handleFocusIn);
       document.addEventListener('focusout', handleFocusOut);
+const Component = () => {
 
       return () => {/* TODO: Fix JSX expression */}
-      };
+      },
     }
     return undefined;
   }, [enableKeyboardNavigation, enableScreenReaderSupport]);
@@ -134,8 +137,10 @@ const,
       }, 1000);
     }
   };
+const Component = () => {
 
-  return(<div;
+  return (<div;
+const Component = () => {
   return (<div></div>
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
       role="main""
@@ -155,13 +160,13 @@ const,
           const _main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {}
             (main as HTMLElement).focus();}
-            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' }),
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""
         className="skip-link"
         onClick={/* TODO: Fix JSX expression */})
-  r: 'smooth' });
+  r: 'smooth' }),
           }
         }}
       >

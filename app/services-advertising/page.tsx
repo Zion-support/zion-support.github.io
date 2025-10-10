@@ -11,28 +11,28 @@ const ServicesAdvertisingPage: React.FC = () => {,
       description: 'Leverage artificial intelligence to create, optimize, and scale your advertising campaigns across all platforms.',
       features: ['Automated A/B Testing', 'Real-time Optimization', 'Cross-platform Management', 'ROI Tracking'],
       price: '$2,500/mo',
-      icon: Target;
+      icon: Target,
     },
     {
       title: 'Programmatic Advertising',
       description: 'Advanced programmatic advertising solutions that maximize reach and minimize costs.',
       features: ['Real-time Bidding', 'Audience Targeting', 'Budget Optimization', 'Performance Analytics'],
       price: '$3,000/mo',
-      icon: BarChart;
+      icon: BarChart,
     },
     {
       title: 'Social Media Advertising',
       description: 'Comprehensive social media advertising management across Facebook, Instagram, LinkedIn, and more.',
       features: ['Multi-platform Management', 'Creative Development', 'Audience Insights', 'Campaign Optimization'],
       price: '$1,800/mo',
-      icon: Users;
+      icon: Users,
     },
     {
       title: 'Search Engine Marketing',
       description: 'Advanced SEM strategies including Google Ads, Bing Ads, and other search platforms.',
       features: ['Keyword Research', 'Ad Copy Optimization', 'Landing Page Testing', 'Conversion Tracking'],
       price: '$2,200/mo',
-      icon: Zap;
+      icon: Zap,
     }
   ];
 
@@ -44,6 +44,7 @@ const ServicesAdvertisingPage: React.FC = () => {,
     'Real-time Optimization',
     'Comprehensive Reporting'
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -51,29 +52,30 @@ const ServicesAdvertisingPage: React.FC = () => {,
       </Navigation><section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto"></section>
           <div className="text-center mb-16"></div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               Advanced</h1> <span className="text-cyan-400">Advertising</span> Services
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your advertising strategy with AI-powered solutions that deliver measurable results.</p>
               Our comprehensive advertising services help you reach the right audience at the right time.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Get Started Today<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-              Advanced <span className="text-cyan-400">Advertising</span> Services;
+              Advanced <span className="text-cyan-400">Advertising</span> Services,
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your advertising strategy with AI-powered solutions that deliver measurable results.
               Our comprehensive advertising services help you reach the right audience at the right time.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Get Started Today;
+                Get Started Today,
               </a>
               <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                 Call +1 302 464 0950;
@@ -164,12 +166,12 @@ const ServicesAdvertisingPage: React.FC = () => {,
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Advertising?</h2><p className="text-xl text-gray-300 mb-8">Let our experts help you create and execute advertising campaigns that deliver real results.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Your Campaign<a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Call +1 302 464 0950</a>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-              Start Your Campaign;
+              Start Your Campaign,
             </a>
             <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
               Call +1 302 464 0950;

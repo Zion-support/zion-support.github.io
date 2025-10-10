@@ -1,6 +1,6 @@
 class SecurityEnhancer {
-  private static instance: SecurityEnhancer;
-  private isInitialized: boolean = false;
+  private static instance: SecurityEnhancer,
+  private isInitialized: boolean = false,
 ,
   private constructor() {}
   private setupHTTPSRedirect(): void {
@@ -32,11 +32,11 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   public static getInstance(): SecurityEnhancer {/* TODO: Fix JSX expression */}
     }
-    return SecurityEnhancer.instance;
+    return SecurityEnhancer.instance,
   }
 
   public initialize(): void {/* TODO: Fix JSX expression */}
   }
 }
 
-export default SecurityEnhancer;
+export default SecurityEnhancer,

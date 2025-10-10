@@ -256,7 +256,7 @@ export default function MicroSaasPage() {
     { name: 'Inventory', count: microSaasServices.filter(s => s.category === 'Inventory').length },
     { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
     { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
-  ];
+  ],
 
   const benefits = [
     {
@@ -279,14 +279,15 @@ export default function MicroSaasPage() {
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security with 99.9% uptime guarantee'
     }
-  ];
+  ],
 
   const stats = [
     { label: 'Active Users', value: '10,000+' },
     { label: 'Apps Available', value: '50+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -448,7 +449,7 @@ export default function MicroSaasPage() {
               Choose the plan that fits your business needs. All plans include 24/7 support and regular updates.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4">$19<span className="text-lg text-gray-400">/month</span></div>
@@ -581,5 +582,5 @@ export default function MicroSaasPage() {
 
       <Footer />
     </div>
-  );
+  ),
 }

@@ -10,7 +10,7 @@ const BusinessIntelligencePage: React.FC = () => {
     {,
       title: 'Real-Time Analytics Dashboard',
       description: 'Live business intelligence dashboards with real-time data visualization and interactive reporting.',
-      icon: BarChart;
+      icon: BarChart,
       price: 'Starting at $2,800/month',
       features: ['Real-time data streaming', 'Interactive dashboards', 'Custom visualizations', 'Mobile responsive', 'Automated alerts'],
       benefits: ['Make faster decisions', 'Identify trends immediately', 'Improve operational efficiency'],
@@ -21,7 +21,7 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'Predictive Analytics & Forecasting',
       description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
-      icon: TrendingUp;
+      icon: TrendingUp,
       price: 'Starting at $3,500/month',
       features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
       benefits: ['Improve planning accuracy by 50%', 'Reduce inventory costs', 'Optimize resource allocation'],
@@ -32,7 +32,7 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'Data Warehouse Design & Implementation',
       description: 'Comprehensive data warehouse solutions for centralized data storage and analytics.',
-      icon: Database;
+      icon: Database,
       price: 'Starting at $4,200/month',
       features: ['Data modeling', 'ETL processes', 'Data quality management', 'Schema design', 'Performance optimization'],
       benefits: ['Centralize all business data', 'Improve data quality', 'Enable advanced analytics'],
@@ -43,7 +43,7 @@ const BusinessIntelligencePage: React.FC = () => {
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Intelligent BI systems that automatically identify patterns and generate insights.',
-      icon: Brain;
+      icon: Brain,
       price: 'Starting at $4,500/month',
       features: ['Automated insights', 'Anomaly detection', 'Natural language queries', 'Pattern recognition', 'Smart recommendations'],
       benefits: ['Discover hidden patterns', 'Reduce analysis time by 80%', 'Make data-driven decisions'],
@@ -157,29 +157,31 @@ const BusinessIntelligencePage: React.FC = () => {
       step: '01',
       title: 'Data Assessment',
       description: 'Analyze your current data landscape and identify opportunities',
-      icon: Database;
+      icon: Database,
     },
     {
       step: '02',
       title: 'Strategy Development',
       description: 'Create a comprehensive BI strategy tailored to your needs',
-      icon: Target;
+      icon: Target,
     },
     {
       step: '03',
       title: 'Implementation',
       description: 'Build and deploy your BI solution with best practices',
-      icon: Zap;
+      icon: Zap,
     },
     {
       step: '04',
       title: 'Optimization',
       description: 'Continuously improve and optimize your BI capabilities',
-      icon: TrendingUp;
+      icon: TrendingUp,
     }
   ];
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -187,7 +189,7 @@ const BusinessIntelligencePage: React.FC = () => {
         <meta name="description" content="Transform your data into strategic insights with our comprehensive business intelligence services." />
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Business Intelligence Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into strategic insights that drive business growth.</p>
             Make informed decisions with our comprehensive BI solutions.</p>
@@ -203,7 +205,7 @@ const BusinessIntelligencePage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Business Intelligence Services;
+              Business Intelligence Services,
             </h1>
           </div>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -289,14 +291,14 @@ const BusinessIntelligencePage: React.FC = () => {
                   ))}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
+                    ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover: from-indigo-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>Get Started</button>
-                  plan.popular;
+                  plan.popular,
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover: from-indigo-600 hover:to-purple-700'}
                     : 'bg-slate-700 text-white hover:bg-slate-600'}
                 }`}>
-                  Get Started;
+                  Get Started,
                 </button>
               </div>
             ))}
@@ -306,7 +308,7 @@ const BusinessIntelligencePage: React.FC = () => {
         {/* CTA Section */}
         <section className="text-center">
           <div className="cyber-card p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?<p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?<p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Data?
             </h2>
@@ -314,7 +316,7 @@ const BusinessIntelligencePage: React.FC = () => {
               Join hundreds of businesses who have unlocked the power of their data with our BI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
+              <a,
           <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?</h2><p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
             </p>
@@ -343,8 +345,8 @@ const BusinessIntelligencePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Services<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive business intelligence solutions to unlock the power of your data.<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{biServices.map((service, index) => (</div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our BI Services;
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+              Our BI Services,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive business intelligence solutions to unlock the power of your data.
@@ -417,7 +419,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 </div>
 
                 <button className="w-full bg-purple-600 hover: bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                  Get Started;
+                  Get Started,
                 </button>,
               </div>))}
           </div>
@@ -429,8 +431,8 @@ const BusinessIntelligencePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Process<p className="text-xl text-gray-300 max-w-3xl mx-auto">A proven methodology to deliver successful business intelligence solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our BI Process;
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+              Our BI Process,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               A proven methodology to deliver successful business intelligence solutions.
@@ -492,8 +494,8 @@ const BusinessIntelligencePage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2>
             <p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a;
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+            <a,
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2><p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
           </p>
@@ -511,14 +513,14 @@ const BusinessIntelligencePage: React.FC = () => {
               <Mail className="w-5 h-5 mr-2" >Email Us</Mai>
             </Mail>
               <Phone className="w-5 h-5 mr-2" />
-              Call Now;
+              Call Now,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="border border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
+              className="border border-white text-white hover: bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" />
-              Email Us;
+              Email Us,
             </a>
           </div>
         </div>

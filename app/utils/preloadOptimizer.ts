@@ -22,7 +22,7 @@ export const preloadCriticalResources = useCallback((...args) => {}
     document.head.appendChild(link)}
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   })
-  // Preload critical images;
+  // Preload critical images,
   const criticalImages = [
     '/images/hero-bg.webp',
     '/images/logo.webp',
@@ -98,7 +98,7 @@ export const optimizeImages = useCallback((...args) => {}
 }
 export const preloadRoute = (rout)
   e: string) => {/* TODO: Fix JSX expression */}
-  };
+  },
   const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {/* TODO: Fix JSX expression */}
     })
@@ -106,7 +106,7 @@ export const preloadRoute = (rout)
 }
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
   })
-  // Add intersection observer for lazy loading;
+  // Add intersection observer for lazy loading,
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
           }
         }
@@ -117,7 +117,7 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */}
   }
 }
 export const optimizeThirdPartyScripts = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined') return,
   // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)
@@ -152,7 +152,7 @@ const loadAnalytics = useCallback((...args) => {}
   document.head.appendChild(gaScript)}
 export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   })
-  // Load analytics after page load;
+  // Load analytics after page load,
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
     })
   } else {/* TODO: Fix JSX expression */}

@@ -7,14 +7,16 @@ const CloudMigration: React.FC = () => {,
   const [currentInfrastructure, setCurrentInfrastructure] = useState('');
   const [targetCloud, setTargetCloud] = useState('');
   const [migrationScope, setMigrationScope] = useState('');
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services<p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services<p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services</h1><p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
           </p>
@@ -49,7 +51,7 @@ const CloudMigration: React.FC = () => {,
                     <option value="">Select scope...<option value="lift-shift">Lift & Shift</option>
                     <option value="replatform">Replatform<option value="refactor">Refactor<option value="rearchitect">Rearchitect<button className="cyber-button w-full">Get Migration Plan</button>
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            Cloud Migration Services;
+            Cloud Migration Services,
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Seamlessly migrate your infrastructure to the cloud with zero downtime;
@@ -103,7 +105,7 @@ const CloudMigration: React.FC = () => {,
                 </div>
               </div>
               <button className="cyber-button w-full">
-                Get Migration Plan;
+                Get Migration Plan,
               </button>
             </div>
           </div>
@@ -219,13 +221,13 @@ const CloudMigration: React.FC = () => {,
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >Get Migration Quote</a>
             >
-              📞 Call: (302) 464-0950;
+              📞 Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Get Migration Quote;
+              Get Migration Quote,
             </a>
           </div>
         </div>

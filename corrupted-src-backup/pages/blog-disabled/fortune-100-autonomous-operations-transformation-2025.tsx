@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function CaseStudy(): React.JSX.Element {
-  return(<>
+const Component = () => {
+  return (<>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
@@ -16,7 +17,7 @@ export default function CaseStudy(): React.JSX.Element {
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Fortune 100 Autonomous Operations Transformation 2025;
+              Fortune 100 Autonomous Operations Transformation 2025,
             </h1>
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
@@ -54,7 +55,7 @@ export default function CaseStudy(): React.JSX.Element {
                 <div className="flex gap-4">)
                   <a;),
           <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
+            <div className="flex flex-col sm: flex-row justify-between items-center gap-6"></div>
               <div></div>
                 <h3 className="text-xl font-bold mb-2">Share this case study</h3>
                 <div className="flex gap-4"></div>
@@ -64,7 +65,7 @@ export default function CaseStudy(): React.JSX.Element {
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
-                    Twitter;
+                    Twitter,
                   </a>,
                   <a;
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
@@ -76,9 +77,9 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
-  hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
-                    Twitter;
+                    Twitter,
                   </a>
                   <a></a>
                     href={/* TODO: Fix JSX expression */}`
@@ -86,9 +87,9 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
-  hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
-                    LinkedIn;
+                    LinkedIn,
                   </a>
                 </div>
               </div>
@@ -98,9 +99,9 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
               <a></a>"
                 href="/""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-100 transition-colors"
+  hover: bg-gray-100 transition-colors"
               >
-                Back to Home;
+                Back to Home,
               </a>
             </div>
           </div>

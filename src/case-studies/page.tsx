@@ -67,7 +67,8 @@ const CaseStudiesPage: React.FC = () => {
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
-  ];
+  ],
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -171,7 +172,7 @@ const CaseStudiesPage: React.FC = () => {
                 Our AI solutions deliver consistent, measurable results
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">300%+</div>
                 <div className="text-gray-600">Average ROI</div>
@@ -219,6 +220,6 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 export default CaseStudiesPage;

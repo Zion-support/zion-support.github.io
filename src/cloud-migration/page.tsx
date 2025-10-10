@@ -189,6 +189,7 @@ const,
   n: 'Scale resources up or down based on demand automatically.',
       percentag,
   e: 'Unlimited'
+const Component = () => {
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Header */}"
@@ -201,7 +202,7 @@ const,
                 <Cloud className="w-8 h-8 text-white" /></Cloud>
               </div>"
               <h1 className="text-5xl font-bold text-white neon-text"></h1>
-                Cloud Migration;
+                Cloud Migration,
               </h1>"
             <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
               Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
@@ -254,13 +255,13 @@ const,
               Seamlessly migrate your applications and data to the cloud with our expert migration services;
               <a></a>"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-blue-700 transition-colors inline-flex items-center"
-                Get Started;
+  hover: bg-blue-700 transition-colors inline-flex items-center"
+                Get Started,
               </a>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
-  hover:text-white transition-all duration-300 inline-flex items-center"
-                View Demo;
+  hover: text-white transition-all duration-300 inline-flex items-center"
+                View Demo,
           </section>
 "
           <section className="mb-16"></section>"
@@ -403,15 +404,15 @@ const,
             Join hundreds of businesses that have successfully migrated to the cloud with our expert team."
             <button className="cyber-button px-8 py-4 text-lg"></button>"
             <button className="cyber-button-outline px-8 py-4 text-lg"></button>
-              Contact Our Experts;
+              Contact Our Experts,
       <Footer /></Footer>"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
       <div className="text-center"></div>"
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-          Contact Us;
+  hover: bg-cyan-600 transition-colors"></a>
+          Contact Us,
 
   );
 };

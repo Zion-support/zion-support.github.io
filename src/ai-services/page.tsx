@@ -39,6 +39,7 @@ $4}
     '95% Process Automation',
     '50% Cost Reduction',
     '99.9% Uptime Guarantee'
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -55,7 +56,7 @@ $4}
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
             </button>
@@ -64,7 +65,7 @@ $4}
           </div>
       
       <Footer />
-  );
+  ),
 };
 
 
@@ -213,14 +214,15 @@ export default function AIServicesPage() {
       color: 'from-indigo-500 to-purple-600',
       popular: false
     }
-  ];
+  ],
 
   const stats = [
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
     { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>
@@ -350,7 +352,7 @@ export default function AIServicesPage() {
                     </a>
                     <a
                       href="mailto:kleber@ziontechgroup.com"
-                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center"
+                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover: bg-slate-700 transition-colors text-center"
                     >
                       Learn More
                     </a>
@@ -390,5 +392,5 @@ export default function AIServicesPage() {
         </section>
       </div>
     </>
-  );
+  ),
 }

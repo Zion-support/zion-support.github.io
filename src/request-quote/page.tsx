@@ -129,6 +129,7 @@ $4}
   ];
 
   if (isSubmitted) {
+const Component = () => {
     return (
       <>
         <Navigation />
@@ -162,7 +163,7 @@ $4}
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -183,8 +184,9 @@ $4}
         </div>
         <Footer />
       </>
-    );
+    ),
   }
+const Component = () => {
 
   return (
     <>
@@ -434,7 +436,7 @@ $4}
                 <div className="space-y-3">
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    className="flex items-center text-cyan-400 hover: text-cyan-300 transition-colors"
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     <span className="text-sm">(302) 464-0950</span>
@@ -456,7 +458,7 @@ $4}
                 </div>
     <div>Coming Soon</div>
 
-  );
+  ),
 };
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -481,12 +483,12 @@ $4}
   n: '',
     requirement,
   s: '')
-  });
+  }),
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
 //     'AI Services',
 //     'IT Infrastructure',
@@ -500,7 +502,7 @@ $4}
   ];
   const projectSizes = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
@@ -509,7 +511,7 @@ $4}
   ];
   const timelines = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
 //     'ASAP',
 //     '1-3 months',
@@ -520,7 +522,7 @@ $4}
   ];
   const budgetRanges = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
 //     'Under $10,000',
 //     '$10,000 - $50,000',
@@ -553,7 +555,7 @@ $4}
   };
   const benefits = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -595,10 +597,10 @@ $4}
       descriptio,
   n: 'Free consultation with our technology experts'
     }
-  ];
+  ],
   const whyChooseUs = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -644,6 +646,7 @@ $4}
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
     return (<div>Coming Soon</div>)
   )
       
@@ -698,7 +701,7 @@ $4}
                 </div>
 
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
@@ -713,11 +716,11 @@ $4}
           
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
-// Contact Us;
+// Contact Us,
           </a>
 
                 <a
-                  href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                  href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
                   
@@ -730,7 +733,7 @@ $4}
           
           "
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
-// Back to Home;
+// Back to Home,
           </a>
               </div>
             </div>
@@ -743,6 +746,7 @@ $4}
       </>
     );
   }
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -753,8 +757,8 @@ $4}
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Request a Quote;
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+// Request a Quote,
 
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
@@ -836,17 +840,17 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
                   </div>"
                   <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-6"></div>
+  md: grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Company Name;
+// Company Name,
           </label>
 
                       <input
 type="text" name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
 
 // />
                     
@@ -861,7 +865,7 @@ type="text" name="company"
           </div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Phone Number;
+// Phone Number,
           </label>
 
                       <input
@@ -920,10 +924,10 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     </select>
                   </div>"
                   <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-6"></div>
+  md: grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Project Size;
+// Project Size,
           </label>
 
                       <select
@@ -1019,7 +1023,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       onChange={handleInputChange}
 // required
                       rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
 
 //                     />
                   
@@ -1034,7 +1038,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Specific Requirements;
+// Specific Requirements,
           </label>
 
                     <textarea

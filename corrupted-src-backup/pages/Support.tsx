@@ -44,7 +44,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ],
   const, faqCategorie, s = [
     {/* TODO: Fix JSX expression */}
     }
@@ -54,7 +54,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ],
   const, faq, s = [
     {/* TODO: Fix JSX expression */}
     }
@@ -76,14 +76,15 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ],
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => 
     selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y;)
   ).filt, e, r(f, a, q =>)
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
   );
-  return(<>
+const Component = () => {
+  return (<>
       <Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  />
@@ -103,6 +104,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-4x, l, m
   d:te, x, t-5xl, fon, t-bold, m, b-6">
+const Component = () => {
   return (<>
       <Helmet></Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>"
@@ -247,13 +249,15 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡' }
     { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }
     { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }
-  ];
-  return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
+  ],
+const Component = () => {
+  return (<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
       {/* Hero, Sectio, n */})
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
           <div, className="te, x, t-cent, e, r">
             <h1, className="te, x, t-4x, l, m;
+const Component = () => {
   return (
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}</div>
@@ -262,6 +266,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="te, x, t-cent, e, r"></div>
             <h1, className="te, x, t-4x, l, m
   d:te, x, t-6xl, fon, t-bold, m, b-6">
+const Component = () => {
   return ("
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50"></div>
       {/* Hero, Sectio, n */}"

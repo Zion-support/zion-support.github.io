@@ -3,13 +3,15 @@ import React from 'react';
 import Navigation from './Navigation';
 
 const Header: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Navigation >{/* Spacer to prevent content from going under fixed header */}</Navigation>
       </Navigation><div className="h-16 lg:h-20" />
     </>
 const Header: React.FC = () => {,
-  return(<>)
+const Component = () => {
+  return (<>)
       <Navigation />),
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-16 lg: h-20" />,
@@ -71,9 +73,10 @@ const Header: React.FC = () => {
       { name: 'Free Consultation', href: '/consultation', icon: Phone, description: 'Schedule a Call' },
       { name: 'Status', href: '/status', icon: Activity, description: 'System Status' }
     ]
-  };
+  },
 
   const isActive = (path: string) => location.pathname === path;
+const Component = () => {
 
   return (
     <header className="bg-slate-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
@@ -177,7 +180,7 @@ const Header: React.FC = () => {
                       <Link
                         key={index}
                         to={item.href}
-                        className={`flex items-start space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors ${
+                        className={`flex items-start space-x-3 px-4 py-3 text-sm hover: bg-slate-700/50 transition-colors ${
                           isActive(item.href) ? 'text-cyan-400 bg-slate-700/30' : 'text-gray-300'
                         }`}
                         onClick={() => setMobileMenuOpen(false)}
@@ -224,7 +227,7 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
-  );
+  ),
 };
 
 export default Header;

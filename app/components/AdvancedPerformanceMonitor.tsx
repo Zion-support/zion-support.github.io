@@ -2,12 +2,12 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  memory: number | null;
+  fcp: number | null,
+  lcp: number | null,
+  fid: number | null,
+  cls: number | null,
+  ttfb: number | null,
+  memory: number | null,
 }
 
 interface PerformanceMonitorProps {
@@ -32,7 +32,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
 
-    const observers: PerformanceObserver[] = [];
+    const observers: PerformanceObserver[] = [],
 
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
@@ -44,9 +44,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime })),
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
         observers.push(lcpObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
@@ -73,7 +73,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             }
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ['first-input'] }),
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
@@ -96,12 +96,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
+                setMetrics(prev => ({ ...prev, cls: clsValue })),
               }
             }
           });
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] }),
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
@@ -120,7 +120,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       // Measure Memory Usage
       const memory =
         (performance as Performance & { memory?: { usedJSHeapSize: number } })
-          .memory?.usedJSHeapSize || null;
+          .memory?.usedJSHeapSize || null,
 
       setMetrics(prev => ({
         ...prev,
@@ -134,6 +134,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
 
     // Cleanup observers
+const Component = () => {
     return () => {
       observers.forEach(observer => {
         try {
@@ -180,22 +181,22 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
-            );
+            ),
           }
           if (onFCP) {
             onFCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
+            ),
           }
           if (onLCP) {
             onLCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
+            ),
           }
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
+            ),
           }
         })
         .catch(() => {
@@ -217,6 +218,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const interval = setInterval(() => {
       measureResourceTiming();
     }, 5000);
+const Component = () => {
 
     return () => {
       if (cleanup) cleanup();
@@ -237,7 +239,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // Performance recommendations
   const getPerformanceRecommendations = useCallback(() => {
-    const recommendations: string[] = [];
+    const recommendations: string[] = [],
 
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
@@ -275,6 +277,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const _recommendations = getPerformanceRecommendations();
 
   if (process.env['NODE_ENV'] === 'development') {
+const Component = () => {
     return (
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>

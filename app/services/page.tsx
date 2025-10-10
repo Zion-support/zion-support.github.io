@@ -27,7 +27,7 @@ const ServicesPage: React.FC = () => {
       features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'User Management'],
       href: '/micro-saas'
     }
-  ];
+  ],
 
   const itServices = [
     {
@@ -58,7 +58,7 @@ const ServicesPage: React.FC = () => {
       features: ['Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Migration Services'],
       path: '/database-management'
     }
-  ];
+  ],
 
   const microSaasServices = [
     {
@@ -68,13 +68,14 @@ const ServicesPage: React.FC = () => {
       features: ['Custom Development', 'User Management', 'Payment Integration', 'Analytics Dashboard'],
       path: '/micro-saas'
     }
-  ];
+  ],
 
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: 'Middletown, DE 19709'
   };
+const Component = () => {
 
   return (
     <>
@@ -123,7 +124,7 @@ const ServicesPage: React.FC = () => {
                   </ul>
                   <a
                     href={service.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                    className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-semibold transition-colors"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -212,7 +213,7 @@ const ServicesPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default ServicesPage;

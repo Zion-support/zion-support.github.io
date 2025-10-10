@@ -10,7 +10,7 @@ const CompliancePage: React.FC = () => {,
       name: 'SOC 2 Type II',
       description: 'Audited controls for security, availability, processing integrity, confidentiality, and privacy',
       status: 'Certified'
-      icon: Award;
+      icon: Award,
       details: [,
         'Annual third-party audits by independent auditors',
         'Comprehensive control testing and validation',
@@ -22,7 +22,7 @@ const CompliancePage: React.FC = () => {,
       name: 'ISO 27001'
       description: 'International standard for information security management systems'
       status: 'Certified'
-      icon: Shield;
+      icon: Shield,
       details: [,
         'Information security management system (ISMS)',
         'Risk assessment and treatment procedures',
@@ -34,7 +34,7 @@ const CompliancePage: React.FC = () => {,
       name: 'GDPR'
       description: 'General Data Protection Regulation compliance for EU data protection'
       status: 'Compliant'
-      icon: Lock;
+      icon: Lock,
       details: [,
         'Data protection by design and by default',
         'Privacy impact assessments (PIAs)',
@@ -46,7 +46,7 @@ const CompliancePage: React.FC = () => {,
       name: 'CCPA'
       description: 'California Consumer Privacy Act compliance for California residents'
       status: 'Compliant'
-      icon: Eye;
+      icon: Eye,
       details: [,
         'Consumer privacy rights management',
         'Data collection and processing transparency',
@@ -58,7 +58,7 @@ const CompliancePage: React.FC = () => {,
       name: 'HIPAA'
       description: 'Health Insurance Portability and Accountability Act for healthcare data'
       status: 'Compliant'
-      icon: Database;
+      icon: Database,
       details: [,
         'Protected health information (PHI) safeguards',
         'Administrative, physical, and technical safeguards',
@@ -70,7 +70,7 @@ const CompliancePage: React.FC = () => {,
       name: 'PCI DSS'
       description: 'Payment Card Industry Data Security Standard for payment processing'
       status: 'Compliant'
-      icon: UserCheck;
+      icon: UserCheck,
       details: [,
         'Secure payment card data handling',
         'Network security and monitoring',
@@ -83,7 +83,7 @@ const CompliancePage: React.FC = () => {,
   const complianceAreas = [
     {
       title: 'Data Protection'
-      icon: Shield;
+      icon: Shield,
       description: 'Comprehensive data protection measures and privacy controls',
       measures: [,
         'Data encryption at rest and in transit',
@@ -94,7 +94,7 @@ const CompliancePage: React.FC = () => {,
     },
     {
       title: 'Access Controls'
-      icon: Lock;
+      icon: Lock,
       description: 'Robust access management and authentication systems',
       measures: [,
         'Multi-factor authentication (MFA)',
@@ -105,7 +105,7 @@ const CompliancePage: React.FC = () => {,
     },
     {
       title: 'Security Monitoring'
-      icon: Eye;
+      icon: Eye,
       description: 'Continuous security monitoring and incident response',
       measures: [,
         'Security information and event management (SIEM)',
@@ -116,7 +116,7 @@ const CompliancePage: React.FC = () => {,
     },
     {
       title: 'Audit & Reporting'
-      icon: FileText;
+      icon: FileText,
       description: 'Regular audits and compliance reporting',
       measures: [,
         'Internal and external security audits',
@@ -149,21 +149,23 @@ const CompliancePage: React.FC = () => {,
       issuer: 'Internal Assessment',
       validUntil: 'Ongoing',
       scope: 'California Privacy Rights'}
-  ];
+  ],
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.</p>
+          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.</p>
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Compliance & Certifications;
+            Compliance & Certifications,
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             We maintain the highest standards of compliance and security to protect your data and ensure regulatory adherence across all industries.
@@ -403,12 +405,12 @@ const CompliancePage: React.FC = () => {,
                 </p>
                 <a;
                   href="mailto: compliance@ziontechgroup.com"
-                  className="inline-flex items-center px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+                  className="inline-flex items-center px-4 py-2 bg-cyan-500 text-white rounded-lg hover: bg-cyan-600 transition-colors"
                 >
                   <FileText className="w-4 h-4 mr-2" >Request Documentation</FileText>
                 </FileText>
                   <FileText className="w-4 h-4 mr-2" />
-                  Request Documentation;
+                  Request Documentation,
                 </a>
               </div>
             </div>

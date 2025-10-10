@@ -82,13 +82,13 @@ function fixStringLiterals(filePath) {
       
       // Fix incomplete object declarations;
       if (line.match(/^\s*const\s+\w+\s*=\s*{\s*$/)) {
-        line = line.replace(/\{\s*$/, '{\n  // TODO: Add properties\n}');
+        line = line.replace(/\{\s*$/, '{\n  // TODO: Add properties\n}'),
         modified = true;
       }
       
       // Fix incomplete array declarations;
       if (line.match(/^\s*const\s+\w+\s*=\s*\[\s*$/)) {
-        line = line.replace(/\[\s*$/, '[\n  // TODO: Add items\n]');
+        line = line.replace(/\[\s*$/, '[\n  // TODO: Add items\n]'),
         modified = true;}
       
       // Fix incomplete function calls;
@@ -111,7 +111,7 @@ function fixStringLiterals(filePath) {
       
       // Fix incomplete single-line comments;
       if (line.trim() === '//') {
-        line = '// TODO: Add comment';
+        line = '// TODO: Add comment',
         modified = true;
       }
       
@@ -123,7 +123,8 @@ function fixStringLiterals(filePath) {
     // Fix empty files;
     if (content.trim().length === 0) {
       content = `export default function Page() {
-  return(<div>)
+const Component = () => {
+  return (<div>)
       <h1>Page</h1>)
       <p>Content coming soon...</p>)
     </div>)
@@ -140,7 +141,7 @@ function fixStringLiterals(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ Fixed: ${filePath}`),
       return true;
     }
     
@@ -204,10 +205,10 @@ for (const file of files) {
   }
 }
 
-console.log(`\n📊 Summary: `);
-console.log(`✅ Files fixed: ${fixedCount}`);
-console.log(`❌ Errors: ${errorCount}`);
-console.log(`📁 Total files processed: ${files.length}`);
+console.log(`\n📊 Summary: `),
+console.log(`✅ Files fixed: ${fixedCount}`),
+console.log(`❌ Errors: ${errorCount}`),
+console.log(`📁 Total files processed: ${files.length}`),
 
 if (fixedCount > 0) {
   console.log('\n🎉 String literals and syntax errors fixed successfully!');

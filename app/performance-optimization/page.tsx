@@ -6,23 +6,23 @@ import Link from 'next/link';
 const PerformanceOptimizationPage: React.FC = () => {,
   const services = [,
     {,
-      icon: Database;
+      icon: Database,
       title: 'Database Optimization',
       description: 'Optimize database queries, indexing, and performance tuning'
     },
     {
-      icon: Cloud;
+      icon: Cloud,
       title: 'Cloud Performance',
       description: 'Optimize cloud infrastructure and resource allocation'},
     {
-      icon: Gauge;
+      icon: Gauge,
       title: 'Application Tuning',
       description: 'Fine-tune applications for maximum performance and efficiency'},
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Security Optimization',
       description: 'Enhance security without compromising performance'}
-  ];
+  ],
 
   const benefits = [
     {
@@ -41,7 +41,7 @@ const PerformanceOptimizationPage: React.FC = () => {,
       title: 'Scalability',
       description: 'Prepare your systems for future growth and demand',
       metric: '10x scalability'}
-  ];
+  ],
 
   const optimizationAreas = [
     {
@@ -65,10 +65,12 @@ const PerformanceOptimizationPage: React.FC = () => {,
       features: ['Bandwidth optimization', 'Latency reduction', 'Protocol optimization', 'Traffic management']
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -79,7 +81,7 @@ const PerformanceOptimizationPage: React.FC = () => {,
             We analyze, tune, and optimize every aspect of your infrastructure for maximum speed and efficiency.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link;
+            <Link,
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
@@ -102,20 +104,20 @@ const PerformanceOptimizationPage: React.FC = () => {,
             Our</h2> <span className="text-cyan-400">Services</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{services.map((service, index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               ></div>
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
                   <service.icon className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}<p className="text-gray-300">{service.description}</p>
               <Zap className="w-5 h-5 mr-2" />
-              Get Optimized;
+              Get Optimized,
             </Link>
             <Link;
               href="/consultation"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
               <Gauge className="w-5 h-5 mr-2" />
-              Free Assessment;
+              Free Assessment,
             </Link>
           </div>,
         </div>,
@@ -283,11 +285,11 @@ const PerformanceOptimizationPage: React.FC = () => {,
             Don't let slow performance hold your business back. Let our experts optimize your systems for maximum speed and efficiency.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link;
+            <Link,
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-4">Boost Your Performance Today</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't let slow performance hold your business back. Let our experts optimize your systems for maximum speed and efficiency.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -301,14 +303,14 @@ const PerformanceOptimizationPage: React.FC = () => {,
               <Zap className="w-5 h-5 mr-2" >View Pricing</Za>
             </Zap>
               <ArrowRight className="w-5 h-5 mr-2" />
-              Get Started Now;
+              Get Started Now,
             </Link>
             <Link;
               href="/pricing"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
               <Zap className="w-5 h-5 mr-2" />
-              View Pricing;
+              View Pricing,
             </Link>
           </div>
         </div>

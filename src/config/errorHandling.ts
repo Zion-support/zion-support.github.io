@@ -35,19 +35,19 @@ export enum ErrorCategory {// TODO: Add content;}
   UNKNOWN = 'unknown'
 }
 export interface ErrorConfig {
-  enabled: boolean;
-  logToConsole: boolean;
-  sendToServer: boolean;
-  sampleRate: number;
-  maxStackTraceLength: number;
-  ignoreErrors: RegExp[];
-  severityThreshold: ErrorSeverity;
+  enabled: boolean,
+  logToConsole: boolean,
+  sendToServer: boolean,
+  sampleRate: number,
+  maxStackTraceLength: number,
+  ignoreErrors: RegExp[],
+  severityThreshold: ErrorSeverity,
 }
 export const _errorHandlingConfig: ErrorConfig = {
 
 export interface ErrorConfig {// TODO: Add content;}
 };
-  enabled: boolean;
+  enabled: boolean,
     logToConsole: boolean;,
     sendToServer: boolean;,
     sampleRate: number;,
@@ -67,7 +67,7 @@ export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
     /Non-Error promise rejection captured/i,
     /Loading chunk \d+ failed/i],
   severityThreshold: ErrorSeverity.LOW
-};
+},
 export const _errorMessages = {
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
@@ -102,7 +102,7 @@ export class AppError extends Error {
 //     /Loading chunk \d+ failed/i,
 //   ],
 
-  severityThreshold: ErrorSeverity.LOW;
+  severityThreshold: ErrorSeverity.LOW,
 
 };
   offlin,
@@ -143,7 +143,7 @@ export class AppError extends Error {
     retr,
   y: 'Please try again in a few moments.'
   }
-};
+},
 export class AppError extends Error {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -171,7 +171,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
   unknown: 'An unexpected error occurred. Please try again.',
     retry: 'Please try again in a few moments.'
   }
-};
+},
 export class AppError extends Error {// TODO: Add content;}
 }
 export class AppError extends Error {

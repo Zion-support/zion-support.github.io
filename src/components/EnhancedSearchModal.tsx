@@ -2,19 +2,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
 
 interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-  type: 'page' | 'service' | 'blog' | 'documentation';
+  id: string,
+  title: string,
+  description: string,
+  url: string,
+  category: string,
+  type: 'page' | 'service' | 'blog' | 'documentation',
   popularity?: number;
   lastModified?: string;
 }
 
 interface SearchModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void,
 }
 
 const mockSearchResults: SearchResult[] = [
@@ -68,7 +68,7 @@ const mockSearchResults: SearchResult[] = [
     popularity: 80,
     lastModified: '2024-01-05'
   }
-];
+],
 
 const recentSearches = [
   'AI Analytics',
@@ -115,6 +115,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     };
 
     document.addEventListener('keydown', handleKeyDown);
+const Component = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex, onClose]);
 
@@ -141,6 +142,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     const sortedResults = filteredResults.sort((a, b) => {
       const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
+const Component = () => {
       return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
     });
 
@@ -176,8 +178,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return '🏢';
       case 'Documentation':
         return '📚';
-      default:
-        return '🔍';
+      default: return '🔍',
     }
   };
 
@@ -191,12 +192,12 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return 'text-pink-400';
       case 'documentation':
         return 'text-green-400';
-      default:
-        return 'text-gray-400';
+      default: return 'text-gray-400',
     }
   };
 
   if (!isOpen) return null;
+const Component = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">

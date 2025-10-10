@@ -62,6 +62,7 @@ export default function ServicesSection() {
       features: ['iOS Development', 'Android Development', 'React Native', 'Flutter']
     }
   ];
+const Component = () => {
 
   return (
     <section id="services" className="py-20 relative">
@@ -114,7 +115,7 @@ export default function ServicesSection() {
               <div className="mt-6">
                 <a
                   href="#contact"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300"
+                  className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium transition-colors duration-300"
                 >
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,5 +154,5 @@ export default function ServicesSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

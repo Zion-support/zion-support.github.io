@@ -78,13 +78,13 @@ class PerformanceMonitoringService {// TODO: Add content;}
 
 }
   private static,
-  instance: PerformanceMonitoringService;
+  instance: PerformanceMonitoringService,
   private,
-  _webVitals: WebVitals = {};
+  _webVitals: WebVitals = {},
   private,
-  customMetrics: CustomMetric[] = [];
+  customMetrics: CustomMetric[] = [],
   private,
-  observers: PerformanceObserver[] = [];
+  observers: PerformanceObserver[] = [],
   private maxMetrics = 1000;
   private constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -128,7 +128,7 @@ class PerformanceMonitoringService {// TODO: Add content;}
         });
       });
       paintObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true }),
       this.observers.push(paintObserver);
       // Observe LCP;
 const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -141,11 +141,11 @@ const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 }
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & {/* TODO: Fix JSX expression */})
   e: number }).renderTime || (lastEntry as PerformanceEntry & {/* TODO: Fix JSX expression */})
-  e: number }).loadTime);
+  e: number }).loadTime),
         }
       });
       lcpObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true }),
       this.observers.push(lcpObserver);
       // Observe CLS;
       const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -159,13 +159,13 @@ const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content;}
 }
             clsValue += (entry as PerformanceEntry & {/* TODO: Fix JSX expression */})
-  e: number }).value;
+  e: number }).value,
             this.recordWebVital('CLS', clsValue);
           }
         });
       });
       clsObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true }),
       this.observers.push(clsObserver);
       // Observe FID;
 const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -175,11 +175,11 @@ const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content;}
 }
           this.recordWebVital('FID', (entry as PerformanceEntry & {/* TODO: Fix JSX expression */})
-  t: number }).processingStart - entry.startTime);
+  t: number }).processingStart - entry.startTime),
         });
       });
       fidObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true }),
       this.observers.push(fidObserver);
       // Observe navigation timing for TTFB;
 const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -193,7 +193,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
         });
       });
       navObserver.observe({/* TODO: Fix JSX expression */})
-  d: true });
+  d: true }),
       this.observers.push(navObserver);
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -219,7 +219,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
       timestamp: Date.now()
 
-    };
+    },
     this.webVitals[name] = metric;`
     logger.info(`Web)`
   Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
@@ -234,7 +234,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
     const,
-  thresholds: Record;
+  thresholds: Record,
           <keyof WebVitals, {/* TODO: Fix JSX expression */}
   r: number }> = {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -247,7 +247,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
       TTFB: { good: 800, poor: 1800 },
       INP: { good: 200, poor: 500 }
 
-    };
+    },
     const threshold = thresholds[name];
     if (!threshold) return 'good';
     if (value;)
@@ -272,7 +272,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
       timestamp: Date.now()
 
-    };
+    },
     this.customMetrics.push(metric);
     // Maintain max metrics limit;
     if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */}
@@ -352,7 +352,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
         case 'needs-improvement': return 50;
         case 'poor': return 0;
 
-        default: return 0;
+        default: return 0,
 
       }
     }
@@ -373,13 +373,13 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     customMetric,
   s: CustomMetric[];,
     recommendation,
-  s: string[];
+  s: string[],
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const score = this.getPerformanceScore();
     const,
-  recommendations: string[] = [];
+  recommendations: string[] = [],
     // Generate recommendations based on metrics;
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {/* TODO: Fix JSX expression */}
   O: Add content;}

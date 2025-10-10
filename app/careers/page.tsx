@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const CareersPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -18,7 +19,7 @@ const CareersPage: React.FC = () => {
         <main className="pt-20">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-8">
                 Careers
               </h1>
               
@@ -38,7 +39,7 @@ const CareersPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default CareersPage;

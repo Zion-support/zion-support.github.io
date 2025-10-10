@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
+  title: string,
+  description: string,
+  features: string[],
+  price: string,
   popular?: boolean;
-  icon: React.ComponentType<{ className?: string }>;
-  onSelect: () => void;
+  icon: React.ComponentType<{ className?: string }>,
+  onSelect: () => void,
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({

@@ -8,7 +8,8 @@ interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 const,
   LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  };
+  },
+const Component = () => {
 
   return (<div className={`flex flex-col items-center justify-center gap-3 ${className}`}></div>`
       <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} /></Loader2>
@@ -16,7 +17,7 @@ const,
         <p className="text-gray-300 text-sm animate-pulse">{text}</p>)
       )}
     </div>
-  );
+  ),
 };
 
 export default LoadingSpinner;"`

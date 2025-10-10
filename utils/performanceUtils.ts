@@ -7,11 +7,11 @@ export const measurePerformance = (nam,
   n: () => void) => {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}
   }
-};
+},
 
 export const getPageLoadTime = (): number | null => {/* TODO: Fix JSX expression */}
   }
-  return null;
+  return null,
 };
 
 export const optimizeImages = () => {
@@ -22,6 +22,6 @@ export const optimizeImages = () => {
         img.loading = 'lazy';
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
   }
 };

@@ -74,6 +74,7 @@ $4}
         'Custom analytics',
         '24/7 support',
         'White-label options'
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -180,7 +181,7 @@ $4}
                     </li>
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover: from-pink-600 hover:to-purple-700'
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}
 
@@ -192,7 +193,7 @@ $4}
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands already using AI Social Media Manager to grow their presence
               Contact Sales
-  );
+  ),
 };
 
 'use client';

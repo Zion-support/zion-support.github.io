@@ -9,7 +9,7 @@ const,
 }) => {/* TODO: Fix JSX expression */}
     }
     
-    // Add breadcrumb structured data;
+    // Add breadcrumb structured data,
     addBreadcrumbStructuredData();
     
     // Add FAQ structured data;
@@ -23,7 +23,7 @@ const,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`),
     if (!meta) {/* TODO: Fix JSX expression */}
     }
     meta.setAttribute('content', content);
@@ -38,13 +38,13 @@ const,
   const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
+    document.head.appendChild(script),
   };
 
   const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
-    };
+    },
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
@@ -53,7 +53,7 @@ const,
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
+    document.head.appendChild(script),
   };
 
   const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
@@ -66,7 +66,7 @@ const,
           }
         }
       ]
-    };
+    },
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
@@ -75,7 +75,7 @@ const,
     const existing = document.getElementById('faq-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
+    document.head.appendChild(script),
   };
 
   const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
@@ -86,9 +86,9 @@ const,
         'http,
   s://twitter.com/ziontechgroup',
         'http,
-  s://linkedin.com/company/ziontechgroup'
+  s: //linkedin.com/company/ziontechgroup'
       ]
-    };
+    },
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
@@ -98,7 +98,7 @@ const,
     if (existing) {/* TODO: Fix JSX expression */}
 
     }
-  };
+  },
 
   const mergedSEOData = { ...defaultSEOData, ...seoData };
 
@@ -108,7 +108,7 @@ const,
       page, 
       title: mergedSEOData.title,
       description: mergedSEOData.description 
-    });
+    }),
 
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -118,9 +118,10 @@ const,
         custom_map: {
           page_type: page
         }
-      });
+      }),
     }
   }, [mergedSEOData, page]);
+const Component = () => {
 
   return (
     <Helmet>
@@ -232,7 +233,7 @@ const,
         })}
       </script>
     </Helmet>
-  );
+  ),
 };
 
 

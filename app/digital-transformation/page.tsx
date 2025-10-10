@@ -8,7 +8,7 @@ const DigitalTransformationPage: React.FC = () => {
     {
       title: 'Assessment & Strategy'
       description: 'Comprehensive analysis of current state and digital readiness'
-      icon: Target;
+      icon: Target,
       duration: '2-4 weeks',
       deliverables: [,
         'Digital maturity assessment',
@@ -20,7 +20,7 @@ const DigitalTransformationPage: React.FC = () => {
     {
       title: 'Planning & Design'
       description: 'Detailed planning and architecture design for transformation'
-      icon: Users;
+      icon: Users,
       duration: '3-6 weeks',
       deliverables: [,
         'Solution architecture design',
@@ -32,7 +32,7 @@ const DigitalTransformationPage: React.FC = () => {
     {
       title: 'Implementation'
       description: 'Phased implementation of digital solutions and processes'
-      icon: Cloud;
+      icon: Cloud,
       duration: '8-16 weeks',
       deliverables: [,
         'System integration',
@@ -44,7 +44,7 @@ const DigitalTransformationPage: React.FC = () => {
     {
       title: 'Optimization'
       description: 'Continuous improvement and optimization of digital systems'
-      icon: TrendingUp;
+      icon: TrendingUp,
       duration: 'Ongoing',
       deliverables: [,
         'Performance optimization',
@@ -60,25 +60,25 @@ const DigitalTransformationPage: React.FC = () => {
       title: 'Process Automation',
       description: 'Automate repetitive tasks and streamline workflows',
       benefits: ['50% time savings', 'Reduced errors', 'Improved efficiency'],
-      icon: Zap;
+      icon: Zap,
     },
     {
       title: 'Cloud Migration',
       description: 'Move to cloud infrastructure for scalability and flexibility',
       benefits: ['Cost reduction', 'Better scalability', 'Enhanced security'],
-      icon: Cloud;
+      icon: Cloud,
     },
     {
       title: 'Data Analytics',
       description: 'Implement advanced analytics for data-driven decisions',
       benefits: ['Better insights', 'Predictive analytics', 'Improved forecasting'],
-      icon: BarChart;
+      icon: BarChart,
     },
     {
       title: 'Security Enhancement',
       description: 'Strengthen cybersecurity and compliance measures',
       benefits: ['Enhanced protection', 'Compliance assurance', 'Risk mitigation'],
-      icon: Shield;
+      icon: Shield,
     }
   ];
 
@@ -99,7 +99,8 @@ const DigitalTransformationPage: React.FC = () => {
       title: 'Competitive Advantage',
       description: 'Stay ahead of competitors with modern digital capabilities',
       metric: '3x faster innovation'}
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
@@ -108,7 +109,8 @@ const DigitalTransformationPage: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6">
             Digital</h1> <span className="text-cyan-400">Transformation</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your business with cutting-edge digital solutions. Our comprehensive approach helps you modernize operations,</p>
             improve efficiency, and stay competitive in the digital age.</p>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">)
@@ -120,7 +122,7 @@ const DigitalTransformationPage: React.FC = () => {
             improve efficiency, and stay competitive in the digital age.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link;
+            <Link,
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
@@ -144,19 +146,19 @@ const DigitalTransformationPage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{phases.map((phase, index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300"
               >
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
                   <phase.icon className="w-6 h-6 text-white" />
               <RefreshCw className="w-5 h-5 mr-2" />
-              Start Transformation;
+              Start Transformation,
             </Link>
             <Link;
               href="/consultation"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
               <Target className="w-5 h-5 mr-2" />
-              Free Assessment;
+              Free Assessment,
             </Link>
           </div>,
         </div>,
@@ -329,8 +331,8 @@ const DigitalTransformationPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join hundreds of businesses that have successfully transformed their operations with our digital solutions.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -344,14 +346,14 @@ const DigitalTransformationPage: React.FC = () => {
               <BarChart className="w-5 h-5 mr-2" >View Case Studies</BarChar>
             </BarChart>
               <ArrowRight className="w-5 h-5 mr-2" />
-              Start Your Transformation;
+              Start Your Transformation,
             </Link>
             <Link;
               href="/case-studies"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover: border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
               <BarChart className="w-5 h-5 mr-2" />
-              View Case Studies;
+              View Case Studies,
             </Link>
           </div>
         </div>

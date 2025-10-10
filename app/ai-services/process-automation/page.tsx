@@ -5,6 +5,7 @@ import { Brain, ArrowRight } from 'lucide-react';
 const AIServicePage: React.FC = () => {
   const serviceName = window.location.pathname.split('/').pop()?.replace(/-/g, ' ') || 'AI Service';
   const title = serviceName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+const Component = () => {
 
   return (
     <>
@@ -21,7 +22,7 @@ const AIServicePage: React.FC = () => {
               <Brain className="w-4 h-4" />
               <span>{title}</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text">
               {title} 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> Solutions</span>
             </h1>
@@ -52,7 +53,7 @@ const AIServicePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 
 export default AIServicePage;

@@ -9,7 +9,7 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   trackingId?: string;
 }
 
@@ -38,7 +38,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_title: document.title,
         page_location: window.location.href,
         send_page_view: true
-      });
+      }),
     }
   }, [trackingId]);
 
@@ -53,7 +53,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_location: window.location.href,
         ...properties,
         send_page_view: true
-      });
+      }),
     }
   }, []);
 
@@ -83,7 +83,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         user_id: userId,
         ...traits,
         send_page_view: true
-      });
+      }),
     }
   }, [trackingId]);
 
@@ -92,6 +92,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     page,
     identify
   };
+const Component = () => {
 
   return (
     <AnalyticsContext.Provider value={value}>
@@ -111,8 +112,8 @@ export const useAnalytics = () => {
 // Global type declarations
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: any[],
+    gtag: (...args: any[]) => void,
   }
 }
 

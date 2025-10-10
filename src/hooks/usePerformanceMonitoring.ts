@@ -22,6 +22,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
       return () => {};
     }
     try {/* TODO: Fix JSX expression */}
@@ -36,7 +37,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
         reportMetric('LCP', lastEntry.startTime);
       });
       lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] }),
       // FID - First Input Delay;
 const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -54,7 +55,7 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
         );
       });
       fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+  s: ['first-input'] }),
 // CLS - Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -82,7 +83,7 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
         reportMetric('CLS', clsValue);
       });
       clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+  s: ['layout-shift'] }),
       // FCP - First Contentful Paint;
 const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -99,7 +100,7 @@ const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
         });
       });
       fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+  s: ['paint'] }),
       // TTFB - Time to First Byte;
 const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -118,7 +119,7 @@ const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX exp
         });
       });
       navigationObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
+  s: ['navigation'] }),
       // Resource timing;
 const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -142,8 +143,9 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
         });
       });
       resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
+  s: ['resource'] }),
       // Cleanup;
+const Component = () => {
       return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -157,6 +159,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
       return () => {};
     }
   }, [reportMetric]);
@@ -183,7 +186,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
 //             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
 
         };
         Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
@@ -194,6 +197,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
       }
     };
     window.addEventListener('load', handleLoad);
+const Component = () => {
     return () => window.removeEventListener('load', handleLoad);
   }, [reportMetric]);
   return {/* TODO: Fix JSX expression */}

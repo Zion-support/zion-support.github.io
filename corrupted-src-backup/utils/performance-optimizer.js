@@ -6,14 +6,14 @@
 class PerformanceOptimizer {
   constructor() {
     this.metrics = {
-      pageLoadTime: 0;
-      firstContentfulPaint: 0;
-      largestContentfulPaint: 0;
-      cumulativeLayoutShift: 0;
-      firstInputDelay: 0;
-      interactionToNextPaint: 0;
+      pageLoadTime: 0,
+      firstContentfulPaint: 0,
+      largestContentfulPaint: 0,
+      cumulativeLayoutShift: 0,
+      firstInputDelay: 0,
+      interactionToNextPaint: 0,
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
-    };
+    },
     this.observers = new Map();
     this.init();
   }
@@ -22,7 +22,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   setupWebVitals() {
-    // Core Web Vitals monitoring;
+    // Core Web Vitals monitoring,
     if ('web-vitals' in window) {
       import('web-vitals').then(
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -34,7 +34,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupWebVitals() {/* TODO: Fix JSX expression */}
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
         }
-      );
+      ),
     }
   }
 
@@ -66,13 +66,13 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupImageOptimization() {/* TODO: Fix JSX expression */}
             }
           }
-        });
+        }),
       });
 
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
-      });
+      }),
     }
   }
 
@@ -98,7 +98,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupCaching() {/* TODO: Fix JSX expression */}
 //           })
         .catch(registrationError => {/* TODO: Fix JSX expression */})
-//           });
+//           }),
     }
   }
 
@@ -129,18 +129,18 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             this.loadLazyComponent(component);
             lazyObserver.unobserve(component);
   preloadCriticalResources() {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
 
   setupLazyLoading() {/* TODO: Fix JSX expression */}
           }
-        });
+        }),
       });
 
       lazyComponents.forEach(component => {)
         lazyObserver.observe(component);
       lazyComponents.forEach(component => {/* TODO: Fix JSX expression */})
-      });
+      }),
     }
   }
 
@@ -158,7 +158,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.onload = () => {,
         link.rel = 'stylesheet';
   optimizeFontLoading() {/* TODO: Fix JSX expression */}
-      };
+      },
       document.head.appendChild(link);
     });
   }
@@ -175,7 +175,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       '/privacy': () => import('../pages/Privacy'),
       '/terms': () => import('../pages/Terms'),
   setupRouteBasedSplitting() {/* TODO: Fix JSX expression */}
-    };
+    },
 
     // Preload next likely routes;
     this.preloadNextRoutes(routes);
@@ -203,16 +203,16 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       if (routes[route]) {
 //         routes[route]().catch(console.error);
   setupComponentSplitting() {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
 
   preloadNextRoutes(routes) {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
   }
 
   getLikelyNextRoutes(currentPath) {/* TODO: Fix JSX expression */}
-    };
+    },
 
     return routeMap[currentPath] || [];
   }
@@ -230,17 +230,17 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             componentObserver.unobserve(entry.target);
   setupComponentLazyLoading(componentName) {/* TODO: Fix JSX expression */}
       `[data-component="${componentName}"]`
-    );
+    ),
 
     if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
           }
-        });
+        }),
       });
 
       componentElements.forEach(element => {)
         componentObserver.observe(element);
       componentElements.forEach(element => {/* TODO: Fix JSX expression */})
-      });
+      }),
     }
   }
 
@@ -258,7 +258,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   async loadComponent(componentName, element) {/* TODO: Fix JSX expression */}
       }
 `
-      const _component = await import(`../components/${componentName}.tsx`);
+      const _component = await import(`../components/${componentName}.tsx`),
       // Render component to element;
       if (component.default) {
         element.innerHTML = component.default();
@@ -278,14 +278,14 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   reportMetrics() {
-    // Send metrics to analytics;
+    // Send metrics to analytics,
     if (window.gtag) {
       window.gtag('event', 'web_vitals', {)
         event_category: 'Performance'),
         event_label: 'Core Web Vitals'),
         value: Math.round(this.metrics.largestContentfulPaint),
   reportMetrics() {/* TODO: Fix JSX expression */}
-      });
+      }),
     }
 
     // Log to console in development;
@@ -294,7 +294,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 //       }
   }
 
-  // Performance optimization methods;
+  // Performance optimization methods,
   optimizeImages() {
     const _images = document.querySelectorAll('img');
     images.forEach(img => {)
@@ -304,7 +304,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       }
       if (!img.decoding) {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
   }
 
   optimizeScripts() {
@@ -314,7 +314,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         script.defer = true;
   optimizeScripts() {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
   }
 
   optimizeStyles() {
@@ -357,7 +357,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.onload = () => {
         link.media = 'all';
   deferNonCriticalCSS() {/* TODO: Fix JSX expression */}
-      };
+      },
     });
   }
 
@@ -381,24 +381,24 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   cleanup() {/* TODO: Fix JSX expression */}
   }
 
-  // Performance monitoring;
+  // Performance monitoring,
   startPerformanceMonitoring() {/* TODO: Fix JSX expression */}
-        });
+        }),
       });
 
       observer.observe({/* TODO: Fix JSX expression */})
-      });
+      }),
       this.observers.set('performance', observer);
     }
   }
 
   handlePerformanceEntry(entry) {/* TODO: Fix JSX expression */}
         }
-        break;
+        break,
       case 'layout-shift':
         if (!entry.hadRecentInput) {/* TODO: Fix JSX expression */}
         }
-        break;
+        break,
     }
   }
 }
@@ -414,7 +414,7 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     performanceOptimizer.startPerformanceMonitoring();
 if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
-  });
+  }),
 } else {/* TODO: Fix JSX expression */}
 }
 "`

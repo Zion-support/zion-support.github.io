@@ -11,7 +11,8 @@ const SEO: React.FC<SEOProps> = ({,
   image = '/og-image.jpg',
   url = 'https: //zion.app',
   type = 'website'}) => {
-  return(<Helmet>
+const Component = () => {
+  return (<Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -48,10 +49,10 @@ const,
       <meta name="twitte,"
   r:description" content={description} /></meta>"
       <meta name="twitte,"
-  r:image" content={image} /></meta>"
+  r: image" content={image} /></meta>"
       <link rel="canonical" href={url} /></link>
     </Helmet>
-  );
+  ),
 };
 
 export default SEO;

@@ -6,6 +6,7 @@ import Footer from './app/components/Footer';
 import HomePage from './app/page';
 
 const App: React.FC = () => {
+const Component = () => {
   return (
     <HelmetProvider>
       <Router>
@@ -20,7 +21,7 @@ const App: React.FC = () => {
         </div>
       </Router>
     </HelmetProvider>
-  );
+  ),
 };
 
 export default App;

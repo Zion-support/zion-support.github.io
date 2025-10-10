@@ -32,7 +32,7 @@ const SupportPage: React.FC = () => {
     { name: 'billing', label: 'Billing & Plans', count: 5 },
     { name: 'technical', label: 'Technical Support', count: 7 },
     { name: 'api', label: 'API & Integration', count: 5 }
-  ];
+  ],
 
   const faqs = [
     {
@@ -59,7 +59,7 @@ const SupportPage: React.FC = () => {
       answer: 'Use your API key in the Authorization header with Bearer token format: "Authorization: Bearer YOUR_API_KEY". You can find your API key in the dashboard.',
       helpful: 41
     }
-  ];
+  ],
 
   const supportChannels = [
     {
@@ -86,7 +86,7 @@ const SupportPage: React.FC = () => {
       responseTime: 'Immediate',
       action: 'Call Now'
     }
-  ];
+  ],
 
   const resources = [
     {
@@ -107,7 +107,7 @@ const SupportPage: React.FC = () => {
       description: 'Searchable articles and troubleshooting guides',
       link: '/knowledge-base'
     }
-  ];
+  ],
 
   const filteredFaqs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -115,6 +115,7 @@ const SupportPage: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -234,7 +235,7 @@ const SupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {resources.map((resource, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: bg-white/10 transition-all duration-300 group">
                   <resource.icon className="w-8 h-8 text-purple-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
                     {resource.title}
@@ -273,7 +274,7 @@ const SupportPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default SupportPage;

@@ -32,6 +32,7 @@ const Sidebar: React.FC = () => {
     };
 
     window.addEventListener('resize', handleResize);
+const Component = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -135,7 +136,8 @@ const Sidebar: React.FC = () => {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
     hours: 'Mon-Fri 9AM-6PM EST'
-  };
+  },
+const Component = () => {
 
   return (
     <>
@@ -208,7 +210,7 @@ const Sidebar: React.FC = () => {
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
+                              : 'text-gray-300 hover: text-white hover:bg-slate-800/50'
                           }`}
                         >
                           <item.icon className="w-4 h-4 flex-shrink-0" />
@@ -247,7 +249,7 @@ const Sidebar: React.FC = () => {
         </div>
       </aside>
     </>
-  );
+  ),
 };
 
 Sidebar.displayName = 'Sidebar';

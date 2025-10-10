@@ -8,6 +8,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIQuantumOptimizationPage: React.FC = () => {
+const Component = () => {
   return (
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
@@ -437,7 +438,7 @@ const AIQuantumOptimizationPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </ErrorBoundary>
   );
 };

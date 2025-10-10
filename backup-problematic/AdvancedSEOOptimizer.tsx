@@ -4,10 +4,10 @@ import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
- title: string;
- description: string;
- keywords: string[];
- canonicalUrl: string;
+ title: string,
+ description: string,
+ keywords: string[],
+ canonicalUrl: string,
  ogTitle?: string;
  ogDescription?: string;
  ogImage?: string;
@@ -43,7 +43,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  name: 'Zion Tech Group'
  url: 'https://ziontechgroup.com'
  logo: 'https://ziontechgroup.com/logo.png'
- description: seoData.description;
+ description: seoData.description,
  address: {
  '@type': 'PostalAddress'
  streetAddress: '364 E Main St STE 1008'
@@ -89,18 +89,18 @@ const,
  itemListElement: [
  {
  '@type': 'ListItem'
- position: 1;
+ position: 1,
  name: 'Home',
  item: 'https://ziontechgroup.com'},
  {
  '@type': 'ListItem',
- position: 2;
- name: seoData.title;
- item: seoData.canonicalUrl;
+ position: 2,
+ name: seoData.title,
+ item: seoData.canonicalUrl,
  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  },
  {/* TODO: Fix JSX expression */}
- }]};
+ }]},
  }, [seoData, enableSchemaMarkup]);
 
  const generateFAQStructuredData = useCallback(() => {
@@ -133,7 +133,7 @@ const,
  {/* TODO: Fix JSX expression */}
  }},
  {/* TODO: Fix JSX expression */}
- }}]};
+ }}]},
 
  return faqData;
  }, [enableSchemaMarkup]);
@@ -192,7 +192,7 @@ const,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
- // };
+ // },
 
  // const _updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
@@ -204,7 +204,7 @@ const,
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
  // // }
  // 
- // const script = document.createElement('script');
+ // const script = document.createElement('script'),
  // script.type = 'application/ld+json';
  // script.textContent = JSON.stringify(data);
  // document.head.appendChild(script);
@@ -227,7 +227,7 @@ const,
  const _trackPageView = (confi)
   g: SEOData) => {/* TODO: Fix JSX expression */}
   g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
- });
+ }),
  }
  };
 
@@ -242,13 +242,14 @@ const,
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
  const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */})
- });
+ }),
  }
  });
  }
  };origin/
+const Component = () => {
 
- return(<Helmet>)
+ return (<Helmet>)
  {/* Basic Meta Tags */})
  <title>{seoData.title}</title>)
  <meta name="description" content={seoData.description} />)
@@ -286,6 +287,7 @@ const,
  <meta name="distribution" content="global" />
  <meta name="rating" content="general" />
  <meta name="theme-color" content="#4F46E5" />
+const Component = () => {
  return (<Helmet></Helmet>
  {/* Basic Meta Tags */}
  <title>{seoData.title}</title>"
@@ -368,13 +370,13 @@ const,
  <link rel="preconnect" href="http,"
   s://www.google-analytics.com" /></link>"
  <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
+  s: //www.googletagmanager.com" /></link>
  {/* DNS Prefetch for better performance */}"
  <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
  <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
  <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
  </Helmet>
- );
+ ),
 };
 
 export default AdvancedSEOOptimizer;"

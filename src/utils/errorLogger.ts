@@ -22,7 +22,7 @@ export interface ErrorLogEntry {// TODO: Add content;}
     severit,
   y: ErrorSeverity;,
     messag,
-  e: string;
+  e: string,
   error?: Error;
   context?: Record;
           <string, unknown>;
@@ -34,7 +34,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   private,
-  logs: ErrorLogEntry[] = [];
+  logs: ErrorLogEntry[] = [],
   private maxLogs = 1000;
   /**
    * Log an error with context;
@@ -65,7 +65,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined,
-      stackTrace: error?.stack;
+      stackTrace: error?.stack,
 
     };
     // Add to internal log;
@@ -96,7 +96,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
 }
     const,
-  styles: Record;
+  styles: Record,
           <ErrorSeverity, string> = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -155,14 +155,14 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 }
 //           ...entry,
           erro,
-  r: entry.error;
+  r: entry.error,
             ? {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
   message: entry.error.message,
                 name: entry.error.name,
-                stack: entry.error.stack;
+                stack: entry.error.stack,
               }
             : undefined;
 

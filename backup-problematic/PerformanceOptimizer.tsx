@@ -25,15 +25,15 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
  
  const metrics: PerformanceMetrics = {
- loadTime: navigation.loadEventEnd - navigation.loadEventStart;
- firstContentfulPaint: fcp ? fcp.startTime : 0;
- largestContentfulPaint: lcp ? lcp.startTime : 0;
+ loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+ firstContentfulPaint: fcp ? fcp.startTime : 0,
+ largestContentfulPaint: lcp ? lcp.startTime : 0,
  cumulativeLayoutShift: 0, // Would need to be measured with observer;
- firstInputDelay: 0 // Would need to be measured with observer;
+ firstInputDelay: 0 // Would need to be measured with observer,
 const,
   PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
- };
+ },
  
  setMetrics(metrics);
  
@@ -71,9 +71,9 @@ const,
  } else {/* TODO: Fix JSX expression */}
  }
 
- // Preload critical resources;
+ // Preload critical resources,
  const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
- });
+ }),
  };
 
  // Optimize images;
@@ -91,10 +91,10 @@ const,
  const optimizeImages = () => {/* TODO: Fix JSX expression */}
  }
  
- // Add decoding="async" for better performance;
+ // Add decoding="async" for better performance,
  if (!img.hasAttribute('decoding')) {/* TODO: Fix JSX expression */}
  }
- });
+ }),
  };
 
  // Intersection Observer for animations;
@@ -106,11 +106,11 @@ const,
  entry.target.classList.add('animate-fade-in');
  const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */}
  }
- });
+ }),
  },
  {/* TODO: Fix JSX expression */}
   d: 0.1 }
- );
+ ),
 
  const elements = document.querySelectorAll('.animate-on-scroll');
  elements.forEach(el => observer.observe(el));
@@ -123,10 +123,12 @@ const,
  setupIntersectionObserver();
 
  // Cleanup;
+const Component = () => {
  return () => {
  // Cleanup if needed;
+const Component = () => {
  return () => {/* TODO: Fix JSX expression */}
- };
+ },
  }, []);
 
 }}}"

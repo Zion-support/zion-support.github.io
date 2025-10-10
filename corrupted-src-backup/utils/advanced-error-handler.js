@@ -10,7 +10,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   setupGlobalErrorHandlers() {
-    // Global error handler;
+    // Global error handler,
     window.addEventListener('error', event => {
       this.handleError({
         type: 'JavaScript Error'
@@ -20,10 +20,10 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         colno: event.colno)
         stack: event.error?.stack)
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent;
-        url: window.location.href;
+        userAgent: navigator.userAgent,
+        url: window.location.href,
   setupGlobalErrorHandlers() {/* TODO: Fix JSX expression */}
-      });
+      }),
     });
 
     // Unhandled promise rejection handler;
@@ -33,10 +33,10 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         message: event.reason?.message || 'Unknown promise rejection'),
         stack: event.reason?.stack),
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent;
-        url: window.location.href;
+        userAgent: navigator.userAgent,
+        url: window.location.href,
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
-      });
+      }),
     });
   }
 
@@ -57,9 +57,9 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             element: event.target.tagName),
             src: event.target.src || event.target.href),
             timestamp: new Date().toISOString(),
-            url: window.location.href;
+            url: window.location.href,
   setupUnhandledRejectionHandler() {/* TODO: Fix JSX expression */}
-      //       });
+      //       }),
   }
 
   setupResourceErrorHandler() {/* TODO: Fix JSX expression */}
@@ -71,7 +71,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             timestam,
   p: new Date().toISOString(),
             ur,
-  l: window.location.href});
+  l: window.location.href}),
         }
       },
       true;
@@ -83,10 +83,10 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('online', () => {
       this.handleNetworkStatusChange('online');
   setupNetworkErrorHandler() {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
 
   setupRecoveryStrategies() {
@@ -113,7 +113,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   handleError(errorInfo) {/* TODO: Fix JSX expression */}
     }
 
-    // Show user-friendly message;
+    // Show user-friendly message,
     this.showUserError(errorInfo);
   }
 
@@ -126,7 +126,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   logError(errorInfo) {/* TODO: Fix JSX expression */}
     }
 
-    // Console logging;
+    // Console logging,
     //     }
 
   attemptRecovery(errorInfo) {/* TODO: Fix JSX expression */}
@@ -143,7 +143,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     }
     if (errorInfo.message?.includes('memory') || errorInfo.message?.includes('allocation')) {/* TODO: Fix JSX expression */}
     }
-    return 'unknown';
+    return 'unknown',
   }
 
   handleNetworkError(errorInfo) {
@@ -161,7 +161,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   handleResourceError(errorInfo) {
-    // Try to load fallback resources;
+    // Try to load fallback resources,
     if (errorInfo.element === 'IMG') {
       this.loadFallbackImage(errorInfo.src);
     } else if (errorInfo.element === 'SCRIPT') {
@@ -233,20 +233,20 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   loadFallbackImage(src) {/* TODO: Fix JSX expression */}`
-    const _img = document.querySelector(`img[src="${src}"]`);
+    const _img = document.querySelector(`img[src="${src}"]`),
     if (img) {/* TODO: Fix JSX expression */}
     }
   }
 
   loadFallbackScript(src) {
-    // Load from CDN or local fallback;
+    // Load from CDN or local fallback,
     const _script = document.createElement('script');
     script.src = src.replace('cdn.example.com', 'fallback.example.com');
     script.onerror = () => {
       // Load local fallback;
       script.src = '/js/fallback.js';
   loadFallbackScript(src) {/* TODO: Fix JSX expression */}
-    };
+    },
     document.head.appendChild(script);
   }
 
@@ -259,7 +259,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       // Load local fallback;
       link.href = '/css/fallback.css';
   loadFallbackStylesheet(src) {/* TODO: Fix JSX expression */}
-    };
+    },
     document.head.appendChild(link);
   }
 
@@ -286,7 +286,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   clearCaches() {/* TODO: Fix JSX expression */}
-        });
+        }),
       });
     }
   }
@@ -311,13 +311,13 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     offlineMessage.className = 'offline-message';
     offlineMessage.innerHTML = `
       <div style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #ff6 b6 b;
-        color: white;
-        padding: 10 px;
+        position: fixed,
+        top: 0,
+        left: 0,
+        right: 0,
+        background: #ff6 b6 b,
+        color: white,
+        padding: 10 px,
         text-align: center;
         z-index: 9999;
       ">
@@ -341,20 +341,20 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     modal.className = 'error-modal';
     modal.innerHTML = `
       <div style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        position: fixed,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
         background: rgba(0,0,0,0.8);
-        display: flex;
+        display: flex,
         align-items: center;
         justify-content: center;
         z-index: 10000;
       "></div>
         <div style="
-          background: white;
-          padding: 20 px;
+          background: white,
+          padding: 20 px,
           border-radius: 8 px;
           max-width: 500 px;
           text-align: center;
@@ -362,12 +362,12 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
           <h2>Something went wrong</h2>,
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
           <button onclick="window.location.reload()" style="
-            background: #007 bff;
-            color: white;
-            border: none;
-            padding: 10 px 20 px;
+            background: #007 bff,
+            color: white,
+            border: none,
+            padding: 10 px 20 px,
             border-radius: 4 px;
-            cursor: pointer;
+            cursor: pointer,
           ">Refresh Page</button>
         </div>
       </div>,
@@ -380,12 +380,12 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     toast.className = 'error-toast';
     toast.innerHTML = `
       <div style="
-        position: fixed;
-        top: 20 px;
-        right: 20 px;
-        background: #ff6 b6 b;
-        color: white;
-        padding: 15 px;
+        position: fixed,
+        top: 20 px,
+        right: 20 px,
+        background: #ff6 b6 b,
+        color: white,
+        padding: 15 px,
         border-radius: 4 px;
         z-index: 9999;
         max-width: 300px;
@@ -414,13 +414,13 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   r:</strong> ${errorInfo.message}"
         <button onclick="this.parentElement.parentElement.remove()" style="
           backgroun,
-  d: none;
+  d: none,
           borde,
-  r: none;
+  r: none,
           colo,
-  r: white;
+  r: white,
           floa,
-  t: right;
+  t: right,
           curso,
   r: pointer;"
         ">×</button>
@@ -442,7 +442,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     this.showErrorToast({)
       message)
       type: 'Network Status'),
-      severity: 'info')});
+      severity: 'info')}),
   }
 
   reportError(errorInfo) {
@@ -452,11 +452,11 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         description: errorInfo.message),
         fatal: errorInfo.severity === 'critical'),
   handleNetworkStatusChange(status) {/* TODO: Fix JSX expression */}
-    });
+    }),
   }
 
   reportError(errorInfo) {/* TODO: Fix JSX expression */}
-      });
+      }),
     }
 
     // Send to custom error reporting service;
@@ -469,7 +469,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       },
       bod)
   y: JSON.stringify(errorInfo)}).catch(error => {/* TODO: Fix JSX expression */})
-      //       });
+      //       }),
   }
 
   // Public methods;
@@ -488,7 +488,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 }
 
-// Initialize error handler;
+// Initialize error handler,
 // const errorHandler = new AdvancedErrorHandler();
 
 // Export for use in other modules;

@@ -19,7 +19,7 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
   } else if (inCategoriesArray && line.includes('// ];')) {/* TODO: Fix JSX expression */}
   }
   
-  // Comment out lines within the arrays;
+  // Comment out lines within the arrays,
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {
     if (!line.trim().startsWith('//')) {
       lines[i] = '  // ' + line;
@@ -32,6 +32,6 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
   }
 }
 
-const fixedContent = lines.join('\n');
+const fixedContent = lines.join('\n'),
 fs.writeFileSync(filePath, fixedContent, 'utf8');
 console.log('Fixed array comments in micro-saas file');

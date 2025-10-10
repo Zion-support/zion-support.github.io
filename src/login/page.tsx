@@ -14,7 +14,7 @@ const LoginPage: React.FC = () => {
     email: '',
     password: '',
     rememberMe: false
-  });
+  }),
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -55,13 +55,14 @@ $4},
       description:     ,
 $4}
   ];
+const Component = () => {
 
   return (
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             {/* Left Side - Login Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
@@ -92,7 +93,7 @@ $4}
                   </div>
     <div>Coming Soon</div>
 
-  );
+  ),
 };
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -131,7 +132,7 @@ $4}
   };
   const features = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -164,6 +165,7 @@ $4}
   n: 'Access your account from any device, anywhere'
     }
   ];
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -172,12 +174,12 @@ $4}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"
         <div className="max-w-6xl mx-auto px-4"></div>"
           <div className="grid grid-cols-1,"
-  lg:grid-cols-2 gap-12 items-center"></div>
+  lg: grid-cols-2 gap-12 items-center"></div>
             {/* Left Side - Login Form */}"
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
               <div className="text-center mb-8"></div>"
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
-// Welcome Back;
+// Welcome Back,
           </h1>"
                 <p className="text-gray-300"></p>
 // Sign in to your account to access your AI and IT services;
@@ -369,7 +371,7 @@ type="checkbox" name="rememberMe"
                       onChange={handleInputChange}"
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,
   focus:ring-cyan-400,"
-  focus:ring-2"
+  focus: ring-2"
 // />
                     
           
@@ -441,7 +443,7 @@ type="submit" disabled={isLoading}
                     href="/signup" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 
 // >
-//                     Sign up here;
+//                     Sign up here,
           </a>
                 </p>
               </div>"
@@ -451,7 +453,7 @@ type="submit" disabled={isLoading}
                 </p>"
                 <div className="grid grid-cols-2 gap-3"></div>"
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,"
-  hover:bg-slate-600 transition-colors"></button>"
+  hover: bg-slate-600 transition-colors"></button>"
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24"></svg>"
                       <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/></path>"
                       <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/></path>"
@@ -475,7 +477,7 @@ type="submit" disabled={isLoading}
             <div className="space-y-8"></div>
               <div></div>"
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
-// Access Your AI & IT Services;
+// Access Your AI & IT Services,
           </h2>"
                 <p className="text-xl text-gray-300 mb-8"></p>
 // Sign in to manage your AI services, view analytics, and access all your;
@@ -515,7 +517,7 @@ type="submit" disabled={isLoading}
                 </p>
                 <a
                   href="/signup"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                  className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
                 >
                   Create your account
                   <ArrowRight className="w-4 h-4 ml-1" />
@@ -534,7 +536,7 @@ type="submit" disabled={isLoading}
           
           </h3>"
                 <p className="text-gray-300 mb-4"></p>
-// Join thousands of businesses already using our AI and IT solutions;
+// Join thousands of businesses already using our AI and IT solutions,
 //                   to transform their operations.
                 
           

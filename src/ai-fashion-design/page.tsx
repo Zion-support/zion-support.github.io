@@ -49,7 +49,8 @@ const AIFashionDesignPage: React.FC = () => {
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
       popular: false
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>
@@ -165,7 +166,7 @@ const AIFashionDesignPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -205,7 +206,7 @@ const AIFashionDesignPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default AIFashionDesignPage;

@@ -13,7 +13,7 @@ function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
   }
 }
 
-findBlogFiles(blogDir);
+findBlogFiles(blogDir),
 
 function fixParsingErrors(filePath) {
   try {
@@ -44,7 +44,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
         }
       }
       
-      newLines.push(line);
+      newLines.push(line),
     }
     
     if (modified) {/* TODO: Fix JSX expression */}
@@ -59,6 +59,6 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 blogFiles.forEach(file => {)
   fixParsingErrors(file);
 blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
-});
+}),
 `
 console.log(`Processed ${blogFiles.length} blog files`);`

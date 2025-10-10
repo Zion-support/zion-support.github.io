@@ -20,7 +20,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   }
   
-  return files;
+  return files,
 }
 
 // Remove unused imports from a file;
@@ -42,10 +42,10 @@ function removeUnusedImports(filePath) {
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     }
     
-    // Get unused variables using ESLint;
+    // Get unused variables using ESLint,
     try {/* TODO: Fix JSX expression */}
       const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, {/* TODO: Fix JSX expression */})
-      });
+      }),
       
       const lintResults = JSON.parse(result);
       if (lintResults.length === 0) return;
@@ -57,7 +57,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           return match ? match[1] : null;
         .map(msg => {/* TODO: Fix JSX expression */})
         })
-        .filter(Boolean);
+        .filter(Boolean),
       
       if (unusedVars.length === 0) return;
       `
@@ -77,7 +77,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       // Remove unused imports from import statements;"
       const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
       content = content.replace(importRegex, (match, imports) => {/* TODO: Fix JSX expression */}
-        });
+        }),
         
         if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
         }
@@ -100,7 +100,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       });
       
       if (content !== originalContent) {/* TODO: Fix JSX expression */}`
-        console.log(`Fixed unused imports in ${filePath}`);
+        console.log(`Fixed unused imports in ${filePath}`),
       }
       
     } catch (error) {

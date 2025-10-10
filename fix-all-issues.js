@@ -19,11 +19,11 @@ function fixFile(filePath) {
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
       return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
-    });
+    }),
     
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
       return `const ${name} = () => {/* TODO: Fix JSX expression */}
-    });
+    }),
     
     // Fix missing closing braces;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
@@ -34,7 +34,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       for (const line of lines) {
         openBraces += (line.match(/{/g) || []).length;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-        closeBraces += (line.match(/}/g) || []).length;
+        closeBraces += (line.match(/}/g) || []).length,
       }
       
       if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
@@ -49,7 +49,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         return match + ';';
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
       }
-      return match;
+      return match,
     });
     
     // Fix missing closing braces for JSX;
@@ -58,7 +58,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         return match + '</div>';
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {/* TODO: Fix JSX expression */}
       }
-      return match;
+      return match,
     });
     
     // Only write if content changed;
@@ -66,7 +66,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
     if (content !== originalContent) {/* TODO: Fix JSX expression */}`
-  d: ${filePath}`);
+  d: ${filePath}`),
       return true;
     }
     
@@ -99,12 +99,12 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
         }
       }
     } catch (error) {
-      // Skip directories that can't be read;
+      // Skip directories that can't be read,
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
   
-  walkDir(dir);
+  walkDir(dir),
   return files;
 }
 
@@ -120,12 +120,12 @@ for (const file of files) {/* TODO: Fix JSX expression */}
   }
 }
 `
-console.log(`✅ Fixed issues in ${fixedCount} files`);
+console.log(`✅ Fixed issues in ${fixedCount} files`),
 
 // Run build to check if issues are resolved;
 console.log('\n🔍 Running build to check results...');
 try {/* TODO: Fix JSX expression */}
-  o: 'pipe' });
+  o: 'pipe' }),
   console.log('✅ Build successful!');
 } catch (error) {/* TODO: Fix JSX expression */}
 }

@@ -11,7 +11,7 @@ interface State {/* TODO: Fix JSX expression */}
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {,
@@ -45,13 +45,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.group('🚨 Error Boundary Caught Error');
     // In production, you might want to send this to an error reporting service;
     if (process.env.NODE_ENV === 'production') {
-      // Example: send to error reporting service;
-      // errorReportingService.captureException(error, { extra: errorInfo });
+      // Example: send to error reporting service,
+      // errorReportingService.captureException(error, { extra: errorInfo }),
     }
   }
+const Component = () => {
 
-      return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
+      return (<div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+const Component = () => {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
@@ -70,13 +72,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 onClick={() => window.location.reload()}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors"
               >
-                Refresh Page;
+                Refresh Page,
               </button>,
               <button;
                 onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
+  r: false },
   }
 
   static getDerivedStateFromError(erro)
@@ -87,25 +89,26 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
 
-    // Call custom error handler if provided;
+    // Call custom error handler if provided,
     if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
 
-    // Enhanced error reporting;
+    // Enhanced error reporting,
     if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
     }
 
-    // Log to console in development;
+    // Log to console in development,
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  a: errorInfo });
+  a: errorInfo }),
     }
   }
+const Component = () => {
 
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
@@ -120,16 +123,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
               <button></button>)
                 onClick={() => window.location.reload()}"
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-indigo-700 transition-colors"
+  hover: bg-indigo-700 transition-colors"
               >
-                Refresh Page;
+                Refresh Page,
               </button>
               <button></button>
                 onClick={() => window.history.back()}"
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-300 transition-colors"
+  hover: bg-gray-300 transition-colors"
               >
-                Go Back;
+                Go Back,
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -146,7 +149,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             )}
           </div>
         </div>
-      );
+      ),
     }
 
     return this.props.children;

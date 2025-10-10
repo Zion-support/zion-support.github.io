@@ -11,7 +11,7 @@ export interface AnalyticsEvent {// TODO: Add content;}
   categor,
   y: string;,
     actio,
-  n: string;
+  n: string,
   label?: string;
   value?: number;
   metadata?: Record;
@@ -24,22 +24,22 @@ export interface UserProperties {/* TODO: Fix JSX expression */}
   sessionId?: string;
   userType?: string;
   [ke,
-  y: string]: unknown;
+  y: string]: unknown,
 }
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   private,
-  queue: AnalyticsEvent[] = [];
+  queue: AnalyticsEvent[] = [],
   private,
-  _userProperties: UserProperties = {};
+  _userProperties: UserProperties = {},
   private,
-  sessionId: string;
+  sessionId: string,
   private isInitialized = false;
   private batchSize = 10;
   private flushInterval = 30000; // 30 seconds;
   private,
-  offlineQueue: AnalyticsEvent[] = [];
+  offlineQueue: AnalyticsEvent[] = [],
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -110,7 +110,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 };
 
   timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent;
+        userAgent: navigator.userAgent,
 
       }
     }
@@ -148,7 +148,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
         ur,
   l: typeof window !== 'undefined' ? window.location.href : ''
       }
-    };
+    },
     // Add to queue;
     this.queue.push(enrichedEvent);
     // Send to gtag if available;
@@ -222,7 +222,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 };
 
   pageTitle: pageTitle || document.title,
-        referrer: document.referrer;
+        referrer: document.referrer,
 
       }
     })
@@ -393,7 +393,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     sessionI,
   d: string;,
     userPropertie,
-  s: UserProperties;
+  s: UserProperties,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -409,7 +409,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     }
   }
 }
-// Export singleton instance;
+// Export singleton instance,
 export default analytics;
 
 

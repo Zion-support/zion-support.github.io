@@ -20,7 +20,7 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
           }
         }
       }
-    });
+    }),
   },
 
   // Screen reader announcements;
@@ -55,7 +55,7 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
 
   // Color contrast checker,
   checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */}
-      });
+      }),
 
       return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
     };
@@ -66,8 +66,8 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
 
     return {
       ratio,
-      meetsAA: ratio >= 4.5;
-      meetsAAA: ratio >= 7;
+      meetsAA: ratio >= 4.5,
+      meetsAAA: ratio >= 7,
     return {/* TODO: Fix JSX expression */}
-    };
+    },
   }};

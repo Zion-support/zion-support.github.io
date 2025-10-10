@@ -2,7 +2,7 @@ import React, { Suspense, lazy, ComponentType } from 'react';
 
 interface LazyComponentProps {
   fallback?: React.ReactNode;
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 export default function LazyComponent({
@@ -18,6 +18,7 @@ const DefaultFallback = () => (
 
 const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
 }) => {
+const Component = () => {
   return (
     <Suspense fallback={fallback}></Suspens>
       {children}
@@ -43,6 +44,7 @@ export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentTy
 export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
 ) => {
   const LazyComponent = lazy(importFunc);
+const Component = () => {
   
   return (props: P) => (
     <LazyComponent fallback={fallback}></LazyComponent>
@@ -59,7 +61,7 @@ interface LazyComponentProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   childre,
-  n: ReactNode;
+  n: ReactNode,
   fallback?: ReactNode;
   delay?: number;
   threshold?: number;
@@ -69,11 +71,12 @@ interface LazyComponentProps {/* TODO: Fix JSX expression */}
 export const _withLazyLoading = {};
           <P extends object>()
   Componen,
-  t: ComponentType;
+  t: ComponentType,
           <P>,
   fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
   return (prop)
   s: P) => ()
     
@@ -88,11 +91,11 @@ export const _withLazyLoading = {};
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <Component {...props} /></Component>
     </Suspense>
-  );
+  ),
 };
 // Lazy component wrapper with intersection observer;
 const,
-  LazyComponent: React.FC;
+  LazyComponent: React.FC,
           <LazyComponentProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -147,8 +150,10 @@ const,
 }
       observer.observe(elementRef.current);
     }
+const Component = () => {
     return () => observer.disconnect();
   }, [delay, threshold, rootMargin]);
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -173,10 +178,11 @@ const,
 };
 // Preload function for critical components;
 export const preloadComponent = (importFunctio)
-  n: () => Promise;
+  n: () => Promise,
           <any>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
   return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -188,13 +194,14 @@ export const preloadComponent = (importFunctio)
 export const createLazyComponent = {};
           <P extends object>()
   importFunctio,
-  n: () => Promise;
+  n: () => Promise,
           <{/* TODO: Fix JSX expression */}
   t: ComponentType<P> }>,
   fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const LazyComponent = lazy(importFunction);
+const Component = () => {
   return (prop)
   s: P) => ()
     
@@ -209,7 +216,7 @@ export const createLazyComponent = {};
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} /></LazyComponent>
     </Suspense>
-  );
+  ),
 };
 // Critical resource preloader;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
@@ -219,7 +226,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   // Preload critical fonts;
 const fontPreloads = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
     'http,
   s://fonts.googleapis.com/css2?family=Orbitro,
@@ -239,7 +246,7 @@ const fontPreloads = [
   // Preload critical images;
 const imagePreloads = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
 //     '/og-image.jpg',
 //     '/favicon.ico'];

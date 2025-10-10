@@ -10,16 +10,16 @@ const ContentStatistics: React.FC = () => {,
     uptime: 0;)
     satisfaction: 0),
     countries: 0),
-    years: 0;
+    years: 0,
   });
 
   const stats = [
     {
       id: 'projects'
       label: 'Projects Completed'
-      value: 500;
+      value: 500,
       suffix: '+'
-      icon: Award;
+      icon: Award,
 const ContentStatistics: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState({)}
@@ -29,7 +29,7 @@ const ContentStatistics: React.FC = () => {}
     satisfaction: 0,
     countries: 0,
     years: 0
-  });
+  }),
 
   const stats = [
     {}
@@ -44,9 +44,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'clients'
       label: 'Happy Clients'
-      value: 200;
+      value: 200,
       suffix: '+'
-      icon: Users;
+      icon: Users,
     {}
       id: 'clients',
       label: 'Happy Clients',
@@ -59,9 +59,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'uptime'
       label: 'Uptime Guarantee'
-      value: 99.9;
+      value: 99.9,
       suffix: '%'
-      icon: Shield;
+      icon: Shield,
     {}
       id: 'uptime',
       label: 'Uptime Guarantee',
@@ -74,9 +74,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'satisfaction'
       label: 'Client Satisfaction'
-      value: 98;
+      value: 98,
       suffix: '%'
-      icon: Star;
+      icon: Star,
     {}
       id: 'satisfaction',
       label: 'Client Satisfaction',
@@ -89,9 +89,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'countries'
       label: 'Countries Served'
-      value: 25;
+      value: 25,
       suffix: '+'
-      icon: Globe;
+      icon: Globe,
     {}
       id: 'countries',
       label: 'Countries Served',
@@ -104,9 +104,9 @@ const ContentStatistics: React.FC = () => {}
     {
       id: 'years'
       label: 'Years Experience'
-      value: 10;
+      value: 10,
       suffix: '+'
-      icon: Clock;
+      icon: Clock,
     {}
       id: 'years',
       label: 'Years Experience',
@@ -116,7 +116,7 @@ const ContentStatistics: React.FC = () => {}
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10',
       description: 'Industry expertise and knowledge'}
-  ];
+  ],
 )
     useEffect(() => {
     const observer = new IntersectionObserver(
@@ -131,12 +131,13 @@ const ContentStatistics: React.FC = () => {}
         }
       },
       { threshold: 0.1 }
-    );
+    ),
 
     const element = document.getElementById('statistics-section');
     if (element) {}
       observer.observe(element);
     }
+const Component = () => {
 
     return () => {}
       if (element) {}
@@ -176,10 +177,12 @@ const ContentStatistics: React.FC = () => {}
       }
     }
   }, [isVisible, stats]);
+const Component = () => {
 
-  return(<section id="statistics-section" className="py-16" aria-labelledby="statistics-heading">
+  return (<section id="statistics-section" className="py-16" aria-labelledby="statistics-heading">
       <div className="container mx-auto px-4">
-        <h2 id="statistics-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-4 neon-text">Our Impact<p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">{stats.map((stat) => (</div>
+        <h2 id="statistics-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-4 neon-text">Our Impact<p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">{stats.map((stat) => (</div>
+const Component = () => {
   return (
     <section id="statistics-section" className="py-16" aria-labelledby="statistics-heading">
       <div className="container mx-auto px-4"></section>
@@ -196,7 +199,7 @@ const ContentStatistics: React.FC = () => {}
           {stats.map((stat) => (}
             <div
         <h2 id="statistics-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-4 neon-text">
-          Our Impact;
+          Our Impact,
         </h2>
         <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">)
           Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.)
@@ -206,7 +209,7 @@ const ContentStatistics: React.FC = () => {}
           {stats.map((stat) => (,
             <div;
               key={stat.id}
-              className={`${stat.bgColor} rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cyber-card`}
+              className={`${stat.bgColor} rounded-xl p-6 text-center hover: scale-105 transition-all duration-300 cyber-card`}
             ></div>
               <div className="flex justify-center mb-4"></div>
                 <div className={`p-3 rounded-full ${stat.bgColor} ${stat.color}`}></div>
@@ -231,7 +234,7 @@ const ContentStatistics: React.FC = () => {}
         <div className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 cyber-card"></div>
           <h3 className="text-2xl font-bold text-white text-center mb-8 neon-text">Industry Recognition</h3>
           <h3 className="text-2xl font-bold text-white text-center mb-8 neon-text">
-            Industry Recognition;
+            Industry Recognition,
           </h3>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
@@ -289,7 +292,8 @@ const ContentStatistics: React.FC = () => {
       icon: Clock,
       color: 'text-yellow-400'
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <section className="py-16">

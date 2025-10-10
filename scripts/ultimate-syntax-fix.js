@@ -44,7 +44,7 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ Fixed: ${filePath}`),
       return true;
     }
     return false;

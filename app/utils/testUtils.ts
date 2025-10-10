@@ -14,7 +14,7 @@ export const wait = (ms: number): Promise<void> => {}
  * Wait for a condition to be true;
  */
 export const waitFor = async (
-  condition: () => boolean;
+  condition: () => boolean,
   timeout = 5000,
   interval = 100;
 ): Promise<void> => {
@@ -32,7 +32,7 @@ export const waitFor = async (
  * Mock fetch for testing;
  */
 export const mockFetch = (
-  response: unknown;
+  response: unknown,
   status = 200,
   headers: Record<string, string> = {}
 ): void => {}
@@ -45,10 +45,10 @@ export const mockFetch = (
         ok: status >= 200 && status < 300,
         status,
         headers: new Headers(headers),
-        json: async () => response;
+        json: async () => response,
         text: async () => JSON.stringify(response)}
       } as Response)
-    ) as typeof fetch;
+    ) as typeof fetch,
   }
 }
 /**
@@ -108,11 +108,11 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {}
         ...global.window,
         ...overrides}
       })
-      writable: true;
+      writable: true,
     })
 export const wait = (m)
   s: number): Promise<void> => {/* TODO: Fix JSX expression */}
-};
+},
 /**
  * Wait for a condition to be true;
  */
@@ -121,7 +121,7 @@ export const waitFor = async (conditio)
   timeout = 5000,
   interval = 100;
 ): Promise<void> => {/* TODO: Fix JSX expression */}
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`),
     }
     await wait(interval);
   }
@@ -138,7 +138,7 @@ export const mockFetch = (respons,
   h: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({/* TODO: Fix JSX expression */})
       } as Response)
-    ) as typeof fetch;
+    ) as typeof fetch,
   }
 };
 /**
@@ -163,10 +163,10 @@ export class MockStorage implements Storage {/* TODO: Fix JSX expression */}
   }
 }
 /**
- * Create a mock localStorage for testing;
+ * Create a mock localStorage for testing,
  */
 export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */}
-};
+},
 /**
  * Mock window object;
  */
@@ -174,7 +174,7 @@ export const mockWindow = (override)
   s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */}
       },
       writabl,
-  e: true;
+  e: true,
     });
   }
 }
@@ -215,7 +215,7 @@ export const createMockPerformance = (): Performance => {}
     },
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries;
+    getEntries: () => entries,
     clearMarks: () => {,
       entries.length = 0;}
     },
@@ -232,18 +232,18 @@ export const createMockPerformance = (): Performance => {}
     toJSON: () => ({}),
     addEventListener: () => {},
     removeEventListener: () => {},
-    dispatchEvent: () => true;
-    onresourcetimingbufferfull: null;
+    dispatchEvent: () => true,
+    onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
 export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */}
   N: () => ({})
-      } as PerformanceEntry);
+      } as PerformanceEntry),
     },
     measur,
   e: (nam)
   e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */}
   N: () => ({})
-      } as PerformanceEntry);
+      } as PerformanceEntry),
     },
     getEntriesByNam,
   e: (nam)
@@ -275,7 +275,7 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
   l: null,
     timeOrigi,
   n: Date.now()
-  } as unknown as Performance;
+  } as unknown as Performance,
 }
 /**
  * Generate random test data;
@@ -319,11 +319,11 @@ export const generateTestData = {/* TODO: Fix JSX expression */}
   },
   emai,
   l: (): string => {/* TODO: Fix JSX expression */}`
-    return `test${generateTestData.string(5)}@example.com`;
+    return `test${generateTestData.string(5)}@example.com`,
   },
   ur,
   l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10)}`;
+  s://example.com/${generateTestData.string(10)}`,
   },
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */}
@@ -352,7 +352,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
  * Spy on console methods;
  */
 export class ConsoleSpy {
-  private originalConsole: Console;
+  private originalConsole: Console,
   private logs: string[] = [],
   private errors: string[] = [],
   private warnings: string[] = [],
@@ -407,29 +407,29 @@ export class ConsoleSpy {}
     this.warnings = [];}
 export const deepClone = <T>(ob)
   j: T): T => {/* TODO: Fix JSX expression */}
-};
+},
 /**
  * Compare objects for equality;
  */
 export const deepEqual = (obj,
   1: unknown, obj)
   2: unknown): boolean => {/* TODO: Fix JSX expression */}
-};
+},
 /**
  * Spy on console methods;
  */
 export class ConsoleSpy {/* TODO: Fix JSX expression */}
-    this.originalConsole = { ...console };
+    this.originalConsole = { ...console },
     this.mock();
   }
   private mock(): void {/* TODO: Fix JSX expression */}
-    };
+    },
     console.error = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
-    };
+    },
     console.warn = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
-    };
+    },
   }
   getLogs(): string[] {/* TODO: Fix JSX expression */}
   }
@@ -443,16 +443,16 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
   }
 }
 /**
- * Create a deferred promise;
+ * Create a deferred promise,
  */
 export interface Deferred<T> {
   promise: Promise<T>,
-  resolve: (value: T) => void;
+  resolve: (value: T) => void,
   reject: (reason?: unknown) => void;}
 }
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve as any: (value: T) => void;
-  let reject as any: (reason?: unknown) => void;
+  let resolve as any: (value: T) => void,
+  let reject as any: (reason?: unknown) => void,
   const promise = new Promise<T>((res, rej) => {
     resolve = res;
 export interface Deferred<T> {}
@@ -472,7 +472,7 @@ export const createDeferred = <T>(): Deferred<T> => {}
 export interface Deferred<T> {/* TODO: Fix JSX expression */}
 }
 export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
-  });
+  }),
   return { promise, resolve, reject };
 };
 /**
@@ -483,7 +483,7 @@ export const retryWithBackoff = async <T>(f)
   maxRetries = 3,
   initialDelay = 1000;
 ): Promise<T> => {
-  let lastError: Error;
+  let lastError: Error,
   for (let i = 0; i < maxRetries; i++) {,
     try {,
       return await fn();}
@@ -506,7 +506,7 @@ export const retryWithBackoff = async <T>(f)
       }
     }
   }
-  throw lastError as any;
+  throw lastError as any,
 }
 /**
  * Measure execution time of a function;
@@ -542,5 +542,5 @@ export const measureExecutionTime = async <T>(f)
   return { result, duration };
 };
 export default {/* TODO: Fix JSX expression */}
-};
+},
 `

@@ -74,7 +74,7 @@ const PricingPage: React.FC = () => {
       cta: 'Contact Sales',
       popular: false
     }
-  ];
+  ],
 
   const addOns = [
     {
@@ -101,7 +101,7 @@ const PricingPage: React.FC = () => {
       price: '$5,000',
       period: '/day'
     }
-  ];
+  ],
 
   const faqs = [
     {
@@ -139,7 +139,7 @@ const PricingPage: React.FC = () => {
           border: 'border-blue-500',
           light: 'bg-blue-50',
           textLight: 'text-blue-600'
-        };
+        },
       case 'cyan':
         return {
           bg: 'bg-cyan-500',
@@ -147,7 +147,7 @@ const PricingPage: React.FC = () => {
           border: 'border-cyan-500',
           light: 'bg-cyan-50',
           textLight: 'text-cyan-600'
-        };
+        },
       case 'purple':
         return {
           bg: 'bg-purple-500',
@@ -155,7 +155,7 @@ const PricingPage: React.FC = () => {
           border: 'border-purple-500',
           light: 'bg-purple-50',
           textLight: 'text-purple-600'
-        };
+        },
       default:
         return {
           bg: 'bg-gray-500',
@@ -163,9 +163,10 @@ const PricingPage: React.FC = () => {
           border: 'border-gray-500',
           light: 'bg-gray-50',
           textLight: 'text-gray-600'
-        };
+        },
     }
   };
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -189,6 +190,7 @@ const PricingPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => {
               const colors = getColorClasses(plan.color);
+const Component = () => {
               return (
                 <div
                   key={index}
@@ -245,7 +247,7 @@ const PricingPage: React.FC = () => {
                       to="/contact"
                       className={`w-full ${
                         plan.popular
-                          ? `${colors.bg} hover:opacity-90 text-white`
+                          ? `${colors.bg} hover: opacity-90 text-white`
                           : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
                       } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
                     >
@@ -253,7 +255,7 @@ const PricingPage: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              );
+              ),
             })}
           </div>
         </div>
@@ -309,7 +311,7 @@ const PricingPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -335,7 +337,7 @@ const PricingPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default PricingPage;

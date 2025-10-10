@@ -6,7 +6,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function AIProjectManagementPage() {
-  return(<div><Helmet>
+const Component = () => {
+  return (<div><Helmet>
+const Component = () => {
   return (
     <div></div><Helmet>
         <title>AI Project Management Solutions - Zion Tech Group</title>
@@ -30,7 +32,7 @@ export default function AIProjectManagementPage() {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              AI Project Management;
+              AI Project Management,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Intelligent project management powered by AI;
@@ -218,15 +220,15 @@ export default function AIProjectManagementPage() {
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ teams using our AI project management solutions to deliver better projects faster and more efficiently.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Trial</a>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Trial;
+              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300">
+                Get Free Trial,
               </a>
             </div>
           </section>
@@ -238,7 +240,7 @@ export default function AIProjectManagementPage() {
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Projects?</h2>
             <p className="text-xl text-blue-100 mb-8">Let our AI solutions streamline your project management</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
@@ -253,5 +255,5 @@ export default function AIProjectManagementPage() {
       
       <Footer />
     </div>
-  );
+  ),
 }

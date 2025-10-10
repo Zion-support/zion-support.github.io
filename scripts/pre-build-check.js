@@ -15,11 +15,11 @@ const _warnings = [];
 // const currentNodeVersion = process.version.slice(1);
 if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
   errors.push(`Node.js version ${requiredNodeVersion} or higher is required (curren)`
-  t: ${currentNodeVersion})`);
+  t: ${currentNodeVersion})`),
 } else {/* TODO: Fix JSX expression */}
 //   }
 
-// Check for required files;
+// Check for required files,
 const requiredFiles = [
   'package.json',
   'next.config.js',
@@ -28,10 +28,10 @@ const requiredFiles = [
   'postcss.config.cjs'];
 
 requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
-  missing: ${file}`);
+  missing: ${file}`),
   } else {/* TODO: Fix JSX expression */}
 //     }
-});
+}),
 
 // Check package.json for critical dependencies;
 try {
@@ -40,16 +40,16 @@ try {
   
   requiredDeps.forEach((dep) => {
     if (!packageJson.dependencies[dep]) {
-      errors.push(`Missing required dependency: ${dep}`);
+      errors.push(`Missing required dependency: ${dep}`),
 try {/* TODO: Fix JSX expression */}`
-  dependency: ${dep}`);
+  dependency: ${dep}`),
     }
   });
   
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-// Check TypeScript configuration;
+// Check TypeScript configuration,
 try {
   const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));
   
@@ -62,7 +62,7 @@ try {/* TODO: Fix JSX expression */}
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-// Check environment variables setup;
+// Check environment variables setup,
 if (!existsSync(resolve(process.cwd(), '.env.example'))) {
   warnings.push('.env.example file not found - consider adding environment variable documentation');
 } else {
@@ -74,13 +74,13 @@ if (!existsSync(resolve(process.cwd(), '.env.example'))) {/* TODO: Fix JSX expre
 } else {/* TODO: Fix JSX expression */}
 //   }
 
-// Report results;
+// Report results,
 // if (errors.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   errors.forEach((error) => // console.log(`   - ${error}`));
+//   //   errors.forEach((error) => // console.log(`   - ${error}`)),
 }
 
 if (warnings.length > 0) {/* TODO: Fix JSX expression */}`
-//   //   warnings.forEach((warning) => // console.log(`   - ${warning}`));
+//   //   warnings.forEach((warning) => // console.log(`   - ${warning}`)),
 }
 
 if (errors.length === 0 && warnings.length === 0) {/* TODO: Fix JSX expression */}

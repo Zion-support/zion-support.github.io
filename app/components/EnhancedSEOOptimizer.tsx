@@ -123,7 +123,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {,
   const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`),
     if (!meta) {}
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
@@ -210,7 +210,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       itemListElement: [
         {
           '@type': 'ListItem'
-          position: 1;
+          position: 1,
   const addBreadcrumbStructuredData = (): void => {}
     const breadcrumbData = {}
       '@context': 'https://schema.org',
@@ -222,7 +222,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
           name: 'Home',
           item: 'https://ziontechgroup.com'}
       ]
-    };
+    },
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';

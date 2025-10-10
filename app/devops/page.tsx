@@ -27,21 +27,23 @@ const DevOpsPage: React.FC = () => {,
     {
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines for faster releases',
-      icon: GitBranch;
+      icon: GitBranch,
     },
     {
       title: 'Container Management',
       description: 'Docker and Kubernetes orchestration for scalable applications',
-      icon: Settings;
+      icon: Settings,
     },
     {
       title: 'Infrastructure Automation',
       description: 'Infrastructure as Code with Terraform and CloudFormation',
-      icon: Zap;
+      icon: Zap,
     }
   ];
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
       <Navigation />
@@ -53,7 +55,7 @@ const DevOpsPage: React.FC = () => {,
         {/* Header */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="DevOps & CI/CD">
-            DevOps & CI/CD;
+            DevOps & CI/CD,
           </h1>,
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">,
             Streamlined development workflows with automated testing, deployment, and monitoring for faster, more reliable software delivery.
@@ -128,23 +130,23 @@ const DevOpsPage: React.FC = () => {,
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Development Process?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss your DevOps requirements and get a custom solution.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
               >Get Free Consultation</a>
               >
-                Get Free Consultation;
+                Get Free Consultation,
               </a>
               <a;
                 href="tel:+13024640950"
-                className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" >Call +1 302 464 0950</Phone>
               </Phone>
                 <Phone className="w-5 h-5" />
-                Call +1 302 464 0950;
+                Call +1 302 464 0950,
               </a>
             </div>
           </div>

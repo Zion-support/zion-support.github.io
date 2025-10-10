@@ -52,6 +52,7 @@ const AIMLPlatformPage: React.FC = () => {
       price: '$2,499',
       description: 'Ideal for development teams',
   const features = [];
+const Component = () => {
   return (
     {// TODO: Add content;}
 
@@ -121,13 +122,14 @@ const AIMLPlatformPage: React.FC = () => {
   const stats = [
   const stats = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
 
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -164,12 +166,12 @@ const AIMLPlatformPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
 
-// Contact Us;
+// Contact Us,
           </button>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
-  hover:text-slate-900 transition-colors"></button>
-Learn More;
+  hover: text-slate-900 transition-colors"></button>
+Learn More,
           </div>
 
       <Footer />

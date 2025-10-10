@@ -7,8 +7,10 @@ const AILeadGeneration: React.FC = () => {,
   const [industry, setIndustry] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [budget, setBudget] = useState('');
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
@@ -44,12 +46,12 @@ const AILeadGeneration: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Budget Range<select
                     value={budget}
-                    onChange={(e) =>setBudget(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setBudget(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select budget...<option value="under-10k">Under $10K</option>
                     <option value="10k-50k">$10K - $50K<option value="50k-100k">$50K - $100K<option value="over-100k">Over $100K<button className="cyber-button w-full">Generate Leads</button>
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            AI Lead Generation;
+            AI Lead Generation,
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Generate high-quality leads using AI-powered targeting and automation;
@@ -100,7 +102,7 @@ const AILeadGeneration: React.FC = () => {,
                 </div>
               </div>
               <button className="cyber-button w-full">
-                Generate Leads;
+                Generate Leads,
               </button>
             </div>
           </div>
@@ -185,13 +187,13 @@ const AILeadGeneration: React.FC = () => {,
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >Start Generating</a>
             >
-              📞 Call: (302) 464-0950;
+              📞 Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Generating;
+              Start Generating,
             </a>
           </div>
         </div>

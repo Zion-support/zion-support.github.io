@@ -113,6 +113,7 @@ namename: 'Emily Rodriguez',
       description: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
       icon: Building,
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
+const Component = () => {
 
   return (
     <>
@@ -276,7 +277,7 @@ namename: 'Emily Rodriguez',
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join thousands of businesses already using AI to streamline their invoicing process. 
                 Start your free trial today and experience the difference.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   href="/contact"
                   <Phone className="w-5 h-5 mr-2" />
                   Get Free Consultation
@@ -287,7 +288,7 @@ namename: 'Emily Rodriguez',
         
         <Footer />
     </>
-  );
+  ),
 });
 
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';

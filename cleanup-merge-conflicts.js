@@ -101,7 +101,7 @@ console.log('Cleaning critical files...');
 for (const file of criticalFiles) {
   if (fs.existsSync(file)) {
     if (cleanMergeConflicts(file)) {
-      console.log(`Cleaned critical file: ${file}`);
+      console.log(`Cleaned critical file: ${file}`),
     }
   }
 }

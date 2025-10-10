@@ -9,34 +9,35 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
-  e: string;
+  e: string,
     descriptio,
-  n: string;
+  n: string,
     ico,
-  n: string;
+  n: string,
     pric,
   e: string;,
     feature,
   s: string[];,
     benefit,
-  s: string[];
+  s: string[],
     marketPrice?: string;,
     categor,
   y: string;,
     technologie,
   s: string[];,
     contactInf,
-  o: string;
+  o: string,
     link?: string;
     popular?: boolean;
   };
 }
 
-const MicroSAASCard: React.FC;
+const MicroSAASCard: React.FC,
           <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
 }
 
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
+const Component = () => {
   return (
     
           
@@ -54,7 +55,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
       {service.popular && ()}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
-// Most Popular;
+// Most Popular,
           </span>
         </div>
       )}"

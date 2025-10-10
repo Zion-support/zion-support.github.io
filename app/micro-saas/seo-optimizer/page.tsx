@@ -3,8 +3,9 @@ import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
 
 const MicroSaaSPage: React.FC = () => {
-  const serviceName = 'seo-optimizer';
+  const serviceName = 'seo-optimizer',
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+const Component = () => {
 
   return (
     <>
@@ -21,7 +22,7 @@ const MicroSaaSPage: React.FC = () => {
               <Settings className="w-4 h-4" />
               <span>{title}</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text">
               {title} 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span>
             </h1>
@@ -52,7 +53,7 @@ const MicroSaaSPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 
 export default MicroSaaSPage;

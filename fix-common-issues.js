@@ -48,12 +48,12 @@ function fixFile(filePath) {
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 }
 
-// Function to fix specific files;
+// Function to fix specific files,
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
 
-    // Apply fixes;
+    // Apply fixes,
     content = fixConsoleStatements(content);
     content = fixUnusedVariables(content);
 
@@ -63,7 +63,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Files that need fixing;
+// Files that need fixing,
 const filesToFix = [
   'app/components/AdvancedPerformanceMonitor.tsx',
   'app/components/EnhancedErrorBoundary.tsx',

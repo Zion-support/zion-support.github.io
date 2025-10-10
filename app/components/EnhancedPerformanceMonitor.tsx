@@ -5,19 +5,19 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   CLS: number | null;,
-    FID: number | null;
+    FID: number | null,
   FCP: number | null;,
-    LCP: number | null;
-  TTFB: number | null;
+    LCP: number | null,
+  TTFB: number | null,
 }
 
 const EnhancedPerformanceMonitor: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    CLS: null;
-    FID: null;
-    FCP: null;
-    LCP: null;
-    TTFB: null;
+    CLS: null,
+    FID: null,
+    FCP: null,
+    LCP: null,
+    TTFB: null,
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -25,23 +25,23 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
   useEffect(() => {
     // Measure Core Web Vitals;
     getCLS((metric) => {
-      setMetrics(prev => ({ ...prev, CLS: metric.value }));
+      setMetrics(prev => ({ ...prev, CLS: metric.value })),
     });
 
     getFID((metric) => {
-      setMetrics(prev => ({ ...prev, FID: metric.value }));
+      setMetrics(prev => ({ ...prev, FID: metric.value })),
     });
 
     getFCP((metric) => {
-      setMetrics(prev => ({ ...prev, FCP: metric.value }));
+      setMetrics(prev => ({ ...prev, FCP: metric.value })),
     });
 
     getLCP((metric) => {
-      setMetrics(prev => ({ ...prev, LCP: metric.value }));
+      setMetrics(prev => ({ ...prev, LCP: metric.value })),
     });
 
     getTTFB((metric) => {
-      setMetrics(prev => ({ ...prev, TTFB: metric.value }));
+      setMetrics(prev => ({ ...prev, TTFB: metric.value })),
     });
 
     // Monitor performance in development;
@@ -53,6 +53,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
       };
 
       window.addEventListener('keydown', handleKeyPress);
+const Component = () => {
       return () => window.removeEventListener('keydown', handleKeyPress);
     }
   }, []);
@@ -63,7 +64,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
   };
 
   const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
-    if (value === null) return 'Measuring...';
+    if (value === null) return 'Measuring...',
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor';
@@ -72,6 +73,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
   if (process.env.NODE_ENV !== 'development' || !isVisible) {
     return null;
   }
+const Component = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm"></div>
@@ -87,7 +89,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
       <div className="space-y-2 text-xs">
         <div className="flex justify-between items-center">
           <span className="text-gray-300">CLS:<span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>{metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })})</span>
-  return(<div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm">)
+const Component = () => {
+  return (<div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm">)
       <div className="flex items-center justify-between mb-3">)
         <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>)
         <button;)
@@ -166,7 +169,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
       <div className="mt-3 pt-2 border-t border-gray-700"></div>
         <p className="text-xs text-gray-400">Press Ctrl+Shift+P to toggle</p>
         <p className="text-xs text-gray-400">
-          Press Ctrl+Shift+P to toggle;
+          Press Ctrl+Shift+P to toggle,
         </p>
       </div>
     </div>

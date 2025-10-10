@@ -48,16 +48,16 @@ function fixDestructuringVariables(content) {
       if (trimmed.startsWith('_') && trimmed.length > 1) {
         return trimmed.substring(1);
 function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
-  });
+  }),
   
   // Fix arrow function parameters;
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
-  });
+  }),
   
   // Fix destructuring assignments;
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
       }
-      return trimmed;
+      return trimmed,
     }).join(', ');`
     return `const { ${fixedVars} } = ${assignment};`;
   });
@@ -83,7 +83,7 @@ function processFile(filePath) {
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
-    return modified;
+    return modified,
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
@@ -118,7 +118,7 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
     }
   }
   
-  walkDir(dir);
+  walkDir(dir),
   return files;
 }
 
@@ -133,7 +133,7 @@ console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+  d: ${file}`),
   }
 }
 `
@@ -142,7 +142,7 @@ console.log(`Processed ${processedCount} files`);
 // Also process root level files;
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+  d: ${file}`),
     }
   }
 }

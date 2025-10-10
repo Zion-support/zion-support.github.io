@@ -8,18 +8,18 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed' })),
     return;
   }
 
   const { address, type, name, userId } = req.body || {};
 
   if (!address || !type) {
-    return res.status(400).json({ error: 'Address and type are required' });
+    return res.status(400).json({ error: 'Address and type are required' }),
   }
 
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(dir, { recursive: true }),
   }
 
   let existing = [];
@@ -37,7 +37,7 @@ export default function handler(req, res) {
   // Check if wallet address already exists
   const existingWallet = existing.find(wallet => wallet.address === address);
   if (existingWallet) {
-    return res.status(400).json({ error: 'Wallet address already exists' });
+    return res.status(400).json({ error: 'Wallet address already exists' }),
   }
 
   const newWallet = {
@@ -48,7 +48,7 @@ export default function handler(req, res) {
     userId: userId || '',
     timestamp: new Date().toISOString(),
     status: 'active'
-  };
+  },
 
   existing.push(newWallet);
 
@@ -60,11 +60,11 @@ export default function handler(req, res) {
       success: true, 
       message: 'Wallet added successfully',
       id: newWallet.id
-    }));
+    })),
   } catch (error) {
     console.error('Error saving wallet:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+    res.end(JSON.stringify({ error: 'Failed to save wallet' })),
   }
 }

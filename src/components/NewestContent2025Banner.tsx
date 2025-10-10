@@ -8,7 +8,7 @@ const,
   NewestContent2025Banner: React.FC<NewestContent2025BannerProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
-  );
+  ),
 };
 
 export default NewestContent2025Banner;

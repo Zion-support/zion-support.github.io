@@ -19,7 +19,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
     (match, method, body) => {/* TODO: Fix JSX expression */}
         }
-        return line;
+        return line,
       }).join('\n');
       return `// console.${method}(...): {\n${fixedBody}\n// }`;
     }
@@ -36,7 +36,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
     (match, body) => {/* TODO: Fix JSX expression */}
         }
-        return line;
+        return line,
       }).join('\n');
       return match.replace(body, fixedBody);
     }
@@ -54,7 +54,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
     (match, method, body) => {/* TODO: Fix JSX expression */}
         }
-        return line;
+        return line,
       });`
       return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`;
     }
@@ -80,7 +80,7 @@ function processFile(filePath) {
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
-    return modified;
+    return modified,
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
@@ -115,7 +115,7 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
     }
   }
   
-  walkDir(dir);
+  walkDir(dir),
   return files;
 }
 
@@ -130,7 +130,7 @@ console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`);
+  d: ${file}`),
   }
 }
 `

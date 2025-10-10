@@ -26,11 +26,11 @@ interface EnhancedSEOProps {
   colorScheme?: string;
   preload?: Array<{
     href: string;,
-    as: string;
+    as: string,
     type?: string;}>;
   prefetch?: Array<{
     href: string;,
-    as: string;
+    as: string,
   }>;
   dnsPrefetch?: string[];
   preconnect?: string[];
@@ -98,14 +98,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
       price: '50000',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock'}};
+      availability: 'https://schema.org/InStock'}},
 
   const finalStructuredData = structuredData || defaultStructuredData;
 </EnhancedSEOProps>
+const Component = () => {
   return (<Helmet>{/* Basic Meta Tags */}<title>{title}</title>
       <meta name="description" content={description} />
+const Component = () => {
 
-  return(<Helmet>)
+  return (<Helmet>)
       {/* Basic Meta Tags */})
       <title>{title}</title>)
       <meta name="description" content={description} />)

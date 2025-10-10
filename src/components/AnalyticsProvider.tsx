@@ -9,7 +9,7 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: ReactNode,
   trackingId?: string;
 }
 
@@ -36,7 +36,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
-        page_location: window.location.href});
+        page_location: window.location.href}),
     }
   }, [trackingId]);
 
@@ -82,6 +82,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     track,
     page,
     identify};
+const Component = () => {
 
   return (
     <AnalyticsContext.Provider value={value}>
@@ -101,7 +102,7 @@ export const useAnalytics = (): AnalyticsContextType => {
 // Declare global gtag function
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: any[],
+    gtag: (...args: any[]) => void,
   }
 }

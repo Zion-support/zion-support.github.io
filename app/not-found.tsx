@@ -11,7 +11,7 @@ export default function NotFoundPage() {
     { name: 'About Us', href: '/about', icon: Users },
     { name: 'Contact', href: '/contact', icon: Phone },
     { name: 'Blog', href: '/blog', icon: Code }
-  ];
+  ],
 
   const popularServices = [
     { name: 'AI Marketing', href: '/ai-marketing', icon: Target },
@@ -20,7 +20,8 @@ export default function NotFoundPage() {
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
     { name: 'Case Studies', href: '/case-studies', icon: BarChart },
     { name: 'Consultation', href: '/consultation', icon: Phone }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -77,7 +78,7 @@ export default function NotFoundPage() {
                 <a
                   key={index}
                   href={service.href}
-                  className="flex items-center space-x-3 p-4 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"
+                  className="flex items-center space-x-3 p-4 bg-slate-800/50 rounded-lg hover: bg-slate-700/50 transition-all duration-300 group"
                 >
                   <service.icon className="w-5 h-5 text-purple-400 group-hover:text-purple-300" />
                   <span className="text-white group-hover:text-purple-300">{service.name}</span>
@@ -123,5 +124,5 @@ export default function NotFoundPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

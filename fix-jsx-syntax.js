@@ -55,7 +55,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
     replacement: '<div$1>$2</div>'
   }
-];
+],
 
 function fixFile(filePath) {
   try {
@@ -81,10 +81,10 @@ function fixFile(filePath) {
   }
 }
 
-//Main function;
+//Main function,
 async function main() {
   // Get all TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
+  const files = await glob('app/**/*.tsx', { cwd: process.cwd() }),
 
   console.log(`Found ${files.length} TSX files to check...`);
 
@@ -114,12 +114,12 @@ async function main() {
 async function main() {/* TODO: Fix JSX expression */}
 }
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     for (const file of files) {/* TODO: Fix JSX expression */}
       }
     }
-  });
+  }),
 
   //   }
 

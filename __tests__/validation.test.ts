@@ -150,7 +150,7 @@ describe('Composite Validation', () => {
 describe('Async Validation', () => {
   test('handles successful async validation', async () => {
     const asyncValidator = async (val: unknown) => {
-      return { isValid: true, errors: [] };
+      return { isValid: true, errors: [] },
     };
     
     const result = await asyncFunction();

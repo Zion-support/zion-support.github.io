@@ -19,7 +19,8 @@ function createProperComponent(filePath) {
     content = `import React from 'react';
 
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {
-  return(<div className="min-h-screen bg-gray-50">)
+const Component = () => {
+  return (<div className="min-h-screen bg-gray-50">)
       <div className="container mx-auto px-4 py-8">)
         <h1 className="text-3xl font-bold text-gray-900 mb-6">)
           ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ')}
@@ -45,6 +46,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
   className = '', 
   children;
 }: ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props) {
+const Component = () => {
   return (
     <div className={\`${fileName.toLowerCase()} \${className}\`}></div>
       {children || (
@@ -95,7 +97,7 @@ function fixFile(filePath) {
   try {
     const content = createProperComponent(filePath);
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed: ${filePath}`);
+    console.log(`✅ Fixed: ${filePath}`),
     return true;
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
@@ -156,10 +158,10 @@ for (const file of files) {
   }
 }
 
-console.log(`\n📊 Summary: `);
-console.log(`✅ Files fixed: ${fixedCount}`);
-console.log(`❌ Errors: ${errorCount}`);
-console.log(`📁 Total files processed: ${files.length}`);
+console.log(`\n📊 Summary: `),
+console.log(`✅ Files fixed: ${fixedCount}`),
+console.log(`❌ Errors: ${errorCount}`),
+console.log(`📁 Total files processed: ${files.length}`),
 
 if (fixedCount > 0) {
   console.log('\n🎉 All files fixed successfully!');

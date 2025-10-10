@@ -8,37 +8,37 @@ import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, S
 const AICustomerSupportPage: React.FC = () => {,
   const features = [,
     {,
-      icon: Bot;
+      icon: Bot,
       title: 'AI-Powered Chatbots',
       description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
       benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support']
     },
     {
-      icon: MessageCircle;
+      icon: MessageCircle,
       title: 'Omnichannel Communication',
       description: 'Seamless integration across email, chat, phone, and social media platforms.',
       benefits: ['Unified experience', 'Context preservation', 'Cross-platform sync']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Intelligent Automation',
       description: 'Automated ticket routing, priority assignment, and resolution suggestions based on AI analysis.',
       benefits: ['Faster resolution', 'Reduced workload', 'Smart prioritization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Advanced Security',
       description: 'Enterprise-grade security with data encryption and compliance with industry standards.',
       benefits: ['Data protection', 'Compliance ready', 'Secure communication']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Real-time analytics and performance metrics to optimize customer support operations.',
       benefits: ['Performance tracking', 'Data-driven insights', 'Continuous improvement']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Human-AI Collaboration',
       description: 'Seamless handoff between AI and human agents for complex issues requiring human touch.',
       benefits: ['Best of both worlds', 'Smooth transitions', 'Enhanced efficiency']
@@ -58,7 +58,7 @@ const AICustomerSupportPage: React.FC = () => {,
         'Standard analytics',
         'Email support'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Professional',
@@ -73,7 +73,7 @@ const AICustomerSupportPage: React.FC = () => {,
         'Priority support',
         'API access'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -89,32 +89,33 @@ const AICustomerSupportPage: React.FC = () => {,
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
   const benefits = [
     {
-      icon: Clock;
+      icon: Clock,
       title: '24/7 Availability',
       description: 'Never miss a customer inquiry with round-the-clock AI support'},
     {
-      icon: Users;
+      icon: Users,
       title: 'Scalable Solutions',
       description: 'Handle increasing support volume without proportional cost increase'},
     {
-      icon: CheckCircle;
+      icon: CheckCircle,
       title: 'Consistent Quality',
       description: 'Deliver consistent, high-quality support experiences every time'
     },
     {
-      icon: Star;
+      icon: Star,
       title: 'Customer Satisfaction',
       description: 'Improve customer satisfaction scores with faster, more accurate responses'
     }
   ];
+const Component = () => {
 
-  return(<>
+  return (<>
       <SEOOptimizer;
         title="AI Customer Support - Zion Tech Group"
         description="Revolutionary AI-powered customer support with chatbots, omnichannel communication, and intelligent automation. Transform your customer service with cutting-edge AI technology."
@@ -136,7 +137,7 @@ const AICustomerSupportPage: React.FC = () => {,
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support;
+              AI Customer Support,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">)
               Revolutionary AI-powered customer support solutions;)
@@ -146,8 +147,8 @@ const AICustomerSupportPage: React.FC = () => {,
               and automated workflows that deliver exceptional customer experiences 24/7.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
@@ -156,13 +157,13 @@ const AICustomerSupportPage: React.FC = () => {,
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Get Quote</a>
               >
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Get Quote;
+                ✉️ Get Quote,
               </a>
             </div>,
           </section>,
@@ -230,20 +231,20 @@ const AICustomerSupportPage: React.FC = () => {,
                     href="mailto:kleber@ziontechgroup.com"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                     }`}
                   >Get Started</a>
                   </ul>
-                  <a;
+                  <a,
                     href="mailto: kleber@ziontechgroup.com",
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
                       plan.popular;
-                        ? 'bg-cyan-400 text-black hover:bg-cyan-300'}
+                        ? 'bg-cyan-400 text-black hover: bg-cyan-300'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'}
                     }`}
                   >
-                    Get Started;
+                    Get Started,
                   </a>
                 </div>
               ))}
@@ -281,8 +282,8 @@ const AICustomerSupportPage: React.FC = () => {,
               and custom implementation plan.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
@@ -291,13 +292,13 @@ const AICustomerSupportPage: React.FC = () => {,
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >✉️ Email Us</a>
               >
-                📞 Call: (302) 464-0950;
+                📞 Call: (302) 464-0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
               >
-                ✉️ Email Us;
+                ✉️ Email Us,
               </a>
             </div>
           </section>

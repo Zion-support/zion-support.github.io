@@ -103,7 +103,7 @@ function fixFile(filePath) {
 // Get all TypeScript files with errors
 function getFilesWithErrors() {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
+    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' }),
     const files = new Set();
     output.split('\n').forEach(line => {
       const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);
@@ -136,7 +136,7 @@ function main() {
   // Run type check again
   console.log('\n🔍 Running type check...');
   try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
+    execSync('pnpm run type-check', { stdio: 'inherit' }),
     console.log('✅ All TypeScript errors fixed!');
   } catch (error) {
     console.log('⚠️  Some errors remain, continuing...');

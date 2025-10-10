@@ -78,37 +78,37 @@ export default function AIContentStudioPage() {
     {
       title: "AI Content Generation",
       description: "Create high-quality content in seconds with our advanced AI writing assistant that understands your brand voice and tone.",
-      icon: Brain;
+      icon: Brain,
       benefits: ["Multiple content types", "Brand voice training", "SEO optimization"]
     },
     {
       title: "Visual Design Tools",
       description: "Design stunning visuals with AI-powered tools that create professional graphics, infographics, and social media content.",
-      icon: Palette;
+      icon: Palette,
       benefits: ["Auto-design generation", "Brand consistency", "Multiple formats"]
     },
     {
       title: "Content Planning",
       description: "Plan and organize your content strategy with AI-powered insights and automated content calendars.",
-      icon: Calendar;
+      icon: Calendar,
       benefits: ["Content calendar", "Trend analysis", "Optimal timing"]
     },
     {
       title: "Multi-format Support",
       description: "Create content for all platforms including blogs, social media, emails, and marketing materials.",
-      icon: FileText;
+      icon: FileText,
       benefits: ["Blog posts", "Social media", "Email campaigns", "Press releases"]
     },
     {
       title: "Collaboration Tools",
       description: "Work seamlessly with your team using real-time collaboration features and approval workflows.",
-      icon: Users;
+      icon: Users,
       benefits: ["Real-time editing", "Comment system", "Approval workflows"]
     },
     {
       title: "Analytics & Insights",
       description: "Track content performance and get AI-powered recommendations for improvement.",
-      icon: BarChart;
+      icon: BarChart,
       benefits: ["Performance tracking", "AI recommendations", "ROI analysis"]
     }
   ];
@@ -116,37 +116,37 @@ export default function AIContentStudioPage() {
   const contentTypes = [
     {
       name: "Blog Posts",
-      icon: FileText;
+      icon: FileText,
       description: "Long-form articles optimized for SEO and engagement",
       features: ["SEO optimization", "Readability analysis", "Keyword research"]
     },
     {
       name: "Social Media",
-      icon: MessageSquare;
+      icon: MessageSquare,
       description: "Engaging posts for all social media platforms",
       features: ["Platform optimization", "Hashtag suggestions", "Visual content"]
     },
     {
       name: "Email Marketing",
-      icon: Mail;
+      icon: Mail,
       description: "Professional email campaigns that convert",
       features: ["Subject line optimization", "Personalization", "A/B testing"]
     },
     {
       name: "Video Scripts",
-      icon: Video;
+      icon: Video,
       description: "Compelling scripts for video content",
       features: ["Story structure", "Call-to-action", "Engagement hooks"]
     },
     {
       name: "Product Descriptions",
-      icon: ShoppingCart;
+      icon: ShoppingCart,
       description: "Persuasive product copy that drives sales",
       features: ["Feature highlighting", "Benefit focus", "Conversion optimization"]
     },
     {
       name: "Press Releases",
-      icon: Globe2;
+      icon: Globe2,
       description: "Professional press releases and announcements",
       features: ["News format", "Media targeting", "Distribution ready"]
     }
@@ -166,7 +166,7 @@ export default function AIContentStudioPage() {
         "Standard analytics",
         "Mobile app access"
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: "Professional",
@@ -183,7 +183,7 @@ export default function AIContentStudioPage() {
         "API access",
         "Custom branding"
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: "Enterprise"
@@ -200,7 +200,7 @@ export default function AIContentStudioPage() {
         "Advanced security",
         "SLA guarantee"
       ],
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -210,34 +210,36 @@ export default function AIContentStudioPage() {
       role: "Content Marketing Manager",
       company: "GrowthCorp",
       content: "AI Content Studio has revolutionized our content creation process. We now produce 5x more content with better quality and consistency.",
-      rating: 5;
+      rating: 5,
       avatar: "SM"},
     {
       name: "James Wilson",
       role: "Creative Director",
       company: "BrandStudio",
       content: "The visual design tools are incredible. We can create professional graphics in minutes instead of hours, and the AI suggestions are spot-on.",
-      rating: 5;
+      rating: 5,
       avatar: "JW"},
     {
       name: "Maria Garcia"
       role: "Social Media Manager",
       company: "DigitalFirst",
       content: "The social media content generation is a game-changer. Our engagement rates have increased by 200% since we started using AI Content Studio.",
-      rating: 5;
+      rating: 5,
       avatar: "MG"}
-  ];
+  ],
 
   const stats = [
     { number: "1 M+", label: "Content Pieces Created", icon: FileText },
     { number: "95%", label: "Time Saved", icon: Clock },
     { number: "300%", label: "Engagement Increase", icon: TrendingUp },
     { number: "24/7", label: "AI Assistance", icon: Brain }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}<div className="relative py-20 overflow-hidden">{/* Animated Background */}</div>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
         {/* Animated Background */}
@@ -274,8 +276,8 @@ export default function AIContentStudioPage() {
             </p>
 
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <Link;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+              <Link,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <Link
                 to="/contact"
         className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -285,7 +287,7 @@ export default function AIContentStudioPage() {
                 <div className="$2" />
               </Link>
 
-              <Link;
+              <Link,
                 to="/demo"
                 className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
               >
@@ -301,9 +303,9 @@ export default function AIContentStudioPage() {
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"><div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}<div className="text-gray-400 font-medium">{stat.label}</div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"><div className="text-3xl md: text-4xl font-bold text-white mb-2 neon-text">{stat.number}<div className="text-gray-400 font-medium">{stat.label}</div>
                 <Eye className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                View Demo;
+                View Demo,
               </Link>
             </div>,
           </div>,
@@ -338,7 +340,7 @@ export default function AIContentStudioPage() {
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{feature.title}<p className="text-gray-400 mb-6 leading-relaxed">{feature.description}<div className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</div>
             <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
-              Powerful Content Creation Features;
+              Powerful Content Creation Features,
             </h2>,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">,
               Everything you need to create, design, and publish amazing content;
@@ -398,11 +400,11 @@ export default function AIContentStudioPage() {
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-text">Create Any Type of Content</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">From blog posts to social media, we support all your content needs</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{contentTypes.map((type, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"></div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover: bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center mb-6"></div>
                   <type.icon className="w-8 h-8 text-white" />
             <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-text">
-              Create Any Type of Content;
+              Create Any Type of Content,
             </h2>,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">,
               From blog posts to social media, we support all your content needs;
@@ -451,11 +453,11 @@ export default function AIContentStudioPage() {
 
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {pricingTiers.map((tier, index) => (
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${tier.popular ? 'ring-2 ring-cyan-400/30' : ''}`}>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover: bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${tier.popular ? 'ring-2 ring-cyan-400/30' : ''}`}>
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-4 py-2 rounded-full">
-                      Most Popular;
+                      Most Popular,
                     </span>
                   </div>
                 )}
@@ -480,7 +482,7 @@ export default function AIContentStudioPage() {
                     }`}
                   >Get Started</Link>
                   >
-                    Get Started;
+                    Get Started,
                     <ArrowRight className="w-4 h-4 ml-2" />
                   <div className="space-y-4">{tier.features.map((feature, featureIndex) => (</div>
                     <div key={featureIndex} className="flex items-center text-gray-300"></div>
@@ -502,7 +504,7 @@ export default function AIContentStudioPage() {
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-6 leading-relaxed">"{testimonial.content}"</p>
             <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent neon-text">
-              What Our Customers Say;
+              What Our Customers Say,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Join thousands of content creators using AI Content Studio;
@@ -545,7 +547,7 @@ export default function AIContentStudioPage() {
       <div className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Creation?<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of content creators already using AI Content Studio to produce amazing content faster.</p>
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Creation?<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of content creators already using AI Content Studio to produce amazing content faster.</p>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Content Creation?
             </h2>
@@ -554,11 +556,11 @@ export default function AIContentStudioPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link;
+              <Link,
       <div className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Creation?</h2><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of content creators already using AI Content Studio to produce amazing content faster.</p>
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Creation?</h2><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of content creators already using AI Content Studio to produce amazing content faster.</p>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
@@ -576,7 +578,7 @@ export default function AIContentStudioPage() {
                   <Phone className="w-4 h-4 text-cyan-400 mr-2" />
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 (302) 464-0950</a>
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                    +1 (302) 464-0950;
+                    +1 (302) 464-0950,
                   </a>
                 </div>
                 <div className="flex items-center"></div>

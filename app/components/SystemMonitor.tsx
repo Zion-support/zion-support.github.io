@@ -51,37 +51,37 @@ interface NavigatorWithConnection extends Navigator {
 
 interface SystemMetrics {
   performance: {
-    score: number;
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    firstInputDelay: number;
-    cumulativeLayoutShift: number;
+    score: number,
+    loadTime: number,
+    firstContentfulPaint: number,
+    largestContentfulPaint: number,
+    firstInputDelay: number,
+    cumulativeLayoutShift: number,
   };
   errors: {
-    total: number;
+    total: number,
     byType: Record<string, number>;
     byCategory: Record<string, number>;
     bySeverity: Record<string, number>;
     recent: Array<{
-      id: string;
-      message: string;
-      type: string;
-      severity: string;
-      timestamp: string;
+      id: string,
+      message: string,
+      type: string,
+      severity: string,
+      timestamp: string,
     }>;
   };
   memory: {
-    used: number;
-    total: number;
-    limit: number;
-    percentage: number;
+    used: number,
+    total: number,
+    limit: number,
+    percentage: number,
   };
   network: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
-    saveData: boolean;
+    effectiveType: string,
+    downlink: number,
+    rtt: number,
+    saveData: boolean,
   };
 }
 
@@ -146,6 +146,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     };
 
     initializeMonitoring();
+const Component = () => {
 
     return () => {
       // Stop monitoring (placeholder - implement as needed)
@@ -160,7 +161,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
   // Get memory information
   const getMemoryInfo = () => {
-    if ('memory' in performance) {totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+    if ('memory' in performance) {totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory,
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
@@ -169,7 +170,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       return { used, total, limit, percentage };
     }
 
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
+    return { used: 0, total: 0, limit: 0, percentage: 0 },
   };
 
   // Get network information
@@ -228,11 +229,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       case 'high': return 'text-red-500 bg-red-50';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      default: return 'text-gray-600 bg-gray-100',
     }
   };
 
   if (!metrics) {
+const Component = () => {
     return (
       <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
         <div className="flex items-center justify-center">
@@ -242,6 +244,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       </div>
     );
   }
+const Component = () => {
 
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>

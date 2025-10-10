@@ -23,17 +23,17 @@ export interface CacheEntry;
     lastAccessed: number
 
 }
-class AdvancedCache;
+class AdvancedCache,
           <T = unknown> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   private,
-  cache: Map;
+  cache: Map,
           <string, CacheEntry<T>> = new Map();
   private,
-  accessOrder: string[] = [];
+  accessOrder: string[] = [],
   private,
-  options: Required<CacheOptions>;
+  options: Required<CacheOptions>,
   private storageKey = 'advanced-cache';
   constructor(_option)
   s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
@@ -47,7 +47,7 @@ class AdvancedCache;
   storag,
   e: options.storage || 'memory',
       maxSiz,
-  e: options.maxSize || 100;
+  e: options.maxSize || 100,
     };
     // Load from persistent storage if needed;
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
@@ -103,7 +103,7 @@ class AdvancedCache;
   cach,
   e: Object.fromEntries(this.cache.entries()),
         accessOrde,
-  r: this.accessOrder;
+  r: this.accessOrder,
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -146,7 +146,7 @@ class AdvancedCache;
       hits: 0,
       lastAccessed: Date.now()
 
-    });
+    }),
     // Update access order;
     this.updateAccessOrder(key);
     // Save to storage if needed;
@@ -251,7 +251,7 @@ class AdvancedCache;
 }
     const now = Date.now();
     const,
-  keysToDelete: string[] = [];
+  keysToDelete: string[] = [],
     this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -278,7 +278,7 @@ class AdvancedCache;
     hitRat,
   e: number;,
     entrie,
-  s: Array;
+  s: Array,
           <{/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -287,15 +287,15 @@ class AdvancedCache;
     hit,
   s: number;,
     ag,
-  e: number;
+  e: number,
     }>;
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const,
-  entries: Array;
+  entries: Array,
           <{/* TODO: Fix JSX expression */}
-  e: number }> = [];
+  e: number }> = [],
     const now = Date.now();
     this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -328,7 +328,7 @@ class AdvancedCache;
     ke,
   y: string,
     fetche,
-  r: () => Promise;
+  r: () => Promise,
           <R>,
     ttl?: number): Promise<R> {// TODO: Add content;}
 

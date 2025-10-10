@@ -1,46 +1,46 @@
 // Real Micro SAAS Services for Zion Tech Group;
 // Comprehensive list of innovative, real-world micro SAAS solutions;
 export interface MicroSaasService {
-  id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  icon: string;
-  price: string;
+  id: string,
+  title: string,
+  description: string,
+  shortDescription: string,
+  icon: string,
+  price: string,
   originalPrice?: string;
-  features: string[];
-  benefits: string[];
-  link: string;
-  popular: boolean;
-  category: string;
-  rating: number;
-  users: string;
-  freeTrial: string;
-  marketPrice: string;
-  capabilities: string[];
-  useCases: string[];
-  integrations: string[];
-  apiAvailable: boolean;
-  mobileApp: boolean;
-  whiteLabel: boolean;
-  support: string;
-  setupTime: string;
+  features: string[],
+  benefits: string[],
+  link: string,
+  popular: boolean,
+  category: string,
+  rating: number,
+  users: string,
+  freeTrial: string,
+  marketPrice: string,
+  capabilities: string[],
+  useCases: string[],
+  integrations: string[],
+  apiAvailable: boolean,
+  mobileApp: boolean,
+  whiteLabel: boolean,
+  support: string,
+  setupTime: string,
   technicalSpecs: {
-    languages: string[];
-    frameworks: string[];
-    databases: string[];
-    cloudProviders: string[];
+    languages: string[],
+    frameworks: string[],
+    databases: string[],
+    cloudProviders: string[],
   };
   pricing: {
-    monthly: number;
-    yearly: number;
-    enterprise: number;
-    features: string[];
+    monthly: number,
+    yearly: number,
+    enterprise: number,
+    features: string[],
   };
 }
 
 export const microSaasServices: MicroSaasService[] = [
-  // AI-Powered Productivity Tools;
+  // AI-Powered Productivity Tools,
   {,
     id: 'ai-project-manager-pro',
     title: 'AI Project Manager Pro',
@@ -68,9 +68,9 @@ export const microSaasServices: MicroSaasService[] = [
       '90% reduction in manual reporting time'
     ],
     link: '/ai-project-manager'
-    popular: true;
+    popular: true,
     category: 'Productivity',
-    rating: 4.9;
+    rating: 4.9,
     users: '15,000+',
     freeTrial: '14 days',
     marketPrice: '$149-299/month',
@@ -95,9 +95,9 @@ export const microSaasServices: MicroSaasService[] = [
       'GitHub', 'GitLab', 'Bitbucket', 'Figma', 'Adobe Creative Suite',
       'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: '24/7 Priority Support',
     setupTime: '15 minutes',
     technicalSpecs: {,
@@ -107,9 +107,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'DigitalOcean']
     },
     pricing: {
-      monthly: 99;
-      yearly: 990;
-      enterprise: 299;
+      monthly: 99,
+      yearly: 990,
+      enterprise: 299,
       features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']
     }
   },
@@ -141,9 +141,9 @@ export const microSaasServices: MicroSaasService[] = [
       '25% reduction in stress levels'
     ],
     link: '/ai-task-manager'
-    popular: true;
+    popular: true,
     category: 'Productivity',
-    rating: 4.8;
+    rating: 4.8,
     users: '25,000+',
     freeTrial: '14 days',
     marketPrice: '$79-149/month',
@@ -167,9 +167,9 @@ export const microSaasServices: MicroSaasService[] = [
       'Google Calendar', 'Outlook', 'Apple Calendar', 'Slack', 'Microsoft Teams',
       'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: false;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: false,
     support: 'Email & Chat Support',
     setupTime: '5 minutes',
     technicalSpecs: {,
@@ -179,9 +179,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Firebase']
     },
     pricing: {
-      monthly: 49;
-      yearly: 490;
-      enterprise: 149;
+      monthly: 49,
+      yearly: 490,
+      enterprise: 149,
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
     }
   },
@@ -214,9 +214,9 @@ export const microSaasServices: MicroSaasService[] = [
       '40% cost savings on content creation'
     ],
     link: '/ai-content-writer'
-    popular: true;
+    popular: true,
     category: 'Content & Marketing',
-    rating: 4.7;
+    rating: 4.7,
     users: '40,000+',
     freeTrial: '7 days',
     marketPrice: '$129-299/month',
@@ -240,9 +240,9 @@ export const microSaasServices: MicroSaasService[] = [
       'WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer',
       'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: '24/7 Support',
     setupTime: '10 minutes',
     technicalSpecs: {,
@@ -252,9 +252,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure']
     },
     pricing: {
-      monthly: 79;
-      yearly: 790;
-      enterprise: 199;
+      monthly: 79,
+      yearly: 790,
+      enterprise: 199,
       features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']
     }
   },
@@ -286,9 +286,9 @@ export const microSaasServices: MicroSaasService[] = [
       '90% automation of routine tasks'
     ],
     link: '/ai-social-media-manager'
-    popular: true;
+    popular: true,
     category: 'Content & Marketing',
-    rating: 4.6;
+    rating: 4.6,
     users: '30,000+',
     freeTrial: '14 days',
     marketPrice: '$149-399/month',
@@ -313,9 +313,9 @@ export const microSaasServices: MicroSaasService[] = [
       'Pinterest', 'Snapchat', 'Hootsuite', 'Buffer', 'Sprout Social',
       'HubSpot', 'Salesforce', 'Zapier'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: '24/7 Support',
     setupTime: '20 minutes',
     technicalSpecs: {,
@@ -325,9 +325,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure']
     },
     pricing: {
-      monthly: 89;
-      yearly: 890;
-      enterprise: 249;
+      monthly: 89,
+      yearly: 890,
+      enterprise: 249,
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
     }
   },
@@ -360,9 +360,9 @@ export const microSaasServices: MicroSaasService[] = [
       '90% automation of routine sales tasks'
     ],
     link: '/ai-crm'
-    popular: true;
+    popular: true,
     category: 'Business & Finance',
-    rating: 4.8;
+    rating: 4.8,
     users: '20,000+',
     freeTrial: '21 days',
     marketPrice: '$199-499/month',
@@ -387,9 +387,9 @@ export const microSaasServices: MicroSaasService[] = [
       'Mailchimp', 'Constant Contact', 'Zapier', 'Webhook APIs',
       'Google Workspace', 'Microsoft 365', 'Slack', 'Teams'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: '24/7 Priority Support',
     setupTime: '30 minutes',
     technicalSpecs: {,
@@ -399,9 +399,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Salesforce']
     },
     pricing: {
-      monthly: 129;
-      yearly: 1290;
-      enterprise: 399;
+      monthly: 129,
+      yearly: 1290,
+      enterprise: 399,
       features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']
     }
   },
@@ -433,9 +433,9 @@ export const microSaasServices: MicroSaasService[] = [
       '90% automation of financial reporting'
     ],
     link: '/ai-financial-analyzer'
-    popular: true;
+    popular: true,
     category: 'Business & Finance',
-    rating: 4.9;
+    rating: 4.9,
     users: '12,000+',
     freeTrial: '14 days',
     marketPrice: '$299-999/month',
@@ -460,9 +460,9 @@ export const microSaasServices: MicroSaasService[] = [
       'QuickBooks', 'Xero', 'Sage', 'SAP', 'Oracle', 'Salesforce',
       'Excel', 'Google Sheets', 'Tableau', 'Power BI'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: '24/7 Expert Support',
     setupTime: '45 minutes',
     technicalSpecs: {,
@@ -472,9 +472,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Bloomberg Cloud']
     },
     pricing: {
-      monthly: 199;
-      yearly: 1990;
-      enterprise: 599;
+      monthly: 199,
+      yearly: 1990,
+      enterprise: 599,
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
     }
   },
@@ -507,9 +507,9 @@ export const microSaasServices: MicroSaasService[] = [
       '24/7 availability and consistency'
     ],
     link: '/ai-customer-support-bot'
-    popular: true;
+    popular: true,
     category: 'Customer Service',
-    rating: 4.7;
+    rating: 4.7,
     users: '35,000+',
     freeTrial: '14 days',
     marketPrice: '$99-299/month',
@@ -534,9 +534,9 @@ export const microSaasServices: MicroSaasService[] = [
       'Slack', 'Microsoft Teams', 'WhatsApp', 'Facebook Messenger',
       'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: '24/7 Support',
     setupTime: '15 minutes',
     technicalSpecs: {,
@@ -546,9 +546,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Dialogflow']
     },
     pricing: {
-      monthly: 59;
-      yearly: 590;
-      enterprise: 199;
+      monthly: 59,
+      yearly: 590,
+      enterprise: 199,
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
     }
   },
@@ -581,9 +581,9 @@ export const microSaasServices: MicroSaasService[] = [
       '40% improvement in team productivity'
     ],
     link: '/ai-code-generation'
-    popular: true;
+    popular: true,
     category: 'Development',
-    rating: 4.8;
+    rating: 4.8,
     users: '18,000+',
     freeTrial: '14 days',
     marketPrice: '$129-399/month',
@@ -608,9 +608,9 @@ export const microSaasServices: MicroSaasService[] = [
       'VS Code', 'IntelliJ', 'Sublime Text', 'Atom', 'Vim',
       'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'
     ],
-    apiAvailable: true;
-    mobileApp: false;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: false,
+    whiteLabel: true,
     support: 'Developer Support',
     setupTime: '10 minutes',
     technicalSpecs: {,
@@ -620,9 +620,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'GitHub Actions']
     },
     pricing: {
-      monthly: 79;
-      yearly: 790;
-      enterprise: 249;
+      monthly: 79,
+      yearly: 790,
+      enterprise: 249,
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
     }
   },
@@ -655,9 +655,9 @@ export const microSaasServices: MicroSaasService[] = [
       '40% increase in preventive care'
     ],
     link: '/ai-healthcare'
-    popular: true;
+    popular: true,
     category: 'Healthcare',
-    rating: 4.9;
+    rating: 4.9,
     users: '8,000+',
     freeTrial: '30 days',
     marketPrice: '$249-999/month',
@@ -682,9 +682,9 @@ export const microSaasServices: MicroSaasService[] = [
       'Apple Health', 'Google Fit', 'Fitbit', 'Garmin', 'Samsung Health',
       'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: '24/7 Medical Support',
     setupTime: '60 minutes',
     technicalSpecs: {,
@@ -694,9 +694,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'HIPAA-compliant hosting']
     },
     pricing: {
-      monthly: 149;
-      yearly: 1490;
-      enterprise: 499;
+      monthly: 149,
+      yearly: 1490,
+      enterprise: 499,
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
     }
   },
@@ -729,9 +729,9 @@ export const microSaasServices: MicroSaasService[] = [
       '80% automation of marketing tasks'
     ],
     link: '/ai-ecommerce-solutions'
-    popular: true;
+    popular: true,
     category: 'E-commerce',
-    rating: 4.7;
+    rating: 4.7,
     users: '22,000+',
     freeTrial: '14 days',
     marketPrice: '$199-599/month',
@@ -756,9 +756,9 @@ export const microSaasServices: MicroSaasService[] = [
       'eBay', 'Etsy', 'Facebook Shop', 'Instagram Shopping',
       'Google Shopping', 'PayPal', 'Stripe', 'Square'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: '24/7 Support',
     setupTime: '30 minutes',
     technicalSpecs: {,
@@ -768,9 +768,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Shopify Plus']
     },
     pricing: {
-      monthly: 119;
-      yearly: 1190;
-      enterprise: 399;
+      monthly: 119,
+      yearly: 1190,
+      enterprise: 399,
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
     }
   },
@@ -803,9 +803,9 @@ export const microSaasServices: MicroSaasService[] = [
       '90% personalization of learning experience'
     ],
     link: '/ai-education'
-    popular: true;
+    popular: true,
     category: 'Education',
-    rating: 4.8;
+    rating: 4.8,
     users: '28,000+',
     freeTrial: '21 days',
     marketPrice: '$149-399/month',
@@ -830,9 +830,9 @@ export const microSaasServices: MicroSaasService[] = [
       'Zoom', 'WebEx', 'Slack', 'Discord', 'YouTube', 'Vimeo',
       'Google Drive', 'OneDrive', 'Dropbox', 'Box'
     ],
-    apiAvailable: true;
-    mobileApp: true;
-    whiteLabel: true;
+    apiAvailable: true,
+    mobileApp: true,
+    whiteLabel: true,
     support: 'Educational Support',
     setupTime: '45 minutes',
     technicalSpecs: {,
@@ -842,9 +842,9 @@ export const microSaasServices: MicroSaasService[] = [
       cloudProviders: ['AWS', 'Google Cloud', 'Azure', 'Education-specific hosting']
     },
     pricing: {
-      monthly: 89;
-      yearly: 890;
-      enterprise: 299;
+      monthly: 89,
+      yearly: 890,
+      enterprise: 299,
       features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
     }
   }
@@ -892,4 +892,4 @@ export const contactInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
-  timezone: 'EST (Eastern Standard Time)'};
+  timezone: 'EST (Eastern Standard Time)'},

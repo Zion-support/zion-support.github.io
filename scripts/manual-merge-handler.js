@@ -11,11 +11,11 @@ function execGitCommand(command, description) {
     const result = execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe'});
+      stdio: 'pipe'}),
     console.log(`✅ ${description} completed`);
     return result;
   } catch (error) {
-    console.log(`❌ ${description} failed: ${error.message}`);
+    console.log(`❌ ${description} failed: ${error.message}`),
     return null;
   }
 }
@@ -37,7 +37,7 @@ async function main() {
   console.log('🚀 Starting manual merge handling for important branches...\n');
   
   // Check current status;
-  console.log('📊 Current Status: ');
+  console.log('📊 Current Status: '),
   execGitCommand('git status --porcelain', 'Checking git status');
   
   // Try to merge each important branch;
@@ -69,7 +69,7 @@ async function main() {
   }
   
   // Final status;
-  console.log('\n📊 Final Status: ');
+  console.log('\n📊 Final Status: '),
   execGitCommand('git status', 'Final git status');
   execGitCommand('git log --oneline -5', 'Recent commits');
   

@@ -7,14 +7,16 @@ const CybersecurityAudit: React.FC = () => {,
   const [auditType, setAuditType] = useState('');
   const [companySize, setCompanySize] = useState('');
   const [industry, setIndustry] = useState('');
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit<p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit<p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
         <div className="max-w-4xl mx-auto"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cybersecurity Audit</h1><p className="text-xl text-gray-300 text-center mb-12">Comprehensive security assessment to protect your digital assets</p>
           </p>
@@ -50,7 +52,7 @@ const CybersecurityAudit: React.FC = () => {,
                     <option value="finance">Finance<option value="technology">Technology</option>
                     <option value="retail">Retail<option value="manufacturing">Manufacturing<button className="cyber-button w-full">Schedule Audit</button>
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
-            Cybersecurity Audit;
+            Cybersecurity Audit,
           </h1>
           <p className="text-xl text-gray-300 text-center mb-12">
             Comprehensive security assessment to protect your digital assets;
@@ -105,7 +107,7 @@ const CybersecurityAudit: React.FC = () => {,
                 </div>
               </div>
               <button className="cyber-button w-full">
-                Schedule Audit;
+                Schedule Audit,
               </button>
             </div>
           </div>
@@ -221,13 +223,13 @@ const CybersecurityAudit: React.FC = () => {,
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >Schedule Audit</a>
             >
-              📞 Call: (302) 464-0950;
+              📞 Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Schedule Audit;
+              Schedule Audit,
             </a>
           </div>
         </div>

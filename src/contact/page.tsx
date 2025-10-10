@@ -24,7 +24,7 @@ $4});
     message: '',
     budget: '',
     timeline: ''
-  });
+  }),
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -62,7 +62,7 @@ $4});
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
-  };
+  },
 
   const services = [
     'AI Services',
@@ -82,6 +82,7 @@ $4});
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -92,7 +93,7 @@ $4});
           Contact Us
         </a>
       </div>
-  );
+  ),
 
 export default ContactPage;
     'Quantum Computing',
@@ -147,7 +148,7 @@ export default ContactPage;
       hours: 'Mon-Fri: 9AM-6PM GMT',
       timezone: 'Greenwich Mean Time'
     }
-  ];
+  ],
 
   const faqs = [
     {
@@ -169,6 +170,7 @@ export default ContactPage;
   ];
 
   if (isSubmitted) {
+const Component = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="max-w-2xl mx-auto text-center p-8">
@@ -201,7 +203,7 @@ export default ContactPage;
           <div className="mt-8">
             <a
               href="/"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center"
             >
               <ArrowRight className="w-5 h-5 mr-2" />
               Back to Home
@@ -209,8 +211,9 @@ export default ContactPage;
           </div>
         </div>
       </div>
-    );
+    ),
   }
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

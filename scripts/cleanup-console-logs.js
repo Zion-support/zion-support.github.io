@@ -21,12 +21,12 @@ function removeConsoleLogs(filePath) {
 function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 //       }
     
-    return modified;
+    return modified,
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Function to process all TypeScript and JavaScript files;
+// Function to process all TypeScript and JavaScript files,
 async function processFiles() {
 async function processFiles() {/* TODO: Fix JSX expression */}
 }
@@ -47,7 +47,7 @@ async function processFiles() {/* TODO: Fix JSX expression */}
         '**/*.test.*')
         '**/*.spec.*'
       ]
-    });
+    }),
     
     files.forEach(file => {)
       totalFiles++;)
@@ -55,11 +55,11 @@ async function processFiles() {/* TODO: Fix JSX expression */}
         modifiedFiles++;
       }
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
+    }),
     
     files.forEach(file => {/* TODO: Fix JSX expression */}
       })
-    });
+    }),
   });
   
 //   //   //   }

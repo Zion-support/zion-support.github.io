@@ -17,7 +17,7 @@ try {
     !branch.includes('aggressive-merge-backup')
   );
 
-  console.log(`📋 Found ${cursorBranches.length} cursor branches: `);
+  console.log(`📋 Found ${cursorBranches.length} cursor branches: `),
   cursorBranches.forEach(branch => console.log(`  - ${branch}`));
 
   if (cursorBranches.length === 0) {
@@ -31,14 +31,14 @@ try {
       console.log(`\n🔄 Attempting to merge ${branch}...`);
       
       // Check if branch has changes;
-      const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8' });
+      const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8' }),
       if (!diff.trim()) {
         console.log(`⏭️  Branch ${branch} has no changes, skipping...`);
         continue;
       }
 
       // Try to merge;
-      execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' });
+      execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' }),
       console.log(`✅ Successfully merged ${branch}`);
       
     } catch (error) {
@@ -46,7 +46,7 @@ try {
       
       // Try to abort the merge if it failed;
       try {
-        execSync('git merge --abort', { stdio: 'pipe' });
+        execSync('git merge --abort', { stdio: 'pipe' }),
       } catch (abortError) {
         // Ignore abort errors;
       }
@@ -55,7 +55,7 @@ try {
 
   // Push all changes;
   console.log('\n📤 Pushing all changes to main...');
-  execSync('git push origin main', { stdio: 'inherit' });
+  execSync('git push origin main', { stdio: 'inherit' }),
 
   console.log('🎉 All available PRs have been processed!');
 

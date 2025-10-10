@@ -8,18 +8,18 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ error: 'Method not allowed' })),
     return;
   }
 
   const { email, name, preferences } = req.body || {};
 
   if (!email) {
-    return res.status(400).json({ error: 'Email is required' });
+    return res.status(400).json({ error: 'Email is required' }),
   }
 
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+    fs.mkdirSync(dir, { recursive: true }),
   }
 
   let existing = [];
@@ -37,7 +37,7 @@ export default function handler(req, res) {
   // Check if email already exists
   const existingSubscriber = existing.find(sub => sub.email === email);
   if (existingSubscriber) {
-    return res.status(400).json({ error: 'Email already subscribed' });
+    return res.status(400).json({ error: 'Email already subscribed' }),
   }
 
   const newSubscriber = {
@@ -47,7 +47,7 @@ export default function handler(req, res) {
     preferences: preferences || {},
     timestamp: new Date().toISOString(),
     status: 'active'
-  };
+  },
 
   existing.push(newSubscriber);
 
@@ -59,11 +59,11 @@ export default function handler(req, res) {
       success: true, 
       message: 'Successfully subscribed to newsletter',
       id: newSubscriber.id
-    }));
+    })),
   } catch (error) {
     console.error('Error saving subscriber:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
+    res.end(JSON.stringify({ error: 'Failed to save subscription' })),
   }
 }

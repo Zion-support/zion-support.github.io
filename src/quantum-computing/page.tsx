@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const QuantumComputingPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -18,7 +19,7 @@ const QuantumComputingPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
               Quantum Computing
             </h1>
             <p className="text-xl text-cyan-400 mb-8">
@@ -93,7 +94,7 @@ const QuantumComputingPage: React.FC = () => {
       
       <Footer />
     </>
-  );
+  ),
 };
 
 export default QuantumComputingPage;

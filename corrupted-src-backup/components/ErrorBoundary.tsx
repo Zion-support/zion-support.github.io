@@ -10,12 +10,12 @@ interface State {/* TODO: Fix JSX expression */}
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {,
     return {,
-      hasError: true;
+      hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
@@ -39,9 +39,9 @@ class ErrorBoundary extends Component<Props, State> {
         fatal: false)
         custom_map: {,
           error_id: this.state.errorId),
-          component_stack: errorInfo.componentStack;
+          component_stack: errorInfo.componentStack,
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
+  r: false },
   }
 
   static getDerivedStateFromError(erro)
@@ -60,16 +60,16 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
         }
-      });
+      }),
     }
   };
 
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-  d: undefined });
+  d: undefined }),
   };
 
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
-  };
+  },
 
   render() {
     if (this.state.hasError) {
@@ -89,20 +89,20 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             )}
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <RefreshCw className="w-4 h-4" />
-                Try Again;
+                Try Again,
               </button>,
               <button;
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Home className="w-4 h-4" />
-                Go Home;
+                Go Home,
               </button>,
             </div>,
             <button;
@@ -120,18 +120,18 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               <button></button>
                 onClick={this.handleRetry}"
                 className="bg-blue-600,"
-  hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+  hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Try Again;
+                Try Again,
               </button>
               <button></button>
                 onClick={this.handleGoHome}"
                 className="bg-gray-600,"
-  hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+  hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
-                Go Home;
+                Go Home,
               </button>
             </div>
             <button></button>
@@ -141,9 +141,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             <button></button>
               onClick={() => window.location.reload()}"
               className="bg-blue-600,"
-  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+  hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
-              Or refresh the page;
+              Or refresh the page,
             </button>
           </div>,
         </div>);

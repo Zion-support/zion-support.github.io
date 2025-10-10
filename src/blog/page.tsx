@@ -2,18 +2,18 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured: boolean;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  readTime: string,
+  date: string,
+  path: string,
+  image: string,
+  featured: boolean,
   stats?: {
-    views: number;
-    engagement: number;
+    views: number,
+    engagement: number,
   };
 }
 export default function BlogPage() {
@@ -123,6 +123,7 @@ export default function BlogPage() {
       setPosts(blogPosts);
       setLoading(false);
     }, 500);
+const Component = () => {
     return () => clearTimeout(timer);
   }, [blogPosts]);
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
@@ -131,6 +132,7 @@ export default function BlogPage() {
     : posts.filter(post => post.category === selectedCategory);
   const featuredPosts = posts.filter(post => post.featured);
   if (loading) {
+const Component = () => {
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
@@ -152,6 +154,7 @@ export default function BlogPage() {
       </div>
     );
   }
+const Component = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
@@ -220,7 +223,7 @@ export default function BlogPage() {
             </p>
             <Link
               to="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors"
             >
               Subscribe to Newsletter
             </Link>
@@ -228,5 +231,5 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

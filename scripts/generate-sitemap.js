@@ -34,7 +34,7 @@ const pages = [,
   { url: '/edge-computing', priority: '0.7', changefreq: 'monthly' },
   { url: '/5 g-implementation', priority: '0.7', changefreq: 'monthly' },
   { url: '/iot-platform', priority: '0.7', changefreq: 'monthly' }
-];
+],
 
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

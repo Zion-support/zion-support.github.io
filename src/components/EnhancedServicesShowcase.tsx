@@ -4,8 +4,8 @@ import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, C
 import { services, serviceCategories, contactInfo } from '../data/services';
 
 interface ServiceCardProps {
-  service: typeof services[0];
-  index: number;
+  service: typeof services[0],
+  index: number,
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
@@ -24,11 +24,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       case 'micro-saas': return Zap;
       case 'it': return Cloud;
       case 'emerging-tech': return Rocket;
-      default: return Target;
+      default: return Target,
     }
   };
 
   const CategoryIcon = getCategoryIcon(service.category);
+const Component = () => {
 
   return (
     <div
@@ -195,6 +196,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
   const popularServices = services.filter(service => service.popular);
   const newServices = services.filter(service => service.new);
+const Component = () => {
 
   return (
     <section className="py-16 px-4">

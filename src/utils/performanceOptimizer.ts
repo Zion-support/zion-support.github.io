@@ -55,7 +55,7 @@ class PerformanceOptimizer {// TODO: Add content;}
     memoryUsage: 0,
     bundleSize: 0,
     cacheHitRate: 0,
-    lazyLoading: false;
+    lazyLoading: false,
 
   };
   private,
@@ -67,13 +67,13 @@ class PerformanceOptimizer {// TODO: Add content;}
     enableCodeSplitting: true,
     enableImageOptimization: true,
     enableCaching: true,
-    enableCompression: true;
+    enableCompression: true,
 
   };
   private,
-  observers: PerformanceObserver[] = [];
+  observers: PerformanceObserver[] = [],
   private,
-  isMonitoring: boolean = false;
+  isMonitoring: boolean = false,
   constructor(config?: Partial;)
           <OptimizationConfig>) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -158,7 +158,7 @@ class PerformanceOptimizer {// TODO: Add content;}
         });
       });
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure'] });
+  s: ['measure'] }),
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -204,7 +204,7 @@ class PerformanceOptimizer {// TODO: Add content;}
 }
           const fidEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */}
   t: number }
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime,
         })
       })
       observer.observe({/* TODO: Fix JSX expression */})
@@ -320,7 +320,7 @@ class PerformanceOptimizer {// TODO: Add content;}
   O: Add content;}
 }
       const memory = (performance as Performance & {/* TODO: Fix JSX expression */})
-  t: number } }).memory;
+  t: number } }).memory,
       if (memory) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -531,7 +531,7 @@ class PerformanceOptimizer {// TODO: Add content;}
   generateReport(): string {// TODO: Add content;}
 }
     const score = this.getPerformanceScore();
-    return `Performance Score: ${score}`;
+    return `Performance Score: ${score}`,
 
   }
   /**
@@ -574,12 +574,12 @@ class PerformanceOptimizer {// TODO: Add content;}
     if (typeof window === 'undefined') return;
     const criticalResources = [
   // TOD,
-  O: Add items;
+  O: Add items,
 ];;
       {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
       {/* TODO: Fix JSX expression */}
-  s: 'style' }];
+  s: 'style' }],
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
@@ -618,7 +618,7 @@ class PerformanceOptimizer {// TODO: Add content;}
       lcp: this.metrics.lcp || 0,
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
-      fmp: this.metrics.fmp || 0;
+      fmp: this.metrics.fmp || 0,
 
     };
   }
@@ -648,7 +648,7 @@ class PerformanceOptimizer {// TODO: Add content;}
 
   metric_name: key,
             metric_value: value,
-            metric_rating: value;
+            metric_rating: value,
 
           < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
           })
@@ -681,12 +681,12 @@ class PerformanceOptimizer {// TODO: Add content;}
     return `
 // Performance Report - Zion Tech Group Website;
 
-Performance Score: ${score}/100;
-Load Time: ${metrics.loadTime.toFixed(2)}ms;
-Render Time: ${metrics.renderTime.toFixed(2)}ms;
-Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-Bundle Size: ${metrics.bundleSize}KB;
-Cache Hit Rate: ${metrics.cacheHitRate}%;
+Performance Score: ${score}/100,
+Load Time: ${metrics.loadTime.toFixed(2)}ms,
+Render Time: ${metrics.renderTime.toFixed(2)}ms,
+Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB,
+Bundle Size: ${metrics.bundleSize}KB,
+Cache Hit Rate: ${metrics.cacheHitRate}%,
   Recommendations:
 
 ${score;}

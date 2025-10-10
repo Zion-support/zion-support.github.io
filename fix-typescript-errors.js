@@ -36,7 +36,7 @@ const patterns = [
   { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
   // Match commented-out function calls;
   { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1(' })
-];
+],
 
 function fixFile(filePath) {
   try {
@@ -44,7 +44,7 @@ function fixFile(filePath) {
     let modified = false;
 
     // Fix 1: Missing closing braces in useState objects
-    const useStatePattern = /useState\(\s*\{([^}]+)\s*$/gm;
+    const useStatePattern = /useState\(\s*\{([^}]+)\s*$/gm,
     content = content.replace(useStatePattern, (match, objContent) => {
       if (!objContent.includes('}')) {
     patterns.forEach(pattern => {)
@@ -68,15 +68,15 @@ const patterns = [
   t: '$1: $2' },
   // Match commented-out function calls;
   {/* TODO: Fix JSX expression */}
-  t: '$1(' }];
+  t: '$1(' }],
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
-      return match;
+      return match,
     });
 
     // Fix 2: Fix malformed JSX attributes with quotes
-    const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)['"]/g;
+    const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)['"]/g,
     content = content.replace(malformedJsxPattern, (match, attr, value) => {
       if (value.includes('"') && value.includes("'")) {
         modified = true;
@@ -87,7 +87,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix 3: Fix missing closing tags in JSX
-    const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm;
+    const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm,
     content = content.replace(unclosedTagPattern, (match, tagName, attributes) => {
       // Check if this is actually unclosed by looking ahead
       const lines = content.split('\n');
@@ -106,7 +106,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix 4: Fix missing commas in object literals
-    const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;
+    const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g,
     content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true;
@@ -124,7 +124,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix 6: Fix missing closing parentheses in function calls
-    const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;
+    const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g,
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true;
@@ -134,7 +134,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix 7: Fix reserved word usage (like 'false' as identifier)
-    const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g;
+    const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g,
     content = content.replace(reservedWordPattern, (match, reserved, separator) => {
       modified = true;
       return `: ${reserved}${separator}`;
@@ -147,7 +147,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
     
-    return false;
+    return false,
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
@@ -168,7 +168,7 @@ async function main() {
       fixedCount++;
     }
   } else {
-    console.log(`File not found: ${filePath}`);
+    console.log(`File not found: ${filePath}`),
   }
 });
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -179,6 +179,6 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
-  });
+  }),
 
 console.log(`Fixed ${fixedCount} files.`);

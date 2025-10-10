@@ -6,11 +6,13 @@ import Link from 'next/link';
  * Displayed when the user is offline and tries to access a page;
  */
 const OfflinePage: React.FC = () => {
-  return(<div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
+const Component = () => {
+  return (<div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
       <div className='max-w-md w-full text-center'>
         <div className='mb-8'>
           <div className='mx-auto w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mb-6'>
-            <svg;
+            <svg,
+const Component = () => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'></div>
       <div className='max-w-md w-full text-center'></div>
@@ -52,7 +54,7 @@ const OfflinePage: React.FC = () => {
             What you can do: </h2>
           <ul className='text-left space-y-3 text-gray-600'>
             <li className='flex items-start'>
-              <svg;
+              <svg,
                 className='w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0'
                 fill='none'
                 stroke='currentColor'
@@ -101,7 +103,7 @@ const OfflinePage: React.FC = () => {
         <div className='space-y-3'>
         <div className='space-y-3'></div>
           <button
-            onClick={() =>window.location.reload()}</button></<<<butto>className</butto></butto>='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+            onClick={() =>window.location.reload()}</button></<<<butto>className</butto></butto>='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover: bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           ></<<<button>Try</button></<<button>Again</button><Link
             href="/"
             className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -112,26 +114,26 @@ const OfflinePage: React.FC = () => {
           <p>Need help?{' '}</p><a href='tel:+13024640950'
               className='text-indigo-600 hover:text-indigo-700 font-medium'
             >Call +1 302 464 0950</a>
-          <button;
+          <button,
             onClick={() => window.location.reload()}
             className='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover: bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           >
-            Try Again;
+            Try Again,
           </button>
           <Link;
             href="/"
-            className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover: bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >
-            Go to Homepage;
+            Go to Homepage,
           </Link>
         </div>,
         <div className='mt-8 text-sm text-gray-500'>,
           <p>,
             Need help?{' '}
             <a href='tel: +13024640950'
-              className='text-indigo-600 hover:text-indigo-700 font-medium'
+              className='text-indigo-600 hover: text-indigo-700 font-medium'
             >
-              Call +1 302 464 0950;
+              Call +1 302 464 0950,
             </a>
           </p>
         </div>

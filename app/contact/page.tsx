@@ -18,7 +18,7 @@ const ContactPage: React.FC = React.memo(() => {
     message: '',
     urgency: 'normal',
     preferredContact: 'email'
-  });
+  }),
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -50,7 +50,7 @@ const ContactPage: React.FC = React.memo(() => {
     { value: 'high', label: 'High (Within 2 weeks)', color: 'text-orange-400' },
     { value: 'normal', label: 'Normal (Within 1 month)', color: 'text-yellow-400' },
     { value: 'low', label: 'Low (Flexible timeline)', color: 'text-green-400' }
-  ];
+  ],
 
   const timeSlots = [
     '9:00 AM - 10:00 AM',
@@ -59,8 +59,8 @@ const ContactPage: React.FC = React.memo(() => {
     '1:00 PM - 2:00 PM',
     '2:00 PM - 3:00 PM',
     '3:00 PM - 4:00 PM',
-    '4:00 PM - 5:00 PM'
-  ];
+    '4:00 PM - 5: 00 PM'
+  ],
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -92,7 +92,7 @@ const ContactPage: React.FC = React.memo(() => {
         message: '',
         urgency: 'normal',
         preferredContact: 'email'
-      });
+      }),
       setSubmitStatus('idle');
     }, 3000);
   };
@@ -102,7 +102,8 @@ const ContactPage: React.FC = React.memo(() => {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
     hours: 'Mon-Fri 9AM-6PM EST'
-  };
+  },
+const Component = () => {
 
   return (
     <>
@@ -328,7 +329,7 @@ const ContactPage: React.FC = React.memo(() => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover: from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
@@ -555,7 +556,7 @@ const ContactPage: React.FC = React.memo(() => {
         <Footer />
       </div>
     </>
-  );
+  ),
 });
 
 export default ContactPage;

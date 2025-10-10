@@ -169,7 +169,7 @@ const App: React.FC = () => {
         enableResourceHints: true,
         enableCompression: true,
         enableCaching: true
-      });
+      }),
       // Initialize SEO enhancer
       const seoEnhancer = new SEOEnhancer({
         title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -217,7 +217,7 @@ const App: React.FC = () => {
         language: 'en',
         author: 'Zion Tech Group',
         publisher: 'Zion Tech Group'
-      });
+      }),
       // Initialize accessibility enhancer
       const accessibilityEnhancer = new AccessibilityEnhancer({
         enableKeyboardNavigation: true,
@@ -227,7 +227,7 @@ const App: React.FC = () => {
         enableReducedMotion: true,
         enableColorBlindSupport: true,
         enableVoiceControl: true
-      });
+      }),
       // Initialize security enhancer
       const securityEnhancer = new SecurityEnhancer({
         enableCSP: true,
@@ -239,7 +239,7 @@ const App: React.FC = () => {
         enablePermissionsPolicy: true,
         enableCORS: true,
         enableSecureCookies: true
-      });
+      }),
       // Initialize UX enhancer
       const uxEnhancer = new UserExperienceEnhancer({
         enableSmoothScrolling: true,
@@ -252,14 +252,14 @@ const App: React.FC = () => {
         enablePushNotifications: false,
         enableDarkMode: true,
         enableAnimations: true
-      });
+      }),
       setEnhancers({
         performance: performanceEnhancer,
         seo: seoEnhancer,
         accessibility: accessibilityEnhancer,
         security: securityEnhancer,
         ux: uxEnhancer
-      });
+      }),
       // Optimize for Core Web Vitals
       seoEnhancer.optimizeForCoreWebVitals();
       // Generate reports (for development)
@@ -279,6 +279,7 @@ const App: React.FC = () => {
   if (!isInitialized) {
     return <LoadingSpinner />;
   }
+const Component = () => {
   return (
     <Router>
       <Routes>
@@ -477,5 +478,5 @@ const NotFoundPage: React.FC = () => (
       </a>
     </div>
   </div>
-);
+),
 export default App;

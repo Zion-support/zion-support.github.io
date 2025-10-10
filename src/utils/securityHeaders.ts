@@ -77,7 +77,7 @@ export function getSecurityHeaders()
 
           <SecurityHeadersConfig>
 ): Record<string, string> {const headers: Record<string, string> = {}
-  // TODO: Add content;
+  // TODO: Add content,
 
 }
     'X-XSS-Protection': '1; mode=block',

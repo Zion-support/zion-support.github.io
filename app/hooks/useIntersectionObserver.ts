@@ -27,6 +27,7 @@ export const useIntersectionObserver = ({
     const observer = new IntersectionObserver(updateEntry, observerParams);
 
     observer.observe(node);
+const Component = () => {
 
     return () => observer.disconnect();
   }, [node, threshold, root, rootMargin, frozen]);

@@ -3,10 +3,10 @@ import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {}
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
+  title: string,
+  description: string,
+  keywords: string[],
+  canonicalUrl: string,
   author?: string;
   robots?: string;
   ogTitle?: string;
@@ -18,11 +18,11 @@ interface SEOData {}
   twitterDescription?: string;,
   twitterImage?: string;
   structuredData?: Record<string, unknown>;
-  faq?: Array<{ question: string; answer: string }>;
+  faq?: Array<{ question: string; answer: string }>,
 }
 
 interface AdvancedSEOOptimizerProps {}
-  seoData: SEOData;
+  seoData: SEOData,
   enableStructuredData?: boolean;
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
@@ -50,8 +50,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@context': 'https://schema.org',
       '@type': 'TechCompany',
       name: 'Zion Tech Group'
-      description: seoData.description;
-      url: seoData.canonicalUrl;
+      description: seoData.description,
+      url: seoData.canonicalUrl,
       logo: 'https://ziontechgroup.com/logo.webp'
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
@@ -77,7 +77,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     if (seoData.author) {}
       baseStructuredData.author = {}
         '@type': 'Person',
-        name: seoData.author;
+        name: seoData.author,
       };
     }
 
@@ -110,9 +110,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@type': 'BreadcrumbList',
       itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({
         '@type': 'ListItem'
-        position: index + 1;
-        name: breadcrumb.name;
-        item: breadcrumb.url;
+        position: index + 1,
+        name: breadcrumb.name,
+        item: breadcrumb.url,
     return {}
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
@@ -122,7 +122,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
         name: breadcrumb.name,
         item: breadcrumb.url
       }))
-    };
+    },
   }, [seoData, enableStructuredData]);
 
   const generateFAQStructuredData = useCallback(() => {}
@@ -135,7 +135,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@type': 'FAQPage',
       mainEntity: seoData.faqs.map((faq: any) => ({
         '@type': 'Question'
-        name: faq.question;
+        name: faq.question,
         acceptedAnswer: {,
     return {}
       '@context': 'https://schema.org',
@@ -145,7 +145,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
         name: faq.question,
         acceptedAnswer: {}
           '@type': 'Answer',
-          text: faq.answer;
+          text: faq.answer,
         }
       }))
     };
@@ -244,7 +244,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       { name: 'theme-color', content: '#3 B82 F6' },
       { name: 'msapplication-TileColor', content: '#3 B82 F6' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' }];
+      { name: 'msapplication-config', content: '/browserconfig.xml' }],
 
     return metaTags;
   }, [seoData]);
@@ -264,9 +264,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       '@type': 'BreadcrumbList',
       itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({}
         '@type': 'ListItem',
-        position: index + 1;
-        name: breadcrumb.name;
-        item: breadcrumb.url;
+        position: index + 1,
+        name: breadcrumb.name,
+        item: breadcrumb.url,
       }))
       itemListElement: [
         {
@@ -295,7 +295,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
         name: faq.question),
         acceptedAnswer: {,
           '@type': 'Answer'),
-          text: faq.answer;
+          text: faq.answer,
     return {}
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -307,7 +307,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
           text: faq.answer
         }
       }))
-    };
+    },
   }, [seoData, enableStructuredData]);
 
   const structuredData = generateStructuredData();
@@ -350,7 +350,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
-          });
+          }),
           (window as any).gtag('event', 'page_load_performance', {)
             event_category: 'Performance'),
             event_label: 'Page Load'),
@@ -358,12 +358,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       }
     }
   }, []);
+const Component = () => {
 
-  return(<Helmet>)
+  return (<Helmet>)
       {/* Basic Meta Tags */})
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
 =======
+const Component = () => {
   return (
     <Helmet></Helme>
       {/* Basic Meta Tags */}

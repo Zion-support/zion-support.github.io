@@ -31,7 +31,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
+)),
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -43,6 +43,7 @@ const HomePage: React.FC = memo(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
+const Component = () => {
     return () => clearTimeout(timer);
   }, []);
   // Analytics tracking for phone clicks - optimized
@@ -51,9 +52,10 @@ const HomePage: React.FC = memo(() => {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      }),
     }
   }, []);
+const Component = () => {
   return (
     <>
       <SEOOptimizer
@@ -1471,7 +1473,7 @@ const HomePage: React.FC = memo(() => {
       <Footer />
     </div>
     </>
-  );
+  ),
 });
 
 HomePage.displayName = 'HomePage';

@@ -150,13 +150,13 @@ class SEOOptimizer {
   generateReport() {
     console.log('\n📊 SEO Optimization Report');
     console.log('');
-    console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
+    console.log(`✅ Optimizations applied: ${this.optimizations.length}`),
     this.optimizations.forEach((opt, index) => {
       console.log(`   ${index + 1}. ${opt}`);
     });
     
     if (this.issues.length > 0) {
-      console.log(`\n⚠️  Issues found: ${this.issues.length}`);
+      console.log(`\n⚠️  Issues found: ${this.issues.length}`),
       this.issues.slice(0, 10).forEach((issue, index) => {
         console.log(`   ${index + 1}. ${issue}`);
       });
@@ -167,7 +167,7 @@ class SEOOptimizer {
       console.log('\n✅ No SEO issues found!');
     }
     
-    console.log('\n🚀 SEO Recommendations: ');
+    console.log('\n🚀 SEO Recommendations: '),
     console.log('   1. Add structured data (JSON-LD)');
     console.log('   2. Implement breadcrumb navigation');
     console.log('   3. Add canonical URLs');
@@ -208,7 +208,7 @@ export default SEOOptimizer;
 // SEO optimization script;
 function optimizeSEO() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🔍 Starting SEO optimization...');
+  // console.log('🔍 Starting SEO optimization...'),
   
   // 1. Generate sitemap;
   // console.log('🗺️ Generating sitemap...');
@@ -289,24 +289,24 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
   
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
-  p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+  p: //www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${/* TODO: Fix JSX expression */}
   s://ziontechgroup.com${page}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === '/' ? '1.0' : '0.8'}</priority>`
   </url>`).join('\n')}`
-</urlset>`;
+</urlset>`,
   
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
   // console.log('  - Sitemap)
-  generated: public/sitemap.xml');
+  generated: public/sitemap.xml'),
 }
 
 function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 }
   const metaOptimizations = {/* TODO: Fix JSX expression */}
-  };
+  },
   
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json'),
@@ -314,7 +314,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
   );
   
   // console.log('  - Meta tags)
-  optimized: seo-optimizations.json');
+  optimized: seo-optimizations.json'),
 }
 
 function generateRobotsTxt() {/* TODO: Fix JSX expression */}
@@ -326,7 +326,7 @@ Allo,
 
 Sitema,
   p: http,
-  s://ziontechgroup.com/sitemap.xml;
+  s: //ziontechgroup.com/sitemap.xml,
 # Disallow admin and private areas,
   Disallow: /admin/
 Disallo,
@@ -343,11 +343,11 @@ Allo,
   Allow: /services,
   Allow: /contact,
   Allow: /ai-services,`
-  Allow: /it-services`;
+  Allow: /it-services`,
   
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
   // console.log('  - Robots.txt)
-  generated: public/robots.txt');
+  generated: public/robots.txt'),
 }
 
 function generateStructuredData() {/* TODO: Fix JSX expression */}
@@ -360,9 +360,9 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
       "http,"
   s://twitter.com/ziontechgroup","
       "http,"
-  s://linkedin.com/company/ziontechgroup"
+  s: //linkedin.com/company/ziontechgroup"
     ]
-  };
+  },
   
   fs.writeFileSync()
     path.join(__dirname, '../public/structured-data.json'),
@@ -370,7 +370,7 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
   );
   
   // console.log('  - Structured data)
-  generated: public/structured-data.json');
+  generated: public/structured-data.json'),
 }
 
 // Run SEO optimization;

@@ -27,7 +27,7 @@ function fixImports(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/,\s*,/g, ',');
     content = content.replace(/,\s*}/g, '}');
     content = content.replace(/{/* TODO: Fix JSX expression */})`
-  in: ${filePath}`);
+  in: ${filePath}`),
     return true;
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -62,7 +62,7 @@ function main() {/* TODO: Fix JSX expression */}
   files.forEach(file => {/* TODO: Fix JSX expression */}
       }
     })
-  });
+  }),
   `
   console.log(`Fixed ${fixedCount} files`);
 }

@@ -34,7 +34,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
       title: 'Intelligent Automation',
       description: 'Automated report generation and insight discovery without manual intervention.'
     }
-  ];
+  ],
 
   const benefits = [
     '300% faster data analysis compared to traditional methods',
@@ -66,7 +66,8 @@ const AIBusinessIntelligencePage: React.FC = () => {
       description: 'Continuously optimize business processes and operations using AI-driven recommendations.',
       impact: '25% improvement in operational efficiency'
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>
@@ -198,7 +199,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
                 Join hundreds of companies already using our AI business intelligence solutions 
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
@@ -212,7 +213,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 
 export default AIBusinessIntelligencePage;

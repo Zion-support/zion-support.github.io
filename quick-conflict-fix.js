@@ -14,7 +14,7 @@ function fixFile(filePath) {
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
     
-//     //Remove conflict markers and choose the better version;
+//     //Remove conflict markers and choose the better version,
     const sections = content.split(/
 
 })

@@ -41,7 +41,7 @@ const AIEdgeComputingPage: React.FC = () => {
       title: "Hybrid Architecture",
       description: "Seamlessly integrate edge computing with cloud services for optimal performance"
     }
-  ];
+  ],
 
   const useCases = [
     {
@@ -156,7 +156,7 @@ const AIEdgeComputingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -180,7 +180,8 @@ const AIEdgeComputingPage: React.FC = () => {
       avatar: "JW",
       content: "Edge computing enables us to monitor patients in real-time and respond to critical situations immediately. It's literally saving lives with faster response times."
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -422,7 +423,7 @@ const AIEdgeComputingPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></section>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Deploy AI at the Edge
           </h2>
@@ -441,9 +442,9 @@ const AIEdgeComputingPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer /></Foote>
+      <Footer /></Footer>
     </div>
-  );
+  ),
 };
 
 AIEdgeComputingPage.displayName = 'AIEdgeComputingPage';

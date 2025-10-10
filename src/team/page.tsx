@@ -67,7 +67,7 @@ const TeamPage: React.FC = () => {
     { icon: Award, label: 'Awards Won', value: '25+' },
     { icon: Brain, label: 'Years Experience', value: '15+' },
     { icon: Shield, label: 'Client Satisfaction', value: '99%' }
-  ];
+  ],
 
   const values = [
     {
@@ -90,7 +90,8 @@ const TeamPage: React.FC = () => {
       description: 'We prioritize the security and privacy of our clients\' data and systems.',
       icon: Shield
     }
-  ];
+  ],
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -210,7 +211,7 @@ const TeamPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Join Our Team
           </h2>
@@ -236,7 +237,7 @@ const TeamPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default TeamPage;

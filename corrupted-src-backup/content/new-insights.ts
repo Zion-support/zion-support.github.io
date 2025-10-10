@@ -8,11 +8,11 @@ export const newInsights: Insight[] = [
     summary: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
     category: 'AI Strategy',
     date: '2025-10-03',
-    readMinutes: 7;
-    featured: true;
+    readMinutes: 7,
+    featured: true,
     tags: ['Platform', 'ROI', 'Scorecards'],
     content: `
-# AI Platform Optimization Insights;
+# AI Platform Optimization Insights,
 Transform your AI platform with intelligent scorecards and performance monitoring that deliver measurable ROI.
 
 ## Key Insights;
@@ -27,11 +27,11 @@ Transform your AI platform with intelligent scorecards and performance monitorin
     summary: 'Advanced quantum AI security framework providing unprecedented protection against emerging threats.',
     category: 'AI Security',
     date: '2025-10-04',
-    readMinutes: 9;
-    featured: true;
+    readMinutes: 9,
+    featured: true,
     tags: ['Security', 'Quantum', 'AI'],
     content: `
-# Quantum AI Security Insights;
+# Quantum AI Security Insights,
 Protect your AI systems with next-generation quantum security frameworks.
 
 ## Security Insights;
@@ -45,4 +45,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }],

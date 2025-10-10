@@ -20,7 +20,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Support', path: '/support', description: 'Get help and support' },
     { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
     { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }
-  ];
+  ],
 
   const microSaasServices = [
     { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning and management' },
@@ -35,7 +35,7 @@ const SitemapPage: React.FC = () => {
     { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-powered SEO optimization' },
     { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-solutions', description: 'E-commerce optimization tools' },
     { name: 'AI Financial Analyzer', path: '/ai-financial-analyzer', description: 'Financial analysis and forecasting' }
-  ];
+  ],
 
   const aiServices = [
     { name: 'Machine Learning Solutions', path: '/machine-learning', description: 'Custom ML models and algorithms' },
@@ -44,7 +44,7 @@ const SitemapPage: React.FC = () => {
     { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
     { name: 'Quantum AI Computing', path: '/quantum-ai', description: 'Next-generation quantum algorithms' },
     { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' }
-  ];
+  ],
 
   const itServices = [
     { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and infrastructure' },
@@ -53,7 +53,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Database Services', path: '/database-services', description: 'Database optimization and management' },
     { name: 'Network Infrastructure', path: '/network-infrastructure', description: 'Enterprise networking solutions' },
     { name: 'IT Support & Helpdesk', path: '/it-support', description: '24/7 technical support' }
-  ];
+  ],
 
   const specializedServices = [
     { name: 'Quantum Computing', path: '/quantum-computing', description: 'Quantum algorithms and security' },
@@ -62,7 +62,7 @@ const SitemapPage: React.FC = () => {
     { name: 'IoT & Edge Computing', path: '/iot-edge', description: 'Connected devices and edge computing' },
     { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
     { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent automation' }
-  ];
+  ],
 
   const blogCategories = [
     { name: 'AI Trends', path: '/blog?category=AI Trends', description: 'Latest AI trends and developments' },
@@ -70,7 +70,8 @@ const SitemapPage: React.FC = () => {
     { name: 'Success Stories', path: '/blog?category=Success Story', description: 'Client success stories' },
     { name: 'Technical Guides', path: '/blog?category=Architecture', description: 'Technical implementation guides' },
     { name: 'Cost Optimization', path: '/blog?category=Cost Optimization', description: 'Efficiency and cost reduction' }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>
@@ -228,7 +229,7 @@ const SitemapPage: React.FC = () => {
                 <Link
                   key={index}
                   to={category.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                  className="cyber-card p-6 hover: scale-105 transition-all duration-300 group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">
@@ -272,7 +273,7 @@ const SitemapPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default SitemapPage;

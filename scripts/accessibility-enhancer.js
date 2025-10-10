@@ -32,16 +32,16 @@ if (fs.existsSync(indexPath)) {
           skipLink.textContent = 'Skip to main content';
           skipLink.className = 'skip-link';
           skipLink.style.cssText = \`
-            position: absolute;
-            top: -40 px;
-            left: 6 px;
-            background: #000;
-            color: #fff;
-            padding: 8 px;
+            position: absolute,
+            top: -40 px,
+            left: 6 px,
+            background: #000,
+            color: #fff,
+            padding: 8 px,
             text-decoration: none;
             z-index: 1000;
             border-radius: 4 px;
-            transition: top 0.3 s;
+            transition: top 0.3 s,
           \`;
           skipLink.addEventListener('focus', function() {
             this.style.top = '6 px';
@@ -58,16 +58,16 @@ if (fs.existsSync(indexPath)) {
           toggle.textContent = 'High Contrast';
           toggle.className = 'accessibility-toggle';
           toggle.style.cssText = \`
-            position: fixed;
-            top: 10 px;
-            right: 10 px;
+            position: fixed,
+            top: 10 px,
+            right: 10 px,
             z-index: 1000;
-            background: #000;
-            color: #fff;
-            border: 2 px solid #fff;
-            padding: 8 px 16 px;
+            background: #000,
+            color: #fff,
+            border: 2 px solid #fff,
+            padding: 8 px 16 px,
             border-radius: 4 px;
-            cursor: pointer;
+            cursor: pointer,
             font-size: 14 px;
           \`;
           toggle.addEventListener('click', function() {
@@ -82,17 +82,17 @@ if (fs.existsSync(indexPath)) {
           const controls = document.createElement('div');
           controls.className = 'font-size-controls';
           controls.style.cssText = \`
-            position: fixed;
-            top: 50 px;
-            right: 10 px;
+            position: fixed,
+            top: 50 px,
+            right: 10 px,
             z-index: 1000;
-            background: #000;
-            color: #fff;
-            padding: 10 px;
+            background: #000,
+            color: #fff,
+            padding: 10 px,
             border-radius: 4 px;
-            display: flex;
+            display: flex,
             flex-direction: column;
-            gap: 5 px;
+            gap: 5 px,
           \`;
           
           const increaseBtn = document.createElement('button');
@@ -196,15 +196,15 @@ if (fs.existsSync(indexPath)) {
           liveRegion.setAttribute('aria-atomic', 'true');
           liveRegion.className = 'sr-only';
           liveRegion.style.cssText = \`
-            position: absolute;
-            width: 1 px;
-            height: 1 px;
-            padding: 0;
-            margin: -1 px;
-            overflow: hidden;
+            position: absolute,
+            width: 1 px,
+            height: 1 px,
+            padding: 0,
+            margin: -1 px,
+            overflow: hidden,
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
-            border: 0;
+            border: 0,
           \`;
           document.body.appendChild(liveRegion);
           
@@ -229,14 +229,14 @@ if (fs.existsSync(indexPath)) {
         // Add high contrast styles
         const highContrastStyles = \`
           .high-contrast {
-            filter: contrast(150%) brightness(120%);
+            filter: contrast(150%) brightness(120%),
           }
           .high-contrast * {
             border-color: currentColor !important;
           }
           .high-contrast button,
           .high-contrast a {
-            border: 2 px solid currentColor !important;
+            border: 2 px solid currentColor !important,
           }
         \`;
         
@@ -264,10 +264,10 @@ function generateAccessibilityReport() {
     timestamp: new Date().toISOString()
     version: "1.0.0"
     summary: {
-      totalIssues: 0;
-      criticalIssues: 0;
-      warnings: 0;
-      passed: 0;
+      totalIssues: 0,
+      criticalIssues: 0,
+      warnings: 0,
+      passed: 0,
     },
     checks: [
       {,
@@ -427,7 +427,7 @@ function generateAccessibilityImprovements() {
       description: "Ensure all interactive elements are keyboard accessible",
       priority: "high",
       implementation: "Add keyboard event handlers where needed"}
-  ];
+  ],
 
   fs.writeFileSync(
     path.join(__dirname, '../public/accessibility-improvements.json'), 

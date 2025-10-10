@@ -151,23 +151,23 @@ const AutonomousSystemsPage: React.FC = () => {,
             <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Autonomous Systems Services</h1><p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">Self-managing, self-optimizing systems that operate independently and continuously improve</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">Explore Autonomous Solutions<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">Schedule Demo</button>
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Autonomous Systems Services;
+                Autonomous Systems Services,
               </h1>,
               <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">,
                 Self-managing, self-optimizing systems that operate independently and continuously improve;
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-                  Explore Autonomous Solutions;
+                  Explore Autonomous Solutions,
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                  Schedule Demo;
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-green-600 transition-colors">
+                  Schedule Demo,
                 </button>
               </div>
             </div>
@@ -313,14 +313,14 @@ const AutonomousSystemsPage: React.FC = () => {,
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" >{benefit}</Star>
                             </Star>
                           ))}
-                        <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">Get Autonomous Consultation</button>
+                        <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-green-700 transition-colors">Get Autonomous Consultation</button>
                       </button>
                     </div>
                         </ul>
                       </div>
 
                       <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-green-700 transition-colors">
-                        Get Autonomous Consultation;
+                        Get Autonomous Consultation,
                       </button>,
                     </div>))}
               </div>
@@ -333,8 +333,8 @@ const AutonomousSystemsPage: React.FC = () => {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Autonomous Capabilities<p className="text-xl text-gray-600">Advanced autonomous technologies that enable self-managing, self-optimizing systems</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Autonomous Capabilities;
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
+                Our Autonomous Capabilities,
               </h2>,
               <p className="text-xl text-gray-600">,
                 Advanced autonomous technologies that enable self-managing, self-optimizing systems;
@@ -395,11 +395,11 @@ const AutonomousSystemsPage: React.FC = () => {,
               Ready to Automate Your Operations?
             </h2>
             <p className="text-xl mb-8 text-green-100">
-              Contact our autonomous systems experts for a free consultation and custom automation strategy;
+              Contact our autonomous systems experts for a free consultation and custom automation strategy,
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Automate Your Operations?</h2><p className="text-xl mb-8 text-green-100">Contact our autonomous systems experts for a free consultation and custom automation strategy</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -414,13 +414,13 @@ const AutonomousSystemsPage: React.FC = () => {,
             </div>
             <div className="mt-8 text-sm text-green-200">
               >
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950,
               </a>
               <a;
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-green-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com,
               </a>,
             </div>,
             <div className="mt-8 text-sm text-green-200">,
@@ -498,6 +498,7 @@ const AutonomousSystemsPage: React.FC = () => {
     "Scalable solutions for any industry",
     "Real-time monitoring and reporting"
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -634,7 +635,7 @@ const AutonomousSystemsPage: React.FC = () => {
                 </p>
                 <a
                   href="/contact"
-                  className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
+                  className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Get Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -675,7 +676,7 @@ const AutonomousSystemsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ),
 };
 
 export default AutonomousSystemsPage;

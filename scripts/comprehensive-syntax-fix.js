@@ -21,7 +21,7 @@ const fixes = [
   // Fix stray semicolons;
   { pattern: /;\s*$/gm, replacement: '' },
   // Fix console statements;
-  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement: '' }];
+  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement: '' }],
 
 function fixFile(filePath) {
   try {
@@ -38,7 +38,7 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ Fixed: ${filePath}`),
       return true;
     }
     return false;

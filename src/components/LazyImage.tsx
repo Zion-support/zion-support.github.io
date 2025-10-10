@@ -7,14 +7,14 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
   sr,
   c: string;,
     al,
-  t: string;
+  t: string,
 
   className?: string;
   children?: React.ReactNode;
 }
 
 const,
-  LazyImage: React.FC;
+  LazyImage: React.FC,
           <LazyImageProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -56,12 +56,13 @@ const,
   d: 0.1,
         rootMargi,
   n: '50px'}
-    );
+    ),
     if (imgRef.current) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       observer.observe(imgRef.current);
     }
+const Component = () => {
     return () => observer.disconnect();
   }, [priority]);
   const handleLoad = () => {/* TODO: Fix JSX expression */}
@@ -76,6 +77,7 @@ const,
     setHasError(true);
     onError?.();
   };
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     

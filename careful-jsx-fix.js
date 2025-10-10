@@ -29,7 +29,7 @@ const fixes = [
     pattern: /<\/\w+><\/\w+>/g,
     replacement: (match) => {
       // Extract the first closing tag
-      const firstTag = match.match(/<\/(\w+)>/)[1];
+      const firstTag = match.match(/<\/(\w+)>/)[1],
       return `</${firstTag}>`;
     }
   }

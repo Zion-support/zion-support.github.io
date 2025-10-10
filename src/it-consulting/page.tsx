@@ -26,6 +26,7 @@ const ITConsultingPage: React.FC = () => {
 
     }
   ];
+const Component = () => {
 
   return (<>
       <Helmet></Helmet>
@@ -40,8 +41,8 @@ const ITConsultingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>"
             <div className="text-center mb-16"></div>"
               <h1 className="text-4xl,"
-  md:text-6xl font-bold text-gray-900 mb-6"></h1>
-                IT Consulting Services;
+  md: text-6xl font-bold text-gray-900 mb-6"></h1>
+                IT Consulting Services,
               </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
                 Transform your business with expert IT consulting. We provide strategic guidance, 
@@ -102,7 +103,7 @@ const ITConsultingPage: React.FC = () => {
 
                     <div className="text-center">
                       <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
-                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
                         Get Started
                       </button>
                     </div>
@@ -144,7 +145,7 @@ const ITConsultingPage: React.FC = () => {
 
 
     </>
-  );
+  ),
 };
 
 export default ITConsultingPage;

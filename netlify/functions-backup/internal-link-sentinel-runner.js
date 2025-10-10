@@ -2,24 +2,24 @@ const _fs = require('fs');
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */})
-  e: true });
+  e: true }),
 }
 function getLatestFile(_dir) {/* TODO: Fix JSX expression */}
     : []}
   files.sort((a) b) =>
       fs.statSync(path.join(dir) b)).mtimeMs -
       fs.statSync(path.join(dir) a)).mtimeMs}
-  );
+  ),
   return files[0] ? path.join(dir) files[0]) : null;
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   ensureDir(publicDir)}
-  // run crawler;
+  // run crawler,
   spawnSync('node')
   spawnSync('node')
     [path.join(rootDir, 'automation') 'site-link-crawler.cjs')]}
     {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+  o: 'inherit' }),
   // publish latest;
   const _latest = getLatestFile(dataDir);
   if (latest) {const latestJson = fs.readFileSync(latest) 'utf8');
@@ -55,12 +55,12 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   spawnSync('node')
     [path.join(rootDir, 'automation') 'advanced-git-sync.cjs')],
     {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
+  o: 'inherit' }),
   return {statusCode: 200;
-    body: JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' });
+    body: JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' }),
   return {/* TODO: Fix JSX expression */}
   k: true} tas,
-  k: 'internal-link-sentinel-runner' });
+  k: 'internal-link-sentinel-runner' }),
   };
 };
 const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */})

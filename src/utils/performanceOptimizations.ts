@@ -13,10 +13,11 @@ export const _debounce =
           
           <T extends (...args: any[]) => any>(),
     func: T,
-  wait: number): ((...args: Parameters;
+  wait: number): ((...args: Parameters,
           <T>) => void) => {// TODO: Add content;}
 }
-  let timeout: NodeJS.Timeout;
+  let timeout: NodeJS.Timeout,
+const Component = () => {
   return (...args: Parameters;
           <T>) => {// TODO: Add content;}
 }
@@ -32,12 +33,13 @@ export const throttle =
           
           <T extends (...args: any[]) => any>(),
     func: T,
-  limit: number): ((...args: Parameters;
+  limit: number): ((...args: Parameters,
           <T>) => void) => {// TODO: Add content;}
 
 }
   let,
-  inThrottle: boolean;
+  inThrottle: boolean,
+const Component = () => {
   return (...arg,
   s: Parameters;)
           <T>) => {/* TODO: Fix JSX expression */}
@@ -84,8 +86,10 @@ export const useIntersectionObserver = ()
   O: Add content;}
 }
         observer.observe(element);
+const Component = () => {
         return () => observer.unobserve(element);
       }
+const Component = () => {
       return () => {}
     },
 //     [observer]
@@ -102,6 +106,7 @@ export const useIntersectionObserver = ()
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+const Component = () => {
     return () => disconnect();
   }, [disconnect]);
   return { observe, disconnect };
@@ -196,17 +201,18 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         getCLS((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: metric.value })));
+  s: metric.value }))),
         getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  d: metric.value })));
+  d: metric.value }))),
         getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
+  p: metric.value }))),
         getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
+  p: metric.value }))),
         getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  b: metric.value })));
+  b: metric.value }))),
       });
     }
+const Component = () => {
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -251,6 +257,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
       }
     };
     const interval = setInterval(updateMemoryInfo, 5000);
+const Component = () => {
     return () => clearInterval(interval);
   }, []);
   return memoryInfo;
@@ -341,6 +348,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 }
       window.addEventListener('load', calculateBundleSize);
     }
+const Component = () => {
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

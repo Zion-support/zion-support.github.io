@@ -164,6 +164,7 @@ valuevalue: '100%',
         'ISO 14001 certification achieved',
         'Enhanced brand reputation'
       icon: Building,
+const Component = () => {
 
   return (
     <>
@@ -310,7 +311,7 @@ valuevalue: '100%',
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey towards sustainable IT operations. Get a free environmental 
               assessment and discover how much you can save while protecting the planet.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Assessment
                 href="tel:+13024640950"
@@ -323,7 +324,7 @@ valuevalue: '100%',
                 Email Us
       <Footer />
     </>
-  );
+  ),
 };
 
 export default GreenITPage;
@@ -335,10 +336,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const GreenITPage: React.FC = () => {
+const Component = () => {
   return (
     <div>Coming Soon</div>
 
-  );
+  ),
 };
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
@@ -376,7 +378,7 @@ const tabs = [
       feature,
   s: [
   // TOD,
-  O: Add items];
+  O: Add items],
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -583,6 +585,7 @@ const tabs = [
         'Enhanced brand reputation'
       ico,
   n: Building,
+const Component = () => {
   return (<div>Coming Soon</div>)
   )
     
@@ -593,8 +596,8 @@ const tabs = [
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Green IT Solutions;
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+// Green IT Solutions,
           </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
@@ -639,12 +642,12 @@ const tabs = [
                   onClick={() => setActiveTab(tab.id)}`
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
                     activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
+  hover: bg-slate-700/50 border-2 border-transparent'`
                   }`}
 //                 >
                   
@@ -663,7 +666,7 @@ const tabs = [
           {activeTab === 'solutions' && ()}"
           <div className="mb-16"></div>"
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Our Green IT Solutions;
+// Our Green IT Solutions,
           </h2>"
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -688,7 +691,7 @@ const tabs = [
                           </li>
                       </ul>"
 <div className="text-sm font-semibold text-green-400 mb-1">Environmental,
-  Impact:</div>"
+  Impact: </div>"
                       <div className="text-sm text-gray-300">{solution.impact}</div>"
                     <div className="flex items-center justify-between"></div>`
                       <div className={`text-lg font-bold ${solution.color}`}></div>
@@ -696,7 +699,7 @@ const tabs = [
 
                       <a
                         href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-Learn More;
+Learn More,
                         <ArrowRight className="w-4 h-4 ml-1" />
 
                       </a>
@@ -764,14 +767,14 @@ Benefits of Green IT;"
           
 
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment,
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                (302) 464-0950,
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover: bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us,
       <Footer />
 
     </div>

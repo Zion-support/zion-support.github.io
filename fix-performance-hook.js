@@ -20,10 +20,10 @@ export const usePageLoadPerformance = () => {
       if (typeof window !== 'undefined' && window.performance) {
         if (navigation) {
           const metrics = {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart;
-            loadComplete: navigation.loadEventEnd - navigation.fetchStart;
-            firstPaint: 0;
-            firstContentfulPaint: 0;
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+            loadComplete: navigation.loadEventEnd - navigation.fetchStart,
+            firstPaint: 0,
+            firstContentfulPaint: 0,
           };
 
           // Track paint metrics if available;
@@ -33,13 +33,13 @@ export const usePageLoadPerformance = () => {
             } else if (entry.name === 'first-contentful-paint') {
               metrics.firstContentfulPaint = entry.startTime;
 export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
-          };
+          },
 
           // Track paint metrics if available;
           paintEntries.forEach(entry => {/* TODO: Fix JSX expression */})
             } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
             }
-          });
+          }),
 
           // Track performance metrics;
           analytics.trackPerformance('page_load', metrics.loadComplete);
@@ -55,12 +55,13 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
     const handleNavigation = () => {
       setTimeout(trackPageLoad, 100);
     const handleNavigation = () => {/* TODO: Fix JSX expression */}
-    };
+    },
 
     window.addEventListener('popstate', handleNavigation);
+const Component = () => {
     
     return () => {/* TODO: Fix JSX expression */}
-    };
+    },
   }, []);
 };
 
@@ -72,6 +73,7 @@ export const useComponentPerformance = (componentName: string) => {
   useEffect(() => {
     startTime.current = performance.now();
     renderCount.current += 1;
+const Component = () => {
 
     return () => {
 //       const endTime = performance.now();
@@ -85,9 +87,9 @@ export const useComponentPerformance = (componentNam)
   });
 
   return {
-    renderCount: renderCount.current;
+    renderCount: renderCount.current,
   return {/* TODO: Fix JSX expression */}
-  };
+  },
 };
 
 /**
@@ -97,6 +99,7 @@ export const useInteractionPerformance = () => {/* TODO: Fix JSX expression */}
   }, []);
 
   const trackClick = useCallback((element: string) => {,
+const Component = () => {
     return () => {,
 //       const duration = performance.now() - startTime;
       trackInteraction('click', element, duration);
@@ -104,6 +107,7 @@ export const useInteractionPerformance = () => {/* TODO: Fix JSX expression */}
   }, [trackInteraction]);
 
   const trackHover = useCallback((element: string) => {,
+const Component = () => {
     return () => {,
 //       const duration = performance.now() - startTime;
       trackInteraction('hover', element, duration);
@@ -116,16 +120,16 @@ export const useInteractionPerformance = () => {/* TODO: Fix JSX expression */}
     trackHover;
   const trackClick = useCallback((elemen)
   t: string) => {/* TODO: Fix JSX expression */}
-    };
+    },
   }, [trackInteraction]);
 
   const trackHover = useCallback((elemen)
   t: string) => {/* TODO: Fix JSX expression */}
-    };
+    },
   }, [trackInteraction]);
 
   return {/* TODO: Fix JSX expression */}
-  };
+  },
 };
 
 /**
@@ -136,11 +140,11 @@ export const useMemoryMonitoring = () => {
     const checkMemory = () => {
       if ('memory' in performance) {
         const metrics = {
-          used: memory.usedJSHeapSize;
-          total: memory.totalJSHeapSize;
-          limit: memory.jsHeapSizeLimit;
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          limit: memory.jsHeapSizeLimit,
 export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
-        };
+        },
 
         analytics.trackPerformance('memory_used', metrics.used);
         analytics.trackPerformance('memory_total', metrics.total);
@@ -152,6 +156,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
 //     const interval = setInterval(checkMemory, 30000);
     
     // Initial check;
+const Component = () => {
     return () => clearInterval(interval);
   }, []);
 };
@@ -165,13 +170,13 @@ export const useNetworkPerformance = () => {
       if (typeof window !== 'undefined' && window.performance) {
         if (navigation) {
           const networkMetrics = {
-            dns: navigation.domainLookupEnd - navigation.domainLookupStart;
-            tcp: navigation.connectEnd - navigation.connectStart;
-            request: navigation.responseStart - navigation.requestStart;
-            response: navigation.responseEnd - navigation.responseStart;
-            dom: navigation.domContentLoadedEventEnd - navigation.responseEnd;
+            dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+            tcp: navigation.connectEnd - navigation.connectStart,
+            request: navigation.responseStart - navigation.requestStart,
+            response: navigation.responseEnd - navigation.responseStart,
+            dom: navigation.domContentLoadedEventEnd - navigation.responseEnd,
 export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */}
-          };
+          },
 
           Object.entries(networkMetrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
             analytics.trackPerformance(\`network_\${key}\`, value);
@@ -186,9 +191,10 @@ export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */}
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
+const Component = () => {
 
     return () => {/* TODO: Fix JSX expression */}
-    };
+    },
   }, []);
 };
 
@@ -197,26 +203,27 @@ export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */}
  */
 export const useScrollPerformance = () => {/* TODO: Fix JSX expression */}
       }
-    };
+    },
 
     const handleScrollEnd = () => {/* TODO: Fix JSX expression */}
       }
-    };
+    },
 
-    let scrollTimeout: NodeJS.Timeout;
+    let scrollTimeout: NodeJS.Timeout,
     const handleScroll = () => {,
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(handleScrollEnd, 150);
     let,
-  scrollTimeout: NodeJS.Timeout;
+  scrollTimeout: NodeJS.Timeout,
     const handleScroll = () => {/* TODO: Fix JSX expression */}
-    };
+    },
 
     window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
-  e: true });
+  e: true }),
+const Component = () => {
 
     return () => {/* TODO: Fix JSX expression */}
-    };
+    },
   }, []);
 };
 
@@ -230,7 +237,7 @@ export const usePerformanceMonitoring = () => {
       analytics.trackPerformance(name, value, unit);
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     }
-  };
+  },
 };`
 `;
 

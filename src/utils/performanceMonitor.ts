@@ -49,12 +49,12 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-            this._metrics[metric] = entry.startTime;
+            this._metrics[metric] = entry.startTime,
             this.reportMetric(metric, entry.startTime);
           }
         }
       });
-      observer.observe({ entryTypes: ['paint'] });
+      observer.observe({ entryTypes: ['paint'] }),
       this.observers.push(observer);
     } catch (error) {
       console.warn('Performance observer not supported:', error);
@@ -69,7 +69,7 @@ class PerformanceMonitor {
         this._metrics.lcp = lastEntry.startTime;
         this.reportMetric('lcp', lastEntry.startTime);
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] }),
       this.observers.push(observer);
     } catch (error) {
       console.warn('LCP observer not supported:', error);
@@ -84,7 +84,7 @@ class PerformanceMonitor {
           this.reportMetric('fid', this._metrics.fid);
         }
       });
-      observer.observe({ entryTypes: ['first-input'] });
+      observer.observe({ entryTypes: ['first-input'] }),
       this.observers.push(observer);
     } catch (error) {
       console.warn('FID observer not supported:', error);
@@ -103,7 +103,7 @@ class PerformanceMonitor {
           }
         }
       });
-      observer.observe({ entryTypes: ['layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'] }),
       this.observers.push(observer);
     } catch (error) {
       console.warn('CLS observer not supported:', error);
@@ -142,7 +142,7 @@ class PerformanceMonitor {
   }
 
   addCustomMetric(name: string, value: number): void {
-    this._metrics.customMetrics[name] = value;
+    this._metrics.customMetrics[name] = value,
     this.reportMetric(name, value);
   }
 

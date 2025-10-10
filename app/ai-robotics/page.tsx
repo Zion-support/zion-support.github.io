@@ -7,37 +7,37 @@ import Footer from '../components/Footer';
 const AIRoboticsPage: React.FC = () => {,
   const features = [,
     {,
-      icon: Brain;
+      icon: Brain,
       title: 'Intelligent Robotics',
       description: 'AI-powered robots that can learn, adapt, and make decisions in real-time for complex tasks.',
       benefits: ['Machine learning', 'Adaptive behavior', 'Real-time decisions', 'Continuous improvement']
     },
     {
-      icon: Eye;
+      icon: Eye,
       title: 'Computer Vision',
       description: 'Advanced vision systems that enable robots to see, recognize, and interact with their environment.',
       benefits: ['Object recognition', 'Spatial awareness', 'Quality inspection', 'Navigation assistance']
     },
     {
-      icon: Settings;
+      icon: Settings,
       title: 'Autonomous Operation',
       description: 'Robots that can operate independently with minimal human intervention and supervision.',
       benefits: ['Self-navigation', 'Task planning', 'Error recovery', 'Maintenance alerts']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Precision Control',
       description: 'High-precision robotic control systems for delicate and complex manufacturing tasks.',
       benefits: ['Micro-precision', 'Repeatable accuracy', 'Force control', 'Speed optimization']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Human-Robot Collaboration',
       description: 'Safe and efficient collaboration between humans and robots in shared workspaces.',
       benefits: ['Safety protocols', 'Intuitive interfaces', 'Collaborative tasks', 'Workflow optimization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Safety Systems',
       description: 'Advanced safety features and fail-safe mechanisms for secure robotic operations.',
       benefits: ['Collision avoidance', 'Emergency stops', 'Safety monitoring', 'Risk assessment']
@@ -48,37 +48,37 @@ const AIRoboticsPage: React.FC = () => {,
     {
       title: 'Manufacturing',
       description: 'Industrial robots for assembly, welding, painting, and quality control in manufacturing.',
-      icon: Factory;
+      icon: Factory,
       useCases: ['Assembly automation', 'Quality control', 'Welding robots', 'Painting systems']
     },
     {
       title: 'Healthcare',
       description: 'Medical robots for surgery, rehabilitation, and patient care assistance.',
-      icon: Stethoscope;
+      icon: Stethoscope,
       useCases: ['Surgical robots', 'Rehabilitation', 'Patient monitoring', 'Drug delivery']
     },
     {
       title: 'Logistics',
       description: 'Warehouse and delivery robots for inventory management and order fulfillment.',
-      icon: Truck;
+      icon: Truck,
       useCases: ['Warehouse automation', 'Order picking', 'Delivery robots', 'Inventory tracking']
     },
     {
       title: 'Agriculture',
       description: 'Agricultural robots for planting, harvesting, and crop monitoring.',
-      icon: Home;
+      icon: Home,
       useCases: ['Precision farming', 'Crop monitoring', 'Harvesting robots', 'Soil analysis']
     },
     {
       title: 'Service Industry',
       description: 'Service robots for cleaning, security, and customer assistance.',
-      icon: Users;
+      icon: Users,
       useCases: ['Cleaning robots', 'Security patrols', 'Customer service', 'Maintenance tasks']
     },
     {
       title: 'Research & Exploration',
       description: 'Robots for scientific research, space exploration, and underwater missions.',
-      icon: Compass;
+      icon: Compass,
       useCases: ['Space exploration', 'Underwater research', 'Scientific experiments', 'Data collection']
     }
   ];
@@ -87,22 +87,22 @@ const AIRoboticsPage: React.FC = () => {,
     {
       metric: '99.9%',
       description: 'Accuracy in precision tasks',
-      icon: Target;
+      icon: Target,
     },
     {
       metric: '24/7',
       description: 'Continuous operation capability',
-      icon: Clock3;
+      icon: Clock3,
     },
     {
       metric: '50%',
       description: 'Increase in productivity',
-      icon: TrendingUp;
+      icon: TrendingUp,
     },
     {
       metric: '90%',
       description: 'Reduction in workplace injuries',
-      icon: Shield;
+      icon: Shield,
     }
   ];
 
@@ -119,7 +119,7 @@ const AIRoboticsPage: React.FC = () => {,
         'Basic analytics',
         'Documentation'
       ],
-      popular: false;
+      popular: false,
     },
     {
       name: 'Robotics Professional',
@@ -135,7 +135,7 @@ const AIRoboticsPage: React.FC = () => {,
         'Training & consultation',
         'API access'
       ],
-      popular: true;
+      popular: true,
     },
     {
       name: 'Robotics Enterprise',
@@ -151,15 +151,17 @@ const AIRoboticsPage: React.FC = () => {,
         'Custom reporting',
         'Full customization'
       ],
-      popular: false;
+      popular: false,
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-24 pb-16 px-4">
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -195,11 +197,11 @@ const AIRoboticsPage: React.FC = () => {,
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-                Build AI Robots;
+                Build AI Robots,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-                View Demo;
+              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover: bg-cyan-400/10 transition-colors text-lg">
+                View Demo,
               </a>
             </div>,
           </div>)
@@ -228,11 +230,11 @@ const AIRoboticsPage: React.FC = () => {,
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">AI Robotics Capabilities</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI robotics platform provides the intelligence and capabilities needed for</p>
               autonomous operation in any environment.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors"></div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover: border-cyan-400/40 transition-colors"></div>
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-cyan-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
-              AI Robotics Capabilities;
+              AI Robotics Capabilities,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI robotics platform provides the intelligence and capabilities needed for;
@@ -269,11 +271,11 @@ const AIRoboticsPage: React.FC = () => {,
         <div className="container mx-auto max-w-6xl"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-6">AI Robotics Applications</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how AI robotics is transforming industries and enabling new possibilities.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors"></div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover: border-purple-400/40 transition-colors"></div>
                 <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <app.icon className="w-6 h-6 text-purple-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
-              AI Robotics Applications;
+              AI Robotics Applications,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover how AI robotics is transforming industries and enabling new possibilities.
@@ -343,14 +345,14 @@ const AIRoboticsPage: React.FC = () => {,
                   ))}
                 <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-colors ${
                   plan.popular
-                    ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
+                    ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
                 }`}>Get Started</a>
-                  plan.popular;
+                  plan.popular,
                     ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'}
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'}
                 }`}>
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -363,18 +365,18 @@ const AIRoboticsPage: React.FC = () => {,
         <div className="container mx-auto max-w-4xl text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Build AI Robots?</h2><p className="text-xl text-gray-300 mb-8">Start building intelligent robots that can see, learn, and adapt to any environment.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Building</a>
               <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-              Start Building;
+              Start Building,
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-              Schedule Demo;
+            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover: bg-cyan-400/10 transition-colors text-lg">
+              Schedule Demo,
             </a>
           </div>
         </div>

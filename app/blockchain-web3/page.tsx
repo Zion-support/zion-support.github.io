@@ -6,42 +6,42 @@ import { Helmet } from 'react-helmet-async';
 const BlockchainWeb3Page: React.FC = () => {,
   const services = [,
     {,
-      icon: Code;
+      icon: Code,
       title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise applications.',
       features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Multi-chain support'],
       benefits: ['100% secure contracts', 'Gas-optimized code', 'Multi-chain compatibility', 'Enterprise-grade security']
     },
     {
-      icon: Globe;
+      icon: Globe,
       title: 'DApp Development',
       description: 'Decentralized applications with intuitive user interfaces and seamless blockchain integration.',
       features: ['Frontend development', 'Web3 integration', 'Wallet connectivity', 'User experience design'],
       benefits: ['Intuitive interfaces', 'Seamless UX', 'Multi-wallet support', 'Mobile responsive']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'DeFi Solutions',
       description: 'Decentralized finance platforms including DEXs, lending protocols, and yield farming.',
       features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity management'],
       benefits: ['High liquidity', 'Low fees', 'Secure protocols', 'Yield optimization']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'NFT Marketplace',
       description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
       features: ['NFT minting', 'Marketplace trading', 'Auction system', 'Royalty management'],
       benefits: ['Easy minting', 'Secure trading', 'Fair auctions', 'Creator royalties']
     },
     {
-      icon: Database;
+      icon: Database,
       title: 'Blockchain Integration',
       description: 'Integrate blockchain technology into existing enterprise systems and workflows.',
       features: ['API development', 'Data synchronization', 'Legacy integration', 'Real-time updates'],
       benefits: ['Seamless integration', 'Real-time data', 'Legacy compatibility', 'Scalable architecture']
     },
     {
-      icon: Lock;
+      icon: Lock,
       title: 'Security Auditing',
       description: 'Comprehensive security audits for smart contracts and blockchain applications.',
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checking'],
@@ -220,13 +220,13 @@ const BlockchainWeb3Page: React.FC = () => {,
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                     </CheckCircle>
                   ))}
-                <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">Get Started</button>
+                <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg font-semibold hover: from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">Get Started</button>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
               </div>
                 </ul>
                 <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg font-semibold hover: from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
-                  Get Started;
+                  Get Started,
                   <ArrowRight className="w-4 h-4 ml-2" />,
                 </button>,
               </div>))}
@@ -240,8 +240,8 @@ const BlockchainWeb3Page: React.FC = () => {,
               From concept to deployment, we've got you covered.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -250,13 +250,13 @@ const BlockchainWeb3Page: React.FC = () => {,
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >View Our Work</a>
               >
-                Start Your Project;
+                Start Your Project,
               </a>
               <a;
                 href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-colors"
               >
-                View Our Work;
+                View Our Work,
               </a>
             </div>
           </div>

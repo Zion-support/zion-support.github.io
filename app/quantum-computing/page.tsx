@@ -200,6 +200,7 @@ const QuantumComputingPage: React.FC = () => {
   ];
 
   const categories = [...new Set(quantumServices.map(service => service.category))];
+const Component = () => {
 
   return (
     <>

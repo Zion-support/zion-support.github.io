@@ -13,7 +13,7 @@ module.exports = {
 function createAdvancedMonitoring() {
   const monitoringFiles = {
     status: 'ok'
-  };
+  },
   return monitoringFiles;
 }
 
@@ -25,7 +25,7 @@ module.exports = {
 };`,
   const cachingFiles = {
     status: 'ready'
-  };
+  },
   return cachingFiles;
 }
 
@@ -37,7 +37,7 @@ module.exports = {
 };`,
   const apiFiles = {
     optimized: true
-  };
+  },
   return apiFiles;
 }
 

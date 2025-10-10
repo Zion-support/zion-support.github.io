@@ -1,7 +1,7 @@
 import Reac, t, { useEffect, useState, useCallba, c, k } fr, o, m 'rea, c, t';
 
 interface PerformanceOptimizerProp, s {
-  isVisib, l, e: boolean;
+  isVisib, l, e: boolean,
   onClo, s, e: () = > v, o, i, d;
  }
 
@@ -18,7 +18,7 @@ interface PerformanceOptimizerProp, s {/* TODO: Fix JSX expression */}
 
 const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  });
+  }),
 
   con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useState<string[]>([])
   );
@@ -44,7 +44,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
       ...pr, e, v)
       [k, e, y]: !pr, e, v[k, e, y])
   const handleOptimizationToggl, e = (k, e, y: keyof, typeof, optimization, s) => {/* TODO: Fix JSX expression */}
-     }));
+     })),
   };
 
   const optimizationOption, s = [

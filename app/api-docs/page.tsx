@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ApiDocsPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -49,7 +50,7 @@ const ApiDocsPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default ApiDocsPage;

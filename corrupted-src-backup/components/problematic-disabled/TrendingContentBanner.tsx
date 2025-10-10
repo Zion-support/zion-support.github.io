@@ -28,11 +28,12 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     }
   ]; useEffect(() => {/* TODO: Fix JSX expression */}
      }, 40, 0, 0);
+const Component = () => {
     return () => clearInterv, a, l(interv, a, l);
   }, [trendingIte, m, s.leng, t, h]);
   const currentIte, m = trendingIte, m, s[currentInd, e, x]; const getBadgeColo, r = (bad, g, e: str, i, n, g) => {/* TODO: Fix JSX expression */}
     }
-  };
+  },
   const Ico, n = currentIt, e, m.ic, o, n; return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
         <div, className="fl, e, x-1"></div>

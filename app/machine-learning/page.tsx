@@ -13,27 +13,27 @@ const MachineLearningPage: React.FC = () => {,
       title: 'Predictive Analytics',
       description: 'Build models that forecast future trends and behaviors with high accuracy',
       features: ['Time Series Forecasting', 'Customer Behavior Prediction', 'Sales Forecasting', 'Risk Assessment'],
-      icon: BarChart;
+      icon: BarChart,
       color: 'text-blue-400'},
     {
       title: 'Custom Model Development',
       description: 'Tailored machine learning models designed for your specific business needs',
       features: ['Algorithm Selection', 'Feature Engineering', 'Model Training', 'Performance Optimization'],
-      icon: Brain;
+      icon: Brain,
       color: 'text-purple-400'},
     {
       title: 'Data Pipeline Setup',
       description: 'Automated data processing and preparation for machine learning workflows',
       features: ['Data Collection', 'Data Cleaning', 'Feature Extraction', 'Real-time Processing'],
-      icon: Zap;
+      icon: Zap,
       color: 'text-green-400'},
     {
       title: 'Model Monitoring',
       description: 'Continuous monitoring and optimization of deployed machine learning models',
       features: ['Performance Tracking', 'Drift Detection', 'Model Retraining', 'Alert Systems'],
-      icon: Target;
+      icon: Target,
       color: 'text-cyan-400'}
-  ];
+  ],
 
   const benefits = [
     'Predict future trends with 95% accuracy',
@@ -42,8 +42,9 @@ const MachineLearningPage: React.FC = () => {,
     'Automate complex business processes',
     'Gain competitive advantage through data insights'
   ];
+const Component = () => {
 
-  return(<>
+  return (<>
       <SEOOptimizer;
         title="Machine Learning Solutions - Zion Tech Group"
         description="Advanced machine learning solutions including predictive analytics, custom model development, and AI infrastructure. Transform your business with data-driven insights."
@@ -84,12 +85,12 @@ const MachineLearningPage: React.FC = () => {,
           {/* Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Machine Learning Solutions">
-              Machine Learning Solutions;
+              Machine Learning Solutions,
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium">
               Advanced AI Models for Business Intelligence;
@@ -182,23 +183,23 @@ const MachineLearningPage: React.FC = () => {,
                 Contact us today for a free consultation and discover the potential of your data.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >Get Free Consultation</a>
                 >
-                  Get Free Consultation;
+                  Get Free Consultation,
                 </a>
                 <a;
                   href="tel:+13024640950"
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" >Call +1 302 464 0950</Phone>
                 </Phone>
                   <Phone className="w-5 h-5" />
-                  Call +1 302 464 0950;
+                  Call +1 302 464 0950,
                 </a>
               </div>
             </div>

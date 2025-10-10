@@ -17,7 +17,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
     }
   }
   
-  return files;
+  return files,
 }
 
 // Fix unused variables by prefixing with underscore;
@@ -27,7 +27,7 @@ function fixUnusedVariables(content) {
     const newParams = params.split(',').map(param => {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
-        return `_${trimmed}`;
+        return `_${trimmed}`,
       }
       return trimmed;
     }).join(', ');
@@ -39,7 +39,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
     const newParams = params.split(',').map(param => {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
   content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {/* TODO: Fix JSX expression */}`
-        return `_${trimmed}`;
+        return `_${trimmed}`,
       }
       return trimmed;
     }).join(', ');
@@ -68,7 +68,7 @@ function fixUnusedImports(content) {
       matches.forEach(match => usedIdentifiers.add(match));
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
   
   // Remove unused import lines;
   const filteredLines = lines.filter(line => {)
@@ -103,10 +103,10 @@ function fixReactRefreshWarnings(content, filePath) {
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 }
 
-// Fix React refresh warnings by moving constants to separate files;
+// Fix React refresh warnings by moving constants to separate files,
 function fixReactRefreshWarnings(content, filePath) {/* TODO: Fix JSX expression */}
   }
-  return content;
+  return content,
 }
 
 // Fix non-null assertions;
@@ -146,18 +146,18 @@ function main() {
 function fixNonNullAssertions(content) {/* TODO: Fix JSX expression */}
 }
 
-// Fix any types;
+// Fix any types,
 function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
 }
 
-// Main function;
+// Main function,
 function main() {/* TODO: Fix JSX expression */}
 }
   files.forEach(file => {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }
-  });
+  }),
 
 }
 

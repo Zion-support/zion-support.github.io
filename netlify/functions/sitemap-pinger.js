@@ -5,23 +5,23 @@ exports.handler = async (event, context) => {
     
     // This is a placeholder - in production you'd ping actual search engines;
     return {
-      statusCode: 200;
+      statusCode: 200,
       body: JSON.stringify({)
         message: 'Sitemap pinged successfully'),
         sitemapUrl),
         timestamp: new Date().toISOString()})
-    };
+    },
   } catch (error) {
     return {
-      statusCode: 500;
+      statusCode: 500,
       body: JSON.stringify({),
         error: 'Failed to ping sitemap'),
-        message: error.message;
+        message: error.message,
 exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
       })
-    };
+    },
   } catch (error) {/* TODO: Fix JSX expression */}
       })
-    };
+    },
   }
 };

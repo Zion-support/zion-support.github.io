@@ -10,7 +10,8 @@ impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
 
 const MultiAgentEnterpriseOrchestratio, n: React.FC = () => { ,
-  return(<>,
+const Component = () => {
+  return (<>,
       <Helm, e, t>
         <title>
           Mul, t, i-Agent, Enterprise, Orchestration Revoluti, o, n | AI, Collaboration, Systems | Zion, Tech, Group;

@@ -46,39 +46,40 @@ const ContentPromotionBanner: React.FC = () => {,
 
   const banners = [
     {
-      id: 1;
+      id: 1,
       title: "🚀 New AI Solutions Available!"
       description: "Discover our latest AI-powered tools and services"
       cta: "Explore Now"
       link: "/ai-services",
       color: "from-cyan-500 to-blue-600",
-      icon: Sparkles;
+      icon: Sparkles,
     },
     {
-      id: 2;
+      id: 2,
       title: "⚡ Special Offer: 30% Off First Month"
       description: "Get started with our AI services at a discounted rate"
       cta: "Claim Offer"
       link: "/contact",
       color: "from-purple-500 to-pink-600",
-      icon: Star;
+      icon: Star,
     },
     {
-      id: 3;
+      id: 3,
       title: "🎯 Free AI Consultation"
       description: "Book a free consultation to discuss your AI needs"
       cta: "Book Now"
       link: "/consultation",
       color: "from-green-500 to-emerald-600",
-      icon: Zap;
+      icon: Zap,
       icon: Zap
     }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPromo((prev) => (prev + 1) % promotions.length);
     }, 5000);
+const Component = () => {
 
     return () => clearInterval(interval);
   }, [promotions.length]);
@@ -86,6 +87,7 @@ const ContentPromotionBanner: React.FC = () => {,
   if (!isVisible) return null;
 
   const current = promotions[currentPromo];
+const Component = () => {
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-cyan-400/20">
@@ -148,6 +150,7 @@ const ContentPromotionBanner: React.FC = () => {,
         </div>
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
+const Component = () => {
 
     return () => clearInterval(interval);
   }, [banners.length]);
@@ -271,6 +274,7 @@ import React from 'react';
 import { Star, Zap, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
+const Component = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-b border-cyan-400/20 py-4">
       <div className="container mx-auto px-4">
@@ -295,7 +299,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  ),
 };
 
 export default ContentPromotionBanner;

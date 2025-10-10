@@ -67,7 +67,7 @@ const NewsPage: React.FC = () => {
       featured: false,
       readTime: '5 min read'
     }
-  ];
+  ],
 
   const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
 
@@ -76,7 +76,8 @@ const NewsPage: React.FC = () => {
     { icon: Award, number: '50+', label: 'Awards Won' },
     { icon: TrendingUp, number: '300%', label: 'Average ROI' },
     { icon: Globe, number: '25+', label: 'Countries Served' }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>

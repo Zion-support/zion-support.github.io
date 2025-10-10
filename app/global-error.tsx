@@ -5,8 +5,9 @@ export default function GlobalError({)
   reset)
 }: {
   error: Error & { digest?: string };)
-    reset: () => void;
+    reset: () => void,
 }) {
+const Component = () => {
   return (
     <html>
       <body>
@@ -17,7 +18,8 @@ export default function GlobalError({)
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             ></button>
               Try again</button>
-  return(<html>
+const Component = () => {
+  return (<html>
       <body>)
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">)
           <div className="text-center">)
@@ -26,19 +28,20 @@ export default function GlobalError({)
               onClick={() => reset()}
               className="px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700"
             >
-              Try again;
+              Try again,
 import { useEffect } from 'react';
 
 export default function GlobalError({
   error,
   reset}: {
-  error: Error & { digest?: string };
-  reset: () => void;
+  error: Error & { digest?: string },
+  reset: () => void,
 }) {
   useEffect(() => {
     // Log the error to an error reporting service
     console.error(error);
   }, [error]);
+const Component = () => {
 
   return (
     <html>

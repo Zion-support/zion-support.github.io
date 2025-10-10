@@ -1,7 +1,7 @@
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {</PerformanceOptimizerProps>
@@ -22,7 +22,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
       }, {
         rootMargin: '50 px 0 px',
         threshold: 0.01
-      });
+      }),
 
   const preloadCriticalResources = () => {
     const criticalResources = [
@@ -49,12 +49,12 @@ $4}
       document.head.appendChild(link);
     });
 
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
+    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length })),
   };
 
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
+    setOptimizationStatus(prev => ({ ...prev, codeSplit: true })),
   };
 
   const addResourceHints = () => {
@@ -65,7 +65,7 @@ $4}
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ];
+    ],
 
     hints.forEach((hint) => {
       const link = document.createElement('link');
@@ -77,14 +77,14 @@ $4}
       document.head.appendChild(link);
     });
 
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
+    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length })),
   };
 
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true })),
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
@@ -121,7 +121,7 @@ $4});
       { href: 'https://fonts.gstatic.com', rel: 'preconnect', crossorigin: 'anonymous' },
       { href: 'https://www.google-analytics.com', rel: 'preconnect' },
       { href: 'https://www.googletagmanager.com', rel: 'preconnect' }
-    ];
+    ],
 
     criticalResources.forEach(resource => {
       if (!document.querySelector(`link[href="${resource.href}"]`)) {
@@ -213,7 +213,8 @@ $4});
         }
       };
 
-      window.addEventListener('scroll', updateScroll, { passive: true });
+      window.addEventListener('scroll', updateScroll, { passive: true }),
+const Component = () => {
 
       return () => {
         window.removeEventListener('scroll', updateScroll);
@@ -230,6 +231,7 @@ $4});
     const cleanupScroll = optimizeScroll();
 
     // Cleanup on unmount
+const Component = () => {
     return () => {
       cleanupScroll();
     };
@@ -275,7 +277,7 @@ interface PerformanceOptimizerProps {/* TODO: Fix JSX expression */}
 const,
   PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  });
+  }),
 
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
@@ -294,34 +296,34 @@ const,
   const optimizeImages = () => {/* TODO: Fix JSX expression */}
       }
       
-      // Add decoding="async" for better performance;
+      // Add decoding="async" for better performance,
       img.setAttribute('decoding', 'async');
       "
       // Add fetchpriority="high" for above-the-fold images;
       if (img.getBoundingClientRect().top <= window.innerHeight) {/* TODO: Fix JSX expression */}
       }
       
-      // Add proper alt text if missing;
+      // Add proper alt text if missing,
       if (!img.getAttribute('alt')) {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
     
     setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
-  d: optimized }));
+  d: optimized })),
   };
 
   const setupLazyLoading = () => {/* TODO: Fix JSX expression */}
             }
           }
-        });
+        }),
       }, {/* TODO: Fix JSX expression */}
-      });
+      }),
       
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach((img) => observer.observe(img));
       
       setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
-  d: lazyImages.length }));
+  d: lazyImages.length })),
     }
   };
 
@@ -329,22 +331,22 @@ const,
       },
       {/* TODO: Fix JSX expression */}
       }
-    ];
+    ],
 
     criticalResources.forEach((resource) => {/* TODO: Fix JSX expression */}
       }
-      document.head.appendChild(link);
+      document.head.appendChild(link),
 
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fidObserver.observe({ entryTypes: ['first-input'] }),
 
 
     setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
-  d: criticalResources.length }));
+  d: criticalResources.length })),
   };
 
   const setupCodeSplitting = () => {/* TODO: Fix JSX expression */}
-  t: true }));
+  t: true })),
   };
 
   const addResourceHints = () => {/* TODO: Fix JSX expression */}
@@ -359,34 +361,34 @@ const,
   s://fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
   n: 'anonymous' }
-    ];
+    ],
 
     hints.forEach((hint) => {/* TODO: Fix JSX expression */}
       }
-      document.head.appendChild(link);
+      document.head.appendChild(link),
     });
 
     setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
-  s: hints.length }));
+  s: hints.length })),
   };
 
   const registerServiceWorker = async () => {/* TODO: Fix JSX expression */}
-  r: true }));
+  r: true })),
         } catch (error) {/* TODO: Fix JSX expression */}
         }
     }
-  };
+  },
 
   // Performance monitoring;
   useEffect(() => {/* TODO: Fix JSX expression */}
-              });
+              }),
             }
           }
         }
       });
       
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+  s: ['largest-contentful-paint'] }),
 
     }
   }, []);
@@ -455,6 +457,7 @@ const,
 
     // Optimize third-party scripts
     optimizeThirdPartyScripts();
+const Component = () => {
 
     return () => {
       window.removeEventListener('load', collectWebVitals);

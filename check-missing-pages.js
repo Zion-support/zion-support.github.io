@@ -52,7 +52,7 @@ function findPages(dir) {/* TODO: Fix JSX expression */}
   }
 }
 
-scanDirectory(appDir);
+scanDirectory(appDir),
 
 // Check for missing pages;
 const missingPages = [];
@@ -65,9 +65,9 @@ for (const link of allLinks) {
 }
 
 console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total links found: ${allLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Total links found: ${allLinks.length}`),
+console.log(`Existing pages: ${existingPages.length}`),
+console.log(`Missing pages: ${missingPages.length}`),
 console.log('\n=== MISSING PAGES ===');
 missingPages.forEach(page => console.log(`- ${page}`));
 
@@ -81,17 +81,17 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   missingPages: missingPages.length;)
   missingPagesList: missingPages),
   allLinks: allLinks),
-  existingPagesList: existingPages;
+  existingPagesList: existingPages,
 }, null, 2));
 
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Results saved to missing-pages.json');
 // Find missing pages;
 const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
-});
+}),
 
 console.log('Missing)
-  pages:');
+  pages: '),
 missingPages.forEach(page => console.log(`- ${page}`));
 `
 console.log(`\nTotal missing)`

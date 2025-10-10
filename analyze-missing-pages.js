@@ -385,9 +385,9 @@ for (const link of allLinks) {
 }
 
 console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total links checked: ${allLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Total links checked: ${allLinks.length}`),
+console.log(`Existing pages: ${existingPages.length}`),
+console.log(`Missing pages: ${missingPages.length}`),
 console.log('\n=== MISSING PAGES ===');
 missingPages.forEach(page => console.log(page));
 
@@ -398,7 +398,7 @@ const unlinkedPages = existingPages
   .filter(p => p !== '' && !linkedPages.has(p));
 
 console.log('\n=== UNLINKED PAGES ===');
-console.log(`Unlinked pages: ${unlinkedPages.length}`);
+console.log(`Unlinked pages: ${unlinkedPages.length}`),
 unlinkedPages.forEach(page => console.log(page));
 
 // Generate report
@@ -409,7 +409,7 @@ const report = {
   unlinkedPages: unlinkedPages.length,
   missingPagesList: missingPages,
   unlinkedPagesList: unlinkedPages
-// Categorize missing pages;
+// Categorize missing pages,
 const missingByCategory = {
   'Main Pages': missingPages.filter(p => ['/faq', '/partners', '/solutions', '/research-development', '/request-quote', '/green-it'].includes(p)),
   'Services Subpages': missingPages.filter(p => p.startsWith('/services/')),
@@ -423,10 +423,10 @@ const missingByCategory = {
 fs.writeFileSync('/workspace/missing-pages-report.json', JSON.stringify(report, null, 2));
 console.log('\nReport saved to missing-pages-report.json');
 console.log('\n=== SUMMARY ===');
-console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
-console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-console.log(`Extra pages: ${extraPages.length}`);
+console.log(`Total sitemap URLs: ${sitemapUrls.length}`),
+console.log(`Total existing pages: ${existingPages.length}`),
+console.log(`Missing pages: ${missingPages.length}`),
+console.log(`Extra pages: ${extraPages.length}`),
 
 // Categorize missing pages
 const missingByCategory = {
@@ -438,7 +438,7 @@ const missingByCategory = {
     !page.startsWith('/blog') && 
     page.includes('/')
   )
-};
+},
 
 console.log('\n=== MISSING PAGES BY CATEGORY ===');
 Object.entries(missingByCategory).forEach(([category, pages]) => {

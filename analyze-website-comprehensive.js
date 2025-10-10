@@ -17,11 +17,11 @@ const brokenLinks = [];
 const missingPages = [];
 const workingLinks = [];
 const analysisResults = {
-  totalLinks: 0;
-  workingLinks: 0;
-  brokenLinks: 0;
-  missingPages: 0;
-  errors: []};
+  totalLinks: 0,
+  workingLinks: 0,
+  brokenLinks: 0,
+  missingPages: 0,
+  errors: []},
 
 // Helper function to make HTTP requests;
 function makeRequest(url, options = {}) {
@@ -31,9 +31,9 @@ function makeRequest(url, options = {}) {
     const client = isHttps ? https : http;
     
     const requestOptions = {
-      hostname: urlObj.hostname;
+      hostname: urlObj.hostname,
       port: urlObj.port || (isHttps ? 443 : 80)
-      path: urlObj.pathname + urlObj.search;
+      path: urlObj.pathname + urlObj.search,
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT;
@@ -44,7 +44,7 @@ function makeRequest(url, options = {}) {
         'Upgrade-Insecure-Requests': '1',
         ...options.headers;
       },
-      timeout: TIMEOUT;
+      timeout: TIMEOUT,
     };
 
     const req = client.request(requestOptions, (res) => {
@@ -59,7 +59,7 @@ function makeRequest(url, options = {}) {
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
-          url: url;
+          url: url,
         });
       });
     });
@@ -95,10 +95,10 @@ function extractLinks(html, baseUrl) {
         links.push({)
           url: absoluteUrl),
           text: linkText),
-          element: anchor.outerHTML;
+          element: anchor.outerHTML,
         });
       } catch (error) {
-        console.log(`Invalid URL: ${href}`);
+        console.log(`Invalid URL: ${href}`),
       }
     }
   });
@@ -113,10 +113,10 @@ function extractLinks(html, baseUrl) {
         links.push({)
           url: absoluteUrl),
           text: 'Form Action'),
-          element: form.outerHTML;
+          element: form.outerHTML,
         });
       } catch (error) {
-        console.log(`Invalid form action: ${action}`);
+        console.log(`Invalid form action: ${action}`),
       }
     }
   });
@@ -152,7 +152,7 @@ async function analyzeUrl(url, depth = 0) {
       workingLinks.push({)
         url: url),
         statusCode: response.statusCode),
-        depth: depth;
+        depth: depth,
       });
       analysisResults.workingLinks++;
 
@@ -171,14 +171,14 @@ async function analyzeUrl(url, depth = 0) {
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'Page not found'});
+        reason: 'Page not found'}),
       analysisResults.brokenLinks++;
     } else {
       brokenLinks.push({)
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'HTTP error'});
+        reason: 'HTTP error'}),
       analysisResults.brokenLinks++;
     }
   } catch (error) {
@@ -187,12 +187,12 @@ async function analyzeUrl(url, depth = 0) {
       url: url;)
       statusCode: 0),
       depth: depth),
-      reason: error.message;
+      reason: error.message,
     });
     analysisResults.brokenLinks++;
     analysisResults.errors.push({)
       url: url),
-      error: error.message;
+      error: error.message,
     });
   }
 }
@@ -200,8 +200,8 @@ async function analyzeUrl(url, depth = 0) {
 // Main analysis function;
 async function analyzeWebsite() {
   console.log('Starting comprehensive website analysis...');
-  console.log(`Base URL: ${BASE_URL}`);
-  console.log(`Max Depth: ${MAX_DEPTH}`);
+  console.log(`Base URL: ${BASE_URL}`),
+  console.log(`Max Depth: ${MAX_DEPTH}`),
   console.log('---');
 
   try {
@@ -211,12 +211,12 @@ async function analyzeWebsite() {
     // Generate report;
     const report = {
       timestamp: new Date().toISOString()
-      baseUrl: BASE_URL;
-      summary: analysisResults;
-      workingLinks: workingLinks;
-      brokenLinks: brokenLinks;
-      missingPages: missingPages;
-      errors: analysisResults.errors;
+      baseUrl: BASE_URL,
+      summary: analysisResults,
+      workingLinks: workingLinks,
+      brokenLinks: brokenLinks,
+      missingPages: missingPages,
+      errors: analysisResults.errors,
     };
 
     // Save detailed report;
@@ -224,9 +224,9 @@ async function analyzeWebsite() {
     
     // Generate summary report;
     console.log('\n=== ANALYSIS SUMMARY ===');
-    console.log(`Total Links Analyzed: ${analysisResults.totalLinks}`);
-    console.log(`Working Links: ${analysisResults.workingLinks}`);
-    console.log(`Broken Links: ${analysisResults.brokenLinks}`);
+    console.log(`Total Links Analyzed: ${analysisResults.totalLinks}`),
+    console.log(`Working Links: ${analysisResults.workingLinks}`),
+    console.log(`Broken Links: ${analysisResults.brokenLinks}`),
     console.log(`Errors: ${analysisResults.errors.length}`);
     
     if (brokenLinks.length > 0) {
@@ -261,7 +261,7 @@ async function analyzeWebsite() {
       });
     }
 
-    console.log('\nDetailed report saved to: website-analysis-report.json');
+    console.log('\nDetailed report saved to: website-analysis-report.json'),
     } catch (error) {
     console.error('Analysis failed:', error);
   }
@@ -299,7 +299,7 @@ class WebsiteAnalyzer {
     }
 
     this.visitedUrls.add(url);
-    console.log(`📄 Analyzing: ${url} (depth: ${depth})`);
+    console.log(`📄 Analyzing: ${url} (depth: ${depth})`),
 
     try {
       const content = await this.fetchPage(url);
@@ -312,7 +312,7 @@ class WebsiteAnalyzer {
           title: document.title,
           content: content,
           links: []
-        });
+        }),
 
         // Extract all links
         const links = this.extractLinks(document, url);
@@ -329,7 +329,7 @@ class WebsiteAnalyzer {
       }
     } catch (err) {
       console.error(`❌ Error analyzing ${url}:`, err.message);
-      this.brokenLinks.push({ url, error: err.message });
+      this.brokenLinks.push({ url, error: err.message }),
     }
   }
 
@@ -342,7 +342,7 @@ class WebsiteAnalyzer {
         path: urlObj.pathname + urlObj.search,
         method: 'GET',
         timeout: 10000
-      };
+      },
 
       const protocol = urlObj.protocol === 'https:' ? https : http;
       
@@ -380,7 +380,7 @@ class WebsiteAnalyzer {
           href: absoluteUrl,
           text: link.textContent.trim(),
           title: link.getAttribute('title') || ''
-        });
+        }),
       }
     });
     
@@ -408,22 +408,22 @@ class WebsiteAnalyzer {
   generateReport() {
     console.log('\n📊 Analysis Report');
     console.log('='.repeat(60));
-    console.log(`📄 Pages analyzed: ${this.pages.size}`);
-    console.log(`🔗 Total links found: ${this.allLinks.size}`);
-    console.log(`❌ Broken links: ${this.brokenLinks.length}`);
+    console.log(`📄 Pages analyzed: ${this.pages.size}`),
+    console.log(`🔗 Total links found: ${this.allLinks.size}`),
+    console.log(`❌ Broken links: ${this.brokenLinks.length}`),
     
     if (this.brokenLinks.length > 0) {
-      console.log('\n❌ Broken Links:');
+      console.log('\n❌ Broken Links: '),
       this.brokenLinks.forEach(link => {
         console.log(`  - ${link.url}: ${link.error}`);
       });
     }
     
-    console.log(`\n📄 PAGES FOUND:`);
+    console.log(`\n📄 PAGES FOUND: `),
     this.pages.forEach((page, url) => {
       console.log(`   • ${url}`);
-      console.log(`     Title: ${page.title}`);
-      console.log(`     Links: ${page.links.length}`);
+      console.log(`     Title: ${page.title}`),
+      console.log(`     Links: ${page.links.length}`),
     });
     
     // Save detailed report
@@ -439,7 +439,7 @@ class WebsiteAnalyzer {
         title: data.title,
         linkCount: data.links.length
       }))
-    };
+    },
     
     fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
     console.log('\n💾 Report saved to website-analysis-report.json');

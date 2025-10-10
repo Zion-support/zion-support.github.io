@@ -3,14 +3,14 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void,
   enableReporting?: boolean;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
@@ -19,7 +19,7 @@ interface State {
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -87,7 +87,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined }),
   };
 
   private handleReload = () => {
@@ -108,7 +108,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       userAgent: navigator.userAgent,
     };
 
-    const subject = `Bug Report - Error ID: ${this.state.errorId}`;
+    const subject = `Bug Report - Error ID: ${this.state.errorId}`,
     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
     
     window.open(`mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
@@ -117,7 +117,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   // In production, you might want to send this to an error reporting service
   if (process.env.NODE_ENV === 'production') {
     // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
+    // errorReportingService.captureException(error, { extra: errorInfo }),
   }
   }
 
@@ -129,6 +129,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       const { retryCount, error, errorId } = this.state;
       const _canRetry = retryCount < this.maxRetries;
+const Component = () => {
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full">
@@ -186,7 +187,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   If this problem persists, please contact our support team.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <button
                     onClick={this.handleReportBug}
                     className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-2 text-sm"
@@ -213,7 +214,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      ),
     }
 
     return this.props.children;

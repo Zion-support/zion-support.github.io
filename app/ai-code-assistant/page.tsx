@@ -13,34 +13,34 @@ const AICodeAssistant: React.FC = memo(() => {}
 
   const features = [
     {
-      icon: Code;
+      icon: Code,
     {}
       icon: Code,
       title: 'Intelligent Code Generation',
       description: 'Generate clean, efficient code from natural language descriptions with AI-powered suggestions',
       color: 'text-purple-400'},
     {
-      icon: Bug;
+      icon: Bug,
     {}
       icon: Bug,
       title: 'Smart Debugging',
       description: 'Automatically detect and fix bugs, suggest optimizations, and improve code quality',
       color: 'text-blue-400'},
     {
-      icon: Terminal;
+      icon: Terminal,
     {}
       icon: Terminal,
       title: 'Multi-Language Support',
       description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more',
       color: 'text-green-400'},
     {
-      icon: GitBranch;
+      icon: GitBranch,
     {}
       icon: GitBranch,
       title: 'Version Control Integration',
       description: 'Seamlessly integrate with Git, GitHub, and other version control systems',
       color: 'text-orange-400'}
-  ];
+  ],
 
   const pricingPlans = [
     {}
@@ -57,7 +57,7 @@ const AICodeAssistant: React.FC = memo(() => {}
         'API access'
       ],
       popular: false},
-      popular: false;
+      popular: false,
     },
     {
     {}
@@ -75,7 +75,7 @@ const AICodeAssistant: React.FC = memo(() => {}
         'Code review assistance'
       ],
       popular: true},
-      popular: true;
+      popular: true,
     },
     {
       name: 'Enterprise'
@@ -94,7 +94,7 @@ const AICodeAssistant: React.FC = memo(() => {}
         'Custom AI models'
       ],
       popular: false}
-      popular: false;
+      popular: false,
     }
   ];
 
@@ -102,31 +102,33 @@ const AICodeAssistant: React.FC = memo(() => {}
     {}
       title: 'Code Generation',
       description: 'Generate boilerplate code, functions, and complete modules from descriptions',
-      icon: Code;
+      icon: Code,
       result: '90% faster'},
     {}
       title: 'Bug Fixing',
       description: 'Automatically detect and fix common bugs and security vulnerabilities',
-      icon: Bug;
+      icon: Bug,
       result: '95% accuracy'},
     {}
       title: 'Code Review',
       description: 'AI-powered code review with suggestions for improvements and best practices',
-      icon: FileText;
+      icon: FileText,
       result: '80% quality'},
     {}
       title: 'Documentation',
       description: 'Generate comprehensive documentation and comments for your code',
-      icon: FileText;
+      icon: FileText,
       result: '100% coverage'}
-  ];
+  ],
 
   const supportedLanguages = [
     'Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'C#', 'Go', 'Rust', 'PHP', 'Ruby',
     'Swift', 'Kotlin', 'Scala', 'R', 'MATLAB', 'Perl', 'Haskell', 'Clojure', 'Elixir', 'Dart'
   ];
+const Component = () => {
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -156,7 +158,7 @@ const AICodeAssistant: React.FC = memo(() => {}
           </div>
 
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            AI Code Assistant;
+            AI Code Assistant,
           </h1>)
 )
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
@@ -165,8 +167,8 @@ const AICodeAssistant: React.FC = memo(() => {}
           </p>
 
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -176,13 +178,13 @@ const AICodeAssistant: React.FC = memo(() => {}
             >Start Coding Smarter</a>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="/contact"
-              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
             >
-              Start Coding Smarter;
+              Start Coding Smarter,
             </a>
           </div>,
         </section>,
@@ -310,11 +312,11 @@ const AICodeAssistant: React.FC = memo(() => {}
             {pricingPlans.map((plan, index) => (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (}
-              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
+              <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover: border-purple-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
+                      Most Popular,
                     </div>
                   </div>
                 )}
@@ -351,7 +353,7 @@ const AICodeAssistant: React.FC = memo(() => {}
                   }`}
                 >Get Started</a>
                 >
-                  Get Started;
+                  Get Started,
                 </a>
               </div>
             ))}
@@ -363,8 +365,8 @@ const AICodeAssistant: React.FC = memo(() => {}
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Code Smarter?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ developers already using our AI Code Assistant to boost their productivity.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <a;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <a,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -377,14 +379,14 @@ const AICodeAssistant: React.FC = memo(() => {}
             </MessageSquare>
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
+              Call: (302) 464-0950,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
       >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Email Us;
+              Email Us,
             </a>
           </div>
         </section>

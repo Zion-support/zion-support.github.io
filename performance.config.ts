@@ -7,28 +7,28 @@ export const performanceConfig = {
   // Core Web Vitals thresholds;
   webVitals: {,
     lcp: {,
-      good: 2500;
-      needsImprovement: 4000;
+      good: 2500,
+      needsImprovement: 4000,
     },
     fid: {,
-      good: 100;
-      needsImprovement: 300;
+      good: 100,
+      needsImprovement: 300,
     },
     cls: {,
-      good: 0.1;
-      needsImprovement: 0.25;
+      good: 0.1,
+      needsImprovement: 0.25,
     },
     fcp: {,
-      good: 1800;
-      needsImprovement: 3000;
+      good: 1800,
+      needsImprovement: 3000,
     },
     ttfb: {,
-      good: 800;
-      needsImprovement: 1800;
+      good: 800,
+      needsImprovement: 1800,
     },
     inp: {,
-      good: 200;
-      needsImprovement: 500;
+      good: 200,
+      needsImprovement: 500,
     }},
 
   // Resource loading priorities;
@@ -40,15 +40,15 @@ export const performanceConfig = {
   lazyLoading: {,
     imagePlaceholder: 'blur',
     rootMargin: '50px',
-    threshold: 0.01;
-    enableNativeLazyLoading: true;
+    threshold: 0.01,
+    enableNativeLazyLoading: true,
   },
 
   // Caching strategies;
   caching: {,
     staticAssets: {,
       maxAge: 31536000, // 1 year;
-      immutable: true;
+      immutable: true,
     },
     api: {,
       maxAge: 300, // 5 minutes;
@@ -62,16 +62,16 @@ export const performanceConfig = {
   bundling: {,
     maxChunkSize: 244000, // ~240KB;
     minChunkSize: 20000, // ~20KB;
-    splitChunks: true;
-    treeshaking: true;
+    splitChunks: true,
+    treeshaking: true,
   },
 
   // Monitoring;
   monitoring: {,
     sampleRate: 0.1, // 10% of requests;
     reportInterval: 30000, // 30 seconds;
-    enableLongTaskDetection: true;
-    enableMemoryMonitoring: true;
+    enableLongTaskDetection: true,
+    enableMemoryMonitoring: true,
 export const performanceConfig = {/* TODO: Fix JSX expression */}
     },
     fi,
@@ -114,6 +114,6 @@ export const performanceConfig = {/* TODO: Fix JSX expression */}
 
   // Monitoring,
   monitoring: {/* TODO: Fix JSX expression */}
-  }};
+  }},
 
 export default performanceConfig;

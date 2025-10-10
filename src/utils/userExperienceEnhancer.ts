@@ -3,28 +3,28 @@
  * Comprehensive UX optimization utilities
  */
 interface UXConfig {
-  enableSmoothScrolling: boolean;
-  enableLoadingStates: boolean;
-  enableErrorBoundaries: boolean;
-  enableAnalytics: boolean;
-  enableNotifications: boolean;
-  enableProgressiveWebApp: boolean;
-  enableOfflineSupport: boolean;
-  enablePushNotifications: boolean;
-  enableDarkMode: boolean;
-  enableAnimations: boolean;
+  enableSmoothScrolling: boolean,
+  enableLoadingStates: boolean,
+  enableErrorBoundaries: boolean,
+  enableAnalytics: boolean,
+  enableNotifications: boolean,
+  enableProgressiveWebApp: boolean,
+  enableOfflineSupport: boolean,
+  enablePushNotifications: boolean,
+  enableDarkMode: boolean,
+  enableAnimations: boolean,
 }
 interface UXMetrics {
-  pageLoadTime: number;
-  interactionTime: number;
-  bounceRate: number;
-  userSatisfaction: number;
-  accessibilityScore: number;
-  performanceScore: number;
+  pageLoadTime: number,
+  interactionTime: number,
+  bounceRate: number,
+  userSatisfaction: number,
+  accessibilityScore: number,
+  performanceScore: number,
 }
 class UserExperienceEnhancer {
-  private config: UXConfig;
-  private metrics: UXMetrics;
+  private config: UXConfig,
+  private metrics: UXMetrics,
   private loadingStates: Map<string, boolean> = new Map();
   private errorBoundaries: Map<string, Error> = new Map();
   constructor(config: UXConfig) {
@@ -36,7 +36,7 @@ class UserExperienceEnhancer {
       userSatisfaction: 0,
       accessibilityScore: 0,
       performanceScore: 0
-    };
+    },
     this.init();
   }
   private init(): void {
@@ -132,7 +132,7 @@ $4});
     }, 3000);
   }
   private hideLoadingState(button: HTMLButtonElement, originalText: string | null): void {
-    button.disabled = false;
+    button.disabled = false,
     button.textContent = originalText;
     button.classList.remove('loading');
     
@@ -238,7 +238,7 @@ $4});
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       referrer: document.referrer
-    };
+    },
     
     this.sendAnalytics('page_view', pageData);
   }
@@ -253,7 +253,7 @@ $4});
         className: target.className,
         text: target.textContent?.substring(0, 100),
         timestamp: Date.now()
-      };
+      },
       
       this.sendAnalytics('user_interaction', interactionData);
     });
@@ -265,7 +265,7 @@ $4});
         formId: form.id,
         formAction: form.action,
         timestamp: Date.now()
-      };
+      },
       
       this.sendAnalytics('form_submit', formData);
     });
@@ -275,7 +275,7 @@ $4});
       
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
-        this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() });
+        this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() }),
       }
     });
   }
@@ -290,7 +290,7 @@ $4});
           firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
           firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
           timestamp: Date.now()
-        };
+        },
         
         this.metrics.pageLoadTime = metrics.pageLoadTime;
         this.sendAnalytics('performance_metrics', metrics);
@@ -335,7 +335,7 @@ $4});
       url: window.location.href,
       timestamp: Date.now(),
       userAgent: navigator.userAgent
-    };
+    },
     
     this.sendAnalytics('error', errorData);
   }
@@ -376,7 +376,7 @@ $4});
       { name: 'msapplication-TileColor', content: '#4f46e5' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
       { name: 'theme-color', content: '#4f46e5' }
-    ];
+    ],
     metaTags.forEach(tag => {
       const meta = document.createElement('meta');
       meta.setAttribute('name', tag.name);
@@ -398,7 +398,7 @@ $4});
     }
   }
   private setupInstallPrompt(): void {
-    let deferredPrompt: any;
+    let deferredPrompt: any,
     
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -500,7 +500,7 @@ $4});
   }
   private addDarkModeToggle(): void {
     const toggle = document.createElement('button');
-    toggle.className = 'dark-mode-toggle fixed top-4 right-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-lg z-50';
+    toggle.className = 'dark-mode-toggle fixed top-4 right-4 bg-gray-200 dark: bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-lg z-50',
     toggle.innerHTML = '🌙';
     toggle.setAttribute('aria-label', 'Toggle dark mode');
     
@@ -557,7 +557,7 @@ $4});
         }
       });
       
-      observer.observe({ entryTypes: ['measure'] });
+      observer.observe({ entryTypes: ['measure'] }),
     }
   }
   private setupAccessibilityMonitoring(): void {
@@ -618,7 +618,7 @@ ${this.metrics.pageLoadTime > 3000 ? '- Optimize page load time' : ''}
 ${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : ''}
 ${this.metrics.userSatisfaction < 80 ? '- Address user satisfaction issues' : ''}
 ${this.metrics.performanceScore < 80 ? '- Optimize performance' : ''}
-    `;
+    `,
     
     return report.trim();
   }
@@ -630,27 +630,27 @@ export default UserExperienceEnhancer;
 
 
 interface UXConfig {enableSmoothScrolling: boolean;}
-  enableLoadingStates: boolean;
-  enableErrorBoundaries: boolean;
-  enableAnalytics: boolean;
-  enableNotifications: boolean;
-  enableProgressiveWebApp: boolean;
-  enableOfflineSupport: boolean;
-  enablePushNotifications: boolean;
-  enableDarkMode: boolean;
-  enableAnimations: boolean;
+  enableLoadingStates: boolean,
+  enableErrorBoundaries: boolean,
+  enableAnalytics: boolean,
+  enableNotifications: boolean,
+  enableProgressiveWebApp: boolean,
+  enableOfflineSupport: boolean,
+  enablePushNotifications: boolean,
+  enableDarkMode: boolean,
+  enableAnimations: boolean,
 }
 
 interface UXMetrics {pageLoadTime: number;}
-  interactionTime: number;
-  bounceRate: number;
-  userSatisfaction: number;
-  accessibilityScore: number;
-  performanceScore: number;
+  interactionTime: number,
+  bounceRate: number,
+  userSatisfaction: number,
+  accessibilityScore: number,
+  performanceScore: number,
 }
 
 class UserExperienceEnhancer {private config: UXConfig;}
-  private metrics: UXMetrics;
+  private metrics: UXMetrics,
 
   constructor(config?: UXConfig) {this.config = config || {}
       enableSmoothScrolling: true,
@@ -662,7 +662,7 @@ class UserExperienceEnhancer {private config: UXConfig;}
       enableOfflineSupport: false,
       enablePushNotifications: false,
       enableDarkMode: false,
-      enableAnimations: true};
+      enableAnimations: true},
     
     this.metrics = {pageLoadTime: 0}
       interactionTime: 0,

@@ -2,7 +2,8 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 impo, r, t { ArrowRig, h, t, CheckCirc, l, e, Rock, e, t, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 
 const AutonomousBusinessOperationsRevolution202, 5 = () => { 
-  return(<>
+const Component = () => {
+  return (<>
       <Helm, e, t>
         <title>
           AI-Powered, Autonomous, Business Operatio, n, s: The, Complete, 2025;

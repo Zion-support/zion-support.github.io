@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 mb-4 md:mb-0">&copy; 2024 Zion Tech Group. All rights reserved.</p>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm">
+              <Link to="/privacy" className="text-gray-300 hover: text-white transition-colors text-sm">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-gray-300 hover:text-white transition-colors text-sm">

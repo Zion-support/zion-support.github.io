@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
+const Component = () => {
 
   return (
 
@@ -36,7 +37,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
         <div></div>
           <h2>Release Safety Model</h2>
 <p>Operational safety hinges on three,
-  primitives: hard;
+  primitives: hard,
             budgets, lightweight approvals and KPI-linked canaries that trigger;
             automatic rollback when thresholds are breached.
           </p>

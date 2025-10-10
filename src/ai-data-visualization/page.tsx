@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
+const Component = () => {
   return (<div><Helmet></Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
@@ -20,8 +21,8 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Data Visualization;
+  md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+              AI Data Visualization,
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
               Transform data into actionable insights with AI;
@@ -176,14 +177,14 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
               <a href="te,"
-  l:+13024640950" className="cyber-button"></a>
+  l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
-  l: (302) 464-0950;
+  l: (302) 464-0950,
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
-                Get Free Demo;
+  hover: text-indigo-600 transition-all duration-300"></a>
+                Get Free Demo,
               </a>
             </div>
           </section>

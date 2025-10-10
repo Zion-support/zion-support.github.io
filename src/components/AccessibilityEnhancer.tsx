@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {</AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+        document.body.classList.add('keyboard-navigation'),
       }
     };
 
@@ -21,7 +21,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
-          outline: 2 px solid #06 b6 d4 !important;
+          outline: 2 px solid #06 b6 d4 !important,
           outline-offset: 2 px !important;
         }
       `;
@@ -74,7 +74,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
@@ -83,6 +83,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
+const Component = () => {
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -94,10 +95,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  focusVisible: boolean;
+  highContrast: boolean,
+  reducedMotion: boolean,
+  fontSize: 'small' | 'medium' | 'large',
+  focusVisible: boolean,
 }
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -105,7 +106,7 @@ const AccessibilityEnhancer: React.FC = () => {
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
-    focusVisible: false});
+    focusVisible: false}),
 
   useEffect(() => {
     // Check for user preferences
@@ -115,7 +116,7 @@ const AccessibilityEnhancer: React.FC = () => {
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast}));
+      highContrast: prefersHighContrast})),
 
     // Apply accessibility settings
     const root = document.documentElement;
@@ -164,6 +165,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     document.addEventListener('keydown', handleKeyDown);
+const Component = () => {
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -178,6 +180,7 @@ const AccessibilityEnhancer: React.FC = () => {
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
+const Component = () => {
 
     return () => {
       const existingLiveRegion = document.getElementById('live-region');
@@ -193,12 +196,13 @@ const AccessibilityEnhancer: React.FC = () => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         const pageTitle = document.title;
-        liveRegion.textContent = `Page loaded: ${pageTitle}`;
+        liveRegion.textContent = `Page loaded: ${pageTitle}`,
       }
     };
 
     // Announce after a short delay to ensure content is loaded
     const timeoutId = setTimeout(announcePageChange, 1000);
+const Component = () => {
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -207,6 +211,7 @@ const AccessibilityEnhancer: React.FC = () => {
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
+const Component = () => {
 
   return (
     <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
@@ -253,7 +258,7 @@ const AccessibilityEnhancer: React.FC = () => {
         </label>
       </div>
     </div>
-  );
+  ),
 };
 
 export default AccessibilityEnhancer;

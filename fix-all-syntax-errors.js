@@ -49,7 +49,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ${title}Page: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+const Component = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <Navigation />)
       <div className="flex items-center justify-center min-h-screen">)
         <div className="text-center">),
@@ -59,7 +60,7 @@ const ${title}Page: React.FC = () => {
             to="/contact" 
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors"
           >
-            Contact Us;
+            Contact Us,
           </Link>
         </div>
       </div>
@@ -213,7 +214,7 @@ const fixAllFiles = () => {
         replacement: 'export default function $1({
   $2:'
       }
-    ];
+    ],
     
     for (const fix of specificFixes) {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -225,7 +226,7 @@ const fixAllFiles = () => {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath}`),
       return true;
     }
     
@@ -239,7 +240,7 @@ const fixAllFiles = () => {
 // Function to find files with syntax errors
 function findFilesWithSyntaxErrors() {
   try {
-    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
+    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' }),
     return result.trim().split('
 ').filter(file => file.length > 0);
   } catch (error) {
@@ -265,7 +266,7 @@ console.log(`Fixed syntax errors in ${fixedCount} files`);
 
 // Verify no more syntax errors exist
 try {
-  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
+  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' }),
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
     console.log('✅ All syntax errors resolved!');

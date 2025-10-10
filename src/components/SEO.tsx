@@ -24,7 +24,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: {/* TODO: Fix JSX expression */}
-  l: string }[];
+  l: string }[],
 }
   titl,
   e: 'Zion Tech Group - AI & IT Solutions',
@@ -52,9 +52,9 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   local,
   e: 'en_US',
   twitterCar,
-  d: 'summary_large_image' as const};
+  d: 'summary_large_image' as const},
 export const,
-  SEO: React.FC;
+  SEO: React.FC,
           <SEOProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -102,7 +102,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
       return structuredData;
     }
     const,
-  baseStructuredData: Record;
+  baseStructuredData: Record,
           <string, unknown> = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -116,7 +116,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
       ur,
   l: seo.url,
       imag,
-  e: seo.image};
+  e: seo.image},
     if (author) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -125,7 +125,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
 }
         '@type': 'Person',
         nam,
-  e: author};
+  e: author},
     }
     if (publishDate) {/* TODO: Fix JSX expression */}
   O: Add content;}

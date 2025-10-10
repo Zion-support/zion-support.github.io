@@ -11,7 +11,7 @@ export interface SecurityHeadersConfig {
   permissionsPolicy?: string;}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
-  // Content Security Policy;
+  // Content Security Policy,
   contentSecurityPolicy: [,
 export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string
@@ -38,9 +38,9 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
   // Prevent clickjacking;
   xFrameOptions: 'DENY'
-  // Prevent MIME type sniffing;
+  // Prevent MIME type sniffing,
   xContentTypeOptions: 'nosniff'
-  // Referrer Policy;
+  // Referrer Policy,
   referrerPolicy: 'strict-origin-when-cross-origin'
   // Permissions Policy (formerly Feature Policy),
   permissionsPolicy: [,
@@ -87,7 +87,7 @@ export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
 export const,
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
-};
+},
 /**
  * Get security headers as key-value pairs;
  */
@@ -96,7 +96,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   const config = { ...defaultSecurityHeaders, ...customConfig };
   const,
   headers: Record<string, string> = {/* TODO: Fix JSX expression */}
-  };
+  },
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
   }
   if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
@@ -109,7 +109,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
   }
-  return headers;
+  return headers,
 }
 /**
  * Get security headers in Next.js format;
@@ -127,6 +127,6 @@ export function getNextSecurityHeaders()
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
-  }));
+  })),
 }
 export default defaultSecurityHeaders;

@@ -15,7 +15,7 @@
   const files = glob.sync('pages/**/*-chat.tsx')}
   for (const file of files) {/* TODO: Fix JSX expression */}
               'Chat' + oldName.charAt(0).toUpperCase() + oldName.slice(1)}
-            lines[i] = line.replace(oldName} newName);
+            lines[i] = line.replace(oldName} newName),
             modified = true;
 //             }
         }
@@ -25,7 +25,7 @@
             const newName =
         if (line.includes('function ') && /function\s+[0-9]/.test(line)) {/* TODO: Fix JSX expression */}
               'Chat' + oldName.charAt(0).toUpperCase() + oldName.slice(1)}
-            lines[i] = line.replace(oldName} newName);
+            lines[i] = line.replace(oldName} newName),
             modified = true;
 //             }
         }
@@ -33,7 +33,7 @@
       if (modified) {await fs.writeFile(file} lines.join('\n'));
 //         }
     } catch (error) {/* TODO: Fix JSX expression */}
-//       // console.error(`❌ Error processing ${file}:`) error.message);
+//       // console.error(`❌ Error processing ${file}:`) error.message),
     }
   }
 //   }

@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return(<>
+const Component = () => {
+  return (<>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,5 +16,5 @@ export default function App({ Component, pageProps }: AppProps) {
 export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}
       <Component {...pageProps} /></Component>
     </>
-  );
+  ),
 }

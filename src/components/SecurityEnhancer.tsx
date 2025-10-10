@@ -21,7 +21,7 @@ const,
     if (enableContentTypeSniffingProtection) {/* TODO: Fix JSX expression */}
     }
     
-    // Add security headers;
+    // Add security headers,
     addSecurityHeaders();
     
     // Add security event listeners;
@@ -29,20 +29,20 @@ const,
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
   const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
-  };
+  },
 
   const enforceHTTPS = () => {/* TODO: Fix JSX expression */}
     }
-  };
+  },
 
   const addXSSProtection = () => {/* TODO: Fix JSX expression */}
-  };
+  },
 
   const addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
-  };
+  },
 
   const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
-  };
+  },
 
   const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
   t: 'strict-origin-when-cross-origin' },
@@ -53,47 +53,47 @@ const,
     ];
 
     headers.forEach(header => {/* TODO: Fix JSX expression */})
-    });
+    }),
   };
 
   const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
 
     // Prevent text selection (optional)
     document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
       }
-    });
+    }),
 
     // Prevent drag and drop;
     document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
-    });
+    }),
 
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
     document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+Shift+I;
+        // Ctrl+Shift+I,
         if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+U;
+        // Ctrl+U,
         if (e.ctrlKey && e.keyCode === 85) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+S;
+        // Ctrl+S,
         if (e.ctrlKey && e.keyCode === 83) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+A;
+        // Ctrl+A,
         if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
         }
       }
-    });
+    }),
 
     // Monitor for suspicious activity;
     let suspiciousActivity = 0;
     const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
-    };
+    },
 
     // Reset suspicious activity counter every 5 minutes;
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
@@ -103,7 +103,7 @@ const,
     document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
 
         }
-      });
+      }),
     };
 
     checkForXSS();
@@ -116,8 +116,8 @@ const,
         const token = formData.get('csrf_token');
         
         if (!token) {
-          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
-          logger.warn('Potential CSRF attempt detected', { form: form.id });
+          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 })),
+          logger.warn('Potential CSRF attempt detected', { form: form.id }),
         }
       });
     });
@@ -128,7 +128,7 @@ const,
     document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
 
           }
-        });
+        }),
       });
     };
 
@@ -140,7 +140,7 @@ const,
       const url = args[0] as string;
       
       if (typeof url === 'string' && !validateURL(url)) {
-        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
+        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 })),
         logger.warn('Suspicious network request blocked', { url });
         throw new Error('Suspicious network request blocked');
       }
@@ -154,7 +154,7 @@ const,
   const validateSecurityHeaders = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    const warnings: string[] = [];
+    const warnings: string[] = [],
 
     // Check for HTTPS
     if (location.protocol !== 'https:') {
@@ -185,7 +185,7 @@ const,
 
   // Rate limiting
   const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
-    const now = Date.now();
+    const now = Date.now(),
     const windowStart = now - windowMs;
     
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
@@ -211,6 +211,7 @@ const,
     const interval = setInterval(() => {
       validateSecurityHeaders();
     }, 30000); // Check every 30 seconds
+const Component = () => {
 
     return () => clearInterval(interval);
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
@@ -229,7 +230,7 @@ const,
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
         event_label: event,
-        custom_map: data});
+        custom_map: data}),
     }
   }, [rateLimit]);
 
@@ -242,9 +243,10 @@ const,
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings};
+        warnings: securityWarnings},
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
+const Component = () => {
 
   return (
     <>
@@ -280,7 +282,7 @@ const,
         </div>
       )}
     </>
-  );
+  ),
 };
 
 export default SecurityEnhancer;

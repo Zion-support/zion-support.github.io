@@ -11,8 +11,8 @@ interface ImageProps {}
   className?: string
   priority?: boolean
   _quality?: number
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   className?: string;
@@ -57,11 +57,11 @@ export const Image: React.FC<ImageProps> = ({,
     if (onError) onError();}
   }, [onError])
   const imageStyle: React.CSSProperties = {
-    ...style;
+    ...style,
     ...(fill && {
       position: 'absolute'
-      top: 0;
-      left: 0;
+      top: 0,
+      left: 0,
   const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}
@@ -74,13 +74,16 @@ export const Image: React.FC<ImageProps> = ({,
     })
   }
   if (hasError) {</ImageProps>
+const Component = () => {
     return (</ImageProps>
   if (hasError) {}
+const Component = () => {
     return (
       <div}
   if (hasError) {
-    return(<div}
-'use client';
+const Component = () => {
+    return (<div}
+'use client',
 import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
@@ -93,7 +96,7 @@ export const,
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
     })
-  };
+  },
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -108,7 +111,9 @@ export const,
       </div>
     )
   }
-  return(<img;
+const Component = () => {
+  return (<img,
+const Component = () => {
   return (<img></img>
       src={src}
       alt={alt}

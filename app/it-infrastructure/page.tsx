@@ -6,7 +6,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITInfrastructurePage: React.FC = () => {,
-  return(<>)
+const Component = () => {
+  return (<>)
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>)
     </>)
 const ITInfrastructurePage: React.FC = () => {
@@ -71,13 +72,14 @@ const ITInfrastructurePage: React.FC = () => {
       features: ['Dedicated team', 'Custom solutions', 'SLA guarantee', 'Real-time monitoring', 'Disaster recovery'],
       popular: false
     }
-  ];
+  ],
 
   const stats = [
     { icon: CheckCircle, value: '99.9%', label: 'Uptime Guarantee' },
     { icon: Zap, value: '50%', label: 'Cost Reduction' },
     { icon: CheckCircle, value: '24/7', label: 'Support Available' }
-  ];
+  ],
+const Component = () => {
 
   return (
     <>
@@ -225,7 +227,7 @@ const ITInfrastructurePage: React.FC = () => {
                 Let our experts help you build a robust, scalable, and secure IT infrastructure 
                 that supports your business growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
@@ -247,7 +249,7 @@ const ITInfrastructurePage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  ),
 };
 
 export default ITInfrastructurePage;

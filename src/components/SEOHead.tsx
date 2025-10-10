@@ -16,7 +16,7 @@ interface SEOHeadProps {/* TODO: Fix JSX expression */}
   nofollow?: boolean;
 }
 
-const SEOHead: React.FC;
+const SEOHead: React.FC,
           <SEOHeadProps> = ({// TODO: Add content;}
 }
 

@@ -106,7 +106,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()});
+      cwd: process.cwd()}),
     allFiles.push(...files);
   }
 
@@ -120,9 +120,9 @@ async function main() {
   uniqueFiles.forEach(processFile);
 
   console.log(`\n🎉 React.memo syntax fixes completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Files fixed: ${fixedFiles}`);
+  console.log(`📊 Statistics: `),
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`),
+  console.log(`   - Files fixed: ${fixedFiles}`),
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

@@ -221,7 +221,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ],
 
   const categories = [
     { name: 'All', count: itServices.length },
@@ -236,7 +236,7 @@ const ITServicesPage: React.FC = () => {
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
+  ],
   const services = [
     {
       icon: Cloud,
@@ -286,7 +286,7 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $2,500/project',
       color: 'text-orange-400'
     }
-  ];
+  ],
 
   const additionalServices = [
     {
@@ -325,7 +325,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Firewall configuration and network security implementation.',
       price: 'Starting at $399/month'
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -349,6 +349,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];
+const Component = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -456,7 +457,7 @@ const ITServicesPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {additionalServices.map((service, index) => (
-              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
+              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover: bg-slate-800/50 transition-all duration-300">
                 <div className="flex items-center mb-3">
                   <service.icon className="w-6 h-6 text-cyan-400 mr-3" />
                   <h3 className="text-lg font-bold text-white">{service.title}</h3>
@@ -581,7 +582,7 @@ const ITServicesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-  );
+  ),
 };
 
 export default ITServicesPage;
