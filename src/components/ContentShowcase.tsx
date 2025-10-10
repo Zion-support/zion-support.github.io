@@ -110,6 +110,42 @@ export default function ContentShowcase({
       icon: TrendingUp,
       category: "Finance",
       link: "/ai-investment-optimizer"
+    },
+    {
+      title: "AI Voice Cloning Studio Pro",
+      description: "Professional voice synthesis and cloning for content creators and businesses",
+      price: "$149/mo",
+      features: ["Voice Synthesis", "Emotion Control", "Multi-language", "Real-time Processing"],
+      icon: Users,
+      category: "Creative",
+      link: "/ai-voice-cloning-studio"
+    },
+    {
+      title: "AI Code Security Auditor Pro",
+      description: "Automated code security analysis and vulnerability detection for developers",
+      price: "$199/mo",
+      features: ["Vulnerability Scanning", "Code Quality Analysis", "Compliance Checking", "Auto-fix Suggestions"],
+      icon: Shield,
+      category: "Security",
+      link: "/ai-code-security-auditor"
+    },
+    {
+      title: "AI Mental Health Companion Pro",
+      description: "AI-powered mental health support and wellness tracking application",
+      price: "$79/mo",
+      features: ["Mood Tracking", "Therapy Sessions", "Crisis Support", "Progress Monitoring"],
+      icon: Heart,
+      category: "Health",
+      link: "/ai-mental-health-companion"
+    },
+    {
+      title: "AI Smart Home Controller Pro",
+      description: "Intelligent home automation with voice control and predictive maintenance",
+      price: "$99/mo",
+      features: ["Voice Control", "Predictive Maintenance", "Energy Optimization", "Security Integration"],
+      icon: Home,
+      category: "IoT",
+      link: "/ai-smart-home-controller"
     }
   ];
 
