@@ -1,200 +1,203 @@
-  private observers: PerformanceObserver[] = [],
-constructor() {
-    this.initializeMetrics()
+  private observers: PerformanceObserver[] = [];
+
+  constructor() {
+    this.initializeMetrics();
   }
-  }
-private initializeMetrics(): void {
+
+  private initializeMetrics(): void {
     if (typeof window === 'undefined' || !('performance' in window)) return;
-// Measure page load time;
+
+    // Measure page load time
     window.addEventListener('load', () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart
-  }
-    })
-// Measure Core Web Vitals;
+      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    });
+
+    // Measure Core Web Vitals
     this.measureCoreWebVitals();
   }
-private measureCoreWebVitals(): void {
-    // First Contentful Paint;
+  private measureCoreWebVitals(): void {
+    // First Contentful Paint
     this.observePaint('first-contentful-paint', (entry) => {
-      this.metrics.firstContentfulPaint = entry.startTime
-  }
-    })
-// Largest Contentful Paint;
+      this.metrics.firstContentfulPaint = entry.startTime;
+    });
+
+    // Largest Contentful Paint
     this.observeLCP();
-// First Input Delay;
+
+    // First Input Delay
     this.observeFID();
-// Cumulative Layout Shift;
+
+    // Cumulative Layout Shift
     this.observeCLS();
   }
-private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return,
-try {
+  private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === type) {
-            callback(entry)
-  }
+            callback(entry);
           }
         }
-      })
-      observer.observe({ entryTypes: ['paint'] })
+      });
+      observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-    console.warn('PerformanceObserver not supported:', error)
-  }
+      // PerformanceObserver not supported
     }
   }
-private observeLCP(): void {
+  private observeLCP(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-try {
+
+    try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.largestContentfulPaint = lastEntry.startTime
-  }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.largestContentfulPaint = lastEntry.startTime;
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-    console.warn('LCP observer not supported:', error)
-  }
+      // LCP observer not supported
     }
   }
-private observeFID(): void {
+  private observeFID(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-try {
+
+    try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime
-  }
+          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
         }
-      })
-      observer.observe({ entryTypes: ['first-input'] })
+      });
+      observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-    console.warn('FID observer not supported:', error)
-  }
+      // FID observer not supported
     }
   }
-private observeCLS(): void {
+  private observeCLS(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-try {
+
+    try {
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value
-  }
+            clsValue += (entry as any).value;
           }
         }
         this.metrics.cumulativeLayoutShift = clsValue;
-      })
-      observer.observe({ entryTypes: ['layout-shift'] })
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-    console.warn('CLS observer not supported:', error)
-  }
+      // CLS observer not supported
     }
   }
-public getMetrics(): PerformanceMetrics {}
-    return { ...this.metrics }
+  public getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
   }
-public getLoadTime(): number {
-    return this.metrics.loadTime
+
+  public getLoadTime(): number {
+    return this.metrics.loadTime;
   }
+
+  public getFirstContentfulPaint(): number {
+    return this.metrics.firstContentfulPaint;
   }
-public getFirstContentfulPaint(): number {
-    return this.metrics.firstContentfulPaint
+
+  public getLargestContentfulPaint(): number {
+    return this.metrics.largestContentfulPaint;
   }
+
+  public getFirstInputDelay(): number {
+    return this.metrics.firstInputDelay;
   }
-public getLargestContentfulPaint(): number {
-    return this.metrics.largestContentfulPaint
+
+  public getCumulativeLayoutShift(): number {
+    return this.metrics.cumulativeLayoutShift;
   }
-  }
-public getFirstInputDelay(): number {
-    return this.metrics.firstInputDelay
-  }
-  }
-public getCumulativeLayoutShift(): number {
-    return this.metrics.cumulativeLayoutShift
-  }
-  }
-public isPerformanceGood(): boolean {
+
+  public isPerformanceGood(): boolean {
     return (
-      this.metrics.firstContentfulPaint < 1800 &&;
-      this.metrics.largestContentfulPaint < 2500 &&;
-      this.metrics.firstInputDelay < 100 &&;
-      this.metrics.cumulativeLayoutShift < 0.1;
-    )
+      this.metrics.firstContentfulPaint < 1800 &&
+      this.metrics.largestContentfulPaint < 2500 &&
+      this.metrics.firstInputDelay < 100 &&
+      this.metrics.cumulativeLayoutShift < 0.1
+    );
   }
-  }
-public cleanup(): void {
+
+  public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
-    this.observers = []
-  }
+    this.observers = [];
   }
 }
 export const performanceMonitor = new PerformanceMonitor();
-// Utility functions;
-export const measureFunction = <T extends (...args: any[]) => any>(,
+
+// Utility functions
+export const measureFunction = <T extends (...args: any[]) => any>(
   fn: T,
-  name?: string;
+  name?: string
 ): T => {
   return ((...args: Parameters<T>) => {
-    const start = performance.now()
-    const result = fn(...args)
-    const end = performance.now(),
-if (name) {}
+    const start = performance.now();
+    const result = fn(...args);
+    const end = performance.now();
+    
+    if (name && process.env.NODE_ENV === 'development') {
+      // Only log in development
       console.log(`${name} took ${end - start} milliseconds`);
     }
-return result;
+    
+    return result;
   }) as T;
-}
-export const debounce = <T extends (...args: any[]) => any>(,
+};
+
+export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): T => {
-    let timeout: NodeJS.Timeout
-return ((...args: Parameters<T>) => {
-    clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait)
-  }
+  let timeout: NodeJS.Timeout;
+  return ((...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
   }) as T;
-}
-export const throttle = <T extends (...args: any[]) => any>(,
+};
+
+export const throttle = <T extends (...args: any[]) => any>(
   func: T,
-  limit: number;
+  limit: number
 ): T => {
-    let inThrottle: boolean
-return ((...args: Parameters<T>) => {
+  let inThrottle: boolean;
+  return ((...args: Parameters<T>) => {
     if (!inThrottle) {
-      func(...args)
-      inThrottle = true,
-      setTimeout(() => inThrottle = false, limit)
-  }
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
     }
   }) as T;
-}
+};
+
 export const lazyLoad = (callback: () => void): void => {
-    if ('requestIdleCallback' in window) {
-    requestIdleCallback(callback)
-  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(callback);
   } else {
-    setTimeout(callback, 1)
+    setTimeout(callback, 1);
   }
-  }
-}
+};
+
 export const preloadImage = (src: string): Promise<void> => {
-    return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
-    img.src = src
-  }
-  })
-}
+    img.src = src;
+  });
+};
+
 export const preloadImages = (srcs: string[]): Promise<void[]> => {
-    return Promise.all(srcs.map(preloadImage))
-  }
-}
+  return Promise.all(srcs.map(preloadImage));
+};
