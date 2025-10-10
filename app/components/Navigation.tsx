@@ -180,17 +180,10 @@ const Navigation: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
   };
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-5faf
 
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-46bd
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
