@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Index | Zion Tech Group',

@@ -38,8 +38,8 @@ class PerformanceMonitor {
             if (entry.name === 'first-contentful-paint') {
               this.recordMetric('FCP', entry.startTime);
             }
-          });
-        });
+
+
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', entries => {
           const lastEntry = entries[entries.length - 1];
@@ -49,7 +49,7 @@ class PerformanceMonitor {
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
             );
           }
-        });
+
         // First Input Delay
         this.observeEntry('first-input', entries => {
           const firstInput = entries[0];
@@ -57,7 +57,7 @@ class PerformanceMonitor {
             const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
-        });
+
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
@@ -65,11 +65,11 @@ class PerformanceMonitor {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value;
             }
-          });
+
           if (clsValue > 0) {
             this.recordMetric('CLS', clsValue);
           }
-        });
+
       }
     } catch (error) {
       logger.error('Failed to initialize performance observers', error as Error);
@@ -84,7 +84,7 @@ class PerformanceMonitor {
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
-      });
+
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
@@ -97,7 +97,7 @@ class PerformanceMonitor {
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
-      });
+
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
@@ -110,7 +110,7 @@ class PerformanceMonitor {
           this.metrics.fid = (entry as any).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);
         }
-      });
+
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
@@ -127,7 +127,7 @@ class PerformanceMonitor {
         }
         this.metrics.cls = clsValue;
         this.logMetric('cls', clsValue);
-      });
+
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
@@ -159,7 +159,7 @@ class PerformanceMonitor {
             this.analyzeResource(resourceEntry);
           }
         }
-      });
+
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     } catch (error) {
@@ -191,7 +191,7 @@ class PerformanceMonitor {
         metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance'
-      });
+
     }
   }
   getMetrics(): PerformanceMetrics {
@@ -233,3 +233,4 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     return `
 Performance Report:
+}

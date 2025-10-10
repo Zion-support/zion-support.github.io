@@ -53,13 +53,13 @@ class EnvValidator {
     const nodeEnv = process.env['NODE_ENV']
     const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {
-      this.errors.push('NODE_ENV is not set')
-      return
+      this.errors.push('NODE_ENV is not set');
+      return;
     }
     if (!validEnvs.includes(nodeEnv)) {
       this.errors.push(
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
-      )
+      );
     }
   }
   private validateOptionalVars(): void {

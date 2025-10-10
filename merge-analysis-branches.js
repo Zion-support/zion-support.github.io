@@ -88,7 +88,6 @@ function mergeAnalysisBranch(branchName) {
 };
 
 for (const branch of analysisBranches) {
-  const _result = mergeAnalysisBranch(branch);
   results.branches.push({ branch, ...result });
   results.summary.total++;
 

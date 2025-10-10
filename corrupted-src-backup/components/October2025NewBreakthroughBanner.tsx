@@ -41,7 +41,7 @@ const, October2025NewBreakthroughBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
             Ne, x, t-Generation, Enterprise, AI;
-            <br   />
+            <br />
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t">";
               Systems, That, Transform Operatio, n, s;
             </sp, a, n>
@@ -217,3 +217,4 @@ const, October2025NewBreakthroughBanne, r = () => {
 };
 export default October2025NewBreakthroughBanner;
 ;
+}

@@ -1,1 +1,244 @@
-// import fs from "fs" import { execSync } from "child_process" import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => ); ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => ); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => ); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) {} }); if (brokenLinks.length > 0) { brokenLinks.forEach(link => { `)})} else {}' import fs from 'fs'' import { execSync } from 'child_process' import fs from "fs" import { execSync } from "child_process" ' import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => ); ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => ); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => ); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) {} }); if (brokenLinks.length > 0) { brokenLinks.forEach(link => { `)})} else {}' import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => ); ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => ); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => ); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) {} }); if (brokenLinks.length > 0) { brokenLinks.forEach(link => { `)})} else {} ursor/add-new-services-and-deploy-updates-0462 ursor/fix-syntax-push-and-merge-to-main-40de' import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => ); ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => ); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => ); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) {} }); if (brokenLinks.length > 0) { brokenLinks.forEach(link => { `)})} else {} origin/cursor/integrate-build-improve-and-re-verify-c7b5 ursor/integrate-build-improve-and-re-verify-8f7d ); const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace("<loc>https: //ziontechgroup && ziontechgroup.com/") "") .replace("</loc>"} "");' import fs from './fs'' import { exec_sync } from './child_process' //Read sitemap.xml; const sitemap_content = fs.readFileSync ("sitemap.xml") "utf8"); //Extract URLs from sitemap; const url_matches = sitemap_content.match ( /<loc > https: \\/\\/ziontechgroup\\.com\\/([^<]+)<\\/loc>/g, ); const sitemap_urls = url_matches; ? url_matches.map ((match) => {const url = match; .replace ("<loc > https: //ziontechgroup.com/") "")} .replace ("</loc>"} ""); return url === "" ? "index" : url; }); : []; console && console && // console.log("Total URLs in sitemap: ") sitemapUrls && sitemapUrls.length); console && // console.log("Total actual pages: ") actualPages && actualPages.length); ' import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => ); ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => ); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => ); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) {} }); if (brokenLinks.length > 0) { brokenLinks.forEach(link => { `)})} else {}' import fs from 'fs'' import { execSync } from 'child_process' //Read sitemap.xml' const sitemapContent = fs.readFileSync('sitemap.xml') 'utf8'); //Extract URLs from sitemap const urlMatches = sitemapContent.match( /<loc>"https": \\/\\/ziontechgroup\\.com\\/([^<]+)<\\/loc>/g ); const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match' .replace('<loc>https: //ziontechgroup.com/') '')' .replace('</loc>'} '');' return url === '' ? 'index' : url; }) : []; console && // console.log("\\n=== EXTRA PAGES (in pages/ but not in sitemap) ==="); const extraPages = actualPages && actualPages.filter((page) => !sitemapUrls && sitemapUrls.includes(page)); extraPages && extraPages.forEach((page) => console && // console.log(`- ${page}`)); console && const pagesNeedingSubdirs = sitemapUrls && sitemapUrls.filter((url) => url && url.includes("/")); pagesNeedingSubdirs && pagesNeedingSubdirs.forEach((page) => console && // console.log(`- ${page}`)); const internalLinkMatches = pageContent && pageContent.match(/href="\\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches && internalLinkMatches.forEach((match) => {' const link = match && match.replace('href="/') "").replace('"') ""); const fullLink = link === "" ? "index" : link} if ( !actualPages && actualPages.includes(fullLink) && !sitemapUrls && sitemapUrls.includes(fullLink) ) { brokenLinks && brokenLinks.push({ page} "brokenLink": `/${link}`) fullLink});' import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => ); ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => ); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => ); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) {} }); if (brokenLinks.length > 0) { brokenLinks.forEach(link => { `)})} else {}' import fs from 'fs'' import { execSync } from 'child_process' //Read sitemap.xml const sitemapContent = fs.readFileSync("sitemap.xml") "utf8"); //Extract URLs from sitemap const urlMatches = sitemapContent.match( /<loc>https:\\/\\/ziontechgroup\\.com\\/([^<]+)<\\/loc>/g }); }); } } catch (error) {' import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); // console.log('Total URLs in sitemap: ')sitemapUrls.length); // console.log('Total actual pages: ')actualPages.length); // console.log('\n=== MISSING PAGES (in sitemap but not in pages/) ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => // console.log(`- ${page}`)); // console.log('\n=== EXTRA PAGES (in pages/but not in sitemap) ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => // console.log(`- ${page}`)); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => // console.log(`- ${page}`)); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) { // console.log(`Error reading ${page}.tsx: `)error.message)} }); if (brokenLinks.length > 0) {// console.log('Found broken internal links: ')} brokenLinks.forEach(link => { // console.log(`- In ${link.page}.tsx: ${link.brokenLink} (${link.fullLink})`)})} else { // console.log('No broken internal links found')} } }' import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); // console.log('Total URLs in sitemap: ')sitemapUrls.length); // console.log('Total actual pages: ')actualPages.length); // console.log('\n=== MISSING PAGES (in sitemap but not in pages/) ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => // console.log(`- ${page}`)); // console.log('\n=== EXTRA PAGES (in pages/ but not in sitemap) ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => // console.log(`- ${page}`)); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => // console.log(`- ${page}`)); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) { // console.log(`Error reading ${page}.tsx: `)error.message)} }); if (brokenLinks.length > 0) {// console.log('Found broken internal links: ')} brokenLinks.forEach(link => { // console.log(`- In ${link.page}.tsx: ${link.brokenLink} (${link.fullLink})`)})} else { // console.log('No broken internal links found')} origin/cursor/integrate-build-improve-and-re-verify-c7b5 ursor/integrate-build-improve-and-re-verify-8f7d } origin/main origin/automation-improvements-final' import fs from 'fs' import { execSync } from 'child_process' const sitemapContent = fs.readFileSync('sitemap.xml')'utf8'); const urlMatches = sitemapContent.match( /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g ), const sitemapUrls = urlMatches ? urlMatches.map(match => {const url = match .replace('<loc>https: .replace('</loc>'}''); return url === '' ? 'index' : url}) : []; const actualPages = execSync( 'find pages -name "*.tsx" -type f | sed "s/pages\\ { encoding: 'utf8' } ) .trim() .split('\n') .filter(page => page !== '_app'); // console.log('Total URLs in sitemap: ')sitemapUrls.length); // console.log('Total actual pages: ')actualPages.length); // console.log('\n=== MISSING PAGES (in sitemap but not in pages/) ==='); const missingPages = sitemapUrls.filter(url => !actualPages.includes(url)); missingPages.forEach(page => // console.log(`- ${page}`)); // console.log('\n=== EXTRA PAGES (in pages/ but not in sitemap) ==='); const extraPages = actualPages.filter(page => !sitemapUrls.includes(page)); extraPages.forEach(page => // console.log(`- ${page}`)); const pagesNeedingSubdirs = sitemapUrls.filter(url => url.includes('/')); pagesNeedingSubdirs.forEach(page => // console.log(`- ${page}`)); const brokenLinks = []; actualPages.forEach(page => { try { const pageContent = fs.readFileSync(`pages/${page}.tsx`)'utf8'); const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g); if (internalLinkMatches) {internalLinkMatches.forEach(match => { const link = match.replace('href="/')'').replace('"')''); const fullLink = link === '' ? 'index' : link} if ( !actualPages.includes(fullLink) && !sitemapUrls.includes(fullLink) ) { brokenLinks.push({ page}brokenLink: `/${link}`,fullLink)})} })} } catch (error) { // console.log(`Error reading ${page}.tsx: `)error.message)} }); if (brokenLinks.length > 0) {// console.log('Found broken internal links: ')} brokenLinks.forEach(link => { // console.log(`- In ${link.page}.tsx: ${link.brokenLink} (${link.fullLink})`)})} else { // console.log('No broken internal links found')} } } '
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Get all existing pages
+const appDir = '/workspace/app';
+const existingPages = [];
+
+function getAllPages(dir) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      getAllPages(fullPath);
+    } else if (file === 'page.tsx') {
+      const relativePath = fullPath.replace(appDir, '');
+      existingPages.push(relativePath);
+    }
+  }
+}
+
+getAllPages(appDir);
+
+// Navigation links from Navigation.tsx
+const navigationLinks = [
+  '/',
+  '/about',
+  '/services',
+  '/ai-services',
+  '/it-services',
+  '/micro-saas',
+  '/case-studies',
+  '/blog',
+  '/pricing',
+  '/contact',
+  // Micro SAAS Solutions
+  '/ai-quantum-financial-oracle',
+  '/ai-neural-memory-assistant',
+  '/ai-holographic-workspace',
+  '/ai-project-manager',
+  '/ai-social-media-manager',
+  '/ai-analytics-dashboard',
+  '/ai-email-marketing',
+  '/ai-smart-calendar',
+  '/ai-content-writer',
+  '/ai-video-generator',
+  '/ai-crm-assistant',
+  '/ai-customer-support-bot',
+  '/ai-content-studio',
+  '/ai-financial-advisor',
+  '/ai-workflow-automation',
+  '/ai-logo-designer',
+  '/ai-climate-solutions-pro',
+  '/ai-drug-discovery-pro',
+  '/ai-password-generator',
+  '/ai-email-signature-manager',
+  // AI Services
+  '/ai-quantum-ml-platform',
+  '/ai-space-mission-control',
+  '/ai-climate-intelligence',
+  '/ai-pharmaceutical-research',
+  '/ai-financial-intelligence',
+  '/ai-autonomous-vehicles',
+  '/ai-blockchain-intelligence',
+  '/ai-supply-chain-intelligence',
+  '/ai-legal-intelligence',
+  '/ai-agricultural-intelligence',
+  '/ai-energy-grid-intelligence',
+  '/ai-manufacturing-intelligence',
+  // IT Services
+  '/quantum-computing-infrastructure',
+  '/5g-implementation',
+  '/metaverse-development',
+  '/web3-infrastructure',
+  '/ai-infrastructure-service',
+  '/mlops-platform',
+  '/zero-trust-architecture',
+  '/ai-security-operations',
+  '/real-time-data-platform',
+  '/data-modernization',
+  '/multi-cloud-management',
+  '/hybrid-cloud-architecture',
+  // Emerging Technologies
+  '/smart-city-solutions',
+];
+
+// Footer links from Footer.tsx
+const footerLinks = [
+  '/ai-workflow-automation',
+  '/ai-customer-support',
+  '/ai-data-analytics',
+  '/ai-content-generation',
+  '/ai-healthcare',
+  '/ai-fintech',
+  '/ai-computer-vision',
+  '/ai-ml-platform',
+  '/ai-quantum-computing',
+  '/ai-drug-discovery-pro',
+  '/ai-climate-solutions-pro',
+  '/ai-space-technology-pro',
+  '/ai-neural-memory-assistant',
+  '/ai-holographic-workspace',
+  '/ai-autonomous-systems',
+  '/ai-blockchain-solutions',
+  '/cloud-migration',
+  '/cybersecurity',
+  '/it-infrastructure',
+  '/it-support',
+  '/custom-development',
+  '/devops-cicd',
+  '/database-management',
+  '/network-design',
+  '/ai-infrastructure-monitoring',
+  '/blockchain-integration-services',
+  '/ai-api-management',
+  '/smart-contract-security-audit',
+  '/edge-computing',
+  '/5g-implementation',
+  '/iot-platform',
+  '/quantum-security',
+  '/ai-project-manager',
+  '/ai-social-media-manager',
+  '/ai-analytics-dashboard',
+  '/ai-email-marketing',
+  '/ai-customer-support-bot',
+  '/ai-content-studio',
+  '/ai-financial-advisor',
+  '/ai-workflow-automation',
+  '/ai-smart-calendar',
+  '/ai-content-writer',
+  '/ai-video-generator',
+  '/ai-crm-assistant',
+  '/ai-voice-assistant',
+  '/ai-document-scanner',
+  '/ai-meeting-transcriber',
+  '/ai-website-builder',
+  '/ai-quantum-computing',
+  '/ai-autonomous-systems',
+  '/ai-blockchain-solutions',
+  '/edge-computing',
+  '/ai-holographic-workspace',
+  '/smart-cities',
+  '/digital-transformation',
+  '/innovation-labs',
+  '/ai-business-intelligence',
+  '/robotics',
+  '/ai-space-technology-pro',
+  '/ai-climate-solutions-pro',
+  '/ai-drug-discovery-pro',
+  '/ai-neural-interface',
+  '/quantum-security',
+  '/ai-immersive-learning',
+  '/ai-ops',
+  '/healthcare-it',
+  '/financial-it',
+  '/edge-computing',
+  '/5g-implementation',
+  '/iot-platform',
+  '/cloud-migration',
+  '/cybersecurity',
+  '/it-infrastructure',
+  '/custom-development',
+  '/about',
+  '/team',
+  '/careers',
+  '/case-studies',
+  '/blog',
+  '/pricing',
+  '/news',
+  '/partners',
+  '/investors',
+  '/demo',
+  '/consultation',
+  '/contact',
+  '/support',
+  '/docs',
+  '/api-docs',
+  '/status',
+  '/health',
+  '/help',
+  '/community',
+  '/training',
+  '/privacy',
+  '/terms',
+  '/cookies',
+  '/gdpr',
+  '/security',
+  '/compliance',
+  '/data-protection',
+  '/accessibility',
+  '/sitemap'
+];
+
+// Combine all links
+const allLinks = [...new Set([...navigationLinks, ...footerLinks])];
+
+// Check which pages exist
+const missingPages = [];
+const existingPagesSet = new Set(existingPages.map(p => p.replace(/^\//, '')));
+
+for (const link of allLinks) {
+  const cleanLink = link.replace(/^\//, '');
+  if (cleanLink === '') continue; // Skip root
+  
+  if (!existingPagesSet.has(cleanLink)) {
+    missingPages.push(link);
+  }
+}
+
+console.log('=== MISSING PAGES ANALYSIS ===');
+console.log(`Total links checked: ${allLinks.length}`);
+console.log(`Existing pages: ${existingPages.length}`);
+console.log(`Missing pages: ${missingPages.length}`);
+console.log('\n=== MISSING PAGES ===');
+missingPages.forEach(page => console.log(page));
+
+// Also check for pages that exist but aren't linked
+const linkedPages = new Set(allLinks.map(l => l.replace(/^\//, '')));
+const unlinkedPages = existingPages
+  .map(p => p.replace(/^\//, ''))
+  .filter(p => p !== '' && !linkedPages.has(p));
+
+console.log('\n=== UNLINKED PAGES ===');
+console.log(`Unlinked pages: ${unlinkedPages.length}`);
+unlinkedPages.forEach(page => console.log(page));
+
+// Generate report
+const report = {
+  totalLinksChecked: allLinks.length,
+  existingPages: existingPages.length,
+  missingPages: missingPages.length,
+  unlinkedPages: unlinkedPages.length,
+  missingPagesList: missingPages,
+  unlinkedPagesList: unlinkedPages
+};
+
+fs.writeFileSync('/workspace/missing-pages-report.json', JSON.stringify(report, null, 2));
+console.log('\nReport saved to missing-pages-report.json');

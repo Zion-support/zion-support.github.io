@@ -25,7 +25,6 @@ export interface BannerConfig {
   };
 }
 
-
 export class BannerRegistry {
   private banners: Map<string, BannerInstance> = new Map();
   private categories: Map<string, string[]> = new Map();
@@ -33,3 +32,4 @@ export class BannerRegistry {
   private maxConcurrentBanners: number = 3;
   private loadingPromises: Map<string, Promise<void>> = new Map();
 
+}

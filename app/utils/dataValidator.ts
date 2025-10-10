@@ -3,7 +3,6 @@
  * Data Validation Utility
  * Provides comprehensive data validation with type safety
  */
-import { errorTracking, ErrorCategory, ErrorSeverity } from './errorTracking';
 export interface ValidationRule<T = unknown> {
   validate: (value: T) => boolean;
   message: string;
@@ -38,7 +37,7 @@ export class ValidationError extends Error {
 export function validateEmail(email: string): { isValid: boolean; error?: string } {
   if (!email) return { isValid: false, error: 'Email is required' };
   if (email.length > 254) return { isValid: false, error: 'Email is too long' };
-  
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailRegex.test(email);
   return {
@@ -53,13 +52,13 @@ export function validateURL(url: string, requireProtocol: boolean = true): { isV
   if (!url) {
     return { isValid: false, error: 'URL is required' };
   }
-  
+
   try {
     // If protocol is not required, add http:// prefix for validation
     const urlToValidate = requireProtocol ? url : `http://${url}`;
     const parsed = new URL(urlToValidate);
-    const isValid = requireProtocol ? 
-      (parsed.protocol === 'http:' || parsed.protocol === 'https:') : 
+    const isValid = requireProtocol ?
+      (parsed.protocol === 'http:' || parsed.protocol === 'https:') :
       true;
     return {
       isValid,
@@ -76,7 +75,7 @@ export function validatePhoneNumber(phone: string): { isValid: boolean; error?: 
   if (!phone) {
     return { isValid: false, error: 'Phone number is required' };
   }
-  
+
   // More flexible phone regex that handles various formats
   const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;
   const isValid = phoneRegex.test(phone);
@@ -365,7 +364,7 @@ export function validatePassword(password: string): { isValid: boolean; error?: 
 
 export function sanitizeHTML(html: string): string {
   if (!html || typeof html !== 'string') return '';
-  
+
   // First escape HTML entities
   let clean = html.replace(/&/g, '&amp;');
   clean = clean.replace(/</g, '&lt;');
@@ -373,50 +372,50 @@ export function sanitizeHTML(html: string): string {
   clean = clean.replace(/"/g, '&quot;');
   clean = clean.replace(/'/g, '&#x27;');
   clean = clean.replace(/\//g, '&#x2F;');
-  
+
   return clean;
 }
 
 export function sanitizeInput(input: string, maxLength: number = 1000): string | null {
   if (!input || typeof input !== 'string') return null;
   if (input.trim() === '') return null;
-  
+
   // Remove null bytes and control characters
   let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
-  
+
   // Trim and limit length
   clean = clean.trim();
   if (clean.length > maxLength) {
     clean = clean.substring(0, maxLength);
   }
-  
+
   return clean || null;
 }
 
 export function validateDate(dateString: string): { isValid: boolean; error?: string } {
   if (!dateString) return { isValid: false, error: 'Date is required' };
-  
+
   // Check format first
   if (!dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
     return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' };
   }
-  
+
   const date = new Date(dateString);
   const isValid = !isNaN(date.getTime());
-  
+
   // Additional check for invalid dates like 2025-02-30
   if (isValid) {
     const [year, month, day] = dateString.split('-').map(Number);
     const actualDate = new Date(year, month - 1, day);
-    const isRealDate = actualDate.getFullYear() === year && 
-                      actualDate.getMonth() === month - 1 && 
+    const isRealDate = actualDate.getFullYear() === year &&
+                      actualDate.getMonth() === month - 1 &&
                       actualDate.getDate() === day;
     return {
       isValid: isRealDate,
       error: isRealDate ? undefined : 'Invalid date'
     };
   }
-  
+
   return {
     isValid: false,
     error: 'Invalid date'
@@ -425,12 +424,12 @@ export function validateDate(dateString: string): { isValid: boolean; error?: st
 
 export function validateCreditCard(cardNumber: string): { isValid: boolean; error?: string } {
   if (!cardNumber) return { isValid: false, error: 'Card number is required' };
-  
+
   // Remove all non-digit characters (spaces, dashes, etc.)
   const cleaned = cardNumber.replace(/\D/g, '');
   if (!/^\d+$/.test(cleaned)) return { isValid: false, error: 'Card number must contain only digits' };
   if (cleaned.length < 13 || cleaned.length > 19) return { isValid: false, error: 'Card number must be between 13 and 19 digits' };
-  
+
   let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
@@ -442,7 +441,7 @@ export function validateCreditCard(cardNumber: string): { isValid: boolean; erro
     sum += digit;
     isEven = !isEven;
   }
-  
+
   const isValid = sum % 10 === 0;
   return {
     isValid,
@@ -452,7 +451,7 @@ export function validateCreditCard(cardNumber: string): { isValid: boolean; erro
 
 export function validateJSON(jsonString: string): { isValid: boolean; error?: string } {
   if (!jsonString) return { isValid: false, error: 'JSON string is required' };
-  
+
   try {
     JSON.parse(jsonString);
     return { isValid: true };

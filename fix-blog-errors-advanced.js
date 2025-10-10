@@ -98,8 +98,6 @@ const fixes = [
 
 function fixFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     fixes.forEach(fix => {
       //       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -129,7 +127,6 @@ async function main() {
 
   //Find all .tsx and .jsx files in blog directory
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
-  const _files = await glob(pattern);
 
   //   let fixedCount = 0;
   files.forEach(file => {
@@ -140,4 +137,3 @@ async function main() {
 
   //   }
 
-main();

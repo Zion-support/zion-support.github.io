@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner

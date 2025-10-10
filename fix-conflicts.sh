@@ -9,10 +9,10 @@ fix_conflicts() {
     echo "Fixing conflicts in $file"
     
     # Remove merge conflict markers and keep the HEAD version
-    sed -i '/<<<<<<< HEAD/,/=======/!d' "$file"
+    sed -i '//!d' "$file"
     sed -i '/<<<<<<< HEAD/d' "$file"
     sed -i '/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
+    sed -i '/
 }
 
 # Fix the problematic files

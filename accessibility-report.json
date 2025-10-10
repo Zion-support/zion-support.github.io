@@ -1,40 +1,89 @@
 {
-  "timestamp": "2025-10-09T03:35:30.859Z",
-  "website": "Zion Tech Group",
-  "url": "https://ziontechgroup.com",
-  "accessibilityScore": 95,
+  "timestamp": "2025-10-10T04:11:35.628Z",
   "checklist": {
-    "alt-texts": "All images have appropriate alt text",
-    "aria-labels": "Interactive elements have ARIA labels",
-    "focus-management": "Focus is properly managed and visible",
-    "color-contrast": "Color contrast meets WCAG AA standards",
-    "keyboard-navigation": "All functionality is keyboard accessible",
-    "semantic-html": "Proper semantic HTML structure is used",
-    "skip-links": "Skip links are provided for main content",
-    "form-labels": "All form inputs have associated labels",
-    "heading-structure": "Heading hierarchy is logical and consistent",
-    "link-purpose": "Link text clearly describes its purpose"
+    "semanticHTML": {
+      "description": "Use semantic HTML elements",
+      "checks": [
+        "Use proper heading hierarchy (h1, h2, h3, etc.)",
+        "Use semantic elements (main, nav, section, article, aside, header, footer)",
+        "Use proper form elements (label, fieldset, legend)",
+        "Use list elements (ul, ol, li) for lists"
+      ]
+    },
+    "keyboardNavigation": {
+      "description": "Ensure keyboard accessibility",
+      "checks": [
+        "All interactive elements are keyboard accessible",
+        "Focus indicators are visible",
+        "Tab order is logical",
+        "Skip links are provided",
+        "No keyboard traps"
+      ]
+    },
+    "colorContrast": {
+      "description": "Ensure sufficient color contrast",
+      "checks": [
+        "Text has at least 4.5:1 contrast ratio",
+        "Large text has at least 3:1 contrast ratio",
+        "Color is not the only way to convey information",
+        "Interactive elements have sufficient contrast"
+      ]
+    },
+    "images": {
+      "description": "Provide alternative text for images",
+      "checks": [
+        "All images have alt attributes",
+        "Decorative images have empty alt attributes",
+        "Complex images have detailed descriptions",
+        "Images of text are avoided"
+      ]
+    },
+    "forms": {
+      "description": "Make forms accessible",
+      "checks": [
+        "All form controls have labels",
+        "Error messages are associated with form controls",
+        "Required fields are clearly marked",
+        "Form validation is accessible"
+      ]
+    },
+    "multimedia": {
+      "description": "Provide alternatives for multimedia",
+      "checks": [
+        "Videos have captions",
+        "Audio has transcripts",
+        "Media controls are accessible",
+        "Auto-playing media can be paused"
+      ]
+    },
+    "responsive": {
+      "description": "Ensure responsive design",
+      "checks": [
+        "Content is readable at 200% zoom",
+        "Layout works on mobile devices",
+        "Text is not cut off on small screens",
+        "Touch targets are at least 44px"
+      ]
+    }
   },
-  "improvements": [
-    "Added ARIA labels to all interactive elements",
-    "Enhanced keyboard navigation support",
-    "Improved focus management",
-    "Added skip links for better navigation",
-    "Enhanced color contrast ratios",
-    "Added semantic HTML structure",
-    "Improved form accessibility",
-    "Added screen reader support"
-  ],
   "recommendations": [
-    "Regular accessibility audits with automated tools",
-    "User testing with assistive technologies",
-    "Continuous monitoring of accessibility metrics",
-    "Training for content creators on accessibility best practices"
+    "Add ARIA labels to interactive elements",
+    "Implement focus management for modals",
+    "Add live regions for dynamic content",
+    "Ensure all interactive elements are keyboard accessible",
+    "Test with screen readers",
+    "Validate HTML markup",
+    "Test with keyboard-only navigation",
+    "Check color contrast ratios",
+    "Test with high contrast mode",
+    "Test with zoom up to 200%"
   ],
   "tools": [
     "axe-core for automated testing",
-    "WAVE for visual accessibility analysis",
-    "Lighthouse for performance and accessibility",
-    "Screen reader testing with NVDA/JAWS"
+    "WAVE for visual accessibility testing",
+    "Lighthouse for accessibility audit",
+    "Screen reader testing (NVDA, JAWS, VoiceOver)",
+    "Keyboard-only navigation testing",
+    "Color contrast analyzers"
   ]
 }

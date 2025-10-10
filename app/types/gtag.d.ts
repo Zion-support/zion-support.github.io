@@ -7,7 +7,9 @@ interface GtagEvent {
   value?: number;
   [key: string]: unknown;
 }
+
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
+
 interface Window {
   gtag?: (
     command: GtagCommand,

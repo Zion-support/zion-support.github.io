@@ -1,9 +1,11 @@
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+
 /**
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
  */
-import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
-import type { Metric } from 'web-vitals';
 
 // Extend Window interface for gtag
 declare global {
@@ -11,9 +13,6 @@ declare global {
     gtag?: (...args: unknown[]) => void;
   }
 }
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
-import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 
 // Types
 interface PerformanceMetric {
@@ -161,7 +160,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-//     }).catch(error => // console.error('Performance reporting error:', error));
+//     }).catch(error => // );
   }
     });
   }
@@ -237,13 +236,12 @@ export function initPerformanceMonitoring(): void {
  */
 export function generatePerformanceReport(): PerformanceReport {
   const metrics: PerformanceMetric[] = [];
-  
+
   return {
     metrics,
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
 }
-
 
   if (typeof window === 'undefined') return;
 
@@ -298,12 +296,8 @@ export function generatePerformanceReport(): PerformanceReport {
   }
 
   if (process.env['NODE_ENV'] === 'development') {
-//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // }ms`);
   }
-
-
-
-
 
   // Monitor Core Web Vitals
   onCLS(sendToAnalytics);
@@ -315,7 +309,7 @@ export function generatePerformanceReport(): PerformanceReport {
   if (typeof window !== 'undefined') {
     // Monitor long tasks
     monitorLongTasks();
-    
+
     // Monitor layout shifts
     monitorLayoutShifts();
 
@@ -333,7 +327,7 @@ export function markPerformance(name: string): void {
   } catch (error) {
 //     }
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     }
 }
@@ -361,9 +355,9 @@ export function measurePerformance(name: string, startTime: number): number {
   }
 
   if (process.env['NODE_ENV'] === 'development') {
-     
+
     // eslint-disable-next-line no-console
-//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // }ms`);
   }
 
   return duration;
@@ -378,17 +372,12 @@ export function markPerformance(name: string): void {
   try {
     performance.mark(name);
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     }
 }
 
 /**
-
-
-
-
-
 
 export function measureBetween(name: string, startMark: string, endMark: string): number {
   if (typeof performance === 'undefined') return 0;
@@ -407,7 +396,7 @@ export function measureBetween(
     const _measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
     return measure.duration;
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     return 0;
   }
@@ -483,11 +472,6 @@ export function getNavigationTiming(): Record<string, number> | null {
 }
 
 /**
-
-
-
-
-
 
   try {
     return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
@@ -596,14 +580,12 @@ export function getMemoryUsage(): Record<string, number> | null {
 //   const navigationTiming = getNavigationTiming();
   const metrics: PerformanceMetric[] = [];
 
-
 //   const navigationTiming = getNavigationTiming();
 
 //   const navigationTiming = getNavigationTiming();
 //   const memoryUsage = getMemoryUsage();
 //   const slowResources = getSlowResources();
   const metrics: PerformanceMetric[] = [];
-
 
 //   const navigationTiming = getNavigationTiming();
   // const memoryUsage = getMemoryUsage();
@@ -626,10 +608,10 @@ export function generatePerformanceReport(): PerformanceReport | null {
   const metrics: PerformanceMetric[] = [];
 
   // Add navigation timing metrics
-  
+
   const metrics: PerformanceMetric[] = [];
 //   const navigationTiming = getNavigationTiming();
-  
+
   if (navigationTiming) {
     Object.entries(navigationTiming).forEach(([name, value]) => {
       metrics.push({
@@ -649,17 +631,12 @@ export function generatePerformanceReport(): PerformanceReport | null {
     });
   }
 
-
-
-
-
         rating: getRating(name, value),
         delta: value,
         id: `nav-${name}-${Date.now()}`
       });
     });
   }
-  
 
         id: `nav-${name}`,
       });
@@ -706,7 +683,7 @@ export function generatePerformanceReport(): PerformanceReport {
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     return null;
   }
@@ -726,7 +703,7 @@ export function generatePerformanceReport(): PerformanceReport {
     observer.observe({ entryTypes: ['layout-shift'] });
     return observer;
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     return null;
   }
@@ -796,14 +773,12 @@ const performanceUtils = {
  */
 export function monitorLongTasks(
 
-
   callback: (entries: PerformanceEntry[]) => void,
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
-
 
   try {
     const observer = new PerformanceObserver(list => {
@@ -822,14 +797,12 @@ export function monitorLongTasks(
  */
 export function monitorLayoutShifts(
 
-
   callback: (entries: PerformanceEntry[]) => void,
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
-
 
   try {
     const observer = new PerformanceObserver(list => {
@@ -854,7 +827,7 @@ export function getConnectionType(): string | null {
   const _connection = (navigator as any).connection;
   const _slowTypes = ['slow-2g', '2g'];
   return (
-    (connection.effectiveType && slowTypes.includes(connection.effectiveType)) || 
+    (connection.effectiveType && slowTypes.includes(connection.effectiveType)) ||
     connection.saveData === true
   const _connection = (navigator as any).connection;
 export function isSlowConnection(): boolean {
@@ -902,7 +875,7 @@ export function isSlowConnection(): boolean {
   const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;
   const _slowTypes = ['slow-2g', '2g'];
   return (
-    slowTypes.includes(connection.effectiveType as string) || 
+    slowTypes.includes(connection.effectiveType as string) ||
     connection.saveData === true
   );
 }

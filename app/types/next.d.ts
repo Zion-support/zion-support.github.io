@@ -28,16 +28,12 @@ export interface Metadata {
     }>;
     locale?: string;
     type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
   };
   twitter?: {
     card?: string;
     title?: string;
     description?: string;
     images?: string[];
-    site?: string;
-    creator?: string;
   };
   robots?: {
     index?: boolean;
@@ -52,17 +48,25 @@ export interface Metadata {
   };
   verification?: {
     google?: string;
+    yandex?: string;
+    yahoo?: string;
+    other?: Record<string, string>;
   };
 }
-export interface MetadataRoute {
-  sitemap?: string;
-  robots?: string;
-  manifest?: string;
+
+export interface Viewport {
+  width?: string;
+  height?: string;
+  initialScale?: number;
+  maximumScale?: number;
+  userScalable?: boolean;
+  viewportFit?: string;
 }
-export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
-export interface MetadataRouteSitemap {
-  url: string;
-  lastModified?: Date | string;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+
+export interface GenerateMetadataParams {
+  params: Record<string, string>;
+  searchParams: Record<string, string | string[] | undefined>;
 }
+
+export type GenerateMetadata = (params: GenerateMetadataParams) => Metadata | Promise<Metadata>;
+export type GenerateViewport = (params: GenerateMetadataParams) => Viewport | Promise<Viewport>;

@@ -51,7 +51,6 @@ function resolveConflictsAndMerge(branchName) {
 
     try {
       //Check for merge conflicts
-      const _status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {
 
@@ -64,11 +63,7 @@ function resolveConflictsAndMerge(branchName) {
           );
 
           return { success: true, method: 'theirs' };
-        } catch (theirsError) {
-
-        }
-
-        //Strategy 2: Auto-resolve with ours
+        } catch () {}//Strategy 2: Auto-resolve with ours
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
@@ -77,11 +72,7 @@ function resolveConflictsAndMerge(branchName) {
           );
 
           return { success: true, method: 'ours' };
-        } catch (oursError) {
-
-        }
-
-        //Strategy 3: Manual conflict resolution
+        } catch () {}//Strategy 3: Manual conflict resolution
         try {
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
 
@@ -102,10 +93,7 @@ function resolveConflictsAndMerge(branchName) {
                 });
                 execSync(`git add "${file}"`, { stdio: 'inherit' });
 
-              } catch (fileError) {
-
-              }
-            }
+              } catch () {}}
           }
 
           //Complete the merge
@@ -114,15 +102,8 @@ function resolveConflictsAndMerge(branchName) {
           });
 
           return { success: true, method: 'manual' };
-        } catch (manualError) {
-
-        }
-      }
-    } catch (statusError) {
-
-    }
-
-    //If all strategies fail, abort and skip
+        } catch () {}}
+    } catch () {}//If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
 
@@ -149,7 +130,6 @@ const results = {
 
 //Process each target branch
 for (const branch of targetBranches) {
-  const _result = resolveConflictsAndMerge(branch);
   results.summary.total++;
 
   if (result.success) {
@@ -177,16 +157,6 @@ fs.writeFileSync('targeted-latest-merge-report.json', JSON.stringify(results, nu
 
 //Step 6: Display summary
 
-
-
-
-
-
-
-
-
-
-
 if (results.failed.length > 0) {
 
   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
@@ -197,8 +167,4 @@ if (results.failed.length > 0) {
 try {
   execSync('git push origin main', { stdio: 'inherit' });
 
-} catch (error) {
-
-
-}
-
+} catch () {}
