@@ -4263,6 +4263,242 @@ const HomePage: React.FC = () => {
             </div>
           </section>
 
+          {/* Testimonials Section */}
+          <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                  What Our Clients Say
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                  Don't just take our word for it. Here's what industry leaders say about our solutions.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "ZionTechGroup's AI solutions transformed our entire workflow. We've seen a 300% increase in productivity and our team loves the intuitive interface."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      JS
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">John Smith</h4>
+                      <p className="text-gray-400 text-sm">CEO, TechCorp Inc.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "The quantum optimization tools are revolutionary. We've reduced our processing time by 99% and our energy costs by 60%. Absolutely game-changing."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      MJ
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Maria Johnson</h4>
+                      <p className="text-gray-400 text-sm">CTO, Quantum Solutions</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "Their AI-powered analytics helped us identify market opportunities we never knew existed. Revenue increased by 250% in just 6 months."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      DR
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">David Rodriguez</h4>
+                      <p className="text-gray-400 text-sm">VP Strategy, Global Dynamics</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "The holographic workspace is the future of remote work. Our team collaboration has never been more efficient and engaging."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      SL
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Sarah Lee</h4>
+                      <p className="text-gray-400 text-sm">Head of Innovation, FutureTech</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "The neural memory assistant is incredible. It learns our patterns and anticipates our needs. It's like having a super-intelligent colleague."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      AW
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Alex Wang</h4>
+                      <p className="text-gray-400 text-sm">Lead Developer, AI Innovations</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-teal-500/20 hover:border-teal-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">
+                    "ZionTechGroup's security solutions are top-notch. We've had zero breaches since implementation and our compliance scores are perfect."
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                      EB
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">Emily Brown</h4>
+                      <p className="text-gray-400 text-sm">CISO, SecureCorp</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="py-20 bg-slate-900 cyber-grid">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                  Get answers to common questions about our AI and IT solutions.
+                </p>
+              </div>
+              
+              <div className="max-w-4xl mx-auto space-y-6">
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">1</span>
+                    What makes ZionTechGroup's AI solutions different from competitors?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Our AI solutions combine cutting-edge quantum computing principles with advanced machine learning algorithms, 
+                    offering 99.9% efficiency rates and real-time adaptation capabilities. We provide enterprise-grade security, 
+                    24/7 support, and custom integration services that most competitors can't match.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">2</span>
+                    Do you offer free trials for your services?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Yes! Most of our services come with free trial periods ranging from 7 to 30 days, depending on the complexity 
+                    of the solution. This allows you to test our AI capabilities, explore features, and see the value before making 
+                    any commitment. No credit card required for most trials.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">3</span>
+                    How quickly can you implement your solutions in our organization?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Implementation timelines vary based on the solution complexity and your organization's requirements. 
+                    Simple micro SAAS solutions can be deployed in 1-2 weeks, while enterprise AI platforms typically 
+                    take 4-8 weeks. We provide dedicated project managers and technical support throughout the process.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">4</span>
+                    What kind of support do you provide?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    We offer comprehensive 24/7 support including live chat, email support, phone support, and dedicated 
+                    account managers for enterprise clients. Our support team includes AI specialists, security experts, 
+                    and integration specialists who can help with any technical challenges or questions.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">5</span>
+                    Are your solutions secure and compliant with industry standards?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Absolutely. All our solutions are built with enterprise-grade security, including end-to-end encryption, 
+                    SOC 2 Type II compliance, GDPR compliance, and regular security audits. We also offer custom compliance 
+                    solutions for specific industry requirements like HIPAA, PCI-DSS, and ISO 27001.
+                  </p>
+                </div>
+
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-teal-500/20 hover:border-teal-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                    <span className="w-8 h-8 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">6</span>
+                    Can I customize the AI solutions to fit my specific business needs?
+                  </h3>
+                  <p className="text-gray-300 ml-12">
+                    Yes! We specialize in custom AI solutions tailored to your specific business requirements. Our team of 
+                    AI engineers and data scientists can modify existing solutions or build completely custom AI applications 
+                    that integrate seamlessly with your existing systems and workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Contact Section */}
           <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 relative overflow-hidden">
             {/* Background Effects */}
