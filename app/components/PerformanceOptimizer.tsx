@@ -1,9 +1,6 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { logger } from '../utils/productionLogger';
-
-import React, { useEffect, useCallback } from 'react';
-import { logger } from '../utils/logger';
 
 interface PerformanceMetrics {
   lcp: number;
