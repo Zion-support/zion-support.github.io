@@ -71,7 +71,11 @@ const Navigation: React.FC = () => {
                 </button>
                 
                 {servicesOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                  <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <Link href="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      All Services
+                    </Link>
+                    <div className="border-t border-gray-700 my-1"></div>
                     <Link href="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
                       AI Services
                     </Link>
@@ -81,12 +85,51 @@ const Navigation: React.FC = () => {
                     <Link href="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
                       Micro SaaS
                     </Link>
+                    <div className="border-t border-gray-700 my-1"></div>
+                    <Link href="/consultation" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Consultation
+                    </Link>
+                    <Link href="/demo" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Demo
+                    </Link>
                   </div>
                 )}
               </div>
 
               <Link href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
+              </Link>
+              
+              {/* Resources Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleAiServices}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Resources
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                
+                {aiServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <Link href="/blog" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Blog
+                    </Link>
+                    <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Case Studies
+                    </Link>
+                    <Link href="/faq" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      FAQ
+                    </Link>
+                    <Link href="/support" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Support
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link href="/pricing" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Pricing
               </Link>
               <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
@@ -112,8 +155,29 @@ const Navigation: React.FC = () => {
               <Link href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Home
               </Link>
+              <Link href="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                All Services
+              </Link>
+              <Link href="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                AI Services
+              </Link>
+              <Link href="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                IT Services
+              </Link>
+              <Link href="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Micro SaaS
+              </Link>
               <Link href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
+              </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Blog
+              </Link>
+              <Link href="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Case Studies
+              </Link>
+              <Link href="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Pricing
               </Link>
               <Link href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact

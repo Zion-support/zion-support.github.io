@@ -11,21 +11,6 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Safe and secure migration of your applications and data to the cloud'
     },
     {
-<<<<<<< HEAD
-      icon: Zap,
-      title: 'Zero Downtime Migration',
-      description: 'Seamless migration with minimal to zero downtime for your business'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Migration',
-      description: 'Intelligent migration planning and execution powered by AI technology'
-    },
-    {
-      icon: Globe,
-      title: 'Multi-Cloud Support',
-      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
-=======
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
@@ -39,7 +24,6 @@ const CloudMigrationPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
 
@@ -59,14 +43,6 @@ const CloudMigrationPage: React.FC = () => {
       <Helmet>
         <title>Cloud Migration | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
-        <meta name="keywords" content="cloud migration, cloud services, IT services, Zion Tech Group, cloud computing" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-=======
         <meta name="keywords" content="cloud migration, cloud services, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -74,14 +50,12 @@ const CloudMigrationPage: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
             Cloud Migration
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud migration solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our cloud migration solutions deliver unmatched performance, security, and scalability.
           </p>
@@ -95,17 +69,8 @@ const CloudMigrationPage: React.FC = () => {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
 
-<<<<<<< HEAD
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Cloud Migration Solutions?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -145,7 +110,6 @@ const CloudMigrationPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
@@ -155,24 +119,6 @@ const CloudMigrationPage: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your cloud migration needs and get a customized solution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Us
-            </button>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -193,7 +139,6 @@ const CloudMigrationPage: React.FC = () => {
                 Email Us
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
           </div>
         </div>
       </div>
