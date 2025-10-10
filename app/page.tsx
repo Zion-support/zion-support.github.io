@@ -92,6 +92,66 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+      title: 'AI Quantum Task Optimizer',
+      description: 'Revolutionary quantum-inspired task optimization that processes millions of task combinations to find the perfect workflow. Achieve 99.9% efficiency.',
+      icon: '⚛️',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Quantum algorithms', 'Multi-dimensional optimization', 'Real-time adaptation', 'Predictive scheduling', 'Energy efficiency', 'Parallel processing', 'Quantum encryption', 'Neural networks'],
+      benefits: ['99.9% efficiency', 'Quantum speed', 'Zero waste', 'Future-proof'],
+      link: '/ai-quantum-task-optimizer',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.9,
+      users: '2,500+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Holographic Workspace',
+      description: 'Immersive 3D workspace with holographic project visualization, spatial computing, and AR collaboration. The future of remote work.',
+      icon: '🌐',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['3D holographic display', 'AR collaboration', 'Spatial computing', 'Gesture control', 'Voice commands', 'Real-time sync', 'VR integration', 'Haptic feedback'],
+      benefits: ['Immersive experience', 'Better collaboration', 'Spatial awareness', 'Next-gen interface'],
+      link: '/ai-holographic-workspace',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '1,200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Neural Memory Assistant',
+      description: 'Advanced AI that learns your work patterns and automatically organizes information, creates connections, and retrieves data instantly.',
+      icon: '🧠',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Pattern learning', 'Auto-organization', 'Instant retrieval', 'Context awareness', 'Memory mapping', 'Predictive search', 'Knowledge graphs', 'Semantic analysis'],
+      benefits: ['Perfect memory', 'Instant access', 'Smart organization', 'Learning system'],
+      link: '/ai-neural-memory-assistant',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.9,
+      users: '5,000+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Telepathic Interface Pro',
+      description: 'Mind-controlled computing interface using advanced EEG and neural pattern recognition. Control your digital workspace with thoughts.',
+      icon: '🔮',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['EEG integration', 'Neural pattern recognition', 'Thought commands', 'Mental shortcuts', 'Focus enhancement', 'Brain training', 'Privacy protection', 'Medical grade'],
+      benefits: ['Hands-free control', 'Mental efficiency', 'Accessibility', 'Cutting-edge tech'],
+      link: '/ai-telepathic-interface',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.7,
+      users: '800+',
+      freeTrial: '7 days'
+    },
+    {
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
       icon: '✅',
@@ -165,6 +225,66 @@ const HomePage: React.FC = () => {
       category: 'Content',
       rating: 4.9,
       users: '40,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Holographic Content Studio',
+      description: 'Create immersive 3D holographic content with AI-powered design, spatial storytelling, and interactive experiences. The future of content creation.',
+      icon: '🎭',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['3D holographic creation', 'Spatial storytelling', 'Interactive experiences', 'AR/VR integration', 'Gesture-based editing', 'Real-time collaboration', 'Haptic feedback', 'Spatial audio'],
+      benefits: ['Immersive content', 'Next-gen storytelling', 'Interactive experiences', 'Future-ready'],
+      link: '/ai-holographic-content-studio',
+      popular: true,
+      category: 'Content',
+      rating: 4.8,
+      users: '1,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Content Optimizer',
+      description: 'Revolutionary content optimization using quantum algorithms to analyze millions of content variations and find the perfect combination for maximum engagement.',
+      icon: '⚡',
+      price: '$249/month',
+      originalPrice: '$349/month',
+      features: ['Quantum content analysis', 'Multi-dimensional optimization', 'Engagement prediction', 'A/B testing automation', 'Viral potential scoring', 'Audience targeting', 'Content clustering', 'Performance forecasting'],
+      benefits: ['Maximum engagement', 'Viral content', 'Perfect targeting', 'Quantum precision'],
+      link: '/ai-quantum-content-optimizer',
+      popular: true,
+      category: 'Content',
+      rating: 4.9,
+      users: '3,200+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Neural Story Architect',
+      description: 'Advanced AI that creates compelling narratives by analyzing human psychology, cultural patterns, and emotional triggers. Craft stories that resonate deeply.',
+      icon: '📚',
+      price: '$179/month',
+      originalPrice: '$249/month',
+      features: ['Psychology analysis', 'Cultural pattern recognition', 'Emotional trigger mapping', 'Narrative structure optimization', 'Character development', 'Plot generation', 'Audience resonance', 'Story arc prediction'],
+      benefits: ['Compelling narratives', 'Deep resonance', 'Cultural awareness', 'Emotional impact'],
+      link: '/ai-neural-story-architect',
+      popular: true,
+      category: 'Content',
+      rating: 4.8,
+      users: '2,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Telepathic Marketing Pro',
+      description: 'Mind-reading marketing that analyzes subconscious consumer patterns and creates campaigns that speak directly to the target audience\'s deepest desires.',
+      icon: '🎯',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['Subconscious analysis', 'Desire mapping', 'Emotional targeting', 'Neuromarketing insights', 'Behavioral prediction', 'Campaign optimization', 'ROI maximization', 'Consumer psychology'],
+      benefits: ['Deep targeting', 'Higher conversion', 'Emotional connection', 'Subconscious appeal'],
+      link: '/ai-telepathic-marketing',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.9,
+      users: '1,800+',
       freeTrial: '7 days'
     },
     {
@@ -242,6 +362,66 @@ const HomePage: React.FC = () => {
       rating: 4.7,
       users: '32,000+',
       freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary financial prediction system using quantum computing to analyze market patterns and predict economic trends with 99.7% accuracy.',
+      icon: '🔮',
+      price: '$499/month',
+      originalPrice: '$799/month',
+      features: ['Quantum market analysis', 'Economic trend prediction', 'Risk assessment', 'Portfolio optimization', 'Crisis prediction', 'Market timing', 'Global economic modeling', 'Real-time adaptation'],
+      benefits: ['99.7% accuracy', 'Crisis prevention', 'Optimal timing', 'Quantum precision'],
+      link: '/ai-quantum-financial-oracle',
+      popular: true,
+      category: 'Finance',
+      rating: 4.9,
+      users: '1,200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Holographic Boardroom',
+      description: 'Immersive 3D boardroom experience with holographic data visualization, spatial analytics, and telepathic decision-making interfaces.',
+      icon: '🏢',
+      price: '$599/month',
+      originalPrice: '$899/month',
+      features: ['3D holographic displays', 'Spatial data visualization', 'Telepathic interfaces', 'Real-time collaboration', 'Gesture controls', 'AR/VR integration', 'Haptic feedback', 'Neural decision support'],
+      benefits: ['Immersive meetings', 'Better decisions', 'Spatial understanding', 'Next-gen collaboration'],
+      link: '/ai-holographic-boardroom',
+      popular: true,
+      category: 'Business',
+      rating: 4.8,
+      users: '800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Neural Business Strategist',
+      description: 'Advanced AI that analyzes market patterns, competitor behavior, and business ecosystems to provide strategic insights and recommendations.',
+      icon: '🧠',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['Market pattern analysis', 'Competitor intelligence', 'Ecosystem mapping', 'Strategic recommendations', 'Scenario planning', 'Risk assessment', 'Opportunity identification', 'Trend prediction'],
+      benefits: ['Strategic advantage', 'Market insights', 'Competitive edge', 'Future planning'],
+      link: '/ai-neural-business-strategist',
+      popular: true,
+      category: 'Business',
+      rating: 4.8,
+      users: '2,100+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Telepathic Sales Pro',
+      description: 'Mind-reading sales system that analyzes customer thoughts, emotions, and buying signals to close deals with unprecedented success rates.',
+      icon: '💼',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['Thought analysis', 'Emotion detection', 'Buying signal recognition', 'Sales coaching', 'Objection prediction', 'Closing optimization', 'Customer psychology', 'Success rate tracking'],
+      benefits: ['Higher close rates', 'Customer insight', 'Sales mastery', 'Psychological advantage'],
+      link: '/ai-telepathic-sales',
+      popular: true,
+      category: 'Sales',
+      rating: 4.9,
+      users: '1,500+',
+      freeTrial: '7 days'
     },
     {
       title: 'AI Financial Analyzer Pro',
@@ -458,6 +638,66 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+      title: 'AI Holographic Design Studio',
+      description: 'Create stunning 3D holographic designs with spatial computing, gesture-based editing, and immersive visualization. The future of design.',
+      icon: '🎨',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['3D holographic design', 'Spatial computing', 'Gesture-based editing', 'Immersive visualization', 'AR/VR integration', 'Haptic feedback', 'Real-time collaboration', 'Spatial audio'],
+      benefits: ['Immersive design', 'Spatial creativity', 'Next-gen interface', 'Future-ready'],
+      link: '/ai-holographic-design-studio',
+      popular: true,
+      category: 'Creative',
+      rating: 4.9,
+      users: '1,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Art Generator',
+      description: 'Revolutionary art creation using quantum algorithms to generate infinite unique artworks, exploring dimensions beyond human imagination.',
+      icon: '🌌',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['Quantum art generation', 'Infinite variations', 'Multi-dimensional art', 'Quantum aesthetics', 'Pattern generation', 'Color theory mastery', 'Style fusion', 'Unlimited creativity'],
+      benefits: ['Infinite creativity', 'Unique artworks', 'Quantum beauty', 'Beyond imagination'],
+      link: '/ai-quantum-art-generator',
+      popular: true,
+      category: 'Creative',
+      rating: 4.8,
+      users: '2,500+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Neural Music Composer',
+      description: 'Advanced AI that creates music by analyzing neural patterns, emotions, and cultural influences to compose deeply resonant musical experiences.',
+      icon: '🎵',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Neural pattern analysis', 'Emotional composition', 'Cultural influence integration', 'Genre fusion', 'Mood matching', 'Instrument selection', 'Harmony generation', 'Rhythm optimization'],
+      benefits: ['Emotional resonance', 'Cultural depth', 'Perfect mood matching', 'Neural creativity'],
+      link: '/ai-neural-music-composer',
+      popular: true,
+      category: 'Creative',
+      rating: 4.9,
+      users: '3,200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Telepathic Creative Assistant',
+      description: 'Mind-controlled creative tool that translates your thoughts, emotions, and visions directly into digital art, music, and content.',
+      icon: '🔮',
+      price: '$499/month',
+      originalPrice: '$699/month',
+      features: ['Thought-to-art translation', 'Emotion visualization', 'Vision capture', 'Mind-controlled editing', 'Creative flow enhancement', 'Inspiration generation', 'Mental shortcut creation', 'Subconscious creativity'],
+      benefits: ['Direct thought translation', 'Unlimited creativity', 'Mental efficiency', 'Pure expression'],
+      link: '/ai-telepathic-creative-assistant',
+      popular: true,
+      category: 'Creative',
+      rating: 4.7,
+      users: '1,200+',
+      freeTrial: '7 days'
+    },
+    {
       title: 'AI Voice Cloning Studio Pro',
       description: 'Realistic voice synthesis with AI-powered voice cloning and text-to-speech. Create professional voiceovers in minutes.',
       icon: '🎤',
@@ -532,6 +772,66 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '35,000+',
       freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Health Optimizer',
+      description: 'Revolutionary health optimization using quantum computing to analyze molecular patterns and optimize your body\'s quantum field for perfect health.',
+      icon: '⚛️',
+      price: '$399/month',
+      originalPrice: '$599/month',
+      features: ['Quantum molecular analysis', 'Quantum field optimization', 'Cellular regeneration', 'Energy balance', 'Quantum healing', 'Molecular repair', 'Quantum nutrition', 'Biofield enhancement'],
+      benefits: ['Perfect health', 'Quantum healing', 'Molecular optimization', 'Energy balance'],
+      link: '/ai-quantum-health-optimizer',
+      popular: true,
+      category: 'Health',
+      rating: 4.9,
+      users: '1,500+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Holographic Medical Scanner',
+      description: 'Advanced 3D holographic medical scanning that provides real-time health visualization, diagnosis, and treatment recommendations.',
+      icon: '🔬',
+      price: '$599/month',
+      originalPrice: '$899/month',
+      features: ['3D holographic scanning', 'Real-time health visualization', 'AI diagnosis', 'Treatment recommendations', 'Organ mapping', 'Disease detection', 'Health monitoring', 'Medical imaging'],
+      benefits: ['Complete health picture', 'Early detection', 'Visual diagnosis', 'Comprehensive monitoring'],
+      link: '/ai-holographic-medical-scanner',
+      popular: true,
+      category: 'Health',
+      rating: 4.8,
+      users: '800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Neural Wellness Coach',
+      description: 'Advanced AI that analyzes your neural patterns, stress levels, and emotional state to provide personalized wellness recommendations and mental health support.',
+      icon: '🧠',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Neural pattern analysis', 'Stress monitoring', 'Emotional state tracking', 'Mental health support', 'Wellness recommendations', 'Meditation guidance', 'Sleep optimization', 'Cognitive enhancement'],
+      benefits: ['Mental wellness', 'Stress reduction', 'Emotional balance', 'Cognitive enhancement'],
+      link: '/ai-neural-wellness-coach',
+      popular: true,
+      category: 'Health',
+      rating: 4.8,
+      users: '2,800+',
+      freeTrial: '21 days'
+    },
+    {
+      title: 'AI Telepathic Therapy Pro',
+      description: 'Mind-reading therapy system that analyzes your thoughts, emotions, and mental patterns to provide personalized therapeutic interventions and mental health support.',
+      icon: '🔮',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: ['Thought analysis', 'Emotion detection', 'Mental pattern recognition', 'Therapeutic interventions', 'Crisis prevention', 'Mental health monitoring', 'Personalized therapy', 'Privacy protection'],
+      benefits: ['Personalized therapy', 'Mental health support', 'Crisis prevention', 'Emotional healing'],
+      link: '/ai-telepathic-therapy',
+      popular: true,
+      category: 'Health',
+      rating: 4.9,
+      users: '1,200+',
+      freeTrial: '7 days'
     },
     {
       title: 'AI Fitness Coach Pro',
@@ -941,49 +1241,69 @@ const HomePage: React.FC = () => {
           <Navigation />
           
           {/* Hero Section */}
-          <section className="relative pt-20 pb-16 overflow-hidden">
+          <section className="relative pt-20 pb-16 overflow-hidden cyber-grid neural-network-bg particle-field">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
+            <div className="absolute inset-0 quantum-field"></div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                  Transform Your Business with
-                  <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    AI-Powered Solutions
-                  </span>
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                <div className="cyber-scan-effect mb-8">
+                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text-3d neon-text">
+                    Transform Your Business with
+                    <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent holographic">
+                      AI-Powered Solutions
+                    </span>
+                  </h1>
+                </div>
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed neon-pulse">
                   Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 
                   Achieve 300% ROI with our cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
-                    className="cyber-button px-8 py-4 text-lg font-semibold"
+                    className="cyber-button px-8 py-4 text-lg font-semibold energy-pulse"
                     onClick={handlePhoneClick}
                   >
                     Get Started Today
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors text-lg font-medium"
+                    className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors text-lg font-medium neon-glow"
                     onClick={handlePhoneClick}
                   >
                     <Phone className="w-5 h-5" />
                     <span>+1 302 464 0950</span>
                   </a>
                 </div>
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  <div className="quantum-card p-6 text-center">
+                    <div className="text-4xl mb-4">⚛️</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
+                    <p className="text-gray-300 text-sm">Revolutionary quantum algorithms for exponential performance</p>
+                  </div>
+                  <div className="quantum-card p-6 text-center">
+                    <div className="text-4xl mb-4">🧠</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Neural Networks</h3>
+                    <p className="text-gray-300 text-sm">Advanced AI that learns and adapts to your needs</p>
+                  </div>
+                  <div className="quantum-card p-6 text-center">
+                    <div className="text-4xl mb-4">🌐</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Holographic Tech</h3>
+                    <p className="text-gray-300 text-sm">Immersive 3D interfaces and spatial computing</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Micro SAAS Services Section */}
-          <section className="py-20 bg-slate-800/50">
+          <section className="py-20 bg-slate-800/50 cyber-scan-effect">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   Micro SAAS Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
                   Powerful, affordable AI-powered tools designed for modern businesses. 
                   Choose from our comprehensive suite of micro SAAS solutions.
                 </p>
@@ -993,7 +1313,7 @@ const HomePage: React.FC = () => {
                 {microSAASServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 hover:border-cyan-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="quantum-card cyber-card bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 hover:border-cyan-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
@@ -1045,13 +1365,13 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* AI Services Section */}
-          <section className="py-20 bg-slate-900/50">
+          <section className="py-20 bg-slate-900/50 neural-network-bg particle-field">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   AI Services & Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
                   Advanced AI solutions for enterprise clients. Transform your business with cutting-edge artificial intelligence.
                 </p>
               </div>
@@ -1060,7 +1380,7 @@ const HomePage: React.FC = () => {
                 {aiServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-purple-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="quantum-card cyber-card bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-purple-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-purple-400" />
@@ -1112,13 +1432,13 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* IT Services Section */}
-          <section className="py-20 bg-slate-800/50">
+          <section className="py-20 bg-slate-800/50 cyber-grid quantum-field">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   IT Services & Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
                   Comprehensive IT services to modernize your infrastructure and accelerate your digital transformation.
                 </p>
               </div>
@@ -1127,7 +1447,7 @@ const HomePage: React.FC = () => {
                 {itServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-green-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="quantum-card cyber-card bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-green-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-green-400" />
@@ -1179,13 +1499,13 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Specialized Services Section */}
-          <section className="py-20 bg-slate-900/50">
+          <section className="py-20 bg-slate-900/50 matrix-rain neural-network-bg">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   Specialized Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
                   Cutting-edge specialized solutions for the future. Quantum computing, autonomous systems, and more.
                 </p>
               </div>
@@ -1194,7 +1514,7 @@ const HomePage: React.FC = () => {
                 {specializedServices.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-orange-400/40 transition-all duration-300 group h-full flex flex-col"
+                    className="quantum-card cyber-card bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-orange-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-orange-400" />
@@ -1246,34 +1566,51 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Contact Section */}
-          <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
+          <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600 cyber-grid neural-network-bg">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
                   Ready to Transform Your Business?
                 </h2>
-                <p className="text-xl text-cyan-100 mb-8">
+                <p className="text-xl text-cyan-100 mb-8 neon-pulse">
                   Contact us today to discuss your AI and IT needs. Our experts are ready to help you achieve your goals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
-                    className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-50 transition-colors"
+                    className="cyber-button bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-50 transition-colors energy-pulse"
                   >
                     Get Free Consultation
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-white hover:text-cyan-100 transition-colors text-lg font-medium"
+                    className="flex items-center space-x-2 text-white hover:text-cyan-100 transition-colors text-lg font-medium neon-glow"
                     onClick={handlePhoneClick}
                   >
                     <Phone className="w-5 h-5" />
                     <span>+1 302 464 0950</span>
                   </a>
                 </div>
-                <div className="mt-8 text-cyan-100">
+                <div className="mt-8 text-cyan-100 neon-pulse">
                   <p>Email: kleber@ziontechgroup.com</p>
                   <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+                </div>
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
+                    <div className="text-4xl mb-4">🚀</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Fast Implementation</h3>
+                    <p className="text-cyan-100 text-sm">Get started in 24 hours with our rapid deployment</p>
+                  </div>
+                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
+                    <div className="text-4xl mb-4">🛡️</div>
+                    <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
+                    <p className="text-cyan-100 text-sm">Bank-level security and compliance standards</p>
+                  </div>
+                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
+                    <div className="text-4xl mb-4">⚡</div>
+                    <h3 className="text-xl font-bold text-white mb-2">24/7 Support</h3>
+                    <p className="text-cyan-100 text-sm">Round-the-clock expert support and monitoring</p>
+                  </div>
                 </div>
               </div>
             </div>

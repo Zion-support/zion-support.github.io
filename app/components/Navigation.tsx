@@ -69,6 +69,10 @@ const Navigation: React.FC = () => {
   const microSAASServices = [
     // Productivity & Management
     { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo' },
+    { name: 'AI Quantum Task Optimizer', href: '/ai-quantum-task-optimizer', icon: Cpu, category: 'Productivity', price: '$199/mo' },
+    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Globe, category: 'Productivity', price: '$299/mo' },
+    { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant', icon: Brain, category: 'Productivity', price: '$149/mo' },
+    { name: 'AI Telepathic Interface Pro', href: '/ai-telepathic-interface', icon: Eye, category: 'Productivity', price: '$399/mo' },
     { name: 'AI Task Manager Pro', href: '/ai-task-manager', icon: Check, category: 'Productivity', price: '$49/mo' },
     { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity', price: '$79/mo' },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity', price: '$39/mo' },
@@ -76,6 +80,10 @@ const Navigation: React.FC = () => {
     
     // Content & Marketing
     { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$89/mo' },
+    { name: 'AI Holographic Content Studio', href: '/ai-holographic-content-studio', icon: Camera, category: 'Content', price: '$399/mo' },
+    { name: 'AI Quantum Content Optimizer', href: '/ai-quantum-content-optimizer', icon: Zap, category: 'Content', price: '$249/mo' },
+    { name: 'AI Neural Story Architect', href: '/ai-neural-story-architect', icon: BookOpen, category: 'Content', price: '$179/mo' },
+    { name: 'AI Telepathic Marketing Pro', href: '/ai-telepathic-marketing', icon: Target, category: 'Marketing', price: '$299/mo' },
     { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing', price: '$69/mo' },
     { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$59/mo' },
     { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing', price: '$79/mo' },
@@ -84,6 +92,10 @@ const Navigation: React.FC = () => {
     
     // Business & Finance
     { name: 'AI CRM Intelligence Pro', href: '/ai-crm', icon: Users, category: 'Business', price: '$89/mo' },
+    { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle', icon: Cpu, category: 'Finance', price: '$499/mo' },
+    { name: 'AI Holographic Boardroom', href: '/ai-holographic-boardroom', icon: Building, category: 'Business', price: '$599/mo' },
+    { name: 'AI Neural Business Strategist', href: '/ai-neural-business-strategist', icon: Brain, category: 'Business', price: '$299/mo' },
+    { name: 'AI Telepathic Sales Pro', href: '/ai-telepathic-sales', icon: Target, category: 'Sales', price: '$399/mo' },
     { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance', price: '$79/mo' },
     { name: 'AI Invoice Generator Pro', href: '/ai-invoice-generator', icon: FileText, category: 'Finance', price: '$49/mo' },
     { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker', icon: CreditCard, category: 'Finance', price: '$29/mo' },
@@ -107,6 +119,10 @@ const Navigation: React.FC = () => {
     
     // Creative & Media
     { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative', price: '$149/mo' },
+    { name: 'AI Holographic Design Studio', href: '/ai-holographic-design-studio', icon: Camera, category: 'Creative', price: '$399/mo' },
+    { name: 'AI Quantum Art Generator', href: '/ai-quantum-art-generator', icon: Palette, category: 'Creative', price: '$299/mo' },
+    { name: 'AI Neural Music Composer', href: '/ai-neural-music-composer', icon: Music, category: 'Creative', price: '$199/mo' },
+    { name: 'AI Telepathic Creative Assistant', href: '/ai-telepathic-creative-assistant', icon: Eye, category: 'Creative', price: '$499/mo' },
     { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning', icon: Music, category: 'Creative', price: '$79/mo' },
     { name: 'AI Music Composer Pro', href: '/ai-music-composition', icon: Music, category: 'Creative', price: '$59/mo' },
     { name: 'AI Fashion Design Studio Pro', href: '/ai-fashion-design', icon: Palette, category: 'Creative', price: '$89/mo' },
@@ -115,6 +131,10 @@ const Navigation: React.FC = () => {
     
     // Health & Wellness
     { name: 'AI Healthcare Assistant Pro', href: '/ai-healthcare', icon: Stethoscope, category: 'Health', price: '$49/mo' },
+    { name: 'AI Quantum Health Optimizer', href: '/ai-quantum-health-optimizer', icon: Cpu, category: 'Health', price: '$399/mo' },
+    { name: 'AI Holographic Medical Scanner', href: '/ai-holographic-medical-scanner', icon: Eye, category: 'Health', price: '$599/mo' },
+    { name: 'AI Neural Wellness Coach', href: '/ai-neural-wellness-coach', icon: Brain, category: 'Health', price: '$199/mo' },
+    { name: 'AI Telepathic Therapy Pro', href: '/ai-telepathic-therapy', icon: Eye, category: 'Health', price: '$299/mo' },
     { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Heart, category: 'Health', price: '$39/mo' },
     
     // Sales & Business
