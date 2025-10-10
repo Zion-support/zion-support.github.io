@@ -119,11 +119,7 @@ export class AccessibilityEnhancer {
       const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
       this.focusableElements[nextIndex]?.focus();
     }
-<<<<<<< HEAD
-    focusableElements[nextIndex]?.focus();
-=======
     
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     event.preventDefault();
   }
 
@@ -359,9 +355,6 @@ export class AccessibilityEnhancer {
     this.skipLinks = [];
     this.landmarks = [];
   }
-<<<<<<< HEAD
-}
-=======
 }
 
 // Create global instance
@@ -383,4 +376,3 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
