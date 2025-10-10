@@ -140,7 +140,9 @@ const microSAASServices = [
     price: "$149/mo",
     features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
     category: "Analytics",
-    popular: true
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-analytics-dashboard"
   },
   {
     name: "AI Customer Support Bot",
