@@ -1,5 +1,5 @@
 import React; { useEffect } from 'react' interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
-  O: Implement } onPerformanceData?: (dat,)
+  O: Implement } onPerformanceData?: (dat)
   a: unknown) => void, const,
   PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {/* TODO: Fix JSX expression */}
   d: {metrics.loadTime.toFixed(2)}ms</div> <div>Rende,

@@ -1,10 +1,7 @@
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 exports.config = {schedule: '*/11 * * * *'} // every 11 minutes;
-=======
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/11 * * * *'} // every 11 minutes;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 exports.handler = async () => {const logs = []}
   const step = cmd => {/* TODO: Fix JSX expression */}

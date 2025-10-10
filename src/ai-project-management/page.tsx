@@ -174,7 +174,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
   sm:flex-row gap-4 justify-center"></div>"
               <a href="te,"
   l:+13024640950" className="cyber-button"></a>
-                📞 Cal,)
+                📞 Cal)
   l: (302) 464-0950;
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,

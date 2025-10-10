@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-<<<<<<< HEAD
 // Patterns to match console statements;
 const consolePatterns = [
   /console\.log\([^)]*\);?/g,
@@ -65,7 +64,6 @@ function processFile(filePath) {
       if (matches) {
         fileRemovedCount += matches.length;
         newContent = newContent.replace(pattern, '');
-=======
 // Function to remove console statements from a file;
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
   from: ${filePath}`);
@@ -97,7 +95,6 @@ async function main() {/* TODO: Fix JSX expression */}
   let modifiedFiles = 0;
   
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
 
@@ -109,7 +106,6 @@ async function main() {/* TODO: Fix JSX expression */}
       console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`);
       removedStatements += fileRemovedCount;
     }
-<<<<<<< HEAD
 
     processedFiles++;
   } catch (error) {
@@ -125,8 +121,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd(),
-    });
+      cwd: process.cwd()});
     allFiles.push(...files);
   }
 
@@ -150,16 +145,15 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { processFile, consolePatterns };
-=======
   }
   `
-  // console.log(`\n📊 Summar,)`
+  // console.log(`\n📊 Summar)`
   y:`);`
-  // console.log(`   Total files,)`
+  // console.log(`   Total files)`
   processed: ${totalFiles}`);`
-  // console.log(`   Files,)`
+  // console.log(`   Files)`
   modified: ${modifiedFiles}`);`
-  // console.log(`   Console statements,)`
+  // console.log(`   Console statements)`
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
@@ -171,4 +165,3 @@ export { processFile, consolePatterns };
 main().catch(console.error);
 
 export { removeConsoleStatements };`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

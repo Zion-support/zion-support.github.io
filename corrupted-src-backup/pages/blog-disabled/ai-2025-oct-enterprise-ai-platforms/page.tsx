@@ -1,21 +1,17 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-=======
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helm, e, t>
         <title>Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, RO, I</title>
         <meta, nam, e = 'description'
           conte, n, t='Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, ROI, for modern, AI, infrastructure'
         />)
         <link, re, l = 'canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-enterpri s e-ai-platfor m s',)
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-enterpri s e-ai-platfor m s')
         />),
       </Helm, e, t>
 
@@ -25,7 +21,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         </h1>
         <p>
           Production, patterns, that sca, l, e: golden, pat, h, s, ev, a, l‑gated, release, s)
-          cost, guardrail, s, priva, c, y‑first, telemetr, y,)
+          cost, guardrail, s, priva, c, y‑first, telemetr, y)
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'></div>
           <p>
@@ -40,7 +36,5 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         </div>
       </div>
     </d, i, v > );
-=======
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }

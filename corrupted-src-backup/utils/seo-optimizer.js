@@ -3,7 +3,6 @@
  * Comprehensive SEO optimization and monitoring utilities;
  */
 
-<<<<<<< HEAD
 class SEOOptimizer {
   constructor() {
     this.seoConfig = {
@@ -23,12 +22,10 @@ class SEOOptimizer {
           description: 'Advanced AI and IT Solutions',
           address: {,
             '@type': 'PostalAddress',
-            addressCountry: 'US',
-          },
+            addressCountry: 'US'},
           sameAs: [,
             'https://linkedin.com/company/ziontechgroup',
             'https: //twitter.com/ziontechgroup',
-=======
 class SEOOptimizer {/* TODO: Fix JSX expression */}
           },
           sameA,
@@ -36,19 +33,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
             'http,
   s://linkedin.com/company/ziontechgroup',
             'http,
-  s://twitter.com/ziontechgroup',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-          ],
-        },
-      },
-    };
+  s://twitter.com/ziontechgroup']}}};
     this.init();
   }
 
   init() {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   setupMetaTags() {
     // Basic meta tags;
     this.addMetaTag('description', this.seoConfig.siteDescription);
@@ -60,9 +51,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.addMetaTag('robots', 'index, follow');
     this.addMetaTag('language', 'en');
     this.addMetaTag('revisit-after', '7 days');
-=======
   setupMetaTags() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   addMetaTag(name, content) {/* TODO: Fix JSX expression */}
@@ -70,25 +59,19 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     }
   }
 
-<<<<<<< HEAD
   setupStructuredData() {
     // Add organization structured data;
     this.addStructuredData(this.seoConfig.structuredData.organization);
-=======
   setupStructuredData() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   addStructuredData(data) {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   setupSitemap() {
     // Generate dynamic sitemap;
     this.generateSitemap();
-=======
   setupSitemap() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   generateSitemap() {/* TODO: Fix JSX expression */}
@@ -106,14 +89,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
   q: 'yearly' },
       {/* TODO: Fix JSX expression */}
-  q: 'yearly' },
-    ];
+  q: 'yearly' }];
 
     const _sitemap = this.buildSitemapXML(pages);
     this.createSitemapFile(sitemap);
   }
 
-<<<<<<< HEAD
   buildSitemapXML(pages) {
     //     const baseUrl = this.seoConfig.siteUrl;
     //     const lastmod = new Date().toISOString().split('T')[0];
@@ -126,12 +107,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       xml += `    <loc>${baseUrl}${page.url}</loc>\n`;
       xml += `    <lastmod>${lastmod}</lastmod>\n`;
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
-=======
   buildSitemapXML(pages) {/* TODO: Fix JSX expression */}`
       xml += `    <loc>${baseUrl}${page.url}</loc>\n`;`
       xml += `    <lastmod>${lastmod}</lastmod>\n`;`
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       xml += `    <priority>${page.priority}</priority>\n`;
       xml += '  </url>\n';
     });
@@ -140,7 +119,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     return xml;
   }
 
-<<<<<<< HEAD
   createSitemapFile(sitemap) {
     // In a real implementation, this would be saved to a file;
     // For now, we'll store it in a data attribute for reference;
@@ -212,7 +190,6 @@ Disallow: /middleware/`;
     this.addOGTag('og:url', this.seoConfig.siteUrl + window.location.pathname);
     this.addOGTag('og:image', this.getPageImage());
     this.addOGTag('og:locale', 'en_US');
-=======
   createSitemapFile(sitemap) {/* TODO: Fix JSX expression */}
   }
 
@@ -302,7 +279,6 @@ Disallo,`
   }
 
   setupOpenGraph() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   addOGTag(property, content) {/* TODO: Fix JSX expression */}"`
@@ -310,7 +286,6 @@ Disallo,`
     }
   }
 
-<<<<<<< HEAD
   setupTwitterCards() {
     // Twitter Card meta tags;
     this.addTwitterTag('twitter:card', 'summary_large_image');
@@ -319,9 +294,7 @@ Disallo,`
     this.addTwitterTag('twitter:title', this.getPageTitle());
     this.addTwitterTag('twitter:description', this.getPageDescription());
     this.addTwitterTag('twitter:image', this.getPageImage());
-=======
   setupTwitterCards() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   addTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`
@@ -329,13 +302,10 @@ Disallo,`
     }
   }
 
-<<<<<<< HEAD
   setupSchemaMarkup() {
     // Add page-specific schema markup;
     this.addPageSchema();
-=======
   setupSchemaMarkup() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   addPageSchema() {/* TODO: Fix JSX expression */}
@@ -345,7 +315,6 @@ Disallo,`
     }
   }
 
-<<<<<<< HEAD
   getHomePageSchema() {
     return {
       '@context': 'https: //schema.org',
@@ -356,16 +325,11 @@ Disallo,`
       potentialAction: {,
         '@type': 'SearchAction',
         target: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
-=======
   getHomePageSchema() {/* TODO: Fix JSX expression */}`
   t: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-        'query-input': 'required name=search_term_string',
-      },
-    };
+        'query-input': 'required name=search_term_string'}};
   }
 
-<<<<<<< HEAD
   getAboutPageSchema() {
     return {
       '@context': 'https: //schema.org',
@@ -385,8 +349,7 @@ Disallo,`
       description: 'Comprehensive AI and IT consulting services'
       provider: this.seoConfig.structuredData.organization;
       serviceType: 'Technology Consulting',
-      areaServed: 'Worldwide',
-    };
+      areaServed: 'Worldwide'};
   }
 
   getContactPageSchema() {
@@ -436,12 +399,10 @@ Disallo,`
         img.addEventListener('load', () => {
           img.width = img.naturalWidth;
           img.height = img.naturalHeight;
-=======
   getAboutPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/about`,
       mainEntit,
-  y: this.seoConfig.structuredData.organization,
-    };
+  y: this.seoConfig.structuredData.organization};
   }
 
   getServicesPageSchema() {/* TODO: Fix JSX expression */}
@@ -451,15 +412,13 @@ Disallo,`
   getContactPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/contact`,
       mainEntit,
-  y: this.seoConfig.structuredData.organization,
-    };
+  y: this.seoConfig.structuredData.organization};
   }
 
   getBlogPageSchema() {/* TODO: Fix JSX expression */}`
   l: `${this.seoConfig.siteUrl}/blog`,
       publishe,
-  r: this.seoConfig.structuredData.organization,
-    };
+  r: this.seoConfig.structuredData.organization};
   }
 
   setupPerformanceSEO() {/* TODO: Fix JSX expression */}
@@ -474,7 +433,6 @@ Disallo,`
 
       // Add width and height attributes;
       if (!img.width && !img.height) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       }
     });
@@ -483,7 +441,6 @@ Disallo,`
   generateAltText(src) {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   optimizeFonts() {
     // Preload critical fonts;
     const criticalFonts = [
@@ -497,15 +454,12 @@ Disallo,`
       link.as = 'style';
       link.onload = () => {,
         link.rel = 'stylesheet';
-=======
   optimizeFonts() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
       document.head.appendChild(link);
     });
   }
 
-<<<<<<< HEAD
   optimizeCriticalCSS() {
     // Inline critical CSS for above-the-fold content;
     const criticalCSS = `
@@ -514,7 +468,6 @@ Disallo,`
       .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
       .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center; }
       .btn { background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; }
-=======
   optimizeCriticalCSS() {/* TODO: Fix JSX expression */}
   g: 0; }
       .container {/* TODO: Fix JSX expression */}
@@ -525,7 +478,6 @@ Disallo,`
   n: center; }
       .btn {/* TODO: Fix JSX expression */}
   y: inline-block; }`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     `;
 
     const _style = document.createElement('style');
@@ -549,7 +501,6 @@ Disallo,`
   }
 
   // Public methods;
-<<<<<<< HEAD
   updatePageSEO(title, description, image) {
     // Update page title;
     document.title = title;
@@ -569,17 +520,15 @@ Disallo,`
     this.updateTwitterTag('twitter:description', description);
     if (image) {
       this.updateTwitterTag('twitter:image', image);
-=======
   updatePageSEO(title, description, image) {/* TODO: Fix JSX expression */}
     }
 
     // Update Twitter Card tags;
-    this.updateTwitterTag('twitte,)
+    this.updateTwitterTag('twitte)
   r:title', title);
-    this.updateTwitterTag('twitte,)
+    this.updateTwitterTag('twitte)
   r:description', description);
     if (image) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
@@ -604,7 +553,6 @@ Disallo,`
     }
   }
 
-<<<<<<< HEAD
   generateBreadcrumbs(items) {
     const breadcrumbSchema = {
       '@context': 'https: //schema.org',
@@ -614,25 +562,19 @@ Disallo,`
         position: index + 1;
         name: item.name;
         item: item.url;
-=======
   generateBreadcrumbs(items) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-      })),
-    };
+      }))};
 
     this.addStructuredData(breadcrumbSchema);
   }
 
-<<<<<<< HEAD
   trackPageView() {
     // Track page view for analytics;
     if (window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: this.getPageTitle(),
         page_location: window.location.href;
-=======
   trackPageView() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }

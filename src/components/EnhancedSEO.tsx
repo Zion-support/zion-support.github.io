@@ -45,8 +45,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   publishedTime,
 //   modifiedTime,
 //   section,
-  tags = [],
-}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
+  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     

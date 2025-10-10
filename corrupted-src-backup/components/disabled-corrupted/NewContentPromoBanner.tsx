@@ -1,11 +1,8 @@
 import Reac, t, { useState } fr, o, m 'rea, c, t';
-<<<<<<< HEAD
 interface NewContentPromoBannerProp, s {
   varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
   classNa, m, e ?  : string;
-=======
 interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }
 const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -35,21 +32,17 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     {/* TODO: Fix JSX expression */}
     }
   ]; if (isDismiss, e, d) return, nul, l;
-<<<<<<< HEAD
-<<<<<<< HEAD
   return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" />
-=======
   return (
     <div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-1, 6, h-16, b, g-white, rounde, d-full, animat, e-pi, n, g" />
       </div>
       <div, className="relativ, e, z-10, ma, x-w-7xl, m, x-auto, p, x-6, p, y-6"></div>
@@ -70,16 +63,12 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             {/* Featured, content, grid */}
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4"></div>
               { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
-<<<<<<< HEAD
                 const Ico, n = it, e, m.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
-=======
                 const Ico, n = it, e, m.ic, o, n; return (</div>
                   <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   >
                     <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>
                       <Icon, className="w-4 h-4, tex, t-whi, t, e/80" />
-=======
   return (<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}></div>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
@@ -109,27 +98,22 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                   ></Link>"
                     <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>"
                       <Icon, className="w-4 h-4, tex, t-whi, t, e/80" /></Icon>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <span, className="te, x, t-xs, fon, t-medium, tex, t-whi, t, e/80">{it, e, m.cate, g, o, r, y}</sp, a, n>
                     </div>"
                     <h4, classNam, e = "fo, n, t-semibold, tex, t-white, tex, t-sm, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s"></h4>
                       {it, e, m.t, i, t, l, e}
-<<<<<<< HEAD
                     </h4>
                     <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
                       {it, e, m.description})
                     </p>)
-=======
                     </h4>"
                     <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2"></p>
                       {it, e, m.description}
                     </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   </L, i, n, k>)
                 );
               })}
             </div>
-<<<<<<< HEAD
             {/* Action, button, s */}
             <div, classNam, e = "flex, fle, x-wrap, ga, p-3"></div>
               <Link, t, o="/bl, o, g"
@@ -161,7 +145,6 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                 <sp, a, n>New, Case, Studies</sp, a, n>
               </div>
               <div, className="flex, item, s-center, ga, p-1"></div>
-=======
             {/* Action, button, s */}"
             <div, classNam, e = "flex, fle, x-wrap, ga, p-3"></div>"
               <Link, t, o="/bl, o, g""
@@ -193,7 +176,6 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                 <sp, a, n>New, Case, Studies</sp, a, n>
               </div>"
               <div, className="flex, item, s-center, ga, p-1"></div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <span, className="fo, n, t-semibo, l, d">50+</sp, a, n>
                 <sp, a, n>Expert, Insight, s</sp, a, n>
               </div>

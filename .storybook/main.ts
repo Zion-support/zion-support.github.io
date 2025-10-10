@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 const config: StorybookConfig = {,
   stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
   addons: ['@storybook/addon-essentials'],
   framework: {,
-=======
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
@@ -11,16 +9,11 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-  ],
+    '@storybook/addon-interactions'],
   framework: {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     name: '@storybook/react-vite',
-    options: {},
-  },
+    options: {}},
   docs: {
-    autodocs: 'tag',
-  },
-};
+    autodocs: 'tag'}};
 
 export default config;

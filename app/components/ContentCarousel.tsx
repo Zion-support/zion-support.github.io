@@ -1,29 +1,22 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { ChevronLeft, ChevronRight, Star, ArrowRight, Brain, Cpu, Shield, Zap, Target, BarChart, Users, Settings } from 'lucide-react';
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-=======
 import { ChevronLeft, ChevronRight, Star, Users, TrendingUp, Award } from 'lucide-react';
 
 const ContentCarousel: React.FC = () => {,
   const [currentSlide, setCurrentSlide] = useState(0);
->>>>>>> origin/main
 
   const slides = [
     {
-<<<<<<< HEAD
       id: 1;
       title: "AI-Powered Business Transformation"
       description: "See how we helped a Fortune 500 company achieve 300% ROI with our AI solutions"
       image: "🤖"
-=======
       id: 1,
-<<<<<<< HEAD
       title: 'AI-Powered Business Transformation',
       description: 'Transform your business with our cutting-edge AI solutions that deliver 300% ROI and automate 95% of your processes.',
       image: '🤖',
@@ -61,15 +54,12 @@ const ContentCarousel: React.FC = () => {,
       cta: 'See Industries',
       href: '/industry-solutions',
       color: 'from-yellow-400 to-orange-600'
-=======
       title: "AI-Powered Business Transformation",
       description: "See how we helped a Fortune 500 company achieve 300% ROI with our AI solutions",
       image: "🤖",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       stats: "300% ROI",
       icon: TrendingUp;
-      color: "from-blue-500 to-cyan-600",
-    },
+      color: "from-blue-500 to-cyan-600"},
     {
       id: 2;
       title: "Enterprise Security Solutions"
@@ -77,8 +67,7 @@ const ContentCarousel: React.FC = () => {,
       image: "🔒"
       stats: "99.9% Uptime",
       icon: Award;
-      color: "from-green-500 to-emerald-600",
-    },
+      color: "from-green-500 to-emerald-600"},
     {
       id: 3;
       title: "Cloud Migration Success"
@@ -86,61 +75,46 @@ const ContentCarousel: React.FC = () => {,
       image: "☁️"
       stats: "40% Cost Reduction",
       icon: Users;
-      color: "from-purple-500 to-pink-600",
-    },
+      color: "from-purple-500 to-pink-600"},
     {
       id: 4;
       title: "AI Marketing Automation"
       description: "Automated marketing campaigns increasing lead generation by 250%"
       image: "📈"
       stats: "250% More Leads",
-<<<<<<< HEAD
       icon: Star;
       color: "from-orange-500 to-red-600",
-=======
       icon: Star,
       color: "from-orange-500 to-red-600"
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
     if (!isAutoPlaying) return;
 
-=======
->>>>>>> origin/main
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
 
     return () => clearInterval(interval);
-<<<<<<< HEAD
   }, [isAutoPlaying, slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     setIsAutoPlaying(false);
-=======
   }, [slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
->>>>>>> origin/main
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-<<<<<<< HEAD
     setIsAutoPlaying(false);
-=======
->>>>>>> origin/main
   };
 
   const goToSlide = (index: number) => {,
     setCurrentSlide(index);
-<<<<<<< HEAD
     setIsAutoPlaying(false);
   };
 
@@ -269,18 +243,13 @@ const ContentCarousel: React.FC = () => {,
         )}
       </button>
     </div>
-=======
   };
 
-<<<<<<< HEAD
   return(<section className="py-16" aria-labelledby="carousel-heading">
       <div className="container mx-auto px-4">
-<<<<<<< HEAD
-=======
   return (
     <section className="py-16" aria-labelledby="carousel-heading">
       <div className="container mx-auto px-4"></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <h2 id="carousel-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Success Stories</h2>
         </h2>
 
@@ -288,7 +257,6 @@ const ContentCarousel: React.FC = () => {,
           <div className="overflow-hidden rounded-2xl"></div>
             <div
               className="flex transition-transform duration-500 ease-in-out"
-=======
         <h2 id="carousel-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
           Success Stories;
         </h2>)
@@ -297,17 +265,13 @@ const ContentCarousel: React.FC = () => {,
           <div className="overflow-hidden rounded-2xl">)
             <div;),
               className="flex transition-transform duration-500 ease-in-out"),
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >{slides.map((slide) => (</div>
-<<<<<<< HEAD
                 <div key={slide.id} className="w-full flex-shrink-0">
                   <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2xl`}>
-<<<<<<< HEAD
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                       <div>
                         <div className="text-6xl mb-6">{slide.image}<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{slide.title}<p className="text-white/90 text-lg mb-6 leading-relaxed">{slide.description}</p>
-=======
                     <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 items-center">,
                       <div>,
                         <div className="text-6xl mb-6">{slide.image}</div>
@@ -316,14 +280,11 @@ const ContentCarousel: React.FC = () => {,
                         </h3>
                         <p className="text-white/90 text-lg mb-6 leading-relaxed">
                           {slide.description}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <div key={slide.id} className="w-full flex-shrink-0"></div>
                   <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2xl`}></div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"></div>
                       <div></div>
                         <div className="text-6xl mb-6">{slide.image}</div><h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{slide.title}</h3><p className="text-white/90 text-lg mb-6 leading-relaxed">{slide.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         </p>
                         <div className="flex items-center space-x-2 text-white"></div>
                           <slide.icon className="w-6 h-6" />
@@ -372,16 +333,11 @@ const ContentCarousel: React.FC = () => {,
           </button>,
 ,
           {/* Slide indicators */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="flex justify-center space-x-2 mt-6">{slides.map((_, index) => (<button
-=======
           <div className="flex justify-center space-x-2 mt-6">{slides.map((_, index) => (</div><button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 key={index}
                 onClick={() =>goToSlide(index)}</button></<<<butto>className</butto></butto>={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/50'
-=======
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
               <button;
@@ -389,7 +345,6 @@ const ContentCarousel: React.FC = () => {,
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${}
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/50'}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               /></button>
@@ -398,12 +353,10 @@ const ContentCarousel: React.FC = () => {,
         </div>
       </div>
     </section>
->>>>>>> origin/main
   );
 };
 
 export default ContentCarousel;
-=======
 import React from 'react';
 import { ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
 
@@ -459,4 +412,3 @@ const ContentCarousel: React.FC = () => {
 };
 
 export default ContentCarousel;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

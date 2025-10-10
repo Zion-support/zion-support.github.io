@@ -8,7 +8,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix merge conflicts in a file;
-<<<<<<< HEAD
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -20,36 +19,28 @@ function fixMergeConflicts(filePath) {
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
       return headContent.trim();
-=======
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
     // Remove any remaining conflict markers;
     content = content;
       .replace(/[\s\S]*?)
       .replace(//g, '')
-<<<<<<< HEAD
       .replace(/)
 )
     // Clean up the content;)
-=======
       .replace(/
 
     // Clean up the content;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     content = content;)
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive empty lines;
       .replace(/^\s*\n/gm, '\n') // Remove empty lines with just spaces;
       .replace(/\s+$/gm, ''); // Remove trailing spaces;
-<<<<<<< HEAD
     if (modified || content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-=======
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return true;
     }
     
@@ -61,7 +52,6 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all TypeScript/React files;
-<<<<<<< HEAD
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   const files = [];
   
@@ -76,10 +66,8 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
         traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-=======
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }
@@ -105,23 +93,20 @@ for (const file of files) {/* TODO: Fix JSX expression */}
   }
 }
 `
-console.log(`\nMerge conflict resolution,)`
+console.log(`\nMerge conflict resolution)`
   complete:`);`
-console.log(`- Files,)`
+console.log(`- Files)`
   processed: ${files.length}`);`
-console.log(`- Files,)`
+console.log(`- Files)`
   fixed: ${fixedCount}`);`
-console.log(`- Error,)`
+console.log(`- Error)`
   s: ${errorCount}`);
 
-<<<<<<< HEAD
 console.log(`\nMerge conflict resolution complete: `);
 console.log(`- Files processed: ${files.length}`);
 console.log(`- Files fixed: ${fixedCount}`);
 console.log(`- Errors: ${errorCount}`);
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 // Run linting to check for remaining issues;
 console.log('\nRunning linting to check for remaining issues...');
 try {/* TODO: Fix JSX expression */}

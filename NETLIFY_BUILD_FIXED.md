@@ -211,10 +211,10 @@ pnpm run lint
 - [x] Build works locally
 - [x] Documentation updated
 - [x] Cleanup script created
-- [ ] **Remove Next.js plugin from Netlify UI** ← YOU ARE HERE
-- [ ] Deploy to Netlify
-- [ ] Verify deployment success
-- [ ] (Optional) Remove Next.js dependencies
+- [] **Remove Next.js plugin from Netlify UI** ← YOU ARE HERE
+- [] Deploy to Netlify
+- [] Verify deployment success
+- [] (Optional) Remove Next.js dependencies
 
 ## Support
 

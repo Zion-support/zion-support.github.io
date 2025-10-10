@@ -4,21 +4,17 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
      },
     {/* TODO: Fix JSX expression */}
      }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-=======
   ]; return (
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
@@ -38,26 +34,22 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. 
             Join, 500, K+ professionals, who, trust our, revolutionary, content to, stay, ahead of, the, curve.
           </p>
-<<<<<<< HEAD
           {/* Achievement, St, a, t, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">)
             { [)
               { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  })
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  })
               {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  })
-=======
           {/* Achievement, St, a, t, s */}
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4 xl, m, x-auto, m, b-12"></div>
             { [
               { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
               {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'  }
             ].m, a, p((achieveme, n, t, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
-=======
   ]; return (<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
@@ -92,7 +84,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             ].m, a, p((achieveme, n, t, ind, e, x) => ("
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {achieveme, n, t.ic, o, n}
                 </div>"
                 <div, classNam, e = "te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1"></div>
@@ -105,7 +96,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             ))}
           </div>
         </div>
-<<<<<<< HEAD
         {/* Featured, Content, Cards */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (</div>
@@ -125,7 +115,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 {/* Catego, r, y */}
                 <div, classNam, e = "mb-4"></div>
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-emera, l, d-400, tex, t-xs, fon, t-semibold, border, border-emera, l, d-5, 0, 0/30">
-=======
         {/* Featured, Content, Cards */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}"
@@ -145,7 +134,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 {/* Catego, r, y */}"
                 <div, classNam, e = "mb-4"></div>"
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-emera, l, d-400, tex, t-xs, fon, t-semibold, border, border-emera, l, d-5, 0, 0/30"></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {conte, n, t.category}
                   </sp, a, n>
                 </div>
@@ -157,7 +145,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, tex, t-sm, leadin, g-relax, e, d"></p>
                   {conte, n, t.description}
                 </p>
-<<<<<<< HEAD
                 {/* Meta, Inf, o */}
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>
                   <span, className="flex, item, s-center, ga, p-2"></span>
@@ -173,7 +160,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className="mb-6"></div>
                   <div, className="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0"></div>
                     <Users, className="w-4 h-4" />
-=======
                 {/* Meta, Inf, o */}"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>"
                   <span, className="flex, item, s-center, ga, p-2"></span>"
@@ -189,7 +175,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className="mb-6"></div>"
                   <div, className="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0"></div>"
                     <Users, className="w-4 h-4" /></Users>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <span, className="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
                   </div>
                 </d, i, v > {/* CTA, Butto, n */}`
@@ -203,7 +188,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             </div>
           ))}
         </div>
-<<<<<<< HEAD
         {/* Special, Offer, Section */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-emera, l, d-5, 0, 0/20, m, b-16"></div>
           <div, className="te, x, t-cent, e, r"></div>
@@ -228,7 +212,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               </div>
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>
                 <a, hre, f="/subscri, b, e"
-=======
         {/* Special, Offer, Section */}"
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-emera, l, d-5, 0, 0/20, m, b-16"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
@@ -253,7 +236,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               </div>"
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
                 <a, hre, f="/subscri, b, e""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   className="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, className="w-5 h-5" /></Sparkles>
@@ -269,7 +251,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Newsletter, Sig, n, u, p */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, vi, a-bl, u, e-500, t, o-purp, l, e-5, 0, 0"></div>
@@ -284,7 +265,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>
                 <input, typ, e="ema, i, l"
                     placehold, e, r="Enter, your, email"
-=======
         {/* Newsletter, Sig, n, u, p */}"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, vi, a-bl, u, e-500, t, o-purp, l, e-5, 0, 0"></div>"
@@ -299,7 +279,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
                 <input, typ, e="ema, i, l""
                     placehold, e, r="Enter, your, email""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     className="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-emera, l, d-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
                   /></input>"
                 <button, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></button>

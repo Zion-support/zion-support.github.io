@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 
 'use client';
@@ -216,7 +210,6 @@ $4}
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -253,7 +246,6 @@ $4}
             
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
-=======
     <div>Coming Soon</div>
 
   );
@@ -334,8 +326,7 @@ $4}
   a,
   i: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -404,8 +395,7 @@ $4}
     i,
   t: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -474,8 +464,7 @@ $4}
     securit,
   y: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -544,8 +533,7 @@ $4}
     automatio,
   n: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -717,12 +705,10 @@ $4}
             </div>"
             <div className="text-center"></div>"
               <p className="text-gray-300 max-w-2xl mx-auto"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 {solutionCategories.find(cat => cat.id === activeTab)?.description}
               </p>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Solutions Grid */}
           <div className="mb-16">
@@ -745,7 +731,6 @@ $4}
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
           {/* Solutions Grid */}"
           <div className="mb-16"></div>"
             <div className="grid grid-cols-1,"
@@ -769,12 +754,10 @@ $4}
                       {solution.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                           {feature}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   </div>
                   
                   <div className="flex items-center justify-between">
@@ -787,7 +770,6 @@ $4}
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
-=======
                   </div>"
                   <div className="flex items-center justify-between"></div>`
                     <div className={`text-lg font-bold ${solution.color}`}></div>
@@ -800,14 +782,12 @@ $4}
 // >
 //                       Learn More;"
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     </a>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Benefits Section */}
           <div className="mb-16">
@@ -821,7 +801,6 @@ $4}
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-=======
           {/* Benefits Section */}"
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
@@ -845,13 +824,11 @@ $4}
                     <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -884,7 +861,6 @@ $4}
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
               </a>
-=======
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
@@ -964,19 +940,15 @@ $4}
           <Mail className="w-4 h-4 mr-2" /></Mail>
 // Email Us;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             </div>
           </div>
         </div>
       </div>
 
       <Footer />
-<<<<<<< HEAD
     </>
-=======
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

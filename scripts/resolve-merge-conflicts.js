@@ -12,8 +12,7 @@ function execGitCommand(command, description) {
     const result = execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe',
-    });
+      stdio: 'pipe'});
     console.log(`✅ ${description} completed`);
     return result;
   } catch (error) {
@@ -40,8 +39,7 @@ function resolveMergeConflicts(filePath) {
           })
           return match;)
         })
-        .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?          // Extract the content after  (usually the incoming changes)
-          const parts = match.split('');
+        .replace(/          const parts = match.split('');
           if (parts.length > 1) {
             const incoming = parts[1].replace(/            return incoming;)
           })

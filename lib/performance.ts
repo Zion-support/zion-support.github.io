@@ -1,6 +1,5 @@
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-<<<<<<< HEAD
 /**
  * Performance Monitoring Utility;
  * Tracks and reports web vitals and performance metrics;
@@ -15,7 +14,6 @@ declare global {
 
 // Types;
 interface PerformanceMetric {
-=======
 
 export interface Metric {
   name: string;
@@ -25,7 +23,6 @@ export interface Metric {
 }
 
 export interface PerformanceMetric {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
@@ -33,7 +30,6 @@ export interface PerformanceMetric {
   id: string;
 }
 
-<<<<<<< HEAD
 // Extended Performance interface for memory API;
 interface PerformanceMemory {
   usedJSHeapSize: number;
@@ -64,8 +60,7 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 },
-};
+  TTFB: { good: 800, poor: 1800 }};
 
 /**
  * Get performance rating based on thresholds;
@@ -120,15 +115,13 @@ function sendToAnalytics(metric: Metric): void {,
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console;
 //     }
-=======
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const thresholds = {
     CLS: [0.1, 0.25],
     FID: [100, 300],
     FCP: [1800, 3000],
     LCP: [2500, 4000],
-    TTFB: [800, 1800],
-  };
+    TTFB: [800, 1800]};
 
   const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0];
   
@@ -150,11 +143,9 @@ function sendToAnalytics(metric: Metric): void {
   if (process.env.NODE_ENV === 'development') {
     console.log('Performance metric:', performanceMetric);
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
   // Send to analytics;
   if (typeof window !== 'undefined' && window.gtag) {
-<<<<<<< HEAD
     window.gtag('event', metric.name, {)
       event_category: 'Web Vitals')
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value;)
@@ -168,21 +159,17 @@ function sendToAnalytics(metric: Metric): void {
       non_interaction: true;
       non_interaction: true;
       non_interaction: true;
-=======
     window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
       value: Math.round(
         metric.name === 'CLS' ? metric.value * 1000 : metric.value
       ),
       event_label: metric.id,
-      non_interaction: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    });
+      non_interaction: true});
   }
 
   // Send to custom endpoint;
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
-<<<<<<< HEAD
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
@@ -291,26 +278,21 @@ export function generatePerformanceReport(): PerformanceReport {
   return {
     metrics;
     timestamp: new Date().toISOString(),
-    url: typeof window !== 'undefined' ? window.location.href : '',
-}
+    url: typeof window !== 'undefined' ? window.location.href : ''}
 
   if (typeof window === 'undefined') return;
 
   // Track Core Web Vitals;
-=======
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(performanceMetric),
-    }).catch(console.error);
+        'Content-Type': 'application/json'},
+      body: JSON.stringify(performanceMetric)}).catch(console.error);
   }
 }
 
 export function reportWebVitals(): void {
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   getCLS(sendToAnalytics);
   getFID(sendToAnalytics);
   getFCP(sendToAnalytics);
@@ -318,7 +300,6 @@ export function reportWebVitals(): void {
   getTTFB(sendToAnalytics);
 }
 
-<<<<<<< HEAD
 /**
  * Get current performance report;
  */
@@ -357,8 +338,7 @@ export function reportWebVitals(): void {
     (window as any).gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
-      event_category: 'Performance',
-    });
+      event_category: 'Performance'});
   }
 
   if (process.env['NODE_ENV'] === 'development') {
@@ -416,8 +396,7 @@ export function measurePerformance(name: string, startTime: number): number {
     window.gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
-      event_category: 'Performance',
-    });
+      event_category: 'Performance'});
   }
 
   if (process.env['NODE_ENV'] === 'development') {
@@ -591,8 +570,7 @@ export function getResourceTiming(): PerformanceResourceTiming[] {
 /**
  * Get slow resources;
  */
-export function getSlowResources(threshold: number = 1000;),
-): PerformanceResourceTiming[] {,
+export function getSlowResources(threshold: number = 1000;)): PerformanceResourceTiming[] {,
   return getResourceTiming().filter(resource => resource.duration > threshold);
 }
 
@@ -676,13 +654,11 @@ export function generatePerformanceReport(): PerformanceReport | null {
       });
     });
   }
-        id: `nav-${name}`,
-      });
+        id: `nav-${name}`});
     });
   }
 
-        id: `nav-${name}`,
-      });
+        id: `nav-${name}`});
     });
   }
 
@@ -693,8 +669,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
     });
   }
 
-        id: `nav-${name}`,
-      });
+        id: `nav-${name}`});
     });
   }
 
@@ -722,9 +697,7 @@ export function generatePerformanceReport(): PerformanceReport {
     metrics: []
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
-  };
-=======
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
 
 export function measurePerformance(name: string, fn: () => void): void {
   const start = performance.now();
@@ -735,8 +708,7 @@ export function measurePerformance(name: string, fn: () => void): void {
     name,
     value: end - start,
     delta: end - start,
-    id: `${name}-${Date.now()}`,
-  });
+    id: `${name}-${Date.now()}`});
 }
 
 export function measureAsyncPerformance<T>(
@@ -750,15 +722,12 @@ export function measureAsyncPerformance<T>(
       name,
       value: end - start,
       delta: end - start,
-      id: `${name}-${Date.now()}`,
-    });
+      id: `${name}-${Date.now()}`});
     return result;
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 
-<<<<<<< HEAD
   try {
     const observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries();
@@ -1018,8 +987,7 @@ export default {
   generateReport: generatePerformanceReport;
   monitorLongTasks,
   monitorLayoutShifts,
-  isSlowConnection,
-};
+  isSlowConnection};
   getPerformanceScore;
 };
 };
@@ -1031,12 +999,10 @@ export {
   type PerformanceMetric,
   type PerformanceReport,
   getRating,
-  sendToAnalytics,
-};
+  sendToAnalytics};
   getPerformanceScore;
 };
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
-  };
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
 }
 /**
  * Check if performance is within acceptable thresholds;
@@ -1074,8 +1040,7 @@ export function generatePerformanceReport(): PerformanceReport {
     metrics: [],
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
-  };
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
 }
   getConnectionType;
 };
@@ -1096,12 +1061,8 @@ export function usePerformanceMonitoring() {
   // Initialize monitoring on mount;
   initPerformanceMonitoring();
 }
-  getConnectionType,
-};
+  getConnectionType};
 }
-  getConnectionType,
-};
+  getConnectionType};
 
 export default performanceUtils;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

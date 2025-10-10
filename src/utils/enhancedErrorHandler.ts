@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Error Handling System
@@ -82,8 +81,7 @@ class EnhancedErrorHandler {
     this.setupErrorRecovery();
     this.setupErrorCleanup();
     this.isInitialized = true;
-    if (process.env['NODE_ENV'] === 'development') {
-      }
+    if (process.env['NODE_ENV'] === 'development') {}
   }
   /**
    * Setup global error handlers
@@ -188,8 +186,7 @@ $4});
           });
         });
         observer.observe({ type: 'longtask', buffered: true });
-      } catch (error) {
-        }
+      } catch (error) {}
     }
   }
   /**
@@ -504,8 +501,7 @@ $4});
         },
         body: JSON.stringify(errorReport)
       });
-    } catch (error) {
-      }
+    } catch (error) {}
   }
   /**
    * Aggregate error data
@@ -520,8 +516,7 @@ $4});
     if (
       errorReport.type === 'resource' ||
       errorReport.category === 'performance'
-    ) {
-      }
+    ) {}
   }
   /**
    * Attempt error recovery
@@ -533,8 +528,7 @@ $4});
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
     );
     if (recentErrors.length > 5) {
-      if (process.env['NODE_ENV'] === 'development') { 
-        }
+      if (process.env['NODE_ENV'] === 'development') {}
       // Implement recovery strategies here
       this.clearErrorState();
     }
@@ -547,8 +541,7 @@ $4});
     this.errorCounts.clear();
     this.errorCategories.clear();
     this.errorRateLimit = 0;
-    if (process.env['NODE_ENV'] === 'development') { 
-      }
+    if (process.env['NODE_ENV'] === 'development') {}
   }
   /**
    * Clean up old errors
@@ -559,8 +552,7 @@ $4});
     this.errors = this.errors.filter(
       error => new Date(error.context.timestamp) > cutoffDate
     );
-    if (process.env['NODE_ENV'] === 'development') { 
-      }
+    if (process.env['NODE_ENV'] === 'development') {}
   }
   /**
    * Get error statistics
@@ -635,7 +627,6 @@ export {
   type ErrorContext,
   type ErrorHandlerConfig
 };
-=======
 
 'use client'
 /**
@@ -723,7 +714,7 @@ class EnhancedErrorHandler {// TODO: Add content;}
   errorRateLimit: number = 0;
   private,
   isInitialized: boolean = false;
-  constructor(confi,)
+  constructor(confi)
   g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -805,7 +796,7 @@ class EnhancedErrorHandler {// TODO: Add content;}
 };
   typ,
   e: 'promise',
-        messag,)
+        messag)
   e: event.reason?.message || String(event.reason),
         stac,
   k: event.reason?.stack,
@@ -844,8 +835,7 @@ class EnhancedErrorHandler {// TODO: Add content;}
           });
         }
       },
-//       true,
-)
+//       true)
   }
   /**
    * Setup network error handler;
@@ -975,8 +965,7 @@ const originalFetch = window.fetch;
 }
         this.cleanupOldErrors();
       },
-//       24 * 60 * 60 * 1000,
-); // Daily cleanup;
+//       24 * 60 * 60 * 1000); // Daily cleanup;
   }
   /**
    * Handle error with comprehensive processing;
@@ -1039,8 +1028,7 @@ const originalFetch = window.fetch;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
 //     this.errorCategories.set()
 //       errorReport.category,
-//       (this.errorCategories.get(errorReport.category) || 0) + 1,
-)
+//       (this.errorCategories.get(errorReport.category) || 0) + 1)
   }
   /**
    * Log error to console;
@@ -1161,8 +1149,7 @@ const originalFetch = window.fetch;
           
           
           
-          < 300000 // Last 5 minutes,
-);
+          < 300000 // Last 5 minutes);
     if (recentErrors.length > 5) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -1200,8 +1187,7 @@ const originalFetch = window.fetch;
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
     this.errors = this.errors.filter()
-      error => new Date(error.context.timestamp) > cutoffDate,
-);
+      error => new Date(error.context.timestamp) > cutoffDate);
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -1283,8 +1269,7 @@ const originalFetch = window.fetch;
 
       },
 //       null,
-//       2,
-)
+//       2)
   }
   /**
    * Manually report error;
@@ -1319,4 +1304,3 @@ export {/* TODO: Fix JSX expression */}
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

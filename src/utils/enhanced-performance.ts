@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Enhanced Performance Monitoring
  * Comprehensive performance tracking and optimization utilities
@@ -116,8 +115,7 @@ export class PerformanceMonitor {
       lcp: this.getMetric('lcp'),
       fid: this.getMetric('fid'),
       cls: this.getMetric('cls'),
-      ttfb: this.getTTFB(),
-    };
+      ttfb: this.getTTFB()};
   }
   
   /**
@@ -200,8 +198,7 @@ export class PerformanceMonitor {
       webVitals,
       resources: this.getResourceStats(),
       memory: this.getMemoryStats(),
-      timestamp: Date.now(),
-    };
+      timestamp: Date.now()};
   }
   
   /**
@@ -219,8 +216,7 @@ export class PerformanceMonitor {
       scripts: resources.filter(r => r.initiatorType === 'script').length,
       styles: resources.filter(r => r.initiatorType === 'css' || r.initiatorType === 'link').length,
       images: resources.filter(r => r.initiatorType === 'img').length,
-      fonts: resources.filter(r => r.initiatorType === 'font').length,
-    };
+      fonts: resources.filter(r => r.initiatorType === 'font').length};
   }
   
   /**
@@ -236,8 +232,7 @@ export class PerformanceMonitor {
     return {
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
-      jsHeapSizeLimit: memory.jsHeapSizeLimit,
-    };
+      jsHeapSizeLimit: memory.jsHeapSizeLimit};
   }
   
   /**
@@ -340,7 +335,6 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
 export const performanceMonitor = new PerformanceMonitor();
 
 export default PerformanceMonitor;
-=======
 
 
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
@@ -406,9 +400,9 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
 // Utility Functions;
  * Throttle function;
 export function throttle;
-          <T extends (...arg,)
+          <T extends (...arg)
   s: unknown[]) => any>(* Request idle callback wrapper;
-export function runWhenIdle(callbac,)
+export function runWhenIdle(callbac)
   k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -426,4 +420,3 @@ export const performanceMonitor = new PerformanceMonitor();
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

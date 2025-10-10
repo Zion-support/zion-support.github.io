@@ -27,8 +27,7 @@ interface EnhancedSEOProps {
   preload?: Array<{
     href: string;,
     as: string;
-    type?: string;,
-  }>;
+    type?: string;}>;
   prefetch?: Array<{
     href: string;,
     as: string;
@@ -37,11 +36,8 @@ interface EnhancedSEOProps {
   preconnect?: string[];
 }
 
-<<<<<<< HEAD
 const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
-=======
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
@@ -81,46 +77,38 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
+      email: 'kleber@ziontechgroup.com'},
     address: {
       '@type': 'PostalAddress'
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
-    },
+      addressCountry: 'US'},
     sameAs: [
       'https://linkedin.com/company/zion-tech-group'
       'https: //twitter.com/ziontechgroup'
       'https: //facebook.com/ziontechgroup'
       'https: //instagram.com/ziontechgroup'
       'https: //github.com/ziontechgroup'
-      'https: //youtube.com/@ziontechgroup',
-    ],
+      'https: //youtube.com/@ziontechgroup'],
     offers: {,
       '@type': 'Offer',
       name: 'AI Enterprise Transformation Services',
       description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
       price: '50000',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-    },
-  };
+      availability: 'https://schema.org/InStock'}};
 
   const finalStructuredData = structuredData || defaultStructuredData;
-<<<<<<< HEAD
 </EnhancedSEOProps>
   return (<Helmet>{/* Basic Meta Tags */}<title>{title}</title>
       <meta name="description" content={description} />
-=======
 
   return(<Helmet>)
       {/* Basic Meta Tags */})
       <title>{title}</title>)
       <meta name="description" content={description} />)
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       <meta name="robots" content={robotsContent} />
@@ -128,13 +116,11 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       <meta name="theme-color" content={themeColor} />
       <meta name="color-scheme" content={colorScheme} />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-<<<<<<< HEAD
       <meta name="format-detection" content="telephone=no,address=no,email=no" >{/* Canonical URL */}<link rel="canonical" href={canonicalUrl} >{/* Language and Locale */}</link>
       <html lang={locale.split('_')[0]} >{alternateLocales.map((altLocale) => (<link key={altLocale} rel="alternate" hrefLang={altLocale} href={`${canonicalUrl}?lang=${altLocale}`} >))}
 </link>
       {/* Open Graph / Facebook */}</link>
       </link><meta property="og:type" content={ogType} />
-=======
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
@@ -146,7 +132,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -154,7 +139,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       <meta property="og: image:width" content="1200" />,
       <meta property="og:image:height" content="630" />,
       <meta property="og:image:alt" content={title} />
-<<<<<<< HEAD
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content={locale} >{publishedTime && <meta property="article:published_time" content={publishedTime} >}</meta>
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} >}</meta>
@@ -163,7 +147,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
 </meta>
       {/* Twitter */}</meta>
       </meta><meta name="twitter:card" content={twitterCard} />
-=======
       <meta property="og: site_name" content="Zion Tech Group" />,
       <meta property="og:locale" content={locale} />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
@@ -175,13 +158,11 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
 
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:image:alt" content={title} />
-<<<<<<< HEAD
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" >{/* Preconnect to external domains */}</meta>
       {preconnect.map((domain) => (<link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous" >))}
@@ -191,7 +172,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
 
       {/* Preload critical resources */}</link>
       {preload.map((resource, index) => (<link
-=======
       <meta name="twitter: site" content="@ziontechgroup" />,
       <meta name="twitter:creator" content="@ziontechgroup" />,
 ,
@@ -208,7 +188,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       {/* Preload critical resources */}
       {preload.map((resource, index) => (
         <link;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           key={index}
           rel="preload"
           href={resource.href}
@@ -216,14 +195,11 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
           type={resource.type}
         >))}</link>
 
-<<<<<<< HEAD
       {/* Prefetch likely next pages */}</link>
       {prefetch.map((resource, index) => (<link
-=======
       {/* Prefetch likely next pages */}
       {prefetch.map((resource, index) => (
         <link;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           key={index}
           rel="prefetch"
           href={resource.href}
@@ -236,7 +212,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       {/* Additional SEO Meta Tags */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
-<<<<<<< HEAD
       <meta name="yandex-verification" content="your-yandex-verification-code" >{/* Security Headers */}</meta>
       </meta><meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
@@ -248,7 +223,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Favicon and Icons */}</meta>
       </meta><link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-=======
       <meta name="yandex-verification" content="your-yandex-verification-code" />
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
@@ -263,7 +237,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       {/* Favicon and Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <link rel="apple-touch-icon" href="/logo192.webp" />
       <link rel="manifest" href="/manifest.json" />
     </Helmet>

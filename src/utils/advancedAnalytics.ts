@@ -165,7 +165,7 @@ class AdvancedAnalytics {// TODO: Add content;}
    * Track page views;
    */
 
-  trackPageView(url?: string, title?: string): void {id: this.generateEventId(),}
+  trackPageView(url?: string, title?: string): void {id: this.generateEventId()}
       type: 'page_view',
       category: 'navigation',
       action: 'page_view',
@@ -530,7 +530,7 @@ class AdvancedAnalytics {// TODO: Add content;}
 }
           'Content-Type': 'application/json'
         },
-        bod,)
+        bod)
   y: JSON.stringify(event)
       });
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -812,7 +812,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
 }
           'Content-Type': 'application/json'
         },
-        bod,)
+        bod)
   y: JSON.stringify(session)
       });
     } catch (error) {/* TODO: Fix JSX expression */}

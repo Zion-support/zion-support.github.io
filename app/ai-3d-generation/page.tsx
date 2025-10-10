@@ -1,16 +1,11 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
-=======
 import React, { lazy } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/main
 
-<<<<<<< HEAD
 const AI3DGenerationPage: React.FC = () => {,
   const features = [,
     'Generate high-quality 3D models from text descriptions',
@@ -37,7 +32,6 @@ const AI3DGenerationPage: React.FC = () => {,
   ];
 
   const applications = [
-=======
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -84,16 +78,13 @@ const AI3DGenerationPage: React.FC = () => {
   ];
 
   const useCases = [
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
     {
       title: 'Game Development',
       description: 'Create 3D assets, characters, and environments for games',
       icon: '🎮'
     },
-=======
 const AI3DGenerationPage: React.FC = () => {
   const services = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     {
       title: 'Architecture Visualization',
       description: 'Generate 3D building models and interior designs',
@@ -110,13 +101,11 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🖨️'
     },
     {
-<<<<<<< HEAD
       title: 'Entertainment & Media',
       description: 'Produce 3 D content for films and animations',
       icon: '🎬',
       examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
     }
-<<<<<<< HEAD
 import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -133,7 +122,6 @@ const AI3DGenerationPage: React.FC = () => {
     'Batch processing'
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Accelerate 3D content creation by 80%',
     'Reduce production costs by 60%',
@@ -154,9 +142,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Educational content'
   ];
 
-=======
   ]
->>>>>>> origin/main
   const pricing = [
     {
       name: 'Creator',
@@ -216,31 +202,24 @@ const AI3DGenerationPage: React.FC = () => {
       step: 1;
       title: 'Describe Your Vision',
       description: 'Input text description or upload reference images',
-      icon: '✍️',
-    },
+      icon: '✍️'},
     {
       step: 2;
       title: 'AI Processing',
       description: 'Our AI generates 3D model with textures and materials',
-      icon: '🤖',
-    },
+      icon: '🤖'},
     {
       step: 3;
       title: 'Review & Refine',
       description: 'Review the generated model and make adjustments',
-      icon: '👁️',
-    },
+      icon: '👁️'},
     {
       step: 4;
       title: 'Export & Use',
       description: 'Download in your preferred format and integrate',
-      icon: '📤',
-    }
+      icon: '📤'}
   ]
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-=======
       title: 'VR/AR Content',
       description: 'Generate immersive 3D content for virtual experiences',
       icon: '🥽'
@@ -252,27 +231,19 @@ const AI3DGenerationPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="pt-24 pb-16 px-4">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Cube className="w-4 h-4 mr-2" >Revolutionary 3D Technology<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.</p>
-=======
         <div className="max-w-7xl mx-auto text-center"></section>
           <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
             <Cube className="w-4 h-4 mr-2" >Revolutionary 3D Technology<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             Transform your ideas into photorealistic 3D assets in minutes, not months.</p>
-=======
             <Cube className="w-4 h-4 mr-2" />
             Revolutionary 3D Technology;
           </div>
@@ -282,29 +253,21 @@ const AI3DGenerationPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
             Create stunning 3D models, characters, and environments from simple text descriptions.
             Transform your ideas into photorealistic 3D assets in minutes, not months.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
-=======
             <Cube className="w-4 h-4 mr-2" />
             Revolutionary 3D Technology
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.
             Transform your ideas into photorealistic 3D assets in minutes, not months.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
 
           {/* Stats */}
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-<<<<<<< HEAD
               <div className="text-3xl font-bold text-cyan-400 mb-2">90%<div className="text-gray-300">Time Saved</div>
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"></div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
               <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div><div className="text-gray-300">Time Saved</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
   const features = [
     'AI-Powered Generation',
     'Real-time Rendering',
@@ -370,14 +333,12 @@ const AI3DGenerationPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
               <div className="text-3xl font-bold text-green-400 mb-2">80%</div><div className="text-gray-300">Cost Reduction</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
               <div className="text-3xl font-bold text-purple-400 mb-2">5min</div><div className="text-gray-300">Generation Time</div>
-=======
               <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
               <div className="text-gray-300">Time Saved</div>
             </div>
@@ -388,46 +349,31 @@ const AI3DGenerationPage: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-purple-400 mb-2">5min</div>
               <div className="text-gray-300">Generation Time</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
             </div>
-<<<<<<< HEAD
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-gray-300">Support</div>
-=======
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div><div className="text-gray-300">Support</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
             </div>
           </div>
 
-<<<<<<< HEAD
-=======
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>,
               <div className="text-gray-300">Support</div>,
             </div>,
           </div>,
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           {/* Contact Info */}
-<<<<<<< HEAD
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
-=======
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
               <div className="flex items-center space-x-2"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Phone className="w-5 h-5" />
                 <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>+1 302 464 0950</span>
               </div>
-<<<<<<< HEAD
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5" />,
                 <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>kleber@ziontechgroup.com</span>,
@@ -435,7 +381,6 @@ const AI3DGenerationPage: React.FC = () => {
               <div className="flex items-center space-x-2">,
                 <MapPin className="w-5 h-5" />,
                 <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>Middletown, DE</span>
-=======
               <div className="flex items-center space-x-2"></div>
                 <Mail className="w-5 h-5" />
                 <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>kleber@ziontechgroup.com</span>
@@ -443,10 +388,8 @@ const AI3DGenerationPage: React.FC = () => {
               <div className="flex items-center space-x-2"></div>
                 <MapPin className="w-5 h-5" />
                 <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>Middletown, DE</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
-=======
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -469,7 +412,6 @@ const AI3DGenerationPage: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Gallery
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
           </div>
         </div>
       </section>
@@ -552,10 +494,8 @@ const AI3DGenerationPage: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
       </section>,
     </div>,
-=======
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
@@ -595,18 +535,12 @@ const AI3DGenerationPage: React.FC = () => {
       
       <Footer />
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
       </section>
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
   );
 };
 
-<<<<<<< HEAD
 export default AI3DGenerationPage;
-=======
 export default AI3DGenerationPage;
->>>>>>> origin/main

@@ -1,5 +1,4 @@
 export type Zion2026AIMarketplaceService =
-<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -35,7 +34,6 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
       yearly: 2999;
       enterprise: 9999;
       currency: 'USD',
-=======
   i,
   d: string;
   nam,
@@ -53,8 +51,7 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     enterpris,
   e: number;
     currenc,
-  y: string,
-  };
+  y: string};
   feature,
   s: string[];
   benefit,
@@ -80,8 +77,7 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     websit,
   e: string;
     addres,
-  s: string,
-  };
+  s: string};
 }
 export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
@@ -103,7 +99,6 @@ export const,
   e: 9999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -162,13 +157,11 @@ export const,
       'Custom development',
       'Ongoing maintenance'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   },
     id: 'ai-marketplace-002',
     name: 'AI Service Integration Hub',
@@ -179,7 +172,6 @@ export const,
       yearly: 1999;
       enterprise: 7999;
       currency: 'USD',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -211,7 +203,6 @@ export const,
   e: 7999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -270,13 +261,11 @@ export const,
       'Training and documentation',
       'Ongoing support'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   },
     id: 'ai-marketplace-003',
     name: 'AI Service Quality Assurance Platform',
@@ -287,7 +276,6 @@ export const,
       yearly: 1499;
       enterprise: 5999;
       currency: 'USD',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -319,7 +307,6 @@ export const,
   e: 5999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -378,13 +365,11 @@ export const,
       'Compliance guidance',
       'Ongoing maintenance'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   },
     id: 'ai-marketplace-004',
     name: 'AI Service Analytics Dashboard',
@@ -395,7 +380,6 @@ export const,
       yearly: 999;
       enterprise: 3999;
       currency: 'USD',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -427,7 +411,6 @@ export const,
   e: 3999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -486,13 +469,11 @@ export const,
       'Training and documentation',
       'Ongoing support'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   },
     id: 'ai-marketplace-005',
     name: 'AI Service Development Studio',
@@ -503,7 +484,6 @@ export const,
       yearly: 3999;
       enterprise: 14999;
       currency: 'USD',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -535,7 +515,6 @@ export const,
   e: 14999,
       currenc,
   y: 'USD'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     feature,
   s: [,
@@ -594,13 +573,11 @@ export const,
       'Training and certification',
       'Ongoing development support'
     ],
-<<<<<<< HEAD
     contactInfo: unknown;
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     contactInf,
   o: unknown,
       phon,
@@ -612,7 +589,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -625,7 +601,7 @@ export type Zion2026AIMarketplaceService = i,
   y: number; yearl,
   y: number; enterpris,
   e: number; currenc,
-  y: string, }; feature,
+  y: string}; feature,
   s: string[]; benefit,
   s: string[]; ro,
   i: string; marketSiz,
@@ -638,7 +614,7 @@ export type Zion2026AIMarketplaceService = i,
   e: string; emai,
   l: string; websit,
   e: string; addres,
-  s: string, }; } export const,
+  s: string}; } export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [ ' i,
   d: 'ai-marketplace-001',' nam,
   e: 'Zion AI Service Marketplace Platform',' descriptio,

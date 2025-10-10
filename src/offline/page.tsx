@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 
 

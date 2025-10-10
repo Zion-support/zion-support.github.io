@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface ExtraService {id: string;
   name: string;
   tagline: string;
@@ -25,20 +24,17 @@ export const extra_services: ExtraService[] = [
     tagline: 'Seamless cloud migration and optimization',
     price: '$99 / hour',
     description: unknown;
-=======
 export interface ExtraService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
   l: string}
 }
     addres,
-  s: string,
-  }
+  s: string}
 export const,
   extraServices: ExtraService[] = [;
     addres,
-  s: string,
-  }
+  s: string}
 ;
 export const,
   extra_services: ExtraService[] = [,
@@ -52,7 +48,6 @@ export const,
   e: '$99 / hour',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional cloud migration services for businesses looking to modernize their infrastructure.',
     feature,
   s: [,
@@ -60,18 +55,14 @@ export const,
       'Performance optimization',
       'Cost analysis',
       'Security implementation',
-      '24 / 7 support',
-    ],
-<<<<<<< HEAD
+      '24 / 7 support'],
     link: '/services / cloud - migration - expert'
     category: 'Cloud Services'
     real_implementation: true;
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'}},
   id: string, name: string;
   tagline: string, price: string;
   description: string, features: string[],
@@ -97,7 +88,6 @@ export const,
 }
 }
     address: string;
-=======
     lin,
   k: '/services / cloud - migration - expert',
     categor,
@@ -111,9 +101,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+  s: '364 E Main St STE 1008 Middletown DE 19709'}},
   i,
   d: string, nam,
   e: string,
@@ -160,14 +148,11 @@ export const,
     emai,
   l: string;
     addres,
-  s: string,
-  };
+  s: string};
 }
 }
     addres,
-  s: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: string}
 export const,
   extraServices: ExtraService[] = [;
     i,
@@ -188,14 +173,12 @@ export const,
       'Security implementation'
       '24/7 support'
     ]
-<<<<<<< HEAD
     link: '/services/cloud-migration-expert'
     category: 'Cloud Services'
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     lin,
   k: '/services/cloud-migration-expert'
     categor,
@@ -209,7 +192,6 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
     i,
@@ -230,14 +212,12 @@ export const,
       'Compliance audit'
       'Remediation guidance'
     ]
-<<<<<<< HEAD
     link: '/services/cybersecurity-audit'
     category: 'Security'
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];      mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
@@ -246,7 +226,6 @@ export const,
     tagline: 'Comprehensive security assessment and protection',
     price: '$199 / hour',
     description: unknown;
-=======
     lin,
   k: '/services/cybersecurity-audit'
     categor,
@@ -276,7 +255,6 @@ export const,
   e: '$199 / hour',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Complete cybersecurity audit and vulnerability assessment for enterprise - level protection.',
     feature,
   s: [,
@@ -284,19 +262,14 @@ export const,
       'Penetration testing',
       'Security policy review',
       'Compliance audit',
-      'Remediation guidance',
-    ],
-<<<<<<< HEAD
+      'Remediation guidance'],
     link: '/services / cybersecurity - audit'
     category: 'Security'
     real_implementation: true;
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobile: "+1 302 464 0950"
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
     id: "cloud-migration-expert"
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
@@ -315,8 +288,7 @@ export const,
     contactInfo: unknown;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
     id: "cybersecurity-audit"
     name: "Cybersecurity Audit Pro",
@@ -336,7 +308,6 @@ export const,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     lin,
   k: '/services / cybersecurity - audit',
     categor,
@@ -350,10 +321,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,"
   e: "+1 302 464 0950",
   i,"
   d: "cloud-migration-expert",
@@ -420,13 +388,11 @@ export const,
   l: "kleber@ziontechgroup.com"
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
 ;
 ];
-<<<<<<< HEAD
     id: "cloud-migration-expert"
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
@@ -445,8 +411,7 @@ export const,
     contactInfo: unknown;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
     id: "cybersecurity-audit"
     name: "Cybersecurity Audit Pro",
@@ -468,15 +433,12 @@ export const,
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  };
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     i,"
   d: "cloud-migration-expert",
     nam,"
@@ -546,9 +508,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  };
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobil,"
   e: "+1 302 464 0950",
   emai,"
@@ -559,7 +519,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -575,24 +534,24 @@ export interface ExtraService,
   n: boolean; contact_inf,
   o: mobil,
   e: string; emai,
-  l: string, } addres,
-  s: string, } export const,
+  l: string} addres,
+  s: string} export const,
   extraServices: ExtraService[] = [ addres,
-  s: string, } ; export const,
+  s: string} ; export const,
   extra_services: ExtraService[] = [, i,
   d: 'cloud - migration - expert',' nam,
   e: 'Cloud Migration Expert',' taglin,
   e: 'Seamless cloud migration and optimization',' pric,
   e: '$99 / hour', descriptio,
   n:  ,' 'Professional cloud migration services for businesses looking to modernize their infrastructure.', feature,
-  s: [,' 'AWS / Azure / GCP migration',' 'Performance optimization',' 'Cost analysis',' 'Security implementation',' '24 / 7 support', ],' lin,
+  s: [,' 'AWS / Azure / GCP migration',' 'Performance optimization',' 'Cost analysis',' 'Security implementation',' '24 / 7 support'],' lin,
   k: '/services / cloud - migration - expert',' categor,
   y: 'Cloud Services', real_implementatio,
   n: true, contact_inf,
   o: ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', }, }, i,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}, i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -618,8 +577,8 @@ export interface ExtraService,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string, }; } } addres,
-  s: string, } export const,
+  s: string}; } } addres,
+  s: string} export const,
   extraServices: ExtraService[] = [ ' i,
   d: 'cloud-migration-expert'' nam,
   e: 'Cloud Migration Expert'' taglin,
@@ -655,14 +614,14 @@ export interface ExtraService,
   e: 'Comprehensive security assessment and protection',' pric,
   e: '$199 / hour', descriptio,
   n:  ,' 'Complete cybersecurity audit and vulnerability assessment for enterprise - level protection.', feature,
-  s: [,' 'Vulnerability assessment',' 'Penetration testing',' 'Security policy review',' 'Compliance audit',' 'Remediation guidance', ],' lin,
+  s: [,' 'Vulnerability assessment',' 'Penetration testing',' 'Security policy review',' 'Compliance audit',' 'Remediation guidance'],' lin,
   k: '/services / cybersecurity - audit',' categor,
   y: 'Security', real_implementatio,
   n: true, contact_inf,
   o: ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', }, }, ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
   e: "+1 302 464 0950",
   i,"
   d: "cloud-migration-expert", nam,"
@@ -719,7 +678,7 @@ export interface ExtraService,
   l: "kleber@ziontechgroup.com",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', }, },; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"

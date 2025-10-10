@@ -5,7 +5,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
 
   // Mock data - in a real app, this would come from an API or CMS;
   const latestArticles = [
-<<<<<<< HEAD
     {
       slug: 'ai-autonomous-workflows-2026',
       title: 'AI Autonomous Workflows 2026',
@@ -17,14 +16,10 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-15',
       readTime: '8 min read',
       author: 'Zion Tech Group Team',
-=======
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  ];
+    }];
 
   const blogPosts = [
-<<<<<<< HEAD
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
       title: 'Enterprise AI Transformation Roadmap 2026',
@@ -33,8 +28,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       category: 'Strategic Guide',
       date: '2026-01-10',
       readTime: '12 min read',
-      author: 'Zion Tech Group Team',
-    },
+      author: 'Zion Tech Group Team'},
     {
       slug: 'quantum-computing-business-applications-2026'
       title: 'Quantum Computing Business Applications 2026'
@@ -42,8 +36,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       category: 'Quantum Technology',
       date: '2026-01-08',
       readTime: '10 min read',
-      author: 'Zion Tech Group Team',
-    },
+      author: 'Zion Tech Group Team'},
     {
       slug: 'ai-cybersecurity-autonomous-defense-2026',
       title: 'AI Cybersecurity Autonomous Defense 2026',
@@ -53,18 +46,14 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-05',
       readTime: '9 min read',
       author: 'Zion Tech Group Team',
-=======
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  ];
+    }];
 
   const featuredPosts = [
-<<<<<<< HEAD
     {
       slug: 'autonomous-enterprise-operations-2026',
       title: 'Autonomous Enterprise Operations 2026',
@@ -73,8 +62,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       category: 'Enterprise Operations',
       date: '2026-01-12',
       readTime: '11 min read',
-      author: 'Zion Tech Group Team',
-    },
+      author: 'Zion Tech Group Team'},
     {
       slug: 'ai-powered-business-intelligence-2026',
       title: 'AI-Powered Business Intelligence 2026',
@@ -83,8 +71,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       category: 'Business Intelligence',
       date: '2026-01-07',
       readTime: '7 min read',
-      author: 'Zion Tech Group Team',
-    },
+      author: 'Zion Tech Group Team'},
     {
       slug: 'quantum-neural-networks-breakthrough-2026'
       title: 'Quantum Neural Networks Breakthrough 2026'
@@ -93,28 +80,21 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-03',
       readTime: '13 min read',
       author: 'Zion Tech Group Team',
-=======
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  ];
+    }];
 
   // Find the current post;
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   );
 
-<<<<<<< HEAD
   if (!currentPost) {
-<<<<<<< HEAD
     return(<div className="min-h-screen bg-gray-50">
-=======
     return (
       <div className="min-h-screen bg-gray-50"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <Header />
         <div className="container mx-auto px-4 py-16 text-center"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
@@ -127,17 +107,14 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           >
             Back to Blog;)
           </a>)
-        </div>,)
-      </div>,)
+        </div>)
+      </div>)
     );
   }
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gray-50">
-=======
   return (
     <div className="min-h-screen bg-gray-50"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Header />
       {/* Article Header */}
       <div className="bg-white border-b"></div>
@@ -150,7 +127,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>
             <div className="flex items-center text-sm text-gray-500"></div>
               <span>{currentPost.author}</span>
-=======
   if (!currentPost) {/* TODO: Fix JSX expression */}
   }
 
@@ -168,7 +144,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>"
             <div className="flex items-center text-sm text-gray-500"></div>
               <span>{currentPost.author}</span>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <span className="mx-2">•</span>
               <span>{currentPost.date}</span>"
               <span className="mx-2">•</span>
@@ -178,7 +153,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Article Content */}
       <div className="container mx-auto px-4 py-12"></div>
         <div className="max-w-4xl mx-auto"></div>
@@ -186,7 +160,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <div className="prose prose-lg max-w-none"></div>
               <h2>Introduction</h2>
               <p>
-=======
       {/* Article Content */}"
       <div className="container mx-auto px-4 py-12"></div>"
         <div className="max-w-4xl mx-auto"></div>"
@@ -194,7 +167,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <div className="prose prose-lg max-w-none"></div>
               <h2>Introduction</h2>
               <p></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Welcome to our comprehensive guide on {currentPost.title}. This article will provide;
                 you with detailed insights, practical implementation strategies, and real-world;
                 examples to help you understand and leverage this cutting-edge technology.
@@ -209,33 +181,24 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
               </ul>
 
               <h2>Implementation Strategy</h2>
-<<<<<<< HEAD
               <p>
-=======
               <p></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Implementing {currentPost.title} requires careful planning and execution. Our team;
                 of experts has developed proven methodologies that ensure successful deployment and;
                 maximum value extraction.
               </p>
 
               <h2>Real-World Applications</h2>
-<<<<<<< HEAD
               <p>
-=======
               <p></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Many leading organizations have already implemented {currentPost.title} with;
                 remarkable results. Case studies show consistent improvements in efficiency, cost;
                 reduction, and competitive advantage.
               </p>
 
               <h2>Conclusion</h2>
-<<<<<<< HEAD
               <p>
-=======
               <p></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 {currentPost.title} represents a significant opportunity for organizations looking;
                 to stay ahead in today's competitive landscape. With proper implementation and;
                 expert guidance, the benefits can be transformative.
@@ -245,9 +208,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Related Posts */}
-<<<<<<< HEAD
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">)
           <div className="max-w-6xl mx-auto">)
@@ -258,7 +219,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                   key={index}
                   className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
                 >,
-=======
       <div className="bg-white py-16"></div>
         <div className="container mx-auto px-4"></div>
           <div className="max-w-6xl mx-auto"></div>
@@ -269,7 +229,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                   key={index}
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
                 ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
                   <p className="text-gray-600 mb-4">{post.description}</p>
@@ -285,7 +244,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                     Read More →,
                   </a>,
                 </div>,
-=======
       {/* Related Posts */}"
       <div className="bg-white py-16"></div>"
         <div className="container mx-auto px-4"></div>"
@@ -314,7 +272,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                     Read More →
                   </a>
                 </div>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               ))}
             </div>
           </div>

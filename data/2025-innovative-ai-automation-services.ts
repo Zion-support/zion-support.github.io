@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.'
 launchDate: '2025-01-25',
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.'
@@ -23,7 +22,6 @@ customers: 234;
 rating: 4 && 4.8;
 reviews: 167;
 }];    features: [,
-=======
 implementationDetail,
   s: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.'
 launchDat,
@@ -43,8 +41,7 @@ customer,
 ratin,
   g: 4 && 4.7;
 review,
-  s: 89,
-};
+  s: 89};
 // Autonomous Data Analytics Platform,
   realImplementation: true,
 implementationDetail,
@@ -52,8 +49,7 @@ implementationDetail,
 launchDat,
   e: '2025-01-28'
 review,
-  s: 89,
-}
+  s: 89}
 // Autonomous Data Analytics Platform,
   real_implementation: true,
 implementation_detail,
@@ -65,7 +61,5 @@ customer,
 ratin,
   g: 4 && 4.8;
 review,
-  s: 167,
-}];    feature,
+  s: 167}];    feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

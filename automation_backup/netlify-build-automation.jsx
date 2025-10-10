@@ -7,13 +7,13 @@
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
-  g: = true; this.log('Startin,)
+  g: = true; this.log('Startin)
   g: Netlify Build Automation...)'' ');' // Initia,
   l: status check; awai,
   t: this.checkNetlifyStatus(); // Schedul,
   e: regular monitoring;' cron.schedule('*/2: * * * *,'' ') asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: this.monitorBuildStatus()}) // Schedule build health checks;' cron.schedule('*/1,)
+  t: this.monitorBuildStatus()}) // Schedule build health checks;' cron.schedule('*/1)
   0: * * * *)'' ') asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: this.checkBuildHealth()}) // Schedule daily optimization} asyn,
@@ -32,7 +32,7 @@
   s: depErrors.slice()0} 3)})} retur,
   n: errors} async applyTimeoutFixes(causes) {/* TODO: Fix JSX expression */}
   n: }' awai,
-  t: this.fixDependencyResolution(), brea}k} } this.log(} asyn,)
+  t: this.fixDependencyResolution(), brea}k} } this.log(} asyn)
   c: applyBuildFixes(errors) {/* TODO: Fix JSX expression */}
   y: }' awai,
   t: this.fixDependencyErrors(), brea}k} } const recentBuilds = this.buildHistory.slice(-20); i,

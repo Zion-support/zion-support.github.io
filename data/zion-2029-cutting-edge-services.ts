@@ -1,5 +1,4 @@
 export type ZionCuttingEdgeService2029 =
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -57,7 +56,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     period: '/month',
     description: 'Revolutionary platform that combines AI and quantum computing to solve complex optimization problems in logistics, finance, drug discovery, and materials science.',
     features: [,
-=======
   i,
   d: string;
   nam,
@@ -123,8 +121,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     addres,
   s: string;
     websit,
-  e: string,
-  };
+  e: string};
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -148,8 +145,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     currenc,
   y: string;
     perio,
-  d: string,
-  };
+  d: string};
 }
 export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
@@ -167,7 +163,6 @@ export const,
   n: 'Revolutionary platform that combines AI and quantum computing to solve complex optimization problems in logistics, finance, drug discovery, and materials science.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered quantum algorithm optimization',
       'Hybrid classical-quantum computing workflows',
       'Real-time quantum error correction',
@@ -186,7 +181,6 @@ export const,
       'Enable breakthrough discoveries in science',
       'Create competitive advantage in quantum era'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700',
@@ -211,8 +205,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready quantum optimization platform with real quantum hardware access and AI-driven algorithm optimization.'
     launchDate: '2024-01-15'
@@ -224,8 +217,7 @@ export const,
       professional: 7999;
       enterprise: 19999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 2. Autonomous Drone Fleet Management System;
     id: 'autonomous-drone-fleet-management',
@@ -235,7 +227,6 @@ export const,
     period: '/month',
     description: 'Enterprise-grade autonomous drone fleet management platform that enables businesses to deploy, monitor, and optimize large-scale drone operations for delivery, inspection, and surveillance.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -329,7 +320,6 @@ export const,
   n: 'Enterprise-grade autonomous drone fleet management platform that enables businesses to deploy, monitor, and optimize large-scale drone operations for delivery, inspection, and surveillance.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered flight path optimization',
       'Real-time fleet monitoring and control',
       'Autonomous obstacle avoidance',
@@ -348,7 +338,6 @@ export const,
       'Eliminate human pilot costs',
       'Enable 24/7 autonomous operations'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700',
@@ -373,8 +362,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready autonomous drone management system with real drone integrations and AI-powered fleet optimization.'
     launchDate: '2024-03-01'
@@ -386,8 +374,7 @@ export const,
       professional: 3999;
       enterprise: 9999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 3. Blockchain-Based Decentralized Identity Management;
     id: 'blockchain-decentralized-identity',
@@ -397,7 +384,6 @@ export const,
     period: '/month',
     description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while ensuring security, privacy, and compliance with global regulations.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -491,7 +477,6 @@ export const,
   n: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while ensuring security, privacy, and compliance with global regulations.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Self-sovereign identity management',
       'Zero-knowledge proof verification',
       'Multi-chain blockchain support',
@@ -510,7 +495,6 @@ export const,
       'Improve user privacy and control',
       'Enable seamless cross-border operations'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-cyan-700',
@@ -535,8 +519,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready decentralized identity platform with real blockchain integrations and regulatory compliance.'
     launchDate: '2024-02-01'
@@ -548,8 +531,7 @@ export const,
       professional: 799;
       enterprise: 1999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 4. AI-Powered Climate Change Prediction & Mitigation Platform;
     id: 'ai-climate-change-prediction',
@@ -559,7 +541,6 @@ export const,
     period: '/month',
     description: 'Advanced climate modeling platform that uses AI and machine learning to predict climate change impacts and provide actionable mitigation strategies for businesses and governments.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -653,7 +634,6 @@ export const,
   n: 'Advanced climate modeling platform that uses AI and machine learning to predict climate change impacts and provide actionable mitigation strategies for businesses and governments.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered climate modeling',
       'Real-time environmental monitoring',
       'Predictive risk assessment',
@@ -672,7 +652,6 @@ export const,
       'Ensure regulatory compliance',
       'Improve corporate ESG ratings'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-teal-600 to-green-700',
@@ -697,8 +676,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready climate prediction platform with real AI models and environmental data integration.'
     launchDate: '2024-01-01'
@@ -710,8 +688,7 @@ export const,
       professional: 4999;
       enterprise: 12999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 5. Neuromorphic Computing AI Platform;
     id: 'neuromorphic-computing-ai',
@@ -721,7 +698,6 @@ export const,
     period: '/month',
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure to enable ultra-efficient AI processing on edge devices and IoT sensors.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -815,7 +791,6 @@ export const,
   n: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure to enable ultra-efficient AI processing on edge devices and IoT sensors.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Brain-inspired neural architecture',
       'Ultra-low power consumption',
       'Real-time learning and adaptation',
@@ -834,7 +809,6 @@ export const,
       'Improve learning efficiency by 5 x',
       'Create new AI applications'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700',
@@ -859,8 +833,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready neuromorphic computing platform with real hardware integration and AI optimization.'
     launchDate: '2024-03-15'
@@ -872,8 +845,7 @@ export const,
       professional: 9999;
       enterprise: 24999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 6. Autonomous Supply Chain Optimization Platform;
     id: 'autonomous-supply-chain-optimization',
@@ -883,7 +855,6 @@ export const,
     period: '/month',
     description: 'Intelligent supply chain platform that uses AI to autonomously optimize inventory, logistics, and supplier relationships in real-time, reducing costs and improving efficiency.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -977,7 +948,6 @@ export const,
   n: 'Intelligent supply chain platform that uses AI to autonomously optimize inventory, logistics, and supplier relationships in real-time, reducing costs and improving efficiency.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered demand forecasting',
       'Autonomous inventory optimization',
       'Real-time supplier performance monitoring',
@@ -996,7 +966,6 @@ export const,
       'Reduce stockouts by 80%',
       'Optimize sustainability metrics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-red-700',
@@ -1021,8 +990,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready supply chain optimization platform with real AI models and ERP integrations.'
     launchDate: '2024-02-15'
@@ -1034,8 +1002,7 @@ export const,
       professional: 5999;
       enterprise: 14999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 7. AI-Powered Healthcare Diagnostics & Treatment Platform;
     id: 'ai-healthcare-diagnostics-treatment',
@@ -1045,7 +1012,6 @@ export const,
     period: '/month',
     description: 'Comprehensive healthcare AI platform that provides accurate diagnostics, personalized treatment recommendations, and predictive health analytics for healthcare providers and patients.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1139,7 +1105,6 @@ export const,
   n: 'Comprehensive healthcare AI platform that provides accurate diagnostics, personalized treatment recommendations, and predictive health analytics for healthcare providers and patients.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered medical image analysis',
       'Personalized treatment recommendations',
       'Predictive health analytics',
@@ -1158,7 +1123,6 @@ export const,
       'Improve patient outcomes by 50%',
       'Enable personalized medicine'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700',
@@ -1183,8 +1147,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready healthcare AI platform with FDA compliance and real medical data integration.'
     launchDate: '2024-01-01'
@@ -1196,8 +1159,7 @@ export const,
       professional: 4499;
       enterprise: 11999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 8. Autonomous Financial Trading & Portfolio Management;
     id: 'autonomous-financial-trading',
@@ -1207,7 +1169,6 @@ export const,
     period: '/month',
     description: 'Advanced autonomous trading platform that uses AI and machine learning to automatically manage portfolios, execute trades, and optimize investment strategies in real-time.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1301,7 +1262,6 @@ export const,
   n: 'Advanced autonomous trading platform that uses AI and machine learning to automatically manage portfolios, execute trades, and optimize investment strategies in real-time.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered market analysis',
       'Autonomous portfolio rebalancing',
       'Real-time risk management',
@@ -1320,7 +1280,6 @@ export const,
       'Eliminate emotional trading decisions',
       'Enable 24/7 market monitoring'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700',
@@ -1345,8 +1304,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready autonomous trading platform with real exchange integrations and regulatory compliance.'
     launchDate: '2024-02-01'
@@ -1358,8 +1316,7 @@ export const,
       professional: 9999;
       enterprise: 24999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 9. AI-Powered Cybersecurity Threat Intelligence Platform;
     id: 'ai-cybersecurity-threat-intelligence',
@@ -1369,7 +1326,6 @@ export const,
     period: '/month',
     description: 'Advanced cybersecurity platform that uses AI to predict, detect, and respond to cyber threats in real-time, providing comprehensive protection for enterprise networks and applications.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1463,7 +1419,6 @@ export const,
   n: 'Advanced cybersecurity platform that uses AI to predict, detect, and respond to cyber threats in real-time, providing comprehensive protection for enterprise networks and applications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered threat detection',
       'Predictive threat modeling',
       'Real-time incident response',
@@ -1482,7 +1437,6 @@ export const,
       'Reduce compliance costs by 60%',
       'Enable proactive threat prevention'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-slate-700 to-zinc-800',
@@ -1507,8 +1461,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready cybersecurity platform with real threat intelligence and AI-powered detection.'
     launchDate: '2024-01-15'
@@ -1520,8 +1473,7 @@ export const,
       professional: 5499;
       enterprise: 13999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   },
   // 10. Autonomous Smart City Infrastructure Management;
     id: 'autonomous-smart-city-infrastructure',
@@ -1531,7 +1483,6 @@ export const,
     period: '/month',
     description: 'Comprehensive smart city platform that uses AI and IoT to autonomously manage urban infrastructure, optimize resource usage, and improve citizen quality of life.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1625,7 +1576,6 @@ export const,
   n: 'Comprehensive smart city platform that uses AI and IoT to autonomously manage urban infrastructure, optimize resource usage, and improve citizen quality of life.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered traffic optimization',
       'Smart energy management',
       'Waste management optimization',
@@ -1644,7 +1594,6 @@ export const,
       'Reduce emergency response time by 50%',
       'Improve citizen satisfaction'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700',
@@ -1669,8 +1618,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Production-ready smart city platform with real IoT integrations and AI-powered optimization.'
     launchDate: '2024-03-01'
@@ -1682,13 +1630,11 @@ export const,
       professional: 12999;
       enterprise: 29999;
       currency: 'USD',
-      period: 'month',
-    }
+      period: 'month'}
   }
 ];
 export const getServicesByCategory = (category: string) =>;
   return zionCuttingEdgeServices2029.filter(service => service.category === category);,
-=======
     popula,
   r: true,
     ico,
@@ -1769,25 +1715,21 @@ export const getServicesByCategory = (category: string) =>;
     }
   }
 ];
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) =>;
   return zionCuttingEdgeServices2029.filter(service => service.category === category);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const getPopularServices = () =>
   return zionCuttingEdgeServices2029.filter(service => service.popular);
 };
-<<<<<<< HEAD
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
-  return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter;,)
-    return starterPrice >= minPrice && starterPrice <= maxPrice),
-  });
+  return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter;)
+    return starterPrice >= minPrice && starterPrice <= maxPrice)});
 };
 export const getServicesByTechnology = (technology: string) =>;
   return zionCuttingEdgeServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
-=======
-export const getServicesByPriceRange = (minPric,)
+export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>;
   return zionCuttingEdgeServices2029.filter(service =>
@@ -1795,11 +1737,10 @@ export const getServicesByPriceRange = (minPric,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
   });
 };
-export const getServicesByTechnology = (technolog,)
+export const getServicesByTechnology = (technolog)
   y: string) =>;
   return zionCuttingEdgeServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 export type ZionCuttingEdgeService2029 = i,
@@ -1835,7 +1776,7 @@ export type ZionCuttingEdgeService2029 = i,
   e: string; emai,
   l: string; addres,
   s: string; websit,
-  e: string, }; realImplementatio,
+  e: string}; realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
@@ -1847,7 +1788,7 @@ export type ZionCuttingEdgeService2029 = i,
   l: number; enterpris,
   e: number; currenc,
   y: string; perio,
-  d: string, }; } export const,
+  d: string}; } export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [ // 1. AI-Powered Quantum Computing Optimization Platform,
   id: 'ai-quantum-computing-optimization',' nam,
   e: 'AI-Powered Quantum Computing Optimization Platform',' taglin,
@@ -2318,8 +2259,8 @@ export type ZionCuttingEdgeService2029 = i,
   l: 12999, enterpris,
   e: 29999,' currenc,
   y: 'USD',' perio,
-  d: 'month' } } ]; export const getServicesByCategory = (categor,)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric,)
+  d: 'month' } } ]; export const getServicesByCategory = (categor)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog,)
+  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'

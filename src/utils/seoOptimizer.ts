@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Advanced SEO Optimization Utility
@@ -22,7 +21,6 @@ interface PageSEOData {
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
-=======
 
 'use client'
 /**
@@ -51,12 +49,10 @@ interface PageSEOData {// TODO: Add content;}
   url?: string
 
   type?: 'website' | 'article' | 'product' | 'profile'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
   section?: string;
-<<<<<<< HEAD
   tags?: string[];
   noindex?: boolean;
   nofollow?: boolean;
@@ -80,7 +76,6 @@ class SEOOptimizer {
    * Set page-specific SEO data
    */
   setPageData(data: PageSEOData): void {
-=======
   tags?: string[]
   noindex?: boolean;
   nofollow?: boolean;
@@ -93,7 +88,7 @@ class SEOOptimizer {// TODO: Add content;}
   config: SEOConfig;
   private,
   currentPageData: PageSEOData | null = null;
-  constructor(confi,)
+  constructor(confi)
   g: SEOConfig) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -118,13 +113,11 @@ class SEOOptimizer {// TODO: Add content;}
   setPageData(data: PageSEOData): void {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.currentPageData = data;
     this.updateMetaTags();
     this.updateStructuredData();
   }
   /**
-<<<<<<< HEAD
    * Generate optimized title
    */
   generateTitle(pageTitle?: string): string {
@@ -145,7 +138,6 @@ class SEOOptimizer {// TODO: Add content;}
    * Generate keywords string
    */
   generateKeywords(pageKeywords?: string[]): string {
-=======
    * Generate optimized title;
    */
   generateTitle(pageTitle?: string): string {return title.includes(this.config.siteName)}
@@ -171,43 +163,35 @@ class SEOOptimizer {// TODO: Add content;}
   generateKeywords(pageKeywords?: string[]): string {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const keywords = pageKeywords || this.currentPageData?.keywords || [];
     return keywords.join(', ');
   }
   /**
-<<<<<<< HEAD
    * Update meta tags
    */
   private updateMetaTags(): void {
-=======
    * Update meta tags;
    */
 
   private updateMetaTags(): void {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     if (!this.currentPageData) return;
     const title = this.generateTitle();
     const description = this.generateDescription();
     const keywords = this.generateKeywords();
     const image = this.currentPageData.image || this.config.defaultImage;
     const url = this.currentPageData.url || window.location.href;
-<<<<<<< HEAD
     // Update title
     document.title = title;
     // Update or create meta tags
-=======
     // Update title;
     document.title = title;
     // Update or create meta tags;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.setMetaTag('description', description);
     this.setMetaTag('keywords', keywords);
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName);
     this.setMetaTag('robots', this.getRobotsContent());
-<<<<<<< HEAD
     // Open Graph tags
     this.setMetaTag('og:title', title, 'property');
     this.setMetaTag('og:description', description, 'property');
@@ -224,48 +208,44 @@ class SEOOptimizer {// TODO: Add content;}
       this.setMetaTag('twitter:image', image);
     }
     // Additional meta tags
-=======
     // Open Graph tags;
-    this.setMetaTag('o,)
+    this.setMetaTag('o)
   g:title', title, 'property');
-    this.setMetaTag('o,)
+    this.setMetaTag('o)
   g:description', description, 'property');
-    this.setMetaTag('o,)
+    this.setMetaTag('o)
   g:image', image, 'property');
-    this.setMetaTag('o,)
+    this.setMetaTag('o)
   g:url', url, 'property');
-    this.setMetaTag('o,)
+    this.setMetaTag('o)
   g:type', this.currentPageData.type || 'website', 'property');
-    this.setMetaTag('o,)
+    this.setMetaTag('o)
   g:site_name', this.config.siteName, 'property');
     // Twitter Card tags;
     if (this.config.twitterHandle) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      this.setMetaTag('twitte,)
+      this.setMetaTag('twitte)
   r:card', 'summary_large_image');
-      this.setMetaTag('twitte,)`
+      this.setMetaTag('twitte)`
   r:site', `@${this.config.twitterHandle}`);
-      this.setMetaTag('twitte,)
+      this.setMetaTag('twitte)
   r:title', title);
-      this.setMetaTag('twitte,)
+      this.setMetaTag('twitte)
   r:description', description);
-      this.setMetaTag('twitte,)
+      this.setMetaTag('twitte)
   r:image', image);
     }
     // Additional meta tags;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
     this.setMetaTag('msapplication-TileColor', '#1e40af');
   }
   /**
-<<<<<<< HEAD
    * Set meta tag
    */
   private setMetaTag(name: string, content: string, _attribute: string = 'name'): void {
     if (!meta) {
-=======
    * Set meta tag;
    */
 
@@ -273,7 +253,6 @@ class SEOOptimizer {// TODO: Add content;}
   // TODO: Add content;
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
@@ -281,7 +260,6 @@ class SEOOptimizer {// TODO: Add content;}
     meta.content = content;
   }
   /**
-<<<<<<< HEAD
    * Get robots content
    */
   private getRobotsContent(): string {
@@ -302,7 +280,6 @@ class SEOOptimizer {// TODO: Add content;}
    */
   private setupStructuredData(): void {
     const structuredData = {
-=======
    * Get robots content;
    */
 
@@ -338,12 +315,10 @@ class SEOOptimizer {// TODO: Add content;}
   O: Add content;}
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: this.config.siteName,
       url: this.config.siteUrl,
-<<<<<<< HEAD
       potentialAction: {
         '@type': 'SearchAction',
         target: `${this.config.siteUrl}/search?q={search_term_string}`,
@@ -358,7 +333,6 @@ class SEOOptimizer {// TODO: Add content;}
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
     const structuredData = {
-=======
       potentialAction: {// TODO: Add content;}
 
 }
@@ -382,14 +356,12 @@ class SEOOptimizer {// TODO: Add content;}
   O: Add content;}
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '@context': 'https://schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
       description: this.generateDescription(),
       url: this.currentPageData.url || window.location.href,
       image: this.currentPageData.image || this.config.defaultImage,
-<<<<<<< HEAD
       publisher: {
         '@type': 'Organization',
         name: this.config.siteName,
@@ -557,7 +529,6 @@ const defaultConfig: SEOConfig = {
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
-=======
       publisher: {// TODO: Add content;}
 
 }
@@ -576,7 +547,7 @@ export default seoOptimizer;
   O: Add content;}
 };
 
-  author: {// '@type': 'Person',}
+  author: {// '@type': 'Person'}
 // name: this.currentPageData.author || this.config.siteName;
 
         },
@@ -586,7 +557,7 @@ export default seoOptimizer;
   d: this.currentPageData.modifiedTime,
         articleSectio,
   n: this.currentPageData.section,
-        keyword,)
+        keyword)
   s: this.generateKeywords()
       }
   )
@@ -693,8 +664,7 @@ private addStructuredData(data: unknown): void {const script = document.createEl
     // This would typically come from your CMS or routing system;
     return [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -834,4 +804,3 @@ export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

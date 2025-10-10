@@ -222,13 +222,13 @@ export const logError = (message: string, error?: Error, context?: Record;)
 
           <string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context)
-export const logCritical = (messag,)
+export const logCritical = (messag)
   e: string, error?: Error, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.CRITICAL, error, context)
-export const logWarning = (messag,)
+export const logWarning = (messag)
   e: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export const logInfo = (messag,)
+export const logInfo = (messag)
   e: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
 export default errorLogger;`

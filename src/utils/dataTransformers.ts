@@ -45,7 +45,7 @@ export function deepClone<T>(obj: T): T {// TODO: Add content;}
  */
 export function deepMerge;
           <T extends Record<string, unknown>>(targe,
-  t: T, sourc,)
+  t: T, sourc)
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -341,7 +341,7 @@ export function chunk<T>(array: T[], size: number): T[][] {// TODO: Add content;
  * Zip multiple arrays together;
  */
 export function zip;
-          <T>(...array,)
+          <T>(...array)
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

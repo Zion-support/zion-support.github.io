@@ -8,7 +8,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix a specific file;
-<<<<<<< HEAD
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -17,11 +16,9 @@ function fixFile(filePath) {
     // Remove duplicate function declarations;
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
       return `const ${name}: React.FC = () => {`;
-=======
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
       return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
     
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
@@ -29,7 +26,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
     
     // Fix missing closing braces;
-<<<<<<< HEAD
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
       const lines = body.split('\n');
       let openBraces = 0;
@@ -37,9 +33,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       
       for (const line of lines) {
         openBraces += (line.match(/{/g) || []).length;
-=======
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         closeBraces += (line.match(/}/g) || []).length;
       }
       
@@ -50,38 +44,29 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
     
     // Fix missing semicolons;
-<<<<<<< HEAD
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
       if (!match.endsWith(';')) {
         return match + ';';
-=======
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       return match;
     });
     
     // Fix missing closing braces for JSX;
-<<<<<<< HEAD
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
       if (tag.includes('<div') && !match.includes('</div>')) {
         return match + '</div>';
-=======
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       return match;
     });
     
     // Only write if content changed;
-<<<<<<< HEAD
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-=======
     if (content !== originalContent) {/* TODO: Fix JSX expression */}`
   d: ${filePath}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return true;
     }
     
@@ -93,7 +78,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all TypeScript/JavaScript files;
-<<<<<<< HEAD
 function findFiles(dir) {
   const files = [];
   
@@ -108,20 +92,15 @@ function findFiles(dir) {
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             walkDir(fullPath);
-=======
 function findFiles(dir) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
           }
         }
       }
-<<<<<<< HEAD
     } catch (error) {
       // Skip directories that can't be read;
-=======
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
   

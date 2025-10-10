@@ -1,7 +1,6 @@
 impo, r, t { ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 export default function CognitiveSearchEnterprise20, 2, 5() { 
   return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
     <>
@@ -45,11 +44,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
             Back, to, Blog;
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e;
-=======
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
                   <TrendingUp, classNam, e='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
@@ -59,11 +55,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
             </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e;
-=======
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-3'>
                   <TrendingUp, className='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
@@ -80,7 +73,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   1. Semantic, Understanding, Layer;
                 </h3>
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
-<<<<<<< HEAD
                   Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations that, capture, semantic;
                   meani, n, g. This, enables, understanding of, synony, m, s, related, concept, s, and, contextual, nuances that, keyword, matching miss, e, s.
 
@@ -89,7 +81,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Enterprise, Deployment, Success;
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-=======
                   Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations that, capture, semantic
                   meani, n, g. This, enables, understanding of, synony, m, s, related, concept, s, and, contextual, nuances that, keyword, matching miss, e, s.</p>
 
@@ -98,7 +89,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Enterprise, Deployment, Success</h2>
           <div></section>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Brain className="h-8 w-8 text-indigo-400 ,>
   Transformative Results;
               </h2>"
@@ -109,7 +99,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
-<<<<<<< HEAD
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -120,7 +109,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
                   <Search className=" />,
                   <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
-=======
                   <span></span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
                 </li>
                 <li className="flex items-start gap-3"></li>
@@ -131,7 +119,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
                   <Search className=" />
                   <span></span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>"
                 <li className="flex items-start gap-3">
                   <Zap className=" />
@@ -174,13 +161,10 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     Enterprise, Securit, y & Complian, c, e;
                   </h3>
                   <p, className='te, x, t-gr, a, y-3, 0, 0'>
-<<<<<<< HEAD
                     R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails track, all, searches and, access, for complian, c, e. Sensitive, data, remains;
                     encrypted, and, on-premises, if, required.
-=======
                     R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails track, all, searches and, access, for complian, c, e. Sensitive, data, remains
                     encrypted, and, on-premises, if, required.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
@@ -195,15 +179,11 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Engineers, solve, problems by, finding, solutions from across, the;
                 organizati, o, n. Leaders, make, data-driven, decisions, with;
                 comprehensive, contex, t.
-<<<<<<< HEAD
                 Start, Your, Knowledge Transformati, o, n;
-=======
                 Start, Your, Knowledge Transformati, o, n</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Brain, classNam, e='ml-2 h-5 w-5' />
                 Start, Your, Knowledge Transformati, o, n;
                 <Brain, className='ml-2 h-5 w-5' />
-<<<<<<< HEAD
               <ul className="space-y-4 text-lg">)
                 <li className="flex items-start gap-3">)
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />)
@@ -216,7 +196,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>$124M+ Productivity: </strong> Employees save 8.5 hours weekly finding information</span>)
-=======
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -229,25 +208,21 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span></span><strong>$124M+ Productivity: </strong> Employees save 8.5 hours weekly finding information</span>,
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>
               </ul>
   </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Enterprise Knowledge Problem</h2>
-<<<<<<< HEAD
               <p className="text-gray-300 mb-4 leading-relaxed">,
             <section className="mb-12">,
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Enterprise Knowledge Problem</h2>,
               <p className="text-gray-300 mb-4 leading-relaxed">",
   Enterprise employees spend 19.8% of their time—nearly one full day per week—searching for information. ,
-=======
               <p className="text-gray-300 mb-4 leading-relaxed"></p>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Enterprise Knowledge Problem</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">"
   Enterprise employees spend 19.8% of their time—nearly one full day per week—searching for information. 
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 Traditional keyword-based search fails to understand context, intent, or relationships between documents. 
                 Critical knowledge remains siloed across 47 different systems on average, inaccessible when decisions matter most.
               </p>
@@ -349,11 +324,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <div></section>
                   <h3 className="text-xl font-bold mb-3 text-indigo-300">Multimodal Search</h3>
                   <p className="text-gray-300">,"
-<<<<<<< HEAD
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations;
-=======
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>
               <div></section>
@@ -364,11 +336,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <div></section>
                   <h3 className="text-xl font-bold mb-3 text-indigo-300">Multimodal Search</h3>
                   <p className="text-gray-300">,"
-<<<<<<< HEAD
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations;
-=======
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>
               <div></section>
@@ -410,15 +379,12 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               </p>
             </section>
 
-<<<<<<< HEAD
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
             <div>
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center">
-=======
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
             <div></section>
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h2 className="text-3xl font-bold mb-4">Unlock Your Institutional Knowledge</h2>
               <p className="text-xl mb-6 text-indigo-100">
   Deploy cognitive search and transform how your organization discovers and leverages information.
@@ -439,11 +405,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               >",
                 Start Your Knowledge Transformation",
                 <Brain className="ml-2 h-5 w-5 ">,
-                <Brain className="ml-2 h-5 w-5" />,
-  );
-=======
+                <Brain className="ml-2 h-5 w-5" />);
 export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   </div>
   </div>

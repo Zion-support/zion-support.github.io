@@ -2,7 +2,6 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 const AutonomousDevOpsServic, e = () => { 
   return(<>
       <Helm, e, t>
@@ -16,7 +15,7 @@ const AutonomousDevOpsServic, e = () => {
           conte, n, t='autonomous, devo, p, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n'
         />)
         <link, re, l = 'canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s',)
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s')
         />),
       </Helm, e, t>
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e'></div>
@@ -31,15 +30,12 @@ const AutonomousDevOpsServic, e = () => {
                   New, Service, Launch - October, 202, 5;
                 </sp, a, n>
               <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
-<<<<<<< HEAD
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and;
                 Zero, Downtim, e;
                   Getted, Today;
-=======
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
                 Zero, Downtim, e
                   Getted, Today</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Link, classNam, e='w-5 h-5' />
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                 <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
@@ -53,7 +49,6 @@ const AutonomousDevOpsServic, e = () => {
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></section>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
-=======
 const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'></section>
@@ -82,59 +77,46 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'py-20, p, x-4'></section>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></div>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Transform, Your, DevOps Operatio, n, s;
             </h2>
             <div, className='grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'></div>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                 <Zap, className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>80% Fast, e, r</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-=======
                 <Zap, className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' /></Zap>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>80% Fast, e, r</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Release, cycles, accelerated with, intelligent, automation and, predictive, optimization;
                 </p>
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                 <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>99.99% Upti, m, e</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-=======
                 <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>99.99% Upti, m, e</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Se, l, f-healing, systems, that prevent, and, resolve issues, autonomousl, y;
                 </p>
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                 <DollarSign, className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>$1, 0, M+ Savin, g, s</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-=======
                 <DollarSign, className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' /></DollarSign>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>$1, 0, M+ Savin, g, s</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Annual, cost, reduction through, automation, and optimizati, o, n;
                 </p>
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                 <Target, className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-=======
                 <Target, className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' /></Target>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Eliminate, manual, configuration and, intervention, completely;
                 </p>
               </div>
@@ -143,26 +125,20 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
 
         {/* Core, Featu, r, e, s */}
-<<<<<<< HEAD
         <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></section>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
-=======
         <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'></section>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></div>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Autonomous, DevOps, Capabilities;
             </h2>
             <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'></div>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                 <CheckCircle, className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-=======
                 <CheckCircle, className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' /></CheckCircle>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Se, l, f-Optimizing, Pipeline, s;
                 </h3>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
@@ -174,57 +150,42 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               </div>
 
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                 <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-=======
                 <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Intelligent, Sel, f-Heali, n, g;
                 </h3>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
                   <li, className='flex, item, s-start, ga, p-3'></li>
                     <span, className='te, x, t-gre, e, n-400, m, t-1'>•</sp, a, n>
-<<<<<<< HEAD
                     <sp, a, n>
-=======
                     <sp, a, n></sp>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       Automatic, rollback, on anomaly, detection, with &lt; 5, second, response;
                     </sp, a, n>
               </div>
 
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                 <Rocket, className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-=======
                 <Rocket, className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' /></Rocket>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Ze, r, o-Downtime, Deploymen, t;
                 </h3>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
                   <li, className='flex, item, s-start, ga, p-3'></li>
                     <span, className='te, x, t-purp, l, e-400, m, t-1'>•</sp, a, n>
-<<<<<<< HEAD
                     <sp, a, n>
-=======
                     <sp, a, n></sp>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       Bl, u, e-green, and, canary deployment, strategies, with AI, monitorin, g;
                     </sp, a, n>
               </div>
 
               <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                 <TrendingUp, className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-=======
                 <TrendingUp, className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' /></TrendingUp>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   Continuous, Optimizatio, n;
                 </h3>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
@@ -235,21 +196,17 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                     </sp, a, n>
 
         {/* Implementation, Timel, i, n, e */}
-<<<<<<< HEAD
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></section>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
-=======
         <section, classNam, e = 'py-20, p, x-4'></section>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></div>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               90-Day, Implementation, Roadmap;
             </h2>
             <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-8'></div>
               <div, className='relati, v, e'></div>
                 <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                   <div, className='w-1, 2, h-12, b, g-bl, u, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                     1;
                   </div>
@@ -260,7 +217,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               <div, classNam, e='relati, v, e'></div>
                 <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, classNam, e='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
-=======
                   <div, className='w-1, 2, h-12, b, g-bl, u, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
                     1;
                   </div>
@@ -272,12 +228,10 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               <div, classNam, e='relati, v, e'></div>
                 <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, classNam, e='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 </div>
               </div>
               <div, className='relati, v, e'></div>
                 <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                   <div, className='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                     2;
                   </div>
@@ -288,7 +242,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               <div, classNam, e='relati, v, e'></div>
                 <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, classNam, e='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
-=======
                   <div, className='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
                     2;
                   </div>
@@ -300,12 +253,10 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               <div, classNam, e='relati, v, e'></div>
                 <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, classNam, e='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 </div>
               </div>
               <div, className='relati, v, e'></div>
                 <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-<<<<<<< HEAD
                   <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                     3;
                   </div>
@@ -323,11 +274,8 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'></section>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
-<<<<<<< HEAD
                 Getted, Today;
-=======
                 Getted, Today</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Link, classNam, e='w-5 h-5' />
                       <li, className='flex, item, s-start, ga, p-2'>
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
@@ -339,13 +287,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'></section>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
-<<<<<<< HEAD
                 Getted, Today;
-=======
                 Getted, Today</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Link, className='w-5 h-5' />
-=======
                   <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
                     3;
                   </div>
@@ -378,5 +322,4 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'></h2>
                 Getted, Today;
                 <Link, className='w-5 h-5' /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }

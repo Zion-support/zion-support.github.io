@@ -2,7 +2,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react'
   // Micro SAAS Services data;
   const microSaasServices = [
-<<<<<<< HEAD
     {id: 1;
       name: "TaskFlow Pro"
       category: "Productivity"
@@ -18,8 +17,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 16;
       name: "AI CodeGen Pro"
@@ -36,8 +34,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 17;
       name: "Quantum Analytics"
@@ -54,8 +51,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 18;
       name: "Blockchain Business Suite"
@@ -72,8 +68,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 19;
       name: "IoT Enterprise Hub"
@@ -90,8 +85,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 20;
       name: "AR/VR Studio Pro"
@@ -108,8 +102,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 2;
       name: "InvoiceGenius"
@@ -126,8 +119,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 3;
       name: "SocialSync Pro"
@@ -144,8 +136,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 4;
       name: "CustomerFlow CRM"
@@ -162,8 +153,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 5;
       name: "DataViz Studio"
@@ -180,8 +170,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 6;
       name: "ScheduleMaster"
@@ -198,8 +187,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 7;
       name: "ContentCraft AI"
@@ -216,8 +204,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 8;
       name: "SecureVault"
@@ -234,8 +221,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 9;
       name: "MediaHub Pro"
@@ -252,8 +238,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 10;
       name: "LearnFlow LMS"
@@ -270,8 +255,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 11;
       name: "EcoTrack Pro"
@@ -288,8 +272,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 12;
       name: "LegalAssist AI"
@@ -306,8 +289,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 13;
       name: "HealthTrack Plus"
@@ -324,8 +306,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 14;
       name: "EventMaster Pro"
@@ -342,8 +323,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 15;
       name: "InventorySmart"
@@ -360,8 +340,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 21;
       name: "Cybersecurity Shield"
@@ -378,8 +357,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 22;
       name: "GreenTech Monitor"
@@ -396,8 +374,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 23;
       name: "VoiceAI Assistant"
@@ -414,8 +391,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 24;
       name: "Quantum Finance Pro"
@@ -432,8 +408,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       contactInfo: {,
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
-        website: "https://ziontechgroup.com",
-      }
+        website: "https://ziontechgroup.com"}
     },
     {id: 25;
       name: "Edge Computing Hub"
@@ -451,7 +426,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com",
-=======
     {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
         websit,"
@@ -625,12 +599,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         websit,"
   e: "http,"
   s://ziontechgroup.com"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   ];
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
-<<<<<<< HEAD
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
     <div className="text-left">
       {/* Animated Background */}</div>
@@ -673,7 +645,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <Search className="text-left" />
             <input;
               type="text"
-=======
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
     <div className="text-left"></div>
       {/* Animated Background */}"
@@ -716,12 +687,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <Search className="text-left" /></Search>
             <input></input>"
               type="text""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               placeholder="Search for innovative micro SAAS solutions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}"
               className="text-left"
-<<<<<<< HEAD
             />
             <div className="text-left"></div>
               <div className="text-left">
@@ -729,14 +698,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               </div>
             </div>
           </div>
-<<<<<<< HEAD
           <div className="text-left">
             <select;
-=======
           <div className="text-left"></div>
             <select
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
             />"
             <div className="text-left"></div>"
               <div className="text-left"></div>
@@ -746,7 +711,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           </div>"
           <div className="text-left"></div>
             <select></select>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}"
               className="text-left"
@@ -756,22 +720,18 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"
               className="text-left"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="text-left">)
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
         {/* Services Grid */})
         <div className="text-left">)
           {filteredServices.map((service) => (
-=======
               {pricingModels.map(pricing => (
                 <option key={pricing} value={pricing} className="text-left"></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}
         <div className="text-left">
           {filteredServices.map((service) => (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div key={service.id} className="text-left">
               {/* Service Header */}</div>
               <div className="text-left"></div>
@@ -791,7 +751,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                       <
                       <span className="text-left">
                         {service.category}</span>
-=======
               {/* TODO: Fix JSX expression */}"
                 <option key={pricing} value={pricing} className="text-left"></option>`
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
@@ -817,7 +776,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                       <"
                       <span className="text-left"></span>
                         {service.category}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <
                     </div>
                   </div>
@@ -827,20 +785,16 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <p className="text-left"></p>
                 {service.description}
               </p>
-<<<<<<< HEAD
               {/* Pricing */}
               <div className="text-left"></div>
                 <div className="text-left">
-=======
               {/* Pricing */}"
               <div className="text-left"></div>"
                 <div className="text-left"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {formatPrice(service.price} service.pricingModel)}
                 </div>"
                 <div className="text-left">{service.userLimit}</div>
               </div>
-<<<<<<< HEAD
               {/* Features */}
               <div className="text-left"></div>
                 <h4 className="text-left">
@@ -870,17 +824,14 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 </div>
               </div>
               {/* CTA */}
-<<<<<<< HEAD
               <div className="text-left">
                 <div className="text-left">
                   <span className="text-left">Ready to transform your business?<
                   <a;
-=======
               <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left">Ready to transform your business?</span><
                   <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     href={service.contactInfo.website}
                     className="text-left"
                     target="_blank"
@@ -931,13 +882,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   <p className="text-left">364 E Main St STE 1008</p><br />Middletown DE 19709</p>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="text-left">
                 <a;
-=======
               <div className="text-left"></div>
                 <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   href="mailto: kleber@ziontechgroup.<com" className="text-left"
                 >
                   <Mail className="text-left" />
@@ -948,7 +896,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 >,
                   <Phone className="text-left" />,
                   Call Now;
-=======
               {/* Features */}"
               <div className="text-left"></div>"
                 <h4 className="text-left"></h4>"
@@ -1046,4 +993,3 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 ></13024640950>"
                   <Phone className="text-left" /></Phone>
                   Call Now;"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

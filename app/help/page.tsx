@@ -20,80 +20,65 @@ import {}
   ExternalLink;
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const HelpPage: React.FC = () => {,
-=======
 const HelpPage: React.FC = () => {}
->>>>>>> origin/merge-error-fixes
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const faqCategories = [
-<<<<<<< HEAD
     {
       title: 'Getting Started'
       icon: BookOpen;
       questions: [
         {,
-=======
     {}
       title: 'Getting Started',
       icon: BookOpen,
       questions: [
         {}
->>>>>>> origin/merge-error-fixes
           question: 'How do I get started with Zion Tech Group services?',
-          answer: 'Getting started is easy! Simply contact our sales team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions.',
-        },
+          answer: 'Getting started is easy! Simply contact our sales team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions.'},
         {}
           question: 'What AI services do you offer?',
           answer: 'We offer comprehensive AI services including workflow automation, customer support, data analytics, content generation, healthcare solutions, fintech platforms, and much more. Check our services page for a complete list.'
         },
         {}
           question: 'Do you offer free consultations?',
-          answer: 'Yes! We provide free initial consultations to assess your needs and recommend the best solutions for your business. Contact us to schedule yours today.',
-        }
+          answer: 'Yes! We provide free initial consultations to assess your needs and recommend the best solutions for your business. Contact us to schedule yours today.'}
       ]
     },
-<<<<<<< HEAD
     {
       title: 'Technical Support'
       icon: HelpCircle;
       questions: [,
         {,
-=======
     {}
       title: 'Technical Support',
       icon: HelpCircle,
       questions: [
         {}
->>>>>>> origin/merge-error-fixes
           question: 'How do I access technical support?',
           answer: 'You can access technical support through our support portal, email support@ziontechgroup.com, or call our 24/7 support line at +1 (302) 464-0950.'
         },
         {}
           question: 'What are your support hours?',
-          answer: 'We provide 24/7 technical support for all our clients. Our support team is always available to help with any issues or questions you may have.',
-        },
+          answer: 'We provide 24/7 technical support for all our clients. Our support team is always available to help with any issues or questions you may have.'},
         {}
           question: 'How do I report a bug or issue?',
           answer: 'You can report bugs through our support portal, email support@ziontechgroup.com, or contact your dedicated account manager. We typically respond within 2 hours.'
         }
       ]
     },
-<<<<<<< HEAD
     {
       title: 'Billing & Pricing'
       icon: FileText;
       questions: [,
         {,
-=======
     {}
       title: 'Billing & Pricing',
       icon: FileText,
       questions: [
         {}
->>>>>>> origin/merge-error-fixes
           question: 'What are your pricing models?',
           answer: 'We offer flexible pricing models including subscription-based plans, project-based pricing, and enterprise agreements. Contact our sales team for a customized quote.'
         },
@@ -103,133 +88,98 @@ const HelpPage: React.FC = () => {}
         },
         {}
           question: 'How do I update my billing information?',
-          answer: 'You can update your billing information through your account dashboard or contact our billing team at billing@ziontechgroup.com.',
-        }
+          answer: 'You can update your billing information through your account dashboard or contact our billing team at billing@ziontechgroup.com.'}
       ]
     }
   ];
 
   const quickLinks = [
-<<<<<<< HEAD
     {
       title: 'Documentation'
       description: 'Comprehensive guides and API documentation'
       icon: BookOpen;
-=======
     {}
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
       icon: BookOpen,
->>>>>>> origin/merge-error-fixes
       link: '/docs',
-      color: 'text-blue-400',
-    },
-<<<<<<< HEAD
+      color: 'text-blue-400'},
     {
       title: 'Video Tutorials'
       description: 'Step-by-step video guides'
       icon: Video;
-=======
     {}
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
       icon: Video,
->>>>>>> origin/merge-error-fixes
       link: '/tutorials',
-      color: 'text-purple-400',
-    },
+      color: 'text-purple-400'},
     {}
       title: 'Download Resources',
       description: 'Templates, guides, and tools',
       icon: Download;
       link: '/downloads',
-      color: 'text-green-400',
-    },
-<<<<<<< HEAD
+      color: 'text-green-400'},
     {
       title: 'Community Forum'
       description: 'Connect with other users'
       icon: MessageSquare;
-=======
     {}
       title: 'Community Forum',
       description: 'Connect with other users',
       icon: MessageSquare,
->>>>>>> origin/merge-error-fixes
       link: '/community',
-      color: 'text-cyan-400',
-    }
+      color: 'text-cyan-400'}
   ];
 
   const contactMethods = [
-<<<<<<< HEAD
     {
       icon: Phone;
       title: 'Phone Support'
-=======
     {}
       icon: Phone,
       title: 'Phone Support',
->>>>>>> origin/merge-error-fixes
       description: '24/7 technical support',
       contact: '+1 (302) 464-0950',
-      action: 'Call Now',
-    },
-<<<<<<< HEAD
+      action: 'Call Now'},
     {
       icon: Mail;
       title: 'Email Support'
-=======
     {}
       icon: Mail,
       title: 'Email Support',
->>>>>>> origin/merge-error-fixes
       description: 'Get help via email',
       contact: 'support@ziontechgroup.com',
-      action: 'Send Email',
-    },
-<<<<<<< HEAD
+      action: 'Send Email'},
     {
       icon: MessageSquare;
       title: 'Live Chat'
-=======
     {}
       icon: MessageSquare,
       title: 'Live Chat',
->>>>>>> origin/merge-error-fixes
       description: 'Chat with our support team',
       contact: 'Available 24/7',
-      action: 'Start Chat',
-    }
+      action: 'Start Chat'}
   ];
 
-<<<<<<< HEAD
   const toggleCategory = (categoryTitle: string) => {,
-=======
   const toggleCategory = (categoryTitle: string) => {}
->>>>>>> origin/merge-error-fixes
     setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
   };
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <Navigation />)
       {/* Hero Section */})
       <section className="relative py-20 overflow-hidden">)
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -257,20 +207,16 @@ const HelpPage: React.FC = () => {}
 ,
       {/* Quick Links */}
       <section className="py-16 bg-white/5">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Quick Links;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Access our most popular resources and support channels;
             </p>
-<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -281,41 +227,33 @@ const HelpPage: React.FC = () => {}
                 className="cyber-card p-6 hover: scale-105 transition-all duration-300 group",
               >,
                 <div className="flex items-center mb-4">,
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             {quickLinks.map((link, index) => (</div>
-=======
             {quickLinks.map((link, index) => (}
->>>>>>> origin/merge-error-fixes
               <a
                 key={index}
                 href={link.link}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
               >
                 <div className="flex items-center mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <link.icon className={`w-8 h-8 ${link.color} mr-3`} />
                   <h3 className="text-xl font-bold text-white group-hover: text-cyan-400 transition-colors">,
                     {link.title}
                   </h3>
                 </div>
                 <p className="text-gray-300 mb-4">{link.description}</p>
-<<<<<<< HEAD
                 <div className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors">,
                   <span className="text-sm font-medium">Learn More</span>,
                   <ArrowRight className="w-4 h-4 ml-2" />,
                 </div>,
               </a>,
-=======
                 <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
                   <span className="text-sm font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </div>
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             ))}
           </div>
         </div>
@@ -323,39 +261,30 @@ const HelpPage: React.FC = () => {}
 
       {/* FAQ Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find answers to common questions about our services and solutions;
             </p>
-<<<<<<< HEAD
           </div>,
 ,
           <div className="space-y-6">,
             {faqCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="cyber-card">
                 <button;
-=======
           </div>
 
           <div className="space-y-6">
-<<<<<<< HEAD
             {faqCategories.map((category, categoryIndex) => (</div>
               <div key={categoryIndex} className="cyber-card"></div>
-=======
             {faqCategories.map((category, categoryIndex) => (}
               <div key={categoryIndex} className="cyber-card">
->>>>>>> origin/merge-error-fixes
                 <button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   onClick={() => toggleCategory(category.title)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
@@ -372,13 +301,10 @@ const HelpPage: React.FC = () => {}
 
                 {expandedCategory === category.title && (}
                   <div className="px-6 pb-6 space-y-4">
-<<<<<<< HEAD
                     {category.questions.map((faq, faqIndex) => (</div>
                       <div key={faqIndex} className="border-l-2 border-cyan-400/30 pl-4"></div>
-=======
                     {category.questions.map((faq, faqIndex) => (}
                       <div key={faqIndex} className="border-l-2 border-cyan-400/30 pl-4">
->>>>>>> origin/merge-error-fixes
                         <h4 className="text-lg font-semibold text-white mb-2">{faq.question}</h4>
                         <p className="text-gray-300">{faq.answer}</p>
                       </div>
@@ -393,20 +319,16 @@ const HelpPage: React.FC = () => {}
 
       {/* Contact Support */}
       <section className="py-16 bg-white/5">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our support team is here to help you succeed;
             </p>
-<<<<<<< HEAD
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
@@ -415,22 +337,17 @@ const HelpPage: React.FC = () => {}
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">,
                   <method.icon className="w-8 h-8 text-white" />,
                 </div>,
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {contactMethods.map((method, index) => (</div>
               <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-=======
             {contactMethods.map((method, index) => (}
               <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
->>>>>>> origin/merge-error-fixes
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>
                 <p className="text-gray-300 mb-4">{method.description}</p>
                 <div className="text-cyan-400 font-semibold mb-4">{method.contact}</div>

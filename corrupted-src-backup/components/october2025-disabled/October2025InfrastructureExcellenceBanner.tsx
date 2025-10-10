@@ -3,10 +3,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ]; return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>),
+    }]; return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>),
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'>
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />
@@ -15,7 +12,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'>
-=======
   ]; return (
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>
       {/* Animated, background, effec, t, s */}</div>
@@ -26,14 +22,12 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         {/* He, a, d, e, r */}</div>
         <div, classNam, e = 'te, x, t-center, m, b-12'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <TrendingUp, className='h-5 w-5, tex, t-bl, u, e-4, 0, 0' />
             <span, className='te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0'>
               NEW, OCTOBER, 2025 CONTE, N, T;
             </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'>
-=======
   ]; return (<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'></div>
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'></div>)
@@ -49,7 +43,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
             </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             Infrastructure, Excellenc, e;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
@@ -59,30 +52,24 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
           </p>
         </div>
         {/* Articles, Gri, d */}
-<<<<<<< HEAD
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
           { newArticl, e, s.m, a, p(artic, l, e = > {
             const Ico, n = artic, l, e.ic, o, n; return (</div>
-=======
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'></div>
           {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
               ></Link>
                 {/* Gradient, acc, e, n, t */}
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-30, 0`}
                 /></div>
-<<<<<<< HEAD
                 <div, classNam, e = 'relati, v, e' > {/* Ic, o, n */}</div>
                   <div, classNam, e = { `inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, mb-4`}
                   ></div>
                     <Icon, classNam, e = 'h-6 w-6, tex, t-whi, t, e' />
-=======
                 <div, classNam, e = 'relati, v, e' > {/* Ic, o, n */}`
                   <div, classNam, e = { `inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, mb-4`}
                   ></div>
                     <Icon, classNam, e = 'h-6 w-6, tex, t-whi, t, e' /></Icon>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   </div>
                   {/* Tit, l, e */}
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>
@@ -91,22 +78,16 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
                   {/* Descripti, o, n */}
                   <p, classNam, e = 'te, x, t-gr, a, y-400, tex, t-sm, m, b-4'></p>
                     {artic, l, e.description}
-<<<<<<< HEAD
                   </p>)
                   {/* Metri, c, s */})
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'>)
                     { artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
-=======
                   </p>
                   {/* Metri, c, s */}
-<<<<<<< HEAD
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'>
                     { artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'></div>
                     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <span, ke, y = { id, x  }, classNa, m, e = 'inli, n, e-flex, item, s-center, p, x-2.5, p, y-1, rounde, d-md, b, g-whi, t, e/5, tex, t-xs, fon, t-medium, tex, t-gr, a, y-300, border, border-whi, t, e/10'
                       ></span>
                         {metr, i, c}

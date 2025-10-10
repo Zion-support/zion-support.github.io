@@ -66,7 +66,7 @@ class BuildOptimizer {
 
     if (largeFiles.length > 0) {
       console.log('⚠️  Large files detected: ');
-      largeFiles.forEach(file => {,)
+      largeFiles.forEach(file => {)
         const stats = fs.statSync(file);
         console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
       });
@@ -85,8 +85,7 @@ class BuildOptimizer {
       this.optimizations.push({)
         name: 'Image Optimization'),
         status: 'skipped'),
-        details: 'No images found',
-      });
+        details: 'No images found'});
       return;
     }
 
@@ -243,8 +242,7 @@ class BuildOptimizer {
     this.optimizations.push({)
       name: 'Sitemap Generation'),
       status: 'completed'),
-      details: 'Generated sitemap.xml',
-    });
+      details: 'Generated sitemap.xml'});
   }
 
   async generateRobotsTxt() {
@@ -267,8 +265,7 @@ Disallow: /private/`;
     this.optimizations.push({)
       name: 'Robots.txt Generation'),
       status: 'completed'),
-      details: 'Generated robots.txt',
-    });
+      details: 'Generated robots.txt'});
   }
 
   async optimizeManifest() {
@@ -293,8 +290,7 @@ Disallow: /private/`;
     this.optimizations.push({)
       name: 'Manifest Optimization'),
       status: 'completed'),
-      details: 'Optimized manifest.json',
-    });
+      details: 'Optimized manifest.json'});
   }
 
   async generateServiceWorker() {
@@ -311,8 +307,7 @@ Disallow: /private/`;
     this.optimizations.push({)
       name: 'Service Worker'),
       status: 'completed'),
-      details: 'Service worker ready',
-    });
+      details: 'Service worker ready'});
   }
 
   getFilesRecursively(dir) {

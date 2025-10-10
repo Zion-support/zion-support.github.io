@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
@@ -172,20 +171,14 @@ const PrivacyPage: React.FC = () => {,
     }
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Privacy Policy<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your privacy is important to us. This policy explains how we collect, use, and protect your information.<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
-=======
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */})
         <section className="text-center mb-16">)
@@ -197,10 +190,7 @@ const PrivacyPage: React.FC = () => {,
           </p>
           <div className="text-sm text-gray-400">
             Last updated: {lastUpdated}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Privacy Policy</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your privacy is important to us. This policy explains how we collect, use, and protect your information.</p><div className="text-sm text-gray-400">Last updated: {lastUpdated}</section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </div>
         </section>
 
@@ -234,22 +224,16 @@ const PrivacyPage: React.FC = () => {,
 
         {/* Contact Information */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="cyber-card p-8">
-<<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us<p className="text-gray-300 mb-6">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
-=======
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2><p className="text-gray-300 mb-6">If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
-<<<<<<< HEAD
                 <div className="space-y-2 text-gray-300">
                   <p>364 E Main St STE 1008<p>Middletown, DE 19709<p>United States</p>
-=======
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2>
             <p className="text-gray-300 mb-6">
               If you have any questions about this Privacy Policy or our data practices, please contact us: </p>
@@ -260,11 +244,8 @@ const PrivacyPage: React.FC = () => {,
                   <p>364 E Main St STE 1008</p>,
                   <p>Middletown, DE 19709</p>
                   <p>United States</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <div className="space-y-2 text-gray-300"></div>
                   <p>364 E Main St STE 1008</p><p>Middletown, DE 19709</p><p>United States</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               </div>
               <div></div>
@@ -280,14 +261,10 @@ const PrivacyPage: React.FC = () => {,
 ,
         {/* Updates */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="cyber-card p-8">
-<<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Policy Updates<p className="text-gray-300 mb-4">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
-=======
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Policy Updates</h2><p className="text-gray-300 mb-4">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
             <ul className="space-y-2 text-gray-300"></u>
               <li className="flex items-start"></l>
@@ -297,9 +274,7 @@ const PrivacyPage: React.FC = () => {,
                 <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Sending email notifications to registered users</spa>
               </span>
               <li className="flex items-start">
-<<<<<<< HEAD
                 <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Updating the "Last Updated" date at the top of this policy<p className="text-gray-300 mt-4">Your continued use of our website or services after any changes to this Privacy Policy constitutes acceptance of the updated policy.</p>
-=======
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Policy Updates</h2>
             <p className="text-gray-300 mb-4">
               We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by: </p>
@@ -319,10 +294,7 @@ const PrivacyPage: React.FC = () => {,
             </ul>
             <p className="text-gray-300 mt-4">
               Your continued use of our website or services after any changes to this Privacy Policy constitutes acceptance of the updated policy.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Updating the "Last Updated" date at the top of this policy</span><p className="text-gray-300 mt-4">Your continued use of our website or services after any changes to this Privacy Policy constitutes acceptance of the updated policy.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
         </section>
@@ -330,7 +302,6 @@ const PrivacyPage: React.FC = () => {,
 
       <Footer />,
     </div>,
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Lock, Eye, Database, Users, Mail, Phone, Globe, CheckCircle, AlertTriangle } from 'lucide-react';
@@ -478,7 +449,6 @@ const PrivacyPage: React.FC = () => {
         </main>
       </div>
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

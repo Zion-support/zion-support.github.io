@@ -14,20 +14,17 @@ const PageTemplate: React.FC<{
   category: string;
   keywords: string[];
 }> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;)
         title={`${title} - Zion Tech Group`})
         description={description})
         keywords={keywords})
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title={`${title} - Zion Tech Group`}
         description={description}
         keywords={keywords}
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}
       />
       <Navigation />
@@ -44,13 +41,10 @@ const PageTemplate: React.FC<{
             <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
               {description}
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
@@ -69,34 +63,28 @@ const PageTemplate: React.FC<{
 ,
         {/* Features Section */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
-=======
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Features
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Powerful capabilities designed to transform your business;
             </p>
-<<<<<<< HEAD
           </div>,
           ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300">,
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />,
-=======
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-semibold text-white mb-2">{feature}</h3>
                 <p className="text-gray-300">Advanced {feature.toLowerCase()} capabilities powered by AI</p>
               </div>
@@ -106,13 +94,10 @@ const PageTemplate: React.FC<{
 
         {/* Benefits Section */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
-=======
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               Why Choose Our {title}?
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
@@ -120,17 +105,14 @@ const PageTemplate: React.FC<{
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover: border-purple-400/60 transition-all duration-300">,
                 <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />,
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
                 <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
                 <p className="text-gray-300">Measurable improvement in your business metrics</p>
               </div>
@@ -140,29 +122,23 @@ const PageTemplate: React.FC<{
 
         {/* Pricing Section */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Pricing;
-=======
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Pricing
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Transparent pricing with no hidden fees;
             </p>
           </div>
-<<<<<<< HEAD
           ,
           <div className="max-w-md mx-auto">,
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
-=======
           
           <div className="max-w-md mx-auto"></div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4">{price}</div>
               <p className="text-gray-300 mb-6">per month</p>
@@ -178,13 +154,10 @@ const PageTemplate: React.FC<{
 ,
         {/* Contact Section */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-=======
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               Ready to Get Started?
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
@@ -216,13 +189,10 @@ const PageTemplate: React.FC<{
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
-<<<<<<< HEAD
                 364 E Main St STE 1008<br />
                 Middletown DE 19709;
-=======
                 364 E Main St STE 1008</p><br />
                 Middletown DE 19709
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
             </div>
           </div>
@@ -230,8 +200,7 @@ const PageTemplate: React.FC<{
       </main>
 
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default PageTemplate;

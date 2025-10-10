@@ -4,7 +4,6 @@ import { fileURLToPath } from 'url';
 
 
 // Function to fix specific files with known issues;
-<<<<<<< HEAD
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -26,16 +25,13 @@ function fixFile(filePath) {
       
       // Remove unused imports;
       unusedImports.forEach(importName => {)
-=======
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g');
         if (content.match(regex)) {/* TODO: Fix JSX expression */}
         }
       });
       
       // Fix unused error parameter;
-<<<<<<< HEAD
       content = content.replace(/\(error\) => \{/, '() => {');
       modified = true;
     }
@@ -71,7 +67,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       content = content.replace(/const AIWritingAssistantPage: React\.FC = \(\) => \{/, 'export default function AIWritingAssistantPage() {');
       content = content.replace(/export default AIWritingAssistantPage;/, '');
       modified = true;
-=======
       content = content.replace(/\(error\) => \{/* TODO: Fix JSX expression */}
     }
 
@@ -89,7 +84,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix ai-writing-assistant/page.tsx - fix export;
     if (filePath.includes('ai-writing-assistant/page.tsx')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     if (modified) {/* TODO: Fix JSX expression */}`

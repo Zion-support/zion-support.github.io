@@ -1,6 +1,5 @@
 /**
  * API Interceptor Utility;
-<<<<<<< HEAD
  * Provides request/response interceptors for API calls;
  */
 
@@ -112,7 +111,6 @@ class APIInterceptor {
 export const apiInterceptor = new APIInterceptor();
 
 export default APIInterceptor;
-=======
  * Centralized API request handling with error handling, retry logic, and caching;
  */
 // ErrorHandler class definition;
@@ -121,7 +119,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     return ErrorHandler.instance;
   }
   handleNetworkError(erro,
-  r: Error, ur,)
+  r: Error, ur)
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
     }
 }
@@ -149,7 +147,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * Make API request;
    */
-  async request<T = unknown>(confi,)
+  async request<T = unknown>(confi)
   g: RequestConfig): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
     }
@@ -168,7 +166,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * Execute the actual request;
    */
-  private async executeRequest<T>(confi,)
+  private async executeRequest<T>(confi)
   g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
       const url = this.buildURL(finalConfig);
@@ -255,7 +253,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * Prepare request configuration;
    */
-  private prepareRequest(confi,)
+  private prepareRequest(confi)
   g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */}
       },
       timeou,
@@ -269,7 +267,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * Build full URL with query parameters;
    */
-  private buildURL(confi,)
+  private buildURL(confi)
   g: RequestConfig): string {/* TODO: Fix JSX expression */}`
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {/* TODO: Fix JSX expression */}
@@ -281,7 +279,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * Build request headers;
    */
-  private buildHeaders(confi,)
+  private buildHeaders(confi)
   g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
     });
@@ -290,13 +288,13 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * Create abort signal for timeout;
    */
-  private createAbortSignal(timeou,)
+  private createAbortSignal(timeou)
   t: number): AbortSignal {/* TODO: Fix JSX expression */}
   }
   /**
    * Parse response based on content type;
    */
-  private async parseResponse<T>(respons,)
+  private async parseResponse<T>(respons)
   e: Response): Promise<T> {/* TODO: Fix JSX expression */}
     }
     if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
@@ -306,14 +304,14 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * Get cache key for request;
    */
-  private getCacheKey(confi,)
+  private getCacheKey(confi)
   g: RequestConfig): string {/* TODO: Fix JSX expression */}`
     return `${config.method}:${url}`;
   }
   /**
    * Get response from cache;
    */
-  private getFromCache(ke,)
+  private getFromCache(ke)
   y: string): APIResponse | null {/* TODO: Fix JSX expression */}
     }
     return entry.data as APIResponse;
@@ -322,7 +320,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * Set response in cache;
    */
   private setInCache(ke,
-  y: string, respons,)
+  y: string, respons)
   e: APIResponse): void {/* TODO: Fix JSX expression */}
     });
   }
@@ -347,13 +345,13 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * Delay helper for retry logic;
    */
-  private delay(m,)
+  private delay(m)
   s: number): Promise<void> {/* TODO: Fix JSX expression */}
   }
   /**
    * Update configuration;
    */
-  updateConfig(confi,)
+  updateConfig(confi)
   g: Partial<APIConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config };
   }
@@ -368,4 +366,3 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
 export const apiInterceptor = APIInterceptor.getInstance();
 export default APIInterceptor;
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

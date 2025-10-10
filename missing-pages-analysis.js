@@ -145,11 +145,11 @@ const referencedLinks = [
 const missingPages = referencedLinks.filter(link => !existingPages.includes(link));
 
 console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total referenced,)`
+console.log(`Total referenced)`
   links: ${referencedLinks.length}`);`
-console.log(`Total existing,)`
+console.log(`Total existing)`
   pages: ${existingPages.length}`);`
-console.log(`Missing,)`
+console.log(`Missing)`
   pages: ${missingPages.length}`);
 console.log('\n=== MISSING PAGES ===');
 missingPages.forEach(page => console.log(page));
@@ -180,5 +180,5 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({/* TODO: Fix J
 }, null, 2));
 
 console.log('\n=== ANALYSIS COMPLETE ===');
-console.log('Missing pages list saved,)
+console.log('Missing pages list saved)
   to: /workspace/missing-pages.json');`

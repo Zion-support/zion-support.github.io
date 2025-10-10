@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Brain, Cpu, Shield, Globe, Users, Award, Target, BarChart, Zap, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, TrendingUp, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, MessageSquare, Eye, Sparkles } from 'lucide-react';
@@ -22,11 +19,8 @@ const AboutPage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '24/7', label: 'Support Available', icon: Clock }
-=======
 import { Users, CheckCircle, Shield, Award, Target, Globe, Brain, Cloud, TrendingUp, Calendar, MessageSquare, Award, Shield, Users } from 'lucide-react';
-=======
 import { Users, CheckCircle, Shield, Award, Target, Globe, Brain, Cloud, TrendingUp, Calendar, MessageSquare } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
 
 export default function AboutPage() {
   const teamMembers = [
@@ -58,17 +52,12 @@ export default function AboutPage() {
       bio: 'Leading researcher in natural language processing and computer vision',
       expertise: ['NLP', 'Computer Vision', 'Deep Learning']
     }
->>>>>>> origin/main
   ];
 
   const values = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Brain;
-=======
       icon: Brain,
-<<<<<<< HEAD
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology, staying ahead of industry trends and delivering cutting-edge solutions.'
     },
@@ -122,11 +111,7 @@ export default function AboutPage() {
       description: 'Ensuring our solutions meet the highest security standards.',
       achievements: ['CISSP Certified', 'Former NSA Security Analyst', 'Security Expert']
     }
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
-=======
       icon: Brain,
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with AI and technology, constantly exploring new frontiers.'
     },
@@ -152,13 +137,10 @@ export default function AboutPage() {
     { number: '100+', label: 'Enterprise Clients', icon: Users },
     { number: '50+', label: 'AI Models Deployed', icon: Brain },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
->>>>>>> origin/main
   ];
 
-<<<<<<< HEAD
   const timeline = [
     {
-<<<<<<< HEAD
       year: '2009',
       title: 'Company Founded',
       description: 'Zion Tech Group was established with a vision to democratize AI technology for businesses of all sizes.'
@@ -419,11 +401,9 @@ export default function AboutPage() {
 };
 
 export default AboutPage;
-=======
       year: '2018',
       title: 'Company Founded',
-      description: 'Zion Tech Group was established with a vision to democratize AI for enterprises.',
-    },
+      description: 'Zion Tech Group was established with a vision to democratize AI for enterprises.'},
     {
       year: '2019',
       title: 'First AI Platform',
@@ -432,8 +412,7 @@ export default AboutPage;
     {
       year: '2020',
       title: 'Quantum Computing Division',
-      description: 'Established quantum computing research and development capabilities.',
-    },
+      description: 'Established quantum computing research and development capabilities.'},
     {
       year: '2021',
       title: 'Global Expansion',
@@ -442,24 +421,19 @@ export default AboutPage;
     {
       year: '2022',
       title: 'AI Ethics Initiative',
-      description: 'Launched comprehensive AI ethics framework and responsible AI practices.',
-    },
+      description: 'Launched comprehensive AI ethics framework and responsible AI practices.'},
     {
       year: '2023',
       title: 'Breakthrough Technologies',
-      description: 'Introduced cutting-edge solutions in autonomous systems and edge computing.',
-    },
+      description: 'Introduced cutting-edge solutions in autonomous systems and edge computing.'},
     {
       year: '2024',
       title: 'Industry Recognition',
-      description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.',
-    }
+      description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.'}
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       {/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section>
@@ -468,8 +442,6 @@ export default AboutPage;
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">About Zion Tech Group</h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Leading the future of AI-powered enterprise solutions with cutting-edge technology,
               innovative thinking, and unwavering commitment to client success.</p>
-<<<<<<< HEAD
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">
@@ -482,9 +454,7 @@ export default AboutPage;
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">),
               Leading the future of AI-powered enterprise solutions with cutting-edge technology;),
               innovative thinking, and unwavering commitment to client success.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
-=======
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
@@ -493,13 +463,10 @@ export default AboutPage;
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">About Zion Tech Group</h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Leading the future of AI-powered enterprise solutions with cutting-edge technology,
               innovative thinking, and unwavering commitment to client success.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-=======
             <div className="flex flex-wrap justify-center gap-4"></div>
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Award className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">ISO 27001 Certified</span>
               </div>
@@ -511,7 +478,6 @@ export default AboutPage;
                 <Globe className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Global Reach</span>
               </div>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -557,40 +523,30 @@ export default AboutPage;
                 We envision a world where AI and human intelligence work in perfect harmony, creating solutions 
                 that are not only powerful but also responsible and beneficial to society.
               </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Mission & Vision */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Mission<p className="text-lg text-gray-300 mb-6 leading-relaxed">To democratize artificial intelligence and cutting-edge technology for enterprises worldwide,</p>
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.</p>
-=======
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Our Mission;
               </h2>,
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">,
                 To democratize artificial intelligence and cutting-edge technology for enterprises worldwide),
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </p>
-=======
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">To democratize artificial intelligence and cutting-edge technology for enterprises worldwide,
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-=======
         <div className="container mx-auto px-4"></section>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
             <div></div>
@@ -599,7 +555,6 @@ export default AboutPage;
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.</p>
               <div className="space-y-4"></div>
                 <div className="flex items-start space-x-3"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300">Transform businesses through AI-powered solutions</p>
                 </div>
@@ -610,7 +565,6 @@ export default AboutPage;
                 <div className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300">Drive sustainable innovation and growth</p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
@@ -676,7 +630,6 @@ const AboutPage: React.FC = () => {
                 <div className="flex items-center mb-6">
                   <Globe className="w-12 h-12 text-purple-400 mr-4" />
                   <h2 className="text-3xl font-bold text-white">Our Vision</h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 </div>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
                   To be the global leader in AI and IT solutions, recognized for our innovative 
@@ -699,15 +652,10 @@ const AboutPage: React.FC = () => {
                 </ul>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Vision<p className="text-lg text-gray-300 mb-6 leading-relaxed">To be the world's leading provider of AI and quantum computing solutions,
                 creating a future where technology seamlessly integrates with human potential</p>
                 to solve the world's most complex challenges.</p>
-=======
               <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
                 Our Vision;
               </h2>
@@ -715,23 +663,18 @@ const AboutPage: React.FC = () => {
                 To be the world's leading provider of AI and quantum computing solutions)
                 creating a future where technology seamlessly integrates with human potential;
                 to solve the world's most complex challenges.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </p>
-=======
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Vision</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">To be the world's leading provider of AI and quantum computing solutions,
                 creating a future where technology seamlessly integrates with human potential
                 to solve the world's most complex challenges.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">
-=======
             <div></div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Vision</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">To be the world's leading provider of AI and quantum computing solutions,
                 creating a future where technology seamlessly integrates with human potential
                 to solve the world's most complex challenges.</p>
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-bold text-white mb-3">Core Values</h3>
                 <div className="space-y-3"></div>
                   <div className="flex items-center space-x-3"></div>
@@ -753,21 +696,15 @@ const AboutPage: React.FC = () => {
         </div>,
       </section>,
 ,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
       {/* Values */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Values<p className="text-lg text-gray-300 max-w-3xl mx-auto">The principles that guide everything we do and shape our culture<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{values.map((value, index) => (</div>
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}<p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Values;
             </h2>
@@ -783,8 +720,6 @@ const AboutPage: React.FC = () => {
                 </div>,
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Values</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">The principles that guide everything we do and shape our culture</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{values.map((value, index) => (</div>
@@ -792,8 +727,6 @@ const AboutPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <value.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Values</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">The principles that guide everything we do and shape our culture</p>
           </div>
@@ -805,8 +738,6 @@ const AboutPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
-=======
             <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               These core values guide everything we do and shape our culture of excellence and innovation.
@@ -841,7 +772,6 @@ const AboutPage: React.FC = () => {
                 <achievement.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <div className="text-4xl font-bold text-white mb-2">{achievement.number}</div>
                 <div className="text-gray-300">{achievement.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
               </div>
             ))}
           </div>
@@ -852,38 +782,30 @@ const AboutPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Meet Our Team<p className="text-lg text-gray-300 max-w-3xl mx-auto">World-class experts in AI, quantum computing, and enterprise technology<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{teamMembers.map((member, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}<h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 font-medium mb-3">{member.role}<p className="text-gray-300 text-sm mb-4">{member.bio}</p>
                 <div className="flex flex-wrap justify-center gap-2">{member.expertise.map((skill, skillIndex) => (<span key={skillIndex} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">{skill}</span>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Meet Our Team;
             </h2>,
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">,
               World-class experts in AI, quantum computing, and enterprise technology;
-=======
             <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our diverse team of experts brings together decades of experience in AI, technology, and business transformation.
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-<<<<<<< HEAD
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover: bg-slate-700/50 transition-all duration-300">,
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">,
                   <span className="text-2xl font-bold text-white">,
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
-=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Meet Our Team</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">World-class experts in AI, quantum computing, and enterprise technology</p>
           </div>
@@ -892,31 +814,22 @@ const AboutPage: React.FC = () => {
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
-=======
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                 <p className="text-purple-400 mb-3">{member.role}</p>
                 <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
-<<<<<<< HEAD
                 <div className="flex flex-wrap justify-center gap-2">
                   {member.expertise.map((skill, skillIndex) => (
-<<<<<<< HEAD
                     <span key={skillIndex} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">
-=======
                 <div className="flex flex-wrap gap-2 justify-center">
                   {member.expertise.map((skill, idx) => (
                     <span key={idx} className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs">
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
                       {skill}
                     </span>
-=======
                     <span key={skillIndex} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">{skill}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
                   ))}
                 </div>
               ))}
@@ -925,20 +838,15 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Achievements */}
       <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Achievements<p className="text-lg text-gray-300 max-w-3xl mx-auto">Numbers that speak to our impact and success<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">{achievements.map((achievement, index) => (</div>
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <achievement.icon className="w-10 h-10 text-white" />
                 <div className="text-3xl lg:text-4xl font-bold text-white mb-2">{achievement.number}<div className="text-gray-300 font-medium">{achievement.label}</div>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Achievements;
             </h2>
@@ -957,8 +865,6 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div className="text-gray-300 font-medium">
                   {achievement.label}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Achievements</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Numbers that speak to our impact and success</p><div className="grid grid-cols-2 lg:grid-cols-4 gap-8">{achievements.map((achievement, index) => (</div>
@@ -966,8 +872,6 @@ const AboutPage: React.FC = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                   <achievement.icon className="w-10 h-10 text-white" />
                 <div className="text-3xl lg:text-4xl font-bold text-white mb-2">{achievement.number}</div><div className="text-gray-300 font-medium">{achievement.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Achievements</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">Numbers that speak to our impact and success</p>
           </div>
@@ -976,7 +880,6 @@ const AboutPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <achievement.icon className="w-10 h-10 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
                 </div>
                 <div className="text-3xl lg:text-4xl font-bold text-white mb-2">{achievement.number}</div>
                 <div className="text-gray-300 font-medium">{achievement.label}</div>
@@ -988,25 +891,18 @@ const AboutPage: React.FC = () => {
 
       {/* Timeline */}
       <section className="py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Journey<p className="text-lg text-gray-300 max-w-3xl mx-auto">Key milestones in our company's growth and innovation</p>
-=======
         <div className="container mx-auto px-4"></section>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Journey</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Key milestones in our company's growth and innovation</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
           <div className="max-w-4xl mx-auto"></div>
             <div className="relative"></div>
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{timeline.map((item, index) => (</div>
-<<<<<<< HEAD
                 </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-=======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Our Journey;
             </h2>
@@ -1019,20 +915,16 @@ const AboutPage: React.FC = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>,
               {timeline.map((item, index) => (
                 <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-slate-800/50 p-6 rounded-lg">
                       <div className="text-cyan-400 font-bold text-lg mb-2">{item.year}<h3 className="text-xl font-bold text-white mb-2">{item.title}<p className="text-gray-300">{item.description}</p>
-=======
                 </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}></div>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}></div>
                     <div className="bg-slate-800/50 p-6 rounded-lg"></div>
                       <div className="text-cyan-400 font-bold text-lg mb-2">{item.year}</div><h3 className="text-xl font-bold text-white mb-2">{item.title}</h3><p className="text-gray-300">{item.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     </div>
                   </div>
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div><div className="w-1/2">))}</div>
-=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Journey</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">Key milestones in our company's growth and innovation</p>
           </div>
@@ -1051,7 +943,6 @@ const AboutPage: React.FC = () => {
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
             </div>
           </div>
         </div>
@@ -1059,58 +950,41 @@ const AboutPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of enterprises that have already transformed their operations with our AI solutions.</p>
-=======
           <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
-=======
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join hundreds of companies that trust Zion Tech Group for their AI transformation journey.
           </p>
-=======
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of enterprises that have already transformed their operations with our AI solutions.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <a;
-=======
         <div className="container mx-auto px-4 text-center"></section>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of enterprises that have already transformed their operations with our AI solutions.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <MessageSquare className="w-5 h-5 mr-2" >Get Started Today</MessageSquare>
             </MessageSquare>
-=======
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
             <a
               href="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
-<<<<<<< HEAD
               <Calendar className="w-5 h-5 mr-2" >Free Consultation</Calendar>
             </Calendar>
-=======
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today;
             </a>
@@ -1121,28 +995,21 @@ const AboutPage: React.FC = () => {
               <Calendar className="w-5 h-5 mr-2" />
               Free Consultation;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               <Calendar className="w-5 h-5 mr-2" />
               Free Consultation
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
-=======
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Your Journey
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
           </div>
         </div>
       </section>
     </div>
   );
 }
->>>>>>> origin/main
-=======
           </section>
 
           {/* Company Stats */}
@@ -1288,4 +1155,3 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,8 +1,8 @@
-// import {saveFeedbackFallback} FeedbackRecord; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord } from "../../utils/feedback/store" function ok(re,)
+// import {saveFeedbackFallback} FeedbackRecord; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord } from "../../utils/feedback/store" function ok(re)
   s: NextApiResponse) dat,
   a: unknown) {/* TODO: Fix JSX expression */}
   k: true} ...data }); } function bad(re,
-  s: NextApiResponse, ms,)
+  s: NextApiResponse, ms)
   g: string) code = 400) {/* TODO: Fix JSX expression */}
   k: false} erro,
   r: msg }); } async function tryWriteToFirestore(do,")
@@ -11,11 +11,11 @@
   k: true} ...data }); } /** * bad - Function description */ function bad() {/* TODO: Fix JSX expression */}
   k: false} erro,"
   r: msg }); } async /** * tryWriteToFirestore - Function description */ function tryWriteToFirestore() {const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL} FIREBASE_PRIVATE_KEY } =; process.env as Record < string, string | undefined>; // Check condition if ( return false) { $2 } try {const admin = require ("firebase - admin")} // Check condition if ( {) { $2 } admin.initialize_app ({/* TODO: Fix JSX expression */}")
-  y: (FIREBASE_PRIVATE_KEY || "").replace (/\\\\n / g) "\\n")} }), import type {NextApiRequest} NextApiResponse } from "next" import { v4 as uuidv4 } from "uuid" import {saveFeedbackFallback} FeedbackRecord;; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord } from "../../utils/feedback/store" function ok(re,)
+  y: (FIREBASE_PRIVATE_KEY || "").replace (/\\\\n / g) "\\n")} }), import type {NextApiRequest} NextApiResponse } from "next" import { v4 as uuidv4 } from "uuid" import {saveFeedbackFallback} FeedbackRecord;; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord } from "../../utils/feedback/store" function ok(re)
   s: NextApiResponse) dat,
   a: unknown) {/* TODO: Fix JSX expression */}
   k: true} ...data }); } function bad(re,
-  s: NextApiResponse, ms,)
+  s: NextApiResponse, ms)
   g: string) code = 400) {/* TODO: Fix JSX expression */}
   k: false} erro,
   r: msg }); } async function tryWriteToFirestore(do,")
@@ -26,7 +26,7 @@
   doc: FeedbackRecord = {/* TODO: Fix JSX expression */}
   context: context |undefined } const wrote = await tryWriteToFirestore(doc); if (!wrote) saveFeedbackFallback(doc); return ok(res) {/* TODO: Fix JSX expression */}
   d: doc && doc.id }); } function bad(re,
-  s: NextApiResponse, ms,)
+  s: NextApiResponse, ms)
   g: string) code = 400) {/* TODO: Fix JSX expression */}
   k: false} erro,
   r: msg }); } catch (error) {/* TODO: Fix JSX expression */}"
@@ -36,7 +36,7 @@
   t: 'feedback comment'}' kin,
   d: 'general';' contex,
   t: 'api' }; return ok(res) {/* TODO: Fix JSX expression */}"
-  d: doc.id }); import type {NextApiRequest} NextApiResponse } from "next", import { v4 as uuidv4 } from "uuid", import {saveFeedbackFallback} FeedbackRecord } from "../../utils/feedback/store", function ok(re,)
+  d: doc.id }); import type {NextApiRequest} NextApiResponse } from "next", import { v4 as uuidv4 } from "uuid", import {saveFeedbackFallback} FeedbackRecord } from "../../utils/feedback/store", function ok(re)
   s: NextApiResponse) dat,
   a: unknown) {/* TODO: Fix JSX expression */}
   k: true} ...data }) } catch (error) {/* TODO: Fix JSX expression */}"
@@ -44,7 +44,7 @@
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } function bad(re,
-  s: NextApiResponse, ms,)
+  s: NextApiResponse, ms)
   g: string) code = 400) {/* TODO: Fix JSX expression */}
   k: false} erro,
   r: msg }) } catch (error) {/* TODO: Fix JSX expression */}"
@@ -59,9 +59,9 @@
   e: (req.headers["x-demo-user-role"] as string) || undefined} talentSlu,"
   g: (req.headers["x-demo-talent-slug"] as string) || undefined}; const,
   doc: FeedbackRecord = {/* TODO: Fix JSX expression */}
-  t: comment || undefined,} kin,
+  t: comment || undefined} kin,
   d: k}; contex,
-  t: context || undefined},; const wrote = await tryWriteToFirestore(doc); if (!wrote) saveFeedbackFallback(doc); return ok(res) {/* TODO: Fix JSX expression */}
+  t: context || undefined}; const wrote = await tryWriteToFirestore(doc); if (!wrote) saveFeedbackFallback(doc); return ok(res) {/* TODO: Fix JSX expression */}
   d: doc.id }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"

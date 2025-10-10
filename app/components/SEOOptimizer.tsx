@@ -1,7 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 
 interface SEOOptimizerProps {
@@ -99,7 +97,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard]);
 
   return null;
-=======
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -112,11 +109,8 @@ interface SEOData {
   structuredData: object;
 }
 
-<<<<<<< HEAD
 export const SEOOptimizer: React.FC = () => {
-=======
 export const SEOOptimizer: React.FC = () => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   const seoData: SEOData = {,
     title: 'Zion Tech Group - AI-Powered Enterprise Solutions',
     description: 'Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.',
@@ -146,20 +140,16 @@ export const SEOOptimizer: React.FC = () => {,
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
-        addressCountry: 'US',
-      },
+        addressCountry: 'US'},
       contactPoint: {,
         '@type': 'ContactPoint',
         telephone: '+1-302-464-0950',
         contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
+        email: 'kleber@ziontechgroup.com'},
       sameAs: [,
         'https://linkedin.com/company/zion-tech-group',
         'https: //twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
-      ],
-=======
+        'https://github.com/zion-tech-group'],
 
 
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
@@ -182,7 +172,7 @@ const,
 
   const updateMetaTag = (nam,
   e: string, conten,
-  t: string, attribut,)
+  t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {/* TODO: Fix JSX expression */}
@@ -190,13 +180,13 @@ const,
     meta.setAttribute('content', content);
   };
 
-  const updateCanonicalUrl = (ur,)
+  const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
     canonical.setAttribute('href', url);
   };
 
-  const addStructuredData = (dat,)
+  const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
@@ -258,7 +248,6 @@ const,
     const existing = document.getElementById('organization-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   };
 
@@ -339,7 +328,6 @@ const,
       <meta name="description" content={seoData.description} />)
       <meta name="keywords" content={seoData.keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
       <meta name="robots" content="index, follow" >{/* Open Graph */}</meta>
       </meta><meta property="og:title" content={seoData.title} />
       <meta property="og:description" content={seoData.description} />
@@ -352,7 +340,6 @@ const,
       <meta name="twitter:description" content={seoData.description} />
       <meta name="twitter:image" content={seoData.ogImage} >{/* Canonical */}</meta>
       </meta><link rel="canonical" href={seoData.canonical} />
-=======
       <meta name="robots" content="index, follow" />
       {/* Open Graph */}
       <meta property="og:title" content={seoData.title} />
@@ -369,10 +356,8 @@ const,
       <meta name="twitter:image" content={seoData.ogImage} />
       {/* Canonical */}
       <link rel="canonical" href={seoData.canonical} />
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     </Helmet>
   );
->>>>>>> origin/main
 };
 
 

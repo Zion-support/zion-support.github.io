@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 //Function to fix corrupted text by removing erroneous commas;
-<<<<<<< HEAD
 function fixCorruptedText(text) {
   //Pattern to match commas that are incorrectly placed in the middle of words;
   //This looks for commas that are followed by a space and then a lowercase letter;
@@ -93,7 +92,6 @@ function fixCorruptedText(text) {
   );
   //Fix array syntax;
   fixed = fixed.replace(/\[\s*\{/g, '[{');
-=======
 function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   d:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
     "{/* TODO: Fix JSX expression */}"
@@ -101,7 +99,6 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   );
   //Fix array syntax;
   fixed = fixed.replace(/\[\s*\{/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   fixed = fixed.replace(/\}\s*\]/g, '}]');
   //Fix function calls;
   fixed = fixed.replace(/calculateEngagementSco,\s*r,\s*e/g, 'calculateEngagementScore');
@@ -121,7 +118,6 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   return fixed;
 }
 //Function to process a file;
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     //     const content = fs.readFileSync(filePath, 'utf8');
@@ -129,16 +125,13 @@ function processFile(filePath) {
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 //Function to recursively find and process files;
-<<<<<<< HEAD
 function processDirectory(dirPath) {
   try {
     //     const items = fs.readdirSync(dirPath);
@@ -148,9 +141,7 @@ function processDirectory(dirPath) {
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
-=======
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       } else if ()
         item.endsWith('.ts') ||

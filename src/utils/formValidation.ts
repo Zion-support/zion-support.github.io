@@ -47,7 +47,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (valu,)
+  e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -88,7 +88,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (valu,)
+  e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -106,7 +106,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (valu,)
+  e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -177,7 +177,7 @@ export const _validationRules = {// TODO: Add content;}
   O: Add content;}
 };
   validat,
-  e: (valu,)
+  e: (valu)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -219,7 +219,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (fil,)
+  e: (fil)
   e: File) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -247,7 +247,7 @@ export const _validationRules = {// TODO: Add content;}
  */
 export function validateField;
           <T>(valu,
-  e: T, rule,)
+  e: T, rule)
   s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -363,8 +363,7 @@ export function debounce;
 
           <T extends (...args: Parameters<T>) => ReturnType<T>>(),
     func: T,
-  wait: number,
-): (...args: Parameters;
+  wait: number): (...args: Parameters;
           <T>) => void {// TODO: Add content;}
 
 }

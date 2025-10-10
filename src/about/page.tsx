@@ -1,13 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
@@ -16,21 +12,17 @@ const AboutPage: React.FC = () => {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
-    },
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.'},
     {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
-      bio: 'Technical expert specializing in machine learning and cloud architecture.',
-    },
+      bio: 'Technical expert specializing in machine learning and cloud architecture.'},
     {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-    },
-  ];
+      bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -43,24 +35,19 @@ const AboutPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-    },
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'},
     {
       icon: Shield,
       title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.',
-    },
+      description: 'Your data and systems are protected with enterprise-grade security measures.'},
     {
       icon: Target,
       title: 'Results',
-      description: 'We focus on delivering measurable business outcomes and ROI.',
-    },
+      description: 'We focus on delivering measurable business outcomes and ROI.'},
     {
       icon: Users,
       title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.',
-    },
-  ];
+      description: 'We work closely with our clients as strategic technology partners.'}];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -70,7 +57,6 @@ const AboutPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
-=======
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
 
 export default function AboutPage() {
@@ -176,7 +162,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -202,7 +187,6 @@ export default function AboutPage() {
               to deliver solutions that drive real business value.
             </p>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -375,14 +359,12 @@ export default function AboutPage() {
         </section>
       </div>
 
-<<<<<<< HEAD
       <Footer />
     </div>
   );
 };
 
 export default AboutPage;
-=======
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -395,7 +377,6 @@ export default AboutPage;
                 <div className="text-gray-600 font-medium">
                   {stat.label}
                 </div>
-=======
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -411,7 +392,6 @@ export default AboutPage;
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
                 <Award className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">ISO 27001 Certified</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
               </div>
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
                 <Shield className="w-5 h-5 text-purple-400" />
@@ -635,4 +615,3 @@ export default AboutPage;
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

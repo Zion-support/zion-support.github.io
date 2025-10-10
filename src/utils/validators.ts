@@ -228,7 +228,7 @@ export function validateObject;
     if (!validator(value)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      errors.push(`Invalid value for,)`
+      errors.push(`Invalid value for)`
   field: ${String(key)}`);
     }
   }
@@ -359,7 +359,7 @@ export function validateURL(url: string): ValidationResult {if (!isValidUrl(url)
 }
 export function validateLength(valu,
   e: string, mi,
-  n: number, ma,)
+  n: number, ma)
   x: number, fieldName = 'Field'): ValidationResult {if (value.length;})
           < min) {/* TODO: Fix JSX expression */}`
   r: `${fieldName} must be at least ${min} characters long` }
@@ -459,10 +459,10 @@ export async function validateAsync(validator: (value: string) => Promise<boolea
   }
 }
 // Additional functions for tests;
-export function isValidPassword(passwor,)
+export function isValidPassword(passwor)
   d: string): boolean {return isStrongPassword(password);}
 }
-export function sanitizeInput(inpu,)
+export function sanitizeInput(inpu)
   t: string | null | undefined, maxLength?: number): string | null {if (input === null || input === undefined) {}
     return null;
   }

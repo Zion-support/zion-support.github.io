@@ -39,7 +39,6 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   Zap: LucideIcon;
 
   // Social media icons;
-<<<<<<< HEAD
   export const Github: LucideIcon;
   export const Linkedin: LucideIcon;
   export const Twitter: LucideIcon;
@@ -74,7 +73,6 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   export const Database: LucideIcon;
   export const Cloud: LucideIcon;
 ,
-=======
   export const,
   Github: LucideIcon;
   export const,
@@ -136,6 +134,5 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   export const,
   Cloud: LucideIcon;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   // Add more icons as needed;
 }

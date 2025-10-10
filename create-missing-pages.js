@@ -115,8 +115,7 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
       </section>
 
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;

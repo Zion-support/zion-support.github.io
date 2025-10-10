@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 /**
  * Performance Optimization Script;
  * Optimizes the application for better performance, SEO, and user experience;
  */
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -14,9 +11,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const optimizeHTML = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -142,8 +136,6 @@ const main = () => {
 };
 
 main();
->>>>>>> origin/main
-=======
 // Performance optimization script;
 function optimizePerformance() {/* TODO: Fix JSX expression */}
 }
@@ -237,7 +229,7 @@ function generatePerformanceReport() {/* TODO: Fix JSX expression */}
   
   const reportPath = path.join(__dirname, '../performance-report.json');
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`
-  console.log(`Performance report,)`
+  console.log(`Performance report)`
   generated: ${reportPath}`);
 }
 
@@ -251,9 +243,8 @@ function getAllFiles(dir, fileList = []) {/* TODO: Fix JSX expression */}
 }
 
 // Run optimization if this script is executed directly;`
-if (import.meta.url === `fil,)`
+if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 
 export default optimizePerformance;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

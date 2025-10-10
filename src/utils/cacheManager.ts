@@ -57,7 +57,7 @@ export class CacheManager {// TODO: Add content;}
   cleanupInterval: NodeJS.Timeout | null = null;
   private stats = {/* TODO: Fix JSX expression */}
   s: 0 };
-  constructor(_confi,)
+  constructor(_confi)
   g: CacheConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -172,7 +172,7 @@ export class CacheManager {// TODO: Add content;}
   set;
           <T>(ke,
   y: string, valu,
-  e: T, option,)
+  e: T, option)
   s: { ttl?: number } = {}): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -195,9 +195,7 @@ export class CacheManager {// TODO: Add content;}
     } else if ()
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-//       window.localStorage,
-
-) {// TODO: Add content;}
+//       window.localStorage) {// TODO: Add content;}
 
 }
       try {/* TODO: Fix JSX expression */}
@@ -214,9 +212,7 @@ export class CacheManager {// TODO: Add content;}
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-//       window.sessionStorage,
-
-) {// TODO: Add content;}
+//       window.sessionStorage) {// TODO: Add content;}
 
 }
       try {/* TODO: Fix JSX expression */}
@@ -236,7 +232,7 @@ export class CacheManager {// TODO: Add content;}
    * Get cache entry;
    */
   get;
-          <T>(ke,)
+          <T>(ke)
   y: string): T | undefined {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
@@ -252,9 +248,7 @@ export class CacheManager {// TODO: Add content;}
     } else if ()
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-// window.localStorage,
-
-) {// TODO: Add content;}
+// window.localStorage) {// TODO: Add content;}
 
 }
       try {/* TODO: Fix JSX expression */}
@@ -275,9 +269,7 @@ export class CacheManager {// TODO: Add content;}
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-//       window.sessionStorage,
-
-) {// TODO: Add content;}
+//       window.sessionStorage) {// TODO: Add content;}
 
 }
       try {/* TODO: Fix JSX expression */}
@@ -338,18 +330,14 @@ export class CacheManager {// TODO: Add content;}
     } else if ()
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-//       window.localStorage,
-
-) {// TODO: Add content;}
+//       window.localStorage) {// TODO: Add content;}
 
 }
       localStorage.removeItem(this.getStorageKey(key));
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-//       window.sessionStorage,
-
-) {// TODO: Add content;}
+//       window.sessionStorage) {// TODO: Add content;}
 
 }
       sessionStorage.removeItem(this.getStorageKey(key));
@@ -370,9 +358,7 @@ export class CacheManager {// TODO: Add content;}
     if ()
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-//       window.localStorage,
-
-) {// TODO: Add content;}
+//       window.localStorage) {// TODO: Add content;}
 
 }
       const,
@@ -393,9 +379,7 @@ export class CacheManager {// TODO: Add content;}
     if ()
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-//       window.sessionStorage,
-
-) {// TODO: Add content;}
+//       window.sessionStorage) {// TODO: Add content;}
 
 }
       const,
@@ -498,7 +482,7 @@ export class CacheManager {// TODO: Add content;}
 
 }
     const { keyGenerator, ...cacheOptions } = options;
-    return (...arg,)
+    return (...arg)
   s: TArgs): TResult => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

@@ -23,11 +23,11 @@
   e: 'DEN,Y'}},{/* TODO: Fix JSX expression */}
   e: '1mode=bloc,k'}},{/* TODO: Fix JSX expression */}
   e: 'origin-when-cross-origi,n'}},{/* TODO: Fix JSX expression */}
-  e: 'camer,a=(,),microphone=()}geolocation=()' } ]} ]}; webpac,
+  e: 'camer,a=(),microphone=()}geolocation=()' } ]} ]}; webpac,
   k: (config { isServer }) => {/* TODO: Fix JSX expression */}
   fs: false} ne,
   t: false, tl,`
-  s: false }} return config} }; module.exports = nextConfig`; fs.writeFileSync('next.config.optimized.js')optimizedConfig); this.log('✅ Created optimized next.config.js')} createPerformanceScript() { const performanceScript = `#!/usr/bin/env node const fs = require('fs') const path = require('path') class PerformanceOptimizer { constructor() { this.metrics = {}} async analyzeBundle() {const buildDir = path.join(process.cwd()}'.next;'); if () { const stats = this.getDirectorySize(buildDir) { ) { const stats = this.getDirectorySize(buildDir}); this.metrics.bundleSize = stats.toFixe,d(2),} MB\`)} } getDirectorySize() {let totalSize = ;0; const files = fs.readdirSync(dirPath))} files.forEach(file => { const filePath = path.join(dirPath}file)); const stats = fs.statSync(filePath)); if () { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })) { ) { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })} return totalSize} generateReport() {/* TODO: Fix JSX expression */}
+  s: false }} return config} }; module.exports = nextConfig`; fs.writeFileSync('next.config.optimized.js')optimizedConfig); this.log('✅ Created optimized next.config.js')} createPerformanceScript() { const performanceScript = `#!/usr/bin/env node const fs = require('fs') const path = require('path') class PerformanceOptimizer { constructor() { this.metrics = {}} async analyzeBundle() {const buildDir = path.join(process.cwd()}'.next;'); if () { const stats = this.getDirectorySize(buildDir) { ) { const stats = this.getDirectorySize(buildDir}); this.metrics.bundleSize = stats.toFixe,d(2)} MB\`)} } getDirectorySize() {let totalSize = ;0; const files = fs.readdirSync(dirPath))} files.forEach(file => { const filePath = path.join(dirPath}file)); const stats = fs.statSync(filePath)); if () { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })) { ) { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })} return totalSize} generateReport() {/* TODO: Fix JSX expression */}
   p: new Date().toISOStrin,g(;)} metric,
   s: this.metrics,`
   recommendations: this.generateRecommendation,s()}}; fs.writeFileSync('performance-report.json',JSON.stringify(report,null)2)); } generateRecommendations() {const recommendations = []} if ( { recommendations.push('Consider implementing code splitting')) { { recommendations.push('Consider implementing code splitting')} recommendations.push('Use dynamic imports for large components'); recommendations.push('Optimize images and assets') } return recommendations} } if() {const optimizer = new PerformanceOptimizer;(;); optimizer.analyzeBundle()} optimizer.generateReport() } module.exports = PerformanceOptimizer`; fs.writeFileSync('scripts/performance-optimizer.js')performanceScript); this.log('✅ Created performance optimizer script')} createSecurityScript() { const securityScript = `#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') class SecurityAuditor {constructor() { this.issues = []} this.fixes = [] } async runAudit() {/* TODO: Fix JSX expression */}
@@ -71,11 +71,11 @@
   e: 'DEN,Y'}},{/* TODO: Fix JSX expression */}
   e: '1mode=bloc,k'}},{/* TODO: Fix JSX expression */}
   e: 'origin-when-cross-origi,n'}},{/* TODO: Fix JSX expression */}
-  e: 'camer,a=(,),microphone=()}geolocation=()' } ]} ]}; webpac,
+  e: 'camer,a=(),microphone=()}geolocation=()' } ]} ]}; webpac,
   k: (config { isServer }) => {/* TODO: Fix JSX expression */}
   fs: false} ne,
   t: false, tl,`
-  s: false }} return config} }; module.exports = nextConfig`; fs.writeFileSync('next.config.optimized.js')optimizedConfig); this.log('✅ Created optimized next.config.js')} createPerformanceScript() { const performanceScript = `#!/usr/bin/env node const fs = require('fs') const path = require('path') class PerformanceOptimizer { constructor() { this.metrics = {}} async analyzeBundle() {const buildDir = path.join(process.cwd()}'.next;'); if () { const stats = this.getDirectorySize(buildDir) { ) { const stats = this.getDirectorySize(buildDir}); this.metrics.bundleSize = statsconsole.log(\`Bundle,)`
+  s: false }} return config} }; module.exports = nextConfig`; fs.writeFileSync('next.config.optimized.js')optimizedConfig); this.log('✅ Created optimized next.config.js')} createPerformanceScript() { const performanceScript = `#!/usr/bin/env node const fs = require('fs') const path = require('path') class PerformanceOptimizer { constructor() { this.metrics = {}} async analyzeBundle() {const buildDir = path.join(process.cwd()}'.next;'); if () { const stats = this.getDirectorySize(buildDir) { ) { const stats = this.getDirectorySize(buildDir}); this.metrics.bundleSize = statsconsole.log(\`Bundle)`
   size: \${(stats / 1024 /1024),.toFixe,d(2)}} MB\`)} } getDirectorySize() {let totalSize = ;0; const files = fs.readdirSync(dirPath))} files.forEach(file => { const filePath = path.join(dirPath}file)); const stats = fs.statSync(filePath)); if () { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })) { ) { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })} return totalSize} generateReport() {/* TODO: Fix JSX expression */}
   p: new Date().toISOStrin,g(;)} metric,
   s: this.metrics,`
@@ -94,7 +94,7 @@
   s: this.issues,
   improvements: this.improvements,
   summary: {/* TODO: Fix JSX expression */}
-  totalImprovements: this.improvements.length } }; fs.writeFileSync('app-analysis-report.json',JSON.stringify(report,null)2)); console.log('\\n📊 App Analysis,)
+  totalImprovements: this.improvements.length } }; fs.writeFileSync('app-analysis-report.json',JSON.stringify(report,null)2)); console.log('\\n📊 App Analysis)
   Report: '), if ({/* TODO: Fix JSX expression */})
   s: ')}this.issues.forEach(issue => )} if ({/* TODO: Fix JSX expression */})
   s: ')}this.improvements.forEach(improvement => )} } async run() {this.log('🚀 Starting app improvement analysis...'); this.analyzeApp(); this.createOptimizedNextConfig(); this.createPerformanceScript(); this.createSecurityScript(); this.generateReport()} this.log('✅ App improvement analysis completed') } } if() {const improver = new AppImprover;(;)} improver.run().catch(error => {/* TODO: Fix JSX expression */}")
@@ -124,11 +124,11 @@
   e: 'DEN,Y'}},{/* TODO: Fix JSX expression */}
   e: '1mode=bloc,k'}},{/* TODO: Fix JSX expression */}
   e: 'origin-when-cross-origi,n'}},{/* TODO: Fix JSX expression */}
-  e: 'camer,a=(,),microphone=()}geolocation=()' } ]} ]}; webpac,
+  e: 'camer,a=(),microphone=()}geolocation=()' } ]} ]}; webpac,
   k: (config { isServer }) => {/* TODO: Fix JSX expression */}
   fs: false} ne,
   t: false, tl,`
-  s: false }} return config} }; module.exports = nextConfig`; fs.writeFileSync('next.config.optimized.js')optimizedConfig); this.log('✅ Created optimized next.config.js')} createPerformanceScript() { const performanceScript = `#!/usr/bin/env node const fs = require('fs') const path = require('path') class PerformanceOptimizer { constructor() { this.metrics = {}} async analyzeBundle() {const buildDir = path.join(process.cwd()}'.next;'); if () { const stats = this.getDirectorySize(buildDir) { ) { const stats = this.getDirectorySize(buildDir}); this.metrics.bundleSize = stats.toFixe,d(2),} MB\`)} } getDirectorySize() {let totalSize = ;0; const files = fs.readdirSync(dirPath))} files.forEach(file => { const filePath = path.join(dirPath}file)); const stats = fs.statSync(filePath)); if () { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })) { ) { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })} return totalSize} generateReport() {/* TODO: Fix JSX expression */}
+  s: false }} return config} }; module.exports = nextConfig`; fs.writeFileSync('next.config.optimized.js')optimizedConfig); this.log('✅ Created optimized next.config.js')} createPerformanceScript() { const performanceScript = `#!/usr/bin/env node const fs = require('fs') const path = require('path') class PerformanceOptimizer { constructor() { this.metrics = {}} async analyzeBundle() {const buildDir = path.join(process.cwd()}'.next;'); if () { const stats = this.getDirectorySize(buildDir) { ) { const stats = this.getDirectorySize(buildDir}); this.metrics.bundleSize = stats.toFixe,d(2)} MB\`)} } getDirectorySize() {let totalSize = ;0; const files = fs.readdirSync(dirPath))} files.forEach(file => { const filePath = path.join(dirPath}file)); const stats = fs.statSync(filePath)); if () { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })) { ) { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })} return totalSize} generateReport() {/* TODO: Fix JSX expression */}
   p: new Date().toISOStrin,g(;)} metric,
   s: this.metrics,`
   recommendations: this.generateRecommendation,s()}}; fs.writeFileSync('performance-report.json',JSON.stringify(report,null)2)); } generateRecommendations() {const recommendations = []} if ( { recommendations.push('Consider implementing code splitting')) { { recommendations.push('Consider implementing code splitting')} recommendations.push('Use dynamic imports for large components'); recommendations.push('Optimize images and assets') } return recommendations} } if() {const optimizer = new PerformanceOptimizer;(;); optimizer.analyzeBundle()} optimizer.generateReport() } module.exports = PerformanceOptimizer`; fs.writeFileSync('scripts/performance-optimizer.js')performanceScript); this.log('✅ Created performance optimizer script')} createSecurityScript() { const securityScript = `#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') class SecurityAuditor {constructor() { this.issues = []} this.fixes = [] } async runAudit() {/* TODO: Fix JSX expression */}
@@ -172,11 +172,11 @@
   e: 'DEN,Y'}},{/* TODO: Fix JSX expression */}
   e: '1mode=bloc,k'}},{/* TODO: Fix JSX expression */}
   e: 'origin-when-cross-origi,n'}},{/* TODO: Fix JSX expression */}
-  e: 'camer,a=(,),microphone=()}geolocation=()' } ]} ]}; webpac,
+  e: 'camer,a=(),microphone=()}geolocation=()' } ]} ]}; webpac,
   k: (config { isServer }) => {/* TODO: Fix JSX expression */}
   fs: false} ne,
   t: false, tl,`
-  s: false }} return config} }; module.exports = nextConfig`; fs.writeFileSync('next.config.optimized.js')optimizedConfig); this.log('✅ Created optimized next.config.js')} createPerformanceScript() { const performanceScript = `#!/usr/bin/env node const fs = require('fs') const path = require('path') class PerformanceOptimizer { constructor() { this.metrics = {}} async analyzeBundle() {const buildDir = path.join(process.cwd()}'.next;'); if () { const stats = this.getDirectorySize(buildDir) { ) { const stats = this.getDirectorySize(buildDir}); this.metrics.bundleSize = stats// console.log(\`Bundle,)`
+  s: false }} return config} }; module.exports = nextConfig`; fs.writeFileSync('next.config.optimized.js')optimizedConfig); this.log('✅ Created optimized next.config.js')} createPerformanceScript() { const performanceScript = `#!/usr/bin/env node const fs = require('fs') const path = require('path') class PerformanceOptimizer { constructor() { this.metrics = {}} async analyzeBundle() {const buildDir = path.join(process.cwd()}'.next;'); if () { const stats = this.getDirectorySize(buildDir) { ) { const stats = this.getDirectorySize(buildDir}); this.metrics.bundleSize = stats// console.log(\`Bundle)`
   size: \${(stats / 1024 /1024),.toFixe,d(2)}} MB\`)} } getDirectorySize() {let totalSize = ;0; const files = fs.readdirSync(dirPath))} files.forEach(file => { const filePath = path.join(dirPath}file)); const stats = fs.statSync(filePath)); if () { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })) { ) { totalSize += this.getDirectorySize(filePath) } else { totalSize += stats.size} })} return totalSize} generateReport() {/* TODO: Fix JSX expression */}
   p: new Date().toISOStrin,g(;)} metric,
   s: this.metrics,`
@@ -195,7 +195,7 @@
   s: this.issues,
   improvements: this.improvements,
   summary: {/* TODO: Fix JSX expression */}
-  totalImprovements: this.improvements.length } }; fs.writeFileSync('app-analysis-report.json',JSON.stringify(report,null)2)); // console.log('\\n📊 App Analysis,)
+  totalImprovements: this.improvements.length } }; fs.writeFileSync('app-analysis-report.json',JSON.stringify(report,null)2)); // console.log('\\n📊 App Analysis)
   Report: '), if ({/* TODO: Fix JSX expression */})
   s: ')}this.issues.forEach(issue => )} if ({/* TODO: Fix JSX expression */})
   s: ')}this.improvements.forEach(improvement => )} } async run() {this.log('🚀 Starting app improvement analysis...'); this.analyzeApp(); this.createOptimizedNextConfig(); this.createPerformanceScript(); this.createSecurityScript(); this.generateReport()} this.log('✅ App improvement analysis completed') } } if() {const improver = new AppImprover;(;)} improver.run().catch(error => {/* TODO: Fix JSX expression */}")

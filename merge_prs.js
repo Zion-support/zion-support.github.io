@@ -2,7 +2,6 @@
 import https from 'https';
 
 // GitHub API configuration;
-<<<<<<< HEAD
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
     const options = {
@@ -14,9 +13,7 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json'
-=======
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     };
 
@@ -55,7 +52,6 @@ async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 async function mergePR(prNumber, title) {
   try {
     // Get PR details first;
@@ -68,24 +64,20 @@ async function mergePR(prNumber, title) {
     if (prDetails.mergeable === false) {
 
       return false;
-=======
 async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
     }
 
     // Check if PR is mergeable;
     if (prDetails.mergeable === false) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     if (prDetails.mergeable_state === 'dirty') {/* TODO: Fix JSX expression */}
     }
 
     // Merge the PR;
-<<<<<<< HEAD
     const mergeData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
-      merge_method: 'merge',
-    });
+      merge_method: 'merge'});
 
     const response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`)
       'PUT')
@@ -97,7 +89,6 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
       return true;
     } else {
       return false;
-=======
     const mergeData = JSON.stringify({/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`,
       merge_metho,
@@ -111,37 +102,30 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
 
     if (response.status === 200) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 async function mergeAllPRs() {
   try {
     if (prs.length === 0) {
 
       return;
-=======
 async function mergeAllPRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
 
     // Filter PRs that target main branch and don't have conflicts;
-<<<<<<< HEAD
     const mainPRs = prs.filter(pr => )
       pr.base.ref === 'main' && )
       pr.mergeable !== false && )
-=======
     const mainPRs = prs.filter(pr => 
       pr.base.ref === 'main' && 
       pr.mergeable !== false && 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       pr.mergeable_state !== 'dirty')
     );
 
@@ -150,16 +134,13 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
 
 
     // Merge PRs one by one;
-<<<<<<< HEAD
     for (const pr of mainPRs) {
       if (success) {
         successCount++;
       } else {
         failCount++;
-=======
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       
       // Add a small delay between merges;
@@ -175,7 +156,6 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
 }
 
 // Run the merge process;
-<<<<<<< HEAD
 mergeAllPRs().then(() => {
 
   process.exit(0);
@@ -183,8 +163,6 @@ mergeAllPRs().then(() => {
 )
   process.exit(1);
 });
-=======
 mergeAllPRs().then(() => {/* TODO: Fix JSX expression */}
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

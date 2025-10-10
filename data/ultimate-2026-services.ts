@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -28,7 +27,6 @@ export interface Ultimate2026Service {;,
     email: string}
     address: string}
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
   i,
   d: string;
   nam,
@@ -79,19 +77,14 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
   s: string}
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
   }
 }
-<<<<<<< HEAD
     address: string;
-=======
     addres,
-  s: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: string}
 export const,
   ultimate2026Services: Ultimate2026Service[] = [;
     feature,
@@ -102,19 +95,16 @@ export const,
       'Premium features'
       '24/7 support'
     ]
-<<<<<<< HEAD
     link: '/services/2026-ultimate-service'
     category: 'Ultimate 2026 Services'
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
   id: string, name: string;
@@ -136,19 +126,16 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
       "All technologies"
       "Maximum capabilities"
       "Premium features",
-      "24/7 support",
-    ],
+      "24/7 support"],
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true;
     contactInfo: unknown;
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     lin,
   k: '/services/2026-ultimate-service'
     categor,
@@ -193,8 +180,7 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
   e: string, emai,
   l: string,
     addres,
-  s: string,
-  }
+  s: string}
 }
 export const,
   ultimate2026Services: Ultimate2026Service[] = [,
@@ -233,7 +219,6 @@ export const,
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -256,16 +241,13 @@ export const,
       "Premium features","
       "24/7 support"
     ];
-<<<<<<< HEAD
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     lin,"
   k: "/services/2026-ultimate-service", categor,"
   y: "Ultimate 2026 Services",
@@ -282,7 +264,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -299,20 +280,20 @@ i,
   e: string; emai,
   l: string; export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
   s: string }; i,
-  d: string,; nam,
-  e: string,; taglin,
-  e: string,; pric,
+  d: string; nam,
+  e: string; taglin,
+  e: string; pric,
   e: string, descriptio,
-  n: string,; feature,
-  s: string[],; lin,
-  k: string,; categor,
-  y: string,; realImplementatio,
-  n: boolean,; contactInf,
+  n: string; feature,
+  s: string[]; lin,
+  k: string; categor,
+  y: string; realImplementatio,
+  n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string,} addres,
+  l: string} addres,
   s: string} addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; } } addres,
-  s: string, } export const,
+  s: string} export const,
   ultimate2026Services: Ultimate2026Service[] = [ feature,
   s: [ 'Ultimate platform'' 'All technologies'' 'Maximum capabilities'' 'Premium features'' '24/7 support' ]' lin,
   k: '/services/2026-ultimate-service'' categor,

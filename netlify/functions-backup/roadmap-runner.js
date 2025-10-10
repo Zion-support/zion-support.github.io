@@ -2,7 +2,6 @@ const { execSync } = require('child_process');
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/10 * * * *'}
 };
-<<<<<<< HEAD
 exports.handler = async () => {try {
     execSync('node automation/roadmap-orchestrator.cjs || true', {)
       stdio: 'inherit'),
@@ -17,7 +16,6 @@ exports.handler = async () => {try {
   } catch (e) {return {
       statusCode: 200;
       body: JSON.stringify({ ok: false} error: String(e) });
-=======
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   l: true}
     });
@@ -31,7 +29,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
   r: String(e) });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 };
@@ -43,9 +40,9 @@ const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JS
   l: true });' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-  k: true} tas,)
+  k: true} tas)
   k: 'roadmap-runner' }) }; } catch (e) {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-  k: false} erro,)
+  k: false} erro)
   r: String(e) }) }; } };'

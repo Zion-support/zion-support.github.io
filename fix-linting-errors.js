@@ -17,8 +17,7 @@ const filesToFix = [
   '/workspace/app/hooks/useForm.ts',
   '/workspace/app/page-minimal.tsx',
   '/workspace/app/page-optimized.tsx',
-  '/workspace/app/utils/__tests__/performanceMonitoring.test.ts',
-];
+  '/workspace/app/utils/__tests__/performanceMonitoring.test.ts'];
 
 function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   }
@@ -27,7 +26,6 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   // Fix unused variables by prefixing with underscore;
   const unusedVarPatterns = [
     // Unused imports;
-<<<<<<< HEAD
     {
       pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
       fix: (match, imports) => {
@@ -39,7 +37,6 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
           const fixedImports = importList;
             .map(imp => {)
               if (unusedImports.includes(imp)) {
-=======
     {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
       fi,
@@ -47,7 +44,6 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
         });
 
         if (unusedImports.length > 0) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 return imp.replace(varName, `_${varName}`);
               }
               return imp;
@@ -56,53 +52,40 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
           return match.replace(imports, fixedImports);
         }
         return match;
-      },
-    },
+      }},
     // Unused variable declarations;
-<<<<<<< HEAD
     {
       pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g;
       fix: (match, varName) => {
         if (varName.startsWith('_')) return match;
         if (matches && matches.length <= 1) {
-=======
     {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           return match.replace(varName, `_${varName}`);
         }
         return match;
-      },
-    },
+      }},
     // Unused function parameters;
-<<<<<<< HEAD
     {
       pattern: /function\s+[^(]*\(([^)]+)\)/g;
       fix: (match, params) => {
         const fixedParams = paramList;
           .map(param => {)
             if (!paramName.startsWith('_') && !paramName.includes('=')) {
-=======
     {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               return param.replace(paramName, `_${paramName}`);
             }
             return param;
           })
           .join(', ');
         return match.replace(params, fixedParams);
-      },
-    },
-  ];
+      }}];
 
   // Apply fixes;
-<<<<<<< HEAD
   for (const { pattern, fix } of unusedVarPatterns) {
     if (newContent !== content) {
       content = newContent;
       modified = true;
-=======
   for (const { pattern, fix } of unusedVarPatterns) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
@@ -114,15 +97,12 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 filesToFix.forEach(fixUnusedVariables);
 
 // Run linter to check results;
-<<<<<<< HEAD
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
 } catch (error) {
 
-=======
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 "`

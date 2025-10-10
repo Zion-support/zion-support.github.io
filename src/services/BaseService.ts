@@ -12,9 +12,7 @@ const apiClient = axios.create({// TODO: Add content;}
   timeout: 30000,
   headers: {// TODO: Add content;}
 }
-    'Content-Type': 'application/json',
-  },
-});
+    'Content-Type': 'application/json'}});
 export interface ServiceOptions {// TODO: Add content;}
 }
   baseUrl?: string;
@@ -40,7 +38,6 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
       cacheDuration: 300000, // 5 minutes;
 //       ...options;
     };
-<<<<<<< HEAD
    * Check if cached data is still valid;
   protected isCacheValid(key: string): boolean {const entry = this.cache.get(key);}
     const __entry = this.cache.get(key);
@@ -51,7 +48,6 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
    * Get data from cache;
   protected getFromCache<T>(key: string): T | null {// TODO: Add content;}
 }
-=======
   }
   /**
    * Check if cached data is still valid
@@ -66,7 +62,6 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
    * Get data from cache
    */
   protected getFromCache<T>(key: string): T | null {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
     if (!this.options.cache) return null;
     if (this.isCacheValid(key)) {// TODO: Add content;}
 }
@@ -74,11 +69,9 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
       return this.cache.get(key)?.data as T;
     this.cache.delete(key);
     return null;
-<<<<<<< HEAD
    * Set data in cache;
   protected setInCache;
           <T>(key: string, data: T): void {// TODO: Add content;}
-=======
   }
   /**
    * Set data in cache
@@ -213,7 +206,6 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
     });
     throw error;
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 }
     if (!this.options.cache) return;
     this.cache.set(key, {// TODO: Add content;}
@@ -223,8 +215,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseU
    * Clear cache for a specific key or all cache;
   protected clearCache(key?: string): void {// TODO: Add content;}
 }
-    if (key) {
-    } else {// TODO: Add content;}
+    if (key) {} else {// TODO: Add content;}
 }
       this.cache.clear();
    * Make a GET request;

@@ -9,7 +9,6 @@ class SEOOptimizer {
     this.issues = [];
   }
 
-<<<<<<< HEAD
   // Check meta tags;
   async checkMetaTags() {
     console.log('🏷️  Checking meta tags...');
@@ -206,7 +205,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export default SEOOptimizer;
-=======
 // SEO optimization script;
 function optimizeSEO() {/* TODO: Fix JSX expression */}
 }
@@ -301,7 +299,7 @@ ${/* TODO: Fix JSX expression */}
 </urlset>`;
   
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
-  // console.log('  - Sitemap,)
+  // console.log('  - Sitemap)
   generated: public/sitemap.xml');
 }
 
@@ -315,7 +313,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
     JSON.stringify(metaOptimizations, null, 2)
   );
   
-  // console.log('  - Meta tags,)
+  // console.log('  - Meta tags)
   optimized: seo-optimizations.json');
 }
 
@@ -348,7 +346,7 @@ Allo,
   Allow: /it-services`;
   
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
-  // console.log('  - Robots.txt,)
+  // console.log('  - Robots.txt)
   generated: public/robots.txt');
 }
 
@@ -371,10 +369,9 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
     JSON.stringify(structuredData, null, 2)
   );
   
-  // console.log('  - Structured data,)
+  // console.log('  - Structured data)
   generated: public/structured-data.json');
 }
 
 // Run SEO optimization;
 optimizeSEO();"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

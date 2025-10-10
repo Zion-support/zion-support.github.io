@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const TaskManagerProPage: React.FC = () => {
   const features = [
@@ -225,7 +221,6 @@ $4}
             Ready to Supercharge Your Productivity?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using Task Manager Pro to achieve more, 
-=======
 
 
 
@@ -418,7 +413,6 @@ Most Popular;
             Ready to Supercharge Your Productivity?"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of professionals using Task Manager Pro to achieve more,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             work smarter, and reach their goals faster.
   );
 };

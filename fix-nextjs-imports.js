@@ -6,35 +6,28 @@ import { glob } from 'glob';
 // Define the replacements;
 const replacements = [
   // Next.js imports to React Router;
-<<<<<<< HEAD
   { from: "import Link from 'next/link';", to: "import { Link } from 'react-router-dom';" },
   {
     from: "import { useRouter } from 'next/router';",
     to: "import { useNavigate, useLocation } from 'react-router-dom';",
-=======
   {/* TODO: Fix JSX expression */}
   o: "import { Link } from 'react-router-dom';" },
   {/* TODO: Fix JSX expression */}"
   m: "import { useRouter } from 'next/router';",
     t,"
-  o: "import { useNavigate, useLocation } from 'react-router-dom';",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  o: "import { useNavigate, useLocation } from 'react-router-dom';"},
   {/* TODO: Fix JSX expression */}"
   m: "import { useRouter } from 'next/navigation';",
     t,"
-  o: "import { useNavigate, useLocation } from 'react-router-dom';",
-  },
+  o: "import { useNavigate, useLocation } from 'react-router-dom';"},
   {/* TODO: Fix JSX expression */}"
   m: "import { usePathname } from 'next/navigation';",
     t,"
-  o: "import { useLocation } from 'react-router-dom';",
-  },
+  o: "import { useLocation } from 'react-router-dom';"},
   {/* TODO: Fix JSX expression */}"
   m: "import { useSearchParams } from 'next/navigation';",
     t,"
-  o: "import { useSearchParams } from 'react-router-dom';",
-  },
+  o: "import { useSearchParams } from 'react-router-dom';"},
   {/* TODO: Fix JSX expression */}"
   o: "import { Helmet } from 'react-helmet-async';" },
   {/* TODO: Fix JSX expression */}"
@@ -45,11 +38,9 @@ const replacements = [
   {/* TODO: Fix JSX expression */}"
   m: "import type { Metadata } from 'next';",
     t,"
-  o: "import { Helmet } from 'react-helmet-async';",
-  },
+  o: "import { Helmet } from 'react-helmet-async';"},
 
   // Next.js specific patterns;
-<<<<<<< HEAD
   { from: 'export const metadata: Metadata = {', to: '// Metadata moved to Helmet component' },
   { from: 'export const metadata = {', to: '// Metadata moved to Helmet component' },
   { from: "'use client';", to: '' },
@@ -58,8 +49,7 @@ const replacements = [
   // Router usage patterns;
   {
     from: 'const router = useRouter();',
-    to: 'const navigate = useNavigate();\n  const location = useLocation();',
-  },
+    to: 'const navigate = useNavigate();\n  const location = useLocation();'},
   { from: 'router.push(', to: 'navigate(' })
   { from: 'router.replace(', to: 'navigate(' })
   { from: 'router.back()', to: 'navigate(-1)' },
@@ -73,7 +63,6 @@ const replacements = [
   // Dynamic import patterns;
   { from: 'dynamic(() => import(', to: 'lazy(() => import(' })
   { from: 'loading: () => <', to: 'fallback={<' },
-=======
   {/* TODO: Fix JSX expression */}
   o: '// Metadata moved to Helmet component' },
   {/* TODO: Fix JSX expression */}
@@ -102,14 +91,12 @@ const replacements = [
   t: 'Link' },
   {/* TODO: Fix JSX expression */}
   o: '<Link to=' },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
   // Dynamic import patterns;
   {/* TODO: Fix JSX expression */}
   o: 'lazy(() => import(' },
   {/* TODO: Fix JSX expression */}
-  o: 'fallback={<' },
-)
+  o: 'fallback={<' })
   // Image patterns (replace with regular img or custom component)
   {/* TODO: Fix JSX expression */}
   o: '<img' },
@@ -126,11 +113,9 @@ const replacements = [
   {/* TODO: Fix JSX expression */}
   o: '' },
   {/* TODO: Fix JSX expression */}
-  o: '' },
-];
+  o: '' }];
 
 // Function to process a single file;
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Apply replacements;
@@ -138,10 +123,8 @@ function processFile(filePath) {
       if (context) {
         // Context-specific replacement;
         const regex = new RegExp(
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     replacements.forEach(({ from, to, context }) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,
           'g'
         );
@@ -149,14 +132,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           content = content.replace(regex, `$1${to}`);
           modified = true;
         }
-<<<<<<< HEAD
       } else {
         // Simple replacement;
         if (content.includes(from)) {
           content = content.replace(
-=======
       } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
             to;
           );
@@ -167,7 +147,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Additional cleanup;
     content = content;
-<<<<<<< HEAD
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
       .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {)
@@ -178,12 +157,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
             if (!imports[module]) imports[module] = [];
             imports[module].push(importsStr);
           }
-=======
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;"
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
       .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
           })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
 
         return ()
@@ -201,7 +178,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Main execution;
-<<<<<<< HEAD
 async function main() {
 
   // Find all TypeScript/JavaScript files in app directory;
@@ -216,16 +192,13 @@ async function main() {
         '**/*backup*/**',
         '**/*corrupted*/**',
         '**/*temp*/**',
-        '**/*.broken/**',
-      ],
-    });
+        '**/*.broken/**']});
 
     files.forEach(file => {)
       totalFiles++;)
       if (processFile(file)) {
         fixedFiles++;
       }
-=======
 async function main() {/* TODO: Fix JSX expression */}
 }
   // Find all TypeScript/JavaScript files in app directory;
@@ -234,25 +207,19 @@ async function main() {/* TODO: Fix JSX expression */}
 
     files.forEach(file => {/* TODO: Fix JSX expression */}
       })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   }
 
 
 
 
-<<<<<<< HEAD
-  if (fixedFiles > 0) {
-
-  } else {
-=======
+  if (fixedFiles > 0) {} else {
   if (fixedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 `
-if (import.meta.url === `fil,)`
+if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 

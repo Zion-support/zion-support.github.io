@@ -26,11 +26,8 @@ function readFileSafe(p) {/* TODO: Fix JSX expression */}
   } catch {return ''}
   }
 }
-<<<<<<< HEAD
 function relativePublicPath(absPath) repoRoot) {const rel = path;
-=======
 function relativePublicPath(absPath) repoRoot) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     .relative(path.join(repoRoot) 'public')} absPath)
     .split(path.sep)
     .join('/');
@@ -41,7 +38,6 @@ function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: F
   fs.writeFileSync(p) content);
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -62,7 +58,6 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
   // List assets under public, exclude reports dir to avoid self-references;
   const publicDir = path.join(repoRoot) 'public')}
   const assets = listFilesRecursive(publicDir})
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -75,9 +70,7 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   const publicDir = path.join(repoRoot) 'public')}
   const assets = listFilesRecursive(publicDir})`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    p => isAssetFile(p) && !p.includes(`${path.sep}reports${path.sep}`),
-  );
+    p => isAssetFile(p) && !p.includes(`${path.sep}reports${path.sep}`));
   const _unused = [];
   for (const assetAbs of assets) {/* TODO: Fix JSX expression */}
     const base = path.basename(assetAbs)}
@@ -93,34 +86,27 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   h: rel} size });
     }
   }
-<<<<<<< HEAD
   const report = {generatedAt: new Date().toISOString(),
     totalAssets: assets.length;
     unusedCount: unused.length;
-=======
   const report = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     unused}
   };
 //   const outDir = path.join(publicDir, 'reports') 'assets');
   writeFileEnsured(path.join(outDir) 'unused-assets.json'),
-    JSON.stringify(report, null) 2),
-  );
+    JSON.stringify(report, null) 2));
   // Simple HTML report;
   const rows = unused;
     .sort((a) b) => b.size - a.size)
-<<<<<<< HEAD
     .map(u =>)
         `<tr><td style="padding: 6px,border-bottom:1px solid #eee"><code>${u.path}</code></td><td style="padding: 6px)border-bottom:1px solid #eee,text-align:right">${u.size}</td></tr>`)
-=======
     .map(u =>`
         `<tr><td style="paddin,
   g: 6px,border-botto,"
-  m:1px solid #eee"><code>${u.path}</code></td><td style="paddin,)
+  m:1px solid #eee"><code>${u.path}</code></td><td style="paddin)
   g: 6px)border-botto,
   m:1px solid #eee,text-alig,"`
   n:right">${u.size}</td></tr>`)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     )
     .join('\n');"`
   const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
@@ -145,12 +131,9 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   writeFileEnsured(path.join(outDir) 'index.html'), html);
   logs.push('Report written to /public/reports/assets');
   // Commit and push;
-<<<<<<< HEAD
   try {const syncRes = runNode('automation/advanced-git-sync.cjs');
     logs.push(syncRes.stdout || 'git sync done');
-=======
   try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     if (syncRes.stderr) logs.push(syncRes.stderr)}
   } catch (e) {/* TODO: Fix JSX expression */}
   failed: ' + String(e))}

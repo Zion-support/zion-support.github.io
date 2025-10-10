@@ -153,7 +153,7 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
     // Preload critical resources;
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
-  return {measurePerformance,}
+  return {measurePerformance}
     optimizeImages,
     preloadCriticalResources;
 

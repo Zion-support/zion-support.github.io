@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Zap, ArrowRight } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -90,7 +88,6 @@ const AIAutomationPage: React.FC = () => {
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 export default function AIAutomationPage() {
   return (

@@ -48,7 +48,7 @@ export const _securityHeaders = {// TODO: Add content;}
   },
   // Security Headers,
   header,
-  s: {// 'X-DNS-Prefetch-Control': 'on',}
+  s: {// 'X-DNS-Prefetch-Control': 'on'}
 // 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
 // 'X-XSS-Protection': '1; mode=block',
 // 'X-Frame-Options': 'SAMEORIGIN',
@@ -111,7 +111,7 @@ export const validationPatterns = {/* TODO: Fix JSX expression */}
   noSpecialChars: /^[a-zA-Z0-9\s]+$/
 
  * Sanitize user input;
-export function sanitizeInput(inpu,)
+export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -133,21 +133,21 @@ export function sanitizeInput(inpu,)
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim();
  * Validate email address;
-export function validateEmail(emai,)
+export function validateEmail(emai)
   l: string): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return validationPatterns.email.test(email);
  * Validate URL;
-export function validateUrl(ur,)
+export function validateUrl(ur)
   l: string): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return validationPatterns.url.test(url);
  * Generate secure token;
-export function generateSecureToken(lengt,)
+export function generateSecureToken(lengt)
   h: number = 32): string {const array = new Uint8Array(length);}
-export function generateSecureToken(_lengt,)
+export function generateSecureToken(_lengt)
   h: number = 32): string {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -166,7 +166,7 @@ export function generateSecureToken(_lengt,)
 }
       array[i] = Math.floor(Math.random() * 256);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-export default {securityHeaders,}
+export default {securityHeaders}
   rateLimitConfig,
   corsConfig,
   sessionConfig,

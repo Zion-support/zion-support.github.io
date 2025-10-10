@@ -14,8 +14,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
       color: 'text-purple-400',
       category: 'AI Development',
-      link: '/ai-ml',
-    },
+      link: '/ai-ml'},
     {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding',
@@ -24,8 +23,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
       color: 'text-blue-400',
       category: 'AI Development',
-      link: '/ai-nlp',
-    },
+      link: '/ai-nlp'},
     {
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for object detection and recognition',
@@ -34,8 +32,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'],
       color: 'text-green-400',
       category: 'AI Development',
-      link: '/ai-vision',
-    },
+      link: '/ai-vision'},
     {
       title: 'AI Automation',
       description: 'Intelligent process automation with decision-making capabilities',
@@ -44,8 +41,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400',
       category: 'Automation',
-      link: '/ai-automation',
-    },
+      link: '/ai-automation'},
     {
       title: 'AI Data Visualization',
       description: 'Transform complex data into interactive visualizations',
@@ -54,8 +50,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling'],
       color: 'text-orange-400',
       category: 'Data Science',
-      link: '/ai-data-visualization',
-    },
+      link: '/ai-data-visualization'},
     {
       title: 'AI 3D Generation',
       description: 'Create 3D models and environments with AI technology',
@@ -64,8 +59,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['3 D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       color: 'text-pink-400',
       category: '3D & Graphics',
-      link: '/ai-3d-generation',
-    },
+      link: '/ai-3d-generation'},
     {
       title: 'AI Voice Synthesis',
       description: 'Advanced voice cloning and text-to-speech solutions',
@@ -74,8 +68,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
       color: 'text-indigo-400',
       category: 'Voice Technology',
-      link: '/ai-voice-synthesis',
-    },
+      link: '/ai-voice-synthesis'},
     {
       title: 'AI Content Generation',
       description: 'Automated content creation for marketing and communication',
@@ -84,8 +77,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'],
       color: 'text-yellow-400',
       category: 'Content AI',
-      link: '/ai-content-writer',
-    },
+      link: '/ai-content-writer'},
     {
       title: 'AI Predictive Analytics',
       description: 'Advanced forecasting and trend analysis with machine learning',
@@ -94,8 +86,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Sales Forecasting', 'Demand Prediction', 'Risk Assessment', 'Trend Analysis'],
       color: 'text-red-400',
       category: 'Analytics',
-      link: '/ai-analytics',
-    },
+      link: '/ai-analytics'},
     {
       title: 'AI Recommendation Engine',
       description: 'Personalized recommendation systems for e-commerce and content',
@@ -104,8 +95,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing'],
       color: 'text-teal-400',
       category: 'Personalization',
-      link: '/ai-sales-automation',
-    },
+      link: '/ai-sales-automation'},
     {
       title: 'AI Fraud Detection',
       description: 'Advanced fraud prevention and security monitoring',
@@ -114,8 +104,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
       color: 'text-red-500',
       category: 'Security',
-      link: '/ai-fraud-detection',
-    },
+      link: '/ai-fraud-detection'},
     {
       title: 'AI Document Processing',
       description: 'Intelligent document analysis and data extraction',
@@ -124,18 +113,13 @@ const AISolutionsPage: React.FC = () => {
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
       color: 'text-gray-400',
       category: 'Document AI',
-      link: '/ai-customer-support',
-    }
+      link: '/ai-customer-support'}
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
@@ -147,7 +131,6 @@ const AISolutionsPage: React.FC = () => {
         <section className="mb-16" aria-labelledby="ai-services-heading">
           <h2 id="ai-services-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">Our AI Services</h2><p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Comprehensive AI solutions tailored to your business needs</p><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">{aiServices.map((service, index) => (</section>
               <a
-=======
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -171,31 +154,24 @@ const AISolutionsPage: React.FC = () => {
           <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">),
             {aiServices.map((service, index) => (
               <a;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 key={index}
                 href={service.link}
-<<<<<<< HEAD
                 className="cyber-card p-6 hover: scale-105 transition-all duration-300 group",
               >,
                 <div className="flex items-center justify-between mb-4">,
                   <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
                   <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}<h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3><p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="mb-4">
-<<<<<<< HEAD
-=======
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4"></div>
                   <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
                   <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3><p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
-=======
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features: </h4>,
                   <ul className="space-y-1">,
                     {service.features.map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
                       </CheckCircle>
@@ -212,15 +188,12 @@ const AISolutionsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our AI Solutions?</h2>
             </h2>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Brain className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3">Cutting-Edge Technology</h3><p className="text-gray-300">We use the latest AI technologies and frameworks to deliver state-of-the-art solutions.</p>
               </div>
@@ -234,18 +207,13 @@ const AISolutionsPage: React.FC = () => {
               <div className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <Shield className="w-8 h-8 text-white" />
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security<p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
-=======
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3><p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
           </div>
         </section>
 
-=======
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
                 <p className="text-gray-300">Bank-level security and compliance for all your AI implementations.</p>
@@ -254,48 +222,37 @@ const AISolutionsPage: React.FC = () => {
           </div>,
         </section>,
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Business with AI?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss how our AI solutions can revolutionize your business operations.</p>
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-<<<<<<< HEAD
               >Get Free Consultation</a>
-=======
               >
                 Get Free Consultation;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
               <a;
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5" >Call +1 302 464 0950</ArrowRight>
               </ArrowRight>
-=======
                 <ArrowRight className="w-5 h-5" />
                 Call +1 302 464 0950;
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
           </div>
         </section>
       </main>
 
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default AISolutionsPage;

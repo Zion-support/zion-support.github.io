@@ -2,7 +2,6 @@
 import https from 'https';
 
 // GitHub API configuration;
-<<<<<<< HEAD
 function makeGitHubRequest(endpoint) {
   return new Promise((resolve, reject) => {
     const options = {
@@ -13,9 +12,7 @@ function makeGitHubRequest(endpoint) {
       headers: {,
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json',
-=======
 function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     };
 
@@ -35,7 +32,6 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
   });
 }
 
-<<<<<<< HEAD
 async function checkOpenPRs() {
   try {
     // Get open pull requests;
@@ -63,7 +59,6 @@ async function checkOpenPRs() {
         hasConflicts),
         mergeable: prDetail.mergeable),
         mergeable_state: prDetail.mergeable_state;
-=======
 async function checkOpenPRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
@@ -71,7 +66,6 @@ async function checkOpenPRs() {/* TODO: Fix JSX expression */}
     
     
     for (const pr of prs) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
     
@@ -82,7 +76,6 @@ async function checkOpenPRs() {/* TODO: Fix JSX expression */}
 }
 
 // Run the check;
-<<<<<<< HEAD
 checkOpenPRs().then(prs => {)
 )
   process.exit(0);
@@ -90,8 +83,6 @@ checkOpenPRs().then(prs => {)
 )
   process.exit(1);
 });
-=======
 checkOpenPRs().then(prs => {/* TODO: Fix JSX expression */})
 }).catch(error => {/* TODO: Fix JSX expression */})
 });`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 'use client';
 /**
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls
  */
 interface ApiCacheConfig {
-=======
 
 'use client'
 /**
@@ -16,13 +14,11 @@ interface ApiCacheConfig {
 interface ApiCacheConfig {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   ttl?: number;
   maxRetries?: number;
   retryDelay?: number;
   deduplicate?: boolean;
 }
-<<<<<<< HEAD
 interface PendingRequest<T> {
   promise: Promise<T>;
   timestamp: number;
@@ -48,7 +44,6 @@ $4});
     };
     // Auto-cleanup every 5 minutes
     setInterval(() => {
-=======
 interface PendingRequest;
           <T> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -74,7 +69,7 @@ export class ApiCache {// TODO: Add content;}
   pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
   private,
   config: Required<ApiCacheConfig>;
-  constructor(_confi,)
+  constructor(_confi)
   g: ApiCacheConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -104,13 +99,11 @@ export class ApiCache {// TODO: Add content;}
     setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.cache.cleanup();
       this.cleanupPendingRequests();
     }, 5 * 60 * 1000);
   }
   /**
-<<<<<<< HEAD
    * Fetch with caching and deduplication
    */
   async fetch<T>(
@@ -152,7 +145,6 @@ export class ApiCache {// TODO: Add content;}
       return data;
     } finally {
       // Clean up pending request
-=======
    * Fetch with caching and deduplication;
    */
 //   async fetch;
@@ -193,8 +185,7 @@ const requestPromise = this.fetchWithRetry;
 // url,
 //       options,
 //       mergedConfig.maxRetries,
-//       mergedConfig.retryDelay,
-);
+//       mergedConfig.retryDelay);
     // Store pending request;
     if (mergedConfig.deduplicate) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -219,12 +210,10 @@ const requestPromise = this.fetchWithRetry;
   O: Add content;}
 }
       // Clean up pending request;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.pendingRequests.delete(cacheKey);
     }
   }
   /**
-<<<<<<< HEAD
    * Fetch with retry logic
    */
   private async fetchWithRetry<T>(
@@ -266,7 +255,6 @@ const requestPromise = this.fetchWithRetry;
           retryDelay,
           attempt + 1
         );
-=======
    * Fetch with retry logic;
    */
 //   private async fetchWithRetry;
@@ -279,8 +267,7 @@ const requestPromise = this.fetchWithRetry;
   s: number,
     retryDela,
   y: number,
-    attempt = 1,
-): Promise;
+    attempt = 1): Promise;
           <T> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -295,9 +282,7 @@ const requestPromise = this.fetchWithRetry;
         if ()
           (response.status >= 500 || response.status === 429) &&
 //           attempt;
-          < maxRetries,
-
-) {// TODO: Add content;}
+          < maxRetries) {// TODO: Add content;}
 
 }
           await this.delay(retryDelay * attempt); // Exponential backoff;
@@ -307,8 +292,7 @@ const requestPromise = this.fetchWithRetry;
 //             options,
 //             maxRetries,
 //             retryDelay,
-//             attempt + 1,
-)
+//             attempt + 1)
         }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`)
       }
@@ -329,15 +313,12 @@ const requestPromise = this.fetchWithRetry;
 //           options,
 //           maxRetries,
 //           retryDelay,
-//           attempt + 1,
-)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+//           attempt + 1)
       }
       throw error;
     }
   }
   /**
-<<<<<<< HEAD
    * Invalidate cache entries matching a pattern
    */
   invalidate(pattern: string | RegExp): number {
@@ -347,7 +328,6 @@ const requestPromise = this.fetchWithRetry;
    * Clear entire cache
    */
   clear(): void {
-=======
    * Invalidate cache entries matching a pattern;
    */
 
@@ -363,12 +343,10 @@ const requestPromise = this.fetchWithRetry;
   clear(): void {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.cache.clear();
     this.pendingRequests.clear();
   }
   /**
-<<<<<<< HEAD
    * Get cache statistics
    */
   getStats() {
@@ -413,7 +391,6 @@ const requestPromise = this.fetchWithRetry;
     const timeout = 60000; // 1 minute
     for (const [key, pending] of this.pendingRequests.entries()) {
       if (now - pending.timestamp > timeout) {
-=======
    * Get cache statistics;
    */
 
@@ -490,14 +467,12 @@ const requestPromise = this.fetchWithRetry;
       if (now - pending.timestamp > timeout) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         this.pendingRequests.delete(key);
       }
     }
   }
 }
 /**
-<<<<<<< HEAD
  * Default API cache instance
  */
 export const defaultApiCache = new ApiCache({
@@ -558,7 +533,6 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   };
 }
 export default ApiCache;
-=======
  * Default API cache instance;
  */
 
@@ -681,19 +655,19 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
           
           
           
-          <T>(pat,)
+          <T>(pat)
   h: string, options?: RequestInit) =>`
       cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})
   d: 'DELETE' }),
     invalidat,
-  e: (patter,)
+  e: (patter)
   n: string | RegExp) => cache.invalidate(pattern),
     clea,
   r: () => cache.clear(),
     stat,
   s: () => cache.getStats(),
     prefetc,
-  h: <T>(pat,)
+  h: <T>(pat)
   h: string, options?: RequestInit) =>`
       cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
   )
@@ -703,4 +677,3 @@ export default ApiCache;`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -21,7 +20,6 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
   hover:text-blue-800 transition-colors duration-200"></Link>"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Home;
-=======
 import React from 'react';
 export default function ServicesAdvertisingPage() {
   return (
@@ -32,7 +30,6 @@ export default function ServicesAdvertisingPage() {
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
           </Link>
         </div>
       </header>

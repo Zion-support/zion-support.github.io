@@ -5,7 +5,6 @@
  */
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
-<<<<<<< HEAD
 
 export enum ErrorCategory {
   Network = 'network',
@@ -44,8 +43,7 @@ class ErrorTrackingService {
   private errorListeners: Array<(error: TrackedError) => void> = []
   private maxStoredErrors = 1000;
   private constructor() {,
-    this.setupGlobalErrorHandlers(),
-  }
+    this.setupGlobalErrorHandlers()}
 
   static getInstance(): ErrorTrackingService {
     if (!ErrorTrackingService.instance) {
@@ -138,7 +136,6 @@ class ErrorTrackingService {
       this.reportToExternalService(errorId).catch(err => {)
         logger.error('Failed to report error to external service', { error: err.message })
       })
-=======
 export enum ErrorCategory {/* TODO: Fix JSX expression */}
 }
 export interface ErrorMetadata {/* TODO: Fix JSX expression */}
@@ -191,12 +188,10 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     });
     // Send to external service if critical;
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return errorId;
   }
-<<<<<<< HEAD
 
   private generateErrorId(message: string): string {,
     const timestamp = Date.now().toString(36),
@@ -215,24 +210,20 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
 
   addListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners.push(listener),
-  }
+    this.errorListeners.push(listener)}
 
   removeListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners = this.errorListeners.filter(l => l !== listener),
-  }
+    this.errorListeners = this.errorListeners.filter(l => l !== listener)}
 
   private notifyListeners(error: TrackedError): void {,
-    this.errorListeners.forEach(listener => {,)
-      try {,)
-        listener(error),
-      } catch (listenerError) {
+    this.errorListeners.forEach(listener => {)
+      try {)
+        listener(error)} catch (listenerError) {
         logger.error('Error in error listener', { error: listenerError.message })
-=======
   /**
    * Generate a unique error ID based on the message;
    */
-  private generateErrorId(messag,)
+  private generateErrorId(messag)
   e: string): string {/* TODO: Fix JSX expression */}
     }`
     return `err_${Math.abs(hash).toString(36)}`;
@@ -241,27 +232,25 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
    * Add an error listener;
    */
   addListener(listene,
-  r: (erro,)
+  r: (erro)
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
   }
   /**
    * Remove an error listener;
    */
   removeListener(listene,
-  r: (erro,)
+  r: (erro)
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */}
   }
   /**
    * Notify all listeners of a new error;
    */
-  private notifyListeners(erro,)
+  private notifyListeners(erro)
   r: TrackedError): void {/* TODO: Fix JSX expression */}
       } catch (listenerError) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     })
   }
-<<<<<<< HEAD
 
   private async reportToExternalService(errorId: string): Promise<void> {,
     // In a real implementation, this would send to an external service;
@@ -274,8 +263,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
 
   getErrorById(id: string): TrackedError | undefined {,
-    return this.errors.get(id),
-  }
+    return this.errors.get(id)}
 
   clearErrors(): void {
     this.errors.clear()
@@ -313,11 +301,10 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
 
 // Export singleton instance;
 export const errorTracking = ErrorTrackingService.getInstance()
-=======
   /**
    * Report critical errors to external service;
    */
-  private async reportToExternalService(errorI,)
+  private async reportToExternalService(errorI)
   d: string): Promise<void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
@@ -335,13 +322,13 @@ export const errorTracking = ErrorTrackingService.getInstance()
   /**
    * Get errors by category;
    */
-  getErrorsByCategory(categor,)
+  getErrorsByCategory(categor)
   y: ErrorCategory): TrackedError[] {/* TODO: Fix JSX expression */}
   }
   /**
    * Get errors by severity;
    */
-  getErrorsBySeverity(severit,)
+  getErrorsBySeverity(severit)
   y: ErrorSeverity): TrackedError[] {/* TODO: Fix JSX expression */}
   }
   /**
@@ -365,7 +352,7 @@ export const errorTracking = ErrorTrackingService.getInstance()
   /**
    * Clear errors older than specified time;
    */
-  clearOldErrors(maxAg,)
+  clearOldErrors(maxAg)
   e: number): void {/* TODO: Fix JSX expression */}
       }
     }
@@ -374,7 +361,7 @@ export const errorTracking = ErrorTrackingService.getInstance()
 export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
 // Export convenience functions for easier testing and usage;
-export const trackError = (erro,)
+export const trackError = (erro)
   r: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {/* TODO: Fix JSX expression */}
   });
 };
@@ -385,12 +372,11 @@ export const getErrorStatistics = () => {/* TODO: Fix JSX expression */}
 };
 export const clearErrorHistory = () => errorTracking.clearErrors();
 export const addErrorListener = (listene,
-  r: (erro,)
+  r: (erro)
   r: TrackedError) => void) =>
   errorTracking.addListener(listener);
 export const removeErrorListener = (listene,
-  r: (erro,)
+  r: (erro)
   r: TrackedError) => void) =>
   errorTracking.removeListener(listener);
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

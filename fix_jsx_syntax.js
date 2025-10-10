@@ -2,7 +2,6 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-<<<<<<< HEAD
 async function main() {
   //Find all TSX files in src/components;
   //   files.forEach(file => {)
@@ -12,14 +11,12 @@ async function main() {
       if (keyPropFix !== content) {
         content = keyPropFix;
         modified = true;
-=======
 async function main() {/* TODO: Fix JSX expression */}
 }
   //Find all TSX files in src/components;
   //   files.forEach(file => {/* TODO: Fix JSX expression */}
   placement: <div>\nkey={...} -> <div\nkey={...})
       if (keyPropFix !== content) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
 
       //2. Fix onClick prop,
@@ -45,7 +42,6 @@ async function main() {/* TODO: Fix JSX expression */}
       if (styleFix !== content) {/* TODO: Fix JSX expression */}
       }
 
-<<<<<<< HEAD
       //5. Fix template literal syntax: ${> -> ${,
       //       const templateFix = content.replace(/\$\{>/g, '${');
       if (templateFix !== content) {
@@ -64,7 +60,6 @@ async function main() {/* TODO: Fix JSX expression */}
       }
 
       //7. Fix unclosed br tags: <br> -> <br />,
-=======
       //5. Fix template literal,
   syntax: ${/* TODO: Fix JSX expression */}
       }
@@ -80,7 +75,6 @@ async function main() {/* TODO: Fix JSX expression */}
 
       //7. Fix unclosed br,
   tags: <br> -> <br /></br>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       //       const brFix = content.replace(/<br>/g, '<br />');
       if (brFix !== content) {/* TODO: Fix JSX expression */}
       }

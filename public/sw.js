@@ -10,7 +10,6 @@ const STATIC_ASSETS = [
   '/manifest.json'
 ];
 
-<<<<<<< HEAD
 // Install event - cache resources;
   '/index.html',
   '/manifest.json',
@@ -26,16 +25,8 @@ const DYNAMIC_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp|woff2?|ttf|eot)$/
 ];
 
-<<<<<<< HEAD
 // Install event - cache static assets
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4 b35
-=======
->>>>>>> origin/main
->>>>>>> origin/main
-=======
 // Install event - cache static assets;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 self.addEventListener('install', (event) => {
   console.log('Service Worker: Installing...');
   
@@ -50,28 +41,17 @@ self.addEventListener('install', (event) => {
       .then(() => {
         console.log('Service Worker: Static assets cached');
         return self.skipWaiting();
-=======
 // Install event - cache static assets;
 self.addEventListener('install', (event) => {/* TODO: Fix JSX expression */}
       })
       .then(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
       .catch((error) => {
         console.error('Service Worker: Failed to cache static assets', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4b35
-=======
->>>>>>> origin/main
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       })
   );
 });
 
-<<<<<<< HEAD
 // Fetch event - serve from cache when offline;
 self.addEventListener('fetch', (event) => {
   event.respondWith(
@@ -106,7 +86,7 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
-        return Promise.all(,)
+        return Promise.all()
           cacheNames.map((cacheName) => {,
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {,
               console.log('Service Worker: Deleting old cache', cacheName);
@@ -118,7 +98,6 @@ self.addEventListener('activate', (event) => {
       .then(() => {
         console.log('Service Worker: Activated');
         return self.clients.claim();
-=======
 // Activate event - clean up old caches;
 self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
             })
@@ -127,22 +106,17 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
         );
       })
       .then(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
   );
 });
 
 // Fetch event - serve from cache or network;
-<<<<<<< HEAD
 self.addEventListener('fetch', (event) => {
-=======
 self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const { request } = event;
   const url = new URL(request.url);
 
   // Skip non-GET requests;
-<<<<<<< HEAD
   if (request.method !== 'GET') {
     return;
   }
@@ -150,18 +124,15 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
   // Skip chrome-extension and other non-http requests;
   if (!url.protocol.startsWith('http')) {
     return;
-=======
   if (request.method !== 'GET') {/* TODO: Fix JSX expression */}
   }
 
   // Skip chrome-extension and other non-http requests;
   if (!url.protocol.startsWith('http')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   event.respondWith()
     caches.match(request)
-<<<<<<< HEAD
       .then((cachedResponse) => {
         // Return cached version if available;
         if (cachedResponse) {
@@ -219,19 +190,16 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
               // For other requests, return a custom offline page;
               return new Response(JSON.stringify({)
                   error: 'Offline'),
-                  message: 'This resource is not available offline',
-                }),
+                  message: 'This resource is not available offline'}),
                 {
                   status: 503;
                   statusText: 'Service Unavailable',
                   headers: {,
-                    'Content-Type': 'application/json',
-                  }
+                    'Content-Type': 'application/json'}
                 }
               );
             });
         }
-=======
       .then((cachedResponse) => {/* TODO: Fix JSX expression */}
         }
 
@@ -253,12 +221,10 @@ self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
           .catch(() => {/* TODO: Fix JSX expression */}
             }
           });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
   );
 });
 
-<<<<<<< HEAD
 // Background sync for offline actions;
 self.addEventListener('sync', (event) => {
   console.log('Service Worker: Background sync', event.tag);
@@ -267,15 +233,12 @@ self.addEventListener('sync', (event) => {
     event.waitUntil(// Handle background sync tasks;)
       handleBackgroundSync()
     );
-=======
 // Background sync for offline form submissions;
 self.addEventListener('sync', (event) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 });
 
 // Push notifications;
-<<<<<<< HEAD
 self.addEventListener('push', (event) => {
   console.log('Service Worker: Push notification received');
   
@@ -292,13 +255,11 @@ self.addEventListener('push', (event) => {
       {,
         action: 'explore',
         title: 'Explore',
-        icon: '/icon-192x192.png',
-      },
+        icon: '/icon-192x192.png'},
       {
         action: 'close',
         title: 'Close',
         icon: '/icon-192x192.png',
-=======
 self.addEventListener('push', (event) => {/* TODO: Fix JSX expression */}
     },
     action,
@@ -306,7 +267,6 @@ self.addEventListener('push', (event) => {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
       },
       {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     ]
   };
@@ -316,7 +276,6 @@ self.addEventListener('push', (event) => {/* TODO: Fix JSX expression */}
   );
 });
 
-<<<<<<< HEAD
 // Notification click handler;
 self.addEventListener('notificationclick', (event) => {
   console.log('Service Worker: Notification clicked');
@@ -324,9 +283,8 @@ self.addEventListener('notificationclick', (event) => {
   event.notification.close();
 
   if (event.action === 'explore') {
-    event.waitUntil(,)
-      clients.openWindow('/'),
-    );
+    event.waitUntil()
+      clients.openWindow('/'));
   }
 });
 
@@ -378,16 +336,7 @@ self.addEventListener('message', (event) => {
 });
 
 console.log('Service Worker: Loaded successfully');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4b35
-=======
->>>>>>> origin/main
->>>>>>> origin/main
-=======
 ,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
 // Handle notification clicks;
 self.addEventListener('notificationclick', (event) => {/* TODO: Fix JSX expression */}
   }
@@ -401,4 +350,3 @@ async function handleOfflineSubmissions() {/* TODO: Fix JSX expression */}
   // and syncing when back online;
   console.log('Handling offline submissions...');
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

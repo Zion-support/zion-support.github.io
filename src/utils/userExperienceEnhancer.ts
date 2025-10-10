@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Advanced User Experience Enhancer
  * Comprehensive UX optimization utilities
@@ -626,7 +625,6 @@ ${this.metrics.performanceScore < 80 ? '- Optimize performance' : ''}
 }
 
 export default UserExperienceEnhancer;
-=======
 // UserExperienceEnhancer utility
 // This file contains utility functions and configurations
 
@@ -664,17 +662,14 @@ class UserExperienceEnhancer {private config: UXConfig;}
       enableOfflineSupport: false,
       enablePushNotifications: false,
       enableDarkMode: false,
-      enableAnimations: true,
-    };
+      enableAnimations: true};
     
-    this.metrics = {pageLoadTime: 0,}
+    this.metrics = {pageLoadTime: 0}
       interactionTime: 0,
       bounceRate: 0,
       userSatisfaction: 0,
       accessibilityScore: 0,
-      performanceScore: 0,
-
-    }
+      performanceScore: 0}
     this.init()
 
 
@@ -706,4 +701,3 @@ export default UserExperienceEnhancer;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

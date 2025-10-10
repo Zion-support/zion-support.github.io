@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 async function submitByEmail(to: string;)
   subject: string)
   text: string)
@@ -16,15 +15,15 @@ async function submitByEmail(to: string;)
   }
 
   const transporter = nodemailer.createTransporter({)
-    host,)
+    host)
     port)
     secure: port === 465),
     auth: { user, pass })
   });
 
   await transporter.sendMail({)
-    from,)
-    to,)
+    from)
+    to)
     subject)
     text)
     attachments)
@@ -34,7 +33,6 @@ async function submitByEmail(to: string;)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
     return res.status(405).json({ error: 'Method not allowed' });
-=======
 async function submitByEmail(t,
   o: string,
   subjec,
@@ -47,7 +45,7 @@ async function submitByEmail(t,
   }
 
   const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}
-  h: { user, pass },)
+  h: { user, pass })
   });
 
   await transporter.sendMail({/* TODO: Fix JSX expression */})
@@ -55,10 +53,9 @@ async function submitByEmail(t,
 }
 
 export default async function handler(re,
-  q: NextApiRequest, re,)
+  q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   try {/* TODO: Fix JSX expression */}
@@ -74,14 +71,11 @@ export default async function handler(re,
     }
 
     // Email submission;
-<<<<<<< HEAD
     if (channels.includes('email')) {
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-=======
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       const text = `Please find the proposal attached.
 
 Titl,
@@ -95,22 +89,18 @@ Regio,
 Budget/Resolutio,
   n: ${meta.budgetOrResolution}
 
-<<<<<<< HEAD
 DAO Governance: See document.,
 ,
 Delegate Note: ${delegateNote || 'N/A'}`;
-=======
 DAO,
   Governance: See document.
 
 Delegate,`
   Note: ${delegateNote || 'N/A'}`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       await submitByEmail(to, subject, text);
     }
 
-<<<<<<< HEAD
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {,
@@ -123,14 +113,12 @@ Delegate,`
 
     const updated = updateProposalMeta(id, m => ({)
       ...m)
-      status: 'Submitted'),
-    }));
+      status: 'Submitted')}));
 
     return res.status(200).json({ meta: updated });
   } catch (error: unknown) {,
     return res.status(500).json({ error: error?.message || 'Submission failed' });
-=======
-    // ENS record hash (defaul,)
+    // ENS record hash (defaul)
   t: compute and store hash only)
     let,
   ensRecordHash: string | undefined;
@@ -145,10 +133,9 @@ Delegate,`
 
     return res.status(200).json({/* TODO: Fix JSX expression */})
   a: updated });
-  } catch (erro,)
+  } catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}
   r: error?.message || 'Submission failed' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 `

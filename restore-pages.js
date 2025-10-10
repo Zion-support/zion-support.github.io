@@ -56,7 +56,6 @@ const pageFiles = [
 ];
 
 // Function to create a basic page component;
-<<<<<<< HEAD
 function createPageComponent(pageName) {
   const componentName = pageName.split('/')[0]
     .split('-')
@@ -76,26 +75,22 @@ const ${componentName}: React.FC = () => {
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>)
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
-=======
 function createPageComponent(pageName) {/* TODO: Fix JSX expression */}
 const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           Contact Us;
         </a>
       </div>,
-    </div>,
-  );
+    </div>);
 };
 
 export default ${componentName};`;
 }
 
 // Function to restore a page file;
-<<<<<<< HEAD
 function restorePageFile(pagePath) {
   const fullPath = path.join(__dirname, 'src', pagePath);
   const dir = path.dirname(fullPath);
@@ -103,17 +98,15 @@ function restorePageFile(pagePath) {
   // Create directory if it doesn't exist;
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
-=======
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
   e: true });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   
   const pageName = pagePath.replace('.tsx', '');
   const content = createPageComponent(pageName);
   
   fs.writeFileSync(fullPath, content, 'utf8');`
-  console.log(`Restore,)`
+  console.log(`Restore)`
   d: ${pagePath}`);
 }
 

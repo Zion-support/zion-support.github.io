@@ -229,8 +229,7 @@ const,
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
         event_label: event,
-        custom_map: data,
-      });
+        custom_map: data});
     }
   }, [rateLimit]);
 
@@ -243,8 +242,7 @@ const,
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings,
-      };
+        warnings: securityWarnings};
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 

@@ -1,19 +1,15 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { octoberUltimateEnterpriseConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-ultima, t, e-enterpri, s, e-conte, n, t";
-<<<<<<< HEAD
 const October2025UltimateEnterpriseBanne, r = () => { 
-<<<<<<< HEAD
   con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t; return(<div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0" />
-=======
   con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t; return (
     <div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }</div>
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0" /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0" />
       </div>
       <div, className="relative, ma, x-w-7xl, m, x-au, t, o">
@@ -28,19 +24,16 @@ const October2025UltimateEnterpriseBanne, r = () => {
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">
               Ultimate, Enterprise, AI;
             </sp, a, n>
-<<<<<<< HEAD
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>)
           </h2>)
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">)
             Breakthrough, solutions, delivering <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>)
             <span, classNam, e = "te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</span>, a, n, d;
-=======
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>
           </h2>
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">
             Breakthrough, solutions, delivering</p> <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>, 
             <span, classNam, e = "te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</span>, a, n, d 
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, classNam, e = "te, x, t-bl, u, e-400, fon, t-bo, l, d"> transformative, result, s</sp, a, n>
           </p>
         </div>
@@ -67,7 +60,6 @@ const October2025UltimateEnterpriseBanne, r = () => {
                   {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e;
                 </h3>
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
-=======
 const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }"
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20"></div>"
@@ -118,12 +110,10 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
                   {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e;
                 </h3>"
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {multiCloudConte, n, t.description}
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
             {/* Metrics, Gri, d */}
             <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6"></div>
               <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s"></div>
@@ -148,7 +138,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               { multiCloudConte, n, t.highligh, t, s.sli, c, e(, 0, 4).m, a, p((highlig, h, t, ind, e, x) = > (</div>
                 <div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />
-=======
             {/* Metrics, Gri, d */}"
             <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6"></div>"
               <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s"></div>"
@@ -173,7 +162,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" /></CheckCircle>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
                 </di, v>
               ))}
@@ -186,7 +174,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               <Link, classNam, e = "w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" /></Link>
             </Li, n, k>
           </div>
-<<<<<<< HEAD
           {/* Conversational, AI, Ca, r, d */}
           <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"></div>
             <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>
@@ -208,7 +195,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
                   {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution;
                 </h3>
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
-=======
           {/* Conversational, AI, Ca, r, d */}"
           <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"></div>"
             <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>"
@@ -230,12 +216,10 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
                   {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution;
                 </h3>"
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {conversationalAIConte, n, t.description}
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
             {/* Metrics, Gri, d */}
             <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6"></div>
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s"></div>
@@ -260,7 +244,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               { conversationalAIConte, n, t.highligh, t, s.sli, c, e(, 0, 4).m, a, p((highlig, h, t, ind, e, x) = > (</div>
                 <div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />
-=======
             {/* Metrics, Gri, d */}"
             <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6"></div>"
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s"></div>"
@@ -285,7 +268,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" /></CheckCircle>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
                 </di, v>
               ))}
@@ -299,7 +281,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             </Li, n, k>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Combined, Value, Propositi, o, n */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-cy, a, n-6, 0, 0/20, vi, a-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20"></div>
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r"></div>
@@ -329,7 +310,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0" />
               </div>
               <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">Fortune, 10, 0</div>
-=======
         {/* Combined, Value, Propositi, o, n */}"
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-cy, a, n-6, 0, 0/20, vi, a-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20"></div>"
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r"></div>"
@@ -359,12 +339,10 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0" /></Sparkles>
               </div>"
               <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">Fortune, 10, 0</div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Proven, Result, s</div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Botto, m, C, T, A */}
         <div, classNam, e = "te, x, t-center, m, t-12"></div>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, fon, t-medi, u, m">
@@ -379,7 +357,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             <Link, t, o="/bl, o, g"
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, tex, t-lg"
             >
-=======
         {/* Botto, m, C, T, A */}"
         <div, classNam, e = "te, x, t-center, m, t-12"></div>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, fon, t-medi, u, m"></p>
@@ -396,7 +373,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, tex, t-lg"
             ></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Explore, All, Insights;
             </Li, n, k>
           </div>

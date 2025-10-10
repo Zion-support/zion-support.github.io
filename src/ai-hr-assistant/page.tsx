@@ -1,9 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -104,6 +102,5 @@ const AIHRAssistantPage: React.FC = () => {
     </div>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 export default AIHRAssistantPage;

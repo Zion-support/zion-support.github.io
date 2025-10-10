@@ -1,18 +1,14 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const useRouter = () => {
   const push = useCallback((url: string) => {,
     window.location.href = url;}
   }, [])
   const replace = useCallback((url: string) => {,
-=======
 export const useRouter = () => {}
   const push = useCallback((url: string) => {}
     window.location.href = url;}
   }, [])
   const replace = useCallback((url: string) => {}
->>>>>>> origin/merge-error-fixes
     window.location.replace(url);}
   }, [])
   const back = useCallback(() => {}
@@ -40,10 +36,9 @@ export const useSearchParams = useCallback((...args) => {}
   return params;}
 }
 export default { useRouter, usePathname, useSearchParams }
-=======
 export const useRouter = () => {/* TODO: Fix JSX expression */}
   }, []);
-  const replace = useCallback((ur,)
+  const replace = useCallback((ur)
   l: string) => {/* TODO: Fix JSX expression */}
   }, []);
   const back = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -60,4 +55,3 @@ export const usePathname = () => {/* TODO: Fix JSX expression */}
 export const useSearchParams = () => {/* TODO: Fix JSX expression */}
 };
 export default { useRouter, usePathname, useSearchParams };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

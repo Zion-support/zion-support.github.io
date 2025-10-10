@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Accessibility Utilities
@@ -217,7 +216,6 @@ $4});
     }, 1000);
   }
   private createAnnouncer(): HTMLElement {
-=======
 
 'use client'
 /**
@@ -253,8 +251,7 @@ class AccessibilityService {// TODO: Add content;}
   foregroun,
   d: string,
     backgroun,
-  d: string,
-): {/* TODO: Fix JSX expression */}
+  d: string): {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   rati,
@@ -559,7 +556,7 @@ const html = document.documentElement;
   }
   // Announce screen reader messages;
   public announce(messag,
-  e: string, priorit,)
+  e: string, priorit)
   y: 'polite' | 'assertive' = 'polite'): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -576,7 +573,6 @@ const html = document.documentElement;
   private createAnnouncer(): HTMLElement {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const announcer = document.createElement('div');
     announcer.id = 'a11y-announcer';
     announcer.className = 'sr-only';
@@ -586,7 +582,6 @@ const html = document.documentElement;
     document.body.appendChild(announcer);
     return announcer;
   }
-<<<<<<< HEAD
   // Trap focus within a modal
   public trapFocus(element: HTMLElement): () => void {
     const focusableElements = element.querySelectorAll(
@@ -600,9 +595,8 @@ const html = document.documentElement;
           e.preventDefault();
           lastElement.focus();
         } else if (!e.shiftKey && document.activeElement === lastElement) {
-=======
   // Trap focus within a modal;
-  public trapFocus(elemen,)
+  public trapFocus(elemen)
   t: HTMLElement): () => void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -629,23 +623,18 @@ const html = document.documentElement;
         } else if (!e.shiftKey && document.activeElement === lastElement) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           e.preventDefault();
           firstElement.focus();
         }
       }
-<<<<<<< HEAD
       if (e.key === 'Escape') {
-=======
       if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         element.dispatchEvent(new CustomEvent('close'));
       }
     };
     element.addEventListener('keydown', handleTabKey);
-<<<<<<< HEAD
     // Return cleanup function
     return () => {
       element.removeEventListener('keydown', handleTabKey);
@@ -666,7 +655,6 @@ const html = document.documentElement;
 // Singleton instance
 const a11y = new AccessibilityService();
 export default a11y;
-=======
     // Return cleanup function;
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -675,7 +663,7 @@ export default a11y;
     };
   }
   // Check if element is visible to screen readers;
-  public isAccessible(elemen,)
+  public isAccessible(elemen)
   t: HTMLElement): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -695,4 +683,3 @@ export default a11y;"`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

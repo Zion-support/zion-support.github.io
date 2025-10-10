@@ -1,27 +1,22 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
-<<<<<<< HEAD
 interface October2025AIRevolutionBannerProp, s {
   classNa, m, e ?  : string;
  }
 export default function October2025AIRevolutionBann, e, r({)
   classNa, m, e = '')
 }: October2025AIRevolutionBannerPro, p, s) {
-<<<<<<< HEAD
   return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}
     >
-=======
   return (
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}
     ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <div, className='container, m, x-auto, p, x-6, p, y-12'>
         {/* Head, e, r */}</div>
         <div, className='te, x, t-center, m, b-10'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4'></div>
             <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' />
             <span, className='te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r'>
-=======
 interface October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
  }
 export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expression */})
@@ -34,36 +29,28 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4'></div>
             <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' /></Sparkles>
             <span, className='te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r'></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               🚀 JUST, PUBLISHE, D - Octob, e, r , 1, 20, 2, 5;
             </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' /></Sparkles>
           </div>
-<<<<<<< HEAD
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-<<<<<<< HEAD
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides;)
           </h2>)
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>)
             <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming;
-=======
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides
           </h2>
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
             <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides;
           </h2>
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
             <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             with, AI, in 20, 2, 5.
           </p>
         </div>
         {/* Featured, Articles, Grid */}
-<<<<<<< HEAD
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
           {/* Articl, e, 1: Autonomous, AI, Agen, t, s */}</div>
           <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-ai-agen, t, s-producti, o, n-deployme, n, t'
@@ -78,7 +65,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
-=======
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'></div>
           {/* Articl, e, 1: Autonomous, AI, Agen, t, s */}
           <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-ai-agen, t, s-producti, o, n-deployme, n, t'
@@ -93,7 +79,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Autonomous, AI, Agents in, Production, 2025;
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
@@ -118,7 +103,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
           {/* Articl, e, 2: LLM, Development, Too, l, s */}
           <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-l, l, m-power, e, d-developme, n, t-too, l, s-revoluti, o, n'
             className='group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/30, t, o-indi, g, o-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-indi, g, o-5, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20'
-<<<<<<< HEAD
           >
             <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
               <div, className='p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, grou, p-hov, e, r:bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s'></div>
@@ -129,7 +113,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
-=======
           ></Link>
             <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
               <div, className='p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, grou, p-hov, e, r:bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s'></div>
@@ -140,7 +123,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               L, L, M-Powered, Development, Tools Revoluti, o, n;
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
@@ -167,7 +149,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
           {/* Articl, e, 3: AI, Safet, y & Align, m, e, n, t */}
           <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-ai-safe, t, y-alignme, n, t-enterpri, s, e-deployme, n, t'
             className='group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/30, t, o-cy, a, n-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-emera, l, d-5, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20'
-<<<<<<< HEAD
           >
             <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
               <div, className='p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, grou, p-hov, e, r:bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s'></div>
@@ -181,7 +162,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
               AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'>
-=======
           ></Link>
             <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
               <div, className='p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, grou, p-hov, e, r:bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s'></div>
@@ -195,7 +175,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
               AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve;
               99.2% safety, complia, n, c, e, prevent, costly, failures, and, build, stakeholder tru, s, t. Your, complete, responsible AI, framewor, k.
             </p>

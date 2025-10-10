@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export const handler = async function () {
   // This function assumes you have an internal endpoint to list users and their roles;
   // For demo, just log. Replace with your actual user listing logic or Supabase RPC.
@@ -7,12 +6,10 @@ export const handler = async function () {
     // Example: call an internal endpoint that iterates users and roles;
     // await fetch(`${process.env.SITE_URL}/api/onboarding/nudge-internal`, { method: "POST" });
   } catch (e) {
-=======
 export const handler = async function () {/* TODO: Fix JSX expression */}
     // await fetch(`${process.env.SITE_URL}/api/onboarding/nudge-internal`, {/* TODO: Fix JSX expression */})
   d: "POST" });
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     //     }
   return {/* TODO: Fix JSX expression */}
   y: 'ok' };

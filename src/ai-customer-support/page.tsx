@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 
 const AICustomerSupportPage: React.FC = () => {
   return (
@@ -14,14 +13,9 @@ const AICustomerSupportPage: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 export default AICustomerSupportPage;
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc

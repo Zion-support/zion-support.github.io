@@ -205,10 +205,10 @@ Found 62+ PRs in draft status (25893-25965):
 - [x] Fast-forward merge successful
 
 ### ⚠️ Manual Review Needed
-- [ ] PR approval (human review)
-- [ ] Final merge to main (automated or manual)
-- [ ] CI/CD pipeline completion
-- [ ] Production deployment
+- [] PR approval (human review)
+- [] Final merge to main (automated or manual)
+- [] CI/CD pipeline completion
+- [] Production deployment
 
 ---
 

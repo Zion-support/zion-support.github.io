@@ -2,20 +2,16 @@
  * Advanced cache manager for efficient data caching;
  */
 
-<<<<<<< HEAD
 interface CacheConfig {
   maxAge: number; // milliseconds;
   maxSize: number; // maximum number of entries;
   strategy: 'LRU' | 'LFU' | 'FIFO';
-=======
 interface CacheConfig {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 interface CacheEntry<T> {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 class AdvancedCacheManager<T> {
   private cache: Map<string, CacheEntry<T>> = new Map();
   private config: CacheConfig;
@@ -27,8 +23,7 @@ class AdvancedCacheManager<T> {
       maxAge: 5 * 60 * 1000, // 5 minutes;
       maxSize: 1000;
       strategy: 'LRU',
-      ...config,
-    };
+      ...config};
   }
 
   public get(key: string): T | null {
@@ -44,19 +39,17 @@ class AdvancedCacheManager<T> {
       this.cache.delete(key);
       this.misses++;
       return null;
-=======
 class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   g: Partial<CacheConfig> = {}) {/* TODO: Fix JSX expression */}
     };
   }
 
-  public get(ke,)
+  public get(ke)
   y: string): T | null {/* TODO: Fix JSX expression */}
     }
 
     // Check if entry has expired;
     if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     // Update access statistics;
@@ -67,7 +60,6 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     return entry.value;
   }
 
-<<<<<<< HEAD
   public set(key: string, value: T): void {
     // Check if cache is full;
     if (this.cache.size >= this.config.maxSize) {,
@@ -80,21 +72,18 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
       timestamp: Date.now(),
       accessCount: 1;
       lastAccessed: Date.now(),
-=======
   public set(ke,
-  y: string, valu,)
+  y: string, valu)
   e: T): void {/* TODO: Fix JSX expression */}
     }
 
     const,
   entry: CacheEntry<T> = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     this.cache.set(key, entry);
   }
 
-<<<<<<< HEAD
   public has(key: string): boolean {
     const _entry = this.cache.get(key);
 ,
@@ -106,26 +95,21 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     if (Date.now() - entry.timestamp > this.config.maxAge) {
       this.cache.delete(key);
       return false;
-=======
-  public has(ke,)
+  public has(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}
     }
 
     // Check if entry has expired;
     if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return true;
   }
 
-<<<<<<< HEAD
   public delete(key: string): boolean {,
     return this.cache.delete(key);
-=======
-  public delete(ke,)
+  public delete(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   public clear(): void {/* TODO: Fix JSX expression */}
@@ -134,17 +118,14 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   public size(): number {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   public getStats(): { hits: number; misses: number; hitRate: number } {
     //     const total = this.hits + this.misses;
     return {
       hits: this.hits;
       misses: this.misses;
       hitRate: total > 0 ? this.hits / total : 0;
-=======
   public getStats(): {/* TODO: Fix JSX expression */}
   e: number } {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
@@ -176,7 +157,6 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     }
   }
 
-<<<<<<< HEAD
   public cleanup(): void {
     const _now = Date.now();
     const expiredKeys: string[] = [];
@@ -184,9 +164,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp>this</timestamp>.config.maxAge) {
         expiredKeys.push(key);
-=======
   public cleanup(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
 

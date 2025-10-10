@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026'
     path: '/services/metaverse-development-platform-2026',
     description: 'Complete metaverse development and deployment solution',
@@ -13,8 +12,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
     pricing: unknown;
       starter: '$399/month',
       professional: '$799/month'}
-      enterprise: 'Custom',
-    }
+      enterprise: 'Custom'}
   },
     name: 'Digital Reality Solutions 2026'
     path: '/services/digital-reality-solutions-2026',
@@ -22,7 +20,6 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
     icon: 'Eye',
     category: 'Digital Reality',
     features: [,
-=======
 export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression */}
   l: '$799/month'}
       enterpris,
@@ -41,18 +38,15 @@ export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression
   y: 'Digital Reality',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AR application development',
       'VR experience design',
       'Mixed reality integration',
       'Spatial computing solutions'
     ],
-<<<<<<< HEAD
     pricing: unknown;
       starter: '$299/month',
       professional: '$599/month',
       enterprise: 'Custom',
-=======
     pricin,
   g: unknown,
       starte,
@@ -61,7 +55,6 @@ export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression
   l: '$599/month',
       enterpris,
   e: 'Custom'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -71,13 +64,11 @@ export const metaverseDigitalCategories2026 = [
   'Augmented Reality',
   'Digital Twins'
 ];
-<<<<<<< HEAD
 export const metaverseDigitalStats2026 =
   totalServices: 2;
   categories: 4;
   averageRating: 4.7;
   activeUsers: 1200;
-=======
 export const metaverseDigitalStats2026 = {};
   totalService,
   s: 2,
@@ -86,9 +77,7 @@ export const metaverseDigitalStats2026 = {};
   averageRatin,
   g: 4.7,
   activeUser,
-  s: 1200,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-};
+  s: 1200};
 export const metaverseDigitalRealityServices2026 = [ nam,
   e: 'Metaverse Development Platform 2026',' pat,
   h: '/services/metaverse-development-platform-2026',' descriptio,

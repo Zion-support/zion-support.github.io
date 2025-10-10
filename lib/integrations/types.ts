@@ -8,7 +8,6 @@ export type IntegrationProviderId =
   | 'workable'
   | 'bamboohr';
 
-<<<<<<< HEAD
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -18,22 +17,18 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-=======
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
   name: string;
-<<<<<<< HEAD
   category: 'crm' | 'ats';
   description: string;
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 ,
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-,
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -64,13 +59,11 @@ export interface ProviderConnection {
   expiresAt?: number;
   config?: Record<string, any>;</string>
 }
-=======
   category: 'crm' | 'ats' | 'hr';
   description: string;
   logoUrl?: string;
   websiteUrl?: string;
   apiDocsUrl?: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 export interface ProviderConnection {
@@ -85,7 +78,6 @@ export interface ProviderConnection {
   createdAt: number;
   updatedAt: number;
   config?: Record<string, any>;
-<<<<<<< HEAD
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
@@ -119,8 +111,6 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
   lastSync?: Date;
   config: Record<string, unknown>;</string>createdAt</string>: Date;
   updatedAt: Date;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 export interface SyncLogEntry {
@@ -128,7 +118,6 @@ export interface SyncLogEntry {
   connectionId: string;
   action: string;
   details?: Record<string, any>;
-<<<<<<< HEAD
 }
 
   details?: Record<string, any>;</string>
@@ -172,9 +161,7 @@ export interface ZapierEvent {
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
 export interface IntegrationProviderMeta {,
-=======
   timestamp: number;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   status: 'success' | 'error' | 'warning';
   message: string;
 
@@ -211,11 +198,9 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-  lastError?: string | null;,
-}
+  lastError?: string | null;}
 
 
-<<<<<<< HEAD
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
@@ -255,12 +240,9 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-  lastError?: string | null;,
-}
+  lastError?: string | null;}
 }
 }
   overrides: IntegrationOverride[];
   events: IntegrationEvent[];
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -4,10 +4,7 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 const CloudServicesPage: React.FC = () => {
   return (
     <div>Coming Soon</div>

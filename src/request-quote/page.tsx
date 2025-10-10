@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 
 'use client';
@@ -193,7 +187,6 @@ $4}
   }
 
   return (
-<<<<<<< HEAD
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -461,7 +454,6 @@ $4}
                     <span className="text-sm">Contact Form</span>
                   </a>
                 </div>
-=======
     <div>Coming Soon</div>
 
   );
@@ -740,16 +732,13 @@ $4}
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
 // Back to Home;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       <Footer />
     </>
-=======
         <Footer /></Footer>
       </>
     );
@@ -1158,7 +1147,6 @@ type="submit" disabled={isSubmitting}
       <Footer /></Footer>
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

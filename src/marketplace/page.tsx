@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
 const MarketplacePage: React.FC = () => {
-<<<<<<< HEAD
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -334,7 +327,6 @@ icon$5: Award,
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-=======
   return (
     <div>Coming Soon</div>
 
@@ -371,7 +363,6 @@ const categories = [
   r: 'bg-green-500/10',
       descriptio,
   n: 'Expert professionals and consultants',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       i,
   d: 1,

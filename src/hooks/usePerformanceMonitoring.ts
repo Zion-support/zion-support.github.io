@@ -8,7 +8,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   const { trackPerformance } = useAnalytics();
   const reportMetric = useCallback()
     (nam,
-  e: string, valu,)
+  e: string, valu)
   e: number) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -43,7 +43,7 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
 })
         const entries = list.getEntries();
 //         entries.forEach()
-          (entr,)
+          (entr)
   y: PerformanceEntry & { processingStart?: number }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

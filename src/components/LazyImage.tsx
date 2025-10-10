@@ -27,7 +27,7 @@ const,
 //   height,
   priority = false,
 //   onLoad,
-//   onError,)
+//   onError)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -55,8 +55,7 @@ const,
   threshol,
   d: 0.1,
         rootMargi,
-  n: '50px',
-      }
+  n: '50px'}
     );
     if (imgRef.current) {/* TODO: Fix JSX expression */}
   O: Add content;}

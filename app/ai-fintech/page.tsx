@@ -139,15 +139,11 @@ const AIFintechPage: React.FC = () => {,
     }
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
-<<<<<<< HEAD
   return(<>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-=======
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation >{/* Hero Section */}</Navigation>
         </Navigation><section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -156,7 +152,6 @@ const AIFintechPage: React.FC = () => {,
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">Start Fintech AI<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">View Trading Demo</button>
-=======
       <Navigation />
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
@@ -175,7 +170,6 @@ const AIFintechPage: React.FC = () => {,
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
                   View Trading Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </button>
               </div>
             </div>,
@@ -183,23 +177,17 @@ const AIFintechPage: React.FC = () => {,
         </section>,
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
-<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose AI Fintech?<p className="text-xl text-gray-600">Revolutionary AI technology that transforms financial services and maximizes returns</p>
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose AI Fintech?
               </h2>
               <p className="text-xl text-gray-600">
                 Revolutionary AI technology that transforms financial services and maximizes returns;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose AI Fintech?</h2><p className="text-xl text-gray-600">Revolutionary AI technology that transforms financial services and maximizes returns</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -228,7 +216,6 @@ const AIFintechPage: React.FC = () => {,
         </section>,
         {/* Services by Category */}
         {categories.map(category => (
-<<<<<<< HEAD
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
               <div className="text-center mb-12"></div>
@@ -245,10 +232,9 @@ const AIFintechPage: React.FC = () => {,
                       </div>
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
-=======
           <section key={category} className="py-16 bg-gray-50">)
-            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,)
-              <div className="text-center mb-12">,)
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
+              <div className="text-center mb-12">)
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">),
                   {category} Solutions;
                 </h2>
@@ -277,84 +263,61 @@ const AIFintechPage: React.FC = () => {,
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>,
                         <ul className="space-y-1">,
                           {service.features.map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" >{feature}</CheckCircle>
                             </CheckCircle>
                           ))}
                         </ul>
                       </div>
-<<<<<<< HEAD
                       <div className="mb-4">
-<<<<<<< HEAD
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (<span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">{tech}</span>
-=======
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>,
                         <div className="flex flex-wrap gap-2">,
                           {service.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">
                               {tech}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div><span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">{tech}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             </span>
                           ))}
                         </div>
                       </div>
-<<<<<<< HEAD
                       <div className="mb-6">
-<<<<<<< HEAD
-=======
                       <div className="mb-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <h4 className="font-semibold text-gray-900 mb-2">Financial Benefits:<ul className="space-y-1">{service.benefits.map((benefit, benefitIndex) => (</ul>
-=======
                         <h4 className="font-semibold text-gray-900 mb-2">Financial Benefits: </h4>,
                         <ul className="space-y-1">,
                           {service.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" >{benefit}</Star>
                             </Star>
                           ))}
-<<<<<<< HEAD
                         <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">Get Fintech Consultation</button>
                       </button>
                     </div>
-=======
                         </ul>
                       </div>
                       <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
                         Get Fintech Consultation;
                       </button>,
-                    </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                  ))}
+                    </div>))}
               </div>
             </div>
           </section>
         ))}
         {/* AI Fintech Capabilities */}
         <section className="py-16 bg-white">
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
-<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Fintech Capabilities<p className="text-xl text-gray-600">Cutting-edge AI technologies that power the future of financial services</p>
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 AI Fintech Capabilities;
               </h2>
               <p className="text-xl text-gray-600">
                 Cutting-edge AI technologies that power the future of financial services;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Fintech Capabilities</h2><p className="text-xl text-gray-600">Cutting-edge AI technologies that power the future of financial services</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -387,40 +350,31 @@ const AIFintechPage: React.FC = () => {,
         </section>,
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Financial Services?<p className="text-xl mb-8 text-indigo-100">Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
-=======
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform Financial Services?
             </h2>
             <p className="text-xl mb-8 text-indigo-100">
               Contact our AI fintech experts for a free consultation and custom financial AI strategy;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a;
-=======
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Financial Services?</h2><p className="text-xl mb-8 text-indigo-100">Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
-<<<<<<< HEAD
               >📞 +1 302 464 0950<a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >✉️ kleber@ziontechgroup.com</a>
               </a>
             </div>
-<<<<<<< HEAD
             <div className="mt-8 text-sm text-indigo-200">
-=======
               >
                 📞 +1 302 464 0950;
               </a>
@@ -432,10 +386,7 @@ const AIFintechPage: React.FC = () => {,
               </a>,
             </div>,
             <div className="mt-8 text-sm text-indigo-200">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
             <div className="mt-8 text-sm text-indigo-200"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

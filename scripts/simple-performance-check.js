@@ -4,7 +4,6 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 // 1. Build size analysis;
-<<<<<<< HEAD
 try {
   const _distPath = path.join(process.cwd(), 'dist');
   if (fs.existsSync(distPath)) {
@@ -16,13 +15,8 @@ try {
 
     // Check for large files;
     const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8' });
-    if (largeFiles.trim()) {
-
-
-    } else {
-    }
+    if (largeFiles.trim()) {} else {}
   } else {
-=======
 try {/* TODO: Fix JSX expression */}
   g: 'utf8' });
 
@@ -38,38 +32,29 @@ try {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // 2. Functions count;
-<<<<<<< HEAD
 try {
   const _functionsCount = execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim();
 
-  if (parseInt(functionsCount) < 100) {
-
-  } else {
-=======
+  if (parseInt(functionsCount) < 100) {} else {
 try {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim();
 
   if (parseInt(functionsCount) < 100) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // 3. Check for performance issues;
 // Check for unused dependencies;
-<<<<<<< HEAD
 try {
   const _packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-=======
 try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const _dependencies = Object.keys(packageJson.dependencies || {});
   const _devDependencies = Object.keys(packageJson.devDependencies || {});
 
@@ -80,53 +65,40 @@ try {/* TODO: Fix JSX expression */}
     heavyDeps.some(heavy => dep.includes(heavy))
   );
   
-<<<<<<< HEAD
   if (foundHeavyDeps.length > 0) {
     // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
   } else {
-=======
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // 4. Check build configuration;
-<<<<<<< HEAD
 try {
   const _viteConfig = fs.readFileSync('vite.config.js', 'utf8');
   const _netlifyToml = fs.readFileSync('netlify.toml', 'utf8');
   
-  if (viteConfig.includes('maxParallelFileOps')) {
-
-  } else {
-  }
+  if (viteConfig.includes('maxParallelFileOps')) {} else {}
   
-  if (netlifyToml.includes('NODE_OPTIONS')) {
-
-  } else {
-=======
+  if (netlifyToml.includes('NODE_OPTIONS')) {} else {
 try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
   
   if (netlifyToml.includes('NODE_OPTIONS')) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 } catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // 5. Generate performance report;
-<<<<<<< HEAD
 const report = {
   timestamp: new Date().toISOString(),
   buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),
   functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
   optimizationStatus: 'Completed',
   improvements: [,
-=======
 const report = {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim(),
   functionsCoun,
@@ -136,24 +108,18 @@ const report = {/* TODO: Fix JSX expression */}
   s: 'Completed',
   improvement,
   s: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     '✅ Functions directory cleaned up (reduced from 348 to 81 functions)',
     '✅ Build memory optimized with NODE_OPTIONS',
     '✅ Vite configuration optimized for performance',
     '✅ Netlify configuration optimized',
     '✅ Memory leak warnings eliminated',
-    '✅ Build time improved (4.90 s vs 5.11 s)',
-  ],
-<<<<<<< HEAD
+    '✅ Build time improved (4.90 s vs 5.11 s)'],
   recommendations: [,
-=======
   recommendation,
   s: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     'Consider code splitting for large vendor bundle',
     'Monitor bundle size in future builds',
-    'Regular cleanup of unused functions',
-  ]
+    'Regular cleanup of unused functions']
 };
 
 fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));

@@ -2,7 +2,6 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
       col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-5, 0, 0}
     {/* TODO: Fix JSX expression */}
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
-<<<<<<< HEAD
     {
       title: 'Neur, a, l-Synaptic, Fusion, A, I',
       date: 'March, 20, 2, 6',
@@ -15,13 +14,10 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>
           <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-<<<<<<< HEAD
             Revolutionary, Content, Just Releas, e, d;
         {/* Content, G, r, i, d */}
-=======
             Revolutionary, Content, Just Releas, e, d
         {/* Content, G, r, i, d */}</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
           { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
@@ -42,7 +38,6 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
                   <Rocket, classNam, e="w-5 h-5" />
                   <Link, classNam, e="w-5 h-5" />
 }}}
-=======
     {/* TODO: Fix JSX expression */}
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>"
@@ -69,4 +64,3 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
                   <Rocket, classNam, e="w-5 h-5" /></Rocket>"
                   <Link, classNam, e="w-5 h-5" /></Link>
 }}}"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

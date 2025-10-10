@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 'use client';
 
 interface OptimizedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
-=======
 
 
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
@@ -21,7 +18,7 @@ const,
   OptimizedLoadingSpinner: React.FC;
           <OptimizedLoadingSpinnerProps> = memo()
   ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
-  m: 'w-4 h-4',}
+  m: 'w-4 h-4'}
       m,
   d: 'w-8 h-8',
       l,
@@ -111,7 +108,6 @@ OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
 
 
-<<<<<<< HEAD
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {
       sm: 'w-4 h-4',
@@ -158,5 +154,3 @@ $4};
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

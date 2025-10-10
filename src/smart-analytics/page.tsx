@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -152,7 +148,6 @@ $4}
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-=======
 
 
 
@@ -258,19 +253,15 @@ const PagePage: React.FC = () => {
 
           
           <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Data?
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
-<<<<<<< HEAD
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               Get Free Demo
 
-=======
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         {/* Contact Info */}
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -279,20 +270,17 @@ const PagePage: React.FC = () => {
               <div className="flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-white transition-colors">
-<<<<<<< HEAD
                   +1 (302) 464-0950
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
-=======
 +1 (302) 464-0950;
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com;
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
   );
 };

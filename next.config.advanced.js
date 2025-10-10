@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
 const nextConfig = {
   experimental: {,
     optimizeCss: true;
@@ -9,14 +8,8 @@ const nextConfig = {
         '*.svg': {,
           loaders: ['@svgr/webpack'],
           as: '*.js',
-=======
 const nextConfig = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-        },
-      },
-    },
-  },
-<<<<<<< HEAD
+        }}}},
   compiler: {,
     removeConsole: process.env.NODE_ENV === 'production',
     styledComponents: true;
@@ -27,8 +20,7 @@ const nextConfig = {/* TODO: Fix JSX expression */}
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000;
     dangerouslyAllowSVG: true;
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
   async headers() {
     return [
       {
@@ -37,7 +29,6 @@ const nextConfig = {/* TODO: Fix JSX expression */}
           {,
             key: 'X-Frame-Options',
             value: 'DENY',
-=======
   compile,
   r: {/* TODO: Fix JSX expression */}
   },
@@ -45,29 +36,19 @@ const nextConfig = {/* TODO: Fix JSX expression */}
   s: {/* TODO: Fix JSX expression */}
   },
   async headers() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           },
           {/* TODO: Fix JSX expression */}
           },
           {/* TODO: Fix JSX expression */}
-          },
-        ],
-      },
-<<<<<<< HEAD
+          }]},
       {
         source: '/static/(.*)',
         headers: [,
           {,
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
-=======
       {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-          },
-        ],
-      },
-    ];
-  },
-};
+          }]}];
+  }};
 
 module.exports = nextConfig;

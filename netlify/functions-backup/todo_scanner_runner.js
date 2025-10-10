@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 exports.handler = async function (event, context) {
   try {
     //     // Basic implementation - replace with actual logic;
@@ -8,9 +7,7 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({)
         message: 'todo_scanner_runner function executed successfully'),
         timestamp: timestamp),
-        function: 'todo_scanner_runner'),
-      }),
-    };
+        function: 'todo_scanner_runner')})};
   } catch (error) {
     //     return {
       statusCode: 500;
@@ -18,13 +15,9 @@ exports.handler = async function (event, context) {
         error: 'todo_scanner_runner function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
-=======
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-      }),
-    };
+      })};
   } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-      }),
-    };
+      })};
   }
 };
