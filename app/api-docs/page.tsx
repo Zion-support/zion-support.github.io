@@ -4,17 +4,14 @@ import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, S
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
 export default function APIDocsPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
   };
-
   const apiEndpoints = [
     {
       title: 'AI Services',
@@ -96,7 +93,6 @@ export default function APIDocsPage() {
       ]
     }
   ];
-
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
@@ -105,7 +101,6 @@ export default function APIDocsPage() {
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(category => category.endpoints.length > 0);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
@@ -114,13 +109,12 @@ export default function APIDocsPage() {
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
       />
       <Navigation />
-      
       {/* Hero Section */}
-      <section className="py-20 px-4">
+<section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-            API Documentation
-          </h1>
+            API Documentation;
+  </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
@@ -128,16 +122,15 @@ export default function APIDocsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Code className="mr-2 h-5 w-5" />
-              Get Started
-            </button>
+              Get Started;
+  </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Download className="mr-2 h-5 w-5" />
-              Download SDK
-            </button>
+              Download SDK;
+  </
           </div>
         </div>
       </section>
-
       {/* Quick Start */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -153,7 +146,6 @@ export default function APIDocsPage() {
                 Get API Key →
               </button>
             </div>
-            
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
@@ -164,7 +156,6 @@ export default function APIDocsPage() {
                 View Examples →
               </button>
             </div>
-            
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
@@ -178,7 +169,6 @@ export default function APIDocsPage() {
           </div>
         </div>
       </section>
-
       {/* API Endpoints */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -195,7 +185,6 @@ export default function APIDocsPage() {
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
-                
                 <div className="space-y-6">
                   {category.endpoints.map((endpoint, endpointIndex) => (
                     <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -212,24 +201,21 @@ export default function APIDocsPage() {
                         </div>
                         <button
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                        >
+                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <>
+                            <React.Fragment>
                               <Check className="w-4 h-4" />
                               Copied!
-                            </>
+                            </React.Fragment>
                           ) : (
-                            <>
+                            <React.Fragment>
                               <Copy className="w-4 h-4" />
                               Copy
-                            </>
+                            </React.Fragment>
                           )}
                         </button>
                       </div>
-                      
                       <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                      
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
                           <code>{endpoint.code}</code>
@@ -243,7 +229,6 @@ export default function APIDocsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
@@ -255,16 +240,22 @@ export default function APIDocsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key
-            </button>
+              Get API Key;
+  </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs
-            </button>
+              View SDKs;
+  </
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 }
+  </button>
+  </button>
+  </button>
+  </button>
+  </h1>
+  </SEOOptimizer>
+  </string>

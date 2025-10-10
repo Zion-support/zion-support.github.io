@@ -1,5 +1,4 @@
-
-
+import React from 'react';
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -17,17 +16,12 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     memor,
   y: number | null;
 }
-
 interface PerformanceMonitorProps {// TODO: Add content;}
-
 }
-
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
-
 const AdvancedPerformanceMonitor: React.FC;
           <PerformanceMonitorProps> = ({// TODO: Add content;}
-
 }
 //   onMetricsUpdate,
   enableRealTimeMonitoring = true;)
@@ -38,14 +32,12 @@ const AdvancedPerformanceMonitor: React.FC;
           <PerformanceMetrics>({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-
   fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
     memory: null;
-
   });
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
@@ -364,7 +356,6 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
 }
     return (<div>Coming Soon</div>)
   )
-      
           <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'></div>
@@ -406,8 +397,6 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
   }
   return null;
 };
-
 export default AdvancedPerformanceMonitor;`
-
-
-
+  </PerformanceMetrics>
+  </PerformanceMonitorProps>

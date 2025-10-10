@@ -175,8 +175,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <div, className="fl, e, x-1">";
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e;
               <div, className="fl, e, x-1">";</div>
-                <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e
-            </p>"
+                <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e;
+  </"
             <div, className="spa, c, e-y-2, m, b-4"></div>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm"></div>"
                 <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0  /></CheckCircle>
@@ -297,8 +297,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <div, className="fl, e, x-1">";
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e;
               <div, className="fl, e, x-1">";</div>
-                <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e
-            </p>"
+                <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e;
+  </"
             <div, className="spa, c, e-y-2, m, b-4"></div>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm"></div>"
                 <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0  /></CheckCircle>

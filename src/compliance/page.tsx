@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
-
-
-
 import { Link } from 'react-router-dom';
-
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -17,7 +13,6 @@ const CompliancePage: React.FC = () => {
     { name: 'HIPAA Compliant', status: 'Certified' },
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
-
   ];
   const complianceAreas = [
   // TOD,
@@ -54,8 +49,6 @@ const CompliancePage: React.FC = () => {
     }
   return (<div>Coming Soon</div>)
   )
-    
-
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         {/* Header */}
@@ -64,16 +57,7 @@ const CompliancePage: React.FC = () => {
             <div className="flex items-center">
               <Link
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Privacy Policy;
@@ -94,15 +78,6 @@ const CompliancePage: React.FC = () => {
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected;
 //                 and our services meet the most stringent requirements.
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
             {/* Certifications Grid */}"
             <div className="grid grid-cols-1,
@@ -142,22 +117,16 @@ Compliance Areas;"
             <p className="text-gray-600 mb-6"></p>
               Our compliance team is available to answer any questions about our certifications,
               security measures, or data protection practices.
-
             <a
               href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-
               Contact Compliance Team;
             </a>"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
-
         <Footer />
-
   );
 };
-
-
 export default CompliancePage;
-
-
+  </div>
+  </div>

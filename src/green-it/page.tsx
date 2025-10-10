@@ -3,11 +3,8 @@ import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail,
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
-
   const tabs = [
     {
       id: 'solutions',
@@ -28,7 +25,6 @@ idid: 'certifications',
       bgColor:     ,
 $4}
   ];
-
   const greenSolutions = [
       title: 'Energy-Efficient Data Centers',
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
@@ -89,7 +85,6 @@ titletitle: 'Environmental Monitoring',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
-
   const benefits = [
       icon: TrendingUp,
       title: 'Cost Savings',
@@ -118,7 +113,6 @@ titletitle: 'Environmental Monitoring',
         'Customer loyalty increase',
         'Investor confidence boost',
         'Talent attraction and retention'
-
   const certifications = [
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',
@@ -129,7 +123,6 @@ namename: 'LEED Platinum',
       description: 'Carbon Footprint Management',
       name: 'Green IT Certification',
       description: 'Sustainable IT Practices',
-
   const stats = [
       value: '60%',
       label: 'Carbon Footprint Reduction',
@@ -143,7 +136,6 @@ valuevalue: '50%',
 valuevalue: '100%',
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
-
   const caseStudies = [
       company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
@@ -164,17 +156,16 @@ valuevalue: '100%',
         'ISO 14001 certification achieved',
         'Enhanced brand reputation'
       icon: Building,
-
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Green IT Solutions
-            </h1>
+              Green IT Solutions;
+  </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your IT infrastructure into a sustainable, environmentally friendly system 
               that reduces costs while protecting our planet.
@@ -190,7 +181,6 @@ valuevalue: '100%',
               <div className="flex items-center text-purple-400">
                 <Award className="w-5 h-5 mr-2" />
                 <span className="font-medium">Certified Solutions</span>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
@@ -200,7 +190,6 @@ valuevalue: '100%',
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
             ))}
-
           {/* Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -217,13 +206,12 @@ valuevalue: '100%',
                   <tab.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{tab.name}</span>
                 </button>
-
           {/* Tab Content */}
           {activeTab === 'solutions' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Our Green IT Solutions
-              </h2>
+                Our Green IT Solutions;
+  </
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {greenSolutions.map((solution, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
@@ -233,7 +221,6 @@ valuevalue: '100%',
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                         <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
@@ -243,10 +230,8 @@ valuevalue: '100%',
                             {feature}
                           </li>
                       </ul>
-                    
                       <div className="text-sm font-semibold text-green-400 mb-1">Environmental Impact:</div>
                       <div className="text-sm text-gray-300">{solution.impact}</div>
-                    
                     <div className="flex items-center justify-between">
                       <div className={`text-lg font-bold ${solution.color}`}>
                         {solution.pricing}
@@ -257,7 +242,6 @@ valuevalue: '100%',
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
           )}
-
           {activeTab === 'benefits' && (
                 Benefits of Green IT
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -272,7 +256,6 @@ valuevalue: '100%',
                       {benefit.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
                           {detail}
-
           {activeTab === 'certifications' && (
                 Our Certifications
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -283,7 +266,6 @@ valuevalue: '100%',
                     <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
                     <p className="text-gray-300 text-sm mb-3">{cert.description}</p>
                     <div className="text-green-400 text-sm font-medium">{cert.status}</div>
-
           {/* Case Studies */}
               Success Stories
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -291,18 +273,14 @@ valuevalue: '100%',
                       <study.icon className={`w-6 h-6 ${study.color}`} />
                       <h3 className="text-xl font-semibold text-white mb-1">{study.company}</h3>
                       <p className="text-gray-400 text-sm mb-3">{study.industry}</p>
-                  
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.challenge}</p>
-                    
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
-                    
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
                       {study.results.map((result, resultIndex) => (
                         <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
                           {result}
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -322,22 +300,16 @@ valuevalue: '100%',
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
-
 export default GreenITPage;
-
-
 import { Link } from 'react-router-dom';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const GreenITPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-
   );
 };
   const [activeTab, setActiveTab] = useState('solutions');
@@ -366,7 +338,6 @@ const tabs = [
   r: 'text-blue-400',
       bgColo,
   r: 'bg-blue-500/10',
-
       titl,
   e: 'Energy-Efficient Data Centers',
       descriptio,
@@ -446,7 +417,6 @@ const tabs = [
   t: 'Reduce commuting emissions by 80%',
       pricin,
   g: 'Starting at $800/month',
-
       titl,
   e: 'Environmental Monitoring',
       descriptio,
@@ -464,7 +434,6 @@ const tabs = [
       pricin,
   g: 'Starting at $600/month'
   const benefits = [,
-
       ico,
   n: TrendingUp,
       titl,
@@ -510,7 +479,6 @@ const tabs = [
   n: 'Environmental Management Systems',
       statu,
   s: 'Certified',
-
       nam,
   e: 'LEED Platinum',
       descriptio,
@@ -530,21 +498,18 @@ const tabs = [
   l: 'Carbon Footprint Reduction',
       colo,
   r: 'text-green-400',
-
       valu,
   e: '40%',
       labe,
   l: 'Energy Cost Savings',
       colo,
   r: 'text-yellow-400',
-
       valu,
   e: '50%',
       labe,
   l: 'Waste Reduction',
       colo,
   r: 'text-blue-400',
-
       valu,
   e: '100%',
       labe,
@@ -552,7 +517,6 @@ const tabs = [
       colo,
   r: 'text-purple-400'
   const caseStudies = [,
-
       compan,
   y: 'TechCorp Manufacturing',
       industr,
@@ -585,8 +549,7 @@ const tabs = [
   n: Building,
   return (<div>Coming Soon</div>)
   )
-    
-          <>
+          <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
@@ -599,15 +562,6 @@ const tabs = [
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </p>"
             <div className="flex flex-wrap justify-center gap-4"></div>"
               <div className="flex items-center text-green-400"></div>"
@@ -647,14 +601,6 @@ const tabs = [
   hover:bg-slate-700/50 border-2 border-transparent'`
                   }`}
 //                 >
-                  
-          
-          
-          
-          
-          
-          
-          
           "
           <tab.icon className="w-5 h-5 mr-2" /></tab>"
                   <span className="font-medium">{tab.name}</span>
@@ -693,12 +639,10 @@ const tabs = [
                     <div className="flex items-center justify-between"></div>`
                       <div className={`text-lg font-bold ${solution.color}`}></div>
                         {solution.pricing}
-
                       <a
                         href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 Learn More;
                         <ArrowRight className="w-4 h-4 ml-1" />
-
                       </a>
           )}
           {activeTab === 'benefits' && (}
@@ -754,16 +698,6 @@ Benefits of Green IT;"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Start your journey towards sustainable IT operations. Get a free environmental;
               assessment and discover how much you can save while protecting the planet.
-            
-          
-          
-          
-          
-          
-          
-          
-
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -773,12 +707,38 @@ Benefits of Green IT;"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer />
-
     </div>
   );
 };
-
-
 export default GreenItPage;
-
-
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </li>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </h2>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

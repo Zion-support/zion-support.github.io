@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
   children;
   enableKeyboardNavigation = true,
@@ -12,7 +10,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [focusVisible, setFocusVisible] = useState(false);
-
   useEffect(() => {
     // Check for user preferences;
     if (enableHighContrast) {
@@ -28,7 +25,6 @@ const,
     }
     return undefined;
   }, [enableHighContrast]);
-
   useEffect(() => {
     // Check for reduced motion preference;
     if (enableReducedMotion) {
@@ -42,7 +38,6 @@ const,
     }
     return undefined;
   }, [enableReducedMotion]);
-
   useEffect(() => {
     // Keyboard navigation support;
     if (enableKeyboardNavigation) {
@@ -56,7 +51,6 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
           }
         }
-
         // Escape key handling;
         if (e.key === 'Escape') {
           const _activeElement = document.activeElement as HTMLElement;
@@ -66,12 +60,10 @@ const,
           }
         }
       };
-
       // Focus management;
       const handleFocusIn = (e: FocusEvent) => {
         setFocusVisible(true);
         const _target = e.target as HTMLElement;
-
         // Announce focus changes to screen readers;
         if (enableScreenReaderSupport && target.getAttribute('aria-label')) {
           const _announcement = target.getAttribute('aria-label');
@@ -81,24 +73,19 @@ const,
           }
         }
       };
-
       const handleFocusOut = () => {/* TODO: Fix JSX expression */}
       };
-
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('focusin', handleFocusIn);
       document.addEventListener('focusout', handleFocusOut);
-
       return () => {/* TODO: Fix JSX expression */}
       };
     }
     return undefined;
   }, [enableKeyboardNavigation, enableScreenReaderSupport]);
-
   useEffect(() => {
     // Apply accessibility styles;
     const _root = document.documentElement;
-
     if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
@@ -106,16 +93,13 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
-
     if (isReducedMotion) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
-
     if (focusVisible) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }, [isHighContrast, isReducedMotion, focusVisible]);
-
   // Announce to screen reader;
   const announceToScreenReader = (message: string) => {,
     if (enableScreenReaderSupport) {,
@@ -124,9 +108,7 @@ const,
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = message;
-
       document.body.appendChild(announcement);
-
       setTimeout(() => {
         document.body.removeChild(announcement);
   const announceToScreenReader = (messag)
@@ -134,7 +116,6 @@ const,
       }, 1000);
     }
   };
-
   return(<div;
   return (<div></div>
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
@@ -167,7 +148,6 @@ const,
       >
         Skip to main content;
       </a>
-
       {/* Accessibility controls */}
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <button;
@@ -184,7 +164,6 @@ const,
         >
           {isHighContrast ? '🔆' : '🌙'} High Contrast;
         </button>
-
         <button;
           onClick={() => setIsReducedMotion(!isReducedMotion)}
           className="accessibility-toggle"
@@ -196,11 +175,11 @@ const,
           {isReducedMotion ? '🏃' : '🚶'} Motion;
         </button>
       </div>
-
       {children}
     </div>
   );
 };
-
 export default AccessibilityEnhancer;
 "`
+  </AccessibilityEnhancerProps>
+  </AccessibilityEnhancerProps>

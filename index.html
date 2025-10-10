@@ -81,11 +81,14 @@
     </style>
     
     <!-- Web App Manifest -->
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="/src/main.tsx" as="script" />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" />
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';" />
     
     <title>Zion Tech Group - Advanced AI and IT Solutions | 300% ROI Guaranteed</title>
   </head>
@@ -98,12 +101,12 @@
     <script type="module" src="/src/main.tsx"></script>
     
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID', {
+      gtag('config', 'G-XXXXXXXXXX', {
         page_title: 'Zion Tech Group - AI and IT Solutions',
         page_location: window.location.href,
         custom_map: {

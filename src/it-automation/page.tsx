@@ -1,16 +1,12 @@
-
-
-
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 import { Settings, Zap, Shield, BarChart, CheckCircle, Star,  Settings,  Zap,  BarChart } from 'lucide-react';
 const ITAutomationPage: React.FC = () => {
   const features = [];
   return (
     {// TODO: Add content;}
-
 };
   ico,
   n: Settings,
@@ -39,14 +35,12 @@ const ITAutomationPage: React.FC = () => {
   s: ['Auto-monitoring', 'Smart alerts', 'Performance tracking']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-
 // IT Automation;
           </h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
@@ -54,7 +48,6 @@ const ITAutomationPage: React.FC = () => {
           </p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             Streamline your IT operations with intelligent automation solutions. Reduce manual work,
-
             improve efficiency, and ensure consistency across all IT processes.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -64,7 +57,6 @@ const ITAutomationPage: React.FC = () => {
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Settings className="w-5 h-5" />
-
               +1 302 464 0950;
           </div>
         </section>"
@@ -96,12 +88,7 @@ const ITAutomationPage: React.FC = () => {
                 </ul>
       </main>
       <Footer /></Footer>
-
     </div>
   );
 };
-
-
 export default ItAutomationPage;
-
-

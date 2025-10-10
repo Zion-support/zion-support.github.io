@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import './index.css';
-
 // Lazy load pages for better performance;
 // const Home = lazy(() => import('./pages/Home'));
 // const About = lazy(() => import('./pages/About'));
@@ -10,7 +9,6 @@ import './index.css';
 // const Team = lazy(() => import('./pages/Team'));
 // const Privacy = lazy(() => import('./pages/Privacy'));
 // const Terms = lazy(() => import('./pages/Terms'));
-
 function App() {
   useEffect(() => {
     // Initialize basic optimizations;
@@ -18,7 +16,6 @@ function App() {
     return () => {
       //       };
   }, []);
-
   return(<ErrorBoundary>
       <div>
   return (
@@ -30,7 +27,6 @@ function App() {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       };
   }, []);
-
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
         <Router></Router>
@@ -55,7 +51,6 @@ function App() {/* TODO: Fix JSX expression */}
     </ErrorBoundary>)
   );
 }
-
 // Simple Error Boundary;
 class ErrorBoundary extends React.Component<
   {/* TODO: Fix JSX expression */}
@@ -66,14 +61,11 @@ class ErrorBoundary extends React.Component<
   n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
   r: false };
   }
-
   static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
   r: true };
   }
-
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     //     }
-
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || ()
@@ -93,7 +85,6 @@ class ErrorBoundary extends React.Component<
   r: Error, errorInf)
   o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
     //     }
-
   render() {/* TODO: Fix JSX expression */}
   r: false })}"
                 className="bg-blue-600 text-white px-4 py-2 rounded,"
@@ -104,10 +95,9 @@ class ErrorBoundary extends React.Component<
             </div>
           </div>));
     }
-
     return this.props.children;
   }
 }
-
 export default App;
 "
+  </ErrorBoundary>

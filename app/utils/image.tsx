@@ -6,8 +6,8 @@ interface ImageProps {
   src: string,
     alt: string
 interface ImageProps {}
-  src: string
-  alt: string
+  src: string,
+    alt: string
   width?: number
   height?: number
   className?: string
@@ -139,3 +139,5 @@ export default Image;
 };
 export default Image;
 "`
+  </ImageProps>
+  </ImageProps>

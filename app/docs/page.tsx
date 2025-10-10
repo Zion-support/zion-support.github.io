@@ -4,10 +4,8 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, G
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
 export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState('');
-
   const docCategories = [
     {
       title: 'Getting Started',
@@ -50,14 +48,12 @@ export default function DocsPage() {
       ]
     }
   ];
-
   const popularDocs = [
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
     { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
     { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
   ];
-
   const filteredDocs = docCategories.map(category => ({
     ...category,
     docs: category.docs.filter(doc => 
@@ -65,7 +61,6 @@ export default function DocsPage() {
       doc.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(category => category.docs.length > 0);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
@@ -74,12 +69,10 @@ export default function DocsPage() {
         keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
       />
       <Navigation />
-      
             </div>
           </div>
         </div>
       </section>
-
       {/* Popular Docs */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -99,8 +92,7 @@ export default function DocsPage() {
                 <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
                 <a
                   href={doc.link}
-                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm"
-                >
+                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
                   Read More
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -109,7 +101,6 @@ export default function DocsPage() {
           </div>
         </div>
       </section>
-
       {/* Documentation Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -126,14 +117,12 @@ export default function DocsPage() {
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
-                
                 <div className="space-y-4">
                   {category.docs.map((doc, docIndex) => (
                     <a
                       key={docIndex}
                       href={doc.link}
-                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
-                    >
+                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
                       <div className="flex items-center justify-between">
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
@@ -151,7 +140,6 @@ export default function DocsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
@@ -163,16 +151,18 @@ export default function DocsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Contact Support
-            </button>
+              Contact Support;
+  </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Join Community
-            </button>
+              Join Community;
+  </
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 }
+  </button>
+  </button>
+  </SEOOptimizer>

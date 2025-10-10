@@ -4,11 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-
 const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const supportCategories = [
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
@@ -18,7 +16,6 @@ const SupportPage: React.FC = () => {
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
   ];
-
   const faqs = [
     {
       id: 1,
@@ -57,7 +54,6 @@ const SupportPage: React.FC = () => {
       category: 'getting-started'
     }
   ];
-
   const supportChannels = [
     {
       icon: Phone,
@@ -92,7 +88,6 @@ const SupportPage: React.FC = () => {
       color: 'text-cyan-400'
     }
   ];
-
   const resources = [
     {
       title: 'Documentation',
@@ -131,20 +126,17 @@ const SupportPage: React.FC = () => {
       link: '/community'
     }
   ];
-
   const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
-
   const searchResults = searchQuery 
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFaqs;
-
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="Support Center - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources."
@@ -153,22 +145,20 @@ const SupportPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Support Center
-            </h1>
+              Support Center;
+  </
             <p className="text-xl text-cyan-400 mb-8">
-              We're here to help you succeed with AI
-            </p>
+              We're here to help you succeed with AI;
+  </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Get instant answers to your questions, access comprehensive resources, 
               and connect with our expert support team.
             </p>
           </section>
-
           {/* Search Section */}
           <section className="mb-16">
             <div className="max-w-2xl mx-auto">
@@ -184,12 +174,11 @@ const SupportPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Support Channels */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Get Support
-            </h2>
+              Get Support;
+  </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -202,12 +191,11 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* FAQ Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category
-            </h2>
+              Browse by Category;
+  </
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
               {supportCategories.map((category) => (
                 <button
@@ -226,12 +214,11 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* FAQ Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Frequently Asked Questions
-            </h2>
+              Frequently Asked Questions;
+  </
             <div className="max-w-4xl mx-auto space-y-4">
               {searchResults.map((faq) => (
                 <div key={faq.id} className="cyber-card p-6">
@@ -241,19 +228,17 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Resources Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Helpful Resources
-            </h2>
+              Helpful Resources;
+  </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {resources.map((resource, index) => (
                 <Link
                   key={index}
                   to={resource.link}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
-                >
+                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
                     <resource.icon className="w-8 h-8 text-cyan-400 mr-4" />
                     <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
@@ -266,7 +251,6 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Contact CTA */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -274,32 +258,38 @@ const SupportPage: React.FC = () => {
                 Still Need Help?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our expert team is ready to assist you with any questions or issues
-              </p>
+                Our expert team is ready to assist you with any questions or issues;
+  </
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
-                >
+                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950
-                </a>
+                  Call (302) 464-0950;
+  </
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
-                >
+                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Mail className="w-5 h-5 mr-2" />
-                  Send Email
-                </a>
+                  Send Email;
+  </
               </div>
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default SupportPage;
+  </a>
+  </a>
+  </p>
+  </h2>
+  </h2>
+  </h2>
+  </h2>
+  </p>
+  </h1>
+  </SEOOptimizer>

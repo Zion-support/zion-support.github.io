@@ -35,8 +35,8 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</
           </div>)
           <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
             { servic, e, s.m, a, p((serv, i, c, e) = > (
-              Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s
-            </p>
+              Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s;
+  </
           </div>
           <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
             { servic, e, s.m, a, p((serv, i, c, e) = > (</div>
@@ -113,15 +113,13 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
           </div>
           <div, classNam, e = "te, x, t-cent, e, r"></div>
             <Link, t, o="/servic, e, s"
-              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-            >
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
               View, All, Services;
               <Link, className="w-6 h-6" />
           </div>"
           <div, classNam, e = "te, x, t-cent, e, r"></div>"
             <Link, t, o="/servic, e, s""
-              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-            ></Link>
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></Link>
               View, All, Services;"
               <Link, className="w-6 h-6" /></Link>
             </Li, n, k>
@@ -144,8 +142,8 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
           { servic, e, s.m, a, p((serv, i, c, e) = > (
             <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
-          Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e
-        </p>
+          Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e;
+  </
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
           { servic, e, s.m, a, p((serv, i, c, e) = > (</div>
             <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>
@@ -209,8 +207,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
         </div>"
         <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6"></div>
           {/* TODO: Fix JSX expression */}"
-            <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } className="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-all, grou, p"
-            ></Link>"
+            <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } className="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-all, grou, p"></Link>"
               <div, className="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</div>"
               <h4, classNam, e = "fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0"></h4>
                 {servi, c, e.na, m, e}

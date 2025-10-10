@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -7,7 +6,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
@@ -15,10 +13,8 @@ const PerformanceMonitor: React.FC = () => {
     cls: null,
     fcp: null,
     ttfb: null});
-
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
-
     // Web Vitals measurement
     const measureWebVitals = () => {
       // LCP - Largest Contentful Paint
@@ -28,7 +24,6 @@ const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -40,7 +35,6 @@ const PerformanceMonitor: React.FC = () => {
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-
       // CLS - Cumulative Layout Shift
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
@@ -53,7 +47,6 @@ const PerformanceMonitor: React.FC = () => {
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-
       // FCP - First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -64,7 +57,6 @@ const PerformanceMonitor: React.FC = () => {
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-
       // TTFB - Time to First Byte
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
@@ -73,7 +65,6 @@ const PerformanceMonitor: React.FC = () => {
           ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
         }));
       }
-
       // Cleanup observers
       return () => {
         lcpObserver.disconnect();
@@ -82,28 +73,23 @@ const PerformanceMonitor: React.FC = () => {
         fcpObserver.disconnect();
       };
     };
-
     const cleanup = measureWebVitals();
-
     // Send metrics to analytics (if available)
     const sendToAnalytics = (metrics: PerformanceMetrics) => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
         const gtag = (window as any).gtag;
-        
         if (metrics.lcp !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'LCP',
             value: Math.round(metrics.lcp)});
         }
-        
         if (metrics.fid !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'FID',
             value: Math.round(metrics.fid)});
         }
-        
         if (metrics.cls !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
@@ -112,23 +98,19 @@ const PerformanceMonitor: React.FC = () => {
         }
       }
     };
-
     // Send metrics after a delay to allow all measurements to complete
     const timeoutId = setTimeout(() => {
       sendToAnalytics(metrics);
     }, 5000);
-
     return () => {
       cleanup?.();
       clearTimeout(timeoutId);
     };
   }, [metrics]);
-
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
-
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
       <div className="mb-2 font-bold">Performance Metrics</div>
@@ -140,5 +122,5 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-
 export default PerformanceMonitor;
+  </PerformanceMetrics>

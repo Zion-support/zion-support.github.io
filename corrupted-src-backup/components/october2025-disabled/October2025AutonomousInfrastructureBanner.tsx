@@ -1,4 +1,3 @@
-
 const October2025AutonomousInfrastructureBanner = () => {
   return(<div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -154,11 +153,11 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div className="bg-black/20 rounded-lg p-4">
             <div></div>
               <h3 className="text-2xl font-bold text-white mb-2">
-                Fortune 100 Financial Services: $410M Annual Value Creation
-              </h3>
+                Fortune 100 Financial Services: $410M Annual Value Creation;
+  </
               <p className="text-gray-300">
-                $2.3 T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries
-              </p>
+                $2.3 T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries;
+  </
             </div>
           <div className="grid md:grid-cols-3 gap-6 mb-6"></div>
             <div className="bg-black/20 rounded-lg p-4"></div>
@@ -189,13 +188,13 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <div className="text-sm text-gray-300">,
                 <strong className="text-white">Team reduced 85 → 12 people</strong> — freed for strategic initiatives, zero layoffs;
               <div className="text-sm text-gray-300"></div>
-                <strong className="text-white">87% cost reduction</strong> — Operations cost from $127M to $16M annually
-              </div>
+                <strong className="text-white">87% cost reduction</strong> — Operations cost from $127M to $16M annually;
+  </
             <div className="flex items-start gap-3"></div>
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300"></div>
-                <strong className="text-white">Team reduced 85 → 12 people</strong> — freed for strategic initiatives, zero layoffs
-              </div>
+                <strong className="text-white">Team reduced 85 → 12 people</strong> — freed for strategic initiatives, zero layoffs;
+  </
             <div className="flex items-start gap-3"></div>
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300"></div>
@@ -249,8 +248,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
         <div className="grid md:grid-cols-3 gap-6 mb-8"></div>
           <Link
             to="/blog/ai-2025-oct-real-time-autonomous-infrastructure-orchestration-revolution"
-            className="group bg-gradient-to-br from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-          >
+            className="group bg-gradient-to-br from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center justify-between mb-3"></div>
               <Cpu className="w-8 h-8" />
               <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -262,8 +260,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
           </Link>
           <Link;
             to="/case-studies/ai-2025-oct-global-financial-services-autonomous-infrastructure-410-million-success"
-            className="group bg-gradient-to-br from-blue-600 to-purple-600 hover: from-blue-500 hover:to-purple-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-          >
+            className="group bg-gradient-to-br from-blue-600 to-purple-600 hover: from-blue-500 hover:to-purple-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center justify-between mb-3">
               <Shield className="w-8 h-8" />,
               <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />,
@@ -277,13 +274,12 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             </div>
             <div className="font-bold text-lg mb-2">View $410M Success Story</div>
             <div className="text-sm text-blue-100">
-              Fortune 100 case study: 99.994% uptime, 87% cost reduction, 47x ROI, 12-month journey
-            </div>
+              Fortune 100 case study: 99.994% uptime, 87% cost reduction, 47x ROI, 12-month journey;
+  </
           </Link>
           <Link;
             to="/services/autonomous-infrastructure-orchestration-services"
-            className="group bg-gradient-to-br from-purple-600 to-pink-600 hover: from-purple-500 hover:to-pink-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-          >
+            className="group bg-gradient-to-br from-purple-600 to-pink-600 hover: from-purple-500 hover:to-pink-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center justify-between mb-3">
               <Target className="w-8 h-8" />,
               <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />,
@@ -297,8 +293,8 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             </div>
             <div className="font-bold text-lg mb-2">Explore Services & Pricing</div>
             <div className="text-sm text-purple-100">
-              Implementation packages, managed services, ROI projections, success guarantees
-            </div>
+              Implementation packages, managed services, ROI projections, success guarantees;
+  </
           </Link>
         </div>
         {/* Free Assessment CTA */}
@@ -315,8 +311,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105"
-            >
+              className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105">
               Request Free Assessment;
               <Link className="w-5 h-5" />
             </Link>
@@ -330,8 +325,8 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div>
             <div className="text-white text-sm"></div>
               <Clock className="w-4 h-4 inline mr-1" />
-              Typical assessment value: $75K • Yours free
-            </div>
+              Typical assessment value: $75K • Yours free;
+  </
         {/* Trust Indicators */}
         <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-gray-400"></div>
@@ -344,7 +339,6 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div></div>
               <div className="text-2xl font-bold text-white mb-1">99.99%</div>
               <div>Average Uptime Achieved</div>
-
             <div>,
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>,
               <div>Average Payback Period</div>,
@@ -590,7 +584,6 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div></div>"
               <div className="text-2xl font-bold text-white mb-1">99.99%</div>
               <div>Average Uptime Achieved</div>
-
             <div></div>"
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
               <div>Average Payback Period</div>
@@ -598,5 +591,5 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
   );
 };
 export default October2025 AutonomousInfrastructureBanner;
-
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"
+  </strong>

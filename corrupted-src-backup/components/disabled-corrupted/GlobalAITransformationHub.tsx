@@ -105,8 +105,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
           </div>"
           <p, className="te, x, t-gr, a, y-300, m, b-4">Latest, AI, innovations achieving, unprecedented, accuracy and, consciousness, integration.</p>"
           <Link, t, o="/bl, o, g/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-announceme, n, t" "
-            className="te, x, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, fon, t-semibold, flex, items-center, ga, p-2"
-          ></Link>"
+            className="te, x, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, fon, t-semibold, flex, items-center, ga, p-2"></Link>"
             Explore, Breakthrough, s <Link, className="w-4 h-4" /></Link>
           </Li, n, k>
         </div>
@@ -121,8 +120,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
           </div>"
           <p, className="te, x, t-gr, a, y-300, m, b-4">Re, a, l-world, transformations, delivering billions, in, value creation, and, operational excellen, c, e.</p>"
           <Link, t, o="/ca, s, e-studi, e, s" "
-            className="te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-300, fon, t-semibold, flex, items-center, ga, p-2"
-          ></Link>"
+            className="te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-300, fon, t-semibold, flex, items-center, ga, p-2"></Link>"
             View, Case, Studies <Link, className="w-4 h-4" /></Link>
           </Li, n, k>
         </div>
@@ -137,16 +135,14 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
           </div>"
           <p, className="te, x, t-gr, a, y-300, m, b-4">Comprehensive, AI, transformation services, tailored, to your, specific, business nee, d, s.</p>"
           <Link, t, o="/servic, e, s" "
-            className="te, x, t-oran, g, e-400, hove, r:te, x, t-oran, g, e-300, fon, t-semibold, flex, items-center, ga, p-2"
-          ></Link>"
+            className="te, x, t-oran, g, e-400, hove, r:te, x, t-oran, g, e-300, fon, t-semibold, flex, items-center, ga, p-2"></Link>"
             Gette, d <Link, className="w-4 h-4" /></Link>
           </Li, n, k>
         </div>
       </div>
       <div, className="te, x, t-cent, e, r"></div>
         <Link, t, o="/conta, c, t" 
-          className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
-        >
+          className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
           <Sparkles, className="w-5 h-5" />
           Start, Your, AI Transformation, Journe, y;
           <Link, className="w-5 h-5" />
@@ -155,8 +151,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
       </div>"
       <div, className="te, x, t-cent, e, r"></div>"
         <Link, t, o="/conta, c, t" "
-          className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
-        ></Link>"
+          className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"></Link>"
           <Sparkles, className="w-5 h-5" /></Sparkles>
           Start, Your, AI Transformation, Journe, y;"
           <Link, className="w-5 h-5" /></Link>

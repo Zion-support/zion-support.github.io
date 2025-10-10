@@ -1,44 +1,34 @@
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {/* TODO: Fix JSX expression */}
 }
-
 interface State {/* TODO: Fix JSX expression */}
 }
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({)
       error),
       errorInfo;
     });
-
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
       // console.error('Error caught by boundary:', error, errorInfo);
     }
-
     // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Enhanced error reporting;
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
-
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console;
@@ -49,7 +39,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
-
       return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
       return (
@@ -68,8 +57,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="space-y-4"></div>
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors"
-              >
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
                 Refresh Page;
               </button>,
               <button;
@@ -78,35 +66,28 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false };
   }
-
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
   r: true, error };
   }
-
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
-
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
-
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
-
     // Enhanced error reporting;
     if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
     }
-
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   a: errorInfo });
     }
   }
-
       return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
             <div className="text-6xl mb-4">⚠️</div>"
@@ -148,9 +129,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;"

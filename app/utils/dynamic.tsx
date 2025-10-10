@@ -32,3 +32,7 @@ export function dynamic<T extends ComponentType<unknown>>(importFun)
   )
 }
 export default dynamic;
+  </unknown>
+  </T>
+  </Suspense>
+  </unknown>

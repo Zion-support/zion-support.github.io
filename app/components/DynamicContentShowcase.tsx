@@ -1,136 +1,262 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
+import { ArrowRight, Play, Pause, RotateCcw, Star, Users, Award, Zap } from 'lucide-react';
 
-const DynamicContentShowcase: React.FC = () => {
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  featured: boolean;
+  stats?: {
+    value: string;
+    label: string;
+  }[];
+  tags: string[];
+}
+
+interface DynamicContentShowcaseProps {
+  title?: string;
+  description?: string;
+  items: ContentItem[];
+  autoPlay?: boolean;
+  autoPlayInterval?: number;
+  showControls?: boolean;
+  variant?: 'carousel' | 'grid' | 'masonry';
+}
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
+  title = 'Featured Content',
+  description = 'Discover our latest innovations and success stories',
+  items,
+  autoPlay = true,
+  autoPlayInterval = 5000,
+  showControls = true,
+  variant = 'carousel'
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
-    },
-    {
-      icon: Zap,
-      title: 'Lightning Fast Performance',
-      description: 'Optimized for speed with sub-second response times and seamless user experience'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-      rating: 5
-    }
-  ];
-
+  // Auto-play functionality
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
+    if (!isPlaying || isHovered) return;
 
-    return () => clearInterval(timer);
-  }, [features.length]);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % items.length);
+    }, autoPlayInterval);
 
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dynamic Content Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
-          </p>
-        </div>
+    return () => clearInterval(interval);
+  }, [isPlaying, isHovered, items.length, autoPlayInterval]);
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-white" />
+  const nextItem = () => {
+    setCurrentIndex((prev) => (prev + 1) % items.length);
+  };
+
+  const prevItem = () => {
+    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const resetToFirst = () => {
+    setCurrentIndex(0);
+    setIsPlaying(true);
+  };
+
+  const renderCarousel = () => (
+    <div className="relative">
+      <div
+        className="relative overflow-hidden rounded-2xl"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {items.map((item) => (
+            <div key={item.id} className="w-full flex-shrink-0">
+              <div className="relative h-96 md:h-[500px] bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white p-8 max-w-4xl">
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                      <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+                        {item.category}
+                      </span>
+                      {item.featured && (
+                        <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-4xl md:text-6xl font-bold mb-6">{item.title}</h3>
+                    <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">{item.description}</p>
+                    
+                    {item.stats && (
+                      <div className="flex justify-center gap-8 mb-8">
+                        {item.stats.map((stat, index) => (
+                          <div key={index} className="text-center">
+                            <div className="text-3xl font-bold">{stat.value}</div>
+                            <div className="text-sm text-gray-300">{stat.label}</div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap justify-center gap-2 mb-8">
+                      {item.tags.map((tag, index) => (
+                        <span
+                          key={index}
+                          className="bg-white/20 px-3 py-1 rounded-full text-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto">
+                      Learn More
+                      <ArrowRight className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Controls */}
+      {showControls && (
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <button
+            onClick={prevItem}
+            className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+          >
+            <ArrowRight className="w-5 h-5 text-white rotate-180" />
+          </button>
+          
+          <button
+            onClick={togglePlayPause}
+            className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+          >
+            {isPlaying ? (
+              <Pause className="w-5 h-5 text-white" />
+            ) : (
+              <Play className="w-5 h-5 text-white" />
+            )}
+          </button>
 
-        {/* Testimonials */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <button
+            onClick={resetToFirst}
+            className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+          >
+            <RotateCcw className="w-5 h-5 text-white" />
+          </button>
+
+          <button
+            onClick={nextItem}
+            className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+          >
+            <ArrowRight className="w-5 h-5 text-white" />
+          </button>
         </div>
+      )}
+
+      {/* Indicators */}
+      <div className="flex justify-center gap-2 mt-6">
+        {items.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              index === currentIndex ? 'bg-white' : 'bg-white/30'
+            }`}
+          />
+        ))}
       </div>
     </div>
+  );
+
+  const renderGrid = () => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {items.map((item) => (
+        <div
+          key={item.id}
+          className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group"
+        >
+          <div className="relative h-48 bg-gradient-to-br from-purple-500 to-blue-600">
+            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute top-4 left-4 flex gap-2">
+              <span className="bg-white/20 px-2 py-1 rounded-full text-xs font-medium text-white">
+                {item.category}
+              </span>
+              {item.featured && (
+                <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-bold">
+                  Featured
+                </span>
+              )}
+            </div>
+          </div>
+          
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+              {item.title}
+            </h3>
+            <p className="text-gray-300 mb-4">{item.description}</p>
+            
+            {item.stats && (
+              <div className="flex gap-4 mb-4">
+                {item.stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-lg font-bold text-white">{stat.value}</div>
+                    <div className="text-xs text-gray-400">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <div className="flex flex-wrap gap-2 mb-4">
+              {item.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+              Learn More
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  return (
+    <section className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {title}
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {description}
+          </p>
+        </div>
+
+        {variant === 'carousel' ? renderCarousel() : renderGrid()}
+      </div>
+    </section>
   );
 };
 

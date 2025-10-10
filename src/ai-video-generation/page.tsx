@@ -3,7 +3,6 @@ import { Video, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Awa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
 const AIVideoGenerationPage: React.FC = () => {
   const features = [
     'AI Video Creation',
@@ -17,7 +16,6 @@ const AIVideoGenerationPage: React.FC = () => {
     'Real-time Preview',
     'Collaboration Tools'
   ];
-
   const benefits = [
     '90% time savings',
     'Professional quality',
@@ -26,7 +24,6 @@ const AIVideoGenerationPage: React.FC = () => {
     'No technical skills needed',
     'Cost-effective solution'
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -50,19 +47,16 @@ const AIVideoGenerationPage: React.FC = () => {
       popular: false
     }
   ];
-
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group"
         description="Transform your content creation with AI Video Generator Pro. Create professional videos, animations, and presentations with AI-powered editing and voice synthesis. Starting at $199/month."
         keywords={['AI video generation', 'video creation', 'AI editing', 'voice synthesis', 'text to video', 'video automation']}
         canonicalUrl="https://ziontechgroup.com/ai-video-generation"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -72,35 +66,32 @@ const AIVideoGenerationPage: React.FC = () => {
                   <Video className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white neon-text">
-                  AI Video Generator Pro
-                </h1>
+                  AI Video Generator Pro;
+  </
               </div>
               <p className="text-xl text-gray-300 mb-8">
-                Create professional videos with AI-powered editing, voice synthesis, and intelligent automation
-              </p>
+                Create professional videos with AI-powered editing, voice synthesis, and intelligent automation;
+  </
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Start Free Trial
-                </a>
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+                  Start Free Trial;
+  </
                 <a
                   href="#demo"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <Play className="w-5 h-5" />
-                  Watch Demo
-                </a>
+                  Watch Demo;
+  </
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Powerful AI Video Features
-            </h2>
+              Powerful AI Video Features;
+  </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -112,7 +103,6 @@ const AIVideoGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -129,20 +119,19 @@ const AIVideoGenerationPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Simple, Transparent Pricing
-            </h2>
+              Simple, Transparent Pricing;
+  </
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
+                        Most Popular;
+  </
                     </div>
                   )}
                   <div className="text-center mb-6">
@@ -168,13 +157,12 @@ const AIVideoGenerationPage: React.FC = () => {
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started
-                  </a>
+                    Get Started;
+  </
                 </div>
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -182,30 +170,37 @@ const AIVideoGenerationPage: React.FC = () => {
                 Ready to Transform Your Video Creation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses creating professional videos with AI
-              </p>
+                Join thousands of businesses creating professional videos with AI;
+  </
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Start Your Free Trial
-                </a>
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
+                  Start Your Free Trial;
+  </
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default AIVideoGenerationPage;
+  </a>
+  </p>
+  </a>
+  </h2>
+  </h2>
+  </a>
+  </a>
+  </p>
+  </h1>
+  </div>
+  </SEOOptimizer>

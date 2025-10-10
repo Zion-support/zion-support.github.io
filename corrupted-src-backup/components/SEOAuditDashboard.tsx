@@ -378,21 +378,21 @@ retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
         >
           {
 isRunni, n, g ? (
-<>
+<React.Fragment>
 <div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></d, i, v>";)
 Analyzi, n, g...)
-</>)
+</React.Fragment>)
 ) : (
-<>{}
+<React.Fragment>{}
 <Search, className="w-4 h-4  /></Search>
 <Search, className="w-4 h-4" />";</Search>Run</Search>, SEO, Audit;
-</>
+</React.Fragment>
 )
 }
         </butt, o, n>
       </d, i, v>
       {repo, r, t && (
-        <>{}
+        <React.Fragment>{}
           {/* SEO, Score, Overview */}
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">"</div>
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"></div>
@@ -731,7 +731,7 @@ Analyzi, n, g...)
           <div, className="mt-6, tex, t-center, tex, t-sm, tex, t-gr, a, y-5, 0, 0">";
             Last, update, d: {new, Dat, e(repo, r, t.lastUpdat, e, d).toLocaleStri, n, g()}
           </d, i, v>
-        </>
+        </React.Fragment>
       )}
     </d, i, v>
   );

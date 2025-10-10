@@ -1,95 +1,116 @@
 'use client';
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Zap, Shield } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
+interface ContentPromotionBannerProps {
+  title: string;
+  description: string;
+  features: string[];
+  ctaText: string;
+  ctaLink: string;
+  variant?: 'default' | 'premium' | 'success';
+  icon?: React.ComponentType<any>;
+}
+
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  title,
+  description,
+  features,
+  ctaText,
+  ctaLink,
+  variant = 'default',
+  icon: Icon = Star
+}) => {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'premium':
+        return {
+          background: 'bg-gradient-to-r from-yellow-500 to-orange-500',
+          text: 'text-black',
+          button: 'bg-black text-yellow-500 hover:bg-gray-800'
+        };
+      case 'success':
+        return {
+          background: 'bg-gradient-to-r from-green-500 to-emerald-500',
+          text: 'text-white',
+          button: 'bg-white text-green-600 hover:bg-gray-100'
+        };
+      default:
+        return {
+          background: 'bg-gradient-to-r from-purple-500 to-blue-500',
+          text: 'text-white',
+          button: 'bg-white text-purple-600 hover:bg-gray-100'
+        };
     }
-  ];
+  };
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+  const styles = getVariantStyles();
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
-        <p className="text-xl text-gray-300 mb-6">
-          Join thousands of businesses already using our AI and IT solutions
-        </p>
+    <div className={`${styles.background} rounded-2xl p-8 md:p-12 relative overflow-hidden`}>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -translate-y-16 translate-x-16" />
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full translate-y-12 -translate-x-12" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {features.map((feature, index) => (
-          <div key={index} className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <feature.icon className="w-8 h-8 text-white" />
+      <div className="relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          {/* Content */}
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <Icon className="w-6 h-6" />
+              </div>
+              <span className={`text-sm font-medium ${styles.text} opacity-90`}>
+                Special Offer
+              </span>
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-            <p className="text-gray-300 text-sm">{feature.description}</p>
-          </div>
-        ))}
-      </div>
 
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
-            <ul className="space-y-2">
-              {benefits.slice(0, 4).map((benefit, index) => (
-                <li key={index} className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
+            <h2 className={`text-3xl md:text-4xl font-bold ${styles.text} mb-4`}>
+              {title}
+            </h2>
+            
+            <p className={`text-lg ${styles.text} opacity-90 mb-6 max-w-2xl`}>
+              {description}
+            </p>
+
+            <ul className="space-y-2 mb-8">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  <span className={styles.text}>{feature}</span>
                 </li>
               ))}
             </ul>
+
+            <a
+              href={ctaLink}
+              className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 ${styles.button}`}
+            >
+              {ctaText}
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
-          <div>
-            <h3 className="text-xl font-bold text-white mb-4">Additional Benefits</h3>
-            <ul className="space-y-2">
-              {benefits.slice(4).map((benefit, index) => (
-                <li key={index} className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </li>
-              ))}
-            </ul>
+
+          {/* Visual Elements */}
+          <div className="flex-shrink-0">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center">
+                <Zap className="w-8 h-8" />
+              </div>
+              <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center">
+                <Shield className="w-8 h-8" />
+              </div>
+              <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center">
+                <Star className="w-8 h-8" />
+              </div>
+              <div className="w-20 h-20 bg-white/20 rounded-xl flex items-center justify-center">
+                <CheckCircle className="w-8 h-8" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="text-center">
-        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
-          Get Started Now
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </button>
       </div>
     </div>
   );

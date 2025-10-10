@@ -1,7 +1,5 @@
-
-
+import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
@@ -21,7 +19,6 @@ const Pagetsx: React.FC = () => {
     title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
-
     }
   ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
@@ -53,7 +50,6 @@ const Pagetsx: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -68,7 +64,6 @@ const Pagetsx: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (}
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-
                         {benefit}
                       </li>)
                     ))}
@@ -94,10 +89,4 @@ const Pagetsx: React.FC = () => {
   )
 }
 export default Pagetsx;"
-
-
-
-
 export default Ai20252026MegaTrendsBreakthroughPage;
-
-

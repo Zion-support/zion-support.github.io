@@ -6,3 +6,4 @@ import React; { useEffect } from 'react' interface PerformanceMonitorProps {/* T
   r: {metrics.renderTime.toFixed(2)}ms</div> <div>Memor,
   y: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div> </div>"'
 }"
+  </PerformanceMonitorProps>

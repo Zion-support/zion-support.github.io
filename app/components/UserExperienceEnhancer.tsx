@@ -2,20 +2,16 @@
 import React from 'react';
 'use client';
 import React, { useEffect, useState } from 'react';
-
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;
 }
-
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-
   useEffect(() => {
     // UX enhancement logic
     const enhanceUX = () => {
       // Add smooth scrolling
       document.documentElement.style.scrollBehavior = 'smooth';
-
       // Add loading states for interactive elements
       const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {
@@ -26,7 +22,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
           }, 1000);
         });
       });
-
       // Add focus indicators
       const style = document.createElement('style');
       style.textContent = `
@@ -37,11 +32,9 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       `;
       document.head.appendChild(style);
     };
-
     enhanceUX();
   }, []);
-
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
-
 export default UserExperienceEnhancer;
+  </UserExperienceEnhancerProps>

@@ -1,17 +1,12 @@
 'use client';
 import React, { useState } from 'react';
-
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 'use client';
 import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const _solutionCategories = [
     {
       id: 'ai',
@@ -46,7 +41,6 @@ $4},
       description:     ,
 $4}
   ];
-
   const solutions = {
     ai: [
       {
@@ -185,7 +179,6 @@ $4},
 $4}
     ]
   };
-
   const benefits = [
     {
       icon: Star,
@@ -208,23 +201,21 @@ $4},
       description:     ,
 $4}
   ];
-
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Our Solutions
-            </h1>
+              Our Solutions;
+  </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
             </p>
           </div>
-
           {/* Solution Categories Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -243,11 +234,9 @@ $4}
                 </button>
               ))}
             </div>
-            
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
-
   );
 };
   const [activeTab, setActiveTab] = useState('ai');
@@ -647,8 +636,7 @@ $4}
   ];
   return (<div>Coming Soon</div>)
   )
-    
-          <>
+          <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
@@ -661,15 +649,6 @@ $4}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Comprehensive technology solutions designed to transform your business operations;
 //               and drive innovation across every aspect of your organization.
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
           </div>
           {/* Solution Categories Tabs */}"
@@ -689,14 +668,6 @@ $4}
   hover:bg-slate-700/50 border-2 border-transparent'`
                   }`}
 //                 >
-                  
-          
-          
-          
-          
-          
-          
-          
           "
           <category.icon className="w-5 h-5 mr-2" /></category>"
                   <span className="font-medium">{category.name}</span>
@@ -709,7 +680,6 @@ $4}
               </p>
             </div>
           </div>
-
           {/* Solutions Grid */}
           <div className="mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -724,7 +694,6 @@ $4}
                       <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
                     </div>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -759,15 +728,13 @@ $4}
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="flex items-center justify-between">
                     <div className={`text-lg font-bold ${solution.color}`}>
                       {solution.pricing}
                     </div>
                     <a
                       href="/contact"
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                    >
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                   </div>"
@@ -775,10 +742,8 @@ $4}
                     <div className={`text-lg font-bold ${solution.color}`}></div>
                       {solution.pricing}
                     </div>
-
                     <a
                       href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-
 // >
 //                       Learn More;"
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
@@ -788,7 +753,6 @@ $4}
               ))}
             </div>
           </div>
-
           {/* Benefits Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -805,15 +769,6 @@ $4}
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Why Choose Our Solutions?
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -829,7 +784,6 @@ $4}
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -842,100 +796,49 @@ $4}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
-              </a>
+                Get Free Consultation;
+  </
               <a
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
+                (302) 464-0950;
+  </
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
-              </a>
+                Email Us;
+  </
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
 // Ready to Transform Your Business?
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Get a free consultation and discover how our solutions can revolutionize your operations;
 //               and drive unprecedented growth.
-            
-          
-          
-          
-          
-          
-          
-          
-          
-
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Get Free Consultation;
           </a>
-
               <a
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <Phone className="w-4 h-4 mr-2" /></Phone>
 // (302) 464-0950;
           </a>
-
               <a
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-
 // >
-                
-          
-          
-          
-          
-          
-          
-          
           "
           <Mail className="w-4 h-4 mr-2" /></Mail>
 // Email Us;
@@ -944,15 +847,13 @@ $4}
           </div>
         </div>
       </div>
-
       <Footer />
-    </>
-
+    </React.Fragment>
     </div>
   );
 };
-
-
 export default SolutionsPage;
-
-
+  </a>
+  </a>
+  </a>
+  </a>

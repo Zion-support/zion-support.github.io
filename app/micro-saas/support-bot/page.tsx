@@ -1,16 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, ArrowRight } from 'lucide-react';
-
 const SmartSupportBotPage: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
         <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/support-bot" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center"></div>
@@ -32,12 +30,11 @@ const SmartSupportBotPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo
-              </button>
+                View Demo;
+  </
             </div>
           </div>
         </section>
-
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -49,8 +46,8 @@ const SmartSupportBotPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default SmartSupportBotPage;
+  </button>

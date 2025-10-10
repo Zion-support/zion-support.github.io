@@ -1,8 +1,5 @@
 import React from 'react';
-
-
 interface PerformanceMetrics {// TODO: Add content;}
-
 };
   fc,
   p: number | null;
@@ -21,17 +18,12 @@ interface PerformanceMetrics {// TODO: Add content;}
     s,
   i: number | null;
 }
-
 interface PerformanceMonitorProps {// TODO: Add content;}
-
 }
-
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
-
 const EnhancedPerformanceMonitor: React.FC;
           <PerformanceMonitorProps> = ({// TODO: Add content;}
-
 }
 //   onMetricsUpdate,
   enableReporting = true,
@@ -43,7 +35,6 @@ const EnhancedPerformanceMonitor: React.FC;
           <PerformanceMetrics>({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-
   fcp: null,
     lcp: null,
     fid: null,
@@ -323,13 +314,11 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   p: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-
   fcp: metrics.fcp,
           lcp: metrics.lcp,
           fid: metrics.fid,
           cls: metrics.cls}});
     });
-
     try {/* TODO: Fix JSX expression */}
   s: ['paint'] });
       return () => observer.disconnect();
@@ -378,7 +367,6 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   const performanceScore = calculatePerformanceScore(metrics);
   return (<div>Coming Soon</div>)
   )
-    
           <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>"
       <div className="flex items-center justify-between mb-2"></div>"
         <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
@@ -387,16 +375,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
           className="text-gray-400,"
   hover:text-white"
 // >
-//
-        
-          
-          
-          
-          
-          
-          
-          
-          
+/
           </button>
       </div>"
       <div className="space-y-1"></div>"
@@ -404,8 +383,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
           <span>Performance,
   Score:</span>
           <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400'}>
-            {performanceScore}/100;
-          </span>
+            {performanceScore}/100</span>
         </div>
         {metrics.fcp !== null && ()}"
           <div className="flex justify-between"></div>
@@ -444,13 +422,10 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
         )}
       </div>"
       <div className="mt-2 text-gray-400 text-xs"></div>
-// Press Ctrl+Shift+P to toggle;
-          </div>
+// Press Ctrl+Shift+P to toggle</div>
     </div>
   );
 };
-
 export default EnhancedPerformanceMonitor;"
-
-
-
+  </PerformanceMetrics>
+  </PerformanceMonitorProps>

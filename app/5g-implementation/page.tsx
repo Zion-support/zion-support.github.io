@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
-
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
@@ -42,9 +41,8 @@ const FiveGImplementationPage: React.FC = () => {
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
     }
   ];
-
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
@@ -68,27 +66,25 @@ const FiveGImplementationPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
+                Get Started;
+  </
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Demo
-              </button>
+                Schedule Demo;
+  </
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced 5G Features
-              </h2>
+                Advanced 5G Features;
+  </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge 5G technology for the next generation of connectivity
-              </p>
+                Cutting-edge 5G technology for the next generation of connectivity;
+  </
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -112,7 +108,6 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
@@ -125,18 +120,24 @@ const FiveGImplementationPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
+                  Contact Us;
+  </
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
+                  Learn More;
+  </
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default FiveGImplementationPage;
+  </button>
+  </button>
+  </p>
+  </h2>
+  </button>
+  </button>
+  </span>

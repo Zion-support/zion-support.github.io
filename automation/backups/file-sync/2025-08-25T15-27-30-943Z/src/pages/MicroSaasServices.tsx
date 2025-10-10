@@ -713,13 +713,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <select></select>
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}"
-              className="text-left"
-            >
+              className="text-left">
               {/* TODO: Fix JSX expression */}"
                 <option key={category} value={category} className="text-left"></option>
                   {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"
-              className="text-left"
-            >
+              className="text-left">
               {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="text-left">)
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
@@ -886,14 +884,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 <a;
               <div className="text-left"></div>
                 <a
-                  href="mailto: kleber@ziontechgroup.<com" className="text-left"
-                >
+                  href="mailto: kleber@ziontechgroup.<com" className="text-left">
                   <Mail className="text-left" />
                   Get Started Today;
                 </a>
                 <a;
-                  href="tel:+<13024640950" className="text-left"
-                >,
+                  href="tel:+<13024640950" className="text-left">,
                   <Phone className="text-left" />,
                   Call Now;
               {/* Features */}"
@@ -982,14 +978,21 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left"></div>
                 <a></a>"
                   href="mailt,"
-  o: kleber@ziontechgroup.<com" className="text-left"
-                ></com>"
+  o: kleber@ziontechgroup.<com" className="text-left"></com>"
                   <Mail className="text-left" /></Mail>
                   Get Started Today;
                 </a>
                 <a></a>"
                   href="te,"
-  l:+<13024640950" className="text-left"
-                ></13024640950>"
+  l:+<13024640950" className="text-left"></13024640950>"
                   <Phone className="text-left" /></Phone>
                   Call Now;"`
+  </span>
+  </span>
+  </span>
+  </option>
+  </select>
+  </span>
+  </span>
+  </span>
+  </span>

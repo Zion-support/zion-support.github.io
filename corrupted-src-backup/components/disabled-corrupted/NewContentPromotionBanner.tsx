@@ -1,3 +1,4 @@
+import React from 'react';
 import Reac, t, { useState } fr, o, m 'rea, c, t';
 interface NewContentPromotionBannerProp, s {
   varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
@@ -43,7 +44,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
         <div, className="flex, item, s-start, justif, y-betwe, e, n"></div>
           <div, className="fl, e, x-1"></div>
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
-              <div, className="flex, item, s-center, ga, p-2" ></div> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
+              <div, className="flex, item, s-center, ga, p-2"></div> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
   const variantClasse, s = {/* TODO: Fix JSX expression */}
   }; const iconClasse, s = {/* TODO: Fix JSX expression */}
@@ -58,14 +59,14 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
         <div, className="flex, item, s-start, justif, y-betwe, e, n"></div>"
           <div, className="fl, e, x-1"></div>"
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"`
-              <div, className="flex, item, s-center, ga, p-2" > <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} /></Sparkles>"
+              <div, className="flex, item, s-center, ga, p-2"> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} /></Sparkles>"
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90"></span>
                   Fresh, Conten, t;
                 </sp, a, n>
               </div>"`
-              <div, className="flex, item, s-center, ga, p-1" > <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} /></TrendingUp>
+              <div, className="flex, item, s-center, ga, p-1"> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} /></TrendingUp>
               </div>
-              <div, className="flex, item, s-center, ga, p-1" ></div> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
+              <div, className="flex, item, s-center, ga, p-1"></div> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
               </div>
             </div>
             <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">

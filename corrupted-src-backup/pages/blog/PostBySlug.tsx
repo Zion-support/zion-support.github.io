@@ -1,8 +1,6 @@
 import React from 'react';
-
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams();
-
   // Mock data - in a real app, this would come from an API or CMS;
   const latestArticles = [
     {
@@ -18,7 +16,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
     }];
-
   const blogPosts = [
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -52,7 +49,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     },
     {/* TODO: Fix JSX expression */}
     }];
-
   const featuredPosts = [
     {
       slug: 'autonomous-enterprise-operations-2026',
@@ -86,11 +82,9 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     },
     {/* TODO: Fix JSX expression */}
     }];
-
   // Find the current post;
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   );
-
   if (!currentPost) {
     return(<div className="min-h-screen bg-gray-50">
     return (
@@ -103,15 +97,13 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           </p>
           <a;
             href="/blog"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
-          >
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
             Back to Blog;)
           </a>)
         </div>)
       </div>)
     );
   }
-
   return(<div className="min-h-screen bg-gray-50">
   return (
     <div className="min-h-screen bg-gray-50"></div>
@@ -129,7 +121,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
               <span>{currentPost.author}</span>
   if (!currentPost) {/* TODO: Fix JSX expression */}
   }
-
   return (<div className="min-h-screen bg-gray-50"></div>
       <Header /></Header>
       {/* Article Header */}"
@@ -152,7 +143,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           </div>
         </div>
       </div>
-
       {/* Article Content */}
       <div className="container mx-auto px-4 py-12"></div>
         <div className="max-w-4xl mx-auto"></div>
@@ -171,7 +161,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                 you with detailed insights, practical implementation strategies, and real-world;
                 examples to help you understand and leverage this cutting-edge technology.
               </p>
-
               <h2>Key Benefits</h2>
               <ul></ul>
                 <li>Significant performance improvements</li>
@@ -179,7 +168,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                 <li>Reduced costs and increased ROI</li>
                 <li>Scalable and future-proof solutions</li>
               </ul>
-
               <h2>Implementation Strategy</h2>
               <p>
               <p></p>
@@ -187,7 +175,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                 of experts has developed proven methodologies that ensure successful deployment and;
                 maximum value extraction.
               </p>
-
               <h2>Real-World Applications</h2>
               <p>
               <p></p>
@@ -195,7 +182,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                 remarkable results. Case studies show consistent improvements in efficiency, cost;
                 reduction, and competitive advantage.
               </p>
-
               <h2>Conclusion</h2>
               <p>
               <p></p>
@@ -207,7 +193,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           </div>
         </div>
       </div>
-
       {/* Related Posts */}
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">)
@@ -227,8 +212,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
               {featuredPosts.slice(0, 3).map((post, index) => (</div>
                 <div
                   key={index}
-                  className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                ></div>
+                  className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"></div>
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
                   <p className="text-gray-600 mb-4">{post.description}</p>

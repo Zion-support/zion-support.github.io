@@ -1,8 +1,5 @@
 import React from 'react';
-
-
 interface AccessibilitySettings {// TODO: Add content;}
-
 };
   highContras,
   t: boolean;
@@ -313,7 +310,6 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
 }
     return (<div>Coming Soon</div>)
   )
-      
           <button></button>"
         onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
   hover:bg-slate-800 transition-colors duration-200 z-50""
@@ -398,8 +394,17 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,"
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
   );
 };
-
 export default EnhancedAccessibility;"`
-
-
-
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </AccessibilitySettings>
+  </AccessibilityProps>

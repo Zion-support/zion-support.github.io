@@ -2,7 +2,7 @@
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
- */
+ *
 import React, { useState, useEffect, useCallback } from 'react';
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {
@@ -68,13 +68,11 @@ interface SystemMetrics {
     rtt: number;
     saveData: boolean;
 interface SystemMonitorProps {
-
-
 'use client';
 /**
  * System Monitor Component;
  * Real-time monitoring dashboard for performance, errors, and system health;
- */
+ *
 import React, { useState, useEffect, useCallback } from 'react';
 // Collect basic performance metrics;
 const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
@@ -262,7 +260,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {}
-
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
@@ -273,7 +270,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {}
-
       const nav = navigator as NavigatorWithConnection;
       const connection = nav.connection;
         effectiveType: connection?.effectiveType || 'unknown',
@@ -336,10 +332,8 @@ $4});
           {enableExport && (
             <button
               onClick={handleExport}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Export Data
-            </button>
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              Export Data</span>
           )}
       {lastUpdate && (
         <p className="text-sm text-gray-500 mb-4">
@@ -542,8 +536,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   focus:ring-2,"
   focus:ring-blue-500"
 // >
-//               Export Data;
-          </button>
+//               Export Data</button>
           )}
       {lastUpdate && ()}"
           <p className="text-sm text-gray-500 mb-4"></p>
@@ -613,14 +606,6 @@ className={`h-2 rounded-full ${}
                   }`}
                   style={/* TODO: Fix JSX expression */}`
   h: `${Math.min(metrics.memory.percentage, 100)}%` }}
-          
-          
-          
-          
-          
-          
-          
-          
           "
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>"
           <div className="space-y-2 max-h-64 overflow-y-auto"></div>
@@ -647,7 +632,36 @@ className={`h-2 rounded-full ${}
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}"
           <div key={category} className="flex justify-between text-sm"></div>"
                     <span className="capitalize">{category}</span>
-
-export default SystemMonitor;
-
-
+export default SystemMonitor</Date>
+  </SystemMetrics>
+  </SystemMonitorProps>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </span>
+  </span>
+  </span>
+  </span>
+  </div>
+  </span>
+  </span>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </Date>
+  </SystemMetrics>
+  </SystemMonitorProps>

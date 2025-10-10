@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-
       icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -42,8 +41,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
     }
   ];
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEOOptimizer 
@@ -52,7 +49,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
         keywords="healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology"
       />
       <Navigation />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -61,8 +57,8 @@ import SEOOptimizer from '../components/SEOOptimizer';
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Healthcare
             <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-              IT Solutions
-            </span>
+              IT Solutions;
+  </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
@@ -71,19 +67,17 @@ import SEOOptimizer from '../components/SEOOptimizer';
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-            </button>
+              Learn More;
+  </
 </div>
         </div>
       </section>
-
 {/* Features Section */}
       <section className="py-20 px-4">
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
@@ -95,7 +89,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -107,7 +100,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
               Experience the benefits of modern healthcare technology with our proven solutions.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -115,25 +107,24 @@ import SEOOptimizer from '../components/SEOOptimizer';
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className="py-20 px-4">
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
-              View Case Studies
-            </button>
+              View Case Studies;
+  </
           </div>
         </div>
       </section>
-
       <Footer />
 </div>
-
   );
 }
+  </button>
+  </span>
+  </SEOOptimizer>

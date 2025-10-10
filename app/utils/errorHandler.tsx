@@ -456,7 +456,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           'Content-Type': 'application/json'
         })
     body: JSON.stringify(error)
-
     try {,
       await fetch(this.config.reportEndpoint, {)
         method: 'POST'),
@@ -496,7 +495,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           ...error,
           timestamp: error.timestamp.toISOString()
         })
-
     } catch (err) {}
       }
   }
@@ -688,7 +686,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     setTimeout(() => {/* TODO: Fix JSX expression */}
     }, this.config.retryDelay * retryItem.retryCount);
   }
-
   // Retry error
   private async retryError(retryItem: { error: AppError; retryCount: number }) {
     try {
@@ -794,7 +791,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       (acc, error) => {
       {} as Record<ErrorType, number>
             `);
-
           }
         }
         // Add your retry logic here;
@@ -864,11 +860,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler
       window.addEventListener('error', event => {)
     this.handleError(event.error || new Error(event.message));
-
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {)
     this.handleError(new Error(event.reason));
-
     }
   }
 }</ErrorSeverity>
@@ -876,7 +870,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler;
       window.addEventListener('error', event => {)
         this.handleError(event.error || new Error(event.message));
-
       // Set up unhandled promise rejection handler;
       window.addEventListener('unhandledrejection', event => {)
   init(): void {}
@@ -884,11 +877,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler
       window.addEventListener('error', event => {)}
         this.handleError(event.error || new Error(event.message));
-
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {)}
         this.handleError(new Error(event.reason));
-
   init(): void {/* TODO: Fix JSX expression */}
       });
       // Set up unhandled promise rejection handler;
@@ -919,7 +910,6 @@ export class ErrorBoundary extends React.Component<
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.errorHandler.handleError(error, errorInfo, {)}
       component: 'ErrorBoundary'
-
   })
     render() {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
@@ -1045,3 +1035,12 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
 };
 export default ErrorHandler;
 "`
+  </h2>
+  </ErrorSeverit>
+  </strong>
+  </strong>
+  </ErrorHandlerConfig>
+  </ErrorHandlerConfig>
+  </ErrorHandlerConfig>
+  </ErrorHandlerConfig>
+  </strin>

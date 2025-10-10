@@ -36,31 +36,28 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-
 const AboutPage: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                About Zion Tech Group
-              </h1>
+                About Zion Tech Group;
+  </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
               </p>
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
 <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
@@ -79,15 +76,13 @@ const AboutPage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
                     <MessageCircle className="w-5 h-5" />
                     <span>Get in Touch</span>
                   </a>
                   <a
                     href="/services"
-                    className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
+                    className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2">
                     <Settings className="w-5 h-5" />
                     <span>Our Services</span>
                   </a>
@@ -110,14 +105,12 @@ const AboutPage: React.FC = () => {
                       <div className="text-2xl font-bold">AI Dashboard</div>
                       <div className="text-sm text-gray-300">Real-time Analytics</div>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
           </div>
 </section>
-
         {/* Values Section */}
         <section className="py-16 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -150,7 +143,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -160,17 +152,19 @@ const AboutPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started
-              </button>
+                Get Started;
+  </
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
-                Contact Us
-              </button>
+                Contact Us;
+  </
             </div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
 );
 };
-
 export default AboutPage;
+  </button>
+  </button>
+  </h1>

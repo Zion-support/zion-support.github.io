@@ -1,10 +1,7 @@
 import React, { ReactNode } from 'react';
-
 import { Helmet } from 'react-helmet-async';
-
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
-
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -12,10 +9,8 @@ const,
     addres,
   s: {/* TODO: Fix JSX expression */}
     }};
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
@@ -31,7 +26,6 @@ const,
         <meta name="rating" content="general" /></meta>
         {/* Canonical URL */}"
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
         {/* Open Graph Tags */}"
         <meta property="o,"
   g:type" content={ogType} /></meta>"
@@ -69,7 +63,6 @@ const,
         <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
         {/* Structured Data */}"
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
-
         {/* Preconnect to external domains */}"
         <link rel="preconnect" href="http,"
   s://fonts.googleapis.com" /></link>"
@@ -85,9 +78,9 @@ const,
         <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
       </Helmet>
       {children}
-    </>
+    </React.Fragment>
   );
 };
-
 export default SEOEnhancer;
 "
+  </SEOEnhancerProps>

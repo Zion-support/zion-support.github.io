@@ -1,10 +1,9 @@
-
-
+import React from 'react';
 'use client';
 /**
  * SEO Component;
  * Provides comprehensive SEO meta tags and structured data;
- */
+ *
 export interface SEOProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -141,8 +140,5 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   };
   return null;
 };
-
 export default SEO;`
-
-
-
+  </SEOProps>

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 interface ImageOptimizerProps {
   src: string;
   alt: string;
@@ -11,7 +10,6 @@ interface ImageOptimizerProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   src;
   alt,
@@ -28,7 +26,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
     if (priority) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -41,27 +38,21 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
         threshold: 0.01;
       }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [priority]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     setHasError(true);
     onError?.();
   };
-
   const generatePlaceholder = () => {
     if (placeholder) return placeholder;
-    
     const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <rect width="100%" height="100%" fill="#1e293b"/>
@@ -77,7 +68,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     ,
     return `data:image/svg+xml;base64,${btoa(svg)}`;
   };
-
   if (hasError) {
     return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
@@ -90,7 +80,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       </div>)
     );
   }
-
   return(<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
@@ -108,7 +97,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
           style={{ filter: 'blur(1 px)' }}
         /></img>
       )}
-      
       {/* Actual Image */}
       {isInView && (
         <img;
@@ -127,5 +115,5 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     </div>
   );
 };
-
 export default ImageOptimizer;
+  </ImageOptimizerProps>

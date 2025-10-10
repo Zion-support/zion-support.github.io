@@ -1,7 +1,5 @@
 import React from 'react';
-
 interface SkeletonProps {// TODO: Add content;}
-
 }
   className?: string;
   width?: string | number;
@@ -21,25 +19,12 @@ const,
   animated = true;)
 }) => {const roundedClasses = rounded ? 'rounded' : '';}
   const animatedClasses = animated ? 'animate-pulse' : '';
-
   return (
     <div className="loadingskeleton">
-
       {/* Component content */}
     </div>)
   );
 };
-
-
-          
-
-          
-          
-          
-          
-          
-          
-          
           "
           <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded /></div>
 );
@@ -49,22 +34,12 @@ export const,
           <div className="space-y-2"></div>
     {/* TODO: Fix JSX expression */}
   h: lines }).map((_, index) => ()
-      
           <Skeleton></Skeleton>
         key={index}"
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
 // />
     ))}
-  
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
 );
 export const,
@@ -112,14 +87,6 @@ export const,
 // >
         {/* TODO: Fix JSX expression */}
   h: columns }).map((_, colIndex) => ()
-          
-          
-          
-          
-          
-          
-          
-          
           "
           <Skeleton key={colIndex} height="16px" /></Skeleton>
         ))}
@@ -127,7 +94,4 @@ export const,
     ))}
   </div>
 );
-export default Skeleton;
-
-
-
+export default Skeleton</SkeletonProps>

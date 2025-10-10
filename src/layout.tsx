@@ -1,14 +1,9 @@
 import Analytics from './components/Analytics';
-
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 import Analytics from './components/Analytics';
-
 export default function RootLayout({
   children}: {
   children: React.ReactNode;
@@ -50,7 +45,6 @@ export default function RootLayout({
       addressCountry: 'US',
     offers: [
       {
-
   const address = {
     '@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
@@ -175,7 +169,6 @@ $4]
       </body>
     </html>
   );
-
 export default RootLayout;
         priceSpecification: {// TODO: Add content;}
 }
@@ -187,10 +180,6 @@ export default RootLayout;
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
-
-
-
 export default SrcPage;
-
-
 }
+  </script>

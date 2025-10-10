@@ -203,14 +203,12 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
               </p>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
                 <a, hre, f="/bl, o, g""
-                  className="bg-gradie, n, t-to-r, fro, m-viol, e, t-500, t, o-purp, l, e-600, hove, r:fr, o, m-viol, e, t-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
-                ></a>"
+                  className="bg-gradie, n, t-to-r, fro, m-viol, e, t-500, t, o-purp, l, e-600, hove, r:fr, o, m-viol, e, t-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></a>"
                   <Rocket, className="w-5 h-5" /></Rocket>
                   <sp, a, n>Explore, All, Content</sp, a, n>
                 </a>"
                 <a, hre, f="/newslett, e, r""
-                  className="bord, e, r-2, borde, r-viol, e, t-500, tex, t-viol, e, t-400, hove, r:bg-viol, e, t-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
-                ></a>
+                  className="bord, e, r-2, borde, r-viol, e, t-500, tex, t-viol, e, t-400, hove, r:bg-viol, e, t-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"></a>
                   <sp, a, n>Subscribe, to, Updates</sp, a, n>"
                   <Link, className="w-5 h-5" /></Link>
                 </a>

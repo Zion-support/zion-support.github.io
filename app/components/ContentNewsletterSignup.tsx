@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
-
 interface ContentNewsletterSignupProps {
   title?: string;
   subtitle?: string;
@@ -13,7 +12,6 @@ interface ContentNewsletterSignupProps {
   }>;
   onSubscribe?: (email: string) => void;
 }
-
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -42,13 +40,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-
     setIsLoading(true);
-    
     try {
       if (onSubscribe) {
         await onSubscribe(email);
@@ -56,7 +51,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
-      
       setIsSubscribed(true);
       setEmail('');
     } catch (error) {
@@ -65,7 +59,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsLoading(false);
     }
   };
-
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4">
@@ -81,15 +74,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           </p>
           <button
             onClick={() => setIsSubscribed(false)}
-            className="text-white underline hover:text-blue-200 transition-colors"
-          >
-            Subscribe another email
-          </button>
+            className="text-white underline hover:text-blue-200 transition-colors">
+            Subscribe another email;
+  </
         </div>
       </div>
     );
   }
-
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -102,7 +93,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             <p className="text-xl text-blue-100 mb-8">
               {subtitle}
             </p>
-            
             <div className="space-y-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -114,14 +104,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               ))}
             </div>
           </div>
-
           {/* Newsletter Form */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address
-                </label>
+                  Email Address;
+  </
                 <input
                   type="email"
                   id="email"
@@ -132,25 +121,22 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
                 />
               </div>
-              
               <button
                 type="submit"
                 disabled={isLoading || !email}
-                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
-              >
+                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center">
                 {isLoading ? (
-                  <>
+                  <React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </>
+                  </React.Fragment>
                 )}
               </button>
-              
               <p className="text-sm text-blue-200 text-center">
                 We respect your privacy. Unsubscribe at any time.
               </p>
@@ -161,5 +147,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     </div>
   );
 };
-
 export default ContentNewsletterSignup;
+  </label>
+  </button>
+  </ContentNewsletterSignupProps>

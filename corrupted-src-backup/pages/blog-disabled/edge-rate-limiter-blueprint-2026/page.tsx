@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function BlogPost(): React.JSX.Element {
-  return(<>
+  return(<React.Fragment>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
@@ -12,7 +11,6 @@ export default function BlogPost(): React.JSX.Element {
             content="Edge Rate Limiter Blueprint 2026 - Latest insights from Zion Tech Group"
           /></meta>
         </Helmet>
-
         <div className="max-w-4xl mx-auto px-4 py-20">
           <div className="mb-12">
             <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
@@ -20,8 +18,8 @@ export default function BlogPost(): React.JSX.Element {
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Edge Rate Limiter Blueprint 2026
-            </h1>
+              Edge Rate Limiter Blueprint 2026;
+  </
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
               <span>•</span>
@@ -30,7 +28,6 @@ export default function BlogPost(): React.JSX.Element {
               <span>5 min read</span>
             </div>
           </div>
-
           <div className="prose prose-lg prose-invert max-w-none"></div>
             <div className="text-gray-200 leading-relaxed"></div>
               <h2>Introduction</h2>
@@ -44,7 +41,6 @@ export default function BlogPost(): React.JSX.Element {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
                 incididunt ut labore et dolore magna aliqua.
               </p>
-
               <h2>Conclusion</h2>
               <p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
@@ -52,7 +48,6 @@ export default function BlogPost(): React.JSX.Element {
               </p>
             </div>
           </div>
-
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
             <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
               <div>)
@@ -68,8 +63,7 @@ export default function BlogPost(): React.JSX.Element {
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Edge Rate Limiter Blueprint 2026')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
+                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     Twitter;
                   </a>,
                   <a;
@@ -112,6 +106,8 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
           </div>
         </div>
       </div>,
-    </>);
+    </React.Fragment>);
 }
 "`
+  </h1>
+  </h1>

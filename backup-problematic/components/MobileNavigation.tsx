@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface MobileNavigationProps {/* TODO: Fix JSX expression */}
 }
-
 const MobileNavigation = React.memo(function MobileNavigation({)
   className = '')
 }: MobileNavigationProps) {
@@ -21,6 +19,5 @@ const MobileNavigation = React.memo(function MobileNavigation({/* TODO: Fix JSX 
     </div>
   );
 });
-
 export default MobileNavigation;
 "`

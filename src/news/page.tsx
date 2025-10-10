@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
-
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
@@ -68,18 +67,15 @@ const NewsPage: React.FC = () => {
       readTime: '5 min read'
     }
   ];
-
   const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
-
   const stats = [
     { icon: Users, number: '100+', label: 'Happy Clients' },
     { icon: Award, number: '50+', label: 'Awards Won' },
     { icon: TrendingUp, number: '300%', label: 'Average ROI' },
     { icon: Globe, number: '25+', label: 'Countries Served' }
   ];
-
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="News & Updates - Zion Tech Group"
         description="Stay updated with the latest news, product launches, and success stories from Zion Tech Group. Discover our AI innovations and enterprise transformations."
@@ -88,22 +84,20 @@ const NewsPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              News & Updates
-            </h1>
+              News & Updates;
+  </
             <p className="text-xl text-cyan-400 mb-8">
-              Stay informed with our latest innovations and success stories
-            </p>
+              Stay informed with our latest innovations and success stories;
+  </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Discover the latest developments in AI technology, product launches, 
               client success stories, and industry insights from Zion Tech Group.
             </p>
           </section>
-
           {/* Stats Section */}
           <section className="mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -116,12 +110,11 @@ const NewsPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Featured Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Featured News
-            </h2>
+              Featured News;
+  </
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {newsArticles.filter(article => article.featured).map((article) => (
                 <article key={article.id} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
@@ -152,8 +145,7 @@ const NewsPage: React.FC = () => {
                   </p>
                   <Link
                     to={`/blog/${article.id}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-white transition-colors"
-                  >
+                    className="inline-flex items-center text-cyan-400 hover:text-white transition-colors">
                     Read More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -161,12 +153,11 @@ const NewsPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* All Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Latest Updates
-            </h2>
+              Latest Updates;
+  </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {newsArticles.map((article) => (
                 <article key={article.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -197,8 +188,7 @@ const NewsPage: React.FC = () => {
                   </p>
                   <Link
                     to={`/blog/${article.id}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-white transition-colors text-sm"
-                  >
+                    className="inline-flex items-center text-cyan-400 hover:text-white transition-colors text-sm">
                     Read More
                     <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
@@ -206,16 +196,15 @@ const NewsPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Newsletter Signup */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Stay Updated
-              </h2>
+                Stay Updated;
+  </
               <p className="text-xl text-gray-300 mb-8">
-                Subscribe to our newsletter for the latest AI insights and company updates
-              </p>
+                Subscribe to our newsletter for the latest AI insights and company updates;
+  </
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
@@ -223,8 +212,8 @@ const NewsPage: React.FC = () => {
                   className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
                 <button className="cyber-button px-8 py-3 font-semibold">
-                  Subscribe
-                </button>
+                  Subscribe;
+  </
               </div>
               <p className="text-gray-400 text-sm mt-4">
                 No spam, unsubscribe at any time.
@@ -232,11 +221,17 @@ const NewsPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default NewsPage;
+  </button>
+  </p>
+  </h2>
+  </h2>
+  </h2>
+  </p>
+  </h1>
+  </SEOOptimizer>

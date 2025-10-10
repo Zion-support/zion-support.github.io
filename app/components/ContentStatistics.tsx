@@ -1,149 +1,137 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
+import React from 'react';
+import { TrendingUp, Users, Award, Zap, Star, Shield, Globe, CheckCircle } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0
-  });
+interface StatItem {
+  id: string;
+  value: string;
+  label: string;
+  change?: string;
+  changeType?: 'positive' | 'negative' | 'neutral';
+  icon?: React.ComponentType<any>;
+  description?: string;
+}
 
-  const targetCounters = {
-    clients: 500,
-    projects: 1000,
-    satisfaction: 99,
-    years: 10
+interface ContentStatisticsProps {
+  title?: string;
+  description?: string;
+  stats: StatItem[];
+  variant?: 'default' | 'compact' | 'detailed';
+  showIcons?: boolean;
+  animated?: boolean;
+}
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({
+  title = 'Our Impact',
+  description = 'Numbers that speak for themselves',
+  stats,
+  variant = 'default',
+  showIcons = true,
+  animated = true
+}) => {
+  const getChangeColor = (changeType?: string) => {
+    switch (changeType) {
+      case 'positive':
+        return 'text-green-400';
+      case 'negative':
+        return 'text-red-400';
+      default:
+        return 'text-gray-400';
+    }
   };
 
-  const statistics = [
-    {
-      icon: Users,
-      value: counters.clients,
-      label: 'Happy Clients',
-      suffix: '+',
-      color: 'text-cyan-400',
-      description: 'Satisfied customers worldwide'
-    },
-    {
-      icon: Award,
-      value: counters.projects,
-      label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400',
-      description: 'Successful implementations'
-    },
-    {
-      icon: TrendingUp,
-      value: counters.satisfaction,
-      label: 'Client Satisfaction',
-      suffix: '%',
-      color: 'text-green-400',
-      description: 'Customer satisfaction rate'
-    },
-    {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
-      color: 'text-yellow-400',
-      description: 'Industry expertise'
+  const getChangeIcon = (changeType?: string) => {
+    switch (changeType) {
+      case 'positive':
+        return '↗';
+      case 'negative':
+        return '↘';
+      default:
+        return '→';
     }
-  ];
+  };
 
-  const achievements = [
-    {
-      icon: Brain,
-      title: 'AI Innovation',
-      description: 'Leading the industry in AI-powered solutions'
-    },
-    {
-      icon: Shield,
-      title: 'Security Excellence',
-      description: 'Bank-level security for all our solutions'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients across 50+ countries'
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: '99.9% uptime and lightning-fast response'
-    }
-  ];
+  const renderStatItem = (stat: StatItem, index: number) => {
+    const IconComponent = stat.icon || TrendingUp;
+    
+    return (
+      <div
+        key={stat.id}
+        className={`bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 ${
+          animated ? 'group' : ''
+        }`}
+      >
+        <div className="flex items-start justify-between mb-4">
+          {showIcons && (
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <IconComponent className="w-6 h-6 text-white" />
+            </div>
+          )}
+          {stat.change && (
+            <div className={`text-sm font-medium ${getChangeColor(stat.changeType)}`}>
+              <span className="mr-1">{getChangeIcon(stat.changeType)}</span>
+              {stat.change}
+            </div>
+          )}
+        </div>
 
-  useEffect(() => {
-    const timers = Object.keys(targetCounters).map(key => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const duration = 2000; // 2 seconds
-      const increment = target / (duration / 16); // 60fps
-      
-      return setInterval(() => {
-        setCounters(prev => {
-          const current = prev[key as keyof typeof prev];
-          if (current < target) {
-            return {
-              ...prev,
-              [key]: Math.min(current + increment, target)
-            };
-          }
-          return prev;
-        });
-      }, 16);
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
+        <div className="space-y-2">
+          <div className="text-3xl md:text-4xl font-bold text-white">
+            {stat.value}
+          </div>
+          <div className="text-lg text-gray-300 font-medium">
+            {stat.label}
+          </div>
+          {stat.description && variant === 'detailed' && (
+            <div className="text-sm text-gray-400">
+              {stat.description}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+    <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Our Impact in Numbers</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {title}
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how we've helped businesses transform with our AI and IT solutions
+            {description}
           </p>
         </div>
 
-        {/* Statistics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:border-cyan-400/50 transition-all duration-300">
-              <div className="flex justify-center mb-4">
-                <div className="bg-gradient-to-r from-cyan-500 to-purple-500 w-16 h-16 rounded-full flex items-center justify-center">
-                  <stat.icon className="h-8 w-8 text-white" />
-                </div>
-              </div>
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {Math.floor(stat.value)}{stat.suffix}
-              </div>
-              <div className="text-white font-semibold mb-2">{stat.label}</div>
-              <div className="text-gray-300 text-sm">{stat.description}</div>
-            </div>
-          ))}
+        {/* Stats Grid */}
+        <div className={`grid gap-8 ${
+          variant === 'compact' 
+            ? 'grid-cols-2 md:grid-cols-4' 
+            : variant === 'detailed'
+            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+            : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+        }`}>
+          {stats.map((stat, index) => renderStatItem(stat, index))}
         </div>
 
-        {/* Achievements */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <achievement.icon className="h-6 w-6 text-white" />
-                </div>
+        {/* Additional Info */}
+        {variant === 'detailed' && (
+          <div className="mt-16 text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span className="text-green-400 font-medium">Trusted by Industry Leaders</span>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
-              <p className="text-gray-300 text-sm">{achievement.description}</p>
+              <p className="text-gray-300">
+                Our solutions are powering innovation across industries, from startups to Fortune 500 companies.
+              </p>
             </div>
-          ))}
-        </div>
+          </div>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 

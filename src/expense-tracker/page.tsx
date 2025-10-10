@@ -2,8 +2,6 @@
 import React from 'react';
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
@@ -34,7 +32,6 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-
   const pricingPlans = [
       name: 'Personal',
       price: '$9',
@@ -48,8 +45,8 @@ $4}
         'Email support',
         '1 year data retention'
       ],
-      popular: false
-      name: 'Business',
+      popular: false,
+    name: 'Business',
       price: '$29',
       description: 'Ideal for small businesses',
         'Up to 10 users',
@@ -60,8 +57,8 @@ $4}
         'API access',
         'Advanced reporting',
         '2 years data retention'
-      popular: true
-      name: 'Enterprise',
+      popular: true,
+    name: 'Enterprise',
       price: '$99',
       description: 'For large organizations',
         'Unlimited users',
@@ -72,7 +69,6 @@ $4}
         'White-label options',
         'Unlimited data retention',
         'Custom compliance rules'
-
   const integrations = [
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
@@ -82,14 +78,13 @@ $4}
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
-
   const testimonials = [
       name: 'Michael Johnson',
       company: 'Small Business Owner',
       role: 'CEO',
       content: 'Expense Tracker saved me 10 hours per month on bookkeeping. The AI categorization is incredibly accurate.',
-      rating: 5
-      name: 'Sarah Williams',
+      rating: 5,
+    name: 'Sarah Williams',
       company: 'Marketing Agency',
       role: 'Finance Manager',
       content: 'Our expense processing time dropped from 2 days to 2 hours. The automated workflows are game-changing.',
@@ -97,7 +92,6 @@ $4}
       company: 'Consulting Firm',
       role: 'Operations Director',
       content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -107,11 +101,11 @@ $4}
             <Receipt className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Expense Tracker
-          </h1>
+            AI Expense Tracker;
+  </
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Smart Financial Management
-          </p>
+            Smart Financial Management;
+  </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your expense management with AI-powered receipt scanning, automated categorization, 
             and intelligent financial insights. Save time, reduce errors, and gain complete control 
@@ -119,17 +113,15 @@ $4}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
-            </a>
+              Call: (302) 464-0950;
+  </
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              Start Free Trial
-            </Link>
-
+              Start Free Trial;
+  </
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -145,12 +137,11 @@ $4}
             <div className="text-4xl font-bold text-orange-400 mb-2">5x</div>
             <div className="text-white font-semibold mb-2">Faster Processing</div>
             <div className="text-gray-300 text-sm">With automated workflows</div>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Expense Management Features
-          </h2>
+            Powerful Expense Management Features;
+  </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -160,7 +151,6 @@ $4}
                 <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
             ))}
         </section>
-
         {/* Integrations Section */}
             Integrates with Your Tools
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -169,7 +159,6 @@ $4}
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
-
         {/* Pricing Section */}
             Simple, Transparent Pricing
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -198,9 +187,8 @@ $4}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started
-                </button>
-
+                  Get Started;
+  </
         {/* Testimonials */}
             What Our Customers Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -214,22 +202,17 @@ $4}
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Expenses?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using AI Expense Tracker to streamline financial 
-
-
-
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [];
   return (
     {// TODO: Add content;}
-
 };
   ico,
   n: Receipt,
@@ -240,32 +223,17 @@ const ExpenseTrackerPage: React.FC = () => {
       benefi,
   t: 'Save 8+ hours per month'
     },
-
       icon: TrendingUp,
       title: 'Real-time Analytics',
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%',
-
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 const PagePage: React.FC = () => {
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>"
         <div className="text-center mb-16"></div>"
@@ -283,30 +251,18 @@ const PagePage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Transform your expense management with AI-powered receipt scanning, automated categorization,
             and intelligent financial insights. Save time, reduce errors, and gain complete control;
-
             over your business finances.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-
 // >
-              
-          
-          
-          
-          
-          
-          
-          
           "
           <Phone className="w-5 h-5 mr-2" />,
  Cal,
   l: (302) 464-0950;
             </a>
-
             <Link
               href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-
 Start Free Trial;
             </Link>
         {/* Key Benefits */}"
@@ -416,8 +372,29 @@ Most Popular;
             management and gain better control over their spending.
   );
 };
-
-
 export default ExpenseTrackerPage;
-
-
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </h2>
+  </div>
+  </div>
+  </Link>
+  </a>
+  </div>
+  </p>
+  </p>
+  </div>
+  </section>
+  </div>

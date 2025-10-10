@@ -1,86 +1,106 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
-const BlogPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  image: string;
+  featured: boolean;
+}
 
-  const blogPosts = [
+const BlogPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+  
+  const blogPosts: BlogPost[] = [
     {
-      id: 1,
-      title: 'The Future of AI in Business: Trends and Predictions for 2024',
-      excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
-      author: 'Zion Tech Team',
+      id: '1',
+      title: 'The Future of AI in Enterprise Solutions',
+      excerpt: 'Exploring how artificial intelligence is transforming business operations and creating new opportunities for growth.',
+      content: 'Full article content...',
+      author: 'Dr. Sarah Chen',
       date: '2024-01-15',
-      category: 'AI & Technology',
-      readTime: '5 min read'
+      readTime: '5 min read',
+      category: 'AI & Machine Learning',
+      tags: ['AI', 'Enterprise', 'Innovation'],
+      image: '/images/blog/ai-enterprise.jpg',
+      featured: true
     },
     {
-      id: 2,
-      title: 'Cloud Migration Best Practices: A Complete Guide',
-      excerpt: 'Learn the essential steps and strategies for successful cloud migration that minimizes downtime and maximizes benefits.',
-      author: 'Cloud Solutions Team',
+      id: '2',
+      title: 'Cloud Migration Best Practices',
+      excerpt: 'A comprehensive guide to successfully migrating your infrastructure to the cloud.',
+      content: 'Full article content...',
+      author: 'Mike Johnson',
       date: '2024-01-10',
-      category: 'Cloud Services',
-      readTime: '8 min read'
+      readTime: '8 min read',
+      category: 'Cloud Computing',
+      tags: ['Cloud', 'Migration', 'Best Practices'],
+      image: '/images/blog/cloud-migration.jpg',
+      featured: false
     },
     {
-      id: 3,
-      title: 'Cybersecurity in the Age of AI: Protecting Your Digital Assets',
-      excerpt: 'Discover how AI is both enhancing cybersecurity capabilities and creating new challenges that businesses must address.',
-      author: 'Security Team',
+      id: '3',
+      title: 'Cybersecurity Trends for 2024',
+      excerpt: 'Stay ahead of the latest cybersecurity threats and protection strategies.',
+      content: 'Full article content...',
+      author: 'Alex Thompson',
       date: '2024-01-05',
+      readTime: '6 min read',
       category: 'Cybersecurity',
-      readTime: '6 min read'
+      tags: ['Security', 'Trends', 'Protection'],
+      image: '/images/blog/cybersecurity.jpg',
+      featured: true
     },
     {
-      id: 4,
-      title: 'Micro SaaS Solutions: Building Scalable AI-Powered Tools',
-      excerpt: 'Learn how to create and scale micro SaaS applications that leverage AI to solve specific business problems.',
-      author: 'Product Team',
+      id: '4',
+      title: 'Building Scalable Web Applications',
+      excerpt: 'Learn the principles and techniques for creating applications that can handle millions of users.',
+      content: 'Full article content...',
+      author: 'Emma Wilson',
       date: '2024-01-01',
-      category: 'Micro SaaS',
-      readTime: '7 min read'
-    },
-    {
-      id: 5,
-      title: 'Enterprise AI Implementation: A Strategic Approach',
-      excerpt: 'Best practices for implementing AI solutions at enterprise scale, including change management and ROI measurement.',
-      author: 'Enterprise Team',
-      date: '2023-12-28',
-      category: 'AI & Technology',
-      readTime: '9 min read'
-    },
-    {
-      id: 6,
-      title: 'The Rise of Edge Computing in AI Applications',
-      excerpt: 'How edge computing is revolutionizing AI deployment and enabling real-time processing at the network edge.',
-      author: 'Infrastructure Team',
-      date: '2023-12-20',
-      category: 'Cloud Services',
-      readTime: '6 min read'
+      readTime: '8 min read',
+      category: 'Development',
+      tags: ['Web Development', 'Scalability', 'Architecture'],
+      image: '/images/blog/scalable-apps.jpg',
+      featured: false
     }
   ];
 
-  const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights'];
+  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.category.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  useEffect(() => {
+    let filtered = blogPosts;
+    if (searchTerm) {
+      filtered = filtered.filter(post =>
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(post => post.category === selectedCategory);
+    }
+    setFilteredPosts(filtered);
+  }, [searchTerm, selectedCategory]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Blog | Zion Tech Group - AI & IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />
-        <meta name="keywords" content="AI blog, technology insights, cloud computing, cybersecurity, micro SaaS, tech trends" />
+        <title>Blog - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, technology, and business innovation from Zion Tech Group experts." />
+        <meta name="keywords" content="AI blog, technology insights, business innovation, Zion Tech Group" />
       </Helmet>
 
       <section className="py-20 px-4">
@@ -98,67 +118,68 @@ const BlogPage: React.FC = () => {
               <input
                 type="text"
                 placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
-          </div>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full border transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
-                    : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+            <div className="flex flex-wrap justify-center gap-2 mb-8">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group"
               >
-                <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <div className="text-4xl font-bold mb-2">{post.category.charAt(0)}</div>
-                      <div className="text-sm opacity-80">{post.category}</div>
-                    </div>
+                <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-600 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-black/20" />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      {post.category}
+                    </span>
                   </div>
+                  {post.featured && (
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-bold">
+                        Featured
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 <div className="p-6">
-                  <div className="flex items-center gap-4 mb-3 text-sm text-gray-400">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </span>
-                    <span className="flex items-center gap-1">
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                    <div className="flex items-center gap-1">
                       <User className="w-4 h-4" />
                       {post.author}
-                    </span>
-                    <span className="flex items-center gap-1">
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      {new Date(post.date).toLocaleDateString()}
+                    </div>
+                    <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       {post.readTime}
-                    </span>
+                    </div>
                   </div>
 
-                  <div className="flex items-center gap-2 mb-4">
-                    <Tag className="w-4 h-4 text-cyan-400" />
-                    <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
-                  </div>
-
-                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                     {post.title}
                   </h2>
                   
@@ -166,29 +187,39 @@ const BlogPage: React.FC = () => {
                     {post.excerpt}
                   </p>
 
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {post.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="flex items-center gap-1 text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full"
+                      >
+                        <Tag className="w-3 h-3" />
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
                   <Link
                     to={`/blog/${post.id}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors"
                   >
                     Read More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </article>
             ))}
           </div>
-          
+
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
+              <div className="text-gray-400 mb-4">
+                <Search className="w-16 h-16 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">No articles found</h3>
+                <p>Try adjusting your search terms or category filters.</p>
+              </div>
             </div>
           )}
-
-          <div className="text-center mt-12">
-            <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-              Load More Articles
-            </button>
-          </div>
         </div>
       </section>
     </div>

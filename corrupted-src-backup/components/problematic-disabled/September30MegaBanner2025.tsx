@@ -235,15 +235,13 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         {/* CTA, Butt, o, n, s */}"
         <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-5, justif, y-cent, e, r"></div>"
           <Link, t, o="/bl, o, g""
-            className="group, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-purp, l, e-500, hove, r:fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-purp, l, e-400, tex, t-white, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, shado, w-2xl, hove, r:shad, o, w-3xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4"
-          ></Link>"
+            className="group, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-purp, l, e-500, hove, r:fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-purp, l, e-400, tex, t-white, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, shado, w-2xl, hove, r:shad, o, w-3xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4"></Link>"
             <Rocket, className="w-7 h-7, grou, p-hov, e, r:rota, t, e-12, transitio, n-transfo, r, m" /></Rocket>
             <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>"
             <Link, className="w-6 h-6, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" /></Link>
           </Li, n, k>"
           <Link, t, o="/conta, c, t""
-            className="group, borde, r-3, borde, r-white, hove, r:bg-white, tex, t-white, hove, r:te, x, t-indi, g, o-900, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4, shado, w-xl, hove, r:shad, o, w-2, x, l"
-          ></Link>"
+            className="group, borde, r-3, borde, r-white, hove, r:bg-white, tex, t-white, hove, r:te, x, t-indi, g, o-900, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4, shado, w-xl, hove, r:shad, o, w-2, x, l"></Link>"
             <Lightbulb, className="w-7 h-7, grou, p-hov, e, r:anima, t, e-pul, s, e" /></Lightbulb>
             <sp, a, n>Schedule, AI, Strategy Ca, l, l</sp, a, n>
           </Li, n, k>

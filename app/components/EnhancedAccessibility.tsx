@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useEffect } from 'react';
-
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add ARIA landmarks
@@ -10,18 +8,15 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
-
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
       }
-
       const footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
     };
-
     // Add skip links
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
@@ -30,7 +25,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
-
     // Enhance focus management
     const enhanceFocusManagement = () => {
       // Add focus indicators
@@ -64,12 +58,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       `;
       document.head.appendChild(style);
     };
-
     // Initialize accessibility enhancements
     addLandmarks();
     addSkipLinks();
     enhanceFocusManagement();
-
     // Cleanup function
     return () => {
       const skipLink = document.querySelector('a[href="#main-content"]');
@@ -78,8 +70,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       }
     };
   }, []);
-
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
-
 export default EnhancedAccessibility;

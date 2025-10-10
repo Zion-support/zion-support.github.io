@@ -1,9 +1,7 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
 const BlockchainWeb3Page: React.FC = () => {
   const features = [
     {
@@ -31,14 +29,12 @@ const BlockchainWeb3Page: React.FC = () => {
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
     }
   ];
-
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -49,7 +45,6 @@ const BlockchainWeb3Page: React.FC = () => {
               Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
@@ -75,8 +70,7 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
-
 export default BlockchainWeb3Page;

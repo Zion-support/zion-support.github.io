@@ -1,10 +1,8 @@
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
-  
   const dataTypes = [
     {
       category: 'Personal Information',
@@ -25,7 +23,6 @@ export default function PrivacyPage() {
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
     }
   ];
-
   const purposes = [
     {
       title: 'Service Provision',
@@ -48,7 +45,6 @@ export default function PrivacyPage() {
       description: 'To protect against fraud and abuse'
     }
   ];
-
   const rights = [
     {
       title: 'Access',
@@ -71,7 +67,6 @@ export default function PrivacyPage() {
       icon: Database
     }
   ];
-
   return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
@@ -88,7 +83,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </div>
-
       <div className="py-20"></div>
         <div className="container mx-auto px-4"></div>
           <div className="max-w-4xl mx-auto space-y-12">
@@ -102,7 +96,6 @@ export default function PrivacyPage() {
                 By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
-
             {/* Information We Collect */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
@@ -123,7 +116,6 @@ export default function PrivacyPage() {
                 ))}
               </div>
             </section>
-
             {/* How We Use Information */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
@@ -141,7 +133,6 @@ export default function PrivacyPage() {
                 ))}
               </div>
             </section>
-
             {/* Data Security */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
@@ -163,7 +154,6 @@ export default function PrivacyPage() {
                 </div>
               </div>
             </section>
-
             {/* Your Rights */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
@@ -179,7 +169,6 @@ export default function PrivacyPage() {
                 ))}
               </div>
             </section>
-
             {/* Contact Information */}
             <section className="bg-gray-50 rounded-lg p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
@@ -205,7 +194,6 @@ export default function PrivacyPage() {
                 </div>
               </div>
             </section>
-
             {/* Updates */}
             <section>
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>

@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
-
 const,
   OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -21,6 +19,6 @@ const,
     />
   );
 };
-
 export default OptimizedImage;
 "`
+  </OptimizedImageProps>

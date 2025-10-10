@@ -38,7 +38,6 @@ export interface MicroSaasService {
     features: string[];
   };
 }
-
 export const microSaasServices: MicroSaasService[] = [
   // AI-Powered Productivity Tools;
   {,
@@ -113,7 +112,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']
     }
   },
-
   {
     id: 'ai-task-manager-pro',
     title: 'AI Task Manager Pro',
@@ -185,7 +183,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
     }
   },
-
   // AI Content & Marketing Tools;
   {
     id: 'ai-content-writer-pro',
@@ -258,7 +255,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']
     }
   },
-
   {
     id: 'ai-social-media-manager',
     title: 'AI Social Media Manager',
@@ -331,7 +327,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
     }
   },
-
   // AI Business & Finance Tools;
   {
     id: 'ai-crm-intelligence',
@@ -405,7 +400,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']
     }
   },
-
   {
     id: 'ai-financial-analyzer',
     title: 'AI Financial Analyzer',
@@ -478,7 +472,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
     }
   },
-
   // AI Customer Service Tools;
   {
     id: 'ai-customer-support-bot',
@@ -552,7 +545,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
     }
   },
-
   // AI Development Tools;
   {
     id: 'ai-code-review-assistant',
@@ -626,7 +618,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
     }
   },
-
   // AI Healthcare Tools;
   {
     id: 'ai-healthcare-assistant',
@@ -700,7 +691,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
     }
   },
-
   // AI E-commerce Tools;
   {
     id: 'ai-ecommerce-optimizer',
@@ -774,7 +764,6 @@ export const microSaasServices: MicroSaasService[] = [
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
     }
   },
-
   // AI Education Tools;
   {
     id: 'ai-education-platform',
@@ -849,7 +838,6 @@ export const microSaasServices: MicroSaasService[] = [
     }
   }
 ];
-
 // Service categories for filtering and organization;
 export const serviceCategories = [
   'All',
@@ -865,7 +853,6 @@ export const serviceCategories = [
   'Analytics',
   'Automation'
 ];
-
 // Pricing tiers for comparison;
 export const pricingTiers = {
   starter: {,
@@ -884,7 +871,6 @@ export const pricingTiers = {
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
   }
 };
-
 // Contact information;
 export const contactInfo = {
   phone: '+1 302 464 0950',

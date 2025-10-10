@@ -1,9 +1,7 @@
 :src/components/PerformanceMonitor.tsx;
 import React, { useEffect, useState } from 'react';
-
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
   children;
   enableReporting = true,
@@ -11,7 +9,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
 }) => {
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
-
   useEffect(() => {
     // Initialize performance monitoring;
     // Add critical resource hints manually;
@@ -22,7 +19,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
       ];
-      
       hints.forEach(hint => {)
         const _link = document.createElement('link');
         link.rel = hint.rel;
@@ -35,7 +31,6 @@ const,
 }) => {/* TODO: Fix JSX expression */}
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
-
   useEffect(() => {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },
         {/* TODO: Fix JSX expression */}
@@ -45,36 +40,30 @@ const,
         {/* TODO: Fix JSX expression */}
   n: 'anonymous' }
       ];
-      
       hints.forEach(hint => {/* TODO: Fix JSX expression */}
         })
         document.head.appendChild(link);
       });
     }
-    
     // Measure page load performance;
 //     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
     if (pageLoadMetrics) {/* TODO: Fix JSX expression */}
       }
     }
-
     // Monitor long tasks if enabled;
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries]);
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
 //         });
-      
       return () => {/* TODO: Fix JSX expression */}
         }
       };
     }
   }, [enableReporting, enableLongTaskMonitoring]);
-
   // Monitor Web Vitals using Performance Observer;
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
     const observer = new PerformanceObserver((list) => {
       const _entries = list.getEntries();
       entries.forEach((entry) => {
@@ -89,14 +78,12 @@ const,
   P: lcp });
           }
         }
-        
         if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
   D: fid }));
           if (enableReporting) {/* TODO: Fix JSX expression */}
   D: fid });
           }
         }
-        
         if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
   S: cls }));
           if (enableReporting) {/* TODO: Fix JSX expression */}
@@ -105,16 +92,13 @@ const,
         }
       });
     });
-
     try {/* TODO: Fix JSX expression */}
   s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (e) {/* TODO: Fix JSX expression */}
 //       }
-
     return () => {/* TODO: Fix JSX expression */}
     };
   }, [enableReporting]);
-
   // Development mode: Log performance metrics;
   useEffect(() => {,
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
@@ -123,13 +107,10 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
 //       }
   }, [metrics]);
-
-  return <>{children};
+  return <React.Fragment>{children};
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   enabled = true;
   budget = {,
@@ -152,42 +133,33 @@ const,
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
   s: string[] }>({/* TODO: Fix JSX expression */})
   s: [] });
-
   const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       onMetricsUpdate?.(newMetrics);
-      
       // Check performance budget;
       const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);
       setBudgetStatus(budgetCheck);
-      
       if (!budgetCheck.passed) {/* TODO: Fix JSX expression */}
       }
     }
   }, [budget, onMetricsUpdate, onBudgetViolation]);
-
   useEffect(() => {
     if (!enabled) return;
-
     // Initial metrics;
     updateMetrics();
-
     // Monitor long tasks;
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
 //       });
-
     // Monitor Web Vitals;
     const reportVitals = (newMetrics: WebVitalsMetrics) => {,
   useEffect(() => {/* TODO: Fix JSX expression */}
 //       });
-
     // Monitor Web Vitals;
     const reportVitals = (newMetric)
   s: WebVitalsMetrics) => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       performanceOptimizer.reportWebVitals(newMetrics);
     };
-
     // Set up performance monitoring;
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -205,20 +177,15 @@ const,
           }
         });
       });
-
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['paint', 'largest-contentful-paint'] });
-
       return () => {/* TODO: Fix JSX expression */}
       };
     }
-
     return () => {/* TODO: Fix JSX expression */}
     };
   }, [enabled, updateMetrics]);
-
   if (!enabled) return null;
-
   return(<div className="performance-monitor">)
       {/* Toggle button */})
       <button;)
@@ -285,7 +252,6 @@ const,
       >
         📊
       </button>
-
       {/* Performance panel */}
       {/* TODO: Fix JSX expression */}
               onClick={() => setIsVisible(false)}"
@@ -299,7 +265,6 @@ const,
               ✕
             </button>
           </div>
-
           {/* Metrics */}"
           <div className="space-y-2 mb-4"></div>"
             <div className="text-sm"></div>"
@@ -327,7 +292,6 @@ const,
               </span>
             </div>
           </div>
-
           {/* Budget Status */}
           <div className="border-t pt-3">
             <div className="flex items-center gap-2 mb-2">
@@ -360,7 +324,6 @@ const,
               </div>
             )}
           </div>
-
           {/* Connection Quality */}
           <div className="border-t pt-3 mt-3">
             <div className="text-sm">
@@ -406,6 +369,12 @@ const,
     </div>
   );
 };
-
 export default PerformanceMonitor;
 }"`
+  </WebVitalsMetrics>
+  </PerformanceMonitorProps>
+  </PerformanceMonitorProps>
+  </WebVitalsMetrics>
+  </PerformanceMonitorProps>
+  </WebVitalsMetrics>
+  </PerformanceMonitorProps>

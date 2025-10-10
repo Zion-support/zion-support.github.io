@@ -74,11 +74,9 @@ import {
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
   Webcam as WebcamIcon, Speaker as SpeakerIcon
 } from 'lucide-react';
-
 const ITConsultingPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const itServices = [
     // IT Infrastructure Services
     {
@@ -402,7 +400,6 @@ const ITConsultingPage: React.FC = () => {
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
     }
   ];
-
   const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -416,14 +413,12 @@ const ITConsultingPage: React.FC = () => {
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
-
   const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
@@ -440,22 +435,19 @@ const ITConsultingPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            >
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5 inline mr-2" />
-              Call (302) 464-0950
-            </a>
+              Call (302) 464-0950;
+  </
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            >
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5 inline mr-2" />
-              Get IT Consultation
-            </a>
+              Get IT Consultation;
+  </
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></div>
@@ -473,14 +465,12 @@ const ITConsultingPage: React.FC = () => {
                 />
               </div>
             </div>
-            
             {/* Category Filter */}
             <div className="lg:w-64"></div>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              >
+                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
                     {category.name}
@@ -489,7 +479,6 @@ const ITConsultingPage: React.FC = () => {
               </select>
             </div>
           </div>
-
           {/* Category Pills */}
           <div className="flex flex-wrap gap-2 mb-8">
             {categories.map((category) => (</div>
@@ -508,7 +497,6 @@ const ITConsultingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></div>
@@ -524,10 +512,8 @@ const ITConsultingPage: React.FC = () => {
                     <div className="text-sm text-gray-400">starting price</div>
                   </div>
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                
                 <div className="space-y-3 mb-6"></div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
@@ -540,7 +526,6 @@ const ITConsultingPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -553,7 +538,6 @@ const ITConsultingPage: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-
                 <div className="space-y-2 mb-6 text-sm"></div>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Setup Time:</span>
@@ -568,36 +552,31 @@ const ITConsultingPage: React.FC = () => {
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
                 </div>
-
                 {service.caseStudy && (
                   <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
                   </div>
                 )}
-
                 <div className="space-y-3"></div>
                   <a
                     href={service.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  >
-                    Get Free Consultation
-                  </a>
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                    Get Free Consultation;
+  </
                   <a
                     href="tel:+13024640950"
-                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                  >
+                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                     <Phone className="w-4 h-4 inline mr-2" />
-                    Call for Quote
-                  </a>
+                    Call for Quote;
+  </
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -611,23 +590,26 @@ const ITConsultingPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            >
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5" />
-              Call (302) 464-0950
-            </a>
+              Call (302) 464-0950;
+  </
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            >
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5" />
-              Get Custom IT Strategy
-            </a>
+              Get Custom IT Strategy;
+  </
           </div>
         </div>
       </section>
     </div>
   );
 };
-
 export default ITConsultingPage;
+  </a>
+  </a>
+  </a>
+  </a>
+  </a>
+  </a>
