@@ -27,7 +27,8 @@ import {
   Cloud,
   Settings,
   Lock,
-  Link
+  Link,
+  Brain
 } from 'lucide-react';
 
 export interface Service {
@@ -257,4 +258,40 @@ export const specializedServices = [
   { name: 'Edge Computing', href: '/edge-computing', icon: Cpu },
   { name: '5G Solutions', href: '/5g-solutions', icon: Zap },
   { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp }
+];
+
+export const serviceCategories = [
+  {
+    title: 'AI Services',
+    icon: Brain,
+    color: 'text-purple-400',
+    services: aiServices
+  },
+  {
+    title: 'IT Services',
+    icon: Settings,
+    color: 'text-cyan-400',
+    services: itServices
+  },
+  {
+    title: 'Micro SAAS',
+    icon: Zap,
+    color: 'text-green-400',
+    services: microSAASServices
+  },
+  {
+    title: 'Specialized',
+    icon: Cpu,
+    color: 'text-orange-400',
+    services: specializedServices
+  }
+];
+
+export const emergingTech = [
+  { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
+  { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Link },
+  { name: 'IoT Development', href: '/iot-development', icon: Globe },
+  { name: 'AR/VR Development', href: '/ar-vr-development', icon: Video },
+  { name: 'Edge Computing', href: '/edge-computing', icon: Cpu },
+  { name: '5G Solutions', href: '/5g-solutions', icon: Zap }
 ];

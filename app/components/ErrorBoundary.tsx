@@ -109,7 +109,7 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 <Home className="w-4 h-4" />
                 Go Home
-              </Link>
+              </a>
             </div>
 
             <div className="mt-6 text-sm text-gray-400">
