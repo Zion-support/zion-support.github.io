@@ -89,10 +89,7 @@ const HomePage: React.FC = () => {
         enableFocusManagement={true}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+      <div className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
@@ -193,9 +190,6 @@ const HomePage: React.FC = () => {
               Start Your Project Today
             </button>
           </section>
-        </main>
-
-        <Footer />
       </div>
     </>
   );

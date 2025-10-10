@@ -30,6 +30,7 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
+const DynamicRouteHandler = React.lazy(() => import('./app/components/DynamicRouteHandler'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -67,6 +68,8 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
+                            {/* Dynamic route handler for all other pages */}
+                            <Route path="/*" element={<DynamicRouteHandler />} />
                           </Routes>
                         </Suspense>
                       </main>
