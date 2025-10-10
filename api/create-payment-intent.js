@@ -19,20 +19,21 @@ async function handler(req, res) {
 
   try {
     const paymentIntent = {
-<<<<<<< HEAD
-      id: 'pi_' + Date.now(),
-      amount: Math.round(amount * 100), // Convert to cents;
-=======
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
-      amount,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+      amount: Math.round(amount * 100), // Convert to cents
       currency,
-      status: 'requires_payment_method'
+      status: 'requires_payment_method',
+      created: Math.floor(Date.now() / 1000)
     };
 
     res.statusCode = 200;
-    res.json({ paymentIntent });
-  } catch {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      message: 'Payment intent created successfully',
+      paymentIntent
+    }));
+  } catch (error) {
+    console.error('Payment intent creation error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));

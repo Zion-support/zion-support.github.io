@@ -20,32 +20,26 @@ async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Basic checkout session creation logic;
-=======
     // Basic checkout session creation logic
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
     const sessionData = {
       productId,
       userId,
-      domain: PROD_DOMAIN,
-      timestamp: new Date().toISOString(),
-=======
-    const sessionData = {
-      productId,
-      userId,
-      domain: PROD_DOMAIN
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+      sessionId: 'cs_' + Date.now(),
+      status: 'created',
+      createdAt: new Date().toISOString()
     };
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ session: sessionData }));
-  } catch {
+    res.end(JSON.stringify({
+      message: 'Checkout session created successfully',
+      session: sessionData
+    }));
+  } catch (error) {
+    console.error('Checkout session creation error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
   }
 }
 
