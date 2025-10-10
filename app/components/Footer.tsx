@@ -242,7 +242,6 @@ const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-<<<<<<< HEAD
             <div className="flex space-x-6 text-sm">
               <a href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
@@ -250,46 +249,9 @@ const Footer: React.FC = () => {
               <a href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
+              <a href="/sitemap" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                Sitemap
               </a>
-=======
-          </div>
-        </div>
-
-        {/* Bottom Footer */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
-          <div className="flex flex-col lg:flex-row justify-between items-center">
-            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 mb-4 lg:mb-0">
-              <p className="text-gray-300 text-sm">
-                &copy; {currentYear} Zion Tech Group. All rights reserved.
-              </p>
-              <div className="flex space-x-6">
-                <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                  Privacy Policy
-                </a>
-                <a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                  Terms of Service
-                </a>
-                <a href="/sitemap" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                  Sitemap
-                </a>
-              </div>
-            </div>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-78fe
             </div>
           </div>
         </div>

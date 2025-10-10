@@ -169,8 +169,6 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
-=======
             <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </a>
@@ -184,7 +182,6 @@ const Navigation: React.FC = () => {
               Careers
             </a>
             
->>>>>>> cursor/website-audit-and-update-with-deployment-78fe
             <div className="relative group">
               <button
                 onClick={toggleServices}
@@ -360,100 +357,6 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <span>{service.name}</span>
-                            <span className="text-cyan-400 text-xs font-medium">{service.price}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <span>{service.name}</span>
-                            <span className="text-purple-400 text-xs font-medium">{service.price}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <a href="/services"
-                      className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services →
-                    </a>
-                  </div>
-                )}
-              </div>
-
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </a>
-              
-              <div className="pt-4 border-t border-gray-700">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <a href="/contact"
-                  className="block cyber-button px-4 py-2 text-center"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
-=======
-        {/* Sidebar */}
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
->>>>>>> cursor/website-audit-and-update-with-deployment-78fe
       </div>
     </nav>
   );
