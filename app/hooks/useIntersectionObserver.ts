@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 ;
 interface UseIntersectionObserverOptions {;
   threshold?: number | number[];
-  root?: Element | null;
-  rootMargin?: string;
+  root?: Element | null
+  rootMargin?: string
   freezeOnceVisible?: boolean;}
 }
 ;
 interface UseIntersectionObserverReturn {;
   ref: React.RefObject<HTMLElement>;
-  isIntersecting: boolean;
+  isIntersecting: boolean
   entry: IntersectionObserverEntry | undefined;}
 }
 ;
@@ -21,15 +21,15 @@ export function useIntersectionObserver(;
     root = null,;
     rootMargin = '0%',;
     freezeOnceVisible = false,;}
-  } = options;
+  } = options
 ;
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
   const ref = useRef<HTMLElement>(null);
 ;
   useEffect(() => {;
-    const element = ref.current;
-    if (!element) return;
+    const element = ref.current
+    if (!element) return
 ;
     const observer = new IntersectionObserver(;
       ([entry]) => {;
@@ -57,5 +57,5 @@ export function useIntersectionObserver(;
   return { ref, isIntersecting, entry };
 }
 ;
-export default useIntersectionObserver;
+export default useIntersectionObserver
 ;

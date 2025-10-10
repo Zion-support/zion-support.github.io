@@ -1,7 +1,7 @@
 'use client';
 /**;
- * Configuration Manager;
- * Centralized configuration management with environment-based settings;
+ * Configuration Manager
+ * Centralized configuration management with environment-based settings
  */;
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {;
@@ -92,11 +92,11 @@ class ConfigManager {;
 ;
   private loadEnvironmentConfig(): void {;
     const env = process.env.NODE_ENV as Environment || 'development';
-    this.config.environment = env;
-    // Override with environment-specific settings;
+    this.config.environment = env
+    // Override with environment-specific settings
     if (env === 'production') {;
       this.config.logging.level = 'error';
-      this.config.logging.enableConsole = false;
+      this.config.logging.enableConsole = false
       this.config.features.enableAnalytics = true;}
     } else if (env === 'staging') {;
       this.config.logging.level = 'warn';
@@ -149,9 +149,9 @@ class ConfigManager {;
   }
 }
 ;
-// Export singleton instance;
+// Export singleton instance
 export const configManager = new ConfigManager();
-export default configManager;
+export default configManager
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */}
   };
@@ -239,10 +239,10 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   }
   static getInstance(): ConfigManager {/* TODO: Fix JSX expression */}
     }
-    return ConfigManager.instance;
+    return ConfigManager.instance
   }
   /**;
-   * Detect current environment;
+   * Detect current environment
    */;
   private detectEnvironment(): Environment {/* TODO: Fix JSX expression */}
       }
@@ -253,35 +253,35 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     return 'development';
   }
   /**;
-   * Load configuration based on environment;
+   * Load configuration based on environment
    */;
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
     let config = { ...defaultConfig };
     switch (this.environment) {/* TODO: Fix JSX expression */}
     }
-    // Apply overrides;
+    // Apply overrides
     config = this.mergeConfig(config, this.overrides);
-    return config;
+    return config
   }
   /**;
-   * Deep merge two config objects;
+   * Deep merge two config objects
    */;
   private mergeConfig(bas,;
   e: AppConfig, overrid);
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
-    const result = { ...base } as AppConfig;
+    const result = { ...base } as AppConfig
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke);
   y: K) => {/* TODO: Fix JSX expression */}
-            result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
+            result[key] = Object.assign({}, baseValue, value) as typeof baseValue
           } else {/* TODO: Fix JSX expression */}
           }
         }
       }
     );
-    return result;
+    return result
   }
   /**;
-   * Get configuration value;
+   * Get configuration value
    */;
   get<K extends keyof AppConfig>(ke);
   y: K): AppConfig[K];
@@ -298,18 +298,18 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     return this.config[key];
   }
   /**;
-   * Set configuration value;
+   * Set configuration value
    */;
   set<K extends keyof AppConfig>(ke,;
   y: K, valu);
-  e: AppConfig[K]): void;
+  e: AppConfig[K]): void
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,;
     nestedKe,;
   y: NK,;
     valu,;
   e: AppConfig[K][NK]);
-  ): void;
+  ): void
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,;
     nestedKeyOrValu,;
@@ -326,7 +326,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     }
   }
   /**;
-   * Get default value for a config key;
+   * Get default value for a config key
    */;
   private getDefaultForKey<K extends keyof AppConfig>(ke);
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */}
@@ -350,87 +350,87 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     return defaultValues[key];
   }
   /**;
-   * Get full configuration;
+   * Get full configuration
    */;
   getConfig(): AppConfig {/* TODO: Fix JSX expression */}
     return { ...this.config };
   }
   /**;
-   * Get environment;
+   * Get environment
    */;
   getEnvironment(): Environment {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Check if feature is enabled;
+   * Check if feature is enabled
    */;
   isFeatureEnabled(featur);
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Enable feature;
+   * Enable feature
    */;
   enableFeature(featur);
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Disable feature;
+   * Disable feature
    */;
   disableFeature(featur);
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Get API configuration;
+   * Get API configuration
    */;
   getAPIConfig() {/* TODO: Fix JSX expression */}
     return { ...this.config.api };
   }
   /**;
-   * Update API configuration;
+   * Update API configuration
    */;
   updateAPIConfig(confi);
   g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */}
     this.config.api = { ...this.config.api, ...config };
   }
   /**;
-   * Check if in production;
+   * Check if in production
    */;
   isProduction(): boolean {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Check if in development;
+   * Check if in development
    */;
   isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Check if in test;
+   * Check if in test
    */;
   isTest(): boolean {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Check if in staging;
+   * Check if in staging
    */;
   isStaging(): boolean {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Override configuration;
+   * Override configuration
    */;
   override(confi);
   g: Partial<AppConfig>): void {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Reset configuration;
+   * Reset configuration
    */;
   reset(): void {/* TODO: Fix JSX expression */}
     this.overrides = {};
     this.config = this.loadConfig();
   }
   /**;
-   * Export configuration as JSON;
+   * Export configuration as JSON
    */;
   export(): string {/* TODO: Fix JSX expression */}
   }
   /**;
-   * Validate configuration;
+   * Validate configuration
    */;
   validate(): {/* TODO: Fix JSX expression */}
   s: string[] } {/* TODO: Fix JSX expression */}
@@ -439,14 +439,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     }
     if (this.config.api.retryAttempts < 0) {/* TODO: Fix JSX expression */}
     }
-    // Validate security configuration;
+    // Validate security configuration
     if (this.config.security.maxRequestsPerMinute < 1) {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
     };
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const configManager = ConfigManager.getInstance();
-export default ConfigManager;
+export default ConfigManager
 ;

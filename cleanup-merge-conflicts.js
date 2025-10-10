@@ -2,82 +2,78 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Function to clean merge conflict markers from a file
 function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let cleaned = false;
     
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-    // Clean up any remaining merge conflict artifacts
-    content = content.replace(/    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-    // Fix common syntax issues that might result from merge conflicts
-    content = content.replace(/,\s*\)/g, ')');
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
-    content = content.replace(/,\s*;/g, ';');
-    content = content.replace(/\(\s*\)/g, '()');
-    content = content.replace(/{\s*}/g, '{}');
-    content = content.replace(/\[\s*\]/g, '[]');
+    // Remove merge conflict markers and keep the HEAD version (first part)
+    const lines = content.split('\n');
+    const cleanedLines = [];
+    let inConflict = false;
+    let conflictType = '';
     
-    // Fix common JSX issues
-    content = content.replace(/<\s*\/\s*>/g, '</>');
-    content = content.replace(/<\s*\/\s*div\s*>/g, '</div>');
-    content = content.replace(/<\s*\/\s*span\s*>/g, '</span>');
-    content = content.replace(/<\s*\/\s*p\s*>/g, '</p>');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.startsWith('<<<<<<< HEAD')) {
+        inConflict = true;
+        conflictType = 'head';
+        cleaned = true;
+        continue;
+      } else if (line.startsWith('=======')) {
+        conflictType = 'separator';
+        continue;
+      } else if (line.startsWith('>>>>>>> ')) {
+        inConflict = false;
+        conflictType = '';
+        continue;
+      }
+      
+      if (!inConflict || conflictType === 'head') {
+        cleanedLines.push(line);
+      }
+    }
     
-    // Fix function syntax issues
-    content = content.replace(/function\s*\(\s*\)\s*{\s*}/g, 'function() {}');
-    content = content.replace(/\(\s*\)\s*=>\s*{\s*}/g, '() => {}');
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned: ${filePath}`);
+    if (cleaned) {
+      fs.writeFileSync(filePath, cleanedLines.join('\n'));
+      console.log(`Cleaned merge conflicts in: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and clean files
-function cleanDirectory(dirPath) {
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
   let cleanedCount = 0;
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other directories we don't want to process
-        if (item === 'node_modules' || item === '.git' || item === 'dist' || item === '.next') {
-          continue;
-        }
-        cleanedCount += cleanDirectory(fullPath);
-      } else if (stat.isFile()) {
-        // Only process certain file types
-        const ext = path.extname(item);
-        if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
-          if (cleanMergeConflicts(fullPath)) {
-            cleanedCount++;
-          }
-        }
+    if (stat.isDirectory()) {
+      // Skip node_modules and other irrelevant directories
+      if (['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+        continue;
+      }
+      cleanedCount += processDirectory(fullPath);
+    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+      if (cleanMergeConflicts(fullPath)) {
+        cleanedCount++;
       }
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
   }
   
   return cleanedCount;
@@ -85,25 +81,11 @@ function cleanDirectory(dirPath) {
 
 // Main execution
 console.log('Starting merge conflict cleanup...');
-const cleanedCount = cleanDirectory('/workspace');
-console.log(`Cleaned ${cleanedCount} files`);
+const cleanedCount = processDirectory('./app');
+console.log(`Cleaned ${cleanedCount} files with merge conflicts.`);
 
-// Also clean specific problematic files
-const criticalFiles = [
-  '/workspace/App.tsx',
-  '/workspace/jest.setup.js',
-  '/workspace/package.json',
-  '/workspace/vite.config.ts',
-  '/workspace/tailwind.config.ts'
-];
-
-console.log('Cleaning critical files...');
-for (const file of criticalFiles) {
-  if (fs.existsSync(file)) {
-    if (cleanMergeConflicts(file)) {
-      console.log(`Cleaned critical file: ${file}`);
-    }
-  }
-}
+// Also clean test files
+const testCleanedCount = processDirectory('./__tests__');
+console.log(`Cleaned ${testCleanedCount} test files with merge conflicts.`);
 
 console.log('Merge conflict cleanup completed!');

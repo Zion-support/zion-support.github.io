@@ -1,20 +1,20 @@
-// SEO utilities for the application;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
+// SEO utilities for the application
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  robots?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
   tags?: string[];
 }
 ;
 export class SEOManager {;
-  private config: SEOConfig;
+  private config: SEOConfig
 ;
   constructor(config: SEOConfig) {;
     this.config = config;}
@@ -30,52 +30,52 @@ export class SEOManager {;
   }
 ;
   private applyConfig(): void {;
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return
 ;
-    // Update title;
-    document.title = this.config.title;
+    // Update title
+    document.title = this.config.title
 ;
-    // Update meta description;
+    // Update meta description
     this.updateMetaTag('description', this.config.description);
 ;
-    // Update meta keywords;
+    // Update meta keywords
     this.updateMetaTag('keywords', this.config.keywords.join(', '));
 ;
-    // Update canonical URL;
+    // Update canonical URL
     this.updateCanonicalUrl();
 ;
-    // Update Open Graph tags;
+    // Update Open Graph tags
     this.updateOpenGraphTags();
 ;
-    // Update Twitter Card tags;
+    // Update Twitter Card tags
     this.updateTwitterTags();
 ;
-    // Update robots meta;
+    // Update robots meta
     if (this.config.robots) {;
       this.updateMetaTag('robots', this.config.robots);}
     }
 ;
-    // Update author;
+    // Update author
     if (this.config.author) {;
       this.updateMetaTag('author', this.config.author);}
     }
 ;
-    // Update published time;
+    // Update published time
     if (this.config.publishedTime) {;
       this.updateMetaTag('article:published_time', this.config.publishedTime);}
     }
 ;
-    // Update modified time;
+    // Update modified time
     if (this.config.modifiedTime) {;
       this.updateMetaTag('article:modified_time', this.config.modifiedTime);}
     }
 ;
-    // Update section;
+    // Update section
     if (this.config.section) {;
       this.updateMetaTag('article:section', this.config.section);}
     }
 ;
-    // Update tags;
+    // Update tags
     if (this.config.tags) {;
       this.config.tags.forEach(tag => {;
         this.addMetaTag('article:tag', tag);}
@@ -84,31 +84,31 @@ export class SEOManager {;
   }
 ;
   private updateMetaTag(name: string, content: string): void {;
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return
 ;}
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement
     if (!meta) {;
       meta = document.createElement('meta');
-      meta.name = name;
+      meta.name = name
       document.head.appendChild(meta);}
     }
-    meta.content = content;
+    meta.content = content
   }
 ;
   private updateCanonicalUrl(): void {;
-    if (typeof document === 'undefined' || !this.config.canonicalUrl) return;
+    if (typeof document === 'undefined' || !this.config.canonicalUrl) return
 ;
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
     if (!canonical) {;
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);}
     }
-    canonical.href = this.config.canonicalUrl;
+    canonical.href = this.config.canonicalUrl
   }
 ;
   private updateOpenGraphTags(): void {;
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return
 ;
     const ogTags = [;}
       { property: 'og:title', content: this.config.ogTitle || this.config.title },;
@@ -127,7 +127,7 @@ export class SEOManager {;
   }
 ;
   private updateTwitterTags(): void {;
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return
 ;
     const twitterTags = [;}
       { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },;
@@ -145,28 +145,28 @@ export class SEOManager {;
   }
 ;
   private updateMetaTagByProperty(property: string, content: string): void {;
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return
 ;}
-    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement
     if (!meta) {;
       meta = document.createElement('meta');
       meta.setAttribute('property', property);
       document.head.appendChild(meta);}
     }
-    meta.content = content;
+    meta.content = content
   }
 ;
   private addMetaTag(name: string, content: string): void {;
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return
 ;
     const meta = document.createElement('meta');
-    meta.name = name;
-    meta.content = content;
+    meta.name = name
+    meta.content = content
     document.head.appendChild(meta);}
   }
 }
 ;
-// Utility functions;
+// Utility functions
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {;
   const cleanContent = content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {;
@@ -179,7 +179,7 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
 };
 ;
 export const addStructuredData = (data: any): void => {;
-  if (typeof document === 'undefined') return;
+  if (typeof document === 'undefined') return
 ;
   const script = document.createElement('script');
   script.type = 'application/ld+json';

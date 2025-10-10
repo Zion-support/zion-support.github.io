@@ -1,8 +1,8 @@
-// Accessibility utilities for the application;
+// Accessibility utilities for the application
 export interface AccessibilityConfig {;
-  enableHighContrast: boolean;
-  enableScreenReader: boolean;
-  enableKeyboardNavigation: boolean;
+  enableHighContrast: boolean
+  enableScreenReader: boolean
+  enableKeyboardNavigation: boolean
   fontSize: 'small' | 'medium' | 'large';
   colorScheme: 'light' | 'dark' | 'auto';}
 }
@@ -16,7 +16,7 @@ export const defaultAccessibilityConfig: AccessibilityConfig = {;
 };
 ;
 export class AccessibilityManager {;
-  private config: AccessibilityConfig;
+  private config: AccessibilityConfig
 ;
   constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {;
     this.config = config;}
@@ -32,32 +32,32 @@ export class AccessibilityManager {;
   }
 ;
   private applyConfig(): void {;
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return
 ;
-    const root = document.documentElement;
+    const root = document.documentElement
 ;
-    // Apply high contrast;
+    // Apply high contrast
     if (this.config.enableHighContrast) {;
       root.classList.add('high-contrast');}
     } else {;
       root.classList.remove('high-contrast');}
     }
 ;
-    // Apply font size;
+    // Apply font size
     root.setAttribute('data-font-size', this.config.fontSize);
 ;
-    // Apply color scheme;
+    // Apply color scheme
     root.setAttribute('data-color-scheme', this.config.colorScheme);
   }
 ;
   public announceToScreenReader(message: string): void {;
-    if (typeof document === 'undefined' || !this.config.enableScreenReader) return;
+    if (typeof document === 'undefined' || !this.config.enableScreenReader) return
 ;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
-    announcement.textContent = message;
+    announcement.textContent = message
 ;
     document.body.appendChild(announcement);
 ;
@@ -67,14 +67,14 @@ export class AccessibilityManager {;
   }
 ;
   public focusElement(selector: string): boolean {;
-    if (typeof document === 'undefined') return false;
+    if (typeof document === 'undefined') return false
 ;
-    const element = document.querySelector(selector) as HTMLElement;
+    const element = document.querySelector(selector) as HTMLElement
     if (element) {;
       element.focus();
       return true;}
     }
-    return false;
+    return false
   }
 ;
   public trapFocus(container: HTMLElement): () => void {;
@@ -86,7 +86,7 @@ export class AccessibilityManager {;
     const lastElement = focusableElements[focusableElements.length - 1];
 ;
     const handleTabKey = (;
-      if (e.key !== 'Tab') return;
+      if (e.key !== 'Tab') return
 ;
       if (e.shiftKey) {;
         if (document.activeElement === firstElement) {;
@@ -116,10 +116,10 @@ export class AccessibilityManager {;
 ;
 export const accessibilityManager = new AccessibilityManager();
 ;
-// Utility functions;
+// Utility functions
 export const isAccessible = (element: HTMLElement): boolean => {;
   const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
-  const hasTextContent = element.textContent?.trim().length > 0;
+  const hasTextContent = element.textContent?.trim().length > 0
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex');
 ;
   return isInteractive && (hasAriaLabel || hasTextContent);}

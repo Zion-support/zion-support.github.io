@@ -1,14 +1,14 @@
 /**;
- * Production-ready logger that removes console statements in production;
+ * Production-ready logger that removes console statements in production
  */;
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 ;
 interface LogEntry {}
   level: LogLevel,;
   message: string,;
-  data?: unknown;
+  data?: unknown
   timestamp: string,;
-  context?: string;
+  context?: string
 }
 ;
 class ProductionLogger {}
@@ -24,27 +24,27 @@ class ProductionLogger {}
       message,;
       data,;
       timestamp: new Date().toISOString(),;
-      context;
+      context
     };
 ;
-    // Only log in development;
+    // Only log in development
     if (this.isDevelopment) {;
       switch (level) {;
     // Only log in development;}
     if (this.isDevelopment) {}
       switch (level) {}
         case 'debug':;
-          break;
+          break
         case 'info':;
-          break;
+          break
         case 'warn':;
-          break;
+          break
         case 'error':;
-          break;
+          break
       }
     }
 ;
-    // In production, send critical errors to monitoring service;
+    // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {;
     // In production, send critical errors to monitoring service;}
     if (this.isProduction && level === 'error') {}
@@ -53,7 +53,7 @@ class ProductionLogger {}
   }
 ;
   private sendToMonitoring(entry: LogEntry): void {,;
-    // Send to analytics/monitoring service;
+    // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {,;
       (window as any).gtag('event', 'error_log', {);
         error_message: entry.message;);
@@ -62,7 +62,7 @@ class ProductionLogger {}
         event_category: 'Error',;
 ,;}
   private sendToMonitoring(entry: LogEntry): void {}
-    // Send to analytics/monitoring service;
+    // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {)}
         error_message: entry.message,;
@@ -90,4 +90,4 @@ class ProductionLogger {}
 }
 ;
 export const logger = new ProductionLogger();
-export default logger;
+export default logger

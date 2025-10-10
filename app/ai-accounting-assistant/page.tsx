@@ -42,4 +42,4 @@ const AIAccountingAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AIAccountingAssistantPage;
+export default AIAccountingAssistantPage

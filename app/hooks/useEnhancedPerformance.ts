@@ -1,15 +1,15 @@
 /**;
- * Enhanced Performance Hook;
- * Combines performance monitoring, error tracking, and analytics;
+ * Enhanced Performance Hook
+ * Combines performance monitoring, error tracking, and analytics
  */;
 import { useEffect, useCallback, useRef } from 'react';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
 ;
 export interface UseEnhancedPerformanceOptions {;
-  component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
+  component?: string
+  trackErrors?: boolean
+  trackPerformance?: boolean
   trackAnalytics?: boolean;}
 }
 ;
@@ -23,19 +23,19 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 ;
   useEffect(() => {;
     mountTimeRef.current = performance.now();
-    renderCountRef.current = 0;
+    renderCountRef.current = 0
 ;
-    // Track component mount;
+    // Track component mount
     if (trackAnalytics) {;
       analytics.trackCustomEvent('Component', 'Mounted', component);}
     }
 ;
     return () => {;
-      // Track component unmount duration;
+      // Track component unmount duration
       if (trackPerformance) {;
-        const _duration = performance.now() - mountTimeRef.current;
+        const _duration = performance.now() - mountTimeRef.current
         if (duration > 5000) {;
-          // Long-lived component;
+          // Long-lived component
           analytics.trackCustomEvent(;
             'Performance',;
             'Long Component Lifetime',;
@@ -45,24 +45,24 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         }
       }
 ;
-      // Track component unmount;
+      // Track component unmount
       if (trackAnalytics) {;
         analytics.trackCustomEvent('Component', 'Unmounted', component);}
       }
     };
   }, [component, trackAnalytics, trackPerformance]);
 ;
-  // Track render performance;
+  // Track render performance
   useEffect(() => {;
     renderCountRef.current++;
 ;
     if (trackPerformance && renderCountRef.current > 10) {;
-      // Many re-renders detected;
+      // Many re-renders detected
       analytics.trackCustomEvent(;
         'Performance',;
         'High Render Count',;
         component,;
-        renderCountRef.current;
+        renderCountRef.current
       );}
     }
   });
@@ -95,7 +95,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
 ;
       return {;
         end: () => {;
-          const _duration = performance.now() - startTime;
+          const _duration = performance.now() - startTime
 ;
           if (trackPerformance) {;
             analytics.trackPerformance(;}
@@ -105,7 +105,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             );
           }
 ;
-          return duration;
+          return duration
         },;
       };
     },;
@@ -119,4 +119,4 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   };
 }
 ;
-export default useEnhancedPerformance;
+export default useEnhancedPerformance

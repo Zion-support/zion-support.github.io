@@ -2,13 +2,13 @@
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 interface ServiceCardProps {
-  title: string;
-  description: string;
+  title: string
+  description: string
   features: string[];
-  price?: string;
-  popular?: boolean;
-  onSelect?: () => void;
-  className?: string;
+  price?: string
+  popular?: boolean
+  onSelect?: () => void
+  className?: string
 }
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
@@ -20,7 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${
+    <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${>
       popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
     }`}>
       {popular && (
@@ -50,15 +50,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
       )}
       {onSelect && (
-        <button
+        <button>
           onClick={onSelect}
           className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">
-          Get Started
+          Get Started</button>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>
       )}
     </div>
   );
 };
-export default ServiceCard;
-  </ServiceCardProps>
+export default ServiceCard</ServiceCard>

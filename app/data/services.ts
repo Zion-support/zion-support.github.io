@@ -6,7 +6,7 @@ import {;
 } from 'lucide-react';
 ;
 export const microSAASServices = [;
-  // Productivity & Management Tools;
+  // Productivity & Management Tools
   {;
     title: 'AI Project Manager Pro',;
     description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',;
@@ -18,7 +18,7 @@ export const microSAASServices = [;
     link: '/ai-project-manager';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.9;
+    rating: 4.9
     users: '10,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -32,7 +32,7 @@ export const microSAASServices = [;
     link: '/ai-meeting-assistant';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.8;
+    rating: 4.8
     users: '20,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -46,7 +46,7 @@ export const microSAASServices = [;
     link: '/ai-document-intelligence';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.7;
+    rating: 4.7
     users: '15,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -60,7 +60,7 @@ export const microSAASServices = [;
     link: '/ai-personal-assistant';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.9;
+    rating: 4.9
     users: '45,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -74,7 +74,7 @@ export const microSAASServices = [;
     link: '/ai-team-collaboration';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.8;
+    rating: 4.8
     users: '25,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -88,7 +88,7 @@ export const microSAASServices = [;
     link: '/ai-task-manager';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.8;
+    rating: 4.8
     users: '25,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -102,7 +102,7 @@ export const microSAASServices = [;
     link: '/ai-workflow-automation';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.7;
+    rating: 4.7
     users: '15,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -116,7 +116,7 @@ export const microSAASServices = [;
     link: '/ai-meeting-scheduler';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.8;
+    rating: 4.8
     users: '30,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -130,10 +130,10 @@ export const microSAASServices = [;
     link: '/ai-time-tracker';
     popular: true,;
     category: 'Productivity',;
-    rating: 4.6;
+    rating: 4.6
     users: '50,000+',;}
     freeTrial: '14 days'},;
-  // Content & Marketing Tools;
+  // Content & Marketing Tools
   {;
     title: 'AI Content Writer Pro',;
     description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',;
@@ -145,7 +145,7 @@ export const microSAASServices = [;
     link: '/ai-content-writer';
     popular: true,;
     category: 'Content',;
-    rating: 4.9;
+    rating: 4.9
     users: '40,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -159,7 +159,7 @@ export const microSAASServices = [;
     link: '/ai-video-creator';
     popular: true,;
     category: 'Content',;
-    rating: 4.8;
+    rating: 4.8
     users: '30,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -173,7 +173,7 @@ export const microSAASServices = [;
     link: '/ai-podcast-studio';
     popular: true,;
     category: 'Content',;
-    rating: 4.7;
+    rating: 4.7
     users: '18,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -187,7 +187,7 @@ export const microSAASServices = [;
     link: '/ai-graphic-design';
     popular: true,;
     category: 'Content',;
-    rating: 4.8;
+    rating: 4.8
     users: '35,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -201,7 +201,7 @@ export const microSAASServices = [;
     link: '/ai-website-builder';
     popular: true,;
     category: 'Content',;
-    rating: 4.9;
+    rating: 4.9
     users: '50,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -215,7 +215,7 @@ export const microSAASServices = [;
     link: '/ai-social-media-manager';
     popular: true,;
     category: 'Marketing',;
-    rating: 4.7;
+    rating: 4.7
     users: '35,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -229,7 +229,7 @@ export const microSAASServices = [;
     link: '/ai-email-marketing';
     popular: true,;
     category: 'Marketing',;
-    rating: 4.8;
+    rating: 4.8
     users: '28,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -243,7 +243,7 @@ export const microSAASServices = [;
     link: '/ai-seo-optimizer';
     popular: true,;
     category: 'Marketing',;
-    rating: 4.9;
+    rating: 4.9
     users: '22,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -257,7 +257,7 @@ export const microSAASServices = [;
     link: '/ai-lead-generation';
     popular: true,;
     category: 'Marketing',;
-    rating: 4.8;
+    rating: 4.8
     users: '18,000+',;}
     freeTrial: '7 days'}
 ];
@@ -274,7 +274,7 @@ export const aiServices = [;
     link: '/machine-learning';
     popular: true,;
     category: 'AI Development';
-    rating: 4.9;
+    rating: 4.9
     users: '500+',;}
     freeTrial: '30 days'},;
   {;
@@ -288,7 +288,7 @@ export const aiServices = [;
     link: '/ai-cybersecurity';
     popular: true,;
     category: 'Security';
-    rating: 4.8;
+    rating: 4.8
     users: '300+',;}
     freeTrial: '30 days'},;
   {;
@@ -302,7 +302,7 @@ export const aiServices = [;
     link: '/ai-healthcare';
     popular: true,;
     category: 'Healthcare';
-    rating: 4.9;
+    rating: 4.9
     users: '200+',;}
     freeTrial: '30 days'},;
   {;
@@ -316,7 +316,7 @@ export const aiServices = [;
     link: '/ai-financial-advisor';
     popular: true,;
     category: 'Finance';
-    rating: 4.7;
+    rating: 4.7
     users: '400+',;}
     freeTrial: '30 days'},;
   {;
@@ -330,7 +330,7 @@ export const aiServices = [;
     link: '/ai-supply-chain';
     popular: true,;
     category: 'Logistics';
-    rating: 4.8;
+    rating: 4.8
     users: '250+',;}
     freeTrial: '30 days'},;
   {;
@@ -344,7 +344,7 @@ export const aiServices = [;
     link: '/ai-legal-assistant';
     popular: true,;
     category: 'Legal';
-    rating: 4.6;
+    rating: 4.6
     users: '150+',;}
     freeTrial: '30 days'},;
   {;
@@ -358,7 +358,7 @@ export const aiServices = [;
     link: '/ai-manufacturing';
     popular: true,;
     category: 'Manufacturing';
-    rating: 4.9;
+    rating: 4.9
     users: '180+',;}
     freeTrial: '30 days'},;
   {;
@@ -372,7 +372,7 @@ export const aiServices = [;
     link: '/ai-education';
     popular: true,;
     category: 'Education';
-    rating: 4.7;
+    rating: 4.7
     users: '600+',;}
     freeTrial: '30 days'}
 ];
@@ -389,7 +389,7 @@ export const itServices = [;
     link: '/cloud-migration';
     popular: true,;
     category: 'Cloud Services';
-    rating: 4.8;
+    rating: 4.8
     users: '600+',;}
     freeTrial: '30 days'},;
   {;
@@ -403,7 +403,7 @@ export const itServices = [;
     link: '/enterprise-infrastructure';
     popular: true,;
     category: 'Infrastructure';
-    rating: 4.9;
+    rating: 4.9
     users: '100+',;}
     freeTrial: '30 days'},;
   {;
@@ -417,7 +417,7 @@ export const itServices = [;
     link: '/devops-automation';
     popular: true,;
     category: 'DevOps';
-    rating: 4.8;
+    rating: 4.8
     users: '400+',;}
     freeTrial: '30 days'},;
   {;
@@ -431,7 +431,7 @@ export const itServices = [;
     link: '/database-management';
     popular: true,;
     category: 'Database';
-    rating: 4.7;
+    rating: 4.7
     users: '350+',;}
     freeTrial: '30 days'},;
   {;
@@ -445,7 +445,7 @@ export const itServices = [;
     link: '/network-security';
     popular: true,;
     category: 'Security';
-    rating: 4.9;
+    rating: 4.9
     users: '500+',;}
     freeTrial: '30 days'},;
   {;
@@ -459,7 +459,7 @@ export const itServices = [;
     link: '/it-consulting';
     popular: true,;
     category: 'Consulting';
-    rating: 4.8;
+    rating: 4.8
     users: '200+',;}
     freeTrial: '30 days'}
 ];
@@ -476,7 +476,7 @@ export const specializedServices = [;
     link: '/quantum-computing';
     popular: true,;
     category: 'Quantum';
-    rating: 4.9;
+    rating: 4.9
     users: '50+',;}
     freeTrial: '60 days'},;
   {;
@@ -490,7 +490,7 @@ export const specializedServices = [;
     link: '/autonomous-systems';
     popular: true,;
     category: 'Autonomous';
-    rating: 4.8;
+    rating: 4.8
     users: '100+',;}
     freeTrial: '30 days'},;
   {;
@@ -504,7 +504,7 @@ export const specializedServices = [;
     link: '/blockchain';
     popular: true,;
     category: 'Blockchain';
-    rating: 4.7;
+    rating: 4.7
     users: '300+',;}
     freeTrial: '30 days'},;
   {;
@@ -518,7 +518,7 @@ export const specializedServices = [;
     link: '/iot-edge';
     popular: true,;
     category: 'IoT';
-    rating: 4.8;
+    rating: 4.8
     users: '400+',;}
     freeTrial: '30 days'}
 ];
@@ -539,7 +539,7 @@ export interface Service {;
   useCases: string[];
   icon: string,;
   popular: boolean,;
-  new?: boolean;
+  new?: boolean
   path: string,;
   contact: {;
     phone: string,;
@@ -554,7 +554,7 @@ export interface Service {;
 }
 ;
 export const services: Service[] = [;
-  // AI Services;
+  // AI Services
   {;
     id: 'ai-project-manager',;
     name: 'AI Project Manager Pro',;
@@ -781,7 +781,7 @@ export const services: Service[] = [;
       currency: 'USD';}
     }
   },;
-  // Micro SAAS Services;
+  // Micro SAAS Services
   {;
     id: 'ai-social-media-manager',;
     name: 'AI Social Media Manager',;
@@ -1007,7 +1007,7 @@ export const services: Service[] = [;
       currency: 'USD';}
     }
   },;
-  // IT Services;
+  // IT Services
   {;
     id: 'cloud-infrastructure',;
     name: 'Cloud Infrastructure Solutions',;
@@ -1188,7 +1188,7 @@ export const services: Service[] = [;
       currency: 'USD';}
     }
   },;
-  // Emerging Technologies;
+  // Emerging Technologies
   {;
     id: 'quantum-computing',;
     name: 'Quantum Computing Solutions',;

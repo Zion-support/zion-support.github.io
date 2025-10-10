@@ -4,12 +4,10 @@ import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === 'undefined') return
     // Monitor page load performance
     const handleLoad = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
         const metrics = {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -21,7 +19,7 @@ export const usePerformanceMonitor = () => {
 
         // Send to analytics if available
         if ('gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
+          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag
           gtag('event', 'page_performance', {
             event_category: 'performance',
             dom_content_loaded: Math.round(metrics.domContentLoaded),
@@ -45,7 +43,7 @@ export const usePerformanceMonitor = () => {
     // Monitor memory usage
     const handleMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as any).memory
         const memoryUsage = {
           used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
           total: Math.round(memory.totalJSHeapSize / 1024 / 1024),

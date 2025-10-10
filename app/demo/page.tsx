@@ -34,8 +34,8 @@ const DemoPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              See Our <span className="text-cyan-400">Solutions</span> in Action;
-  </
+              See Our</h1> <span className="text-cyan-400">Solutions</span> in Action
+  
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
             </p>
@@ -60,10 +60,10 @@ const DemoPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
+                  <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center"></button>
                     <Play className="w-4 h-4 mr-2" />
-                    Watch Demo;
-  </
+                    Watch Demo
+  
                 </div>
               ))}
             </div>
@@ -76,7 +76,7 @@ const DemoPage: React.FC = () => {
               <p className="text-gray-300 mb-6">
                 Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.
               </p>
-              <a 
+              <a>
                 href="/contact" 
                 className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
                 Schedule Demo
@@ -89,6 +89,5 @@ const DemoPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default DemoPage;
-  </button>
+export default DemoPage</DemoPage>
   </h1>

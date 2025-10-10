@@ -42,4 +42,4 @@ const SupplyChainOptimizerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default SupplyChainOptimizerPage;
+export default SupplyChainOptimizerPage

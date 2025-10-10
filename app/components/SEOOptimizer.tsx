@@ -4,11 +4,11 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
+  title?: string
+  description?: string
   keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
+  canonicalUrl?: string
+  ogImage?: string
   structuredData?: Record<string, unknown>;
 }
 
@@ -22,8 +22,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {
   useEffect(() => {
     // Update page title
-    document.title = title;
-
+    document.title = title
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -31,10 +30,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = description;
+      meta.content = description
       document.head.appendChild(meta);
     }
-<<<<<<< HEAD
     meta.setAttribute('content', content);
   };
   const updateCanonicalUrl = (url: string) => {
@@ -121,18 +119,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const existing = document.getElementById('organization-structured-data');
     if (existing) {
       existing.remove();
-=======
-
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     }
 
     // Update canonical URL
@@ -142,7 +128,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       const link = document.createElement('link');
       link.rel = 'canonical';
-      link.href = canonicalUrl;
+      link.href = canonicalUrl
       document.head.appendChild(link);
     }
 
@@ -153,7 +139,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       const meta = document.createElement('meta');
       meta.setAttribute('property', 'og:title');
-      meta.content = title;
+      meta.content = title
       document.head.appendChild(meta);
     }
 
@@ -163,7 +149,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       const meta = document.createElement('meta');
       meta.setAttribute('property', 'og:description');
-      meta.content = description;
+      meta.content = description
       document.head.appendChild(meta);
     }
 
@@ -173,7 +159,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     } else {
       const meta = document.createElement('meta');
       meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
+      meta.content = ogImage
       document.head.appendChild(meta);
     }
 
@@ -227,10 +213,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Helmet>
   );
 };
-<<<<<<< HEAD
-export default SEOOptimizer;
-  </SEOOptimizerProps>
-=======
-
-export default SEOOptimizer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+export default SEOOptimizer</SEOOptimizer>

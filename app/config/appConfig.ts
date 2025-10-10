@@ -1,6 +1,6 @@
 /**;
- * Application Configuration;
- * Centralized configuration management for the Zion Tech Group application;
+ * Application Configuration
+ * Centralized configuration management for the Zion Tech Group application
  */;
 export interface AppConfig {;
   app: {;
@@ -64,10 +64,10 @@ const config: AppConfig = {;
 };
 ;
 /**;
- * Get configuration value by key path;
+ * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group';
  */;
-export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config;
+export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config
 ;
   for (const key of keys) {;
     if (value && typeof value === 'object' && key in value) {;
@@ -77,36 +77,36 @@ export function getConfig<T = unknown>(keyPath: string): T {let value: unknown =
     }
   }
 ;
-  return value as T;
+  return value as T
 }
 ;
 /**;
- * Check if a feature is enabled;
+ * Check if a feature is enabled
  */;
 export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {;
   return config.features[feature];}
 }
 ;
 /**;
- * Get current environment;
+ * Get current environment
  */;
 export function getEnvironment(): string {;
   return config.app.environment;}
 }
 ;
 /**;
- * Check if running in production;
+ * Check if running in production
  */;
 export function isProduction(): boolean {;
   return config.app.environment === 'production';}
 }
 ;
 /**;
- * Check if running in development;
+ * Check if running in development
  */;
 export function isDevelopment(): boolean {;
   return config.app.environment === 'development';}
 }
 ;
-export default config;
+export default config
 ;

@@ -45,8 +45,8 @@ const CommunityPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Community;
-  </
+            Community
+  
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
             Connect, learn, and grow together.
@@ -85,21 +85,20 @@ const CommunityPage: React.FC = () => {
             Become part of our growing community and start connecting with like-minded professionals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
               <Users className="mr-2 h-5 w-5" />
-              Join Community;
-  </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              Join Community
+  
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
               <MessageCircle className="mr-2 h-5 w-5" />
-              Learn More;
-  </
+              Learn More
+  
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default CommunityPage;
-  </button>
+export default CommunityPage</CommunityPage>
   </button>
   </h1>

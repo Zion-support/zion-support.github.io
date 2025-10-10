@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -83,11 +78,11 @@ const Next.dPage: React.FC = () => {
               Contact our experts to discuss your next.d needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
@@ -99,85 +94,80 @@ const Next.dPage: React.FC = () => {
   );
 };
 
-export default Next.dPage;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+export default Next.dPage
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
-  title?: string;
-  description?: string;
+  title?: string
+  description?: string
   keywords?: string[];
   authors?: Array<{ name: string; url?: string }> | string[];
-  creator?: string;
-  publisher?: string;
+  creator?: string
+  publisher?: string
   formatDetection?: {
-    email?: boolean;
-    address?: boolean;
-    telephone?: boolean;
+    email?: boolean
+    address?: boolean
+    telephone?: boolean
   };
-  metadataBase?: URL;
+  metadataBase?: URL
   alternates?: {
-    canonical?: string;
+    canonical?: string
     languages?: Record<string, string>;
   };
   openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
+    title?: string
+    description?: string
+    url?: string
+    siteName?: string
     images?: Array<{
       url: string,
-      width?: number;
-      height?: number;
-      alt?: string;
+      width?: number
+      height?: number
+      alt?: string
     }>;
-    locale?: string;
-    type?: string;
+    locale?: string
+    type?: string
     authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
+    publishedTime?: string
   };
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
+    site?: string
+    creator?: string
+    title?: string
+    description?: string
     images?: string[];
   };
   robots?: {
-    index?: boolean;
-    follow?: boolean;
+    index?: boolean
+    follow?: boolean
     googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
+      index?: boolean
+      follow?: boolean
+      'max-video-preview'?: number
       'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
+      'max-snippet'?: number
     };
   };
   verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
+    google?: string
+    yandex?: string
+    yahoo?: string
     other?: Record<string, string>;
   };
 }
 
 export interface MetadataRoute {
   url: string,
-  lastModified?: string | Date;
+  lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  priority?: number
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
-  lastModified?: string | Date;
+  lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  priority?: number
 }
 
 // Custom Next.js types
@@ -199,8 +189,8 @@ export interface ServerComponentProps {
 
 // Client components types
 export interface ClientComponentProps {
-  children?: React.ReactNode;
-  className?: string;
+  children?: React.ReactNode
+  className?: string
 }
 
 // Route handlers
@@ -220,13 +210,13 @@ export interface DynamicRoute {
 // Static generation types
 export interface StaticProps {
   props: { [key: string]: any };
-  revalidate?: number;
-  notFound?: boolean;
+  revalidate?: number
+  notFound?: boolean
 }
 
 // ISR types
 export interface ISRConfig {
-  revalidate: number;
+  revalidate: number
   tags?: string[];
 }
 
@@ -244,17 +234,12 @@ export interface NodeRuntime {
 declare module 'next' {
   interface NextApiRequest {
     user?: {
-      id: string;
-      email: string;
-      name?: string;
+      id: string
+      email: string
+      name?: string
     };
   }
 }
 
-<<<<<<< HEAD
 export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-=======
 export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

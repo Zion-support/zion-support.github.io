@@ -170,7 +170,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
   const structuredData = data || getDefaultData();
 
   return (
-    <script
+    <script>
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredData, null, 2)
@@ -179,4 +179,4 @@ const StructuredData: React.FC<StructuredDataProps> = ({
   );
 };
 
-export default StructuredData;
+export default StructuredData

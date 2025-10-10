@@ -7,8 +7,7 @@ export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = [];
   private skipLinks: HTMLElement[] = [];
   private landmarks: HTMLElement[] = [];
-  private isInitialized = false;
-
+  private isInitialized = false
   constructor() {
     this.init();
   }
@@ -17,8 +16,7 @@ export class AccessibilityEnhancer {
    * Initialize accessibility enhancements
    */
   private init(): void {
-    if (this.isInitialized) return;
-    
+    if (this.isInitialized) return
     this.setupFocusManagement();
     this.setupKeyboardNavigation();
     this.setupSkipLinks();
@@ -27,7 +25,7 @@ export class AccessibilityEnhancer {
     this.setupColorContrast();
     this.setupScreenReaderSupport();
     
-    this.isInitialized = true;
+    this.isInitialized = true
   }
 
   /**
@@ -70,17 +68,17 @@ export class AccessibilityEnhancer {
     const style = document.createElement('style');
     style.textContent = `
       *:focus {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+        outline: 2px solid #3b82f6 !important
+        outline-offset: 2px !important
       }
       
       *:focus:not(:focus-visible) {
-        outline: none !important;
+        outline: none !important
       }
       
       *:focus-visible {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+        outline: 2px solid #3b82f6 !important
+        outline-offset: 2px !important
       }
     `;
     document.head.appendChild(style);
@@ -105,33 +103,22 @@ export class AccessibilityEnhancer {
    * Handle tab key navigation
    */
   private handleTabKey(event: KeyboardEvent): void {
-    const activeElement = document.activeElement as HTMLElement;
+    const activeElement = document.activeElement as HTMLElement
     const currentIndex = this.focusableElements.indexOf(activeElement);
     
-    if (currentIndex === -1) return;
-    
+    if (currentIndex === -1) return
     if (event.shiftKey) {
       // Shift + Tab (backward)
-      const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.focusableElements.length - 1;
+      const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.focusableElements.length - 1
       this.focusableElements[prevIndex]?.focus();
     } else {
       // Tab (forward)
-      const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
+      const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0
       this.focusableElements[nextIndex]?.focus();
     }
-<<<<<<< HEAD
 focusableElements[nextIndex]?.focus();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     focusableElements[nextIndex]?.focus();
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     event.preventDefault();
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
   }
 
   /**
@@ -141,14 +128,14 @@ focusableElements[nextIndex]?.focus();
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
+      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement
       closeButton?.click();
     });
     
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
+      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement
       trigger?.click();
     });
   }
@@ -157,8 +144,7 @@ focusableElements[nextIndex]?.focus();
    * Handle arrow key navigation
    */
   private handleArrowKeys(event: KeyboardEvent): void {
-    const activeElement = document.activeElement as HTMLElement;
-    
+    const activeElement = document.activeElement as HTMLElement
     // Handle arrow keys for radio groups, menus, etc.
     if (activeElement.getAttribute('role') === 'menuitem' || 
         activeElement.getAttribute('type') === 'radio') {
@@ -170,30 +156,28 @@ focusableElements[nextIndex]?.focus();
    * Handle menu navigation with arrow keys
    */
   private handleMenuNavigation(event: KeyboardEvent): void {
-    const activeElement = document.activeElement as HTMLElement;
+    const activeElement = document.activeElement as HTMLElement
     const menuItems = Array.from(
       activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
     ) as HTMLElement[];
     
     const currentIndex = menuItems.indexOf(activeElement);
     
-    if (currentIndex === -1) return;
-    
-    let nextIndex = currentIndex;
-    
+    if (currentIndex === -1) return
+    let nextIndex = currentIndex
     switch (event.key) {
       case 'ArrowDown':
-        nextIndex = (currentIndex + 1) % menuItems.length;
-        break;
+        nextIndex = (currentIndex + 1) % menuItems.length
+        break
       case 'ArrowUp':
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
-        break;
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1
+        break
       case 'ArrowRight':
-        nextIndex = (currentIndex + 1) % menuItems.length;
-        break;
+        nextIndex = (currentIndex + 1) % menuItems.length
+        break
       case 'ArrowLeft':
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
-        break;
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1
+        break
     }
     
     menuItems[nextIndex]?.focus();
@@ -312,7 +296,7 @@ focusableElements[nextIndex]?.focus();
    * Announce page changes to screen readers
    */
   private announcePageChange(): void {
-    const title = document.title;
+    const title = document.title
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = `Page loaded: ${title}`;
@@ -325,7 +309,7 @@ focusableElements[nextIndex]?.focus();
   public announce(message: string): void {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
-      liveRegion.textContent = message;
+      liveRegion.textContent = message
     }
   }
 
@@ -361,7 +345,7 @@ focusableElements[nextIndex]?.focus();
    * Cleanup and destroy
    */
   public destroy(): void {
-    this.isInitialized = false;
+    this.isInitialized = false
     this.focusableElements = [];
     this.skipLinks = [];
     this.landmarks = [];

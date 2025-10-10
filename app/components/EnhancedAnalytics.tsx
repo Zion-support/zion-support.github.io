@@ -1,9 +1,7 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const EnhancedAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -48,10 +46,10 @@ const EnhancedAnalyticsPage: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                EnhancedAnalytics;
-  </
+                EnhancedAnalytics
+  
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -61,12 +59,12 @@ const EnhancedAnalyticsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
-  </
+                Learn More
+  
             </div>
           </div>
         </div>
@@ -100,8 +98,8 @@ const EnhancedAnalyticsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+              Key Benefits
+  
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our enhancedanalytics solutions for your business.
             </p>
@@ -127,14 +125,14 @@ const EnhancedAnalyticsPage: React.FC = () => {
               Contact our experts to discuss your enhancedanalytics needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                Call Now
+  
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
-  </
+                Email Us
+  
             </div>
           </div>
         </div>
@@ -142,118 +140,11 @@ const EnhancedAnalyticsPage: React.FC = () => {
     </div>
   );
 };
-export default EnhancedAnalyticsPage;
-  </button>
+export default EnhancedAnalyticsPage</EnhancedAnalyticsPage>
   </button>
   </h2>
   </button>
   </span>
-=======
-;
-const EnhancedAnalyticsPage: React.FC = () => {;
-  const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
-      description: 'Advanced AI technology to transform your business operations and improve efficiency';}
-    },;
-    {;
-      icon: Zap,;
-      title: 'High Performance',;
-      description: 'Lightning-fast processing and real-time analytics for optimal results';}
-    },;
-    {;
-      icon: Shield,;
-      title: 'Enterprise Security',;
-      description: 'Bank-level security with encryption and compliance standards';}
-    },;
-    {;
-      icon: Globe,;
-      title: 'Global Reach',;
-      description: 'Worldwide deployment and support for international businesses';}
-=======
-import { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface AnalyticsEvent {
-  name: string;
-  value?: number;
-  category?: string;
-  label?: string;
-}
-
-class AnalyticsService {
-  private isInitialized = false;
-
-  init() {
-    if (this.isInitialized || typeof window === 'undefined') return;
-    
-    // Initialize Web Vitals
-    this.initWebVitals();
-    
-    // Initialize custom event tracking
-    this.initCustomEvents();
-    
-    this.isInitialized = true;
-  }
-
-  private initWebVitals() {
-    onCLS(this.sendToAnalytics);
-    onINP(this.sendToAnalytics);
-    onFCP(this.sendToAnalytics);
-    onLCP(this.sendToAnalytics);
-    onTTFB(this.sendToAnalytics);
-  }
-
-  private initCustomEvents() {
-    // Track page views
-    this.trackPageView();
-    
-    // Track button clicks
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      if (target.matches('button, a[href]')) {
-        this.trackEvent('click', {
-          category: 'engagement',
-          label: target.textContent || target.getAttribute('href') || 'unknown'
-        });
-      }
-    });
-
-    // Track form submissions
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      this.trackEvent('form_submit', {
-        category: 'engagement',
-        label: form.id || form.className || 'unknown_form'
-      });
-    });
-  }
-
-  private trackPageView() {
-    this.trackEvent('page_view', {
-      category: 'navigation',
-      label: window.location.pathname
-    });
-  }
-
-  trackEvent(name: string, params: Omit<AnalyticsEvent, 'name'> = {}) {
-    const event: AnalyticsEvent = {
-      name,
-      ...params
-    };
-
-    // Send to analytics service (replace with your preferred service)
-    console.log('Analytics Event:', event);
-    
-    // Example: Send to Google Analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', name, {
-        event_category: params.category,
-        event_label: params.label,
-        value: params.value
-      });
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
     }
   }
 
@@ -275,17 +166,12 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
   return <>{children}</>;
 };
-<<<<<<< HEAD
 ;
-export default EnhancedAnalyticsPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
-
+export default EnhancedAnalyticsPage
 export const useAnalytics = () => {
   return {
     trackEvent: analyticsService.trackEvent.bind(analyticsService)
   };
 };
 
-export default AnalyticsService;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
+export default AnalyticsService

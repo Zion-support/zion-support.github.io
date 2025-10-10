@@ -1,16 +1,16 @@
 /**;
- * Comprehensive validation utilities for forms and data;
- * Provides all validation functions expected by tests;
+ * Comprehensive validation utilities for forms and data
+ * Provides all validation functions expected by tests
  */;
 export interface ValidationResult {;
   isValid: boolean,;
-  error?: string;
+  error?: string
   errors?: string[];,;}
 export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
 ;
 /**;
- * Email validation with length check;
+ * Email validation with length check
  */;
 export function validateEmail(email: string): ValidationResult {,;
   if (!email || email.length > 254) {,;}
@@ -31,7 +31,7 @@ export function validateEmail(emai);
 }
 ;
 /**;
- * URL validation;
+ * URL validation
  */;
 export function validateURL(url: string): ValidationResult {,;
   if (!url || url.trim() === '') {,;}
@@ -42,7 +42,7 @@ export function validateURL(url: string): ValidationResult {,;
     const urlObj = new URL(url);
     const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:';
     return {,;
-      isValid;
+      isValid
       error: isValid ? undefined : 'Invalid URL format',;
 export function validateURL(ur);}
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
@@ -57,7 +57,7 @@ export function validateURL(ur);}
 }
 ;
 /**;
- * String length validation;
+ * String length validation
  */;
 export function validateLength(value: string;);
   min: number);
@@ -102,7 +102,7 @@ export function validateLength(valu,;
 }
 ;
 /**;
- * Password validation;
+ * Password validation
  */;
 export function validatePassword(password: string): ValidationResult {,;
   if (!password || password.length < 8) {,;}
@@ -164,7 +164,7 @@ export function validatePassword(passwor);
 }
 ;
 /**;
- * Required field validation;
+ * Required field validation
  */;
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {,;
   if (value === null || value === undefined) {,;}
@@ -199,7 +199,7 @@ export function validateRequired(valu,;
 }
 ;
 /**;
- * Date validation;
+ * Date validation
  */;
 export function validateDate(dateString: string): ValidationResult {,;
   if (!dateString || dateString.trim() === '') {,;}
@@ -211,7 +211,7 @@ export function validateDate(dateStrin);
   r: 'Date is required' };
   }
 ;
-  // Check for YYYY-MM-DD format;
+  // Check for YYYY-MM-DD format
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
   r: 'Date must be in YYYY-MM-DD format' };
@@ -243,7 +243,7 @@ export function validateDate(dateStrin);
 }
 ;
 /**;
- * Credit card validation using Luhn algorithm;
+ * Credit card validation using Luhn algorithm
  */;
 export function validateCreditCard(cardNumber: string): ValidationResult {,;
   if (!cardNumber || cardNumber.trim() === '') {,;}
@@ -265,24 +265,24 @@ export function validateCreditCard(cardNumbe);
   r: 'Credit card number must be between 13 and 19 digits' };
   }
 ;
-  let sum = 0;
-  let isEven = false;
+  let sum = 0
+  let isEven = false
 ;
   for (let i = cleaned.length - 1; i >= 0; i--) {;
     let digit = parseInt(cleaned[i], 10);
     if (isEven) {;
-      digit *= 2;
+      digit *= 2
       if (digit > 9) {;
-        digit -= 9;
+        digit -= 9
 ;}
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
       }
     }
-    sum += digit;
-    isEven = !isEven;
+    sum += digit
+    isEven = !isEven
   }
 ;
-  const isValid = sum % 10 === 0;
+  const isValid = sum % 10 === 0
   return {;
     isValid,;
     error: isValid ? undefined : 'Invalid credit card number',;}
@@ -291,7 +291,7 @@ export function validateCreditCard(cardNumbe);
 }
 ;
 /**;
- * JSON validation;
+ * JSON validation
  */;
 export function validateJSON(jsonString: string): ValidationResult {,;
   if (!jsonString || jsonString.trim() === '') {,;}
@@ -316,12 +316,12 @@ export function validateJSON(jsonStrin);
 }
 ;
 /**;
- * HTML sanitization;
+ * HTML sanitization
  */;
 export function sanitizeHTML(html: string): string {;
   if (!html) return '';
 ,;
-  return html;
+  return html
     .replace(/&/g, '&amp;');
     .replace(/</g, '&lt;');
     .replace(/>/g, '&gt;');
@@ -333,7 +333,7 @@ export function sanitizeHTML(htm);}
 }
 ;
 /**;
- * Composite validation;
+ * Composite validation
  */;
 export function validateComposite(value: unknown);
   validators: Array<(val: unknown) => ValidationResult>;
@@ -341,7 +341,7 @@ export function validateComposite(value: unknown);
   for (const validator of validators) {;
     const result = validator(value);
     if (!result.isValid) {,;
-      return result;
+      return result
 export function validateComposite(valu,;
   e: unknown,;
   validator,;
@@ -355,7 +355,7 @@ export function validateComposite(valu,;
 }
 ;
 /**;
- * Async validation;
+ * Async validation
  */;
 export async function validateAsync(;
   validator: (val: unknown) => Promise<ValidationResult>;
@@ -378,7 +378,7 @@ export async function validateAsync(validato,;
   }
 }
 ;
-// Re-export existing functions for compatibility;
+// Re-export existing functions for compatibility
 export {;
   isValidEmail,;
   isValidPhone,;

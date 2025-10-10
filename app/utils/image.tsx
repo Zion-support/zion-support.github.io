@@ -6,7 +6,6 @@ interface ImageProps {;
   src: string,;
     alt: string;}
 interface ImageProps {}
-<<<<<<< HEAD
   src: string,
     alt: string
   width?: number
@@ -16,35 +15,31 @@ interface ImageProps {}
   _quality?: number
   src: string,
   alt: string,
-=======
-  src: string;
-  alt: string;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  _quality?: number
   src: string,;
   alt: string,;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  _quality?: number
   _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
+  _blurDataURL?: string
+  fill?: boolean
+  sizes?: string
+  style?: React.CSSProperties
+  onLoad?: () => void
   onError?: () => void;}
 }
 export const Image: React.FC<ImageProps>= ({;}
 export const Image: React.FC<ImageProps> = ({}
   src,;
 export const Image: React.FC<ImageProps> = ({,;
-  src;
+  src
   alt,;
   width,;
   height,;
@@ -71,7 +66,7 @@ export const Image: React.FC<ImageProps> = ({,;
     if (onError) onError();}
   }, [onError]);
   const imageStyle: React.CSSProperties = {;
-    ...style;
+    ...style
     ...(fill && {;
       position: 'absolute';
       top: 0,;
@@ -91,9 +86,9 @@ export const Image: React.FC<ImageProps> = ({,;
     return (</ImageProps>;}
   if (hasError) {}
     return (;
-      <div}
+      <div}>
   if (hasError) {;}
-    return(<div}
+    return(<div}>
 'use client';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
@@ -113,7 +108,7 @@ export const,;
         style={imageStyle}
         {...props});
       >)</div>;
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>);
+        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>);
       </div>);
     ),;
         {...props}
@@ -122,7 +117,7 @@ export const,;
       </div>;
     );
   }
-  return(<img;
+  return(<img>
   return (<img></img>;
       src={src}
       alt={alt}
@@ -145,15 +140,11 @@ export default Image</img>;
     />);
   );
 }
-export default Image;
+export default Image
     />);
   );
 };
-export default Image;
-<<<<<<< HEAD
+export default Image
 "`
   </ImageProps>
   </ImageProps>
-=======
-"`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

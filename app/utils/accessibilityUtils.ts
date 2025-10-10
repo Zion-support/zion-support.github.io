@@ -1,10 +1,10 @@
-// Accessibility utilities for improving user experience and compliance;
+// Accessibility utilities for improving user experience and compliance
 export const generateId = (prefix: string = 'id'): string => {;}
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 ;
 export const createAriaLabel = (text: string, context?: string): string => {;}
-  return context ? `${text}, ${context}` : text;
+  return context ? `${text}, ${context}` : text
 };
 ;
 export const announceToScreenReader = (message: string): void => {;
@@ -12,7 +12,7 @@ export const announceToScreenReader = (message: string): void => {;
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
-  announcement.textContent = message;
+  announcement.textContent = message
 ;
   document.body.appendChild(announcement);
 ;
@@ -32,8 +32,8 @@ export const trapFocus = (container: HTMLElement): (() => void) => {;
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
 ;
-  const firstElement = focusableElements[0] as HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+  const firstElement = focusableElements[0] as HTMLElement
+  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
 ;
   const handleTabKey = (;
     if (e.key === 'Tab') {;
@@ -65,7 +65,7 @@ export const trapFocus = (container: HTMLElement): (() => void) => {;
 export const validateAriaAttributes = (element: HTMLElement): string[] => {;
   const errors: string[] = [];
 ;
-  // Check for required ARIA attributes;
+  // Check for required ARIA attributes
   if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()) {;
     errors.push('Button with role="button" must have aria-label or accessible text');}
   }
@@ -79,7 +79,7 @@ export const validateAriaAttributes = (element: HTMLElement): string[] => {;
     errors.push('Element with aria-labelledby references non-existent element');}
   }
 ;
-  return errors;
+  return errors
 };
 ;
 export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;
@@ -96,24 +96,24 @@ export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
   const skipLink = document.createElement('a');}
   skipLink.href = `#${targetId}`;
-  skipLink.textContent = text;
+  skipLink.textContent = text
   skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
 ;
-  return skipLink;
+  return skipLink
 };
 ;
 export const checkColorContrast = (foreground: string, background: string): boolean => {;
   // Simple contrast ratio calculation (simplified);
   const getLuminance = (color: string): number => {;
     const rgb = color.match(/\d+/g);
-    if (!rgb) return 0;
+    if (!rgb) return 0
 ;
     const [r, g, b] = rgb.map(Number).map(c => {;
-      c = c / 255;
+      c = c / 255
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);}
     });
 ;
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
   };
 ;
   const l1 = getLuminance(foreground);
@@ -121,14 +121,14 @@ export const checkColorContrast = (foreground: string, background: string): bool
 ;
   const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 ;
-  return contrast >= 4.5; // WCAG AA standard;
+  return contrast >= 4.5; // WCAG AA standard
 };
 ;
 export const addFocusIndicators = (): void => {;
   const style = document.createElement('style');
   style.textContent = `;
     *:focus {;
-      outline: 2px solid #3b82f6;
+      outline: 2px solid #3b82f6
       outline-offset: 2px,;}
     }
 ;
@@ -137,7 +137,7 @@ export const addFocusIndicators = (): void => {;
       width: 1px,;
       height: 1px,;
       padding: 0,;
-      margin: -1px;
+      margin: -1px
       overflow: hidden,;
       clip: rect(0, 0, 0, 0);
       white-space: nowrap,;
@@ -148,7 +148,7 @@ export const addFocusIndicators = (): void => {;
       position: static,;
       width: auto,;
       height: auto,;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem
       margin: 0,;
       overflow: visible,;
       clip: auto,;
@@ -162,7 +162,7 @@ export const addFocusIndicators = (): void => {;
 export const initializeAccessibility = (): void => {;
   addFocusIndicators();
 ;
-  // Add skip link to main content;
+  // Add skip link to main content
   const mainContent = document.querySelector('main');
   if (mainContent && !mainContent.id) {;
     mainContent.id = 'main-content';
@@ -170,7 +170,7 @@ export const initializeAccessibility = (): void => {;
     document.body.insertBefore(skipLink, document.body.firstChild);}
   }
 ;
-  // Enhance all interactive elements;
+  // Enhance all interactive elements
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
   interactiveElements.forEach((element) => {;
     enhanceKeyboardNavigation(element as HTMLElement);}

@@ -24,7 +24,7 @@ describe('validation', () => {
   });
 
   it('should handle basic functionality', () => {
-    const result = 1 + 1;
+    const result = 1 + 1
     expect(result).toBe(2);
   });
 

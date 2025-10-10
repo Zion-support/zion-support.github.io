@@ -92,21 +92,15 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
-                  <Link 
-<<<<<<< HEAD
+                  <Link
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-=======
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                  >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
                   View All AI Services →
@@ -124,21 +118,15 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
-                  <Link 
-<<<<<<< HEAD
+                  <Link
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-=======
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                  >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
                   View All IT Services →
@@ -156,21 +144,15 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-                  <Link 
-<<<<<<< HEAD
+                  <Link
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-=======
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                  >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   to="/micro-saas"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
                   View All Micro SAAS →
@@ -187,10 +169,9 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     to={link.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                  >
+                    className="text-gray-300 hover:text-white text-sm transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -203,10 +184,9 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {resourcesLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     to={link.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                  >
+                    className="text-gray-300 hover:text-white text-sm transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -260,32 +240,18 @@ const Footer: React.FC = memo(() => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
-            </div>
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </p>
             <div className="flex space-x-6">
               <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy;
-  </
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service;
-  </
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy;
-  </
-=======
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </a>
+              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </a>
+              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
-              </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+              </a>
             </div>
           </div>
         </div>
@@ -295,17 +261,4 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
-<<<<<<< HEAD
 export default Footer;
-  </a>
-  </a>
-  </a>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-=======
-
-export default Footer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -1,10 +1,10 @@
 /**;
- * Google Analytics gtag types;
+ * Google Analytics gtag types
  */;
 interface GtagEvent {;
-  event_category?: string;
-  event_label?: string;
-  value?: number;
+  event_category?: string
+  event_label?: string
+  value?: number
   [key: string]: unknown;}
 }
 ;
