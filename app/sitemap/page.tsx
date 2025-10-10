@@ -88,6 +88,7 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

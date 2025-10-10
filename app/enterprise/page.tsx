@@ -223,6 +223,7 @@ const EnterprisePage: React.FC = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

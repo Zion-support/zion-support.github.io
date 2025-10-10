@@ -96,6 +96,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 
       <Footer />
 </div>
+    </>
   );
 };
 

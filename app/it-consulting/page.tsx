@@ -627,6 +627,7 @@ const ITConsultingPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

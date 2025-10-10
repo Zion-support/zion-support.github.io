@@ -71,6 +71,7 @@ const FuturisticHeroPage: React.FC = () => {
                 Email Us
               </button>
             </div>
+    </>
   );
 };
 

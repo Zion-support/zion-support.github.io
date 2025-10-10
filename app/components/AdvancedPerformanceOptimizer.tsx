@@ -142,6 +142,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       )}
     </div>
+    </>
   );
 };
 

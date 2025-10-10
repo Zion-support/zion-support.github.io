@@ -94,7 +94,7 @@ const DemoPage: React.FC = () => {
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Live Demos - Zion Tech Group | See Our Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business with real-time demonstrations." />
@@ -273,7 +273,7 @@ const DemoPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

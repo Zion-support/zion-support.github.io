@@ -39,7 +39,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>EnhancedSEOOptimizer | Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedSEOOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -100,7 +100,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
 
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -136,6 +135,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

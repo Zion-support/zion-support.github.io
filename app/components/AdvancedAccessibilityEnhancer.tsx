@@ -96,6 +96,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       </div>
       {children}
     </div>
+    </>
   );
 };
 

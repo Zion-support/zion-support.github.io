@@ -2,7 +2,6 @@
 import React from 'react';
 import React, { useState, useEffect } from 'react';
 
-
 interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
@@ -17,7 +16,6 @@ interface PerformanceMetrics {
   fps: number,
   [key: string]: number;
 }
-
 
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -127,6 +125,7 @@ const PerformanceDashboard: React.FC = () => {
             Last updated: {new Date().toLocaleTimeString()}</div>
         </div>
     </div>
+    </>
   );
 };
 

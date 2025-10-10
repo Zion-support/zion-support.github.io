@@ -69,14 +69,15 @@ const CareersPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
       </Helmet>
 
-      <section className="relative py-20 px-4 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -113,32 +114,12 @@ const CareersPage: React.FC = () => {
                     <span>{position.type}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
-                  <ul className="text-sm text-gray-300 space-y-1">
-                    {position.requirements?.map((req, reqIndex) => (
-                      <li key={reqIndex} className="flex items-center space-x-2">
-                        <span className="w-1 h-1 bg-purple-400 rounded-full"></span>
-                        <span>{req}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  Apply Now
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
+                <p className="text-gray-300 text-sm">{position.description}</p>
               </div>
-            ))}
-=======
               ))}
             </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -179,7 +160,8 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

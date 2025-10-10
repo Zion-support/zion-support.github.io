@@ -115,6 +115,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
