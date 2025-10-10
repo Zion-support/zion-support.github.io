@@ -12,9 +12,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 class BuildOptimizer {
-  constructor() {
+    constructor() {
     this.distPath = path.join(process.cwd(), 'dist');
-    this.optimizations = [];
+    this.optimizations = []
   }
 
   async optimize() {
@@ -32,25 +32,25 @@ class BuildOptimizer {
       await this.generateServiceWorker();
       
       console.log('✅ Build optimization completed successfully!');
-      this.printSummary();
-    } catch (error) {
-      console.error('❌ Build optimization failed:', error.message);
-      process.exit(1);
-    }
+      this.printSummary()
+  } catch (error) {
+    console.error('❌ Build optimization failed:', error.message);
+      process.exit(1)
+  }
   }
 
   async analyzeBundle() {
     console.log('📊 Analyzing bundle...');
     
     if (!fs.existsSync(this.distPath)) {
-      throw new Error('Dist folder not found. Please run build first.');
-    }
+      throw new Error('Dist folder not found. Please run build first.')
+  }
 
     const files = this.getFilesRecursively(this.distPath);
     const totalSize = files.reduce((total, file) => {
-      const stats = fs.statSync(file);
-      return total + stats.size;
-    }, 0);
+    const stats = fs.statSync(file);
+      return total + stats.size
+  }, 0);
 
     this.optimizations.push({)
       name: 'Bundle Analysis'),
@@ -59,15 +59,16 @@ class BuildOptimizer {
     });
 
     // Check for large files;
-    const largeFiles = files.filter(file => {)
+    const largeFiles = files.filter(file => {
+    )
       const stats = fs.statSync(file);
-      return stats.size > 100 * 1024; // 100KB;
-    });
+      return stats.size > 100 * 1024; // 100KB
+  });
 
     if (largeFiles.length > 0) {
-      console.log('⚠️  Large files detected: ');
+      console.log('⚠️  Large files detected: ')
       largeFiles.forEach(file => {)
-        const stats = fs.statSync(file);
+        const stats = fs.statSync(file),
         console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
       });
     }
@@ -90,7 +91,8 @@ class BuildOptimizer {
     }
 
     // Add image optimization metadata;
-    images.forEach(image => {)
+    images.forEach(image => {
+    )
       const stats = fs.statSync(image);
       const sizeKB = (stats.size / 1024).toFixed(2);
       
@@ -98,8 +100,8 @@ class BuildOptimizer {
       if (image.endsWith('.html')) {
         let content = fs.readFileSync(image, 'utf8');
         content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"');
-        fs.writeFileSync(image, content);
-      }
+        fs.writeFileSync(image, content)
+  }
     });
 
     this.optimizations.push({)
@@ -125,11 +127,12 @@ class BuildOptimizer {
       // Remove unnecessary whitespace;
       content = content.replace(/\s+/g, ' ');
       content = content.replace(/;\s*}/g, '}');
-      content = content.replace(/{\s*/g, '{');
+      content = content.replace(/{
+    \s*/g, '{');
       content = content.replace(/;\s*/g, ';');
       
-      fs.writeFileSync(cssFile, content);
-    });
+      fs.writeFileSync(cssFile, content)
+  });
 
     this.optimizations.push({)
       name: 'CSS Optimization'),
@@ -150,8 +153,8 @@ class BuildOptimizer {
       
       // Remove console.log statements in production;
       if (process.env.NODE_ENV === 'production') {
-        content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, '');
-      }
+        content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, '')
+  }
       
       // Remove unnecessary whitespace;
       content = content.replace(/\s+/g, ' ');
@@ -175,7 +178,7 @@ class BuildOptimizer {
 
     const securityHeaders = `
 <!-- Security Headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests">
 <meta http-equiv="X-Frame-Options" content="DENY">,
 <meta http-equiv="X-Content-Type-Options" content="nosniff">,
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,
@@ -252,13 +255,13 @@ class BuildOptimizer {
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Crawl-delay for respectful crawling;
-Crawl-delay: 1;
-# Disallow admin and private areas;
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+# Disallow admin and private areas,
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/,
-Disallow: /private/`;
+Disallow: /private/`,
 ,
     fs.writeFileSync(path.join(this.distPath, 'robots.txt'), robotsTxt);
 
@@ -284,8 +287,8 @@ Disallow: /private/`;
       manifest.theme_color = manifest.theme_color || '#4 f46 e5';
       manifest.background_color = manifest.background_color || '#0 f172 a';
       
-      fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-    }
+      fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2))
+  }
 
     this.optimizations.push({)
       name: 'Manifest Optimization'),
@@ -301,8 +304,8 @@ Disallow: /private/`;
     const swDest = path.join(this.distPath, 'sw.js');
     
     if (fs.existsSync(swSource)) {
-      fs.copyFileSync(swSource, swDest);
-    }
+      fs.copyFileSync(swSource, swDest)
+  }
 
     this.optimizations.push({)
       name: 'Service Worker'),
@@ -314,28 +317,29 @@ Disallow: /private/`;
     const files = [];
     
     if (!fs.existsSync(dir)) {
-      return files;
-    }
+      return files
+  }
     
     const items = fs.readdirSync(dir);
     
-    items.forEach(item => {)
+    items.forEach(item => {
+    )
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files.push(...this.getFilesRecursively(fullPath));
-      } else {
-        files.push(fullPath);
-      }
+        files.push(...this.getFilesRecursively(fullPath))
+  } else {
+    files.push(fullPath)
+  }
     });
     
     return files;
   }
 
   printSummary() {
-    console.log('\n📋 Optimization Summary: ');
-    console.log('===');
+    console.log('\n📋 Optimization Summary: ')
+    console.log('==='),
     
     this.optimizations.forEach(opt => {)
       const status = opt.status === 'completed' ? '✅' : ),
@@ -349,8 +353,8 @@ Disallow: /private/`;
 
 // Run optimization if called directly;
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const optimizer = new BuildOptimizer();
-  optimizer.optimize().catch(console.error);
-}
+    const optimizer = new BuildOptimizer();
+  optimizer.optimize().catch(console.error)
+  }
 
 export default BuildOptimizer;

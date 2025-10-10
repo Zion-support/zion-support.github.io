@@ -6,14 +6,14 @@ interface OptimizedLoadingSpinnerProps {
   className?: string;
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
 }
 const,
-  OptimizedLoadingSpinner: React.FC;
+  OptimizedLoadingSpinner: React.FC,
           <OptimizedLoadingSpinnerProps> = memo()
   ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
@@ -21,17 +21,17 @@ const,
   d: 'w-8 h-8',
       l,
   g: 'w-12 h-12'
-    };
+    }
     const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   primar,
   y: 'text-cyan-400',
       secondar,
   y: 'text-purple-400',
       whit,
   e: 'text-white'
-    };
+    }
     return (<div>Coming Soon</div>)
   )
           <div></div>
@@ -44,7 +44,7 @@ className="animate-spin""
           fill="none""
           viewBox="0 0 24 24""
           xmlns="htt,"
-  p:// www.w3.org/2000/svg"
+  p: // www.w3.org/2000/svg"
 //         >
           <circle></circle>"
 className="opacity-25""
@@ -61,7 +61,7 @@ className="opacity-75""
 // />
           </svg>
       </div>
-    );
+    ),
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
@@ -71,12 +71,12 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
       lg:     ,
-$4};
+$4}
     const colorClasses = {
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white:     ,
-$4};
+$4}
     return (
       <div
         className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
@@ -87,7 +87,7 @@ $4};
           className="animate-spin"
           fill="none"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="http: //www.w3.org/2000/svg"
         >
           <circle
             className="opacity-25"
@@ -104,7 +104,7 @@ $4};
           />
         </svg>
       </div>
-    );
+    ),
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';

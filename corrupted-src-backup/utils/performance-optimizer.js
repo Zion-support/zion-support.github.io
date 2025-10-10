@@ -9,11 +9,11 @@ class PerformanceOptimizer {
       pageLoadTime: 0;
       firstContentfulPaint: 0;
       largestContentfulPaint: 0;
-      cumulativeLayoutShift: 0;
-      firstInputDelay: 0;
-      interactionToNextPaint: 0;
+      cumulativeLayoutShift: 0
+      firstInputDelay: 0
+      interactionToNextPaint: 0,
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
-    };
+    }
     this.observers = new Map();
     this.init();
   }
@@ -46,7 +46,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     this.setupLazyLoading();
 
     // Optimize font loading;
-    this.optimizeFontLoading();
+    this.optimizeFontLoading()
   }
 
   setupImageOptimization() {
@@ -81,7 +81,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     this.setupRouteBasedSplitting();
 
     // Component-based splitting;
-    this.setupComponentSplitting();
+    this.setupComponentSplitting()
   }
 
   setupCaching() {
@@ -113,8 +113,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.rel = 'preload';
       link.href = resource;
       link.as = 'script';
-      document.head.appendChild(link);
-    });
+      document.head.appendChild(link)
+  });
   }
 
   setupLazyLoading() {
@@ -152,13 +152,13 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
     criticalFonts.forEach(font => {)
       const _link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = font;
-      link.as = 'style';
+      link.rel = 'preload'
+      link.href = font
+      link.as = 'style',
       link.onload = () => {,
         link.rel = 'stylesheet';
   optimizeFontLoading() {/* TODO: Fix JSX expression */}
-      };
+      }
       document.head.appendChild(link);
     });
   }
@@ -175,7 +175,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       '/privacy': () => import('../pages/Privacy'),
       '/terms': () => import('../pages/Terms'),
   setupRouteBasedSplitting() {/* TODO: Fix JSX expression */}
-    };
+    }
 
     // Preload next likely routes;
     this.preloadNextRoutes(routes);
@@ -190,8 +190,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       'InteractiveMaps'];
 
     heavyComponents.forEach(component => {)
-      this.setupComponentLazyLoading(component);
-    });
+      this.setupComponentLazyLoading(component)
+  });
   }
 
   preloadNextRoutes(routes) {
@@ -212,7 +212,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   getLikelyNextRoutes(currentPath) {/* TODO: Fix JSX expression */}
-    };
+    }
 
     return routeMap[currentPath] || [];
   }
@@ -322,23 +322,28 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     this.inlineCriticalCSS();
 
     // Defer non-critical CSS;
-    this.deferNonCriticalCSS();
+    this.deferNonCriticalCSS()
   }
 
   inlineCriticalCSS() {
     // This would typically be done at build time;
     // For runtime, we can add critical styles to head;
     const criticalCSS = `
-      body { font-family: Inter, sans-serif; }
-      .container { max-width: 1200px; margin: 0 auto; }
-      .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      body { font-family: Inter, sans-serif
+  }
+      .container {
+    max-width: 1200px, margin: 0 auto
+  }
+      .header {
+    background: #fff, box-shadow: 0 2px 4px rgba(0,0,0,0.1)
+  }
   optimizeStyles() {/* TODO: Fix JSX expression */}
   }
 
   inlineCriticalCSS() {/* TODO: Fix JSX expression */}
   y: Inter, sans-serif; }
       .container {/* TODO: Fix JSX expression */}
-  n: 0 auto; }
+  n: 0 auto, }
       .header {/* TODO: Fix JSX expression */}
   w: 0 2px 4px rgba(0,0,0,0.1); }`
     `;
@@ -357,14 +362,14 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.onload = () => {
         link.media = 'all';
   deferNonCriticalCSS() {/* TODO: Fix JSX expression */}
-      };
+      }
     });
   }
 
   // Memory management;
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
-    this.observers.clear();
+    this.observers.clear()
   }
 
   // Performance monitoring;
@@ -372,8 +377,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver(list => {)
         list.getEntries().forEach(entry => {)
-          this.handlePerformanceEntry(entry);
-        });
+          this.handlePerformanceEntry(entry)
+  });
       });
 
       observer.observe({)

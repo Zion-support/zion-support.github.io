@@ -219,6 +219,6 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
       </d, i, v>
     </secti, o, n>
   );
-};
+}
 export default October2025LatestContentBanner;
-;"`
+"`

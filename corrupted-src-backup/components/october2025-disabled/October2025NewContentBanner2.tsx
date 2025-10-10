@@ -118,6 +118,6 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
       </div>
     </sec, t, i, o, n>
   );
-};
+}
 export default October2025NewContentBanner2;
 "`

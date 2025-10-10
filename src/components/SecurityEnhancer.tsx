@@ -20,26 +20,26 @@ const,
     addSecurityEventListeners();
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
   const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   const enforceHTTPS = () => {/* TODO: Fix JSX expression */}
     }
-  };
+  }
   const addXSSProtection = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   const addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
   t: 'strict-origin-when-cross-origin' },
       {/* TODO: Fix JSX expression */}
   t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
       {/* TODO: Fix JSX expression */}
-  t: 'max-age=63072000; includeSubDomains; preload' }
+  t: 'max-age=63072000; includeSubDomains, preload' }
     ];
     headers.forEach(header => {/* TODO: Fix JSX expression */})
     });
-  };
+  }
   const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
       }
     });
@@ -72,7 +72,7 @@ const,
     // Monitor for suspicious activity;
     let suspiciousActivity = 0;
     const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
-    };
+    }
     // Reset suspicious activity counter every 5 minutes;
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
     // Track rapid clicks (potential bot activity)
@@ -80,7 +80,7 @@ const,
     document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
         }
       });
-    };
+    }
     checkForXSS();
     // Monitor form submissions for CSRF
     const forms = document.querySelectorAll('form');
@@ -100,7 +100,7 @@ const,
           }
         });
       });
-    };
+    }
     checkSuspiciousCode();
     // Monitor for unusual network requests
     const originalFetch = window.fetch;
@@ -112,29 +112,29 @@ const,
         throw new Error('Suspicious network request blocked');
       }
       return originalFetch.apply(window, args);
-    };
+    }
   }, [validateURL]);
   // Security headers validation
   const validateSecurityHeaders = useCallback(() => {
     if (typeof window === 'undefined') return;
-    const warnings: string[] = [];
+    const warnings: string[] = []
     // Check for HTTPS
     if (location.protocol !== 'https:') {
-      warnings.push('Site is not served over HTTPS');
-      setIsSecure(false);
-    }
+      warnings.push('Site is not served over HTTPS'),
+      setIsSecure(false)
+  }
     // Check for security headers (if available)
     const headers = (window as any).securityHeaders;
     if (headers) {
-      if (!headers['x-frame-options']) {
-        warnings.push('X-Frame-Options header missing');
-      }
+    if (!headers['x-frame-options']) {
+        warnings.push('X-Frame-Options header missing')
+  }
       if (!headers['x-content-type-options']) {
-        warnings.push('X-Content-Type-Options header missing');
-      }
+    warnings.push('X-Content-Type-Options header missing')
+  }
       if (!headers['x-xss-protection']) {
-        warnings.push('X-XSS-Protection header missing');
-      }
+    warnings.push('X-XSS-Protection header missing')
+  }
     }
     setSecurityWarnings(warnings);
     if (warnings.length > 0) {
@@ -143,10 +143,10 @@ const,
   }, []);
   // Rate limiting
   const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
-    const now = Date.now();
-    const windowStart = now - windowMs;
+    const now = Date.now()
+    const windowStart = now - windowMs,
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
-      .filter((timestamp: number) => timestamp > windowStart);
+      .filter((timestamp: number) => timestamp > windowStart),
     if (requests.length >= limit) {
       logger.warn('Rate limit exceeded', { key, limit, windowMs });
       return false;
@@ -162,8 +162,8 @@ const,
     validateSecurityHeaders();
     // Set up periodic security checks
     const interval = setInterval(() => {
-      validateSecurityHeaders();
-    }, 30000); // Check every 30 seconds
+      validateSecurityHeaders()
+  }, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
   // Security event handlers
@@ -171,8 +171,8 @@ const,
     logger.info('Security event', { event, data });
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
-      return;
-    }
+    return
+  }
     // Send to security monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'security_event', {
@@ -190,7 +190,7 @@ const,
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings};
+        warnings: securityWarnings}
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
   return (
@@ -225,6 +225,6 @@ const,
       )}
     </React.Fragment>
   );
-};
+}
 export default SecurityEnhancer</div>
   </SecurityEnhancerProps>

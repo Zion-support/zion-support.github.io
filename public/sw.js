@@ -1,31 +1,26 @@
-<<<<<<< HEAD
-=======
+
 // Service Worker for Zion Tech Group
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
-<<<<<<< HEAD
-  '/manifest.json'
-=======
+
   '/manifest.json',
   '/favicon.ico'
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-<<<<<<< HEAD
-      .then((cache) => cache.addAll(urlsToCache))
-=======
+
       .then((cache) => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
   );
 });
 
@@ -33,14 +28,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-<<<<<<< HEAD
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-=======
+
         // Return cached version or fetch from network
         return response || fetch(event.request);
       })
@@ -60,6 +48,6 @@ self.addEventListener('activate', (event) => {
         })
       );
     })
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
   );
 });

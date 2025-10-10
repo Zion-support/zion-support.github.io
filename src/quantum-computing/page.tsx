@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const QuantumComputingPage: React.FC = () => {
-  return (
+    return (
     <React.Fragment>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>
@@ -15,7 +15,7 @@ const QuantumComputingPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
               Quantum Computing;
   </
             <p className="text-xl text-cyan-400 mb-8">
@@ -44,7 +44,7 @@ const QuantumComputingPage: React.FC = () => {
   </
                 <li className="flex items-center">
                   <span className="text-cyan-400 mr-3">✓</span>
-                  Financial modeling;
+                  Financial modeling
   </
               </ul>
             </div>
@@ -72,12 +72,12 @@ const QuantumComputingPage: React.FC = () => {
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300">
-                Explore Quantum Solutions;
+                Explore Quantum Solutions
   </
               <a
                 href="/consultation"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Schedule Consultation;
+                Schedule Consultation,
   </
             </div>
           </div>
@@ -85,8 +85,8 @@ const QuantumComputingPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
+  )
+  }
 export default QuantumComputingPage;
   </a>
   </a>

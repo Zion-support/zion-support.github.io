@@ -68,10 +68,10 @@ readingTimereadingTime: '45 min read',
             <span className="text-2xl">🚀</span>
             <span className="text-yellow-400 font-bold text-lg">ULTIMATE BUSINESS INTELLIGENCE 2025</span>
             <span className="text-2xl">⚡</span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
+          <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence
-            content that&apos;s transforming enterprises worldwide</p>
+            content that&apos,s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
             <button
@@ -134,23 +134,23 @@ readingTimereadingTime: '45 min read',
                   />
                 </svg>
                 to="/services"
-                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300">Learn More</Link>
-    </section>);
+                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover: bg-blue-400/10 transition-all duration-300">Learn More</Link>
+    </section>)
 export default UltimateBusinessIntelligenceShowcase2025
-'use client';
+'use client',
 import React, { useState } from 'react';
         return (import { Link } from 'react-router-dom';)
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'ultimate-business-intelligence-revolution',
       titl,
@@ -159,15 +159,15 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       ur,
-  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough';
+  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       typ,
   e: 'Blog Post',
       categor,
   y: 'blog',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ro,
   i: '30,000%',
         efficienc,
@@ -202,7 +202,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       descriptio,
   n: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
       ur,
-  l: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide';
+  l: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       typ,
   e: 'Implementation Guide',
       categor,
@@ -254,8 +254,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
           </svg>"
                 to="/services""
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,"
-  hover:bg-blue-400/10 transition-all duration-300"
+  hover: bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
-    </section>);
-export default UltimateBusinessIntelligenceShowcase2025;
+    </section>)
+export default UltimateBusinessIntelligenceShowcase2025,
   </path>

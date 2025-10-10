@@ -9,8 +9,8 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
     pageViews: 0;
     uniqueVisitors: 0;
     bounceRate: 0;
-    conversionRate: 0;
-    avgSessionDuration: 0;
+    conversionRate: 0
+    avgSessionDuration: 0
     topPages: []
     trafficSources: []
     deviceBreakdown: []
@@ -18,9 +18,9 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       loadTime: 0;)
       firstContentfulPaint: 0;)
       largestContentfulPaint: 0;)
-      cumulativeLayoutShift: 0;)
+      cumulativeLayoutShift: 0,)
     })
-    conversions: 0;
+    conversions: 0,
     performance: 0),
     errors: 0)});
   useEffect(() => {
@@ -97,7 +97,7 @@ const,
       </div>
     </div>
   );
-};
+}
 export default AdvancedAnalytics;
 "
   </AdvancedAnalyticsProps>

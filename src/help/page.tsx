@@ -88,7 +88,7 @@ titletitle: 'Security Best Practices',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
         description: 'Set up monitoring and logging for your AI services and applications']
-  };
+  }
   const resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
@@ -147,8 +147,8 @@ questionquestion: 'Is there a free trial available?',
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Help Center;
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Help Center,
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers, get support, and learn how to make the most of our AI and IT services. 
@@ -247,12 +247,12 @@ questionquestion: 'Is there a free trial available?',
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find what you're looking for? Our support team is here to help you 
               with any questions or issues you might have.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <MessageSquare className="w-5 h-5 mr-2" />
-                Contact Support;
+                Contact Support
   </
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -266,14 +266,14 @@ questionquestion: 'Is there a free trial available?',
     </React.Fragment>
   return (
     <div>Coming Soon</div>
-  );
-};
+  ),
+}
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'getting-started',
       nam,
@@ -308,7 +308,7 @@ const categories = [
     }
   ];
   const helpArticles = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
     'getting-started': [;
   titl,
@@ -366,13 +366,13 @@ const categories = [
           </a>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
       <Footer /></Footer>
     </React.Fragment>
-export default HelpPage;
+export default HelpPage,
   </div>
   </p>
   </h2>

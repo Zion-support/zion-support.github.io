@@ -1,10 +1,10 @@
 const, October2025TechBreakthroughBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">)
-      {/* Animated, Backgroun, d */};)
+      {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0, opacit, y-20">)
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">
-      {/* Animated, Backgroun, d */};</div>
+      {/* Animated, Backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 20%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent, 5, 0%)]"></d, i, v>
@@ -13,7 +13,7 @@ const, October2025TechBreakthroughBanne, r = () => {
       {/* Animated, Gri, d */}
       <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-im, a, g;
   e:radi, a, l-gradie, n, t(ellipse_, 8, 0%_, 5, 0%_at_, 5, 0%_, 5, 0%,#0, 0, 0,transpare, n, t)]"></d, i, v>"
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">"
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-8"></div>
@@ -22,7 +22,7 @@ const, October2025TechBreakthroughBanne, r = () => {
             <sp, a, n>BREAKTHROUGH, OCTOBER, 1, 20, 2, 5</sp, a, n>
             <Sparkles, className="w-5 h-5  />
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">";
-      {/* Animated, Backgroun, d */};</div>
+      {/* Animated, Backgroun, d */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>";
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 20%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent, 5, 0%)]"></d, i, v>";
@@ -31,13 +31,13 @@ const, October2025TechBreakthroughBanne, r = () => {
       {/* Animated, Gri, d */}
       <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-im, a, g;
   e:radi, a, l-gradie, n, t(ellipse_, 8, 0%_, 5, 0%_at_, 5, 0%_, 5, 0%,#0, 0, 0,transpare, n, t)]"></d, i, v>";
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-8">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50">";</div>
 const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, Backgroun, d */};
+      {/* Animated, Backgroun, d */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>"
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 20%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent, 5, 0%)]"></d, i, v>"
@@ -55,7 +55,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             <sp, a, n>BREAKTHROUGH, OCTOBER, 1, 20, 2, 5</sp, a, n>"
             <Sparkles, className="w-5 h-5  /></Sparkles>"
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n">";
-      {/* Animated, Backgroun, d */};"
+      {/* Animated, Backgroun, d */}"
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 50%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent, 5, 0%)]"></d, i, v>";"
         <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 20%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent, 5, 0%)]"></d, i, v>";"
@@ -608,7 +608,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="te, x, t-cent, e, r"></div>
               <div, className="te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2">3-5, Year, s</d, i, v>
               <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Quantum, Threat, Window</d, i, v>
-              <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Deploy, quantu, m-safe, security, NOW before, i, t's, too, late</d, i, v>;
+              <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Deploy, quantu, m-safe, security, NOW before, i, t's, too, late</d, i, v>
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";</div>
             <div, className="te, x, t-cent, e, r">";</div>
               <div, className="te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2">3-5, Year, s</d, i, v>";
@@ -632,7 +632,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="te, x, t-cent, e, r"></div>"
               <div, className="te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2">3-5, Year, s</d, i, v>"
               <div, className="te, x, t-white, tex, t-sm, fon, t-medi, u, m">Quantum, Threat, Window</d, i, v>"
-              <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Deploy, quantu, m-safe, security, NOW before, i, t's, too, late</d, i, v>;"
+              <div, className="te, x, t-cy, a, n-200, tex, t-xs, m, t-1">Deploy, quantu, m-safe, security, NOW before, i, t's, too, late</d, i, v>"
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";"
             <div, className="te, x, t-cent, e, r">";"
               <div, className="te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2">3-5, Year, s</d, i, v>";"
@@ -861,6 +861,6 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default October2025TechBreakthroughBanner;
-;"
+"

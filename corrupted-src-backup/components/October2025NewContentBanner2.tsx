@@ -225,6 +225,6 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
       </d, i, v>
     </secti, o, n>
   );
-};
+}
 export default October2025NewContentBanner2;
-;"`
+"`

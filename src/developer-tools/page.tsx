@@ -67,11 +67,11 @@ $4}
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Developer Tools;
+            <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
+              Developer Tools
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity;
+              AI-powered development tools that accelerate your coding workflow and improve productivity,
   </
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -94,7 +94,7 @@ $4}
             </div>
             {/* Contact Info */}
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-              <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5" />
                   <span className="text-white font-medium">+1 302 464 0950</span>
@@ -106,15 +106,15 @@ $4}
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-5 h-5" />
     <div>Coming Soon</div>
-  );
-};
+  ),
+}
   const _devTools = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Code Generator',
       descriptio,
@@ -129,8 +129,8 @@ $4}
   e: 'Starting at $99/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'API Testing Suite',
       descriptio,
@@ -145,8 +145,8 @@ $4}
   e: 'Starting at $149/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Database Management Tool',
       descriptio,
@@ -161,8 +161,8 @@ $4}
   e: 'Starting at $199/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'DevOps Automation',
       descriptio,
@@ -177,8 +177,8 @@ $4}
   e: 'Starting at $299/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Code Review Assistant',
       descriptio,
@@ -193,8 +193,8 @@ $4}
   e: 'Starting at $79/month'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Performance Profiler',
       descriptio,
@@ -224,11 +224,11 @@ $4}
           <div className="max-w-7xl mx-auto text-center"></div>"
             <h1 className="text-4xl,
   sm:text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-// Developer Tools;
+  md: text-6xl font-bold text-white mb-6"></h1>
+// Developer Tools
           </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-// AI-powered development tools that accelerate your coding workflow and improve productivity;
+// AI-powered development tools that accelerate your coding workflow and improve productivity,
           </p>
             {/* Stats */}"
             <div className="grid grid-cols-2,"
@@ -354,8 +354,8 @@ $4}
                   <div className="text-center">
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block">
-                      Get Started Now;
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
+                      Get Started Now,
   </
                   </div>"
                   <div className="text-center"></div>
@@ -364,9 +364,9 @@ $4}
   o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-purple-700,"
-  hover:to-blue-700 transition-all inline-block"
+  hover: to-blue-700 transition-all inline-block"
 // >
-//                       Get Started Now;
+//                       Get Started Now,
           </a>
                   </div>
                 </div>
@@ -383,16 +383,16 @@ $4}
             <p className="text-xl text-purple-100 mb-8">
               Join thousands of developers who have accelerated their productivity with our AI-powered tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Call (302) 464-0950;
+                Call (302) 464-0950
   </
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
-                Email Us;
+                Email Us,
   </
             </div>
           </div>
@@ -409,16 +409,16 @@ $4}
             <p className="text-xl text-purple-100 mb-8"></p>
 // Join thousands of developers who have accelerated their productivity with our AI-powered tools.
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
-//                 Call (302) 464-0950;
+//                 Call (302) 464-0950
           </a>
               <a
                 href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
-//                 Email Us;
+//                 Email Us
           </a>
             </div>
           </div>
@@ -426,8 +426,8 @@ $4}
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  ),
+}
 export default DeveloperToolsPage;
   </a>
   </a>

@@ -6,6 +6,6 @@ const,
       {/* Component content */}
     </div>
   );
-};
+}
 export default NewestContent2025Banner;
   </NewestContent2025BannerProps>

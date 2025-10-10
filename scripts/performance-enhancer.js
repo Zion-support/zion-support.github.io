@@ -23,7 +23,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   s: {},
       recommendation,
   s: []
-    };
+    }
   }
 
   async enhance() {/* TODO: Fix JSX expression */}
@@ -43,7 +43,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 //       const files = await fs.readdir(distPath);
       
       let _totalSize = 0;
-      const _fileSizes = {};
+      const _fileSizes = {}
       
       for (const file of files) {/* TODO: Fix JSX expression */}
         }
@@ -53,9 +53,10 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       this.report.metrics.fileSizes = fileSizes;
       
       // Add recommendations based on bundle size;
-      if (totalSize > 1024 * 1024) { // 1MB;
-        this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.');
-      }
+      if (totalSize > 1024 * 1024) {
+    // 1MB;
+        this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.')
+  }
       
       this.report.optimizations.push({)
         type: 'bundle-analysis'),
@@ -75,14 +76,14 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   }
 
   async optimizeImages() {
-//     try {
+    //     try {
 //       const publicPath = path.join(process.cwd(), 'public');
 //       const imagesPath = path.join(publicPath, 'images');
       
       // Check if images directory exists;
       try {
-        await fs.access(imagesPath);
-      } catch {
+        await fs.access(imagesPath)
+  } catch {
 //         return;
   async optimizeImages() {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
@@ -112,40 +113,59 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   }
 
   async optimizeCSS() {
-//     try {
+    //     try {
       // Generate critical CSS;
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
-.min-h-screen { min-height: 100 vh; }
-.bg-slate-950 { background-color: #020617; }
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.text-white { color: #ffffff; }
-.font-bold { font-weight: 700; }
-.text-xl { font-size: 1.25rem; }
-.p-4 { padding: 1rem; }
-.rounded { border-radius: 0.25rem; }
+.min-h-screen { min-height: 100 vh
+  }
+.bg-slate-950 {
+    background-color: #020617
+  }
+.flex {
+    display: flex
+  }
+.items-center {
+    align-items: center
+  }
+.justify-center {
+    justify-content: center
+  }
+.text-white {
+    color: #ffffff
+  }
+.font-bold {
+    font-weight: 700
+  }
+.text-xl {
+    font-size: 1.25rem
+  }
+.p-4 {
+    padding: 1rem
+  }
+.rounded {
+    border-radius: 0.25rem
+  }
   async optimizeCSS() {/* TODO: Fix JSX expression */}
-  t: 100vh; }
+  t: 100vh, }
 .bg-slate-950 {/* TODO: Fix JSX expression */}
-  r: #020617; }
+  r: #020617, }
 .flex {/* TODO: Fix JSX expression */}
-  y: flex; }
+  y: flex, }
 .items-center {/* TODO: Fix JSX expression */}
-  s: center; }
+  s: center, }
 .justify-center {/* TODO: Fix JSX expression */}
-  t: center; }
+  t: center, }
 .text-white {/* TODO: Fix JSX expression */}
-  r: #ffffff; }
+  r: #ffffff, }
 .font-bold {/* TODO: Fix JSX expression */}
-  t: 700; }
+  t: 700, }
 .text-xl {/* TODO: Fix JSX expression */}
-  e: 1.25rem; }
+  e: 1.25rem, }
 .p-4 {/* TODO: Fix JSX expression */}
-  g: 1rem; }
+  g: 1rem, }
 .rounded {/* TODO: Fix JSX expression */}
-  s: 0.25rem; }`
+  s: 0.25rem, }`
 `;
 
 //       const criticalCSSPath = path.join(process.cwd(), 'public', 'critical.css');
@@ -207,7 +227,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   
   // Start monitoring when DOM is ready;
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', observeWebVitals);
+    document.addEventListener('DOMContentLoaded', observeWebVitals)
   } else {
     observeWebVitals();
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
@@ -231,7 +251,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   }
 
   async generateServiceWorker() {
-//     try {
+    //     try {
       const serviceWorkerScript = `
 // Service Worker for caching and offline support;
 // const CACHE_NAME = 'zion-app-v1';
@@ -246,8 +266,8 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
-  );
-});
+  )
+  });
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(

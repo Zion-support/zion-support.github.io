@@ -10,8 +10,8 @@ const REPO_NAME = 'zion.app'
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     const options = {
       hostname: 'api.github.com',
-      port: 443;
-  path: path;
+      port: 443
+  path: path,
       method: 'GET'}
       headers: {,
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
@@ -22,7 +22,7 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
         'User-Agent': 'Node.js';
         'Accept': 'application/vnd.github.v3+json'
       }
-    };
+    }
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
       });
@@ -70,7 +70,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(postData)
       }
-    };
+    }
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
       });

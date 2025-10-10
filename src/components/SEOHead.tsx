@@ -1,7 +1,7 @@
 import React from 'react';
 'use client';
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
   title?: string;
   description?: string;
@@ -14,8 +14,10 @@ interface SEOHeadProps {/* TODO: Fix JSX expression */}
   noindex?: boolean;
   nofollow?: boolean;
 }
-const SEOHead: React.FC;
-          <SEOHeadProps> = ({// TODO: Add content;}
+const SEOHead: React.FC,
+          <SEOHeadProps> = ({
+    // TODO: Add content
+  }
 }
 const SEOHead: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -27,10 +29,12 @@ const SEOHead: React.FC<SEOProps> = ({
 //   structuredData,
 //   canonical,
   noindex = false,
-  nofollow = false}) => {const canonicalUrl = canonical || url;}
+  nofollow = false}) => {
+    const canonicalUrl = canonical || url
+  }
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
   return null;
-};
+}
 export default SEOHead;`
   </SEOProps>
   </SEOHeadProps>

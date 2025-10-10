@@ -10,8 +10,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
       {/* Animated, Background, Elements */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
-        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
+        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
@@ -19,8 +19,8 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
       {/* Animated, Background, Elements */}"
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;"
-        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;"
+        <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>"
+        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>"
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';"
@@ -737,7 +737,6 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default October2025 SupplyChainRevolutionBanner;
-;
 }"

@@ -1,12 +1,12 @@
 import React from 'react';
 'use client';
 interface UserExperienceEnhancerProps {
-  enableSmoothScrolling?: boolean;
+    enableSmoothScrolling?: boolean;
   enableLoadingStates?: boolean;
   enableErrorBoundaries?: boolean;
   enableAnalytics?: boolean;
-  enableNotifications?: boolean;
-}
+  enableNotifications?: boolean
+  }
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   enableSmoothScrolling = true,
   enableLoadingStates = true,
@@ -23,8 +23,8 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     window.addEventListener('offline', handleOffline);
     return () => {
       window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
+      window.removeEventListener('offline', handleOffline)
+  }
   }, []);
   // Smooth scrolling
   useEffect(() => {
@@ -32,11 +32,11 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       const style = document.createElement('style');
       style.textContent = `
         html {
-          scroll-behavior: smooth;
-        }
+          scroll-behavior: smooth
+  }
         @media (prefers-reduced-motion: reduce) {
           html {
-            scroll-behavior: auto;
+            scroll-behavior: auto,
 interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -45,7 +45,7 @@ const,
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
   // Handle online/offline status;
   useEffect(() => {/* TODO: Fix JSX expression */}
-    };
+    }
   // Smooth scrolling;
   useEffect(() => {/* TODO: Fix JSX expression */}
         }
@@ -69,8 +69,8 @@ const,
       links.forEach(link => {
         link.addEventListener('click', (e) => {
           const href = link.getAttribute('href');
-          if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
-  // Loading states management;
+          if (href && !href.startsWith('#') && !href.startsWith('mailto: ') && !href.startsWith('tel:')) {
+  // Loading states management,
   const setLoading = useCallback((ke,
   y: string, loadin)
   g: boolean) => {/* TODO: Fix JSX expression */}
@@ -94,11 +94,11 @@ const,
           (window as any).gtag('event', 'exception', {
             description: event.error?.message || 'Unknown error',
             fatal: false
-  // Error boundary enhancement;
+  // Error boundary enhancement,
   useEffect(() => {/* TODO: Fix JSX expression */}
           });
         }
-      };
+      }
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
         // console.error('Unhandled promise rejection:', event.reason);
         if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -109,14 +109,14 @@ const,
   t: PromiseRejectionEvent) => {/* TODO: Fix JSX expression */}
           });
         }
-      };
+      }
       window.addEventListener('error', handleError);
       window.addEventListener('unhandledrejection', handleUnhandledRejection);
       return () => {
         window.removeEventListener('error', handleError);
         window.removeEventListener('unhandledrejection', handleUnhandledRejection);
       return () => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
   }, [enableErrorBoundaries]);
   // Analytics enhancement
@@ -143,7 +143,7 @@ $4});
             });
           }
         }
-      };
+      }
       // Track scroll depth
       const handleScroll = () => {
         const scrollDepth = Math.round(
@@ -178,8 +178,8 @@ $4});
               (window as any).gtag('event', 'scroll', {
                 event_category: 'engagement',
                 value: 90
-      // Track scroll depth;
-      let maxScrollDepth = 0;
+      // Track scroll depth
+      let maxScrollDepth = 0,
       const handleScroll = () => {/* TODO: Fix JSX expression */}
               });
             }
@@ -194,7 +194,7 @@ $4});
             }
           }
         }
-      };
+      }
       // Track time on page
       const startTime = Date.now();
       const handleBeforeUnload = () => {
@@ -210,7 +210,7 @@ $4});
       const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
           });
         }
-      };
+      }
       document.addEventListener('visibilitychange', handleVisibilityChange);
       window.addEventListener('scroll', handleScroll, { passive: true });
       window.addEventListener('beforeunload', handleBeforeUnload);
@@ -222,7 +222,7 @@ $4});
   e: true });
       window.addEventListener('beforeunload', handleBeforeUnload);
       return () => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
   }, [enableAnalytics]);
   // Notifications
@@ -234,8 +234,8 @@ $4});
       notification.textContent = 'You are currently offline. Some features may not be available.';
       document.body.appendChild(notification);
       const timer = setTimeout(() => {
-        notification.remove();
-      }, 5000);
+        notification.remove()
+  }, 5000);
       return () => {
         clearTimeout(timer);
         notification.remove();
@@ -243,7 +243,7 @@ $4});
   useEffect(() => {/* TODO: Fix JSX expression */}
       }, 5000);
       return () => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
   }, [isOnline, enableNotifications]);
   // Performance monitoring
@@ -296,13 +296,13 @@ $4});
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       return () => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
   }, []);
   return null;
-};
+}
 export default UserExperienceEnhancer;
-};
+}
 export default UserExperienceEnhancer;`
   </UserExperienceEnhancerProps>
   </UserExperienceEnhancerProps>

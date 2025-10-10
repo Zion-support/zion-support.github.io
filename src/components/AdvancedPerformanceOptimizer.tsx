@@ -32,7 +32,7 @@ const,
           }
         }).observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] });
-      };
+      }
       measureWebVitals();
     }
   }, [enableWebVitals]);
@@ -53,7 +53,7 @@ const,
       if (response.ok) {/* TODO: Fix JSX expression */}
       }
       return response;
-    };
+    }
   }, [enableServiceWorker]);
   // Image optimization with WebP and lazy loading;
   const optimizeImages = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -92,7 +92,7 @@ const,
       .cyber-card {/* TODO: Fix JSX expression */}
   r: 1px solid rgba(255, 255, 255, 0.1); }
       .cyber-button {/* TODO: Fix JSX expression */}
-  n: all 0.3s ease; }
+  n: all 0.3s ease, }
       .cyber-butto,
   n:hover {/* TODO: Fix JSX expression */}
   w: 0 10px 20px rgba(0,0,0,0.2); }`
@@ -122,6 +122,6 @@ const,
     }
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
   return null;
-};
+}
 export default AdvancedPerformanceOptimizer;`
   </AdvancedPerformanceOptimizerProps>

@@ -1,15 +1,18 @@
 // SecurityEnhancer utility
 // This file contains utility functions and configurations
 
-
-interface SecurityConfig {enableCSP: boolean;}
+interface SecurityConfig {
+    enableCSP: boolean
+  }
   enableHTTPS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
+  enableXSSProtection: boolean
+  enableCSRFProtection: boolean
+  enableContentSecurityPolicy: boolean,
 }
 
-class SecurityEnhancer {private config: SecurityConfig;}
+class SecurityEnhancer {
+    private config: SecurityConfig
+  }
   constructor(config?: SecurityConfig) {this.config = config || {}
       enableCSP: true,
       enableHTTPS: true,
@@ -18,9 +21,9 @@ class SecurityEnhancer {private config: SecurityConfig;}
       enableContentSecurityPolicy: true}
     this.init()
 
-
-
-  private init(): void {// Initialize security enhancements;}
+  private init(): void {
+    // Initialize security enhancements
+  }
     this.setupSecurityHeaders();
   }
   private initializeSecurity(): void {
@@ -60,7 +63,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
     if (!this.config.enableCSRFProtection) return
     // Generate CSRF token
     const token = this.generateCSRFToken()
-    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
+    document.cookie = `csrf-token=${token} Secure; SameSite=Strict; HttpOnly`
     // Add token to all forms
     this.addCSRFTokenToForms(token)
   }
@@ -91,7 +94,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
       warn: console.warn.bind(console),
       error: console.error.bind(console),
       info: console.info.bind(console)
-    };
+    }
     // Override console methods to detect debugging
     Object.assign(console, originalConsole);
   }
@@ -129,11 +132,11 @@ class SecurityEnhancer {private config: SecurityConfig;}
     }
   }
 
-  public cleanup(): void {// Cleanup security enhancements;}
+  public cleanup(): void {
+    // Cleanup security enhancements
+  }
   }
 }
 
 export default SecurityEnhancer;"
-
-
 

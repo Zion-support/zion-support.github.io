@@ -1,13 +1,13 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
+    enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
   enableResourceHints?: boolean;
-  enableServiceWorker?: boolean;
-}
+  enableServiceWorker?: boolean
+  }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -26,23 +26,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   });
   useEffect(() => {
     if (enableImageOptimization) {
-      optimizeImages();
-    }
+      optimizeImages()
+  }
     if (enableLazyLoading) {
-      setupLazyLoading();
-    }
+    setupLazyLoading()
+  }
     if (enablePreloading) {
-      preloadCriticalResources();
-    }
+    preloadCriticalResources()
+  }
     if (enableCodeSplitting) {
-      setupCodeSplitting();
-    }
+    setupCodeSplitting()
+  }
     if (enableResourceHints) {
-      addResourceHints();
-    }
+    addResourceHints()
+  }
     if (enableServiceWorker) {
-      registerServiceWorker();
-    }
+    registerServiceWorker()
+  }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
   const optimizeImages = () => {
     const images = document.querySelectorAll('img');
@@ -51,21 +51,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Add loading="lazy" for images below the fold
       if (img.getBoundingClientRect().top > window.innerHeight) {
         img.setAttribute('loading', 'lazy');
-        optimized++;
-      }
+        optimized++
+  }
       // Add decoding="async" for better performance
       img.setAttribute('decoding', 'async');
       // Add fetchpriority="high" for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
-        img.setAttribute('fetchpriority', 'high');
-      }
+    img.setAttribute('fetchpriority', 'high')
+  }
       // Add proper alt text if missing
       if (!img.getAttribute('alt')) {
-        img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions');
-      }
+    img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')
+  }
     });
     setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
-  };
+  }
   const setupLazyLoading = () => {
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
@@ -75,8 +75,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
+              observer.unobserve(img)
+  }
           }
         });
       }, {
@@ -87,11 +87,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       lazyImages.forEach((img) => observer.observe(img));
       setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
     }
-  };
+  }
   const preloadCriticalResources = () => {
     const criticalResources = [
       {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600,700&display=swap',
         as: 'style',
         type: 'text/css'
       },
@@ -102,21 +102,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     ];
     criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
+    const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
       if (resource.type) {
-        link.type = resource.type;
-      }
+        link.type = resource.type
+  }
       document.head.appendChild(link);
     });
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
-  };
+  }
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
-  };
+  }
   const addResourceHints = () => {
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
@@ -127,16 +127,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
     ];
     hints.forEach((hint) => {
-      const link = document.createElement('link');
+    const link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
       if (hint.crossorigin) {
-        link.crossOrigin = hint.crossorigin;
-      }
+        link.crossOrigin = hint.crossorigin
+  }
       document.head.appendChild(link);
     });
     setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
-  };
+  }
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
@@ -146,7 +146,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           // Service Worker registration failed - handled silently in production
         }
     }
-  };
+  }
   // Performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -168,6 +168,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, []);
   return null;
-};
+}
 export default PerformanceOptimizer;
   </PerformanceOptimizerProps>

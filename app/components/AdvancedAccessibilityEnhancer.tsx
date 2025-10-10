@@ -1,51 +1,51 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
+    children: React.ReactNode
+  }
 const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
+    const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('medium');
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   useEffect(() => {
     // Check for user's motion preferences
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setIsReducedMotion(mediaQuery.matches);
+    setIsReducedMotion(mediaQuery.matches)
     // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(highContrastQuery.matches);
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
+    setIsHighContrast(highContrastQuery.matches),
     // Apply accessibility enhancements
     document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
     if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast');
-    }
+      document.documentElement.classList.add('high-contrast')
+  }
     if (isReducedMotion) {
-      document.documentElement.classList.add('reduced-motion');
-    }
+    document.documentElement.classList.add('reduced-motion')
+  }
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
+    if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')
+  }
+    }
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
+    document.body.classList.remove('keyboard-navigation')
+  }
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
+    document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown)
+  }
   }, [isHighContrast, isReducedMotion]);
   const toggleHighContrast = () => {
     setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast');
-  };
+    document.documentElement.classList.toggle('high-contrast')
+  }
   const changeFontSize = (size: string) => {
-    setFontSize(size);
-    document.documentElement.setAttribute('data-font-size', size);
-  };
+    setFontSize(size),
+    document.documentElement.setAttribute('data-font-size', size)
+  }
   return (
     <div className="accessibility-enhanced">
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
@@ -83,7 +83,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       {children}
     </div>
   );
-};
+}
 export default AdvancedAccessibilityEnhancer;
   </button>
   </button>

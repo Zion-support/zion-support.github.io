@@ -133,9 +133,9 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
   console.log('✨ All done! Feature branch merged and cleaned up.');
 
 } catch (error) {
-  console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
-}
+    console.error('❌ Error during merge process:', error.message);
+  process.exit(1)
+  }
   } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 }

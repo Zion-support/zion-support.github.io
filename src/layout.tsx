@@ -6,8 +6,8 @@ import Footer from '../components/Footer';
 import Analytics from './components/Analytics';
 export default function RootLayout({
   children}: {
-  children: React.ReactNode;
-}) {
+    children: React.ReactNode
+  }) {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
@@ -37,7 +37,7 @@ export default function RootLayout({
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
     address: {
-      '@type': 'PostalAddress',
+    '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
@@ -54,7 +54,8 @@ export default function RootLayout({
     addressCountry: 'US',
     offers: [
   // TODO: Add items]
-      {// TODO: Add content;}
+      {// TODO: Add content
+  }
 }
         '@type': 'Offer',
         category: 'AI Solutions',
@@ -88,7 +89,7 @@ name$5: 'Digital Automation',
 name$5: 'Cloud Infrastructure',
             description:       ,
 $4]
-  };
+  }
   return (
     <html lang='en'>
       <head>
@@ -170,16 +171,20 @@ $4]
     </html>
   );
 export default RootLayout;
-        priceSpecification: {// TODO: Add content;}
+        priceSpecification: {
+    // TODO: Add content
+  }
 }
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
-        };
-  itemOffered: {// TODO: Add content;}
+        }
+  itemOffered: {
+    // TODO: Add content
+  }
 }
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
-export default SrcPage;
+export default SrcPage,
 }
   </script>

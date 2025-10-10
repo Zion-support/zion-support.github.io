@@ -201,7 +201,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
   }, [trendingIte, m, s.leng, t, h]);
   const, currentIte, m = trendingIte, m, s[currentInd, e, x];
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {
-swit, c, h (bad, g, e) {
+    swit, c, h (bad, g, e) {
 ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';
 ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';
 ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';
@@ -212,9 +212,9 @@ ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';';
 ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';';
 ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';';
 defa, u, l;
-  t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';';
-};
-  };
+  t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';'
+  }
+  }
   const, Ico, n = currentIt, e, m.ic, o, n;
   return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
       <div, className="flex, item, s-center, justif, y-betwe, e, n">
@@ -270,8 +270,8 @@ defa, u, l;
               </d, i, v>
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
-};
-  };
+}
+  }
   const, Ico, n = currentIt, e, m.ic, o, n;
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">""
@@ -392,8 +392,10 @@ defa, u, l;
               <butt, o, n
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
-                classNa, m, e={`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
-                  ind, e, x === currentInd, e, x;}
+                classNa, m, e={
+    `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
+                  ind, e, x === currentInd, e, x
+  }
                     ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' }
             {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
@@ -422,5 +424,5 @@ defa, u, l;
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default TrendingContentBanner;"`

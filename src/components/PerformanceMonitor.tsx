@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
-}
+    lcp: number | null;
+  fid: number | null
+  cls: number | null
+  fcp: number | null,
+  ttfb: number | null
+  }
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
@@ -41,7 +41,7 @@ const PerformanceMonitor: React.FC = () => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+            clsValue += entry.value,
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
         });
@@ -67,17 +67,17 @@ const PerformanceMonitor: React.FC = () => {
       }
       // Cleanup observers
       return () => {
-        lcpObserver.disconnect();
+    lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-        fcpObserver.disconnect();
-      };
-    };
+        fcpObserver.disconnect()
+  }
+    }
     const cleanup = measureWebVitals();
     // Send metrics to analytics (if available)
     const sendToAnalytics = (metrics: PerformanceMetrics) => {
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        const gtag = (window as any).gtag;
+        const gtag = (window as any).gtag,
         if (metrics.lcp !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
@@ -97,19 +97,19 @@ const PerformanceMonitor: React.FC = () => {
             value: Math.round(metrics.cls * 1000) / 1000});
         }
       }
-    };
+    }
     // Send metrics after a delay to allow all measurements to complete
     const timeoutId = setTimeout(() => {
-      sendToAnalytics(metrics);
-    }, 5000);
+    sendToAnalytics(metrics)
+  }, 5000);
     return () => {
-      cleanup?.();
-      clearTimeout(timeoutId);
-    };
+    cleanup?.();
+      clearTimeout(timeoutId)
+  }
   }, [metrics]);
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
-    return null;
+    return null
   }
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
@@ -121,6 +121,6 @@ const PerformanceMonitor: React.FC = () => {
       <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}</div>
     </div>
   );
-};
+}
 export default PerformanceMonitor;
   </PerformanceMetrics>

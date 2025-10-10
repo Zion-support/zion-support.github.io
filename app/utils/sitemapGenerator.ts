@@ -1,9 +1,10 @@
-export const generateSitemap = useCallback((...args) => {;
-  const baseUrl = 'https: //ziontechgroup.com',;
-  const staticPages = [,;}
+export const generateSitemap = useCallback((...args) => {
+    const baseUrl = 'https: //ziontechgroup.com',;
+  const staticPages = [,
+  }
 export const generateSitemap = useCallback((...args) => {}
-  const baseUrl = 'https://ziontechgroup.com';
-  const staticPages = [;
+  const baseUrl = 'https: //ziontechgroup.com',
+  const staticPages = [
     '',;
     '/services',;
     '/contact',;
@@ -45,29 +46,31 @@ export const generateSitemap = useCallback((...args) => {}
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,;
-  ${staticPages.map(page =>),;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;}
+  ${
+    staticPages.map(page =>),;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  }
   ${staticPages.map(page =>)}
   <url>}
-    <loc>${baseUrl}${page}</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>;
+    <loc>${baseUrl}${page}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>`).join('')}
 </urlset>`;
   return sitemap;
 }
 export const generateRobotsTxt = useCallback((...args) => {}
   return `User-agent: *;
-Allow: /;
-Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Crawl-delay for better server performance;
+Allow: /
+Sitemap: https://ziontechgroup.com/sitemap.xml
+# Crawl-delay for better server performance,
 Crawl-delay: 1,;
 # Disallow admin and private areas;
 Disallow: /admin/,;
 Disallow: /api/,;
 Disallow: /_next/,;
-Disallow: /private/`;}
+Disallow: /private/`,}
 }
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }
@@ -78,7 +81,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'daily',;
       priorit,;
-  y: 1.0;
+  y: 1.0,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/about`,;
@@ -87,7 +90,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'monthly',;
       priorit,;
-  y: 0.8;
+  y: 0.8,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/services`,;
@@ -96,7 +99,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'weekly',;
       priorit,;
-  y: 0.9;
+  y: 0.9,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/ai-services`,;
@@ -105,7 +108,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'weekly',;
       priorit,;
-  y: 0.9;
+  y: 0.9,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/it-services`,;
@@ -114,7 +117,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'weekly',;
       priorit,;
-  y: 0.9;
+  y: 0.9,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/quantum-computing`,;
@@ -123,7 +126,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'weekly',;
       priorit,;
-  y: 0.9;
+  y: 0.9,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/autonomous-systems`,;
@@ -132,7 +135,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'weekly',;
       priorit,;
-  y: 0.9;
+  y: 0.9,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/micro-saas`,;
@@ -141,7 +144,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'weekly',;
       priorit,;
-  y: 0.8;
+  y: 0.8,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/enterprise`,;
@@ -150,7 +153,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'weekly',;
       priorit,;
-  y: 0.9;
+  y: 0.9,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/contact`,;
@@ -159,7 +162,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'monthly',;
       priorit,;
-  y: 0.8;
+  y: 0.8,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/team`,;
@@ -168,7 +171,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'monthly',;
       priorit,;
-  y: 0.7;
+  y: 0.7,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/case-studies`,;
@@ -177,7 +180,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'weekly',;
       priorit,;
-  y: 0.8;
+  y: 0.8,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/blog`,;
@@ -186,7 +189,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'daily',;
       priorit,;
-  y: 0.8;
+  y: 0.8,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/privacy`,;
@@ -195,7 +198,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'yearly',;
       priorit,;
-  y: 0.3;
+  y: 0.3,
     },;
     {/* TODO: Fix JSX expression */}`;
   l: `${baseUrl}/terms`,;
@@ -204,9 +207,9 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       changefre,;
   q: 'yearly',;
       priorit,;
-  y: 0.3;
+  y: 0.3,
     }
   ];
-};
+}
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
-};`;
+}`;

@@ -28,7 +28,7 @@ export function deepClone<T>(ob);
 export function deepMerge<T extends Record<string, unknown>>(targe,;
   t: T, sourc);
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
-  const output = { ...target };
+  const output = { ...target }
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -44,7 +44,7 @@ export function flattenObject(ob,;
   prefix = '',;
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
-  flattened: Record<string, unknown> = {};
+  flattened: Record<string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
       const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
@@ -61,11 +61,11 @@ export function unflattenObject(ob,;
   j: Record<string, unknown>,;
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
-  result: Record<string, unknown> = {};
+  result: Record<string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
-          current[k] = current[k] || {};
-          current = current[k] as Record<string, unknown>;
+          current[k] = current[k] || {}
+          current = current[k] as Record<string>
         }
       }
     }
@@ -78,9 +78,9 @@ export function unflattenObject(ob,;
 export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,;
   key,;
-  s: K[]);
+  s: K[]),
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick<T, K>;
+  const result = {} as Pick<T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     });
   });
@@ -92,12 +92,12 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
 export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,;
   key,;
-  s: K[]);
+  s: K[]),
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
-  const result = { ...obj };
+  const result = { ...obj }
   keys.forEach(key => {/* TODO: Fix JSX expression */});
   });
-  return result as Omit<T, K>;
+  return result as Omit<T>
 }
 /**;
  * Group array items by a key;
@@ -105,11 +105,11 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
 export function groupBy<T>(arra,;
   y: T[],;
   ke,;
-  y: keyof T | ((ite);
-  m: T) => string | number);
+  y: keyof T | ((ite)
+  m: T) => string | number),
 ): Record<string, T[]> {/* TODO: Fix JSX expression */}
     },;
-    {} as Record<string, T[]></string>;
+    {} as Record<string, T[]></string>
   );
 }
 /**;
@@ -131,10 +131,10 @@ export function unique<T>(arra);
 export function sortBy<T>(arra,;
   y: T[],;
   key,;
-  s: Array<keyof T | ((ite);
+  s: Array<keyof T | ((ite),
   m: T) => unknown)>,;
   order,;
-  s: Array<'asc' | 'desc'> = [];
+  s: Array<'asc' | 'desc'> = [],
 ): T[] {/* TODO: Fix JSX expression */}
       }
       // Convert to comparable values;
@@ -249,5 +249,5 @@ export function snakeCase(st);
   r: string): string {/* TODO: Fix JSX expression */}
 }
 export default {/* TODO: Fix JSX expression */}
-};
+}
 `;

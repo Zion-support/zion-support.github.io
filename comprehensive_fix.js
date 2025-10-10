@@ -74,13 +74,13 @@ if (fs.existsSync(seoOptimizerPath)) {
     title: string;
     description: string;
     keywords: string[];
-    canonicalUrl: string;
-    ogImage: string;
-    structuredData?: unknown;,
+    canonicalUrl: string
+    ogImage: string
+    structuredData?: unknown,,
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  };
+  }
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
@@ -149,7 +149,7 @@ if (fs.existsSync(performancePath)) {
   // Add proper declaration at the top;
   content = `declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: (...args: unknown[]) => void,
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 

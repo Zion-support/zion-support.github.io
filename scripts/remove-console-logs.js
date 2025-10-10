@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 // Find all TypeScript and JavaScript files;
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
-  let files = [];
+    let files = [];
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
@@ -16,14 +16,14 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(findFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
+      files = files.concat(findFiles(fullPath, extensions))
+  } else if (extensions.some(ext => item.endsWith(ext))) {
+    files.push(fullPath)
+  }
   }
   
   return files;
-};
+}
 
 // Remove console.log statements;
 const removeConsoleLogs = (filePath) => {
@@ -108,14 +108,14 @@ console.log(`📊 Files)`
 console.log(`🗑️  Total console statements)`
   removed: ${totalRemoved}`);`
 console.log(`\n💡 Not)`
-  e: console.error statements in development mode checks were preserved.`);`
+  e: console.error statements in development mode checks were preserved.`),`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
-};
+}
 
 // Main execution;
 const srcDir = path.join(__dirname, '..', 'src');
@@ -132,8 +132,8 @@ console.log(`Found ${allFiles.length} files to process`);
 
 let cleanedCount = 0;
 for (const file of allFiles) {
-  if (removeConsoleLogs(file)) {
-    cleanedCount++;
+    if (removeConsoleLogs(file)) {
+    cleanedCount++
   }
 }
 
@@ -159,5 +159,5 @@ async function processFiles() {/* TODO: Fix JSX expression */}
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-export { removeConsoleLogs, processFiles };
+export { removeConsoleLogs, processFiles }
 `

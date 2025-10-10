@@ -2,7 +2,7 @@ import React from 'react';
 const NewBlogContentShowcase202, 6: React.FC = () => { ,
   const blogPost, s = [
     {
-      id: 1;
+      id: 1,
       title: 'The, Complete, Guide to, AI, Revolution 20, 2, 6: From, Concept, to Implementat, i, o, n',
       slug: 'comple, t, e-gui, d, e-ai-revoluti, o, n-2, 0, 2, 6',
       excerpt: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.',
@@ -328,5 +328,5 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
       </div>
     </div>
   );
-};
+}
 export default NewBlogContentShowcase2026;"`

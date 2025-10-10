@@ -31,7 +31,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
 
   // Ensure proper function structure;
   if (!fixed.includes('exports.handler = async function')) {
-    return content; // Skip if no proper function found;
+    return content; // Skip if no proper function found
   }
 
   // Add proper error handling if missing;
@@ -46,7 +46,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
   } catch (error) {
 
     return {
-      statusCode: 500;
+      statusCode: 500,
       body: JSON.stringify({)
         error: 'Function failed'),
         message: error.message),
@@ -65,7 +65,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
       }),
       header,
   s: {'Content-Type': 'application/json'}
-    };
+    }
   }`
 }`
       );
@@ -106,9 +106,6 @@ async function main() {/* TODO: Fix JSX expression */}
     }
   });
 
-
-
-
   if (errorCount > 0) {/* TODO: Fix JSX expression */}
   }
 }
@@ -117,4 +114,4 @@ if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 }
 
-export { fixNetlifyFunction };`
+export { fixNetlifyFunction }`

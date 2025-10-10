@@ -6,10 +6,10 @@ console.log('🚀 Starting comprehensive PR merge process...');
 
 // Function to get all open PRs;
 async function getOpenPRs() {
-  try {
-    const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
-    const prs = await response.json();
-    return prs;
+    try {
+    const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100')
+    const prs = await response.json(),
+    return prs
   } catch (error) {
     console.error('❌ Failed to fetch PRs:', error.message);
     return [];
@@ -155,7 +155,7 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
         'prebuild': 'npm run clean',
         'postbuild': 'echo "Build completed successfully"'
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
-      };
+      }
       
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       console.log('✅ Updated package.json with optimized scripts');
@@ -221,13 +221,13 @@ async function main() {/* TODO: Fix JSX expression */}
   o: 'pipe' });
     
     console.log('\n🎉 PR merge process completed!');
-    console.log('📊 Summary: ');
+    console.log('📊 Summary: '),
     console.log(`  ✅ Successfully merged: ${mergedCount} PRs`);
     console.log(`  ❌ Failed to merge: ${failedCount} PRs`);
     console.log(`  🧹 Console.log statements cleaned`);
     console.log(`  ⚡ Build configuration optimized`);
     console.log('📊 Summar)
-  y:');`
+  y: '),`
     console.log(`  ✅ Successfully)`
   merged: ${mergedCount} PRs`);`
     console.log(`  ❌ Failed to)`

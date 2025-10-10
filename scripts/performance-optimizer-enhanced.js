@@ -5,19 +5,20 @@ import { glob } from 'glob';
 
 // Performance optimization patterns;
 const optimizations = {
-  // Remove unused CSS classes;
+    // Remove unused CSS classes;
   removeUnusedCSS: (content) => {,
     // This is a simplified version - in production, use tools like PurgeCSS;
-    return content;
+    return content
   },
 
   // Optimize images (placeholder - would need actual image processing)
-  optimizeImages: (content) => {,
+  optimizeImages: (content) => {
+    ,
     // Replace large image references with optimized versions;
     return content;
       .replace(/\.jpg/g, '.webp')
       .replace(/\.png/g, '.webp')
-      .replace(/\.jpeg/g, '.webp');
+      .replace(/\.jpeg/g, '.webp')
   },
 
   // Minify inline styles;
@@ -48,10 +49,10 @@ const optimizations = {
         /const (\w+): React\.FC = \(/g;
         'const $1: React.FC = React.memo((')
       );
-      // Add closing parenthesis for React.memo;
+      // Add closing parenthesis for React.memo
       content = content.replace()
-        /(\w+)\.displayName = '\w+';/g;
-        '$1.displayName = \'$1\';\n});'
+        /(\w+)\.displayName = '\w+';/g
+        '$1.displayName = \'$1\',\n});'
       );
     }
     return content;
@@ -59,7 +60,7 @@ const optimizations = {
 
   // Add performance hints;
   addPerformanceHints: (content) => {
-    // Add preload hints for critical resources;
+    // Add preload hints for critical resources,
     if (content.includes('<head>')) {
       const preloadHints = `
     <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,
@@ -69,7 +70,7 @@ const optimizations = {
     }
     return content;
   }
-};
+}
 
 // Files to process;
 const filePatterns = [
@@ -104,7 +105,7 @@ let processedFiles = 0;
 let optimizationsApplied = 0;
 
 function processFile(filePath) {
-  try {
+    try {
     const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileOptimizations = 0;
@@ -114,8 +115,8 @@ function processFile(filePath) {
       const before = newContent;
       newContent = optimizer(newContent);
       if (newContent !== before) {
-        fileOptimizations++;
-      }
+        fileOptimizations++
+  }
     });
 
     if (fileOptimizations > 0) {
@@ -152,13 +153,13 @@ async function main() {
   uniqueFiles.forEach(processFile);
 
   console.log(`\n🎉 Enhanced performance optimization completed!`);
-  console.log(`📊 Statistics: `);
+  console.log(`📊 Statistics: `),
   console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
   console.log(`   - Optimizations applied: ${optimizationsApplied}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
+    main()
+  }
 
-export { processFile, optimizations };
+export { processFile, optimizations }

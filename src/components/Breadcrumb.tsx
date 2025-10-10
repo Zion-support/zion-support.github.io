@@ -2,12 +2,12 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 interface BreadcrumbItem {
-  name: string;
-  href: string;
-  current?: boolean;
-}
+    name: string
+  href: string,
+  current?: boolean
+  }
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
+  const location = useLocation(),
   const generateBreadcrumbs = (): BreadcrumbItem[] => {,
     const pathSegments = location.pathname.split('/').filter(Boolean);
     const breadcrumbs: BreadcrumbItem[] = [,
@@ -22,18 +22,19 @@ const Breadcrumb: React.FC = () => {
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-      breadcrumbs.push({)
+      breadcrumbs.push({
+    )
         name)
         href: currentPath),
-        current: isLast;
-      });
+        current: isLast
+  });
     });
     return breadcrumbs;
-  };
+  }
   const breadcrumbs = generateBreadcrumbs();
   // Don't show breadcrumb on home page;
   if (location.pathname === '/') {
-    return null;
+    return null
   }
   const structuredData = {
     "@context": "https: //schema.org",
@@ -44,7 +45,7 @@ const Breadcrumb: React.FC = () => {
       "name": item.name,
       "item": `https://ziontechgroup.com${item.href}`
     }))
-  };
+  }
   return(<React.Fragment>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
@@ -83,7 +84,7 @@ const Breadcrumb: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       /></script>
   );
-};
+}
 export default Breadcrumb;
   </ol>
   </nav>

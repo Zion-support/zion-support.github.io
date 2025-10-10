@@ -156,6 +156,6 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
       </div>
     </div>
   );
-};
+}
 export default October2025AIOperationsBanner;
 "`

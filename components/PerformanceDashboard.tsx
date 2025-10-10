@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-}
+    loadTime: number
+  renderTime: number
+  memoryUsage: number,
+  fps: number
+  }
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -26,7 +26,7 @@ const PerformanceDashboard: React.FC = () => {
         loadTime,
         memoryUsage,
       }));
-    };
+    }
     //Update metrics on load
     updateMetrics();
     //Update metrics periodically
@@ -35,7 +35,7 @@ const PerformanceDashboard: React.FC = () => {
   }, []);
   //Only show in development
   if (process.env['NODE_ENV'] !== 'development') {
-    return null;
+    return null
   }
   return (
     <div className="fixed bottom-4 right-4 z-50">
@@ -66,6 +66,6 @@ const PerformanceDashboard: React.FC = () => {
       )}
     </div>
   );
-};
+}
 export default PerformanceDashboard</button>
   </PerformanceMetrics>

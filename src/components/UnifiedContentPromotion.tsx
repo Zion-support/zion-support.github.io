@@ -6,6 +6,6 @@ const,
       {/* Component content */}
     </div>
   );
-};
+}
 export default UnifiedContentPromotion;
   </UnifiedContentPromotionProps>

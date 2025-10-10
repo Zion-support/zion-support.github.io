@@ -14,9 +14,9 @@ const,
       addres,
   s: {/* TODO: Fix JSX expression */}
       },
-      ...seoData.structuredData};
+      ...seoData.structuredData}
     if (seoData.author) {/* TODO: Fix JSX expression */}
-      };
+      }
     }
     if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
     }
@@ -32,26 +32,26 @@ const,
     }
     return {/* TODO: Fix JSX expression */}
       }))
-    };
+    }
   }, [seoData, enableStructuredData]);
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
       }))
-    };
+    }
   }, [seoData, enableStructuredData]);
   // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableOpenGraph) return {};
+    if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
-    };
+    }
   }, [seoData, enableOpenGraph]);
   // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableTwitterCards) return {};
+    if (!enableTwitterCards) return {}
     return {/* TODO: Fix JSX expression */}
-    };
+    }
   }, [seoData, enableTwitterCards]);
   // Generate meta tags;
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -76,14 +76,14 @@ const,
     }
     return {/* TODO: Fix JSX expression */}
       }))
-    };
+    }
   }, [seoData.breadcrumbs]);
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
       }))
-    };
+    }
   }, [seoData.faqs]);
   const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
@@ -107,7 +107,7 @@ const,
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
     structuredDataRef.current = script;
-  };
+  }
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [structuredData]);
@@ -162,7 +162,7 @@ const,
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
     </Helmet>
   );
-};
+}
 export default AdvancedSEOOptimizer;
 }"
   </AdvancedSEOOptimizerProps>

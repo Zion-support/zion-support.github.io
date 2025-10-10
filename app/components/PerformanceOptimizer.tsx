@@ -3,12 +3,12 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
+    children: React.ReactNode;
+  enableImageOptimization?: boolean
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean,
+  enableCodeSplitting?: boolean
+  }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   children, 
@@ -17,7 +17,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false);
+    const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [performanceScore, setPerformanceScore] = useState<number | null>(null);
 
@@ -27,11 +27,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
       if (!img.loading) {
-        img.loading = 'lazy';
-      }
+        img.loading = 'lazy'
+  }
       if (!img.decoding) {
-        img.decoding = 'async';
-      }
+    img.decoding = 'async'
+  }
     });
   }, [enableImageOptimization]);
 
@@ -41,21 +41,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if (window.gc) {
-          window.gc();
-        }
+          window.gc()
+  }
       }
     }
   }, []);
 
   const runOptimizations = useCallback(async () => {
     setIsOptimizing(true);
-    const newOptimizations: string[] = [];
-
+    const newOptimizations: string[] = []
     // Optimize images
     if (enableImageOptimization) {
-      optimizeImages();
-      newOptimizations.push('Images optimized for lazy loading');
-    }
+      optimizeImages(),
+      newOptimizations.push('Images optimized for lazy loading')
+  }
 
     // Optimize memory
     optimizeMemory();
@@ -73,8 +72,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     // Run initial optimizations
     const timer = setTimeout(() => {
-      runOptimizations();
-    }, 1000);
+      runOptimizations()
+  }, 1000);
 
     return () => clearTimeout(timer);
   }, [runOptimizations]);
@@ -125,8 +124,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -134,15 +131,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
-  useEffect(() => {
+    useEffect(() => {
     // Preload critical resources
     if (enablePreloading && typeof window !== 'undefined') {
       // Preload critical fonts
       const fontPreload = document.createElement('link');
       fontPreload.rel = 'preload';
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontPreload.as = 'style';
-      document.head.appendChild(fontPreload);
+      fontPreload.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      fontPreload.as = 'style'
+      document.head.appendChild(fontPreload),
 
       // Preload critical images
       const criticalImages = [
@@ -155,37 +152,37 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
-        document.head.appendChild(link);
-      });
+        document.head.appendChild(link)
+  });
     }
 
     // Optimize images
     if (enableImageOptimization && typeof window !== 'undefined') {
-      const images = document.querySelectorAll('img');
+    const images = document.querySelectorAll('img');
       images.forEach(img => {
         // Add loading="lazy" for non-critical images
         if (enableLazyLoading && !img.hasAttribute('loading')) {
-          img.loading = 'lazy';
-        }
+          img.loading = 'lazy'
+  }
 
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
-          img.decoding = 'async';
-        }
+    img.decoding = 'async'
+  }
       });
     }
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
+              observer.unobserve(img)
+  }
           }
         });
       });
@@ -216,9 +213,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
   return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-};
+
+}
 
 export default PerformanceOptimizer;

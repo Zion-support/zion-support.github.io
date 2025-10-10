@@ -15,7 +15,7 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn()}};
+        emit: jest.fn()}}
   }}));
 // Mock files that use import.meta.env
 jest.mock('./src/utils/logger.ts', () => ({

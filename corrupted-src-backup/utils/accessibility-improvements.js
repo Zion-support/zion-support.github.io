@@ -24,7 +24,8 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
   },
 
   // Screen reader announcements;
-  announceToScreenReader: message => {,
+  announceToScreenReader: message => {
+    ,
     const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -33,8 +34,8 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
     document.body.appendChild(announcement);
 
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
+      document.body.removeChild(announcement)
+  }, 1000);
   },
 
   // Color contrast checker;
@@ -58,7 +59,7 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
       });
 
       return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
-    };
+    }
 
     //     const l1 = getLuminance(foreground);
     //     const l2 = getLuminance(background);
@@ -66,8 +67,8 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
 
     return {
       ratio,
-      meetsAA: ratio >= 4.5;
-      meetsAAA: ratio >= 7;
+      meetsAA: ratio >= 4.5
+      meetsAAA: ratio >= 7,
     return {/* TODO: Fix JSX expression */}
-    };
-  }};
+    }
+  }}

@@ -5,13 +5,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+    const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
+    navigator.clipboard.writeText(code)
+    setCopiedCode(id),
+    setTimeout(() => setCopiedCode(null), 2000)
+  }
   const apiEndpoints = [
     {
       title: 'AI Services',
@@ -119,14 +119,14 @@ export default function APIDocsPage() {
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Code className="mr-2 h-5 w-5" />
-              Get Started;
+              Get Started
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Download className="mr-2 h-5 w-5" />
-              Download SDK;
+              Download SDK,
   </
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function APIDocsPage() {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
@@ -240,17 +240,17 @@ export default function APIDocsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key;
+              Get API Key
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs;
+              View SDKs
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
+  ),
 }
   </button>
   </button>

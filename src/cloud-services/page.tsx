@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
-  return (
+    return (
     <div>Coming Soon</div>
-  );
-};
+  )
+  }
   const _services = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Cloud,
       titl,
@@ -24,8 +24,8 @@ const CloudServicesPage: React.FC = () => {
   s: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Shield,
       titl,
@@ -36,8 +36,8 @@ const CloudServicesPage: React.FC = () => {
   s: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Zap,
       titl,
@@ -48,8 +48,8 @@ const CloudServicesPage: React.FC = () => {
   s: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: BarChart,
       titl,
@@ -62,8 +62,8 @@ const CloudServicesPage: React.FC = () => {
   ];
   const benefits = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
 //     'Cost Optimization',
@@ -77,22 +77,22 @@ const CloudServicesPage: React.FC = () => {
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
 // Cloud Services;
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
+            Coming Soon
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Get Started Today;
+//               Get Started Today
           </a>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Learn More;
+//               Learn More,
           </a>
           </div>
         </section>
@@ -143,22 +143,22 @@ const CloudServicesPage: React.FC = () => {
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
 // Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Call (302) 464-0950;
+//               Call (302) 464-0950
           </a>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Get Free Consultation;
+//               Get Free Consultation
           </a>
           </div>
         </section>
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  ),
+}
 export default CloudServicesPage;

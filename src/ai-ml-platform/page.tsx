@@ -48,8 +48,10 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'Ideal for development teams',
   const features = [];
   return (
-    {// TODO: Add content;}
-};
+    {
+    // TODO: Add content
+  }
+}
   ico,
   n: Brain,
       titl,
@@ -113,8 +115,8 @@ const AIMLPlatformPage: React.FC = () => {
   const stats = [
   const stats = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
@@ -132,7 +134,7 @@ const AIMLPlatformPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI ML platform solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us;
   </
@@ -143,24 +145,24 @@ const AIMLPlatformPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
+            Page
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
+            Coming Soon
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us;
+// Contact Us,
           </button>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
-  hover:text-slate-900 transition-colors"></button>
-Learn More;
+  hover: text-slate-900 transition-colors"></button>
+Learn More
           </div>
       <Footer />
     </div>
-  );
-};
+  ),
+}
 export default $1;
 export default AiMlPlatformPage;
   </p>

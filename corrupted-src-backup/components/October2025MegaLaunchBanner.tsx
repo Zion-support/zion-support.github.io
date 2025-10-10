@@ -134,6 +134,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default October2025MegaLaunchBanner;
 }}"

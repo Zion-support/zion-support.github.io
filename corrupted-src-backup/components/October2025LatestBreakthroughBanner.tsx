@@ -1,24 +1,24 @@
 const, October2025LatestBreakthroughBanne, r = () => {
   return(<div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */};
+      {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */};</div>
+      {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
     <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};</div>
+      {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
 const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, effects */};
+      {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;"
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>"
     <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};"
+      {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
@@ -60,7 +60,8 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
         </d, i, v>
         {/* Content, Card, s */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
-          {)
+          {
+    )
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
@@ -68,11 +69,13 @@ const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;";
 return(<Li, n, k;
-  k, e, y={conte, n, t.id;}
+  k, e, y={conte, n, t.id
+  }
 return (</div>
 <Li, n, k
-  k, e, y={conte, n, t.id;
-}
+  k, e, y={
+    conte, n, t.id
+  }
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e;
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
@@ -129,13 +132,13 @@ return (</div>
                   {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) => (</div>
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2"></div>
                       <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>
-                      <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>;
+                      <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2">";</div>
                       <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>";
                   {/* TODO: Fix JSX expression */}"
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2"></div>"
                       <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>"
-                      <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>;"
+                      <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>"
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2">";"
                       <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>";"
                       <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>';
@@ -250,7 +253,6 @@ return (</div>
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default October2025 LatestBreakthroughBanner;
-;
 }}"`

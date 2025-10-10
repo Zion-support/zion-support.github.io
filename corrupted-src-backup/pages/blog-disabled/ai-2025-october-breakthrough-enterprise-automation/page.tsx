@@ -217,22 +217,22 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation" />
       </Helmet>
         <div></div>
-            <Link to="/", className="text-white hover:text-zion-cyan transition-colors">← Back to Home</Link>
+            <Link to="/", className="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>
   </div>
   </div>
           <div></div>
               <Zap className="w-4 h-4 mr-2" />
-  October 2025 • Enterprise AI;
+  October 2025 • Enterprise AI
   </div>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
-  Complete Implementation Guide;
+  Complete Implementation Guide,
               </span>,
             </h1>,
             ,
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,"
-  AI-Powered Enterprise Automation 2025:</h1> <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
-  Complete Implementation Guide;
+  AI-Powered Enterprise Automation 2025: </h1> <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
+  Complete Implementation Guide,
   </
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">,"</p>
@@ -339,18 +339,18 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
       </Helmet>
         <div></div>"
             <Link to="/", className="text-white,"
-  hover:text-zion-cyan transition-colors">← Back to Home</Link>
+  hover: text-zion-cyan transition-colors">← Back to Home</Link>
   </div>
   </div>
           <div></div>"
               <Zap className="w-4 h-4 mr-2" /></Zap>
-  October 2025 • Enterprise AI;
+  October 2025 • Enterprise AI,
   </div>"
             <h1 className="text-4xl,"
   md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation,"
   2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">"
-  Complete Implementation Guide;
+  Complete Implementation Guide,
               </span>
             </h1>
             "
@@ -620,11 +620,11 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5 " />
                       <Link className="w-5 h-5" />
                     </Link>
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx
                     <Link to="/case-studies"
   className= " />
                     <Link to="/case-studies>"
-  className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors;
+  className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors,
                   <div></div>"
                     to="/contact""
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold,"
@@ -645,21 +645,21 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
   sm:flex-row gap-4 justify-center"></div>"
                     to="/contact""
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold,"
-  hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2""
+  hover: bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Start Your Transformation""
                       <Link className="w-5 h-5 " /></Link>"
                       <Link className="w-5 h-5" /></Link>
                     </Link>
-:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;"
+:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx,"
                     <Link to="/case-studies""
   className= " /></Link>"
                     <Link to="/case-studies>""
   className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold,
   hover:bg-emerald-400,
-  hover:text-white transition-colors;
+  hover: text-white transition-colors
                     >
-                      View Case Studies;
+                      View Case Studies,
                     </Link>
                   </div>
                 </div>
@@ -669,7 +669,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>,
     </React.Fragment>);
-};
+}
 export default EnterpriseAutomation2025;
   </div>
 </article>

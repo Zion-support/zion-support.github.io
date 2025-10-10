@@ -299,5 +299,5 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
       </div>
     </div>
   );
-};
+}
 export default UltimateContentAdvertisingBanner;"

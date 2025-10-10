@@ -14,9 +14,9 @@ const,
       addres,
   s: {/* TODO: Fix JSX expression */}
       },
-      ...seoData.structuredData};
+      ...seoData.structuredData}
     if (seoData.author) {/* TODO: Fix JSX expression */}
-      };
+      }
     }
     if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
     }
@@ -30,19 +30,19 @@ const,
   }, [seoData, enableStructuredData]);
   // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableOpenGraph) return {};
+    if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
-    };
+    }
   }, [seoData, enableOpenGraph]);
   // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableTwitterCards) return {};
+    if (!enableTwitterCards) return {}
     const faqData = {/* TODO: Fix JSX expression */}
           }},
         {/* TODO: Fix JSX expression */}
           }},
         {/* TODO: Fix JSX expression */}
-          }}]};
+          }}]}
   }, [seoData, enableTwitterCards]);
   // Generate meta tags;
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -85,7 +85,7 @@ const,
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
     structuredDataRef.current = script;
-  };
+  }
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [structuredData]);
@@ -140,7 +140,7 @@ const,
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
     </Helmet>
   );
-};
+}
 export default AdvancedSEOOptimizer;
 "
   </AdvancedSEOOptimizerProps>

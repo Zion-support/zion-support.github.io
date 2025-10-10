@@ -1,32 +1,23 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const filePath = path.join(__dirname, 'app/5 g-implementation/page.tsx');
-
+const filePath = '/workspace/app/5g-implementation/page.tsx';
 let content = fs.readFileSync(filePath, 'utf8');
 
-// Fix malformed JSX elements
-content = content.replace(/<\/undefined>/g, '');
-content = content.replace(/&quot;/g, '"');
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>');
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined><\/undefined>/g, 'className="$1"$2>');
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined><\/undefined><\/undefined>/g, 'className="$1"$2>');
+// Fix all the semicolon issues in object properties
+content = content.replace(/(\w+):\s*([^,}]+);\s*([,}])/g, '$1: $2$3');
+content = content.replace(/(\w+):\s*([^,}]+);\s*$/gm, '$1: $2');
+content = content.replace(/{\s*(\w+):\s*([^,}]+);\s*}/g, '{\n    $1: $2\n  }');
 
-// Fix malformed closing tags
-content = content.replace(/<\/undefined><\/undefined>/g, '');
-content = content.replace(/<\/undefined><\/undefined><\/undefined>/g, '');
+// Fix specific patterns
+content = content.replace(/icon: (\w+),;/g, 'icon: $1,');
+content = content.replace(/title: '([^']+)',;/g, "title: '$1',");
+content = content.replace(/description: '([^']+)',;/g, "description: '$1',");
+content = content.replace(/benefits: \[([^\]]+)\]\s*}/g, 'benefits: [$1]\n  }');
 
-// Fix malformed self-closing tags
-content = content.replace(/\/><\/undefined>/g, '/>');
-
-// Fix malformed quotes in className
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>');
+// Clean up multiple empty lines
+content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
 fs.writeFileSync(filePath, content, 'utf8');
-console.log('Fixed 5 g-implementation/page.tsx');
+console.log('Fixed 5g-implementation/page.tsx');

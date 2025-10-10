@@ -2,19 +2,19 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
-  id: string;
+    id: string;
   title: string;
   description: string;
   category: string;
   readTime: string;
   date: string;
   path: string;
-  image: string;
-  featured: boolean;
+  image: string
+  featured: boolean
   stats?: {
-    views: number;
-    engagement: number;
-  };
+    views: number,
+    engagement: number
+  }
 }
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -121,8 +121,8 @@ export default function BlogPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
+      setLoading(false)
+  }, 500);
     return () => clearTimeout(timer);
   }, [blogPosts]);
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
@@ -220,14 +220,14 @@ export default function BlogPage() {
             </p>
             <Link
               to="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-              Subscribe to Newsletter;
+              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
+              Subscribe to Newsletter
   </
           </div>
         </div>
       </div>
     </div>
-  );
+  ),
 }
   </Link>
   </h3>

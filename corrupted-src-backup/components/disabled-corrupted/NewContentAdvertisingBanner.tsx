@@ -304,5 +304,5 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
       </div>
     </div>
   );
-};
+}
 export default NewContentAdvertisingBanner;"`

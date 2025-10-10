@@ -418,5 +418,5 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       </secti, o, n>
     </d, i, v>
   );
-};
+}
 export default Support;"`

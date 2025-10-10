@@ -12,9 +12,9 @@ import Footer from '../components/Footer';
 const,
   OfflinePage: React.FC = () => {const handleRetry = () => {}
     window.location.reload();
-  };
+  }
   const handleGoHome = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
     window.location.href = '/';
   return (<div>Coming Soon</div>)
@@ -34,15 +34,15 @@ const,
           <button></button>
             onClick={handleRetry}"
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500,"
-  hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
+  hover: bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
 // >
           "
           <RefreshCw className="w-4 h-4" /></RefreshCw>
-// Try Again;
+// Try Again,
           </button>
 onClick={handleGoHome}"
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"
-  hover:bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
+  hover: bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
             <Home className="w-4 h-4" /></Home>
             Go Home;"
         <div className="mt-6 text-sm text-gray-400"></div>"
@@ -54,6 +54,6 @@ onClick={handleGoHome}"
           <p className="text-xs text-gray-400"></p>
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.
-  );
-};
+  ),
+}
 export default OfflinePage;

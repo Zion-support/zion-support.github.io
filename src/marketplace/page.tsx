@@ -123,8 +123,8 @@ $4}
       case 'equipment':
         return equipment;
       default:
-        return [];
-  };
+        return []
+  }
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -163,8 +163,8 @@ icon$5: Award,
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Zion Tech Marketplace;
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Zion Tech Marketplace,
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover, compare, and purchase AI and IT solutions from verified vendors. 
@@ -190,11 +190,11 @@ icon$5: Award,
                   placeholder="Search marketplace..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
                 <Filter className="w-5 h-5 mr-2" />
-                Filters;
+                Filters,
   </
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-4">
@@ -287,12 +287,12 @@ icon$5: Award,
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Browse our marketplace to discover the tools, talent, and equipment you need 
               to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <ShoppingCart className="w-5 h-5 mr-2" />
-                Start Shopping;
+                Start Shopping
   </
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -305,14 +305,14 @@ icon$5: Award,
       <Footer />
   return (
     <div>Coming Soon</div>
-  );
-};
+  ),
+}
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'products',
       nam,
@@ -411,14 +411,14 @@ const categories = [
           <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
 // Start Shopping;
           </a>
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="tel: +13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
       <Footer /></Footer>
-export default MarketplacePage;
+export default MarketplacePage,
   </div>
   </p>
   </h2>

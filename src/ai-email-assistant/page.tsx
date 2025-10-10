@@ -157,6 +157,6 @@ import Footer from '../components/Footer';
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
+  ),
+}
 export default PagePage;

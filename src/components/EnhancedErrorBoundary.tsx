@@ -5,15 +5,15 @@ interface State {/* TODO: Fix JSX expression */}
 }
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
     this.maxRetries = props.maxRetries || 3;
   }
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}`
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCoun,
-  t: 0;
-    };
+  t: 0,
+    }
   }
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -34,13 +34,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   private reportError = (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
-  };
+  }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
       }));
     }
     // Enhanced error reporting logic;
     const errorReport = {/* TODO: Fix JSX expression */}
-    };
+    }
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
@@ -52,24 +52,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       // });
     } catch (reportingError) {/* TODO: Fix JSX expression */}
     }
-  };
+  }
   private getUserId = (): string | null => {/* TODO: Fix JSX expression */}
-  };
+  }
   private getSessionId = (): string => {/* TODO: Fix JSX expression */}`
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
-  };
+  }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
   o: undefined });
-  };
+  }
   private handleReload = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   private copyErrorDetails = () => {/* TODO: Fix JSX expression */}
-    };
+    }
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {/* TODO: Fix JSX expression */}
           }, 2000);
@@ -77,7 +77,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       })
       .catch(() => {/* TODO: Fix JSX expression */}
       });
-  };
+  }
   render() {/* TODO: Fix JSX expression */}
       }
       return (<div className="error-boundary"></div>
@@ -118,16 +118,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
               <button></button>
                 onClick={this.handleReload}"
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-indigo-700 transition-colors"
+  hover: bg-indigo-700 transition-colors"
               >
-                Try Again;
+                Try Again,
               </button>
               <button></button>
                 onClick={this.handleGoHome}"
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-300 transition-colors"
+  hover: bg-gray-300 transition-colors"
               >
-                Go Home;
+                Go Home,
               </button>
             </div>
             {/* TODO: Fix JSX expression */}
@@ -138,9 +138,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                   id="copy-error-details"
                   onClick={this.copyErrorDetails}"
                   className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,"
-  hover:bg-gray-300"
+  hover: bg-gray-300"
                 >
-                  Copy Error Details;
+                  Copy Error Details,
                 </button>
               </details>
             )}

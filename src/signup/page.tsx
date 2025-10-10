@@ -25,13 +25,13 @@ const SignupPage: React.FC = () => {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-  };
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
-      return;
-    }
+      alert('Passwords do not match'),
+      return
+  }
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -64,10 +64,10 @@ $4];
     <React.Fragment>
     <div>Coming Soon</div>
   );
-};
+}
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   firstNam,
   e: '',
     lastNam,
@@ -85,33 +85,33 @@ $4];
     agreeToTerm,
   s: false,
     subscribeNewslette,
-  r: false;)
+  r: false,)
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent;)
+const handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
     }));
-  };
+  }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
       alert('Passwords do not match');
       return;
     }
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -122,11 +122,11 @@ const handleInputChange = (e: React.ChangeEvent;)
     window.location.href = '/';
   const features = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Shield,
       titl,
@@ -155,10 +155,10 @@ const PagePage: React.FC = () => {
   </
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name;
+                      First Name,
   </
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -228,10 +228,10 @@ const PagePage: React.FC = () => {
               </div>"
               <form onSubmit={handleSubmit} className="space-y-6"></form>"
                 <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-4"></div>
+  md: grid-cols-2 gap-4"></div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// First Name;
+// First Name,
           </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -240,9 +240,9 @@ type="text" name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
 // required
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
 />
-                      Last Name;
+                      Last Name,
                         name="lastName" value={formData.lastName}
                         placeholder="Enter your last name" Email Address;
           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -279,12 +279,12 @@ Confirm Password;
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
-                      <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
-                        Terms of Service;
+                      <a href="/terms" className="text-cyan-400 hover: text-cyan-300">
+                        Terms of Service,
   </{' '}
                       and{' '}
-                      <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-                        Privacy Policy;
+                      <a href="/privacy" className="text-cyan-400 hover: text-cyan-300">
+                        Privacy Policy,
   </
                     </span>
                       name="subscribeNewsletter"
@@ -345,8 +345,8 @@ Confirm Password;
           </a>{' '}
                       and{' '}"
                       <a href="/privacy" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
-// Privacy Policy;
+  hover: text-cyan-300"></a>
+// Privacy Policy,
           </a>
                     </span>
 name="subscribeNewsletter" checked={formData.subscribeNewsletter}
@@ -364,8 +364,8 @@ Creating Account...
               <div className="mt-8 text-center"></div>
                   Already have an account?{' '}
                   <a
-                    href="/login" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-Sign in here;
+                    href="/login" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
+Sign in here,
             {/* Right Side - Features and Benefits */}"
             <div className="space-y-8"></div>"
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>

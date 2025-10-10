@@ -51,12 +51,12 @@ try {
       try {
         execSync('git merge --abort', { stdio: 'pipe' });
       } catch (abortError) {
-        // Ignore abort errors;
-      }
+    // Ignore abort errors
+  }
     }
   }
 
-  console.log(`\n📊 Merge Summary: `);
+  console.log(`\n📊 Merge Summary: `),
   console.log(`✅ Successfully merged: ${mergedCount} branches`);
   console.log(`⏭️  Skipped: ${skippedCount} branches`);
 
@@ -67,6 +67,6 @@ try {
   console.log('🎉 All merges completed successfully!');
 
 } catch (error) {
-  console.error('❌ Error during merge process:', error.message);
-  process.exit(1);
-}
+    console.error('❌ Error during merge process:', error.message);
+  process.exit(1)
+  }

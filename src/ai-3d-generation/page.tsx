@@ -65,24 +65,24 @@ const AI3DGenerationPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
                   <Camera className="w-8 h-8 text-white" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-white neon-text">
-                  AI 3D Generation Studio;
+                <h1 className="text-4xl md: text-5xl font-bold text-white neon-text">
+                  AI 3D Generation Studio,
   </
               </div>
               <p className="text-xl text-gray-300 mb-8">
                 Create 3D models, animations, and virtual environments with AI;
   </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Free Trial;
+                  Start Free Trial
   </
                 <a
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <Play className="w-5 h-5" />
-                  View Gallery;
+                  View Gallery,
   </
               </div>
             </div>
@@ -172,11 +172,11 @@ const AI3DGenerationPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Join leading companies using AI 3D generation technology;
   </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Your Free Trial;
+                  Start Your Free Trial
   </
                 <a
                   href="tel:+13024640950"
@@ -190,8 +190,8 @@ const AI3DGenerationPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  ),
+}
 export default AI3DGenerationPage;
   </a>
   </p>

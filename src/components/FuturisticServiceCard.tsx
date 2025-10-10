@@ -22,7 +22,7 @@ const,
     orang,
   e: {/* TODO: Fix JSX expression */}
     }
-  };
+  }
   const currentColor = colorClasses[color];
   return (<div></div>
       className={/* TODO: Fix JSX expression */}
@@ -105,6 +105,6 @@ const,
       ></div>
     </div>
   );
-};
+}
 export default FuturisticServiceCard;"`
   </FuturisticServiceCardProps>

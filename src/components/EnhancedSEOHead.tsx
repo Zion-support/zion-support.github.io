@@ -1,13 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
-  title?: string;
+    title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
-  type?: string;
-}
+  type?: string
+  }
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
@@ -54,7 +54,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "Cloud Computing",
       "Automation"
     ]
-  };
+  }
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -89,7 +89,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
       {/* Fonts */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></link>
+      <link href="https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700,800&display=swap" rel="stylesheet" /></link>
       {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" /></link>
       <link rel="apple-touch-icon" href="/logo192.png" /></link>
@@ -170,6 +170,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta name="theme-color" content="#00 ffff" media="(prefers-color-scheme: light)" /></meta>
       <meta name="theme-color" content="#0 f172 a" media="(prefers-color-scheme: dark)" /></meta>
     </Helmet>
-  );
-};
+  ),
+}
 export default EnhancedSEOHead;

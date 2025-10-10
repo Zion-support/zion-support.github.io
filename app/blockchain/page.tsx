@@ -181,8 +181,8 @@ const BlockchainPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                        Get Blockchain Quote;
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors">
+                        Get Blockchain Quote,
   </
                     </div>
                   ))}
@@ -192,13 +192,13 @@ const BlockchainPage: React.FC = () => {
         ))}
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Blockchain Capabilities;
+                Our Blockchain Capabilities
   </
               <p className="text-xl text-gray-600">
-                Comprehensive blockchain technologies and methodologies for modern business applications;
+                Comprehensive blockchain technologies and methodologies for modern business applications,
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -237,23 +237,23 @@ const BlockchainPage: React.FC = () => {
         </section>
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform with Blockchain?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Contact our blockchain experts for a free consultation and custom blockchain strategy development;
+              Contact our blockchain experts for a free consultation and custom blockchain strategy development
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950
   </
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                ✉️ kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com,
   </
             </div>
             <div className="mt-8 text-sm text-blue-200">
@@ -264,7 +264,7 @@ const BlockchainPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 export default BlockchainPage;
   </a>
   </a>

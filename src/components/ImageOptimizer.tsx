@@ -1,16 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 interface ImageOptimizerProps {
-  src: string;
+    src: string;
   alt: string;
   className?: string;
   width?: number;
   height?: number;
-  priority?: boolean;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
+  priority?: boolean
+  placeholder?: string
+  onLoad?: () => void,
+  onError?: () => void
+  }
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+    ,
   src;
   alt,
   className = '',
@@ -19,9 +20,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   priority = false,
   placeholder,
   onLoad,
-  onError;
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  onError
+  }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
@@ -30,27 +31,27 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
-        }
+          observer.disconnect()
+  }
       },
       {
-        rootMargin: '50px 0px',
-        threshold: 0.01;
-      }
+    rootMargin: '50px 0px',
+        threshold: 0.01
+  }
     );
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+    observer.observe(imgRef.current)
+  }
     return () => observer.disconnect();
   }, [priority]);
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
-  };
+    onLoad?.()
+  }
   const handleError = () => {
     setHasError(true);
-    onError?.();
-  };
+    onError?.()
+  }
   const generatePlaceholder = () => {
     if (placeholder) return placeholder;
     const svg = `
@@ -66,8 +67,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       </svg>,
     `;
     ,
-    return `data:image/svg+xml;base64,${btoa(svg)}`;
-  };
+    return `data: image/svg+xml,base64,${btoa(svg)}`;
+  }
   if (hasError) {
     return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
@@ -114,6 +115,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       )}
     </div>
   );
-};
+}
 export default ImageOptimizer;
   </ImageOptimizerProps>

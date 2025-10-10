@@ -87,11 +87,11 @@ const NewsPage: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              News & Updates;
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+              News & Updates
   </
             <p className="text-xl text-cyan-400 mb-8">
-              Stay informed with our latest innovations and success stories;
+              Stay informed with our latest innovations and success stories,
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Discover the latest developments in AI technology, product launches, 
@@ -205,14 +205,14 @@ const NewsPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Subscribe to our newsletter for the latest AI insights and company updates;
   </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
                 <button className="cyber-button px-8 py-3 font-semibold">
-                  Subscribe;
+                  Subscribe,
   </
               </div>
               <p className="text-gray-400 text-sm mt-4">
@@ -225,7 +225,7 @@ const NewsPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-};
+}
 export default NewsPage;
   </button>
   </p>

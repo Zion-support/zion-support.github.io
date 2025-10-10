@@ -117,8 +117,8 @@ const AICustomerSupportBotPage: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
-                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-                  Get Started;
+                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
+                  Get Started
   </
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
@@ -130,8 +130,8 @@ const AICustomerSupportBotPage: React.FC = () => {
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
       <Footer />
-  );
-};
+  ),
+}
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';

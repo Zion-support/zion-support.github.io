@@ -59,11 +59,11 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
         const layoutEntry = entry as PerformanceEntry & {)
           hadRecentInput?: boolean;)
           value?: number;)
-        };)
+        })
         if (!layoutEntry.hadRecentInput) {
           clsValue += layoutEntry.value || 0;
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-        };)
+        })
         if (!layoutEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
         }
       });
@@ -89,5 +89,5 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
   s: ['navigation'] });
   }, []);
 
-  return { metrics, isSupported };
+  return { metrics, isSupported }
 }

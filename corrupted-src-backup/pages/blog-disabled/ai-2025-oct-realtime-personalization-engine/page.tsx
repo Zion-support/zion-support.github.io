@@ -27,7 +27,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
   content=" />
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />,
         <meta name="description",
-  content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.", /><meta name: "keywords;
+  content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.", /><meta name: "keywords,
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>",
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI;
         />
@@ -388,7 +388,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <Target className="ml-2 h-5 w-5 ">,
                 <Target className="ml-2 h-5 w-5" />);
 export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */}
-};
+}
   </div>
   </div>
   </div>
