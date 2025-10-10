@@ -36,8 +36,8 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
-  ]
+    'Gain competitive advantage with advanced technology'
+  ];
 return (
     <>
       <Helmet>
@@ -56,12 +56,6 @@ return (
             </div>
           </div>
         </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1>
-              Ai Agricultural Intelligence Pro
-            </h1>
             <p>
               Advanced AI-powered ai agricultural intelligence pro solution for modern businesses.
             </p>
@@ -70,7 +64,7 @@ return (
                 Get Started
               </button>
               <button>
-                View Demo,
+                View Demo
               </button>
             </div>
           </div>
