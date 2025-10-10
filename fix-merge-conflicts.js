@@ -40,9 +40,16 @@ function resolveMergeConflicts(content) {
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
-  // Remove any remaining merge conflict markers
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+  // Fix missing closing tags
+  content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+  content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
+  content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
+  
+  // Fix JSX fragments
+  content = content.replace(/<>\s*$/gm, '<></>');
+  
+  // Fix missing semicolons
+  content = content.replace(/([^;}])\s*$/gm, '$1;');
   
   return content;
 }

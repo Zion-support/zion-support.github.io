@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 
@@ -27,112 +24,166 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     });
   }, []);
 
-  const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        // Trigger garbage collection if available
-        if (window.gc) {
-          window.gc();
-        }
+  const optimizeScripts = useCallback(() => {
+    const scripts = document.querySelectorAll('script[src]');
+    scripts.forEach((script) => {
+      if (!script.async && !script.defer) {
+        script.defer = true;
       }
-    }
+    });
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/css/critical.css'
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const calculatePerformanceScore = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!navigation) return;
+
+    const loadTime = navigation.loadEventEnd - navigation.fetchStart;
+    const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart;
+    const firstPaint = performance.getEntriesByName('first-paint')[0]?.startTime || 0;
+    const firstContentfulPaint = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
+
+    let score = 100;
+    
+    // Deduct points based on performance metrics
+    if (loadTime > 3000) score -= 20;
+    if (loadTime > 5000) score -= 20;
+    if (domContentLoaded > 2000) score -= 15;
+    if (firstContentfulPaint > 1500) score -= 15;
+    if (firstPaint > 1000) score -= 10;
+
+    setPerformanceScore(Math.max(0, score));
   }, []);
 
   const runOptimizations = useCallback(async () => {
     setIsOptimizing(true);
     const newOptimizations: string[] = [];
 
-    // Optimize images
-    optimizeImages();
-    newOptimizations.push('Images optimized for lazy loading');
+    try {
+      // Image optimization
+      optimizeImages();
+      newOptimizations.push('Images optimized for lazy loading');
 
-    // Optimize memory
-    optimizeMemory();
-    newOptimizations.push('Memory optimization applied');
+      // Script optimization
+      optimizeScripts();
+      newOptimizations.push('Scripts optimized for async loading');
 
-    // Calculate performance score
-    const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
-    setPerformanceScore(score);
-    newOptimizations.push(`Performance score: ${score}/100`);
+      // Preload critical resources
+      preloadCriticalResources();
+      newOptimizations.push('Critical resources preloaded');
 
-    setOptimizations(newOptimizations);
-    setIsOptimizing(false);
-  }, [optimizeImages, optimizeMemory]);
+      // Calculate performance score
+      setTimeout(() => {
+        calculatePerformanceScore();
+        newOptimizations.push('Performance score calculated');
+      }, 1000);
+
+      setOptimizations(newOptimizations);
+    } catch (error) {
+      console.error('Performance optimization error:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [optimizeImages, optimizeScripts, preloadCriticalResources, calculatePerformanceScore]);
 
   useEffect(() => {
-    // Initial optimization
-    optimizeImages();
-    
-    // Re-optimize on route changes
-    const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Run initial optimizations
+    runOptimizations();
 
-    return () => observer.disconnect();
-  }, [optimizeImages]);
+    // Set up performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          calculatePerformanceScore();
+        }
+      });
+    });
 
-  useEffect(() => {
-    const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
-  }, [optimizeMemory]);
+    observer.observe({ entryTypes: ['navigation'] });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [runOptimizations, calculatePerformanceScore]);
 
   return (
-    <>
+    <div className={`performance-optimizer ${className}`}>
       {children}
-      <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-            <Settings className="h-5 w-5 mr-2 text-blue-600" />
-            Performance Optimizer
-          </h3>
-          <button
-            onClick={runOptimizations}
-            disabled={isOptimizing}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-          >
-            <Zap className="h-4 w-4 mr-2" />
-            {isOptimizing ? 'Optimizing...' : 'Optimize'}
-          </button>
-        </div>
-
-        {optimizations.length > 0 && (
-          <div className="space-y-2 mb-4">
-            {optimizations.map((optimization, index) => (
-              <div key={index} className="flex items-center text-sm text-green-600">
-                <CheckCircle className="h-4 w-4 mr-2" />
-                {optimization}
-              </div>
-            ))}
+      
+      {/* Performance Indicator */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+          <div className="flex items-center mb-2">
+            <Settings className="w-4 h-4 mr-2" />
+            <span className="font-semibold">Performance Optimizer</span>
           </div>
-        )}
-
-        {performanceScore && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Performance Score</span>
-              <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
+          
+          {isOptimizing && (
+            <div className="flex items-center text-yellow-400 mb-2">
+              <Zap className="w-4 h-4 mr-2 animate-pulse" />
+              Optimizing...
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  performanceScore >= 90 ? 'bg-green-500' : 
-                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${performanceScore}%` }}
-              />
-            </div>
-            {performanceScore < 90 && (
-              <div className="mt-2 flex items-center">
-                <AlertTriangle className="h-4 w-4 text-yellow-600" />
-                <span className="text-sm text-yellow-800 ml-2">
-                  Performance can be improved. Consider additional optimizations.
+          )}
+          
+          {performanceScore !== null && (
+            <div className="mb-2">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm">Performance Score:</span>
+                <span className={`font-bold ${
+                  performanceScore >= 80 ? 'text-green-400' :
+                  performanceScore >= 60 ? 'text-yellow-400' : 'text-red-400'
+                }`}>
+                  {performanceScore}/100
                 </span>
               </div>
-            )}
-          </div>
-        )}
-      </div>
-    </>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div
+                  className={`h-2 rounded-full ${
+                    performanceScore >= 80 ? 'bg-green-400' :
+                    performanceScore >= 60 ? 'bg-yellow-400' : 'bg-red-400'
+                  }`}
+                  style={{ width: `${performanceScore}%` }}
+                />
+              </div>
+            </div>
+          )}
+          
+          {optimizations.length > 0 && (
+            <div className="space-y-1">
+              <span className="text-sm font-medium">Optimizations Applied:</span>
+              <ul className="text-xs space-y-1">
+                {optimizations.map((optimization, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckCircle className="w-3 h-3 text-green-400 mr-1" />
+                    {optimization}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
 };
 

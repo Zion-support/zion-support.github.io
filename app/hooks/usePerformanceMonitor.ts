@@ -20,12 +20,35 @@ export const usePerformanceMonitor = () => {
         }
       });
 
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      } catch (e) {
-        // Fallback for browsers that don't support all entry types
-        console.log('Performance monitoring not fully supported');
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+      // Monitor navigation timing
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        console.log('Page Load Time:', navigation.loadEventEnd - navigation.fetchStart);
+        console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.fetchStart);
       }
+
+      return () => {
+        observer.disconnect();
+      };
     }
   }, []);
+
+  return {
+    // Return performance metrics if needed
+    getMetrics: () => {
+      if (typeof window === 'undefined') return null;
+      
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (!navigation) return null;
+
+      return {
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+        firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+        firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
+      };
+    }
+  };
 };

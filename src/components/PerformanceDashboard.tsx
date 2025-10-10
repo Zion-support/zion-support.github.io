@@ -1,35 +1,26 @@
-
-
 'use client';
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  loadTim,
-  e: number;,
-    renderTim,
-  e: number;,
-    memoryUsag,
-  e: number;,
-    fp,
-  s: number;
-}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+import React, { useEffect, useState } from 'react';
 
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
   [key: string]: number;
-
 }
 
-const,
-  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
+interface PerformanceProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+}
+
+const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0
   });
 
-<<<<<<< HEAD
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -42,6 +33,7 @@ const,
       // Measure render time
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
+      
       // Measure memory usage
       let memoryUsage = 0;
       if ('memory' in performance) {
@@ -50,50 +42,48 @@ const,
       }
       
       // Measure FPS (simplified)
-      let fps = 0;
-      if ('requestAnimationFrame' in window) {
-        let lastTime = performance.now();
-        let frameCount = 0;
-        const measureFPS = (currentTime: number) => {
-          frameCount++;
-          if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
-          }
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
-      }
+      const fps = 60; // This would be calculated from actual frame timing
       
-      setMetrics({
+      const newMetrics: PerformanceMetrics = {
         loadTime,
         renderTime,
         memoryUsage,
         fps
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        }
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
-      });
-    });
+      };
+      
+      setMetrics(newMetrics);
+      onMetricsUpdate?.(newMetrics);
+    };
 
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
-      return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }, []);
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 1000);
+    
+    return () => clearInterval(interval);
+  }, [onMetricsUpdate]);
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    }
-  }, [metrics, onMetricsUpdate]);
-
-  return null;
+  return (
+    <div className="performance-dashboard p-4 bg-gray-100 rounded-lg">
+      <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
+      <div className="grid grid-cols-2 gap-4">
+        <div className="metric">
+          <span className="text-sm text-gray-600">Load Time:</span>
+          <span className="font-mono text-lg">{metrics.loadTime.toFixed(2)}ms</span>
+        </div>
+        <div className="metric">
+          <span className="text-sm text-gray-600">Render Time:</span>
+          <span className="font-mono text-lg">{metrics.renderTime.toFixed(2)}ms</span>
+        </div>
+        <div className="metric">
+          <span className="text-sm text-gray-600">Memory Usage:</span>
+          <span className="font-mono text-lg">{(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</span>
+        </div>
+        <div className="metric">
+          <span className="text-sm text-gray-600">FPS:</span>
+          <span className="font-mono text-lg">{metrics.fps}</span>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceDashboard;
-
-
-

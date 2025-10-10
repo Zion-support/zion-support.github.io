@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
-
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
@@ -19,35 +16,49 @@ export const useAnalytics = () => {
   return context;
 };
 
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-    }
-  }, []);
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
 
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('event', eventName, parameters);
+    if (typeof window !== 'undefined') {
+      // Google Analytics 4
+      if (window.gtag) {
+        window.gtag('event', eventName, parameters);
+      }
+      
+      // Custom analytics
+      console.log('Analytics Event:', eventName, parameters);
     }
   };
 
   const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('event', 'page_view', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
+    if (typeof window !== 'undefined') {
+      // Google Analytics 4
+      if (window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: pageName,
+          page_location: window.location.href
+        });
+      }
+      
+      // Custom analytics
+      console.log('Page View:', pageName);
     }
   };
 
-  const value = {
+  useEffect(() => {
+    // Initialize analytics
+    if (typeof window !== 'undefined') {
+      // Track initial page view
+      trackPageView(document.title);
+    }
+  }, []);
+
+  const value: AnalyticsContextType = {
     trackEvent,
-    trackPageView,
+    trackPageView
   };
 
   return (
@@ -57,4 +68,4 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   );
 };
 
-export { AnalyticsProvider };
+export default AnalyticsProvider;
