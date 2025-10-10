@@ -6,18 +6,6 @@ import Footer from '../components/Footer';
 
 const AI3DGenerationPage: React.FC = React.memo(() => {
   const features = [
-<<<<<<< HEAD
-    'Generate high-quality 3D models from text descriptions',
-    'Create photorealistic textures and materials',
-    'Automated animation and rigging',
-    'LOD (Level of Detail) optimization',
-    'VR/AR integration ready',
-    'Real-time rendering capabilities',
-    'Batch processing for multiple models',
-    'Custom style transfer and adaptation',
-    'Physics simulation integration',
-    'Export to all major 3D formats'
-=======
     {
       icon: Cube,
       title: 'AI Model Generation',
@@ -42,7 +30,6 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
       description: 'Automatic Level of Detail optimization for performance',
       benefits: ['Performance scaling', 'Memory optimization', 'Quality preservation']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-d48f
   ];
 
   const benefits = [
@@ -95,13 +82,6 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
     }
   ];
 
-<<<<<<< HEAD
-  const pricing = [
-    {
-      plan: 'Starter',
-      price: '$199/month',
-      features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
-=======
   const pricingPlans = [
     {
       name: 'Starter',
@@ -115,7 +95,6 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
         'Email support',
         'Common format exports'
       ],
->>>>>>> cursor/fix-errors-and-merge-to-main-d48f
       popular: false
     },
     {
@@ -150,29 +129,6 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
       ],
       popular: false
     }
-<<<<<<< HEAD
-  ];
-
-  const technologies = [
-    'Neural Radiance Fields',
-    'Generative Adversarial Networks',
-    '3D Convolutional Networks',
-    'Point Cloud Processing',
-    'Mesh Generation',
-    'Texture Synthesis',
-    'Real-time Rendering',
-    'Cloud Computing',
-    'GPU Acceleration',
-    'Machine Learning'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Helmet>
-        <title>AI 3D Generation Services | Zion Tech Group</title>
-        <meta name="description" content="Create stunning 3D models, animations, and visualizations with AI-powered tools. Reduce production time by 90% and costs by 80%." />
-        <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, game development, architecture visualization" />
-=======
   ];
 
   return (
@@ -180,7 +136,6 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Generate high-quality 3D models from text descriptions using advanced AI technology." />
->>>>>>> cursor/fix-errors-and-merge-to-main-d48f
       </Helmet>
       
       <Navigation />
@@ -197,29 +152,12 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
               Transform your ideas into reality in minutes, not months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center space-x-2"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Call (302) 464-0950</span>
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="cyber-button-outline inline-flex items-center space-x-2"
-              >
-                <Mail className="w-4 h-4" />
-                <span>Get Quote</span>
-              </a>
-=======
               <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Generating
               </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 View Gallery
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-d48f
             </div>
           </div>
         </div>
@@ -232,143 +170,6 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful AI Features
             </h2>
-<<<<<<< HEAD
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature}
-                  </h3>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Benefits Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Why Choose Our 3D AI?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
-                    <p className="text-gray-300 text-sm">
-                      Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Use Cases Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Industry Applications
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {applications.map((app, index) => (
-                <div key={index} className="cyber-card p-6">
-                  <div className="text-4xl mb-4">{app.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
-                  <p className="text-gray-300 mb-4">{app.description}</p>
-                  <ul className="space-y-2">
-                    {app.examples.map((example, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Technologies Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Advanced Technologies
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {technologies.map((tech, index) => (
-                <div key={index} className="cyber-card p-4 text-center">
-                  <span className="text-sm text-gray-300">{tech}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Pricing Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Flexible Pricing Plans
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}>
-                    Get Started
-                  </button>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="text-center py-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your 3D Workflow?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of creators who are already using AI to generate stunning 3D content in minutes instead of hours.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-              >
-                Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a
-                href="/demo"
-                className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-              >
-                View Demo
-              </a>
-            </div>
-          </section>
-        </div>
-      </main>
-      
-=======
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered 3D generation platform offers advanced capabilities for creating professional 3D content.
             </p>
@@ -522,7 +323,6 @@ const AI3DGenerationPage: React.FC = React.memo(() => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d48f
       <Footer />
     </div>
   );
