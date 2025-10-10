@@ -1,100 +1,55 @@
 'use client';
+
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Star } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
-    }
-  ];
+interface ContentPromotionBannerProps {
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  showRating?: boolean;
+  rating?: number;
+  reviewCount?: number;
+}
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+  title = "Transform Your Business with AI",
+  description = "Join thousands of companies already using our AI solutions to drive growth and innovation.",
+  ctaText = "Get Started Today",
+  ctaLink = "/contact",
+  showRating = true,
+  rating = 4.9,
+  reviewCount = 1250
+}) => {
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-4 px-4">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="text-sm font-medium">
-          🚀 Transform your business with our AI and IT solutions. 
-          <a href="/contact" className="underline hover:no-underline ml-1">
-            Get started today →
-          </a>
-        </p>
-=======
-    <div className="bg-gradient-to-r from-cyan-600 to-purple-600 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Transform Your Business Today
-          </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Join thousands of businesses already using our AI and IT solutions to drive growth and innovation.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <feature.icon className="w-12 h-12 text-white mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-white/80 text-sm">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
-              <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center text-white">
-                    <CheckCircle className="w-5 h-5 text-white mr-3 flex-shrink-0" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-              <p className="text-white/90 mb-6">
-                Contact us today for a free consultation and discover how we can help transform your business.
-              </p>
-              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2 mx-auto">
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-1">{title}</h3>
+            <p className="text-sm opacity-90">{description}</p>
           </div>
+          
+          {showRating && (
+            <div className="flex items-center space-x-2 text-sm">
+              <div className="flex items-center space-x-1">
+                <Star className="w-4 h-4 fill-current text-yellow-300" />
+                <span className="font-medium">{rating}</span>
+              </div>
+              <span className="opacity-75">({reviewCount} reviews)</span>
+            </div>
+          )}
+          
+          <Link
+            to={ctaLink}
+            className="bg-white text-cyan-600 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2"
+          >
+            {ctaText}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
->>>>>>> origin/main
       </div>
     </div>
   );

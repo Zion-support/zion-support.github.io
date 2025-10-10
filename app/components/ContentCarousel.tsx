@@ -1,178 +1,149 @@
 'use client';
+
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+interface CarouselItem {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+  category?: string;
+}
 
-  const slides = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
-    }
-  ];
+interface ContentCarouselProps {
+  items: CarouselItem[];
+  autoPlay?: boolean;
+  autoPlayInterval?: number;
+  showControls?: boolean;
+  showIndicators?: boolean;
+  className?: string;
+}
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+const ContentCarousel: React.FC<ContentCarouselProps> = ({
+  items,
+  autoPlay = true,
+  autoPlayInterval = 5000,
+  showControls = true,
+  showIndicators = true,
+  className = ''
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (!isPlaying || !autoPlay) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === items.length - 1 ? 0 : prevIndex + 1
+      );
+    }, autoPlayInterval);
+
+    return () => clearInterval(interval);
+  }, [isPlaying, autoPlay, autoPlayInterval, items.length]);
+
+  const goToPrevious = () => {
+    setCurrentIndex(currentIndex === 0 ? items.length - 1 : currentIndex - 1);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex(currentIndex === items.length - 1 ? 0 : currentIndex + 1);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  if (!items || items.length === 0) {
+    return null;
+  }
 
   return (
-<<<<<<< HEAD
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">Featured Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/10 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-white mb-3">AI Solutions</h3>
-              <p className="text-gray-300 text-sm">Transform your business with cutting-edge AI technology</p>
-            </div>
-            <div className="bg-white/10 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-white mb-3">Cloud Services</h3>
-              <p className="text-gray-300 text-sm">Scalable cloud infrastructure for modern businesses</p>
-            </div>
-            <div className="bg-white/10 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-white mb-3">Cybersecurity</h3>
-              <p className="text-gray-300 text-sm">Protect your business from evolving cyber threats</p>
-=======
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Our <span className="text-cyan-400">Solutions</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover how our cutting-edge technology can transform your business operations.
-          </p>
-        </div>
-
-        {/* Carousel */}
-        <div className="relative max-w-4xl mx-auto mb-12">
-          <div className="overflow-hidden rounded-2xl">
+    <div className={`relative ${className}`}>
+      <div className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative overflow-hidden rounded-xl">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {slides.map((slide, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                    <div className="text-center mb-8">
-                      <slide.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-                      <h3 className="text-3xl font-bold text-white mb-4">{slide.title}</h3>
-                      <p className="text-xl text-gray-300 mb-6">{slide.description}</p>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {slide.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
+              {items.map((item) => (
+                <div key={item.id} className="w-full flex-shrink-0">
+                  <div className="relative h-96 md:h-[500px]">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                      {item.category && (
+                        <span className="inline-block bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                          {item.category}
+                        </span>
+                      )}
+                      <h3 className="text-2xl md:text-4xl font-bold mb-4">{item.title}</h3>
+                      <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl">
+                        {item.description}
+                      </p>
+                      {item.link && (
+                        <a
+                          href={item.link}
+                          className="inline-flex items-center bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                        >
+                          Learn More
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
               ))}
->>>>>>> origin/main
             </div>
+
+            {showControls && (
+              <>
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors duration-200"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors duration-200"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={togglePlayPause}
+                  className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors duration-200"
+                >
+                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                </button>
+              </>
+            )}
           </div>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
+          {showIndicators && items.length > 1 && (
+            <div className="flex justify-center space-x-2 mt-6">
+              {items.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                    index === currentIndex ? 'bg-cyan-500' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
-<<<<<<< HEAD
-=======
-
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
-            <p className="text-xl text-gray-300">
-              We deliver exceptional results through innovative technology and expert support.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <CheckCircle className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <p className="text-white font-medium">{benefit}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto">
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
->>>>>>> origin/main
       </div>
     </div>
   );

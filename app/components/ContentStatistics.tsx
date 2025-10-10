@@ -1,220 +1,115 @@
 'use client';
+
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
+import { TrendingUp, Users, Award, Zap } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0
-  });
+interface StatItem {
+  id: number;
+  value: number;
+  label: string;
+  icon: React.ComponentType<{ className?: string }>;
+  suffix?: string;
+  prefix?: string;
+}
 
-  const targetCounters = {
-    clients: 500,
-    projects: 1000,
-    satisfaction: 99,
-    years: 10
-  };
+interface ContentStatisticsProps {
+  title?: string;
+  description?: string;
+  stats?: StatItem[];
+  className?: string;
+}
 
-  const statistics = [
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({
+  title = "Our Impact",
+  description = "Numbers that speak for themselves - see how we're transforming businesses worldwide.",
+  stats = [
     {
-      icon: Users,
-      value: counters.clients,
-      label: 'Happy Clients',
-      suffix: '+',
-      color: 'text-cyan-400'
-    },
-    {
+      id: 1,
+      value: 1000,
+      label: "Projects Completed",
       icon: Award,
-      value: counters.projects,
-      label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400'
+      suffix: "+"
     },
     {
+      id: 2,
+      value: 500,
+      label: "Happy Clients",
+      icon: Users,
+      suffix: "+"
+    },
+    {
+      id: 3,
+      value: 99,
+      label: "Success Rate",
       icon: TrendingUp,
-      value: counters.satisfaction,
-      label: 'Client Satisfaction',
-      suffix: '%',
-      color: 'text-green-400'
+      suffix: "%"
     },
     {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
-      color: 'text-yellow-400'
-    }
-  ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
+      id: 4,
+      value: 24,
+      label: "Support Hours",
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      suffix: "/7"
     }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+  ],
+  className = ''
+}) => {
+  const [animatedStats, setAnimatedStats] = useState<{ [key: number]: number }>({});
 
   useEffect(() => {
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const animateStats = () => {
+      stats.forEach((stat) => {
+        const duration = 2000; // 2 seconds
+        const steps = 60;
+        const increment = stat.value / steps;
+        let current = 0;
 
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
-
-      return setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timers[0]);
-        }
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= stat.value) {
+            current = stat.value;
+            clearInterval(timer);
+          }
+          setAnimatedStats(prev => ({
+            ...prev,
+            [stat.id]: Math.floor(current)
+          }));
+        }, duration / steps);
+      });
     };
-  }, []);
+
+    // Start animation after a short delay
+    const timeout = setTimeout(animateStats, 500);
+    return () => clearTimeout(timeout);
+  }, [stats]);
 
   return (
-<<<<<<< HEAD
-    <div className="py-16 px-4">
+    <div className={`py-16 px-4 ${className}`}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Our Impact
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Numbers that speak for our success and client satisfaction.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-            <div className="text-gray-300">Projects Completed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-            <div className="text-gray-300">Uptime Guarantee</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-            <div className="text-gray-300">Support Available</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-            <div className="text-gray-300">Micro SaaS Tools</div>
-=======
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
-      <div className="container mx-auto px-4">
-        {/* Statistics Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Our <span className="text-cyan-400">Achievements</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Numbers that speak for themselves - our track record of success and client satisfaction.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">{description}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"
-            >
-              <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-4`} />
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value}{stat.suffix}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat) => {
+            const IconComponent = stat.icon;
+            const animatedValue = animatedStats[stat.id] || 0;
+            
+            return (
+              <div key={stat.id} className="text-center">
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    {stat.prefix}{animatedValue}{stat.suffix}
+                  </div>
+                  <div className="text-gray-300 text-lg">{stat.label}</div>
+                </div>
               </div>
-              <div className="text-white font-medium">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Features Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
-            <p className="text-xl text-gray-300">
-              Our solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">Key Benefits</h3>
-            <p className="text-xl text-gray-300">
-              Discover why thousands of businesses trust our solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center text-white">
-                <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                <span className="text-sm">{benefit}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto">
-              <span>Get Started Today</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
->>>>>>> origin/main
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
