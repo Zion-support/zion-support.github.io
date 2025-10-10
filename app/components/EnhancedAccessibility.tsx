@@ -1,109 +1,114 @@
 'use client';
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 
 interface AccessibilitySettings {
   highContrast: boolean;
   reducedMotion: boolean;
-  fontSize: 'normal' | 'large' | 'extra-large';
+  largeText: boolean;
   focusVisible: boolean;
 }
 
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
-    fontSize: 'normal',
+    largeText: false,
     focusVisible: false
   });
+
   const { trackEvent } = useAnalytics();
 
   useEffect(() => {
-<<<<<<< HEAD
     // Add ARIA landmarks
     const addLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
+
+      const header = document.querySelector('header');
+      if (header && !header.getAttribute('role')) {
+        header.setAttribute('role', 'banner');
       }
+
       const footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
-    };
 
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
     };
 
     // Enhance focus management
     const enhanceFocusManagement = () => {
-      // Add focus indicators
+      // Add focus-visible polyfill
       const style = document.createElement('style');
       style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        .sr-only.focus:not-sr-only {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
+        .focus-visible:focus {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
         }
       `;
       document.head.appendChild(style);
+
+      // Add focus trap for modals
+      const modals = document.querySelectorAll('[role="dialog"]');
+      modals.forEach(modal => {
+        const focusableElements = modal.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+        if (firstElement && lastElement) {
+          const handleTabKey = (e: KeyboardEvent) => {
+            if (e.key === 'Tab') {
+              if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                  lastElement.focus();
+                  e.preventDefault();
+                }
+              } else {
+                if (document.activeElement === lastElement) {
+                  firstElement.focus();
+                  e.preventDefault();
+                }
+              }
+            }
+          };
+
+          modal.addEventListener('keydown', handleTabKey);
+        }
+      });
     };
 
-    // Add keyboard navigation support
+    // Add keyboard navigation
     const addKeyboardNavigation = () => {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content with Tab
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
+      const handleKeyDown = (e: KeyboardEvent) => {
+        // Skip to main content
+        if (e.key === 'Tab' && e.ctrlKey) {
+          const main = document.querySelector('main');
+          if (main) {
+            main.focus();
+            main.scrollIntoView();
+            e.preventDefault();
           }
         }
 
-        // Close dropdowns with Escape
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+        // Escape key handling
+        if (e.key === 'Escape') {
+          const modals = document.querySelectorAll('[role="dialog"]');
+          modals.forEach(modal => {
+            if (modal.getAttribute('aria-hidden') === 'false') {
+              const closeButton = modal.querySelector('[aria-label="Close"]') as HTMLElement;
+              if (closeButton) {
+                closeButton.click();
+              }
+            }
           });
         }
       };
@@ -112,44 +117,32 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       return () => document.removeEventListener('keydown', handleKeyDown);
     };
 
-    // Initialize accessibility enhancements
-    addLandmarks();
-    addSkipLinks();
-    enhanceFocusManagement();
-    const cleanup = addKeyboardNavigation();
-
-<<<<<<< HEAD
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      }
-=======
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
 
-    setSettings(prev => ({
-      ...prev,
+    setSettings({
+      highContrast: prefersHighContrast,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    }));
+      largeText: false,
+      focusVisible: true
+    });
 
     // Apply initial settings
     applyAccessibilitySettings({
-      ...settings,
+      highContrast: prefersHighContrast,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      largeText: false,
+      focusVisible: true
     });
 
-    // Listen for preference changes
+    // Set up media query listeners
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
 
     const handleMotionChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
       applyAccessibilitySettings({ ...settings, reducedMotion: e.matches });
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
     };
 
     const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -160,25 +153,23 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
 
-    // Setup keyboard navigation
-    setupKeyboardNavigation();
+    // Initialize accessibility features
+    addLandmarks();
+    enhanceFocusManagement();
+    const cleanup = addKeyboardNavigation();
 
-    // Setup focus management
-    setupFocusManagement();
+    // Track accessibility usage
+    trackEvent('accessibility', 'features_initialized', {
+      reducedMotion: prefersReducedMotion,
+      highContrast: prefersHighContrast
+    });
 
     return () => {
       motionQuery.removeEventListener('change', handleMotionChange);
       contrastQuery.removeEventListener('change', handleContrastChange);
+      cleanup();
     };
   }, []);
-<<<<<<< HEAD
-=======
-    return cleanup;
-  }, []);
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-  return <React.Fragment>{children}</React.Fragment>;
-=======
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
@@ -197,9 +188,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       root.classList.remove('reduced-motion');
     }
 
-    // Apply font size
-    root.classList.remove('font-normal', 'font-large', 'font-extra-large');
-    root.classList.add(`font-${newSettings.fontSize}`);
+    // Apply large text
+    if (newSettings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
 
     // Apply focus visible
     if (newSettings.focusVisible) {
@@ -209,111 +203,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   };
 
-  const setupKeyboardNavigation = () => {
-    // Skip to main content functionality
-    const skipLink = document.querySelector('.skip-link');
-    if (skipLink) {
-      skipLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const main = document.querySelector('main');
-        if (main) {
-          main.focus();
-          main.scrollIntoView();
-        }
-      });
-    }
-
-    // Trap focus in modals
-    const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {
-      const focusableElements = modal.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      const firstElement = focusableElements[0] as HTMLElement;
-      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              lastElement?.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              firstElement?.focus();
-              e.preventDefault();
-            }
-          }
-        }
-      };
-
-      modal.addEventListener('keydown', handleKeyDown);
-    });
-  };
-
-  const setupFocusManagement = () => {
-    // Add focus indicators
-    const style = document.createElement('style');
-    style.textContent = `
-      .focus-visible *:focus {
-        outline: 2px solid #3b82f6;
-        outline-offset: 2px;
-      }
-      
-      .high-contrast {
-        --tw-bg-opacity: 1;
-        --tw-text-opacity: 1;
-      }
-      
-      .reduced-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      
-      .font-large {
-        font-size: 1.125rem;
-      }
-      
-      .font-extra-large {
-        font-size: 1.25rem;
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Track focus events for analytics
-    document.addEventListener('focusin', (e) => {
-      trackEvent('focus_event', {
-        category: 'accessibility',
-        label: (e.target as HTMLElement).tagName
-      });
-    });
-  };
-
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings };
-    setSettings(updatedSettings);
-    applyAccessibilitySettings(updatedSettings);
-    
-    trackEvent('accessibility_setting_changed', {
-      category: 'accessibility',
-      label: Object.keys(newSettings)[0]
-    });
-  };
-
-  // Provide accessibility context
+  // Apply settings when they change
   useEffect(() => {
-    const context = {
-      settings,
-      updateSettings
-    };
-    
-    (window as any).accessibilityContext = context;
+    applyAccessibilitySettings(settings);
   }, [settings]);
 
   return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
 };
 
 export default EnhancedAccessibility;
