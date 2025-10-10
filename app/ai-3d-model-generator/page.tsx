@@ -1,80 +1,85 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Share2, Zap, Users, Clock, CheckCircle, ArrowRight, Star, Shield, Globe, Smartphone, Brain, BarChart } from 'lucide-react';
+import { Box, Zap, Users, Clock, CheckCircle, ArrowRight, Star, Shield, Globe, Smartphone, Brain, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AISocialMediaManagerPage: React.FC = () => {
+const AI3DModelGeneratorPage: React.FC = () => {
   const features = [
-    'AI-powered content generation for all platforms',
-    'Automated posting across 15+ social networks',
-    'Smart hashtag research and optimization',
-    'Real-time engagement monitoring and responses',
-    'Advanced analytics and performance insights',
-    'Content calendar with optimal timing suggestions',
-    'Brand voice consistency across all platforms',
-    'Influencer identification and outreach automation',
-    'Crisis management and sentiment analysis',
-    'ROI tracking and campaign optimization'
+    'AI-powered 3D model generation from text descriptions',
+    'High-resolution 3D models with realistic textures',
+    'Support for multiple 3D formats (OBJ, FBX, STL, GLTF)',
+    'Real-time 3D preview and editing capabilities',
+    'Custom material and lighting generation',
+    'Animation and rigging for 3D characters',
+    'Batch processing for multiple models',
+    'API integration for seamless workflows',
+    'Cloud-based rendering with unlimited storage',
+    'Commercial usage rights included'
   ];
 
   const benefits = [
-    'Save 20+ hours per week on social media management',
-    'Increase engagement rates by 250%',
-    'Grow followers organically with AI-optimized content',
-    'Maintain consistent brand presence 24/7',
-    'Make data-driven decisions with advanced analytics',
-    'Scale social media efforts across multiple accounts'
+    'Create professional 3D models in minutes, not hours',
+    'Reduce 3D modeling costs by 90%',
+    'Generate unlimited 3D content with AI assistance',
+    'Maintain consistent quality across all models',
+    'Scale 3D production across teams and projects',
+    'Access to cutting-edge 3D generation technology'
   ];
 
-  const supportedPlatforms = [
-    'Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube', 'Pinterest', 'Snapchat',
-    'WhatsApp Business', 'Telegram', 'Discord', 'Reddit', 'Tumblr', 'Medium', 'Quora'
+  const useCases = [
+    'Game Development',
+    'Architectural Visualization',
+    'Product Design',
+    'Virtual Reality',
+    'Augmented Reality',
+    '3D Printing',
+    'Marketing Materials',
+    'E-commerce',
+    'Education',
+    'Entertainment'
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$49',
+      name: 'Creator',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for individual creators',
       features: [
-        '3 social media accounts',
-        '50 posts per month',
-        'Basic analytics',
-        'Content calendar',
+        '10 3D models per month',
+        'Standard resolution',
+        'Basic materials',
         'Email support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for businesses',
       features: [
-        '10 social media accounts',
-        'Unlimited posts',
-        'Advanced analytics',
-        'AI content generation',
-        'Priority support',
-        'Team collaboration'
+        '50 3D models per month',
+        'High resolution',
+        'Advanced materials',
+        'API access',
+        'Priority support'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited accounts',
+        'Unlimited 3D models',
+        'Ultra-high resolution',
+        'Custom training',
         'White-label solution',
-        'Custom AI training',
-        'Dedicated support',
-        'API access',
-        'Advanced reporting'
+        'Dedicated support'
       ],
       popular: false
     }
@@ -82,24 +87,24 @@ const AISocialMediaManagerPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jessica Martinez',
-      role: 'Marketing Manager',
-      company: 'Fashion Brand',
-      content: 'Our social media engagement has tripled since using this AI manager. The content suggestions are spot-on and the automation saves us so much time.',
+      name: 'Alex Chen',
+      role: 'Game Developer',
+      company: 'Indie Studio',
+      content: 'This AI 3D generator has revolutionized our game development process. We can now create detailed 3D assets in minutes instead of days.',
       rating: 5
     },
     {
-      name: 'Robert Chen',
-      role: 'CEO',
-      company: 'Tech Startup',
-      content: 'The AI understands our brand voice perfectly and creates content that resonates with our audience. Our follower growth has been incredible.',
+      name: 'Maria Rodriguez',
+      role: 'Architect',
+      company: 'Design Firm',
+      content: 'The quality of 3D models generated by this AI is incredible. It has significantly accelerated our architectural visualization projects.',
       rating: 5
     },
     {
-      name: 'Amanda Wilson',
-      role: 'Social Media Director',
-      company: 'Agency',
-      content: 'Managing multiple client accounts is now effortless. The analytics insights help us optimize campaigns and deliver better results.',
+      name: 'David Kim',
+      role: 'Product Manager',
+      company: 'E-commerce Platform',
+      content: 'We use AI-generated 3D models for all our product showcases. The quality is professional-grade and saves us thousands of dollars.',
       rating: 5
     }
   ];
@@ -107,9 +112,9 @@ const AISocialMediaManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager - Automate Your Social Presence | Zion Tech Group</title>
-        <meta name="description" content="Transform your social media strategy with AI-powered content generation, automated posting, and advanced analytics. Manage 15+ platforms from one dashboard." />
-        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, social media scheduling" />
+        <title>AI 3D Model Generator - Create 3D Models with AI | Zion Tech Group</title>
+        <meta name="description" content="Generate high-quality 3D models from text descriptions using AI. Create professional 3D assets for games, architecture, and more with our advanced AI technology." />
+        <meta name="keywords" content="AI 3D model generator, 3D modeling, 3D assets, text to 3D, 3D generation, AI modeling" />
       </Helmet>
       
       <Navigation />
@@ -119,48 +124,48 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             {/* Hero Section */}
             <section className="text-center mb-16">
-              <div className="inline-flex items-center bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <Share2 className="w-4 h-4 mr-2" />
-                AI-Powered Social Media
+              <div className="inline-flex items-center bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Box className="w-4 h-4 mr-2" />
+                AI-Powered 3D Generation
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Social Media Manager
+                AI 3D Model Generator
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Automate your entire social media strategy with AI. Generate engaging content, 
-                schedule posts, and grow your audience across 15+ platforms automatically.
+                Generate high-quality 3D models from simple text descriptions using cutting-edge AI technology. 
+                Create professional 3D assets for games, architecture, and more in minutes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
                   href="#pricing"
-                  className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
-                  className="border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                  className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                 >
-                  Watch Demo
+                  View Gallery
                 </a>
               </div>
               
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">15+</div>
-                  <div className="text-gray-400">Platforms</div>
+                  <div className="text-3xl font-bold text-emerald-400 mb-2">90%</div>
+                  <div className="text-gray-400">Cost Reduction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">250%</div>
-                  <div className="text-gray-400">Engagement Boost</div>
+                  <div className="text-3xl font-bold text-emerald-400 mb-2">10+</div>
+                  <div className="text-gray-400">3D Formats</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">20h</div>
-                  <div className="text-gray-400">Time Saved/Week</div>
+                  <div className="text-3xl font-bold text-emerald-400 mb-2">5 min</div>
+                  <div className="text-gray-400">Generation Time</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">4.9★</div>
+                  <div className="text-3xl font-bold text-emerald-400 mb-2">4.8★</div>
                   <div className="text-gray-400">User Rating</div>
                 </div>
               </div>
@@ -169,7 +174,7 @@ const AISocialMediaManagerPage: React.FC = () => {
             {/* Features Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Complete Social Media Solution
+                Advanced 3D Generation Features
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
@@ -183,16 +188,19 @@ const AISocialMediaManagerPage: React.FC = () => {
               </div>
             </section>
 
-            {/* Supported Platforms */}
+            {/* Use Cases Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Supported Social Platforms
+                3D Model Use Cases
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {supportedPlatforms.map((platform, index) => (
-                  <div key={index} className="bg-gradient-to-br from-pink-500/10 to-rose-600/10 rounded-lg p-4 text-center border border-pink-500/20">
-                    <Share2 className="w-6 h-6 text-pink-400 mx-auto mb-2" />
-                    <span className="text-white text-sm font-medium">{platform}</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {useCases.map((useCase, index) => (
+                  <div key={index} className="bg-gradient-to-br from-emerald-500/10 to-teal-600/10 rounded-lg p-6 border border-emerald-500/20">
+                    <Box className="w-8 h-8 text-emerald-400 mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-3">{useCase}</h3>
+                    <p className="text-gray-300 text-sm">
+                      Leverage AI-generated 3D models to enhance your projects in this domain with professional-quality assets.
+                    </p>
                   </div>
                 ))}
               </div>
@@ -201,12 +209,12 @@ const AISocialMediaManagerPage: React.FC = () => {
             {/* Benefits Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Why Choose Our AI Social Media Manager?
+                Why Choose Our AI 3D Generator?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-pink-500/10 to-rose-600/10 rounded-lg p-6 border border-pink-500/20">
-                    <div className="text-pink-400 text-2xl mb-4">📈</div>
+                  <div key={index} className="bg-gradient-to-br from-emerald-500/10 to-teal-600/10 rounded-lg p-6 border border-emerald-500/20">
+                    <div className="text-emerald-400 text-2xl mb-4">🎯</div>
                     <h3 className="text-xl font-semibold text-white mb-3">Benefit {index + 1}</h3>
                     <p className="text-gray-300">{benefit}</p>
                   </div>
@@ -217,14 +225,14 @@ const AISocialMediaManagerPage: React.FC = () => {
             {/* Pricing Section */}
             <section id="pricing" className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Choose Your Plan
+                Choose Your 3D Generation Plan
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {pricingPlans.map((plan, index) => (
-                  <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-pink-500' : ''}`}>
+                  <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-emerald-500' : ''}`}>
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                           Most Popular
                         </span>
                       </div>
@@ -233,7 +241,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <p className="text-gray-400 mb-4">{plan.description}</p>
                       <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-pink-400">{plan.price}</span>
+                        <span className="text-4xl font-bold text-emerald-400">{plan.price}</span>
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                       </div>
                     </div>
@@ -249,8 +257,8 @@ const AISocialMediaManagerPage: React.FC = () => {
                       href="/contact"
                       className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                         plan.popular
-                          ? 'bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white'
-                          : 'border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
+                          ? 'bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white'
+                          : 'border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
                       }`}
                     >
                       Get Started
@@ -276,7 +284,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                     <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-pink-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-emerald-400 text-sm">{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
                 ))}
@@ -285,23 +293,23 @@ const AISocialMediaManagerPage: React.FC = () => {
 
             {/* CTA Section */}
             <section className="text-center">
-              <div className="bg-gradient-to-r from-pink-500/10 to-rose-600/10 rounded-lg p-12 border border-pink-500/20">
+              <div className="bg-gradient-to-r from-emerald-500/10 to-teal-600/10 rounded-lg p-12 border border-emerald-500/20">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Ready to Transform Your Social Media?
+                  Ready to Generate 3D Models?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Join thousands of businesses who are already using AI to dominate social media.
+                  Join thousands of creators who are already using AI to generate professional 3D models.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
-                    className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                   >
                     Start Free Trial
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                    className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                   >
                     Call: (302) 464-0950
                   </a>
@@ -320,4 +328,4 @@ const AISocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AISocialMediaManagerPage;
+export default AI3DModelGeneratorPage;

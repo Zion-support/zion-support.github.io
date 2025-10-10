@@ -1,88 +1,88 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Zap, Users, Clock, CheckCircle, ArrowRight, Star, Shield, Globe, Smartphone, Brain, BarChart } from 'lucide-react';
+import { Cpu, Zap, Users, Clock, CheckCircle, ArrowRight, Star, Shield, Globe, Smartphone, Brain, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIVoiceCloningPage: React.FC = () => {
+const QuantumComputingSolutionsPage: React.FC = () => {
   const features = [
-    'High-fidelity voice cloning with just 3 minutes of audio',
-    'Real-time voice synthesis and conversion',
-    'Emotion and tone control for natural speech',
-    'Multi-language support with 50+ languages',
-    'Custom voice training and fine-tuning',
-    'API integration for seamless workflows',
-    'Voice authentication and security features',
-    'Batch processing for multiple voices',
-    'Cloud-based processing with unlimited storage',
-    'Commercial usage rights included'
+    'Quantum algorithm development and optimization',
+    'Quantum machine learning implementations',
+    'Cryptographic security enhancement',
+    'Complex optimization problem solving',
+    'Quantum simulation and modeling',
+    'Quantum cloud computing access',
+    'Hybrid classical-quantum systems',
+    'Quantum error correction protocols',
+    'Quantum networking solutions',
+    'Research and development partnerships'
   ];
 
   const benefits = [
-    'Create personalized voice experiences for customers',
-    'Reduce voice production costs by 95%',
-    'Scale voice content across multiple languages',
-    'Maintain consistent brand voice across all touchpoints',
-    'Enable accessibility with custom voice options',
-    'Generate unlimited voice content automatically'
+    'Solve problems exponentially faster than classical computers',
+    'Breakthrough capabilities in cryptography and security',
+    'Revolutionary drug discovery and material science',
+    'Advanced financial modeling and risk analysis',
+    'Next-generation artificial intelligence',
+    'Unprecedented optimization capabilities'
   ];
 
-  const useCases = [
-    'Audiobook Production',
-    'Podcast Creation',
-    'Voice Assistant Development',
-    'E-learning Content',
-    'Marketing Videos',
-    'Accessibility Solutions',
-    'Gaming Characters',
-    'Customer Service',
-    'Language Learning',
-    'Voice Authentication'
+  const applications = [
+    'Drug Discovery & Molecular Simulation',
+    'Financial Risk Analysis & Portfolio Optimization',
+    'Cryptography & Cybersecurity',
+    'Supply Chain Optimization',
+    'Climate Modeling & Environmental Research',
+    'Machine Learning & AI Acceleration',
+    'Logistics & Route Optimization',
+    'Material Science & Chemistry',
+    'Quantum Chemistry Calculations',
+    'Optimization Problems'
   ];
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$79',
+      name: 'Research',
+      price: '$5,000',
       period: '/month',
-      description: 'Perfect for content creators',
+      description: 'For academic and research institutions',
       features: [
-        '5 voice clones',
-        '10 hours of generation',
-        'Standard quality',
-        'Basic emotions',
+        '10 hours quantum computing access',
+        'Basic quantum algorithms',
+        'Research support',
+        'Documentation and tutorials',
         'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$199',
+      name: 'Enterprise',
+      price: '$25,000',
       period: '/month',
-      description: 'Ideal for businesses',
+      description: 'For large organizations',
       features: [
-        '20 voice clones',
-        '50 hours of generation',
-        'High quality',
-        'Advanced emotions',
-        'API access',
-        'Priority support'
+        '50 hours quantum computing access',
+        'Advanced quantum algorithms',
+        'Custom algorithm development',
+        'Dedicated quantum engineer',
+        'Priority support',
+        'Training and consultation'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$599',
-      period: '/month',
-      description: 'For large organizations',
+      name: 'Custom',
+      price: 'Contact',
+      period: 'Us',
+      description: 'Tailored solutions for specific needs',
       features: [
-        'Unlimited voice clones',
-        'Unlimited generation',
-        'Premium quality',
-        'Custom training',
-        'White-label solution',
-        'Dedicated support'
+        'Unlimited quantum access',
+        'Custom quantum hardware',
+        'On-premise deployment',
+        'White-label solutions',
+        'Dedicated team',
+        'SLA guarantee'
       ],
       popular: false
     }
@@ -90,24 +90,24 @@ const AIVoiceCloningPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Lisa Park',
-      role: 'Content Creator',
-      company: 'Podcast Network',
-      content: 'This AI voice cloning has revolutionized our podcast production. We can now create content in multiple languages with consistent quality.',
+      name: 'Dr. Sarah Chen',
+      role: 'Research Director',
+      company: 'Pharmaceutical Corp',
+      content: 'Quantum computing has accelerated our drug discovery process by 1000x. We can now simulate molecular interactions that were impossible before.',
       rating: 5
     },
     {
-      name: 'Marcus Johnson',
-      role: 'Product Manager',
-      company: 'E-learning Platform',
-      content: 'The voice cloning technology has made our courses more engaging and accessible. Students love the personalized learning experience.',
+      name: 'Michael Rodriguez',
+      role: 'CTO',
+      company: 'Financial Services',
+      content: 'The quantum optimization algorithms have revolutionized our portfolio management. We can now process complex risk scenarios in real-time.',
       rating: 5
     },
     {
-      name: 'Sarah Chen',
-      role: 'Marketing Director',
-      company: 'Tech Startup',
-      content: 'We use AI voice cloning for all our marketing videos. It saves us thousands of dollars and maintains our brand consistency.',
+      name: 'Dr. James Wilson',
+      role: 'Chief Scientist',
+      company: 'Materials Research Lab',
+      content: 'Quantum simulation has opened new frontiers in material science. We are discovering materials with properties we never thought possible.',
       rating: 5
     }
   ];
@@ -115,9 +115,9 @@ const AIVoiceCloningPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Voice Cloning - Create Realistic Voice Replicas | Zion Tech Group</title>
-        <meta name="description" content="Clone any voice with AI technology. Create realistic voice replicas for content, marketing, and applications with just 3 minutes of audio sample." />
-        <meta name="keywords" content="AI voice cloning, voice synthesis, voice replication, text to speech, voice generation, voice AI" />
+        <title>Quantum Computing Solutions - Next-Gen Computing Power | Zion Tech Group</title>
+        <meta name="description" content="Harness the power of quantum computing for breakthrough solutions in drug discovery, cryptography, optimization, and AI. Access cutting-edge quantum technology." />
+        <meta name="keywords" content="quantum computing, quantum algorithms, quantum machine learning, quantum cryptography, quantum optimization" />
       </Helmet>
       
       <Navigation />
@@ -127,49 +127,49 @@ const AIVoiceCloningPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             {/* Hero Section */}
             <section className="text-center mb-16">
-              <div className="inline-flex items-center bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <Mic className="w-4 h-4 mr-2" />
-                AI-Powered Voice Technology
+              <div className="inline-flex items-center bg-purple-500/10 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Cpu className="w-4 h-4 mr-2" />
+                Next-Generation Computing
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Voice Cloning
+                Quantum Computing Solutions
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Clone any voice with cutting-edge AI technology. Create realistic voice replicas 
-                for content, marketing, and applications with just 3 minutes of audio sample.
+                Unlock the power of quantum computing for breakthrough solutions in drug discovery, 
+                cryptography, optimization, and artificial intelligence. Access cutting-edge quantum technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
                   href="#pricing"
-                  className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Free Trial
+                  Explore Solutions
                 </a>
                 <a
                   href="#demo"
-                  className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                  className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                 >
-                  Listen to Samples
+                  Schedule Consultation
                 </a>
               </div>
               
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">3 min</div>
-                  <div className="text-gray-400">Training Time</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">1000x</div>
+                  <div className="text-gray-400">Faster Processing</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
-                  <div className="text-gray-400">Languages</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                  <div className="text-gray-400">Quantum Algorithms</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">95%</div>
-                  <div className="text-gray-400">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">100%</div>
+                  <div className="text-gray-400">Secure</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">4.9★</div>
-                  <div className="text-gray-400">User Rating</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                  <div className="text-gray-400">Access</div>
                 </div>
               </div>
             </section>
@@ -177,7 +177,7 @@ const AIVoiceCloningPage: React.FC = () => {
             {/* Features Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Advanced Voice Cloning Features
+                Quantum Computing Capabilities
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
@@ -191,18 +191,18 @@ const AIVoiceCloningPage: React.FC = () => {
               </div>
             </section>
 
-            {/* Use Cases Section */}
+            {/* Applications Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Voice Cloning Use Cases
+                Quantum Computing Applications
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {useCases.map((useCase, index) => (
-                  <div key={index} className="bg-gradient-to-br from-blue-500/10 to-cyan-600/10 rounded-lg p-6 border border-blue-500/20">
-                    <Mic className="w-8 h-8 text-blue-400 mb-4" />
-                    <h3 className="text-xl font-semibold text-white mb-3">{useCase}</h3>
+                {applications.map((application, index) => (
+                  <div key={index} className="bg-gradient-to-br from-purple-500/10 to-indigo-600/10 rounded-lg p-6 border border-purple-500/20">
+                    <Cpu className="w-8 h-8 text-purple-400 mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-3">{application}</h3>
                     <p className="text-gray-300 text-sm">
-                      Leverage AI voice cloning to create personalized and engaging experiences in this domain.
+                      Leverage quantum computing to solve complex problems in this domain with unprecedented speed and accuracy.
                     </p>
                   </div>
                 ))}
@@ -212,12 +212,12 @@ const AIVoiceCloningPage: React.FC = () => {
             {/* Benefits Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Why Choose Our AI Voice Cloning?
+                Why Choose Quantum Computing?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-blue-500/10 to-cyan-600/10 rounded-lg p-6 border border-blue-500/20">
-                    <div className="text-blue-400 text-2xl mb-4">🎯</div>
+                  <div key={index} className="bg-gradient-to-br from-purple-500/10 to-indigo-600/10 rounded-lg p-6 border border-purple-500/20">
+                    <div className="text-purple-400 text-2xl mb-4">⚡</div>
                     <h3 className="text-xl font-semibold text-white mb-3">Benefit {index + 1}</h3>
                     <p className="text-gray-300">{benefit}</p>
                   </div>
@@ -228,14 +228,14 @@ const AIVoiceCloningPage: React.FC = () => {
             {/* Pricing Section */}
             <section id="pricing" className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Choose Your Voice Cloning Plan
+                Quantum Computing Access Plans
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {pricingPlans.map((plan, index) => (
-                  <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
+                  <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                           Most Popular
                         </span>
                       </div>
@@ -244,7 +244,7 @@ const AIVoiceCloningPage: React.FC = () => {
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <p className="text-gray-400 mb-4">{plan.description}</p>
                       <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
+                        <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                       </div>
                     </div>
@@ -260,8 +260,8 @@ const AIVoiceCloningPage: React.FC = () => {
                       href="/contact"
                       className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                         plan.popular
-                          ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white'
-                          : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
+                          ? 'bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white'
+                          : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
                       }`}
                     >
                       Get Started
@@ -274,7 +274,7 @@ const AIVoiceCloningPage: React.FC = () => {
             {/* Testimonials Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                What Our Customers Say
+                What Our Partners Say
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
@@ -287,7 +287,7 @@ const AIVoiceCloningPage: React.FC = () => {
                     <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-blue-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-purple-400 text-sm">{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
                 ))}
@@ -296,23 +296,23 @@ const AIVoiceCloningPage: React.FC = () => {
 
             {/* CTA Section */}
             <section className="text-center">
-              <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-lg p-12 border border-blue-500/20">
+              <div className="bg-gradient-to-r from-purple-500/10 to-indigo-600/10 rounded-lg p-12 border border-purple-500/20">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Ready to Clone Your Voice?
+                  Ready to Harness Quantum Power?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Join thousands of creators and businesses who are already using AI voice cloning to scale their content.
+                  Join the quantum revolution and unlock unprecedented computing capabilities for your organization.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
-                    className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                   >
-                    Start Free Trial
+                    Schedule Consultation
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                   >
                     Call: (302) 464-0950
                   </a>
@@ -331,4 +331,4 @@ const AIVoiceCloningPage: React.FC = () => {
   );
 };
 
-export default AIVoiceCloningPage;
+export default QuantumComputingSolutionsPage;

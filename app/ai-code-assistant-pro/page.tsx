@@ -1,80 +1,80 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Share2, Zap, Users, Clock, CheckCircle, ArrowRight, Star, Shield, Globe, Smartphone, Brain, BarChart } from 'lucide-react';
+import { Code, Zap, Users, Clock, CheckCircle, ArrowRight, Star, Shield, Globe, Smartphone, Brain, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AISocialMediaManagerPage: React.FC = () => {
+const AICodeAssistantProPage: React.FC = () => {
   const features = [
-    'AI-powered content generation for all platforms',
-    'Automated posting across 15+ social networks',
-    'Smart hashtag research and optimization',
-    'Real-time engagement monitoring and responses',
-    'Advanced analytics and performance insights',
-    'Content calendar with optimal timing suggestions',
-    'Brand voice consistency across all platforms',
-    'Influencer identification and outreach automation',
-    'Crisis management and sentiment analysis',
-    'ROI tracking and campaign optimization'
+    'GPT-4 powered code generation and completion',
+    'Support for 50+ programming languages',
+    'Intelligent code review and optimization suggestions',
+    'Automated bug detection and fixing',
+    'Real-time pair programming with AI',
+    'Code documentation generation',
+    'Test case generation and validation',
+    'Security vulnerability scanning',
+    'Performance optimization recommendations',
+    'Integration with popular IDEs and editors'
   ];
 
   const benefits = [
-    'Save 20+ hours per week on social media management',
-    'Increase engagement rates by 250%',
-    'Grow followers organically with AI-optimized content',
-    'Maintain consistent brand presence 24/7',
-    'Make data-driven decisions with advanced analytics',
-    'Scale social media efforts across multiple accounts'
+    'Increase coding productivity by 300%',
+    'Reduce bugs and security vulnerabilities',
+    'Learn best practices from AI suggestions',
+    'Generate comprehensive test coverage',
+    'Automate repetitive coding tasks',
+    'Scale development across teams'
   ];
 
-  const supportedPlatforms = [
-    'Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube', 'Pinterest', 'Snapchat',
-    'WhatsApp Business', 'Telegram', 'Discord', 'Reddit', 'Tumblr', 'Medium', 'Quora'
+  const supportedLanguages = [
+    'JavaScript/TypeScript', 'Python', 'Java', 'C++', 'C#', 'Go', 'Rust', 'PHP', 'Ruby', 'Swift',
+    'Kotlin', 'Scala', 'R', 'MATLAB', 'Dart', 'Elixir', 'Haskell', 'Clojure', 'F#', 'OCaml'
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$49',
+      name: 'Developer',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for individual developers',
       features: [
-        '3 social media accounts',
-        '50 posts per month',
-        'Basic analytics',
-        'Content calendar',
+        'Unlimited code generation',
+        '20+ programming languages',
+        'Basic code review',
+        'IDE integration',
         'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$149',
+      name: 'Team',
+      price: '$99',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for development teams',
       features: [
-        '10 social media accounts',
-        'Unlimited posts',
-        'Advanced analytics',
-        'AI content generation',
+        'Everything in Developer',
+        '50+ programming languages',
+        'Advanced code review',
+        'Team collaboration tools',
         'Priority support',
-        'Team collaboration'
+        'Custom integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
+      price: '$299',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited accounts',
-        'White-label solution',
-        'Custom AI training',
+        'Everything in Team',
+        'Custom AI models',
+        'On-premise deployment',
+        'Advanced security features',
         'Dedicated support',
-        'API access',
-        'Advanced reporting'
+        'SLA guarantee'
       ],
       popular: false
     }
@@ -82,24 +82,24 @@ const AISocialMediaManagerPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jessica Martinez',
-      role: 'Marketing Manager',
-      company: 'Fashion Brand',
-      content: 'Our social media engagement has tripled since using this AI manager. The content suggestions are spot-on and the automation saves us so much time.',
+      name: 'Alex Thompson',
+      role: 'Senior Developer',
+      company: 'TechCorp',
+      content: 'This AI assistant has transformed how we write code. It catches bugs before they happen and suggests optimizations I never would have thought of.',
       rating: 5
     },
     {
-      name: 'Robert Chen',
-      role: 'CEO',
-      company: 'Tech Startup',
-      content: 'The AI understands our brand voice perfectly and creates content that resonates with our audience. Our follower growth has been incredible.',
+      name: 'Maria Garcia',
+      role: 'Lead Engineer',
+      company: 'StartupXYZ',
+      content: 'The code generation is incredibly accurate and the documentation feature saves us hours every week. Our team productivity has increased dramatically.',
       rating: 5
     },
     {
-      name: 'Amanda Wilson',
-      role: 'Social Media Director',
-      company: 'Agency',
-      content: 'Managing multiple client accounts is now effortless. The analytics insights help us optimize campaigns and deliver better results.',
+      name: 'David Kim',
+      role: 'CTO',
+      company: 'InnovateLabs',
+      content: 'The security scanning and performance optimization features have helped us maintain high code quality across all our projects.',
       rating: 5
     }
   ];
@@ -107,9 +107,9 @@ const AISocialMediaManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager - Automate Your Social Presence | Zion Tech Group</title>
-        <meta name="description" content="Transform your social media strategy with AI-powered content generation, automated posting, and advanced analytics. Manage 15+ platforms from one dashboard." />
-        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, social media scheduling" />
+        <title>AI Code Assistant Pro - Intelligent Coding with AI | Zion Tech Group</title>
+        <meta name="description" content="Boost your coding productivity with our AI-powered code assistant. Get intelligent code generation, review, bug detection, and optimization for 50+ programming languages." />
+        <meta name="keywords" content="AI code assistant, code generation, programming AI, code review, bug detection, developer tools" />
       </Helmet>
       
       <Navigation />
@@ -119,27 +119,27 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             {/* Hero Section */}
             <section className="text-center mb-16">
-              <div className="inline-flex items-center bg-pink-500/10 text-pink-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <Share2 className="w-4 h-4 mr-2" />
-                AI-Powered Social Media
+              <div className="inline-flex items-center bg-purple-500/10 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Brain className="w-4 h-4 mr-2" />
+                AI-Powered Development
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Social Media Manager
+                AI Code Assistant Pro
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Automate your entire social media strategy with AI. Generate engaging content, 
-                schedule posts, and grow your audience across 15+ platforms automatically.
+                Supercharge your coding with our intelligent AI assistant. Generate, review, and optimize code 
+                across 50+ programming languages with advanced AI technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
                   href="#pricing"
-                  className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
-                  className="border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                  className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                 >
                   Watch Demo
                 </a>
@@ -148,19 +148,19 @@ const AISocialMediaManagerPage: React.FC = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">15+</div>
-                  <div className="text-gray-400">Platforms</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                  <div className="text-gray-400">Languages</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">250%</div>
-                  <div className="text-gray-400">Engagement Boost</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">100K+</div>
+                  <div className="text-gray-400">Developers</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">20h</div>
-                  <div className="text-gray-400">Time Saved/Week</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
+                  <div className="text-gray-400">Productivity Boost</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">4.9★</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">4.8★</div>
                   <div className="text-gray-400">User Rating</div>
                 </div>
               </div>
@@ -169,7 +169,7 @@ const AISocialMediaManagerPage: React.FC = () => {
             {/* Features Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Complete Social Media Solution
+                Powerful Development Features
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
@@ -183,16 +183,16 @@ const AISocialMediaManagerPage: React.FC = () => {
               </div>
             </section>
 
-            {/* Supported Platforms */}
+            {/* Supported Languages */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Supported Social Platforms
+                Supported Programming Languages
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {supportedPlatforms.map((platform, index) => (
-                  <div key={index} className="bg-gradient-to-br from-pink-500/10 to-rose-600/10 rounded-lg p-4 text-center border border-pink-500/20">
-                    <Share2 className="w-6 h-6 text-pink-400 mx-auto mb-2" />
-                    <span className="text-white text-sm font-medium">{platform}</span>
+                {supportedLanguages.map((language, index) => (
+                  <div key={index} className="bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-lg p-4 text-center border border-purple-500/20">
+                    <Code className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+                    <span className="text-white text-sm font-medium">{language}</span>
                   </div>
                 ))}
               </div>
@@ -201,12 +201,12 @@ const AISocialMediaManagerPage: React.FC = () => {
             {/* Benefits Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                Why Choose Our AI Social Media Manager?
+                Why Choose Our AI Code Assistant?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-gradient-to-br from-pink-500/10 to-rose-600/10 rounded-lg p-6 border border-pink-500/20">
-                    <div className="text-pink-400 text-2xl mb-4">📈</div>
+                  <div key={index} className="bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-lg p-6 border border-purple-500/20">
+                    <div className="text-purple-400 text-2xl mb-4">⚡</div>
                     <h3 className="text-xl font-semibold text-white mb-3">Benefit {index + 1}</h3>
                     <p className="text-gray-300">{benefit}</p>
                   </div>
@@ -221,10 +221,10 @@ const AISocialMediaManagerPage: React.FC = () => {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {pricingPlans.map((plan, index) => (
-                  <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-pink-500' : ''}`}>
+                  <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                           Most Popular
                         </span>
                       </div>
@@ -233,7 +233,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <p className="text-gray-400 mb-4">{plan.description}</p>
                       <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-pink-400">{plan.price}</span>
+                        <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                       </div>
                     </div>
@@ -249,8 +249,8 @@ const AISocialMediaManagerPage: React.FC = () => {
                       href="/contact"
                       className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                         plan.popular
-                          ? 'bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white'
-                          : 'border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
+                          ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white'
+                          : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
                       }`}
                     >
                       Get Started
@@ -263,7 +263,7 @@ const AISocialMediaManagerPage: React.FC = () => {
             {/* Testimonials Section */}
             <section className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-                What Our Customers Say
+                What Developers Say
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
@@ -276,7 +276,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                     <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-pink-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-purple-400 text-sm">{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
                 ))}
@@ -285,23 +285,23 @@ const AISocialMediaManagerPage: React.FC = () => {
 
             {/* CTA Section */}
             <section className="text-center">
-              <div className="bg-gradient-to-r from-pink-500/10 to-rose-600/10 rounded-lg p-12 border border-pink-500/20">
+              <div className="bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-lg p-12 border border-purple-500/20">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Ready to Transform Your Social Media?
+                  Ready to Code Smarter?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Join thousands of businesses who are already using AI to dominate social media.
+                  Join thousands of developers who are already using AI to write better code faster.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
-                    className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                   >
                     Start Free Trial
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                   >
                     Call: (302) 464-0950
                   </a>
@@ -320,4 +320,4 @@ const AISocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AISocialMediaManagerPage;
+export default AICodeAssistantProPage;
