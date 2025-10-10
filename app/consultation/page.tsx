@@ -112,7 +112,7 @@ const ConsultationPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
         <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
@@ -303,8 +303,7 @@ const ConsultationPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Section */}
       <section className="py-16 px-4">
@@ -385,7 +384,8 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
