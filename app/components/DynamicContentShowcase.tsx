@@ -1,44 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
-
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-=======
-import { CheckCircle, ArrowRight, Star, Zap, Shield, Brain, Cloud, BarChart, Users, Target, TrendingUp } from 'lucide-react';
-
-interface Feature {
-  id: number;
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  color: string;
-}
-
-interface Benefit {
-  id: number;
-  title: string;
-  description: string;
-}
-
-const DynamicContentShowcase: React.FC = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
 
   const features = [
     {
-<<<<<<< HEAD
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
-=======
-      id: 1,
-      title: 'AI-Powered Analytics',
-      description: 'Transform your data into actionable insights with advanced machine learning algorithms.',
-      icon: BarChart,
-      color: 'from-blue-500 to-purple-600'
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     },
     {
       id: 2,
@@ -52,99 +16,17 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       icon: Zap,
-<<<<<<< HEAD
-      title: 'Lightning Fast Performance',
-      description: 'Optimized for speed with sub-second response times and seamless user experience'
-=======
-      color: 'from-purple-500 to-pink-600'
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
-<<<<<<< HEAD
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-      rating: 5
-=======
-      color: 'from-orange-500 to-red-600'
-    }
-  ];
-
-  const benefits: Benefit[] = [
-    {
-      id: 1,
-      title: '300% ROI',
-      description: 'Average return on investment'
-    },
-    {
-      id: 2,
-      title: '70% Cost Reduction',
-      description: 'Operational cost savings'
-    },
-    {
-      id: 3,
-      title: '90% Efficiency Gains',
-      description: 'Process optimization'
-    },
-    {
-      id: 4,
-      title: '24/7 Support',
-      description: 'Round-the-clock assistance'
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-<<<<<<< HEAD
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
-=======
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
 
     return () => clearInterval(timer);
   }, [features.length]);
@@ -162,63 +44,6 @@ const DynamicContentShowcase: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-=======
-        {/* Feature Showcase */}
-        <div className="mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Feature Content */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className={`w-12 h-12 bg-gradient-to-r ${features[currentFeature].color} rounded-lg flex items-center justify-center`}>
-                  {React.createElement(features[currentFeature].icon, { className: "w-6 h-6 text-white" })}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Star className="w-5 h-5 text-yellow-400" />
-                  <Star className="w-5 h-5 text-yellow-400" />
-                  <Star className="w-5 h-5 text-yellow-400" />
-                  <Star className="w-5 h-5 text-yellow-400" />
-                  <Star className="w-5 h-5 text-yellow-400" />
-                </div>
-              </div>
-              
-              <h3 className="text-3xl font-bold text-white mb-4">
-                {features[currentFeature].title}
-              </h3>
-              <p className="text-lg text-gray-300 mb-6">
-                {features[currentFeature].description}
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mb-6">
-                {features.map((feature, index) => (
-                  <button
-                    key={feature.id}
-                    onClick={() => setCurrentFeature(index)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      currentFeature === index
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                    }`}
-                  >
-                    {feature.title}
-                  </button>
-                ))}
-              </div>
-              
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center gap-2">
-                Learn More
-                <ArrowRight className="w-4 h-4" />
-              </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
             </div>
 
             {/* Feature Visual */}
@@ -235,22 +60,6 @@ const DynamicContentShowcase: React.FC = () => {
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit) => (
-              <div key={benefit.id} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">{benefit.title}</h4>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
               </div>
             ))}
           </div>

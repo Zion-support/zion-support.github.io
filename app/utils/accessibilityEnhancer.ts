@@ -119,15 +119,6 @@ export class AccessibilityEnhancer {
       const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
       this.focusableElements[nextIndex]?.focus();
     }
-<<<<<<< HEAD
-
-    event.preventDefault();
-
-=======
-    
-    event.preventDefault();
-    
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
   }
 
   /**

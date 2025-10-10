@@ -5,61 +5,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const CloudSecurityPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-icon: Shield,
-      title: 'Advanced Cloud Security',
-      description: 'Comprehensive cloud security solutions with enterprise-grade protection'
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Monitoring',
-      description: 'Continuous monitoring and threat detection for your cloud infrastructure'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Security',
-      description: 'Intelligent security solutions powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
-      title: 'Global Compliance',
-      description: 'Worldwide compliance with security standards and regulations'
-=======
-      icon: Lock,
-      title: 'Data Encryption',
-      description: 'End-to-end encryption for all data in transit and at rest'
-    },
-    {
-      icon: Shield,
-      title: 'Security Monitoring',
-      description: '24/7 security monitoring and threat detection'
-    },
-    {
-      icon: Eye,
-      title: 'Access Control',
-      description: 'Advanced access control and identity management'
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Compliance',
-      description: 'Meet industry compliance standards and regulations'
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     }
   ];
   const benefits = [
-<<<<<<< HEAD
-'Advanced cloud security technology',
-    'Real-time threat monitoring and detection',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible security solutions',
-    '24/7 technical support',
-=======
-    'Advanced security monitoring',
-    'Real-time threat detection',
-    'Enterprise-grade encryption',
-    'Compliance with industry standards',
-    '24/7 security support',
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
@@ -69,34 +17,10 @@ icon: Shield,
       <Helmet>
         <title>Cloud Security | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Security services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
-<meta name="keywords" content="cloud security, security services, IT services, Zion Tech Group, cybersecurity" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Security;
-  </
-=======
-        <meta name="keywords" content="cloud security, cybersecurity, data protection, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Security
-          </h1>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-<<<<<<< HEAD
-</div>
-=======
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       </section>
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -119,12 +43,6 @@ icon: Shield,
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-{/* Benefits Section */}
-=======
-
-      {/* Benefits Section */}
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -161,13 +79,6 @@ icon: Shield,
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-<<<<<<< HEAD
-              Email Us;
-  </
-=======
-              Email Us
-            </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
           </div>
         </div>
         <div className="text-center">

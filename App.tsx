@@ -15,7 +15,7 @@ import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
+import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
@@ -30,29 +30,7 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
-const PartnersPage = React.lazy(() => import('./app/partners/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const FAQPage = React.lazy(() => import('./app/faq/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
-const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
-const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
-const TermsPage = React.lazy(() => import('./app/terms/page'));
-const CookiesPage = React.lazy(() => import('./app/cookies/page'));
-const DocsPage = React.lazy(() => import('./app/docs/page'));
-const CommunityPage = React.lazy(() => import('./app/community/page'));
-const ApiPage = React.lazy(() => import('./app/api/page'));
-const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
-const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-// New AI Services
-const AISmartContractAuditor = React.lazy(() => import('./app/ai-smart-contract-auditor/page'));
-const AIQuantumComputingSimulator = React.lazy(() => import('./app/ai-quantum-computing-simulator/page'));
-const AINeuralInterface = React.lazy(() => import('./app/ai-neural-interface/page'));
-const AISpaceMissionOptimizer = React.lazy(() => import('./app/ai-space-mission-optimizer/page'));
-const AIClimatePredictionEngine = React.lazy(() => import('./app/ai-climate-prediction-engine/page'));
-const AICyberDefenseMatrix = React.lazy(() => import('./app/ai-cyber-defense-matrix/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -89,29 +67,6 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/faq" element={<FAQPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                            <Route path="/privacy" element={<PrivacyPage />} />
-                            <Route path="/terms" element={<TermsPage />} />
-                            <Route path="/cookies" element={<CookiesPage />} />
-                            <Route path="/docs" element={<DocsPage />} />
-                            <Route path="/community" element={<CommunityPage />} />
-                            <Route path="/api" element={<ApiPage />} />
-                            <Route path="/tutorials" element={<TutorialsPage />} />
-                            <Route path="/sitemap" element={<SitemapPage />} />
-                            {/* New AI Services Routes */}
-                            <Route path="/ai-smart-contract-auditor" element={<AISmartContractAuditor />} />
-                            <Route path="/ai-quantum-computing-simulator" element={<AIQuantumComputingSimulator />} />
-                            <Route path="/ai-neural-interface" element={<AINeuralInterface />} />
-                            <Route path="/ai-space-mission-optimizer" element={<AISpaceMissionOptimizer />} />
-                            <Route path="/ai-climate-prediction-engine" element={<AIClimatePredictionEngine />} />
-                            <Route path="/ai-cyber-defense-matrix" element={<AICyberDefenseMatrix />} />
                           </Routes>
                         </Suspense>
                       </main>

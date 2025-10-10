@@ -42,50 +42,6 @@ const BlockchainPage: React.FC = () => {
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
-<<<<<<< HEAD
-<div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Blockchain Solutions;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge blockchain technology and decentralized solutions. 
-            Powered by advanced AI and industry expertise.
-          </p>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our blockchain solutions deliver unmatched performance, security, and scalability.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-=======
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-indigo-800/50"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Blockchain Solutions
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Transform your business with cutting-edge blockchain technology and decentralized solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
-                  Explore Blockchain Solutions
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  Schedule Blockchain Consultation
-                </button>
-              </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
             </div>
           ))}
         </div>
@@ -102,12 +58,6 @@ const BlockchainPage: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-{/* Key Benefits */}
-=======
-
-        {/* Key Benefits */}
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
