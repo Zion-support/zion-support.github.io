@@ -25,7 +25,19 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
         { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
         { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Neural Interface Platform', href: '/ai-neural-interface' },
+        { name: 'AI Quantum Machine Learning', href: '/ai-quantum-ml-platform' },
+        { name: 'AI Space Mission Control', href: '/ai-space-mission-control' },
+        { name: 'AI Climate Intelligence', href: '/ai-climate-intelligence' },
+        { name: 'AI Pharmaceutical Research', href: '/ai-pharmaceutical-research' },
+        { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
+        { name: 'AI Blockchain Intelligence', href: '/ai-blockchain-intelligence' },
+        { name: 'AI Supply Chain Intelligence', href: '/ai-supply-chain-intelligence' },
+        { name: 'AI Legal Intelligence', href: '/ai-legal-intelligence' },
+        { name: 'AI Agricultural Intelligence', href: '/ai-agricultural-intelligence' },
+        { name: 'AI Energy Grid Intelligence', href: '/ai-energy-grid-intelligence' },
+        { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing-intelligence' }
       ]
     },
     {
@@ -47,7 +59,21 @@ const Footer: React.FC = memo(() => {
         { name: 'Edge Computing Solutions', href: '/edge-computing' },
         { name: '5G Network Implementation', href: '/5g-implementation' },
         { name: 'IoT Platform Development', href: '/iot-platform' },
-        { name: 'Quantum-Safe Security', href: '/quantum-security' }
+        { name: 'Quantum-Safe Security', href: '/quantum-security' },
+        { name: 'Metaverse Development Platform', href: '/metaverse-development' },
+        { name: 'Web3 Infrastructure Services', href: '/web3-infrastructure' },
+        { name: 'AI Infrastructure as a Service', href: '/ai-infrastructure-service' },
+        { name: 'MLOps Platform Implementation', href: '/mlops-platform' },
+        { name: 'Zero Trust Security Architecture', href: '/zero-trust-architecture' },
+        { name: 'AI-Powered Security Operations', href: '/ai-security-operations' },
+        { name: 'Real-time Data Platform', href: '/real-time-data-platform' },
+        { name: 'Data Lake & Warehouse Modernization', href: '/data-modernization' },
+        { name: 'Hybrid Cloud Architecture', href: '/hybrid-cloud-architecture' },
+        { name: 'Smart City Solutions', href: '/smart-cities' },
+        { name: 'Innovation Labs', href: '/innovation-labs' },
+        { name: 'Robotics Solutions', href: '/robotics' },
+        { name: 'Quantum Security Solutions', href: '/quantum-security' },
+        { name: 'AI Immersive Learning', href: '/ai-immersive-learning' }
       ]
     },
     {
@@ -69,7 +95,24 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant' },
         { name: 'AI Document Scanner Pro', href: '/ai-document-scanner' },
         { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber' },
-        { name: 'AI Website Builder Pro', href: '/ai-website-builder' }
+        { name: 'AI Website Builder Pro', href: '/ai-website-builder' },
+        { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant' },
+        { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber' },
+        { name: 'AI Password Generator Pro', href: '/ai-password-generator' },
+        { name: 'AI Social Media Scheduler', href: '/ai-social-media-scheduler' },
+        { name: 'AI Resume Builder Pro', href: '/ai-resume-builder' },
+        { name: 'AI Translation Suite', href: '/ai-translation-suite' },
+        { name: 'AI Data Backup Manager', href: '/ai-data-backup-manager' },
+        { name: 'AI Time Tracking Pro', href: '/ai-time-tracking' },
+        { name: 'AI Meeting Room Scheduler', href: '/ai-meeting-room-scheduler' },
+        { name: 'AI Expense Categorizer', href: '/ai-expense-categorizer' },
+        { name: 'AI Customer Feedback Analyzer', href: '/ai-customer-feedback-analyzer' },
+        { name: 'AI Inventory Optimizer', href: '/ai-inventory-optimizer' },
+        { name: 'AI Contract Analyzer', href: '/ai-contract-analyzer' },
+        { name: 'AI Performance Monitor', href: '/ai-performance-monitor' },
+        { name: 'AI Email Filter Pro', href: '/ai-email-filter' },
+        { name: 'AI Task Scheduler', href: '/ai-task-scheduler' },
+        { name: 'AI Document Scanner Pro', href: '/ai-document-scanner' }
       ]
     },
     {

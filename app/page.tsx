@@ -614,6 +614,196 @@ const microSAASServices = [
     popular: true,
     icon: Shield,
     link: "https://ziontechgroup.com/ai-code-security-auditor"
+  },
+  {
+    name: "AI Voice Assistant Pro",
+    description: "Advanced voice-controlled AI assistant with natural language processing and multi-language support",
+    price: "$129/mo",
+    features: ["Voice Recognition", "Multi-language", "Task Automation", "Smart Scheduling"],
+    category: "Voice AI",
+    popular: true,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-voice-assistant"
+  },
+  {
+    name: "AI Meeting Transcriber Pro",
+    description: "Real-time meeting transcription with AI-powered insights and action item extraction",
+    price: "$89/mo",
+    features: ["Real-time Transcription", "Action Items", "Speaker Identification", "Meeting Summaries"],
+    category: "Productivity",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-meeting-transcriber"
+  },
+  {
+    name: "AI Website Builder Pro",
+    description: "No-code website builder with AI-powered design suggestions and content generation",
+    price: "$149/mo",
+    features: ["No-Code Builder", "AI Design", "Content Generation", "SEO Optimization"],
+    category: "Web Development",
+    popular: true,
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-website-builder"
+  },
+  {
+    name: "AI Password Generator Pro",
+    description: "Advanced password management with AI-powered security analysis and breach monitoring",
+    price: "$39/mo",
+    features: ["Password Generation", "Security Analysis", "Breach Monitoring", "Multi-device Sync"],
+    category: "Security",
+    popular: true,
+    icon: Lock,
+    link: "https://ziontechgroup.com/ai-password-generator"
+  },
+  {
+    name: "AI Email Signature Manager",
+    description: "Professional email signature management with AI-powered design and compliance checking",
+    price: "$29/mo",
+    features: ["Signature Design", "Compliance Check", "Brand Consistency", "Team Management"],
+    category: "Communication",
+    popular: false,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-signature-manager"
+  },
+  {
+    name: "AI Social Media Scheduler",
+    description: "Intelligent social media scheduling with optimal timing and engagement prediction",
+    price: "$79/mo",
+    features: ["Smart Scheduling", "Engagement Prediction", "Content Optimization", "Multi-platform"],
+    category: "Social Media",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-social-media-scheduler"
+  },
+  {
+    name: "AI Resume Builder Pro",
+    description: "AI-powered resume creation with ATS optimization and industry-specific templates",
+    price: "$59/mo",
+    features: ["ATS Optimization", "Industry Templates", "Skills Analysis", "Cover Letter Generation"],
+    category: "Career",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-resume-builder"
+  },
+  {
+    name: "AI Translation Suite",
+    description: "Advanced translation service with context-aware AI and real-time language processing",
+    price: "$99/mo",
+    features: ["Real-time Translation", "Context Awareness", "Document Translation", "Voice Translation"],
+    category: "Language",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-translation-suite"
+  },
+  {
+    name: "AI Data Backup Manager",
+    description: "Intelligent data backup with AI-powered deduplication and recovery optimization",
+    price: "$69/mo",
+    features: ["Smart Deduplication", "Recovery Optimization", "Version Control", "Cloud Sync"],
+    category: "Data Management",
+    popular: true,
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-data-backup-manager"
+  },
+  {
+    name: "AI Time Tracking Pro",
+    description: "Advanced time tracking with AI-powered productivity insights and project analysis",
+    price: "$49/mo",
+    features: ["Automatic Tracking", "Productivity Insights", "Project Analysis", "Team Reports"],
+    category: "Productivity",
+    popular: true,
+    icon: Clock,
+    link: "https://ziontechgroup.com/ai-time-tracking"
+  },
+  {
+    name: "AI Meeting Room Scheduler",
+    description: "Smart meeting room booking with AI-powered optimization and conflict resolution",
+    price: "$39/mo",
+    features: ["Smart Booking", "Conflict Resolution", "Resource Optimization", "Usage Analytics"],
+    category: "Office Management",
+    popular: false,
+    icon: Calendar,
+    link: "https://ziontechgroup.com/ai-meeting-room-scheduler"
+  },
+  {
+    name: "AI Expense Categorizer",
+    description: "Automatic expense categorization with AI-powered receipt processing and tax optimization",
+    price: "$59/mo",
+    features: ["Auto Categorization", "Receipt Processing", "Tax Optimization", "Report Generation"],
+    category: "Finance",
+    popular: true,
+    icon: Calculator,
+    link: "https://ziontechgroup.com/ai-expense-categorizer"
+  },
+  {
+    name: "AI Customer Feedback Analyzer",
+    description: "Advanced sentiment analysis and feedback processing with actionable insights",
+    price: "$119/mo",
+    features: ["Sentiment Analysis", "Actionable Insights", "Trend Detection", "Response Suggestions"],
+    category: "Analytics",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-customer-feedback-analyzer"
+  },
+  {
+    name: "AI Inventory Optimizer",
+    description: "Smart inventory management with demand forecasting and automated reordering",
+    price: "$179/mo",
+    features: ["Demand Forecasting", "Auto Reordering", "Stock Optimization", "Supplier Management"],
+    category: "Operations",
+    popular: true,
+    icon: Package,
+    link: "https://ziontechgroup.com/ai-inventory-optimizer"
+  },
+  {
+    name: "AI Contract Analyzer",
+    description: "Intelligent contract analysis with risk assessment and compliance checking",
+    price: "$199/mo",
+    features: ["Risk Assessment", "Compliance Check", "Clause Analysis", "Renewal Alerts"],
+    category: "Legal",
+    popular: false,
+    icon: Scale,
+    link: "https://ziontechgroup.com/ai-contract-analyzer"
+  },
+  {
+    name: "AI Performance Monitor",
+    description: "Real-time performance monitoring with AI-powered anomaly detection and optimization",
+    price: "$149/mo",
+    features: ["Real-time Monitoring", "Anomaly Detection", "Performance Optimization", "Alert System"],
+    category: "Monitoring",
+    popular: true,
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-performance-monitor"
+  },
+  {
+    name: "AI Email Filter Pro",
+    description: "Advanced email filtering with AI-powered spam detection and priority management",
+    price: "$39/mo",
+    features: ["Smart Filtering", "Spam Detection", "Priority Management", "Auto Organization"],
+    category: "Email Management",
+    popular: true,
+    icon: Mail,
+    link: "https://ziontechgroup.com/ai-email-filter"
+  },
+  {
+    name: "AI Task Scheduler",
+    description: "Intelligent task scheduling with AI-powered optimization and deadline management",
+    price: "$69/mo",
+    features: ["Smart Scheduling", "Deadline Management", "Priority Optimization", "Team Coordination"],
+    category: "Project Management",
+    popular: true,
+    icon: Calendar,
+    link: "https://ziontechgroup.com/ai-task-scheduler"
+  },
+  {
+    name: "AI Document Scanner Pro",
+    description: "Advanced document scanning with OCR, data extraction, and intelligent organization",
+    price: "$89/mo",
+    features: ["OCR Processing", "Data Extraction", "Smart Organization", "Cloud Storage"],
+    category: "Document Management",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-document-scanner"
   }
 ];
 
@@ -623,46 +813,77 @@ const testimonials: Testimonial[] = [
     name: "Sarah Johnson",
     role: "CTO",
     company: "TechCorp Solutions",
-    content: "Zion Tech Group's AI solutions transformed our operations completely. We achieved 300% ROI in just 6 months and reduced operational costs by 70%. Their AI workflow automation is game-changing.",
+    content: "Zion Tech Group's AI solutions transformed our operations completely. We achieved 300% ROI in just 6 months and reduced operational costs by 70%. Their AI workflow automation and quantum financial oracle are game-changing technologies that put us years ahead of our competition.",
     avatar: "SJ"
   },
   {
     name: "Michael Chen",
     role: "CEO",
     company: "InnovateLabs",
-    content: "The AI customer support bot they built for us handles 90% of inquiries automatically. Our customer satisfaction increased by 40% while reducing support costs by 60%. Outstanding work!",
+    content: "The AI customer support bot and neural memory assistant they built for us handle 90% of inquiries automatically. Our customer satisfaction increased by 40% while reducing support costs by 60%. The AI holographic workspace has revolutionized our remote collaboration. Outstanding work!",
     avatar: "MC"
   },
   {
     name: "Dr. Emily Rodriguez",
     role: "Chief Medical Officer",
     company: "MedTech Innovations",
-    content: "Their AI healthcare solutions are revolutionary. The diagnostic accuracy improved by 35% and patient processing time decreased by 50%. This is the future of healthcare technology.",
+    content: "Their AI healthcare solutions and drug discovery platform are revolutionary. The diagnostic accuracy improved by 35% and patient processing time decreased by 50%. The AI pharmaceutical research tools accelerated our drug development by 200%. This is the future of healthcare technology.",
     avatar: "ER"
+  },
+  {
+    name: "David Kim",
+    role: "VP of Engineering",
+    company: "Quantum Dynamics",
+    content: "The quantum computing infrastructure and AI neural interface platform have given us unprecedented computational power. We're solving problems that were previously impossible, and our research has advanced by 5 years in just 18 months. Zion Tech Group is truly at the forefront of innovation.",
+    avatar: "DK"
+  },
+  {
+    name: "Lisa Thompson",
+    role: "Head of Operations",
+    company: "Global Manufacturing Corp",
+    content: "Their AI manufacturing intelligence and supply chain optimization solutions have revolutionized our production. We've reduced waste by 45%, improved quality by 60%, and increased throughput by 80%. The predictive maintenance alone has saved us millions in downtime costs.",
+    avatar: "LT"
+  },
+  {
+    name: "James Wilson",
+    role: "Chief Financial Officer",
+    company: "FinTech Innovations",
+    content: "The AI financial intelligence platform and quantum financial oracle have transformed our trading operations. We've achieved 25% better returns while reducing risk by 40%. The real-time market analysis and algorithmic trading capabilities are simply extraordinary.",
+    avatar: "JW"
   }
 ];
 
 // Stats data
 const stats: Stat[] = [
   {
-    number: "500+",
-    label: "Happy Clients",
+    number: "1,200+",
+    label: "Enterprise Clients",
     icon: Users
   },
   {
-    number: "99.9%",
+    number: "99.99%",
     label: "Uptime Guarantee",
     icon: Shield
   },
   {
     number: "24/7",
-    label: "Support Available",
+    label: "Global Support",
     icon: Clock
   },
   {
-    number: "300%",
+    number: "400%",
     label: "Average ROI",
     icon: TrendingUp
+  },
+  {
+    number: "50+",
+    label: "Countries Served",
+    icon: Globe
+  },
+  {
+    number: "15+",
+    label: "Years Experience",
+    icon: Award
   }
 ];
 
@@ -836,6 +1057,126 @@ const aiServices: AIService[] = [
     enterprise: true,
     icon: Building,
     link: "https://ziontechgroup.com/ai-smart-city-management"
+  },
+  {
+    name: "AI Neural Interface Platform",
+    description: "Advanced brain-computer interface with AI-powered neural signal processing and control",
+    price: "$8,500/mo",
+    features: ["Neural Signal Processing", "Thought Control", "Cognitive Enhancement", "Medical Applications"],
+    category: "Neural Technology",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-interface"
+  },
+  {
+    name: "AI Quantum Machine Learning",
+    description: "Quantum-enhanced machine learning platform with exponential speedup for complex algorithms",
+    price: "$15,000/mo",
+    features: ["Quantum Algorithms", "Exponential Speedup", "Complex Optimization", "Quantum Neural Networks"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-ml-platform"
+  },
+  {
+    name: "AI Space Mission Control",
+    description: "Autonomous space mission management with AI-powered trajectory optimization and mission planning",
+    price: "$25,000/mo",
+    features: ["Mission Planning", "Trajectory Optimization", "Autonomous Control", "Risk Assessment"],
+    category: "Space Technology",
+    enterprise: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-space-mission-control"
+  },
+  {
+    name: "AI Climate Intelligence",
+    description: "Advanced climate modeling and prediction with AI-powered environmental monitoring",
+    price: "$18,000/mo",
+    features: ["Climate Modeling", "Environmental Monitoring", "Disaster Prediction", "Carbon Tracking"],
+    category: "Environmental AI",
+    enterprise: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-intelligence"
+  },
+  {
+    name: "AI Pharmaceutical Research",
+    description: "Accelerated drug discovery with AI-powered molecular analysis and clinical trial optimization",
+    price: "$22,000/mo",
+    features: ["Drug Discovery", "Molecular Analysis", "Clinical Trials", "Patent Research"],
+    category: "Healthcare AI",
+    enterprise: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-pharmaceutical-research"
+  },
+  {
+    name: "AI Financial Intelligence",
+    description: "Advanced financial AI with real-time market analysis and algorithmic trading",
+    price: "$20,000/mo",
+    features: ["Market Analysis", "Algorithmic Trading", "Risk Management", "Portfolio Optimization"],
+    category: "Financial AI",
+    enterprise: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-financial-intelligence"
+  },
+  {
+    name: "AI Blockchain Intelligence",
+    description: "AI-powered blockchain analysis with smart contract optimization and DeFi integration",
+    price: "$16,000/mo",
+    features: ["Blockchain Analysis", "Smart Contract AI", "DeFi Integration", "Security Auditing"],
+    category: "Blockchain AI",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-blockchain-intelligence"
+  },
+  {
+    name: "AI Supply Chain Intelligence",
+    description: "Intelligent supply chain optimization with AI-powered logistics and demand forecasting",
+    price: "$14,000/mo",
+    features: ["Logistics Optimization", "Demand Forecasting", "Risk Management", "Cost Optimization"],
+    category: "Supply Chain AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-supply-chain-intelligence"
+  },
+  {
+    name: "AI Legal Intelligence",
+    description: "Advanced legal AI with case analysis, contract review, and compliance monitoring",
+    price: "$12,000/mo",
+    features: ["Case Analysis", "Contract Review", "Compliance Monitoring", "Legal Research"],
+    category: "Legal AI",
+    enterprise: true,
+    icon: Scale,
+    link: "https://ziontechgroup.com/ai-legal-intelligence"
+  },
+  {
+    name: "AI Agricultural Intelligence",
+    description: "Smart farming solutions with AI-powered crop monitoring and yield optimization",
+    price: "$10,000/mo",
+    features: ["Crop Monitoring", "Yield Optimization", "Weather Analysis", "Automation Control"],
+    category: "Agricultural AI",
+    enterprise: true,
+    icon: Sprout,
+    link: "https://ziontechgroup.com/ai-agricultural-intelligence"
+  },
+  {
+    name: "AI Energy Grid Intelligence",
+    description: "Smart energy grid management with AI-powered optimization and renewable integration",
+    price: "$15,000/mo",
+    features: ["Grid Optimization", "Renewable Integration", "Demand Forecasting", "Energy Storage"],
+    category: "Energy AI",
+    enterprise: true,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-energy-grid-intelligence"
+  },
+  {
+    name: "AI Manufacturing Intelligence",
+    description: "Smart manufacturing with AI-powered process optimization and quality control",
+    price: "$18,000/mo",
+    features: ["Process Optimization", "Quality Control", "Predictive Maintenance", "Supply Integration"],
+    category: "Manufacturing AI",
+    enterprise: true,
+    icon: Factory,
+    link: "https://ziontechgroup.com/ai-manufacturing-intelligence"
   }
 ];
 
@@ -1073,6 +1414,132 @@ const itServices: ITService[] = [
     category: "Consulting",
     icon: Settings,
     link: "https://ziontechgroup.com/digital-transformation-consulting"
+  },
+  {
+    name: "Metaverse Development Platform",
+    description: "Complete metaverse infrastructure with virtual worlds, avatars, and immersive experiences",
+    price: "$8,500/mo",
+    features: ["Virtual Worlds", "Avatar Systems", "Immersive Experiences", "Blockchain Integration"],
+    category: "Metaverse",
+    icon: Eye,
+    link: "https://ziontechgroup.com/metaverse-development"
+  },
+  {
+    name: "Web3 Infrastructure Services",
+    description: "Complete Web3 infrastructure with DeFi, NFT, and blockchain solutions",
+    price: "$6,500/mo",
+    features: ["DeFi Platforms", "NFT Marketplaces", "Smart Contracts", "Token Economics"],
+    category: "Web3",
+    icon: Shield,
+    link: "https://ziontechgroup.com/web3-infrastructure"
+  },
+  {
+    name: "AI Infrastructure as a Service",
+    description: "Complete AI infrastructure platform with GPU clusters and model deployment",
+    price: "$12,000/mo",
+    features: ["GPU Clusters", "Model Deployment", "Auto-scaling", "MLOps Pipeline"],
+    category: "AI Infrastructure",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-infrastructure-service"
+  },
+  {
+    name: "MLOps Platform Implementation",
+    description: "Complete MLOps platform with model training, deployment, and monitoring",
+    price: "$7,500/mo",
+    features: ["Model Training", "Deployment Pipeline", "Monitoring", "Version Control"],
+    category: "MLOps",
+    icon: Settings,
+    link: "https://ziontechgroup.com/mlops-platform"
+  },
+  {
+    name: "Zero Trust Security Architecture",
+    description: "Complete zero trust security implementation with identity verification and access control",
+    price: "$9,500/mo",
+    features: ["Identity Verification", "Access Control", "Network Segmentation", "Continuous Monitoring"],
+    category: "Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/zero-trust-architecture"
+  },
+  {
+    name: "AI-Powered Security Operations",
+    description: "Advanced security operations center with AI-powered threat detection and response",
+    price: "$11,000/mo",
+    features: ["AI Threat Detection", "Automated Response", "Behavioral Analysis", "Incident Management"],
+    category: "Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-security-operations"
+  },
+  {
+    name: "Real-time Data Platform",
+    description: "High-performance real-time data processing with streaming analytics and visualization",
+    price: "$6,000/mo",
+    features: ["Streaming Analytics", "Real-time Processing", "Data Visualization", "Event Sourcing"],
+    category: "Data Platform",
+    icon: Database,
+    link: "https://ziontechgroup.com/real-time-data-platform"
+  },
+  {
+    name: "Data Lake & Warehouse Modernization",
+    description: "Modern data architecture with cloud-native data lakes and intelligent warehouses",
+    price: "$8,000/mo",
+    features: ["Data Lake Design", "Warehouse Modernization", "Data Governance", "Analytics Platform"],
+    category: "Data Management",
+    icon: Database,
+    link: "https://ziontechgroup.com/data-modernization"
+  },
+  {
+    name: "Hybrid Cloud Architecture",
+    description: "Seamless hybrid cloud solutions with multi-cloud management and optimization",
+    price: "$7,000/mo",
+    features: ["Multi-cloud Management", "Cost Optimization", "Security Integration", "Migration Services"],
+    category: "Cloud Architecture",
+    icon: Cloud,
+    link: "https://ziontechgroup.com/hybrid-cloud-architecture"
+  },
+  {
+    name: "Smart City Solutions",
+    description: "Complete smart city infrastructure with IoT, sensors, and intelligent systems",
+    price: "$15,000/mo",
+    features: ["IoT Infrastructure", "Sensor Networks", "Intelligent Systems", "Citizen Services"],
+    category: "Smart Cities",
+    icon: Building,
+    link: "https://ziontechgroup.com/smart-cities"
+  },
+  {
+    name: "Innovation Labs",
+    description: "Dedicated innovation labs with cutting-edge technology and research facilities",
+    price: "$20,000/mo",
+    features: ["Research Facilities", "Technology Labs", "Innovation Programs", "Expert Teams"],
+    category: "Innovation",
+    icon: Rocket,
+    link: "https://ziontechgroup.com/innovation-labs"
+  },
+  {
+    name: "Robotics Solutions",
+    description: "Advanced robotics systems with AI-powered automation and control",
+    price: "$18,000/mo",
+    features: ["Robotic Systems", "AI Control", "Automation", "Human-Robot Interaction"],
+    category: "Robotics",
+    icon: Settings,
+    link: "https://ziontechgroup.com/robotics"
+  },
+  {
+    name: "Quantum Security Solutions",
+    description: "Quantum-safe security solutions with post-quantum cryptography",
+    price: "$25,000/mo",
+    features: ["Post-quantum Crypto", "Quantum Key Distribution", "Security Auditing", "Migration Services"],
+    category: "Quantum Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/quantum-security"
+  },
+  {
+    name: "AI Immersive Learning",
+    description: "Immersive learning platforms with VR/AR and AI-powered education",
+    price: "$12,000/mo",
+    features: ["VR/AR Learning", "AI Tutoring", "Immersive Experiences", "Progress Tracking"],
+    category: "Education Technology",
+    icon: GraduationCap,
+    link: "https://ziontechgroup.com/ai-immersive-learning"
   }
 ];
 
@@ -1098,10 +1565,10 @@ const HomePage: React.FC = memo(() => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            AI-Powered Enterprise Solutions
+            Next-Generation AI & IT Solutions
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
+            Revolutionize your business with cutting-edge AI technology, quantum computing, and advanced IT infrastructure. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains with our comprehensive suite of micro SAAS, enterprise AI, and IT solutions.
           </p>
           
 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -1115,9 +1582,9 @@ const HomePage: React.FC = memo(() => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">400%</div>
               <div className="text-gray-400">Average ROI</div>
             </div>
             <div className="text-center">
@@ -1129,8 +1596,16 @@ const HomePage: React.FC = memo(() => {
               <div className="text-gray-400">Efficiency Gains</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">99.99%</div>
               <div className="text-gray-400">Uptime Guarantee</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">1,200+</div>
+              <div className="text-gray-400">Enterprise Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-400 mb-2">50+</div>
+              <div className="text-gray-400">Countries Served</div>
             </div>
           </div>
 </div>
@@ -1457,7 +1932,7 @@ const HomePage: React.FC = memo(() => {
       {/* Stats Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative mb-4">
@@ -1505,9 +1980,9 @@ const HomePage: React.FC = memo(() => {
               <div className="text-2xl mb-2">📍</div>
               <h3 className="text-lg font-bold text-white mb-2">Location</h3>
               <p className="text-cyan-400 font-medium">
-                Middletown, DE
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
               </p>
-
             </div>
           </div>
           
