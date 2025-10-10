@@ -719,6 +719,51 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     }
   ];
+      title: 'AI Password Manager Pro',
+      description: 'Advanced password management with AI-powered security recommendations and breach monitoring. Secure your digital life.',
+      icon: '🔐',
+      price: '$19/month',
+      originalPrice: '$29/month',
+      features: ['Password generation', 'Security analysis', 'Breach monitoring', 'Auto-fill', '2FA management', 'Family sharing', 'Dark web monitoring', 'Security alerts'],
+      benefits: ['Enhanced security', 'Convenience', 'Breach protection', 'Peace of mind'],
+      link: '/ai-password-manager',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '100,000+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Website Builder Pro',
+      description: 'AI-powered website creation with smart design suggestions, SEO optimization, and e-commerce integration. Build professional sites in minutes.',
+      icon: '🌐',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['AI design generation', 'Smart templates', 'SEO optimization', 'Mobile responsive', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],
+      benefits: ['Professional websites', 'SEO ready', 'Mobile optimized', 'Easy maintenance'],
+      link: '/ai-website-builder',
+      popular: true,
+      category: 'Web Development',
+      rating: 4.7,
+      users: '40,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Logo Designer Pro',
+      description: 'Professional logo creation with AI-powered design and brand consistency. Create stunning logos in minutes.',
+      icon: '🎨',
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: ['AI logo generation', 'Brand consistency', 'Multiple formats', 'Color schemes', 'Font matching', 'Brand guidelines', 'Vector files', 'Unlimited revisions'],
+      benefits: ['Professional logos', 'Brand consistency', 'Cost effective', 'Quick turnaround'],
+      link: '/ai-logo-designer',
+      popular: true,
+      category: 'Design',
+      rating: 4.8,
+      users: '30,000+',
+      freeTrial: '7 days'
+    }
+  ];
 
   const aiServices = [
     {
