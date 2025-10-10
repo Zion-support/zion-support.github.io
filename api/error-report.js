@@ -1,9 +1,10 @@
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-    return}
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-  try {;
+  try {
 const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
 
     // Log error details (in production you would send this to your monitoring service)
@@ -13,7 +14,13 @@ const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
     // 3. Send alerts to your team
 
     // console.error removed for production
-.toISOString()
+    console.error('Error reported:', {
+      error,
+      stack,
+      componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent,
+      url
     });
 
     // For now, just acknowledge receipt
@@ -22,9 +29,11 @@ const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Error report received' 
-    }))} catch (error) {
+    }));
+  } catch (error) {
     // console.error removed for production
-res.statusCode = 500;
+    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process error report' }))}
+    res.end(JSON.stringify({ error: 'Failed to process error report' }));
+  }
 }

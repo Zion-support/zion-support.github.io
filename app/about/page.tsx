@@ -34,14 +34,13 @@ import {
   ChevronRight,
   Phone,
   Mail,
-  MapPin;)
+  MapPin
 } from 'lucide-react';
-;
 const AboutPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
+      <Helmet>
+        <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
       </Helmet>

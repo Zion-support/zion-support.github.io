@@ -3,33 +3,24 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 
-// Mock components;
+// Mock components
 const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-return (
-
-  return <div data-testid="error-boundary">
-);
-}{children}</div>};
-;
+  return <div data-testid="error-boundary">{children}</div>;
+};
 const AdvancedSEOOptimizer = ({ title, description }: { title?: string; description?: string }) => {
-return (
-
-  return <div data-testid="seo-optimizer">
-);
-}{title} - {description}</div>};
-;
+  return <div data-testid="seo-optimizer">{title} - {description}</div>;
+};
 const AdvancedPerformanceMonitor = () => {
-return (
+  return <div data-testid="performance-monitor">Performance Monitor</div>;
+};
 
-  return <div data-testid="performance-monitor">Performance Monitor</div>
-);
-}};
-
-// Mock component that throws an error;
+// Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error')}
-  return <div>Test content</div>};
+    throw new Error('Test error');
+  }
+  return <div>Test content</div>;
+};
 
 // Test component for error boundary tests
 // const TestComponent = () => <div>Test component</div>;
