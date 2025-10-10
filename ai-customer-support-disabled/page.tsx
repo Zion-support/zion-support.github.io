@@ -169,6 +169,7 @@ const,
           </section>
         </main>
       </div>
+    </div>
     </>
   );
 };
@@ -325,6 +326,7 @@ const AICustomerSupportPage2: React.FC = () => {
         </main>
         <Footer />
       </div>
+<<<<<<< HEAD
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support
             </h1>
@@ -335,6 +337,8 @@ const AICustomerSupportPage2: React.FC = () => {
         </div>
       </main>
     </div>
+=======
+>>>>>>> main
   );
 };
 

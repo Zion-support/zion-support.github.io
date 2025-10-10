@@ -12,7 +12,8 @@ describe('validators', () => {
   it('should handle basic functionality', () => {
     const result = 1 + 1;
     expect(result).toBe(2);
-import { describe, it, expect } from '@jest/globals';
+  });
+});
 
 describe('Validators', () => {
   it('should pass basic test', () => {

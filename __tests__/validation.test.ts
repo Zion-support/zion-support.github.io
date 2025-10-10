@@ -4,9 +4,6 @@
 
 import { describe, it, expect, beforeEach } from '@jest/globals';
 
-describe('validation', () => {
-  beforeEach(() => {
-    // Setup before each test;
 import {
   isValidEmail,
   isValidPhone,
@@ -26,6 +23,12 @@ import {
   validateAsync,
   validateRequired,
 } from '../app/utils/validators';
+
+describe('validation', () => {
+  beforeEach(() => {
+    // Setup before each test;
+  });
+});
 
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {
@@ -206,7 +209,8 @@ describe('Async Validation', () => {
     const result = await validateAsync(asyncValidator, 'test');
     expect(result.isValid).toBe(false);
     expect(result.error).toContain('Validation failed');
-import { describe, it, expect } from '@jest/globals';
+  });
+});
 
 describe('Validation', () => {
   it('should pass basic test', () => {

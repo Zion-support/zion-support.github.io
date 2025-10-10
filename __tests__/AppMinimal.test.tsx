@@ -1,4 +1,6 @@
 import { describe, it, expect, beforeEach } from '@jest/globals';
+import { render } from '@testing-library/react';
+import App from '../App';
 
 describe('AppMinimalx', () => {
   beforeEach(() => {
@@ -12,6 +14,9 @@ describe('AppMinimalx', () => {
   it('should handle basic functionality', () => {
     const result = 1 + 1;
     expect(result).toBe(2);
+  });
+});
+
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);

@@ -206,6 +206,7 @@ const,
 
         </main>
       </div>
+    </div>
     </>
   );
 };
@@ -365,8 +366,12 @@ const AIWorkflowAutomationPage = () => {
           </section>
         </main>
         <Footer />
+<<<<<<< HEAD
       </div>,
     </div>,
+=======
+      </div>
+>>>>>>> main
   );
 };
 

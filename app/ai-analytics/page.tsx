@@ -298,6 +298,7 @@ const AIAnalyticsPage: React.FC = () => {
     { name: 'Google Ads', icon: '🔍' }
   ]
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-20 pb-16 px-4">
@@ -308,11 +309,15 @@ const AIAnalyticsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">Start Free Trial<button className="cyber-button-outline px-8 py-4 text-lg" aria-label="View Demo" tabIndex="0">View Demo</button>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> main
       <Navigation />
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
               AI-Powered Analytics Dashboard;
             </h1>
@@ -329,6 +334,16 @@ const AIAnalyticsPage: React.FC = () => {
             </div>,
           </div>,
 ,
+=======
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">AI-Powered Analytics Dashboard</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into actionable insights with our intelligent analytics platform. Make data-driven decisions with AI-powered recommendations.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">Start Free Trial</button>
+              <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="View Demo" tabIndex="0">View Demo</button>
+            </div>
+          </div>
+
+>>>>>>> main
           {/* Stats */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">
             <div className="text-center">
@@ -363,12 +378,19 @@ const AIAnalyticsPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features<p className="text-xl text-gray-300">Everything you need to understand your business data<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
             <p className="text-xl text-gray-300">Everything you need to understand your business data</p>)
           </div>)
 )
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">),
+=======
+            <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
+            <p className="text-xl text-gray-300">Everything you need to understand your business data</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> main
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -379,10 +401,16 @@ const AIAnalyticsPage: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+<<<<<<< HEAD
                 <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2" role="list">{feature.benefits.map((benefit, idx) => (</ul>
+=======
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2" role="list">
+                  {feature.benefits.map((benefit, idx) => (
+>>>>>>> main
                     <li key={idx} className="flex items-center text-sm text-gray-400" style={{ color: "#9CA3AF" }}>
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" >{benefit}</CheckCircle>
-                    </CheckCircle>
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      {benefit}
                   ))}
                 </ul>
               </div>

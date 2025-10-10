@@ -12,6 +12,9 @@ describe('advanced-componentsx', () => {
   it('should handle basic functionality', () => {
     const result = 1 + 1;
     expect(result).toBe(2);
+  });
+});
+
 describe('Advanced Components', () => {
   it('renders advanced components', () => {
     expect(true).toBe(true);

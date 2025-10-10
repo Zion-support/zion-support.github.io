@@ -12,6 +12,9 @@ describe('componentsx', () => {
   it('should handle basic functionality', () => {
     const result = 1 + 1;
     expect(result).toBe(2);
+  });
+});
+
 describe('Components', () => {
   it('renders basic components', () => {
     expect(true).toBe(true);
