@@ -4,7 +4,7 @@
 export const navigation = {
   // Add utility functions here
   init: () => {
-    console.log('navigation initialized');
+    // Navigation initialized
   }
 };
 
