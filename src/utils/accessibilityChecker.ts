@@ -1192,7 +1192,7 @@ $4});
       return 'No accessibility issues found. Great job!';
     }
   }
-}
+},
         fix: 'Add a;
 
           <main> element or role="main"',

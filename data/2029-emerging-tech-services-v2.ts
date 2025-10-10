@@ -197,7 +197,7 @@ export const,
       'Innovation'],
     price: '$25,999/month'
     }
-  }
+},
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
     description:,
@@ -208,7 +208,7 @@ export const,
       'Trading',
       'Finance',
       'Analytics'],
-    price: '$35,999/month'
+price: '$35,999/month',
     features: [;
     complianc,
   e: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalabilit,
@@ -243,10 +243,10 @@ export const,
       'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.'
     categor,
   y: [,
-      'Biotechnology'
-      'Computing'
-      'Data Storage'
-      'Research'
+'Biotechnology',
+'Computing',
+'Data Storage',
+'Research',
       'Innovation'
     ]
     pric,
@@ -262,41 +262,41 @@ export const,
       'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.'
     categor,
   y: [,
-      'Fintech'
-      'Quantum Computing'
-      'Trading'
-      'Finance'
+'Fintech',
+'Quantum Computing',
+'Trading',
+'Finance',
       'Analytics'
     ]
     pric,
   e: '$35,999/month'
     feature,
   s: [;
-      'Quantum market analysis algorithms'
-      'Real-time trading execution'
-      'Predictive market modeling'
-      'Risk assessment and management'
-      'Portfolio optimization'
-      'High-frequency trading capabilities'
-      'Market sentiment analysis'
+'Quantum market analysis algorithms',
+'Real-time trading execution',
+'Predictive market modeling',
+'Risk assessment and management',
+'Portfolio optimization',
+'High-frequency trading capabilities',
+'Market sentiment analysis',
       'Automated trading strategies'
     ]
     benefit,
   s: [;
-      'Increase trading accuracy by 300%'
-      'Reduce trading risks by 60%'
-      'Faster trade execution'
-      'Better portfolio performance'
-      'Enhanced risk management'
+'Increase trading accuracy by 300%',
+'Reduce trading risks by 60%',
+'Faster trade execution',
+'Better portfolio performance',
+'Enhanced risk management',
       'Competitive trading advantage'
-    ]
+],
     useCases: [
     useCase,
   s: [,
-      'Institutional trading'
-      'Hedge fund operations'
-      'Algorithmic trading'
-      'Risk management'
+'Institutional trading',
+'Hedge fund operations',
+'Algorithmic trading',
+'Risk management',
       'Portfolio optimization'
       'Market analysis'],
     marketSize: '$42.3B by 2029',
@@ -312,26 +312,26 @@ export const,
       'Financial experts',
       'Implementation team'],
     compliance: ['SEC', 'FINRA', 'SOX', 'SOC 2'],    scalability: 'Enterprise-grade, global trading',    roi: '1000% within 18 months',
-    deployment: 'Cloud-native, low-latency infrastructure'
-    maintenance: 'Continuous updates, performance optimization'
-    training: 'Trading platform training, certification'
-    documentation: 'Trading guides, best practices'
-    api: 'Trading APIs, market data feeds'
+deployment: 'Cloud-native, low-latency infrastructure',
+maintenance: 'Continuous updates, performance optimization',
+training: 'Trading platform training, certification',
+documentation: 'Trading guides, best practices',
+api: 'Trading APIs, market data feeds',
     mobile: 'Mobile trading apps',
-    security: 'Financial-grade security, encryption'
-    backup: 'Real-time backup, disaster recovery'
+security: 'Financial-grade security, encryption',
+backup: 'Real-time backup, disaster recovery',
     monitoring: 'Trading performance monitoring',
-    analytics: 'Trading analytics, performance reports'
-    customization: 'Custom trading strategies, integration'
+analytics: 'Trading analytics, performance reports',
+customization: 'Custom trading strategies, integration',
     whiteLabel: 'Available for financial institutions',
     affiliate: '15% commission for referrals',    referral: '$100,000 bonus for partnerships',    partnership: 'Financial institution partnerships',
-    funding: 'Series C funding, $500M valuation'
+funding: 'Series C funding, $500M valuation',
     exit: 'IPO or financial acquisition',
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+},
     id: 'quantum-creativity-studio',
     name: 'Quantum Creativity Studio',
     description:,
@@ -343,17 +343,17 @@ export const,
   s: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']
     technolog,
   y: [,
-      'Quantum Computing'
-      'Machine Learning'
-      'Financial Analytics'
+'Quantum Computing',
+'Machine Learning',
+'Financial Analytics',
       'Trading'
     ]
     integratio,
   n: ['Trading platforms', 'Market data feeds', 'Risk systems']
     suppor,
   t: [,
-      '24/7 trading support'
-      'Financial experts'
+'24/7 trading support',
+'Financial experts',
       'Implementation team'
     ]
     complianc,
@@ -417,31 +417,31 @@ export const,
   e: '$1,999/month'
     feature,
   s: [;
-      'Quantum creativity algorithms'
-      'AI-powered content generation'
-      'Creative design tools'
-      'Collaborative workspace'
-      'Real-time rendering'
-      'Creative asset management'
-      'Design automation'
+'Quantum creativity algorithms',
+'AI-powered content generation',
+'Creative design tools',
+'Collaborative workspace',
+'Real-time rendering',
+'Creative asset management',
+'Design automation',
       'Creative analytics'
     ]
     benefit,
   s: [;
-      'Unleash unlimited creativity'
-      'Generate unique content'
-      'Accelerate design processes'
-      'Enhance creative collaboration'
-      'Improve design quality'
+'Unleash unlimited creativity',
+'Generate unique content',
+'Accelerate design processes',
+'Enhance creative collaboration',
+'Improve design quality',
       'Reduce creative blocks'
-    ]
+],
     useCases: [
     useCase,
   s: [,
-      'Graphic design'
-      'Content creation'
-      'Product design'
-      'Marketing materials'
+'Graphic design',
+'Content creation',
+'Product design',
+'Marketing materials',
       'Creative agencies'
       'Individual artists'],
     marketSize: '$18.9B by 2029',
@@ -454,20 +454,20 @@ export const,
     integration: ['Design tools', 'Creative platforms', 'Asset libraries']
     support: ['24/7 creative support', 'Design experts', 'Implementation help']
     compliance: ['Copyright protection', 'Creative licensing', 'Data privacy'],    scalability: 'Creative platform, multi-user support',    roi: '400% within 12 months',
-    deployment: 'Cloud-based, web and desktop apps'
-    maintenance: 'Continuous updates, feature additions'
-    training: 'Creative training, tutorials'
-    documentation: 'Creative guides, best practices'
+deployment: 'Cloud-based, web and desktop apps',
+maintenance: 'Continuous updates, feature additions',
+training: 'Creative training, tutorials',
+documentation: 'Creative guides, best practices',
     api: 'Creative platform APIs',
     mobile: 'Mobile creative apps',
-    security: 'Content protection, access controls'
+security: 'Content protection, access controls',
     backup: 'Creative asset backup',
     monitoring: 'Creative performance tracking',
-    analytics: 'Creative insights, usage analytics'
-    customization: 'Custom creative tools, templates'
+analytics: 'Creative insights, usage analytics',
+customization: 'Custom creative tools, templates',
     whiteLabel: 'Available for creative agencies',
     affiliate: '30% commission for referrals',    referral: '$10,000 bonus for partnerships',    partnership: 'Creative agency partnerships',
-    funding: 'Series A funding, $80M valuation'
+funding: 'Series A funding, $80M valuation',
     exit: 'Acquisition by major creative platform',
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -481,9 +481,9 @@ export const,
   s: ['Adobe Creative Suite', 'Canva', 'Figma', 'Sketch']
     technolog,
   y: [,
-      'Quantum Computing'
-      'AI/ML'
-      'Computer Graphics'
+'Quantum Computing',
+'AI/ML',
+'Computer Graphics',
       'Design Tools'
     ]
     integratio,
@@ -549,7 +549,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
-    marketSize: '$18.9B by 2029'
+marketSize: '$18.9B by 2029',
     competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
     technology: ['Quantum ComputingAI/MLComputer GraphicsDesign Tools'];
     integration: ['Design toolsCreative platformsAsset libraries'];
@@ -579,21 +579,21 @@ export const,
   };
     feature,
   s: [;
-      'DNA-based data storage'
-      'Molecular computing algorithms'
-      'Biological data processing'
-      'High-density storage solutions'
-      'Parallel molecular operations'
-      'Bio-compatible interfaces'
-      'Molecular programming tools'
+'DNA-based data storage',
+'Molecular computing algorithms',
+'Biological data processing',
+'High-density storage solutions',
+'Parallel molecular operations',
+'Bio-compatible interfaces',
+'Molecular programming tools',
       'Biological error correction'
     ]
     benefit,
   s: [;
-      'Exponential storage density increase'
-      'Parallel processing capabilities'
-      'Energy-efficient computing'
-      'Long-term data preservation'
+'Exponential storage density increase',
+'Parallel processing capabilities',
+'Energy-efficient computing',
+'Long-term data preservation',
       'Biological compatibility'
       'Revolutionary computing paradigm'],
     useCases: [,
@@ -617,35 +617,35 @@ export const,
       'Biotech experts',
       'Implementation team'],
     compliance: ['FDA', 'ISO 13485', 'GMP', 'Research ethics'],    scalability: 'Research-grade, scalable deployment',    roi: '800% within 36 months',
-    deployment: 'Laboratory setup, cloud integration'
-    maintenance: 'Continuous optimization, biological monitoring'
-    training: 'Biotech training, safety protocols'
-    documentation: 'Research protocols, safety guides'
+deployment: 'Laboratory setup, cloud integration',
+maintenance: 'Continuous optimization, biological monitoring',
+training: 'Biotech training, safety protocols',
+documentation: 'Research protocols, safety guides',
     api: 'Research data APIs',
     mobile: 'Research monitoring apps',    security: 'Biological security, access controls',    backup: 'Biological backup, redundancy'
-    monitoring: 'Biological monitoring, quality control'
-    analytics: 'Research analytics, performance metrics'
-    customization: 'Custom research protocols, integration'
+monitoring: 'Biological monitoring, quality control',
+analytics: 'Research analytics, performance metrics',
+customization: 'Custom research protocols, integration',
     whiteLabel: 'Available for research institutions',
     affiliate: '25% commission for referrals',    referral: '$75,000 bonus for partnerships',    partnership: 'Research institution partnerships',
-    funding: 'Series B funding, $150M valuation'
+funding: 'Series B funding, $150M valuation',
     exit: 'IPO or biotech acquisition',
     market_size: '$15.8B by 2029',
     competitors: ['Microsoft', 'Illumina', 'Twist Bioscience', 'DNA Script'],
     technology: [,
     technolog,
   y: [,
-      'DNA Synthesis'
-      'Molecular Biology'
-      'Bioinformatics'
+'DNA Synthesis',
+'Molecular Biology',
+'Bioinformatics',
       'Computing'
     ]
     integratio,
   n: ['Research platforms', 'Data centers', 'Laboratory systems']
     suppor,
   t: [,
-      '24/7 research support'
-      'Biotech experts'
+'24/7 research support',
+'Biotech experts',
       'Implementation team'
     ]
     complianc,
@@ -723,7 +723,7 @@ export const,
       'Trading',
       'Finance',
       'Analytics'],
-    price: '$35,999/month'
+price: '$35,999/month',
     features: [;
     complianc,
   e: ['FDA', 'ISO 13485', 'GMP', 'Research ethics'],    scalabilit,
@@ -767,31 +767,31 @@ export const,
       'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.'
     categor,
   y: [,
-      'Fintech'
-      'Quantum Computing'
-      'Trading'
-      'Finance'
+'Fintech',
+'Quantum Computing',
+'Trading',
+'Finance',
       'Analytics'
     ]
     pric,
   e: '$35,999/month'
     feature,
   s: [;
-      'Quantum market analysis algorithms'
-      'Real-time trading execution'
-      'Predictive market modeling'
-      'Risk assessment and management'
-      'Portfolio optimization'
-      'High-frequency trading capabilities'
-      'Market sentiment analysis'
+'Quantum market analysis algorithms',
+'Real-time trading execution',
+'Predictive market modeling',
+'Risk assessment and management',
+'Portfolio optimization',
+'High-frequency trading capabilities',
+'Market sentiment analysis',
       'Automated trading strategies'
     ]
     benefit,
   s: [;
-      'Increase trading accuracy by 300%'
-      'Reduce trading risks by 60%'
-      'Faster trade execution'
-      'Better portfolio performance'
+'Increase trading accuracy by 300%',
+'Reduce trading risks by 60%',
+'Faster trade execution',
+'Better portfolio performance',
       'Enhanced risk management'
       'Competitive trading advantage'],
     useCases: [,
@@ -816,35 +816,35 @@ export const,
       'Financial experts',
       'Implementation team'],
     compliance: ['SEC', 'FINRA', 'SOX', 'SOC 2'],    scalability: 'Enterprise-grade, global trading',    roi: '1000% within 18 months',
-    deployment: 'Cloud-native, low-latency infrastructure'
-    maintenance: 'Continuous updates, performance optimization'
-    training: 'Trading platform training, certification'
-    documentation: 'Trading guides, best practices'
-    api: 'Trading APIs, market data feeds'
+deployment: 'Cloud-native, low-latency infrastructure',
+maintenance: 'Continuous updates, performance optimization',
+training: 'Trading platform training, certification',
+documentation: 'Trading guides, best practices',
+api: 'Trading APIs, market data feeds',
     mobile: 'Mobile trading apps',
-    security: 'Financial-grade security, encryption'
-    backup: 'Real-time backup, disaster recovery'
+security: 'Financial-grade security, encryption',
+backup: 'Real-time backup, disaster recovery',
     monitoring: 'Trading performance monitoring',
-    analytics: 'Trading analytics, performance reports'
-    customization: 'Custom trading strategies, integration'
+analytics: 'Trading analytics, performance reports',
+customization: 'Custom trading strategies, integration',
     whiteLabel: 'Available for financial institutions',
     affiliate: '15% commission for referrals',    referral: '$100,000 bonus for partnerships',    partnership: 'Financial institution partnerships',
-    funding: 'Series C funding, $500M valuation'
+funding: 'Series C funding, $500M valuation',
     exit: 'IPO or financial acquisition',
     contact: description: unknown;
     technolog,
   y: [,
-      'Quantum Computing'
-      'Machine Learning'
-      'Financial Analytics'
+'Quantum Computing',
+'Machine Learning',
+'Financial Analytics',
       'Trading'
     ]
     integratio,
   n: ['Trading platforms', 'Market data feeds', 'Risk systems']
     suppor,
   t: [,
-      '24/7 trading support'
-      'Financial experts'
+'24/7 trading support',
+'Financial experts',
       'Implementation team'
     ]
     complianc,
@@ -893,76 +893,76 @@ export const,
   e: '$1,999/month'
     feature,
   s: [;
-      'Quantum creativity algorithms'
-      'AI-powered content generation'
-      'Creative design tools'
-      'Collaborative workspace'
-      'Real-time rendering'
-      'Creative asset management'
-      'Design automation'
+'Quantum creativity algorithms',
+'AI-powered content generation',
+'Creative design tools',
+'Collaborative workspace',
+'Real-time rendering',
+'Creative asset management',
+'Design automation',
       'Creative analytics'
     ]
     benefit,
   s: [;
-      'Unleash unlimited creativity'
-      'Generate unique content'
-      'Accelerate design processes'
-      'Enhance creative collaboration'
-      'Improve design quality'
+'Unleash unlimited creativity',
+'Generate unique content',
+'Accelerate design processes',
+'Enhance creative collaboration',
+'Improve design quality',
       'Reduce creative blocks'
-    ]
+],
     useCases: [;
     technology: [
-      'Quantum Computing'
+'Quantum Computing',
       'AI/ML'
       'Computer Graphics',
       'Design Tools'],
     integration: ['Design tools', 'Creative platforms', 'Asset libraries']
     support: ['24/7 creative support', 'Design experts', 'Implementation help']
     compliance: ['Copyright protection', 'Creative licensing', 'Data privacy'],    scalability: 'Creative platform, multi-user support',    roi: '400% within 12 months',
-    deployment: 'Cloud-based, web and desktop apps'
-    maintenance: 'Continuous updates, feature additions'
-    training: 'Creative training, tutorials'
-    documentation: 'Creative guides, best practices'
+deployment: 'Cloud-based, web and desktop apps',
+maintenance: 'Continuous updates, feature additions',
+training: 'Creative training, tutorials',
+documentation: 'Creative guides, best practices',
     api: 'Creative platform APIs',
     mobile: 'Mobile creative apps',
-    security: 'Content protection, access controls'
+security: 'Content protection, access controls',
     backup: 'Creative asset backup',
     monitoring: 'Creative performance tracking',
-    analytics: 'Creative insights, usage analytics'
-    customization: 'Custom creative tools, templates'
+analytics: 'Creative insights, usage analytics',
+customization: 'Custom creative tools, templates',
     whiteLabel: 'Available for creative agencies',
     affiliate: '30% commission for referrals',    referral: '$10,000 bonus for partnerships',    partnership: 'Creative agency partnerships',
-    funding: 'Series A funding, $80M valuation'
-    exit: 'Acquisition by major creative platform'
+funding: 'Series A funding, $80M valuation',
+exit: 'Acquisition by major creative platform',
     contact: unknown;
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
-    marketSize: '$18 && 18.9 B by 2029'
+marketSize: '$18 && 18.9 B by 2029',
     competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
     technology: ['Quantum ComputingAI/MLComputer GraphicsDesign Tools'];
     integration: ['Design toolsCreative platformsAsset libraries'];
     support: ['24/7 creative supportDesign expertsImplementation help'];
     compliance: ['Copyright protectionCreative licensingData privacy'],
-    scalability: 'Creative platform, multi-user support'
+scalability: 'Creative platform, multi-user support',
     roi: '400% within 12 months',
-    deployment: 'Cloud-based, web and desktop apps'
-    maintenance: 'Continuous updates, feature additions'
-    training: 'Creative training, tutorials'
-    documentation: 'Creative guides, best practices'
+deployment: 'Cloud-based, web and desktop apps',
+maintenance: 'Continuous updates, feature additions',
+training: 'Creative training, tutorials',
+documentation: 'Creative guides, best practices',
     api: 'Creative platform APIs',
     mobile: 'Mobile creative apps',
-    security: 'Content protection, access controls'
+security: 'Content protection, access controls',
     backup: 'Creative asset backup',
     monitoring: 'Creative performance tracking',
-    analytics: 'Creative insights, usage analytics'
-    customization: 'Custom creative tools, templates'
+analytics: 'Creative insights, usage analytics',
+customization: 'Custom creative tools, templates',
     whiteLabel: 'Available for creative agencies',
     affiliate: '30% commission for referrals',
-    referral: '$10,000 bonus for partnerships'
+referral: '$10,000 bonus for partnerships',
     partnership: 'Creative agency partnerships',
-    funding: 'Series A funding, $80M valuation'
-    exit: 'Acquisition by major creative platform'
+funding: 'Series A funding, $80M valuation',
+exit: 'Acquisition by major creative platform',
     contact: unknown;
       mobile: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -993,9 +993,9 @@ export const,
   s: [;
     technolog,
   y: [,
-      'Quantum Computing'
-      'AI/ML'
-      'Computer Graphics'
+'Quantum Computing',
+'AI/ML',
+'Computer Graphics',
       'Design Tools'
     ]
     integratio,

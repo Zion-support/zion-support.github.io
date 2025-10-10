@@ -236,7 +236,7 @@ export class TestRunner {}
       coverage: false,
       watch: false,
       bail: false,
-      reporter: 'console'
+reporter: 'console',
       outputDir: './test-results',
       includePattern: [,
         '**/*.test.ts',

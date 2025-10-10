@@ -99,7 +99,7 @@ titletitle: 'Environmental Monitoring',
         'Lower maintenance and replacement costs',
         'Improved resource utilization',
         'Reduced waste management costs'
-      ]
+],
       title: 'Environmental Impact',
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
         '60% reduction in carbon emissions',

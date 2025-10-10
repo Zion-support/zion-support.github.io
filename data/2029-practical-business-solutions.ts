@@ -155,14 +155,14 @@ export const,
   n: 'Practical business solution platform that provides real-world solutions for 2029.'
       feature,
   s: [;
-        'Practical solutions'
-        'Business applications'
-        'Real-world use cases'
-        'Easy integration'
+'Practical solutions',
+'Business applications',
+'Real-world use cases',
+'Easy integration',
         'Affordable pricing'
-      ]
-      link: '/services/2029-practical-business-solution'
-      category: 'Practical Business Solutions 2029'
+],
+link: '/services/2029-practical-business-solution',
+category: 'Practical Business Solutions 2029',
       realImplementation: true;
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -203,7 +203,7 @@ export const,
   }
 }
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [
-    id: "2029-practical-business-solution"
+id: "2029-practical-business-solution",
     name: "2029 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2029",
     price: "$299/month",
@@ -215,8 +215,8 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       "Easy integration",
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
   ];    features: [;
-      "Practical solutions"
-      "Business applications"
+"Practical solutions",
+"Business applications",
       "Real - world use cases"
       "Easy integration",
       "Affordable pricing"],
@@ -356,7 +356,7 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   };
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
-      id: '2029-practical-business-solution'
+id: '2029-practical-business-solution',
       name: '2029 Practical Business Solution Platform',
       tagline: 'Practical business solutions for 2029',
       price: '$299/month',
@@ -382,16 +382,16 @@ export const,
         'Real-world use cases',
         'Easy integration',
         'Affordable pricing'],
-      link: '/services/2029-practical-business-solution'
-      category: 'Practical Business Solutions 2029'
+link: '/services/2029-practical-business-solution',
+category: 'Practical Business Solutions 2029',
       realImplementation: true;
       contactInfo: unknown;
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'}};
   ];    features: [
-      "Practical solutions"
-      "Business applications"
+"Practical solutions",
+"Business applications",
       "Real-world use cases"
       lin,
   k: '/services/2029-practical-business-solution',
@@ -440,8 +440,8 @@ export const,
 }"
       "Affordable pricing"
     ],
-    link: "/services/2029-practical-business-solution"
-    category: "Practical Business Solutions 2029"
+link: "/services/2029-practical-business-solution",
+category: "Practical Business Solutions 2029",
     realImplementation: true;
     contactInfo: unknown;
   id: string;
@@ -510,8 +510,8 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       "Easy integration",
       "Affordable pricing"
     ],
-    link: "/services/2029-practical-business-solution"
-    category: "Practical Business Solutions 2029"
+link: "/services/2029-practical-business-solution",
+category: "Practical Business Solutions 2029",
     realImplementation: true;
     contactInfo: unknown;
       mobile: "+1 302 464 0950",

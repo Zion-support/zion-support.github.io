@@ -67,11 +67,11 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, small businesses, getting, started with, automatio, n"
       featur, e, s: [,
-        "Up, to, 10 automated, workflow, s"
-        "5, user, accounts"
-        "Basic, analytics, dashboard"
-        "Email, suppor, t"
-        "Standard, integration, s (5)"
+"Up, to, 10 automated, workflow, s",
+"5, user, accounts",
+"Basic, analytics, dashboard",
+"Email, suppor, t",
+"Standard, integration, s (5)",
         "Monthly, reportin, g"
       ]
       popul, a, r: fal, s, e;
@@ -82,13 +82,13 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing businesses, with, complex workflo, w, s"
       featur, e, s: [,
-        "Unlimited, automated, workflows"
-        "25, user, accounts"
-        "Advanced, analytic, s & AI, insight, s"
-        "Priority, suppor, t"
-        "Advanced, integration, s (25)"
-        "Re, a, l-time, monitorin, g"
-        "Custom, workflow, templates"
+"Unlimited, automated, workflows",
+"25, user, accounts",
+"Advanced, analytic, s & AI, insight, s",
+"Priority, suppor, t",
+"Advanced, integration, s (25)",
+"Re, a, l-time, monitorin, g",
+"Custom, workflow, templates",
         "API, acces, s"
       ]
       popul, a, r: tr, u, e;
@@ -99,14 +99,14 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organization, s"
       featur, e, s: [,
-        "Unlimited, everythin, g"
-        "Unlimited, user, accounts"
-        "Enterpri, s, e-grade, analytic, s"
-        "Dedicated, success, manager"
-        "Unlimited, integration, s"
-        "Advanced, security, features"
-        "Custom, developmen, t"
-        "SLA, guarante, e"
+"Unlimited, everythin, g",
+"Unlimited, user, accounts",
+"Enterpri, s, e-grade, analytic, s",
+"Dedicated, success, manager",
+"Unlimited, integration, s",
+"Advanced, security, features",
+"Custom, developmen, t",
+"SLA, guarante, e",
         "On-premise, deployment, option"
       ]
       popul, a, r: fal, s, e;
@@ -199,8 +199,8 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       challen, g, e: "Manual, workflow, processes causing, delays, and erro, r, s"
       soluti, o, n: "Implemented, A, I-driven, automation, for supply, chain, management"
       resul, t, s: [,
-        "85% reduction, in, processing ti, m, e"
-        "99.7% accuracy, improvemen, t"
+"85% reduction, in, processing ti, m, e",
+"99.7% accuracy, improvemen, t",
         "$15 M, annual, cost savin, g, s"
       tit, l, e: "Fortune, 500, Manufacturing",";
       challen, g, e: "Manual, workflow, processes causing, delays, and erro, r, s",";
@@ -217,8 +217,8 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       challen, g, e: "Complex, compliance, workflows requiring, manual, oversight"
       soluti, o, n: "Deployed, intelligent, automation with, rea, l-time, monitorin, g"
       resul, t, s: [,
-        "90% faster, compliance, reporting"
-        "1, 0, 0% audit, compliance, rate"
+"90% faster, compliance, reporting",
+"1, 0, 0% audit, compliance, rate",
         "$8 M, operational, savings"
       tit, l, e: "Global, Financial, Services",";
       challen, g, e: "Complex, compliance, workflows requiring, manual, oversight",";
@@ -235,8 +235,8 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       challen, g, e: "Patient, data, processing bottlenec, k, s"
       soluti, o, n: "Automated, patient, intake and, data, processing workflo, w, s"
       resul, t, s: [,
-        "75% faster, patient, processing"
-        "95% reduction, in, data entry, error, s"
+"75% faster, patient, processing",
+"95% reduction, in, data entry, error, s",
         "40% improvement, in, patient satisfacti, o, n"
       tit, l, e: "Healthcare, Syste, m",";
       challen, g, e: "Patient, data, processing bottlenec, k, s",";

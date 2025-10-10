@@ -2,8 +2,8 @@
 export const advancedITServices2025 = [
     };
     marketSize: '$15 && 15.7B',
-    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
-    competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
+targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
+competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
     market_size: '$15.7B',
     target_audience: unknown;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
@@ -455,7 +455,7 @@ export const advancedITServices2025 = [
 ];
 ;
 export const advancedITServices2025 = [
-    }
+},
     category: 'IT Operations',
     tags: [,
     categor,
@@ -479,7 +479,7 @@ export const advancedITServices2025 = [
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers'
     competitiveAdvantag,
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration'
-  }
+},
     id: 'quantum-data-center-platform',
     name: 'QuantumDataCenter Pro',
     description:,
@@ -492,18 +492,18 @@ export const advancedITServices2025 = [
       'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
     feature,
   s: [;
-      'Quantum-enhanced computing'
-      'Advanced cooling and power management'
-      'Ultra-secure quantum storage'
-      'Real-time performance optimization'
-      'Integration with cloud platforms'
-      'Advanced monitoring and analytics'
-      'Custom quantum solutions'
+'Quantum-enhanced computing',
+'Advanced cooling and power management',
+'Ultra-secure quantum storage',
+'Real-time performance optimization',
+'Integration with cloud platforms',
+'Advanced monitoring and analytics',
+'Custom quantum solutions',
       '24/7 data center support'
-    ]
+],
     pricing: starter: unknown;
         price: 499;
-        period: 'month'
+period: 'month',
         features: [
     pricin,
   g: starte,
@@ -518,7 +518,7 @@ export const advancedITServices2025 = [
           'Basic quantum features',
           'Standard support']}
       professional: price: 1299;
-        period: 'month'
+period: 'month',
         features: [
       professiona,
   l: pric,
@@ -527,12 +527,12 @@ export const advancedITServices2025 = [
   d: 'month'
         feature,
   s: [,
-          'Up to 500 racks'
+'Up to 500 racks',
           'Advanced quantum features'
           'Custom solutions',
           'Priority support']}
       enterprise: price: 2999;
-        period: 'month'
+period: 'month',
         features: [
       enterpris,
   e: pric,
@@ -541,11 +541,11 @@ export const advancedITServices2025 = [
   d: 'month'
         feature,
   s: [,
-          'Unlimited racks'
+'Unlimited racks',
           'Custom quantum solutions'
           'White-label platform',
           'Dedicated support']}
-    }
+},
     category: 'Data Center',
     tags: [,
     categor,
@@ -569,7 +569,7 @@ export const advancedITServices2025 = [
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration'
-  }
+},
     id: 'quantum-cybersecurity-platform',
     name: 'QuantumCyber Pro',
     description:,
@@ -582,18 +582,18 @@ export const advancedITServices2025 = [
       'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
     feature,
   s: [;
-      'Quantum-resistant encryption'
-      'Advanced threat detection'
-      'Quantum key distribution'
-      'Real-time security monitoring'
-      'Integration with security tools'
-      'Advanced analytics and reporting'
-      'Custom security solutions'
+'Quantum-resistant encryption',
+'Advanced threat detection',
+'Quantum key distribution',
+'Real-time security monitoring',
+'Integration with security tools',
+'Advanced analytics and reporting',
+'Custom security solutions',
       '24/7 quantum security operations'
-    ]
+],
     pricing: starter: unknown;
         price: 299;
-        period: 'month'
+period: 'month',
         features: [
     pricin,
   g: starte,
@@ -617,14 +617,14 @@ export const advancedITServices2025 = [
   d: 'month'
         feature,
   s: [,
-          'Up to 1,000 endpoints'
-          'Advanced quantum features'
-          'Custom solutions'
+'Up to 1,000 endpoints',
+'Advanced quantum features',
+'Custom solutions',
           'Priority support'
         ]
-      }
+},
       enterprise: price: 1999;
-        period: 'month'
+period: 'month',
         features: [
       enterpris,
   e: pric,
@@ -633,11 +633,11 @@ export const advancedITServices2025 = [
   d: 'month'
         feature,
   s: [,
-          'Unlimited endpoints'
+'Unlimited endpoints',
           'Custom quantum security'
           'White-label solution',
           'Dedicated support']}
-    }
+},
     category: 'Quantum Cybersecurity',
     tags: [,
     categor,
@@ -670,18 +670,18 @@ export const advancedITServices2025 = [
   n: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.'
     feature,
   s: [;
-      'AI-powered migration planning'
-      'Quantum-enhanced migration tools'
-      'Zero-downtime migration'
-      'Real-time migration monitoring'
-      'Integration with cloud platforms'
-      'Advanced analytics and reporting'
-      'Custom migration strategies'
+'AI-powered migration planning',
+'Quantum-enhanced migration tools',
+'Zero-downtime migration',
+'Real-time migration monitoring',
+'Integration with cloud platforms',
+'Advanced analytics and reporting',
+'Custom migration strategies',
       '24/7 migration support'
-    ]
+],
     pricing: starter: unknown;
         price: 199;
-        period: 'month'
+period: 'month',
         features: [
     pricin,
   g: starte,
@@ -705,12 +705,12 @@ export const advancedITServices2025 = [
   d: 'month'
         feature,
   s: [,
-          'Up to 1,000 workloads'
-          'Advanced quantum features'
-          'Custom strategies'
+'Up to 1,000 workloads',
+'Advanced quantum features',
+'Custom strategies',
           'Priority support'
         ]
-      }
+},
       enterprise: price: 1499;
         period: 'month',
         features: [,
@@ -763,7 +763,7 @@ export const advancedITServices2025 = [
 ];
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$15.7B',
-    targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
+targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
       emai,
   l: 'kleber@ziontechgroup.com'

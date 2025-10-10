@@ -12,12 +12,12 @@ export interface CybersecurityQuantumService {;
     currency: string;
     trialDays: number}
     setupTime: string;
-    id: 'quantum - resistant - encryption - platform'
+id: 'quantum - resistant - encryption - platform',
     name: 'Quantum - Resistant Encryption Platform',
     tagline: 'Future - proof security with post - quantum cryptography',
     description: unknown;
       'Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.',
-    category: 'Quantum Security & Cryptography'
+category: 'Quantum Security & Cryptography',
     price: unknown;
       monthly: 499;
       yearly: 4990;
@@ -123,11 +123,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, FIPS 140 - 2, Common Criteria, FedRAMP'],
-    link: 'https://ziontechgroup.com / quantum - resistant - encryption - platform'
-    icon: ''
-    color: 'from - red - 500 to - orange - 600'
+link: 'https://ziontechgroup.com / quantum - resistant - encryption - platform',
+icon: '',
+color: 'from - red - 500 to - orange - 600',
     popular: true;
-    launch_date: '2024 - 01 - 15'
+launch_date: '2024 - 01 - 15',
     customers: 650;
     rating: 4 && 4.9;
     reviews: 480;
@@ -156,8 +156,8 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   k: [,
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch'],
     realImplementation: true;
-    implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
-    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
+implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.',
+roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.',
     useCases: [;
     realImplementatio,
   n: true,
@@ -167,10 +167,10 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
     useCase,
   s: [;
-      'Advanced persistent threat detection'
-      'Malware analysis and classification'
-      'Network security monitoring'
-      'Endpoint threat detection'
+'Advanced persistent threat detection',
+'Malware analysis and classification',
+'Network security monitoring',
+'Endpoint threat detection',
       'Security incident investigation'
       'Threat intelligence sharing'],
     integrations: [,
@@ -191,11 +191,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tagline: 'Proactive threat detection with autonomous security intelligence',
     description: unknown;
       'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.',
-    category: 'AI Cybersecurity & Threat Intelligence'
+category: 'AI Cybersecurity & Threat Intelligence',
     price: unknown;
       monthly: 399;
       yearly: 3990;
-      currency: 'USD'
+currency: 'USD',
       trial_days: 21;
       setup_time: '1 - 2 weeks',
       enterprise: 'Custom pricing',
@@ -295,11 +295,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'],
-    link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform'
-    icon: ''
-    color: 'from - purple - 500 to - indigo - 600'
+link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform',
+icon: '',
+color: 'from - purple - 500 to - indigo - 600',
     popular: true;
-    launch_date: '2024 - 02 - 01'
+launch_date: '2024 - 02 - 01',
     customers: 1200;
     rating: 4 && 4.8;
     reviews: 950;
@@ -307,8 +307,8 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security'],
     techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
     realImplementation: true;
-    implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
-    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
+implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',
+roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.',
     useCases: [;
     lin,
   k: 'http,
@@ -338,15 +338,15 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
     useCase,
   s: [;
-      'Secure remote access'
-      'Application access control'
-      'Cloud security'
-      'Compliance management'
+'Secure remote access',
+'Application access control',
+'Cloud security',
+'Compliance management',
       'Identity governance'
       'Risk management'],
     integrations: [,
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
-    ]
+],
     support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform',
@@ -355,11 +355,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tagline: 'Secure access with continuous verification and least privilege',
     description: unknown;
       'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.',
-    category: 'Zero - Trust Security & Access Control'
+category: 'Zero - Trust Security & Access Control',
     price: unknown;
       monthly: 299;
       yearly: 2990;
-      currency: 'USD'
+currency: 'USD',
       trial_days: 21;
       setup_time: '1 - 2 weeks',
       enterprise: 'Custom pricing',
@@ -465,11 +465,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     support: unknown;
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
-    link: 'https://ziontechgroup.com / zero - trust - network - access - platform'
-    icon: ''
-    color: 'from - blue - 500 to - cyan - 600'
+link: 'https://ziontechgroup.com / zero - trust - network - access - platform',
+icon: '',
+color: 'from - blue - 500 to - cyan - 600',
     popular: true;
-    launch_date: '2024 - 01 - 20'
+launch_date: '2024 - 01 - 20',
     customers: 1800;
     rating: 4 && 4.7;
     reviews: 1400;
@@ -481,11 +481,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tagline: 'Unhackable communication with quantum entanglement',
     description: unknown;
       'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',
-    category: 'Quantum Communications & Security'
+category: 'Quantum Communications & Security',
     price: unknown;
       monthly: 999;
       yearly: 9990;
-      currency: 'USD'
+currency: 'USD',
       trial_days: 30;
       setup_time: '2 - 4 weeks',
       enterprise: 'Custom pricing',
@@ -608,11 +608,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'Highest security standards, Government security requirements, Industry - specific standards'],
-    link: 'https://ziontechgroup.com / quantum - key - distribution - network'
-    icon: ''
-    color: 'from - purple - 500 to - pink - 600'
+link: 'https://ziontechgroup.com / quantum - key - distribution - network',
+icon: '',
+color: 'from - purple - 500 to - pink - 600',
     popular: true;
-    launch_date: '2024 - 03 - 01'
+launch_date: '2024 - 03 - 01',
     customers: 120;
     rating: 4 && 4.9;
     reviews: 95;
@@ -621,8 +621,8 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true;
-    implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
+implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
+roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.',
     useCases: [;
     lin,
   k: 'http,
@@ -655,10 +655,10 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
     useCase,
   s: [;
-      'Application security testing'
-      'Network vulnerability assessment'
-      'Cloud security scanning'
-      'Compliance auditing'
+'Application security testing',
+'Network vulnerability assessment',
+'Cloud security scanning',
+'Compliance auditing',
       'Penetration testing'
       'Security monitoring'],
     integrations: [,
@@ -672,11 +672,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   t: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
-    icon: ''
-    color: 'from-green-500 to-emerald-600'
+link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
+icon: '',
+color: 'from-green-500 to-emerald-600',
     popular: true;
-    launchDate: '2024-02-15'
+launchDate: '2024-02-15',
     customers: 2500;
     rating: 4.8;
     reviews: 1900;
@@ -713,11 +713,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tagline: 'Intelligent security scanning with AI - driven risk analysis',
     description: unknown;
       'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',
-    category: 'Vulnerability Management & Security Testing'
+category: 'Vulnerability Management & Security Testing',
     price: unknown;
       monthly: 199;
       yearly: 1990;
-      currency: 'USD'
+currency: 'USD',
       trial_days: 14;
       setup_time: '1 - 3 days',
       enterprise: 'Custom pricing',
@@ -813,11 +813,11 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     support: unknown;
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment'
-    icon: ''
-    color: 'from - green - 500 to - emerald - 600'
+link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
+icon: '',
+color: 'from - green - 500 to - emerald - 600',
     popular: true;
-    launch_date: '2024 - 02 - 15'
+launch_date: '2024 - 02 - 15',
     customers: 2500;
     rating: 4 && 4.8;
     reviews: 1900;
@@ -846,12 +846,12 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring'
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
-    support: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.'
+support: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
     icon: '';
-    color: 'from - green - 500 to - emerald - 600'
+color: 'from - green - 500 to - emerald - 600',
     popular: true;
-    launch_date: '2024 - 02 - 15'
+launch_date: '2024 - 02 - 15',
     customers: 2500;
     rating: 4 && 4.8;
     reviews: 1900;

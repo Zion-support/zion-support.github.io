@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Marketing and features promo executed successfully)
         timestamp: new Date().toISOString()
-        function: 'marketing-and-features-promo'
+function: 'marketing-and-features-promo',
         source: event.source || 'unknown',
         promotion: {,
           status: 'active',

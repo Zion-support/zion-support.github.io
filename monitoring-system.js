@@ -10,7 +10,7 @@
   e: 'Build failed';erro,
   r: error.message }} } function checkPerformance() {const bundleSize = getBundleSize;(;); return {} statu,
   s: bundleSize < 50 ? 'healthy' : 'warning' messag,`
-  e: `Bundle,`
+e: `Bundle,`,
   size: ${bundleSize};MB`; bundleSize}} function checkSecurity() {/* TODO: Fix JSX expression */}
   o: 'pip)e'}}); return {/* TODO: Fix JSX expression */}
   e: 'No security vulnerabilities foun,d'}}} catch (error) {/* TODO: Fix JSX expression */}

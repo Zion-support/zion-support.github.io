@@ -67,13 +67,13 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, startups and, small, teams getting, started, with cloud, infrastructur, e"
       featur, e, s: [,
-        "Single, cloud, provider set, u, p"
-        "Basic, C, I/CD, pipelin, e"
-        "Standard, monitorin, g"
-        "Email, suppor, t"
-        "Monthly, infrastructure, review"
-        "Basic, security, scanning"
-        "Up, to, 5 environmen, t, s"
+"Single, cloud, provider set, u, p",
+"Basic, C, I/CD, pipelin, e",
+"Standard, monitorin, g",
+"Email, suppor, t",
+"Monthly, infrastructure, review",
+"Basic, security, scanning",
+"Up, to, 5 environmen, t, s",
         "Standard, backup, strategy"
       ]
       popul, a, r: fal, s, e;
@@ -84,15 +84,15 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s"
       featur, e, s: [,
-        "Mul, t, i-cloud, setu, p"
-        "Advanced, C, I/CD, with, testing"
-        "Comprehensive, monitorin, g & alerti, n, g"
-        "Priority, suppor, t"
-        "Weekly, infrastructure, reviews"
-        "Advanced, securit, y & complian, c, e"
-        "Up, to, 15 environmen, t, s"
-        "Automated, backu, p & recove, r, y"
-        "Performance, optimizatio, n"
+"Mul, t, i-cloud, setu, p",
+"Advanced, C, I/CD, with, testing",
+"Comprehensive, monitorin, g & alerti, n, g",
+"Priority, suppor, t",
+"Weekly, infrastructure, reviews",
+"Advanced, securit, y & complian, c, e",
+"Up, to, 15 environmen, t, s",
+"Automated, backu, p & recove, r, y",
+"Performance, optimizatio, n",
         "Disaster, recovery, planning"
       ]
       popul, a, r: tr, u, e;
@@ -103,17 +103,17 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
       featur, e, s: [,
-        "Hybr, i, d & mul, t, i-cloud, architectur, e"
-        "Enterpri, s, e-grade, C, I/CD"
-        "Advanced, monitoring, with AI, insight, s"
-        "Dedicated, DevOps, engineer"
-        "Daily, infrastructure, management"
-        "Full, securit, y & compliance, suit, e"
-        "Unlimited, environment, s"
-        "Enterprise, backu, p & disaster, recover, y"
-        "24/7, monitorin, g & suppo, r, t"
-        "Custom, automation, development"
-        "SLA, guarante, e"
+"Hybr, i, d & mul, t, i-cloud, architectur, e",
+"Enterpri, s, e-grade, C, I/CD",
+"Advanced, monitoring, with AI, insight, s",
+"Dedicated, DevOps, engineer",
+"Daily, infrastructure, management",
+"Full, securit, y & compliance, suit, e",
+"Unlimited, environment, s",
+"Enterprise, backu, p & disaster, recover, y",
+"24/7, monitorin, g & suppo, r, t",
+"Custom, automation, development",
+"SLA, guarante, e",
         "On-premise, integratio, n"
       ]
       popul, a, r: fal, s, e;

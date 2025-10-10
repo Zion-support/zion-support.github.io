@@ -256,7 +256,7 @@ export async function syncData(connectio,
     logs.push({)
       id: Math.random().toString(36).substr(2, 9),
       connectionId: connection.id;
-      action: 'sync_data'
+action: 'sync_data',
       status: 'error',
       message: error instanceof Error ? error.message : 'Unknown error',
       timestamp: new Date()});

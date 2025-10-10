@@ -67,13 +67,13 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, small-scale, edge, deployments and, proof, of concep, t, s"
       featur, e, s: [,
-        "Up, to, 10 edge, device, s"
-        "Basic, AI, model deployme, n, t"
-        "Standard, monitorin, g"
-        "Email, suppor, t"
-        "Monthly, analytics, reports"
-        "Basic, security, features"
-        "Standard, protocol, s"
+"Up, to, 10 edge, device, s",
+"Basic, AI, model deployme, n, t",
+"Standard, monitorin, g",
+"Email, suppor, t",
+"Monthly, analytics, reports",
+"Basic, security, features",
+"Standard, protocol, s",
         "Cloud, backup, integration"
       ]
       popul, a, r: fal, s, e;
@@ -84,15 +84,15 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, medium-scale, deployments, with advanced, requirement, s"
       featur, e, s: [,
-        "Up, to, 100 edge, device, s"
-        "Advanced, AI, model deployme, n, t"
-        "Re, a, l-time, monitorin, g & alerti, n, g"
-        "Priority, suppor, t"
-        "Custom, analytics, dashboards"
-        "Advanced, securit, y & encrypti, o, n"
-        "Optimized, protocol, s"
-        "Hybrid, cloud, integration"
-        "Custom, model, training"
+"Up, to, 100 edge, device, s",
+"Advanced, AI, model deployme, n, t",
+"Re, a, l-time, monitorin, g & alerti, n, g",
+"Priority, suppor, t",
+"Custom, analytics, dashboards",
+"Advanced, securit, y & encrypti, o, n",
+"Optimized, protocol, s",
+"Hybrid, cloud, integration",
+"Custom, model, training",
         "API, acces, s"
       ]
       popul, a, r: tr, u, e;
@@ -103,17 +103,17 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, edge deploymen, t, s"
       featur, e, s: [,
-        "Unlimited, edge, devices"
-        "Custom, AI, model developme, n, t"
-        "Enterprise, monitoring, suite"
-        "Dedicated, edge, specialist"
-        "Custom, analytic, s & reporti, n, g"
-        "Enterprise, security, suite"
-        "Custom, protocol, development"
-        "Mul, t, i-cloud, integratio, n"
-        "On-premise, deploymen, t"
-        "24/7, monitorin, g & suppo, r, t"
-        "SLA, guarante, e"
+"Unlimited, edge, devices",
+"Custom, AI, model developme, n, t",
+"Enterprise, monitoring, suite",
+"Dedicated, edge, specialist",
+"Custom, analytic, s & reporti, n, g",
+"Enterprise, security, suite",
+"Custom, protocol, development",
+"Mul, t, i-cloud, integratio, n",
+"On-premise, deploymen, t",
+"24/7, monitorin, g & suppo, r, t",
+"SLA, guarante, e",
         "Traini, n, g & consultati, o, n"
       ]
       popul, a, r: fal, s, e;

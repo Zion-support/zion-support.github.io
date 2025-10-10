@@ -31,7 +31,7 @@ questionquestion: 'How can I get started?',
           question: 'Do you offer custom solutions?',
           answer:         ,
 $4}
-      ]
+],
       category: 'AI Services',
           question: 'What AI services do you provide?',
           answer:           ,

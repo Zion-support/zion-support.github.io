@@ -146,8 +146,8 @@ export const,
         'Global edge computing network',
         'Quantum - safe data storage'],
       popular: true;
-      icon: ''
-      color: 'from - indigo - 600 to - purple - 700'
+icon: '',
+color: 'from - indigo - 600 to - purple - 700',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
       market_position: unknown;
@@ -155,7 +155,7 @@ export const,
       target_audience: unknown;
         'Enterprise businesses, Research institutions, Financial services, Healthcare organizations, Government agencies, Technology companies',
       trial_days: 30;
-      setup_time: '2 weeks'
+setup_time: '2 weeks',
       category: 'Quantum & Cloud Infrastructure',
       real_service: true;
       technology: [,
@@ -223,18 +223,18 @@ export const,
         'Microsoft Azure',
         'IBM Cloud',
         'Oracle Cloud'],
-      market_size: '$397.4B market'
-      growth_rate: '280% annual growth'
-      variant: 'quantum - futuristic'
+market_size: '$397.4B market',
+growth_rate: '280% annual growth',
+variant: 'quantum - futuristic',
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
+mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Enterprise - grade quantum - enhanced cloud platform with hybrid computing capabilities, quantum - resistant security, and comprehensive management tools. Includes 24 / 7 support and custom development.',
-      launch_date: '2025 - 08 - 15'
+launch_date: '2025 - 08 - 15',
       customers: 800;
       rating: 4 && 4.9;
       reviews: 400;
@@ -307,8 +307,8 @@ export const,
         'Automated scaling',
         'Multi - cloud edge integration'],
       popular: true;
-      icon: ''
-      color: 'from - teal - 500 to - cyan - 600'
+icon: '',
+color: 'from - teal - 500 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration',
       market_position: unknown;
@@ -316,7 +316,7 @@ export const,
       target_audience: unknown;
         'IoT companies, Manufacturing businesses, Smart city initiatives, Transportation companies, Healthcare organizations, Retail businesses',
       trial_days: 21;
-      setup_time: '1 week'
+setup_time: '1 week',
       category: 'Edge Computing & IoT',
       real_service: true;
       technology: [,
@@ -384,18 +384,18 @@ export const,
         'Google Cloud IoT Edge',
         'FogHorn',
         'ClearBlade'],
-      market_size: '$43.4B market'
-      growth_rate: '240% annual growth'
-      variant: 'edge - futuristic'
+market_size: '$43.4B market',
+growth_rate: '240% annual growth',
+variant: 'edge - futuristic',
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
+mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Enterprise - grade edge computing platform with AI - powered orchestration, global edge network, comprehensive IoT management, and real - time analytics. Includes custom development and 24 / 7 support.',
-      launch_date: '2025 - 07 - 20'
+launch_date: '2025 - 07 - 20',
       customers: 1200;
       rating: 4 && 4.8;
       reviews: 600;
@@ -466,8 +466,8 @@ export const,
         'Real - time monitoring',
         'Automated response'],
       popular: true;
-      icon: ''
-      color: 'from - emerald - 600 to - green - 700'
+icon: '',
+color: 'from - emerald - 600 to - green - 700',
       text_color: 'text - emerald - 400',
       link: 'https://ziontechgroup.com / zero - trust - network',
       market_position: unknown;
@@ -475,7 +475,7 @@ export const,
       target_audience: unknown;
         'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Manufacturing companies',
       trial_days: 30;
-      setup_time: '2 weeks'
+setup_time: '2 weeks',
       category: 'Network Security',
       real_service: true;
       technology: [,
@@ -543,25 +543,25 @@ export const,
         'Fortinet',
         'Check Point',
         'Juniper Networks'],
-      market_size: '$45.2B market'
-      growth_rate: '260% annual growth'
-      variant: 'security - futuristic'
+market_size: '$45.2B market',
+growth_rate: '260% annual growth',
+variant: 'security - futuristic',
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
+mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Enterprise - grade zero - trust platform with comprehensive security features, AI - powered monitoring, and seamless integration capabilities. Includes professional services and 24 / 7 support.',
-      launch_date: '2025 - 09 - 10'
+launch_date: '2025 - 09 - 10',
       customers: 900;
       rating: 4 && 4.9;
       reviews: 450;
     },
         'AI-powered CI/CD automation',
     // AI - Powered DevOps Platform;
-      id: 'ai - powered - devops - platform'
+id: 'ai - powered - devops - platform',
       name: 'AI - Powered DevOps Platform',
       tagline: 'Automate and optimize your development pipeline with AI',
       price: '$199',
@@ -625,8 +625,8 @@ export const,
         'Cost optimization',
         'Team collaboration tools'],
       popular: true;
-      icon: ''
-      color: 'from - orange - 500 to - red - 600'
+icon: '',
+color: 'from - orange - 500 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - devops',
       market_position: unknown;
@@ -634,7 +634,7 @@ export const,
       target_audience: unknown;
         'Development teams, DevOps engineers, Software companies, IT departments, Digital agenciestups',
       trial_days: 14;
-      setup_time: '3 days'
+setup_time: '3 days',
       category: 'DevOps & Automation',
       real_service: true;
       technology: [,
@@ -703,18 +703,18 @@ export const,
         'Jenkins',
         'CircleCI',
         'Travis CI'],
-      market_size: '$8.2B market'
-      growth_rate: '190% annual growth'
-      variant: 'devops - futuristic'
+market_size: '$8.2B market',
+growth_rate: '190% annual growth',
+variant: 'devops - futuristic',
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
+mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
         'Comprehensive DevOps platform with AI - powered automation, intelligent testing, performance optimization, and seamless integrations. Includes custom workflows and enterprise support.',
-      launch_date: '2025 - 10 - 15'
+launch_date: '2025 - 10 - 15',
       customers: 2500;
       rating: 4 && 4.7;
       reviews: 1250;
@@ -751,7 +751,7 @@ export const,
         'Quantum-resistant encryption',
         'Multi-layer security',
     // Quantum - Safe Data Storage;
-      id: 'quantum - safe - data - storage'
+id: 'quantum - safe - data - storage',
       name: 'Quantum - Safe Data Storage',
       tagline: 'Future - proof your data with quantum - resistant encryption',
       price: '$349',
@@ -793,7 +793,7 @@ export const,
       target_audience: unknown;
         'Financial institutions, Healthcare organizations, Government agencies, Legal firms, Research institutions, Technology companies',
       trial_days: 30;
-      setup_time: '1 week'
+setup_time: '1 week',
       category: 'Data Storage & Security',
       real_service: true;
       technology: [,
@@ -860,11 +860,11 @@ export const,
         'Azure Blob',
         'Dropbox Business',
         'Box'],
-      market_size: '$78.4B market'
-      growth_rate: '220% annual growth'
-      variant: 'quantum - futuristic'
+market_size: '$78.4B market',
+growth_rate: '220% annual growth',
+variant: 'quantum - futuristic',
       contact_info: unknown;
-        mobile: '+1 302 464 0950'
+mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -895,7 +895,7 @@ export const,
       launch_dat,
   e: '2025 - 11 - 20',
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
-      launchDate: '2025-11-20'
+launchDate: '2025-11-20',
       customers: 1100;
       rating: 4 && 4.8;
       reviews: 550;
@@ -968,31 +968,31 @@ export const,
   n: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
     feature,
   s: [;
-      'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring'
+'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring',
       'Global edge computing networkQuantum-safe data storage'
       integration,
   s: [;
-        'AWS S3'
-        'Azure Blob'
-        'Google Cloud Storage'
-        'Dropbox'
-        'OneDrive'
-        'Box'
+'AWS S3',
+'Azure Blob',
+'Google Cloud Storage',
+'Dropbox',
+'OneDrive',
+'Box',
         'API Access'
       ]
       useCase,
   s: [;
-        'Secure document storage'
-        'Compliance data management'
-        'Backup and recovery'
-        'Data archiving'
-        'Collaborative storage'
+'Secure document storage',
+'Compliance data management',
+'Backup and recovery',
+'Data archiving',
+'Collaborative storage',
         'API-driven applications'
       ],
       roi: 'Average customer saves $500K annually through improved security and compliance management.',
       competitors: [,
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
-      launchDate: '2025-11-20'
+launchDate: '2025-11-20',
       customers: 1100;
       rating: 4.8;
       reviews: 550;
@@ -1011,7 +1011,7 @@ export const,
     integrations: ['AWS ServicesAzure ServicesGoogle CloudKubernetesDockerTerraformAnsibleJenkins'], useCases: ['High-performance computingCryptographic applicationsMachine learning accelerationFinancial modelingDrug discoveryClimate modeling'],
     roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.', competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'],
     marketSize: '$397.4B market', growthRate: '280% annual growth'
-    variant: 'quantum-futuristic'
+variant: 'quantum-futuristic',
     contactInfo: unknown;
   ];    features: [;
       'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication',
@@ -1112,7 +1112,7 @@ export interface Innovative2026ITInfrastructureService {;
   s: 550};
   ];    feature,
   s: [;
-      'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication'
+'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication',
       'API accessMobile applications'
     ],
     popula,
@@ -1152,7 +1152,7 @@ export interface Innovative2026ITInfrastructureService {;
   o: unknown;
   ];    feature,
   s: [;
-      'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication'
+'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication',
       'API access_mobile applications'
     ],
     popula,

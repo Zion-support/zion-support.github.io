@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Stale content auditor runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'stale-content-auditor-runner'
+function: 'stale-content-auditor-runner',
         source: event.source || 'unknown',
         audit: {,
           status: 'active',

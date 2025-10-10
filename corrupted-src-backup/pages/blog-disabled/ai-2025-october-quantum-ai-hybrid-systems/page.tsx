@@ -258,18 +258,18 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
         <title>Quantum-AI Hybrid Systems,
   2025: Practical Near-Term Implementation | Zion Tech Group</title>,"
         <meta name="description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta,"
-  property: "o,"
+property: "o,",
   g:title", content="Quantum-AI Hybrid Systems,"
   2025: Practical Near-Term Implementation" />"
         <meta,"
-  property: "o,"
+property: "o,",
   g:description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />""
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta,"
-  property: "o,"
+property: "o,",
   g:title", content="Quantum-AI Hybrid Systems,"
   2025: Practical Near-Term Implementation" /></meta>
         <meta,"
-  property: "o,"
+property: "o,",
   g:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /></meta>
         <link,"
   rel: "canonical", href="http,

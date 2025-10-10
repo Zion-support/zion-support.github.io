@@ -67,13 +67,13 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, small businesses, starting, with AI-powered, email, marketing"
       featur, e, s: [,
-        "Up, to, 10,000, subscriber, s"
-        "Basic, AI, content generati, o, n"
-        "Simple, automatio, n"
-        "Email, suppor, t"
-        "Basic, analytic, s"
-        "Standard, template, s"
-        "5, campaign, s/mon, t, h"
+"Up, to, 10,000, subscriber, s",
+"Basic, AI, content generati, o, n",
+"Simple, automatio, n",
+"Email, suppor, t",
+"Basic, analytic, s",
+"Standard, template, s",
+"5, campaign, s/mon, t, h",
         "Basic, segmentatio, n"
       ]
       popul, a, r: fal, s, e;
@@ -84,15 +84,15 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs"
       featur, e, s: [,
-        "Up, to, 50,000, subscriber, s"
-        "Advanced, AI, content generati, o, n"
-        "Smart, automation, workflows"
-        "Priority, suppor, t"
-        "Advanced, analytic, s & insigh, t, s"
-        "Custom, template, s"
-        "Unlimited, campaign, s"
-        "Advanced, segmentatio, n"
-        "A/B, testin, g"
+"Up, to, 50,000, subscriber, s",
+"Advanced, AI, content generati, o, n",
+"Smart, automation, workflows",
+"Priority, suppor, t",
+"Advanced, analytic, s & insigh, t, s",
+"Custom, template, s",
+"Unlimited, campaign, s",
+"Advanced, segmentatio, n",
+"A/B, testin, g",
         "API, acces, s"
       ]
       popul, a, r: tr, u, e;
@@ -103,17 +103,17 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
       featur, e, s: [,
-        "Unlimited, subscriber, s"
-        "Enterprise, AI, capabilities"
-        "Complex, automation, workflows"
-        "Dedicated, account, manager"
-        "Enterprise, analytics, suite"
-        "Whi, t, e-label, template, s"
-        "Unlimited, campaign, s"
-        "Advanced, AI, segmentation"
-        "Custom, integration, s"
-        "Advanced, security, features"
-        "SLA, guarante, e"
+"Unlimited, subscriber, s",
+"Enterprise, AI, capabilities",
+"Complex, automation, workflows",
+"Dedicated, account, manager",
+"Enterprise, analytics, suite",
+"Whi, t, e-label, template, s",
+"Unlimited, campaign, s",
+"Advanced, AI, segmentation",
+"Custom, integration, s",
+"Advanced, security, features",
+"SLA, guarante, e",
         "Traini, n, g & consultati, o, n"
       ]
       popul, a, r: fal, s, e;

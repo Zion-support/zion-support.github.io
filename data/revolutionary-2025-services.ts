@@ -64,7 +64,7 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
     addres,
   s: string}
   }
-}
+},
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
@@ -83,8 +83,8 @@ export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
     tagline: "Next-generation AI capabilities", price: "$199/month"
     description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence."
     features: [;
-      "Advanced AI models"
-      "Revolutionary algorithms"
+"Advanced AI models",
+"Revolutionary algorithms",
       "Breakthrough capabilities"
       "Future-ready architecture",
       "Cutting-edge features"],
@@ -171,7 +171,7 @@ export const,
   }
 ];
 ;
-    id: "revolutionary-ai-platform"
+id: "revolutionary-ai-platform",
     name: "Revolutionary AI Platform",
     tagline: "Next-generation AI capabilities",
     price: "$199/month",
@@ -183,12 +183,12 @@ export const,
       "Future-ready architecture",
       "Cutting-edge features"
     ],
-    link: "/services/revolutionary-ai-platform"
-    category: "Revolutionary 2025 Services"
+link: "/services/revolutionary-ai-platform",
+category: "Revolutionary 2025 Services",
     realImplementation: true;
     contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+mobile: "+1 302 464 0950",
+email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};

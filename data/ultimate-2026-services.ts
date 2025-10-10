@@ -81,7 +81,7 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
   }
 ];
   }
-}
+},
     address: string;
     addres,
   s: string}
@@ -89,14 +89,14 @@ export const,
   ultimate2026Services: Ultimate2026Service[] = [;
     feature,
   s: [;
-      'Ultimate platform'
-      'All technologies'
-      'Maximum capabilities'
-      'Premium features'
+'Ultimate platform',
+'All technologies',
+'Maximum capabilities',
+'Premium features',
       '24/7 support'
-    ]
-    link: '/services/2026-ultimate-service'
-    category: 'Ultimate 2026 Services'
+],
+link: '/services/2026-ultimate-service',
+category: 'Ultimate 2026 Services',
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,10 +120,10 @@ export const,
 export const ultimate2026 Services: Ultimate2026 Service[] = [,
     id: "2026-ultimate-service", name: "2026 Ultimate Service Platform",
     tagline: "The ultimate platform for 2026", price: "$699/month",
-    description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities."
+description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
     features: [;
-      "Ultimate platform"
-      "All technologies"
+"Ultimate platform",
+"All technologies",
       "Maximum capabilities"
       "Premium features",
       "24/7 support"],

@@ -42,7 +42,7 @@ export interface AppConfig {
     enableConsole: boolean;
     enableNetwork: boolean;
   };
-}
+},
   environment: 'development',
   api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
@@ -175,7 +175,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     enableConsole: boolean;,
     enableNetwork: boolean
   }
-}
+},
   environment: 'development',
   api: {// TODO: Add content;}
 };

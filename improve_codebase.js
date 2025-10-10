@@ -89,7 +89,7 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
     const improvedContent = content.replace(/build: \{[\s\S]*?\}/,
       `build: {outDir: 'dist'
     sourcemap: mode !== 'production'
-    minify: 'terser'
+minify: 'terser',
     terserOptions: {)
       compress: {)
         drop_console: true;)

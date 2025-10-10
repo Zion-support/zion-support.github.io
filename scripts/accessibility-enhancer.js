@@ -262,7 +262,7 @@ function generateAccessibilityReport() {
   
   const accessibilityReport = {
     timestamp: new Date().toISOString()
-    version: "1.0.0"
+version: "1.0.0",
     summary: {
       totalIssues: 0;
       criticalIssues: 0;
@@ -333,8 +333,8 @@ function generateAccessibilityChecklist() {
   console.log('✅ Generating accessibility checklist...');
   
   const checklist = {
-    title: "Zion Tech Group Accessibility Checklist"
-    version: "1.0.0"
+title: "Zion Tech Group Accessibility Checklist",
+version: "1.0.0",
     lastUpdated: new Date().toISOString()
     categories: [,
       {,
@@ -441,8 +441,8 @@ function generateAccessibilityTestingGuide() {
   console.log('🧪 Generating accessibility testing guide...');
   
   const testingGuide = {
-    title: "Accessibility Testing Guide"
-    version: "1.0.0"
+title: "Accessibility Testing Guide",
+version: "1.0.0",
     lastUpdated: new Date().toISOString()
     tools: [,
       {,

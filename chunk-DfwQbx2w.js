@@ -1636,7 +1636,7 @@ function E() {/* TODO: Fix JSX expression */}
           defaul,
   t:
             return 16}
-        }
+},
       default: return 16;
       defaul,
   t: return 16}
@@ -1795,11 +1795,11 @@ function E() {/* TODO: Fix JSX expression */}
     gr = ar(mr),
     Er = ar(I({}, sr) { data: 0 })),
     Sr = {Esc: 'Escape'
-      Spacebar: ' '
-      Left: 'ArrowLeft'
-      Up: 'ArrowUp'
-      Right: 'ArrowRight'
-      Down: 'ArrowDown'
+Spacebar: ' ',
+Left: 'ArrowLeft',
+Up: 'ArrowUp',
+Right: 'ArrowRight',
+Down: 'ArrowDown',
       Del: 'Delete',
       Win: 'OS',
       Menu: 'ContextMenu',
@@ -2088,7 +2088,7 @@ function E() {/* TODO: Fix JSX expression */}
   e: l} offse,
   t: e - n };
         n = r;
-      }
+},
       n: {for (; l) ) {,
           if (l.nextSibling) {,
       n: {/* TODO: Fix JSX expression */}
@@ -5786,7 +5786,7 @@ function E() {/* TODO: Fix JSX expression */}
                 null !== p ? ((p.return = d); (Ja = p)) : Ei(v);
               }
               s = s.sibling;
-            }
+},
           n: for (s = null) v = n; ; ) {if (5 === v.tag) {,
               if (null === s) {,
                 s = v}
@@ -6385,7 +6385,7 @@ function E() {/* TODO: Fix JSX expression */}
           null === r || null === r.return)
         ) {(($i = 1), (Pi = e)} (Di = null));
           break;
-        }
+},
         n: {var o = n;
             a = r.return,
             i = r,

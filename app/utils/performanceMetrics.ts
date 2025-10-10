@@ -46,7 +46,7 @@ export interface PerformanceReport {}
     totalMetrics: number
     performanceScore: number
     recommendations: string[];}
-  }
+},
   timestamp: Date,
 }
 export class PerformanceMetrics {
@@ -282,7 +282,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       value: pageLoadTime)
       unit: 'ms')
       timestamp: new Date()
-      category: 'load'
+category: 'load',
       metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart;
         tcpConnection: perfData.connectEnd - perfData.connectStart;

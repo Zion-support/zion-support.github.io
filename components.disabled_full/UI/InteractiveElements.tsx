@@ -170,7 +170,7 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   e: '360'}} transition="{/* TODO: Fix JSX expression */}"
   e: "linear}"> "}} /> ) : (" ico,")
   n: && <span className="text-left" >{icon}<" className = "absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0; className="text-left" )" animate="{{" x: 'isHovered ? [',-100%} "] as,"
-  any: "-100%,opacit,"
+any: "-100%,opacit,",
   y: 'isHovered ? [0',0.2}0] as any : 0 }} transition = "{/* TODO: Fix JSX expression */}"
   n: '0.6' }}" <div className="text-left"> <motion.div className="text-left" animate="{/* TODO: Fix JSX expression */}"
   e: '360' }} transition="{/* TODO: Fix JSX expression */}
@@ -314,7 +314,7 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   y: '',0}y: '20'}}" whileInView="{/* TODO: Fix JSX expression */}"
   y: '',1}y: '0'}}" transition="{/* TODO: Fix JSX expression */}
   n: '0.',6}dela,
-  y: 'inde,"
+y: 'inde,",
   x: * 0.1'}}" viewport="{/* TODO: Fix JSX expression */}
   e: 'true'}}> <motion.di,"
   v: className="text-left" whileHover="{/* TODO: Fix JSX expression */}
@@ -326,7 +326,7 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   e: 0}} whileInView="{/* TODO: Fix JSX expression */}"
   e: '1'}} transition="{/* TODO: Fix JSX expression */}
   n: '0.',5}dela,
-  y: 'inde,"
+y: 'inde,",
   x: * 0.1 + 0.3'}} viewport="{/* TODO: Fix JSX expression */}")
   e: 'true'}}>" {stat.number} ) </motion.h3>" <p: className="text-left" >{stat.labe}l}</p>" stat,
   s: Array<{)} numbe,
@@ -383,7 +383,7 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   colorClasses: 'Record<NonNullable<FloatingActionButtonProps[',color"]>,string> = {/* TODO: Fix JSX expression */}
   focus:ring-purple-500'} re,
   d:}bg-red-600,
-  hover: 'bg-red-700,"
+hover: 'bg-red-700,",
   focus:ring-red-500'}"; position?: "bottom-right" | "bottom-left" | "top-right" | "top-left" color?: "blue" | "green" | "purple" | "red"} ; export const,"
   FloatingActionButton: React.FC<FloatingActionButtonProps> = ({) tooltip," position = "bottom-right"," color = "blue" const [showTooltip)setShowTooltip] = useState(false)}}} "; const,"
   positionClasses: Record<NonNullable<FloatingActionButtonProps["position"]>,string> = {" "bottom-right": "bottom-6 right-6"," "bottom-left": "bottom-6 left-6","top-right": "top-6 right-6"}" "top-left": "top-6 left-6"} ; const,"

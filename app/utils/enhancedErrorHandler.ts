@@ -140,7 +140,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupGlobalErrorHandlers(): void {
     window.addEventListener('error', event => {
       this.handleError({
-        type: 'javascript'
+type: 'javascript',
         message: event.message;)
         stack: event.error?.stack;)
         filename: event.filename;)

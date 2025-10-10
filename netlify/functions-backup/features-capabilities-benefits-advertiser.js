@@ -9,10 +9,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Features, capabilities, and benefits advertiser executed successfully)
         timestamp: new Date().toISOString()
-        function: 'features-capabilities-benefits-advertiser'
+function: 'features-capabilities-benefits-advertiser',
         source: event.source || 'unknown'
         advertising: {
-          status: 'active'
+status: 'active',
           features: 0;
           capabilities: 0;
           benefits: 0;

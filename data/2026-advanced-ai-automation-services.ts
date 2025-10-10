@@ -125,7 +125,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   n: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
     feature,
   s: [;
-      '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting'
+'99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting',
       'Scenario planning toolsExecutive dashboard'
     ],
     popula,
@@ -185,7 +185,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   n: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
     feature,
   s: [;
-      'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis'
+'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis',
       'ROI measurementIntegration with CRM systems'
     ],
     popula,
@@ -246,7 +246,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   n: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
     feature,
   s: [;
-      'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics'
+'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics',
       'Multi-platform integrationAutomated reporting'
     ],
     popula,
@@ -306,15 +306,15 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   n: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     feature,
   s: [;
-      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection'
+'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection',
       'ROI trackingCRM integration'
     ];
     popular: true;
-    icon: ''
+icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
-    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
+marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.',
     targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
     trialDays: 14;
     setupTime: '1 week',
@@ -330,8 +330,8 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
-    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
-    launchDate: '2026-01-25'
+implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
+launchDate: '2026-01-25',
     customers: 198;
     rating: 4 && 4.9;
     reviews: 267;
@@ -454,7 +454,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       professional: '$1199/month'}
       enterprise: 'Custom'}
   },
-    name: 'Advanced AI Workflow Engine 2026'
+name: 'Advanced AI Workflow Engine 2026',
     path: '/services/advanced-ai-workflow-engine-2026',
     description: 'Intelligent workflow automation with AI',
     icon: 'Workflow',

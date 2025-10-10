@@ -262,7 +262,7 @@
   r: 'true}error }} ; componentDidCatch(erro)
   r: 'Error)errorInf,
   o: ErrorInfo) {} this.state = { hasErro}; r: 'false' }} ; return {hasErro;} r: 'true}error }} ; override componentDidCatch(erro)
-  r: 'Error)errorInf,"
+r: 'Error)errorInf,",
   o: ErrorInfo) {} error}; errorInfo}); if (process.env['NODE_ENV'] = == "development") {" if (process.env['NODE_ENV'] === "development") {;}}} ; if (process.env['NODE_ENV'] === "production") {/* TODO: Fix JSX expression */}"
   o: ErrorInfo) {} error}; errorInfo});} if (process.env['NODE_ENV'] = == "development") {" if (process.env['NODE_ENV'] === "development") {}}} ; if (process.env['NODE_ENV'] === "production") {/* TODO: Fix JSX expression */}"
   o: ErrorInfo) => {; fetch("/api/analytics/error" {" fetch("/api/analytics/error" {} metho,"
@@ -281,7 +281,7 @@
   l: 'window.location.href} timestam,
   p: Date.now()}; userAgen,
   t: 'navigator.userAgent'});} }).catch(_console.error)} ; private handleRetry = () => {/* TODO: Fix JSX expression */}
-  r: 'undefined}errorInf,"
+r: 'undefined}errorInf,",
   o: 'undefined' })} ; override render() {; if (this.state.hasError) {; if (this.props.fallback) {; return (" <div className = "min-h-screen flex items-center justify-center bg-gray-50">" <div className="text-left" >" <div className="text-left" > <svg;" return (; <div className="text-left" > <div className="text-left" > <svg; className="text-left" ; fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">" <path; strokeLinecap="round" strokeLinejoin="round} strokeWidth={2} className="text-left" none; stroke="currentColor; viewBox="0 0 24 24; <path strokeLinecap="round; d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />" className="text-left" none; stroke="currentColor; viewBox="0 0 24 24; aria-hidden="true">" strokeLinecap="round; strokeLinejoin="round; ></div> <h1 className="text-left" > Something went wrong" ></div> <p className="text-left" >" We"re sorry,but something unexpected happened. Please try refreshing the page." <p className="text-left" >" We&apos;re sorry,but something unexpected happened. Please try refreshing the page.; We&apos;re sorry,but something unexpected happened. Please try refreshing the page."; ></div> <div className = "flex flex-col,")
   sm: flex-row gap-3">"; <button onClick={this.handleRetry} className="text-left" ; s: ring-offset-2 transition-colors> onClick="{this.handleRetry} className="text-left" flex space-x-3">" className="text-left" ) Try Again," className="text-left"); onClick="{()" => window.location.reload()} className="text-left" ; {process.env['NODE_ENV'] === "development" && this.state.error && (} <details className="text-left"> className="text-left" development" && this.state.error && (" <details className="text-left">" <summary className="text-left" > Error Details (Development) Only)" <pre className="text-left" >}; {this.state.error.stack} ; {this.state.errorInfo && (" ></div> {this.state.errorInfo && ("} {this.state.errorInfo.componentStack} ) )}" <details className="text-left" >" <summary className="text-left" > Error Details (Development)" <div className="text-left" >" <div className="text-left" > <strong>Erro,
   r:</strong> {this.state.error.message} ; <div> <strong>Component,"

@@ -237,10 +237,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		useCases: ['Employee wellness24/7 support'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
 		realService: true;
-	}
+},
 		id: 'ai-product-spec-writer',
 		name: 'AI Product Spec Writer',
-		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
 		category: 'AI Business Management',
 		pricing: { starter: '$79/mo' }
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
@@ -248,7 +248,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		useCases: ['Faster planningBetter alignment'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
 		realService: true;
-	}
+},
 		id: 'ai-creative-studio',
 		name: 'AI Creative Studio',
   description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
@@ -390,10 +390,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   use_cases: ['Employee wellness24 / 7 support'],
   link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
   real_service: true;
-}
+},
   id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
-  description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
   category: 'AI Business Management',
   pricing: { starter: '$79 / mo' }
   features: ['PRD templates_story generation_acceptance criteria_analytics alignment'];
@@ -401,7 +401,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   use_cases: ['Faster planning_better alignment'],
   link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
   real_service: true;
-}
+},
   id: 'ai - creative - studio',
   name: 'AI Creative Studio',
   description: 'Generate brand - consistent images and short - form videos with approvals and rights management.',
@@ -811,17 +811,17 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
 		realService: true;
-	}
+},
 		id: 'ai-product-spec-writer',
 		name: 'AI Product Spec Writer',
-		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
 		category: 'AI Business Management',
 		pricing: { starter: '$79/mo' }
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
 		realService: true;
-	}
+},
 		id: 'ai-creative-studio',
 		name: 'AI Creative Studio',
   description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
@@ -953,10 +953,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   use_cases: ['Employee wellness24 / 7 support'],
   link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
   real_service: true;
-}
+},
   id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
-  description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
   category: 'AI Business Management',
   pricing: { starter: '$79 / mo' }
   features: ['PRD templates_story generation_acceptance criteria_analytics alignment'];
@@ -964,7 +964,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   use_cases: ['Faster planning_better alignment'],
   link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
   real_service: true;
-}
+},
   id: 'ai - creative - studio',
   name: 'AI Creative Studio',
   description: 'Generate brand - consistent images and short - form videos with approvals and rights management.',

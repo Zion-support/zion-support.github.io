@@ -67,13 +67,13 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, small businesses, wanting, to leverage, predictive, analytics"
       featur, e, s: [,
-        "Up, to, 10 predictive, model, s"
-        "5, data, sources"
-        "Basic, dashboar, d"
-        "Email, suppor, t"
-        "Monthly, report, s"
-        "Standard, integration, s"
-        "Historical, data, analysis"
+"Up, to, 10 predictive, model, s",
+"5, data, sources",
+"Basic, dashboar, d",
+"Email, suppor, t",
+"Monthly, report, s",
+"Standard, integration, s",
+"Historical, data, analysis",
         "Basic, forecastin, g"
       ]
       popul, a, r: fal, s, e;
@@ -84,15 +84,15 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing companies, with, complex data, need, s"
       featur, e, s: [,
-        "Unlimited, predictive, models"
-        "25, data, sources"
-        "Advanced, dashboar, d & visualizati, o, n"
-        "Priority, suppor, t"
-        "Re, a, l-time, monitorin, g"
-        "Advanced, integration, s"
-        "Custom, model, training"
-        "API, acces, s"
-        "Automated, alert, s"
+"Unlimited, predictive, models",
+"25, data, sources",
+"Advanced, dashboar, d & visualizati, o, n",
+"Priority, suppor, t",
+"Re, a, l-time, monitorin, g",
+"Advanced, integration, s",
+"Custom, model, training",
+"API, acces, s",
+"Automated, alert, s",
         "A/B, testing, insights"
       ]
       popul, a, r: tr, u, e;
@@ -103,17 +103,17 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
       featur, e, s: [,
-        "Unlimited, everythin, g"
-        "Unlimited, data, sources"
-        "Enterprise, dashboar, d"
-        "Dedicated, data, scientist"
-        "Custom, model, development"
-        "Unlimited, integration, s"
-        "Advanced, securit, y & complian, c, e"
-        "Whi, t, e-label, option, s"
-        "SLA, guarante, e"
-        "On-premise, deploymen, t"
-        "Custom, reportin, g"
+"Unlimited, everythin, g",
+"Unlimited, data, sources",
+"Enterprise, dashboar, d",
+"Dedicated, data, scientist",
+"Custom, model, development",
+"Unlimited, integration, s",
+"Advanced, securit, y & complian, c, e",
+"Whi, t, e-label, option, s",
+"SLA, guarante, e",
+"On-premise, deploymen, t",
+"Custom, reportin, g",
         "Traini, n, g & consultati, o, n"
       ]
       popul, a, r: fal, s, e;

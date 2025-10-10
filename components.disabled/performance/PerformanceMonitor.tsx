@@ -143,7 +143,7 @@
   e: Math.round(metrics.fcp | 0),non_interactio,"
   n: "true"; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
   p: Date.now()} metrics}; metrics})}).catch(console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,"
-  n: "null,"
+n: "null,",
   export: default PerformanceMonitor"," window.removeEventListener("beforeunload")sendMetrics)}},[]);} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
   d: "POST",header,"
   s: {"}; "Content-Type": "application/json"},bod,"
@@ -196,7 +196,7 @@
   f: (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
   s: {"} "Content-Type": "application/json}"}," bod,
   y: JSON.stringify({} ur)
-  l: 'window.location.hre,f)timestam,"
+l: 'window.location.hre,f)timestam,",
   p: Date.now()}metrics})}).catch(_console.error)} ; window.addEventListener("beforeunload")sendMetrics);} setTimeout(sendMetrics)5000);} retur,"
   n: () => {"}; fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"] });} const sendMetrics = () => {/* TODO: Fix JSX expression */}"
@@ -218,7 +218,7 @@
   e: Math.round(metrics.fcp || 0),non_interactio,"
   n: 'true; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
   p: Date.now()} metrics}; metrics})}).catch(_console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,
-  n: 'null,"
+n: 'null,",
   export: default PerformanceMonitor," window.removeEventListener("beforeunload")sendMetrics)}},[]);} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
   d: "POST",header,"
   s: {"}; "Content-Type": "application/json"},bod,

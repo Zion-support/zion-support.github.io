@@ -67,13 +67,13 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, IoT projects, in, development and, testing, phases"
       featur, e, s: [,
-        "Up, to, 1,000, connected, devices"
-        "Basic, edge, computing capabiliti, e, s"
-        "Standard, data, analytics"
-        "Email, suppor, t"
-        "Monthly, device, health repor, t, s"
-        "Basic, security, monitoring"
-        "Cloud, data, storage (100, G, B)"
+"Up, to, 1,000, connected, devices",
+"Basic, edge, computing capabiliti, e, s",
+"Standard, data, analytics",
+"Email, suppor, t",
+"Monthly, device, health repor, t, s",
+"Basic, security, monitoring",
+"Cloud, data, storage (100, G, B)",
         "Standard, integration, s (10)"
       ]
       popul, a, r: fal, s, e;
@@ -84,16 +84,16 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, production IoT, deployments, with high, device, counts"
       featur, e, s: [,
-        "Up, to, 10,000, connected, devices"
-        "Advanced, edge, AI processi, n, g"
-        "Re, a, l-time, analytic, s & insigh, t, s"
-        "Priority, suppor, t"
-        "Weekly, performance, reports"
-        "Advanced, securit, y & threat, detectio, n"
-        "Cloud, data, storage (1, T, B)"
-        "Advanced, integration, s (50)"
-        "Custom, device, protocols"
-        "Ed, g, e-to-cloud, synchronizatio, n"
+"Up, to, 10,000, connected, devices",
+"Advanced, edge, AI processi, n, g",
+"Re, a, l-time, analytic, s & insigh, t, s",
+"Priority, suppor, t",
+"Weekly, performance, reports",
+"Advanced, securit, y & threat, detectio, n",
+"Cloud, data, storage (1, T, B)",
+"Advanced, integration, s (50)",
+"Custom, device, protocols",
+"Ed, g, e-to-cloud, synchronizatio, n",
         "5 G, connectivity, support"
       ]
       popul, a, r: tr, u, e;
@@ -104,18 +104,18 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for lar, g, e-scale, enterprise, IoT deploymen, t, s"
       featur, e, s: [,
-        "Unlimited, connected, devices"
-        "Premium, edge, AI with, custom, models"
-        "Enterpri, s, e-grade, analytics, platform"
-        "Dedicated, IoT, engineer"
-        "Daily, monitorin, g & optimizati, o, n"
-        "Full, security, suite with, complianc, e"
-        "Unlimited, cloud, data stora, g, e"
-        "Unlimited, integration, s"
-        "Custom, protocol, development"
-        "Mul, t, i-region, deploymen, t"
-        "Private, 5 G, network set, u, p"
-        "SLA, guarante, e"
+"Unlimited, connected, devices",
+"Premium, edge, AI with, custom, models",
+"Enterpri, s, e-grade, analytics, platform",
+"Dedicated, IoT, engineer",
+"Daily, monitorin, g & optimizati, o, n",
+"Full, security, suite with, complianc, e",
+"Unlimited, cloud, data stora, g, e",
+"Unlimited, integration, s",
+"Custom, protocol, development",
+"Mul, t, i-region, deploymen, t",
+"Private, 5 G, network set, u, p",
+"SLA, guarante, e",
         "On-premise, edge, infrastructure"
       ]
       popul, a, r: fal, s, e;

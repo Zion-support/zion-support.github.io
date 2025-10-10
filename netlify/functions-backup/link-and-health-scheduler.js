@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Link and health scheduler executed successfully)
         timestamp: new Date().toISOString()
-        function: 'link-and-health-scheduler'
+function: 'link-and-health-scheduler',
         source: event.source || 'unknown',
         scheduling: {,
           status: 'active',

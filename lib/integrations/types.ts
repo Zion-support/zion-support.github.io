@@ -58,7 +58,7 @@ export interface ProviderConnection {
   refreshToken?: string;
   expiresAt?: number;
   config?: Record<string, any>;</string>
-}
+},
   category: 'crm' | 'ats' | 'hr';
   description: string;
   logoUrl?: string;
@@ -206,7 +206,7 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-}
+},
   payload: Record<string, any>;</string>
 }
 
@@ -230,7 +230,7 @@ export interface IntegrationProviderMeta {
   logoUrl?: string;
   websiteUrl?: string;
   apiDocsUrl?: string;
-}
+},
   payload: Record<string, any>;</string>
 }
 }
@@ -242,7 +242,7 @@ export interface IntegrationsState {
   events: ZapierEvent[];
   lastError?: string | null;}
 }
-}
+},
   overrides: IntegrationOverride[];
   events: IntegrationEvent[];
 }

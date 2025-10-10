@@ -14,7 +14,7 @@ export const revolutionary2027MicroSaasServices = [{name: 'Revolutionary 2027 Mi
       professional: '$799/month'}
       enterprise: 'Custom'}
   },
-    name: 'Revolutionary 2027 SaaS Analytics'
+name: 'Revolutionary 2027 SaaS Analytics',
     path: '/services/revolutionary-2027-saas-analytics',
     description: 'Intelligent 2027 SaaS performance and user analytics',
     icon: 'BarChart3',

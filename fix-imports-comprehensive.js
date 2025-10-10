@@ -4,29 +4,29 @@ import path from 'path';
 
 //Correct icon mappings - using actual lucide-react exports;
 const iconMappings = {
-  rrowleft: 'ArrowLeft'
-  alendar: 'Calendar'
-  ser: 'User'
-  lock: 'Clock'
-  ag: 'Tag'
-  rendingup: 'TrendingUp'
-  ollarsign: 'DollarSign'
-  sers: 'Users'
-  arget: 'Target'
-  rain: 'Brain'
-  ap: 'Zap'
-  hield: 'Shield'
-  rrowright: 'ArrowRight'
-  og: 'Log'
-  pu: 'Cpu'
-  lobe: 'Globe'
-  ocket: 'Rocket'
-  heckcircle: 'CheckCircle'
-  hare2: 'Share2'
-  ookmark: 'Bookmark'
-  ot: 'Bot'
-  ookopen: 'BookOpen'
-  auge: 'Gauge'
+rrowleft: 'ArrowLeft',
+alendar: 'Calendar',
+ser: 'User',
+lock: 'Clock',
+ag: 'Tag',
+rendingup: 'TrendingUp',
+ollarsign: 'DollarSign',
+sers: 'Users',
+arget: 'Target',
+rain: 'Brain',
+ap: 'Zap',
+hield: 'Shield',
+rrowright: 'ArrowRight',
+og: 'Log',
+pu: 'Cpu',
+lobe: 'Globe',
+ocket: 'Rocket',
+heckcircle: 'CheckCircle',
+hare2: 'Share2',
+ookmark: 'Bookmark',
+ot: 'Bot',
+ookopen: 'BookOpen',
+auge: 'Gauge',
   hieldcheck: 'ShieldCheck',
   ctivity: 'Activity',
   tom: 'Atom',
@@ -35,13 +35,13 @@ const iconMappings = {
 
 //Icons that don't exist in lucide-react - replace with similar ones;
 const iconReplacements = {
-  Tag: 'Hash'
-  Globe: 'Globe2'
+Tag: 'Hash',
+Globe: 'Globe2',
   Rocket: 'Rocket': 'Cpu'
-  Share2: 'Share'
-  Bookmark: 'Bookmark'
+Share2: 'Share',
+Bookmark: 'Bookmark',
   Bot: 'Bot': 'BookOpen'
-  Gauge: 'Gauge'
+Gauge: 'Gauge',
   ShieldCheck: 'ShieldCheck',
   Activity: 'Activity',
   Atom: 'Atom',

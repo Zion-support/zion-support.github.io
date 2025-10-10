@@ -67,13 +67,13 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       peri, o, d: "o, n, e-ti, m, e"
       descripti, o, n: "Perfect, for, simple smart, contracts, and token, contract, s"
       featur, e, s: [,
-        "Static, code, analysis"
-        "Manual, code, review"
-        "Basic, vulnerability, scan"
-        "Security, repor, t"
-        "Email, suppor, t"
-        "1, revision, included"
-        "Standard, compliance, check"
+"Static, code, analysis",
+"Manual, code, review",
+"Basic, vulnerability, scan",
+"Security, repor, t",
+"Email, suppor, t",
+"1, revision, included",
+"Standard, compliance, check",
         "Up, to, 500 lines, of, code"
       ]
       popul, a, r: fal, s, e;
@@ -84,15 +84,15 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       peri, o, d: "o, n, e-ti, m, e"
       descripti, o, n: "Comprehensive, audit, for complex, DeFi, protocols and, dApp, s"
       featur, e, s: [,
-        "Full, stati, c & dynamic, analysi, s"
-        "Comprehensive, manual, review"
-        "Advanced, vulnerability, scanning"
-        "Detailed, security, report"
-        "Priority, suppor, t"
-        "3, revisions, included"
-        "Full, compliance, verification"
-        "Up, to, 2,000, lines, of co, d, e"
-        "Gas, optimization, analysis"
+"Full, stati, c & dynamic, analysi, s",
+"Comprehensive, manual, review",
+"Advanced, vulnerability, scanning",
+"Detailed, security, report",
+"Priority, suppor, t",
+"3, revisions, included",
+"Full, compliance, verification",
+"Up, to, 2,000, lines, of co, d, e",
+"Gas, optimization, analysis",
         "Architecture, revie, w"
       ]
       popul, a, r: tr, u, e;
@@ -103,17 +103,17 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       peri, o, d: "o, n, e-ti, m, e"
       descripti, o, n: "Complete, audit, solution for, enterprise, blockchain projec, t, s"
       featur, e, s: [,
-        "E, n, d-to-end, security, analysis"
-        "Mul, t, i-contract, system, review"
-        "Formal, verificatio, n"
-        "Executive, summary, report"
-        "Dedicated, security, consultant"
-        "Unlimited, revision, s"
-        "Full, regulatory, compliance"
-        "Unlimited, lines, of co, d, e"
-        "Performance, optimizatio, n"
-        "Architectu, r, e & design, revie, w"
-        "Po, s, t-deployment, monitorin, g"
+"E, n, d-to-end, security, analysis",
+"Mul, t, i-contract, system, review",
+"Formal, verificatio, n",
+"Executive, summary, report",
+"Dedicated, security, consultant",
+"Unlimited, revision, s",
+"Full, regulatory, compliance",
+"Unlimited, lines, of co, d, e",
+"Performance, optimizatio, n",
+"Architectu, r, e & design, revie, w",
+"Po, s, t-deployment, monitorin, g",
         "Security, training, included"
       ]
       popul, a, r: fal, s, e;

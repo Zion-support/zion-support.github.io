@@ -67,13 +67,13 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, small businesses, wanting, to add, conversational, AI capabiliti, e, s"
       featur, e, s: [,
-        "Up, to, 1,000, conversation, s/mon, t, h"
-        "Basic, NLP, capabilities"
-        "Te, x, t & voice, suppor, t"
-        "Email, suppor, t"
-        "Basic, analytic, s"
-        "Standard, integration, s"
-        "5, language, support"
+"Up, to, 1,000, conversation, s/mon, t, h",
+"Basic, NLP, capabilities",
+"Te, x, t & voice, suppor, t",
+"Email, suppor, t",
+"Basic, analytic, s",
+"Standard, integration, s",
+"5, language, support",
         "Basic, customizatio, n"
       ]
       popul, a, r: fal, s, e;
@@ -84,16 +84,16 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing companies, with, complex conversational, need, s"
       featur, e, s: [,
-        "Up, to, 10,000, conversation, s/mon, t, h"
-        "Advanced, NL, P & N, L, U"
-        "Te, x, t, voi, c, e & video, suppor, t"
-        "Priority, suppor, t"
-        "Advanced, analytic, s & insigh, t, s"
-        "Advanced, integration, s"
-        "25, language, support"
-        "Custom, model, training"
-        "API, acces, s"
-        "A/B, testin, g"
+"Up, to, 10,000, conversation, s/mon, t, h",
+"Advanced, NL, P & N, L, U",
+"Te, x, t, voi, c, e & video, suppor, t",
+"Priority, suppor, t",
+"Advanced, analytic, s & insigh, t, s",
+"Advanced, integration, s",
+"25, language, support",
+"Custom, model, training",
+"API, acces, s",
+"A/B, testin, g",
         "Sentiment, analysi, s"
       ]
       popul, a, r: tr, u, e;
@@ -104,18 +104,18 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
       featur, e, s: [,
-        "Unlimited, conversation, s"
-        "Enterprise, NL, P & N, L, U"
-        "Full, mult, i-modal, suppor, t"
-        "Dedicated, AI, specialist"
-        "Enterprise, analytics, suite"
-        "Unlimited, integration, s"
-        "1, 5, 0+ language, suppor, t"
-        "Custom, AI, development"
-        "Whi, t, e-label, solution, s"
-        "Advanced, security, features"
-        "SLA, guarante, e"
-        "On-premise, deploymen, t"
+"Unlimited, conversation, s",
+"Enterprise, NL, P & N, L, U",
+"Full, mult, i-modal, suppor, t",
+"Dedicated, AI, specialist",
+"Enterprise, analytics, suite",
+"Unlimited, integration, s",
+"1, 5, 0+ language, suppor, t",
+"Custom, AI, development",
+"Whi, t, e-label, solution, s",
+"Advanced, security, features",
+"SLA, guarante, e",
+"On-premise, deploymen, t",
         "Traini, n, g & consultati, o, n"
       ]
       popul, a, r: fal, s, e;

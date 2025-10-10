@@ -56,19 +56,19 @@ export const,
   n: 'Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.'
       feature,
   s: [;
-        'Emerging tech breakthroughs'
-        'Innovation platform'
-        'Future capabilities'
-        'Advanced features'
+'Emerging tech breakthroughs',
+'Innovation platform',
+'Future capabilities',
+'Advanced features',
         'Expert insights'
-      ]
-      link: '/services/2029-emerging-tech-breakthrough'
-      category: 'Emerging Tech Breakthroughs 2029'
+],
+link: '/services/2029-emerging-tech-breakthrough',
+category: 'Emerging Tech Breakthroughs 2029',
       realImplementation: true;
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'}
-    }
+},
   real_implementation: boolean;
   contact_info: unknown;
     mobile: string;
@@ -92,7 +92,7 @@ export const,
   }
 }
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
-    id: "2029-emerging-tech-breakthrough"
+id: "2029-emerging-tech-breakthrough",
     name: "2029 Emerging Tech Breakthrough Platform",
     tagline: "Emerging tech breakthroughs for 2029",
     price: "$899/month",
@@ -198,7 +198,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   };
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
   [
-      id: '2029-emerging-tech-breakthrough'
+id: '2029-emerging-tech-breakthrough',
       name: '2029 Emerging Tech Breakthrough Platform',
       tagline: 'Emerging tech breakthroughs for 2029',
       price: '$899/month',
@@ -224,16 +224,16 @@ export const,
         'Future capabilities',
         'Advanced features',
         'Expert insights'],
-      link: '/services/2029-emerging-tech-breakthrough'
-      category: 'Emerging Tech Breakthroughs 2029'
+link: '/services/2029-emerging-tech-breakthrough',
+category: 'Emerging Tech Breakthroughs 2029',
       realImplementation: true;
       contactInfo: unknown;
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'}};
   ];    features: [
-      "Emerging tech breakthroughs"
-      "Innovation platform"
+"Emerging tech breakthroughs",
+"Innovation platform",
       "Future capabilities"
       lin,
   k: '/services/2029-emerging-tech-breakthrough',
@@ -282,7 +282,7 @@ export const,
 }
 export interface EmergingTechBreakthrough2029 {;
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
-    id: "2029-emerging-tech-breakthrough"
+id: "2029-emerging-tech-breakthrough",
     name: "2029 Emerging Tech Breakthrough Platform",
     tagline: "Emerging tech breakthroughs for 2029",
     price: "$899/month",
@@ -294,8 +294,8 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Advanced features",
       "Expert insights"
     ],
-    link: "/services/2029-emerging-tech-breakthrough"
-    category: "Emerging Tech Breakthroughs 2029"
+link: "/services/2029-emerging-tech-breakthrough",
+category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true;
     contactInfo: unknown;
       mobile: "+1 302 464 0950",

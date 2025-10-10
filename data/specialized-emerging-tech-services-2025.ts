@@ -30,7 +30,7 @@
     email: string;
     address: string;
     website: string;
-  }
+},
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -42,7 +42,7 @@
   market_advantage: string;
 
 const contact =
-  mobile: '+1 302 464 0950'
+mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
@@ -147,7 +147,7 @@ const contact =
   n: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.'
     feature,
   s: [;
-      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'
+'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications',
       'Advanced pattern recognitionCustom neuromorphic algorithms'
       benefit,
   s: [,
@@ -172,7 +172,7 @@ const contact =
   n: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.'
     feature,
   s: [;
-      'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'
+'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications',
       'Advanced pattern recognition_custom neuromorphic algorithms'
     ],
     popula,

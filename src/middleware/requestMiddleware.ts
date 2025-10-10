@@ -6,7 +6,7 @@
  */
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {// TODO: Add content;}
-}
+},
   request: {// TODO: Add content;}
 };
   url: string;,

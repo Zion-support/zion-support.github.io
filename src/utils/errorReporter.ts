@@ -19,7 +19,7 @@ export interface ErrorReporterConfig {
   remoteEndpoint?: string;
   maxErrorsInMemory: number;
   captureContext: boolean;
-}
+},
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,

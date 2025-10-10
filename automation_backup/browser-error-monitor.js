@@ -153,7 +153,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: 'false'}reaso,`
   n: 'Failed to reload resources; `' } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -379,7 +379,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: true}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: false}reaso,`
   n: Failed to reload resources; ` } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -540,7 +540,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: 'false'}reaso,`
   n: 'Failed to reload resources; `' } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -766,7 +766,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: true}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: false}reaso,`
   n: Failed to reload resources; ` } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -927,7 +927,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: 'false'}reaso,`
   n: 'Failed to reload resources; `' } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -1153,7 +1153,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: true}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: false}reaso,`
   n: Failed to reload resources; ` } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -1314,7 +1314,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: 'false'}reaso,`
   n: 'Failed to reload resources; `' } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -1540,7 +1540,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: true}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: false}reaso,`
   n: Failed to reload resources; ` } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -1701,7 +1701,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: 'false'}reaso,`
   n: 'Failed to reload resources; `' } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}
@@ -1927,7 +1927,7 @@
   e: 'Global error handler injected'} async fixTypeError(error) {await this.page.evaluate(() => {' if (typeof window.typeCheck === 'undefined') { window.typeCheck = (value)expectedType) => {' if (expectedType === 'array') return Array.isArray(value); if (expectedType === 'object') return typeof value === 'object' && value !== null} return typeof value === expectedType} }) return {/* TODO: Fix JSX expression */}
   s: true}messag,
   e: Type checking helper injected'} async fixResourceError(error) {/* TODO: Fix JSX expression */}
-  l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`
+l: 'networkidle0 }) return {/* TODO: Fix JSX expression */}`,
   e: 'Resources reloaded} ` } } catch (reloadError) {/* TODO: Fix JSX expression */}
   s: false}reaso,`
   n: Failed to reload resources; ` } ; async fixMissingResource(error) {/* TODO: Fix JSX expression */}

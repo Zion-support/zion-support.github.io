@@ -62,17 +62,17 @@ export const,
       "Drug discovery and molecular modeling""
       "Climate modeling and prediction""
       "Cryptographic security analysis"
-    ]
+],
     targetAudience: [
-      "Financial institutions"
-      "Research organizations"
+"Financial institutions",
+"Research organizations",
       "Government agencies"
       "Technology companies",
       "Healthcare organizations"],
     tags: ["quantum", "AI", "optimization", "real-time", "hybrid"]
     estimatedDelivery: "8-12 weeks",
     supportLevel: "24/7 dedicated support",
-    marketPrice: "$25,000/month"
+marketPrice: "$25,000/month",
     roi: "500-2000% within 6 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -84,7 +84,7 @@ export const,
       apiEndpoints: 50;
       uptime: "99.99%",
       security: ["Quantum-resistant encryption", "Zero-trust architecture", "SOC2 compliance"]
-    }
+},
     competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"]
     marketSize: "$1.7 billion by 2027",
     uniqueValue: "First commercial quantum-classical hybrid optimization platform with real-time AI fallback",
@@ -114,7 +114,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     technicalSpec,
@@ -179,17 +179,17 @@ export const,
       "Brain-computer interfaces""
       "Neuromorphic sensors""
       "Advanced pattern recognition"
-    ]
+],
     targetAudience: [
-      "Research institutions"
-      "Technology companies"
+"Research institutions",
+"Technology companies",
       "Healthcare organizations"
       "Robotics companies",
       "AI research labs"],
     tags: ["neuromorphic", "AI", "brain simulation", "cognitive computing", "energy efficient"]
     estimatedDelivery: "6-10 weeks",
     supportLevel: "24/7 technical support",
-    marketPrice: "$15,000/month"
+marketPrice: "$15,000/month",
     roi: "300-800% within 12 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -222,7 +222,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -270,17 +270,17 @@ export const,
       "Agricultural improvements""
       "Environmental remediation""
       "Biofuel production"
-    ]
+],
     targetAudience: [
-      "Pharmaceutical companies"
-      "Biotechnology firms"
+"Pharmaceutical companies",
+"Biotechnology firms",
       "Agricultural companies"
       "Research institutions",
       "Environmental organizations"],
     tags: ["synthetic biology", "AI", "DNA design", "protein engineering", "biotechnology"]
     estimatedDelivery: "10-16 weeks",
     supportLevel: "24/7 specialized support",
-    marketPrice: "$20,000/month"
+marketPrice: "$20,000/month",
     roi: "400-1200% within 18 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -289,19 +289,19 @@ export const,
     uniqueValue: "First commercial synthetic biology AI platform with automated safety and compliance protocols"}
     id: "space-ai-autonomous-systems",
     title: "Space AI Autonomous Systems Platform",
-    description: "Advanced AI platform for autonomous space operations including satellite management, space exploration, and orbital optimization. Features autonomous decision-making and real-time space analytics."
-    category: "Space Technology"
-    subcategory: "AI Autonomous Systems"
+description: "Advanced AI platform for autonomous space operations including satellite management, space exploration, and orbital optimization. Features autonomous decision-making and real-time space analytics.",
+category: "Space Technology",
+subcategory: "AI Autonomous Systems",
     price: 19999;
-    currency: "USD"
-    pricingModel: "monthly"
+currency: "USD",
+pricingModel: "monthly",
     features: [;
-      "Autonomous satellite operations"
-      "Real-time space analytics"
-      "Orbital optimization algorithms"
-      "Space debris tracking"
-      "Autonomous navigation systems"
-      "Multi-satellite coordination"
+"Autonomous satellite operations",
+"Real-time space analytics",
+"Orbital optimization algorithms",
+"Space debris tracking",
+"Autonomous navigation systems",
+"Multi-satellite coordination",
       "Space weather prediction"
     targetAudienc,
   e: [,"
@@ -329,7 +329,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -377,17 +377,17 @@ export const,
       "Orbital debris cleanup""
       "Space weather monitoring""
       "Autonomous space stations"
-    ]
+],
     targetAudience: [
-      "Space agencies"
-      "Satellite companies"
+"Space agencies",
+"Satellite companies",
       "Space exploration firms"
       "Government organizations",
       "Research institutions"],
     tags: ["space technology", "AI", "autonomous systems", "satellites", "orbital optimization"]
     estimatedDelivery: "12-20 weeks",
     supportLevel: "24/7 mission-critical support",
-    marketPrice: "$35,000/month"
+marketPrice: "$35,000/month",
     roi: "600-1500% within 24 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -420,7 +420,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -468,17 +468,17 @@ export const,
       "Superconducting materials""
       "Lightweight composites""
       "Quantum materials"
-    ]
+],
     targetAudience: [
-      "Electronics companies"
-      "Energy companies"
+"Electronics companies",
+"Energy companies",
       "Aerospace firms"
       "Research institutions",
       "Manufacturing companies"],
     tags: ["advanced materials", "AI", "quantum materials", "material discovery", "synthesis"]
     estimatedDelivery: "8-14 weeks",
     supportLevel: "24/7 research support",
-    marketPrice: "$25,000/month"
+marketPrice: "$25,000/month",
     roi: "500-1000% within 18 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -511,7 +511,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -559,17 +559,17 @@ export const,
       "Gaming and entertainment""
       "Research applications""
       "Human augmentation"
-    ]
+],
     targetAudience: [
-      "Healthcare organizations"
-      "Research institutions"
+"Healthcare organizations",
+"Research institutions",
       "Gaming companies"
       "Accessibility services",
       "Technology companies"],
     tags: ["brain-computer interface", "AI", "neural technology", "accessibility", "medical"]
     estimatedDelivery: "16-24 weeks",
     supportLevel: "24/7 medical-grade support",
-    marketPrice: "$40,000/month"
+marketPrice: "$40,000/month",
     roi: "800-2000% within 36 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -602,7 +602,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -650,17 +650,17 @@ export const,
       "Energy system management""
       "Transportation optimization""
       "Smart city management"
-    ]
+],
     targetAudience: [
-      "Manufacturing companies"
-      "Infrastructure operators"
+"Manufacturing companies",
+"Infrastructure operators",
       "Energy companies"
       "Transportation companies",
       "Government agencies"],
     tags: ["digital twin", "AI", "simulation", "predictive analytics", "optimization"]
     estimatedDelivery: "10-16 weeks",
     supportLevel: "24/7 operational support",
-    marketPrice: "$30,000/month"
+marketPrice: "$30,000/month",
     roi: "400-1200% within 12 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -669,19 +669,19 @@ export const,
     uniqueValue: "Most advanced commercial digital twin platform with AI-powered predictive analytics and autonomous optimization"}
     id: "extended-reality-ai-platform",
     title: "Extended Reality AI Platform",
-    description: "Revolutionary extended reality platform combining VR, AR, and AI for immersive experiences. Features AI-powered content generation and adaptive environments."
-    category: "Extended Reality"
-    subcategory: "AI Platform"
+description: "Revolutionary extended reality platform combining VR, AR, and AI for immersive experiences. Features AI-powered content generation and adaptive environments.",
+category: "Extended Reality",
+subcategory: "AI Platform",
     price: 15999;
-    currency: "USD"
-    pricingModel: "monthly"
+currency: "USD",
+pricingModel: "monthly",
     features: [;
-      "AI-powered content generation"
-      "Adaptive virtual environments"
-      "Real-time rendering optimization"
-      "Multi-user collaboration"
-      "Gesture and voice recognition"
-      "Haptic feedback integration"
+"AI-powered content generation",
+"Adaptive virtual environments",
+"Real-time rendering optimization",
+"Multi-user collaboration",
+"Gesture and voice recognition",
+"Haptic feedback integration",
       "Cross-platform compatibility"
     targetAudienc,
   e: [,"
@@ -709,7 +709,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -757,17 +757,17 @@ export const,
       "Virtual collaboration""
       "Design and prototyping""
       "Virtual tourism"
-    ]
+],
     targetAudience: [
-      "Educational institutions"
-      "Entertainment companies"
+"Educational institutions",
+"Entertainment companies",
       "Training organizations"
       "Design firms",
       "Technology companies"],
     tags: ["extended reality", "AI", "VR", "AR", "immersive technology"]
     estimatedDelivery: "8-12 weeks",
     supportLevel: "24/7 immersive support",
-    marketPrice: "$25,000/month"
+marketPrice: "$25,000/month",
     roi: "500-1000% within 12 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -800,7 +800,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -848,17 +848,17 @@ export const,
       "Smart city operations""
       "Industrial automation""
       "Edge computing networks"
-    ]
+],
     targetAudience: [
-      "IoT companies"
-      "Automotive manufacturers"
+"IoT companies",
+"Automotive manufacturers",
       "Smart city operators"
       "Industrial companies",
       "Technology firms"],
     tags: ["edge AI", "computing", "IoT", "real-time", "distributed learning"]
     estimatedDelivery: "6-10 weeks",
     supportLevel: "24/7 edge support",
-    marketPrice: "$22,000/month"
+marketPrice: "$22,000/month",
     roi: "400-800% within 12 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -891,7 +891,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -939,17 +939,17 @@ export const,
       "Cross-organization learning""
       "Privacy-sensitive applications""
       "Distributed AI training"
-    ]
+],
     targetAudience: [
-      "Healthcare organizations"
-      "Financial institutions"
+"Healthcare organizations",
+"Financial institutions",
       "Research institutions"
       "Government agencies",
       "Technology companies"],
     tags: ["federated learning", "AI", "privacy", "distributed learning", "collaboration"]
     estimatedDelivery: "10-16 weeks",
     supportLevel: "24/7 privacy support",
-    marketPrice: "$28,000/month"
+marketPrice: "$28,000/month",
     roi: "500-1200% within 18 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -982,7 +982,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -1030,17 +1030,17 @@ export const,
       "Sustainable manufacturing""
       "Green building design""
       "Environmental monitoring"
-    ]
+],
     targetAudience: [
-      "Energy companies"
-      "Manufacturing firms"
+"Energy companies",
+"Manufacturing firms",
       "Construction companies"
       "Government agencies",
       "Environmental organizations"],
     tags: ["sustainable technology", "AI", "environmental", "renewable energy", "circular economy"]
     estimatedDelivery: "12-18 weeks",
     supportLevel: "24/7 sustainability support",
-    marketPrice: "$32,000/month"
+marketPrice: "$32,000/month",
     roi: "600-1500% within 24 months",
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -1073,7 +1073,7 @@ export const,
   emai,"
   l: "kleber@ziontechgroup.com"
       websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com"
     }
     uniqueValu,"
@@ -1138,7 +1138,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } technicalSpec,
   s: technolog,"
   y: ["Quantum Computing", "Machine Learning", "Hybrid Algorithms", "Real-time Processing"] integration,"
@@ -1180,7 +1180,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "Most advanced commercial neuromorphic AI platform with brain-inspired computing architecture" } i,"
   d: "synthetic-biology-ai-design",
@@ -1212,7 +1212,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "First commercial synthetic biology AI platform with automated safety and compliance protocols" } i,"
   d: "space-ai-autonomous-systems",
@@ -1244,7 +1244,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "Most advanced commercial space AI platform with fully autonomous operations and real-time decision making" } i,"
   d: "advanced-materials-ai-discovery",
@@ -1276,7 +1276,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "First commercial advanced materials AI platform with quantum simulation and automated synthesis planning" } i,"
   d: "brain-computer-interface-ai",
@@ -1308,7 +1308,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "Most advanced commercial brain-computer interface platform with AI-powered neural processing and medical-grade safety" } i,"
   d: "digital-twin-ai-platform",
@@ -1340,7 +1340,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "Most advanced commercial digital twin platform with AI-powered predictive analytics and autonomous optimization" } i,"
   d: "extended-reality-ai-platform",
@@ -1372,7 +1372,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "Most advanced commercial extended reality platform with AI-powered content generation and adaptive environments" } i,"
   d: "edge-ai-computing-platform",
@@ -1404,7 +1404,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "Most advanced commercial edge AI platform with autonomous intelligence and distributed learning capabilities" } i,"
   d: "federated-learning-ai-platform",
@@ -1436,7 +1436,7 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "Most advanced commercial federated learning platform with privacy-preserving AI and collaborative learning capabilities" } i,"
   d: "sustainable-technology-ai-platform",
@@ -1468,6 +1468,6 @@ export interface UltimateInnovativeService,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" websit,"
-  e: "http,"
+e: "http,",
   s://ziontechgroup.com" } uniqueValu,"
   e: "Most advanced commercial sustainable technology platform with AI-powered environmental optimization and circular economy modeling" }; ]"

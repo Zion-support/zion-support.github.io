@@ -67,14 +67,14 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, startups and, small, projects entering, the, Web3 spa, c, e"
       featur, e, s: [,
-        "Basic, smart, contract developme, n, t"
-        "Single, blockchain, integration"
-        "Standard, security, auditing"
-        "Email, suppor, t"
-        "Monthly, progress, reports"
-        "Basic, DeFi, protocol set, u, p"
-        "Simple, NFT, marketplace"
-        "Standard, token, development"
+"Basic, smart, contract developme, n, t",
+"Single, blockchain, integration",
+"Standard, security, auditing",
+"Email, suppor, t",
+"Monthly, progress, reports",
+"Basic, DeFi, protocol set, u, p",
+"Simple, NFT, marketplace",
+"Standard, token, development",
         "Basic, analytics, dashboard"
       ]
       popul, a, r: fal, s, e;
@@ -85,17 +85,17 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing projects, with, complex blockchain, requirement, s"
       featur, e, s: [,
-        "Advanced, smart, contract developme, n, t"
-        "Mul, t, i-chain, integratio, n (5, network, s)"
-        "Comprehensive, security, auditing"
-        "Priority, suppor, t"
-        "Weekly, progress, reports"
-        "Advanced, DeFi, protocols"
-        "Custom, NFT, marketplace with, advanced, features"
-        "Tokenomics, desig, n & implementati, o, n"
-        "Advanced, analytic, s & reporti, n, g"
-        "Custom, Web3, integrations"
-        "DAO, governance, setup"
+"Advanced, smart, contract developme, n, t",
+"Mul, t, i-chain, integratio, n (5, network, s)",
+"Comprehensive, security, auditing",
+"Priority, suppor, t",
+"Weekly, progress, reports",
+"Advanced, DeFi, protocols",
+"Custom, NFT, marketplace with, advanced, features",
+"Tokenomics, desig, n & implementati, o, n",
+"Advanced, analytic, s & reporti, n, g",
+"Custom, Web3, integrations",
+"DAO, governance, setup",
         "Yield, farming, protocols"
       ]
       popul, a, r: tr, u, e;
@@ -106,19 +106,19 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for lar, g, e-scale, blockchain, and Web3, implementation, s"
       featur, e, s: [,
-        "Enterpri, s, e-grade, smart, contract sui, t, e"
-        "Unlimited, blockchain, integrations"
-        "Thi, r, d-party, security, audits"
-        "Dedicated, blockchain, architect"
-        "Daily, progress, reports"
-        "Complex, DeFi, ecosystem developme, n, t"
-        "Enterprise, NF, T & tokenization, platfor, m"
-        "Custom, blockchain, development"
-        "Enterprise, analytic, s & complian, c, e"
-        "Full, Web3, ecosystem integrati, o, n"
-        "Advanced, DAO, governance"
-        "Cro, s, s-chain, bridge, development"
-        "SLA, guarante, e"
+"Enterpri, s, e-grade, smart, contract sui, t, e",
+"Unlimited, blockchain, integrations",
+"Thi, r, d-party, security, audits",
+"Dedicated, blockchain, architect",
+"Daily, progress, reports",
+"Complex, DeFi, ecosystem developme, n, t",
+"Enterprise, NF, T & tokenization, platfor, m",
+"Custom, blockchain, development",
+"Enterprise, analytic, s & complian, c, e",
+"Full, Web3, ecosystem integrati, o, n",
+"Advanced, DAO, governance",
+"Cro, s, s-chain, bridge, development",
+"SLA, guarante, e",
         "24/7, monitorin, g & suppo, r, t"
       ]
       popul, a, r: fal, s, e;

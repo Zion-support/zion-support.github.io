@@ -44,7 +44,7 @@ import React { useEffect } from \"react\" const,
   SecurityEnhancer: _React.F,
   C: = () => {/* TODO: Fix JSX expression */}"
   t: '= csp} document.head.appendChild(cspMeta)}; const securityHeaders = {} ; Object.entries(securityHeaders).forEach(([name)value]) => {" const meta = document.createElement("meta")}}} meta.httpEqui,
-  v: '= name; meta.conten,"
+v: '= name; meta.conten,",
   t: '= value; document.head.appendChild(meta)});} const detectXSS = () => {" const scripts = document.querySelectorAll("script")}}} scripts.forEach(scrip,
   t: => {/* TODO: Fix JSX expression */}")`
   b:," connect-src "self" http; s: frame-src "none" object-src "none" base-uri "self" form-action "self, form-action "self"`; cspMeta.httpEquiv = "Content-Security-Policy"} cspMeta.content = csp}; const securityHeaders = {} ; meta.httpEquiv = name; meta.content = value; scripts.forEach(script = > {; if (; script['src'] &&) !script['src'].startsWith(window.location.origin) &&" !script['src'].includes("googletagmanager.com") &&" !script['src'].includes()}}} ) {"; if (script['src'] && !script['src'].startsWith(window.location.origin) &&; !script['src'].includes("googletagmanager.com") &&; !script['src'].includes("google-analytics.com")) {} !script['src'].includes("google-analytics.com")) {" script.remove()} ;})} ; const monitorSuspiciousActivity = () => {; const iframes = document.querySelectorAll("iframe")}}} iframes.forEach(ifram,")

@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Dead code report executed successfully)
         timestamp: new Date().toISOString()
-        function: 'dead-code-report'
+function: 'dead-code-report',
         source: event.source || 'unknown',
         report: {,
           status: 'generated',

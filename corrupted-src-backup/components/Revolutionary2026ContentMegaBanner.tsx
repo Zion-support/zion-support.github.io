@@ -58,7 +58,7 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       ic, o, n: "🛡️",
       impa, c, t: "99.99% Securi, t, y"
       featur, e, d: fal, s, e;
-    }
+},
 id: 3;
 tit, l, e: "Quant, u, m-Neural, Network, Architecture"
 descripti, o, n: "Ne, x, t-generation, computing, combining quantum, processing, with neural, networks, for unprecedented, performanc, e"
@@ -109,7 +109,7 @@ featur, e, d: fal, s, e;
       ic, o, n: "🎭",
       impa, c, t: "95% Accura, c, y"
       featur, e, d: fal, s, e;
-    }
+},
 id: 6;
 tit, l, e: "Synthetic, Data, Generation Revoluti, o, n"
 descripti, o, n: "AI-generated, datasets, that outperform, real, data with, 9, 5% accuracy, and, infinite scalabili, t, y"

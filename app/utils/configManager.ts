@@ -14,7 +14,7 @@ export interface AppConfig {
     timeout: number,
     retryAttempts: number,
     enableCaching: boolean,
-  }
+},
   features: {
     enableAnalytics: boolean,
     enableErrorReporting: boolean,
@@ -22,24 +22,24 @@ export interface AppConfig {
     enableAccessibility: boolean,
     enableSEO: boolean,
     enablePWA: boolean,
-  }
+},
   performance: {
     enableCodeSplitting: boolean,
     enableLazyLoading: boolean,
     enableImageOptimization: boolean,
     enableCaching: boolean,
-  }
+},
   security: {
     enableCSP: boolean,
     enableCORS: boolean,
     enableRateLimiting: boolean,
     maxRequestsPerMinute: number,
-  }
+},
   ui: {,
     theme: 'light' | 'dark' | 'auto',
     language: string,
     timezone: string,
-  }
+},
   logging: {,
     level: 'debug' | 'info' | 'warn' | 'error',
     enableConsole: boolean,
@@ -48,7 +48,7 @@ export interface AppConfig {
 }
 
 const defaultConfig: AppConfig = {
-  environment: 'development'
+environment: 'development',
   api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com'
     timeout: 30000,

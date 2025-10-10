@@ -826,7 +826,7 @@ class EnhancedErrorHandler {// TODO: Add content;}
   typ,
   e: 'resource',
             messag,
-  e: `Failed to load,`
+e: `Failed to load,`,
   resource: ${target?.src || target?.href}`,
             elemen,
   t: event.target?.constructor.name,

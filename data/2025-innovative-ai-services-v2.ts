@@ -101,21 +101,21 @@
   i: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.'
     useCase,
   s: [;
-      'Customer service automation'
-      'Mental health monitoring'
-      'Educational personalization'
-      'Gaming experience enhancement'
+'Customer service automation',
+'Mental health monitoring',
+'Educational personalization',
+'Gaming experience enhancement',
       'Marketing campaign optimization'
       'Therapeutic applications'],
     integrations: [,
       'CRM systems, Chat platforms, Video conferencing, Social media, Mobile apps, Web applications'
-    ]
-    support: '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.'
+],
+support: '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.',
     compliance: [
-    icon: ''
-    color: 'from - purple - 500 to - pink - 600'
+icon: '',
+color: 'from - purple - 500 to - pink - 600',
     popular: true;
-    launch_date: '2024 - 02 - 15'
+launch_date: '2024 - 02 - 15',
     customers: 850;
     rating: 4 && 4.9;
     reviews: 180;
@@ -123,8 +123,8 @@
     growth_rate: '45% annually'},
       'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators'],
     realImplementation: true;
-    implementationDetails: 'Advanced quantum-AI platform with hybrid processing, real-time simulations, and comprehensive quantum operations. Includes desktop application and cloud access.'
-    roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.'
+implementationDetails: 'Advanced quantum-AI platform with hybrid processing, real-time simulations, and comprehensive quantum operations. Includes desktop application and cloud access.',
+roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.',
     useCases: [;
       'Therapeutic applications'
     ]
@@ -163,15 +163,15 @@
   i: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.'
     useCase,
   s: [;
-      'Drug discovery'
-      'Financial modeling'
-      'Supply chain optimization'
-      'Climate modeling'
+'Drug discovery',
+'Financial modeling',
+'Supply chain optimization',
+'Climate modeling',
       'Cryptography'
       'Machine learning acceleration'],
     integrations: [,
       'Quantum hardware, Classical computing, Cloud platforms, Scientific software, Business applications'
-    ]
+],
     support: 'Dedicated quantum physicist, 24/7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-fusion-platform',
@@ -180,11 +180,11 @@
     tagline: 'Quantum computing meets artificial intelligence',
     description: unknown;
       'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.',
-    category: 'Quantum & AI'
+category: 'Quantum & AI',
     price: unknown;
       monthly: 499;
       yearly: 4990;
-      currency: 'USD'
+currency: 'USD',
       trial_days: 7;
       setup_time: '4 hours',
       enterprise: 1999;
@@ -289,11 +289,11 @@
     support: unknown;
       'Dedicated quantum physicist, 24 / 7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
-    link: 'https://ziontechgroup.com / quantum - ai - fusion - platform'
-    icon: ''
-    color: 'from - cyan - 500 to - blue - 600'
+link: 'https://ziontechgroup.com / quantum - ai - fusion - platform',
+icon: '',
+color: 'from - cyan - 500 to - blue - 600',
     popular: true;
-    launch_date: '2024 - 01 - 20'
+launch_date: '2024 - 01 - 20',
     customers: 420;
     rating: 4 && 4.9;
     reviews: 95;
@@ -333,8 +333,8 @@
   k: [,
       'Advanced AI/ML, Evolutionary algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Kubernetes'],
     realImplementation: true;
-    implementationDetails: 'Sophisticated autonomous AI platform with evolutionary learning, self-optimization, and multi-agent coordination. Includes comprehensive monitoring and management tools.'
-    roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.'
+implementationDetails: 'Sophisticated autonomous AI platform with evolutionary learning, self-optimization, and multi-agent coordination. Includes comprehensive monitoring and management tools.',
+roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.',
     useCases: [;
     realImplementatio,
   n: true,
@@ -344,10 +344,10 @@
   i: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.'
     useCase,
   s: [;
-      'AI system management'
-      'Automated optimization'
-      'Continuous learning'
-      'Resource management'
+'AI system management',
+'Automated optimization',
+'Continuous learning',
+'Resource management',
       'Performance monitoring'
       'System evolution'],
     integrations: [,
@@ -368,11 +368,11 @@
     tagline: 'Self - managing AI systems that evolve and adapt',
     description: unknown;
       'Revolutionary AI platform that creates, manages, and evolves autonomous AI systems that can learn, adapt, and optimize themselves without human intervention.',
-    category: 'AI & Consciousness'
+category: 'AI & Consciousness',
     price: unknown;
       monthly: 399;
       yearly: 3990;
-      currency: 'USD'
+currency: 'USD',
       trial_days: 14;
       setup_time: '6 hours',
       enterprise: 1599;
@@ -472,11 +472,11 @@
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, AI ethics guidelines, Industry - specific regulations'],
-    link: 'https://ziontechgroup.com / ai - autonomous - ecosystem - manager'
-    icon: ''
-    color: 'from - green - 500 to - emerald - 600'
+link: 'https://ziontechgroup.com / ai - autonomous - ecosystem - manager',
+icon: '',
+color: 'from - green - 500 to - emerald - 600',
     popular: true;
-    launch_date: '2024 - 03 - 01'
+launch_date: '2024 - 03 - 01',
     customers: 680;
     rating: 4 && 4.8;
     reviews: 150;
@@ -511,8 +511,8 @@
   k: [,
       'Multiple AI models, Multimodal processing, React, Node && Node.js, PostgreSQL, Redis, AWS, GPU optimization'],
     realImplementation: true;
-    implementationDetails: 'Comprehensive multimodal AI platform with orchestration, cross-modal understanding, and unified API access. Includes mobile SDK and extensive integration capabilities.'
-    roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.'
+implementationDetails: 'Comprehensive multimodal AI platform with orchestration, cross-modal understanding, and unified API access. Includes mobile SDK and extensive integration capabilities.',
+roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.',
     useCases: [;
     realImplementatio,
   n: true,
@@ -522,15 +522,15 @@
   i: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.'
     useCase,
   s: [;
-      'Content analysis'
-      'Media processing'
-      'Customer interaction'
-      'Research automation'
+'Content analysis',
+'Media processing',
+'Customer interaction',
+'Research automation',
       'Quality control'
       'Creative assistance'],
     integrations: [,
       'AI platforms, Content management systems, Media platforms, Business applications, Mobile apps'
-    ]
+],
     support: '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics guidelines'],
     link: 'https://ziontechgroup && ziontechgroup.com/multimodal-ai-orchestrator',
@@ -539,11 +539,11 @@
     tagline: 'Seamlessly integrate text, image, audio, and video AI',
     description: unknown;
       'Advanced AI platform that orchestrates multiple AI models across different modalities to provide comprehensive, context - aware intelligence and automation.',
-    category: 'AI & Consciousness'
+category: 'AI & Consciousness',
     price: unknown;
       monthly: 249;
       yearly: 2490;
-      currency: 'USD'
+currency: 'USD',
       trial_days: 21;
       setup_time: '3 hours',
       enterprise: 999;
@@ -649,11 +649,11 @@
     support: unknown;
       '24 / 7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics guidelines'],
-    link: 'https://ziontechgroup.com / multimodal - ai - orchestrator'
-    icon: ''
-    color: 'from - indigo - 500 to - purple - 600'
+link: 'https://ziontechgroup.com / multimodal - ai - orchestrator',
+icon: '',
+color: 'from - indigo - 500 to - purple - 600',
     popular: true;
-    launch_date: '2024 - 02 - 10'
+launch_date: '2024 - 02 - 10',
     customers: 1200;
     rating: 4 && 4.7;
     reviews: 280;
@@ -661,8 +661,8 @@
     growth_rate: '32% annually'},
       'AI ethics algorithms, Bias detection, React, Node && Node.js, PostgreSQL, Redis, AWS, Compliance tools'],
     realImplementation: true;
-    implementationDetails: 'Advanced AI ethics platform with bias detection, governance frameworks, and compliance monitoring. Includes comprehensive reporting and training tools.'
-    roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.'
+implementationDetails: 'Advanced AI ethics platform with bias detection, governance frameworks, and compliance monitoring. Includes comprehensive reporting and training tools.',
+roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.',
     useCases: [;
     suppor,
   t: unknown,
@@ -699,10 +699,10 @@
   i: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.'
     useCase,
   s: [;
-      'AI bias detection'
-      'Ethical compliance'
-      'Governance automation'
-      'Risk assessment'
+'AI bias detection',
+'Ethical compliance',
+'Governance automation',
+'Risk assessment',
       'Audit preparation'
       'Policy enforcement'],
     integrations: [,
@@ -717,11 +717,11 @@
     complianc,
   e: [,
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'],
-    link: 'https://ziontechgroup.com/ai-ethics-governance-platform'
-    icon: ''
-    color: 'from-yellow-500 to-orange-600'
+link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
+icon: '',
+color: 'from-yellow-500 to-orange-600',
     popular: true;
-    launchDate: '2024-01-15'
+launchDate: '2024-01-15',
     customers: 950;
     rating: 4.6;
     reviews: 220;
@@ -761,31 +761,31 @@
     techStack: ['Advanced AI models, Computer Vision, NLP, React, Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true;
     implementationDetails: 'Sophisticated AI platform with emotional intelligence, real-time processing, and multi-modal analysis. Includes mobile SDK and comprehensive API.',
-    roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.'
+roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.',
     useCases: [;
       'Customer service automationMental health monitoringEducational personalizationGaming experience enhancementMarketing campaign optimizationTherapeutic applications'],
     integrations: ['CRM systems, Chat platforms, Video conferencing, Social media, Mobile apps, Web applications'],
     support: '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, HIPAA (for healthcare)'],
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform'
+link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
     icon: '';
-    color: 'from-purple-500 to-pink-600'
+color: 'from-purple-500 to-pink-600',
     popular: true;
-    launchDate: '2024-02-15'
+launchDate: '2024-02-15',
     customers: 850;
     rating: 4.9;
     reviews: 180;
     marketSize: '$35B emotional AI market',
     growthRate: '45% annually'},
-    id: 'quantum-ai-fusion-platform'
-    name: 'Quantum AI Fusion Platform'
-    tagline: 'Quantum computing meets artificial intelligence'
-  description: 'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.'
-    category: 'Quantum & AI'
+id: 'quantum-ai-fusion-platform',
+name: 'Quantum AI Fusion Platform',
+tagline: 'Quantum computing meets artificial intelligence',
+description: 'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.',
+category: 'Quantum & AI',
     price: unknown;
       monthly: 179;
       yearly: 1790;
-      currency: 'USD'
+currency: 'USD',
       trial_days: 30;
       setup_time: '2 hours',
       enterprise: 699;
@@ -930,11 +930,11 @@
     complianc,
   e: [,
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'],
-    link: 'https://ziontechgroup.com / ai - ethics - governance - platform'
-    icon: ''
-    color: 'from - yellow - 500 to - orange - 600'
+link: 'https://ziontechgroup.com / ai - ethics - governance - platform',
+icon: '',
+color: 'from - yellow - 500 to - orange - 600',
     popular: true;
-    launch_date: '2024 - 01 - 15'
+launch_date: '2024 - 01 - 15',
     customers: 950;
     rating: 4 && 4.6;
     reviews: 220;
@@ -965,16 +965,16 @@
 ];      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement'
     ];
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
-    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
+support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
-    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
+support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
-    link: 'https://ziontechgroup.com / ai - ethics - governance - platform'
+link: 'https://ziontechgroup.com / ai - ethics - governance - platform',
     icon: '';
-    color: 'from - yellow - 500 to - orange - 600'
+color: 'from - yellow - 500 to - orange - 600',
     popular: true;
-    launch_date: '2024 - 01 - 15'
+launch_date: '2024 - 01 - 15',
     customers: 950;
     rating: 4 && 4.6;
     reviews: 220;
@@ -1095,7 +1095,7 @@
 ];
     feature,
   s: [;
-      'Quantum-AI hybrid algorithmsComplex problem solvingOptimization enginesQuantum machine learningHybrid classical-quantum processingReal-time quantum simulationsCustom quantum circuitsAdvanced analytics dashboard'
+'Quantum-AI hybrid algorithmsComplex problem solvingOptimization enginesQuantum machine learningHybrid classical-quantum processingReal-time quantum simulationsCustom quantum circuitsAdvanced analytics dashboard',
       'API for quantum operationsMulti-qubit support'
     ];
     benefit,
@@ -1109,17 +1109,17 @@
     techStack: ['Quantum algorithms, AI/ML, Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum simulators'],
     realImplementation: true;
     implementationDetails: 'Advanced quantum-AI platform with hybrid processing, real-time simulations, and comprehensive quantum operations. Includes desktop application and cloud access.',
-    roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.'
+roi: 'Average customer sees 500% ROI within 12 months through breakthrough problem-solving capabilities.',
     useCases: [;
       'Drug discoveryFinancial modelingSupply chain optimizationClimate modelingCryptographyMachine learning acceleration'],
     integrations: ['Quantum hardware, Classical computing, Cloud platforms, Scientific software, Business applications'],
     support: 'Dedicated quantum physicist, 24/7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
-    link: 'https://ziontechgroup.com/quantum-ai-fusion-platform'
+link: 'https://ziontechgroup.com/quantum-ai-fusion-platform',
     icon: '';
-    color: 'from-cyan-500 to-blue-600'
+color: 'from-cyan-500 to-blue-600',
     popular: true;
-    launchDate: '2024-01-20'
+launchDate: '2024-01-20',
     customers: 420;
     rating: 4.9;
     reviews: 95;
@@ -1129,11 +1129,11 @@
     name: 'AI Autonomous Ecosystem Manager',
     tagline: 'Self-managing AI systems that evolve and adapt',
     description: 'Revolutionary AI platform that creates, manages, and evolves autonomous AI systems that can learn, adapt, and optimize themselves without human intervention.',
-    category: 'AI & Consciousness'
+category: 'AI & Consciousness',
     price: unknown;
       monthly: 399;
       yearly: 3990;
-      currency: 'USD'
+currency: 'USD',
       trialDays: 14;
       setupTime: '6 hours',
       enterprise: 1599;
@@ -1212,7 +1212,7 @@
   e: 1599},
     feature,
   s: [;
-      'Autonomous AI creationSelf-optimization algorithmsEvolutionary learning systemsMulti-agent coordinationAutomatic problem solvingSelf-healing capabilitiesPerformance monitoringResource optimization'
+'Autonomous AI creationSelf-optimization algorithmsEvolutionary learning systemsMulti-agent coordinationAutomatic problem solvingSelf-healing capabilitiesPerformance monitoringResource optimization',
       'Custom AI trainingEcosystem analytics'
     ];
     benefit,
@@ -1226,17 +1226,17 @@
     techStack: ['Advanced AI/ML, Evolutionary algorithms, React, Node.js, PostgreSQL, Redis, AWS, Kubernetes'],
     realImplementation: true;
     implementationDetails: 'Sophisticated autonomous AI platform with evolutionary learning, self-optimization, and multi-agent coordination. Includes comprehensive monitoring and management tools.',
-    roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.'
+roi: 'Average customer sees 400% ROI within 10 months through reduced management overhead and improved performance.',
     useCases: [;
       'AI system managementAutomated optimizationContinuous learningResource managementPerformance monitoringSystem evolution'],
     integrations: ['AI/ML platforms, Cloud services, Monitoring tools, Business applications, Data sources'],
     support: '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, AI ethics guidelines, Industry-specific regulations'],
-    link: 'https://ziontechgroup.com/ai-autonomous-ecosystem-manager'
+link: 'https://ziontechgroup.com/ai-autonomous-ecosystem-manager',
     icon: '';
-    color: 'from-green-500 to-emerald-600'
+color: 'from-green-500 to-emerald-600',
     popular: true;
-    launchDate: '2024-03-01'
+launchDate: '2024-03-01',
     customers: 680;
     rating: 4.8;
     reviews: 150;
@@ -1246,11 +1246,11 @@
     name: 'Multimodal AI Orchestrator',
     tagline: 'Seamlessly integrate text, image, audio, and video AI',
     description: 'Advanced AI platform that orchestrates multiple AI models across different modalities to provide comprehensive, context-aware intelligence and automation.',
-    category: 'AI & Consciousness'
+category: 'AI & Consciousness',
     price: unknown;
       monthly: 249;
       yearly: 2490;
-      currency: 'USD'
+currency: 'USD',
       trialDays: 21;
       setupTime: '3 hours',
       enterprise: 999;
@@ -1329,7 +1329,7 @@
   e: 999},
     feature,
   s: [;
-      'Multi-modal AI integrationCross-modal understandingUnified AI orchestrationContext-aware processingReal-time multimodal analysisCustom model trainingAPI for all modalitiesAdvanced analytics'
+'Multi-modal AI integrationCross-modal understandingUnified AI orchestrationContext-aware processingReal-time multimodal analysisCustom model trainingAPI for all modalitiesAdvanced analytics',
       'Performance optimizationScalable architecture'
     ];
     benefit,
@@ -1343,17 +1343,17 @@
     techStack: ['Multiple AI models, Multimodal processing, React, Node.js, PostgreSQL, Redis, AWS, GPU optimization'],
     realImplementation: true;
     implementationDetails: 'Comprehensive multimodal AI platform with orchestration, cross-modal understanding, and unified API access. Includes mobile SDK and extensive integration capabilities.',
-    roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.'
+roi: 'Average customer sees 300% ROI within 8 months through improved AI capabilities and reduced integration costs.',
     useCases: [;
       'Content analysisMedia processingCustomer interactionResearch automationQuality controlCreative assistance'],
     integrations: ['AI platforms, Content management systems, Media platforms, Business applications, Mobile apps'],
     support: '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics guidelines'],
-    link: 'https://ziontechgroup.com/multimodal-ai-orchestrator'
+link: 'https://ziontechgroup.com/multimodal-ai-orchestrator',
     icon: '';
-    color: 'from-indigo-500 to-purple-600'
+color: 'from-indigo-500 to-purple-600',
     popular: true;
-    launchDate: '2024-02-10'
+launchDate: '2024-02-10',
     customers: 1200;
     rating: 4.7;
     reviews: 280;
@@ -1363,11 +1363,11 @@
     name: 'AI Ethics & Governance Platform',
     tagline: 'Ensure responsible and ethical AI development',
     description: 'Comprehensive platform that helps organizations develop, deploy, and monitor AI systems with built-in ethical considerations, bias detection, and governance controls.',
-    category: 'AI & Consciousness'
+category: 'AI & Consciousness',
     price: unknown;
       monthly: 179;
       yearly: 1790;
-      currency: 'USD'
+currency: 'USD',
       trialDays: 30;
       setupTime: '2 hours',
       enterprise: 699;
@@ -1446,7 +1446,7 @@
   e: 699},
     feature,
   s: [;
-      'Bias detection and mitigationEthical AI guidelinesGovernance frameworksCompliance monitoringTransparency toolsAccountability trackingRisk assessmentAudit trails'
+'Bias detection and mitigationEthical AI guidelinesGovernance frameworksCompliance monitoringTransparency toolsAccountability trackingRisk assessmentAudit trails',
       'Policy managementTraining and education'
     ];
     benefit,
@@ -1460,17 +1460,17 @@
     techStack: ['AI ethics algorithms, Bias detection, React, Node.js, PostgreSQL, Redis, AWS, Compliance tools'],
     realImplementation: true;
     implementationDetails: 'Advanced AI ethics platform with bias detection, governance frameworks, and compliance monitoring. Includes comprehensive reporting and training tools.',
-    roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.'
+roi: 'Average customer sees 250% ROI within 6 months through reduced compliance risks and improved trust.',
     useCases: [;
       'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'],
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'],
     support: '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'],
-    link: 'https://ziontechgroup.com/ai-ethics-governance-platform'
+link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
     icon: '';
-    color: 'from-yellow-500 to-orange-600'
+color: 'from-yellow-500 to-orange-600',
     popular: true;
-    launchDate: '2024-01-15'
+launchDate: '2024-01-15',
     customers: 950;
     rating: 4.6;
     reviews: 220;
@@ -1527,7 +1527,7 @@
   }
 ];
 export interface InnovativeAIService {/* TODO: Fix JSX expression */}
-  }
+},
   id: string;
   name: string;
   tagline: string,,

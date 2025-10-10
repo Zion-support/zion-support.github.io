@@ -227,7 +227,7 @@ function sendToAnalytics(metric: Metric): void {
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       non_interaction: true;
     });
-  }
+},
         userAgent: navigator.userAgent;
       }),
       keepalive: true;
@@ -653,7 +653,7 @@ export function generatePerformanceReport(): PerformanceReport | null {
         id: `nav-${name}`
       });
     });
-  }
+},
         id: `nav-${name}`});
     });
   }

@@ -101,7 +101,7 @@ fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
     '@typescript-eslint/recommended',
     'plugin: react/recommended',
     'plugin: react-hooks/recommended'],
-  parser: '@typescript-eslint/parser'
+parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2022;
     sourceType: 'module',
@@ -147,19 +147,19 @@ fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(es
 // // 4. Create Prettier configuration;
 // const prettierConfig = {
   semi: true;
-  trailingComma: 'es5'
+trailingComma: 'es5',
   singleQuote: true;
   printWidth: 80;
   tabWidth: 2;
   useTabs: false;
   bracketSpacing: true;
-  arrowParens: 'avoid'
-  endOfLine: 'lf'
+arrowParens: 'avoid',
+endOfLine: 'lf',
   jsxSingleQuote: true;
-  quoteProps: 'as-needed'
+quoteProps: 'as-needed',
   bracketSameLine: false;
-  proseWrap: 'preserve'
-  htmlWhitespaceSensitivity: 'css'
+proseWrap: 'preserve',
+htmlWhitespaceSensitivity: 'css',
   vueIndentScriptAndStyle: false;
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: false;
@@ -192,8 +192,8 @@ export default defineConfig({
       gzipSize: true),
       brotliSize: true)})],
   build: {
-    target: 'esnext'
-    minify: 'terser'
+target: 'esnext',
+minify: 'terser',
     sourcemap: true;
     rollupOptions: {,
       output: {,
@@ -313,7 +313,7 @@ function generateImprovementReport() {
   
   const report = {
     timestamp: new Date().toISOString()
-    version: "1.0.0"
+version: "1.0.0",
     improvements: [,
       {,
         category: "Performance",

@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Internal link graph runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'internal-link-graph-runner'
+function: 'internal-link-graph-runner',
         source: event.source || 'unknown',
         graph: {,
           status: 'generating',

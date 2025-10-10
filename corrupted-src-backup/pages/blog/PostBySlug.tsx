@@ -30,8 +30,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '12 min read',
       author: 'Zion Tech Group Team'},
     {
-      slug: 'quantum-computing-business-applications-2026'
-      title: 'Quantum Computing Business Applications 2026'
+slug: 'quantum-computing-business-applications-2026',
+title: 'Quantum Computing Business Applications 2026',
       description: 'Revolutionary quantum solutions delivering 2000x speed improvements and breakthrough capabilities',
       category: 'Quantum Technology',
       date: '2026-01-08',
@@ -73,8 +73,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '7 min read',
       author: 'Zion Tech Group Team'},
     {
-      slug: 'quantum-neural-networks-breakthrough-2026'
-      title: 'Quantum Neural Networks Breakthrough 2026'
+slug: 'quantum-neural-networks-breakthrough-2026',
+title: 'Quantum Neural Networks Breakthrough 2026',
       description: 'Revolutionary quantum-enhanced AI delivering unprecedented computational power',
       category: 'AI Research',
       date: '2026-01-03',

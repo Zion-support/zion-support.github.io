@@ -22,10 +22,10 @@
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trial_days: 60;
-    setup_time: '4 - 6 weeks'
+setup_time: '4 - 6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launch_date: '2024 - 01 - 10'
+roi: 'Average customer sees 600% ROI through operational improvements',
+launch_date: '2024 - 01 - 10',
     customers: 950;
     rating: 4 && 4.9;
     reviews: 520;
@@ -303,10 +303,10 @@ export interface ComprehensiveService {}
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 60;
-    setupTime: '4-6 weeks'
+setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launchDate: '2024-01-10'
+roi: 'Average customer sees 600% ROI through operational improvements',
+launchDate: '2024-01-10',
     customers: 950;
     rating: 4.9;
     reviews: 520;
@@ -443,7 +443,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics'
+'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics',
       'API access for enterprise integrationsCustom AI model training for industry-specific content'
     ],
     categor,
@@ -496,7 +496,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms'
+'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms',
       'Advanced reporting and analyticsMobile app for customer success managers'
     ],
     categor,
@@ -549,7 +549,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis'
+'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis',
       'Integration with core banking systemsAdvanced analytics and reporting'
     ],
     categor,
@@ -602,7 +602,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools'
+'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools',
       'Compliance with medical standardsAdvanced security and privacy controls'
     ],
     categor,
@@ -655,7 +655,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights'
+'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights',
       'Integration with major e-commerce platformsReal-time analytics and reporting'
     ],
     categor,
@@ -708,7 +708,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response'
+'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response',
       'Cloud security monitoringAdvanced security analytics'
     ],
     categor,
@@ -761,7 +761,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure'
+'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure',
       'Advanced monitoring and alertingCollaborative data workspace'
     ],
     categor,
@@ -814,7 +814,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics'
+'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics',
       'Integration with major HR systemsAdvanced reporting and insights'
     ],
     categor,
@@ -867,7 +867,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval'
+'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval',
       'Collaborative review workflowsAudit trail and version control'
     ],
     categor,
@@ -920,7 +920,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting'
+'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting',
       'Integration with ERP and MES systemsMobile app for field workers'
     ],
     categor,
@@ -1649,7 +1649,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     phone: string;
     email: string;
     address: string;
-  }
+},
   competitors: string[];
   roi: string;
   launch_date: string;
@@ -1714,8 +1714,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    roi: 'Average customer sees 300% ROI within 3 months'
-    launch_date: '2024 - 01 - 15'
+roi: 'Average customer sees 300% ROI within 3 months',
+launch_date: '2024 - 01 - 15',
     customers: 2500;
     rating: 4 && 4.8;
     reviews: 1250;
@@ -1757,14 +1757,14 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$49'
     perio,
   d: '/month'
-      'GPT-4 powered content generation with 99.2% accuracy'
-      'Multi-language support (25+ languages) with cultural adaptation'
-      'Advanced SEO optimization with real-time keyword research'
-      'Brand voice training and consistency maintenance'
-      'Plagiarism detection with 99.8% accuracy'
-      'Content calendar and automated scheduling'
-      'Team collaboration with version control'
-      'Analytics dashboard with performance metrics'
+'GPT-4 powered content generation with 99.2% accuracy',
+'Multi-language support (25+ languages) with cultural adaptation',
+'Advanced SEO optimization with real-time keyword research',
+'Brand voice training and consistency maintenance',
+'Plagiarism detection with 99.8% accuracy',
+'Content calendar and automated scheduling',
+'Team collaboration with version control',
+'Analytics dashboard with performance metrics',
       'API access for enterprise integrations'
       'Custom AI model training for industry-specific content'],
     category: 'AI & Content Creation',
@@ -1783,18 +1783,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities'
     useCase,
   s: [;
-      'Blog content creation and optimization'
-      'Social media content generation'
-      'Product descriptions and marketing copy'
-      'Email marketing campaigns'
+'Blog content creation and optimization',
+'Social media content generation',
+'Product descriptions and marketing copy',
+'Email marketing campaigns',
       'Technical documentation and whitepapers'
-    ]
+],
     integrations: [
     integration,
   s: [,
-      'WordPress'
-      'Shopify'
-      'HubSpot'
+'WordPress',
+'Shopify',
+'HubSpot',
       'Mailchimp'
       'Google Analytics',
       'SEMrush'],
@@ -1806,8 +1806,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trialDays: 14;
     setupTime: '5 minutes',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business']
-    roi: 'Average customer sees 300% ROI within 3 months'
-    launchDate: '2024-01-15'
+roi: 'Average customer sees 300% ROI within 3 months',
+launchDate: '2024-01-15',
     customers: 2500;
     rating: 4.8;
     reviews: 1250;
@@ -1821,7 +1821,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     price: '$199',
     period: '/month',
     features: [,
-      'Google Analytics'
+'Google Analytics',
       'SEMrush'
     ]
     complianc,
@@ -1885,9 +1885,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations'
     useCase,
   s: [;
-      'Customer churn prevention'
-      'Upsell and cross-sell optimization'
-      'Customer onboarding automation'
+'Customer churn prevention',
+'Upsell and cross-sell optimization',
+'Customer onboarding automation',
       'Customer health monitoring'
       'Customer success team productivity'],
     integrations: [,
@@ -1909,8 +1909,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 21;
     setup_time: '1 - 2 days',
     competitors: ['Gainsight', 'Totango', 'ClientSuccess', 'ChurnZero'],
-    roi: 'Average customer sees 400% ROI through reduced churn'
-    launch_date: '2024 - 02 - 20'
+roi: 'Average customer sees 400% ROI through reduced churn',
+launch_date: '2024 - 02 - 20',
     customers: 1800;
     rating: 4 && 4.9;
     reviews: 950;
@@ -1982,9 +1982,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems'
     useCase,
   s: [;
-      'Credit risk assessment'
-      'Fraud detection and prevention'
-      'Compliance monitoring and reporting'
+'Credit risk assessment',
+'Fraud detection and prevention',
+'Compliance monitoring and reporting',
       'Market risk management'
       'Operational risk assessment'],
     integrations: [,
@@ -2005,8 +2005,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30;
     setup_time: '2 - 4 weeks',
     competitors: ['SAS', 'IBM', 'Oracle', 'SAP'],
-    roi: 'Average customer sees 500% ROI through risk reduction'
-    launch_date: '2024 - 03 - 10'
+roi: 'Average customer sees 500% ROI through risk reduction',
+launch_date: '2024 - 03 - 10',
     customers: 1200;
     rating: 4 && 4.7;
     reviews: 680;
@@ -2077,9 +2077,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems'
     useCase,
   s: [;
-      'Radiology image analysis'
-      'Pathology slide analysis'
-      'Cardiology imaging support'
+'Radiology image analysis',
+'Pathology slide analysis',
+'Cardiology imaging support',
       'Oncology diagnostic assistance'
       'Emergency department support'],
     integrations: [,
@@ -2121,8 +2121,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Google Health',
       'Microsoft Healthcare',
       'Philips'],
-    roi: 'Average customer sees 600% ROI through improved diagnostic accuracy'
-    launch_date: '2024 - 01 - 30'
+roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
+launch_date: '2024 - 01 - 30',
     customers: 850;
     rating: 4 && 4.9;
     reviews: 420;
@@ -2176,9 +2176,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement'
     useCase,
   s: [;
-      'Product recommendation optimization'
-      'Pricing strategy optimization'
-      'Customer experience personalization'
+'Product recommendation optimization',
+'Pricing strategy optimization',
+'Customer experience personalization',
       'Marketing campaign optimization'
       'Inventory and supply chain optimization'],
     integrations: [,
@@ -2200,8 +2200,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 14;
     setup_time: '1 - 2 days',
     competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia'],
-    roi: 'Average customer sees 350% ROI through increased conversions'
-    launch_date: '2024 - 02 - 15'
+roi: 'Average customer sees 350% ROI through increased conversions',
+launch_date: '2024 - 02 - 15',
     customers: 3200;
     rating: 4 && 4.8;
     reviews: 1680;
@@ -2273,9 +2273,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities'
     useCase,
   s: [;
-      'Threat detection and prevention'
-      'Incident response automation'
-      'Compliance monitoring and reporting'
+'Threat detection and prevention',
+'Incident response automation',
+'Compliance monitoring and reporting',
       'Vulnerability management'
       'Security operations optimization'],
     integrations: [,
@@ -2297,8 +2297,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30;
     setup_time: '1 - 2 weeks',
     competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
-    roi: 'Average customer sees 450% ROI through threat prevention'
-    launch_date: '2024 - 03 - 01'
+roi: 'Average customer sees 450% ROI through threat prevention',
+launch_date: '2024 - 03 - 01',
     customers: 2100;
     rating: 4 && 4.9;
     reviews: 1100;
@@ -2371,9 +2371,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure'
     useCase,
   s: [;
-      'Data pipeline automation'
-      'Data quality management'
-      'Real-time analytics'
+'Data pipeline automation',
+'Data quality management',
+'Real-time analytics',
       'Machine learning operations'
       'Data governance and compliance'],
     integrations: [,
@@ -2395,8 +2395,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 21;
     setup_time: '1 - 2 weeks',
     competitors: ['Fivetran', 'Alteryx', 'Talend', 'Informatica'],
-    roi: 'Average customer sees 400% ROI through data automation'
-    launch_date: '2024 - 02 - 01'
+roi: 'Average customer sees 400% ROI through data automation',
+launch_date: '2024 - 02 - 01',
     customers: 2800;
     rating: 4 && 4.8;
     reviews: 1450;
@@ -2468,9 +2468,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates'
     useCase,
   s: [;
-      'Candidate sourcing and screening'
-      'Interview process optimization'
-      'Diversity and inclusion initiatives'
+'Candidate sourcing and screening',
+'Interview process optimization',
+'Diversity and inclusion initiatives',
       'Employee onboarding automation'
       'Performance management and tracking'],
     integrations: [,
@@ -2492,8 +2492,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 14;
     setup_time: '1 - 2 days',
     competitors: ['HireVue', 'Pymetrics', 'HiredScore', 'Entelo'],
-    roi: 'Average customer sees 300% ROI through improved hiring'
-    launch_date: '2024 - 01 - 20'
+roi: 'Average customer sees 300% ROI through improved hiring',
+launch_date: '2024 - 01 - 20',
     customers: 1900;
     rating: 4 && 4.7;
     reviews: 890;
@@ -2565,18 +2565,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration'
     useCase,
   s: [;
-      'Contract review and analysis'
-      'Risk assessment and management'
-      'Compliance monitoring'
-      'Legal document automation'
+'Contract review and analysis',
+'Risk assessment and management',
+'Compliance monitoring',
+'Legal document automation',
       'Contract lifecycle management'
     ]
     integration,
   s: [;
-      'Clio'
-      'MyCase'
-      'PracticePanther'
-      'LexisNexis'
+'Clio',
+'MyCase',
+'PracticePanther',
+'LexisNexis',
       'Westlaw'
       'DocuSign'],
     compliance: [,
@@ -2596,8 +2596,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30;
     setup_time: '1 - 2 weeks',
     competitors: ['Evisort', 'ContractPodAi', 'Kira Systems', 'Luminance'],
-    roi: 'Average customer sees 500% ROI through contract automation'
-    launch_date: '2024 - 02 - 10'
+roi: 'Average customer sees 500% ROI through contract automation',
+launch_date: '2024 - 02 - 10',
     customers: 1100;
     rating: 4 && 4.8;
     reviews: 580;
@@ -2682,8 +2682,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 60;
     setup_time: '4 - 6 weeks',
     competitors: ['PTC', 'Siemens', 'GE Digital', 'Rockwell Automation'],
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launch_date: '2024 - 01 - 10'
+roi: 'Average customer sees 600% ROI through operational improvements',
+launch_date: '2024 - 01 - 10',
     customers: 950;
     rating: 4 && 4.9;
     reviews: 520;
@@ -3046,7 +3046,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms'
+'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms',
       'Advanced reporting and analyticsMobile app for customer success managers'
     ],
     categor,
@@ -3099,7 +3099,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis'
+'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis',
       'Integration with core banking systemsAdvanced analytics and reporting'
     ],
     categor,
@@ -3152,7 +3152,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools'
+'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools',
       'Compliance with medical standardsAdvanced security and privacy controls'
     ],
     categor,
@@ -3205,7 +3205,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights'
+'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights',
       'Integration with major e-commerce platformsReal-time analytics and reporting'
     ],
     categor,
@@ -3258,7 +3258,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response'
+'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response',
       'Cloud security monitoringAdvanced security analytics'
     ],
     categor,
@@ -3311,7 +3311,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure'
+'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure',
       'Advanced monitoring and alertingCollaborative data workspace'
     ],
     categor,
@@ -3364,7 +3364,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics'
+'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics',
       'Integration with major HR systemsAdvanced reporting and insights'
     ],
     categor,
@@ -3417,7 +3417,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval'
+'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval',
       'Collaborative review workflowsAudit trail and version control'
     ],
     categor,
@@ -3470,7 +3470,7 @@ export const,
   d: '/month',
     feature,
   s: [;
-      'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting'
+'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting',
       'Integration with ERP and MES systemsMobile app for field workers'
     ],
     categor,

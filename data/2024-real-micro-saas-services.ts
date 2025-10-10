@@ -14,7 +14,7 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
       professional: '$399/month'}
       enterprise: 'Custom'}
   },
-    name: 'Real SaaS Analytics 2024'
+name: 'Real SaaS Analytics 2024',
     path: '/services/real-saas-analytics-2024',
     description: 'Comprehensive SaaS performance and user analytics',
     icon: 'BarChart3',
