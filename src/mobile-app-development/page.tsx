@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Code, Zap, Shield, Users, BarChart, CheckCircle, ArrowRight, Globe, Navigation as NavigationIcon } from 'lucide-react';
+import { Smartphone, Code, Zap, Shield, Users, BarChart, CheckCircle, ArrowRight, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

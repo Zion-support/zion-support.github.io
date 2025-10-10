@@ -90,6 +90,8 @@ body::before {
   0%, 100% { opacity: 0.3; }
   50% { opacity: 0.6; }
 }
+
+body {
   background: var(--bg-dark);
   color: var(--text-primary);
   overflow-x: hidden;
