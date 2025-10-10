@@ -8,7 +8,7 @@ const CookiesPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>Cookie Policy - Zion Tech Group</title>
+        <title>Cookie Policy - Zion Tech Group</title>
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
       </Helmet>
       

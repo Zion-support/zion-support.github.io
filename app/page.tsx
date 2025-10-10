@@ -84,16 +84,17 @@ const handlePhoneClick = useCallback(() => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en';)
-},
+            availableLanguage: 'en'
+          },
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US';);
-        }}
+            addressCountry: 'US'
+          }
+        }
       />
       <PerformanceOptimizer
         enableImageOptimization={true}

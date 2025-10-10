@@ -78,8 +78,8 @@ const entries = list.getEntries();
   }
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {;
-const longTaskObserver = new PerformanceObserver((list) => {
+      try {
+    const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
     // Keep HEAD version
         })
@@ -91,8 +91,8 @@ const longTaskObserver = new PerformanceObserver((list) => {
   }
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
-      try {;
-const resourceObserver = new PerformanceObserver((list) => {;
+      try {
+    const resourceObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
     // Keep HEAD version
           })});

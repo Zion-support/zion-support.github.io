@@ -1,6 +1,7 @@
 import React from 'react';
 ;
-const SitemapPage: React.FC = () => {const pages = [
+const SitemapPage: React.FC = () => {
+  const pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
     { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
@@ -41,25 +42,10 @@ const SitemapPage: React.FC = () => {const pages = [
 
         <div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            {pages.map((page, index) => (</div>
-              <div></div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
-                  <a 
-                    href={page.path} 
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
-                  ></a>
-                    {page.title}
-                  </a>
-                </h3>
-                <p className="text-sm text-gray-600 mb-2"></p>
-                  {page.description}
-                </p>
-                <p className="text-xs text-gray-500"></p>
-                  {page.path}
-                </p>
-              </div>
-            ));
-          </div>
+            {pages.map(($1) => (
+                    $2
+                  ))}
+                </div>
         </div>
 
         <div></div>

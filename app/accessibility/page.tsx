@@ -2,8 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
-;
-const AccessibilityPage: React.FC = () => {const features = [
+
+const AccessibilityPage: React.FC = () => {
+  const features = [
     {
       icon: Eye,
       title: 'Visual Accessibility',
@@ -131,10 +132,10 @@ const standards = [
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ));
+                    ))}
                   </ul>
                 </div>
-              ));
+              ))}
             </div>
           </div>
         </section>
@@ -152,22 +153,10 @@ const standards = [
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {standards.map((standard, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>
-                  <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full font-semibold">
-                    {standard.status}
-                  </span>
+              {standards.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
         </section>
 

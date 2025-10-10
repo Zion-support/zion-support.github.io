@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
-;
+
 const ContentStatistics: React.FC = () => {const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
@@ -202,12 +202,9 @@ const increment = target / steps;
                 <h4 className="text-xl font-bold text-white mb-3 text-center">{feature.title}</h4>
                 <p className="text-gray-300 text-center mb-4">{feature.description}</p>
                 <div className="space-y-2">
-                  {feature.stats.map((stat, statIndex) => (
-                    <div key={statIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      <span>{stat}</span>
-                    </div>
-                  ));
+                  {feature.stats.map(($1) => (
+                    $2
+                  ))}
                 </div>
               </div>
             ));
@@ -224,19 +221,10 @@ const increment = target / steps;
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-3 rounded-full">
-                    <achievement.icon className="w-8 h-8 text-white" />
-                  </div>
+            {achievements.map(($1) => (
+                    $2
+                  ))}
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
-                <h4 className="text-lg font-semibold text-white mb-2">{achievement.title}</h4>
-                <p className="text-gray-300 text-sm">{achievement.description}</p>
-              </div>
-            ));
-          </div>
         </div>
 
         {/* Benefits Section */}

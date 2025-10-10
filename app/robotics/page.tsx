@@ -2,8 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const PagePage: React.FC = () => {const features = [
+
+const PagePage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -39,7 +40,7 @@ const benefits = [
   return (
     <div></div>
       <Helmet></Helmet>
-        <title></titl>Page | Zion Tech Group</title>
+        <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>

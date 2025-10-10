@@ -28,8 +28,8 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
   private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-    try {;
-const observer = new PerformanceObserver((list) => {
+    try {
+    const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === type) {
             callback(entry);
@@ -44,8 +44,8 @@ const observer = new PerformanceObserver((list) => {
   private observeLCP(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-    try {;
-const observer = new PerformanceObserver((list) => {;
+    try {
+    const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
         this.metrics.largestContentfulPaint = lastEntry.startTime});
@@ -58,8 +58,8 @@ const lastEntry = entries[entries.length - 1];
   private observeFID(): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-    try {;
-const observer = new PerformanceObserver((list) => {
+    try {
+    const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime}
       });

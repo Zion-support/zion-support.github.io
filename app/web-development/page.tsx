@@ -233,13 +233,10 @@ const process = [
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
                   <h></h>{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
-            <h></h>Technologies We Use</h2><div></div>{technologies.map((tech, index) => (</section>
-                <div></div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
+            <h></h>Technologies We Use</h2><div></div>{technologies.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </section>
 
           {/* Process */}
@@ -260,13 +257,10 @@ const process = [
                   </div>
                   <h></h>{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-            <h></h>Our Development Process</h2><div></div>{process.map((step, index) => (</section>
-                <div></div>
-                  <div></div>
-                    <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>
+            <h></h>Our Development Process</h2><div></div>{process.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </section>
 
           {/* CTA Section */}

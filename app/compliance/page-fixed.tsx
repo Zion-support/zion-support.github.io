@@ -4,8 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-;
-const PageFixedPage: React.FC = () => {const features = [
+
+const PageFixedPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Analysis',

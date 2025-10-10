@@ -2,8 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const ServiceCardSkeletonPage: React.FC = () => {const features = [
+
+const ServiceCardSkeletonPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

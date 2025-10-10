@@ -24,8 +24,8 @@ let existing = [];
     if (fs.existsSync(file)) {;
 const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = []}
-  } catch (error) {
+      if (!Array.isArray(existing)) existing = []  }
+  } catch (_error) { // eslint-disable-line no-unused-vars
     // console.error removed for production
 existing = []}
 
@@ -54,7 +54,8 @@ const newRate = {
       success: true, 
       rate: totalRate,
       id: newRate.id
-    }))} catch (error) {
+    }));
+  } catch (error) { // eslint-disable-line no-unused-vars
     // console.error removed for production
 res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

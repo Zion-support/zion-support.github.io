@@ -289,25 +289,10 @@ const recentPosts = blogPosts.slice(0, 3);
                 <div className="bg-white rounded-xl shadow-lg p-6">
                   <h3 className="text-xl font-bold mb-4 text-gray-900">Recent Posts</h3>
                   <div className="space-y-4">
-                    {recentPosts.map((post) => (
-                      <div key={post.id} className="flex gap-3">
-                        <img
-                          src={post.image}
-                          alt={post.title}
-                          className="w-16 h-16 object-cover rounded-lg flex-shrink-0"
-                        />
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-medium text-gray-900 line-clamp-2 mb-1">
-                            {post.title}
-                          </h4>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <Clock className="w-3 h-3 mr-1" />
-                            <span>{post.readTime}</span>
-                          </div>
-                        </div>
-                      </div>
-                    ));
-                  </div>
+                    {recentPosts.map(($1) => (
+                    $2
+                  ))}
+                </div>
                 </div>
               </aside>
 
@@ -356,13 +341,10 @@ const recentPosts = blogPosts.slice(0, 3);
                           </div>
                           <div className="flex items-center justify-between">
                             <div className="flex flex-wrap gap-2">
-                              {post.tags.map((tag) => (
-                                <span key={tag} className="bg-gray-100 text-gray-600 text-sm px-2 py-1 rounded-full flex items-center">
-                                  <Tag className="w-3 h-3 mr-1" />
-                                  {tag}
-                                </span>
-                              ));
-                            </div>
+                              {post.tags.map(($1) => (
+                    $2
+                  ))}
+                </div>
                             <button className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
                               Read More
                               <ArrowRight className="w-4 h-4 ml-1" />
@@ -389,36 +371,10 @@ const recentPosts = blogPosts.slice(0, 3);
               Featured Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => post.featured).map((post) => (
-                <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center space-x-1">
-                        <User className="w-4 h-4" />
-                        <span>{post.author}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-32 flex items-center justify-center mb-4">
-                    <div className="text-4xl">📊</div>
-                  </div>
-                  <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
-                    <span>Read More</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </article>
-              ));
-            </div>
+              {blogPosts.filter(post => post.featured).map(($1) => (
+                    $2
+                  ))}
+                </div>
           </div>
         </section>
 

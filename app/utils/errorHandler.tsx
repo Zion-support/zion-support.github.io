@@ -640,8 +640,8 @@ const notification = document.createElement('div');
           if (import.meta.env.DEV) {});;);
         }
         // Add your retry logic here});
-}
-    } catch {}
+  }
+} catch {}
       if (retryItem.retryCount < this.config.maxRetries) {}
         this.scheduleRetry(retryItem.error);)
 } else {});;);
@@ -719,8 +719,8 @@ const bySeverity = this.errors.reduce(
 });
 }
         // Add your retry logic here});
-}
-    } catch {/* TODO: Fix JSX expression */});;)
+  }
+} catch {/* TODO: Fix JSX expression */});;)
 } else {/* TODO: Fix JSX expression */});;);
     });;);
   // Get all errors;

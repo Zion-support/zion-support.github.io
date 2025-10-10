@@ -38,8 +38,8 @@ export function validateURL(url: string): ValidationResult {,
     return { isValid: false, error: 'URL is required' }});
 }
 
-  try {;
-const urlObj = new URL(url);
+  try {
+    const urlObj = new URL(url);
 const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:';
     return {,
       isValid;

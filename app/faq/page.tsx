@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-;
+
 const FAQPage: React.FC = () => {
 return (;
 const [openItems, setOpenItems] = useState<number[]>

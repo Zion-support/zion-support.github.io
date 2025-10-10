@@ -15,8 +15,9 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-;
-const ServicesPage: React.FC = () => {const services = [
+
+const ServicesPage: React.FC = () => {
+  const services = [
     // AI Services
     {
       icon: Brain,

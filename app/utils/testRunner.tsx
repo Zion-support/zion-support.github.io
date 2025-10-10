@@ -1029,8 +1029,8 @@ const passed = violations.length === 0;
     testName: string),
     assertions: (result: RenderResult) => void;
   ): Promise<{ passed: boolean; error?: string }> {
-    try {;
-const result = this.customRender(component)
+    try {
+    const result = this.customRender(component)
       assertions(result)
       this.testResults.push({`}
   ): Promise<{ passed: boolean; error?: string }> {}
@@ -1229,8 +1229,8 @@ const passed = violations.length === 0;
   async runIntegrationTest(component: ReactElement),
     testName: string),
     userInteractions: (result: RenderResult) => Promise<void></void>): Promise<{ passed: boolean; error?: string }> {
-    try {;
-const result = this.customRender(component)
+    try {
+    const result = this.customRender(component)
       await userInteractions(result)
       this.testResults.push({`}
   ): Promise<{ passed: boolean; error?: string }> {}

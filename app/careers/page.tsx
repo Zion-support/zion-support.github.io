@@ -10,7 +10,7 @@ const CareersPage: React.FC = () => {
 ;
 const CareersPage: React.FC = () => {const openPositions: JobPosition[] = [
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight } from 'lucide-react';
-;
+
 const CareersPage: React.FC = () => {const openPositions: JobPosition[] = [
     {
       id: '1',
@@ -153,16 +153,10 @@ const companyValues = [
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {companyValues.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+              {companyValues.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
         </section>
 
@@ -176,13 +170,10 @@ const companyValues = [
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
+              {benefits.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
         </section>
 
@@ -195,36 +186,10 @@ const companyValues = [
                 <p className="text-xl text-gray-600">Check out our most exciting open roles</p>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
-                {featuredPositions.map((position) => (
-                  <div key={position.id} className="bg-white border-2 border-blue-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{position.title}</h3>
-                        <p className="text-blue-600 font-medium">{position.department}</p>
-                      </div>
-                      <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                        Featured
-                      </span>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600 mb-4">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      <span className="mr-4">{position.location}</span>
-                      <Clock className="w-4 h-4 mr-1" />
-                      <span className="mr-4">{position.type}</span>
-                      <Briefcase className="w-4 h-4 mr-1" />
-                      <span>{position.experience}</span>
-                    </div>
-                    <p className="text-gray-600 mb-4">{position.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-green-600">{position.salary}</span>
-                      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
-                        Apply Now
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </button>
-                    </div>
-                  </div>
-                ));
-              </div>
+                {featuredPositions.map(($1) => (
+                    $2
+                  ))}
+                </div>
             </div>
           </section>);
         {/* All Positions */}
@@ -316,16 +281,10 @@ const companyValues = [
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+              {values.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
         </section>
 

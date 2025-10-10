@@ -155,7 +155,8 @@ const duration = performance.now() - startTime;
       // Parse response data;
 const data = await this.parseResponse<T>(finalResponse);
       return {/* TODO: Fix JSX expression */}
-      }} catch (error) {/* TODO: Fix JSX expression */}
+        }
+} catch (error) {/* TODO: Fix JSX expression */}
       }
       // Apply error interceptor;
       if (this.config.interceptors?.error) {/* TODO: Fix JSX expression */}

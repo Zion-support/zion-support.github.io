@@ -2,8 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
-;
-const FiveGImplementationPage: React.FC = () => {const features = [
+
+const FiveGImplementationPage: React.FC = () => {
+  const features = [
     {
       icon: Wifi,
       title: '5G Network Design',
@@ -103,10 +104,10 @@ const FiveGImplementationPage: React.FC = () => {const features = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ));
-                    </ul>);
+                      ))}
+                    </ul>
                 </div>
-              ));
+              ))}
             </div>
           </div>
         </section>

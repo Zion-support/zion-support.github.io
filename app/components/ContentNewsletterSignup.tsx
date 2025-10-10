@@ -96,15 +96,10 @@ const handleSubmit = async (e: React.FormEvent) => {
             </p>
             
             <div className="space-y-4"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3"></div>
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"></div>
-                    <feature.icon className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-blue-100"></spa>{feature.text}</span>
+              {features.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
 
           {/* Newsletter Form */}

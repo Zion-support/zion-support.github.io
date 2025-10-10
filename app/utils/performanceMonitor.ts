@@ -115,8 +115,8 @@ let clsValue = 0;
           });;
           if (clsValue > 0) {/* TODO: Fix JSX expression */});;);
 });
-}
-    } catch (error) {}
+  }
+} catch (error) {}
       logger.error('Failed to initialize performance observers', error as Error););
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {

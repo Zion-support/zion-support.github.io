@@ -8,7 +8,7 @@ const TeamPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>Our Team - Zion Tech Group</title>
+        <title>Our Team - Zion Tech Group</title>
         <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
       </Helmet>
       

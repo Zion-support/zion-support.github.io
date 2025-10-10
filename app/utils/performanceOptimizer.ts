@@ -176,8 +176,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       if (navigation) {}
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
   private measureLoadTime(): void {/* TODO: Fix JSX expression */}
-      }
-    } catch (error) {
+        }
+} catch (error) {
     }
   }
   /**
@@ -230,8 +230,8 @@ const lastEntry = entries[entries.length - 1]
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
         entries.forEach((entry: PerformanceEntry) => {}
-          const fidEntry = entry as PerformanceEntry & { processingStart: number }
-    } catch {/* TODO: Fix JSX expression */}
+          const fidEntry = entry as PerformanceEntry & { processingStart: number   }
+} catch {/* TODO: Fix JSX expression */}
     }
   }
   private observeFID() {/* TODO: Fix JSX expression */}

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-;
-const IoTPage: React.FC = () => {const iotServices = [
+
+const IoTPage: React.FC = () => {
+  const iotServices = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -141,7 +142,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>IoT Services - Zion Tech Group</title>
+        <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
         <meta name="keywords" content="IoT services, smart cities, industrial IoT, smart agriculture, connected devices, Internet of Things" />
       </Helmet>
@@ -261,12 +262,10 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                       <div></div>
                         <h4 className="font-semibold text-gray-900 mb-2"></h>Technologies:</h4>
                         <div className="flex flex-wrap gap-2"></div>
-                          {service.technologies.map((tech, techIndex) => (</div>
-                            <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded"></span>
-                              {tech}
-                            </span>
-                          ));
-                        </div>
+                          {service.technologies.map(($1) => (
+                    $2
+                  ))}
+                </div>
                       </div>
 
                       <div></div>

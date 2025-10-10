@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-;
-const BlockchainPage: React.FC = () => {const blockchainServices = [
+
+const BlockchainPage: React.FC = () => {
+  const blockchainServices = [
     {
       title: 'Smart Contract Development',
       description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.',
@@ -141,7 +142,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>Blockchain Services - Zion Tech Group</title>
+        <title>Blockchain Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
         <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" />
       </Helmet>
@@ -261,12 +262,10 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2"></h>Technologies:</h4>
                         <div className="flex flex-wrap gap-2"></div>
-                          {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded"></span>
-                              {tech}
-                            </span>
-                          ));
-                        </div>
+                          {service.technologies.map(($1) => (
+                    $2
+                  ))}
+                </div>
                       </div>
 
                       <div className="mb-6"></div>

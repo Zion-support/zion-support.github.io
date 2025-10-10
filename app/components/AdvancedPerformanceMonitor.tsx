@@ -65,8 +65,8 @@ const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
-      try {;
-const lcpObserver = new PerformanceObserver(list => {;
+      try {
+    const lcpObserver = new PerformanceObserver(list => {;
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }););)
@@ -79,8 +79,8 @@ const lastEntry = entries[entries.length - 1];
 
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
-      try {;
-const fidObserver = new PerformanceObserver(list => {;
+      try {
+    const fidObserver = new PerformanceObserver(list => {;
 const entries = list.getEntries();
           entries.forEach(entry => {
             if ($1) { const fidEntry = entry as PerformanceEventTiming;
@@ -117,8 +117,8 @@ const entries = list.getEntries();
     }
 
     // Measure Time to First Byte (TTFB)
-    try {;
-const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+    try {
+    const navigationEntries = performance.getEntriesByType?.('navigation') || [];
 const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
 const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
-;
+
 const MicroSaaSPage: React.FC = () => {
 return (;
 const serviceName = 'chat-analytics';
@@ -10,7 +10,7 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>{title} | Zion Tech Group - Micro SaaS Solutions</title>
+        <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta name="description" content={`Powerful ${title.toLowerCase(); micro SaaS solution for modern businesses.`} />
         <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
       </Helmet>

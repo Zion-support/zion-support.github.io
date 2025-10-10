@@ -235,20 +235,10 @@ const toggleFAQ = (index: number) => {
               <p className="text-xl text-gray-600">Choose your preferred way to contact us</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white border-2 border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition-all">
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-blue-100 p-3 rounded-full">
-                      {channel.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{channel.title}</h3>
-                  <p className="text-gray-600 mb-4">{channel.description}</p>
-                  <p className="text-blue-600 font-medium mb-2">{channel.contact}</p>
-                  <p className="text-sm text-gray-500">{channel.availability}</p>
+              {supportChannels.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
         </section>
 

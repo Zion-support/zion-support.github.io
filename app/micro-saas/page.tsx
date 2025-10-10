@@ -321,13 +321,10 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ));
-              </div>
+                {benefits.map(($1) => (
+                    $2
+                  ))}
+                </div>
             </div>
           </section>);
           </div>

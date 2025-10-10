@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
-;
-const AIAnalyticsDashboardPage: React.FC = () => {const features = [
+
+const AIAnalyticsDashboardPage: React.FC = () => {
+  const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
@@ -53,7 +54,7 @@ const metrics = [
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
+        <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
         <meta name="keywords" content="AI analytics dashboard, business intelligence, data visualization, real-time analytics, predictive insights, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />

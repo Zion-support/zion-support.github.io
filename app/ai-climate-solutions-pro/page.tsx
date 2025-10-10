@@ -4,8 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-;
-const PagePage: React.FC = () => {const features = [
+
+const PagePage: React.FC = () => {
+  const features = [
     {
       title: 'Feature 1',
       description: 'Description of feature 1',
@@ -88,10 +89,11 @@ const benefits = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ));
-                    </ul>);
+                      ))}
+                    </ul>
+                  )}
                 </div>
-              ));
+              ))}
             </div>
           </div>
         </section>
@@ -109,15 +111,10 @@ const benefits = [
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
+              {benefits.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
         </section>
 
@@ -238,15 +235,10 @@ export default AiClimateSolutionsProPage;    'Benefit 1',
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+            {benefits.map(($1) => (
+                    $2
+                  ))}
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ));
-          </div>
         </div>
       </section>
 

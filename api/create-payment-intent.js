@@ -15,8 +15,8 @@ const { amount, currency = 'usd' } = req.body || {};
     res.end(JSON.stringify({ error: 'Amount is required' }));
     return}
 
-  try {;
-const paymentIntent = {
+  try {
+    const paymentIntent = {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
@@ -25,7 +25,8 @@ const paymentIntent = {
     };
 
     res.statusCode = 200;
-    res.json({ paymentIntent })} catch (err) {
+    res.json({ paymentIntent });
+  } catch (_err) { // eslint-disable-line no-unused-vars
     // console.error removed for production
 res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

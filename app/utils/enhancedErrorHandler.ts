@@ -284,8 +284,8 @@ const originalFetch = window.fetch
     if (!this.config.enablePerformanceImpact) return;
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {
-      try {;
-const observer = new PerformanceObserver(list => {)
+      try {
+    const observer = new PerformanceObserver(list => {)
           list.getEntries().forEach(entry => {)
             if (entry.duration > 100) {
               // Tasks longer than 100ms;

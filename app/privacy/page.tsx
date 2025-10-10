@@ -124,18 +124,10 @@ const rights = [
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
-                {purposes.map((purpose, index) => (</div>
-                  <div></div>
-                    <div></div>
-                      <purpose.icon className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div></div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>{purpose.title}</h3>
-                      <p className="text-gray-700">{purpose.description}</p>
-                    </div>
-                  </div>
-                ));
-              </div>
+                {purposes.map(($1) => (
+                    $2
+                  ))}
+                </div>
             </section>
 
             {/* Data Security */}
@@ -164,16 +156,10 @@ const rights = [
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
-                {rights.map((right, index) => (</div>
-                  <div></div>
-                    <div></div>
-                      <right.icon className="h-6 w-6 text-green-600 mr-3" />
-                      <h3 className="text-lg font-semibold text-gray-900"></h>{right.title}</h3>
-                    </div>
-                    <p className="text-gray-700">{right.description}</p>
-                  </div>
-                ));
-              </div>
+                {rights.map(($1) => (
+                    $2
+                  ))}
+                </div>
             </section>
 
             {/* Contact Information */}

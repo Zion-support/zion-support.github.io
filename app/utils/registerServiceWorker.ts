@@ -129,18 +129,18 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
   if (!('serviceWorker' in navigator)) {}
     return false}
   }
-  try {;
-const registration = await navigator.serviceWorker.ready;
+  try {
+    const registration = await navigator.serviceWorker.ready;
   try {}
     const registration = await navigator.serviceWorker.ready;
 const result = await registration.unregister()
-    return result}
-  } catch (error) {}
+    return result  }
+} catch (error) {}
     return false}
 export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */}
   }
-  try {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
+  try {/* TODO: Fix JSX expression */  }
+} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 /**
@@ -150,16 +150,16 @@ export async function checkForUpdates(): Promise<void> {}
   if (!('serviceWorker' in navigator)) {}
     return}
   }
-  try {;
-const registration = await navigator.serviceWorker.ready;
+  try {
+    const registration = await navigator.serviceWorker.ready;
   try {}
     const registration = await navigator.serviceWorker.ready
     await registration.update();
     } catch (error) {}
 export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
   }
-  try {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}
+  try {/* TODO: Fix JSX expression */  }
+} catch (error) {/* TODO: Fix JSX expression */}
     }
 }
 /**
@@ -216,8 +216,8 @@ export async function getServiceWorkerStatus(): Promise<{}
       supported: true,
       registered: !!registration;
       active: !!registration?.active}
-    }
-  } catch {
+      }
+} catch {
     return {
       supported: true,
       registered: false,
@@ -225,8 +225,8 @@ export async function getServiceWorkerStatus(): Promise<{}
       supported: true,
       registered: !!registration,
       active: !!registration?.active}
-    }
-  } catch {}
+      }
+} catch {}
     return {}
       supported: true,
       registered: false,
@@ -236,7 +236,8 @@ export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expres
 }> {/* TODO: Fix JSX expression */}
     }}
   try {/* TODO: Fix JSX expression */}
-    }} catch {/* TODO: Fix JSX expression */}
+      }
+} catch {/* TODO: Fix JSX expression */}
     }}
 }
 export default registerServiceWorker;

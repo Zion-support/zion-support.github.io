@@ -48,8 +48,8 @@ const cacheKey = apiCache.generateKey(url, body);
         return cachedData;);
     }
 
-    try {;
-const response = await fetch(url, {)
+    try {
+    const response = await fetch(url, {)
         method)
         headers: {,
           ...this.defaultHeaders),

@@ -1,20 +1,21 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return}
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+  try {
+    const { name, email, phone, details, country, service } = req.body || {};
 
-  try {;
-const { name, email, phone, details, country, service } = req.body || {};
-
-    if (!name || !email || !phone || !details) {
-      return}
-
+    if (!name || !email) {
+      return res.status(400).json({ error: 'Name and email are required' });
+    }
     // Process quote submission logic here
     // In a real application, you would:
     // 1. Save to your database
     // 2. Send notification to your sales team
     // 3. Send confirmation email to the customer
-    // 4. Integrate with your CRM;
-const quoteData = {
+    // 4. Integrate with your CRM
+    
+    const quoteData = {
       name,
       email,
       phone,
@@ -26,16 +27,23 @@ const quoteData = {
     };
 
     // console.log removed for production
-res.statusCode = 200;
+    // eslint-disable-next-line no-console
+    console.log('Quote request:', quoteData);
+    
+    res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Quote request submitted successfully',
       quoteId: `quote_${Date.now()}`,
       data: quoteData
-    }))} catch (error) {
+    }));
+  } catch (error) {
     // console.error removed for production
-res.statusCode = 500;
+    // eslint-disable-next-line no-console
+    console.error('Quote request error:', error);
+    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }))}
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
 }

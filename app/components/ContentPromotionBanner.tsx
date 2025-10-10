@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-;
-const ContentPromotionBanner: React.FC = () => {const features = [
+
+const ContentPromotionBanner: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -84,38 +85,17 @@ const stats = [
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-3 rounded-full">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
+          {features.map(($1) => (
+                    $2
+                  ))}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            </div>
-          ));
-        </div>
 
         {/* Stats Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-gradient-to-r from-green-500 to-blue-500 p-3 rounded-full">
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
+          {stats.map(($1) => (
+                    $2
+                  ))}
                 </div>
-                <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-xl font-semibold text-gray-300 mb-2">{stat.label}</div>
-                <div className="text-gray-400">{stat.description}</div>
-              </div>
-            </div>
-          ));
-        </div>
 
         {/* Benefits Section */}
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">

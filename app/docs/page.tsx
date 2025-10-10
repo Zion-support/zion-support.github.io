@@ -84,28 +84,10 @@ const filteredDocs = docCategories.map(category => ({
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {popularDocs.map((doc, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
+            {popularDocs.map(($1) => (
+                    $2
+                  ))}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                  {doc.title}
-                </h3>
-                <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
-                <a
-                  href={doc.link}
-                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm"
-                >
-                  Read More
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            ));
-          </div>
         </div>
       </section>
 
@@ -127,23 +109,9 @@ const filteredDocs = docCategories.map(category => ({
                 </div>
                 
                 <div className="space-y-4">
-                  {category.docs.map((doc, docIndex) => (
-                    <a
-                      key={docIndex}
-                      href={doc.link}
-                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
-                            {doc.title}
-                          </h4>
-                          <p className="text-gray-300 text-sm">{doc.description}</p>
-                        </div>
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
-                      </div>
-                    </a>
-                  ));
+                  {category.docs.map(($1) => (
+                    $2
+                  ))}
                 </div>
               </div>
             ));

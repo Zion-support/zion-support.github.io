@@ -46,7 +46,7 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
-        <title></titl>Contact Us - Zion Tech Group | Get in Touch</title>
+        <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com" />
         <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support" />
       </Helmet>

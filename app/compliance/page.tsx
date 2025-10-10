@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, CheckCircle, FileText, Lock, Award, Globe } from 'lucide-react';
-const CompliancePage: React.FC = () => {const complianceStandards = [
+const CompliancePage: React.FC = () => {
+  const complianceStandards = [
     {
       icon: Shield,
       title: 'SOC 2 Type II',
@@ -60,16 +61,10 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceStandards.map((standard, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4">
-                    <standard.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{standard.title}</h3>
-                  <p className="text-gray-300">{standard.description}</p>
+              {complianceStandards.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
         </section>
 

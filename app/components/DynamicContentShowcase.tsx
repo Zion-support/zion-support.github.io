@@ -176,13 +176,10 @@ const currentTestimonial = testimonials[currentIndex];
                 
                 {feature.stats && (
                   <div className="grid grid-cols-3 gap-4">
-                    {feature.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="text-center">
-                        <div className="text-lg font-bold text-white">{stat.value}</div>
-                        <div className="text-gray-400 text-xs">{stat.label}</div>
-                      </div>
-                    ));
-                  </div>);
+                    {feature.stats.map(($1) => (
+                    $2
+                  ))}
+                </div>);
               </div>
             ));
           </div>
@@ -203,9 +200,9 @@ const currentTestimonial = testimonials[currentIndex];
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <div className="text-center">
                 <div className="flex justify-center mb-6">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ));
+                  {[...Array(currentTestimonial.rating)].map(($1) => (
+                    $2
+                  ))}
                 </div>
                 
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -277,13 +274,10 @@ const currentTestimonial = testimonials[currentIndex];
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span>{benefit}</span>
+              {benefits.map(($1) => (
+                    $2
+                  ))}
                 </div>
-              ));
-            </div>
           </div>
         </div>
       </section>
