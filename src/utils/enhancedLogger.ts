@@ -764,7 +764,4 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const logger = EnhancedLogger.getInstance();
 // Export default;
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

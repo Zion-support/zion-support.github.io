@@ -39,10 +39,7 @@ icon: Shield,
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-5xl font-bold text-white mb-6">            Cloud Infrastructure  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions. 
             Powered by cutting-edge AI technology and industry expertise.

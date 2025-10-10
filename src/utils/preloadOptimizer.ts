@@ -164,7 +164,4 @@ const gaScript = document.createElement('script')
   s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
 //   document.head.appendChild(gaScript)
 }"
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

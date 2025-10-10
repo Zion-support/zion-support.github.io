@@ -2,9 +2,7 @@ import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";"
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t";
 const, Suppor, t: Rea, c, t.FC = () => {
-=======
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('');
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l');
   const, supportChannel, s = [
@@ -14,7 +12,6 @@ return (
       descripti, o, n: 'Speak, directly, with our, technical, experts'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 2, minute, s'
-<<<<<<< HEAD
       conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'
     }    {
       ic, o, n: MessageCirc, l, e;

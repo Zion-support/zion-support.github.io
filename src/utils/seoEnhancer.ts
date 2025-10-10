@@ -51,7 +51,4 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   };
 };
 export default SEOEnhancer;"
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

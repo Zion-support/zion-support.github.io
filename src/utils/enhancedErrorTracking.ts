@@ -307,7 +307,4 @@ class EnhancedErrorTracker {
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker()
 export default errorTracker;`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

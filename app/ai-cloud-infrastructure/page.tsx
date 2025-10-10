@@ -86,8 +86,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
                       </li>
                     ))}
                   </ul>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
                 </div>
               ))}
             </div>
@@ -110,7 +108,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       </main>
       <Footer />
     </React.Fragment>
-<<<<<<< HEAD
   )
 }export default AiCloudInfrastructurePage
   </button>
@@ -118,5 +115,3 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
   </button>
   </button>
   </h1>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

@@ -1139,7 +1139,6 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
   };
 };
 export default ErrorHandler;"`
-<<<<<<< HEAD
   </div>
   </div>
   </div>
@@ -1147,5 +1146,3 @@ export default ErrorHandler;"`
   </ErrorHandlerConfig>
   </ErrorHandlerConfig>
   </ErrorHandlerConfig>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

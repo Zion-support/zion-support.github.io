@@ -55,17 +55,10 @@ module.exports = {
     priority: {
       home: 1;
       services: 0.9;
-<<<<<<< HEAD
       about: 0.8
       contact: 0.7
       blog: 0.6,
 module.exports = {/* TODO: Fix JSX expression */}
-=======
-      about: 0.8;
-      contact: 0.7;
-      blog: 0.6;
-module.exports = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     twitterCard,
   s: {/* TODO: Fix JSX expression */};

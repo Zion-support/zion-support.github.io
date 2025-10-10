@@ -15,12 +15,8 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-<<<<<<< HEAD
         emit: jest.fn()}}
   }}));
-=======
-        emit: jest.fn()}}}}));
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Mock files that use import.meta.env
 jest.mock('./src/utils/logger.ts', () => ({
   logger: {
@@ -72,12 +68,8 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn()}));
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-48f3; //Mock: Next.js router.mock('next/router') () => ({' useRouter() { ',
 }}
-=======
-ursor/automate-test-fix-improve-and-merge-code-48f3; //Mock: Next.js router.mock('next/router') () => ({' useRouter() { '}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ursor/automate-test-fix-improve-and-merge-code-48f3; //Moc,
   k: Next.js router.mock('next/router') () => ({/* TODO: Fix JSX expression */};
 }})

@@ -1640,10 +1640,8 @@ export const,
     reviews: 45;
 ]
 export interface InnovativeMicroSaasService2025 {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -1671,7 +1669,6 @@ export interface InnovativeMicroSaasService2025 {
   growthRate: string
   variant: ServiceVariant,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}

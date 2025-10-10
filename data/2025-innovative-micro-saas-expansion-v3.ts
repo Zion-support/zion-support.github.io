@@ -2535,10 +2535,8 @@ marketSize: '$28B+ Warehouse Robotics market', growthRate: '35% YoY',
     rating: 4.9;
     reviews: 28;
 export interface InnovativeMicroSaasService {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string
   tagline: string
@@ -2566,7 +2564,6 @@ export interface InnovativeMicroSaasService {
   growthRate: string
   variant: ServiceVariant,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}

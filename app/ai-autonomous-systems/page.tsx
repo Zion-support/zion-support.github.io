@@ -118,13 +118,11 @@ const AiAutonomousSystemsPage: React.FC = () => {
               </div>
             ))}
           </div>
-=======
       </div>
     </>
   );
 };
 export default AiAutonomousSystemsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </div>
       </section>
       {/* Benefits Section */}      <section className="py-20 px-4">
@@ -165,7 +163,6 @@ export default AiAutonomousSystemsPage;
       </section>
       <Footer />
     </div>
-<<<<<<< HEAD
   )
 }export default PagePage
   </button>
@@ -178,7 +175,3 @@ export default AiAutonomousSystemsPage;
   </button>
   </h1>
   </main>
-=======
-}
-export default PagePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

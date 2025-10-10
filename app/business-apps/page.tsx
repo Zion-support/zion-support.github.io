@@ -119,9 +119,6 @@ title: 'AI-Powered Business Apps',
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-=======
-<<<<<<< HEAD
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747
               Email Us
   </export default BusinessAppsPage
   </button>

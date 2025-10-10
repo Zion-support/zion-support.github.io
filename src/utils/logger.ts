@@ -364,7 +364,4 @@ class Logger {/* TODO: Fix JSX expression */}
   };
 };
 export const logger = new Logger()`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

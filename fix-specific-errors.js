@@ -5,7 +5,6 @@ import { glob } from 'glob';
 function processFile(filePath) {
   try {
     // Fix malformed closing tags;
-<<<<<<< HEAD
     if (content.includes('</div>}')) {
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
@@ -31,25 +30,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       modified = true;
     }
 
-=======
-    if (content.includes('</div>}')) {;
-function processFile(filePath) {/* TODO: Fix JSX expression */};
-    if (content.includes('</div>}')) {/* TODO: Fix JSX expression */};
-      content = content.replace(/<\/div>\}/g, '}');
-      modified = true};
-    // Fix malformed closing tags with semicolons;
-    if (content.includes('</div>;')) {
-      content = content.replace(/<\/div>;/g, ';');
-      modified = true};
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {
-      content = content.replace(/<\/div>,/g, ',');
-      modified = true};
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {
-      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;');
-      modified = true};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Fix malformed object properties;
     if (content.includes('const config = {
 ')) {
@@ -62,17 +42,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
             /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
             '$1: $2,'
           );
-<<<<<<< HEAD
           modified = true;
         }
     if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
     }
 
-=======
-          modified = true};
-    if (content.includes('</div>;')) {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Fix malformed closing tags with commas;
     if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */};
     };
@@ -82,7 +56,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     // Fix malformed object properties;
     if (content.includes('const config = {/* TODO: Fix JSX expression */};
         })
-<<<<<<< HEAD
         newLines.push(line);
       }
       if (modified) {/* TODO: Fix JSX expression */}
@@ -97,41 +70,20 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-        newLines.push(line)};
-      if (modified) {/* TODO: Fix JSX expression */};
-      };
-    };
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution;
 async function main() {
   // Find all TypeScript/JavaScript files in app directory;
   files.forEach(file => {)
     if (processFile(file)) {
-<<<<<<< HEAD
       fixedCount++;
     }
 async function main() {/* TODO: Fix JSX expression */}
 }
-=======
-      fixedCount++};
-async function main() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Find all TypeScript/JavaScript files in app directory;
   files.forEach(file => {/* TODO: Fix JSX expression */};
     })
-<<<<<<< HEAD
   });
 
 }
 
-=======
-  })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 main().catch(console.error);

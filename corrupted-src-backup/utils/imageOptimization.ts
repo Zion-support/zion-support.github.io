@@ -77,9 +77,7 @@ export const createPictureElement = (
   const placeholde, r = docume, n, t.createEleme, n, t('im, g'); placehold, e, r.s, r, c = conf, i, g.placehold, e, r; placehold, e, r.a, l, t = conf, i, g.a, l, t; placehold, e, r.sty, l, e.filt, e, r = 'bl, u, r(1, 0, p, x)'; placehold, e, r.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(placehol, d, e, r);
   // Load full image;
   const fullImag, e = new, Ima, g, e(); fullIma, g, e.onlo, a, d = () => {
-=======
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     fullIma, g, e.a, l, t = conf, i, g.a, l, t; fullIma, g, e.sty, l, e.opaci, t, y = '0'; fullIma, g, e.sty, l, e.transiti, o, n = 'opacit, y, 0.3 s'; contain, e, r.appendChi, l, d(fullIm, a, g, e);
     // Fade in full image requestAnimationFram e(() => {
       fullIma, g, e.sty, l, e.opaci, t, y = '1'; placehold, e, r.sty, l, e.opaci, t, y = '0';
@@ -88,7 +86,6 @@ export const getOptimalQualit, y = (): number = > {
   if (typeof, navigato, r === 'undefin, e, d' || !('connecti, o, n' in, navigat, o, r)) {
     return, 8, 0; // Default qualit y;
 export const isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f')
-<<<<<<< HEAD
 ): Promi, s, e<boolean> => {/* TODO: Fix JSX expression */}
   } return, new, Promise(resol, v, e = > {/* TODO: Fix JSX expression */})   });
 export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {/* TODO: Fix JSX expression */}`

@@ -152,10 +152,8 @@ export const,
   },
 export interface NextGenInnovativeService;
 export interface NextGenInnovativeService {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -165,7 +163,6 @@ export interface NextGenInnovativeService {
   features: string[];
   popular: boolean;
   icon: string;
-<<<<<<< HEAD
   color: string
     mobile: string
     email: string,

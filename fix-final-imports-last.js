@@ -13,13 +13,8 @@ function processFile(filePath) {
         replacement: "import { Metadata } from './types/next';"},
       {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
-<<<<<<< HEAD
         replacement: "import Link from './utils/link';",
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-=======
-        replacement: "import Link from './utils/link';",;
-function processFile(filePath) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,
   t: "import { Metadata } from './types/next';"},
@@ -28,7 +23,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -37,14 +31,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processDirectory(dirPath) {
   items.forEach(item => {)
 )
@@ -58,13 +44,9 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
       };
     };
   });
-<<<<<<< HEAD
 
   return totalFixed;
 }
 
-=======
-  return totalFixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process the app directory;
 // Process the app directory;"

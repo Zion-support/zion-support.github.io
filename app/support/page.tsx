@@ -20,8 +20,6 @@ const SupportPage: React.FC = () => {
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   const supportChannels = [
     {
       title: 'Email Support',
@@ -136,6 +134,5 @@ const SupportPage: React.FC = () => {
   )
 }  );
 };
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747
 
 export default SupportPage

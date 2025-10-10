@@ -45,8 +45,6 @@ const AnalyticsToolsPage: React.FC = () => {
             Analytics Tools
   </              Email Us
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           </div>
         </div>
         <div className="text-center">

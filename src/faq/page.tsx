@@ -111,16 +111,13 @@ $4];
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
-=======
 );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors">
                           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? (
-<<<<<<< HEAD
                             <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : (
                             <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />

@@ -113,7 +113,4 @@ export function useEnhancedPerformance(__option)
     trackError,
     trackUserAction,
     measureOperation;)`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

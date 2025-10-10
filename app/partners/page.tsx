@@ -22,7 +22,6 @@ const PartnersPage: React.FC = () => {
   const [selectedTier, setSelectedTier] = useState('all');
 
   const partners: Partner[] = [
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     {
       id: '1',
       name: 'Microsoft',
@@ -39,7 +38,6 @@ const PartnersPage: React.FC = () => {
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
   ];
   const benefits = [
     {
@@ -121,6 +119,5 @@ const PartnersPage: React.FC = () => {
   )
 }  );
 };
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747
 
 export default PartnersPage

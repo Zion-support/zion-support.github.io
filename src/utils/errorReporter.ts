@@ -492,7 +492,4 @@ export const captureComponentError = ()
   });
 }
 export default ErrorReporter;
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

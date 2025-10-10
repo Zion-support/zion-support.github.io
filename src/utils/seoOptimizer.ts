@@ -794,7 +794,4 @@ const,
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

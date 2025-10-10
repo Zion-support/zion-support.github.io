@@ -3,12 +3,8 @@ import fs from 'fs';
 
 const filePath = './src/micro-saas/page-original.tsx';
 let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
 
 // Find the start of the _realEstateSaaS array (line 1666)
-=======
-// Find the start of the _realEstateSaaS array (line 1666);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const lines = content.split('\n');
 let inRealEstateArray = false;
 let inCategoriesArray = false;
@@ -29,7 +25,6 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
 ];
     if (!line.trim().startsWith('//')) {
       lines[i] = '  // ' + line;
-<<<<<<< HEAD
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {/* TODO: Fix JSX expression */}
     }
   }
@@ -39,20 +34,6 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-  if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [
-')) {/* TODO: Fix JSX expression */};
-];
-    };
-  };
-  if (inCategoriesArray && i > categoriesStartLine && !line.includes('// const _categories = [
-')) {/* TODO: Fix JSX expression */};
-];
-    };
-  };
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const fixedContent = lines.join('\n');
 fs.writeFileSync(filePath, fixedContent, 'utf8');
 console.log('Fixed array comments in micro-saas file');

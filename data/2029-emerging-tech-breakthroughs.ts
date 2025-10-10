@@ -99,15 +99,12 @@ export const,
       "Future capabilities",
       "Advanced features",
 export interface EmergingTechBreakthrough2029 {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       "Expert insights"
     ],
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: unknown}      lin,
   k: '/services/2029-emerging-tech-breakthrough'

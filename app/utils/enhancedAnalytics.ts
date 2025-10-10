@@ -371,11 +371,9 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   };
   private flushOfflineQueue(): void {
     if (this.offlineQueue.length === 0) return;
-=======
     // Merge offline queue into main queue;
   private flushOfflineQueue(): void {};
     if (this.offlineQueue.length === 0) return
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Merge offline queue into main queue
   }
   private flushOfflineQueue(): void {}
@@ -399,7 +397,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     queueSize: number,
     offlineQueueSize: number,
     sessionId: string,
-<<<<<<< HEAD
   }
     userProperties: UserProperties,}
   } {

@@ -112,8 +112,5 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 export default ModernLoadingSpinner;
 export default ModernLoadingSpinner;"`
-<<<<<<< HEAD
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

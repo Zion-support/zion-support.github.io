@@ -10,18 +10,12 @@ for (const filePath of files) {
     //Fix unterminated regular expression literals in object properties;
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
-<<<<<<< HEAD
 for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;
     });
 
-=======
-for (const filePath of files) {/* TODO: Fix JSX expression */};
-        return `${prop}: '${value.substring(1)}'`};
-      return match});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //Fix JSX attributes that look like regex but are actually strings;
     content = content.replace(/={\s*\/[^\/\n]*$/gm, match => {)
       const value = match;)
@@ -45,16 +39,11 @@ for (const filePath of files) {/* TODO: Fix JSX expression */};
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;
     });
 
-=======
-        return `${prop}: '${value.substring(1)}'`};
-      return match});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //Fix malformed JSX expressions;
     content = content.replace(/\{\s*\/[^\/\n]*$/gm, match => {)
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
@@ -64,16 +53,11 @@ for (const filePath of files) {/* TODO: Fix JSX expression */};
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;
     });
 
-=======
-        return `${prop}: '${value.substring(1)}'`};
-      return match});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //Fix malformed template literals;
     content = content.replace(/`[^`]*$/gm, match => {)
       if (!match.endsWith('`')) {
@@ -89,7 +73,6 @@ for (const filePath of files) {/* TODO: Fix JSX expression */};
     //Fix malformed JSX attributes;
     content = content.replace(/(\w+)=\{[^}]*$/gm, match => {
       if (!match.includes('}')) {
-<<<<<<< HEAD
     content = content.replace(/(\w+)=\{[^}]*$/gm, match => {/* TODO: Fix JSX expression */}
       if (!match.includes('}')) {/* TODO: Fix JSX expression */}
         return match + '}';
@@ -97,17 +80,10 @@ for (const filePath of files) {/* TODO: Fix JSX expression */};
       return match;
     });
 
-=======
-    content = content.replace(/(\w+)=\{[^}]*$/gm, match => {/* TODO: Fix JSX expression */};
-      if (!match.includes('}')) {/* TODO: Fix JSX expression */};
-        return match + '}'};
-      return match});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //Fix specific patterns with malformed object properties;
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;
@@ -119,14 +95,5 @@ for (const filePath of files) {/* TODO: Fix JSX expression */};
 //     }
 }
 
-=======
-        return `${prop}: '${value.substring(1)}'`};
-      return match});
-    if (content !== originalContent) {/* TODO: Fix JSX expression */};
-    };
-  } catch (error) {/* TODO: Fix JSX expression */};
-//     };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 
 }}}`

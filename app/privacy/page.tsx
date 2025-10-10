@@ -37,7 +37,6 @@ const PrivacyPage: React.FC = () => {
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information and data." />
         <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, data security" />
         <link rel="canonical" href="https://ziontechgroup.com/privacy" />
@@ -311,5 +310,3 @@ const PrivacyPage: React.FC = () => {
 }
 
 export default PrivacyPage
-=======
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

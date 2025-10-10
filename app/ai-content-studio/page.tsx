@@ -164,7 +164,6 @@ icon: Brain,      title: 'AI-Powered Intelligence',      description: 'Advanced 
       </section>
       <Footer />
     </React.Fragment>
-<<<<<<< HEAD
   )
 }export default AiContentStudioPage
   </button>
@@ -177,5 +176,3 @@ icon: Brain,      title: 'AI-Powered Intelligence',      description: 'Advanced 
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

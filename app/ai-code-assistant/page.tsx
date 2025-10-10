@@ -115,5 +115,3 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
   </button>
   </button>
   </h1>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

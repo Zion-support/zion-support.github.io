@@ -847,10 +847,8 @@ export interface InnovativeITService2025 {id: string, name: string,
     rating: 4.8;
     reviews: 52;
 export interface InnovativeITService2025 {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -878,7 +876,6 @@ export interface InnovativeITService2025 {
   growthRate: string
   variant: string,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}
@@ -3517,10 +3514,6 @@ rating: 4.8
     launchDate: '2024-09-01'
     customers: 123;
 export interface InnovativeITService2025 {
-=======
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -3548,7 +3541,6 @@ export interface InnovativeITService2025 {
   growthRate: string
   variant: string,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}

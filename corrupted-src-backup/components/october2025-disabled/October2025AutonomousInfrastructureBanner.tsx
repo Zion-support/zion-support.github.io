@@ -1,8 +1,6 @@
 const October2025AutonomousInfrastructureBanner = () => {
-=======
 };
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
       <div className="absolute inset-0 opacity-10">
   return (
@@ -36,7 +34,6 @@ return (
             Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. ,
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
             Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
 const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}  y: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */};

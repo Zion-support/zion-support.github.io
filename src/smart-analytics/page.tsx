@@ -155,10 +155,8 @@ const SmartAnalyticsPage: React.FC = () => {
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
-=======
 };
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -177,7 +175,6 @@ return (
       </main>
       <Footer />
     </div>
-<<<<<<< HEAD      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'

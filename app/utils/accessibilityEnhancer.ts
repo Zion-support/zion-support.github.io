@@ -3,7 +3,6 @@
  * Provides comprehensive accessibility improvements for web applications
  */
 
-<<<<<<< HEAD
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = []
   private skipLinks: HTMLElement[] = []
@@ -149,7 +148,6 @@ export class AccessibilityEnhancer {
       description: 'Worldwide deployment and support for international businesses'
     }
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6  private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {
@@ -373,7 +371,6 @@ export class AccessibilityEnhancer {
     this.skipLinks = []
     this.landmarks = []
   }
-<<<<<<< HEAD
 }
 
 // Create global instance
@@ -656,4 +653,3 @@ Recommendations:
 - Test with screen readers regularly
 `});;)
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

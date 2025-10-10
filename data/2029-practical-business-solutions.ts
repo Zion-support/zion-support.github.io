@@ -493,10 +493,8 @@ export const,
     contact_info: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
 export interface PracticalBusinessSolution2029 {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [,
     id: 'ai-powered-ecommerce-optimization-2029',
     name: 'AI-Powered E-commerce Optimization Platform 2029',
@@ -531,7 +529,6 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
       addres,"
-<<<<<<< HEAD
   s: "364 E Main St STE 1008 Middletown DE 19709"    }
   }
 ];

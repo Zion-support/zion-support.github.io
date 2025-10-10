@@ -3,17 +3,12 @@
  * Focused PR Merger - Merges specific recent branches that are likely open PRs;
  */ import { execSync } from 'child_process';
 import fs from 'fs';
-<<<<<<< HEAD
 
 // //Step 1: Ensure we're on main and up to date,
-=======
-// //Step 1: Ensure we're on main and up to date;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // try {,
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
-<<<<<<< HEAD
     //   process.exit(1)
   }
 
@@ -22,16 +17,6 @@ const branchesToMerge = [,
 // //Step,
   1: Ensure we're on main and up to date,
 // try {/* TODO: Fix JSX expression */}
-=======
-//   process.exit(1)};
-//Step 2: Define specific branches to merge (most recent and relevant),;
-const branchesToMerge = [
-,
-];
-// //Step,
-  1: Ensure we're on main and up to date;
-// try {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   o: 'inherit' });
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
   o: 'inherit' });
@@ -40,12 +25,7 @@ const branchesToMerge = [
 //Step,
   2: Define specific branches to merge (most recent and relevant)
 const branchesToMerge = [
-<<<<<<< HEAD
   //Recent error fixing branches,
-=======
-];
-  //Recent error fixing branches;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   'cursor/build-and-fix-errors-008f',
   'cursor/build-and-fix-errors-079c',
   'cursor/build-and-fix-errors-0ebf',
@@ -66,12 +46,8 @@ const branchesToMerge = [
   'cursor/build-ai-powered-smart-contract-generator-b22 e',
   'cursor/build-ai-pricing-suggestion-engine-ea4 e',
   'cursor/build-ai-resume-and-portfolio-builder-workflow-2029'];
-<<<<<<< HEAD
 
 // //Step 3: Enhanced conflict resolution function,
-=======
-// //Step 3: Enhanced conflict resolution function;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function resolveConflictsAndMerge(branchName) {,
 //   try {,
     //Check if branch exists;
@@ -80,7 +56,6 @@ function resolveConflictsAndMerge(branchName) {,
     const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)
       { encoding: 'utf8' };
 // //Step,
-<<<<<<< HEAD
   3: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
@@ -95,19 +70,6 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   d: 'already_merged' }
     }
 
-=======
-  3: Enhanced conflict resolution function;
-function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */};
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    //Check if already merged;`;
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
-      {/* TODO: Fix JSX expression */};
-  g: 'utf8' })
-    ).trim();
-    if (isMerged !== 'not_merged') {/* TODO: Fix JSX expression */};
-  d: 'already_merged' }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //Try direct merge;
     execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
       { stdio: 'inherit' };
@@ -130,76 +92,47 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
       {/* TODO: Fix JSX expression */};
   o: 'inherit' })
     );
-<<<<<<< HEAD
 //     return {/* TODO: Fix JSX expression */}
   d: 'direct' }
   } catch (error) {/* TODO: Fix JSX expression */}
-=======
-//     return {/* TODO: Fix JSX expression */};
-  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
             {/* TODO: Fix JSX expression */};
   o: 'inherit' };
           );
-<<<<<<< HEAD
 //           return {/* TODO: Fix JSX expression */}
   d: 'theirs' }
         } catch (theirsError) {/* TODO: Fix JSX expression */}
 //           }
 
         //Strategy 2: Auto-resolve with ours,
-=======
-//           return {/* TODO: Fix JSX expression */};
-  d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */};
-//           };
-        //Strategy 2: Auto-resolve with ours;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         try {,
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           execSync(
         //Strategy,
-<<<<<<< HEAD
   2: Auto-resolve with ours,
         try {/* TODO: Fix JSX expression */}
-=======
-  2: Auto-resolve with ours;
-        try {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   o: 'inherit' });
           execSync(")`
             `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
             {/* TODO: Fix JSX expression */};
   o: 'inherit' };
           );
-<<<<<<< HEAD
 //           return {/* TODO: Fix JSX expression */}
   d: 'ours' }
         } catch (oursError) {/* TODO: Fix JSX expression */}
 //           }
 
         //Strategy 3: Manual conflict resolution,
-=======
-//           return {/* TODO: Fix JSX expression */};
-  d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */};
-//           };
-        //Strategy 3: Manual conflict resolution;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         try {,
           execSync('git reset --hard HEAD', { stdio: 'inherit' });
           //Get conflicted files;
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U')
             { encoding: 'utf8' };
         //Strategy,
-<<<<<<< HEAD
   3: Manual conflict resolution,
         try {/* TODO: Fix JSX expression */}
-=======
-  3: Manual conflict resolution;
-        try {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   o: 'inherit' });
           //Get conflicted files;
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U',
@@ -234,7 +167,6 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
             {/* TODO: Fix JSX expression */};
   o: 'inherit' })
           );
-<<<<<<< HEAD
 //           return {/* TODO: Fix JSX expression */}
   d: 'manual' }
         } catch (manualError) {/* TODO: Fix JSX expression */}
@@ -243,14 +175,6 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
     } catch (statusError) {/* TODO: Fix JSX expression */}
 //       }
 
-=======
-//           return {/* TODO: Fix JSX expression */};
-  d: 'manual' }} catch (manualError) {/* TODO: Fix JSX expression */};
-//           };
-      };
-    } catch (statusError) {/* TODO: Fix JSX expression */};
-//       };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //If all strategies fail, abort and skip;
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
@@ -258,7 +182,6 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
     try {/* TODO: Fix JSX expression */};
   o: 'inherit' });
-<<<<<<< HEAD
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
     }
@@ -268,13 +191,6 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
   }
 }
 
-=======
-//       } catch (abortError) {/* TODO: Fix JSX expression */};
-  o: 'inherit' })};
-    return {/* TODO: Fix JSX expression */};
-  d: 'failed' }};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Step 4: Execute merge process;
 // const results = {
 };
@@ -292,16 +208,10 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
       already_merged: 0
       failed: 0,
 //Step,
-<<<<<<< HEAD
   4: Execute merge process,
 // const results = {/* TODO: Fix JSX expression */}
     }}}
 
-=======
-  4: Execute merge process;
-// const results = {/* TODO: Fix JSX expression */};
-    }}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Process each branch;
 for (const branch of branchesToMerge) {
   results.summary.total++;
@@ -309,7 +219,6 @@ for (const branch of branchesToMerge) {
 for (const branch of branchesToMerge) {/* TODO: Fix JSX expression */};
     results.successful.push({ branch, ...result });
     results.summary.successful++;
-<<<<<<< HEAD
     results.summary.methods[result.method]++;
   } else {/* TODO: Fix JSX expression */}
     results.failed.push({ branch, ...result });
@@ -319,26 +228,13 @@ for (const branch of branchesToMerge) {/* TODO: Fix JSX expression */};
 }
 
 //Step 5: Generate report,
-=======
-    results.summary.methods[result.method]++} else {/* TODO: Fix JSX expression */};
-    results.failed.push({ branch, ...result });
-    results.summary.failed++;
-    results.summary.methods.failed++};
-};
-//Step 5: Generate report;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // // // // // // // // // // // if (results.failed.length > 0) {,
 //Step,
   5: Generate report,
 // // // // // // // // // // // if (results.failed.length > 0) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
 //   //   results.failed.forEach(result => // console.log(`  - ${result.branch}`));
 }
 
-=======
-//   //   results.failed.forEach(result => // // console.log removed for production
-)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Save report;
 results.timestamp = new Date().toISOString();
 fs.writeFileSync('focused-pr-merge-report.json')

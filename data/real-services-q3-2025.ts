@@ -85,10 +85,8 @@ const contact =
   mobile: '+1 302 464 0950'
   address: '364 E Main St STE 1008 Middletown DE 19709'
 // const contact = {
-=======
 ;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -102,7 +100,6 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
 }
 }export const,
   realServicesQ32025: Q3Service[] = [};

@@ -120,10 +120,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;   * Update meta tags;
    */;
   private updateMetaTags(): void {
-=======
     if (!this.currentPageData) return;
   private updateMetaTags(): void {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (!this.currentPageData) return
   }
   private updateMetaTags(): void {}
@@ -150,7 +148,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     // Twitter Card tags;
     if (this.config.twitterHandle) {
     // Twitter Card tags
-<<<<<<< HEAD
   }
     if (this.config.twitterHandle) {}
       this.setMetaTag('twitter:card', 'summary_large_image');`}

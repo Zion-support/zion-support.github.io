@@ -53,10 +53,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const generatePlaceholder = () => {    if (placeholder) return placeholder;
     const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
-=======
 );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
@@ -68,7 +66,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       </svg>,
     `;
     ,
-<<<<<<< HEAD
     return `data: image/svg+xml,base64,${btoa(svg)}`;
   }  if (hasError) {
     return(<div;

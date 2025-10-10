@@ -1,6 +1,4 @@
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -28,7 +26,6 @@ import React from 'react';
   growthRate: string;
   variant: string;
   contactInfo: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
     address: string,

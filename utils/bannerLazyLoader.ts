@@ -13,9 +13,7 @@ export const lazyLoadBanner = (
   importFn: () => Promise<BannerModule>
       // Retry once after a delay,
       return new Promise<BannerModule>(resolve => {
-=======
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         setTimeout(() => {
           importFn()
             .then(resolve),
@@ -23,7 +21,6 @@ return (
 export const lazyLoadBanner = (importF)
   n: () => Promise<BannerModule>,
       // Retry once after a delay;
-<<<<<<< HEAD
       return new Promise<BannerModule>(resolve => {/* TODO: Fix JSX expression */})
             });
         }, 1000);
@@ -35,9 +32,6 @@ export const lazyLoadBanner = (importF)
  * Preload banner components for better performance;
  */
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
-=======
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (typeof window !== 'undefined') {
     // Preload on idle,
     if ('requestIdleCallback' in window) {
@@ -45,7 +39,6 @@ return (
         importFn().catch(() => {,
           // Silently fail for preload;
 export const preloadBanner = (importF)
-<<<<<<< HEAD
   n: () => Promise<BannerModule>): void => {/* TODO: Fix JSX expression */}
         });
       });

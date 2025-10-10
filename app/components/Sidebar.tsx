@@ -188,13 +188,10 @@ return (
               aria-label="Close sidebar"
             >,
               <X>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
             </button>
           </div>
 
           {/* Navigation */}
-<<<<<<< HEAD
           <div className="flex-1 overflow-y-auto py-6"></div>
             <nav>
               {
@@ -271,5 +268,3 @@ return (
 }
 Sidebar.displayName = 'Sidebar'
 export default Sidebar
-=======
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

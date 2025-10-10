@@ -46,7 +46,4 @@ export const Link: React.FC,
   )
 };
 export default Link;
-<<<<<<< HEAD
   </LinkProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

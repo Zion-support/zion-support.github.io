@@ -101,10 +101,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     reviews: 4;
 ]
 export interface CuttingEdgeITInfrastructureService {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -132,7 +130,6 @@ export interface CuttingEdgeITInfrastructureService {
   growthRate: string
   variant: string,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}

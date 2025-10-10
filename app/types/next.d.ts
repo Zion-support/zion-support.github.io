@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   description?: string;
   keywords?: string[]
   authors?: Array<{ name: string; url?: string }> | string[]
@@ -238,4 +237,3 @@ declare module 'next' {
 }
 
 export {}
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6

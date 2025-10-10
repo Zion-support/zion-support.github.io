@@ -401,7 +401,4 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 };
 // Export singleton instance;
 export default analytics;
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -461,7 +461,4 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   })
 };
 export default performanceReporter;`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

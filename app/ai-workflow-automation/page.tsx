@@ -133,19 +133,15 @@ return (
 }
 export default AiWorkflowAutomationPage=======
 
-=======
                 <button>
                   Contact Us;
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Get Started
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
                 </button>
                 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                   Learn More
                 </button>
-=======
                   </div>
                 ))}
               </div>
@@ -190,7 +186,6 @@ export default AiWorkflowAutomationPage=======
 };
 
 export default AiWorkflowAutomationPage;>>>>>>> cursor/website-audit-and-update-with-deployment-9351
-=======
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -278,5 +273,3 @@ export default AiWorkflowAutomationPage;>>>>>>> cursor/website-audit-and-update-
 };
 
 export default AiWorkflowAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

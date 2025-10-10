@@ -5,7 +5,6 @@ import fs from 'fs';
 function safeGitCommand(command, description) {
   try {
 //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-<<<<<<< HEAD
 //     return { success: true, result }
   } catch (error) {
 //     return { success: false, error: error.message }
@@ -18,16 +17,6 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-//     return { success: true, result }} catch (error) {
-//     return { success: false, error: error.message };
-function safeGitCommand(command, description) {/* TODO: Fix JSX expression */};
-  o: 'pipe' });
-//     return {/* TODO: Fix JSX expression */};
-  s: true, result }} catch (error) {/* TODO: Fix JSX expression */};
-  r: error.message }};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to check if branch exists;
 function branchExists(branchName) {
   try {
@@ -38,17 +27,11 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */};
       {/* TODO: Fix JSX expression */};
   o: 'pipe' };
     );
-<<<<<<< HEAD
     return true;
   } catch {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-    return true} catch {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Current PRs to process;
 const prs = [
 ];
@@ -108,13 +91,9 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
   //Check if branch exists;
   if (!branchExists(pr.branch)) {/* TODO: Fix JSX expression */};
     });
-<<<<<<< HEAD
     continue;
   }
 
-=======
-    continue};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //   //Try to merge the branch;
   const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)
     `Merge ${pr.branch}`
@@ -140,39 +119,24 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
   const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,`
     `Merge ${pr.branch}`)
   );
-<<<<<<< HEAD
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     });
   } else {/* TODO: Fix JSX expression */}`
-=======
-  if (mergeResult.success) {/* TODO: Fix JSX expression */};
-    })} else {/* TODO: Fix JSX expression */}`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
     results.push({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
     });
   }
 }
 
-=======
-    })};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Run system checks;
 // const typeCheck = safeGitCommand('pnpm run type-check')
   'TypeScript type checking'
 );
 const buildCheck = safeGitCommand('pnpm run build: no-check')
   'Production build'
-<<<<<<< HEAD
 )
 //Push changes if any were merged
-=======
-);
-//Push changes if any were merged;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 if (mergedCount > 0) {
 //   const pushResult = safeGitCommand('git push origin main')
     'Push changes to main'),
@@ -208,17 +172,11 @@ const report = {
     allPassed: typeCheck.success &&
       lintCheck.success &&,
       testCheck.success &&,
-<<<<<<< HEAD
       buildCheck.success
   },
   results: results,
   status: mergedCount > 0 ? 'success' : 'no-changes'}
 
-=======
-      buildCheck.success},
-  results: results;
-  status: mergedCount > 0 ? 'success' : 'no-changes'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Save detailed report;
 fs.writeFileSync('enhanced-pr-merge-report.json')
 const report = {/* TODO: Fix JSX expression */}`
@@ -229,12 +187,8 @@ const report = {/* TODO: Fix JSX expression */}`
   result,
   s: results,
   statu,
-<<<<<<< HEAD
   s: mergedCount > 0 ? 'success' : 'no-changes'}
 
-=======
-  s: mergedCount > 0 ? 'success' : 'no-changes'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Save detailed report;
 fs.writeFileSync('enhanced-pr-merge-report.json')
   JSON.stringify(report, null, 2)

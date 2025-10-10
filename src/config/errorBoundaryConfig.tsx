@@ -1,12 +1,9 @@
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 'use client'
 /**
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
  */
-<<<<<<< HEAD
 export interface ErrorBoundaryConfig {
     // TODO: Add content
   }

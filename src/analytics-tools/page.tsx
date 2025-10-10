@@ -63,10 +63,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
-=======
 };
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
           <div>Coming Soon</div>
   )
@@ -76,7 +74,6 @@ return (
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
-<<<<<<< HEAD
       {/* Hero Section */}      <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">

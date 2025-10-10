@@ -155,7 +155,4 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */};
     {/* TODO: Fix JSX expression */};
   q: 'yearly' }]
 }"`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

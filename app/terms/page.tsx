@@ -38,7 +38,6 @@ const TermsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Terms of Service for Zion Tech Group. Learn about our terms, conditions, and policies for using our AI and IT services." />
         <meta name="keywords" content="terms of service, legal, terms and conditions, privacy policy, user agreement" />
         <link rel="canonical" href="https://ziontechgroup.com/terms" />
@@ -208,5 +207,3 @@ const TermsPage: React.FC = () => {
 }
 
 export default TermsPage
-=======
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

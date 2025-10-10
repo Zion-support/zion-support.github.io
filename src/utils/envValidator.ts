@@ -124,7 +124,4 @@ export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 }  return envValidator.getConfig()
 };
 export default envValidator;`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

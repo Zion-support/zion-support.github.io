@@ -526,10 +526,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
     ]
 export interface ComprehensiveInnovativeService {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -557,7 +555,6 @@ export interface ComprehensiveInnovativeService {
   growthRate: string
   variant: ServiceVariant,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}

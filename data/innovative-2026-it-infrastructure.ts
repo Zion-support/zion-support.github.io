@@ -1055,10 +1055,8 @@ export const,
     reviews: 550;
 ]
 export interface Innovative2026ITInfrastructureService {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -1086,7 +1084,6 @@ export interface Innovative2026ITInfrastructureService {
   growthRate: string
   variant: ServiceVariant,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}

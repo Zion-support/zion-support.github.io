@@ -15,13 +15,8 @@ const report = {
       .split('\n')
       .filter(f => f) || [],
   recentCommits: recentCommits?.trim().split('\n') || [],
-<<<<<<< HEAD
   recentBranches: recentBranches?.trim().split('\n') || [],
 const report = {/* TODO: Fix JSX expression */}
-=======
-  recentBranches: recentBranches?.trim().split('\n') || [],;
-const report = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 };
 fs.writeFileSync('merge-analysis-report.json', JSON.stringify(report, null, 2));
 // // // // // // // // // 8. Provide next steps;

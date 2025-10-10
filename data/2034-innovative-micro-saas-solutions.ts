@@ -1,9 +1,7 @@
 export type InnovativeMicroSaas =
 export type InnovativeMicroSaas = {
-=======
 ;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string
   description: string
@@ -17,7 +15,6 @@ export type InnovativeMicroSaas = {
     | 'Human Resources',
     | 'Supply Chain Management',
     | 'Customer Support',
-<<<<<<< HEAD
   pricing: { starter: string} professional?: string} enterprise?: string }
   features: string[],
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}

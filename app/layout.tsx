@@ -22,11 +22,9 @@ const features = [    {
     icon: Globe,      title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'  }
   }]const benefits = [
-=======
   ];
 
   const benefits = [
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -57,7 +55,6 @@ return (
                 Layout
               </span>
               <br>
-=======
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -77,7 +74,6 @@ return (
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               <span>Layout</span>
               <br />
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
               <span className="text-white">Solutions</span>
             </h1>
             <p>              Transform your business with our advanced layout solutions.
@@ -115,9 +111,7 @@ return (
             {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-<<<<<<< HEAD
                   <feature.icon className="w-8 h-8 text-white" />                </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -162,7 +156,6 @@ return (
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p>>>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747
               Contact our experts to discuss your layout needs and get a customized solution.
@@ -187,4 +180,3 @@ export default LayoutPage};
 
 export default LayoutPage;
 
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

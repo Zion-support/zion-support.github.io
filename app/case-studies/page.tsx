@@ -90,7 +90,6 @@ const CaseStudiesPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
-=======
               ))};
             </div>
           </div>
@@ -115,7 +114,6 @@ const CaseStudiesPage: React.FC = () => {
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   Explore Our Services
                 </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </div>
             ))}
           </div>
@@ -149,7 +147,6 @@ const CaseStudiesPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   )
 }
 export default CaseStudiesPage

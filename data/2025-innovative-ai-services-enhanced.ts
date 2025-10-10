@@ -290,10 +290,8 @@ export interface InnovativeAIService2025 {id: string, name: string,
     rating: 4.8;
     reviews: 89;
 export interface InnovativeAIService2025 {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -321,7 +319,6 @@ export interface InnovativeAIService2025 {
   growthRate: string
   variant: string,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}
@@ -964,10 +961,6 @@ rating: 4.8
     launchDate: '2024-03-25'
     customers: 156;
 export interface InnovativeAIService2025 {
-=======
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -995,7 +988,6 @@ export interface InnovativeAIService2025 {
   growthRate: string
   variant: string,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}

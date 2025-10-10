@@ -76,8 +76,6 @@ import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, In
     }
   ]
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   return (
     <>
       <Helmet>

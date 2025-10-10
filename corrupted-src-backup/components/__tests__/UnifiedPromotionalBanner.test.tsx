@@ -90,7 +90,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
           title: 'Test, I, t, e, m',
           category: 'Test, Catego, r, y',
           li, n, k: '/t, e, s, t'
-=======
   descri, b, e('Edge, Case, s', () => { 
     it('handles, empty, featured items, arra, y', () => {
           title: 'I, t, e, m , 1',
@@ -99,13 +98,11 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
           title: 'Test, I, t, e, m',
           category: 'Test, Catego, r, y',
           li, n, k: '/t, e, s, t'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   descri, b, e('Edge, Case, s', () => { 
     it('handles, empty, featured items, arra, y', () => {
           title: 'I, t, e, m , 1',
           category: 'Catego, r, y , 1',
       li, n, k: '/it, e, m-, 1'
-<<<<<<< HEAD
           title: 'Test, I, t, e, m',
           category: 'Test, Catego, r, y',
           li, n, k: '/t, e, s, t'

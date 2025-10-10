@@ -6,13 +6,9 @@ try {
 //   const prData = fs.readFileSync('open_prs_current.json', 'utf8');
   openPRs = JSON.parse(prData);
 //   } catch (error) {
-<<<<<<< HEAD
     //   process.exit(1)
   }
 
-=======
-//   process.exit(1)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to safely merge a PR branch;
 function mergePR(pr) {
 //   const branchName = pr.head.ref;
@@ -29,19 +25,12 @@ try {/* TODO: Fix JSX expression */};
 // Function to safely merge a PR branch;
 function mergePR(pr) {/* TODO: Fix JSX expression */};
         `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
-<<<<<<< HEAD
         {/* TODO: Fix JSX expression */}
   o: 'pipe' }
       );
     } catch (error) {/* TODO: Fix JSX expression */}
     }
 
-=======
-        {/* TODO: Fix JSX expression */};
-  o: 'pipe' };
-      )} catch (error) {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Fetch the latest changes;
 //     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
     // Check for merge conflicts;
@@ -77,12 +66,8 @@ function mergePR(pr) {/* TODO: Fix JSX expression */};
         {/* TODO: Fix JSX expression */};
   o: 'inherit' })
       );
-<<<<<<< HEAD
 //       return true;
     } catch (mergeError) {/* TODO: Fix JSX expression */}
-=======
-//       return true} catch (mergeError) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   o: 'pipe' });
       // Try to resolve conflicts automatically;
       try {/* TODO: Fix JSX expression */}"`
@@ -90,7 +75,6 @@ function mergePR(pr) {/* TODO: Fix JSX expression */};
           {/* TODO: Fix JSX expression */};
   o: 'inherit' };
         );
-<<<<<<< HEAD
 //         return true;
       } catch (resolveError) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
@@ -101,15 +85,6 @@ function mergePR(pr) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-//         return true} catch (resolveError) {/* TODO: Fix JSX expression */};
-  o: 'pipe' });
-        return false};
-    };
-  } catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process each PR;
 for (const pr of openPRs) {
 //   const success = mergePR(pr);
@@ -128,7 +103,6 @@ for (const pr of openPRs) {/* TODO: Fix JSX expression */};
 const summary = {
 };
   totalPRs: openPRs.length;
-<<<<<<< HEAD
   successfulMerges: successCount
   failedMerges: failCount
   results: results,
@@ -136,14 +110,6 @@ const summary = {
 const summary = {/* TODO: Fix JSX expression */}
 }
 
-=======
-  successfulMerges: successCount;
-  failedMerges: failCount;
-  results: results;
-  timestamp: new Date().toISOString(),;
-const summary = {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2));
 // // // // // Push changes to main if there were successful merges;
 if (successCount > 0) {

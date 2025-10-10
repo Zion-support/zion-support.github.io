@@ -31,10 +31,8 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with,
 </p>
 </d, i, v>
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12"></div>
-=======
 );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 {/* Blog, Post, Card */
 };
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e;
@@ -61,7 +59,6 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with,
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>";
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Cognitive, Orchestration, Breakthrough</h3>";
-<<<<<<< HEAD
             <div, className="spa, c, e-y-2, m, b-6, tex, t-whi, t, e/90">";</div>
 const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 }          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hove,

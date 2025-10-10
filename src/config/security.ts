@@ -161,7 +161,4 @@ export default {securityHeaders};
   validateEmail,
   validateUrl,
   generateSecureToken;"
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

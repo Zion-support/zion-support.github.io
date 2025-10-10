@@ -4,6 +4,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+
 export default [
   // Global ignores
   {
@@ -60,19 +61,14 @@ export default [
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
-        };
-      };
+        }
+      }
     },
     rules: {
       ...js.configs.recommended.rules,
       'no-unused-vars': 'warn',
-<<<<<<< HEAD
       'no-console': 'off'
     }
-=======
-      'no-console': 'warn'
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
   // TypeScript configuration
   {
@@ -85,8 +81,8 @@ export default [
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
-        };
-      };
+        }
+      }
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -95,10 +91,10 @@ export default [
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-...reactHooks.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true };
+        { allowConstantExport: true }
       ],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
@@ -107,6 +103,6 @@ export default [
       '@typescript-eslint/no-non-null-assertion': 'off',
       'no-console': 'off',
       'no-unused-vars': 'off'
-    };
-  };
+    }
+  }
 ];

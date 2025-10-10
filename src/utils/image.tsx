@@ -181,8 +181,5 @@ className={`bg-gray-200 flex items-center justify-center ${className}`};
   )
 };
 export default Image;"`
-<<<<<<< HEAD
   </ImageProps>
   </ImageProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

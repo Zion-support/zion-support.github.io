@@ -14,7 +14,6 @@ function fixLintWarnings(filePath) {
     // Fix unused variables by prefixing with underscore;
     content = content.replace(/const (\w+) = /g, (match, varName) => {
       if (varName.startsWith('_')) return match;
-<<<<<<< HEAD
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
       return `const _${varName} = `;
     });
@@ -23,12 +22,6 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
       return `let _${varName} = `;
     });
     
-=======
-function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */};
-      return `const _${varName} = `});
-    content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}`
-      return `let _${varName} = `});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Fix unused imports;
     content = content.replace(/import React from 'react';/g, '');
     content = content.replace(/import { Link } from 'react-router-dom';/g, '');
@@ -46,7 +39,6 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */};
     if (filePath.includes('main.tsx')) {
       content = content.replace(/const registration = /g, 'const _registration = ');
       content = content.replace(/const registrationError = /g, 'const _registrationError = ');
-<<<<<<< HEAD
     if (filePath.includes('main.tsx')) {/* TODO: Fix JSX expression */}
     }
     
@@ -87,36 +79,6 @@ function findFilesToFix(dir) {
     
     for (const item of items) {
       const fullPath = path.join(currentPath, item);
-=======
-    if (filePath.includes('main.tsx')) {/* TODO: Fix JSX expression */};
-    };
-    if (filePath.includes('offline/page.tsx')) {/* TODO: Fix JSX expression */};
-      content = content.replace(/import { Link } from 'react-router-dom';/g, '')};
-    if (filePath.includes('service-template.tsx')) {/* TODO: Fix JSX expression */};
-    };
-    if (filePath.includes('page.tsx') && !filePath.includes('page-original')) {/* TODO: Fix JSX expression */};
-    };
-    if (filePath.includes('page-optimized.tsx')) {/* TODO: Fix JSX expression */};
-    };
-    if (filePath.includes('sitemap/page.tsx')) {/* TODO: Fix JSX expression */};
-    };
-    if (filePath.includes('micro-saas/page-original.tsx')) {/* TODO: Fix JSX expression */};
-    };
-    // Write the cleaned content back;
-    fs.writeFileSync(filePath, content, 'utf8');
-    return true} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-return false};
-};
-// Function to find all files that need lint fixing;
-function findFilesToFix(dir) {;
-const files = [];
-  ;
-function walkDir(currentPath) {;
-const items = fs.readdirSync(currentPath);
-    for (const item of items) {;
-const fullPath = path.join(currentPath, item);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         walkDir(fullPath);
@@ -128,13 +90,9 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */};
     };
   };
   walkDir(dir);
-<<<<<<< HEAD
   return files;
 }
 
-=======
-  return files};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution;
 const srcDir = path.join(__dirname, 'src');
 console.log('Fixing lint warnings...');

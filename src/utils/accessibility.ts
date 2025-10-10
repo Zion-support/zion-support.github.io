@@ -649,7 +649,4 @@ export default a11y;
 // Singleton instance;
 const a11y = new AccessibilityService()
 export default a11y;"`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

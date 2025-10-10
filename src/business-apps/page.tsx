@@ -4,10 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star } from 'lucide-react';
 const BusinessAppsPage: React.FC = () => {
-=======
 };
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div>
       <Navigation />
@@ -23,7 +21,6 @@ return (
             This page is under development. Please check back soon for updates.
           </p>
         </section>
-<<<<<<< HEAD
         {/* Key Benefits */}        <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 // Why Choose Our Business Apps?

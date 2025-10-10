@@ -385,7 +385,4 @@ export function debounce;
     timeout = setTimeout(later, wait)
   };
 }"`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

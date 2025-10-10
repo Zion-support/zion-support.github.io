@@ -230,7 +230,4 @@ export const _performanceConfig = {
 };
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

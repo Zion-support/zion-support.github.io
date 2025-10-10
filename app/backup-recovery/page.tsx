@@ -39,10 +39,7 @@ icon: Shield,
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-5xl font-bold text-white mb-6">            Backup & Recovery  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced backup and recovery solutions. 
             Powered by cutting-edge AI technology and industry expertise.
@@ -104,9 +101,6 @@ icon: Shield,
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-=======
-<<<<<<< HEAD
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747
               Email Us
   </export default BackupRecoveryPage
   </button>

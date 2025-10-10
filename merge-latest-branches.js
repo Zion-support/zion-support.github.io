@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
-<<<<<<< HEAD
 
 console.log('🔄 Merging latest enhancement branches...');
 
-=======
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 try {
   // List of recent branches to check and potentially merge;
   const branchesToCheck = [
@@ -32,7 +28,6 @@ try {
       // Check if branch has unique commits;
       const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
       if (!uniqueCommits.trim()) {
-<<<<<<< HEAD
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`);
         skippedCount++;
         continue;
@@ -74,33 +69,3 @@ try {
     console.error('❌ Error during merge process:', error.message);
   process.exit(1)
   }
-=======
-        // console.log removed for production
-skippedCount++;
-        continue};
-      // console.log removed for production
-// console.log removed for production
-.slice(0, 3).join('\n'));
-      // Try to merge the branch;
-      // console.log removed for production
-execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: 'inherit' });
-      // console.log removed for production
-mergedCount++} catch (error) {
-      // console.log removed for production
-// Try to abort the merge if it failed;
-      try {
-        execSync('git merge --abort', { stdio: 'pipe' })} catch (abortError) {
-        // Ignore abort errors};
-    };
-  };
-  // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// Push all changes;
-  // console.log removed for production
-execSync('git push origin main', { stdio: 'inherit' });
-  // console.log removed for production
-} catch (error) {
-  // console.error removed for production
-process.exit(1)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

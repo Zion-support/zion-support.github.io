@@ -163,7 +163,6 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
       </section>
       <Footer />
     </React.Fragment>
-<<<<<<< HEAD
   )
 }export default AiContentDeliveryNetworkPage
   </button>
@@ -176,5 +175,3 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

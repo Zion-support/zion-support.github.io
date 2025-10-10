@@ -15,16 +15,9 @@ exports.handler = async function (event, context) {
         error: 'todo_scanner_runner function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
-<<<<<<< HEAD
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
       })}
   } catch (error) {/* TODO: Fix JSX expression */}
       })}
   }
 }
-=======
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */};
-      })}} catch (error) {/* TODO: Fix JSX expression */};
-      })}};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

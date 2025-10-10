@@ -6,10 +6,8 @@ export type EnterpriseITSolution =
   r: string, // e.g. "$2, 999 / mo"
 export type EnterpriseITSolution =
 export type EnterpriseITSolution = {
-=======
 ;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export type EnterpriseITSolution =
   id: string;
   name: string;
@@ -44,7 +42,6 @@ export type EnterpriseITSolution = {/* TODO: Fix JSX expression */};
   real_service?: boolean,
   rating?: number,
       'Policy-based access',
-<<<<<<< HEAD
       'Micro-segmentation'}export const enterpriseITSolutions: EnterpriseITSolution[] = [,
     id: 'zero - trust - network - architecture',
     name: 'Zero Trust Network Architecture',

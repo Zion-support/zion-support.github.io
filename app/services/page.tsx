@@ -27,7 +27,6 @@ import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     // AI Services
-=======
     {
       icon: Brain,
       title: 'AI Solutions',
@@ -37,7 +36,6 @@ import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
       category: 'AI Services',
       popular: true
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Brain,
       title: 'AI-Powered Chatbots',
@@ -372,7 +370,6 @@ import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
       benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']
     },
     {
-<<<<<<< HEAD
       icon: Globe,
       title: 'Web Development',
       description: 'Modern, responsive web applications built with cutting-edge technologies for optimal performance.',

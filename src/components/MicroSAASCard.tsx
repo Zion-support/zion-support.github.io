@@ -39,10 +39,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {  return (
           <div>Coming Soon</div>
   )
           <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-=======
 );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {service.popular && ()}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
@@ -114,7 +112,6 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {  return (
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
 export default MicroSAASCard;"`

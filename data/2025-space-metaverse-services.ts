@@ -2,10 +2,8 @@
     realImplementation: true;
 export interface SpaceMetaverseService;
 export interface SpaceMetaverseService {
-=======
 ;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -663,7 +661,6 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */};
   competitors: string[], techStack: string[],
   realImplementation: boolean, implementationDetails: string,
   roi: string, useCases: string[],
-<<<<<<< HEAD
   integrations: string[], support: string,
   compliance: string[], link: string,
   icon: string, color: string,

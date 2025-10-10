@@ -771,7 +771,4 @@ export default ApiClient;
 // Export both the class and default instance;
 export { apiClient };
 export default ApiClient;`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

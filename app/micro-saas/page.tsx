@@ -9,7 +9,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
 
   const microSaasTools = [
     {
-<<<<<<< HEAD
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content scheduling'],
@@ -23,7 +22,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
       icon: Zap,
       category: 'content',
       link: 'https://ziontechgroup.com/zion-ai-content-studio-pro'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
     },
     {
       title: 'Zion Analytics Intelligence',
@@ -135,7 +133,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
       description: 'Advanced customer analytics platform with sentiment analysis, churn prediction, and personalized recommendations.',
       features: ['Sentiment Analysis', 'Churn Prediction', 'Customer Segmentation', 'Personalized Recommendations', 'Behavioral Analytics', 'Survey Analysis', 'NPS Tracking', 'ROI Measurement'],
       price: '$119/month',
-<<<<<<< HEAD
       marketPrice: '$250-700/month',
       benefits: ['Increase customer retention by 40%', 'Predict customer churn', 'Personalized experiences', 'Data-driven insights'],
       icon: Users,
@@ -186,59 +183,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
       icon: Shield
     }
   ]
-=======
-    },
-    {
-      id: '2',
-      icon: MessageSquare,
-      title: 'ZionChat AI',
-      description: 'Enterprise-grade AI customer support platform with multilingual capabilities',
-      features: [
-        'Advanced AI chatbot with 95% accuracy rate',
-        'Live chat integration with human handoff',
-        'Multi-language support (50+ languages)',
-        'Sentiment analysis and emotion detection',
-        'Ticket management and escalation system',
-        'Knowledge base integration',
-        'Voice and video chat support',
-        'CRM integration (Salesforce, HubSpot, etc.)',
-        'Custom AI model training',
-        'Advanced analytics and reporting'
-      ],
-      price: '$79/month',
-      originalPrice: '$149/month',
-      users: 'Up to 25 users',
-      popular: false,
-      category: 'Communication',
-      link: 'https://ziontechgroup.com/chat-ai',
-      marketPrice: '$200-500/month',
-      savings: '60% off market rate'
-    },
-    {
-      id: '3',
-      icon: Shield,
-  const benefits = [
-    'Quick setup and deployment (under 5 minutes)',
-    'Scalable pricing plans with no hidden fees',
-    '24/7 customer support and technical assistance',
-    'Regular feature updates and improvements',
-    'Enterprise-grade security and compliance',
-    'Easy integration with existing systems',
-    'White-label solutions available',
-    'Free trial and money-back guarantee',
-    'Comprehensive documentation and training',
-    'Dedicated account management'
-  ];
-
-  const stats = [
-    { icon: <Users className="w-8 h-8 text-cyan-400" />, value: '50K+', label: 'Active Users' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-400" />, value: '99.9%', label: 'Uptime SLA' },
-    { icon: <Shield className="w-8 h-8 text-purple-400" />, value: '100%', label: 'Secure & Compliant' },
-    { icon: <Zap className="w-8 h-8 text-orange-400" />, value: '2min', label: 'Setup Time' },
-    { icon: <Award className="w-8 h-8 text-yellow-400" />, value: '4.9/5', label: 'Customer Rating' },
-    { icon: <Rocket className="w-8 h-8 text-pink-400" />, value: '10x', label: 'Faster Deployment' }
-  ];
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
@@ -408,7 +352,6 @@ const MicroSaasPage: React.FC = () => {
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Pricing
             </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
           </div>
         </div>
       </section>
@@ -561,19 +504,16 @@ const MicroSaasPage: React.FC = () => {
               </div>
               <div className="mt-6 text-sm text-gray-400">
                 <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
               </div>
             </div>>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
                 </div>
               ))}
             </div>
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747
           </div>
         </section>
     </>
   )
 }  );
 };
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747
 
 export default MicroSaasPage
