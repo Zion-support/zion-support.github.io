@@ -131,7 +131,13 @@ const App: React.FC = memo(() => {
                       <Route path="/status" element={<StatusPage />} />
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
-<Route path="/services" element={<ServicesPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/ai-ops" element={<AIOpsPage />} />
+                      <Route path="/healthcare-it" element={<HealthcareITPage />} />
+                      <Route path="/financial-it" element={<FinancialITPage />} />
+                      <Route path="/edge-computing" element={<EdgeComputingPage />} />
+                      <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                      <Route path="/iot-platform" element={<IoTPlatformPage />} />
                     </Routes>
                   </Suspense>
                   </main>
