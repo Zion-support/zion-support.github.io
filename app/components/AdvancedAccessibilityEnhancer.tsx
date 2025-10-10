@@ -1,132 +1,165 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 
-    }
-  ];
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('medium');
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+
+  useEffect(() => {
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setIsReducedMotion(prefersReducedMotion);
+
+    // Apply accessibility enhancements
+    document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
+    
+    // Add keyboard navigation support
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
+
+  const toggleHighContrast = () => {
+    setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast', !isHighContrast);
+  };
+
+  const changeFontSize = (size: string) => {
+    setFontSize(size);
+    document.documentElement.setAttribute('data-font-size', size);
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AdvancedAccessibilityEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedAccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AdvancedAccessibilityEnhancer, AI solutions, IT services, Zion Tech Group, advancedaccessibilityenhancer" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedAccessibilityEnhancer
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced advancedaccessibilityenhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
+    <div 
+      className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${fontSize} ${isReducedMotion ? 'reduced-motion' : ''}`}
+      data-font-size={fontSize}
+    >
+      {/* Accessibility Controls */}
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 9999 }}>
+        <button
+          onClick={toggleHighContrast}
+          className="accessibility-button"
+          aria-label="Toggle high contrast mode"
+          style={{
+            background: isHighContrast ? '#000' : '#fff',
+            color: isHighContrast ? '#fff' : '#000',
+            border: '2px solid #000',
+            padding: '8px 12px',
+            margin: '4px',
+            borderRadius: '4px',
+            cursor: 'pointer'
+          }}
+        >
+          {isHighContrast ? 'Normal' : 'High Contrast'}
+        </button>
+        
+        <div style={{ display: 'inline-block', margin: '4px' }}>
+          <label htmlFor="font-size-select" style={{ color: isHighContrast ? '#fff' : '#000' }}>
+            Font Size:
+          </label>
+          <select
+            id="font-size-select"
+            value={fontSize}
+            onChange={(e) => changeFontSize(e.target.value)}
+            style={{
+              background: isHighContrast ? '#000' : '#fff',
+              color: isHighContrast ? '#fff' : '#000',
+              border: '2px solid #000',
+              padding: '4px',
+              marginLeft: '8px',
+              borderRadius: '4px'
+            }}
+          >
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">Extra Large</option>
+          </select>
         </div>
-      </section>
+      </div>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AdvancedAccessibilityEnhancer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+      {/* Enhanced Content */}
+      <div className="enhanced-content">
+        {children}
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <style jsx>{`
+        .accessibility-enhancer {
+          --font-size-small: 0.875rem;
+          --font-size-medium: 1rem;
+          --font-size-large: 1.125rem;
+          --font-size-xlarge: 1.25rem;
+        }
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our advancedaccessibilityenhancer solutions for your business.
-            </p>
-          </div>
+        .accessibility-enhancer.small {
+          font-size: var(--font-size-small);
+        }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        .accessibility-enhancer.medium {
+          font-size: var(--font-size-medium);
+        }
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedaccessibilityenhancer needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+        .accessibility-enhancer.large {
+          font-size: var(--font-size-large);
+        }
+
+        .accessibility-enhancer.xlarge {
+          font-size: var(--font-size-xlarge);
+        }
+
+        .accessibility-enhancer.high-contrast {
+          --bg-color: #000;
+          --text-color: #fff;
+          --border-color: #fff;
+        }
+
+        .accessibility-enhancer.high-contrast * {
+          background-color: var(--bg-color) !important;
+          color: var(--text-color) !important;
+          border-color: var(--border-color) !important;
+        }
+
+        .accessibility-enhancer.reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .keyboard-navigation *:focus {
+          outline: 3px solid #0066cc !important;
+          outline-offset: 2px !important;
+        }
+
+        .accessibility-button:hover {
+          opacity: 0.8;
+        }
+
+        .accessibility-button:focus {
+          outline: 3px solid #0066cc;
+          outline-offset: 2px;
+        }
+      `}</style>
     </div>
   );
 };
 
-export default AdvancedAccessibilityEnhancerPage;
+export default AdvancedAccessibilityEnhancer;
