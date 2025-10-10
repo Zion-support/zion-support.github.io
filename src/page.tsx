@@ -682,7 +682,7 @@ const specializedServices = [
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
+          backgroundSize: '50px 50px'}
         }}></div>
 
         <div className="relative z-10 container mx-auto px-4 text-center">

@@ -81,13 +81,13 @@ const, advertisingFeature, s = [
               transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
             ></moti>
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
-            </moti, o, n.d, i, v>
+            </moti, o, n.d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>
-              <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0  />
+              <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0  />"
               <span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, CONTENT, ADVERTISING</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30"></div>
-              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />"
         {/* Head, e, r */}"
         <div, className="te, x, t-center, m, b-20">";"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";
@@ -95,7 +95,7 @@ const, advertisingFeature, s = [
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
               transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
             ></moti>"
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
+              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>"
             </moti, o, n.d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>"
               <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0  /></Rocket>"
@@ -134,7 +134,7 @@ const, advertisingFeature, s = [
           <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Ultimate, Conten, t;
           </h2>
-          <h3, className="te, x, t-5x, l, m;
+          <h3, className="te, x, t-5x, l, m;"
           </h2>"
           <h3, className="te, x, t-5x, l, m,"
   d: te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
@@ -147,7 +147,7 @@ const, advertisingFeature, s = [
           {/* Urgency, Banne, r */}
           <div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12"></div>
             <div, className="flex, item, s-center, ga, p-3"></div>
-              <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e  />
+              <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e  />"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>"
           <div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12">";</div>
             <div, className="flex, item, s-center, ga, p-3">";</div>
@@ -165,15 +165,15 @@ const, advertisingFeature, s = [
           </d, i, v>
         </d, i, v>
         {/* Features, Gri, d */}
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">")
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)"
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";)
           {advertisingFeatur, e, s.m, a, p((featu, r, e, ind, e, x) => (
             <moti, o, n.d, i, v;
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">"</div>
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";
           {advertisingFeatur, e, s.m, a, p((featu, r, e, ind, e, x) => (</div>
             <moti, o, n.d, i, v
@@ -190,7 +190,7 @@ const, advertisingFeature, s = [
               whileHov, e, r={{ sca, l, e: 1.05 }}"
               classNa, m, e="group, relativ, e"
             >
-              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e;
+              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e;"
   r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">"</div>
                 <div, className="te, x, t-6xl, m, b-6, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
@@ -199,9 +199,9 @@ const, advertisingFeature, s = [
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-3, 0, 0">"</h3>
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>";
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">";
-                <div, className="te, x, t-6xl, m, b-6, grou, p-ho, v, e;
+                <div, className="te, x, t-6xl, m, b-6, grou, p-ho, v, e;"
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">";</div>
-                <div, className="te, x, t-6xl, m, b-6, grou, p-ho, v, e
+                <div, className="te, x, t-6xl, m, b-6, grou, p-ho, v, e"
             ></moti>"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e,"
   r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>""
@@ -266,7 +266,7 @@ const, advertisingFeature, s = [
               </h3>"
               <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-6">";
                 {[...Arr, a, y(5)].m, a, p((_, i) => (</div>
-                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  />
+                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  />"
                 {/* TODO: Fix JSX expression */}"
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
@@ -350,15 +350,15 @@ const, advertisingFeature, s = [
               {/* Benefits, Lis, t */}
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0"></div>
-                  <CheckCircle, className="w-6 h-6  />
+                  <CheckCircle, className="w-6 h-6  />"
                   <span, className="te, x, t-lg, fon, t-semibo, l, d">Exclusive, Early, Access</sp, a, n>
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-bl, u, e-4, 0, 0"></div>
-                  <CheckCircle, className="w-6 h-6  />
+                  <CheckCircle, className="w-6 h-6  />"
                   <span, className="te, x, t-lg, fon, t-semibo, l, d">Expert, Consultation, s</sp, a, n>
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-purp, l, e-4, 0, 0"></div>
-                  <CheckCircle, className="w-6 h-6  />
+                  <CheckCircle, className="w-6 h-6  />"
                   <span, className="te, x, t-lg, fon, t-semibo, l, d">Fortune, 500, Case Studi, e, s</sp, a, n>
                 </d, i, v>
               </d, i, v>
@@ -380,7 +380,7 @@ const, advertisingFeature, s = [
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">";</div>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/conta, c, t"
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e;
+                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e;"
               {/* Benefits, Lis, t */}"
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">""
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0"></div>"
@@ -423,7 +423,7 @@ const, advertisingFeature, s = [
                 </a>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
-                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e;
+                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e;"
                 </a>"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/bl, o, g""

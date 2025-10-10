@@ -1,5 +1,5 @@
-const analyticsOptimizer = {
-  trackPageView: () => {,;
+const analyticsOptimizer={
+  trackPageView: () => {,;}
 const analyticsOptimizer = {/* TODO: Fix JSX expression */}
     //     }};
 

@@ -143,19 +143,19 @@ const _announcement = document.createElement('div');
       <a;)
         href="#main-content")
         className="skip-link")
-        onClick={e => {)
+        onClick={e => {)}
       {/* Skip to main content link */}</div>
       <a
         href="#main-content"
         className="skip-link"
         onClick={e => {
           e.preventDefault();
-          const _main = document.querySelector('main') || document.querySelector('#main-content');
+          const _main = document.querySelector('main') || document.querySelector('#main-content');}
           if (main) {}
             (main as HTMLElement).focus()}
             (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
       {/* Skip to main content link */}
-      <a></a>"
+      <a"
         href="#main-content""
         className="skip-link"
         onClick={/* TODO: Fix JSX expression */})

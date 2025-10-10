@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {;
 const _response = NextResponse.next();
 
   // Security Headers;
-  const securityHeaders = {,
+  const securityHeaders={,
     // Prevent XSS attacks;
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
@@ -47,7 +47,7 @@ const _response = NextResponse.next();
 
     // Additional security headers;
     'X-DNS-Prefetch-Control': 'on',
-    'X-Download-Options': 'noopen',
+    'X-Download-Options': 'noopen',}
     'X-Permitted-Cross-Domain-Policies': 'none'};
 
   // Apply all security headers;
@@ -82,7 +82,7 @@ export function middleware(reques)
 
   return response}
 
-export const config = {
+export const config={
   matcher: [
     /*
      * Match all request paths except:
@@ -91,6 +91,6 @@ export const config = {
      * - favicon.ico (favicon file)
      * - public folder;
      */,
-    '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
+    '/((?!_next/static|_next/image|favicon.ico|public/).*)'],}
 export const config = {/* TODO: Fix JSX expression */}
 };

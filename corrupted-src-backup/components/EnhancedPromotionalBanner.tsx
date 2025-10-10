@@ -6,14 +6,14 @@ interface EnhancedPromotionalBannerProps {/* TODO: Fix JSX expression */}
 const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
   banner;
   className = ''}) => {;
-const variantStyles = {
+const variantStyles={
     success: 'bg-gradient-to-r from-green-600 to-emerald-600',
     warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',
     info: 'bg-gradient-to-r from-blue-600 to-indigo-600',
     error: 'bg-gradient-to-r from-red-600 to-pink-600',
     succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-6, 0, 0',
     warni, n, g: 'bg-gradie, n, t-to-r, fro, m-yell, o, w-600, t, o-oran, g, e-60, 0',
-    in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-60, 0',
+    in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-60, 0',}
     err, o, r: 'bg-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-pi, n, k-60, 0'}; retu, r, n(<div, classNam, e = { `${variantStyl, e, s[bann, e, r.vari, a, n, t] }, te, x, t-whit, e, p-4 ${classNa, m, e}`}
     >
       <div, classNam, e = 'container, m, x-auto, p, x-6'>

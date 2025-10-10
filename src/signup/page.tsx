@@ -379,9 +379,7 @@ Confirm Password;
 // Terms of Service;
           </a>{' '}
                       and{' '}"
-                      <a href="/privacy" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
-// Privacy Policy;
+                      <a// Privacy Policy;
           </a>
 
                     </span>

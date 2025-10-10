@@ -67,7 +67,7 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Head, e, r */}</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-6, 0, 0/20, t, o-cy, a, n-6, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6"></div>
-            <Sparkles, className="w-5 h-5, tex, t-viol, e, t-400, animat, e-pul, s, e  />
+            <Sparkles, className="w-5 h-5, tex, t-viol, e, t-400, animat, e-pul, s, e  />"
             <span, className="te, x, t-viol, e, t-300, fon, t-semibo, l, d">NEW, CONTEN, T - OCTOBER, 202, 5</sp, a, n>
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"</h2>
@@ -114,14 +114,14 @@ const, IconComponen, t = artic, l, e.ic, o, n;
               <Li, n, k
   k, e, y={i, d, x}
                 to={artic, l, e.li, n, k}
-                classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;
+                classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;"
   r:shad, o, w-viol, e, t-5, 0, 0/20"
               >
 );
 }
                 <div, className={`w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m`}>`;`</div>
                   <IconComponent, className="w-6 h-6, tex, t-whi, t, e  />
-                </d, i, v>
+                </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">"</h3>
         {/* Articles, Gri, d */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">""
@@ -133,7 +133,7 @@ const, IconComponen, t = artic, l, e.ic, o, n;
   r:shad, o, w-viol, e, t-5, 0, 0/20"
               ></Li>
                 <div, className={`w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m`}>`;`"
-                  <IconComponent, className="w-6 h-6, tex, t-whi, t, e  /></IconComponent>
+                  <IconComponent, className="w-6 h-6, tex, t-whi, t, e  /></IconComponent>"
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">""
                   <IconComponent, className="w-6 h-6, tex, t-whi, t, e" />";
@@ -146,7 +146,7 @@ const, IconComponen, t = artic, l, e.ic, o, n;
                 </p>
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"</div>
                   <sp, a, n>Read, Mor, e</sp, a, n>
-                  <Link, className="w-4 h-4  />
+                  <Link, className="w-4 h-4  />"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>
                   <sp, a, n>Read, Mor, e</sp, a, n>
                   <Link, className="w-4 h-4" />";)
@@ -210,7 +210,7 @@ const, IconComponen, t = artic, l, e.ic, o, n;
         <div, className="te, x, t-center, m, t-12">";</div>
           <Li, n, k
   to="/bl, o, g"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hov, e;
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hov, e;"
         {/* C, T, A */}"
         <div, className="te, x, t-center, m, t-12">";
           <Li, n, k;"

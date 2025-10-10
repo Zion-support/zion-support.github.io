@@ -2,21 +2,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //     // // console.log removed for production
 }
     // Link and health scheduling simulation;
-    const result = {
+    const result={
       statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Link and health scheduler executed successfully)
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
 function: 'link-and-health-scheduler'
-=======
-        timestamp: new Date().toISOString()
-        function: 'link-and-health-scheduler',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         scheduling: {,
           status: 'active',

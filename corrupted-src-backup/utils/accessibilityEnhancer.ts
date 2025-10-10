@@ -15,13 +15,13 @@ class AccessibilityEnhancer {
   private focusTrapElements: HTMLElement[] = [];
 ,;
 constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
+    this.config={
       enableFocusManagement: true;
       enableKeyboardNavigation: true;
       enableScreenReaderSupport: true;
       enableHighContrast: false;
       enableReducedMotion: false;
-      ...config,
+      ...config,}
 class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
     }}

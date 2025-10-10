@@ -8,10 +8,10 @@ const REPO_NAME = 'zion.app'
 }
 //Function to make GitHub API requests;
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {;
-const options = {
+const options={
       hostname: 'api.github.com',
       port: 443;
-  path: path;
+  path: path;}
       method: 'GET'}
       headers: {,;
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
@@ -40,7 +40,7 @@ const postData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`;
       merge_method: 'merge'});
-    const options = {hostname: 'api.github.com',
+    const options={hostname: 'api.github.com',}
       port: 443}
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       method: 'PUT',

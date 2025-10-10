@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const AiCostOptimizationBreakthrough2026Page: React.FC = () => {
 import React from 'react';
 // eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
+export const metadata={
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
   description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains. Proven methods for Fortune 500 companies to maximize AI ROI.',
   keywords: 'AI cost optimization 2026, reduce AI costs 90%, AI spending optimization, enterprise AI cost reduction, AI ROI maximization, Fortune 500 AI savings',
@@ -21,7 +21,7 @@ export const metadata = {
         url: '/og-ai-cost-optimization-2026.jpg',
         width: 1200,
         height: 630,
-        alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction'
+        alt: 'AI Cost Optimization Breakthrough 2026 - 90% Cost Reduction'}
       }]
   },
   twitter: {

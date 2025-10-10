@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 //Correct icon mappings - using actual lucide-react exports;
-const iconMappings = {
+const iconMappings={
   rrowleft: 'ArrowLeft',
   alendar: 'Calendar',
   ser: 'User',
@@ -30,11 +30,11 @@ const iconMappings = {
   hieldcheck: 'ShieldCheck',
   ctivity: 'Activity',
   tom: 'Atom',
-  atellite: 'Satellite',
+  atellite: 'Satellite',}
   ward: 'Award'};
 
 //Icons that don't exist in lucide-react - replace with similar ones;
-const iconReplacements = {
+const iconReplacements={
   Tag: 'Hash',
   Globe: 'Globe2',
   Rocket: 'Rocket': 'Cpu'
@@ -45,7 +45,7 @@ const iconReplacements = {
   ShieldCheck: 'ShieldCheck',
   Activity: 'Activity',
   Atom: 'Atom',
-  Satellite: 'Satellite',
+  Satellite: 'Satellite',}
   Award: 'Award'};
 
 //Function to fix imports in a file;
@@ -131,7 +131,7 @@ directories.forEach(dir => {)
 const dirFiles = fs;
       .readdirSync(dir, { recursive: true })
 directories.forEach(dir => {/* TODO: Fix JSX expression */})
-  e: true })
+  e: true })'
       .filter(file => file.endsWith('.tsx'))
       .map(file => path.join(dir, file));
     files.push(...dirFiles)}

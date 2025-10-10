@@ -26,10 +26,10 @@ const filesToFix = [
 // Pattern to match commented-out variable declarations;
 const patterns = [
   // Match commented-out const/let/var declarations;
-  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' },
-  // Match commented-out variable assignments;
-  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
-  // Match commented-out variable references;
+  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2=' },
+  // Match commented-out variable assignments;'
+  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1=' },
+  // Match commented-out variable references;'
   { regex: /\/\/\s*(\w+)\s*[;)]/g, replacement: '$1' },
   // Match commented-out object property assignments;
   { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
@@ -55,12 +55,12 @@ const useStatePattern = /useState\(\s*\{([^}]+)\s*$/gm;
 const patterns = [
   // Match commented-out const/let/var declarations;
   {/* TODO: Fix JSX expression */}
-  t: '$1 $2 =' },
+  t: '$1 $2=' },
   // Match commented-out variable assignments;
-  {/* TODO: Fix JSX expression */}
-  t: '$1 =' },
+  {/* TODO: Fix JSX expression */}'
+  t: '$1=' },
   // Match commented-out variable references;
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */}'
   t: '$1' },
   // Match commented-out object property assignments;
   {/* TODO: Fix JSX expression */}

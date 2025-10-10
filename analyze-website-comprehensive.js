@@ -16,11 +16,11 @@ const visitedUrls = new Set();
 const brokenLinks = [];
 const missingPages = [];
 const workingLinks = [];
-const analysisResults = {
+const analysisResults={
   totalLinks: 0;
   workingLinks: 0;
   brokenLinks: 0;
-  missingPages: 0;
+  missingPages: 0;}
   errors: []};
 
 // Helper function to make HTTP requests;
@@ -30,7 +30,7 @@ const urlObj = new URL(url);
     const isHttps = urlObj.protocol === 'https: ';
     const client = isHttps ? https : http;
     ;
-const requestOptions = {
+const requestOptions={
       hostname: urlObj.hostname;
       port: urlObj.port || (isHttps ? 443 : 80)
       path: urlObj.pathname + urlObj.search;
@@ -41,7 +41,7 @@ const requestOptions = {
         'Accept-Language': 'en-US,en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1',
+        'Upgrade-Insecure-Requests': '1',}
         ...options.headers},
       timeout: TIMEOUT};
 ;
@@ -184,13 +184,13 @@ try {
     await analyzeUrl(BASE_URL);
 
     // Generate report;
-    const report = {
+    const report={
       timestamp: new Date().toISOString()
       baseUrl: BASE_URL;
       summary: analysisResults;
       workingLinks: workingLinks;
       brokenLinks: brokenLinks;
-      missingPages: missingPages;
+      missingPages: missingPages;}
       errors: analysisResults.errors};
 
     // Save detailed report;
@@ -301,12 +301,12 @@ this.brokenLinks.push({ url, error: err.message })}
   async fetchPage(url) {
     return new Promise((resolve, reject) => {;
 const urlObj = new URL(url);
-      const options = {
+      const options={
         hostname: urlObj.hostname,
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
         path: urlObj.pathname + urlObj.search,
         method: 'GET',
-        timeout: 10000
+        timeout: 10000}
       };
 ;
 const protocol = urlObj.protocol === 'https:' ? https : http;
@@ -379,7 +379,7 @@ this.pages.forEach((page, url) => {
     
     // Save detailed report
     // Save report to file;
-const report = {
+const report={
       baseUrl: this.baseUrl,
       analyzedAt: new Date().toISOString(),
       pagesAnalyzed: this.pages.size,
@@ -388,7 +388,7 @@ const report = {
       pages: Array.from(this.pages.entries()).map(([url, data]) => ({
         url,
         title: data.title,
-        linkCount: data.links.length
+        linkCount: data.links.length}
       }))
     };
     

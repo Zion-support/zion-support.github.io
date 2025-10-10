@@ -263,8 +263,7 @@ const featuredPosts = [
                     <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <a></a>
-                    href={`/blog/${post.slug}`}"
+                  <ahref={`/blog/${post.slug}`}"
                     className="text-blue-600 font-semibold,"
   hover:text-blue-800 transition-colors"
                   >

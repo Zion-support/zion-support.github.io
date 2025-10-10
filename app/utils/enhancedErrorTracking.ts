@@ -73,11 +73,11 @@ constructor() {}
   }
   public trackError(error: Error, context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
-const trackedError: TrackedError = {
+const trackedError: TrackedError={
       message: error.message;
       stack: error.stack;
       context: {,
-        ...context;
+        ...context;}
   public trackError(error: Error, context: ErrorContext = {}): void {}
     if (typeof window === 'undefined') return;
 const trackedError: TrackedError = {}

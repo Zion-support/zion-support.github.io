@@ -5,7 +5,7 @@
 
 class SecurityEnhancer {;
 constructor() {
-    this.securityConfig = {
+    this.securityConfig={
       cspEnabled: true;
       xssProtection: true;
       csrfProtection: true;
@@ -24,7 +24,7 @@ constructor() {
         'connect-src': ["'self'", 'https: //api.ziontechgroup.com'],
         'frame-src': ["'none'"],
         'object-src': ["'none'"],
-        'base-uri': ["'self'"],
+        'base-uri': ["'self'"],}
         'form-action': ["'self'"]},
       trustedDomains: [,
 class SecurityEnhancer {/* TODO: Fix JSX expression */}
@@ -129,9 +129,9 @@ const _input = document.createElement('input');
     window.fetch = (url, options = {}) => {
 //       const token = sessionStorage.getItem('csrf_token');
       if (token) {
-        options.headers = {
+        options.headers={
           ...options.headers,
-          'X-CSRF-Token': token,
+          'X-CSRF-Token': token,}
   addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */}
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
         }}
@@ -304,11 +304,11 @@ const maxSize = 10 * 1024 * 1024; // 10MB;
 
   setupSecureHeaders() {
     // Add security headers via meta tags;
-    const headers = {
+    const headers={
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',}
   validateFile(file) {/* TODO: Fix JSX expression */}
   }
 
@@ -406,11 +406,11 @@ const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
   }
 
   reportSecurityEvent(type, data) {;
-const event = {
+const event={
       type,
       data,
       timestamp: new Date().toISOString(),
-      url: window.location.href;
+      url: window.location.href;}
       userAgent: navigator.userAgent};
 
     // Send to security monitoring service;
@@ -450,7 +450,7 @@ const _warning = document.createElement('div');
         padding: 15 px;
         border-radius: 4 px;
         z-index: 9999;
-        max-width: 300px;
+        max-width: 300px;"
       ">,
         <strong>Security Warning:</strong> ${message}
   showSecurityWarning(message) {/* TODO: Fix JSX expression */}
@@ -464,7 +464,7 @@ const _warning = document.createElement('div');
   r: white;
           floa,
   t: right;
-          curso,
+          curso,"
   r: pointer;"
         ">×</button>
       </div>`

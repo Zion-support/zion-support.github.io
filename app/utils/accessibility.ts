@@ -7,11 +7,11 @@ export interface AccessibilityConfig {
   fontSize: 'small' | 'medium' | 'large';
   colorScheme: 'light' | 'dark' | 'auto'}
 
-export const defaultAccessibilityConfig: AccessibilityConfig = {
+export const defaultAccessibilityConfig: AccessibilityConfig={
   enableHighContrast: false,
   enableScreenReader: true,
   enableKeyboardNavigation: true,
-  fontSize: 'medium',
+  fontSize: 'medium',}
   colorScheme: 'auto'}
 export class AccessibilityManager {
   private config: AccessibilityConfig;

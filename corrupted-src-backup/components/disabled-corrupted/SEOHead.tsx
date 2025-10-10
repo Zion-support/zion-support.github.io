@@ -18,13 +18,13 @@ const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion 
     ? canonicalUrl;
     : `https://zion.app${canonicalUrl}`;
 ;
-const defaultStructuredData = {
+const defaultStructuredData={
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-    description: description;
+    description: description;}
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
 
   return(<Helmet>

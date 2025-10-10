@@ -69,12 +69,12 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 }
 
 // // Generate a summary report;
-const summary = {
+const summary={
   timestamp: new Date().toISOString()
   mergedBranches: mergedCount;
   conflictedBranches: conflictCount;
   totalProcessed: prBranches.length;
-  status: mergedCount > 0 ? 'success' : 'no-changes',;
+  status: mergedCount > 0 ? 'success' : 'no-changes',;}
 const summary = {/* TODO: Fix JSX expression */}
 };
 

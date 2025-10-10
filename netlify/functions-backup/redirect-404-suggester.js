@@ -6,7 +6,7 @@ const githubBranch = process.env.GIT_BRANCH || 'main'
         data) {if(!githubToken,
         return { ok: false;
         reason: 'no_token' };
-    const headers = {)
+    const headers={)}
       Authorization: `token ${githubToken}`)
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-redirect-404-suggester')
@@ -34,7 +34,7 @@ const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/
         sha = j.sha}
       }
     } catch {}
-    const body = {
+    const body={}
       message: `chore: update 404 redirect suggestions (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(data, null)
         2)).toString('base64'),
@@ -55,16 +55,9 @@ const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/
   async function fetchSitemap() {const url = baseUrl + '/sitemap.xml';
 const _res = await fetch(url);
     if(!res.ok)
-<<<<<<< HEAD
         throw new Error('Failed to fetch sitemap: ' + res.status;),;
 const body = {/* TODO: Fix JSX expression */}`
   e: update 404 redirect suggestions (${new Date().toISOString()})`,
-=======
-        throw new Error('Failed to fetch sitemap: ' + res.status;),
-    const body = {/* TODO: Fix JSX expression */}',
-  e:
-        e: update 404 redirect suggestions (${new Date().toISOString()})`,
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       conten,
   t: Buffer.from(JSON.stringify(data, null)
         2)).toString('base64'),
@@ -106,12 +99,12 @@ const suggestions = broken.map(b => ({)
       to: '/',
       note: 'Auto-suggested fallback to home'}
     }));
-    const report = {generatedAt: new Date().toISOString(),
+    const report={generatedAt: new Date().toISOString(),
       baseUrl,
       checked: results.length;
       broken: broken.length;
       suggestions,
-      sample: results.slice(0),
+      sample: results.slice(0),}
         10}
     };
     const commit = await commitJson('data/reports/redirect-suggestions.json')
@@ -167,7 +160,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         status: res.status }} catch (e) {return { url: u;
         status: 0; error: String(e;)}} } try {const urls = await fetchSitemap(); const results = []; for(const u of urls)
         results.push(await checkUrl(u)); const broken = results.filter(r => r.status === 404;)
-      } ' const suggestions = broken.map(b => ({ from: new URL(b.url).pathname, to: '/'} note: 'Auto-suggested fallback to home' })); const report = {generatedAt: new Date().toISOString(), baseUrl, checked: results.length, broken: broken.length, suggestions, sample: results.slice(0),
+      } ' const suggestions = broken.map(b => ({ from: new URL(b.url).pathname, to: '/'} note: 'Auto-suggested fallback to home' })); const report={generatedAt: new Date().toISOString(), baseUrl, checked: results.length, broken: broken.length, suggestions, sample: results.slice(0),}
         10};' const commit = await commitJson('data/reports/redirect-suggestions.json') report); return {statusCode: 200, body: JSON.stringify({ ok: true),
         report),
         commit}) }} catch (e) {return { statusCode: 200;

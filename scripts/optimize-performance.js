@@ -22,12 +22,12 @@ function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
 }
     
     // Check for missing key props in lists;
-    if (content.includes('.map(') && !content.includes('key=')) {
+    if (content.includes('.map(') && !content.includes('key=')) {'
     if (content.includes('.map(') && !content.includes('key=')) {/* TODO: Fix JSX expression */}`
       // // console.log removed for production
 without key props`)}
     
-    // Check for inline object/function definitions in JSX;
+    // Check for inline object/function definitions in JSX;'
     if (content.includes('style={{') || content.includes('onClick={()')) {}
     if (content.includes('style={/* TODO: Fix JSX expression */})`
       // // console.log removed for production

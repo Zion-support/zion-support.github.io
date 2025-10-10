@@ -15,11 +15,11 @@ class Logger {
   private static instance: Logger;
 ,
   private constructor(config: Partial<LoggerConfig> = {}) {
-    this.config = {
+    this.config={
       level: this.getLogLevelFromEnv(),
       prefix: config.prefix || 'APP',
       timestamp: config.timestamp !== false;
-      colorize: config.colorize !== false && typeof window !== 'undefined',
+      colorize: config.colorize !== false && typeof window !== 'undefined',}
 class Logger {/* TODO: Fix JSX expression */}
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
     }}

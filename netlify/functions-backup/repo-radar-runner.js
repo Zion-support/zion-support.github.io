@@ -2,21 +2,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //     // // console.log removed for production
 }
     // Repository radar simulation;
-    const result = {
+    const result={
       statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Repository radar runner executed successfully)
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
 function: 'repo-radar-runner'
-=======
-        timestamp: new Date().toISOString()
-        function: 'repo-radar-runner',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         radar: {,
           status: 'scanning',

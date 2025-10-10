@@ -367,7 +367,7 @@ type="text" placeholder="Search FAQs..."
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,
   focus:outline-none,
-  focus:border-cyan-400,
+  focus:border-cyan-400,"
   focus:ring-2,"
   focus:ring-cyan-400/20"
 // />

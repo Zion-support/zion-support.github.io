@@ -66,7 +66,7 @@ export interface ErrorHandlerConfig {
   reportEndpoint?: string;
   logLevel: 'debug' | 'info' | 'warn' | 'error'}
 // Default configuration
-export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
+export const _defaultErrorHandlerConfig: ErrorHandlerConfig={
   enableLogging: true,
   enableReporting: true,
   enableRetry: true,
@@ -75,7 +75,7 @@ export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
   enableUserNotification: true,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
-  logLevel: 'error'
+  logLevel: 'error'}
 };
 // Error Handler class
 export class ErrorHandler {
@@ -173,11 +173,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return ErrorHandler.instance}
   // Handle error
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {;
-const appError: AppError = {
+const appError: AppError={
       id: this.generateErrorId(),
   // Handle error;
   handleError(erro,
-  r: Error, errorInfo?: ErrorInfo, context?: Record;)
+  r: Error, errorInfo?: ErrorInfo, context?: Record;)}
           <string, unknown>): AppError {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -230,11 +230,11 @@ const appError: AppError = {
     return appError}
   // Handle network error
   handleNetworkError(error: Error, url: string, status?: number): AppError {;
-const appError: AppError = {
+const appError: AppError={
       id: this.generateErrorId(),
   // Handle network error;
   handleNetworkError(erro,
-  r: Error, ur)
+  r: Error, ur)}
   l: string, status?: number): AppError {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -272,11 +272,11 @@ const appError: AppError = {
     return appError}
   // Handle validation error
   handleValidationError(field: string, message: string, value?: unknown): AppError {;
-const appError: AppError = {
+const appError: AppError={
       id: this.generateErrorId(),
   // Handle validation error;
   handleValidationError(fiel,
-  d: string, messag)
+  d: string, messag)}
   e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -510,7 +510,7 @@ break
           color: white;
           font-size: 18px;
           cursor: pointer;
-          margin-left: 10px;
+          margin-left: 10px;"
         ">×</button></div>
     `;
     document.body.appendChild(notification);
@@ -699,7 +699,7 @@ const error = this.errors.find(e => e.id === errorId);
     color: white
           font-size: 18px;,
     cursor: pointer
-          margin-left: 10px
+          margin-left: 10px"
 ">×</button></div>
 
     `;
@@ -988,7 +988,7 @@ $4})}
                 padding: '10px 20px',
 // React error boundary component;
 export class ErrorBoundary extends React.Component;
-          <
+          <}
   {/* TODO: Fix JSX expression */}
   n: React.ReactNode; fallback?: React.ReactNode },
   {/* TODO: Fix JSX expression */}

@@ -115,7 +115,7 @@ return (
           <a></a>
             href={/* TODO: Fix JSX expression */}
   o:kleber@ziontechgroup.com'}"
-            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg,
+            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg,"
   hover:from-cyan-600,"
   hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
 // >

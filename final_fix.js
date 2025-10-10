@@ -93,9 +93,9 @@ if (fs.existsSync(systemMonitorPath)) {
   content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder');
 
   // Fix the exportData variable declaration issue;
-  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {');
+  content = content.replace(/const exportData = \{/g, 'const exportData: unknown={');
 ,
-  fs.writeFileSync(systemMonitorPath, content);
+  fs.writeFileSync(systemMonitorPath, content);}
 if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}
   //     }
 

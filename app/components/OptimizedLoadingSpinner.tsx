@@ -9,13 +9,7 @@ interface OptimizedLoadingSpinnerProps {
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-<<<<<<< HEAD
   fullScreen?: boolean;);
-=======
-  fullScreen?: boolean]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',;
@@ -23,15 +17,9 @@ variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
-<<<<<<< HEAD
     fullScreen = false,;)
 }); => {;
 const sizeClasses = useMemo(
-=======
-    fullScreen = false,]
-    }); => {
-    const sizeClasses = useMemo(
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -103,7 +91,7 @@ switch (variant) {
                 <div
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{
+                  style={{}
                     height: `${12 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,]
     }}
@@ -119,19 +107,10 @@ switch (variant) {
               role='status'
               aria-label='Loading'
             />
-<<<<<<< HEAD
           ););
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
 }, [fullScreen, className]);
-=======
-          )]
-    }
-    }, [size, variant, color, sizeClasses, colorClasses]);
-
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
-    }, [fullScreen, className]);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     return (</div>
       <div>
@@ -143,12 +122,7 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
             </p>
           );
         </div>
-<<<<<<< HEAD
     ););
-=======
-    )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'

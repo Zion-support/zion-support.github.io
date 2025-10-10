@@ -29,11 +29,11 @@ const CategoryIcon = getCategoryIcon(service.category);
   return (
     <div
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
-        isHovered ? 'shadow-2xl' : 'shadow-lg'
+        isHovered ? 'shadow-2xl' : 'shadow-lg'}
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{
+      style={{}
         animationDelay: `${index * 100}ms`,
         background: isHovered 
           ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15))'
@@ -240,7 +240,7 @@ const popularServices = services.filter(service => service.popular);
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
             }`}
           >
             All Services
@@ -252,7 +252,7 @@ const popularServices = services.filter(service => service.popular);
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}
               }`}
             >
               <span className="text-lg">{category.icon}</span>

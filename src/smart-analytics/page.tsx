@@ -119,7 +119,7 @@ const pricingPlans = [
               <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
-                  plan.popular ? 'border-cyan-500' : 'border-gray-600'
+                  plan.popular ? 'border-cyan-500' : 'border-gray-600'}
                 } relative`}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -142,7 +142,7 @@ const pricingPlans = [
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                      : 'bg-gray-600 text-white hover:bg-gray-700'
+                      : 'bg-gray-600 text-white hover:bg-gray-700'}
                   }`}
                   Get Started
 

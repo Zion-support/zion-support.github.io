@@ -2,10 +2,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //     // // console.log removed for production
 }
     // Anchor links auto-fixing simulation;
-    const result = {
+    const result={
       statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Anchor links auto-fixer executed successfully)

@@ -102,7 +102,7 @@ return (
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4"></section>"
         <div className="max-w-7xl mx-auto text-center"></div>"
-          <h1 className="text-4xl,
+          <h1 className="text-4xl,"
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
 // AI Analytics Tools;
@@ -187,7 +187,7 @@ return (
           {/* Contact Info */}"
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
             <div className="flex flex-col,
-  md:flex-row items-center justify-center space-y-4,
+  md:flex-row items-center justify-center space-y-4,"
   md:space-y-0,"
   md:space-x-8"></div>"
               <div className="flex items-center space-x-2"></div>"
@@ -205,7 +205,7 @@ return (
   md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Our Analytics Tools;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
             {analyticsTools.map((tool, index) => ()}"
@@ -230,10 +230,9 @@ return (
                   </ul>"
                 <div className="text-center"></div>"
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
-                  <a></a>
-                    href={/* TODO: Fix JSX expression */}
+                  <ahref={/* TODO: Fix JSX expression */}
   o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,"
   hover:from-cyan-600,"
   hover:to-blue-700 transition-all inline-block"
 // >
@@ -241,7 +240,7 @@ return (
           </a>
       {/* Benefits Section */}
 Why Choose Our Analytics Tools?"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => ()}"

@@ -19,10 +19,10 @@ class AdvancedCacheManager<T> {
   private misses = 0;
 ,;
 constructor(config: Partial<CacheConfig> = {}) {
-    this.config = {
+    this.config={
       maxAge: 5 * 60 * 1000, // 5 minutes;
       maxSize: 1000;
-      strategy: 'LRU',
+      strategy: 'LRU',}
       ...config}}
 
   public get(key: string): T | null {;

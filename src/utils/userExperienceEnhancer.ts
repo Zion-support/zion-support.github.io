@@ -28,13 +28,13 @@ class UserExperienceEnhancer {
   private errorBoundaries: Map<string, Error> = new Map();
   constructor(config: UXConfig) {
     this.config = config;
-    this.metrics = {
+    this.metrics={
       pageLoadTime: 0,
       interactionTime: 0,
       bounceRate: 0,
       userSatisfaction: 0,
       accessibilityScore: 0,
-      performanceScore: 0
+      performanceScore: 0}
     };
     this.init()}
   private init(): void {
@@ -200,12 +200,12 @@ const errorDiv = document.createElement('div');
     // Track user satisfaction
     this.trackUserSatisfaction()}
   private trackPageView(): void {;
-const pageData = {
+const pageData={
       url: window.location.href,
       title: document.title,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      referrer: document.referrer
+      referrer: document.referrer}
     };
     
     this.sendAnalytics('page_view', pageData)}
@@ -213,24 +213,24 @@ const pageData = {
     // Track clicks
     document.addEventListener('click', (event) => {;
 const target = event.target as HTMLElement;
-      const interactionData = {
+      const interactionData={
         type: 'click',
         element: target.tagName,
         id: target.id,
         className: target.className,
         text: target.textContent?.substring(0, 100),
-        timestamp: Date.now()
+        timestamp: Date.now()}
       };
       
       this.sendAnalytics('user_interaction', interactionData)});
     // Track form submissions
     document.addEventListener('submit', (event) => {;
 const form = event.target as HTMLFormElement;
-      const formData = {
+      const formData={
         type: 'form_submit',
         formId: form.id,
         formAction: form.action,
-        timestamp: Date.now()
+        timestamp: Date.now()}
       };
       
       this.sendAnalytics('form_submit', formData)});
@@ -247,12 +247,12 @@ const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - w
       window.addEventListener('load', () => {;
 const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         ;
-const metrics = {
+const metrics={
           pageLoadTime: perfData.loadEventEnd - perfData.navigationStart,
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
           firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
           firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
-          timestamp: Date.now()
+          timestamp: Date.now()}
         };
         
         this.metrics.pageLoadTime = metrics.pageLoadTime;
@@ -283,13 +283,13 @@ const interactionTime = Date.now() - lastInteractionTime;
       gtag('event', event, data)}
   }
   private reportError(error: Error, type: string): void {;
-const errorData = {
+const errorData={
       message: error.message,
       stack: error.stack,
       type: type,
       url: window.location.href,
       timestamp: Date.now(),
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent}
     };
     
     this.sendAnalytics('error', errorData)}

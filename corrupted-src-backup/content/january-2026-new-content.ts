@@ -1,6 +1,6 @@
 // January 2026 - New Revolutionary Content;
 // Brand new cutting-edge AI breakthroughs and enterprise solutions;
-export const january2026NewContent = {
+export const january2026NewContent={
   featuredArticles: [
     {
       id: 'ai-2026-january-autonomous-enterprise-mesh',
@@ -13,7 +13,7 @@ export const january2026NewContent = {
       publishDate: '2026-01-15',
       category: 'Enterprise AI',
       tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
-      readTime: '12 min',
+      readTime: '12 min',}
       excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.'},
     {
       id: 'ai-2026-january-quantum-edge-computing',

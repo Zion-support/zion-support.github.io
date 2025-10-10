@@ -16,13 +16,13 @@ class AdvancedPerformanceMonitor {
   private isMonitoring = false;,
 ,;
 constructor(thresholds: Partial<PerformanceThresholds> = {}) {
-    this.thresholds = {
+    this.thresholds={
       loadTime: 3000;
       firstContentfulPaint: 1800;
       largestContentfulPaint: 2500;
       cumulativeLayoutShift: 0.1;
       firstInputDelay: 100;
-      ...thresholds,
+      ...thresholds,}
 class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   s: Partial<PerformanceThresholds> = {}) {/* TODO: Fix JSX expression */}
     }}

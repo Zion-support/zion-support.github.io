@@ -11,7 +11,6 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
     message: '';)
 });
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,22 +22,6 @@ const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTe
 }););)
 }, []);
 const handleSubmit = useCallback(async (e: React.FormEvent) => {
-=======
-    message: '']
-    });;
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value]
-    });)]
-    }, []);
-
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -52,22 +35,12 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
         message: '';)
 });;)
 } catch (error) {
       setSubmitStatus('error');)
 } finally {
       setIsSubmitting(false););
-=======
-        message: '']
-    });]
-    } catch (error) {
-      setSubmitStatus('error')]
-    } finally {
-      setIsSubmitting(false)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
 
   return (
@@ -299,12 +272,6 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
 
       <Footer />
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContactPage;
 }

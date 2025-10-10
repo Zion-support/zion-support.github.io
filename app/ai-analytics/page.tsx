@@ -14,8 +14,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-=======
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -34,7 +32,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: Globe,
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
@@ -46,7 +43,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-<<<<<<< HEAD
 ;
 const benefits = [
     'Increase efficiency by up to 50%',
@@ -64,19 +60,6 @@ const benefits = [
 const useCases = [
         <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [;
 const useCases = [
-=======
-
-  const benefits = [
-    'Transform raw data into actionable insights',
-    'Make data-driven decisions with confidence',
-    'Identify trends and opportunities early',
-    'Optimize business processes and workflows',
-    'Reduce costs through intelligent automation',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-  const useCases = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
@@ -156,7 +139,6 @@ const useCases = [
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
@@ -168,41 +150,6 @@ const useCases = [
                         </li>
                       ));
                     </ul>);
-=======
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Use Cases</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI analytics platform can transform your business across different industries.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 text-center">
-                  <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <useCase.icon className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 </div>
               ));
             </div>
@@ -250,11 +197,7 @@ const useCases = [
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               ));
-=======
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
@@ -292,13 +235,7 @@ const useCases = [
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default AiAnalyticsPage;
     </React.Fragment>)
 export default AiAnalyticsPage;
-=======
-};
-
-export default AiAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

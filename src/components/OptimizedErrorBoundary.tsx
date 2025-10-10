@@ -18,11 +18,11 @@ class OptimizedErrorBoundary extends Component<
   private resetTimeoutId: number | null = null;
   constructor(props: OptimizedErrorBoundaryProps) {
     super(props);
-    this.state = {
+    this.state={
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId:     ,
+      errorId:     ,}
 $4}}
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -161,7 +161,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
                 <strong>Error:</strong> {error.message}
         {process.env['NODE_ENV'] === 'development' && error && ()}
           <details className='mb-4 text-left'></details>
-            <summary className='cursor-pointer text-sm text-gray-500,
+            <summary className='cursor-pointer text-sm text-gray-500,'
   hover:text-gray-700'></summary>
 // Error Details (Development)
             
@@ -203,7 +203,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
             </div>
           </details>
         )}
-        <div className='flex flex-col,
+        <div className='flex flex-col,'
   sm:flex-row gap-2 justify-center'></div>
           <button></button>
             onClick={onRetry}
@@ -215,7 +215,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
   hover:bg-blue-700,
   focus:outline-none,
   focus:ring-2,
-  focus:ring-blue-500,
+  focus:ring-blue-500,'
   focus:ring-offset-2 transition-colors'
 // >
 //             Try Again;
@@ -241,7 +241,7 @@ ErrorFallback.displayName = 'ErrorFallback';
   hover:bg-gray-700,
   focus:outline-none,
   focus:ring-2,
-  focus:ring-gray-500,
+  focus:ring-gray-500,'
   focus:ring-offset-2 transition-colors'
 // >
 //             Reload Page;

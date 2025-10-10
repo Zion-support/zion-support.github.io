@@ -109,7 +109,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
         {/* Featured, Content, Car, d, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'></div>
           {/* TODO: Fix JSX expression */}
-              <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hove,
+              <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hove,'
   r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderC, o, l, o, r }}
               ></Link>
@@ -198,7 +198,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
             >
               Get, a, Free Consultati, o, n;
               <Link, className='w-5 h-5, m, l-2' />
-              className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,
+              className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,'
   r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
             ></Link>
               Explore, All, Articles;

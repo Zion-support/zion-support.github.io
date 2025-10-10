@@ -28,7 +28,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       modified = true}
 
     // Fix malformed object properties;
-    if (content.includes('const config = {')) {
+    if (content.includes('const config={')) {
       // Look for lines that might be missing colons;
       for (let i = 0; i < lines.length; i++) {
         // Fix lines that look like property assignments but are missing colons;
@@ -36,7 +36,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           line = line.replace(
             /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
             '$1: $2,'
-          );
+          );}
           modified = true}
     if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
     }

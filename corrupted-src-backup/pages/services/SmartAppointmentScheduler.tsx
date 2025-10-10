@@ -22,7 +22,7 @@ return (
           <div, className="te, x, t-center, m, b-16"></div>
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"></div>
               <Users, className="w-1, 0, h-10, tex, t-whi, t, e  />
-            </d, i, v>
+            </d, i, v>"
             <h1, className="te, x, t-4 xl, m, d: te, x, t-6 xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"</h>Smart</h>, Appointment, Scheduler;
             </h1>
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">
@@ -33,7 +33,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
           {/* Head, e, r */}"
           <div, className="te, x, t-center, m, b-16"></div>"
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"></div>"
-              <Users, className="w-1, 0, h-10, tex, t-whi, t, e  /></Users>
+              <Users, className="w-1, 0, h-10, tex, t-whi, t, e  /></Users>"
             </d, i, v>"
             <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"
               Smart, Appointment, Scheduler;
@@ -60,10 +60,10 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               <p, className="te, x, t-gr, a, y-600, m, b-6">Perfect, for, hospitals, clini, c, s, and, private, practices looking, to, modernize their, appointment, system.</p>";
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a;
-  hr, e, f="te;
+  hr, e, f="te;"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
-  hr, e, f="te
+  hr, e, f="te"
   l: +130246409, 5, 0" 
             </p>"
             <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-2xl, m, x-au, t, o">";"
@@ -74,16 +74,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
               <p, className="te, x, t-gr, a, y-600, m, b-6">Perfect, for, hospitals, clini, c, s, and, private, practices looking, to, modernize their, appointment, system.</p>";"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
-                <a></a>"
+                <a"
   hr, e, f="te,"
   l: +130246409, 5, 0" "
                   classNa, m, e="bg-gre, e, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-cent, e, r"
                 >
                   Ca, l, l +1, 302, 464 09, 5, 0;
                 </a>
-                <a;
-  hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
-                <a></a>"
+                <a"
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" "
                   classNa, m, e="bord, e, r-2, borde, r-gre, e, n-600, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-50, transitio, n-colors, tex, t-cent, e, r"
                 >
@@ -95,25 +93,25 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
           {/* Featur, e, s */}
           <section, className="mb-16">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-3, ga, p-8">"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
-                  <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
+                  <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />"
           <section, className="mb-16">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>";
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-3, ga, p-8">";
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-3, ga, p-8">"</section>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
-                  <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
+                  <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />"
           <section, className="mb-16">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>";
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-3, ga, p-8">";</section>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
@@ -138,7 +136,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
-                  <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  />
+                  <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  />"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
               </d, i, v>"
@@ -154,7 +152,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
-                  <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  />
+                  <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  />"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
               </d, i, v>"
@@ -170,7 +168,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
-                  <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0  />
+                  <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0  />"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
               </d, i, v>"
@@ -186,7 +184,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
-                  <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  />
+                  <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  />"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
               </d, i, v>"
@@ -202,7 +200,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </d, i, v>
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>
-                  <Shield, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />
+                  <Shield, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";</div>
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";</div>
               </d, i, v>"
@@ -227,7 +225,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">$49/mon, t, h</d, i, v>
                 <ul, className="spa, c, e-y-3, m, b-8">
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />"
           {/* Prici, n, g */}"
           <section, className="mb-16"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>"
@@ -238,18 +236,18 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <ul, className="spa, c, e-y-3, m, b-8"></ul>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
-                    Up, to, 5 provide, r, s;
+                    Up, to, 5 provide, r, s;"
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
-                    500, appointment, s/mon, t, h;
+                    500, appointment, s/mon, t, h;"
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
                     Basic, telemedicin, e;
-                  </li>
+                  </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />"
           <section, className="mb-16">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";</section>
@@ -285,10 +283,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                     Email, suppor, t;
                   </li>
                 </ul>
-                <a;
-  hr, e, f="te;
-  l: +130246409, 5, 0" 
-                <a></a>"
+                <a"
   hr, e, f="te,"
   l: +130246409, 5, 0" "
                   classNa, m, e="w-full, b, g-gre, e, n-600, tex, t-white, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-center, bloc, k"
@@ -308,19 +303,19 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <ul, className="spa, c, e-y-3, m, b-8"></ul>"
                   <li, className="flex, item, s-cent, e, r"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  /></CheckCircle>
-                    Up, to, 20 provide, r, s;
+                    Up, to, 20 provide, r, s;"
                   </li>"
                   <li, className="flex, item, s-cent, e, r"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  /></CheckCircle>
-                    2,000, appointment, s/mon, t, h;
+                    2,000, appointment, s/mon, t, h;"
                   </li>"
                   <li, className="flex, item, s-cent, e, r"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  /></CheckCircle>
-                    Advanced, telemedicin, e;
+                    Advanced, telemedicin, e;"
                   </li>"
                   <li, className="flex, item, s-cent, e, r"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  /></CheckCircle>
-                    Payment, processin, g;
+                    Payment, processin, g;"
                   </li>"
                   <li, className="flex, item, s-cent, e, r"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  /></CheckCircle>"
@@ -348,9 +343,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                     Priority, suppor, t;
                   </li>
                 </ul>
-                <a;
-  hr, e, f="t, e, l: +130246409, 5, 0" 
-                <a></a>"
+                <a"
   hr, e, f="t, e, l: +130246409, 5, 0" "
                   classNa, m, e="w-full, b, g-white, tex, t-gre, e, n-600, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, tex, t-center, bloc, k"
                 >
@@ -362,7 +355,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">Cust, o, m</d, i, v>
                 <ul, className="spa, c, e-y-3, m, b-8">
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />"
               </d, i, v>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8"></div>"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Enterpri, s, e</h3>"
@@ -370,22 +363,22 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <ul, className="spa, c, e-y-3, m, b-8"></ul>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
-                    Unlimited, provider, s;
+                    Unlimited, provider, s;"
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
-                    Unlimited, appointment, s;
+                    Unlimited, appointment, s;"
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
-                    Custom, integration, s;
+                    Custom, integration, s;"
                   </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>
                     Dedicated, suppor, t;
-                  </li>
+                  </li>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8">";</div>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Enterpri, s, e</h3>";
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">Cust, o, m</d, i, v>";
@@ -419,9 +412,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                     Whi, t, e-label, option, s;
                   </li>
                 </ul>
-                <a;
-  hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
-                <a></a>"
+                <a"
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" "
                   classNa, m, e="w-full, b, g-gre, e, n-600, tex, t-white, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-center, bloc, k"
                 >
@@ -440,11 +431,11 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a;
-  hr, e, f="te;
+  hr, e, f="te;"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
-  hr, e, f="te
+  hr, e, f="te"
   l: +130246409, 5, 0" 
           {/* Contact, Sectio, n */}"
           <section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">";"
@@ -455,16 +446,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
-                <a></a>"
+                <a"
   hr, e, f="te,"
   l: +130246409, 5, 0" "
                   classNa, m, e="bg-gre, e, n-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-cent, e, r"
                 >
                   Ca, l, l +1, 302, 464 09, 5, 0;
                 </a>
-                <a;
-  hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
-                <a></a>"
+                <a"
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" "
                   classNa, m, e="bord, e, r-2, borde, r-gre, e, n-600, tex, t-gre, e, n-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-50, transitio, n-colors, tex, t-cent, e, r"
                 >

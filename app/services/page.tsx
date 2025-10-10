@@ -854,12 +854,12 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                 <div className="md:w-64">
                   <div className="relative">
                     <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <select
+                    <select}
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value);
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
                     >
-                      {categories.map((category) => (
+                      {categories.map((category) => (}
                         <option key={category} value={category} className="bg-gray-800">
                           {category}
                         </option>
@@ -877,7 +877,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category
                         ? 'bg-cyan-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                        : 'bg-white/10 text-gray-300 hover:bg-white/20'}
                     }`}
                   >
                     {category}
@@ -961,7 +961,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
             {totalPages > 1 && (
               <div className="flex justify-center items-center mt-12 space-x-2">
                 <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1));
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1));}
                   disabled={currentPage === 1}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
@@ -976,7 +976,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                       className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                         currentPage === page
                           ? 'bg-cyan-500 text-white'
-                          : 'bg-white/10 text-white hover:bg-white/20'
+                          : 'bg-white/10 text-white hover:bg-white/20'}
                       }`}
                     >
                       {page}
@@ -985,7 +985,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                 </div>
                 
                 <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages));
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages));}
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >

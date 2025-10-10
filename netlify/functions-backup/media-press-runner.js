@@ -8,7 +8,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || ''}}
-exports.config = {// Top-of-funnel and newsroom refresh cadence;
+exports.config={// Top-of-funnel and newsroom refresh cadence;}
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });

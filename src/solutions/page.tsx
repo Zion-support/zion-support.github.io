@@ -47,7 +47,7 @@ $4},
 $4}
   ];
 ;
-const solutions = {
+const solutions={
     ai: [
       {
         title: 'AI-Powered Analytics',
@@ -55,7 +55,7 @@ const solutions = {
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
         icon: BarChart,
-        color:       ,
+        color:       ,}
 $4},
       {
         title: 'AI Marketing Automation',
@@ -233,7 +233,7 @@ $4}
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === category.id
+                    activeTab === category.id}
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
@@ -813,7 +813,7 @@ $4}
           
           
           </h2>"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => ()}"

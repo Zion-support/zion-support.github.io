@@ -140,8 +140,7 @@ const process = [
               >
                 Start Your Project;
               </a>
-              <a></a>
-                Call +1 302 464 0950;
+              <aCall +1 302 464 0950;
               </a>
             </div>,
           </section>,
@@ -207,7 +206,6 @@ const process = [
                     href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
                   >Get Started</a>
-                  </a>
                 </div>
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >
@@ -292,8 +290,7 @@ const process = [
                 >
                   Start Your Project;
                 </a>
-                <a></a>
-                  Call +1 302 464 0950;
+                <aCall +1 302 464 0950;
                 </a>
               </div>
             </div>
@@ -302,11 +299,5 @@ const process = [
 
         <Footer />
       </div>,
-<<<<<<< HEAD
     </>);)
-=======
-    </>)]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default WebDevelopmentPage;

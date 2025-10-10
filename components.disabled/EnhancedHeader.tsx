@@ -45,7 +45,7 @@ import React,{useState}useEffect } from \"react\" ; ShoppingCart} from \"lucide-
   e: "Careers"}hre,"
   f: "/careers" }," {/* TODO: Fix JSX expression */}"
   e: "Contact"}hre,"
-  f: "/contact" }; ]; return (" <header className = "{"fixed" w-full z-50 transition-all duration-300 ${" scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">}}"} ; >" <div className = "max-w-7xl mx-auto px-4,
+  f: "/contact" }; ]; return (" <header className = "{"fixed" w-full z-50 transition-all duration-300 ${" scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">}}"} ; >" <div className="max-w-7xl mx-auto px-4,"
   sm: px-6,")
   lg:px-8">" <div className="text-left" >; {}" <div className="text-left" >" <Link href="/" className="text-left" >" <div className="text-left" >" <span className="text-left" >Z></div> </div>" <div className="text-left" >" <span className="text-left" > Zion Tech Group; <" <div className="text-left" > Technology Solutions) ></div> ></div> ></div> ); {}" <nav className="text-left" > {navigation.map(item => ("}) <div key="{item.name}" className="text-left" > {item.dropdown ? (" <div className="text-left" relative>" <button onClick="{()" => toggleDropdown(item.name)}" className="text-left" text-sm" font-medium px-4 py-2 rounded-md transition-colors flex items-center ${; router.pathname === item.href |" router.pathname.startsWith(item.href + "/")" ? "text-blue-600 bg-blue-50} : "text-gray-700,
   hover: text-blue-600,"

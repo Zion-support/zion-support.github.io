@@ -44,11 +44,7 @@ const SitemapPage: React.FC = () => {const pages = [
             {pages.map((page, index) => (</div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
-                  <a 
-                    href={page.path} 
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
-                  ></a>
-                    {page.title}
+                  <a{page.title}
                   </a>
                 </h3>
                 <p className="text-sm text-gray-600 mb-2"></p>
@@ -70,27 +66,13 @@ const SitemapPage: React.FC = () => {const pages = [
             If you can't find what you're looking for, feel free to contact us directly.
           </p>
           <div>
-            <a 
-              href="/contact"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
-            ></a>
-              Contact Us
+            <aContact Us
             </a>
-            <a 
-              href="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
-            ></a>
-              Call Us: (302) 464-0950
+            <aCall Us: (302) 464-0950
             </a>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default SitemapPage;

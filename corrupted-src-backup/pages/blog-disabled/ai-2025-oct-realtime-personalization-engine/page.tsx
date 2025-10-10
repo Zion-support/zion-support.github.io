@@ -22,10 +22,10 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
       <Helmet>
         <title>Real-Time AI Personalization Engine 2025 — 98.4% Relevance, 8.7x Conversion Lift, $234M+ Revenue Growth | Zion Tech Group</title>
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
-        <meta name="description;
-  content="Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth." /><meta name="keywords;
+        <meta name="description;"
+  content="Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth." /><meta name="keywords;"
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI" /><link rel="canonical", href=" " />
-  content=" />
+  content=" />"
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />,
         <meta name="description",
   content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.", /><meta name: "keywords;
@@ -91,7 +91,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
           <div></div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
                 <Target className="h-8 w-8 text-rose-400 ,>
-  Revenue Impact;
+  Revenue Impact;"
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
@@ -108,7 +108,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               <ul className="space-y-4 text-lg">,
                 <li className="flex items-start gap-3">,
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
-                  <Zap className=" />,
+                  <Zap className=" />,"
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,
                 </li>
@@ -122,11 +122,11 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               <ul className="space-y-4 text-lg"></ul>
                 <li className="flex items-start gap-3"></li>
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
-                  <Zap className=" />
+                  <Zap className=" />"
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Users className=" />
+                  <Users className=" />"
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
                 </li>"
@@ -428,7 +428,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JS
 </p>
 </p>
 
-</a>
 </a>
 
 </ul>

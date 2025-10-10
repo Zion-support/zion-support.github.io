@@ -51,7 +51,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
             <nav, className='spa, c, e-y-1'></nav>
               { secti, o, n.lin, k, s.m, a, p((l, i, n, k, linkInd, e, x) = > (
                 <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={ `block, p, x-3, p, y-2, tex, t-sm, rounde, d-md, transitio, n-colo, r, s ${
-                    isActi, v, e(li, n, k.p, a, t, h)
+                    isActi, v, e(li, n, k.p, a, t, h)}
                        ? 'bg-bl, u, e-100, tex, t-bl, u, e-700, fon, t-medi, u, m'}
                       : 'te, x, t-gr, a, y-600, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'}
   ]; return (<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'></aside>

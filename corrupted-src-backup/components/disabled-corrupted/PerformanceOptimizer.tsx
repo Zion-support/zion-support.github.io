@@ -75,10 +75,10 @@ const optimizationOption, s = [
 
       <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'>
         { optimizationOptio, n, s.m, a, p(opti, o, n = > (</div>
-          <div, ke, y = { opti, o, n.k, e, y  }, classNa, m, e = { `p-4, border, rounded-lg, transitio, n-colo, r, s ${
+          <div, ke, y = { opti, o, n.k, e, y  }, classNa, m, e={ `p-4, border, rounded-lg, transitio, n-colo, r, s ${
               opti, o, n.enabl, e, d;
                  ? 'bord, e, r-gre, e, n-200, b, g-gre, e, n-50'
-                 : 'bord, e, r-gr, a, y-200, b, g-gr, a, y-50'
+                 : 'bord, e, r-gr, a, y-200, b, g-gr, a, y-50'}
              }`}
           >
             <div, className='flex, item, s-start, spac, e-x-3'>
@@ -88,7 +88,7 @@ const optimizationOption, s = [
             <div, className='flex, item, s-start, spac, e-x-3'></div>
               <div, className='fl, e, x-shri, n, k-0' ></div> <opti, o, n.icon, className={ `h-5 w-5 ${
                     opti, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4, 0, 0'
-      <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'></div>
+      <div, className='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-4'></div>}
         {/* TODO: Fix JSX expression */}
           <div, ke, y = { opti, o, n.k, e, y  }, classNa, m, e = {/* TODO: Fix JSX expression */}
              }`}
@@ -130,10 +130,10 @@ const optimizationOption, s = [
           </h3>
           <div, className='spa, c, e-y-1'>
             {currentOptimizatio, n, s.m, a, p((optimizat, i, o, n, ind, e, x) =  > (</div>
-              <div, ke, y = { in, d, e, x   }, classNa, m, e = { `te, x, t-sm ${
+              <div, ke, y = { in, d, e, x   }, classNa, m, e={ `te, x, t-sm ${
                   optimizati, o, n.startsW, i, t, h('✓')
                      ? 'te, x, t-gre, e, n-6, 0, 0'
-                     : 'te, x, t-gr, a, y-6, 0, 0'
+                     : 'te, x, t-gr, a, y-6, 0, 0'}
       {/* TODO: Fix JSX expression */}
               <div, ke, y = { in, d, e, x   }, classNa, m, e = {/* TODO: Fix JSX expression */}`
                  }`}
@@ -150,7 +150,7 @@ const optimizationOption, s = [
         >
           Clo, s, e;
         </button>
-        <button, onCli, c, k={ () = > {
+        <button, onCli, c, k={ () = > {}
             setCurrentOptimizatio, n, s([])}
             // Trigger r e-optimizat i o n}
         ></button>

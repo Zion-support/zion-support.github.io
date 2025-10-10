@@ -110,10 +110,10 @@ const routes = [
 ];
 ;
 const baseUrl = 'https: //ziontechgroup.com';
-const results = {
+const results={
   working: []
   broken: [],
-  missing: [],
+  missing: [],}
   errors: []};
 ;
 function checkUrl(url) {
@@ -121,14 +121,14 @@ function checkUrl(url) {
 const parsedUrl = new URL(url);
     const client = parsedUrl.protocol === 'https: ' ? https : http;
     ;
-const options = {
+const options={
       hostname: parsedUrl.hostname;
       port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80)
       path: parsedUrl.pathname + parsedUrl.search;
       method: 'HEAD',
       timeout:
         timeout: 10000;
-      headers: {,
+      headers: {,}
         'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
     };
 ;

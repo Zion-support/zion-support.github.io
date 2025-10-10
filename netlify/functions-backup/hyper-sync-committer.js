@@ -47,7 +47,7 @@ function json(res)
       'User-Agent': 'netlify-hyper-sync-committer'};`
 //     const bodyStr = `Hyper sync heartbeat at ${new Date().toISOString()}\n`;
 //     const sha = await getCurrentSha(headers);
-    const body = {
+    const body={}
       message: `chore(sync): hyper-sync heartbeat (${new Date().toISOString()})`,
       content: Buffer.from(bodyStr).toString('base64'),
       branch: githubBranch;

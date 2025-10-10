@@ -48,11 +48,11 @@ export const preloadImage = (s, r, c: st, r, i, n, g,
         heig, h, t: i, m, g.naturalHei, g, h, t});
 export const isFormatSupported = asy, n, c(form, a, t: 'we, b, p' | 'av, i, f')
 ): Promi, s, e<boolean> => {
-  if (typeof, windo, w = == 'undefi, n, e, d') return, fals, e; const testImage, s = {
-    we, b, p: 'da, t, a:image/we, b, p; ba, s, e, 6, 4,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3, A, A/vuUA, A, A = ',
-    av, i, f: 'da, t, a:image/av, i, f; bas, e, 6, 4,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f, 8, D///8Wfhw B 8+ErK4 2 A = ' 
+  if (typeof, windo, w = == 'undefi, n, e, d') return, fals, e; const testImage, s={
+    we, b, p: 'da, t, a:image/we, b, p; ba, s, e, 6, 4,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3, A, A/vuUA, A, A=','
+    av, i, f: 'da, t, a:image/av, i, f; bas, e, 6, 4,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f, 8, D///8Wfhw B 8+ErK4 2 A=' }
   }; return, new, Promise(resol, v, e = > { );
-const im, g = new, Ima, g, e(); i, m, g.onlo, a, d = () => resol, v, e(i, m, g.wid, t, h = == , 1); i, m, g.onerr, o, r = () = > resol, v, e(fal, s, e); i, m, g.s, r, c = testImag, e, s[for, m, a, t]});
+const im, g = new, Ima, g, e(); i, m, g.onlo, a, d = () => resol, v, e(i, m, g.wid, t, h = == , 1); i, m, g.onerr, o, r = () = > resol, v, e(fal, s, e); i, m, g.s, r, c = testImag, e, s[for, m, a, t]});'
 export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {
   if (await, isFormatSupporte, d('av, i, f')) return 'av, i, f'; if (await, isFormatSupporte, d('we, b, p')) return 'we, b, p';
   return 'j, p, g';

@@ -1167,7 +1167,7 @@ export type Real2036InnovativeService =
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036 InnovativeService = {;
+export type Real2036 InnovativeService={;
     features: [,
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
@@ -1195,7 +1195,7 @@ export type Real2036 InnovativeService = {;
     use_cases: [,
       'Government communications',
       'Financial transactions',
-      'Healthcare data sharing',
+      'Healthcare data sharing',}
       'Military operations']}
   },
   // Autonomous DevOps Platform;
@@ -1301,7 +1301,7 @@ export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-export type Real2036 InnovativeService = {;
+export type Real2036 InnovativeService={;
   id: string;
   name: string;
   tagline: string;
@@ -1332,7 +1332,7 @@ export type Real2036 InnovativeService = {;
   e: 'AI optimization, Real-time insights, Comprehensive coverage'
     integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
-    useCase,
+    useCase,}
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
 export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}

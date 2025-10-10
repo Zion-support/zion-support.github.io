@@ -82,12 +82,12 @@ const ageDays = stat;
         freshnessScore}});
   items.sort((a)
         b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9));
-  const summary = {generatedAt: new Date().toISOString()
+  const summary={generatedAt: new Date().toISOString()
     totalFiles: items.length;
     staleCount: items.filter(i => i.stale).length;
     freshCount: items.filter(i => !i.stale).length;
     top10MostRecent: items.slice(0),
-        10),
+        10),}
     items}
   };
 //   const outDir = path.join(workspaceRoot, 'public') 'automation');
@@ -175,7 +175,7 @@ const full = path.join(dir)
         f);' const stale = typeof ageDays === 'number' ? ageDays > 30 : true;' const freshnessScore = typeof ageDays === 'number' ? Math.max(0, 100 - Math.min(100)
         ageDays)) : 0; return {path: rel, size, mtimeIso: stat ? new Date(mtime).toISOString() : null, ageDays,
         stale; freshnessScore }}); items.sort((a)
-        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9)); const summary = {generatedAt: new Date().toISOString(), totalFiles: items.length, staleCount: items.filter(i => i.stale).length, freshCount: items.filter(i => !i.stale).length, top10MostRecent: items.slice(0),
+        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9)); const summary={generatedAt: new Date().toISOString(), totalFiles: items.length, staleCount: items.filter(i => i.stale).length, freshCount: items.filter(i => !i.stale).length, top10MostRecent: items.slice(0),}
         10), items} }; ' const outDir = path.join(workspaceRoot, 'public') 'automation'); try {fs.mkdirSync(outDir} { recursive: true;)})} catch {}' const outPath = path.join(outDir) 'docs-freshness.json'); fs.writeFileSync(outPath, JSON.stringify(summary, null)
         2)); return {outPath,
         summary }} exports.config = {' schedule: '*/30 * * * *'} }; exports.handler = async function handler() {try {' const workspaceRoot = path.resolve(__dirname, '..') '..')} const { outPath,

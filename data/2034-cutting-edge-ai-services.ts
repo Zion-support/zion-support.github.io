@@ -470,7 +470,7 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	}
 ];
 ;
-export type CuttingEdgeAIService = {;
+export type CuttingEdgeAIService={;
 	id: string;
 	name: string,,
   description: string;
@@ -481,7 +481,7 @@ export type CuttingEdgeAIService = {;
 		| 'AI Psychology'
 		| 'AI Business Management',
 		| 'AI Healthcare',
-		| 'AI Neural Interfaces',
+		| 'AI Neural Interfaces',}
 export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 		| 'AI Quantum Computing'}
 	pricin,
@@ -532,7 +532,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		realService: true}
 ];
 ;
-export type CuttingEdgeAIService = {;
+export type CuttingEdgeAIService={;
 	id: string;
 	name: string,,
   description: string;
@@ -545,7 +545,7 @@ export type CuttingEdgeAIService = {;
 		| 'AI Healthcare',
 		| 'AI Neural Interfaces',
 export const,
-  cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
+  cuttingEdgeAIServices: CuttingEdgeAIService[] = [;}
 	{/* TODO: Fix JSX expression */}
   d: 'ai-emotional-support-agent'}
 		nam,

@@ -1,5 +1,5 @@
-const errorHandler = {
-  setReportingEnabled: (enabled: boolean) => {,
+const errorHandler={
+  setReportingEnabled: (enabled: boolean) => {,}
     //     },
 
   handleError: (error: unknown) => {,;

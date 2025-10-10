@@ -9,17 +9,9 @@ interface ContentNewsletterSignupProps {
   buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>;
-<<<<<<< HEAD
     text: string;)
 }>;
   onSubscribe?: (email: string) => void;);
-=======
-    text: string]
-    }>;
-  onSubscribe?: (email: string) => void]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -40,7 +32,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
     },
     {
       icon: Globe,
-<<<<<<< HEAD
       text: "Global community access";);
   ],
   onSubscribe;)
@@ -49,18 +40,6 @@ const [email, setEmail] = useState('');
 const [isSubscribed, setIsSubscribed] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
 const handleSubmit = async (e: React.FormEvent) => {
-=======
-      text: "Global community access"]
-    }
-  ],
-  onSubscribe]
-    }); => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     if (!email) return;
 
@@ -71,7 +50,6 @@ const handleSubmit = async (e: React.FormEvent) => {
         await onSubscribe(email)]
     } else {
         // Simulate API call
-<<<<<<< HEAD
         await new Promise(resolve => setTimeout(resolve, 1000)););
       setIsSubscribed(true);
       setEmail('');)
@@ -80,18 +58,6 @@ const handleSubmit = async (e: React.FormEvent) => {
 )
 } finally {
       setIsLoading(false););
-=======
-        await new Promise(resolve => setTimeout(resolve, 1000))]
-    }
-      
-      setIsSubscribed(true);
-      setEmail('')]
-    } catch (error) {
-      console.error('Subscription failed:', error)]
-    } finally {
-      setIsLoading(false)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   };
 
   if (isSubscribed) {
@@ -115,17 +81,11 @@ const handleSubmit = async (e: React.FormEvent) => {
           </button>
         </div>
       </div>
-<<<<<<< HEAD
     ););
-=======
-    )]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
       <div className="max-w-6xl mx-auto"></div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>}
           {/* Content */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
@@ -158,7 +118,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   type="email"
                   id="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value);
+                  onChange={(e) => setEmail(e.target.value);}
                   placeholder={placeholder}
                   required
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
@@ -191,12 +151,6 @@ const handleSubmit = async (e: React.FormEvent) => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContentNewsletterSignup;
 }

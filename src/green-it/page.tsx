@@ -204,7 +204,7 @@ const caseStudies = [
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === tab.id
+                    activeTab === tab.id}
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
@@ -661,7 +661,7 @@ const caseStudies = [,
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Our Green IT Solutions;
           </h2>"
-              <div className="grid grid-cols-1,
+              <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
                 {greenSolutions.map((solution, index) => ()}"
@@ -714,7 +714,7 @@ Benefits of Green IT;"
                           {detail}
 {activeTab === 'certifications' && (}
                 Our Certifications;"
-              <div className="grid grid-cols-1,
+              <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>)
                 {certifications.map((cert, index) => ()}"

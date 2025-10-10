@@ -105,7 +105,7 @@ console.error = (...args) => {
   originalConsoleError(...args)};
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
-(window as unknown as Record<string, unknown>).location = {
+(window as unknown as Record<string, unknown>).location={
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',
@@ -120,3 +120,4 @@ delete (window as unknown as Record<string, unknown>).location;
   replace: jest.fn()
 
 
+}

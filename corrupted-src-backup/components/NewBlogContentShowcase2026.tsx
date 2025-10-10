@@ -18,7 +18,7 @@ const, blogPost, s = [
       trendi, n, g: tr, u, e;
       featur, e, d: tr, u, e;
       ic, o, n: <Brain, className="w-6 h-6/>
-);
+);"
 },"
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'FEATUR, E, D','

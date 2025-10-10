@@ -216,7 +216,7 @@ const performanceMetrics = performanceOptimizer.getMetrics();
 const memoryInfo = getMemoryInfo();
       // Get network info;
 const networkInfo = getNetworkInfo();
-      const newMetrics: SystemMetrics = {;
+      const newMetrics: SystemMetrics={;
 const _networkInfo = getNetworkInfo();
       const _newMetrics: SystemMetrics = {
           score: performanceScore,
@@ -224,7 +224,7 @@ const _networkInfo = getNetworkInfo();
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
+          cumulativeLayoutShift: 0, // Not available in current metrics}
         },
           total: errorStats.totalErrors,
           byType: errorStats.errorsByType,
@@ -283,13 +283,13 @@ const nav = navigator as NavigatorWithConnection;
   // Export data;
 const handleExport = () => {
     if (!metrics) return;
-    const exportData = {
+    const exportData={
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString();
 const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type:     ,
+      type:     ,}
 $4});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -396,7 +396,7 @@ const getSeverityColor = (severity: string) => {
                 <div
                   className={`h-2 rounded-full ${
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
-                    metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
+                    metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'}
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
                 ></div>
@@ -535,7 +535,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
               onClick={handleExport}"
               className="px-4 py-2 bg-blue-600 text-white rounded-md,
   hover:bg-blue-700,
-  focus:outline-none,
+  focus:outline-none,"
   focus:ring-2,"
   focus:ring-blue-500"
 // >
@@ -550,7 +550,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       {/* Performance Metrics */}"
       <div className="mb-8"></div>"
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>"
-        <div className="grid grid-cols-1,
+        <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-4"></div>"
           <div className="bg-gray-50 p-4 rounded-lg"></div>"
@@ -571,7 +571,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
       {/* Error Metrics */}"
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>"
-        <div className="grid grid-cols-1,
+        <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-4"></div>"
               <span className="text-sm font-medium text-gray-600">Total Errors</span>"

@@ -339,10 +339,10 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
@@ -361,7 +361,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
                 Edge, Computin, g</h1> <span, className="bg-gradie, n, t-to-r, fro, m-te, a, l-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>";
               </h1>
-              <p, className="te, x, t-x, l, m;
+              <p, className="te, x, t-x, l, m;"
   d: te, x, t-2xl, tex, t-te, a, l-100, ma, x-w-4xl, m, x-auto, m, b-8">";
                 Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. 
                 Transform, your, IoT, industri, a, l, and, smart, city applications, with, distributed intelligen, c, e.
@@ -371,7 +371,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
                 <a
   hr, e, f="/conta, c, t"
-                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-te, a, l-600, hov, e;
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-te, a, l-600, hov, e;"
         {/* Hero, Sectio, n */}"
         <section, className="bg-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -408,7 +408,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 </a>
                 <a;
   hr, e, f="#prici, n, g"
-                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
+                  classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;"
                 <a></a>"
   hr, e, f="#prici, n, g""
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"
@@ -424,14 +424,14 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -454,15 +454,15 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 Bring, intelligence, closer to, your, data sources, for, unprecedented speed, and, reliability.
               </p>
             </d, i, v>
-            <div, className="gri, d, m;
+            <div, className="gri, d, m;"
   d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">
-            <div, className="gri, d, m
+            <div, className="gri, d, m"
   d: gr, i, d-co, l, s-4, ga, p-8">"</div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4"></div>
-                  <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />
+                  <Zap, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />"
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";</div>
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">";</div>
@@ -482,7 +482,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4"></div>
-                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
+                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />"
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
@@ -498,7 +498,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-cy, a, n-100, rounde, d-full, m, b-4"></div>
-                  <Clock, className="w-8 h-8, tex, t-cy, a, n-6, 0, 0  />
+                  <Clock, className="w-8 h-8, tex, t-cy, a, n-6, 0, 0  />"
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-cy, a, n-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
@@ -514,7 +514,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>
-                  <Users, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
+                  <Users, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />"
               <div, className="te, x, t-cent, e, r">";</div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
@@ -533,14 +533,14 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Use, Case, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -563,7 +563,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 Edge, AI, solutions transforming, operations, across multiple, industrie, s.
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
 return (
@@ -573,8 +573,8 @@ const, Ico, n = useCa, s, e.ic, o, n;
 );
 }"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">
-                      <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
+                      <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />)"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)"
   g:gr, i, d-co, l, s-4, ga, p-8">";)
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
 return (
@@ -587,8 +587,8 @@ const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6"></div>
-                      <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+                      <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
 return (
@@ -606,7 +606,7 @@ const, Ico, n = useCa, s, e.ic, o, n;
                     <ul, className="spa, c, e-y-2">";)
                       {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
@@ -644,14 +644,14 @@ const, Ico, n = useCa, s, e.ic, o, n;
         </secti, o, n>
         {/* Technologi, e, s */}
         <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -674,12 +674,12 @@ const, Ico, n = useCa, s, e.ic, o, n;
                 Leverage, cuttin, g-edge, edge, computing platforms, and, frameworks.
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-3, ga, p-8">"</div>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {technologi, e, s.m, a, p((te, c, h, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
@@ -700,14 +700,14 @@ const, Ico, n = useCa, s, e.ic, o, n;
         </secti, o, n>
         {/* Featur, e, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -730,7 +730,7 @@ const, Ico, n = useCa, s, e.ic, o, n;
                 Powerful, capabilities, that make, edge, AI deployment, seamless, and efficie, n, t.
               </p>
             </d, i, v>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
@@ -744,12 +744,12 @@ const, Ico, n = featu, r, e.ic, o, n;
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4"></div>
                       <Icon, className="w-6 h-6, tex, t-te, a, l-6, 0, 0  />
-                    </d, i, v>
+                    </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  />)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
+                      <CheckCircle, className="w-4 h-4, m, r-1  />)"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)"
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
@@ -760,8 +760,8 @@ const, Ico, n = featu, r, e.ic, o, n;
 }";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+                      <CheckCircle, className="w-4 h-4, m, r-1  />"
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
@@ -783,7 +783,7 @@ const, Ico, n = featu, r, e.ic, o, n;
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4"></div>"
-                      <Icon, className="w-6 h-6, tex, t-te, a, l-6, 0, 0  /></Icon>
+                      <Icon, className="w-6 h-6, tex, t-te, a, l-6, 0, 0  /></Icon>"
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
@@ -809,14 +809,14 @@ const, Ico, n = featu, r, e.ic, o, n;
         </secti, o, n>
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -839,9 +839,9 @@ const, Ico, n = featu, r, e.ic, o, n;
                 Choose, the, plan that, fits, your edge, computing, needs and, deployment, scale.
               </p>
             </d, i, v>
-            <div, className="gri, d, m;
+            <div, className="gri, d, m;"
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m"
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>
@@ -884,16 +884,7 @@ const, Ico, n = featu, r, e.ic, o, n;
                       </li>
                     ))}
                   </ul>
-                  <a;
-  hr, e, f="/conta, c, t"
-                    classNa, m, e={
-`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
-pl, a, n.popul, a, r;
-? 'bg-te, a, l-600, tex, t-white, hove, r: bg-te, a, l-7, 0, 0'
-? 'bg-te, a, l-600, tex, t-white, hov, e;
-  r: bg-te, a, l-7, 0, 0','}
-: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
-                  <a></a>"
+                  <a"
   hr, e, f="/conta, c, t"
                     classNa, m, e={/* TODO: Fix JSX expression */}`
 }`}`;`
@@ -923,14 +914,14 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* Testimonia, l, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -953,16 +944,16 @@ pl, a, n.popul, a, r;
                 Join, leading, companies already, using, our edge, computing, AI solutio, n, s.
               </p>
             </d, i, v>
-            <div, className="gri, d, m;
+            <div, className="gri, d, m;"
   d: gr, i, d-co, l, s-3, ga, p-8">"
-            <div, className="gri, d, m
+            <div, className="gri, d, m"
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />"
             </d, i, v>"
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
@@ -990,10 +981,10 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">";
@@ -1011,16 +1002,16 @@ pl, a, n.popul, a, r;
             <p, className="te, x, t-xl, tex, t-te, a, l-100, ma, x-w-3xl, m, x-auto, m, b-8">";
               Transform, your, applications with, rea, l-time, edge, AI processing, and, achieve unprecedented, performanc, e.
             </p>
-            <div, className="flex, fle, x-co, l, s;
+            <div, className="flex, fle, x-co, l, s;"
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a;
-            <div, className="flex, fle, x-co, l, s
+            <div, className="flex, fle, x-co, l, s"
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
               <a
   hr, e, f="/conta, c, t"
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-te, a, l-600, hov, e;
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-te, a, l-600, hov, e;"
             </p>"
             <div, className="flex, fle, x-co, l, s,"
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
@@ -1036,7 +1027,7 @@ pl, a, n.popul, a, r;
               </a>
               <a;
   hr, e, f="/ca, s, e-studi, e, s"
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;"
               <a></a>"
   hr, e, f="/ca, s, e-studi, e, s""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,"

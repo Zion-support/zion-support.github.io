@@ -4,7 +4,7 @@ import fs from 'fs';
 const missingPages = fs.readFileSync('missing_pages.txt', 'utf8').split('\n').filter(page => page.trim());
 
 // Page configurations;
-const pageConfigs = {
+const pageConfigs={
   'ai-fintech': {
     title: 'AI Fintech Solutions',
     description: 'Advanced AI-powered financial technology solutions for banking, trading, risk management, and fraud detection.',
@@ -12,7 +12,7 @@ const pageConfigs = {
     features: ['Algorithmic Trading', 'Risk Management', 'Fraud Detection', 'Credit Scoring', 'Regulatory Compliance', 'Real-time Analytics'],
     benefits: ['40% Better Returns', '99.9% Fraud Detection', '60% Cost Reduction'],
     price: '$2,200/month',
-    keywords: ['AI fintech', 'financial AI', 'banking AI', 'trading algorithms', 'risk management', 'fraud detection']
+    keywords: ['AI fintech', 'financial AI', 'banking AI', 'trading algorithms', 'risk management', 'fraud detection']}
   },
   'ai-mobile-app-development': {
     title: 'AI Mobile App Development',

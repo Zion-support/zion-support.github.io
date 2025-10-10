@@ -1,5 +1,5 @@
 // Accessibility utilities and components;
-export const accessibilityUtils = {
+export const accessibilityUtils={
   // Focus management;
   trapFocus: element => {,;
 const focusableElements = element.querySelectorAll()
@@ -13,7 +13,7 @@ const focusableElements = element.querySelectorAll()
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
-            e.preventDefault();
+            e.preventDefault();}
 export const accessibilityUtils = {/* TODO: Fix JSX expression */}
           }
         } else {/* TODO: Fix JSX expression */}

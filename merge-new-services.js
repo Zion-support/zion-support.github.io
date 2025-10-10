@@ -110,11 +110,11 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Step 4: Process all new service branches;
-// const results = {
+// const results={
   summary: {
     total: 0;
     successful: 0;
-    failed: 0;
+    failed: 0;}
     methods: { direct: 0, theirs: 0, ours: 0, failed: 0 },
 //Step,
   4: Process all new service branches;

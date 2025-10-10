@@ -1,11 +1,11 @@
 
-export const metadata: Metadata = {,
+export const metadata: Metadata={,
   title: 'Quantum Blockchain Security Services | Zion Tech Group',
   description: 'Professional Quantum Blockchain Security Services services from Zion Tech Group.',
   keywords: 'Quantum Blockchain Security Services, services, technology, enterprise',
   openGraph: {,
     title: 'Quantum Blockchain Security Services',
-    description: 'Professional Quantum Blockchain Security Services services from Zion Tech Group.',
+    description: 'Professional Quantum Blockchain Security Services services from Zion Tech Group.',}
     type: 'website'}};
 
 export default function quantumblockchainsecurityservices() {

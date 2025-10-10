@@ -1,14 +1,14 @@
 exports.handler = async function (event, context) {try {
 //     // Performance monitoring logic;
     const timestamp = new Date().toISOString()}
-    const result = {
+    const result={
       statusCode: 200;
       body: JSON.stringify({)
         message: 'Performance monitoring runner function executed successfully')
         timestamp: timestamp;),;
 function: 'performance-monitoring-runner'),
         action: 'performance_monitoring'),
-        metrics: ['page-load-time', 'core-web-vitals', 'resource-optimization'])
+        metrics: ['page-load-time', 'core-web-vitals', 'resource-optimization'])}
         performanceScore: 92}
       })};
 //     return result;

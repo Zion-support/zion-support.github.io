@@ -26,7 +26,7 @@ function absolute(u) {/* TODO: Fix JSX expression */}
         message) {if(!githubToken,
         return { ok: false;
         status: 0; error: 'No GITHUB_TOKEN provided' };
-    const headers = {)
+    const headers={)}
       Authorization: `token ${githubToken}`)
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-performance-hints')
@@ -58,9 +58,9 @@ const r = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${enc
         sha = j.sha}
       }
     } catch {}
-    const body = {message,
+    const body={message,
       content: Buffer.from(content).toString('base64'),
-      branch: githubBranch;
+      branch: githubBranch;}
       sha}
     };
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
@@ -134,9 +134,9 @@ const scriptSrcs = Array.from(new Set(")
       .filter(c => typeof c.size === 'number' && c.size > 200 * 1024)
       .sort((a)
         b) => (b.size || 0) - (a.size || 0));
-    const summary = {baseUrl,
+    const summary={baseUrl,
       generatedAt: new Date().toISOString(),
-      totals: { assetsChecked: checks.length;
+      totals: { assetsChecked: checks.length;}
         large: large.length },
       large: large.slice(0),
       .sort((a)
@@ -210,7 +210,7 @@ exports.config = { schedule: '*/15 * * * *' }; exports.handler = async function 
         status: 0; error: 'No GITHUB_TOKEN provided' };' const headers = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-performance-hints' }; let sha; try { const r = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`, { headers;)
-      }); if (r.ok) {const j = await r.json(); sha = j.sha} } } catch {}' const body = {message, content: Buffer.from(content).toString('base64'), branch: githubBranch;
+      }); if (r.ok) {const j = await r.json(); sha = j.sha} } } catch {}' const body={message, content: Buffer.from(content).toString('base64'), branch: githubBranch;}
         sha };' const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {method: 'PUT', headers)
         body: JSON.stringify(body;)}); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {error = String(e;)
@@ -226,7 +226,7 @@ exports.config = { schedule: '*/15 * * * *' }; exports.handler = async function 
       } checks.push({ url: src),
         size: r.size),
         status: r.status})} ' const large = checks.filter(c => typeof c.size === 'number' && c.size > 200 * 1024).sort((a)
-        b) => (b.size||0)-(a.size||0)); const summary = {baseUrl, generatedAt: new Date().toISOString(), totals: { assetsChecked: checks.length;
+        b) => (b.size||0)-(a.size||0)); const summary={baseUrl, generatedAt: new Date().toISOString(), totals: { assetsChecked: checks.length;}
         large: large.length }, large: large.slice(0;),
         50;)}; ' const jsonPath = 'automation/reports/performance-hints.json'' const mdPath = 'docs/performance-hints.md' const jsonContent = JSON.stringify({...summary)
         all: checks }, null)

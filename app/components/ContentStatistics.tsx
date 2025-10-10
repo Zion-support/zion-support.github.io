@@ -13,13 +13,13 @@ const ContentStatistics: React.FC = () => {
     uptime: 0
   });
 
-  const targetCounters = {
+  const targetCounters={
     clients: 10000,
     projects: 5000,
     satisfaction: 99,
     years: 15,
     countries: 50,
-    uptime: 99
+    uptime: 99}
   };
 
   const statistics = [

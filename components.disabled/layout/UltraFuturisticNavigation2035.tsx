@@ -764,7 +764,6 @@ const [isOpen,setIsOpen] = useState(false); const [activeDropdown,setActiveDropd
   n: 'Schema diffs & CI gates' } ] } ]; const quickActions = [ {/* TODO: Fix JSX expression */}"
   n: <Link className="text-left" />}primar,
   y: 'true' },{/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   f: '/quote}ico,"
   n: <DollarSign className="text-left" /> },{/* TODO: Fix JSX expression */}
   f: '/contact}ico,"
@@ -786,33 +785,6 @@ return (
 const [isOpen,setIsOpen] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null>
 );
 }(null)} const [isScrolled}setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 10)}; window.addEventListener('scroll')handleScroll); return () => window.removeEventListener('scroll')handleScroll)};[]); const toggleDropdown = (nam,")`
-=======
-  f: '/quote}ico,',
-  n:
-        n: <DollarSign className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/contact}ico,',
-  n:
-        n: <Video className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/chat}ico,',
-  n:
-        n: <MessageCircle className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/pricing}ico,',
-  n:
-        n: <DollarSign className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/market-pricing}ico,',
-  n:
-        n: <BarChart3 className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/services-advertising}ico,',
-  n:
-        n: <Sparkles className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/resources}ico,',
-  n:
-        n: <BookOpen className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/support}ico,',
-  n:
-        n: <HelpCircle className="text-left" /> } ]; const,
-  UltraFuturisticNavigation2035: _React.FC = () => {const [isOpen,setIsOpen] = useState(false); const [activeDropdown,setActiveDropdown] = useState<string | null>(null)} const [isScrolled}setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 10)}; window.addEventListener('scroll')handleScroll); return () => window.removeEventListener('scroll')handleScroll)};[]); const toggleDropdown = (nam,")`
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   e: string) => { setActiveDropdown(activeDropdown === name ? null : name)}; const closeDropdowns = () => { setActiveDropdown(null)}; const closeMobileMenu = () => {setIsOpen(false)} closeDropdowns()}; return ( <nav aria-label="<Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${ isScrolled ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl' : 'bg-transparent' }`}> {} <div className="text-left" > <div className={`absolute inset-0 transition-opacity duration-300 ${ isScrolled ? 'opacity-100' : 'opacity-0' }`}> <div className="text-left" /> <div></div> </div> <div className="text-left" > <div className="text-left" > <div className="text-left" > {} <Link href="/" className="text-left" > <div className="text-left" > <Brain className="text-left" /> </div> <div> <div className="text-left" > Zion Tech Group </div> <div className="text-left" >Revolutionary Technology</div> </div> </Link> {} <div className="text-left" > {navigationItems.map((item) => ( <div key={item.name} className="text-left" > <button onClick={() => toggleDropdown(item.name)} className="text-left" > {item.icon} <span>{item.name}< {item.badge && ( <span className={`px-2 py-1 text-xs rounded-full ${ item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' : item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' : item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' : item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' : item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' : item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' : 'bg-gray-500/20 text-gray-400 border border-gray-500/30' }`}> {item.badge} < )} <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${ activeDropdown === item.name ? 'rotate-180' : '' }`} /> </button> {} <AnimatePresence> {/* TODO: Fix JSX expression */}
   y: '0,y: '10}scal,
   e: '0.95' }} animate={/* TODO: Fix JSX expression */}

@@ -59,8 +59,8 @@ export class FocusTrap {/* TODO: Fix JSX expression */}
 /**
  * ARIA helper functions;
  */
-export const ariaHelpers = {
-  setAriaExpanded(element: HTMLElement, expanded: boolean): void {,
+export const ariaHelpers={
+  setAriaExpanded(element: HTMLElement, expanded: boolean): void {,}
     element.setAttribute('aria-expanded', expanded.toString())},
 
   setAriaHidden(element: HTMLElement, hidden: boolean): void {,
@@ -110,13 +110,13 @@ export const announceToScreenReader = (messag)
 /**
  * Keyboard navigation helpers;
  */
-export const keyboardNavigation = {
+export const keyboardNavigation={
   handleArrowKeys(event: KeyboardEvent, items: HTMLElement[]): void {
     //     const currentIndex = items.indexOf(document.activeElement as HTMLElement);
 
     if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
       event.preventDefault();
-      //       const nextIndex = (currentIndex + 1) % items.length;,
+      //       const nextIndex = (currentIndex + 1) % items.length;,}
       items[nextIndex]?.focus()} else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
       event.preventDefault();
       const _prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;

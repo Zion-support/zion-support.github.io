@@ -17,8 +17,8 @@ const,
 );
 
 // Simple logger replacement;
-const logger = {
-  error: (message: string, error?: unknown, meta?: unknown) => {;
+const logger={
+  error: (message: string, error?: unknown, meta?: unknown) => {;}
 const logger = {/* TODO: Fix JSX expression */}
     //     },
   war,

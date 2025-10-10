@@ -1,5 +1,5 @@
 // Advanced analytics and monitoring;
-export const analyticsUtils = {
+export const analyticsUtils={
   // Performance monitoring;
   measurePerformance: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {;
@@ -11,7 +11,7 @@ const metrics = {
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0;
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;}
 export const analyticsUtils = {/* TODO: Fix JSX expression */}
       };
 
@@ -20,14 +20,14 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
 
   // Error tracking;
   trackError: (error, context = {}) => {;
-const errorData = {
+const errorData={
       message: error.message;
       stack: error.stack;
       url: window.location.href;
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent;
       context,
-  // Error tracking,
+  // Error tracking,}
   trackError: (error, context = {}) => {/* TODO: Fix JSX expression */}
     };
 
@@ -37,7 +37,7 @@ const errorData = {
 
   // User behavior tracking;
   trackUserInteraction: (action, element, metadata = {}) => {;
-const interactionData = {
+const interactionData={
       action,
       element: element.tagName?.toLowerCase() || 'unknown'
       id: element.id || null;
@@ -45,7 +45,7 @@ const interactionData = {
       timestamp: new Date().toISOString(),
       url: window.location.href;
       metadata,
-  // User behavior tracking,
+  // User behavior tracking,}
   trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
     };
 

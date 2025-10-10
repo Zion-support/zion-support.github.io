@@ -194,13 +194,13 @@ return (
   n: && <span className="text-left">{icon}<}" {children} ; " {/* TODO: Fix JSX expression */}"
   t: === "gradient" && ("}" <motion.di,"
   v: className="text-left" > initial="{{" x: "-100%"}}" animate="{/* TODO: Fix JSX expression */}"
-  d: ? "100%" : "-100%"}}" transition="{/* TODO: Fix JSX expression */}
+  d: ? "100%" : "-100%"}}" transition="{/* TODO: Fix JSX expression */}"
   n: '0.',6}eas,"
   e: "easeInOut"}}""; initial = "{/* TODO: Fix JSX expression */}"
   y: '0' }}" animate="{/* TODO: Fix JSX expression */}"
   y: '1' }} className="text-left" w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> " transition="{/* TODO: Fix JSX expression */}")
   n: '0.6' }} ) />" <div className="text-left" > {/* TODO: Fix JSX expression */}"
-  e: '360' }} transition="{/* TODO: Fix JSX expression */}
+  e: '360' }} transition="{/* TODO: Fix JSX expression */}"
   t: 'Infinity'}eas,"
   e: "linear" }} ; ) : (" icon && <span className="text-left">{icon}<" animate="{/* TODO: Fix JSX expression */}")
   y: 'loading ? 0 : 1' }} className="text-left" mr-2">{icon}<} ) {children}" {variant === "gradient" && (" <motion.div} className="text-left" {{" x: "-100%" }} animate="{{" x: isHovered ? "100%" : "-100%" }}" className="text-left"}" onMouseDown="{()" => setIsPressed(true)}" onMouseUp="{()" => setIsPressed(false)}" boxShado,"
@@ -221,7 +221,7 @@ return (
   any: '-100%,opacit,',
   y: 'isHovered ? [0',0.2}0] as any : 0 }} transition = "{/* TODO: Fix JSX expression */}"
   n: '0.6' }}" <div className="text-left"> <motion.div className="text-left" animate="{/* TODO: Fix JSX expression */}"
-  e: '360' }} transition="{/* TODO: Fix JSX expression */}
+  e: '360' }} transition="{/* TODO: Fix JSX expression */}"
   t: 'Infinity'}eas,"
   e: "linear> " }} /> ) : (; icon && <span className="text-left" >{icon}></div> <span>{children}></div> interface AnimatedCardProps {} className?: strin,
   g: 'delay?: numbe',r} ; expor,
@@ -292,14 +292,14 @@ return (
   e: {x: ,0}opacit,
   y: '1'} }} a,"
   s: 'const'," className = "{/* TODO: Fix JSX expression */}"
-  l: transition-shadow duration-300 ${classNam}e}"}" initial="hidden""; transition = "{/* TODO: Fix JSX expression */}
+  l: transition-shadow duration-300 ${classNam}e}"}" initial="hidden""; transition="{/* TODO: Fix JSX expression */}"
   n: '0.',6}dela,"
   y: ''}}" whileHover="{{" y: '-5'}} ; if (isInView) controls.start(" "visible")},[isInView,controls])} righ,
   t: {/* TODO: Fix JSX expression */}
   n: { x: -50}opacit,
   y: '0' },visibl,
   e: {x: 0}opacit,"
-  y: '1' } }} as const," variants="{/* TODO: Fix JSX expression */}
+  y: '1' } }} as const," variants="{/* TODO: Fix JSX expression */}"
   n: { opacit} y: '0'}y: '20' }; visibl,"
   e: {opacit} y: '1'}y: '0' }"; transition="{/* TODO: Fix JSX expression */}"
   n: '0.5'}delay }} className="text-left" bg-white" rounded-lg shadow-lg p-6 ${className}"} ; bg-white rounded-lg shadow-md border border-gray-200; transition-all duration-300 cursor-pointer,>{children} ; interface HoverEffectProps {} className?: strin,
@@ -307,20 +307,20 @@ return (
   t: const,
   HoverEffect: React.FC<HoverEffectProps> = ({} scal,"
   e: '= 1.05'}" whileHover="{{" scale }}; transition="{/* TODO: Fix JSX expression */}
-  s: '400'}dampin,
+  s: '400'}dampin,"
   g: '17' }} boxShado,")
   w: isHovered ") ? "0 20px 40px rgba(0,0,0)0.1); : "0 4px 6px rgba(0,0,0)0.1)" expor,
   t: const,
   HoverEffect: React.FC<HoverEffectProps> = ({} scal,"
   e: '= 1.05'}"; whileHover="{{" scale }} transition="{/* TODO: Fix JSX expression */}
-  s: '400'}dampin,
+  s: '400'}dampin,"
   g: '17' }} ; boxShado,")
   w: isHovered ") ? "0 20px 40px rgba(0,0,0)0.1); : "0 4px 6px rgba(0,0,0)0.1)" interface LoadingSpinnerProps {"; size?: "sm" | "md" | "lg} expor,
   t: const,
   LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}")
   e: = "md)"}"} classNam,"
   e: = "}) => {; const sizeClasses = {} ; " className = "{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full ${className}"}" animate="{/* TODO: Fix JSX expression */}"
-  e: '360'}} transition="{/* TODO: Fix JSX expression */}
+  e: '360'}} transition="{/* TODO: Fix JSX expression */}"
   t: 'Infinit',y}eas,"
   e: "linear"}}" size?: "sm" | "md" | "lg" export const,"
   LoadingSpinner: React.FC<LoadingSpinnerProps> = ({, interface LoadingSpinnerProps {"}} color?: "primary" | "secondary" | "white"} ; " export const,"
@@ -347,12 +347,12 @@ return (
   ProgressBar: React.FC<ProgressBarProps> = ({/* TODO: Fix JSX expression */}")`
   ProgressBar: React.FC<ProgressBarProps> = ({) progress)} showPercentage = true}" return (; <div className="text-left" ${className}`}>`" <div className="text-left" > <span className="text-left" >Progress></div> {showPercentage && (`} const [animatedProgress}setAnimatedProgress] = useState(0); const timer = setTimeout(() => {; setAnimatedProgress(progress)},100); return () => clearTimeout(timer)};[progress]); " <div className = "{`w-full" ${className}`}>" <div className="text-left" justify-between items-center mb-2"> {showPercentage && (" <span className="text-left" >{Math.round(progress)}%<" <span className="text-left" > {Math.round(animatedProgress)}%" </div> <div className="text-left" >" <motion.div; className="text-left" " initial="{/* TODO: Fix JSX expression */}"`
   h: '0' }}`" animate="{/* TODO: Fix JSX expression */}"`
-  h: `${progress}%` }}`; transition="{/* TODO: Fix JSX expression */}
+  h: `${progress}%` }}`; transition="{/* TODO: Fix JSX expression */}"
   n: '0.5'}eas,"
   e: "easeOut" }} ; interface TooltipProps {/* TODO: Fix JSX expression */}"
   ProgressBar: React.FC<ProgressBarProps> = ({) progress)} showPercentage = true}" return (} <div className="text-left" w-full" ${className}"}> <div className="text-left" > <span className="text-left" >Progress></div> {showPercentage && (" const [animatedProgress)setAnimatedProgress] = useState(0)}}} const timer = setTimeout(() => {; setAnimatedProgress(progress)},100)} return () => clearTimeout(timer)};[progress])} "; <div className = "{"w-full" ${className}"}>" <div className=flex" justify-between items-center mb-2"> {showPercentage && (" <span className="text-left" >{Math.round(progress)}%<" <span className="text-left" > {Math.round(animatedProgress)}%" ></div> <div className="text-left" >" <motion.div; className="text-left" {/* TODO: Fix JSX expression */}"
   h: '0' }} animate="{/* TODO: Fix JSX expression */}"
-  h: "${progress}%" }}" transition="{/* TODO: Fix JSX expression */}
+  h: "${progress}%" }}" transition="{/* TODO: Fix JSX expression */}"
   n: '0.5'}eas,"
   e: "easeOut" }} ; interface TooltipProps {; conten> t: 'string'}"} position?: "top" | "bottom" | "left" | "right"} ; export const,"
   Tooltip: React.FC<TooltipProps> = ({) content," position = "top" const [isVisible)setIsVisible] = useState(false)}}} "; const positionClasses = {}" onMouseLeave="{()" => setIsVisible(false)} ; )} expor,
@@ -367,10 +367,10 @@ return (
   y: '',1}y: '0'}}" transition="{/* TODO: Fix JSX expression */}
   n: '0.',6}dela,
   y: 'inde,',
-  x:
-        x: * 0.1'}}" viewport="{/* TODO: Fix JSX expression */}
+  x:"
+        x: * 0.1'}}" viewport="{/* TODO: Fix JSX expression */}"
   e: 'true'}}> <motion.di,"
-  v: className="text-left" whileHover="{/* TODO: Fix JSX expression */}
+  v: className="text-left" whileHover="{/* TODO: Fix JSX expression */}"
   e: 1.,1}rotat,"
   e: '5'}} transition="{{" type } "spring,"}dampin,
   g: '10'}}> <stat.ico,"
@@ -380,7 +380,7 @@ return (
   e: '1'}} transition="{/* TODO: Fix JSX expression */}
   n: '0.',5}dela,
   y: 'inde,',
-  x:
+  x:"
         x: * 0.1 + 0.3'}} viewport="{/* TODO: Fix JSX expression */}")
   e: 'true'}}>" {stat.number} ) </motion.h3>" <p: className="text-left" >{stat.labe}l}</p>" stat,
   s: Array<{)} numbe,
@@ -390,7 +390,7 @@ return (
   InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => (") <div className = "grid grid-cols-2,"
   md: grid-cols-4 gap-6">); {stats.map((stat}index) => (" key="{index} className="text-left" {/* TODO: Fix JSX expression */}"
   y: '0'}y: '20' }}" whileInView="{/* TODO: Fix JSX expression */}"
-  y: '1'}y: '0' }}" transition="{/* TODO: Fix JSX expression */}
+  y: '1'}y: '0' }}" transition="{/* TODO: Fix JSX expression */}"
   n: '0.6'}dela,"
   y: 'index * 0.1' }}" viewport="{/* TODO: Fix JSX expression */}"
   e: 'true' }}" className="text-left"{/* TODO: Fix JSX expression */}
@@ -398,11 +398,11 @@ return (
   e: '5' }} transition="{{" type "spring"}dampin,")
   g: '10' }}" <stat.icon className="text-left" /> <motion.h3)" className="text-left" {/* TODO: Fix JSX expression */}"
   e: 0 }}" whileInView="{/* TODO: Fix JSX expression */}"
-  e: '1' }}" transition="{/* TODO: Fix JSX expression */}
+  e: '1' }}" transition="{/* TODO: Fix JSX expression */}"
   n: '0.5'}dela,"
-  y: 'index * 0.1 + 0.3' }} ; {stat.number}" <p className="text-left">{stat.label}</p>" initial="{/* TODO: Fix JSX expression */}
+  y: 'index * 0.1 + 0.3' }} ; {stat.number}" <p className="text-left">{stat.label}</p>" initial="{/* TODO: Fix JSX expression */}"
   y: '0'}scal,"
-  e: '0.8' }}" animate="{/* TODO: Fix JSX expression */}
+  e: '0.8' }}" animate="{/* TODO: Fix JSX expression */}"
   y: 'isVisible ? 1 : 0'}scal,"
   e: 'isVisible ? 1 : 0.8' }} className="text-left" absolute" z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg ${positionClasses[position]}"} ; {content} <div className="text-left"absolute" w-2 h-2 bg-gray-900 transform rotate-45 ${; position === "top" ? "top-full left-1/2 -translate-x-1/2 -mt-1" :; position === "bottom" ? "bottom-full left-1/2 -translate-x-1/2 -mb-1" :; position === "left" ? "left-full top-1/2 -translate-y-1/2 -ml-1" :; "right-full top-1/2 -translate-y-1/2 -mr-1>}}}"} /> ))} ; )} interface FloatingActionButtonProps {/* TODO: Fix JSX expression */}"
   k: (void) => $3} tooltip?: string," position?,:}bottom-right" | "bottom-left" | "top-right" | "top-left} color?: "blue" | "green" | "purple" | "red}" expor,
@@ -427,7 +427,7 @@ return (
   e: '1.1'}}" whileTap="{/* TODO: Fix JSX expression */}"
   e: '0.9'}}" initial="{/* TODO: Fix JSX expression */}"
   e: '0'}}" animate="{/* TODO: Fix JSX expression */}"
-  e: '1'}} transition="{/* TODO: Fix JSX expression */}
+  e: '1'}} transition="{/* TODO: Fix JSX expression */}"
   g: '1',5}stiffnes,"
   s: '300'}}">{icon} ; {/* TODO: Fix JSX expression */}"
   p: && showTooltip && ("} <motion.div initial = "{/* TODO: Fix JSX expression */}"
@@ -472,12 +472,12 @@ return (
   e: '1.1' }}" whileTap="{/* TODO: Fix JSX expression */}"
   e: '0.9' }}" animate="{/* TODO: Fix JSX expression */}"
   e: '1' }} transition="{/* TODO: Fix JSX expression */}
-  g: '15'}stiffnes,
+  g: '15'}stiffnes,"
   s: '300' }} ; {icon} ; {/* TODO: Fix JSX expression */}"
   y: '0'}y: '10' }}" animate="{/* TODO: Fix JSX expression */}"
   y: '1'}y: '0' }}" className=absolute" bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap" {tooltip}"; <div className="text-left" /> export default {) FadeIn)} InteractiveStats}; FloatingActionButton; )}; className = "{"bg-blue-600" h-2 rounded-full} initial="{/* TODO: Fix JSX expression */}"
   h: '0' }}" animate="{/* TODO: Fix JSX expression */}"
-  h: "${animatedProgress}%" }}" transition="{/* TODO: Fix JSX expression */}
+  h: "${animatedProgress}%" }}" transition="{/* TODO: Fix JSX expression */}"
   n: '1'}eas,"
   e: "easeOut" }} ; interface ToggleSwitchProps {/* TODO: Fix JSX expression */}
   ToggleSwitch: React.FC<ToggleSwitchProps> = ({; checked) onChange)} <button relative inline-flex h-6 w-11 items-center rounded-full}; transition-colors,
@@ -485,5 +485,5 @@ return (
   focus:ring-2,
   focus:ring-blue-500,"`
   focus:ring-offset-2"> } ${checked ? "bg-blue-600" : "bg-gray-200"}" ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}" onClick="{()" => !disabled && onChange(!checked)}" disabled="{disabled}" </button><motion.span,"; className=inline-block" h-4 w-4 transform rounded-full bg-white shadow-lg`}" animate="{{" x: 'checked ? 20 : 4' }}" transition="{/* TODO: Fix JSX expression */}
-  s: '500'}dampin,
+  s: '500'}dampin,"
   g: '30' }} ; ></div> export {; InteractiveCard; AnimatedCounter} ProgressBar}; ToggleSwitch))))))))))))))))))))))'"`

@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 function generateStructuredData() {
   // console.log removed for production
 ;
-const structuredData = {
+const structuredData={
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -29,7 +29,7 @@ const structuredData = {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"}
     },
     "address": {
       "@type": "PostalAddress",
@@ -79,7 +79,7 @@ const structuredData = {
 function generateMetaTags() {
   // console.log removed for production
 ;
-const metaTags = {
+const metaTags={
     title: "Zion Tech Group - Advanced AI and IT Solutions",
     description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
     keywords: [,
@@ -106,7 +106,7 @@ const metaTags = {
       title: "Zion Tech Group - Advanced AI and IT Solutions",
       description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
       image: "https://ziontechgroup.com/og-image.jpg",
-      url: "https://ziontechgroup.com",
+      url: "https://ziontechgroup.com",}
       type: "website"},
     twitter: {,
       card: "summary_large_image",
@@ -133,7 +133,7 @@ function generateOpenGraphImages() {
 function generateFAQSchema() {
   // console.log removed for production
 ;
-const faqSchema = {
+const faqSchema={
     "@context": "https: //schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -142,7 +142,7 @@ const faqSchema = {
         "name": "What services does Zion Tech Group offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Zion Tech Group offers comprehensive AI solutions, IT services, cloud migration, cybersecurity, quantum computing, autonomous systems, and digital transformation services."
+          "text": "Zion Tech Group offers comprehensive AI solutions, IT services, cloud migration, cybersecurity, quantum computing, autonomous systems, and digital transformation services."}
         }
       },
       {
@@ -183,14 +183,14 @@ const faqSchema = {
 function generateBreadcrumbSchema() {
   // console.log removed for production
 ;
-const breadcrumbSchema = {
+const breadcrumbSchema={
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Home",
+        "name": "Home",}
         "item": "https: //ziontechgroup.com"},
       {
         "@type": "ListItem",
@@ -216,7 +216,7 @@ const breadcrumbSchema = {
 function generateLocalBusinessSchema() {
   // console.log removed for production
 ;
-const localBusinessSchema = {
+const localBusinessSchema={
     "@context": "https: //schema.org",
     "@type": "LocalBusiness",
     "name": "Zion Tech Group",
@@ -230,7 +230,7 @@ const localBusinessSchema = {
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
+      "addressCountry": "US"}
     },
     "geo": {
       "@type": "GeoCoordinates",

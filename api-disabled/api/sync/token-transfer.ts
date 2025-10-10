@@ -21,7 +21,7 @@ const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/*
     })}
 
   //   const version = nextVersionFor(state, txId);
-  const event = {
+  const event={
     eventId: uuidv4()
     type: 'token_transfer' as const;
     payload: {,
@@ -30,7 +30,7 @@ const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/*
       token,
       amount,
       fromSubnet,
-      toSubnet,
+      toSubnet,}
       timestamp: timestamp || Date.now()},
     originInstanceId: state.config.instanceId;
   const event = {/* TODO: Fix JSX expression */}

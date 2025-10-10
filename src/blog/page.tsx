@@ -166,7 +166,7 @@ const timer = setTimeout(() => {
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === category
                   ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
+                  : 'bg-white text-gray-600 hover:bg-gray-100'}
               }`}
             >
               {category === 'all' ? 'All Articles' : category}

@@ -36,13 +36,8 @@ const observer = new IntersectionObserver(
 
         if (entry.isIntersecting && freezeOnceVisible) {
           observer.disconnect();
-<<<<<<< HEAD
       },
       {
-=======
-        },
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         threshold,
         root,
         rootMargin}

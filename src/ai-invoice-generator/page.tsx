@@ -222,7 +222,7 @@ const useCases = [
                   <div key={index} className={`relative rounded-lg p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400' 
-                      : 'bg-slate-800/50 border border-slate-700'
+                      : 'bg-slate-800/50 border border-slate-700'}
                   }`}>
                     {plan.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -248,7 +248,7 @@ const useCases = [
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                       Get Started
                     </button>
-
+}
           {/* Testimonials Section */}
                   Loved by Businesses Worldwide
                   See how our AI invoice generator is transforming businesses across industries.

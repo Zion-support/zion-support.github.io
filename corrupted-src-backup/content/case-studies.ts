@@ -1,5 +1,5 @@
 import React from 'react';
-export type CaseStudy = {
+export type CaseStudy={
   id: string;
   title: string;
   company: string;
@@ -8,7 +8,7 @@ export type CaseStudy = {
   solution: string;
   results: string[];
   technologies: string[];
-  duration: string;
+  duration: string;}
   imageUrl?: string};
 
 export const caseStudies: CaseStudy[] = [

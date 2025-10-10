@@ -80,7 +80,7 @@ readingTimereadingTime: '45 min read',
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'}
               }`}
             >
               {category.name}
@@ -254,7 +254,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>"
                 to="/contact""
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl,
-  hover:from-blue-700,
+  hover:from-blue-700,"
   hover:to-indigo-700 transition-all duration-300 transform,"
   hover:scale-105 shadow-2xl""
               >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>

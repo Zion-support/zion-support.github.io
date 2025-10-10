@@ -5,13 +5,13 @@
 
 class PerformanceOptimizer {;
 constructor() {
-    this.metrics = {
+    this.metrics={
       pageLoadTime: 0;
       firstContentfulPaint: 0;
       largestContentfulPaint: 0;
       cumulativeLayoutShift: 0;
       firstInputDelay: 0;
-      interactionToNextPaint: 0;
+      interactionToNextPaint: 0;}
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     };
     this.observers = new Map();
@@ -151,7 +151,7 @@ const _link = document.createElement('link');
 
   setupRouteBasedSplitting() {
     // Implement route-based code splitting;
-    const routes = {
+    const routes={
       '/': () => import('../pages/Home'),
       '/about': () => import('../pages/About'),
       '/services': () => import('../pages/Services'),
@@ -159,7 +159,7 @@ const _link = document.createElement('link');
       '/contact': () => import('../pages/Contact'),
       '/team': () => import('../pages/Team'),
       '/privacy': () => import('../pages/Privacy'),
-      '/terms': () => import('../pages/Terms'),
+      '/terms': () => import('../pages/Terms'),}
   setupRouteBasedSplitting() {/* TODO: Fix JSX expression */}
     };
 

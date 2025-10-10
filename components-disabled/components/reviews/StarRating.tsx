@@ -8,7 +8,7 @@ import React from 'react';
 return (
 ; <button} key={star}" type="button"""' className={/* TODO: Fix JSX expression */}"
   r: scale-110'}`} onMouseLeave={() =>
-);
+);}
 } !readOnly && setHovered(null)} </button> <svg; width={size} height={size}' view_box='0 0 24 24'' fill={active ? 'gold' : 'none export default StarRating} xmlns="htt,"`
   p://www.w3.org/2000/svg"" width={size}"' stroke={active ? 'gold' : 'current_color'}' stroke_width='2'' stroke_linecap='round'' stroke_linejoin='round'`;' className={`drop - shadow ${active ? 'animate - pulse - slow' : }`} >; </svg>' <polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2' />; </svg>; </button>); </div>); <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />;" </div>);"`;'
 "`

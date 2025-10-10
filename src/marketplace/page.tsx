@@ -214,7 +214,7 @@ icon$5: Award,
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeCategory === category.id
+                    activeCategory === category.id}
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
@@ -274,7 +274,7 @@ icon$5: Award,
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-400">{item.experience} experience</span>
                         <span className={`px-2 py-1 rounded text-xs ${
-                          item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                          item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}
                         }`}>
                           {item.available ? 'Available' : 'Busy'}
 

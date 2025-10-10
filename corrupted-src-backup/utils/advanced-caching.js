@@ -173,11 +173,11 @@ const _memInfo = performance.memory;
   }
 
   setupCacheAnalytics() {
-    this.stats = {
+    this.stats={
       hits: 0;
       misses: 0;
       sets: 0;
-      deletes: 0;
+      deletes: 0;}
       evictions: 0}}
 
   getStats() {

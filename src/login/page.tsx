@@ -362,7 +362,7 @@ type="checkbox" name="rememberMe"
 
                       checked={formData.rememberMe}
                       onChange={handleInputChange}"
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,"
   focus:ring-cyan-400,"
   focus:ring-2"
 // />

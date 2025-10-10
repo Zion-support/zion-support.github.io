@@ -55,9 +55,9 @@ return (
 );
 };
 ;
-const metrics: PerformanceMetrics = {,
+const metrics: PerformanceMetrics={,
         renderTime;
-        componentMountTime: performance.now() - mountTimeRef.current;
+        componentMountTime: performance.now() - mountTimeRef.current;}
         isSlowRender};
 
       // Track memory usage if available;
@@ -101,11 +101,11 @@ const navigation = performance.getEntriesByType('navigation')
         )[0] as PerformanceNavigationTiming;
 
         if (navigation) {;
-const metrics = {
+const metrics={
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
             firstByte: navigation.responseStart - navigation.requestStart;
-            domInteractive: navigation.domInteractive - navigation.navigationStart;
+            domInteractive: navigation.domInteractive - navigation.navigationStart;}
             totalLoadTime: navigation.loadEventEnd - navigation.navigationStart};
 
           // Track each metric;

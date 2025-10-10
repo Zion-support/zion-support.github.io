@@ -110,11 +110,11 @@ interface SEOConfig {}
   tags?: string[];}
 }
 // Default SEO config;
-const defaultSEOConfig: SEOConfig = {
+const defaultSEOConfig: SEOConfig={
   title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
   keywords: []
-// Default SEO config
+// Default SEO config}
 const defaultSEOConfig: SEOConfig = {}
   title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
@@ -143,7 +143,7 @@ export const generateStructuredData = (data: {}
 // sameAs?: string[];,
 // [key: string]: unknown;
 }) => {
-  const baseStructure = {
+  const baseStructure={}
     '@context': 'https: //schema.org'}) => {}
   const baseStructure = {}
     '@context': 'https://schema.org',
@@ -527,7 +527,7 @@ export const generateAdvancedStructuredData = (data: {}
 // sameAs?: string[];,
 // [key: string]: unknown;
 }) => {
-  const baseStructure = {
+  const baseStructure={}
     '@context': 'https: //schema.org'}) => {}
   const baseStructure = {}
     '@context': 'https://schema.org',

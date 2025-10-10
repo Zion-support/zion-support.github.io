@@ -70,7 +70,7 @@ const,
         </section>
         {/* Services Grid */}"
         <section className="container mx-auto px-4 py-16"></section>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-2 gap-8"></div>
             {services.map((service, index) => ()}"
@@ -96,7 +96,7 @@ const,
 
             Why Choose Our {title}?
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => ()}"

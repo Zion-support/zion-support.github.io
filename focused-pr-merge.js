@@ -189,7 +189,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 }
 
 //Step 4: Execute merge process;
-// const results = {
+// const results={
   successful: []
   failed: []
   summary: {
@@ -204,7 +204,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
       already_merged: 0;
       failed: 0;
 //Step,
-  4: Execute merge process;
+  4: Execute merge process;}
 // const results = {/* TODO: Fix JSX expression */}
     }}};
 

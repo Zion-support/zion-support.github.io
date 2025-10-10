@@ -112,7 +112,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 }
 
 //Step 4: Process all branches;
-const results = {
+const results={
   successful: []
   failed: []
   summary: {
@@ -127,7 +127,7 @@ const results = {
       not_found: 0;
       failed: 0;
 //Step,
-  4: Process all branches;
+  4: Process all branches;}
 const results = {/* TODO: Fix JSX expression */}
     }}};
 
@@ -155,8 +155,8 @@ const results = {/* TODO: Fix JSX expression */}
 }
 
 //Step 5: Generate report;
-// const report = {,
-  ...results;
+// const report={,
+  ...results;}
   timestamp: new Date().toISOString()};
 
 fs.writeFileSync('recent-branches-merge-report.json')

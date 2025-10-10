@@ -196,7 +196,7 @@ const MicroSaasPage: React.FC = () => {
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     category === 'All'
                       ? 'bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'}
                   }`}
                 >
                   {category}
@@ -239,7 +239,7 @@ const MicroSaasPage: React.FC = () => {
                 <div
                   key={product.id}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group ${
-                    product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700'
+                    product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700'}
                   }`}
                 >
                   {product.popular && (
@@ -278,7 +278,7 @@ const MicroSaasPage: React.FC = () => {
                   <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
                     product.popular
                       ? 'bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 hover:from-cyan-300 hover:to-purple-300'
-                      : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'
+                      : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'}
                   }`}>
                     Start Free Trial
                     <ArrowRight className="w-4 h-4" />

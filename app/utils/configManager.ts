@@ -47,14 +47,14 @@ export interface AppConfig {
   }
 }
 
-const defaultConfig: AppConfig = {
+const defaultConfig: AppConfig={
   environment: 'development',
   api:
         api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com'
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true,
+    enableCaching: true,}
   },
   features: {
     enableAnalytics: true,

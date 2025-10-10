@@ -2,21 +2,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //     // // console.log removed for production
 }
     // Dead code reporting simulation;
-    const result = {
+    const result={
       statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Dead code report executed successfully)
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
 function: 'dead-code-report'
-=======
-        timestamp: new Date().toISOString()
-        function: 'dead-code-report',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         report: {,
           status: 'generated',

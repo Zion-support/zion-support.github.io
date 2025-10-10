@@ -644,13 +644,13 @@ const defaultValue = this.getDefaultForKey(key);
    * Get default value for a config key
    */
   private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {;
-const defaultValues: AppConfig = {
+const defaultValues: AppConfig={
       environment: 'development',
       api: {
         baseURL: '',
         timeout: 30000,
         retryAttempts: 3,
-        enableCaching: true
+        enableCaching: true}
       },
       features: {
         enableAnalytics: false,

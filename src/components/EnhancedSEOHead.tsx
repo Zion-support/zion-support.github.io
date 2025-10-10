@@ -16,7 +16,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
   url = "https://ziontechgroup.com",
   type = "website"
 }) => {;
-const structuredData = {
+const structuredData={
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -29,7 +29,7 @@ const structuredData = {
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
+      "addressCountry": "US"}
     },
     "contactPoint": {
       "@type": "ContactPoint",

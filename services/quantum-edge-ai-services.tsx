@@ -1,11 +1,11 @@
 
-export const metadata: Metadata = {,
+export const metadata: Metadata={,
   title: 'Quantum Edge Ai Services | Zion Tech Group',
   description: 'Professional Quantum Edge Ai Services services from Zion Tech Group.',
   keywords: 'Quantum Edge Ai Services, services, technology, enterprise',
   openGraph: {,
     title: 'Quantum Edge Ai Services',
-    description: 'Professional Quantum Edge Ai Services services from Zion Tech Group.',
+    description: 'Professional Quantum Edge Ai Services services from Zion Tech Group.',}
     type: 'website'}};
 
 export default function quantumedgeaiservices() {

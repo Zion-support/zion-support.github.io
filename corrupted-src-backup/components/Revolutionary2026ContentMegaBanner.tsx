@@ -227,12 +227,12 @@ featur, e, d: fal, s, e}
           </d, i, v>
         </d, i, v>
         {/* Featured, Content, Grid */})
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)"
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">)
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (
             <d, i, v;
         {/* Featured, Content, Grid */}
-        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l"
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           {revolutionaryConte, n, t.m, a, p((conte, n, t) => (</div>
             <d, i, v
@@ -255,7 +255,7 @@ featur, e, d: fal, s, e}
               )}
               {/* Card, glow, effect */}
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>
-              <div, className="relative, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e;
+              <div, className="relative, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e;"
   r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">
                 {/* Ic, o, n & Badg, e, s */}</div>
                 <div, className="flex, item, s-start, justif, y-between, m, b-6"></div>
@@ -338,7 +338,7 @@ featur, e, d: fal, s, e}
                   <Link, className="w-4 h-4"  />
                   <sp, a, n>Explore, Breakthroug, h</sp, a, n>
                   <span, className="w-4 h-4, grou, p-hov, e, r/bt;
-                <a></a>
+                <a></a>"
   hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}`"
                   classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,"
   r:-transla, t, e-y-1"
@@ -422,7 +422,7 @@ featur, e, d: fal, s, e}
                 </a>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
-                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e;
+                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e;"
                 </a>"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/bl, o, g""

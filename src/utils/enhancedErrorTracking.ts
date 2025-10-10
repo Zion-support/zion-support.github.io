@@ -50,12 +50,12 @@ $4})})}
   }
   public trackError(error: Error, _context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
-    const trackedError: TrackedError = {
+    const trackedError: TrackedError={
       message: error.message,
       stack: error.stack,
       context: {
         ...context,
-        sessionId: this.sessionId
+        sessionId: this.sessionId}
       },
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,

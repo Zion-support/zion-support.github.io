@@ -83,7 +83,7 @@ const measureFPS = (currentTime: number) => {
       <div className="space-y-3">
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Load Time:</span>
-          <span className="text-sm font-mono">
+          <span className="text-sm font-mono">}
             {metrics.loadTime.toFixed(2)}ms
           </span>
         </div>

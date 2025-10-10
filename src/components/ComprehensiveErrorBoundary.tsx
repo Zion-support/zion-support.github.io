@@ -243,7 +243,7 @@ constructor(props: ErrorBoundaryProps) {
 // >
 //                  Reload Page;
           </button>
-              <a></a>"
+              <a"
                 href="/contact""
                 className="cyber-button""
 

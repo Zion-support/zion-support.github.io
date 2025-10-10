@@ -282,7 +282,7 @@ const useCases = [
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
                       tier.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        : 'bg-slate-700 text-white hover:bg-slate-600'}
                     }`}
                   >
                     Get Started
@@ -322,7 +322,7 @@ const useCases = [
 export default AIAnalyticsPage;
 {/* Use Cases */}
               Use Cases;"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>
               {useCases.map((useCase, index) => ()}"

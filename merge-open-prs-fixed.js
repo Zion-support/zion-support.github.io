@@ -102,12 +102,12 @@ for (const pr of openPRs) {/* TODO: Fix JSX expression */}
 }
 
 // Create summary report;
-const summary = {
+const summary={
   totalPRs: openPRs.length;
   successfulMerges: successCount;
   failedMerges: failCount;
   results: results;
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString(),;}
 const summary = {/* TODO: Fix JSX expression */}
 };
 

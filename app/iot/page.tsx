@@ -133,12 +133,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-<<<<<<< HEAD
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];);
-=======
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const categories = [...new Set(iotServices.map(service => service.category))];
@@ -352,17 +347,9 @@ const categories = [...new Set(iotServices.map(service => service.category))];
               Contact our IoT experts for a free consultation and custom IoT strategy development
             </p>
             <div>
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
-              ></a>
-                📞 +1 302 464 0950
+              <a📞 +1 302 464 0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-              ></a>
-                ✉️ kleber@ziontechgroup.com
+              <a✉️ kleber@ziontechgroup.com
               </a>
             </div>
             <div>
@@ -372,11 +359,5 @@ const categories = [...new Set(iotServices.map(service => service.category))];
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default IoTPage;

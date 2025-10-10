@@ -34,7 +34,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         data) {if(!githubToken,
         return { ok: false;
         reason: 'no_token' };
-    const headers = {)
+    const headers={)}
       Authorization: `token ${githubToken}`)
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-performance-budget-checker')
@@ -62,7 +62,7 @@ const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/
         sha = j.sha}
       }
     } catch {}
-    const body = {
+    const body={}
       message: `chore: update performance budget report (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(data, null)
         2)).toString('base64'),
@@ -144,15 +144,15 @@ const putRes = await fetch(`http,
         bytes]) => ({url,
         bytes}));
 //     const KB = 1024;
-    const budgets = {jsTotalKb: 500;
-      cssTotalKb: 200;
+    const budgets={jsTotalKb: 500;
+      cssTotalKb: 200;}
       imgTotalKb: 1500}
     };
-    const report = {generatedAt: new Date().toISOString(),
+    const report={generatedAt: new Date().toISOString(),
       baseUrl,
       counts: {,
         js: scriptSrcs.length;
-        css: cssHrefs.length;
+        css: cssHrefs.length;}
         img: imgSrcs.length}
       },
       totals: {jsBytes: totalJs, cssBytes: totalCss;
@@ -224,8 +224,8 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         b) => b[1]-a[1]).slice(0)
         10).map(([url)
         bytes]) => ({url,
-        bytes})); const KB = 1024; const budgets = {jsTotalKb: 500, cssTotalKb: 200;
-        imgTotalKb: 1500 }; const report = {generatedAt: new Date().toISOString(), baseUrl, counts: { js: scriptSrcs.length, css: cssHrefs.length;
+        bytes})); const KB = 1024; const budgets={jsTotalKb: 500, cssTotalKb: 200;}
+        imgTotalKb: 1500 }; const report={generatedAt: new Date().toISOString(), baseUrl, counts: { js: scriptSrcs.length, css: cssHrefs.length;}
         img: imgSrcs.length }, totals: {jsBytes: totalJs, cssBytes: totalCss;
         imgBytes: totalImg }, budgets, withinBudget: {js: totalJs / KB <= budgets.jsTotalKb, css: totalCss / KB <= budgets.cssTotalKb;
         img: totalImg / KB <= budgets.imgTotalKb }, largestAssets }; ' const commit = await commitJson('data/reports/performance-budget.json') report); return {statusCode: 200, body: JSON.stringify({ ok: true),

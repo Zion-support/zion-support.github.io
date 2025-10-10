@@ -22,14 +22,8 @@ const preloadComponents = () => {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-<<<<<<< HEAD
       import('./components/ContentCarousel');)
 }, 100););
-=======
-      import('./components/ContentCarousel')]
-    }, 100)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -50,7 +44,6 @@ const [isVisible, setIsVisible] = useState(false);
 const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-<<<<<<< HEAD
     return () => clearTimeout(timer);)
 }, []);
   // Analytics tracking for phone clicks - optimized;
@@ -60,18 +53,6 @@ const handlePhoneClick = useCallback(() => {
         event_category: 'engagement',
         event_label: 'main_phone_number';)
 });;);
-=======
-    return () => clearTimeout(timer)]
-    }, []);
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number']
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
   return (
     <React.Fragment>
@@ -103,7 +84,7 @@ const handlePhoneClick = useCallback(() => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en']
+            availableLanguage: 'en']}
     },
           address: {
             '@type': 'PostalAddress',
@@ -111,12 +92,7 @@ const handlePhoneClick = useCallback(() => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-<<<<<<< HEAD
             addressCountry: 'US';);
-=======
-            addressCountry: 'US']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }}
       />
       <PerformanceOptimizer
@@ -150,14 +126,10 @@ const handlePhoneClick = useCallback(() => {
         {/* Navigation */}</div>
         <Navigation />
         {/* Skip to main content for accessibility */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-        ></a>
-          Skip to main content
+        <aSkip to main content
         </a>
       {/* Content Promotion Banner */}
-      <Suspense fallback={<div></Suspense>}>
+      <Suspense fallback={<div></div></Suspense>}>
         <ContentPromotionBanner />
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main"></main>
@@ -166,7 +138,7 @@ const handlePhoneClick = useCallback(() => {
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8']
+              : 'opacity-0 translate-y-8']}
     }`}
           aria-labelledby="hero-heading"
         ></section>
@@ -212,19 +184,9 @@ const handlePhoneClick = useCallback(() => {
             
             {/* CTA Buttons */}
             <div>
-              <a
-                href="tel:+13024640950"
-                onClick={handlePhoneClick}
-                className="cyber-button w-full sm:w-auto text-center"
-                aria-label="Call us at (302) 464-0950"
-            ></a>
-              📞 Call: (302) 464-0950
+              <a📞 Call: (302) 464-0950
             </a>
-            <a 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            ></a>
-              Get Free Consultation
+            <aGet Free Consultation
             </a>
           </div>
         </div>
@@ -248,8 +210,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text"></di>Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -263,8 +224,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text"></di>Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -278,8 +238,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text"></di>Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -296,8 +255,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2"></di>Starting at $1,999/month</div>
-                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -311,8 +269,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2"></di>Starting at $1,499/month</div>
-                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -326,8 +283,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2"></di>Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -348,8 +304,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2"></di>$149/month</div>
-                    <a href="/ai-crm" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -363,8 +318,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2"></di>$199/month</div>
-                    <a href="/ai-analytics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -378,8 +332,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2"></di>$299/month</div>
-                    <a href="/ai-content-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -393,8 +346,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2"></di>$99/month</div>
-                    <a href="/ai-chatbot-builder" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -408,8 +360,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2"></di>$179/month</div>
-                    <a href="/ai-email-marketing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -423,8 +374,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2"></di>$399/month</div>
-                    <a href="/ai-mobile-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -438,8 +388,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2"></di>$129/month</div>
-                    <a href="/ai-seo-optimizer" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -453,8 +402,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2"></di>$79/month</div>
-                    <a href="/ai-invoice-generator" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -468,8 +416,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2"></di>$89/month</div>
-                    <a href="/ai-lead-scoring" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -483,8 +430,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2"></di>$159/month</div>
-                    <a href="/ai-social-media-manager" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -498,8 +444,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2"></di>$249/month</div>
-                    <a href="/ai-ecommerce-assistant" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -513,8 +458,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2"></di>$119/month</div>
-                    <a href="/ai-document-processor" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -528,8 +472,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2"></di>$189/month</div>
-                    <a href="/ai-design-studio" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -543,8 +486,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2"></di>$199/month</div>
-                    <a href="/ai-security-monitor" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -558,8 +500,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2"></di>$169/month</div>
-                    <a href="/ai-financial-planner" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -573,8 +514,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-lime-400 mb-2"></di>$79/month</div>
-                    <a href="/ai-health-tracker" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -588,8 +528,7 @@ const handlePhoneClick = useCallback(() => {
                   </p>
                   <div>
                     <div className="text-lg sm:text-2xl font-bold text-fuchsia-400 mb-2"></di>$139/month</div>
-                    <a href="/ai-learning-platform" className="text-fuchsia-400 hover:text-fuchsia-300 font-medium text-sm sm:text-base"></a>
-                      Learn More →
+                    <aLearn More →
                     </a>
                   </div>
                 </article>
@@ -610,8 +549,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2"></di>$1,299/month</div>
-                  <a href="/cloud-migration" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -623,8 +561,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2"></di>$799/month</div>
-                  <a href="/cybersecurity-suite" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -636,8 +573,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2"></di>$599/month</div>
-                  <a href="/devops-cicd" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -649,8 +585,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2"></di>$399/month</div>
-                  <a href="/database-management" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -662,8 +597,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2"></di>$699/month</div>
-                  <a href="/network-solutions" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -675,8 +609,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2"></di>$1,999/month</div>
-                  <a href="/mobile-app-development" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -688,8 +621,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2"></di>$299/hour</div>
-                  <a href="/it-consulting" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -701,8 +633,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2"></di>$499/month</div>
-                  <a href="/it-support" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -714,8 +645,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2"></di>$799/month</div>
-                  <a href="/system-administration" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -727,8 +657,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2"></di>$1,499/month</div>
-                  <a href="/it-infrastructure-design" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -740,8 +669,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2"></di>$699/month</div>
-                  <a href="/performance-optimization" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -753,8 +681,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2"></di>$399/month</div>
-                  <a href="/backup-recovery" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -766,8 +693,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2"></di>$899/month</div>
-                  <a href="/it-project-management" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -779,8 +705,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2"></di>$2,999/month</div>
-                  <a href="/enterprise-solutions" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -792,8 +717,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-lime-400 mb-2"></di>$299/month</div>
-                  <a href="/it-training" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -813,8 +737,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2"></di>Starting at $199/month</div>
-                  <a href="/ai-customer-support" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -826,8 +749,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2"></di>Starting at $299/month</div>
-                  <a href="/ai-sales-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -839,8 +761,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2"></di>Starting at $99/month</div>
-                  <a href="/ai-workflow-automation" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -852,8 +773,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2"></di>Starting at $149/month</div>
-                  <a href="/ai-data-visualization" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -865,8 +785,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2"></di>Starting at $199/month</div>
-                  <a href="/ai-lead-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -878,8 +797,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2"></di>Starting at $149/month</div>
-                  <a href="/ai-document-processing" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -892,8 +810,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2"></di>Starting at $399/month</div>
-                  <a href="/ai-predictive-analytics" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -906,8 +823,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2"></di>Starting at $249/month</div>
-                  <a href="/ai-image-recognition" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -920,8 +836,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2"></di>Starting at $179/month</div>
-                  <a href="/ai-voice-processing" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -934,8 +849,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2"></di>Starting at $299/month</div>
-                  <a href="/ai-recommendation-engine" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -948,8 +862,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2"></di>Starting at $129/month</div>
-                  <a href="/ai-sentiment-analysis" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -962,8 +875,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2"></di>Starting at $199/month</div>
-                  <a href="/ai-research-assistant" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -983,8 +895,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-cyan-400 mb-2"></di>Custom Pricing</div>
-                  <a href="/robotics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -996,8 +907,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-green-400 mb-2"></di>Starting at $499/month</div>
-                  <a href="/iot-edge-computing" className="text-green-400 hover:text-green-300 font-medium text-sm"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -1009,8 +919,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-yellow-400 mb-2"></di>Starting at $699/month</div>
-                  <a href="/blockchain-web3" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -1022,8 +931,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-pink-400 mb-2"></di>Starting at $399/month</div>
-                  <a href="/business-intelligence" className="text-pink-400 hover:text-pink-300 font-medium text-sm"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -1043,8 +951,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-blue-400 mb-2"></di>Starting at $299/month</div>
-                  <a href="/devops" className="text-blue-400 hover:text-blue-300 font-medium text-sm"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -1056,8 +963,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-indigo-400 mb-2"></di>Starting at $1,299/month</div>
-                  <a href="/ai-mobile-app-development" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -1069,8 +975,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-teal-400 mb-2"></di>Starting at $199/month</div>
-                  <a href="/database" className="text-teal-400 hover:text-teal-300 font-medium text-sm"></a>
-                    Learn More →
+                  <aLearn More →
                   </a>
                 </div>
               </article>
@@ -1099,8 +1004,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-blue-400 mb-2"></di>$29/month</div>
-                  <a href="/ai-writing-assistant" className="text-blue-400 hover:text-blue-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1112,8 +1016,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-green-400 mb-2"></di>$49/month</div>
-                  <a href="/smart-analytics" className="text-green-400 hover:text-green-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1125,8 +1028,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-purple-400 mb-2"></di>$19/month</div>
-                  <a href="/ai-scheduler" className="text-purple-400 hover:text-purple-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1138,8 +1040,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-yellow-400 mb-2"></di>$15/month</div>
-                  <a href="/expense-tracker" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1151,8 +1052,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-indigo-400 mb-2"></di>$39/month</div>
-                  <a href="/task-manager-pro" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1164,8 +1064,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-pink-400 mb-2"></di>$59/month</div>
-                  <a href="/crm-lite" className="text-pink-400 hover:text-pink-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1177,8 +1076,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-cyan-400 mb-2"></di>$25/month</div>
-                  <a href="/email-optimizer" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1190,8 +1088,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-orange-400 mb-2"></di>$45/month</div>
-                  <a href="/social-media-manager" className="text-orange-400 hover:text-orange-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1211,8 +1108,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-pink-400 mb-2"></di>$35/month</div>
-                  <a href="/ai-design-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1224,8 +1120,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-blue-400 mb-2"></di>$29/month</div>
-                  <a href="/landing-page-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1237,8 +1132,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-green-400 mb-2"></di>$49/month</div>
-                  <a href="/seo-optimizer" className="text-green-400 hover:text-green-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1250,8 +1144,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-yellow-400 mb-2"></di>$79/month</div>
-                  <a href="/ad-campaign-manager" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1271,8 +1164,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-cyan-400 mb-2"></di>$39/month</div>
-                  <a href="/code-assistant" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1284,8 +1176,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-indigo-400 mb-2"></di>$59/month</div>
-                  <a href="/api-builder" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1297,8 +1188,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-red-400 mb-2"></di>$25/month</div>
-                  <a href="/bug-tracker-pro" className="text-red-400 hover:text-red-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1310,8 +1200,7 @@ const handlePhoneClick = useCallback(() => {
                 </p>
                 <div>
                   <div className="text-lg font-bold text-purple-400 mb-2"></di>$19/month</div>
-                  <a href="/doc-generator" className="text-purple-400 hover:text-purple-300 font-medium text-sm"></a>
-                    Try Free →
+                  <aTry Free →
                   </a>
                 </div>
               </article>
@@ -1319,19 +1208,19 @@ const handlePhoneClick = useCallback(() => {
           </div>
         </section>
         {/* Statistics Section */}
-        <Suspense fallback={<div></Suspense>}>
+        <Suspense fallback={<div></div></Suspense>}>
           <ContentStatistics />
         </Suspense>
         {/* Content Carousel */}
-        <Suspense fallback={<div></Suspense>}>
+        <Suspense fallback={<div></div></Suspense>}>
           <ContentCarousel />
         </Suspense>
         {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div></Suspense>}>
+        <Suspense fallback={<div></div></Suspense>}>
           <DynamicContentShowcase />
         </Suspense>
         {/* Newsletter Signup */}
-        <Suspense fallback={<div></Suspense>}>
+        <Suspense fallback={<div></div></Suspense>}>
           <ContentNewsletterSignup />
         </Suspense>
 
@@ -1356,8 +1245,7 @@ const handlePhoneClick = useCallback(() => {
                     </div>
                     <div>
                       <p className="text-gray-300 text-sm">Phone</p>
-                      <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg"></a>
-                        +1 (302) 464-0950
+                      <a+1 (302) 464-0950
                       </a>
                     </div>
                   </div>
@@ -1368,8 +1256,7 @@ const handlePhoneClick = useCallback(() => {
                     </div>
                     <div>
                       <p className="text-gray-300 text-sm">Email</p>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg"></a>
-                        kleber@ziontechgroup.com
+                      <akleber@ziontechgroup.com
                       </a>
                     </div>
                   </div>

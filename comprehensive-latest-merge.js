@@ -142,13 +142,13 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Step 4: Execute merge process;
-const results = {
+const results={
   successful: []
   failed: []
   summary: {
     total: 0;
     successful: 0;
-    failed: 0;
+    failed: 0;}
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
 //Step,
   4: Execute merge process;
@@ -181,11 +181,11 @@ for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {/* TODO: Fi
 
 //Step 5: Generate comprehensive report;
 results.timestamp = new Date().toISOString();
-results.branchCounts = {
+results.branchCounts={
   total: branches.length;
   processed: results.summary.total;
   successful: results.summary.successful;
-  failed: results.summary.failed;
+  failed: results.summary.failed;}
   if (batchIndex < batches.length - 1) {/* TODO: Fix JSX expression */}
   }
 }

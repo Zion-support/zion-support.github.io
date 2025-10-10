@@ -40,14 +40,14 @@ const existingWallet = existing.find(wallet => wallet.address === address);
     res.end(JSON.stringify({ error: 'Wallet address already exists' }));
     return}
 ;
-const newWallet = {
+const newWallet={
     id: Date.now().toString(),
     address,
     type,
     name: name || '',
     userId: userId || '',
     timestamp: new Date().toISOString(),
-    status: 'active'
+    status: 'active'}
   };
 
   existing.push(newWallet);

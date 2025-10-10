@@ -26,7 +26,7 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
 const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
  const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
  ;
-const metrics: PerformanceMetrics = {
+const metrics: PerformanceMetrics={
  loadTime: navigation.loadEventEnd - navigation.loadEventStart;
  firstContentfulPaint: fcp ? fcp.startTime : 0;
  largestContentfulPaint: lcp ? lcp.startTime : 0;
@@ -34,7 +34,7 @@ const metrics: PerformanceMetrics = {
  firstInputDelay: 0 // Would need to be measured with observer;
 const,
   PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps>
-);
+);}
 } = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
  };

@@ -16,7 +16,7 @@ function keyify(text) {
         message) {if(!githubToken,
         return { ok: false;
         status: 0; error: 'No GITHUB_TOKEN provided' };
-    const headers = {)
+    const headers={)}
       Authorization: `token ${githubToken}`)
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-i18n-seed-runner')
@@ -49,9 +49,9 @@ function keyify(text) {/* TODO: Fix JSX expression */}
         sha = json.sha}
       }
     } catch {}
-    const body = {message,
+    const body={message,
       content: Buffer.from(content).toString('base64'),
-      branch: githubBranch;
+      branch: githubBranch;}
       sha}
     };
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
@@ -151,7 +151,7 @@ exports.config = { schedule: '*/20 * * * *' }; exports.handler = async function 
         status: 0; error: 'No GITHUB_TOKEN provided' }; const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-i18n-seed-runner' }; let sha; try { const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`, { headers;)
-      }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {}' const body = {message, content: Buffer.from(content).toString('base64'), branch: githubBranch;
+      }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {}' const body={message, content: Buffer.from(content).toString('base64'), branch: githubBranch;}
         sha };' const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {method: 'PUT', headers)
         body: JSON.stringify(body;)}); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {error = String(e;)

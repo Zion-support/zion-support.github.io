@@ -123,10 +123,10 @@ const content = fs.readFileSync(filePath, 'utf8');
     
     // Fix common unused variable patterns;
     const patterns = [
-      { regex: /(\w+):\s*(\w+)\s*=\s*/, replacement: '_$1: $2 = ' },
-      { regex: /const\s+(\w+)\s*=\s*/, replacement: 'const _$1 = ' },
-      { regex: /let\s+(\w+)\s*=\s*/, replacement: 'let _$1 = ' },
-      { regex: /var\s+(\w+)\s*=\s*/, replacement: 'var _$1 = ' }
+      { regex: /(\w+):\s*(\w+)\s*=\s*/, replacement: '_$1: $2=' },'
+      { regex: /const\s+(\w+)\s*=\s*/, replacement: 'const _$1=' },'
+      { regex: /let\s+(\w+)\s*=\s*/, replacement: 'let _$1=' },'
+      { regex: /var\s+(\w+)\s*=\s*/, replacement: 'var _$1=' }
     ];
     ;
 let changed = false;
@@ -134,14 +134,14 @@ let changed = false;
       if (pattern.regex.test(newContent)) {
         newContent = newContent.replace(pattern.regex, pattern.replacement);
         changed = true}
-function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
-  t: '_$1: $2 = ' },
-      {/* TODO: Fix JSX expression */}
-  t: 'const _$1 = ' },
-      {/* TODO: Fix JSX expression */}
-  t: 'let _$1 = ' },
-      {/* TODO: Fix JSX expression */}
-  t: 'var _$1 = ' }
+function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}'
+  t: '_$1: $2=' },
+      {/* TODO: Fix JSX expression */}'
+  t: 'const _$1=' },
+      {/* TODO: Fix JSX expression */}'
+  t: 'let _$1=' },
+      {/* TODO: Fix JSX expression */}'
+  t: 'var _$1=' }
     ];
     ;
 let changed = false;
@@ -159,7 +159,7 @@ let changed = false;
   
   return false}
 
-// Get all TypeScript/JavaScript files in src directory;
+// Get all TypeScript/JavaScript files in src directory;'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
 let results = [];
   const list = fs.readdirSync(dir);

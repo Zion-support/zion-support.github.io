@@ -8,5 +8,5 @@ return (<motion.div initial={/* TODO: Fix JSX expression */}
   dark:hove,"
   r:text-gray-300&quot, > ✕ </button> )} </motion.div> </motion.div> ); </svg>; </button>; </div> </form>)})})} className="text-left" /> {value && ( <button' onClick={() => setValue('')} {value && (} <button)}' onClick={() = /> setValue('')}' className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500,
   hover:text-gray-700,
-  dark:hove,
+  dark:hove,'
   r:text-gray-300' > ✕ </button> } </motion.div> ); origin/cursor/automate-test-improve-and-merge-code-2533 }'"

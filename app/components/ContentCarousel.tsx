@@ -141,7 +141,7 @@ const ContentCarousel: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
+                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'}
                 }`}
               />
             ))}

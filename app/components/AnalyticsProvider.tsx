@@ -73,9 +73,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const value: AnalyticsContextType = {
+  const value: AnalyticsContextType={
     trackEvent,
-    trackPageView,
+    trackPageView,}
   };
 
   return (

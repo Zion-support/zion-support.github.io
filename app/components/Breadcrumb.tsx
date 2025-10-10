@@ -13,8 +13,6 @@ interface BreadcrumbItem {
 ;
 const Breadcrumb: React.FC = () => {const location = useLocation();
   
-<<<<<<< HEAD
-=======
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
     const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
     const breadcrumbs: BreadcrumbItem[] = [
@@ -44,21 +42,13 @@ const Breadcrumb: React.FC = () => {const location = useLocation();
 
   const breadcrumbs = generateBreadcrumbs();
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null;
   }
-<<<<<<< HEAD
 ;
 const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
 const breadcrumbItems = [
-=======
-
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-  
-  const breadcrumbItems = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     { name: 'Home', path: '/', icon: Home }
   ];
 
@@ -81,7 +71,7 @@ const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' 
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
                   index === breadcrumbItems.length - 1
                     ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
+                    : 'text-gray-300 hover:text-cyan-400'}
                 }`}
               >
                 {item.icon && <item.icon className="w-4 h-4" />}
@@ -115,12 +105,7 @@ const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   {item.name}
-<<<<<<< HEAD
                 </Link>);
-=======
-                </Link>
-              )}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </li>
           ));
         </ol>

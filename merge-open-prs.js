@@ -139,13 +139,13 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Execute merge process;
-// const results = {
+// const results={
   successful: []
   failed: []
   summary: {
     total: 0;
     successful: 0;
-    failed: 0;
+    failed: 0;}
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
 // const results = {/* TODO: Fix JSX expression */}
   d: 0 }}};

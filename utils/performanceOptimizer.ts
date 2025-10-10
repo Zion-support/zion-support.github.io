@@ -2,9 +2,9 @@
  * Performance Optimizer Utilities;
  */
 
-export const performanceOptimizer = {
+export const performanceOptimizer={
   init: () => {,
-    if (typeof window !== 'undefined') {,
+    if (typeof window !== 'undefined') {,}
       //       }
   },
 

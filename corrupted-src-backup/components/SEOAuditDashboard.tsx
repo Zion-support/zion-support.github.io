@@ -323,7 +323,7 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TOD
       <div, className="flex, justif, y-between, item, s-center, m, b-6">";</div>
         <d, i, v>
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"></h2>
-            <Search, className="w-6 h-6  />
+            <Search, className="w-6 h-6  />"
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";</h2>
   return ("
     <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";"
@@ -340,7 +340,7 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TOD
         <butt, o, n;
   onCli, c, k={runSEOAud, i, t}
           disabl, e, d={isRunni, n, g}
-          classNa, m, e={`px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`
+          classNa, m, e={`px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`}
             isRunni, n, g}
               ? 'bg-gr, a, y-400, tex, t-white, curso, r-n, o, t-allow, e, d'}
           classNa, m, e={/* TODO: Fix JSX expression */}
@@ -356,7 +356,7 @@ Analyzi, n, g...)
 </React.Fragment>)
 ) : (
 <React.Fragment>{}
-<Search, className="w-4 h-4  /></Search>
+<Search, className="w-4 h-4  /></Search>"
 <Search, className="w-4 h-4" />";</Search>Run</Search>, SEO, Audit;
 </React.Fragment>
 )

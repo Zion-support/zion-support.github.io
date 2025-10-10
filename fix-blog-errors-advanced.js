@@ -9,9 +9,9 @@ const fixes = [
   {
     pattern:
       /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
-    replacement: `export const metadata = {,
+    replacement: `export const metadata={,
   title: '$1',
-  description: '$2',
+  description: '$2',}
   keywords: '$3'};`},
   //Fix missing commas in metadata;
   {

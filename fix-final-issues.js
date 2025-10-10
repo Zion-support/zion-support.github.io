@@ -34,16 +34,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       modified = true}
 
     // Fix Link component href prop;
-    if (content.includes('<Link href=')) {
+    if (content.includes('<Link href=')) {'
       content = content.replace(/<Link href=/g, '<Link to=');
       modified = true}
 
-    // Fix Next.js imports in sitemap;
+    // Fix Next.js imports in sitemap;'
     if (content.includes("import { Metadata } from 'next';")) {
     if (content.includes('<Link href=')) {/* TODO: Fix JSX expression */}
     }
 
-    // Fix Next.js imports in sitemap;"
+    // Fix Next.js imports in sitemap;"'
     if (content.includes("import { Metadata } from 'next';")) {/* TODO: Fix JSX expression */}"
       content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react';");
       modified = true}

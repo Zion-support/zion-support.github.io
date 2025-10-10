@@ -99,13 +99,13 @@ const, Suppor, t: Rea, c, t.FC = () =>
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
             <div, className="te, x, t-cent, e, r">
-              <h1, className="te, x, t-4x, l, m;
+              <h1, className="te, x, t-4x, l, m;"
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
         {/* Hero, Sectio, n */}</div>
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></section>
             <div, className="te, x, t-cent, e, r"></div>
-              <h1, className="te, x, t-4x, l, m
+              <h1, className="te, x, t-4x, l, m"
   d:te, x, t-5xl, fon, t-bold, m, b-6">
   return (<React.Fragment>
       <Helmet></Helmet>
@@ -135,7 +135,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
                     placehold, e, r="Search, for, help articl, e, s, FA, Q, s, or, topic, s..."
                     val, u, e={searchQue, r, y}
                     onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
-                    classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u;
+                    classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u;"
               {/* Search, Ba, r */}"
               <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>"
                 <div, className="relati, v, e"></div>"
@@ -172,7 +172,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
                 Choose, the, support channel, that, works best, for, you;
               </p>
             </d, i, v>
-            <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l;
+            <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l;"
   g:gr, i, d-co, l, s-4, ga, p-8">
               {supportChanne, l, s.m, a, p((chann, e, l, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, hove, r:shad, o, w-xl, transitio, n-shad, o, w"></div>
@@ -258,13 +258,13 @@ const, Suppor, t: Rea, c, t.FC = () =>
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
           <div, className="te, x, t-cent, e, r">
             <h1, className="te, x, t-4x, l, m;
-  return (
+  return ("
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}</div>
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></section>
           <div, className="te, x, t-cent, e, r"></div>
-            <h1, className="te, x, t-4x, l, m
+            <h1, className="te, x, t-4x, l, m"
   d:te, x, t-6xl, fon, t-bold, m, b-6">
   return ("
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50"></div>
@@ -289,7 +289,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
                   placehold, e, r="Search, our, knowledge ba, s, e..."
                   val, u, e={searchQue, r, y}
                   onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
-                  classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u;
+                  classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u;"
             {/* Search, Ba, r */}"
             <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>"
               <div, className="relati, v, e"></div>"
@@ -314,7 +314,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
               <butt, o, n
   onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
                 classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`
-                  selectedCatego, r, y === 'a, l, l'
+                  selectedCatego, r, y === 'a, l, l'}
                     ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                     : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
             {/* Category, Filte, r */}"
@@ -330,7 +330,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
                 <butt, o, n;
   k, e, y={catego, r, y.id}
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}</butt>classNa</butt>, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colors, flex, items-cent, e, r ${`
-                    selectedCatego, r, y === catego, r, y.id;
+                    selectedCatego, r, y === catego, r, y.id;}
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                       : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
               {/* TODO: Fix JSX expression */}
@@ -404,7 +404,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
               </Li, n, k>
               <Li, n, k;
   to="/documentati, o, n"
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e;
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e;"
               <Li, n, k;"
   to="/documentati, o, n""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e,"

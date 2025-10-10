@@ -40,12 +40,7 @@ const EnterprisePage: React.FC = () => {const features = [
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-<<<<<<< HEAD
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];);
-=======
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const solutions = [
@@ -71,12 +66,7 @@ const solutions = [
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-<<<<<<< HEAD
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];);
-=======
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const benefits = [
@@ -230,11 +220,5 @@ const stats = [
 
       <Footer />
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default EnterprisePage;

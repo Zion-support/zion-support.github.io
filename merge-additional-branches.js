@@ -192,7 +192,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
 }
 
 //Step 4: Execute merge strategy;
-// const results = {
+// const results={
   branches: []
   failed: []
   summary: {
@@ -208,7 +208,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
       not_found: 0;
       already_merged: 0;
 //Step,
-  4: Execute merge strategy;
+  4: Execute merge strategy;}
 // const results = {/* TODO: Fix JSX expression */}
     }}};
 
@@ -225,8 +225,8 @@ for (const branch of additionalBranches) {/* TODO: Fix JSX expression */}
 
 //Step 5: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
-results.branchCounts = {,
-  total: additionalBranches.length;
+results.branchCounts={,
+  total: additionalBranches.length;}
   processed: results.branches.length};
 
 fs.writeFileSync('additional-branches-merge-report.json')

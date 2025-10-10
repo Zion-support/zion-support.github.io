@@ -93,8 +93,8 @@ try {/* TODO: Fix JSX expression */}
 }
 
 // 5. Generate performance report;
-const report = {
-  timestamp: new Date().toISOString(),
+const report={
+  timestamp: new Date().toISOString(),}
   buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),;
 functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
   optimizationStatus: 'Completed',

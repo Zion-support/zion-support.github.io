@@ -73,13 +73,13 @@ class ApiClient {
     cacheOptions?: CacheOptions};
   private abortControllers: Map<string, AbortController> = new Map();
   constructor(_config: ApiClientConfig = {}) {
-    this.config = {
+    this.config={
       baseURL: config.baseURL || '',
       timeout: config.timeout || 30000,
       retries: config.retries || 3,
       retryDelay: config.retryDelay || 1000,
       headers: config.headers || {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json'}
       },
       cacheOptions: config.cacheOptions
     }}
@@ -606,11 +606,11 @@ const cacheKey = `${method}:${url}`;
    * Update default config
    */
   setConfig(config: Partial<ApiClientConfig>): void {
-    this.config = {
+    this.config={
       ...this.config,
       ...config,
       headers: {
-        ...this.config.headers,
+        ...this.config.headers,}
         ...(config.headers || {})
       }
     }}

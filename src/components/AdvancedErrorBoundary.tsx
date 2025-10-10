@@ -26,11 +26,11 @@ interface ErrorReport {
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
 constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = {
+    this.state={
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null}
     }}
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
@@ -59,7 +59,7 @@ constructor(props: ErrorBoundaryProps) {
 
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
     try {;
-const errorReport: ErrorReport = {
+const errorReport: ErrorReport={
         errorId: this.state.errorId,
         error,
         errorInfo,
@@ -69,7 +69,7 @@ const errorReport: ErrorReport = {
         errorBoundary: 'AdvancedErrorBoundary',
         errorTimestamp: new Date().toISOString(),
         errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : null,
-        errorUrl: typeof window !== 'undefined' ? window.location.href : null
+        errorUrl: typeof window !== 'undefined' ? window.location.href : null}
       };
 
       // Send to error reporting service

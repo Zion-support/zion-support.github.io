@@ -28,7 +28,7 @@ const recentBranches = execSync()
 //Step,
   2: Get all branches that might need merging;
 // //Get recent branches (last 7 days);
-const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdat)
+const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdat)"
   e:short) %(refnam,")
   e:short)"',
   {/* TODO: Fix JSX expression */}
@@ -133,7 +133,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Step 4: Process branches in batches;
-const results = {
+const results={
   successful: []
   failed: []
   summary: {
@@ -148,7 +148,7 @@ const results = {
       not_found: 0;
       failed: 0;
 //Step,
-  4: Process branches in batches;
+  4: Process branches in batches;}
 const results = {/* TODO: Fix JSX expression */}
     }}};
 
@@ -196,8 +196,8 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
 }
 
 //Step 5: Generate final report;
-// const report = {,
-  ...results;
+// const report={,
+  ...results;}
   timestamp: new Date().toISOString()};
 
 fs.writeFileSync('comprehensive-pr-merge-report.json')

@@ -179,10 +179,10 @@ function u() {/* TODO: Fix JSX expression */}
               defaul,
   t: f = 5e3}
             }
-            return((r = {id: c++),
+            return((r={id: c++),
                 callback: u),
   priorityLevel: r, startTime: a),
-                expirationTime: (f = a + f),
+                expirationTime: (f = a + f),}
                 sortIndex: -1}
             return ((r = {/* TODO: Fix JSX expression */}
   x: -1})

@@ -137,7 +137,7 @@ const timer = setInterval(() => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'}
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
         {/* Stats Section */}
@@ -235,7 +235,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600,
   hover:from-cyan-600,
   hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform,
-  hover:-translate-y-1,
+  hover:-translate-y-1,"
   hover:shadow-2xl,"
   hover:shadow-cyan-500/25"
         {/* Stats Section */}"

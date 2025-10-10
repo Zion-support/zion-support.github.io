@@ -178,7 +178,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Step 5: Execute merge strategy;
-// const results = {
+// const results={
   priority: []
   cursor: []
   failed: []
@@ -194,7 +194,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       failed: 0;
       not_found: 0;
 //Step,
-  5: Execute merge strategy;
+  5: Execute merge strategy;}
 // const results = {/* TODO: Fix JSX expression */}
     }}};
 
@@ -222,13 +222,13 @@ for (const branch of recentCursorBranches) {/* TODO: Fix JSX expression */}
 
 //Step 6: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
-results.branchCounts = {
+results.branchCounts={
   priority: priorityBranches.length;
   cursor: recentCursorBranches.length;
   total: priorityBranches.length + recentCursorBranches.length;
 //Step,
   6: Generate comprehensive report;
-// results.timestamp = new Date().toISOString();
+// results.timestamp = new Date().toISOString();}
 results.branchCounts = {/* TODO: Fix JSX expression */}
 };
 

@@ -17,18 +17,18 @@ export class PerformanceOptimizer {
   private, confi, g: OptimizationConf, i, g;
   private, observer, s: PerformanceObserv, e, r[] = [];
 ;
-construct, o, r(conf, i, g: Parti, a, l<OptimizationCon, f, i, g > = {}) {</OptimizationCon>th</OptimizationCon>, i, s.conf, i, g = {
+construct, o, r(conf, i, g: Parti, a, l<OptimizationCon, f, i, g > = {}) {</OptimizationCon>th</OptimizationCon>, i, s.conf, i, g={
       enableLazyLoadi, n, g: tr, u, e,
       enableCodeSplitti, n, g: t, r, u, e,
       enableImageOptimizati, o, n: t, r, u, e,
       enableCachi, n, g: t, r, u, e,
-      enableCompressi, o, n: t, r, u, e,
-      ...conf, i, g}; th, i, s.metri, c, s = {
+      enableCompressi, o, n: t, r, u, e,}
+      ...conf, i, g}; th, i, s.metri, c, s={
       loadT, i, m, e:  , 0,
       renderTi, m, e:  , 0,
       memoryUsa, g, e:  , 0,
       bundleSi, z, e:  , 0,
-      cacheHitRat, i, o:  , 0,
+      cacheHitRat, i, o:  , 0,}
       errorRa, t, e:  , 0}; th, i, s.initializePerformanceMonitori, n, g()}
 
   private, initializePerformanceMonitorin, g(): vo, i, d {

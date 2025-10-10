@@ -17,7 +17,7 @@ function processFile(filePath) {
 
       // Skip lines that look like broken metadata;
       if (
-        line.includes('const metadata: Metadata = {') ||
+        line.includes('const metadata: Metadata={') ||
         line.includes('const metadata = {') ||
         (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||</title>
         (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||
@@ -27,7 +27,7 @@ function processFile(filePath) {
         (line.includes('openGraph:') && !line.includes('//')) ||,
         (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,;
+        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,;}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
         (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))

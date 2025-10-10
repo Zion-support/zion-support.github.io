@@ -192,7 +192,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                             endpoint.method === 'POST' 
                               ? 'bg-green-500/20 text-green-400' 
-                              : 'bg-blue-500/20 text-blue-400'
+                              : 'bg-blue-500/20 text-blue-400'}
                           }`}>
                             {endpoint.method}
                           </span>

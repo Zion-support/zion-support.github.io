@@ -14,7 +14,7 @@ const LazyComponent = lazy(importFunc)</unknown>
 ): ComponentType<unknown></unknown> {}
   const LazyComponent = lazy(importFunc)
   return (props: unknown) => (}
-    <Suspense fallback={options.loading ? options.loading() : <div></Suspense>Loading...</div>}>
+    <Suspense fallback={options.loading ? options.loading() : <div></div></Suspense>Loading...</div>}>
       <LazyComponent {...props} />
 'use client';
 import React, { lazy, Suspense, ComponentType } from 'react';
@@ -26,13 +26,8 @@ export function dynamic<T extends ComponentType<unknown></T>>(importFun)
   option,
   s: DynamicOptions = {}
 ): ComponentType<unknown></unknown> {/* TODO: Fix JSX expression */}
-    <Suspense fallback={options.loading ? options.loading() : <div></Suspense>Loading...</div>}>
+    <Suspense fallback={options.loading ? options.loading() : <div></div></Suspense>Loading...</div>}>
       <LazyComponent></LazyComponent>
     </Suspense>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default dynamic;

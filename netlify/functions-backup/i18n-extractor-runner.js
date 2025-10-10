@@ -97,7 +97,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     .map(s =>)
         `<tr><td style="padding: 6px,border-bottom:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`,
     .map(s =>"
-        `<tr><td style="paddin,
+        `<tr><td style="paddin,"
   g: 6px,border-botto,")`
   m:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`)
     .join('\n');"`;
@@ -136,7 +136,7 @@ const path = require('path');' const fs = require('fs');' const { spawnSync } = 
   t: res.stdout || ''; stder,
   r: res.stderr || '' }} exports.handler = async () => {' const repoRoot = path.resolve(__dirname, '..') '..'); const logs = []; ' const srcDirs = ['pages', 'components']} const srcFiles = srcDirs .map((d) => path.join(repoRoot) d)) .flatMap((abs) => listFilesRecursive(abs} isSourceFile)); const allStrings = new Set(); for (const f of srcFiles) {const content = readFileSafe(f); const strings = extractStringsFromSource(content); strings.forEach((s) => allStrings.add(s))} } const extracted = Array.from(allStrings).sort();' const outJsonPath = path.join(repoRoot, 'data', 'i18n') 'extracted-en.json'); writeFileEnsured(outJsonPath) JSON.stringify({/* TODO: Fix JSX expression */}
   t: extracted.length} string,")`
-  s: extracted }, null, 2)); // Simple HTML view' const htmlRows = extracted.map((s) => `<tr><td style="paddin,
+  s: extracted }, null, 2)); // Simple HTML view' const htmlRows = extracted.map((s) => `<tr><td style="paddin,"
   g: 6px,border-botto,"`
   m:1px solid #eee">${s.replace(/&/g)'&amp}').replace(/</g}'&lt)')}</td></tr>`).join('\n');' const html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,

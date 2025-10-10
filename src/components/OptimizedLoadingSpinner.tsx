@@ -113,10 +113,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       lg:     ,
 $4};
 ;
-const colorClasses = {
+const colorClasses={
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
-      white:     ,
+      white:     ,}
 $4};
 
     return (

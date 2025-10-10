@@ -6,7 +6,7 @@ import { glob } from 'glob';
 
 // Function to fix emoji characters in JSX;
 function fixEmojis(content) {;
-const emojiMap = {
+const emojiMap={
     '🎧': 'headphones',
     '📈': 'trending-up',
     '💰': 'dollar-sign',
@@ -56,7 +56,7 @@ const emojiMap = {
     '🎬': 'film',
     '🎮': 'gamepad',
     '🎲': 'dice',
-    '🎯': 'target'
+    '🎯': 'target'}
   };
 ;
 let fixed = content;

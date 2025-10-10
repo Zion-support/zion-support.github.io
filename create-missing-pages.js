@@ -139,7 +139,7 @@ const pageContent = createPageTemplate(route, title, description, category);
 };
 
 // Page configurations;
-const pageConfigs = {
+const pageConfigs={}
   '/ai-task-manager': { title: 'AI Task Manager Pro', description: 'Intelligent task management with AI-powered prioritization and productivity insights', category: 'Productivity' },
   '/ai-time-tracker': { title: 'AI Time Tracker Pro', description: 'Advanced time tracking with AI-powered productivity analysis and reporting', category: 'Productivity' },
   '/ai-meeting-assistant': { title: 'AI Meeting Assistant Pro', description: 'AI-powered meeting transcription, action items extraction, and follow-up automation', category: 'Productivity' },

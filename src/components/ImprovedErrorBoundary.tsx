@@ -23,11 +23,11 @@ interface State {
 class ImprovedErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {
     super(props);
-    this.state = {
+    this.state={
       hasError: false,
       error: null,
       errorInfo: null,
-      errorCount: 0
+      errorCount: 0}
     }}
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -328,7 +328,7 @@ p: Date.now(),
       )}
     return this.props.children}
 }
-const styles = {
+const styles={
   container: {
     minHeight: '100vh',
     display: 'flex',
@@ -336,7 +336,7 @@ const styles = {
     justifyContent: 'center',
     padding: '20px',
     backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'}
   },
   content: {
     maxWidth: '600px',

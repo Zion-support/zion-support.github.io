@@ -255,10 +255,10 @@ const description = pageDescription || this.currentPageData?.description || this
    * Setup structured data
    */
   private setupStructuredData(): void {;
-const structuredData = {
+const structuredData={
    * Get robots content;
    */
-
+}
   private getRobotsContent(): string {// TODO: Add content}
 
 }
@@ -304,7 +304,7 @@ const structuredData = {
    */
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
-    const structuredData = {
+    const structuredData={}
       potentialAction: {// TODO: Add content}
 
 }
@@ -468,7 +468,7 @@ const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
     return Math.round(score)}
 }
 // Default configuration;
-const defaultConfig: SEOConfig = {
+const defaultConfig: SEOConfig={
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',
   defaultTitle: 'Advanced AI and IT Solutions',
@@ -476,7 +476,7 @@ const defaultConfig: SEOConfig = {
   defaultImage: 'https://zion.app/og-image.jpg',
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
+  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;

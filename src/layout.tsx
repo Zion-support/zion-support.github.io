@@ -12,7 +12,7 @@ import Analytics from './components/Analytics';
 export default function RootLayout({
   children}: {
   children: React.ReactNode}) {;
-const structuredData = {
+const structuredData={
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -35,7 +35,7 @@ const structuredData = {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
-      areaServed: 'US',
+      areaServed: 'US',}
       availableLanguage: 'en'},
     sameAs: [
       'https://twitter.com/ziontechgroup',
@@ -49,7 +49,7 @@ const structuredData = {
       addressCountry: 'US',
     offers: [
       {;
-const address = {
+const address={
     '@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
     addressLocality: 'Middletown',
@@ -57,7 +57,7 @@ const address = {
     postalCode: '19709',
     addressCountry: 'US',
     offers: [
-  // TODO: Add items]
+  // TODO: Add items]}
       {// TODO: Add content}
 }
         '@type': 'Offer',

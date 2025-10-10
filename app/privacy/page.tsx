@@ -21,12 +21,7 @@ const dataTypes = [
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
-<<<<<<< HEAD
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];);
-=======
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const purposes = [
@@ -48,12 +43,7 @@ const purposes = [
     {
       title: 'Security',
       icon: Shield,
-<<<<<<< HEAD
       description: 'To protect against fraud and abuse';);
-=======
-      description: 'To protect against fraud and abuse']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const rights = [
@@ -75,12 +65,7 @@ const rights = [
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-<<<<<<< HEAD
       icon: Database;);
-=======
-      icon: Database]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -235,9 +220,4 @@ const rights = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   ););
-=======
-  )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

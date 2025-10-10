@@ -61,7 +61,7 @@ const replacements = [
   { from: 'href=', to: 'to=', context: 'Link' },
   { from: '<Link href=', to: '<Link to=' },
 
-  // Dynamic import patterns;
+  // Dynamic import patterns;'
   { from: 'dynamic(() => import(', to: 'lazy(() => import(' })
   { from: 'loading: () => <', to: 'fallback={<' },
   {/* TODO: Fix JSX expression */}
@@ -94,7 +94,7 @@ const replacements = [
   o: '<Link to=' },
 
   // Dynamic import patterns;
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */}'
   o: 'lazy(() => import(' },
   {/* TODO: Fix JSX expression */}
   o: 'fallback={<' })

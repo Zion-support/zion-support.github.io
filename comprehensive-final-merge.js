@@ -199,7 +199,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
 }
 
 //Step 5: Process each batch;
-const results = {
+const results={
   batches: []
   total: {
     branches: 0;
@@ -214,7 +214,7 @@ const results = {
       not_found: 0;
       already_merged: 0;
 //Step,
-  5: Process each batch;
+  5: Process each batch;}
 const results = {/* TODO: Fix JSX expression */}
     }}};
 
@@ -222,7 +222,7 @@ for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
     `\n📦 Processing Batch ${i + 1}/${batches.length} (${batch.length} branches)...`
   );
 ;
-const batchResults = {
+const batchResults={
     batchNumber: i + 1;
     branches: []
     successful: 0;
@@ -234,7 +234,7 @@ const batchResults = {
       manual: 0;
       failed: 0;
       not_found: 0;
-      already_merged: 0;
+      already_merged: 0;}
   const batchResults = {/* TODO: Fix JSX expression */}
     }};
 
@@ -265,12 +265,12 @@ const batchResults = {
 
 //Step 6: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
-results.summary = {
+results.summary={
   totalBatches: batches.length;
   totalBranches: results.total.branches;
   successfulMerges: results.total.successful;
   failedMerges: results.total.failed;
-  successRate: ((results.total.successful / results.total.branches) * 100).toFixed(2) +,
+  successRate: ((results.total.successful / results.total.branches) * 100).toFixed(2) +,}
     '%'};
 
 fs.writeFileSync('comprehensive-final-merge-report.json')

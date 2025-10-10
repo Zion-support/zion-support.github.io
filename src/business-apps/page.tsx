@@ -87,7 +87,7 @@ return (
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
                             <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" /></Star>
                             {benefit}"
-className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold,
+className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold,"
   hover:from-cyan-600,"
   hover:to-blue-700 transition-all text-sm inline-block"
                       >Get This App</a>

@@ -22,12 +22,7 @@ const features = [
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses';);
-=======
-      description: 'Worldwide deployment and support for international businesses']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const benefits = [
@@ -80,11 +75,5 @@ const benefits = [
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;

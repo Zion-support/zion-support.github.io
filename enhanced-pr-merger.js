@@ -158,13 +158,13 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 }
 
 //Generate comprehensive report;
-const report = {
+const report={
   timestamp: new Date().toISOString()
   summary: {
     totalPRs: prs.length;
     merged: mergedCount;
     conflicts: conflictCount;
-    notFound: notFoundCount;
+    notFound: notFoundCount;}
     successRate: `${Math.round((mergedCount / prs.length) * 100)}%`},
   systemChecks: {
     typeCheck: typeCheck.success;

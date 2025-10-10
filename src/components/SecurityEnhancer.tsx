@@ -215,12 +215,12 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {
   // Expose security utilities globally for debugging
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      (window as any).securityUtils = {
+      (window as any).securityUtils={
         sanitizeInput,
         validateURL,
         rateLimit,
         metrics,
-        isSecure,
+        isSecure,}
         warnings: securityWarnings}}
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 

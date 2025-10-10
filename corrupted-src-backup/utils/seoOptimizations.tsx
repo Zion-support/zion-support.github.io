@@ -172,7 +172,7 @@ Sitemap: ${sitemapUrl}`;
 
   // Generate robots.txt content,
   generateRobotsTxt: (sitemapUr,
-  l: string = 'http)
+  l: string='http)'
   s://zion.app/sitemap.xml') => {/* content */}
     return `User-agen,
   t: *
@@ -198,21 +198,21 @@ export const urlUtils = {/* content */}
   // Generate canonical URL,
   generateCanonicalUrl: (pat,
   h: string, baseUr,
-  l: string = 'http)
+  l: string='http)'
   s://zion.app') => {/* content */}`
     return `${baseUrl}${path}`},
 
   // Generate Open Graph URL,
   generateOGUrl: (pat,
   h: string, baseUr,
-  l: string = 'http)
+  l: string='http)'
   s://zion.app') => {/* content */}`
     return `${baseUrl}${path}`},
 
   // Generate Twitter Card URL,
   generateTwitterUrl: (pat,
   h: string, baseUr,
-  l: string = 'http)
+  l: string='http)'
   s://zion.app') => {/* content */}`
     return `${baseUrl}${path}`}
 };
@@ -416,7 +416,7 @@ export const SEOComponent = ({/* content */}
 }) => {/* content */}
 //   const siteName = 'Zion Tech Group';
 //   const siteUrl = 'https: //zion.app';
-//   const siteUrl = 'http,
+//   const siteUrl='http,'
   s://zion.app';`
 //   const defaultImage = `${siteUrl}/images/og-default.jpg`;
   `

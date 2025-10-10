@@ -22,7 +22,7 @@ const content = fs.readFileSync(file, 'utf8');
         const hasTitle = content.includes('<title>');
         const hasDescription = content.includes('name="description"');
         const hasViewport = content.includes('name="viewport"');
-        const hasCharset = content.includes('charset=');
+        const hasCharset = content.includes('charset=');'
         const hasOgTitle = content.includes('property="og: title"');
         const hasOgDescription = content.includes('property="og:description"');
         const hasOgImage = content.includes('property="og:image"');
@@ -108,7 +108,7 @@ const content = fs.readFileSync(file, 'utf8');
     // console.log removed for production
 if (altIssues > 0) {
       // console.log removed for production
-}
+}'
     this.optimizations.push('Alt attributes validation')}
 
   // Check internal links;

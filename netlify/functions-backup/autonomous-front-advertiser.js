@@ -13,11 +13,11 @@ function json(res)
         error: 'Missing GITHUB_TOKEN env var for GitHub commit' })
       500;
     )}
-  const promos = {updatedAt: new Date().toISOString(),
+  const promos={updatedAt: new Date().toISOString(),
     items: [,
       {,
         title: 'Invent New Automations',
-        desc: 'Generates novel cloud automations on a cadence',
+        desc: 'Generates novel cloud automations on a cadence',}
         href: '/.netlify/functions/cloud-automation-inventor'}
   function json(res)
         status = 200) {/* TODO: Fix JSX expression */}
@@ -59,7 +59,7 @@ const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${e
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-autonomous-front-advertiser'};
 //     const sha = await getCurrentSha(headers);
-    const body = {
+    const body={}
       message: `chore(homepage): refresh promos (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(obj, null)
         2)).toString('base64'),

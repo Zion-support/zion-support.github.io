@@ -53,10 +53,10 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
         {/* Header, Sectio, n */}</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6"></div>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />"
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5</sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-          </d, i, v>
+          </d, i, v>"
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Ne, x, t-Generation, AI, Technologies: The, Future, is N, o, w;
           </h2>
@@ -69,7 +69,7 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6"></div>"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5</sp, a, n>"
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>"
           </d, i, v>"
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Ne, x, t-Generation, AI, Technologie,
@@ -104,12 +104,12 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
           {/* Articl, e, 1 - Neuromorphic, Computin, g */}</div>
           <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-neuromorph, i, c-neur, a, l-networ, k, s-revoluti, o, n"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/40, t, o-indi, g, o-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-indi, g, o-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/40, t, o-indi, g, o-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-indi, g, o-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;"
   r:shad, o, w-indi, g, o-5, 0, 0/50"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />
+                <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";</div>
                 <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0" />";
@@ -118,9 +118,9 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
                 <span, className="te, x, t-xs, tex, t-indi, g, o-300, fon, t-semibold, uppercase, tracking-wi, d, e">Neuromorphic, A, I</sp, a, n>";
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e"
   r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">"</h3>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">";
               Neuromorphic, Neural, Network;
@@ -171,12 +171,12 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
           {/* Articl, e, 2 - Synthetic, Data, Generation */}
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-synthet, i, c-da, t, a-generati, o, n-maste, r, y"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;"
   r:shad, o, w-purp, l, e-5, 0, 0/50"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0  />
+                <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";</div>
                 <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0" />";
@@ -185,7 +185,7 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
                 <span, className="te, x, t-xs, tex, t-purp, l, e-300, fon, t-semibold, uppercase, tracking-wi, d, e">Data, Engineerin, g</sp, a, n>";
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">"
               Synthetic, Data, Generation Maste, r, y: Solving, A, I's, Data, Scarcity Probl, e, m'
             </h3>
@@ -239,12 +239,12 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
           {/* Articl, e, 3 - Quantum, Machine, Learning */}
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-machi, n, e-learni, n, g-enterpri, s, e-breakthrou, g, h"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;"
   r:shad, o, w-pi, n, k-5, 0, 0/50"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0  />
+                <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">";</div>
                 <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0" />";
@@ -253,7 +253,7 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
                 <span, className="te, x, t-xs, tex, t-pi, n, k-300, fon, t-semibold, uppercase, tracking-wi, d, e">Quantum, M, L</sp, a, n>";
               </d, i, v>
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-pi, n, k-200, transitio, n-colo, r, s">"
               Quantum, Machine, Learning: Enterprise, Breakthrough, in 20, 2, 5;
             </h3>
@@ -317,12 +317,12 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
         <div, className="te, x, t-center, m, t-10">";</div>
           <Li, n, k
   to="/bl, o, g"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hov, e;
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hov, e;"
         {/* CTA, Sectio, n */}"
         <div, className="te, x, t-center, m, t-10">";
           <Li, n, k;"
   to="/bl, o, g""
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-105, shado, w-lg, hov, e,"
   r:shad, o, w-2, x, l"
           ></Li>

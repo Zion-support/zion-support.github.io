@@ -47,7 +47,7 @@ $4},
 $4}
   ];
 ;
-const researchProjects = {
+const researchProjects={
     ai: [
       {
         title: 'Consensus Intelligence Framework',
@@ -62,7 +62,7 @@ const researchProjects = {
           'Published 3 papers in top-tier conferences'
         ],
         icon: Brain,
-        color:       ,
+        color:       ,}
 $4},
       {
         title: 'Autonomous Business Intelligence',
@@ -275,7 +275,7 @@ $4}
                   key={area.id}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === area.id
+                    activeTab === area.id}
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
@@ -831,7 +831,7 @@ $4}
                       <div className="text-sm text-gray-400 mb-1">Status</div>
                       <div className={`text-sm font-medium ${
                         project.status === 'Completed' ? 'text-green-400' : 
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
+                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'}
                       }`}>
                         {project.status}
                       </div>
@@ -942,7 +942,7 @@ $4}
                         <span>•</span>
                         <span>{pub.year}</span>
                         <span className={`px-2 py-1 rounded text-xs ${
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
+                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'}
                         }`}>
                           {pub.impact} Impact
                         </span>
@@ -978,8 +978,7 @@ $4}
                           {pub.impact} Impact;
           </span>
                       </div>
-                      <a></a>
-                        href={pub.link}"
+                      <ahref={pub.link}"
                         className="text-cyan-400,"
   hover:text-cyan-300 text-sm font-medium"
 // >
@@ -1009,7 +1008,7 @@ $4}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Research Achievements;
           </h2>"
-            <div className="grid grid-cols-1,
+            <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>
               {achievements.map((achievement, index) => ()}"

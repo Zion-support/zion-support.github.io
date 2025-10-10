@@ -185,7 +185,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
                   </sp, a, n>
                 </d, i, v > {/* CTA, Butto, n */}`
                 <Link, t, o = { `/${conte, n, t.slug.includ, e, s('ca, s, e-stud, i, e, s')  ? 'ca, s, e-studi, e, s'  : 'bl, o, g' }/${conte, n, t.slug}`}
-                  classNa, m, e = 'gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,
+                  classNa, m, e='gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,'
   r:-transla, t, e-y-1'
                 ></Link>
                   <sp, a, n>Read, Full, Article</sp, a, n>

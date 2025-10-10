@@ -58,13 +58,13 @@ export const Image: React.FC<ImageProps> = ({,
     setHasError(true)
     if (onError) onError();}
   }, [onError])
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties={
     ...style;
     ...(fill && {
       position: 'absolute',
       top:
         top: 0,
-      left: 0,
+      left: 0,}
   const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}

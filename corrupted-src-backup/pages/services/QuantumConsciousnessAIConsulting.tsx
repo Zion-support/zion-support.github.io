@@ -48,7 +48,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
              /></div>
               <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-12'></div>
                 <a, hre, f='#<consultati, o, n'
-                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hove,
+                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hove,'
   r:-transla, t, e-y-1'
 
         {/* Key, Featu, r, e, s */}

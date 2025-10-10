@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // console.log removed for production
 // Accessibility checklist;
-const accessibilityChecklist = {
+const accessibilityChecklist={
   semanticHTML: {,
     description: 'Use semantic HTML elements',
     checks: [,
@@ -14,7 +14,7 @@ const accessibilityChecklist = {
       'Use semantic elements (main, nav, section, article, aside, header, footer)',
       'Use proper form elements (label, fieldset, legend)',
       'Use list elements (ul, ol, li) for lists'
-    ]
+    ]}
   },
   keyboardNavigation: {,
     description: 'Ensure keyboard accessibility',
@@ -110,7 +110,7 @@ const filePath = path.join(distDir, file);
       // console.log removed for production
 }
     
-    // Check for skip links;
+    // Check for skip links;'
     if (!content.includes('skip') && !content.includes('Skip')) {
       // console.log removed for production
 }
@@ -148,7 +148,7 @@ const filePath = path.join(distDir, file);
 function generateAccessibilityReport() {
   // console.log removed for production
 ;
-const report = {
+const report={
     timestamp: new Date().toISOString()
     checklist: accessibilityChecklist;
     recommendations: [,
@@ -170,7 +170,7 @@ const report = {
       'Screen reader testing (NVDA, JAWS, VoiceOver)',
       'Keyboard-only navigation testing',
       'Color contrast analyzers'
-    ]
+    ]}
   };
   
   fs.writeFileSync(

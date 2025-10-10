@@ -17,7 +17,7 @@ export default function EnterpriseSolutionsBanner() {
 export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression */}
 }
   return (<div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"></div>"
-      <div className="max-w-7xl mx-auto px-4,
+      <div className="max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8"></div>"
         <div className="text-center"></div>"

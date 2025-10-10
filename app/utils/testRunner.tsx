@@ -79,8 +79,8 @@ export interface TestConfig {}
   excludePattern?: string[];}
 }
 // Default test configuration
-export const defaultTestConfig: TestConfig = {,
-    enableMocking: true,
+export const defaultTestConfig: TestConfig={,
+    enableMocking: true,}
 export const defaultTestConfig: TestConfig = {}
   enableMocking: true,
   enableCoverage: true,
@@ -129,14 +129,14 @@ interface Test {</void>
     fn: () => void | Promise<void>timeout?: number
   skip?: boolean
 // Default test configuration;
-export const defaultTestConfig: TestConfig = {
+export const defaultTestConfig: TestConfig={
   enableMocking: true,
   enableCoverage: true,
   enablePerformance: true,
   enableAccessibility: true,
   enableVisualRegression: false,
   coverageThreshold: 80,
-  performanceThreshold: 100,
+  performanceThreshold: 100,}
   accessibilityThreshold: 90}
 }
 interface TestResult {
@@ -225,7 +225,7 @@ export class TestRunner {}
   private isRunning: boolean = false;
   private startTime: number = 0;
   constructor(config: Partial<TestConfig> = {}) {
-    this.config = {
+    this.config={}
   constructor(config: Partial<TestConfig> = {}) {}
     this.config = {}
       ...defaultTestConfig,
@@ -338,9 +338,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Create a new test suite;
    */
   public describe(name: string, fn: () => void): void {
-    const suite: TestSuite = {
+    const suite: TestSuite={
       name;
-      tests: []
+      tests: []}
   public describe(name: string, fn: () => void): void {}
     const suite: TestSuite = {}
       name,
@@ -949,9 +949,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate JSON report;
    */
   private generateJsonReport(): void {
-    const report = {
+    const report={
       summary: {,
-    total: this.results.length,
+    total: this.results.length,}
   private generateJsonReport(): void {}
     const report = {}
       summary: {}
@@ -1402,10 +1402,10 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
-    const coverage: CoverageMetrics = {,
+    const coverage: CoverageMetrics={,
     statements: 85,
   // Coverage test
-  // Coverage test
+  // Coverage test}
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
@@ -1435,10 +1435,10 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     }></void>
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {
+    const coverage: CoverageMetrics={
       statements: 85,
       branches: 80,
-      functions: 90,
+      functions: 90,}
       lines: 85}
     }
     const passed = coverage.statements >= this.config.coverageThreshold;
@@ -1710,8 +1710,8 @@ export const useTestRunner = useCallback((...args) => {}
   }
 }
 // Test utilities;
-export const testUtils = {
-  // Create mock data</void>
+export const testUtils={
+  // Create mock data</void>}
   createMockData: (type: string, count: number = 10) => {}</void>
 // Test utilities
 export const testUtils = {}

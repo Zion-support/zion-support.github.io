@@ -84,7 +84,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
           </p>
         </div>
 "
-        <div className="grid,
+        <div className="grid,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
           {/* TODO: Fix JSX expression */}

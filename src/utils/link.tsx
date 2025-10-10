@@ -34,8 +34,7 @@ export const Link: React.FC;
   return (<div>Coming Soon</div>)
   )
     
-          <a></a>
-      href={href}
+          <ahref={href}
       className={className}
       target={target}
       rel={rel}

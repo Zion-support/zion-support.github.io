@@ -22,7 +22,7 @@ return (
         </d, i, v>
       </d, i, v>
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
+        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;"
   r:sca, l, e-1, 0, 5">"
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <span, className="te, x, t-4, x, l">🧠</sp, a, n>
@@ -31,11 +31,11 @@ return (
           <div, className="spa, c, e-y-3, m, b-6">
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
+        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;"
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
-        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
             <span, className="te, x, t-4, x, l">🧠</sp, a, n>
@@ -44,7 +44,7 @@ return (
           <div, className="spa, c, e-y-3, m, b-6"></div>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d"></p>
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";</div>
-        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e"
   r:sca, l, e-1, 0, 5">";</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
             <span, className="te, x, t-4, x, l">🧠</sp, a, n>";
@@ -76,12 +76,12 @@ return (
           </d, i, v>
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-neur, a, l-architectu, r, e-sear, c, h"
-            classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;
+            classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;"
   r:sca, l, e-105, shado, w-lg"
           ></Li>Explore</Li>, NAS, Revolution →
           </Li, n, k>
         </d, i, v>
-        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
+        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;"
   r:sca, l, e-1, 0, 5">"
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <span, className="te, x, t-4, x, l">⚡</sp, a, n>
@@ -89,10 +89,10 @@ return (
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6">
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
+        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;"
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
-        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
             <span, className="te, x, t-4, x, l">⚡</sp, a, n>
@@ -100,7 +100,7 @@ return (
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6"></div>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d"></p>
-        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e"
   r:sca, l, e-1, 0, 5">";</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
             <span, className="te, x, t-4, x, l">⚡</sp, a, n>";
@@ -132,12 +132,12 @@ return (
           </d, i, v>
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-reinforceme, n, t-learni, n, g-enterpri, s, e"
-            classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, hove, r: fr, o, m-emera, l, d-500, hove, r:to-te, a, l-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;
+            classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, hove, r: fr, o, m-emera, l, d-500, hove, r:to-te, a, l-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;"
   r:sca, l, e-105, shado, w-lg"
           ></Li>Master</Li>, Distributed, RL →
           </Li, n, k>
         </d, i, v>
-        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
+        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;"
   r:sca, l, e-1, 0, 5">"
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <span, className="te, x, t-4, x, l">🔒</sp, a, n>
@@ -145,10 +145,10 @@ return (
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6">
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
+        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;"
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
-        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e"
   r:sca, l, e-1, 0, 5">"</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
             <span, className="te, x, t-4, x, l">🔒</sp, a, n>
@@ -156,7 +156,7 @@ return (
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6"></div>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d"></p>
-        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e"
   r:sca, l, e-1, 0, 5">";</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
             <span, className="te, x, t-4, x, l">🔒</sp, a, n>";
@@ -188,7 +188,7 @@ return (
           </d, i, v>
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-priva, c, y-preservi, n, g-ai-enterpri, s, e-deployme, n, t"
-            classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-viol, e, t-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-viol, e, t-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;
+            classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-viol, e, t-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-viol, e, t-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;"
   r:sca, l, e-105, shado, w-lg"
           ></Li>Deploy</Li>, with, Privacy →
           </Li, n, k>
@@ -231,7 +231,7 @@ return (
           <div, className="flex, fle, x-col, ga, p-3">";</div>
             <Li, n, k
   to="/conta, c, t"
-              classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-pi, n, k-600, t, o-emera, l, d-600, hove, r: fr, o, m-purp, l, e-500, hove, r:v, i, a-pi, n, k-500, hove, r:to-emera, l, d-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove;
+              classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-pi, n, k-600, t, o-emera, l, d-600, hove, r: fr, o, m-purp, l, e-500, hove, r:v, i, a-pi, n, k-500, hove, r:to-emera, l, d-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove;"
   r:sca, l, e-105, shado, w-lg, tex, t-center, whitespac, e-nowr, a, p"
             ></Li>
               🚀 Start, Your, AI Transformati, o, n;

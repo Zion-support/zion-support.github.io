@@ -10,9 +10,9 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>";
             <span, className="te, x, t-gr, a, y-400, tex, t-sm">Octobe, r, 1, 20, 2, 5</sp, a, n>";
           </d, i, v>
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;
+          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;"
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
+          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l"
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h1>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             Quantum, Edge, AI Revolut, i, o;
@@ -530,27 +530,17 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";</div>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/conta, c, t"
-                  classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, shado, w-lg, hov, e;
+                  classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, shado, w-lg, hov, e;"
               </ul>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">""
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";"
-                <a, titl, e="Internal, lin, k""
-                  hr, e, f="/conta, c, t""
-                  classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, shado, w-lg, hov, e,"
-  r:shad, o, w-cy, a, n-5, 0, 0/50"
-                ></a>
-                  Schedule, Consultatio, n →
+                <aSchedule, Consultatio, n →
                 </a>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/ca, s, e-studi, e, s/quant, u, m-ed, g, e-ai-manufacturi, n, g-succe, s, s-20, 2, 5"
-                  classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-cy, a, n-300, borde, r-2, borde, r-cy, a, n-500, rounde, d-xl, hove, r: bg-cy, a, n-500, hov, e;
+                  classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-cy, a, n-300, borde, r-2, borde, r-cy, a, n-500, rounde, d-xl, hove, r: bg-cy, a, n-500, hov, e;"
                 </a>"
-                <a, titl, e="Internal, lin, k""
-                  hr, e, f="/ca, s, e-studi, e, s/quant, u, m-ed, g, e-ai-manufacturi, n, g-succe, s, s-20, 2, 5""
-                  classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, fon, t-bold, tex, t-cy, a, n-300, borde, r-2, borde, r-cy, a, n-500, rounde, d-xl, hove, r: bg-cy, a, n-500, hov, e,"
-  r:te, x, t-white, transitio, n-all, duratio, n-3, 0, 0"
-                ></a>
-                  View, Success, Story →
+                <aView, Success, Story →
                 </a>
               </d, i, v>
             </d, i, v>
@@ -574,7 +564,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
             <div, className="flex, ga, p-3">";</div>
               <span, className="te, x, t-gr, a, y-400, tex, t-sm">Sha, r, e: </sp, a, n>";
               <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hove, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">Twitt, e, r</a>";
-              <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hov, e;
+              <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hov, e;"
         {/* Foot, e, r */}"
         <footer, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/10"></footer>"
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-center, justif, y-betwe, e, n"></div>"

@@ -160,10 +160,10 @@ const putRes = await fetch(`http,
       : [];
     const _warmedPages = baseUrl ? await warmUrls(pageUrls) : [];
     const _warmedFunctions = baseUrl ? await warmUrls(functionUrls) : [];
-    const summary = {generatedAt: new Date().toISOString(),
+    const summary={generatedAt: new Date().toISOString(),
       baseUrl,
       counts: {,
-        pages: warmedPages.length;
+        pages: warmedPages.length;}
         functions: warmedFunctions.length}
       },
       ok: warmedPages.filter(x => x.ok).length +
@@ -230,7 +230,7 @@ function,
       }`, {' method: 'PUT', headers)
         body: JSON.stringify(body;)}); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {error = String(e;)
       } } } return {ok)
-        status; error }} try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary = {generatedAt: new Date().toISOString(), baseUrl, counts: { pages: warmedPages.length;
+        status; error }} try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary={generatedAt: new Date().toISOString(), baseUrl, counts: { pages: warmedPages.length;}
         functions: warmedFunctions.length }, ok: warmedPages.filter(x => x.ok).length + warmedFunctions.filter(x => x.ok).length, failed: warmedPages.filter(x => !x.ok).length + warmedFunctions.filter(x => !x.ok).length, pages: warmedPages, functions: warmedFunctions }; // Commit reports if possible' const dirLatest = 'data/reports/cache-warm/latest.json' const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`; let commitLatest = { ok: false }, commitHistory = { ok: false }; if (githubToken) {' commitHistory = await commitFile(dirHistory, summary) '[history]')}' commitLatest = await commitFile(dirLatest)
         summary} '[latest]')} return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ok: true),
         summary),

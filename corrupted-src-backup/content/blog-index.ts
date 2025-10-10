@@ -160,12 +160,12 @@ export function getTotalValueProposition(): string {/* TODO: Fix JSX expression 
   }, 0);
   return `$${totalValue}M+ total value proposition`}
 
-export const blogStats = {
+export const blogStats={
   totalPosts: allBlogPosts.length;
   featuredPosts: getFeaturedPosts().length;
   categories: getAllCategories().length;
   tags: getAllTags().length;
-  totalValue: getTotalValueProposition(),
+  totalValue: getTotalValueProposition(),}
 export const blogStats = {/* TODO: Fix JSX expression */}
 };
 `

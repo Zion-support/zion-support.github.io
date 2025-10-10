@@ -110,7 +110,7 @@ return (
         {/* Services Grid */}"
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
             {services.map((service, index) => ()}"
@@ -133,7 +133,7 @@ return (
         {/* Benefits Section */}"
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>"
-          <div className="grid grid-cols-2,
+          <div className="grid grid-cols-2,"
   md:grid-cols-3,"
   lg:grid-cols-6 gap-6"></div>
             {benefits.map((benefit, index) => ()}"

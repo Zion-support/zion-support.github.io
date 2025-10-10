@@ -42,7 +42,7 @@ const line = lines[i];
       modified = true}
     
     // Fix common syntax errors;
-    content = content.replace(/export\s+return/g, 'export const rateLimitingMiddleware =');
+    content = content.replace(/export\s+return/g, 'export const rateLimitingMiddleware=');'
     content = content.replace(/}\s*;\s*$/gm, '}');
     content = content.replace(/}\s*;\s*export/g, '}\nexport');
     

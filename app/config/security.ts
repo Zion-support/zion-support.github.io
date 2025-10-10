@@ -3,7 +3,7 @@
  * Defines security headers and policies for the application
  */
 
-export const securityHeaders = {
+export const securityHeaders={
   // Content Security Policy
   contentSecurityPolicy: {
     directives: {
@@ -19,7 +19,7 @@ export const securityHeaders = {
       imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
       connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
       frameSrc: ["'self'"],
-      objectSrc: ["'none'"],
+      objectSrc: ["'none'"],}
       upgradeInsecureRequests: true}},
 
   // Security Headers
@@ -35,39 +35,39 @@ export const securityHeaders = {
 /**
  * Rate limiting configuration
  */
-export const rateLimitConfig = {
+export const rateLimitConfig={
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
+  max: 100, // Limit each IP to 100 requests per windowMs}
   message: 'Too many requests from this IP, please try again later.'};
 
 /**
  * CORS configuration
  */
-export const corsConfig = {
+export const corsConfig={
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-  maxAge: 86400, // 24 hours
+  maxAge: 86400, // 24 hours}
 };
 
 /**
  * Session configuration
  */
-export const sessionConfig = {
+export const sessionConfig={
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
   cookie: {
     secure: process.env['NODE_ENV'] === 'production',
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours}
     sameSite: 'strict' as const}};
 
 /**
  * Input validation patterns
  */
-export const validationPatterns = {
+export const validationPatterns={}
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,

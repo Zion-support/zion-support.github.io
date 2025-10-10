@@ -2,21 +2,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //     // // console.log removed for production
 }
     // Orphan pages detection simulation;
-    const result = {
+    const result={
       statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Orphan pages detector executed successfully)
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
 function: 'orphan-pages-detector'
-=======
-        timestamp: new Date().toISOString()
-        function: 'orphan-pages-detector',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         detection: {,
           status: 'active',

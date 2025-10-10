@@ -14,19 +14,19 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
 }) => {/* TODO: Fix JSX expression */}
    };
   if (!isVisib, l, e) return, nul, l;
-  const variantClasse, s = {
+  const variantClasse, s={
       in, f, o: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-1, 0, 0",
       succe, s, s: "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, borde, r-gre, e, n-4, 0, 0/30, tex, t-gre, e, n-10, 0",
       warni, n, g: "bg-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, borde, r-yell, o, w-4, 0, 0/30, tex, t-yell, o, w-10, 0",
       err, o, r: "bg-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, borde, r-r, e, d-4, 0, 0/30, tex, t-r, e, d-10, 0",
-      defau, l, t: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-10, 0",
-      premi, u, m: "bg-gradie, n, t-to-r, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-r, e, d-6, 0, 0/20, borde, r-purp, l, e-4, 0, 0/30, tex, t-purp, l, e-10, 0"}; const iconClasse, s = {
+      defau, l, t: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-10, 0",}
+      premi, u, m: "bg-gradie, n, t-to-r, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-r, e, d-6, 0, 0/20, borde, r-purp, l, e-4, 0, 0/30, tex, t-purp, l, e-10, 0"}; const iconClasse, s={
       in, f, o: "te, x, t-bl, u, e-4, 0, 0",
       succe, s, s: "te, x, t-gre, e, n-40, 0",
       warni, n, g: "te, x, t-yell, o, w-40, 0",
       err, o, r: "te, x, t-r, e, d-40, 0",
       defau, l, t: "te, x, t-bl, u, e-40, 0",
-      premi, u, m: "te, x, t-purp, l, e-30, 0"
+      premi, u, m: "te, x, t-purp, l, e-30, 0"}
   }; return(<div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
       {/* Background, Patter, n */}
       <div, className="absolute, inse, t-0, opacit, y-10">

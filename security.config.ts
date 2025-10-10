@@ -3,7 +3,7 @@
  * Comprehensive security settings and best practices;
  */
 
-export const securityConfig = {
+export const securityConfig={
   // Content Security Policy;
   csp: {,
     directives: {,
@@ -18,7 +18,7 @@ export const securityConfig = {
       'font-src': ["'self'", 'https: //fonts.gstatic.com'],
       'connect-src': ["'self'", 'https: //www.google-analytics.com'],
       'frame-ancestors': ["'none'"],
-      'base-uri': ["'self'"],
+      'base-uri': ["'self'"],}
       'form-action': ["'self'"]},
     reportOnly: false},
 

@@ -31,7 +31,7 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
         {/* Header, Sectio, n */}</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6"></div>
-            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />"
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm"></span>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">";</div>
@@ -81,13 +81,13 @@ return (</div>
 <Li, n, k
   k, e, y={conte, n, t.id}
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
-                classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e;
+                classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e;"
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               >
                 <div, className="flex, item, s-start, ga, p-4, m, b-4"></div>
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-3, rounde, d-lg`}>`;`</div>
                     <Icon, className="w-6 h-6, tex, t-whi, t, e  />
-                  </d, i, v>
+                  </d, i, v>"
                   <div, className="fl, e, x-1"></div>
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>
                     <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
@@ -107,7 +107,7 @@ return (</div>
               ></Li>"
                 <div, className="flex, item, s-start, ga, p-4, m, b-4"></div>`
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-3, rounde, d-lg`}>`;`"
-                    <Icon, className="w-6 h-6, tex, t-whi, t, e  /></Icon>
+                    <Icon, className="w-6 h-6, tex, t-whi, t, e  /></Icon>"
                   </d, i, v>"
                   <div, className="fl, e, x-1"></div>"
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>"
@@ -162,7 +162,7 @@ return (</div>
                 </ul>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   Read, Full, Article;</div>
-                  <Link, className="w-4 h-4  />
+                  <Link, className="w-4 h-4  />"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   Read, Full, Article;</div>
                   Read, Full, Article;"

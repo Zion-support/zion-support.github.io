@@ -12,7 +12,7 @@ class PerformanceMonitor {
   private observer: PerformanceObserver | null = null;
 
   private constructor() {
-    this.metrics = {
+    this.metrics={
       lcp: null;
       fid: null;
       cls: null;
@@ -22,7 +22,7 @@ class PerformanceMonitor {
       loadTime: 0;
       domContentLoaded: 0;
       firstPaint: null;
-      firstContentfulPaint: null;
+      firstContentfulPaint: null;}
 class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }}
 
@@ -102,10 +102,10 @@ const interactionTypes: (keyof WindowEventMap)[] = [,
       window.addEventListener()
         type)
         event => {;
-const interaction: UserInteraction = {,
+const interaction: UserInteraction={,
             type: type as UserInteraction['type']),
             timestamp: performance.now(),
-            element: (event.target as Element)?.tagName?.toLowerCase(),
+            element: (event.target as Element)?.tagName?.toLowerCase(),}
   private trackUserInteractions(): void {/* TODO: Fix JSX expression */}
           };
 

@@ -2296,7 +2296,7 @@ i,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } const contact = ' mobil,
+  s: number } const contact=' mobil,'
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',' websit,

@@ -6,8 +6,8 @@ export async function simulateAction<T = unknown>(
   action: string;
   details: Record<string, unknown> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {;
-const log: SyncLogEntry = {,
-    id: Math.random().toString(36).substr(2, 9),
+const log: SyncLogEntry={,
+    id: Math.random().toString(36).substr(2, 9),}
 // Simple UUID generator since uuid package is not available}};
 
 // Simple UUID generator since uuid package is not available;
@@ -19,7 +19,7 @@ export async function simulateAction<T = any>(
   action: string;
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {;
-const log: SyncLogEntry = {,
+const log: SyncLogEntry={,}
     id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     id: uuidv4()
     id: uuidv4()
@@ -100,10 +100,10 @@ export async function simulateAction<T = any>(connectio,
     log.status = 'warning';
     log.message = `Action ${action} completed with warnings`}
 ;
-const result = {
+const result={
     success: true;
     data: details;
-    timestamp: new Date().toISOString(),
+    timestamp: new Date().toISOString(),}
   if (Math.random() < 0.2) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} completed with warnings`}
 ;
@@ -145,8 +145,8 @@ const result = {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })}
 };
 // ATS actions;
-export const ats = {
-  async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
+export const ats={
+  async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {}
 export const ats = {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'ats.pushApplicant', { applicant })},
 
@@ -164,10 +164,10 @@ const logs: SyncLogEntry[] = [];
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
 
 // CRM actions;
-export const crm = {
+export const crm={
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
 export async function testConnection(connectio,
-  n: ProviderConnection;)
+  n: ProviderConnection;)}
 ): Promise<boolean> {/* TODO: Fix JSX expression */}
   } catch {/* TODO: Fix JSX expression */}
   }

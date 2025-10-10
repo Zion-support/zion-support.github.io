@@ -291,7 +291,7 @@ const _img = document.querySelector(`img[src="${src}"]`);
         color: white;
         padding: 10 px;
         text-align: center;
-        z-index: 9999;
+        z-index: 9999;"
       ">
         You're offline. Some features may not be available.
       </div>,
@@ -319,14 +319,14 @@ const _modal = document.createElement('div');
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 10000;
+        z-index: 10000;"
       "></div>
         <div style="
           background: white;
           padding: 20 px;
           border-radius: 8 px;
           max-width: 500 px;
-          text-align: center;
+          text-align: center;"
         ">,
           <h2>Something went wrong</h2>,
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
@@ -336,7 +336,7 @@ const _modal = document.createElement('div');
             border: none;
             padding: 10 px 20 px;
             border-radius: 4 px;
-            cursor: pointer;
+            cursor: pointer;"
           ">Refresh Page</button>
         </div>
       </div>,
@@ -356,7 +356,7 @@ const _toast = document.createElement('div');
         padding: 15 px;
         border-radius: 4 px;
         z-index: 9999;
-        max-width: 300px;
+        max-width: 300px;"
       ">,
         <strong>Error:</strong> ${errorInfo.message}
   garbageCollect() {/* TODO: Fix JSX expression */}
@@ -388,7 +388,7 @@ const _toast = document.createElement('div');
   r: white;
           floa,
   t: right;
-          curso,
+          curso,"
   r: pointer;"
         ">×</button>
       </div>`

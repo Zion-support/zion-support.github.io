@@ -13,9 +13,9 @@ import { fileURLToPath } from 'url';
 // // __dirname removed
 class PerformanceEnhancer {;
 constructor() {
-    this.report = {
+    this.report={
       timestamp: new Date().toISOString(),
-      optimizations: [],
+      optimizations: [],}
       metrics: {},
       recommendations: [],
 class PerformanceEnhancer {/* TODO: Fix JSX expression */}

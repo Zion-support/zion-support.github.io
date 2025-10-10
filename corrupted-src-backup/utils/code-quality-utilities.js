@@ -1,9 +1,9 @@
 // Code quality utilities and configurations;
-export const codeQualityUtils = {
+export const codeQualityUtils={
   // Type checking utilities;
   validateTypes: (value, expectedType) => {
     //     const actualType = typeof value;
-    if (actualType !== expectedType) {
+    if (actualType !== expectedType) {}
 export const codeQualityUtils = {/* TODO: Fix JSX expression */}
       throw new Error(`Expected ${expectedType}, got ${actualType}`)}
     return true},

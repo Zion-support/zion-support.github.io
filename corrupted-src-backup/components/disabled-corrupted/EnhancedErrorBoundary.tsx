@@ -13,10 +13,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 ;
 constructor(props: Props) {
     super(props);
-    this.state = {
+    this.state={
       hasError: false;
       error: null;
-      errorInfo: null;
+      errorInfo: null;}
       errorId: null}}
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -55,14 +55,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     this.reportError(error, errorInfo)}
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {;
-const errorReport = {
+const errorReport={
       errorId: this.state.errorId;
       message: error.message;
       stack: error.stack;
       componentStack: errorInfo.componentStack;
       timestamp: new Date().toISOString()
       userAgent: navigator.userAgent;
-      url: window.location.href;
+      url: window.location.href;}
       retryCount: this.retryCount};
 
     // Send to error reporting service;
@@ -119,12 +119,12 @@ return (
   };
 
   private handleReportBug = () => {;
-const errorDetails = {
+const errorDetails={
       errorId: this.state.errorId;
       message: this.state.error?.message;
       stack: this.state.error?.stack;
       componentStack: this.state.errorInfo?.componentStack;
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString(),}
       url: window.location.href};
 
     // Create a mailto link with error details;
@@ -172,7 +172,7 @@ const errorDetails = {
 
       // Default error UI;
       return (<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,
-  sm:px-6,
+  sm:px-6,'
   lg:px-8'></div>
           <div className='max-w-md w-full space-y-8'></div>
             <div className='text-center'></div>
@@ -226,7 +226,7 @@ const errorDetails = {
   hover:bg-indigo-700,
   focus:outline-none,
   focus:ring-2,
-  focus:ring-offset-2,
+  focus:ring-offset-2,'
   focus:ring-indigo-500'
                   >
                     Try Again ({this.maxRetries - this.retryCount} attempts;)
@@ -239,7 +239,7 @@ const errorDetails = {
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
-  focus:ring-offset-2,
+  focus:ring-offset-2,'
   focus:ring-indigo-500'
                 >
                   Reload Page;
@@ -265,7 +265,7 @@ const errorDetails = {
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
-  focus:ring-offset-2,
+  focus:ring-offset-2,'
   focus:ring-indigo-500'
                 >
                   Report Bug;
@@ -276,7 +276,7 @@ const errorDetails = {
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
-  focus:ring-offset-2,
+  focus:ring-offset-2,'
   focus:ring-indigo-500'
                 >
                   Go Back;

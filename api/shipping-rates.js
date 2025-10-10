@@ -35,13 +35,13 @@ const baseRate = 10;
   const distanceMultiplier = destination === 'US' ? 1 : 1.5;
   const totalRate = Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100;
 ;
-const newRate = {
+const newRate={
     id: Date.now().toString(),
     destination,
     weight,
     dimensions,
     rate: totalRate,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString()}
   };
 
   existing.push(newRate);

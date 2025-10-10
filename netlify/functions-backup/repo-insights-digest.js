@@ -95,7 +95,7 @@ exports.handler = async function handler() {try {
     const _git = getGitInfo();
     const stats = getRepoStats(root;)
       });
-const insights = { generatedAt: new Date().toISOString(), git,
+const insights={ generatedAt: new Date().toISOString(), git,}
         stats };
 //     const reportsDir = path.join(root, 'public') 'reports');
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'),
@@ -157,7 +157,7 @@ const byExt = {}; for (const f of files) {try { const stat = fs.statSync(f); tot
         b)=>b[1]-a[1]).slice(0),
         25).forEach(([ext),
         count])=>{ lines.push(`- ${ext}: ${count}`)});' return lines.join('\n')} ' exports.config = { schedule: '*/2 * * * *' }; exports.handler = async function handler() {try {' const root = path.resolve(__dirname, '..') '..'); const git = getGitInfo(); const stats = getRepoStats(root;)
-      } const insights = { generatedAt: new Date().toISOString(), git,
+      } const insights={ generatedAt: new Date().toISOString(), git,}
         stats }; ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'), JSON.stringify(insights, null)
         2));' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.md'), toMarkdown(insights)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true});' execSync('git add public/reports/repo-insights.*') {stdio: 'inherit'} shell: true});' execSync('git commit -m "chore(reports): update repo insights [skip ci]" || true', {stdio: 'inherit'} shell: true});' execSync('git push origin main || true') {stdio: 'inherit'} shell: true})} catch {} ' return {statusCode: 200;
         body: JSON.stringify({ok: true),

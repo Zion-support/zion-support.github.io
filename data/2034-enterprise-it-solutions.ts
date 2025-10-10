@@ -5,7 +5,7 @@ export type EnterpriseITSolution =
     starte,"
   r: string, // e.g. "$2, 999 / mo"
 export type EnterpriseITSolution =
-export type EnterpriseITSolution = {;
+export type EnterpriseITSolution={;
 export type EnterpriseITSolution =
   id: string;
   name: string;
@@ -16,7 +16,7 @@ export type EnterpriseITSolution =
     | 'DevOps & Automation'
     | 'Data & Analytics',
     | 'Cloud Services',
-    | 'Cybersecurity',
+    | 'Cybersecurity',}
   pricing: unknown}
     starter: string, // e.g. "$2} 999 / mo"
 export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
@@ -1728,11 +1728,11 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realService:
         realService: true;
-export type EnterpriseITSolution = {
+export type EnterpriseITSolution={
 	id: string;
 	name: string;
 	tagline?: string;,
-	description: string;
+	description: string;}
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
 	pricing: {,
 		starter: string, // e.g. "$2}999/mo"

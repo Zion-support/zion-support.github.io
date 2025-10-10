@@ -32,12 +32,12 @@ const,
   //   const currentTime = new Date().toISOString();
 
   // Generate structured data;
-  const structuredData = {
+  const structuredData={
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description: description;
-    url: window.location.origin;
+    url: window.location.origin;}
     logo: `${window.location.origin}/images/logo.png`,
     sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
@@ -69,14 +69,14 @@ const structuredData = {/* TODO: Fix JSX expression */}`
 
   // Add article structured data if type is article;
   if (type === 'article') {;
-const articleData = {
+const articleData={
       '@context': 'https: //schema.org',
       '@type': 'Article',
       headline: title;
       description: description;
       image: image;
       author: {,
-        '@type': 'Organization',
+        '@type': 'Organization',}
         name: author},
       publisher: {,
         '@type': 'Organization',

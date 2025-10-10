@@ -140,13 +140,13 @@ if (brokenLinks.length > 0) {
 }
 
 // Generate report;
-const report = {
+const report={
   timestamp: new Date().toISOString()
   totalPages: allPages.length;
   totalFooterLinks: footerLinks.length;
   missingPages: missingPages;
   additionalMissing: additionalMissing;
-  brokenLinks: brokenLinks;
+  brokenLinks: brokenLinks;}
   existingPages: allPages.map(p => p.path)};
 
 fs.writeFileSync(

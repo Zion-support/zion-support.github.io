@@ -124,14 +124,14 @@ const retryButton = screen.getByText('Try Again (3 attempts left)');
     consoleSpy.mockRestore()})});
 
 describe('AdvancedSEOOptimizer', () => {;
-const mockSEOData = {
+const mockSEOData={
     title: 'Test Title',
     description: 'Test Description',
     keywords: ['test', 'keywords'],
     canonicalUrl: 'https://example.com',
     ogImage: 'https://example.com/image.jpg',
     structuredData: {
-      '@type': 'Organization',
+      '@type': 'Organization',}
       name: 'Test Organization'}};
 
   it('renders without crashing', () => {
@@ -217,11 +217,11 @@ const helmetContext = {};
 
 describe('AdvancedPerformanceMonitor', () => {
   // Mock performance API;
-const mockPerformance = {
+const mockPerformance={
     getEntriesByName: jest.fn(() => []),
     getEntriesByType: jest.fn(() => []),
     getEntries: jest.fn(() => []),
-    measurePageLoad: jest.fn(),
+    measurePageLoad: jest.fn(),}
     reportWebVitals: jest.fn()};
 
   // Mock PerformanceObserver

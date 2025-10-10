@@ -39,7 +39,7 @@ const link = document.createElement('link')
 export const preloadRoute = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-const routeResources = {
+const routeResources={}
 export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Preload route-specific resources;

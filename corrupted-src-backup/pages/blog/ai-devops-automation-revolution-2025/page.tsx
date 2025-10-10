@@ -10,9 +10,9 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>";
             <span, className="te, x, t-gr, a, y-400, tex, t-sm">Octobe, r, 1, 20, 2, 5</sp, a, n>";
           </d, i, v>
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;
+          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;"
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
+          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l"
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h1>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             AI-Powered, DevOps, Automation Revolut, i, o;
@@ -467,12 +467,12 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               Transform, your, DevOps operations, with, AI-powered, automatio, n. Our, team, of experts, will, help you, design, and implement, a, custom solution, tailored, to your, infrastructure, and business, need, s.
             </p>
-            <div, className="flex, fle, x-co, l, s;
+            <div, className="flex, fle, x-co, l, s;"
   m: fl, e, x-row, ga, p-4">"
-              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove;
-            <div, className="flex, fle, x-co, l, s
+              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove;"
+            <div, className="flex, fle, x-co, l, s"
   m: fl, e, x-row, ga, p-4">"</section>
-              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove
+              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove"
   r:sca, l, e-105, shado, w-xl">"
                 Schedule, Consultatio, n;
               </a>
@@ -481,7 +481,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hover:sca, l, e-105, shado, w-xl">";
                 Schedule, Consultatio, n;
               </a>
-              <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e;
+              <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e;"
             </p>"
             <div, className="flex, fle, x-co, l, s,"
   m: fl, e, x-row, ga, p-4">""

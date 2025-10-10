@@ -6,10 +6,10 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // Performance monitoring script;
-const performanceReport = {
+const performanceReport={
   timestamp: new Date().toISOString()
   buildSize: 0;
-  pageCount: 0;
+  pageCount: 0;}
   recommendations: []};
 
 // Analyze build output;

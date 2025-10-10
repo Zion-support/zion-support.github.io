@@ -226,14 +226,14 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
-    const structuredData = {
+    const structuredData={
       '@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle()
       description: this.generateDescription()
       url: this.currentPageData.url || window.location.href;
       image: this.currentPageData.image || this.config.defaultImage;
-      publisher: {,
+      publisher: {,}
   private updateStructuredData(): void {}
     if (!this.currentPageData) return
     const structuredData = {}
@@ -501,10 +501,10 @@ Disallo,`
   }
 }
 // Default configuration;
-const defaultConfig: SEOConfig = {
+const defaultConfig: SEOConfig={
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app'
-// Default configuration
+// Default configuration}
 const defaultConfig: SEOConfig = {}
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',

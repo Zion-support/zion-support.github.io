@@ -125,10 +125,10 @@ interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 ;
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   enabled = true;
-  budget = {,
+  budget={,
     maxBundleSize: 500, // 500KB;
     maxImageSize: 100, // 100KB;
-    maxFirstLoad: 3000, // 3 seconds;
+    maxFirstLoad: 3000, // 3 seconds;}
     maxInteractive: 2000 // 2 seconds},
   onMetricsUpdate,
   onBudgetViolation}) => {
@@ -280,7 +280,7 @@ const _paintEntry = entry as PerformancePaintTiming;
               onClick={() => setIsVisible(false)}"
               className="text-gray-500,
   hover:text-gray-700,
-  dark:text-gray-400,
+  dark:text-gray-400,"
   dark:hove,"
   r:text-gray-200""
               aria-label="Close performance monitor"

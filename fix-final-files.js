@@ -53,7 +53,7 @@ export default ${componentName};`
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {
   //Configuration properties}
-export const default${componentName}Config: ${componentName}Config = {
+export const default${componentName}Config: ${componentName}Config={}
   //Default configuration};
 export default {
   default${componentName}Config} else if (isTs) {/* TODO: Fix JSX expression */}`

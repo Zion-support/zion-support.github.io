@@ -26,9 +26,9 @@ function processFile(filePath) {
         if (typeMatch) metadata.type = typeMatch[1];
         if (urlMatch) metadata.url = urlMatch[1]} catch (e) {
         // If parsing fails, use defaults;
-        metadata = {
+        metadata={
           title: 'Zion Tech Group',
-          description: 'Advanced AI and IT Solutions',;
+          description: 'Advanced AI and IT Solutions',;}
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       } catch (e) {/* TODO: Fix JSX expression */}
         }}

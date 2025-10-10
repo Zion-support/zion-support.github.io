@@ -129,7 +129,7 @@ const _response = await originalFetch(...args);
     //     const errorId = this.generateErrorId(errorData);
     const _now = new Date().toISOString();
 ;
-const context: ErrorContext = {
+const context: ErrorContext={
       timestamp: now;
       url: errorData.url || window.location.href;
       userAgent: navigator.userAgent;
@@ -137,7 +137,7 @@ const context: ErrorContext = {
       stackTrace: errorData.error?.stack;
       componentStack: errorData.componentStack;
       props: errorData.props;
-      state: errorData.state;
+      state: errorData.state;}
   private setupReactErrorBoundary(): void {/* TODO: Fix JSX expression */}
     //     }
 
@@ -155,7 +155,7 @@ const _severity = this.determineSeverity(errorData);
       existingError.lastOccurrence = now;
       this.errors.set(errorId, existingError)} else {
       // Create new error report;
-      const errorReport: ErrorReport = {,
+      const errorReport: ErrorReport={,
         id: errorId;
         type: errorData.type;
         severity,
@@ -164,7 +164,7 @@ const _severity = this.determineSeverity(errorData);
         frequency: 1;
         firstOccurrence: now;
         lastOccurrence: now;
-        resolved: false;
+        resolved: false;}
     if (this.errors.has(errorId)) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
       };

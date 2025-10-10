@@ -32,9 +32,9 @@ export class BaseService {// TODO: Add content}
   private cache: Map;
           <string, CacheEntry<unknown>> = new Map();
 constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseUrl}
-    this.options = {retries: 3,
+    this.options={retries: 3,
     cache: false,
-      cacheDuration: 300000, // 5 minutes;
+      cacheDuration: 300000, // 5 minutes;}
 //       ...options};
    * Check if cached data is still valid;
   protected isCacheValid(key: string): boolean {const entry = this.cache.get(key)}

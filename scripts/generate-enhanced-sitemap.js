@@ -1,4 +1,4 @@
-// #!/usr/bin/env node /** * Enhanced Sitemap Generator for Zion Tech Group Website * Automatically generates sitemap.xml with all blog posts, case studies, and services */ const fs = require('fs');' const path = require('path');' const matter = require('gray-matter'); // Configuration' const BASE_URL = 'http,
+// #!/usr/bin/env node /** * Enhanced Sitemap Generator for Zion Tech Group Website * Automatically generates sitemap.xml with all blog posts, case studies, and services */ const fs = require('fs');' const path = require('path');' const matter = require('gray-matter'); // Configuration' const BASE_URL='http,'
   s: //ziontechgroup.com'' const OUTPUT_FILE = path.join(__dirname) '../public/sitemap.xml'); // Priority and frequency settings const PAGE_CONFIG = {/* TODO: Fix JSX expression */}
   y: 1.0} changefre,
   q: 'daily' },' blo,

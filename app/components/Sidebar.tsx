@@ -18,22 +18,16 @@ import {
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
   Clock;)
 } from 'lucide-react';
 ;
 const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
 const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
 const location = useLocation();
-=======
-  Clock]
-    } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
   useEffect(() => {;
 const handleResize = () => {
       if (window.innerWidth >= 1024) {
-<<<<<<< HEAD
         setIsOpen(false););
     };
 
@@ -48,27 +42,6 @@ const newExpanded = new Set(expandedSections);
       newExpanded.add(section););
     setExpandedSections(newExpanded););
 const navigationSections = [
-=======
-        setIsOpen(false)]
-    }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize)]
-    }, []);
-
-  const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
-      newExpanded.delete(section)]
-    } else {
-      newExpanded.add(section)]
-    }
-    setExpandedSections(newExpanded)]
-    };
-
-  const navigationSections = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       title: 'Main',
       items: [
@@ -149,27 +122,16 @@ const navigationSections = [
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-<<<<<<< HEAD
       ];);
-=======
-      ]]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
-const contactInfo = {
+const contactInfo={
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-<<<<<<< HEAD
     hours: 'Mon-Fri 9AM-6PM EST';);
-=======
-    hours: 'Mon-Fri 9AM-6PM EST']
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
-    <React.Fragment>
+    <React.Fragment>}
       {/* Mobile Menu Button */}
       <button
         onClick={() =></button> setIsOpen(true);
@@ -178,7 +140,7 @@ const contactInfo = {
       >
         <Menu className="w-6 h-6" />
       </button>
-
+}
       {/* Sidebar Overlay */}
       {isOpen && (
         <div 
@@ -186,10 +148,10 @@ const contactInfo = {
           onClick={() =></div> setIsOpen(false);
         />
       );
-
+}
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full']
+        isOpen ? 'translate-x-0' : '-translate-x-full']}
     } lg:translate-x-0 lg:static lg:z-auto`}></aside>
         <div className="flex flex-col h-full"></div>
           {/* Header */}</div>
@@ -211,7 +173,7 @@ const contactInfo = {
               <X className="w-6 h-6" />
             </button>
           </div>
-
+}
           {/* Navigation */}
           <div className="flex-1 overflow-y-auto py-6"></div>
             <nav className="space-y-2 px-4"></nav>
@@ -220,7 +182,7 @@ const contactInfo = {
                   <button
                     onClick={() =></button> section.key && toggleSection(section.key);
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
+                  >}
                     <span>{section.title}</span>
                     {section.key && (
                       expandedSections.has(section.key) ? 
@@ -239,7 +201,7 @@ const contactInfo = {
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50']
+                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50']}
     }`}
                         >
                           <item.icon className="w-4 h-4 flex-shrink-0" />
@@ -276,14 +238,6 @@ const contactInfo = {
           </div>
       </aside>
     </>
-<<<<<<< HEAD
   ););
 Sidebar.displayName = 'Sidebar'
-=======
-  )]
-    };
-
-Sidebar.displayName = 'Sidebar';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Sidebar;

@@ -212,9 +212,9 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e"></div>
             <Sparkles, className="w-5 h-5, m, r-2  />
-            🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;
+            🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;"
             <Sparkles, className="w-5 h-5, m, l-2  /></Sparkles>
-          </d, i, v>
+          </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">";</div>
@@ -224,9 +224,9 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Head, e, r */}"
         <div, className="text-center mb-12"></div>"
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e"></div>"
-            <Sparkles, className="w-5 h-5, m, r-2  /></Sparkles>
+            <Sparkles, className="w-5 h-5, m, r-2  /></Sparkles>"
             🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;"
-            <Sparkles, className="w-5 h-5, m, l-2  /></Sparkles>
+            <Sparkles, className="w-5 h-5, m, l-2  /></Sparkles>"
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""
         <div, className="text-center mb-12">";"
@@ -263,7 +263,7 @@ const, Ico, n = conte, n, t.ic, o, n;
               <Li, n, k
   k, e, y={ind, e, x}
                 to={conte, n, t.li, n, k}
-                classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
+                classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;"
   r:shad, o, w-2, x, l"
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
               >
@@ -275,7 +275,7 @@ const, Ico, n = conte, n, t.ic, o, n;
                   <div, className="flex, item, s-start, m, b-6"></div>
                     <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`</div>
                       <Icon, className="w-8 h-8, tex, t-whi, t, e  />
-                    </d, i, v>
+                    </d, i, v>"
                     <div, className="fl, e, x-1"></div>
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
                 <div, className="relativ, e, p-8">";
@@ -291,7 +291,7 @@ const, Ico, n = conte, n, t.ic, o, n;
           {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                 to={conte, n, t.li, n, k}"
-                classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hove,
+                classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hove,"
   r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"
   r:shad, o, w-2, x, l"
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
@@ -301,7 +301,7 @@ const, Ico, n = conte, n, t.ic, o, n;
                   {/* Ic, o, n & Tit, l, e */}"
                   <div, className="flex, item, s-start, m, b-6"></div>`
                     <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`"
-                      <Icon, className="w-8 h-8, tex, t-whi, t, e  /></Icon>
+                      <Icon, className="w-8 h-8, tex, t-whi, t, e  /></Icon>"
                     </d, i, v>"
                     <div, className="fl, e, x-1"></div>"
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">""
@@ -349,7 +349,7 @@ const, Ico, n = conte, n, t.ic, o, n;
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>
                     <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
                       Read, Full, Article;</div>
-                      <Link, className="w-4 h-4, m, l-2  />
+                      <Link, className="w-4 h-4, m, l-2  />"
                   <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5</sp, a, n>";
                     <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
@@ -381,7 +381,7 @@ const, Ico, n = conte, n, t.ic, o, n;
           <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">";</div>
             <Li, n, k
   to="/bl, o, g"
-              classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove;
+              classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove;"
         {/* Bottom, CT, A */}"
         <div, className="te, x, t-cent, e, r">";"
           <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">";

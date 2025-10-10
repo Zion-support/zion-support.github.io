@@ -125,15 +125,9 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
               Get, personalized, recommendations and, ROI, projections in, just, 30 minut, e, s.
             </p>"
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
-              <a, hre, f="/conta, c, t" "
-                className="bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-gre, e, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"
-              ></a>
-                Get, Free, Assessment;
+              <aGet, Free, Assessment;
               </a>"
-              <a, hre, f="/ca, s, e-studi, e, s" "
-                className="bord, e, r-2, borde, r-gre, e, n-500, tex, t-gre, e, n-400, hove, r:bg-gre, e, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"
-              ></a>
-                View, Success, Stories;
+              <aView, Success, Stories;
               </a>
             </div>
           </div>
@@ -161,15 +155,9 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
               pilot, program, s, and, direct, access to, our, AI exper, t, s.
             </p>"
             <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4"></div>"
-              <a, hre, f="/conta, c, t" "
-                className="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"
-              ></a>
-                Join, Innovation, Lab;
+              <aJoin, Innovation, Lab;
               </a>"
-              <a, hre, f="/servic, e, s" "
-                className="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"
-              ></a>
-                Explore, Service, s;
+              <aExplore, Service, s;
               </a>
             </div>
           </div>

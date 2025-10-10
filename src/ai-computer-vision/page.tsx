@@ -113,7 +113,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => ()}"

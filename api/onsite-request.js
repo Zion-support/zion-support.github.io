@@ -29,7 +29,7 @@ const data = fs.readFileSync(file, 'utf8');
     // console.error removed for production
 existing = []}
 ;
-const newRequest = {
+const newRequest={
     id: Date.now().toString(),
     name,
     email,
@@ -38,7 +38,7 @@ const newRequest = {
     message,
     location,
     timestamp: new Date().toISOString(),
-    status: 'pending'
+    status: 'pending'}
   };
 
   existing.push(newRequest);

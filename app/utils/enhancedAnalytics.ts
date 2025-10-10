@@ -66,7 +66,7 @@ class EnhancedAnalytics {}
   public initialize(config?: { userId?: string; userType?: string }): void {
     if (this.isInitialized) return;
     this.isInitialized = true;
-    this.userProperties = {
+    this.userProperties={}
   public initialize(config?: { userId?: string; userType?: string }): void {}
     if (this.isInitialized) return
     this.isInitialized = true
@@ -91,17 +91,17 @@ class EnhancedAnalytics {}
     })
   }
   public setUserProperties(properties: UserProperties): void {,
-    this.userProperties = {,
-      ...this.userProperties;
+    this.userProperties={,
+      ...this.userProperties;}
       ...properties}
     }
   }
   public trackEvent(event: AnalyticsEvent): void {
-    const enrichedEvent: AnalyticsEvent = {
+    const enrichedEvent: AnalyticsEvent={
       ...event;
       metadata: {
         ...event.metadata;
-        sessionId: this.sessionId;
+        sessionId: this.sessionId;}
   public setUserProperties(properties: UserProperties): void {}
     this.userProperties = {}
       ...this.userProperties,

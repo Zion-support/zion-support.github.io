@@ -143,7 +143,7 @@ const,
             <Link></Link>"
               to="/contact""
                className="inline-flex items-center justify-center gap-2 bg-white,
-  hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg,
+  hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg,"
   hover:shadow-2xl transform,"
   hover:scale-105""
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"

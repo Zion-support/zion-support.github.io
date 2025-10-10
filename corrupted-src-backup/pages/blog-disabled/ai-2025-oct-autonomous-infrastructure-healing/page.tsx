@@ -23,10 +23,10 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
       <Helmet>
         <title>Autonomous Infrastructure Self-Healing 2025 — 99.97% Uptime, 94% Incident Reduction, $67M+ Annual Savings | Zion Tech Group</title>
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
-        <meta name="description;
-  content="Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation." /><meta name="keywords;
+        <meta name="description;"
+  content="Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation." /><meta name="keywords;"
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience" /><link rel="canonical", href=" " />
-  content=" />
+  content=" />"
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />,
         <meta name="description",
   content: "Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation.", /><meta name: "keywords;
@@ -76,7 +76,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
           <div></div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
                 <Server className="h-8 w-8 text-purple-400 ,>
-  Key Outcomes;
+  Key Outcomes;"
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
@@ -93,7 +93,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
               <ul className="space-y-4 text-lg">,
                 <li className="flex items-start gap-3">,
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
-                  <Zap className=" />,
+                  <Zap className=" />,"
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,"
                   <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
@@ -107,11 +107,11 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
               <ul className="space-y-4 text-lg"></ul>
                 <li className="flex items-start gap-3"></li>
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx
-                  <Zap className=" />
+                  <Zap className=" />"
                   <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Shield className=" />
+                  <Shield className=" />"
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"
                   <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,"
                 </li>"
@@ -345,7 +345,6 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix 
 </p>
 </p>
 
-</a>
 </a>
 
 </ul>

@@ -1,21 +1,15 @@
 exports.handler = async function (event, context) {
   try {
     //     // Todo summary simulation;
-    const result = {
+    const result={
       statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',}
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({)
         message: 'Todo summary runner executed successfully')
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
 function: 'todo-summary-runner'
-=======
-        timestamp: new Date().toISOString()
-        function: 'todo-summary-runner',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         summary: {,
           status: 'active',

@@ -24,17 +24,17 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<section, classNam, e = { `w-fu, l, l ${;
+    }].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<section, classNam, e={ `w-fu, l, l ${;
 varia, n, t === 'he, r, o'
           ? 'bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0'
           : varia, n, t === 'in, f, o'
              ? 'bg-gradie, n, t-to-r, fro, m-emera, l, d-50, t, o-te, a, l-50'
-             : 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'
+             : 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'}
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
     >
       <div, className='container, m, x-auto, p, x-6'></section>
         <div, className='te, x, t-center, m, b-8' ></div> <div, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${;
-varia, n, t === 'in, f, o'
+varia, n, t === 'in, f, o'}
                  ? 'bg-white, tex, t-gr, a, y-9, 0, 0'}
                  : 'bg-whi, t, e/20, tex, t-whi, t, e'}
              }`}

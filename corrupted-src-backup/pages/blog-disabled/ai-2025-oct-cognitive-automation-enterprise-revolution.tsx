@@ -23,7 +23,7 @@ return (
       <Helmet>),
         <title>Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>),
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
-        <meta name="description;
+        <meta name="description;"
   content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name="keywords;
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
@@ -33,9 +33,9 @@ const CognitiveAutomationEnterpriseRevolution: () => {
     <div></div>
       <Helmet>
         <title>Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>,
-:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx
-        <meta name="description
-  content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name="keywords
+:src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx"
+        <meta name="description"
+  content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name="keywords"
   content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce" />
         <meta name="description"
   content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems.", /><meta name: "keywords;
@@ -284,7 +284,7 @@ const,
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx
               <div></section>
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30"></div>
-                <p className="text-lg font-semibold text-white mb-2>
+                <p className="text-lg font-semibold text-white mb-2>"
                   💡 Key Insight: </p>"
                 <p className="text-lg"></p>
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30"></div>
@@ -297,7 +297,7 @@ const,
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
               <div></div>"
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30"></div>"
-                <p className="text-lg font-semibold text-white mb-2></p>
+                <p className="text-lg font-semibold text-white mb-2></p>"
                   💡 Key,"
   Insight: </p>""
                 <p className="text-lg"></p>"
@@ -408,12 +408,12 @@ const,
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30"></div>
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"></h3>
                     <Target className="w-6 h-6 text-purple-400 ,>
-  2. Decision-Making Capability;
+  2. Decision-Making Capability;"
                   </h3>"
 "
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30"></div>"
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2"></h3>"
-                    <Target className="w-6 h-6 text-purple-400 ,></Target>
+                    <Target className="w-6 h-6 text-purple-400 ,></Target>"
   2. Decision-Making Capability;"
                   </h3>""
                   <p className="mb-4">,"
@@ -528,7 +528,7 @@ Real-world implementations across industries are delivering transformational res
                     </li>
                     <li className="flex items-start gap-2">
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
-                      <CheckCircle className=" />
+                      <CheckCircle className=" />"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>"
                       <span></span><strong>$12M annual savings</strong> in back-office operations</span>"
                     </li>"

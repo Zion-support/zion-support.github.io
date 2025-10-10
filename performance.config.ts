@@ -3,11 +3,11 @@
  * Comprehensive performance monitoring and optimization settings;
  */
 
-export const performanceConfig = {
+export const performanceConfig={
   // Core Web Vitals thresholds;
   webVitals: {,
     lcp: {,
-      good: 2500;
+      good: 2500;}
       needsImprovement: 4000},
     fid: {,
       good: 100;

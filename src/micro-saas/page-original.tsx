@@ -10322,7 +10322,7 @@ const categories = [
       {/* Hero Section */}"
       <section className="pt-24 pb-16 px-4"></section>"
         <div className="max-w-7xl mx-auto text-center"></div>"
-          <h1 className="text-4xl,
+          <h1 className="text-4xl,"
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
 // Micro SAAS Solutions;
@@ -10379,7 +10379,7 @@ const categories = [
           {/* Contact Info */}"
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
             <div className="flex flex-col,
-  md:flex-row items-center justify-center space-y-4,
+  md:flex-row items-center justify-center space-y-4,"
   md:space-y-0,"
   md:space-x-8"></div>"
               <div className="flex items-center space-x-2"></div>"
@@ -10449,11 +10449,11 @@ const categories = [
           <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
 // Choose Your Perfect AI Tools;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
             {microSAASServices.map((service, index) => ()}"
-          <div key={index} className="bg-white rounded-xl shadow-lg p-6,
+          <div key={index} className="bg-white rounded-xl shadow-lg p-6,"
   hover:shadow-2xl transition-all duration-300,"
   hover:scale-105"></div>"
                 <div className="text-center mb-6"></div>"
@@ -10527,10 +10527,9 @@ const categories = [
                   <p className="text-xs text-gray-500 mt-2">
                 </div>"
                 <div className="text-center"></div>
-                  <a></a>
-                    href={/* TODO: Fix JSX expression */}
+                  <ahref={/* TODO: Fix JSX expression */}
   o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,"
   hover:from-purple-700,"
   hover:to-blue-700 transition-all inline-block"
 // >

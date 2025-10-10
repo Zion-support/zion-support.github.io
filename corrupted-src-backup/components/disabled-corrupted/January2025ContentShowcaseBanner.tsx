@@ -305,7 +305,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5'
             >
               <BookOpen, className='w-5 h-5' />
-              className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hove,
+              className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hove,'
   r:sca, l, e-1, 0, 5'
             ></Link>
               <BookOpen, className='w-5 h-5' /></BookOpen>

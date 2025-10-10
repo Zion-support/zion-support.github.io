@@ -4,13 +4,13 @@
 // const packageJsonPath = '/workspace/package.json';
 
 // Add performance optimization scripts;
-packageJson.scripts = {
+packageJson.scripts={
     ...packageJson.scripts,
     'optimize: images': 'node scripts/optimize-images.js',
     'optimize: css': 'node scripts/optimize-css.cjs',
     'optimize: all': 'pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized',
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
-    'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
+    'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',}
 packageJson.scripts = {/* TODO: Fix JSX expression */}
 };
 
@@ -186,7 +186,7 @@ pnpm,
 ,
 fs.writeFileSync('/workspace/README.md', readmeContent);
 // // 8. Create improvement summary;
-const improvementSummary = {
+const improvementSummary={
     timestamp: new Date().toISOString(),
     improvements: [,
         'Performance optimizations implemented',
@@ -202,7 +202,7 @@ const improvementSummary = {
         'Test accessibility features',
         'Verify SEO improvements',
         'Monitor system performance'
-    ];
+    ];}
 const improvementSummary = {/* TODO: Fix JSX expression */}
 };
 

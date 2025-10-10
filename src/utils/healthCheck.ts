@@ -8,7 +8,7 @@ import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 
 // Core Web Vitals thresholds;
-const coreWebVitals = {
+const coreWebVitals={}
   lcp: { good: 2500, needsImprovement: 4000 },
   fid: { good: 100, needsImprovement: 300 },
   cls: { good: 0.1, needsImprovement: 0.25 },
@@ -109,11 +109,11 @@ let status: 'healthy' | 'degraded' | 'unhealthy'
     } else {
       status = 'healthy'
     }
-    const healthStatus: HealthStatus = {
+    const healthStatus: HealthStatus={
       status,
       timestamp: now,
       uptime: now - this.startTime,
-      checks
+      checks}
     };
     // Cache the result
     this.cachedStatus = healthStatus

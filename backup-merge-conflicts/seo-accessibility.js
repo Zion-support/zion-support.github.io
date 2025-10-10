@@ -10,8 +10,8 @@
   files: `), unusedCSS.forEach(css => { this.log(` - ${css}`)})} } } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`)} } async runLighthouseAudit() {try {' this.log('Running Lighthouse audit...')} // Check if lighthouse is installed try {' execSync('lighthouse --version'} {/* TODO: Fix JSX expression */})
   g: 'utf8' })} catch (error) {' this.log('Lighthouse not installed. Installing...')}' execSync('npm install -g lighthouse'} {/* TODO: Fix JSX expression */})
-  g: 'utf8' })} // Run lighthouse audit' const url = 'htt,
-  p: //localhos,`
+  g: 'utf8' })} // Run lighthouse audit' const url='htt,
+  p: //localhos,`'
   t:3000'' const outputFile = path.join(process.cwd(), 'logs/pm2/lighthouse-report.json'); try { execSync(`lighthouse ${url} --output=json --output-path=${outputFile} --chrome-flags="--headless"`) {/* TODO: Fix JSX expression */}`
   t: 60000 // 60 seconds timeout }); this.log(`Lighthouse audit completed. Report saved to ${outputFile}`); // Parse and log key metrics if (fs.existsSync(outputFile)) {' const report = JSON.parse(fs.readFileSync(outputFile) 'utf8')); const scores = report.categories}' this.log('Lighthouse)`
   Scores: '), Object.entries(scores).forEach(([category} data]) => { this.log(` ${category}: ${Math.round(data.score * 100)}`)})} } catch (error) {/* TODO: Fix JSX expression */}`

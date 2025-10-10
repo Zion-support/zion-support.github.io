@@ -22,10 +22,10 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
       <Helmet>
         <title>Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster Discovery, $124M+ Productivity Gains | Zion Tech Group</title>
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
-        <meta name="description;
-  content="Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization." /><meta name="keywords;
+        <meta name="description;"
+  content="Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization." /><meta name="keywords;"
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems" /><link rel="canonical", href=" " />
-  content=" />
+  content=" />"
         <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />,
         <meta name="description",
   content: "Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization.", /><meta name: "keywords;
@@ -90,7 +90,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
           <div></section>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
                 <Brain className="h-8 w-8 text-indigo-400 ,>
-  Transformative Results;
+  Transformative Results;"
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
@@ -107,7 +107,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <ul className="space-y-4 text-lg">,
                 <li className="flex items-start gap-3">,
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
-                  <Search className=" />,
+                  <Search className=" />,"
                   <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                   <span></span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
                 </li>
@@ -117,11 +117,11 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <ul className="space-y-4 text-lg"></ul>
                 <li className="flex items-start gap-3"></li>
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
-                  <Search className=" />
+                  <Search className=" />"
                   <span></span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Zap className=" />
+                  <Zap className=" />"
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>"
                   <span></span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
@@ -439,7 +439,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX ex
 </p>
 </p>
 
-</a>
 </a>
 
 </ul>

@@ -130,7 +130,7 @@ return (
         <meta property: "og:description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />"
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property: "og:title", content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" />,
         <meta property: "og:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
-        <link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/>
+        <link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/>"
       </Helmet>"
 "
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
@@ -161,7 +161,7 @@ return (
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6 border border-purple-400/30"></div>
               <Brain className="w-4 h-4 mr-2 ,>
   October 2025 • Quantum Computing;
-            </div>
+            </div>"
             "
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">,
   Quantum-AI Hybrid Systems 2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">,
@@ -280,7 +280,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
   g:
         g:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /></meta>
         <link,"
-  rel: "canonical", href="http,
+  rel: "canonical", href="http,"
   s://ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/></link>"
       </Helmet>""
 ""
@@ -299,7 +299,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
           <div className="max-w-4xl mx-auto text-center mb-12"></div>"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6 border border-purple-400/30"></div>"
               <Brain className="w-4 h-4 mr-2 ,></Brain>
-  October 2025 • Quantum Computing;
+  October 2025 • Quantum Computing;"
             </div>"
             ""
             <h1 className="text-4xl,"
@@ -359,7 +359,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
               <div></div><CheckCircle className=" />Featured</div>
   </div>
   </div>
-  Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies;
+  Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies;"
               real-world applications, and ROI optimization for 1000x processing speed gains."
             </p>"
 :src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx;
@@ -390,7 +390,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
             <div><Clock className=" />15 min read</div>""
               <div><CheckCircle className=" />Featured</div>
   </div>
-  </div>
+  </div>"
   Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies;"
               real-world applications, and ROI optimization for 1000x processing speed gains.""
             </p>"
@@ -602,7 +602,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5" />,
                     </Link>,
                     <Link to="/services/quantum-computing-consulting">,
-  className= " />,
+  className=" />,"
                   <div></div>"
                     to="/contact""
   className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,"
@@ -614,7 +614,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5" /></Link>
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
-  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold,
+  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold,"
   hover:bg-purple-400,"
   hover:text-white transition-colors>""
               <section className="text-center"></section>
@@ -630,7 +630,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                       <Link className="w-5 h-5" /></Link>
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
-  className= " />
+  className=" />
   )};
 
 export default QuantumAIHybrid2025;
@@ -653,7 +653,6 @@ export default QuantumAIHybrid2025;
 </span>
 
 </a>
-</a>
 
 </ul>
 </ul>
@@ -679,5 +678,5 @@ export default QuantumAIHybrid2025;
 </Check>
 </Check>
 </Check>
-</Check>
+</Check>"
 "

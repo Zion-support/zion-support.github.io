@@ -46,7 +46,7 @@ import Footer from '../components/Footer';
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
 // Key Features;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
             <div className="cyber-card hologram-card p-6"></div>"
@@ -170,8 +170,7 @@ import Footer from '../components/Footer';
                 <li> Email templates</li>
                 <li> Basic analytics</li>
               </ul>"
-              <a href="/contact" className="cyber-button w-full text-center"></a>
-// Get Started;
+              <a// Get Started;
           </a>
             </div>"
             <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div>"
@@ -186,8 +185,7 @@ import Footer from '../components/Footer';
                 <li> Advanced analytics</li>
                 <li> Team collaboration</li>
               </ul>"
-              <a href="/contact" className="cyber-button w-full text-center"></a>
-// Get Started;
+              <a// Get Started;
           </a>
             </div>"
             <div className="cyber-card hologram-card p-8 text-center"></div>"
@@ -201,8 +199,7 @@ import Footer from '../components/Footer';
                 <li> Dedicated support</li>
                 <li> Custom analytics</li>
               </ul>"
-              <a href="/contact" className="cyber-button w-full text-center"></a>
-// Contact Sales;
+              <a// Contact Sales;
           </a>
             </div>
           </div>

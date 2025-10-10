@@ -42,7 +42,7 @@ const [, setIsLoaded] = useState(false);
   const handleError = useCallback(() => {
     setHasError(true);
     if (onError) onError()}, [onError]);
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties={
     ...style,
     ...(fill && {
       position: 'absolute',
@@ -50,7 +50,7 @@ const [, setIsLoaded] = useState(false);
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit:     ,
+      objectFit:     ,}
 $4})
   };
   if (hasError) {

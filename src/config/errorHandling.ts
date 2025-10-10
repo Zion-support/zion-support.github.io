@@ -42,8 +42,8 @@ export interface ErrorConfig {
   maxStackTraceLength: number;
   ignoreErrors: RegExp[];
   severityThreshold: ErrorSeverity}
-export const _errorHandlingConfig: ErrorConfig = {
-
+export const _errorHandlingConfig: ErrorConfig={
+}
 export interface ErrorConfig {// TODO: Add content}
 };
   enabled: boolean;
@@ -67,11 +67,11 @@ export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content}
     /Loading chunk \d+ failed/i],
   severityThreshold: ErrorSeverity.LOW
 };
-export const _errorMessages = {
+export const _errorMessages={
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',
-    serverError:   ,
+    serverError:   ,}
 $4},
   validation: {
     required: 'This field is required.',

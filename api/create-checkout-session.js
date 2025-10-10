@@ -19,11 +19,11 @@ const { productId, userId } = req.body || {};
 
   try {
     // Basic checkout session creation logic;
-const sessionData = {
+const sessionData={
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),
-      status: 'pending'
+      status: 'pending'}
     };
 
     // In a real implementation, you would:

@@ -5,10 +5,10 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Performance optimization patterns;
-const optimizations = {
+const optimizations={
   // Remove unused CSS classes;
   removeUnusedCSS: (content) => {,
-    // This is a simplified version - in production, use tools like PurgeCSS;
+    // This is a simplified version - in production, use tools like PurgeCSS;}
     return content},
 
   // Optimize images (placeholder - would need actual image processing)

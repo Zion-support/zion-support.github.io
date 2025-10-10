@@ -208,7 +208,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             🚀 5 Revolutionary AI Breakthroughs;
         </div>
         {/* Articles Grid */}"
-        <div className="grid,
+        <div className="grid,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-6 mb-10"></div>
           {/* TODO: Fix JSX expression */}
@@ -216,7 +216,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
               to={article.link}"
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20,
   hover:bg-white/20,
-  hover:border-cyan-400/50 transition-all duration-300,
+  hover:border-cyan-400/50 transition-all duration-300,"
   hover:scale-105,"
   hover:shadow-2xl"
             >"
@@ -297,7 +297,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             to="/blog""
             className="bg-gradient-to-r from-cyan-500 to-blue-600,
   hover:from-cyan-400,
-  hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300,
+  hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300,"
   hover:scale-105,"
   hover:shadow-2xl inline-flex items-center gap-3 group""
             <Sparkles className="w-5 h-5" /></Sparkles>

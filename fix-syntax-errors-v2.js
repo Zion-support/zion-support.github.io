@@ -30,11 +30,11 @@ const fixes = [
       // Fix malformed metadata objects
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:'
+        replacement: 'export const metadata={\n  $1: \'$2\',\n  $3:'}
       },
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: "$2",\n  $3:'
+        replacement: 'export const metadata={\n  $1: "$2",\n  $3:'}
       },
       // Fix malformed function parameters
       {
@@ -59,7 +59,7 @@ const fixes = [
       // Fix missing semicolons in exports
       {
         pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const $1 = {\n  $2: \'$3\',\n  $4:'
+        replacement: 'export const $1={\n  $2: \'$3\',\n  $4:'}
       },
       // Fix malformed function declarations
       {
@@ -85,7 +85,7 @@ const specificFixes = [
       // Fix malformed metadata
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:'
+        replacement: 'export const metadata={\n  $1: \'$2\',\n  $3:'}
       },
       // Fix malformed function parameters
       {

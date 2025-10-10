@@ -17,14 +17,14 @@ class AccessibilityEnhancer {
   private issues: AccessibilityIssue[] = [];
 ,;
 constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
+    this.config={
       enableAutoFix: true;
       enableKeyboardNavigation: true;
       enableScreenReaderSupport: true;
       enableColorContrastCheck: true;
       enableFocusManagement: true;
       enableARIALabels: true;
-      ...config,
+      ...config,}
 class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
     }}

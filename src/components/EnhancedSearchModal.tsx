@@ -279,7 +279,7 @@ const getTypeColor = (type: string) => {
                       className={`w-full text-left p-3 rounded-lg transition-colors ${
                         index === selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'
-                          : 'hover:bg-slate-800/50 text-gray-300'
+                          : 'hover:bg-slate-800/50 text-gray-300'}
                       }`}
                     >
                       <div className="flex items-start justify-between">

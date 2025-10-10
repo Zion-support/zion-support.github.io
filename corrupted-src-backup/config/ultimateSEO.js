@@ -1,4 +1,4 @@
-module.exports = {
+module.exports={
   metaTags: {,
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1',
@@ -10,7 +10,7 @@ module.exports = {
       locale: 'en_US',
       site_name: 'Zion Tech Group',
       image: '/images/og-image.jpg',
-      imageWidth: 1200;
+      imageWidth: 1200;}
       imageHeight: 630},
     twitterCards: {,
       card: 'summary_large_image',

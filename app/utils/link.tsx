@@ -44,12 +44,7 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
       window.location.href = href;});
 }
   }</LinkProps>
-<<<<<<< HEAD
   return (<a;);
-=======
-  return (<a]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return(<a;
 import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */});
@@ -62,8 +57,7 @@ export const,
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */});
 }
   };
-  return (<a></a>
-      href={href}
+  return (<ahref={href}
       className={className}
       target={target}
       rel={rel}
@@ -71,27 +65,16 @@ export const,
       aria-label={ariaLabel}
       {...props}
     >{children}</a>
-    </a>
       aria-label={ariaLabel});
       {...props});
     >)
       {children});
     </a>)
-<<<<<<< HEAD
   );)
-=======
-  )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Link;
     >
       {children}
     </a>)
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Link;
 }

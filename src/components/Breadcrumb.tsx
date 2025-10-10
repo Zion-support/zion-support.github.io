@@ -40,13 +40,13 @@ const breadcrumbs = generateBreadcrumbs();
   if (location.pathname === '/') {
     return null}
 ;
-const structuredData = {
+const structuredData={
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": breadcrumbs.map((item, index) => ({
       "@type": "ListItem",
       "position": index + 1,
-      "name": item.name,
+      "name": item.name,}
       "item": `https://ziontechgroup.com${item.href}`
     }))
   };

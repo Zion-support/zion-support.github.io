@@ -10,15 +10,9 @@ interface AccessibilitySettings {
   screenReader: boolean;
   focusVisible: boolean;
 }
-<<<<<<< HEAD
 ;
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
 const [settings, setSettings] = useState<AccessibilitySettings>({
-=======
-
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -94,7 +88,7 @@ const newSettings = { ...settings, [key]: value };
       >
         <Eye className="w-6 h-6" />
       </button>
-
+}
       {/* Accessibility Panel */}
       {isOpen && (
         <div className="fixed bottom-20 right-4 z-50 bg-white rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">
@@ -110,13 +104,13 @@ const newSettings = { ...settings, [key]: value };
               <button
                 onClick={() => updateSetting('highContrast', !settings.highContrast);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
+                  settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'}
                 }`}
                 aria-label="Toggle high contrast"
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                    settings.highContrast ? 'translate-x-6' : 'translate-x-1'}
                   }`}
                 />
               </button>
@@ -131,13 +125,13 @@ const newSettings = { ...settings, [key]: value };
               <button
                 onClick={() => updateSetting('largeText', !settings.largeText);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.largeText ? 'bg-blue-600' : 'bg-gray-200'
+                  settings.largeText ? 'bg-blue-600' : 'bg-gray-200'}
                 }`}
                 aria-label="Toggle large text"
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.largeText ? 'translate-x-6' : 'translate-x-1'
+                    settings.largeText ? 'translate-x-6' : 'translate-x-1'}
                   }`}
                 />
               </button>
@@ -152,13 +146,13 @@ const newSettings = { ...settings, [key]: value };
               <button
                 onClick={() => updateSetting('reducedMotion', !settings.reducedMotion);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200'
+                  settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200'}
                 }`}
                 aria-label="Toggle reduced motion"
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'}
                   }`}
                 />
               </button>
@@ -173,13 +167,13 @@ const newSettings = { ...settings, [key]: value };
               <button
                 onClick={() => updateSetting('screenReader', !settings.screenReader);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.screenReader ? 'bg-blue-600' : 'bg-gray-200'
+                  settings.screenReader ? 'bg-blue-600' : 'bg-gray-200'}
                 }`}
                 aria-label="Toggle screen reader mode"
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.screenReader ? 'translate-x-6' : 'translate-x-1'
+                    settings.screenReader ? 'translate-x-6' : 'translate-x-1'}
                   }`}
                 />
               </button>
@@ -194,13 +188,13 @@ const newSettings = { ...settings, [key]: value };
               <button
                 onClick={() => updateSetting('focusVisible', !settings.focusVisible);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.focusVisible ? 'bg-blue-600' : 'bg-gray-200'
+                  settings.focusVisible ? 'bg-blue-600' : 'bg-gray-200'}
                 }`}
                 aria-label="Toggle enhanced focus"
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.focusVisible ? 'translate-x-6' : 'translate-x-1'
+                    settings.focusVisible ? 'translate-x-6' : 'translate-x-1'}
                   }`}
                 />
               </button>
@@ -219,7 +213,7 @@ const newSettings = { ...settings, [key]: value };
       <style jsx global>{`
         .high-contrast {
           --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
+          --tw-text-opacity: 1;}
         }
         
         .high-contrast * {
@@ -261,8 +255,6 @@ const newSettings = { ...settings, [key]: value };
       `}</style>
     </>
   );
-<<<<<<< HEAD
-=======
 interface EnhancedAccessibilityProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -282,7 +274,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     // Skip to main content functionality
     if (typeof window !== 'undefined') {
       const skipLink = document.createElement('a');
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
@@ -436,7 +427,6 @@ const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement, enableReducedMotion]);
 
   return null;
-<<<<<<< HEAD
 }
 export default EnhancedAccessibility;
     // Enhance focus management;
@@ -472,9 +462,6 @@ const style = document.createElement('style');
     addLandmarks();
     addSkipLinks();
     enhanceFocusManagement();
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     // Cleanup function
     return () => {;

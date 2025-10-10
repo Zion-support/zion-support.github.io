@@ -86,8 +86,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                   >
                     Twitter;
                   </a>
-                  <a></a>
-                    href={/* TODO: Fix JSX expression */}`
+                  <ahref={/* TODO: Fix JSX expression */}`
   s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
                     target="_blank""
                     rel="noopener noreferrer""
@@ -98,10 +97,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                   </a>
                 </div>
               </div>
-              <a;
-                href="/blog"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              <a></a>"
+              <a"
                 href="/blog""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"

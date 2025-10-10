@@ -71,9 +71,9 @@ const identify = (userId: string, traits?: Record<string, any>) => {
 }
   };
 ;
-const value: AnalyticsContextType = {
+const value: AnalyticsContextType={
     track,
-    page,
+    page,}
     identify};
 
   return (

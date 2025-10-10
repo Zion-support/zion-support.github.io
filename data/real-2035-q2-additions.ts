@@ -99,18 +99,10 @@ varian,
     rating: 4.7;
     reviews: 12}
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
-<<<<<<< HEAD
     market_size: '$10B+ email productivity'
     growth_rate: '15% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$10B+ email productivity',
-    growth_rate: '15% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',
@@ -133,18 +125,10 @@ variant: 'network - futuristic'
     useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting'],
     roi: 'Cuts manual email time by 6080%',
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons'],
-<<<<<<< HEAD
     marketSize: '$10B+ email productivity'
     growthRate: '15% CAGR';
 variant: 'network-futuristic'
     contactInfo: contact;
-=======
-    marketSize: '$10B+ email productivity',
-    growthRate: '15% CAGR',
-    variant: 'network-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',
     launchDate: '2025-08-20',
@@ -312,18 +296,10 @@ varian,
     use_cases: ['NPS', 'Feature feedback', 'Onboarding'],
     roi: '24 x higher completion on mobile',
     competitors: ['Typeform', 'SurveyMonkey'],
-<<<<<<< HEAD
     market_size: '$7B research tooling'
     growth_rate: '9% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    market_size: '$7B research tooling',
-    growth_rate: '9% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Survey builder + delivery channels + analytics + export',
@@ -430,18 +406,10 @@ varian,
     use_cases: ['Agency ops', 'Clinic ops', 'Boutique retail'],
     roi: 'Saves 35 hrs / week per user',
     competitors: ['Notion templates', 'ClickUp'],
-<<<<<<< HEAD
     market_size: '$3B productivity niche'
     growth_rate: '8% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$3B productivity niche',
-    growth_rate: '8% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Templates + KPI widgets + export',
     launch_date: '2025 - 08 - 20',
@@ -547,18 +515,10 @@ varian,
     use_cases: ['Webinars', 'Town halls', 'Customer training'],
     roi: 'Saves 50% ops time per event',
     competitors: ['Eventbrite', 'Hopin (basic)'],
-<<<<<<< HEAD
     market_size: '$6B event tooling'
     growth_rate: '10% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$6B event tooling',
-    growth_rate: '10% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Ticketing + agenda + comms + analytics',
     launch_date: '2025 - 08 - 20',
@@ -660,18 +620,10 @@ varian,
     use_cases: ['SaaS referrals', 'Course affiliates', 'Partner programs'],
     roi: '+1525% new revenue from partners',
     competitors: ['FirstPromoter', 'Rewardful'],
-<<<<<<< HEAD
     market_size: '$12B affiliate'
     growth_rate: '9% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    market_size: '$12B affiliate',
-    growth_rate: '9% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Link generator + rules + exports',
     launch_date: '2025 - 08 - 20',
@@ -774,18 +726,10 @@ varian,
     use_cases: ['Website analytics', 'Campaign tracking'],
     roi: 'Clarity on what converts, 1020% lift',
     competitors: ['Fathom', 'Plausible'],
-<<<<<<< HEAD
     market_size: '$2B privacy analytics'
     growth_rate: '14% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$2B privacy analytics',
-    growth_rate: '14% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Tracker script + dashboard',
     launch_date: '2025 - 08 - 20',
@@ -889,18 +833,10 @@ varian,
     use_cases: ['IT support', 'Asset requests', 'Approvals'],
     roi: '2540% faster resolution time',
     competitors: ['Freshservice', 'Jira Service Management'],
-<<<<<<< HEAD
     market_size: '$10B ITSM SMB'
     growth_rate: '11% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$10B ITSM SMB',
-    growth_rate: '11% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Ticketing + KB + SLAs + reports',
     launch_date: '2025 - 08 - 20',
@@ -1004,31 +940,17 @@ varian,
     use_cases: ['RMAs', 'Return analytics'],
     roi: 'Reduce returns costs by 1020%',
     competitors: ['Loop Returns', 'Happy Returns (PayPal)'],
-<<<<<<< HEAD
     market_size: '$4B returns tooling'
     growth_rate: '13% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    market_size: '$4B returns tooling',
-    growth_rate: '13% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Portal + labels + analytics',
     launch_date: '2025 - 08 - 20',
     customers: 14;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 5},
     id: 'automated - email - followups'
-=======
-    reviews: 5;
-  },
-    id: 'automated - email - followups',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Automated Email Followups',
     tagline: 'No - lead - left - behind sequences across inboxes',
     price: '$15',
@@ -1123,18 +1045,10 @@ varian,
     use_cases: ['Lead follow - up', 'Ticket nudges'],
     roi: '+1025% more replies',
     competitors: ['Mailshake (lite)', 'GMass'],
-<<<<<<< HEAD
     market_size: '$5B sales engagement (SMB)'
     growth_rate: '10% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$5B sales engagement (SMB)',
-    growth_rate: '10% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Sequencer + inbox + analytics',
     launch_date: '2025 - 08 - 20',
@@ -1230,18 +1144,10 @@ varian,
     use_cases: ['Accessibility', 'SEO content'],
     roi: 'Saves 24 hrs / episode',
     competitors: ['Rev', 'Descript (lite)'],
-<<<<<<< HEAD
     market_size: '$1B+ transcription'
     growth_rate: '12% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$1B+ transcription',
-    growth_rate: '12% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Uploader + ASR + export',
     launch_date: '2025 - 08 - 20',
@@ -1345,18 +1251,10 @@ varian,
     use_cases: ['SEO rewrites', 'Gap analysis'],
     roi: '+2040% organic traffic lift',
     competitors: ['Surfer SEO', 'MarketMuse'],
-<<<<<<< HEAD
     market_size: '$2B SEO tooling'
     growth_rate: '11% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$2B SEO tooling',
-    growth_rate: '11% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Crawler + editor plugin + suggestions',
     launch_date: '2025 - 08 - 20',
@@ -1458,18 +1356,10 @@ varian,
     use_cases: ['Content calendar', 'Repurposing'],
     roi: 'Saves 46 hrs / week',
     competitors: ['Buffer', 'Hootsuite (lite)'],
-<<<<<<< HEAD
     market_size: '$4B social tooling'
     growth_rate: '10% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    market_size: '$4B social tooling',
-    growth_rate: '10% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Calendar + generator + queue',
     launch_date: '2025 - 08 - 20',
@@ -1571,18 +1461,10 @@ varian,
     use_cases: ['Lead routing', 'Scoring'],
     roi: 'Improves MQLSQL by 1020%',
     competitors: ['Clearbit (lite)', 'Apollo enrichment'],
-<<<<<<< HEAD
     market_size: '$3B enrichment'
     growth_rate: '9% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$3B enrichment',
-    growth_rate: '9% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'REST + dashboard + quotas',
     launch_date: '2025 - 08 - 20',
@@ -1684,31 +1566,17 @@ varian,
     use_cases: ['Compliance', 'User trust'],
     roi: 'Avoid fines, preserve UX',
     competitors: ['OneTrust (lite)', 'CookieYes'],
-<<<<<<< HEAD
     market_size: '$4B privacy tooling'
     growth_rate: '14% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$4B privacy tooling',
-    growth_rate: '14% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Banner + preferences + logs',
     launch_date: '2025 - 08 - 20',
     customers: 37;
     rating: 4 && 4.7;
-<<<<<<< HEAD
     reviews: 10},
     id: 'cookie - scanner - pro'
-=======
-    reviews: 10;
-  },
-    id: 'cookie - scanner - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Cookie Scanner Pro',
     tagline: 'Auto - detects cookies + trackers and updates your policy',
     price: '$9',
@@ -1801,36 +1669,19 @@ varian,
     technology: ['Crawler', 'Classifier'],
     integrations: ['GitHub Actions'],
     use_cases: ['Policy updates', 'Audits'],
-<<<<<<< HEAD
     roi: 'Automates tedious checks'
     competitors: ['Cookiebot (lite)']
     market_size: '$1B cookie tools'
     growth_rate: '8% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    roi: 'Automates tedious checks',
-    competitors:
-        competitors: ['Cookiebot (lite)']
-    market_size: '$1B cookie tools',
-    growth_rate: '8% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Scanner + policy generator',
     launch_date: '2025 - 08 - 20',
     customers: 19;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 5},
     id: 'statuspage - sla - tracker'
-=======
-    reviews: 5;
-  },
-    id: 'statuspage - sla - tracker',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'StatusPage SLA Tracker',
     tagline: 'Track uptime / incidents and publish SLA reports',
     price: '$19',
@@ -1923,36 +1774,19 @@ varian,
     technology: ['Next.js', 'CRON'],
     integrations: ['Pingdom', 'UptimeRobot'],
     use_cases: ['SLA reports', 'Status page'],
-<<<<<<< HEAD
     roi: 'Reduce support tickets ~20%'
     competitors: ['Statuspage (lite)']
     market_size: '$1B status tools'
     growth_rate: '9% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    roi: 'Reduce support tickets ~20%',
-    competitors:
-        competitors: ['Statuspage (lite)']
-    market_size: '$1B status tools',
-    growth_rate: '9% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Monitors + incidents + pages',
     launch_date: '2025 - 08 - 20',
     customers: 11;
     rating: 4 && 4.4;
-<<<<<<< HEAD
     reviews: 3},
     id: 'agentic - lead - qualifier'
-=======
-    reviews: 3;
-  },
-    id: 'agentic - lead - qualifier',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Agentic Lead Qualifier',
     tagline: 'Website chat agent that pre - qualifies and routes leads',
     price: '$29',
@@ -2038,18 +1872,10 @@ varian,
     integrations: ['HubSpot', 'Calendly'],
     use_cases: ['Lead capture', 'Meeting booking'],
     competitors: ['Drift (lite)', 'Intercom Fin'],
-<<<<<<< HEAD
     market_size: '$3B chatbots'
     growth_rate: '12% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$3B chatbots',
-    growth_rate: '12% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Widget + flows + routing',
     launch_date: '2025 - 08 - 20',
@@ -2121,18 +1947,10 @@ varian,
     use_cases: ['DSAR fulfillment'],
     roi: 'Avoid compliance toil and risk',
     competitors: ['Transcend (lite)', 'Osano'],
-<<<<<<< HEAD
     market_size: '$6B privacy ops'
     growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    market_size: '$6B privacy ops',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Portal + workflow + exports',
     launch_date: '2025 - 08 - 20',
@@ -2199,18 +2017,10 @@ varian,
     use_cases: ['Lead capture', 'Meeting booking'],
     roi: '+1530% qualified demos',
     competitors: ['Drift (lite)', 'Intercom Fin'],
-<<<<<<< HEAD
     market_size: '$3B chatbots'
     growth_rate: '12% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$3B chatbots',
-    growth_rate: '12% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Widget + flows + routing',
     launch_date: '2025 - 08 - 20',
@@ -2312,31 +2122,17 @@ varian,
     use_cases: ['DSAR fulfillment'],
     roi: 'Avoid compliance toil and risk',
     competitors: ['Transcend (lite)', 'Osano'],
-<<<<<<< HEAD
     market_size: '$6B privacy ops'
     growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    market_size: '$6B privacy ops',
-    growth_rate: '18% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Portal + workflow + exports',
     launch_date: '2025 - 08 - 20',
     customers: 10;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 4},
     id: 'feature-flag-auditor'
-=======
-    reviews: 4;
-  },
-    id: 'feature-flag-auditor',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end-of-life automation',
     price: '$19',
@@ -2433,18 +2229,10 @@ varian,
     useCases: ['Cleanup debt', 'Reduce risk']
     roi: 'Avoid outages, reduce toil',
   competitors: ['LaunchDarkly add-ons'];
-<<<<<<< HEAD
     marketSize: '$1 B flags'
     growthRate: '10% CAGR';
 variant: 'ai-futuristic'
     contactInfo: contact;
-=======
-    marketSize: '$1 B flags',
-    growthRate: '10% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Scanner + PR bot',
     launchDate: '2025-08-20',
@@ -2525,31 +2313,17 @@ varian,
     use_cases: ['Cleanup debt', 'Reduce risk'],
     roi: 'Avoid outages, reduce toil',
     competitors: ['LaunchDarkly add - ons']
-<<<<<<< HEAD
     market_size: '$1B flags'
     growth_rate: '10% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$1B flags',
-    growth_rate: '10% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Scanner + PR bot',
     launch_date: '2025 - 08 - 20',
     customers: 8;
     rating: 4 && 4.4;
-<<<<<<< HEAD
     reviews: 3},
     id: 'postgres - index - advisor - pro'
-=======
-    reviews: 3;
-  },
-    id: 'postgres - index - advisor - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
     price: '$79',
@@ -2634,23 +2408,12 @@ varian,
     technology: ['pg_stat_statements', 'Advisor'],
     integrations: ['GitHub Actions'],
     use_cases: ['DB tuning', 'Perf boosts'],
-<<<<<<< HEAD
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)']
     market_size: '$2B DB tuning'
     growth_rate: '9% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    roi: 'Cut query costs 2050%',
-    competitors:
-        competitors: ['pganalyze (adjacent)']
-    market_size: '$2B DB tuning',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Collector + advisor + PRs',
     launch_date: '2025 - 08 - 20',
@@ -2704,23 +2467,12 @@ varian,
     technology: ['AWS S3', 'Cost models'],
     integrations: ['AWS'],
     use_cases: ['Storage hygiene', 'Cost cuts'],
-<<<<<<< HEAD
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)']
     market_size: '$3B cloud cost'
     growth_rate: '12% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    roi: 'Save 1030% storage spend',
-    competitors:
-        competitors: ['Kubecost (adjacent)']
-    market_size: '$3B cloud cost',
-    growth_rate: '12% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Analyzer + simulator + rule export',
     launch_date: '2025 - 08 - 20',
@@ -2776,31 +2528,17 @@ varian,
     use_cases: ['Compliance audits', 'Risk reduction'],
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie'],
-<<<<<<< HEAD
     market_size: '$5B data security'
     growth_rate: '15% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$5B data security',
-    growth_rate: '15% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Connectors + scan jobs + exports',
     launch_date: '2025 - 08 - 20',
     customers: 13;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 5},
     id: 'api-breaking-change-watcher'
-=======
-    reviews: 5;
-  },
-    id: 'api-breaking-change-watcher',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
     price: '$49',
@@ -2816,31 +2554,17 @@ variant: 'ai - futuristic'
     use_cases: ['Schema governance', 'Release safety'],
     roi: 'Fewer incidents, faster integration',
     competitors: ['Stoplight (adjacent)']
-<<<<<<< HEAD
     market_size: '$1B API tooling'
     growth_rate: '9% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$1B API tooling',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Registry + diff engine + CI',
     launch_date: '2025 - 08 - 20',
     customers: 12;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 3},
     id: 'postgres-index-advisor-pro'
-=======
-    reviews: 3;
-  },
-    id: 'postgres-index-advisor-pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
     price: '$79',
@@ -2969,23 +2693,12 @@ varian,
     technology: ['pg_stat_statements', 'Advisor']
     integrations: ['GitHub Actions'],
     useCases: ['DB tuning', 'Perf boosts']
-<<<<<<< HEAD
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)'];
     marketSize: '$2 B DB tuning'
     growthRate: '9% CAGR';
 variant: 'network-futuristic'
     contactInfo: contact;
-=======
-    roi: 'Cut query costs 2050%',
-    competitors:
-        competitors: ['pganalyze (adjacent)'];
-    marketSize: '$2 B DB tuning',
-    growthRate: '9% CAGR',
-    variant: 'network-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Collector + advisor + PRs',
     launchDate: '2025-08-20',
@@ -3080,36 +2793,19 @@ varian,
     technology: ['AWS S3', 'Cost models']
     integrations: ['AWS'],
     useCases: ['Storage hygiene', 'Cost cuts']
-<<<<<<< HEAD
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)'];
     marketSize: '$3 B cloud cost'
     growthRate: '12% CAGR';
 variant: 'holographic-matrix'
     contactInfo: contact;
-=======
-    roi: 'Save 1030% storage spend',
-    competitors:
-        competitors: ['Kubecost (adjacent)'];
-    marketSize: '$3 B cloud cost',
-    growthRate: '12% CAGR',
-    variant: 'holographic-matrix',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Analyzer + simulator + rule export',
     launchDate: '2025-08-20',
     customers: 17;
     rating: 4.5;
-<<<<<<< HEAD
     reviews: 4}
     id: 'pii-discovery-scanner'
-=======
-    reviews: 4;
-  }
-    id: 'pii-discovery-scanner',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
     price: '$89',
@@ -3206,18 +2902,10 @@ varian,
     useCases: ['Compliance audits', 'Risk reduction']
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie']
-<<<<<<< HEAD
     marketSize: '$5 B data security'
     growthRate: '15% CAGR';
 variant: 'ai-futuristic'
     contactInfo: contact;
-=======
-    marketSize: '$5 B data security',
-    growthRate: '15% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Connectors + scan jobs + exports',
     launchDate: '2025-08-20',
@@ -3298,31 +2986,17 @@ varian,
     useCases: ['Cleanup debt', 'Reduce risk'];
     roi: 'Avoid outages, reduce toil',
     competitors: ['LaunchDarkly add-ons']
-<<<<<<< HEAD
     marketSize: '$1B flags'
     growthRate: '10% CAGR';
 variant: 'ai-futuristic'
     contactInfo: contact;
-=======
-    marketSize: '$1B flags',
-    growthRate: '10% CAGR',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Scanner + PR bot',
     launchDate: '2025-08-20',
     customers: 8;
     rating: 4.4;
-<<<<<<< HEAD
     reviews: 3},
     id: 'postgres - index - advisor - pro'
-=======
-    reviews: 3;
-  },
-    id: 'postgres - index - advisor - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
     price: '$79',
@@ -3415,36 +3089,19 @@ varian,
     technology: ['pg_stat_statements', 'Advisor'],
     integrations: ['GitHub Actions'],
     use_cases: ['DB tuning', 'Perf boosts'],
-<<<<<<< HEAD
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)']
     market_size: '$2B DB tuning'
     growth_rate: '9% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    roi: 'Cut query costs 2050%',
-    competitors:
-        competitors: ['pganalyze (adjacent)']
-    market_size: '$2B DB tuning',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Collector + advisor + PRs',
     launch_date: '2025 - 08 - 20',
     customers: 15;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 5},
     id: 's3 - lifecycle - optimizer'
-=======
-    reviews: 5;
-  },
-    id: 's3 - lifecycle - optimizer',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
     price: '$59',
@@ -3537,36 +3194,19 @@ varian,
     technology: ['AWS S3', 'Cost models'],
     integrations: ['AWS'],
     use_cases: ['Storage hygiene', 'Cost cuts'],
-<<<<<<< HEAD
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)']
     market_size: '$3B cloud cost'
     growth_rate: '12% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    roi: 'Save 1030% storage spend',
-    competitors:
-        competitors: ['Kubecost (adjacent)']
-    market_size: '$3B cloud cost',
-    growth_rate: '12% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Analyzer + simulator + rule export',
     launch_date: '2025 - 08 - 20',
     customers: 17;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 4},
     id: 'pii - discovery - scanner'
-=======
-    reviews: 4;
-  },
-    id: 'pii - discovery - scanner',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
     price: '$89',
@@ -3661,31 +3301,17 @@ varian,
     use_cases: ['Compliance audits', 'Risk reduction'],
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie'],
-<<<<<<< HEAD
     market_size: '$5B data security'
     growth_rate: '15% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$5B data security',
-    growth_rate: '15% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Connectors + scan jobs + exports',
     launch_date: '2025 - 08 - 20',
     customers: 13;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 5},
     id: 'api-breaking-change-watcher'
-=======
-    reviews: 5;
-  },
-    id: 'api-breaking-change-watcher',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
     price: '$49',
@@ -3800,18 +3426,10 @@ varian,
     use_cases: ['Schema governance', 'Release safety'],
     roi: 'Fewer incidents, faster integration',
     competitors: ['Stoplight (adjacent)']
-<<<<<<< HEAD
     market_size: '$1B API tooling'
     growth_rate: '9% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$1B API tooling',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Registry + diff engine + CI',
     launch_date: '2025 - 08 - 20',
@@ -3897,31 +3515,17 @@ varian,
     useCases: ['Schema governance', 'Release safety']
     roi: 'Fewer incidents, faster integration',
   competitors: ['Stoplight (adjacent)'];
-<<<<<<< HEAD
     marketSize: '$1 B API tooling'
     growthRate: '9% CAGR';
 variant: 'network-futuristic'
     contactInfo: contact;
-=======
-    marketSize: '$1 B API tooling',
-    growthRate: '9% CAGR',
-    variant: 'network-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Registry + diff engine + CI',
     launchDate: '2025-08-20',
     customers: 12;
     rating: 4.5;
-<<<<<<< HEAD
     reviews: 3}
     id: 'feature - flag - auditor'
-=======
-    reviews: 3;
-  }
-    id: 'feature - flag - auditor',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end - of - life automation',
     price: '$19',
@@ -4016,31 +3620,17 @@ varian,
     use_cases: ['Cleanup debt', 'Reduce risk'],
     roi: 'Avoid outages, reduce toil',
     competitors: ['LaunchDarkly add - ons']
-<<<<<<< HEAD
     market_size: '$1B flags'
     growth_rate: '10% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$1B flags',
-    growth_rate: '10% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Scanner + PR bot',
     launch_date: '2025 - 08 - 20',
     customers: 8;
     rating: 4 && 4.4;
-<<<<<<< HEAD
     reviews: 3},
     id: 'postgres - index - advisor - pro'
-=======
-    reviews: 3;
-  },
-    id: 'postgres - index - advisor - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
     price: '$79',
@@ -4133,36 +3723,19 @@ varian,
     technology: ['pg_stat_statements', 'Advisor'],
     integrations: ['GitHub Actions'],
     use_cases: ['DB tuning', 'Perf boosts'],
-<<<<<<< HEAD
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)']
     market_size: '$2B DB tuning'
     growth_rate: '9% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    roi: 'Cut query costs 2050%',
-    competitors:
-        competitors: ['pganalyze (adjacent)']
-    market_size: '$2B DB tuning',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Collector + advisor + PRs',
     launch_date: '2025 - 08 - 20',
     customers: 15;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 5},
     id: 's3 - lifecycle - optimizer'
-=======
-    reviews: 5;
-  },
-    id: 's3 - lifecycle - optimizer',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
     price: '$59',
@@ -4255,36 +3828,19 @@ varian,
     technology: ['AWS S3', 'Cost models'],
     integrations: ['AWS'],
     use_cases: ['Storage hygiene', 'Cost cuts'],
-<<<<<<< HEAD
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)']
     market_size: '$3B cloud cost'
     growth_rate: '12% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    roi: 'Save 1030% storage spend',
-    competitors:
-        competitors: ['Kubecost (adjacent)']
-    market_size: '$3B cloud cost',
-    growth_rate: '12% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Analyzer + simulator + rule export',
     launch_date: '2025 - 08 - 20',
     customers: 17;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 4},
     id: 'pii - discovery - scanner'
-=======
-    reviews: 4;
-  },
-    id: 'pii - discovery - scanner',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
     price: '$89',
@@ -4379,31 +3935,17 @@ varian,
     use_cases: ['Compliance audits', 'Risk reduction'],
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie'],
-<<<<<<< HEAD
     market_size: '$5B data security'
     growth_rate: '15% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: '$5B data security',
-    growth_rate: '15% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Connectors + scan jobs + exports',
     launch_date: '2025 - 08 - 20',
     customers: 13;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 5},
     id: 'api-breaking-change-watcher'
-=======
-    reviews: 5;
-  },
-    id: 'api-breaking-change-watcher',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
     price: '$49',
@@ -4521,31 +4063,17 @@ varian,
     use_cases: ['Schema governance', 'Release safety'],
     roi: 'Fewer incidents, faster integration',
     competitors: ['Stoplight (adjacent)']
-<<<<<<< HEAD
     market_size: '$1B API tooling'
     growth_rate: '9% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    market_size: '$1B API tooling',
-    growth_rate: '9% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Registry + diff engine + CI',
     launch_date: '2025 - 08 - 20',
     customers: 12;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 3},
     id: 'synthetic - journey - monitor'
-=======
-    reviews: 3;
-  },
-    id: 'synthetic - journey - monitor',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
     price: '$39',
@@ -4640,18 +4168,10 @@ varian,
     use_cases: ['Regression checks', 'SLO monitoring'],
     roi: 'Prevent broken funnels',
     competitors: ['Checkly', 'Datadog Synthetics'],
-<<<<<<< HEAD
     market_size: '$2B testing / obs'
     growth_rate: '10% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    market_size: '$2B testing / obs',
-    growth_rate: '10% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Recorder + runner + alerts',
     launch_date: '2025 - 08 - 20',
@@ -4753,36 +4273,19 @@ varian,
     technology: ['AWS / GCP / IAM'],
     integrations: ['AWS', 'GCP'],
     use_cases: ['Reduce blast radius']
-<<<<<<< HEAD
     roi: 'Reduce risk + audit toil'
     competitors: ['Cloud Custodian (DIY)']
     market_size: '$3B cloud sec'
     growth_rate: '13% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    roi: 'Reduce risk + audit toil',
-    competitors:
-        competitors: ['Cloud Custodian (DIY)']
-    market_size: '$3B cloud sec',
-    growth_rate: '13% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Collector + analyzer + PRs',
     launch_date: '2025 - 08 - 20',
     customers: 9;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 3},
     id: 'warehouse - cost - optimizer'
-=======
-    reviews: 3;
-  },
-    id: 'warehouse - cost - optimizer',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Data Warehouse Cost Optimizer',
     tagline: 'Right - size warehouses and schedule off - peak workloads',
     price: '$99',
@@ -4875,36 +4378,19 @@ varian,
     technology: ['Snowflake / BigQuery APIs'],
     integrations: ['dbt', 'GHA'],
     use_cases: ['Cost control', 'Ops hygiene'],
-<<<<<<< HEAD
     roi: '1030% lower DW costs'
     competitors: ['SelectStar (adjacent)']
     market_size: '$2B finops DW'
     growth_rate: '12% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
-=======
-    roi: '1030% lower DW costs',
-    competitors:
-        competitors: ['SelectStar (adjacent)']
-    market_size: '$2B finops DW',
-    growth_rate: '12% CAGR',
-    variant: 'network - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Analyzer + simulator + PRs',
     launch_date: '2025 - 08 - 20',
     customers: 7;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 3},
     id: 'email - warmup - monitor'
-=======
-    reviews: 3;
-  },
-    id: 'email - warmup - monitor',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Email Warmup & Reputation Monitor',
     tagline: 'Track sender reputation and run inbox placement tests',
     price: '$39',
@@ -4999,31 +4485,17 @@ varian,
     use_cases: ['Deliverability', 'Inbox tests'],
     roi: 'Protects domain reputation',
     competitors: ['Warmup Inbox', 'Mailreach'],
-<<<<<<< HEAD
     market_size: '$1B deliverability'
     growth_rate: '9% CAGR';
 variant: 'holographic - matrix'
     contact_info: contact;
-=======
-    market_size: '$1B deliverability',
-    growth_rate: '9% CAGR',
-    variant: 'holographic - matrix',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Warmup + tests + alerts',
     launch_date: '2025 - 08 - 20',
     customers: 16;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 4},
     id: 'ai - meeting - to - ticket'
-=======
-    reviews: 4;
-  },
-    id: 'ai - meeting - to - ticket',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'AI MeetingtoTicket Copilot',
     tagline: 'Turn meeting action items into Jira / GitHub tickets',
     price: '$25',
@@ -5116,23 +4588,12 @@ varian,
     technology: ['ASR', 'LLM'],
     integrations: ['Jira', 'GitHub'],
     use_cases: ['Project follow - through']
-<<<<<<< HEAD
     roi: 'Close the loop on action items'
     competitors: ['Fathom + manual']
     market_size: '$2B productivity'
     growth_rate: '9% CAGR';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    roi: 'Close the loop on action items',
-    competitors:
-        competitors: ['Fathom + manual']
-    market_size: '$2B productivity',
-    growth_rate: '9% CAGR',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Transcribe + extract + tickets',
     launch_date: '2025 - 08 - 20',
@@ -5236,23 +4697,12 @@ export const,
 		technology: ['Gmail/Outlook APIsLLMWebhook'];
 		integrations: ['GmailOutlookHubSpotPipedriveSlack'];
 		useCases: ['Inbound triageNurture sequencesSLA reporting'];
-<<<<<<< HEAD
 		roi: 'Cuts manual email time by 6080%'
 		competitors: ['Superhuman AIFront AIGmail add-ons'];
 		marketSize: '$10 B+ email productivity'
 		growthRate: '15% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Cuts manual email time by 6080%',
-		competitors:
-        competitors: ['Superhuman AIFront AIGmail add-ons'];
-		marketSize: '$10 B+ email productivity',
-		growthRate: '15% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',
 		launchDate: '2025-08-20',
@@ -5282,23 +4732,12 @@ variant: 'network-futuristic'
 		technology: ['TwilioNext && TwilioNext.jsVercel/Netlify'];
 		integrations: ['HubSpotSheetsSlack'];
 		useCases: ['NPSFeature feedbackOnboarding'];
-<<<<<<< HEAD
 		roi: '24 x higher completion on mobile'
 		competitors: ['TypeformSurveyMonkey'];
 		marketSize: '$7 B research tooling'
 		growthRate: '9% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: '24 x higher completion on mobile',
-		competitors:
-        competitors: ['TypeformSurveyMonkey'];
-		marketSize: '$7 B research tooling',
-		growthRate: '9% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Survey builder + delivery channels + analytics + export',
 		launchDate: '2025-08-20',
@@ -5330,23 +4769,12 @@ variant: 'holographic-matrix'
 		technology: ['Next && Next.jsSQLite/Postgres'];
 		integrations: ['Google CalendarOutlook'];
 		useCases: ['Agency opsClinic opsBoutique retail'];
-<<<<<<< HEAD
 		roi: 'Saves 35 hrs/week per user'
 		competitors: ['Notion templatesClickUp'];
 		marketSize: '$3 B productivity niche'
 		growthRate: '8% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Saves 35 hrs/week per user',
-		competitors:
-        competitors: ['Notion templatesClickUp'];
-		marketSize: '$3 B productivity niche',
-		growthRate: '8% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Templates + KPI widgets + export',
 		launchDate: '2025-08-20',
@@ -5378,23 +4806,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsStripeTwilio'];
 		integrations: ['ZoomGoogle CalendarSlack'];
 		useCases: ['WebinarsTown hallsCustomer training'];
-<<<<<<< HEAD
 		roi: 'Saves 50% ops time per event'
 		competitors: ['EventbriteHopin (basic)'];
 		marketSize: '$6 B event tooling'
 		growthRate: '10% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Saves 50% ops time per event',
-		competitors:
-        competitors: ['EventbriteHopin (basic)'];
-		marketSize: '$6 B event tooling',
-		growthRate: '10% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Ticketing + agenda + comms + analytics',
 		launchDate: '2025-08-20',
@@ -5424,23 +4841,12 @@ variant: 'network-futuristic'
 		technology: ['Next && Next.jsPostgres'];
 		integrations: ['StripePaddleShopify'];
 		useCases: ['SaaS referralsCourse affiliatesPartner programs'];
-<<<<<<< HEAD
 		roi: '+1525% new revenue from partners'
 		competitors: ['FirstPromoterRewardful'];
 		marketSize: '$12 B affiliate'
 		growthRate: '9% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: '+1525% new revenue from partners',
-		competitors:
-        competitors: ['FirstPromoterRewardful'];
-		marketSize: '$12 B affiliate',
-		growthRate: '9% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Link generator + rules + exports',
 		launchDate: '2025-08-20',
@@ -5468,23 +4874,12 @@ variant: 'holographic-matrix'
 		technology: ['Next && Next.jsEdge analytics'];
 		integrations: ['ShopifyWordPress'];
 		useCases: ['Website analyticsCampaign tracking'],
-<<<<<<< HEAD
 		roi: 'Clarity on what converts, 1020% lift'
 		competitors: ['FathomPlausible'];
 		marketSize: '$2 B privacy analytics'
 		growthRate: '14% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Clarity on what converts, 1020% lift',
-		competitors:
-        competitors: ['FathomPlausible'];
-		marketSize: '$2 B privacy analytics',
-		growthRate: '14% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Tracker script + dashboard',
 		launchDate: '2025-08-20',
@@ -5514,23 +4909,12 @@ variant: 'network-futuristic'
 		technology: ['Next && Next.jsPostgres'];
 		integrations: ['OktaGoogleSlack'];
 		useCases: ['IT supportAsset requestsApprovals'];
-<<<<<<< HEAD
 		roi: '2540% faster resolution time'
 		competitors: ['FreshserviceJira Service Management'];
 		marketSize: '$10 B ITSM SMB'
 		growthRate: '11% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: '2540% faster resolution time',
-		competitors:
-        competitors: ['FreshserviceJira Service Management'];
-		marketSize: '$10 B ITSM SMB',
-		growthRate: '11% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Ticketing + KB + SLAs + reports',
 		launchDate: '2025-08-20',
@@ -5560,29 +4944,17 @@ variant: 'ai-futuristic'
 		technology: ['Shopify APINext && APINext.js'];
 		integrations: ['ShopifyShippo'];
 		useCases: ['RMAsReturn analytics'];
-<<<<<<< HEAD
 		roi: 'Reduce returns costs by 1020%'
 		competitors: ['Loop ReturnsHappy Returns (PayPal)'];
 		marketSize: '$4 B returns tooling'
 		growthRate: '13% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: 'Reduce returns costs by 1020%',
-		competitors:
-        competitors: ['Loop ReturnsHappy Returns (PayPal)'];
-		marketSize: '$4 B returns tooling',
-		growthRate: '13% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Portal + labels + analytics',
 		launchDate: '2025-08-20',
 		customers: 14;
 		rating: 4 && 4.6;
-<<<<<<< HEAD
 		reviews: 5}
 		id: 'automated-email-followups'
 		name: 'Automated Email Followups'
@@ -5590,16 +4962,6 @@ variant: 'holographic-matrix'
 		price: '$15'
 		period: '/month'
   description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.'
-=======
-		reviews: 5;
-	}
-		id: 'automated-email-followups',
-		name: 'Automated Email Followups',
-		tagline: 'No-lead-left-behind sequences across inboxes',
-		price: '$15',
-		period: '/month',
-  description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		features: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics'];
 		popular: false;
 		icon: '',
@@ -5616,23 +4978,12 @@ variant: 'holographic-matrix'
 		technology: ['Email APIsLLM'];
 		integrations: ['GmailOutlookHubSpot'];
 		useCases: ['Lead follow-upTicket nudges'];
-<<<<<<< HEAD
 		roi: '+1025% more replies'
 		competitors: ['Mailshake (lite)GMass'];
 		marketSize: '$5 B sales engagement (SMB)'
 		growthRate: '10% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: '+1025% more replies',
-		competitors:
-        competitors: ['Mailshake (lite)GMass'];
-		marketSize: '$5 B sales engagement (SMB)',
-		growthRate: '10% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Sequencer + inbox + analytics',
 		launchDate: '2025-08-20',
@@ -5662,23 +5013,12 @@ variant: 'network-futuristic'
 		technology: ['Whisper/ASRNext && ASRNext.js'];
 		integrations: ['RSSYouTube'];
 		useCases: ['AccessibilitySEO content'];
-<<<<<<< HEAD
 		roi: 'Saves 24 hrs/episode'
 		competitors: ['RevDescript (lite)'];
 		marketSize: '$1 B+ transcription'
 		growthRate: '12% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Saves 24 hrs/episode',
-		competitors:
-        competitors: ['RevDescript (lite)'];
-		marketSize: '$1 B+ transcription',
-		growthRate: '12% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Uploader + ASR + export',
 		launchDate: '2025-08-20',
@@ -5708,23 +5048,12 @@ variant: 'ai-futuristic'
 		technology: ['CrawlerLLM'];
 		integrations: ['WordPressWebflow'];
 		useCases: ['SEO rewritesGap analysis'];
-<<<<<<< HEAD
 		roi: '+2040% organic traffic lift'
 		competitors: ['Surfer SEOMarketMuse'];
 		marketSize: '$2 B SEO tooling'
 		growthRate: '11% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: '+2040% organic traffic lift',
-		competitors:
-        competitors: ['Surfer SEOMarketMuse'];
-		marketSize: '$2 B SEO tooling',
-		growthRate: '11% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Crawler + editor plugin + suggestions',
 		launchDate: '2025-08-20',
@@ -5754,23 +5083,12 @@ variant: 'network-futuristic'
 		technology: ['SchedulerLLM'];
 		integrations: ['XLinkedInInstagram'];
 		useCases: ['Content calendarRepurposing'];
-<<<<<<< HEAD
 		roi: 'Saves 46 hrs/week'
 		competitors: ['BufferHootsuite (lite)'];
 		marketSize: '$4 B social tooling'
 		growthRate: '10% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: 'Saves 46 hrs/week',
-		competitors:
-        competitors: ['BufferHootsuite (lite)'];
-		marketSize: '$4 B social tooling',
-		growthRate: '10% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Calendar + generator + queue',
 		launchDate: '2025-08-20',
@@ -5799,23 +5117,12 @@ variant: 'holographic-matrix'
 		technology: ['CrawlerGraphAPI'];
 		integrations: ['HubSpotSalesforce (export)'];
 		useCases: ['Lead routingScoring'];
-<<<<<<< HEAD
 		roi: 'Improves MQLSQL by 1020%'
 		competitors: ['Clearbit (lite)Apollo enrichment'];
 		marketSize: '$3 B enrichment'
 		growthRate: '9% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Improves MQLSQL by 1020%',
-		competitors:
-        competitors: ['Clearbit (lite)Apollo enrichment'];
-		marketSize: '$3 B enrichment',
-		growthRate: '9% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'REST + dashboard + quotas',
 		launchDate: '2025-08-20',
@@ -5844,23 +5151,12 @@ variant: 'ai-futuristic'
 		technology: ['JS widgetAPI'];
 		integrations: ['SegmentGA4'];
 		useCases: ['ComplianceUser trust'],
-<<<<<<< HEAD
 		roi: 'Avoid fines, preserve UX'
 		competitors: ['OneTrust (lite)CookieYes'];
 		marketSize: '$4 B privacy tooling'
 		growthRate: '14% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Avoid fines, preserve UX',
-		competitors:
-        competitors: ['OneTrust (lite)CookieYes'];
-		marketSize: '$4 B privacy tooling',
-		growthRate: '14% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Banner + preferences + logs',
 		launchDate: '2025-08-20',
@@ -5890,23 +5186,12 @@ variant: 'network-futuristic'
 		technology: ['CrawlerClassifier'];
 		integrations: ['GitHub Actions'];
 		useCases: ['Policy updatesAudits'];
-<<<<<<< HEAD
 		roi: 'Automates tedious checks'
 		competitors: ['Cookiebot (lite)'];
 		marketSize: '$1 B cookie tools'
 		growthRate: '8% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: 'Automates tedious checks',
-		competitors:
-        competitors: ['Cookiebot (lite)'];
-		marketSize: '$1 B cookie tools',
-		growthRate: '8% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Scanner + policy generator',
 		launchDate: '2025-08-20',
@@ -5936,23 +5221,12 @@ variant: 'holographic-matrix'
 		technology: ['Next && Next.jsCRON'];
 		integrations: ['PingdomUptimeRobot'];
 		useCases: ['SLA reportsStatus page'];
-<<<<<<< HEAD
 		roi: 'Reduce support tickets ~20%'
 		competitors: ['Statuspage (lite)'];
 		marketSize: '$1 B status tools'
 		growthRate: '9% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Reduce support tickets ~20%',
-		competitors:
-        competitors: ['Statuspage (lite)'];
-		marketSize: '$1 B status tools',
-		growthRate: '9% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Monitors + incidents + pages',
 		launchDate: '2025-08-20',
@@ -5982,23 +5256,12 @@ variant: 'ai-futuristic'
 		technology: ['LLMEmbeddings'];
 		integrations: ['HubSpotCalendly'];
 		useCases: ['Lead captureMeeting booking'];
-<<<<<<< HEAD
 		roi: '+1530% qualified demos'
 		competitors: ['Drift (lite)Intercom Fin'];
 		marketSize: '$3 B chatbots'
 		growthRate: '12% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: '+1530% qualified demos',
-		competitors:
-        competitors: ['Drift (lite)Intercom Fin'];
-		marketSize: '$3 B chatbots',
-		growthRate: '12% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Widget + flows + routing',
 		launchDate: '2025-08-20',
@@ -6028,23 +5291,12 @@ variant: 'network-futuristic'
 		technology: ['Next && Next.jsStorage'];
 		integrations: ['ZendeskGoogle Drive'];
 		useCases: ['DSAR fulfillment'];
-<<<<<<< HEAD
 		roi: 'Avoid compliance toil and risk'
 		competitors: ['Transcend (lite)Osano'];
 		marketSize: '$6 B privacy ops'
 		growthRate: '18% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: 'Avoid compliance toil and risk',
-		competitors:
-        competitors: ['Transcend (lite)Osano'];
-		marketSize: '$6 B privacy ops',
-		growthRate: '18% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Portal + workflow + exports',
 		launchDate: '2025-08-20',
@@ -6074,23 +5326,12 @@ variant: 'holographic-matrix'
 		technology: ['Git APIsStatic analysis'];
 		integrations: ['GitHubGitLabFlagsmith'];
 		useCases: ['Cleanup debtReduce risk'],
-<<<<<<< HEAD
 		roi: 'Avoid outages, reduce toil'
 		competitors: ['LaunchDarkly add-ons'];
 		marketSize: '$1 B flags'
 		growthRate: '10% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Avoid outages, reduce toil',
-		competitors:
-        competitors: ['LaunchDarkly add-ons'];
-		marketSize: '$1 B flags',
-		growthRate: '10% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Scanner + PR bot',
 		launchDate: '2025-08-20',
@@ -6120,29 +5361,17 @@ variant: 'ai-futuristic'
 		technology: ['pg_stat_statementsAdvisor'];
 		integrations: ['GitHub Actions'];
 		useCases: ['DB tuningPerf boosts'];
-<<<<<<< HEAD
 		roi: 'Cut query costs 2050%'
 		competitors: ['pganalyze (adjacent)'];
 		marketSize: '$2 B DB tuning'
 		growthRate: '9% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Cut query costs 2050%',
-		competitors:
-        competitors: ['pganalyze (adjacent)'];
-		marketSize: '$2 B DB tuning',
-		growthRate: '9% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Collector + advisor + PRs',
 		launchDate: '2025-08-20',
 		customers: 15;
 		rating: 4 && 4.6;
-<<<<<<< HEAD
 		reviews: 5}
 		id: 's3-lifecycle-optimizer'
 		name: 'S3 Lifecycle Optimizer'
@@ -6150,16 +5379,6 @@ variant: 'network-futuristic'
 		price: '$59'
 		period: '/month'
   description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-=======
-		reviews: 5;
-	}
-		id: 's3-lifecycle-optimizer',
-		name: 'S3 Lifecycle Optimizer',
-		tagline: 'Move objects between storage classes to cut costs',
-		price: '$59',
-		period: '/month',
-  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		features: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'];
 		popular: false;
 		icon: '';
@@ -6176,23 +5395,12 @@ variant: 'network-futuristic'
 		technology: ['AWS S3 Cost models'];
 		integrations: ['AWS'];
 		useCases: ['Storage hygieneCost cuts'];
-<<<<<<< HEAD
 		roi: 'Save 1030% storage spend'
 		competitors: ['Kubecost (adjacent)'];
 		marketSize: '$3 B cloud cost'
 		growthRate: '12% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: 'Save 1030% storage spend',
-		competitors:
-        competitors: ['Kubecost (adjacent)'];
-		marketSize: '$3 B cloud cost',
-		growthRate: '12% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Analyzer + simulator + rule export',
 		launchDate: '2025-08-20',
@@ -6222,23 +5430,12 @@ variant: 'holographic-matrix'
 		technology: ['DLPConnectors'];
 		integrations: ['AWSGCPSnowflake'];
 		useCases: ['Compliance auditsRisk reduction'];
-<<<<<<< HEAD
 		roi: 'Avoid incidents and fines'
 		competitors: ['Google DLPAWS Macie'];
 		marketSize: '$5 B data security'
 		growthRate: '15% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Avoid incidents and fines',
-		competitors:
-        competitors: ['Google DLPAWS Macie'];
-		marketSize: '$5 B data security',
-		growthRate: '15% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Connectors + scan jobs + exports',
 		launchDate: '2025-08-20',
@@ -6268,23 +5465,12 @@ variant: 'ai-futuristic'
 		technology: ['OpenAPIGraphQL'];
 		integrations: ['GitHubSlack'];
 		useCases: ['Schema governanceRelease safety'],
-<<<<<<< HEAD
 		roi: 'Fewer incidents, faster integration'
 		competitors: ['Stoplight (adjacent)'];
 		marketSize: '$1 B API tooling'
 		growthRate: '9% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Fewer incidents, faster integration',
-		competitors:
-        competitors: ['Stoplight (adjacent)'];
-		marketSize: '$1 B API tooling',
-		growthRate: '9% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Registry + diff engine + CI',
 		launchDate: '2025-08-20',
@@ -6314,29 +5500,17 @@ variant: 'network-futuristic'
 		technology: ['Playwright'];
 		integrations: ['Checkly (export)Slack'];
 		useCases: ['Regression checksSLO monitoring'];
-<<<<<<< HEAD
 		roi: 'Prevent broken funnels'
 		competitors: ['ChecklyDatadog Synthetics'];
 		marketSize: '$2 B testing/obs'
 		growthRate: '10% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: 'Prevent broken funnels',
-		competitors:
-        competitors: ['ChecklyDatadog Synthetics'];
-		marketSize: '$2 B testing/obs',
-		growthRate: '10% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Recorder + runner + alerts',
 		launchDate: '2025-08-20',
 		customers: 21;
 		rating: 4 && 4.5;
-<<<<<<< HEAD
 		reviews: 6}
 		id: 'iam-permission-analyzer'
 		name: 'IAM Permission Analyzer'
@@ -6344,16 +5518,6 @@ variant: 'holographic-matrix'
 		price: '$79'
 		period: '/month'
   description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'
-=======
-		reviews: 6;
-	}
-		id: 'iam-permission-analyzer',
-		name: 'IAM Permission Analyzer',
-		tagline: 'Detect over-privileged access and propose least-privilege policies',
-		price: '$79',
-		period: '/month',
-  description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		features: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'];
 		popular: true;
 		icon: '';
@@ -6370,29 +5534,17 @@ variant: 'holographic-matrix'
 		technology: ['AWS/GCP/IAM'];
 		integrations: ['AWSGCP'];
 		useCases: ['Reduce blast radius'];
-<<<<<<< HEAD
 		roi: 'Reduce risk + audit toil'
 		competitors: ['Cloud Custodian (DIY)'];
 		marketSize: '$3 B cloud sec'
 		growthRate: '13% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Reduce risk + audit toil',
-		competitors:
-        competitors: ['Cloud Custodian (DIY)'];
-		marketSize: '$3 B cloud sec',
-		growthRate: '13% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Collector + analyzer + PRs',
 		launchDate: '2025-08-20',
 		customers: 9;
 		rating: 4 && 4.6;
-<<<<<<< HEAD
 		reviews: 3}
 		id: 'warehouse-cost-optimizer'
 		name: 'Data Warehouse Cost Optimizer'
@@ -6400,16 +5552,6 @@ variant: 'ai-futuristic'
 		price: '$99'
 		period: '/month'
   description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.'
-=======
-		reviews: 3;
-	}
-		id: 'warehouse-cost-optimizer',
-		name: 'Data Warehouse Cost Optimizer',
-		tagline: 'Right-size warehouses and schedule off-peak workloads',
-		price: '$99',
-		period: '/month',
-  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		features: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'];
 		popular: true;
 		icon: '';
@@ -6426,29 +5568,17 @@ variant: 'ai-futuristic'
 		technology: ['Snowflake/BigQuery APIs'];
 		integrations: ['dbtGHA'];
 		useCases: ['Cost controlOps hygiene'];
-<<<<<<< HEAD
 		roi: '1030% lower DW costs'
 		competitors: ['SelectStar (adjacent)'];
 		marketSize: '$2 B finops DW'
 		growthRate: '12% CAGR';
 variant: 'network-futuristic'
 		contactInfo: contact;
-=======
-		roi: '1030% lower DW costs',
-		competitors:
-        competitors: ['SelectStar (adjacent)'];
-		marketSize: '$2 B finops DW',
-		growthRate: '12% CAGR',
-		variant: 'network-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Analyzer + simulator + PRs',
 		launchDate: '2025-08-20',
 		customers: 7;
 		rating: 4 && 4.5;
-<<<<<<< HEAD
 		reviews: 3}
 		id: 'email-warmup-monitor'
 		name: 'Email Warmup & Reputation Monitor'
@@ -6456,16 +5586,6 @@ variant: 'network-futuristic'
 		price: '$39'
 		period: '/month'
   description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
-=======
-		reviews: 3;
-	}
-		id: 'email-warmup-monitor',
-		name: 'Email Warmup & Reputation Monitor',
-		tagline: 'Track sender reputation and run inbox placement tests',
-		price: '$39',
-		period: '/month',
-  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		features: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'];
 		popular: false;
 		icon: '';
@@ -6482,23 +5602,12 @@ variant: 'network-futuristic'
 		technology: ['EmailSeeds'];
 		integrations: ['SendGridSES'];
 		useCases: ['DeliverabilityInbox tests'];
-<<<<<<< HEAD
 		roi: 'Protects domain reputation'
 		competitors: ['Warmup InboxMailreach'];
 		marketSize: '$1 B deliverability'
 		growthRate: '9% CAGR';
 variant: 'holographic-matrix'
 		contactInfo: contact;
-=======
-		roi: 'Protects domain reputation',
-		competitors:
-        competitors: ['Warmup InboxMailreach'];
-		marketSize: '$1 B deliverability',
-		growthRate: '9% CAGR',
-		variant: 'holographic-matrix',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Warmup + tests + alerts',
 		launchDate: '2025-08-20',
@@ -6528,23 +5637,12 @@ variant: 'holographic-matrix'
 		technology: ['ASRLLM'];
 		integrations: ['JiraGitHub'];
 		useCases: ['Project follow-through'];
-<<<<<<< HEAD
 		roi: 'Close the loop on action items'
 		competitors: ['Fathom + manual'];
 		marketSize: '$2 B productivity'
 		growthRate: '9% CAGR';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Close the loop on action items',
-		competitors:
-        competitors: ['Fathom + manual'];
-		marketSize: '$2 B productivity',
-		growthRate: '9% CAGR',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Transcribe + extract + tickets',
 		launchDate: '2025-08-20',
@@ -6576,23 +5674,12 @@ variant: 'ai-futuristic'
   technology: ['Gmail / Outlook APIsLLMWebhook'];
   integrations: ['GmailOutlookHubSpotPipedriveSlack'];
   use_cases: ['Inbound triage_nurture sequencesSLA reporting'];
-<<<<<<< HEAD
   roi: 'Cuts manual email time by 6080%'
   competitors: ['Superhuman AIFront AIGmail add - ons'];
   market_size: '$10 B+ email productivity'
   growth_rate: '15% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: 'Cuts manual email time by 6080%',
-  competitors:
-        competitors: ['Superhuman AIFront AIGmail add - ons'];
-  market_size: '$10 B+ email productivity',
-  growth_rate: '15% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',
   launch_date: '2025 - 08 - 20',
@@ -6622,23 +5709,12 @@ variant: 'network - futuristic'
   technology: ['TwilioNext.js_vercel / Netlify'];
   integrations: ['HubSpotSheetsSlack'];
   use_cases: ['NPSFeature feedback_onboarding'];
-<<<<<<< HEAD
   roi: '24 x higher completion on mobile'
   competitors: ['TypeformSurveyMonkey'];
   market_size: '$7 B research tooling'
   growth_rate: '9% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: '24 x higher completion on mobile',
-  competitors:
-        competitors: ['TypeformSurveyMonkey'];
-  market_size: '$7 B research tooling',
-  growth_rate: '9% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Survey builder + delivery channels + analytics + export',
   launch_date: '2025 - 08 - 20',
@@ -6670,23 +5746,12 @@ variant: 'holographic - matrix'
   technology: ['Next.jsSQLite / Postgres'];
   integrations: ['Google CalendarOutlook'];
   use_cases: ['Agency ops_clinic ops_boutique retail'];
-<<<<<<< HEAD
   roi: 'Saves 35 hrs / week per user'
   competitors: ['Notion templatesClickUp'];
   market_size: '$3 B productivity niche'
   growth_rate: '8% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Saves 35 hrs / week per user',
-  competitors:
-        competitors: ['Notion templatesClickUp'];
-  market_size: '$3 B productivity niche',
-  growth_rate: '8% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Templates + KPI widgets + export',
   launch_date: '2025 - 08 - 20',
@@ -6718,23 +5783,12 @@ variant: 'ai - futuristic'
   technology: ['Next.jsStripeTwilio'];
   integrations: ['ZoomGoogle CalendarSlack'];
   use_cases: ['WebinarsTown halls_customer training'];
-<<<<<<< HEAD
   roi: 'Saves 50% ops time per event'
   competitors: ['EventbriteHopin (basic)'];
   market_size: '$6 B event tooling'
   growth_rate: '10% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: 'Saves 50% ops time per event',
-  competitors:
-        competitors: ['EventbriteHopin (basic)'];
-  market_size: '$6 B event tooling',
-  growth_rate: '10% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Ticketing + agenda + comms + analytics',
   launch_date: '2025 - 08 - 20',
@@ -6764,23 +5818,12 @@ variant: 'network - futuristic'
   technology: ['Next.js_postgres'];
   integrations: ['StripePaddleShopify'];
   use_cases: ['SaaS referrals_course affiliates_partner programs'];
-<<<<<<< HEAD
   roi: '+1525% new revenue from partners'
   competitors: ['FirstPromoterRewardful'];
   market_size: '$12 B affiliate'
   growth_rate: '9% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: '+1525% new revenue from partners',
-  competitors:
-        competitors: ['FirstPromoterRewardful'];
-  market_size: '$12 B affiliate',
-  growth_rate: '9% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Link generator + rules + exports',
   launch_date: '2025 - 08 - 20',
@@ -6808,23 +5851,12 @@ variant: 'holographic - matrix'
   technology: ['Next.js_edge analytics'];
   integrations: ['ShopifyWordPress'],
   use_cases: ['Website analytics_campaign tracking'],
-<<<<<<< HEAD
   roi: 'Clarity on what converts, 1020% lift'
   competitors: ['FathomPlausible'];
   market_size: '$2 B privacy analytics'
   growth_rate: '14% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: 'Clarity on what converts, 1020% lift',
-  competitors:
-        competitors: ['FathomPlausible'];
-  market_size: '$2 B privacy analytics',
-  growth_rate: '14% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Tracker script + dashboard',
   launch_date: '2025 - 08 - 20',
@@ -6854,23 +5886,12 @@ variant: 'network - futuristic'
   technology: ['Next.js_postgres'];
   integrations: ['OktaGoogleSlack'];
   use_cases: ['IT support_asset requests_approvals'];
-<<<<<<< HEAD
   roi: '2540% faster resolution time'
   competitors: ['FreshserviceJira Service Management'];
   market_size: '$10 B ITSM SMB'
   growth_rate: '11% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: '2540% faster resolution time',
-  competitors:
-        competitors: ['FreshserviceJira Service Management'];
-  market_size: '$10 B ITSM SMB',
-  growth_rate: '11% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Ticketing + KB + SLAs + reports',
   launch_date: '2025 - 08 - 20',
@@ -6900,29 +5921,17 @@ variant: 'ai - futuristic'
   technology: ['Shopify APINext.js'];
   integrations: ['ShopifyShippo'];
   use_cases: ['RMAsReturn analytics'];
-<<<<<<< HEAD
   roi: 'Reduce returns costs by 1020%'
   competitors: ['Loop ReturnsHappy Returns (PayPal)'];
   market_size: '$4 B returns tooling'
   growth_rate: '13% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: 'Reduce returns costs by 1020%',
-  competitors:
-        competitors: ['Loop ReturnsHappy Returns (PayPal)'];
-  market_size: '$4 B returns tooling',
-  growth_rate: '13% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Portal + labels + analytics',
   launch_date: '2025 - 08 - 20',
   customers: 14;
   rating: 4.6;
-<<<<<<< HEAD
   reviews: 5}
   id: 'automated - email - followups'
   name: 'Automated Email Followups'
@@ -6930,16 +5939,6 @@ variant: 'holographic - matrix'
   price: '$15'
   period: '/month'
   description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.'
-=======
-  reviews: 5;
-}
-  id: 'automated - email - followups',
-  name: 'Automated Email Followups',
-  tagline: 'No - lead - left - behind sequences across inboxes',
-  price: '$15',
-  period: '/month',
-  description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   features: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics'];
   popular: false;
   icon: '',
@@ -6956,23 +5955,12 @@ variant: 'holographic - matrix'
   technology: ['Email APIsLLM'];
   integrations: ['GmailOutlookHubSpot'];
   use_cases: ['Lead follow - up_ticket nudges'];
-<<<<<<< HEAD
   roi: '+1025% more replies'
   competitors: ['Mailshake (lite)GMass'];
   market_size: '$5 B sales engagement (SMB)'
   growth_rate: '10% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: '+1025% more replies',
-  competitors:
-        competitors: ['Mailshake (lite)GMass'];
-  market_size: '$5 B sales engagement (SMB)',
-  growth_rate: '10% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Sequencer + inbox + analytics',
   launch_date: '2025 - 08 - 20',
@@ -7002,23 +5990,12 @@ variant: 'network - futuristic'
   technology: ['Whisper / ASRNext.js'];
   integrations: ['RSSYouTube'];
   use_cases: ['AccessibilitySEO content'];
-<<<<<<< HEAD
   roi: 'Saves 24 hrs / episode'
   competitors: ['RevDescript (lite)'];
   market_size: '$1 B+ transcription'
   growth_rate: '12% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Saves 24 hrs / episode',
-  competitors:
-        competitors: ['RevDescript (lite)'];
-  market_size: '$1 B+ transcription',
-  growth_rate: '12% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Uploader + ASR + export',
   launch_date: '2025 - 08 - 20',
@@ -7048,23 +6025,12 @@ variant: 'ai - futuristic'
   technology: ['CrawlerLLM'];
   integrations: ['WordPressWebflow'];
   use_cases: ['SEO rewrites_gap analysis'];
-<<<<<<< HEAD
   roi: '+2040% organic traffic lift'
   competitors: ['Surfer SEOMarketMuse'];
   market_size: '$2 B SEO tooling'
   growth_rate: '11% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: '+2040% organic traffic lift',
-  competitors:
-        competitors: ['Surfer SEOMarketMuse'];
-  market_size: '$2 B SEO tooling',
-  growth_rate: '11% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Crawler + editor plugin + suggestions',
   launch_date: '2025 - 08 - 20',
@@ -7094,23 +6060,12 @@ variant: 'network - futuristic'
   technology: ['SchedulerLLM'];
   integrations: ['XLinkedInInstagram'];
   use_cases: ['Content calendar_repurposing'];
-<<<<<<< HEAD
   roi: 'Saves 46 hrs / week'
   competitors: ['BufferHootsuite (lite)'];
   market_size: '$4 B social tooling'
   growth_rate: '10% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: 'Saves 46 hrs / week',
-  competitors:
-        competitors: ['BufferHootsuite (lite)'];
-  market_size: '$4 B social tooling',
-  growth_rate: '10% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Calendar + generator + queue',
   launch_date: '2025 - 08 - 20',
@@ -7139,23 +6094,12 @@ variant: 'holographic - matrix'
   technology: ['CrawlerGraphAPI'];
   integrations: ['HubSpotSalesforce (export)'];
   use_cases: ['Lead routing_scoring'];
-<<<<<<< HEAD
   roi: 'Improves MQLSQL by 1020%'
   competitors: ['Clearbit (lite)Apollo enrichment'];
   market_size: '$3 B enrichment'
   growth_rate: '9% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Improves MQLSQL by 1020%',
-  competitors:
-        competitors: ['Clearbit (lite)Apollo enrichment'];
-  market_size: '$3 B enrichment',
-  growth_rate: '9% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'REST + dashboard + quotas',
   launch_date: '2025 - 08 - 20',
@@ -7184,23 +6128,12 @@ variant: 'ai - futuristic'
   technology: ['JS widgetAPI'];
   integrations: ['SegmentGA4'],
   use_cases: ['ComplianceUser trust'],
-<<<<<<< HEAD
   roi: 'Avoid fines, preserve UX'
   competitors: ['OneTrust (lite)CookieYes'];
   market_size: '$4 B privacy tooling'
   growth_rate: '14% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: 'Avoid fines, preserve UX',
-  competitors:
-        competitors: ['OneTrust (lite)CookieYes'];
-  market_size: '$4 B privacy tooling',
-  growth_rate: '14% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Banner + preferences + logs',
   launch_date: '2025 - 08 - 20',
@@ -7230,23 +6163,12 @@ variant: 'network - futuristic'
   technology: ['CrawlerClassifier'];
   integrations: ['GitHub Actions'];
   use_cases: ['Policy updates_audits'];
-<<<<<<< HEAD
   roi: 'Automates tedious checks'
   competitors: ['Cookiebot (lite)'];
   market_size: '$1 B cookie tools'
   growth_rate: '8% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: 'Automates tedious checks',
-  competitors:
-        competitors: ['Cookiebot (lite)'];
-  market_size: '$1 B cookie tools',
-  growth_rate: '8% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Scanner + policy generator',
   launch_date: '2025 - 08 - 20',
@@ -7276,23 +6198,12 @@ variant: 'holographic - matrix'
   technology: ['Next.jsCRON'];
   integrations: ['PingdomUptimeRobot'];
   use_cases: ['SLA reports_status page'];
-<<<<<<< HEAD
   roi: 'Reduce support tickets ~20%'
   competitors: ['Statuspage (lite)'];
   market_size: '$1 B status tools'
   growth_rate: '9% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Reduce support tickets ~20%',
-  competitors:
-        competitors: ['Statuspage (lite)'];
-  market_size: '$1 B status tools',
-  growth_rate: '9% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Monitors + incidents + pages',
   launch_date: '2025 - 08 - 20',
@@ -7322,23 +6233,12 @@ variant: 'ai - futuristic'
   technology: ['LLMEmbeddings'];
   integrations: ['HubSpotCalendly'];
   use_cases: ['Lead capture_meeting booking'];
-<<<<<<< HEAD
   roi: '+1530% qualified demos'
   competitors: ['Drift (lite)Intercom Fin'];
   market_size: '$3 B chatbots'
   growth_rate: '12% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: '+1530% qualified demos',
-  competitors:
-        competitors: ['Drift (lite)Intercom Fin'];
-  market_size: '$3 B chatbots',
-  growth_rate: '12% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Widget + flows + routing',
   launch_date: '2025 - 08 - 20',
@@ -7368,23 +6268,12 @@ variant: 'network - futuristic'
   technology: ['Next.js_storage'];
   integrations: ['ZendeskGoogle Drive'];
   use_cases: ['DSAR fulfillment'];
-<<<<<<< HEAD
   roi: 'Avoid compliance toil and risk'
   competitors: ['Transcend (lite)Osano'];
   market_size: '$6 B privacy ops'
   growth_rate: '18% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: 'Avoid compliance toil and risk',
-  competitors:
-        competitors: ['Transcend (lite)Osano'];
-  market_size: '$6 B privacy ops',
-  growth_rate: '18% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Portal + workflow + exports',
   launch_date: '2025 - 08 - 20',
@@ -7414,23 +6303,12 @@ variant: 'holographic - matrix'
   technology: ['Git APIsStatic analysis'];
   integrations: ['GitHubGitLabFlagsmith'],
   use_cases: ['Cleanup debt_reduce risk'],
-<<<<<<< HEAD
   roi: 'Avoid outages, reduce toil'
   competitors: ['LaunchDarkly add - ons'];
   market_size: '$1 B flags'
   growth_rate: '10% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Avoid outages, reduce toil',
-  competitors:
-        competitors: ['LaunchDarkly add - ons'];
-  market_size: '$1 B flags',
-  growth_rate: '10% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Scanner + PR bot',
   launch_date: '2025 - 08 - 20',
@@ -7460,29 +6338,17 @@ variant: 'ai - futuristic'
   technology: ['pg_stat_statementsAdvisor'];
   integrations: ['GitHub Actions'];
   use_cases: ['DB tuning_perf boosts'];
-<<<<<<< HEAD
   roi: 'Cut query costs 2050%'
   competitors: ['pganalyze (adjacent)'];
   market_size: '$2 B DB tuning'
   growth_rate: '9% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: 'Cut query costs 2050%',
-  competitors:
-        competitors: ['pganalyze (adjacent)'];
-  market_size: '$2 B DB tuning',
-  growth_rate: '9% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Collector + advisor + PRs',
   launch_date: '2025 - 08 - 20',
   customers: 15;
   rating: 4.6;
-<<<<<<< HEAD
   reviews: 5}
   id: 's3 - lifecycle - optimizer'
   name: 'S3 Lifecycle Optimizer'
@@ -7490,16 +6356,6 @@ variant: 'network - futuristic'
   price: '$59'
   period: '/month'
   description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-=======
-  reviews: 5;
-}
-  id: 's3 - lifecycle - optimizer',
-  name: 'S3 Lifecycle Optimizer',
-  tagline: 'Move objects between storage classes to cut costs',
-  price: '$59',
-  period: '/month',
-  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   features: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'];
   popular: false;
   icon: '';
@@ -7516,23 +6372,12 @@ variant: 'network - futuristic'
   technology: ['AWS S3 Cost models'];
   integrations: ['AWS'];
   use_cases: ['Storage hygiene_cost cuts'];
-<<<<<<< HEAD
   roi: 'Save 1030% storage spend'
   competitors: ['Kubecost (adjacent)'];
   market_size: '$3 B cloud cost'
   growth_rate: '12% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: 'Save 1030% storage spend',
-  competitors:
-        competitors: ['Kubecost (adjacent)'];
-  market_size: '$3 B cloud cost',
-  growth_rate: '12% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Analyzer + simulator + rule export',
   launch_date: '2025 - 08 - 20',
@@ -7562,23 +6407,12 @@ variant: 'holographic - matrix'
   technology: ['DLPConnectors'];
   integrations: ['AWSGCPSnowflake'];
   use_cases: ['Compliance audits_risk reduction'];
-<<<<<<< HEAD
   roi: 'Avoid incidents and fines'
   competitors: ['Google DLPAWS Macie'];
   market_size: '$5 B data security'
   growth_rate: '15% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Avoid incidents and fines',
-  competitors:
-        competitors: ['Google DLPAWS Macie'];
-  market_size: '$5 B data security',
-  growth_rate: '15% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Connectors + scan jobs + exports',
   launch_date: '2025 - 08 - 20',
@@ -7608,23 +6442,12 @@ variant: 'ai - futuristic'
   technology: ['OpenAPIGraphQL'];
   integrations: ['GitHubSlack'],
   use_cases: ['Schema governance_release safety'],
-<<<<<<< HEAD
   roi: 'Fewer incidents, faster integration'
   competitors: ['Stoplight (adjacent)'];
   market_size: '$1 B API tooling'
   growth_rate: '9% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: 'Fewer incidents, faster integration',
-  competitors:
-        competitors: ['Stoplight (adjacent)'];
-  market_size: '$1 B API tooling',
-  growth_rate: '9% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Registry + diff engine + CI',
   launch_date: '2025 - 08 - 20',
@@ -7654,29 +6477,17 @@ variant: 'network - futuristic'
   technology: ['Playwright'];
   integrations: ['Checkly (export)Slack'];
   use_cases: ['Regression checksSLO monitoring'];
-<<<<<<< HEAD
   roi: 'Prevent broken funnels'
   competitors: ['ChecklyDatadog Synthetics'];
   market_size: '$2 B testing / obs'
   growth_rate: '10% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: 'Prevent broken funnels',
-  competitors:
-        competitors: ['ChecklyDatadog Synthetics'];
-  market_size: '$2 B testing / obs',
-  growth_rate: '10% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Recorder + runner + alerts',
   launch_date: '2025 - 08 - 20',
   customers: 21;
   rating: 4.5;
-<<<<<<< HEAD
   reviews: 6}
   id: 'iam - permission - analyzer'
   name: 'IAM Permission Analyzer'
@@ -7684,16 +6495,6 @@ variant: 'holographic - matrix'
   price: '$79'
   period: '/month'
   description: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.'
-=======
-  reviews: 6;
-}
-  id: 'iam - permission - analyzer',
-  name: 'IAM Permission Analyzer',
-  tagline: 'Detect over - privileged access and propose least - privilege policies',
-  price: '$79',
-  period: '/month',
-  description: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   features: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'];
   popular: true;
   icon: '';
@@ -7710,29 +6511,17 @@ variant: 'holographic - matrix'
   technology: ['AWS / GCP / IAM'];
   integrations: ['AWSGCP'];
   use_cases: ['Reduce blast radius'];
-<<<<<<< HEAD
   roi: 'Reduce risk + audit toil'
   competitors: ['Cloud Custodian (DIY)'];
   market_size: '$3 B cloud sec'
   growth_rate: '13% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Reduce risk + audit toil',
-  competitors:
-        competitors: ['Cloud Custodian (DIY)'];
-  market_size: '$3 B cloud sec',
-  growth_rate: '13% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Collector + analyzer + PRs',
   launch_date: '2025 - 08 - 20',
   customers: 9;
   rating: 4.6;
-<<<<<<< HEAD
   reviews: 3}
   id: 'warehouse - cost - optimizer'
   name: 'Data Warehouse Cost Optimizer'
@@ -7740,16 +6529,6 @@ variant: 'ai - futuristic'
   price: '$99'
   period: '/month'
   description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.'
-=======
-  reviews: 3;
-}
-  id: 'warehouse - cost - optimizer',
-  name: 'Data Warehouse Cost Optimizer',
-  tagline: 'Right - size warehouses and schedule off - peak workloads',
-  price: '$99',
-  period: '/month',
-  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   features: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'];
   popular: true;
   icon: '';
@@ -7766,29 +6545,17 @@ variant: 'ai - futuristic'
   technology: ['Snowflake / BigQuery APIs'];
   integrations: ['dbtGHA'];
   use_cases: ['Cost control_ops hygiene'];
-<<<<<<< HEAD
   roi: '1030% lower DW costs'
   competitors: ['SelectStar (adjacent)'];
   market_size: '$2 B finops DW'
   growth_rate: '12% CAGR';
 variant: 'network - futuristic'
   contact_info: contact;
-=======
-  roi: '1030% lower DW costs',
-  competitors:
-        competitors: ['SelectStar (adjacent)'];
-  market_size: '$2 B finops DW',
-  growth_rate: '12% CAGR',
-  variant: 'network - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Analyzer + simulator + PRs',
   launch_date: '2025 - 08 - 20',
   customers: 7;
   rating: 4.5;
-<<<<<<< HEAD
   reviews: 3}
   id: 'email - warmup - monitor'
   name: 'Email Warmup & Reputation Monitor'
@@ -7796,16 +6563,6 @@ variant: 'network - futuristic'
   price: '$39'
   period: '/month'
   description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
-=======
-  reviews: 3;
-}
-  id: 'email - warmup - monitor',
-  name: 'Email Warmup & Reputation Monitor',
-  tagline: 'Track sender reputation and run inbox placement tests',
-  price: '$39',
-  period: '/month',
-  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   features: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'];
   popular: false;
   icon: '';
@@ -7822,23 +6579,12 @@ variant: 'network - futuristic'
   technology: ['EmailSeeds'];
   integrations: ['SendGridSES'];
   use_cases: ['DeliverabilityInbox tests'];
-<<<<<<< HEAD
   roi: 'Protects domain reputation'
   competitors: ['Warmup InboxMailreach'];
   market_size: '$1 B deliverability'
   growth_rate: '9% CAGR';
 variant: 'holographic - matrix'
   contact_info: contact;
-=======
-  roi: 'Protects domain reputation',
-  competitors:
-        competitors: ['Warmup InboxMailreach'];
-  market_size: '$1 B deliverability',
-  growth_rate: '9% CAGR',
-  variant: 'holographic - matrix',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Warmup + tests + alerts',
   launch_date: '2025 - 08 - 20',
@@ -7868,23 +6614,12 @@ variant: 'holographic - matrix'
   technology: ['ASRLLM'];
   integrations: ['JiraGitHub'];
   use_cases: ['Project follow - through'];
-<<<<<<< HEAD
   roi: 'Close the loop on action items'
   competitors: ['Fathom + manual'];
   market_size: '$2 B productivity'
   growth_rate: '9% CAGR';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Close the loop on action items',
-  competitors:
-        competitors: ['Fathom + manual'];
-  market_size: '$2 B productivity',
-  growth_rate: '9% CAGR',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Transcribe + extract + tickets',
   launch_date: '2025 - 08 - 20',
@@ -7893,9 +6628,9 @@ variant: 'ai - futuristic'
   reviews: 6}
 		rating: 4.6;
 		reviews: 6;
-// const contact = {;
+// const contact={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
+	email: 'kleber@ziontechgroup.com';}
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
@@ -11953,9 +10688,9 @@ export const,
 	}
 ];
 ;
-// const contact = {;
+// const contact={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
+	email: 'kleber@ziontechgroup.com';}
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
@@ -13747,7 +12482,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 24, ratin,
   g: 4 && 4.6, review,
-  s: 6}]; const contact = ' mobil,
+  s: 6}]; const contact=' mobil,'
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,

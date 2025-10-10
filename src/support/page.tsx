@@ -216,7 +216,7 @@ const searchResults = searchQuery
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'
+                      : 'bg-slate-800 text-white hover:bg-slate-700'}
                   }`}
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />

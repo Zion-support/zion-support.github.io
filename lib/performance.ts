@@ -49,7 +49,7 @@ interface PerformanceReport {
   userAgent: string}
 
 // Thresholds for ratings (from web.dev);
-const THRESHOLDS = {
+const THRESHOLDS={}
   CLS: { good: 0.1, poor: 0.25 },
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
@@ -76,7 +76,7 @@ const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
  * Send performance data to analytics;
  */;
 function sendToAnalytics(metric: Metric): void {,;
-const performanceMetric: PerformanceMetric = {,
+const performanceMetric: PerformanceMetric={,
     name: metric.name;
     value: metric.value;
     rating: getRating(metric.name, metric.value),
@@ -94,7 +94,7 @@ const performanceMetric: PerformanceMetric = {,
     id: metric.id;
     id: metric.id;
     id: metric.id;
-    id: metric.id;
+    id: metric.id;}
     id: metric.id};
 
   // Log in development;
@@ -107,11 +107,11 @@ const performanceMetric: PerformanceMetric = {,
     // eslint-disable-next-line no-console;
 //     }
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {;
-const thresholds = {
+const thresholds={
     CLS: [0.1, 0.25],
     FID: [100, 300],
     FCP: [1800, 3000],
-    LCP: [2500, 4000],
+    LCP: [2500, 4000],}
     TTFB: [800, 1800]};
 ;
 const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0];
@@ -121,12 +121,12 @@ const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0];
   return 'poor'}
 ;
 function sendToAnalytics(metric: Metric): void {;
-const performanceMetric: PerformanceMetric = {
+const performanceMetric: PerformanceMetric={
     name: metric.name,
     value: metric.value,
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
-    id: metric.id
+    id: metric.id}
   };
 
   // Log in development
@@ -709,7 +709,7 @@ export function getConnectionType(): string {
 const _connection = (navigator as NavigatorWithConnection).connection;
   return connection.effectiveType || connection.type || 'unknown'}
 ;
-const performanceUtils = {
+const performanceUtils={
   init: initPerformanceMonitoring;
   measure: measurePerformance;
   mark: markPerformance;
@@ -721,7 +721,7 @@ const performanceUtils = {
   generateReport: generatePerformanceReport;
   monitorLongTasks,
   monitorLayoutShifts,
-  isSlowConnection,
+  isSlowConnection,}
     userAgent: navigator.userAgent}}
 
     userAgent: navigator.userAgent}}

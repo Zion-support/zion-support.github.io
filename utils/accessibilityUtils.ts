@@ -3,7 +3,7 @@
  */
 
 // Focus management utilities;
-export const focusManagement = {
+export const focusManagement={
   // Trap focus within an element;
   trapFocus: (element: HTMLElement): (() => void) => {,;
 const focusableElements = element.querySelectorAll()
@@ -19,7 +19,7 @@ const handleKeyDown = (e: KeyboardEvent) => {
         if (e.shiftKey) {,
           if (document.activeElement === firstElement) {,
             lastElement.focus();
-            e.preventDefault();
+            e.preventDefault();}
 export const focusManagement = {/* TODO: Fix JSX expression */}
           }
         } else {/* TODO: Fix JSX expression */}
@@ -55,9 +55,9 @@ const _mainElement = document.querySelector('main') as HTMLElement;
   }};
 
 // ARIA utilities;
-export const ariaUtils = {
+export const ariaUtils={
   // Generate unique IDs for ARIA relationships;
-  generateId: (prefix: string = 'aria'): string => {,
+  generateId: (prefix: string = 'aria'): string => {,}
 export const ariaUtils = {/* TODO: Fix JSX expression */}
     return `${prefix}-${Math.random().toString(36).substr(2, 9)}`},
 
@@ -77,7 +77,7 @@ export const ariaUtils = {/* TODO: Fix JSX expression */}
     }, 1000)}};
 
 // Keyboard navigation utilities;
-export const keyboardNavigation = {
+export const keyboardNavigation={
   // Handle arrow key navigation for lists;
   handleArrowKeys: (
     event: KeyboardEvent;
@@ -95,7 +95,7 @@ export const keyboardNavigation = {
         return 0;
       case 'End':
         event.preventDefault();
-        return items.length - 1;
+        return items.length - 1;}
       default: return currentIndex}
   },
   // Handle Enter and Space key activation;
@@ -113,14 +113,14 @@ export const keyboardNavigation = {/* TODO: Fix JSX expression */}
     }
   }};
 // Color contrast utilities;
-export const colorContrast = {
+export const colorContrast={
   // Calculate relative luminance;
   getLuminance: (r: number, g: number, b: number): number => {
 return (
 ,;
 const [rs, gs, bs] = [r, g, b].map(c => {)
       c = c / 255;)
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);}
 export const colorContrast = {/* TODO: Fix JSX expression */}
     });
 //     const lum1 = colorContrast.getLuminance(...color1);
@@ -135,9 +135,9 @@ export const colorContrast = {/* TODO: Fix JSX expression */}
 } {,
     return level === 'AA' ? contrastRatio >= 4.5 : contrastRatio >= 7}};
 // Motion and animation utilities;
-export const motionUtils = {
+export const motionUtils={
   // Check if user prefers reduced motion;
-  prefersReducedMotion: (): boolean => {,
+  prefersReducedMotion: (): boolean => {,}
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches},
   // Apply reduced motion styles;
   applyReducedMotion: (element: HTMLElement): void => {,
@@ -149,7 +149,7 @@ export const motionUtils = {
   conditionalAnimation: (animation: string, fallback: string = ''): string => {,
     return motionUtils.prefersReducedMotion() ? fallback : animation}};
 // Form accessibility utilities;
-export const formAccessibility = {
+export const formAccessibility={
   // Associate label with input;
   associateLabel: (
     input: HTMLInputElement;
@@ -161,7 +161,7 @@ const _label = document.createElement('label');
       input.id = label.getAttribute('for')!;
   // Check if contrast meets WCAG standards,
   meetsWCAG: (contrastRati,
-  o: number, leve)
+  o: number, leve)}
   l: 'AA' | 'AAA' = 'AA'): boolean => {/* TODO: Fix JSX expression */}
   }};
 // Motion and animation utilities;
@@ -196,9 +196,9 @@ export const formAccessibility = {/* TODO: Fix JSX expression */}
     const contrastRatio = 4.5; // Placeholder;
     return contrastRatio >= thresholds[level]}};
 // Screen reader utilities;
-export const screenReaderUtils = {
+export const screenReaderUtils={
   // Hide element from screen readers;
-  hideFromScreenReader: (element: HTMLElement): void => {,
+  hideFromScreenReader: (element: HTMLElement): void => {,}
     element.setAttribute('aria-hidden', 'true')},
   // Show element to screen readers;
   showToScreenReader: (element: HTMLElement): void => {,
@@ -210,10 +210,10 @@ const _element = document.createElement('span');
     element.className = 'sr-only';
     return element}};
 // Accessibility testing utilities;
-export const accessibilityTesting = {
+export const accessibilityTesting={
   // Check for missing alt text on images;
   checkImageAltText: (): {,
-    missing: HTMLImageElement[];
+    missing: HTMLImageElement[];}
     empty: HTMLImageElement[]} => {;
 const _images = Array.from(document.querySelectorAll('img'));
     const _missing = images.filter(img => !img.hasAttribute('alt'));

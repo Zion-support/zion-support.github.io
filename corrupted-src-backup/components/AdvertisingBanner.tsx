@@ -21,7 +21,7 @@ return (
         padding: '2rem',
         borderRadius: '0.5rem')
         margin: '1rem 0')
-        display: 'flex')
+        display: 'flex')}
         alignItems: 'center')}
         gap: '2rem'}
       }}
@@ -37,7 +37,7 @@ return (
             src={imageUrl}
             alt={title}
             style={{
-              width: '200px',
+              width: '200px',}
               height: 'auto')}
               borderRadius: '0.25rem')}
 const,
@@ -65,7 +65,7 @@ const,
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
             color: textColor;
             textDecoration: 'none',
-            borderRadius: '0.25rem',
+            borderRadius: '0.25rem',}
             fontWeight: 'bold'}
             transition: 'background-color 0.2s'}
           }}
@@ -80,8 +80,7 @@ const,
   e: '1.5rem' }}>{title}</h2>
         <p style={/* TODO: Fix JSX expression */}
   y: 0.9 }}>{description}</p>
-        <a></a>
-          href={ctaUrl}
+        <ahref={ctaUrl}
           style={/* TODO: Fix JSX expression */}
           }}
           onMouseOver={/* TODO: Fix JSX expression */}

@@ -13,7 +13,7 @@ const, futureTechArticle, s = [
       readTi, m, e: '18, mi, n','
       trendi, n, g: tr, u, e;
       ic, o, n: <Atom, className="w-8 h-8/>
-);
+);"
 },"
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','

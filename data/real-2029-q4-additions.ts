@@ -103,18 +103,10 @@ varian,
     use_cases: ['Customer support triage', 'Lead routing', 'Internal helpdesk'],
     roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.',
     competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI'],
-<<<<<<< HEAD
     market_size: 'Helpdesk software $20B+'
     growth_rate: '25% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'Helpdesk software $20B+',
-    growth_rate: '25% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Shared inbox connectors, rules engine, and prompt templates with human - in - the - loop.',
@@ -289,18 +281,10 @@ varian,
       'Exit intent feedback'],
     roi: 'Increase response rates 25x and de-risk product decisions.',
     competitors: ['Typeform', 'SurveyMonkey']
-<<<<<<< HEAD
     marketSize: 'Survey market $9 B+'
     growthRate: '14% YoY';
 variant: 'ai-futuristic'
     contactInfo: contact;
-=======
-    marketSize: 'Survey market $9 B+',
-    growthRate: '14% YoY',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Responsive renderer with schema-driven forms and analytics.',
     launchDate: '2029-11-05',
@@ -370,18 +354,10 @@ varian,
       'Exit intent feedback'],
     roi: 'Increase response rates 25x and de - risk product decisions.',
     competitors: ['Typeform', 'SurveyMonkey'],
-<<<<<<< HEAD
     market_size: 'Survey market $9B+'
     growth_rate: '14% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'Survey market $9B+',
-    growth_rate: '14% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Responsive renderer with schema - driven forms and analytics.',
@@ -455,18 +431,10 @@ varian,
     use_cases: ['Meetups', 'Webinars', 'Conferences'],
     roi: 'Cut ops overhead by 50% and improve attendance by 1530%.',
     competitors: ['Eventbrite', 'Hopin'],
-<<<<<<< HEAD
     market_size: 'Event tech $6B+'
     growth_rate: '18% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'Event tech $6B+',
-    growth_rate: '18% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Ticketing service with role - based portals and exportable analytics.',
@@ -547,18 +515,10 @@ varian,
     use_cases: ['On - call management', 'Incident response'],
     roi: 'Reduce paging confusion and missed alerts by 3050%.',
     competitors: ['PagerDuty', 'Opsgenie'],
-<<<<<<< HEAD
     market_size: 'Incident management $3B+'
     growth_rate: '20% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'Incident management $3B+',
-    growth_rate: '20% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Rotations engine and integrations with chat tools.',
     launch_date: '2029 - 10 - 30',
@@ -642,18 +602,10 @@ varian,
     use_cases: ['Page optimization', 'Content planning', 'Brief creation'],
     roi: 'Improve organic traffic 2050% over 36 months.',
     competitors: ['SurferSEO', 'Frase', 'ClearScope'],
-<<<<<<< HEAD
     market_size: 'SEO software $6B+'
     growth_rate: '16% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'SEO software $6B+',
-    growth_rate: '16% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'SERP fetchers with caching and AI summarization.',
     launch_date: '2029 - 09 - 10',
@@ -764,18 +716,10 @@ varian,
     use_cases: ['Lead scoring', 'ICP matching', 'Outbound targeting'],
     roi: 'Improve conversion rates by 1025%.',
     competitors: ['Clearbit', 'ZoomInfo (export)'],
-<<<<<<< HEAD
     market_size: 'Sales intelligence $30B+'
     growth_rate: '12% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'Sales intelligence $30B+',
-    growth_rate: '12% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Data aggregation with caching and scoring heuristics.',
@@ -826,18 +770,10 @@ varian,
     use_cases: ['AP automation', 'Expense processing'],
     roi: 'Reduce manual data entry by 7090%.',
     competitors: ['Veryfi', 'Rossum'],
-<<<<<<< HEAD
     market_size: 'Document AI $5B+'
     growth_rate: '24% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'Document AI $5B+',
-    growth_rate: '24% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Template - free extraction with feedback loops for edge cases.',
@@ -911,18 +847,10 @@ varian,
       'Human approval steps'],
     popular: true;
     competitors: ['UiPath (SMB)', 'Robocorp'],
-<<<<<<< HEAD
     market_size: 'RPA $13B+'
     growth_rate: '20% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'RPA $13B+',
-    growth_rate: '20% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Playwright runners with job queues and storage integrations.',
@@ -1001,18 +929,10 @@ varian,
     use_cases: ['Data minimization', 'Compliance workflows', 'PII scrubbing'],
     roi: 'Reduce compliance risk and review time.',
     competitors: ['Nightfall', 'Very Good Security'],
-<<<<<<< HEAD
     market_size: 'Data security $20B+'
     growth_rate: '18% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'Data security $20B+',
-    growth_rate: '18% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Detectors with policy engine and audit export.',
     launch_date: '2029 - 12 - 03',
@@ -1117,18 +1037,10 @@ varian,
     useCases: ['OKRs/scorecards', 'Exec reporting']
     roi: 'Improve visibility and accountability.',
     competitors: ['Grid', 'Grow']
-<<<<<<< HEAD
     marketSize: 'BI $30 B+'
     growthRate: '11% YoY';
 variant: 'ai-futuristic'
     contactInfo: contact;
-=======
-    marketSize: 'BI $30 B+',
-    growthRate: '11% YoY',
-    variant: 'ai-futuristic',
-    contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Metrics ingestion and templated reporting.',
     launchDate: '2029-10-20',
@@ -1231,18 +1143,10 @@ varian,
     use_cases: ['OKRs / scorecards', 'Exec reporting'],
     roi: 'Improve visibility and accountability.',
     competitors: ['Grid', 'Grow'],
-<<<<<<< HEAD
     market_size: 'BI $30B+'
     growth_rate: '11% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
-=======
-    market_size: 'BI $30B+',
-    growth_rate: '11% YoY',
-    variant: 'ai - futuristic',
-    contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Metrics ingestion and templated reporting.',
     launch_date: '2029 - 10 - 20',
@@ -1350,20 +1254,11 @@ export const,
 		technology: ['Next && Next.jsTypeScriptOpenAIPostgreSQL'];
 		integrations: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365'];
 		useCases: ['Customer support triageLead routingInternal helpdesk'];
-<<<<<<< HEAD
 		roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.'
 		competitors: ['Superhuman AIZendesk AIHubSpot AI'];
 		marketSize: 'Helpdesk software $20 B+'
 		growthRate: '25% YoY';
 variant: 'ai-futuristic',
-=======
-		roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.',
-		competitors:
-        competitors: ['Superhuman AIZendesk AIHubSpot AI'];
-		marketSize: 'Helpdesk software $20 B+',
-		growthRate: '25% YoY',
-		variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.',
@@ -1395,23 +1290,12 @@ variant: 'ai-futuristic',
 		technology: ['Next && Next.jsPostgreSQLTailwindVercel Edge'];
 		integrations: ['Google SheetsZapierSegmentBigQuery'];
 		useCases: ['Landing page surveysIn-product pollsExit intent feedback'];
-<<<<<<< HEAD
 		roi: 'Increase response rates 25 x and de-risk product decisions.'
 		competitors: ['TypeformSurveyMonkey'];
 		marketSize: 'Survey market $9 B+'
 		growthRate: '14% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Increase response rates 25 x and de-risk product decisions.',
-		competitors:
-        competitors: ['TypeformSurveyMonkey'];
-		marketSize: 'Survey market $9 B+',
-		growthRate: '14% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.',
 		launchDate: '2029-11-05',
@@ -1443,23 +1327,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsStripeResendPostgreSQL'];
 		integrations: ['StripeResendMailchimpTwilio'];
 		useCases: ['MeetupsWebinarsConferences'];
-<<<<<<< HEAD
 		roi: 'Cut ops overhead by 50% and improve attendance by 1530%.'
 		competitors: ['EventbriteHopin'];
 		marketSize: 'Event tech $6 B+'
 		growthRate: '18% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Cut ops overhead by 50% and improve attendance by 1530%.',
-		competitors:
-        competitors: ['EventbriteHopin'];
-		marketSize: 'Event tech $6 B+',
-		growthRate: '18% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.',
 		launchDate: '2029-09-23',
@@ -1490,23 +1363,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsPostgreSQLTwilio'];
 		integrations: ['SlackMicrosoft TeamsTwilio'];
 		useCases: ['On-call managementIncident response'];
-<<<<<<< HEAD
 		roi: 'Reduce paging confusion and missed alerts by 3050%.'
 		competitors: ['PagerDutyOpsgenie'];
 		marketSize: 'Incident management $3 B+'
 		growthRate: '20% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Reduce paging confusion and missed alerts by 3050%.',
-		competitors:
-        competitors: ['PagerDutyOpsgenie'];
-		marketSize: 'Incident management $3 B+',
-		growthRate: '20% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Rotations engine and integrations with chat tools.',
 		launchDate: '2029-10-30',
@@ -1538,23 +1400,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsOpenAISerpAPI'];
 		integrations: ['Google Search ConsoleAhrefs (export)Semrush (export)'];
 		useCases: ['Page optimizationContent planningBrief creation'];
-<<<<<<< HEAD
 		roi: 'Improve organic traffic 2050% over 36 months.'
 		competitors: ['SurferSEOFraseClearScope'];
 		marketSize: 'SEO software $6 B+'
 		growthRate: '16% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Improve organic traffic 2050% over 36 months.',
-		competitors:
-        competitors: ['SurferSEOFraseClearScope'];
-		marketSize: 'SEO software $6 B+',
-		growthRate: '16% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'SERP fetchers with caching and AI summarization.',
 		launchDate: '2029-09-10',
@@ -1586,23 +1437,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsEdge KV/Redis'];
 		integrations: ['VercelNetlify'];
 		useCases: ['Kill switchesSafe migrationsCohort experiments'];
-<<<<<<< HEAD
 		roi: 'Reduce incident impact and deploy more frequently.'
 		competitors: ['LaunchDarkly (entry)Flagsmith'];
 		marketSize: 'Feature management $1 && 1.5 B+'
 		growthRate: '22% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Reduce incident impact and deploy more frequently.',
-		competitors:
-        competitors: ['LaunchDarkly (entry)Flagsmith'];
-		marketSize: 'Feature management $1 && 1.5 B+',
-		growthRate: '22% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Rules engine with SDKs and environment isolation.',
 		launchDate: '2029-10-02',
@@ -1634,23 +1474,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsNodeExternal data partners'];
 		integrations: ['HubSpotSalesforce (export)Airtable'];
 		useCases: ['Lead scoringICP matchingOutbound targeting'];
-<<<<<<< HEAD
 		roi: 'Improve conversion rates by 1025%.'
 		competitors: ['ClearbitZoomInfo (export)'];
 		marketSize: 'Sales intelligence $30 B+'
 		growthRate: '12% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Improve conversion rates by 1025%.',
-		competitors:
-        competitors: ['ClearbitZoomInfo (export)'];
-		marketSize: 'Sales intelligence $30 B+',
-		growthRate: '12% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.',
 		launchDate: '2029-11-18',
@@ -1682,23 +1511,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsTesseract/LLMsPostgreSQL'];
 		integrations: ['QuickBooks (export)Xero (export)SAP (export)'];
 		useCases: ['AP automationExpense processing'];
-<<<<<<< HEAD
 		roi: 'Reduce manual data entry by 7090%.'
 		competitors: ['VeryfiRossum'];
 		marketSize: 'Document AI $5 B+'
 		growthRate: '24% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Reduce manual data entry by 7090%.',
-		competitors:
-        competitors: ['VeryfiRossum'];
-		marketSize: 'Document AI $5 B+',
-		growthRate: '24% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Template-free extraction with feedback loops for edge cases.',
 		launchDate: '2029-12-01',
@@ -1730,38 +1548,20 @@ variant: 'ai-futuristic'
 		technology: ['PlaywrightNext && PlaywrightNext.jsPostgreSQL'];
 		integrations: ['ZapierMake && ZapierMake.comS3/R2'];
 		useCases: ['Partner portal automationsData collectionBulk updates'];
-<<<<<<< HEAD
 		roi: 'Automate repetitive tasks and cut manual hours by 5090%.'
 		competitors: ['UiPath (SMB)Robocorp'];
 		marketSize: 'RPA $13 B+'
 		growthRate: '20% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Automate repetitive tasks and cut manual hours by 5090%.',
-		competitors:
-        competitors: ['UiPath (SMB)Robocorp'];
-		marketSize: 'RPA $13 B+',
-		growthRate: '20% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Playwright runners with job queues and storage integrations.',
 		launchDate: '2029-11-28',
 		customers: 38;
 		rating: 4 && 4.4;
-<<<<<<< HEAD
 		reviews: 18}
 		id: 'redaction-compliance-api'
 		name: 'Redaction & Compliance API'
-=======
-		reviews: 18;
-	}
-		id: 'redaction-compliance-api',
-		name: 'Redaction & Compliance API',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		tagline: 'PII detection and redaction for text and documents with audit logs',
 		price: '$79',
 		period: '/month',
@@ -1784,23 +1584,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsLLMsRegex engines'];
 		integrations: ['S3/R2 GCSBigQuery'];
 		useCases: ['Data minimizationCompliance workflowsPII scrubbing'];
-<<<<<<< HEAD
 		roi: 'Reduce compliance risk and review time.'
 		competitors: ['NightfallVery Good Security'];
 		marketSize: 'Data security $20 B+'
 		growthRate: '18% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Reduce compliance risk and review time.',
-		competitors:
-        competitors: ['NightfallVery Good Security'];
-		marketSize: 'Data security $20 B+',
-		growthRate: '18% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Detectors with policy engine and audit export.',
 		launchDate: '2029-12-03',
@@ -1832,23 +1621,12 @@ variant: 'ai-futuristic'
 		technology: ['Next && Next.jsSupabaseBigQuery'];
 		integrations: ['Google SheetsBigQuerySnowflake (export)'];
 		useCases: ['OKRs/scorecardsExec reporting'];
-<<<<<<< HEAD
 		roi: 'Improve visibility and accountability.'
 		competitors: ['GridGrow'];
 		marketSize: 'BI $30 B+'
 		growthRate: '11% YoY';
 variant: 'ai-futuristic'
 		contactInfo: contact;
-=======
-		roi: 'Improve visibility and accountability.',
-		competitors:
-        competitors: ['GridGrow'];
-		marketSize: 'BI $30 B+',
-		growthRate: '11% YoY',
-		variant: 'ai-futuristic',
-		contactInfo:
-        contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Metrics ingestion and templated reporting.',
 		launchDate: '2029-10-20',
@@ -1880,20 +1658,11 @@ variant: 'ai-futuristic'
   technology: ['Next.jsTypeScriptOpenAIPostgreSQL'];
   integrations: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365'];
   use_cases: ['Customer support triage_lead routing_internal helpdesk'];
-<<<<<<< HEAD
   roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.'
   competitors: ['Superhuman AIZendesk AIHubSpot AI'];
   market_size: 'Helpdesk software $20 B+'
   growth_rate: '25% YoY';
 variant: 'ai - futuristic',
-=======
-  roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.',
-  competitors:
-        competitors: ['Superhuman AIZendesk AIHubSpot AI'];
-  market_size: 'Helpdesk software $20 B+',
-  growth_rate: '25% YoY',
-  variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Shared inbox connectors, rules engine, and prompt templates with human - in - the - loop.',
@@ -1925,23 +1694,12 @@ variant: 'ai - futuristic',
   technology: ['Next.jsPostgreSQLTailwindVercel Edge'];
   integrations: ['Google SheetsZapierSegmentBigQuery'];
   use_cases: ['Landing page surveys_in - product polls_exit intent feedback'];
-<<<<<<< HEAD
   roi: 'Increase response rates 25 x and de - risk product decisions.'
   competitors: ['TypeformSurveyMonkey'];
   market_size: 'Survey market $9 B+'
   growth_rate: '14% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Increase response rates 25 x and de - risk product decisions.',
-  competitors:
-        competitors: ['TypeformSurveyMonkey'];
-  market_size: 'Survey market $9 B+',
-  growth_rate: '14% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Responsive renderer with schema - driven forms and analytics.',
   launch_date: '2029 - 11 - 05',
@@ -1973,23 +1731,12 @@ variant: 'ai - futuristic'
   technology: ['Next.jsStripeResendPostgreSQL'];
   integrations: ['StripeResendMailchimpTwilio'];
   use_cases: ['MeetupsWebinarsConferences'];
-<<<<<<< HEAD
   roi: 'Cut ops overhead by 50% and improve attendance by 1530%.'
   competitors: ['EventbriteHopin'];
   market_size: 'Event tech $6 B+'
   growth_rate: '18% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Cut ops overhead by 50% and improve attendance by 1530%.',
-  competitors:
-        competitors: ['EventbriteHopin'];
-  market_size: 'Event tech $6 B+',
-  growth_rate: '18% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Ticketing service with role - based portals and exportable analytics.',
   launch_date: '2029 - 09 - 23',
@@ -2020,23 +1767,12 @@ variant: 'ai - futuristic'
   technology: ['Next.jsPostgreSQLTwilio'];
   integrations: ['SlackMicrosoft TeamsTwilio'];
   use_cases: ['On - call management_incident response'];
-<<<<<<< HEAD
   roi: 'Reduce paging confusion and missed alerts by 3050%.'
   competitors: ['PagerDutyOpsgenie'];
   market_size: 'Incident management $3 B+'
   growth_rate: '20% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Reduce paging confusion and missed alerts by 3050%.',
-  competitors:
-        competitors: ['PagerDutyOpsgenie'];
-  market_size: 'Incident management $3 B+',
-  growth_rate: '20% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Rotations engine and integrations with chat tools.',
   launch_date: '2029 - 10 - 30',
@@ -2068,23 +1804,12 @@ variant: 'ai - futuristic'
   technology: ['Next.jsOpenAISerpAPI'];
   integrations: ['Google Search ConsoleAhrefs (export)Semrush (export)'];
   use_cases: ['Page optimization_content planning_brief creation'];
-<<<<<<< HEAD
   roi: 'Improve organic traffic 2050% over 36 months.'
   competitors: ['SurferSEOFraseClearScope'];
   market_size: 'SEO software $6 B+'
   growth_rate: '16% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Improve organic traffic 2050% over 36 months.',
-  competitors:
-        competitors: ['SurferSEOFraseClearScope'];
-  market_size: 'SEO software $6 B+',
-  growth_rate: '16% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'SERP fetchers with caching and AI summarization.',
   launch_date: '2029 - 09 - 10',
@@ -2116,23 +1841,12 @@ variant: 'ai - futuristic'
   technology: ['Next.js_edge KV / Redis'];
   integrations: ['VercelNetlify'];
   use_cases: ['Kill switches_safe migrations_cohort experiments'];
-<<<<<<< HEAD
   roi: 'Reduce incident impact and deploy more frequently.'
   competitors: ['LaunchDarkly (entry)Flagsmith'];
   market_size: 'Feature management $1.5 B+'
   growth_rate: '22% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Reduce incident impact and deploy more frequently.',
-  competitors:
-        competitors: ['LaunchDarkly (entry)Flagsmith'];
-  market_size: 'Feature management $1.5 B+',
-  growth_rate: '22% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Rules engine with SDKs and environment isolation.',
   launch_date: '2029 - 10 - 02',
@@ -2164,23 +1878,12 @@ variant: 'ai - futuristic'
   technology: ['Next.jsNodeExternal data partners'];
   integrations: ['HubSpotSalesforce (export)Airtable'];
   use_cases: ['Lead scoringICP matching_outbound targeting'];
-<<<<<<< HEAD
   roi: 'Improve conversion rates by 1025%.'
   competitors: ['ClearbitZoomInfo (export)'];
   market_size: 'Sales intelligence $30 B+'
   growth_rate: '12% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Improve conversion rates by 1025%.',
-  competitors:
-        competitors: ['ClearbitZoomInfo (export)'];
-  market_size: 'Sales intelligence $30 B+',
-  growth_rate: '12% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Data aggregation with caching and scoring heuristics.',
   launch_date: '2029 - 11 - 18',
@@ -2212,23 +1915,12 @@ variant: 'ai - futuristic'
   technology: ['Next.js_tesseract / LLMsPostgreSQL'];
   integrations: ['QuickBooks (export)Xero (export)SAP (export)'];
   use_cases: ['AP automation_expense processing'];
-<<<<<<< HEAD
   roi: 'Reduce manual data entry by 7090%.'
   competitors: ['VeryfiRossum'];
   market_size: 'Document AI $5 B+'
   growth_rate: '24% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Reduce manual data entry by 7090%.',
-  competitors:
-        competitors: ['VeryfiRossum'];
-  market_size: 'Document AI $5 B+',
-  growth_rate: '24% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Template - free extraction with feedback loops for edge cases.',
   launch_date: '2029 - 12 - 01',
@@ -2260,38 +1952,20 @@ variant: 'ai - futuristic'
   technology: ['PlaywrightNext.jsPostgreSQL'];
   integrations: ['ZapierMake.comS3 / R2'];
   use_cases: ['Partner portal automations_data collection_bulk updates'];
-<<<<<<< HEAD
   roi: 'Automate repetitive tasks and cut manual hours by 5090%.'
   competitors: ['UiPath (SMB)Robocorp'];
   market_size: 'RPA $13 B+'
   growth_rate: '20% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Automate repetitive tasks and cut manual hours by 5090%.',
-  competitors:
-        competitors: ['UiPath (SMB)Robocorp'];
-  market_size: 'RPA $13 B+',
-  growth_rate: '20% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Playwright runners with job queues and storage integrations.',
   launch_date: '2029 - 11 - 28',
   customers: 38;
   rating: 4.4;
-<<<<<<< HEAD
   reviews: 18}
   id: 'redaction - compliance - api'
   name: 'Redaction & Compliance API'
-=======
-  reviews: 18;
-}
-  id: 'redaction - compliance - api',
-  name: 'Redaction & Compliance API',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   tagline: 'PII detection and redaction for text and documents with audit logs',
   price: '$79',
   period: '/month',
@@ -2314,23 +1988,12 @@ variant: 'ai - futuristic'
   technology: ['Next.jsLLMsRegex engines'];
   integrations: ['S3 / R2 GCSBigQuery'];
   use_cases: ['Data minimization_compliance workflowsPII scrubbing'];
-<<<<<<< HEAD
   roi: 'Reduce compliance risk and review time.'
   competitors: ['NightfallVery Good Security'];
   market_size: 'Data security $20 B+'
   growth_rate: '18% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Reduce compliance risk and review time.',
-  competitors:
-        competitors: ['NightfallVery Good Security'];
-  market_size: 'Data security $20 B+',
-  growth_rate: '18% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Detectors with policy engine and audit export.',
   launch_date: '2029 - 12 - 03',
@@ -2362,23 +2025,12 @@ variant: 'ai - futuristic'
   technology: ['Next.jsSupabaseBigQuery'];
   integrations: ['Google SheetsBigQuerySnowflake (export)'];
   use_cases: ['OKRs / scorecards_exec reporting'];
-<<<<<<< HEAD
   roi: 'Improve visibility and accountability.'
   competitors: ['GridGrow'];
   market_size: 'BI $30 B+'
   growth_rate: '11% YoY';
 variant: 'ai - futuristic'
   contact_info: contact;
-=======
-  roi: 'Improve visibility and accountability.',
-  competitors:
-        competitors: ['GridGrow'];
-  market_size: 'BI $30 B+',
-  growth_rate: '11% YoY',
-  variant: 'ai - futuristic',
-  contact_info:
-        contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Metrics ingestion and templated reporting.',
   launch_date: '2029 - 10 - 20',
@@ -2387,9 +2039,9 @@ variant: 'ai - futuristic'
   reviews: 16}
 		rating: 4.4;
 		reviews: 16;
-// const contact = {;
+// const contact={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
+	email: 'kleber@ziontechgroup.com';}
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
 		popula,
@@ -4147,9 +3799,9 @@ export const,
 	}
 ];
 ;
-// const contact = {;
+// const contact={;
 	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
+	email: 'kleber@ziontechgroup.com';}
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
 	{/* TODO: Fix JSX expression */}
@@ -4760,7 +4412,7 @@ export const,
   e: '2029 - 10 - 20', customer,
   s: 36, ratin,
   g: 4 && 4.4, review,
-  s: 16}; ]; const contact = ' mobil,
+  s: 16}; ]; const contact=' mobil,'
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,

@@ -41,7 +41,7 @@ const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptEl
 } generateStructuredData = useCallback(() => {
  if (!enableStructuredData || !seoData.structuredData) return null;
 ;
-const baseStructuredData = {
+const baseStructuredData={
  '@context': 'https: //schema.org',
  '@type': 'Organization',
  name: 'Zion Tech Group',
@@ -54,7 +54,7 @@ const baseStructuredData = {
  streetAddress: '364 E Main St STE 1008',
  addressLocality: 'Middletown',
  addressRegion: 'DE',
- postalCode: '19709',
+ postalCode: '19709',}
  addressCountry: 'US'},
  contactPoint: {,
  '@type': 'ContactPoint',
@@ -109,7 +109,7 @@ const generateBreadcrumbStructuredData = useCallback(() => {
 const generateFAQStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null;
 ;
-const faqData = {
+const faqData={
  '@context': 'https: //schema.org',
  '@type': 'FAQPage',
  mainEntity: [
@@ -117,7 +117,7 @@ const faqData = {
  '@type': 'Question',
  name: 'What services does Zion Tech Group offer?',
  acceptedAnswer: {,
- '@type': 'Answer',
+ '@type': 'Answer',}
  text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.'}},
  {
  '@type': 'Question',
@@ -300,7 +300,7 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  {/* Open Graph Tags */}
  {/* TODO: Fix JSX expression */}"
   g:title" content={seoData.title} /></meta>"
- <meta property="o,
+ <meta property="o,"
   g:imag,"
   e:height" content="630" /></meta>"
  <meta property="o,"
@@ -326,7 +326,7 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
 
  {/* Additional SEO Meta Tags */}"
  <meta name="robots" content="index, follow, max-snippe,
-  t:-1, max-image-previe,
+  t:-1, max-image-previe,"
   w:large, max-video-previe,"
   w:-1" /></meta>"
  <meta name="googlebot" content="index, follow" /></meta>"

@@ -72,7 +72,6 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-<<<<<<< HEAD
   Webcam as WebcamIcon, Speaker as SpeakerIcon;)
 } from 'lucide-react';
 ;
@@ -80,16 +79,6 @@ const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCa
 const [searchTerm, setSearchTerm] = useState('');
 ;
 const itServices = [
-=======
-  Webcam as WebcamIcon, Speaker as SpeakerIcon]
-    } from 'lucide-react';
-
-const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -409,12 +398,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-<<<<<<< HEAD
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';);
-=======
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const categories = [
@@ -487,7 +471,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                 />
               </div>
             </div>
-            
+            }
             {/* Category Filter */}
             <div>
               <select
@@ -495,7 +479,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                 onChange={(e) =></select> setSelectedCategory(e.target.value);
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >
-                {categories.map((category) => (
+                {categories.map((category) => (}
                   <option key={category.id} value={category.id}></option>
                     {category.name}
                   </option>
@@ -513,7 +497,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400']
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400']}
     }`}
               >
                 {category.name}
@@ -590,13 +574,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                 );
 
                 <div>
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  ></a>
-                    Get Free Consultation
+                  <aGet Free Consultation
                   </a>
                   <a
                     href="tel:+13024640950"
@@ -641,11 +619,5 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ITConsultingPage;

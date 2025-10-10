@@ -13,7 +13,7 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}"
       <header className="bg-white shadow-sm border-b"></header>"
-        <div className="max-w-7xl mx-auto px-4,
+        <div className="max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8 py-4"></div>"
           <Link href="/" className="inline-flex items-center text-blue-600,"
@@ -36,7 +36,7 @@ export default function ServicesAdvertisingPage() {
       {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></section>"
         <div className="absolute inset-0 bg-black opacity-20"></div>"
-        <div className="relative max-w-7xl mx-auto px-4,
+        <div className="relative max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8"></div>"
           <div className="text-center"></div>"
@@ -77,7 +77,7 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
       </section>
       {/* Key Metrics */}"
       <section className="py-16 bg-white"></section>"
-        <div className="max-w-7xl mx-auto px-4,
+        <div className="max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8"></div>"
           <div className="text-center mb-12"></div>"
@@ -87,7 +87,7 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
           </h2>"
             <p className="text-xl text-gray-600"></p>
 Our AI-powered advertising delivers measurable business impact;"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>"
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>"
@@ -102,7 +102,7 @@ Our AI-powered advertising delivers measurable business impact;"
       <section id="services" className="py-16 bg-gray-50"></section>
 AI Advertising Solutions;
               Comprehensive AI-powered advertising services for maximum impact;"
-          <div className="grid grid-cols-1,
+          <div className="grid grid-cols-1,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
             <div className="bg-white rounded-lg shadow-lg p-6,"

@@ -80,13 +80,8 @@ const navigationEntry = performance.getEntriesByType('navigation')[0] as Perform
       }, 10000);
     };
 
-<<<<<<< HEAD
     // Show performance panel after 3 seconds;
 const timer = setTimeout(() => setIsVisible(true), 3000);
-=======
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return () => clearTimeout(timer);
   }, []);
 
@@ -111,7 +106,7 @@ const getScoreText = (value: number, thresholds: { good: number; poor: number })
         <h3 className="font-semibold text-cyan-400">Performance</h3>
         <button
           onClick={() => setIsVisible(false);
-          className="text-gray-400 hover:text-white"
+          className="text-gray-400 hover:text-white"}
 import { useAnalytics } from './AnalyticsProvider';
 
 interface PerformanceMetrics {
@@ -305,20 +300,17 @@ const getScoreText = (value: number | null, thresholds: { good: number; needsImp
           ×
         </button>
       </div>
-<<<<<<< HEAD
-=======
     // Resource timing analysis
     const analyzeResources = () => {
       const resources = performance.getEntriesByType('resource');
       const slowResources = resources.filter((resource: any) => resource.duration > 1000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       
       if (slowResources.length > 0) {
         // console.warn removed for production
 => ({
           name: r.name,
           duration: r.duration,
-          size: r.transferSize
+          size: r.transferSize}
         })));
       }
     };
@@ -326,10 +318,10 @@ const getScoreText = (value: number | null, thresholds: { good: number; needsImp
     // Memory usage monitoring;
 const monitorMemory = () => {
       if ($1) { const memory = (performance as any).memory;
-const memoryUsage = {
+const memoryUsage={
           used: Math.round(memory.usedJSHeapSize / 1048576), // MB
           total: Math.round(memory.totalJSHeapSize / 1048576), // MB
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
+          limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB}
         };
         
         if (memoryUsage.used > memoryUsage.limit * 0.8) {
@@ -341,10 +333,10 @@ const memoryUsage = {
     // Network information;
 const monitorNetwork = () => {
       if ($1) { const connection = (navigator as any).connection;
-const networkInfo = {
+const networkInfo={
           effectiveType: connection.effectiveType,
           downlink: connection.downlink,
-          rtt: connection.rtt
+          rtt: connection.rtt}
         };
         
         // console.log removed for production
@@ -376,87 +368,7 @@ const logMetrics = () => {
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>
-<<<<<<< HEAD
           </div>);
-=======
-          </div>
-        )}
-
-      <div className="space-y-3">
-        {/* FCP */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">First Contentful Paint</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}`}>
-              {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 })}
-            </div>
-          </div>
-        </div>
-
-        {/* LCP */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">Largest Contentful Paint</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}`}>
-              {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })}
-            </div>
-          </div>
-        </div>
-
-        {/* FID */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">First Input Delay</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}`}>
-              {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.fid, { good: 100, needsImprovement: 300 })}
-            </div>
-          </div>
-        </div>
-
-        {/* CLS */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">Cumulative Layout Shift</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}`}>
-              {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}
-            </div>
-          </div>
-        </div>
-
-        {/* TTFB */}
-        <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-gray-700">Time to First Byte</span>
-          <div className="text-right">
-            <span className={`text-sm font-bold ${getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}`}>
-              {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
-            </span>
-            <div className="text-xs text-gray-500">
-              {getScoreText(metrics.ttfb, { good: 800, needsImprovement: 1800 })}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-4 pt-3 border-t border-gray-200">
-        <button
-          onClick={() => window.location.reload()}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm"
-        >
-          Refresh Metrics
-        </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       </div>
     </div>
   );

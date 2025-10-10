@@ -142,7 +142,6 @@
   5: "ttfb"})valu,
   e: Math.round(metrics.fcp | 0),non_interactio,"
   n: "true"; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
-<<<<<<< HEAD
   p: Date.now()} metrics}; metrics})}).catch(console.error)} } ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()} window.removeEventListener("beforeunload")sendMetrics)}"},[])} retur,"
   n: "null,"
   export: default PerformanceMonitor"," window.removeEventListener("beforeunload")sendMetrics)}},[])} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
@@ -151,17 +150,6 @@
   y: JSON.stringify({) ur} l: "window.location.href")timestam,"
   p: Date.now()}metrics})}).catch(console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect()} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics)} },[])} " return null; "'"'"' import _React { useEffect } from "react" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; "; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
   a: 'T; statu} s: 'number}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
-=======
-  p: Date.now()} metrics}; metrics})}).catch(console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,"
-  n: 'null,',
-  export:
-        export: default PerformanceMonitor"," window.removeEventListener("beforeunload")sendMetrics)}},[]);} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
-  d: "POST",header,"
-  s: {"}; "Content-Type": "application/json"},bod,"
-  y: JSON.stringify({) ur} l: "window.location.href")timestam,"
-  p: Date.now()}metrics})}).catch(console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"'"' import _React { useEffect } from "react" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; "; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
-  a: 'T; statu} s: 'number}message?: string} ; interface User {/* TODO: Fix JSX expression */}',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
   l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}
   n: 'string; pric} e: 'number}} categor,y: 'string'} ; interface FormData {} [ke,
@@ -208,14 +196,8 @@
   f: (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
   s: {"} "Content-Type": "application/json}"}," bod,
   y: JSON.stringify({} ur)
-<<<<<<< HEAD
   l: 'window.location.hre,f)timestam,"
   p: Date.now()}metrics})}).catch(_console.error)} ; window.addEventListener("beforeunload")sendMetrics)} setTimeout(sendMetrics)5000)} retur,"
-=======
-  l: 'window.location.hre,f)timestam,',
-  p:
-        p: Date.now()}metrics})}).catch(_console.error)} ; window.addEventListener("beforeunload")sendMetrics);} setTimeout(sendMetrics)5000);} retur,"
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   n: () => {"}; fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"] })} const sendMetrics = () => {/* TODO: Fix JSX expression */}"
   p: {"} metric_," 1: "fcp",metric_,"
@@ -235,7 +217,6 @@
   5: "ttfb"})valu,
   e: Math.round(metrics.fcp || 0),non_interactio,"
   n: 'true; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
-<<<<<<< HEAD
   p: Date.now()} metrics}; metrics})}).catch(_console.error)} } ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()} window.removeEventListener("beforeunload")sendMetrics)}"},[])} retur,
   n: 'null,"
   export: default PerformanceMonitor," window.removeEventListener("beforeunload")sendMetrics)}},[])} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
@@ -243,14 +224,3 @@
   s: {"}; "Content-Type": "application/json"},bod,
   y: JSON.stringify({) ur} l: 'window.location.href)timestam,"
   p: Date.now()}metrics})}).catch(_console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect()} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics)} },[])} " return null; "'"
-=======
-  p: Date.now()} metrics}; metrics})}).catch(_console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,
-  n: 'null,',
-  export:
-        export: default PerformanceMonitor," window.removeEventListener("beforeunload")sendMetrics)}},[]);} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
-  d: "POST",header,"
-  s: {"}; "Content-Type": "application/json"},bod,
-  y: JSON.stringify({) ur} l: 'window.location.href)timestam,',
-  p:
-        p: Date.now()}metrics})}).catch(_console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81

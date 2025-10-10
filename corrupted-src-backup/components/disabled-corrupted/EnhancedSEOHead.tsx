@@ -19,7 +19,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
   image = 'htt, p, s: //ziontechgro u p.c o m/og-image.j p g' ,
   ty, p, e = 'webs, i, t, e',
   author = 'Zion, Tech, Grou, p'}) => { ;
-const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {
+const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a={
     '@conte, x, t': 'htt, p, s: //sche m a.o r g' ,
     '@ty, p, e': 'Organizati, o, n',
     na, m, e: 'Zion, Tech, Grou, p',
@@ -33,7 +33,7 @@ const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo,
     contactPoi, n, t: {,
       '@ty, p, e': 'ContactPo, i, n, t',
       telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',
-      contactTy, p, e: 'customer, servi, c, e',
+      contactTy, p, e: 'customer, servi, c, e',}
       ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},
     addre, s, s: {,
       '@ty, p, e': 'PostalAddr, e, s, s',
@@ -108,19 +108,19 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, nam, e='robo, t, s' conte, n, t='in, d, e, x, foll, o, w' /></meta>
       <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0' /></meta>
       {/* Open, Graph, Meta Ta, g, s */}
-      <meta, propert, y='o,
+      <meta, propert, y='o,'
   g: title' conte, n, t={t, i, t, l, e} /></meta>
-      <meta, propert, y = 'o,
+      <meta, propert, y='o,'
   g: description' conte, n, t={descrip, t, i, o, n} /></meta>
-      <meta, propert, y = 'o,
+      <meta, propert, y='o,'
   g: image' conte, n, t={i, m, a, g, e} /></meta>
-      <meta, propert, y = 'o,
+      <meta, propert, y='o,'
   g: u, r, l' conte, n, t={canonica, l, U, r, l} /></meta>
-      <meta, propert, y = 'o,
+      <meta, propert, y='o,'
   g: ty, p, e' conte, n, t={ty, p, e} /></meta>
-      <meta, propert, y = 'o,
+      <meta, propert, y='o,'
   g: site_na, m, e' conte, n, t='Zion, Tech, Group' /></meta>
-      <meta, propert, y='o,
+      <meta, propert, y='o,'
   g:loca, l, e' conte, n, t='en_, U, S' /></meta>
       {/* Twitter, Card, Meta Ta, g, s */}
       <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' /></meta>

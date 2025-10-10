@@ -1,6 +1,6 @@
 
 export type InnovativeMicroSaas =
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas={;
   id: string;
   name: string;
   description: string;
@@ -13,7 +13,7 @@ export type InnovativeMicroSaas = {;
     | 'Financial Technology'
     | 'Human Resources',
     | 'Supply Chain Management',
-    | 'Customer Support',
+    | 'Customer Support',}
   pricing: { starter: string} professional?: string} enterprise?: string }
   features: string[];
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
@@ -614,7 +614,7 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 	}
 ];
 ;
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas={;
 	id: string;
 	name: string,,
   description: string;
@@ -627,7 +627,7 @@ export type InnovativeMicroSaas = {;
 		| 'Sales Automation'
 		| 'Financial Technology',
 		| 'Human Resources',
-		| 'Supply Chain Management',
+		| 'Supply Chain Management',}
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 		| 'Customer Support'}
 	pricin,
@@ -692,7 +692,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		realService: true}
 ];
 ;
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas={;
 	id: string;
 	name: string,,
   description: string;
@@ -707,7 +707,7 @@ export type InnovativeMicroSaas = {;
 		| 'Human Resources',
 		| 'Supply Chain Management',
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;}
 	{/* TODO: Fix JSX expression */}
   e: 'Podcast Transcription & SEO Suite'}
 		taglin,

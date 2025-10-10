@@ -5,7 +5,7 @@
 
 class SEOOptimizer {;
 constructor() {
-    this.seoConfig = {
+    this.seoConfig={
       siteName: 'Zion Tech Group',
       siteDescription:,
         'Advanced AI and IT Solutions - Leading technology company providing cutting-edge AI, machine learning, and IT consulting services.',
@@ -21,7 +21,7 @@ constructor() {
           logo: 'https://ziontechgroup.com/images/logo.png',
           description: 'Advanced AI and IT Solutions',
           address: {,
-            '@type': 'PostalAddress',
+            '@type': 'PostalAddress',}
             addressCountry: 'US'},
           sameAs: [,
             'https://linkedin.com/company/ziontechgroup',
@@ -527,14 +527,14 @@ const _meta = document.querySelector(`meta[name="${name}"]`);
   }
 
   generateBreadcrumbs(items) {;
-const breadcrumbSchema = {
+const breadcrumbSchema={
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: items.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1;
         name: item.name;
-        item: item.url;
+        item: item.url;}
   generateBreadcrumbs(items) {/* TODO: Fix JSX expression */}
       }))};
 

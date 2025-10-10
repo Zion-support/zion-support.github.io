@@ -2146,9 +2146,9 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   rating: number;
   reviews: number}
 ;
-// const contact = {;
+// const contact={;
   mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+  email: 'kleber@ziontechgroup.com';}
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
   realImplementatio,
@@ -2948,7 +2948,7 @@ i,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } const contact = ' mobil,
+  s: number } const contact=' mobil,'
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,

@@ -43,12 +43,12 @@ const,
   }, [structuredData]);
 
   // Default structured data for organization;
-  const defaultStructuredData = {
+  const defaultStructuredData={
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description: description;
-    url: canonicalUrl || window.location.origin;
+    url: canonicalUrl || window.location.origin;}
     logo: `${window.location.origin}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
     contactPoint: {,

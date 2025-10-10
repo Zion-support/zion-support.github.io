@@ -43,7 +43,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */}
   y: '2s' }}></div>
       </div>"
-      <div className="relative max-w-7xl mx-auto px-4,
+      <div className="relative max-w-7xl mx-auto px-4,"
   sm:px-6,"
   lg:px-8 py-12"></div>
         {/* Header Section */}"
@@ -503,7 +503,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             to="/blog/ai-2025-oct-real-time-autonomous-infrastructure-orchestration-revolution""
             className="group bg-gradient-to-br from-cyan-600 to-blue-600,
   hover:from-cyan-500,
-  hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform,
+  hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform,"
   hover:scale-105,"
   hover:shadow-2xl"
           >"
@@ -522,7 +522,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             to="/case-studies/ai-2025-oct-global-financial-services-autonomous-infrastructure-410-million-success""
             className="group bg-gradient-to-br from-blue-600 to-purple-600,
   hover:from-blue-500,
-  hover:to-purple-500 text-white rounded-xl p-6 transition-all duration-300 transform,
+  hover:to-purple-500 text-white rounded-xl p-6 transition-all duration-300 transform,"
   hover:scale-105,"
   hover:shadow-2xl"
           >"
@@ -541,7 +541,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             to="/services/autonomous-infrastructure-orchestration-services""
             className="group bg-gradient-to-br from-purple-600 to-pink-600,
   hover:from-purple-500,
-  hover:to-pink-500 text-white rounded-xl p-6 transition-all duration-300 transform,
+  hover:to-pink-500 text-white rounded-xl p-6 transition-all duration-300 transform,"
   hover:scale-105,"
   hover:shadow-2xl"
           >"
@@ -569,7 +569,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
   sm:flex-row gap-4 justify-center items-center"></div>
             <Link></Link>"
               to="/contact""
-              className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg,
+              className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg,"
   hover:bg-gray-100 transition-colors transform,"
   hover:scale-105"
             >

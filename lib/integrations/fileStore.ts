@@ -15,10 +15,10 @@ export function readState(): IntegrationsState {
   
 
   if (!fs.existsSync(STATE_FILE)) {;
-const initial: IntegrationsState = {,
+const initial: IntegrationsState={,
       connections: [],
       logs: [],
-      overrides: [],
+      overrides: [],}
       events: []};
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8')}
 }
@@ -52,11 +52,11 @@ const raw = fs.readFileSync(STATE_FILE, 'utf8');
 //     const raw = fs.readFileSync(STATE_FILE, "utf8");
     return JSON.parse(raw) as IntegrationsState} catch (error) {
     return {;
-const initial: IntegrationsState = {,;
+const initial: IntegrationsState={,;
 const initial: IntegrationsState = {
       connections: [],
       logs: [],
-      overrides: [],
+      overrides: [],}
       events: []};
 
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");

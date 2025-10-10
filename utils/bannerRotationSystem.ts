@@ -63,13 +63,13 @@ return (
 
   try {;
 const _impressions = getStoredImpressions();
-    const newImpression: BannerImpression = {
+    const newImpression: BannerImpression={
       ...impression;
       timestamp: Date.now(),
       sessionId: getSessionId(),
 export const recordBannerImpression = (impressio,
   n: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>
-);
+);}
 })
 ) => {/* TODO: Fix JSX expression */}
     };

@@ -2,21 +2,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //     // // console.log removed for production
 }
     // Broken image scanning simulation;
-    const result = {
+    const result={
       statusCode: 200;
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',}
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Broken image scanner executed successfully)
-<<<<<<< HEAD
         timestamp: new Date().toISOString();
 function: 'broken-image-scanner'
-=======
-        timestamp: new Date().toISOString()
-        function: 'broken-image-scanner',
-        source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         scanning: {,
           status: 'active',

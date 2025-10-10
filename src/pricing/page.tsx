@@ -194,7 +194,7 @@ const colors = getColorClasses(plan.color);
                 <div
                   key={index}
                   className={`relative bg-white rounded-2xl shadow-lg border-2 ${
-                    plan.popular ? colors.border : 'border-gray-200'
+                    plan.popular ? colors.border : 'border-gray-200'}
                   } overflow-hidden`}
                 >
 );
@@ -247,7 +247,7 @@ const colors = getColorClasses(plan.color);
                     <Link
                       to="/contact"
                       className={`w-full ${
-                        plan.popular
+                        plan.popular}
                           ? `${colors.bg} hover:opacity-90 text-white`
                           : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
                       } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}

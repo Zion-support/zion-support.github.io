@@ -61,11 +61,11 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' }
   ];
   return(<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;"
   g:px-8">",
   return (
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">"</div>
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">
     { na, m, e: 'Ho, m, e', hr, e, f: '/' },';
@@ -132,11 +132,11 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   ];
   return ()
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";)
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;)
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;)"
   g:px-8">";),
   return (</div>
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l"
   g:px-8">";</div>
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">";
           {/* Lo, g, o */}</div>
@@ -175,7 +175,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   {it, e, m.na, m, e}
                   {it, e, m.dropdo, w, n && (
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
-                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  /></p>
+                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  /></p>"
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">";
                   {/* TODO: Fix JSX expression */}"
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  /></path>"
@@ -195,7 +195,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                         to={dropdownIt, e, m.hr, e, f}
                         classNa, m, e="block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e;
                 {/* TODO: Fix JSX expression */}
-  k, e, y={ind, e, x}
+  k, e, y={ind, e, x}"
                         to={dropdownIt, e, m.hr, e, f}"
                         classNa, m, e="block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e,"
   r:te, x, t-bl, u, e-600, transitio, n-colo, r, s"
@@ -212,17 +212,12 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">"</div>
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">";</div>
             <a, titl, e="Internal, lin, k"
-              hr, e, f="te;
+              hr, e, f="te;"
   l: +130246409, 5, 0"
           {/* CTA, Butto, n */}"
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">""
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">";"
-            <a, titl, e="Internal, lin, k""
-              hr, e, f="te,"
-  l: +130246409, 5, 0""
-              classNa, m, e="te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medi, u, m"
-            ></a>
-              +1, 302, 464 09, 5, 0;
+            <a+1, 302, 464 09, 5, 0;
             </a>
             <Li, n, k;
   to="/conta, c, t"
@@ -236,7 +231,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           {/* Mobile, menu, button */}
           <butt, o, n;
   onCli, c, k={() => setIsMenuOp, e, n(!isMenuOp, e, n)}
-            classNa, m, e="md: hidde, n, p-2, rounde, d-md, tex, t-gr, a, y-700, hove, r:te, x, t-bl, u, e-600, hov, e;
+            classNa, m, e="md: hidde, n, p-2, rounde, d-md, tex, t-gr, a, y-700, hove, r:te, x, t-bl, u, e-600, hov, e;"
   r:bg-gr, a, y-100, transitio, n-colo, r, s"
             ar, i, a-lab, e, l="Toggle, men, u"
           >
@@ -255,13 +250,13 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               ) : (
                 <pa, t, h;
               ) : (</p>
-                <pa, t, h 
+                <pa, t, h "
   strokeLinec, a, p="rou, n, d"
                   strokeLinejo, i, n="rou, n, d"
                   strokeWid, t, h={2}
-                  d="M4, 6h16M4, 12h16M4 18h, 1, 6  />
+                  d="M4, 6h16M4, 12h16M4 18h, 1, 6  />"
   onCli, c, k={() => setIsMenuOp, e, n(!isMenuOp, e, n)}"
-            classNa, m, e="m,
+            classNa, m, e="m,"
   d: hidde, n, p-2, rounde, d-md, tex, t-gr, a, y-700, hove, r:te, x, t-bl, u, e-600, hov, e,"
   r:bg-gr, a, y-100, transitio, n-colo, r, s""
             ar, i, a-lab, e, l="Toggle, men, u"
@@ -274,7 +269,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             ></s>
               {/* TODO: Fix JSX expression */}
                   strokeWid, t, h={2}"
-                  d="M6, 18L18, 6M6 6l12, 1, 2  /></pa>
+                  d="M6, 18L18, 6M6 6l12, 1, 2  /></pa>"
               ) : (<pa, t, h;"
   strokeLinec, a, p="rou, n, d""
                   strokeLinejo, i, n="rou, n, d"
@@ -286,17 +281,17 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
         {/* Mobile, Navigatio, n */}
         {
-isMenuOp, e, n && (
+isMenuOp, e, n && ("
 <div, className="md: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0"></div>
 <nav, className="flex, fle, x-col, spac, e-y-1">
-<div, className="m;
+<div, className="m;"
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";
 <nav, className="flex, fle, x-col, spac, e-y-1">";
 {navigationIte, m, s.m, a, p((it, e, m) => (
 <div, ke, y={it, e, m.na, m, e}
 }>
                   <Li, n, k;
-<div, className="m
+<div, className="m"
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";</div>
 <nav, className="flex, fle, x-col, spac, e-y-1">";
 {navigationIte, m, s.m, a, p((it, e, m) => (
@@ -306,7 +301,7 @@ isMenuOp, e, n && (
                     classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e;
         {/* TODO: Fix JSX expression */}
 }></div>
-                  <Li, n, k;
+                  <Li, n, k;"
   to={it, e, m.hr, e, f}"
                     classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e,"
   r:bg-gr, a, y-100, rounde, d-md, transitio, n-colors, fon, t-medi, u, m"
@@ -324,7 +319,7 @@ isMenuOp, e, n && (
                           to={dropdownIt, e, m.hr, e, f}
                           classNa, m, e="block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e;
                   {/* TODO: Fix JSX expression */}
-  k, e, y={ind, e, x}
+  k, e, y={ind, e, x}"
                           to={dropdownIt, e, m.hr, e, f}"
                           classNa, m, e="block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e,"
   r:bg-gr, a, y-100, rounde, d-md, transitio, n-colo, r, s"
@@ -342,11 +337,7 @@ isMenuOp, e, n && (
                   hr, e, f="t, e, l: +130246409, 5, 0"
               ))}"
               <div, className="px-4, p, y-2, borde, r-t, borde, r-gr, a, y-200, m, t-2">";"
-                <a, titl, e="Internal, lin, k""
-                  hr, e, f="t, e, l: +130246409, 5, 0""
-                  classNa, m, e="block, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, m, b-2"
-                ></a>
-                  +1, 302, 464 09, 5, 0;
+                <a+1, 302, 464 09, 5, 0;
                 </a>
                 <Li, n, k;
   to="/conta, c, t"

@@ -6,24 +6,24 @@ import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, Colo
 
 export class AdvancedDataVisualization {
   private config: VisualizationConfig;
-  private charts: Map<string, StoredChart> = new Map();</string>constructor</string>(config: Partial<VisualizationConfig> = {}) {</VisualizationConfig>this</VisualizationConfig>.config = {
+  private charts: Map<string, StoredChart> = new Map();</string>constructor</string>(config: Partial<VisualizationConfig> = {}) {</VisualizationConfig>this</VisualizationConfig>.config={
       defaultChartType: 'line',
       defaultColorScheme: 'blue',
       animationDuration: 300;
-      responsive: true;
+      responsive: true;}
       ...config}}
 
   public createChart(id: string)
     data: ChartData)
     type: ChartType = this.config.defaultChartType;
   ): StoredChart {,;
-const chart: StoredChart = {,
+const chart: StoredChart={,
       id;
       type,
       data,
       config: {,
         ...this.config;
-        colorScheme: this.config.defaultColorScheme;
+        colorScheme: this.config.defaultColorScheme;}
 import {/* TODO: Fix JSX expression */}
 } from '../types/visualization';
 

@@ -106,9 +106,9 @@ const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues/${iss
     actions.push({ issue: issue.number),
         labels: finalLabels),
         result: res})}
-  const log = {generatedAt: new Date().toISOString(),
+  const log={generatedAt: new Date().toISOString(),
     totalOpen: issues.length;
-    labeled: actions.length;
+    labeled: actions.length;}
     actions}
   };
   // Try to store log as an artifact in repo;
@@ -198,7 +198,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
         continue;' const rule = ruleLabels(issue.title || '') issue.body || '');' const ai = await aiSuggestLabels(issue.title || '') issue.body || ''); const finalLabels = Array.from(new Set([...(rule||[]), ...(ai||[])])); const res = await addLabels(issue.number)
         finalLabels} actions.push({ issue: issue.number),
         labels: finalLabels),
-        result: res})} const log = {generatedAt: new Date().toISOString(), totalOpen: issues.length, labeled: actions.length;
+        result: res})} const log={generatedAt: new Date().toISOString(), totalOpen: issues.length, labeled: actions.length;}
         actions }; // Try to store log as an artifact in repo try {const headers = ghHeaders; let sha}' const path = 'data/reports/ai-issue-labeler-log.json' const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }` , { headers;)
       }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)

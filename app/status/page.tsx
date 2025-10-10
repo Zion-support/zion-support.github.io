@@ -227,7 +227,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       incident.status === 'resolved' 
                         ? 'bg-green-500/20 text-green-400' 
-                        : 'bg-yellow-500/20 text-yellow-400'
+                        : 'bg-yellow-500/20 text-yellow-400'}
                     }`}>
                       {incident.status}
                     </span>

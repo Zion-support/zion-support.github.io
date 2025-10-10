@@ -3,10 +3,10 @@ import { fileURLToPath } from 'url';
 
 
 // Files that need specific fixes;
-const specificFixes = {
+const specificFixes={
   'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx': {
     keywords:
-      'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',;
+      'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',;}
 const specificFixes = {/* TODO: Fix JSX expression */}
   },
   'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx': {/* TODO: Fix JSX expression */}

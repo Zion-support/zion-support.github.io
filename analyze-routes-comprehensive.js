@@ -232,10 +232,10 @@ const definedRoutes = [,
 ];
 
 // Track results;
-const results = {
+const results={
   working: [],
   broken: [],
-  errors: [],
+  errors: [],}
   total: 0};
 
 // Helper function to make HTTP requests;
@@ -245,7 +245,7 @@ const urlObj = new URL(url);
     const isHttps = urlObj.protocol === 'https: ';
     const client = isHttps ? https : http;
     ;
-const requestOptions = {
+const requestOptions={
       hostname: urlObj.hostname;
       port: urlObj.port || (isHttps ? 443 : 80)
       path: urlObj.pathname + urlObj.search;
@@ -256,7 +256,7 @@ const requestOptions = {
         'Accept-Language': 'en-US,en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1'
+        'Upgrade-Insecure-Requests': '1'}
       },
       timeout: TIMEOUT};
 ;
@@ -339,13 +339,13 @@ const batch = definedRoutes.slice(i, i + batchSize);
   }
 
   // Generate report;
-  const report = {
+  const report={
     timestamp: new Date().toISOString()
     baseUrl: BASE_URL;
     summary: {
       total: results.total;
       working: results.working.length;
-      broken: results.broken.length;
+      broken: results.broken.length;}
       errors: results.errors.length},
     working: results.working;
     broken: results.broken;

@@ -6,9 +6,9 @@
 
 
 // Configuration;
-const config = {
+const config={
   appDir: path.join(__dirname, 'app'),
-  improvements: [],
+  improvements: [],}
   errors: []};
 
 // Helper function to read files recursively;

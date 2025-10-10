@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */;
-const nextConfig = {
+const nextConfig={
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
   experimental: {
-    optimizeCss: true,
+    optimizeCss: true,}
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion']},
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'},

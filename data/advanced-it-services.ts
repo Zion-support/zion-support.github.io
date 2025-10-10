@@ -140,20 +140,11 @@ export const,
     useCases: ['Drug discovery', 'Financial modeling', 'Cryptography', 'Optimization problems'],
     roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',
     competitors: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],
-<<<<<<< HEAD
     marketSize: '$500M quantum computing market'
     growthRate: '500% annual growth';
 variant: 'quantum-cloud'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
-=======
-    marketSize: '$500M quantum computing market',
-    growthRate: '500% annual growth',
-    variant: 'quantum-cloud',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -377,20 +368,11 @@ export const,
       'IBM Quantum ($1000+/month)',
       'AWS Braket ($5000+/month)',
       'Google Quantum AI'],
-<<<<<<< HEAD
     market_size: '$500M quantum computing market'
     growth_rate: '500% annual growth';
 variant: 'quantum - cloud'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
-=======
-    market_size: '$500M quantum computing market',
-    growth_rate: '500% annual growth',
-    variant: 'quantum - cloud',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -524,20 +506,11 @@ varian,
       'Smart manufacturing'],
     roi: '300% ROI within 6 months through reduced latency and improved performance',
     competitors: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],
-<<<<<<< HEAD
     marketSize: '$50B edge computing market'
     growthRate: '250% annual growth';
 variant: 'edge-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
-=======
-    marketSize: '$50B edge computing market',
-    growthRate: '250% annual growth',
-    variant: 'edge-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -675,20 +648,11 @@ varian,
       'Palo Alto Networks ($10000+/month)',
       'CrowdStrike ($5000+/month)',
       'Zscaler'],
-<<<<<<< HEAD
     market_size: '$30B zero trust market'
     growth_rate: '200% annual growth';
 variant: 'zero - trust - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
-=======
-    market_size: '$30B zero trust market',
-    growth_rate: '200% annual growth',
-    variant: 'zero - trust - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -827,18 +791,10 @@ varian,
       'Deloitte ($40000+/month)'
       'AWS Migration Hub'
     ]
-<<<<<<< HEAD
     marketSize: '$15B cloud migration market'
     growthRate: '200% annual growth';
 variant: 'ai-migration-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    marketSize: '$15B cloud migration market',
-    growthRate: '200% annual growth',
-    variant: 'ai-migration-futuristic',
-    contactInfo:
-        contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -975,20 +931,11 @@ varian,
       'Security automation'],
     roi: '350% ROI within 6 months through automation and performance improvements',
     competitors: ['GitLab ($99+/month)', 'GitHub Actions ($1000+/month)', 'Jenkins'],
-<<<<<<< HEAD
     marketSize: '$8B DevOps market'
     growthRate: '180% annual growth';
 variant: 'ai-devops-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
-=======
-    marketSize: '$8B DevOps market',
-    growthRate: '180% annual growth',
-    variant: 'ai-devops-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1079,20 +1026,11 @@ varian,
     useCases: ['Supply chain tracking', 'Financial transactions', 'Digital identity', 'Smart contracts'],
     roi: '500% ROI within 18 months through efficiency improvements and new business models',
     competitors: ['IBM Blockchain ($10000+/month)', 'ConsenSys ($5000+/month)', 'R3 Corda'],
-<<<<<<< HEAD
     marketSize: '$20B enterprise blockchain market'
     growthRate: '300% annual growth';
 variant: 'blockchain-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
-=======
-    marketSize: '$20B enterprise blockchain market',
-    growthRate: '300% annual growth',
-    variant: 'blockchain-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1262,20 +1200,11 @@ varian,
       'AWS ($50000+/month)',
       'Azure ($40000+/month)',
       'Google Cloud ($45000+/month)'],
-<<<<<<< HEAD
     market_size: '$200B data center market'
     growth_rate: '150% annual growth';
 variant: 'quantum - infrastructure'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
-=======
-    market_size: '$200B data center market',
-    growth_rate: '150% annual growth',
-    variant: 'quantum - infrastructure',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1414,20 +1343,11 @@ varian,
       'Cisco ($8000+/month)',
       'Palo Alto Networks ($10000+/month)',
       'Fortinet ($5000+/month)'],
-<<<<<<< HEAD
     market_size: '$25B network security market'
     growth_rate: '180% annual growth';
 variant: 'ai - network - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
-=======
-    market_size: '$25B network security market',
-    growth_rate: '180% annual growth',
-    variant: 'ai - network - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1566,20 +1486,11 @@ varian,
       'AWS IoT ($1000+/month)',
       'Azure IoT ($2000+/month)',
       'Google Cloud IoT ($1500+/month)'],
-<<<<<<< HEAD
     market_size: '$100B IoT market'
     growth_rate: '250% annual growth';
 variant: 'quantum - iot - futuristic'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
-=======
-    market_size: '$100B IoT market',
-    growth_rate: '250% annual growth',
-    variant: 'quantum - iot - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1668,20 +1579,11 @@ varian,
     useCases: ['Cloud migration', 'Cost optimization', 'Performance improvement', 'Security enhancement'],
     roi: '600% ROI within 12 months through cost savings and performance improvements',
     competitors: ['Accenture ($50000+/month)', 'Deloitte ($40000+/month)', 'AWS Migration Hub'],
-<<<<<<< HEAD
     marketSize: '$15B cloud migration market'
     growthRate: '200% annual growth';
 variant: 'ai-migration-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
-=======
-    marketSize: '$15B cloud migration market',
-    growthRate: '200% annual growth',
-    variant: 'ai-migration-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1690,23 +1592,12 @@ variant: 'ai-migration-futuristic'
     launchDate: '2024-10-01',
     customers: 89;
     rating: 4 && 4.8;
-<<<<<<< HEAD
     reviews: 45}];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     realImplementation: true;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
     launchDate: '2024-10-01'
-=======
-    reviews: 45;
-  }];      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    realImplementation:
-        realImplementation: true;
-    implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
-    launchDate: '2024-10-01',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     customers: 89;
     rating: 4 && 4.8;
     reviews: 45;

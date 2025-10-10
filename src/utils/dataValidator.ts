@@ -389,7 +389,7 @@ const value = data[field];
 /**
  * Validation rules builder
  */
-export const ValidationRulesBuilder = {
+export const ValidationRulesBuilder={
   required: <T>(): ValidationRule<T> => ({
     validate: (value: T) => {
 return (
@@ -397,7 +397,7 @@ return (
  * Validate form data;
  */
 export function validateForm<T extends Record<string, unknown>
-);
+);}
 }>()
 
   data: T,

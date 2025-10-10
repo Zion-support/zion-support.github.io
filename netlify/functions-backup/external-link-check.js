@@ -1,7 +1,7 @@
 exports.handler = async function (event, context) {try {
 //     // External link check logic;
     const timestamp = new Date().toISOString()}
-    const result = {
+    const result={
       statusCode: 200;
       body: JSON.stringify({
         message: 'External link check function executed successfully')
@@ -10,7 +10,7 @@ function: 'external-link-check')
         action: 'external_link_validation')
         checkedLinks: 75;),
         workingLinks: 72),
-        brokenLinks: 3),
+        brokenLinks: 3),}
         fixedLinks: 3}
       })};
 //     return result;

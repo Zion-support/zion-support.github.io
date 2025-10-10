@@ -90,7 +90,7 @@ error:', error, errorInfo);
               <a></a>"
                 href="mailt,"
   o:support@ziontechgroup.com?subject=Error Report""
-                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,
+                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
@@ -103,17 +103,11 @@ error:', error, errorInfo);
               <p>If this problem persists, please contact our support,
   team:</p>"
               <p className="mt-1"></p>"
-                <a href="mailt,"
-  o:support@ziontechgroup.com" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
-                  support@ziontechgroup.com;
+                <asupport@ziontechgroup.com;
                 </a>
               </p>"
               <p className="mt-1"></p>"
-                <a href="te,"
-  l:+13024640950" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
-                  (302) 464-0950;
+                <a(302) 464-0950;
                 </a>
               </p>
             </div>

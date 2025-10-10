@@ -52,7 +52,7 @@ class EnhancedErrorHandler {
   private errorRateLimit: number = 0;
   private isInitialized: boolean = false;
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    this.config = {
+    this.config={
       enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -61,7 +61,7 @@ class EnhancedErrorHandler {
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
       errorRetentionDays: 30,
-      ...config
+      ...config}
     };
     this.initialize()}
   /**

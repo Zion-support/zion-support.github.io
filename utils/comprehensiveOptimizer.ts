@@ -21,14 +21,14 @@ export interface OptimizationConfig {/* TODO: Fix JSX expression */}
 /**
  * Default optimization configuration;
  */
-export const DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {
+export const DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig={
   accessibility: {
     enableFocusManagement: true;
     enableAriaUtils: true;
     enableKeyboardNavigation: true;
     enableColorContrast: true;
     enableScreenReader: true;
-    enableFormAccessibility: true;
+    enableFormAccessibility: true;}
     enableMotionAccessibility: true},
   performance: {
     enableMemoryMonitoring: true;
@@ -190,8 +190,8 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
     try {
       // Run accessibility audit;
       if (this.config.accessibility.enableFocusManagement) {
-        results.accessibility = {
-          focusManagement: 'enabled',
+        results.accessibility={
+          focusManagement: 'enabled',}
     try {/* TODO: Fix JSX expression */}
         }}
 

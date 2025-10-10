@@ -84,11 +84,11 @@ const input = document.createElement('input')
     this.monitorNetworkRequests()
   }
   private monitorConsoleAccess(): void {;
-const originalConsole = {
+const originalConsole={
       log: console.log.bind(console),
       warn: console.warn.bind(console),
       error: console.error.bind(console),
-      info: console.info.bind(console)
+      info: console.info.bind(console)}
     };
     // Override console methods to detect debugging
     Object.assign(console, originalConsole)}

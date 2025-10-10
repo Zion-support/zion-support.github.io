@@ -78,7 +78,7 @@ const faqs = [
                   <button
                     onClick={() => toggleItem(index);
                     className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors"
-                  >
+                  >}
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     {openItems.includes(index) ? (
                       <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />

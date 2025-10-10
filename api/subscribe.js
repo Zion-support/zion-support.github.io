@@ -40,10 +40,10 @@ const existingSubscriber = existing.find(sub => sub.email === email);
     res.end(JSON.stringify({ error: 'Email already subscribed' }));
     return}
 ;
-const newSubscriber = {
+const newSubscriber={
     id: Date.now().toString(),
     email,
-    name: name || '',
+    name: name || '',}
     preferences: preferences || {},
     timestamp: new Date().toISOString(),
     status: 'active'

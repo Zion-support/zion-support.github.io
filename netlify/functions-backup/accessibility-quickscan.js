@@ -6,7 +6,7 @@ const githubBranch = process.env.GIT_BRANCH || 'main'
         data) {if(!githubToken,
         return { ok: false;
         reason: 'no_token' };
-    const headers = {)
+    const headers={)}
       Authorization: `token ${githubToken}`)
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-a11y-quickscan')
@@ -34,7 +34,7 @@ const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/
         sha = j.sha}
       }
     } catch {}
-    const body = {
+    const body={}
       message: `chore: update a11y quickscan report (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(data, null)
         2)).toString('base64'),
@@ -108,9 +108,9 @@ const putRes = await fetch(`http,
           code: button.text.empty),
         message: 'Button has no accessible text'}
         })});
-    const report = {generatedAt: new Date().toISOString(),
+    const report={generatedAt: new Date().toISOString(),
       baseUrl,
-      counts: { images: imgs.length;
+      counts: { images: imgs.length;}
         buttons: buttons.length },
       issues,
       summary: {total: issues.length;
@@ -174,7 +174,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         message: 'Image missing alt attribute'} tag});' if (/\srole=["']presentation["']/.test(tag) && /\salt=/.test(tag)) issues.push({code: img.alt.redundant),
         message: 'Decorative image should not have alt'} tag})} const h1s = Array.from(html.matchAll(/<h1\\b[^>]*>/gi));' if(h1s.length === 0)
         issues.push({code: 'h1.missing'} message: 'Missing H1' });' if(h1s.length > 1)
-        issues.push({code: 'h1.multiple'} message: 'Multiple H1 elements' }); const buttons = Array.from(html.matchAll(/<button\\b[^>]*>([\\s\\S]*?)<\\/button>/gi));' buttons.forEach(([) text]) => {if (!text || !text.trim()) issues.push({ code: 'button.text.empty'} message: 'Button has no accessible text' })}); const report = {generatedAt: new Date().toISOString(), baseUrl, counts: { images: imgs.length;
+        issues.push({code: 'h1.multiple'} message: 'Multiple H1 elements' }); const buttons = Array.from(html.matchAll(/<button\\b[^>]*>([\\s\\S]*?)<\\/button>/gi));' buttons.forEach(([) text]) => {if (!text || !text.trim()) issues.push({ code: 'button.text.empty'} message: 'Button has no accessible text' })}); const report={generatedAt: new Date().toISOString(), baseUrl, counts: { images: imgs.length;}
         buttons: buttons.length }, issues,' summary: {total: issues.length;
         severity: issues.length > 10 ? 'high' : issues.length > 0 ? 'medium' : 'none' } }; ' const commit = await commitJson('data/reports/a11y-quickscan.json') report); return {statusCode: 200, body: JSON.stringify({ ok: true),
         report),

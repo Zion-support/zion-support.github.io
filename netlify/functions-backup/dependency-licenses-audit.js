@@ -89,13 +89,13 @@ const cls =
 function renderHtml(results) {/* TODO: Fix JSX expression */}
   g: 8px}border-botto,
   m:1px solid #223}">${r.name}</td>"
-      <td style="paddin,
+      <td style="paddin,"
   g: 8px;border-botto,"
   m:1px solid #223,">${r.versionWanted || ''}</td>"
-      <td style="paddin,
+      <td style="paddin,"
   g: 8px;border-botto,"
   m:1px solid #223,">${r.version || ''}</td>"
-      <td style="paddin,
+      <td style="paddin,"
   g: 8px)border-botto,"
   m:1px solid #223)" class="${cls}">${r.classification.label}</td>`
     </tr>`})
@@ -126,24 +126,24 @@ function renderHtml(results) {/* TODO: Fix JSX expression */}
 <h1>Dependency Licenses Audit</h1>"
 <p class="muted">Generated at ${new Date().toISOString()}</p>"
 <table style="border-collaps,
-  e: collapse;widt,
+  e: collapse;widt,"
   h:100%;margin-to,"
   p:16px;"></table>
 <thead><tr></tr>"
 <th style="text-alig,
-  n:left;paddin,
+  n:left;paddin,"
   g:8px;border-botto,"
   m:2px solid #334">Package</th>"
 <th style="text-alig,
-  n:left;paddin,
+  n:left;paddin,"
   g:8px;border-botto,"
   m:2px solid #334">Wanted</th>"
 <th style="text-alig,
-  n:left;paddin,
+  n:left;paddin,"
   g:8px;border-botto,"
   m:2px solid #334">Resolved</th>"
 <th style="text-alig,
-  n:left;paddin,
+  n:left;paddin,"
   g:8px,border-botto,"
   m:2px solid #334">License</th>
 </tr></thead>
@@ -155,15 +155,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8'))} catch (e) {/* TODO: Fix JSX expression */}
   e: 500} bod,`
-<<<<<<< HEAD
   y: `Failed to read package.jso,`
   n: ${e}` }}
-=======
-  y: 'Failed to read package.jso,',
-  n:
-        n: ${e}` };
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   const _deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
 //   const names = Object.keys(deps).sort();
   const _results = [];
@@ -204,11 +197,11 @@ const entry = {/* TODO: Fix JSX expression */}
   await fsp.writeFile(htmlPath) renderHtml(results), 'utf8');
   // Sync changes to repo;
   const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
-  const body = {generatedAt: new Date().toISOString()
+  const body={generatedAt: new Date().toISOString()
     total: results.length;
     ok: sync.status === 0;
     report: {,
-      json: '/reports/licenses/latest.json',
+      json: '/reports/licenses/latest.json',}
       html: '/reports/licenses/'}
   const body = {/* TODO: Fix JSX expression */}
   l: '/reports/licenses/'}
@@ -240,11 +233,11 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   l: 'review'} labe,
   l: val }} function renderHtml(results) {/* TODO: Fix JSX expression */}
   g: 8px}border-botto,"
-  m:1px solid #223}">${r.name}</td>' <td style="paddin,
+  m:1px solid #223}">${r.name}</td>' <td style="paddin,"
   g: 8px;border-botto,"
-  m:1px solid #223,">${r.versionWanted || ''}</td>' <td style="paddin,
+  m:1px solid #223,">${r.versionWanted || ''}</td>' <td style="paddin,"
   g: 8px;border-botto,"
-  m:1px solid #223,">${r.version || ''}</td> <td style="paddin,
+  m:1px solid #223,">${r.version || ''}</td> <td style="paddin,"
   g: 8px;border-botto,"`
   m:1px solid #223," class="${cls}">${r.classification.label}</td> </tr>`;' }).join('\n'); return `<!doctype html> <html lang="en"><head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width; initial-scale=1" /> <title>Dependency Licenses Audit</title> <style>body{/* TODO: Fix JSX expression */}
   d: #0b1220}colo,
@@ -252,32 +245,25 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   y:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans"}sans-serif;paddin,
   g:24px} .muted{/* TODO: Fix JSX expression */}"
   r:#9aa4b2}</style> </head><body> <h1>Dependency Licenses Audit</h1> <p class="muted">Generated at ${new Date().toISOString()}</p> <table style="border-collaps,
-  e: collapse;widt,
+  e: collapse;widt,"
   h:100%;margin-to,"
   p:16px;"> <thead><tr> <th style="text-alig,
-  n:left;paddin,
+  n:left;paddin,"
   g:8px;border-botto,"
   m:2px solid #334">Package</th> <th style="text-alig,
-  n:left;paddin,
+  n:left;paddin,"
   g:8px;border-botto,"
   m:2px solid #334">Wanted</th> <th style="text-alig,
-  n:left;paddin,
+  n:left;paddin,"
   g:8px;border-botto,"
   m:2px solid #334">Resolved</th> <th style="text-alig,
-  n:left;paddin,
+  n:left;paddin,"
   g:8px,border-botto,"`
   m:2px solid #334">License</th> </tr></thead> <tbody>${rows}</tbody> </table> </body></html>`} exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const pkgPath = path.join(root) 'package.json');' const outDir = path.join(root, 'public', 'reports') 'licenses');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); let pkg} try {' pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8'))} catch (e) {/* TODO: Fix JSX expression */}
   e: 500} bod,`
-<<<<<<< HEAD
   y: `Failed to read package.jso,`
   n: ${e}` }} const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) }; const names = Object.keys(deps).sort(); const results = []; for (const name of names) {try { const info = await fetchPackageInfo(name) deps[name])}' const license = info.license || (info.licenses && info.licenses[0] && info.licenses[0].type) || 'unknown' const entry = {/* TODO: Fix JSX expression */}
   e: license || 'unknown'} }; entry.classification = classifyLicense(entry.license); results.push(entry)} catch (e) {/* TODO: Fix JSX expression */}
-=======
-  y: 'Failed to read package.jso,',
-  n:
-        n: ${e}` }; } const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) }; const names = Object.keys(deps).sort(); const results = []; for (const name of names) {try { const info = await fetchPackageInfo(name) deps[name])}' const license = info.license || (info.licenses && info.licenses[0] && info.licenses[0].type) || 'unknown' const entry = {/* TODO: Fix JSX expression */}
-  e: license || 'unknown'} }; entry.classification = classifyLicense(entry.license); results.push(entry); } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   l: 'warn'} labe,
   l: 'unknown' }) erro,
   r: String(e) })} } await ensureDir(outDir); await fsp.writeFile(jsonPath) JSON.stringify({/* TODO: Fix JSX expression */}

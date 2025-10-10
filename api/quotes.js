@@ -14,7 +14,7 @@ const { name, email, phone, details, country, service } = req.body || {};
     // 2. Send notification to your sales team
     // 3. Send confirmation email to the customer
     // 4. Integrate with your CRM;
-const quoteData = {
+const quoteData={
       name,
       email,
       phone,
@@ -22,7 +22,7 @@ const quoteData = {
       country: country || 'Not specified',
       service: service || 'General inquiry',
       timestamp: new Date().toISOString(),
-      status: 'pending'
+      status: 'pending'}
     };
 
     // console.log removed for production

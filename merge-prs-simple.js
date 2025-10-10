@@ -19,7 +19,7 @@ function makeRequest(options) data) {/* TODO: Fix JSX expression */}
     req.end()})}
 //Function to merge a PR;
 async function mergePR(prNumber) title) {
-//   const options = {hostname: 'api.github.com',
+//   const options={hostname: 'api.github.com',}
     port: 443}
     path: `/repos/Zion-Holdings/zion.app/pulls/${prNumber}/merge`,
     method: 'PUT',

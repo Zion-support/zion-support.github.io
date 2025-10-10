@@ -100,13 +100,13 @@ function optimizePerformance() {/* TODO: Fix JSX expression */}
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
       // Add performance optimization scripts;
-      packageJson.scripts = {
+      packageJson.scripts={
         ...packageJson.scripts,
         'build: optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
         'build: production': 'NODE_OPTIONS="--max-old-space-size=4096" next build && next export',
         'analyze': 'ANALYZE=true next build',
         'lint:fix': 'eslint . --ext .ts,.tsx,.js,.jsx --fix',
-        'type-check': 'tsc --noEmit'
+        'type-check': 'tsc --noEmit'}
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
       };
       

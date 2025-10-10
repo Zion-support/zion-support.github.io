@@ -26,7 +26,8 @@ class PerformanceMonitor {
     
     this.isInitialized = true;
     this.setupWebVitals();
-    this.setupCustomMetrics()}
+    this.setupCustomMetrics();
+  }
 
   private setupWebVitals(): void {
     // First Contentful Paint

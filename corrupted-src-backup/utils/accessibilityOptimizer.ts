@@ -13,13 +13,13 @@ class AccessibilityOptimizer {
   private results: OptimizationResult[] = [];
 ,;
 constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
+    this.config={
       enableARIALabels: true;
       enableKeyboardNavigation: true;
       enableColorContrast: true;
       enableFocusManagement: true;
       enableScreenReaderSupport: true;
-      ...config,
+      ...config,}
 class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
     }}

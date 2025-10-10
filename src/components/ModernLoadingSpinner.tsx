@@ -16,10 +16,10 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     lg: 'w-12 h-12',
     xl:   ,
 $4};
-  const colorClasses = {
+  const colorClasses={
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
-    accent:   ,
+    accent:   ,}
 $4};
   const spinnerClasses = `
     ${sizeClasses[size]}

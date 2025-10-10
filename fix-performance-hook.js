@@ -20,10 +20,10 @@ export const usePageLoadPerformance = () => {
 const trackPageLoad = () => {
       if (typeof window !== 'undefined' && window.performance) {
         if (navigation) {;
-const metrics = {
+const metrics={
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart;
             loadComplete: navigation.loadEventEnd - navigation.fetchStart;
-            firstPaint: 0;
+            firstPaint: 0;}
             firstContentfulPaint: 0};
 
           // Track paint metrics if available;
@@ -121,10 +121,10 @@ export const useMemoryMonitoring = () => {
   useEffect(() => {;
 const checkMemory = () => {
       if ('memory' in performance) {;
-const metrics = {
+const metrics={
           used: memory.usedJSHeapSize;
           total: memory.totalJSHeapSize;
-          limit: memory.jsHeapSizeLimit;
+          limit: memory.jsHeapSizeLimit;}
 export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
         };
 
@@ -147,12 +147,12 @@ export const useNetworkPerformance = () => {
 const trackNetworkTiming = () => {
       if (typeof window !== 'undefined' && window.performance) {
         if (navigation) {;
-const networkMetrics = {
+const networkMetrics={
             dns: navigation.domainLookupEnd - navigation.domainLookupStart;
             tcp: navigation.connectEnd - navigation.connectStart;
             request: navigation.responseStart - navigation.requestStart;
             response: navigation.responseEnd - navigation.responseStart;
-            dom: navigation.domContentLoadedEventEnd - navigation.responseEnd;
+            dom: navigation.domContentLoadedEventEnd - navigation.responseEnd;}
 export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */}
           };
 

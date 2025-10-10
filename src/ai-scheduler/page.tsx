@@ -175,7 +175,7 @@ const testimonials = [
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
+                  : 'border-slate-700 hover:border-cyan-500/50'}
               }`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
@@ -198,7 +198,7 @@ const testimonials = [
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   Get Started
                 </button>
-
+}
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -5,12 +5,12 @@ const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true'});
 
 /** @type {import('next').NextConfig} */;
-const nextConfig = {
+const nextConfig={
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
-  eslint: {
+  eslint: {}
     ignoreDuringBuilds: true},
   typescript: {
     ignoreBuildErrors: true},
@@ -33,7 +33,7 @@ const nextConfig = {
       )}
 
     // Optimize bundle size
-    config.optimization = {
+    config.optimization={
       ...config.optimization,
       splitChunks: {
         chunks: 'all',
@@ -44,7 +44,7 @@ const nextConfig = {
             chunks: 'all',
             name: 'framework',
             test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types|use-subscription)[\\/]/,
-            priority: 40,
+            priority: 40,}
             enforce: true},
           lib: {
             test(module) {

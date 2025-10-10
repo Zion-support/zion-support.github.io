@@ -39,8 +39,8 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix specific patterns;
     if (filePath.includes('main.tsx')) {
-      content = content.replace(/const registration = /g, 'const _registration = ');
-      content = content.replace(/const registrationError = /g, 'const _registrationError = ');
+      content = content.replace(/const registration = /g, 'const _registration=');'
+      content = content.replace(/const registrationError = /g, 'const _registrationError=');'
     if (filePath.includes('main.tsx')) {/* TODO: Fix JSX expression */}
     }
     

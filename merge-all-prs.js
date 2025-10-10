@@ -136,7 +136,7 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
     try {;
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
-      packageJson.scripts = {
+      packageJson.scripts={
         ...packageJson.scripts,
         'build: optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
         'build: production': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
@@ -145,7 +145,7 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
         'type-check': 'tsc --noEmit --skipLibCheck',
         'clean': 'rm -rf .next out dist node_modules/.cache',
         'prebuild': 'npm run clean',
-        'postbuild': 'echo "Build completed successfully"'
+        'postbuild': 'echo "Build completed successfully"'}
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
       };
       

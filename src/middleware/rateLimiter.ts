@@ -21,8 +21,8 @@ export class RateLimiter {
   private requests: Map<string, RequestRecord> = new Map();
   private config: RateLimitConfig;
   constructor(config: RateLimitConfig) {
-    this.config = {
-      message: 'Too many requests, please try again later.',
+    this.config={
+      message: 'Too many requests, please try again later.',}
 interface RequestRecord {// TODO: Add content}
 };
   count: number;,
@@ -99,12 +99,12 @@ const now = Date.now();
   getStats(): { totalTracked: number } {
     return { totalTracked: this.requests.size };
  * Pre-configured rate limiters for common use cases
-export const rateLimiters = {
+export const rateLimiters={
   // Strict: 10 requests per minute
   strict: new RateLimiter({
     windowMs: 60 * 1000,
     max: 10,
-    message:   ,
+    message:   ,}
 $4}),
   // Standard: 100 requests per 15 minutes
   standard: new RateLimiter({

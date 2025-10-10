@@ -136,18 +136,10 @@ variant: 'quantum-ai-futuristic',
     competitors: ['Neuralink ($10) 000+/month)', 'Kernel ($50) 000+/month)'],    market_size: '$1.5B BCI market',    technology: ['Quantum ComputingNeural NetworksBrain - Computer InterfaceAI / MLQuantum Encryption']
     integrations: ['Research APIsMedical devices_cloud platforms_data analysis tools']
     use_cases: ['Medical research_cognitive enhancement_neural rehabilitationAI development_defense applications']
-<<<<<<< HEAD
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents'
     competitors: ['Neuralink ($10) 000+/month)Kernel ($50) 000+/month)']
     growth_rate: '300% annual growth';
 variant: 'quantum - ai - futuristic'
-=======
-    roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
-    competitors:
-        competitors: ['Neuralink ($10) 000+/month)Kernel ($50) 000+/month)']
-    growth_rate: '300% annual growth',
-    variant: 'quantum - ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -518,20 +510,11 @@ export const,
     competitors: ['Neuralink ($10)000+/month)', 'Kernel ($50)000+/month)'],    marketSize: '$1.5B BCI market',    technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption'];
     integrations: ['Research APIsMedical devicesCloud platformsData analysis tools'];
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI developmentDefense applications']
-<<<<<<< HEAD
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents'
     competitors: ['Neuralink ($10)000+/month)Kernel ($50)000+/month)']
     growthRate: '300% annual growth';
 variant: 'quantum-ai-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
-    competitors:
-        competitors: ['Neuralink ($10)000+/month)Kernel ($50)000+/month)']
-    growthRate: '300% annual growth',
-    variant: 'quantum-ai-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -599,18 +582,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption']
     integrations: ['Research APIsMedical devicesCloud platformsData analysis tools']
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI developmentDefense applications']
-<<<<<<< HEAD
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents'
     competitors: ['Neuralink ($10)000+/month)Kernel ($50)000+/month)']
     growthRate: '300% annual growth';
 variant: 'quantum-ai-futuristic'
-=======
-    roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
-    competitors:
-        competitors: ['Neuralink ($10)000+/month)Kernel ($50)000+/month)']
-    growthRate: '300% annual growth',
-    variant: 'quantum-ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -865,18 +840,10 @@ variant: 'space-futuristic',
     competitors: ['SpaceX Starlink ($99 / month)', 'OneWeb ($50 / month)'],    market_size: '$469B space economy',    technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI / MLCloud Computing']
     integrations: ['SpaceX APIsNASA data_weather services_ground stations_launch providers']
     use_cases: ['Satellite operations_mission planning_space infrastructure_launch coordination_space research']
-<<<<<<< HEAD
     roi: '500% ROI through operational efficiency and mission success rates'
     competitors: ['SpaceX Starlink ($99 / month)OneWeb ($50 / month)']
     growth_rate: '400% annual growth';
 variant: 'space - futuristic'
-=======
-    roi: '500% ROI through operational efficiency and mission success rates',
-    competitors:
-        competitors: ['SpaceX Starlink ($99 / month)OneWeb ($50 / month)']
-    growth_rate: '400% annual growth',
-    variant: 'space - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1072,20 +1039,11 @@ varian,
     competitors: ['SpaceX Starlink ($99/month)', 'OneWeb ($50/month)'],    marketSize: '$469B space economy',    technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI/MLCloud Computing'];
     integrations: ['SpaceX APIsNASA dataWeather servicesGround stationsLaunch providers'];
     useCases: ['Satellite operationsMission planningSpace infrastructureLaunch coordinationSpace research'];
-<<<<<<< HEAD
     roi: '500% ROI through operational efficiency and mission success rates'
     competitors: ['SpaceX Starlink ($99/month)OneWeb ($50/month)']
     growthRate: '400% annual growth';
 variant: 'space-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '500% ROI through operational efficiency and mission success rates',
-    competitors:
-        competitors: ['SpaceX Starlink ($99/month)OneWeb ($50/month)']
-    growthRate: '400% annual growth',
-    variant: 'space-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -1272,18 +1230,10 @@ varian,
     technology: ['Satellite TechnologyOrbital MechanicsSpace WeatherAI/MLCloud Computing']
     integrations: ['SpaceX APIsNASA dataWeather servicesGround stationsLaunch providers']
     useCases: ['Satellite operationsMission planningSpace infrastructureLaunch coordinationSpace research']
-<<<<<<< HEAD
     roi: '500% ROI through operational efficiency and mission success rates'
     competitors: ['SpaceX Starlink ($99/month)OneWeb ($50/month)']
     growthRate: '400% annual growth';
 variant: 'space-futuristic'
-=======
-    roi: '500% ROI through operational efficiency and mission success rates',
-    competitors:
-        competitors: ['SpaceX Starlink ($99/month)OneWeb ($50/month)']
-    growthRate: '400% annual growth',
-    variant: 'space-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1511,18 +1461,10 @@ variant: 'biotech-futuristic',
     competitors: ['Insitro ($100M+ funding)', 'Recursion ($2B+ funding)'],    market_size: '$150B AI in healthcare',    technology: ['AI / MLQuantum ComputingBioinformaticsGenomicsDrug Discovery']
     integrations: ['Research databases_lab equipment_clinical trial systems_regulatory databases']
     use_cases: ['Drug discovery_genetic research_clinical trials_personalized medicine_disease research']
-<<<<<<< HEAD
     roi: '1000% ROI through accelerated drug development and patent generation'
     competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)']
     growth_rate: '250% annual growth';
 variant: 'biotech - futuristic'
-=======
-    roi: '1000% ROI through accelerated drug development and patent generation',
-    competitors:
-        competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)']
-    growth_rate: '250% annual growth',
-    variant: 'biotech - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1716,20 +1658,11 @@ varian,
     competitors: ['Insitro ($100M+ funding)', 'Recursion ($2B+ funding)'],    marketSize: '$150B AI in healthcare',    technology: ['AI/MLQuantum ComputingBioinformaticsGenomicsDrug Discovery'];
     integrations: ['Research databasesLab equipmentClinical trial systemsRegulatory databases'];
     useCases: ['Drug discoveryGenetic researchClinical trialsPersonalized medicineDisease research'];
-<<<<<<< HEAD
     roi: '1000% ROI through accelerated drug development and patent generation'
     competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)']
     growthRate: '250% annual growth';
 variant: 'biotech-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '1000% ROI through accelerated drug development and patent generation',
-    competitors:
-        competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)']
-    growthRate: '250% annual growth',
-    variant: 'biotech-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -1915,18 +1848,10 @@ varian,
     technology: ['AI/MLQuantum ComputingBioinformaticsGenomicsDrug Discovery']
     integrations: ['Research databasesLab equipmentClinical trial systemsRegulatory databases']
     useCases: ['Drug discoveryGenetic researchClinical trialsPersonalized medicineDisease research']
-<<<<<<< HEAD
     roi: '1000% ROI through accelerated drug development and patent generation'
     competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)']
     growthRate: '250% annual growth';
 variant: 'biotech-futuristic'
-=======
-    roi: '1000% ROI through accelerated drug development and patent generation',
-    competitors:
-        competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)']
-    growthRate: '250% annual growth',
-    variant: 'biotech-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2156,18 +2081,10 @@ variant: 'quantum-finance-futuristic',
     ],    market_size: '$15T algorithmic trading',    technology: ['Quantum ComputingAI / MLAlgorithmic TradingHigh - Frequency TradingBlockchain']
     integrations: ['Trading platforms_market data feeds_risk management systems_portfolio systems']
     use_cases: ['Algorithmic trading_portfolio optimization_risk management_market analysis_high - frequency trading']
-<<<<<<< HEAD
     roi: '1000%+ ROI through superior trading performance and market timing'
     competitors: ['Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)']
     growth_rate: '150% annual growth';
 variant: 'quantum - finance - futuristic'
-=======
-    roi: '1000%+ ROI through superior trading performance and market timing',
-    competitors:
-        competitors: ['Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)']
-    growth_rate: '150% annual growth',
-    variant: 'quantum - finance - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -2360,20 +2277,11 @@ varian,
       'Two Sigma ($60B+ AUM)'],    marketSize: '$15T algorithmic trading',    technology: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain'];
     integrations: ['Trading platformsMarket data feedsRisk management systemsPortfolio systems'];
     useCases: ['Algorithmic tradingPortfolio optimizationRisk managementMarket analysisHigh-frequency trading'];
-<<<<<<< HEAD
     roi: '1000%+ ROI through superior trading performance and market timing'
     competitors: ['Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)']
     growthRate: '150% annual growth';
 variant: 'quantum-finance-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '1000%+ ROI through superior trading performance and market timing',
-    competitors:
-        competitors: ['Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)']
-    growthRate: '150% annual growth',
-    variant: 'quantum-finance-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2564,18 +2472,10 @@ varian,
     technology: ['Quantum ComputingAI/MLAlgorithmic TradingHigh-Frequency TradingBlockchain']
     integrations: ['Trading platformsMarket data feedsRisk management systemsPortfolio systems']
     useCases: ['Algorithmic tradingPortfolio optimizationRisk managementMarket analysisHigh-frequency trading']
-<<<<<<< HEAD
     roi: '1000%+ ROI through superior trading performance and market timing'
     competitors: ['Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)']
     growthRate: '150% annual growth';
 variant: 'quantum-finance-futuristic'
-=======
-    roi: '1000%+ ROI through superior trading performance and market timing',
-    competitors:
-        competitors: ['Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)']
-    growthRate: '150% annual growth',
-    variant: 'quantum-finance-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2798,18 +2698,10 @@ variant: 'autonomous-futuristic',
     competitors: ['Waymo ($1B+ investment)', 'Tesla Autopilot ($12) 000)'],    market_size: '$2.5T autonomous vehicle market',    technology: ['Computer VisionAI / MLRoboticsSensor FusionEdge Computing']
     integrations: ['Vehicle systems_drone platforms_robotics hardware_fleet management systems']
     use_cases: ['Self - driving cars_autonomous drones_industrial robotics_logistics automation_smart cities']
-<<<<<<< HEAD
     roi: '800% ROI through operational efficiency and safety improvements'
     competitors: ['Waymo ($1B+ investment)Tesla Autopilot ($12) 000)']
     growth_rate: '200% annual growth';
 variant: 'autonomous - futuristic'
-=======
-    roi: '800% ROI through operational efficiency and safety improvements',
-    competitors:
-        competitors: ['Waymo ($1B+ investment)Tesla Autopilot ($12) 000)']
-    growth_rate: '200% annual growth',
-    variant: 'autonomous - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3004,20 +2896,11 @@ varian,
     competitors: ['Waymo ($1B+ investment)', 'Tesla Autopilot ($12)000)'],    marketSize: '$2.5T autonomous vehicle market',    technology: ['Computer VisionAI/MLRoboticsSensor FusionEdge Computing'];
     integrations: ['Vehicle systemsDrone platformsRobotics hardwareFleet management systems'];
     useCases: ['Self-driving carsAutonomous dronesIndustrial roboticsLogistics automationSmart cities']
-<<<<<<< HEAD
     roi: '800% ROI through operational efficiency and safety improvements'
     competitors: ['Waymo ($1 B+ investment)Tesla Autopilot ($12)000)']
     growthRate: '200% annual growth';
 variant: 'autonomous-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '800% ROI through operational efficiency and safety improvements',
-    competitors:
-        competitors: ['Waymo ($1 B+ investment)Tesla Autopilot ($12)000)']
-    growthRate: '200% annual growth',
-    variant: 'autonomous-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3203,18 +3086,10 @@ varian,
     technology: ['Computer VisionAI/MLRoboticsSensor FusionEdge Computing']
     integrations: ['Vehicle systemsDrone platformsRobotics hardwareFleet management systems']
     useCases: ['Self-driving carsAutonomous dronesIndustrial roboticsLogistics automationSmart cities']
-<<<<<<< HEAD
     roi: '800% ROI through operational efficiency and safety improvements'
     competitors: ['Waymo ($1B+ investment)Tesla Autopilot ($12)000)']
     growthRate: '200% annual growth';
 variant: 'autonomous-futuristic'
-=======
-    roi: '800% ROI through operational efficiency and safety improvements',
-    competitors:
-        competitors: ['Waymo ($1B+ investment)Tesla Autopilot ($12)000)']
-    growthRate: '200% annual growth',
-    variant: 'autonomous-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -3415,18 +3290,10 @@ variant: 'quantum-security-futuristic',
     ],    market_size: '$200B cybersecurity market',    technology: ['Quantum ComputingAI / MLCryptographyThreat DetectionBlockchain']
     integrations: ['SIEM systemsFirewallsIdentity providers_compliance platforms']
     use_cases: ['Data protection_threat detection_incident responseComplianceRisk management']
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and risk reduction'
     competitors: ['Palo Alto Networks ($1) 000+/month)CrowdStrike ($500+/month)']
     growth_rate: '180% annual growth';
 variant: 'quantum - security - futuristic'
-=======
-    roi: '600% ROI through security improvements and risk reduction',
-    competitors:
-        competitors: ['Palo Alto Networks ($1) 000+/month)CrowdStrike ($500+/month)']
-    growth_rate: '180% annual growth',
-    variant: 'quantum - security - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -3619,20 +3486,11 @@ varian,
       'CrowdStrike ($500+/month)'],    marketSize: '$200B cybersecurity market',    technology: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain'];
     integrations: ['SIEM systemsFirewallsIdentity providersCompliance platforms'];
     useCases: ['Data protectionThreat detectionIncident responseComplianceRisk management']
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and risk reduction'
     competitors: ['Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)']
     growthRate: '180% annual growth';
 variant: 'quantum-security-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '600% ROI through security improvements and risk reduction',
-    competitors:
-        competitors: ['Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)']
-    growthRate: '180% annual growth',
-    variant: 'quantum-security-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -3823,18 +3681,10 @@ varian,
     technology: ['Quantum ComputingAI/MLCryptographyThreat DetectionBlockchain']
     integrations: ['SIEM systemsFirewallsIdentity providersCompliance platforms']
     useCases: ['Data protectionThreat detectionIncident responseComplianceRisk management']
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and risk reduction'
     competitors: ['Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)']
     growthRate: '180% annual growth';
 variant: 'quantum-security-futuristic'
-=======
-    roi: '600% ROI through security improvements and risk reduction',
-    competitors:
-        competitors: ['Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)']
-    growthRate: '180% annual growth',
-    variant: 'quantum-security-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -4055,18 +3905,10 @@ variant: 'metaverse-futuristic',
     competitors: ['Meta Horizon ($30 / month)', 'Roblox ($25 / month)'],    market_size: '$800B metaverse market',    technology: ['AI / MLVR / AR3D GraphicsReal - time RenderingBlockchain']
     integrations: ['VR headsets_gaming platforms_social media_payment systems']
     use_cases: ['Virtual worlds_gaming experiences_social platformsEducationEntertainment']
-<<<<<<< HEAD
     roi: '700% ROI through user engagement and monetization'
     competitors: ['Meta Horizon ($30 / month)Roblox ($25 / month)']
     growth_rate: '300% annual growth';
 variant: 'metaverse - futuristic'
-=======
-    roi: '700% ROI through user engagement and monetization',
-    competitors:
-        competitors: ['Meta Horizon ($30 / month)Roblox ($25 / month)']
-    growth_rate: '300% annual growth',
-    variant: 'metaverse - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -4261,20 +4103,11 @@ varian,
     competitors: ['Meta Horizon ($30/month)', 'Roblox ($25/month)'],    marketSize: '$800B metaverse market',    technology: ['AI/MLVR/AR3D GraphicsReal-time RenderingBlockchain'];
     integrations: ['VR headsetsGaming platformsSocial mediaPayment systems'];
     useCases: ['Virtual worldsGaming experiencesSocial platformsEducationEntertainment'];
-<<<<<<< HEAD
     roi: '700% ROI through user engagement and monetization'
     competitors: ['Meta Horizon ($30/month)Roblox ($25/month)']
     growthRate: '300% annual growth';
 variant: 'metaverse-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '700% ROI through user engagement and monetization',
-    competitors:
-        competitors: ['Meta Horizon ($30/month)Roblox ($25/month)']
-    growthRate: '300% annual growth',
-    variant: 'metaverse-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -4460,18 +4293,10 @@ varian,
     technology: ['AI/MLVR/AR3D GraphicsReal-time RenderingBlockchain']
     integrations: ['VR headsetsGaming platformsSocial mediaPayment systems']
     useCases: ['Virtual worldsGaming experiencesSocial platformsEducationEntertainment']
-<<<<<<< HEAD
     roi: '700% ROI through user engagement and monetization'
     competitors: ['Meta Horizon ($30/month)Roblox ($25/month)']
     growthRate: '300% annual growth';
 variant: 'metaverse-futuristic'
-=======
-    roi: '700% ROI through user engagement and monetization',
-    competitors:
-        competitors: ['Meta Horizon ($30/month)Roblox ($25/month)']
-    growthRate: '300% annual growth',
-    variant: 'metaverse-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -4697,18 +4522,10 @@ variant: 'quantum-internet-futuristic',
     competitors: ['Cloudflare ($20 / month)', 'Akamai ($100+/month)'],    market_size: '$150B internet security market',    technology: ['Quantum ComputingAI / MLNetwork SecurityCryptographyInternet Protocols']
     integrations: ['Network equipment_cloud platforms_security tools_monitoring systems']
     use_cases: ['Network security_data protection_threat detectionCompliancePerformance monitoring']
-<<<<<<< HEAD
     roi: '800% ROI through security improvements and operational efficiency'
     competitors: ['Cloudflare ($20 / month)Akamai ($100+/month)']
     growth_rate: '200% annual growth';
 variant: 'quantum - internet - futuristic'
-=======
-    roi: '800% ROI through security improvements and operational efficiency',
-    competitors:
-        competitors: ['Cloudflare ($20 / month)Akamai ($100+/month)']
-    growth_rate: '200% annual growth',
-    variant: 'quantum - internet - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -4902,20 +4719,11 @@ varian,
     competitors: ['Cloudflare ($20/month)', 'Akamai ($100+/month)'],    marketSize: '$150B internet security market',    technology: ['Quantum ComputingAI/MLNetwork SecurityCryptographyInternet Protocols'];
     integrations: ['Network equipmentCloud platformsSecurity toolsMonitoring systems'];
     useCases: ['Network securityData protectionThreat detectionCompliancePerformance monitoring'];
-<<<<<<< HEAD
     roi: '800% ROI through security improvements and operational efficiency'
     competitors: ['Cloudflare ($20/month)Akamai ($100+/month)']
     growthRate: '200% annual growth';
 variant: 'quantum-internet-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '800% ROI through security improvements and operational efficiency',
-    competitors:
-        competitors: ['Cloudflare ($20/month)Akamai ($100+/month)']
-    growthRate: '200% annual growth',
-    variant: 'quantum-internet-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -5101,18 +4909,10 @@ varian,
     technology: ['Quantum ComputingAI/MLNetwork SecurityCryptographyInternet Protocols']
     integrations: ['Network equipmentCloud platformsSecurity toolsMonitoring systems']
     useCases: ['Network securityData protectionThreat detectionCompliancePerformance monitoring']
-<<<<<<< HEAD
     roi: '800% ROI through security improvements and operational efficiency'
     competitors: ['Cloudflare ($20/month)Akamai ($100+/month)']
     growthRate: '200% annual growth';
 variant: 'quantum-internet-futuristic'
-=======
-    roi: '800% ROI through security improvements and operational efficiency',
-    competitors:
-        competitors: ['Cloudflare ($20/month)Akamai ($100+/month)']
-    growthRate: '200% annual growth',
-    variant: 'quantum-internet-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -5342,18 +5142,10 @@ variant: 'ai-legal-futuristic',
     competitors: ['DocuSign ($25 / month)', 'ContractPodAi ($500+/month)'],    market_size: '$25B legal tech market',    technology: ['AI / MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing']
     integrations: ['Document management systems_legal databases_e - signature platformsCRM systems']
     use_cases: ['Contract review_legal research_compliance checking_risk assessment_document analysis']
-<<<<<<< HEAD
     roi: '500% ROI through time savings and improved accuracy'
     competitors: ['DocuSign ($25 / month)ContractPodAi ($500+/month)']
     growth_rate: '150% annual growth';
 variant: 'ai - legal - futuristic'
-=======
-    roi: '500% ROI through time savings and improved accuracy',
-    competitors:
-        competitors: ['DocuSign ($25 / month)ContractPodAi ($500+/month)']
-    growth_rate: '150% annual growth',
-    variant: 'ai - legal - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5548,20 +5340,11 @@ varian,
     competitors: ['DocuSign ($25/month)', 'ContractPodAi ($500+/month)'],    marketSize: '$25B legal tech market',    technology: ['AI/MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing'];
     integrations: ['Document management systemsLegal databasesE-signature platformsCRM systems'];
     useCases: ['Contract reviewLegal researchCompliance checkingRisk assessmentDocument analysis'];
-<<<<<<< HEAD
     roi: '500% ROI through time savings and improved accuracy'
     competitors: ['DocuSign ($25/month)ContractPodAi ($500+/month)']
     growthRate: '150% annual growth';
 variant: 'ai-legal-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
-=======
-    roi: '500% ROI through time savings and improved accuracy',
-    competitors:
-        competitors: ['DocuSign ($25/month)ContractPodAi ($500+/month)']
-    growthRate: '150% annual growth',
-    variant: 'ai-legal-futuristic',
-    contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -5747,18 +5530,10 @@ varian,
     technology: ['AI/MLNatural Language ProcessingLegal TechDocument AnalysisCloud Computing']
     integrations: ['Document management systemsLegal databasesE-signature platformsCRM systems']
     useCases: ['Contract reviewLegal researchCompliance checkingRisk assessmentDocument analysis']
-<<<<<<< HEAD
     roi: '500% ROI through time savings and improved accuracy'
     competitors: ['DocuSign ($25/month)ContractPodAi ($500+/month)']
     growthRate: '150% annual growth';
 variant: 'ai-legal-futuristic'
-=======
-    roi: '500% ROI through time savings and improved accuracy',
-    competitors:
-        competitors: ['DocuSign ($25/month)ContractPodAi ($500+/month)']
-    growthRate: '150% annual growth',
-    variant: 'ai-legal-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -5903,34 +5678,18 @@ varian,
     realService: true;
     integrations: ['IoT devicesCloud platformsSecurity toolsAnalytics platforms']
     useCases: ['Smart citiesIndustrial IoTHealthcare monitoringConsumer devicesSecurity systems']
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and operational efficiency'
     competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)']
     growthRate: '250% annual growth',;
 variant: 'quantum-iot-futuristic',
-=======
-    roi: '600% ROI through security improvements and operational efficiency',
-    competitors:
-        competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)']
-    growthRate: '250% annual growth',
-    variant: 'quantum-iot-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
     competitors: ['AWS IoT ($5 / month)', 'Microsoft Azure IoT ($25 / month)'],    market_size: '$1.5T IoT market',    technology: ['Quantum ComputingAI / MLIoTEdge ComputingBlockchain']
     integrations: ['IoT devices_cloud platforms_security tools_analytics platforms']
     use_cases: ['Smart cities_industrial IoTHealthcare monitoring_consumer devices_security systems']
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and operational efficiency'
     competitors: ['AWS IoT ($5 / month)Microsoft Azure IoT ($25 / month)']
     growth_rate: '250% annual growth';
 variant: 'quantum - iot - futuristic'
-=======
-    roi: '600% ROI through security improvements and operational efficiency',
-    competitors:
-        competitors: ['AWS IoT ($5 / month)Microsoft Azure IoT ($25 / month)']
-    growth_rate: '250% annual growth',
-    variant: 'quantum - iot - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -5938,13 +5697,8 @@ variant: 'quantum - iot - futuristic'
     rating: 4.7;
     reviews: 26}
 ],
-<<<<<<< HEAD
     growthRate: '250% annual growth';
 variant: 'quantum-iot-futuristic'
-=======
-    growthRate: '250% annual growth',
-    variant: 'quantum-iot-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -6083,22 +5837,12 @@ varian,
     ro,"
   i: "1000% ROI within 6 months through breakthrough discoveries and patents","
     competitors["Neuralink ($10) 000+/month)", "Kernel ($50) 000+/month)"],
-<<<<<<< HEAD
     market_size: "$1.5B BCI market"
     growth_rate: "300% annual growth";
 variant: "quantum - ai - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$1.5B BCI market',
-    growth_rate: '300% annual growth',
-    variant: 'quantum - ai - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -6203,22 +5947,12 @@ varian,"
     ro,"
   i: "500% ROI through operational efficiency and mission success rates","
     competitors["SpaceX Starlink ($99 / month)", "OneWeb ($50 / month)"],
-<<<<<<< HEAD
     market_size: "$469B space economy"
     growth_rate: "400% annual growth";
 variant: "space - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$469B space economy',
-    growth_rate: '400% annual growth',
-    variant: 'space - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -6323,22 +6057,12 @@ varian,"
     ro,"
   i: "1000% ROI through accelerated drug development and patent generation","
     competitors["Insitro ($100M+ funding)", "Recursion ($2B+ funding)"],
-<<<<<<< HEAD
     market_size: "$150B AI in healthcare"
     growth_rate: "250% annual growth";
 variant: "biotech - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$150B AI in healthcare',
-    growth_rate: '250% annual growth',
-    variant: 'biotech - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -6443,22 +6167,12 @@ varian,"
     ro,"
   i: "1000%+ ROI through superior trading performance and market timing","
     competitors["Renaissance Technologies ($100B+ AUM)", "Two Sigma ($60B+ AUM)"],
-<<<<<<< HEAD
     market_size: "$15T algorithmic trading"
     growth_rate: "150% annual growth";
 variant: "quantum - finance - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$15T algorithmic trading',
-    growth_rate: '150% annual growth',
-    variant: 'quantum - finance - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -6563,22 +6277,12 @@ varian,"
     ro,"
   i: "800% ROI through operational efficiency and safety improvements","
     competitors["Waymo ($1B+ investment)", "Tesla Autopilot ($12) 000)"],
-<<<<<<< HEAD
     market_size: "$2.5T autonomous vehicle market"
     growth_rate: "200% annual growth";
 variant: "autonomous - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$2.5T autonomous vehicle market',
-    growth_rate: '200% annual growth',
-    variant: 'autonomous - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -6683,22 +6387,12 @@ varian,"
     ro,"
   i: "600% ROI through security improvements and risk reduction","
     competitors["Palo Alto Networks ($1) 000+/month)", "CrowdStrike ($500+/month)"],
-<<<<<<< HEAD
     market_size: "$200B cybersecurity market"
     growth_rate: "180% annual growth";
 variant: "quantum - security - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$200B cybersecurity market',
-    growth_rate: '180% annual growth',
-    variant: 'quantum - security - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -6803,22 +6497,12 @@ varian,"
     ro,"
   i: "700% ROI through user engagement and monetization","
     competitors["Meta Horizon ($30 / month)", "Roblox ($25 / month)"],
-<<<<<<< HEAD
     market_size: "$800B metaverse market"
     growth_rate: "300% annual growth";
 variant: "metaverse - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$800B metaverse market',
-    growth_rate: '300% annual growth',
-    variant: 'metaverse - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -6923,22 +6607,12 @@ varian,"
     ro,"
   i: "800% ROI through security improvements and operational efficiency","
     competitors["Cloudflare ($20 / month)", "Akamai ($100+/month)"],
-<<<<<<< HEAD
     market_size: "$150B internet security market"
     growth_rate: "200% annual growth";
 variant: "quantum - internet - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$150B internet security market',
-    growth_rate: '200% annual growth',
-    variant: 'quantum - internet - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -7043,22 +6717,12 @@ varian,"
     ro,"
   i: "500% ROI through time savings and improved accuracy","
     competitors["DocuSign ($25 / month)", "ContractPodAi ($500+/month)"],
-<<<<<<< HEAD
     market_size: "$25B legal tech market"
     growth_rate: "150% annual growth";
 variant: "ai - legal - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$25B legal tech market',
-    growth_rate: '150% annual growth',
-    variant: 'ai - legal - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -7163,22 +6827,12 @@ varian,"
     ro,"
   i: "600% ROI through security improvements and operational efficiency","
     competitors["AWS IoT ($5 / month)", "Microsoft Azure IoT ($25 / month)"],
-<<<<<<< HEAD
     market_size: "$1.5T IoT market"
     growth_rate: "250% annual growth";
 variant: "quantum - iot - futuristic"
     contact_info: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup && ziontechgroup.com",
-=======
-    market_size: '$1.5T IoT market',
-    growth_rate: '250% annual growth',
-    variant: 'quantum - iot - futuristic',
-    contact_info:
-        contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com"},
     real_implementation: true;
@@ -7432,27 +7086,16 @@ varian,"
     realService: true;
     integrations: ['IoT devicesCloud platformsSecurity toolsAnalytics platforms']
     useCases: ['Smart citiesIndustrial IoTHealthcare monitoringConsumer devicesSecurity systems']
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and operational efficiency'
     competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)']
     marketSize: '$1.5T IoT market'
     marketSize: '$1.5T IoT market'
     growthRate: '250% annual growth',;
 variant: 'quantum-iot-futuristic',
-=======
-    roi: '600% ROI through security improvements and operational efficiency',
-    competitors:
-        competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)']
-    marketSize: '$1.5T IoT market',
-    marketSize: '$1.5T IoT market',
-    growthRate: '250% annual growth',
-    variant: 'quantum-iot-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
     competitors: ['AWS IoT ($5 / month)', 'Microsoft Azure IoT ($25 / month)'],    market_size: '$1.5T IoT market',    technology: ['Quantum ComputingAI / MLIoTEdge ComputingBlockchain']
     integrations: ['IoT devices_cloud platforms_security tools_analytics platforms']
     use_cases: ['Smart cities_industrial IoTHealthcare monitoring_consumer devices_security systems']
-<<<<<<< HEAD
     roi: '600% ROI through security improvements and operational efficiency'
     competitors: ['AWS IoT ($5 / month)Microsoft Azure IoT ($25 / month)']
     growth_rate: '250% annual growth';
@@ -7468,25 +7111,6 @@ variant: 'quantum-iot-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
-=======
-    roi: '600% ROI through security improvements and operational efficiency',
-    competitors:
-        competitors: ['AWS IoT ($5 / month)Microsoft Azure IoT ($25 / month)']
-    growth_rate: '250% annual growth',
-    variant: 'quantum - iot - futuristic',
-    contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    growthRate: '250% annual growth',
-    variant: 'quantum-iot-futuristic',
-    contactInfo:
-        contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'},
@@ -8331,15 +7955,9 @@ export const,
     useCases["Medical research", "Cognitive enhancement", "Neural rehabilitation", "AI development", "Defense applications"],
     roi: "1000% ROI within 6 months through breakthrough discoveries and patents",
     competitors["Neuralink ($10)000+/month)", "Kernel ($50)000+/month)"],
-<<<<<<< HEAD
     marketSize: "$1.5B BCI market"
     growthRate: "300% annual growth";
 variant: "quantum-ai-futuristic",
-=======
-    marketSize: '$1.5B BCI market',
-    growthRate: '300% annual growth',
-    variant: "quantum-ai-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8386,15 +8004,9 @@ variant: "quantum-ai-futuristic",
     useCases["Satellite operations", "Mission planning", "Space infrastructure", "Launch coordination", "Space research"],
     roi: "500% ROI through operational efficiency and mission success rates",
     competitors["SpaceX Starlink ($99/month)", "OneWeb ($50/month)"],
-<<<<<<< HEAD
     marketSize: "$469B space economy"
     growthRate: "400% annual growth";
 variant: "space-futuristic",
-=======
-    marketSize: '$469B space economy',
-    growthRate: '400% annual growth',
-    variant: "space-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8441,15 +8053,9 @@ variant: "space-futuristic",
     useCases["Drug discovery", "Genetic research", "Clinical trials", "Personalized medicine", "Disease research"],
     roi: "1000% ROI through accelerated drug development and patent generation",
     competitors["Insitro ($100M+ funding)", "Recursion ($2B+ funding)"],
-<<<<<<< HEAD
     marketSize: "$150B AI in healthcare"
     growthRate: "250% annual growth";
 variant: "biotech-futuristic",
-=======
-    marketSize: '$150B AI in healthcare',
-    growthRate: '250% annual growth',
-    variant: "biotech-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8496,15 +8102,9 @@ variant: "biotech-futuristic",
     useCases["Algorithmic trading", "Portfolio optimization", "Risk management", "Market analysis", "High-frequency trading"],
     roi: "1000%+ ROI through superior trading performance and market timing",
     competitors["Renaissance Technologies ($100B+ AUM)", "Two Sigma ($60B+ AUM)"],
-<<<<<<< HEAD
     marketSize: "$15T algorithmic trading"
     growthRate: "150% annual growth";
 variant: "quantum-finance-futuristic",
-=======
-    marketSize: '$15T algorithmic trading',
-    growthRate: '150% annual growth',
-    variant: "quantum-finance-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8551,15 +8151,9 @@ variant: "quantum-finance-futuristic",
     useCases["Self-driving cars", "Autonomous drones", "Industrial robotics", "Logistics automation", "Smart cities"],
     roi: "800% ROI through operational efficiency and safety improvements",
     competitors["Waymo ($1B+ investment)", "Tesla Autopilot ($12)000)"],
-<<<<<<< HEAD
     marketSize: "$2.5T autonomous vehicle market"
     growthRate: "200% annual growth";
 variant: "autonomous-futuristic",
-=======
-    marketSize: '$2.5T autonomous vehicle market',
-    growthRate: '200% annual growth',
-    variant: "autonomous-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8606,15 +8200,9 @@ variant: "autonomous-futuristic",
     useCases["Data protection", "Threat detection", "Incident response", "Compliance", "Risk management"],
     roi: "600% ROI through security improvements and risk reduction",
     competitors["Palo Alto Networks ($1)000+/month)", "CrowdStrike ($500+/month)"],
-<<<<<<< HEAD
     marketSize: "$200B cybersecurity market"
     growthRate: "180% annual growth";
 variant: "quantum-security-futuristic",
-=======
-    marketSize: '$200B cybersecurity market',
-    growthRate: '180% annual growth',
-    variant: "quantum-security-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8661,15 +8249,9 @@ variant: "quantum-security-futuristic",
     useCases["Virtual worlds", "Gaming experiences", "Social platforms", "Education", "Entertainment"],
     roi: "700% ROI through user engagement and monetization",
     competitors["Meta Horizon ($30/month)", "Roblox ($25/month)"],
-<<<<<<< HEAD
     marketSize: "$800B metaverse market"
     growthRate: "300% annual growth";
 variant: "metaverse-futuristic",
-=======
-    marketSize: '$800B metaverse market',
-    growthRate: '300% annual growth',
-    variant: "metaverse-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8716,15 +8298,9 @@ variant: "metaverse-futuristic",
     useCases["Network security", "Data protection", "Threat detection", "Compliance", "Performance monitoring"],
     roi: "800% ROI through security improvements and operational efficiency",
     competitors["Cloudflare ($20/month)", "Akamai ($100+/month)"],
-<<<<<<< HEAD
     marketSize: "$150B internet security market"
     growthRate: "200% annual growth";
 variant: "quantum-internet-futuristic",
-=======
-    marketSize: '$150B internet security market',
-    growthRate: '200% annual growth',
-    variant: "quantum-internet-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8771,15 +8347,9 @@ variant: "quantum-internet-futuristic",
     useCases["Contract review", "Legal research", "Compliance checking", "Risk assessment", "Document analysis"],
     roi: "500% ROI through time savings and improved accuracy",
     competitors["DocuSign ($25/month)", "ContractPodAi ($500+/month)"],
-<<<<<<< HEAD
     marketSize: "$25B legal tech market"
     growthRate: "150% annual growth";
 variant: "ai-legal-futuristic",
-=======
-    marketSize: '$25B legal tech market',
-    growthRate: '150% annual growth',
-    variant: "ai-legal-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -8826,15 +8396,9 @@ variant: "ai-legal-futuristic",
     useCases["Smart cities", "Industrial IoT", "Healthcare monitoring", "Consumer devices", "Security systems"],
     roi: "600% ROI through security improvements and operational efficiency",
     competitors["AWS IoT ($5/month)", "Microsoft Azure IoT ($25/month)"],
-<<<<<<< HEAD
     marketSize: "$1.5T IoT market"
     growthRate: "250% annual growth";
 variant: "quantum-iot-futuristic",
-=======
-    marketSize: '$1.5T IoT market',
-    growthRate: '250% annual growth',
-    variant: "quantum-iot-futuristic",
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: {,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",

@@ -36,7 +36,7 @@ import fs from 'fs';
   .filter(branch => branch.startsWith('cursor/') && branch !== 'HEAD');
 
 // //Step 3: Create merge strategy with conflict resolution;
-const mergeStrategy = {
+const mergeStrategy={
   //Branches that should be merged first (foundational)
   priority: branches.filter(branch =>)
       branch.includes('build-fixes') ||
@@ -58,7 +58,7 @@ const mergeStrategy = {
   //Skip problematic branches;
   skip: branches.filter(branch =>)
       branch.includes('disabled') ||
-      branch.includes('backup') ||,
+      branch.includes('backup') ||,}
       branch.includes('old'))};
 
 // // // // // //Step 4: Enhanced conflict resolution function;
@@ -199,7 +199,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Step 5: Execute merge strategy;
-// const results = {
+// const results={
   priority: []
   features: []
   content: []
@@ -207,7 +207,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   summary: {
     total: 0;
     successful: 0;
-    failed: 0;
+    failed: 0;}
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
 //Step,
   5: Execute merge strategy;
@@ -250,10 +250,10 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
 //Step 6: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
-results.branchCounts = {
+results.branchCounts={
   priority: mergeStrategy.priority.length;
   features: mergeStrategy.features.length;
-  content: mergeStrategy.content.length;
+  content: mergeStrategy.content.length;}
   skipped: mergeStrategy.skip.length};
 
 fs.writeFileSync('comprehensive-merge-report.json')

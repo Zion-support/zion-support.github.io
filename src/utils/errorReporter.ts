@@ -120,7 +120,7 @@ export class ErrorReporter {// TODO: Add content}
     severity: ErrorReport['severity'] = 'medium',
     context?: Record<string, unknown>
   ): void {;
-const errorReport: ErrorReport = {
+const errorReport: ErrorReport={
       message: error.message,
    * Report an error with full context;
    */
@@ -131,7 +131,7 @@ const errorReport: ErrorReport = {
   y: ErrorReport['severity'] = 'medium',
     context?: Record;
 
-          <string, unknown>
+          <string, unknown>}
   ): void {// TODO: Add content}
 
 }
@@ -200,11 +200,11 @@ const style = this.getConsoleStyle(report.severity);
    * Get console styling based on severity
    */
   private getConsoleStyle(severity: ErrorReport['severity']): string {;
-const styles = {
+const styles={
       low: 'color: #2196F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',
-      critical:     ,
+      critical:     ,}
 $4};
     return styles[severity]}
   /**

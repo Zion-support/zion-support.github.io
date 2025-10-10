@@ -218,7 +218,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   solutions.
                 </p>
               </div>"
-              <div className="grid,
+              <div className="grid,"
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>"
                 <div className="text-center p-6 bg-gray-50 rounded-lg"></div>"
@@ -415,16 +415,16 @@ export default function About() {/* TODO: Fix JSX expression */}
             </p>"
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>
-              <a></a>"
+              <a"
                 href="/contact""
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
               >
                 Get In Touch;
               </a>
-              <a></a>"
+              <a"
                 href="/services""
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,"
   hover:bg-white,"
   hover:text-blue-600 transition-colors"
               >

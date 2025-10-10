@@ -42,14 +42,9 @@ const _features = [];
             </p>"
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
-              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-                Get Started;
+              <aGet Started;
               </a>"
-              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
-  hover:bg-cyan-500,"
-  hover:text-white transition-colors"></a>
-                View Demo;
+              <aView Demo;
               </a>
             </div>
           </div>
@@ -84,9 +79,7 @@ const _features = [];
           <div className="max-w-4xl mx-auto text-center"></div>"
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>"
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
-            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-              Contact Us;
+            <aContact Us;
             </a>
           </div>
         </section>

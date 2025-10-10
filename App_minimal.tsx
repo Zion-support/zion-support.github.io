@@ -16,7 +16,7 @@ return (
           <main>
             <Routes>
               <Route path="/" element={<HomePage />
-);
+);}
 }} />
             </Routes>
           </main>

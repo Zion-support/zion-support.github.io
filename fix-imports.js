@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 //Mapping of broken imports to correct imports;
-const iconMappings = {
+const iconMappings={
   rrowleft: 'ArrowLeft',
   alendar: 'Calendar',
   ser: 'User',
@@ -24,7 +24,7 @@ const iconMappings = {
   heckcircle: 'CheckCircle',
   hare2: 'Share2',
   ookmark: 'Bookmark',
-  ot: 'Bot',
+  ot: 'Bot',}
   ookopen: 'BookOpen'};
 
 //Function to fix imports in a file;

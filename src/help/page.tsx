@@ -38,7 +38,7 @@ idid: 'technical',
 $4}
   ];
 ;
-const helpArticles = {
+const helpArticles={
     'getting-started': [
         title: 'How to Get Started with AI Services',
         description: 'Complete guide to setting up your AI services and making the most of our platform',
@@ -93,7 +93,7 @@ titletitle: 'Security Best Practices',
         description: 'Build custom integrations with our platform using webhooks and APIs',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
-        description: 'Set up monitoring and logging for your AI services and applications']
+        description: 'Set up monitoring and logging for your AI services and applications']}
   };
 ;
 const resources = [
@@ -189,7 +189,7 @@ const filteredArticles = getCurrentArticles().filter(article =>
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeCategory === category.id
+                    activeCategory === category.id}
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
@@ -219,7 +219,7 @@ const filteredArticles = getCurrentArticles().filter(article =>
                     <span className={`px-2 py-1 rounded text-xs ${
                       article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
                       article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                      'bg-red-500/20 text-red-400'
+                      'bg-red-500/20 text-red-400'}
                     }`}>
                       {article.difficulty}
                     </span>

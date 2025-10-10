@@ -14,7 +14,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
         {/* Head, e, r */}
         <div, className="flex, item, s-center, ga, p-3, m, b-6"></div>
           <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-cy, a, n-500, rounde, d-xl"></div>
-            <Sparkles, className="w-8 h-8, tex, t-whi, t, e  /></Sparkles>
+            <Sparkles, className="w-8 h-8, tex, t-whi, t, e  /></Sparkles>"
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2 xl, shado, w-2 xl, border, border-purp, l, e-5, 0, 0/30, m, y-12"></div>";
       {/* Animated, background, effect */};
       <div, className="absolute, inse, t-0, opacit, y-20">";
@@ -36,7 +36,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
         {/* Head, e, r */}</div>
         <div, className="flex, item, s-center, ga, p-3, m, b-6"></div>
           <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-cy, a, n-500, rounde, d-xl"></div>
-            <Sparkles, className="w-8 h-8, tex, t-whi, t, e  />
+            <Sparkles, className="w-8 h-8, tex, t-whi, t, e  />"
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2xl, shado, w-2xl, border, border-purp, l, e-5, 0, 0/30, m, y-12">";
       {/* Animated, background, effect */};</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
@@ -108,12 +108,12 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
           {/* Articl, e, 1 */}</div>
           <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-agen, t, s-automati, o, n-revoluti, o, n"
-            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, hov, e;
+            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, hov, e;"
   r:sca, l, e-105, transform, duration-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Bot, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
+                <Bot, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";</div>
           <Li, n, k;"
@@ -130,9 +130,9 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               </d, i, v>"
               <span, className="px-2, p, y-1, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d">N, E, W</sp, a, n>";
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e"
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"</h3>
             </d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
@@ -145,7 +145,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             </p>
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4"></div>
               <span, className="flex, item, s-center, ga, p-1"></span>
-                <TrendingUp, className="w-3 h-3  />
+                <TrendingUp, className="w-3 h-3  />"
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";</div>
               <span, className="flex, item, s-center, ga, p-1">";</span>
             </p>"
@@ -160,15 +160,15 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               <sp, a, n>•</sp, a, n>
               <sp, a, n>85% Efficien, c, y</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-ho, v, e;
+            <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-ho, v, e;"
   r: te, x, t-purp, l, e-3, 0, 0">"
               Read, Full, Guide;</div>
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-3, 0, 0">";
               Read, Full, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
-              Read, Full, Guide;</div>
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+              Read, Full, Guide;</div>"
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e"
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-ho, v, e,"
   r: te, x, t-purp, l, e-3, 0, 0">"
@@ -183,12 +183,12 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
           {/* Articl, e, 2 */}
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-l, l, m-securi, t, y-prom, p, t-injecti, o, n-defen, s, e"
-            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-r, e, d-4, 0, 0/50, transitio, n-all, hov, e;
+            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-r, e, d-4, 0, 0/50, transitio, n-all, hov, e;"
   r:sca, l, e-105, transform, duration-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-2, b, g-r, e, d-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Shield, className="w-6 h-6, tex, t-r, e, d-4, 0, 0  />
+                <Shield, className="w-6 h-6, tex, t-r, e, d-4, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-2, b, g-r, e, d-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">";</div>
           <Li, n, k;"
@@ -205,9 +205,9 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               </d, i, v>"
               <span, className="px-2, p, y-1, b, g-r, e, d-5, 0, 0/20, tex, t-r, e, d-300, tex, t-xs, fon, t-semibold, rounde, d">CRITIC, A, L</sp, a, n>";
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-r, e, d-300, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e"
   r: te, x, t-r, e, d-300, transitio, n-colo, r, s">"</h3>
             </d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
@@ -220,7 +220,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             </p>
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4"></div>
               <span, className="flex, item, s-center, ga, p-1"></span>
-                <Shield, className="w-3 h-3  />
+                <Shield, className="w-3 h-3  />"
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";</div>
               <span, className="flex, item, s-center, ga, p-1">";</span>
             </p>"
@@ -235,15 +235,15 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               <sp, a, n>•</sp, a, n>
               <sp, a, n>$3.2B, Protecte, d</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-ho, v, e;
+            <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-ho, v, e;"
   r: te, x, t-r, e, d-3, 0, 0">"
               Read, Security, Guide;</div>
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-r, e, d-3, 0, 0">";
               Read, Security, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
-              Read, Security, Guide;</div>
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+              Read, Security, Guide;</div>"
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e"
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-ho, v, e,"
   r: te, x, t-r, e, d-3, 0, 0">"
@@ -258,12 +258,12 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
           {/* Articl, e, 3 */}
           <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-vect, o, r-databas, e, s-r, a, g-syste, m, s-enterpri, s, e"
-            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, hov, e;
+            classNa, m, e="group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, hov, e;"
   r:sca, l, e-105, transform, duration-3, 0, 0"
           >
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-2, b, g-cy, a, n-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">"</div>
-                <Database, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0  />
+                <Database, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0  />"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
               <div, className="p-2, b, g-cy, a, n-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">";</div>
           <Li, n, k;"
@@ -280,9 +280,9 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               </d, i, v>"
               <span, className="px-2, p, y-1, b, g-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-300, tex, t-xs, fon, t-semibold, rounde, d">ESSENTI, A, L</sp, a, n>";
             </d, i, v>
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;"
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e"
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"</h3>
             </d, i, v>"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
@@ -295,7 +295,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             </p>
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4"></div>
               <span, className="flex, item, s-center, ga, p-1"></span>
-                <Database, className="w-3 h-3  />
+                <Database, className="w-3 h-3  />"
             <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4">";</div>
               <span, className="flex, item, s-center, ga, p-1">";</span>
             </p>"
@@ -310,15 +310,15 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               <sp, a, n>•</sp, a, n>
               <sp, a, n>92% Accura, c, y</sp, a, n>
             </d, i, v>
-            <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-ho, v, e;
+            <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-ho, v, e;"
   r: te, x, t-cy, a, n-3, 0, 0">"
               Read, Implementation, Guide;</div>
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-cy, a, n-3, 0, 0">";
               Read, Implementation, Guide;
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
-              Read, Implementation, Guide;</div>
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+              Read, Implementation, Guide;</div>"
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e"
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-ho, v, e,"
   r: te, x, t-cy, a, n-3, 0, 0">"
@@ -363,7 +363,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             </d, i, v>
             <Li, n, k;
   to="/bl, o, g"
-              classNa, m, e="fl, e, x-shri, n, k-0, inlin, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl, transform, hove;
+              classNa, m, e="fl, e, x-shri, n, k-0, inlin, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl, transform, hove;"
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="fl, e, x-shri, n, k-0, inlin, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl, transform, hove,"

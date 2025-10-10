@@ -127,7 +127,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               <BookOpen, classNam, e='w-5 h-5' />
               Explore, Complete, Library;
               <Users, classNam, e='w-5 h-5' />
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hove,
+              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hove,'
   r:sca, l, e-1, 0, 5'
             ></Link>
               <BookOpen, classNam, e='w-5 h-5' /></BookOpen>

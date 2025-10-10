@@ -22,13 +22,13 @@ return (
         transition: 'top 0.3 s',
         borderRadius: '4 px',
         fontSize: '14 px',
-        fontWeight: 'bold'
+        fontWeight: 'bold'}
       }}
       onFocus={(e) =>
-);
+);}
 } {
         e.currentTarget.style.top = '6 px'}}
-      onBlur={(e) => {
+      onBlur={(e) => {}
         e.currentTarget.style.top = '-40 px'}}
     >
       {children}

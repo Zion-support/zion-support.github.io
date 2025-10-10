@@ -13,7 +13,7 @@ export const _generateSitemap = (url)
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-  const baseUrl = 'http,
+  const baseUrl='http,'
   s://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
   const sitemap = `

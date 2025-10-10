@@ -1130,11 +1130,11 @@ $4})}
    */
   private calculateScore(): number {
     if (this.issues.length === 0) return 100;
-    const severityWeights = {
+    const severityWeights={
       [A11ySeverity.MINOR]: 1,
       [A11ySeverity.MODERATE]: 3,
       [A11ySeverity.SERIOUS]: 7,
-      [A11ySeverity.CRITICAL]: 15
+      [A11ySeverity.CRITICAL]: 15}
     };
     const totalPenalty = this.issues.reduce((sum, issue) => {
       return sum + severityWeights[issue.severity]}, 0);

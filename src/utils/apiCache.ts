@@ -34,11 +34,11 @@ export class ApiCache {
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
       storage:     ,
 $4});
-    this.config = {
+    this.config={
       ttl: config.ttl || 5 * 60 * 1000,
       maxRetries: config.maxRetries || 3,
       retryDelay: config.retryDelay || 1000,
-      deduplicate: config.deduplicate ?? true
+      deduplicate: config.deduplicate ?? true}
     };
     // Auto-cleanup every 5 minutes
     setInterval(() => {

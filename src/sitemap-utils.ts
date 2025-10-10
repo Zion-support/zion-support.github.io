@@ -11,7 +11,7 @@ export const generateSitemap = (pages: Array;)
           <{ path: string; priority: number }>) => {// TODO: Add content}
 }
   const baseUrl = 'https://ziontechgroup.com';
-  let sitemap = '
+  let sitemap='
           
           
           
@@ -20,7 +20,7 @@ export const generateSitemap = (pages: Array;)
           
           
           
-          <?xml version="1.0" encoding="UTF-8"?>
+          <?xml version="1.0" encoding="UTF-8"?>'
 ';
   sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ';

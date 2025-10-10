@@ -15,7 +15,7 @@ interface State {
   errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {;
+class ErrorBoundary extends Component<Props, State> {
 constructor(props: Props) {
     super(props);
     this.state = {
@@ -58,13 +58,13 @@ constructor(props: Props) {
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag;
-const errorData = {
+const errorData={
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href}
     };
 
     // Example: Send to analytics

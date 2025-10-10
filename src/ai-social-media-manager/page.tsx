@@ -160,7 +160,7 @@ const pricing = [
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
                 plan.popular 
                   ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
-                  : 'border-slate-700/50'
+                  : 'border-slate-700/50'}
               }`}>
                 {plan.popular && (
                   <div className="bg-pink-500 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
@@ -180,7 +180,7 @@ const pricing = [
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
-                    : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
+                    : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'}
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}
 
       {/* CTA Section */}

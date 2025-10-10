@@ -3,10 +3,10 @@ import fs from 'fs';
 
 // // const fixedContent = `import Link from 'next/link';
 
-export const metadata = {
+export const metadata={
   title: 'Enterprise Solutions - Zion Tech Group',
   description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
-  keywords:,
+  keywords:,}
     'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence'};
 
 export default function EnterprisePage() {
@@ -87,7 +87,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <Link></Link>"
                 href="/contact""
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold,
-  hover:from-cyan-600,
+  hover:from-cyan-600,"
   hover:to-blue-700 transition-all duration-300 transform,"
   hover:scale-105"
               >
@@ -95,7 +95,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               </Link>
               <Link></Link>"
                 href="/services""
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,"
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-all duration-300"
               >
@@ -174,7 +174,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               </h3>
               <p className="text-gray-300 mb-6">
 "
-          <div className="grid,
+          <div className="grid,"
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20,"
@@ -285,7 +285,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               <Link></Link>"
                 href="/contact""
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold,
-  hover:from-cyan-600,
+  hover:from-cyan-600,"
   hover:to-blue-700 transition-all duration-300 transform,"
   hover:scale-105"
               >
@@ -293,7 +293,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
               </Link>
               <Link></Link>"
                 href="/services""
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,"
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-all duration-300"
               >
