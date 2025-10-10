@@ -73,6 +73,9 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
+const NetworkingPage = React.lazy(() => import('./app/networking/page'));
+const HealthPage = React.lazy(() => import('./app/health/page'));
+const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'));
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -189,6 +192,9 @@ const App: React.FC = memo(() => {
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/networking" element={<NetworkingPage />} />
+                  <Route path="/health" element={<HealthPage />} />
+                  <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
                 </Routes>
               </Suspense>
             </main>
