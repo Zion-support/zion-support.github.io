@@ -5,8 +5,8 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-// import {ServiceCardSkeleton, StatsSkeleton}}from './components/EnhancedLoadingStates';
-import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic}}from 'lucide-react';
+// import {ServiceCardSkeleton, StatsSkeleton} from './components/EnhancedLoadingStates';
+import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic} from 'lucide-react';
 
 // Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -25,7 +25,7 @@ const preloadComponents = () => {if (typeof window !== 'undefined') {
 }
 
 // Loading skeleton component;
-const ServiceCardSkeleton: React.FC = memo(() => (,
+const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
@@ -34,7 +34,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (,
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
-const HomePage: React.FC = () => {,
+const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   
@@ -43,14 +43,17 @@ const HomePage: React.FC = () => {,
     setIsLoaded(true);
     // Trigger visibility animation;
     const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);}, []);
+    return () => clearTimeout(timer);
+  }, []);
   
   // Analytics tracking for phone clicks - optimized;
-  const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag;
-      gtag('event', 'phone_click', {)
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}).gtag;
+      gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number',})
+        event_label: 'main_phone_number',
+      });
     }
   }, []);
 

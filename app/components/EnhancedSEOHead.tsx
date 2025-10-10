@@ -1,14 +1,18 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-interface SEOHeadProps {title: string;,}
-  description: string;,
-  keywords?: string[]
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  keywords?: string[];
   canonicalUrl?: string;
   structuredData?: any;
   ogImage?: string;
-  twitterCard?: string;}const SEOHead: React.FC<SEOHeadProps> = ({,
+  twitterCard?: string;
+}
+
+const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
   keywords = [],
