@@ -48,6 +48,13 @@ const AIVoiceCloningPage = lazy(() => import('./ai-voice-cloning/page'));
 const AIMusicCompositionPage = lazy(() => import('./ai-music-composition/page'));
 const AIFashionDesignPage = lazy(() => import('./ai-fashion-design/page'));
 const AIFitnessCoachPage = lazy(() => import('./ai-fitness-coach/page'));
+
+// New Missing Pages
+const AIQuantumTaskOptimizerPage = lazy(() => import('./ai-quantum-task-optimizer/page'));
+const AIHolographicWorkspacePage = lazy(() => import('./ai-holographic-workspace/page'));
+const AINeuralMemoryAssistantPage = lazy(() => import('./ai-neural-memory-assistant/page'));
+const AITelepathicInterfacePage = lazy(() => import('./ai-telepathic-interface/page'));
+const AIQuantumFinancialOraclePage = lazy(() => import('./ai-quantum-financial-oracle/page'));
 const AI3DGenerationPage = lazy(() => import('./ai-3d-generation/page'));
 const MachineLearningPage = lazy(() => import('./machine-learning/page'));
 const NLPPage = lazy(() => import('./nlp/page'));
@@ -214,6 +221,13 @@ const App: React.FC = () => {
             <Route path="/nlp" element={<NLPPage />} />
             <Route path="/computer-vision" element={<ComputerVisionPage />} />
             <Route path="/ai-automation" element={<AIAutomationPage />} />
+            
+            {/* New Missing Pages */}
+            <Route path="/ai-quantum-task-optimizer" element={<AIQuantumTaskOptimizerPage />} />
+            <Route path="/ai-holographic-workspace" element={<AIHolographicWorkspacePage />} />
+            <Route path="/ai-neural-memory-assistant" element={<AINeuralMemoryAssistantPage />} />
+            <Route path="/ai-telepathic-interface" element={<AITelepathicInterfacePage />} />
+            <Route path="/ai-quantum-financial-oracle" element={<AIQuantumFinancialOraclePage />} />
             <Route path="/quantum-ai" element={<QuantumAIPage />} />
             <Route path="/database-services" element={<DatabaseServicesPage />} />
             <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
