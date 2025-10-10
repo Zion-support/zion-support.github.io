@@ -3,23 +3,11 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import SEOEnhancer from './components/SEOEnhancer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import EnhancedSEOOptimizer from './components/EnhancedSEOOptimizer';
-import EnhancedPerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import EnhancedAnalytics from './components/EnhancedAnalytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
-import ServiceWorker from './components/ServiceWorker';
-import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEO from './components/EnhancedSEO';
+import PerformanceEnhancer from './components/PerformanceEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -89,6 +77,66 @@ const HomePage: React.FC = () => {
       category: 'Productivity',
       rating: 4.9,
       users: '10,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Meeting Assistant Pro',
+      description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
+      icon: '🎯',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support', 'Meeting analytics'],
+      benefits: ['90% meeting efficiency', 'Zero missed action items', 'Automatic follow-ups', 'Better meeting outcomes'],
+      link: '/ai-meeting-assistant',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '20,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Document Intelligence Pro',
+      description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
+      icon: '📄',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],
+      benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],
+      link: '/ai-document-intelligence',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.7,
+      users: '15,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Personal Assistant Pro',
+      description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',
+      icon: '🤖',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Email management', 'Smart scheduling', 'Task automation', 'Voice commands', 'Calendar sync', 'Reminder system', 'Travel planning', 'Expense tracking'],
+      benefits: ['50% time savings', 'Never miss important tasks', 'Better organization', 'Reduced stress'],
+      link: '/ai-personal-assistant',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.9,
+      users: '45,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Team Collaboration Hub',
+      description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',
+      icon: '👥',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Video conferencing', 'Task management', 'Performance insights'],
+      benefits: ['35% team productivity increase', 'Better communication', 'Reduced meetings', 'Improved outcomes'],
+      link: '/ai-team-collaboration',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '25,000+',
       freeTrial: '14 days'
     },
     {
@@ -166,6 +214,66 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '40,000+',
       freeTrial: '7 days'
+    },
+    {
+      title: 'AI Video Creator Pro',
+      description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',
+      icon: '🎬',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['AI video editing', 'Voice synthesis', 'Auto-captions', 'Template library', 'Music generation', 'Color correction', 'Motion graphics', 'Multi-format export'],
+      benefits: ['90% faster video production', 'Professional quality', 'No editing skills needed', 'Unlimited creativity'],
+      link: '/ai-video-creator',
+      popular: true,
+      category: 'Content',
+      rating: 4.8,
+      users: '30,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Podcast Studio Pro',
+      description: 'Complete podcast production suite with AI-powered editing, transcription, and distribution. Launch your podcast in 24 hours.',
+      icon: '🎙️',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['AI audio editing', 'Auto-transcription', 'Show notes generation', 'Distribution automation', 'Analytics dashboard', 'Guest booking', 'Monetization tools', 'Social media integration'],
+      benefits: ['Professional podcast quality', '10x faster production', 'Better audience engagement', 'Monetization ready'],
+      link: '/ai-podcast-studio',
+      popular: true,
+      category: 'Content',
+      rating: 4.7,
+      users: '18,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Graphic Design Studio',
+      description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',
+      icon: '🎨',
+      price: '$69/month',
+      originalPrice: '$99/month',
+      features: ['AI design generation', 'Brand kit management', 'Template library', 'Logo creation', 'Social media graphics', 'Print design', 'Color palette generator', 'Font pairing'],
+      benefits: ['Professional designs', 'Brand consistency', 'No design skills needed', 'Unlimited creativity'],
+      link: '/ai-graphic-design',
+      popular: true,
+      category: 'Content',
+      rating: 4.8,
+      users: '35,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Website Builder Pro',
+      description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',
+      icon: '🌐',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['AI design generation', 'Content optimization', 'SEO tools', 'Mobile optimization', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],
+      benefits: ['Professional websites', 'SEO optimized', 'Mobile responsive', 'Fast loading'],
+      link: '/ai-website-builder',
+      popular: true,
+      category: 'Content',
+      rating: 4.9,
+      users: '50,000+',
+      freeTrial: '14 days'
     },
     {
       title: 'AI Social Media Manager Pro',
@@ -629,6 +737,111 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days'
     },
     {
+      title: 'AI Cybersecurity Shield Pro',
+      description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',
+      icon: Shield,
+      price: '$2,200/month',
+      originalPrice: '$3,000/month',
+      features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Security Monitoring', 'Incident Response', 'Vulnerability Assessment', 'Compliance Reporting', '24/7 Monitoring'],
+      benefits: ['99.9% threat detection', 'Zero false positives', 'Automated response', 'Compliance ready'],
+      link: '/ai-cybersecurity',
+      popular: true,
+      category: 'Security',
+      rating: 4.8,
+      users: '300+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Healthcare Assistant Pro',
+      description: 'Revolutionary healthcare AI with diagnostic assistance, patient monitoring, and treatment optimization.',
+      icon: Stethoscope,
+      price: '$3,500/month',
+      originalPrice: '$5,000/month',
+      features: ['Diagnostic Assistance', 'Patient Monitoring', 'Treatment Optimization', 'Medical Imaging', 'Drug Discovery', 'Clinical Trials', 'Patient Records', 'Telemedicine'],
+      benefits: ['30% faster diagnosis', 'Better patient outcomes', 'Reduced errors', 'Cost savings'],
+      link: '/ai-healthcare',
+      popular: true,
+      category: 'Healthcare',
+      rating: 4.9,
+      users: '200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Financial Advisor Pro',
+      description: 'Intelligent financial planning with portfolio optimization, risk assessment, and automated trading.',
+      icon: DollarSign,
+      price: '$1,800/month',
+      originalPrice: '$2,500/month',
+      features: ['Portfolio Optimization', 'Risk Assessment', 'Automated Trading', 'Market Analysis', 'Tax Optimization', 'Retirement Planning', 'Insurance Analysis', 'Real-time Alerts'],
+      benefits: ['25% better returns', 'Risk reduction', 'Automated management', 'Tax optimization'],
+      link: '/ai-financial-advisor',
+      popular: true,
+      category: 'Finance',
+      rating: 4.7,
+      users: '400+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+      icon: Truck,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Quality Control', 'Cost Optimization', 'Risk Management', 'Sustainability Tracking'],
+      benefits: ['35% cost reduction', '99% on-time delivery', 'Better inventory management', 'Sustainability goals'],
+      link: '/ai-supply-chain',
+      popular: true,
+      category: 'Logistics',
+      rating: 4.8,
+      users: '250+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Legal Assistant Pro',
+      description: 'Advanced legal AI with contract analysis, case research, and document automation.',
+      icon: FileText,
+      price: '$2,000/month',
+      originalPrice: '$2,800/month',
+      features: ['Contract Analysis', 'Case Research', 'Document Automation', 'Legal Research', 'Compliance Checking', 'Risk Assessment', 'Due Diligence', 'Litigation Support'],
+      benefits: ['80% faster research', 'Better accuracy', 'Cost reduction', 'Risk mitigation'],
+      link: '/ai-legal-assistant',
+      popular: true,
+      category: 'Legal',
+      rating: 4.6,
+      users: '150+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Manufacturing Intelligence',
+      description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization.',
+      icon: Factory,
+      price: '$3,000/month',
+      originalPrice: '$4,200/month',
+      features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Integration', 'Energy Management', 'Safety Monitoring', 'Performance Analytics', 'IoT Integration'],
+      benefits: ['40% efficiency increase', 'Zero downtime', 'Better quality', 'Cost savings'],
+      link: '/ai-manufacturing',
+      popular: true,
+      category: 'Manufacturing',
+      rating: 4.9,
+      users: '180+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'AI Education Platform Pro',
+      description: 'Personalized learning with adaptive curriculum, student analytics, and automated assessment.',
+      icon: GraduationCap,
+      price: '$1,200/month',
+      originalPrice: '$1,800/month',
+      features: ['Adaptive Learning', 'Student Analytics', 'Automated Assessment', 'Content Generation', 'Progress Tracking', 'Parent Communication', 'Teacher Tools', 'Accessibility Features'],
+      benefits: ['50% better learning outcomes', 'Personalized education', 'Teacher efficiency', 'Student engagement'],
+      link: '/ai-education',
+      popular: true,
+      category: 'Education',
+      rating: 4.7,
+      users: '600+',
+      freeTrial: '30 days'
+    },
+    {
       title: 'AI Customer Service Automation',
       description: 'Intelligent customer service automation with sentiment analysis and smart routing. Reduce support costs by 60%.',
       icon: MessageSquare,
@@ -782,6 +995,111 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days'
     },
     {
+      title: 'Enterprise IT Infrastructure',
+      description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',
+      icon: Building,
+      price: '$5,000/month',
+      originalPrice: '$7,500/month',
+      features: ['High Availability Setup', 'Load Balancing', 'Auto-scaling', 'Disaster Recovery', 'Security Hardening', 'Performance Monitoring', 'Backup Solutions', '24/7 Support'],
+      benefits: ['99.99% uptime', 'Unlimited scalability', 'Enterprise security', 'Cost optimization'],
+      link: '/enterprise-infrastructure',
+      popular: true,
+      category: 'Infrastructure',
+      rating: 4.9,
+      users: '100+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'DevOps & CI/CD Automation',
+      description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring.',
+      icon: Settings,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Alerting', 'Security Scanning', 'Automated Testing', 'Deployment Automation', 'Team Training'],
+      benefits: ['10x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],
+      link: '/devops-automation',
+      popular: true,
+      category: 'DevOps',
+      rating: 4.8,
+      users: '400+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Database Management & Optimization',
+      description: 'Advanced database services with performance tuning, backup strategies, and high availability setup.',
+      icon: Database,
+      price: '$1,800/month',
+      originalPrice: '$2,500/month',
+      features: ['Performance Tuning', 'Backup & Recovery', 'High Availability', 'Security Hardening', 'Monitoring', 'Query Optimization', 'Index Management', 'Capacity Planning'],
+      benefits: ['50% performance improvement', 'Zero data loss', 'Better security', 'Cost reduction'],
+      link: '/database-management',
+      popular: true,
+      category: 'Database',
+      rating: 4.7,
+      users: '350+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Network Security & Firewall',
+      description: 'Advanced network security with next-generation firewalls, intrusion detection, and threat prevention.',
+      icon: Lock,
+      price: '$1,500/month',
+      originalPrice: '$2,200/month',
+      features: ['Next-Gen Firewalls', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring', 'Access Control', 'Compliance Reporting', '24/7 Monitoring'],
+      benefits: ['99.9% threat prevention', 'Zero breaches', 'Compliance ready', 'Better performance'],
+      link: '/network-security',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '500+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting with digital transformation, technology roadmaps, and implementation planning.',
+      icon: Briefcase,
+      price: '$3,000/month',
+      originalPrice: '$4,500/month',
+      features: ['Digital Transformation', 'Technology Roadmaps', 'Implementation Planning', 'Vendor Management', 'Cost Optimization', 'Risk Assessment', 'Compliance Planning', 'Change Management'],
+      benefits: ['Better IT strategy', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],
+      link: '/it-consulting',
+      popular: true,
+      category: 'Consulting',
+      rating: 4.8,
+      users: '200+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Managed IT Services',
+      description: 'Complete managed IT services with 24/7 monitoring, maintenance, and support for all your IT needs.',
+      icon: Users,
+      price: '$1,200/month',
+      originalPrice: '$1,800/month',
+      features: ['24/7 Monitoring', 'Proactive Maintenance', 'Help Desk Support', 'Security Management', 'Backup & Recovery', 'Software Updates', 'Hardware Management', 'Performance Optimization'],
+      benefits: ['Reduced IT costs', 'Better uptime', 'Expert support', 'Peace of mind'],
+      link: '/managed-it-services',
+      popular: true,
+      category: 'Managed Services',
+      rating: 4.7,
+      users: '800+',
+      freeTrial: '30 days'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile app development with modern technologies and best practices.',
+      icon: Smartphone,
+      price: '$2,800/month',
+      originalPrice: '$4,000/month',
+      features: ['Native iOS/Android', 'Cross-platform Development', 'UI/UX Design', 'API Integration', 'Push Notifications', 'Analytics Integration', 'App Store Optimization', 'Maintenance & Support'],
+      benefits: ['Professional apps', 'Cross-platform', 'Better user experience', 'Faster time to market'],
+      link: '/mobile-app-development',
+      popular: true,
+      category: 'Development',
+      rating: 4.8,
+      users: '300+',
+      freeTrial: '30 days'
+    },
+    {
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive cybersecurity with threat detection, incident response, and compliance management. Protect your business 24/7.',
       icon: Shield,
@@ -907,8 +1225,8 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <ErrorBoundary>
-      <SEOOptimizer
+    <EnhancedErrorBoundary>
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
@@ -936,7 +1254,59 @@ const HomePage: React.FC = () => {
             "addressCountry": "US"
           }
         }}
+        preload={[
+          { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
+          { href: '/images/hero-bg.jpg', as: 'image' }
+        ]}
+        prefetch={[
+          { href: '/services', as: 'document' },
+          { href: '/contact', as: 'document' },
+          { href: '/about', as: 'document' }
+        ]}
+        dnsPrefetch={[
+          'https://fonts.googleapis.com',
+          'https://fonts.gstatic.com',
+          'https://www.google-analytics.com'
+        ]}
+        preconnect={[
+          'https://fonts.googleapis.com',
+          'https://fonts.gstatic.com',
+          'https://www.google-analytics.com',
+          'https://www.googletagmanager.com'
+        ]}
       >
+        <PerformanceEnhancer
+          enableWebVitals={true}
+          enableResourceTiming={true}
+          enableMemoryMonitoring={true}
+          enableNetworkMonitoring={true}
+          enableUserTiming={true}
+          enableLongTaskMonitoring={true}
+          enableLayoutShiftMonitoring={true}
+          enableAnalytics={true}
+          enableErrorReporting={true}
+          performanceBudget={{
+            lcp: 2500,
+            fid: 100,
+            cls: 0.1,
+            fcp: 1800,
+            ttfb: 600
+          }}
+        />
+        <AccessibilityEnhancer
+          enableKeyboardNavigation={true}
+          enableScreenReaderSupport={true}
+          enableHighContrast={true}
+          enableFocusManagement={true}
+          enableAriaLabels={true}
+          enableSkipLinks={true}
+          enableColorContrast={true}
+          enableTextScaling={true}
+          enableMotionReduction={true}
+          enableVoiceNavigation={true}
+          enableAnalytics={true}
+          enableErrorReporting={true}
+        />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <Navigation />
           
@@ -1281,8 +1651,8 @@ const HomePage: React.FC = () => {
 
           <Footer />
         </div>
-      </SEOOptimizer>
-    </ErrorBoundary>
+      </EnhancedSEO>
+    </EnhancedErrorBoundary>
   );
 };
 

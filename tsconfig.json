@@ -156,6 +156,8 @@
     "src.disabled/**",
     "utils.disabled/**",
     "vite.config.performance.ts",
+    "vite.config.ts",
+    "vite.config.d.ts",
     "dao/**",
     "deployments/**",
     "e2e/**",

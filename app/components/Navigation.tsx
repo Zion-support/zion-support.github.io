@@ -1,5 +1,79 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { 
+  ChevronDown, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Menu, 
+  X, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart, 
+  Users, 
+  Zap,
+  Star,
+  TrendingUp,
+  Settings,
+  Globe,
+  Target,
+  ArrowRight,
+  Sparkles,
+  Database,
+  MessageSquare,
+  Eye,
+  Cpu,
+  Lock,
+  BarChart3,
+  FileText,
+  Search,
+  Bot,
+  Palette,
+  Camera,
+  Music,
+  Video,
+  Gamepad2,
+  ShoppingCart,
+  CreditCard,
+  Building,
+  Factory,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Home,
+  Heart,
+  Stethoscope,
+  GraduationCap,
+  Briefcase,
+  Wrench,
+  Hammer,
+  Paintbrush,
+  Scissors,
+  BookOpen,
+  Calculator,
+  Calendar,
+  Clock3,
+  Compass,
+  Navigation as NavIcon,
+  PieChart,
+  TrendingDown,
+  Activity,
+  Zap as Lightning,
+  Target as Crosshair,
+  Shield as Security,
+  Users as People,
+  Star as StarIcon,
+  CheckCircle as Check,
+  ArrowRight as Arrow,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as Location,
+  Truck,
+  Smartphone
+} from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +98,15 @@ const Navigation: React.FC = () => {
     setIsAIOpen(false);
     setIsITOpen(false);
     setIsSpecializedOpen(false);
+  };
+
+  const handlePhoneClick = () => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'navigation_phone_number'
+      });
+    }
   };
 
   const toggleMenu = () => {
@@ -122,33 +205,32 @@ const Navigation: React.FC = () => {
   ];
 
   const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain, price: '$1,500/mo' },
-    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart, price: '$1,300/mo' },
-    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe, price: '$1,800/mo' },
-    { name: 'AI Fraud Detection System', href: '/ai-fraud-detection', icon: Shield, price: '$2,200/mo' },
-    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, price: '$1,600/mo' },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope, price: '$2,500/mo' },
-    { name: 'AI Financial Services', href: '/ai-financial-services', icon: CreditCard, price: '$1,900/mo' },
-    { name: 'AI Natural Language Processing', href: '/ai-nlp', icon: MessageSquare, price: '$1,100/mo' },
-    { name: 'AI Computer Vision', href: '/computer-vision', icon: Eye, price: '$1,400/mo' },
-    { name: 'AI Customer Service Automation', href: '/ai-customer-service', icon: MessageSquare, price: '$1,200/mo' },
-    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield, price: '$1,400/mo' },
-    { name: 'AI Human Resources', href: '/ai-hr', icon: Users, price: '$1,200/mo' },
-    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText, price: '$1,500/mo' },
-    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home, price: '$1,300/mo' },
-    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory, price: '$1,800/mo' },
-    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck, price: '$1,600/mo' },
-    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap, price: '$1,200/mo' },
-    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap, price: '$1,500/mo' },
-    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield, price: '$1,400/mo' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, price: '$1,300/mo' },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu, price: '$3,000/mo' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, price: '$1,800/mo' },
-    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard, price: '$1,600/mo' },
-    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone, price: '$1,400/mo' },
-    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users, price: '$1,200/mo' },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, price: '$800/mo' },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, price: '$900/mo' }
+    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
+    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield },
+    { name: 'AI Human Resources', href: '/ai-hr', icon: Users },
+    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText },
+    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home },
+    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory },
+    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck },
+    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap },
+    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
+    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield },
+    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
+    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
+    { name: 'Quantum AI Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
+    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
+    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
+    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar },
+    { name: 'AI Robotics', href: '/ai-robotics', icon: Settings },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings }
   ];
 
   const itServices = [
@@ -196,8 +278,8 @@ const Navigation: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
@@ -208,10 +290,23 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+            <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Home
+            </a>
+            <a href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              About
+            </a>
+            <a href="/team" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Team
+            </a>
+            <a href="/careers" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Careers
+            </a>
+            
             <div className="relative group">
               <button
                 onClick={toggleServices}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -346,35 +441,33 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
-              About
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Pricing
             </a>
-            <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Case Studies
+            </a>
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Blog
+            </a>
+            <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Enterprise
             </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
             </a>
             
             <div className="flex items-center space-x-4">
               <a
                 href="tel:+13024640950"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
+                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors font-medium"
+                onClick={handlePhoneClick}
               >
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">+1 302 464 0950</span>
               </a>
               <a href="/contact"
-                className="cyber-button px-4 py-2 text-sm"
+                className="cyber-button px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300"
               >
                 Get Started
               </a>
@@ -445,32 +538,39 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
                 Pricing
               </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/team" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+                Team
+              </a>
+              <a href="/careers" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+                Careers
+              </a>
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+                Case Studies
+              </a>
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+                Blog
+              </a>
+              <a href="/enterprise" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+                Enterprise
+              </a>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
                 Contact
               </a>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4 font-medium"
+                  onClick={handlePhoneClick}
                 >
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
                 <a href="/contact"
-                  className="block cyber-button px-4 py-2 text-center"
+                  className="block cyber-button px-6 py-3 text-center font-semibold hover:scale-105 transition-all duration-300"
                   onClick={closeAllMenus}
                 >
                   Get Started
