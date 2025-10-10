@@ -3,17 +3,11 @@
  * Provides SEO optimization and meta tag management
  */
 
-<<<<<<< HEAD
-export interface SEOConfig {
-=======
 export interface SEOData {
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl: string;
-<<<<<<< HEAD
-=======
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;

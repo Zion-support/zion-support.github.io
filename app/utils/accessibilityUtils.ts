@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Accessibility utilities for improving user experience and compliance
 
 export const generateId = (prefix: string = 'id'): string => {

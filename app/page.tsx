@@ -68,13 +68,6 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
-
-<<<<<<< HEAD
-  // Contact information
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
@@ -4879,12 +4872,11 @@ const HomePage: React.FC = () => {
         </Suspense>
       </main>
 
-<<<<<<< HEAD
-        {/* Footer */}
-        <Footer />
-        
-        {/* Skip to main content for accessibility */}
-        <a
+      {/* Footer */}
+      <Footer />
+      
+      {/* Skip to main content for accessibility */}
+      <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
         >

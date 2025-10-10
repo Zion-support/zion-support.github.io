@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
@@ -735,7 +734,6 @@ export default function MicroSaasPage() {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
       
@@ -949,7 +947,6 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
