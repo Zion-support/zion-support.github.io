@@ -2,9 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
-=======
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
 
 interface JobPosition {
@@ -20,7 +17,6 @@ interface JobPosition {
   posted: string;
   featured: boolean;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
