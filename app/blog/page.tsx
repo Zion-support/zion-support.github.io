@@ -390,4 +390,6 @@ export default function BlogPage() {
       </section>
     </div>
   );
-}
+};
+
+export default BlogPage;

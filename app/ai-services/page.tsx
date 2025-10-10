@@ -1277,9 +1277,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               key={service.id}
 
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
-                service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
-                service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
-
+                service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20 neon-glow-purple' : ''
               }`}
             >
               {/* Animated Background */}

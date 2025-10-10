@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Heart, Stethoscope, Brain, Shield, CheckCircle, Phone, Mail, Target, Target, Shield, CheckCircle, Phone, Mail, Eye, AlertTriangle } from 'lucide-react';
+import { Heart, Stethoscope, Brain, Shield, CheckCircle, Phone, Mail, Target, Eye, AlertTriangle } from 'lucide-react';
 
 const AIHealthcarePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);

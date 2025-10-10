@@ -580,4 +580,6 @@ export default function CareersPage() {
       </section>
     </div>
   );
-}
+};
+
+export default CareersPage;
