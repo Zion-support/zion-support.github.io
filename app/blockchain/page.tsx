@@ -13,8 +13,8 @@ const BlockchainPage: React.FC = () => {
       benefits: ['Automate business processes', 'Reduce intermediaries', 'Ensure transparency'],
       marketPrice: '$15,000-50,000/project',
       category: 'Smart Contracts',
-      technologies: ['Solidity', 'Vyper', 'Rust', 'Go', 'JavaScript'];)
-},
+      technologies: ['Solidity', 'Vyper', 'Rust', 'Go', 'JavaScript']
+    },
     {
       title: 'DeFi Protocol Development',
       description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions.',
@@ -24,8 +24,8 @@ const BlockchainPage: React.FC = () => {
       benefits: ['Enable decentralized finance', 'Increase financial inclusion', 'Reduce traditional banking costs'],
       marketPrice: '$50,000-200,000/project',
       category: 'DeFi',
-      technologies: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Arbitrum'];)
-},
+      technologies: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Arbitrum']
+    },
     {
       title: 'NFT Marketplace Development',
       description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
