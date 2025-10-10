@@ -49,6 +49,68 @@ const AIAutonomousSystemsPage: React.FC = () => {
     {
       title: 'Autonomous Vehicles',
       description: 'Self-driving cars, trucks, and drones with advanced AI navigation and safety systems.',
+      icon: '🚗'
+    },
+    {
+      title: 'Smart Manufacturing',
+      description: 'Automated production lines with intelligent quality control and predictive maintenance.',
+      icon: '🏭'
+    },
+    {
+      title: 'Healthcare Robotics',
+      description: 'Autonomous surgical robots and patient care systems with AI-powered precision.',
+      icon: '🏥'
+    },
+    {
+      title: 'Smart Cities',
+      description: 'Intelligent traffic management, waste collection, and urban infrastructure systems.',
+      icon: '🏙️'
+    },
+    {
+      title: 'Agricultural Automation',
+      description: 'Autonomous farming equipment and crop monitoring systems for precision agriculture.',
+      icon: '🚜'
+    },
+    {
+      title: 'Space Exploration',
+      description: 'Autonomous rovers and spacecraft systems for deep space exploration missions.',
+      icon: '🚀'
+    }
+  ];
+
+  const benefits = [
+    'Reduce operational costs by 60%',
+    'Increase efficiency by 80%',
+    'Minimize human error by 95%',
+    'Enable 24/7 autonomous operation',
+    'Improve safety and reliability',
+    'Scale operations without limits',
+    'Adapt to changing conditions',
+    'Optimize resource utilization'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Autonomous Systems - Zion Tech Group</title>
+        <meta name="description" content="Build intelligent autonomous systems with our AI technology. Self-managing, adaptive, and goal-oriented AI systems for various industries." />
+        <meta name="keywords" content="AI autonomous systems, autonomous vehicles, smart manufacturing, healthcare robotics, smart cities, agricultural automation" />
+      </Helmet>
+
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full mb-8">
+              <Brain className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Autonomous Systems
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Build intelligent autonomous systems that think, learn, and adapt. 
+              Our AI technology enables self-managing systems across industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
@@ -62,6 +124,22 @@ const AIAutonomousSystemsPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Core Capabilities
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Advanced AI technologies that power truly autonomous systems
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -150,6 +228,9 @@ const AIAutonomousSystemsPage: React.FC = () => {
         </section>
       </main>
 
+      <Footer />
+    </>
+  );
 };
 
 export default AIAutonomousSystemsPage;
