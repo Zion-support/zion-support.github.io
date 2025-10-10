@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -110,7 +109,6 @@ const ConsultationPage: React.FC = () => {
     setSelectedType(typeId);
     // In a real app, this would open a booking modal or redirect to a booking page
     console.log(`Booking consultation: ${typeId}`);
-=======
 import { Calendar, Clock, User, Mail, Phone, MessageCircle, CheckCircle, ArrowRight, Zap, Target, Users, Award } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
@@ -188,7 +186,6 @@ const ConsultationPage: React.FC = () => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
   };
 
   return (
@@ -207,7 +204,6 @@ const ConsultationPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
             </h1>
@@ -235,7 +231,6 @@ const ConsultationPage: React.FC = () => {
                 <div className="text-left">
                   <div className="text-2xl font-bold">Proven Results</div>
                   <div className="text-gray-400">98% client satisfaction</div>
-=======
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Expert Consultation
@@ -263,7 +258,6 @@ const ConsultationPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300 mb-3">{service.description}</p>
                   <p className="text-cyan-400 text-sm font-medium">{service.duration}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                 </div>
               ))}
             </div>
