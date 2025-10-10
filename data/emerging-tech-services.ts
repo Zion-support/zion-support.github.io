@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Quantum-secured space communication',
     id: 'quantum - space - communications',
     name: 'Quantum Space Communications',
@@ -245,7 +241,6 @@ import React from 'react';
   marketSize: string
   growthRate: string,
   variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',
-<<<<<<< HEAD
   contactInfo: unknown,
     mobile: string, email: string
     address: string
@@ -256,16 +251,6 @@ import React from 'react';
   rating: number
   reviews: number,
 }
-=======
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string},
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const emergingTechServices: EmergingTechService[] = [,
   // Quantum Internet & Communication Services;
     id: 'quantum-internet-security-platform', name: 'Quantum Internet Security Platform',
@@ -1869,7 +1854,6 @@ export const,
   marketSize: string
   growthRate: string,
   variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',
-<<<<<<< HEAD
   contactInfo: unknown,
     mobile: string, email: string
     address: string
@@ -1880,16 +1864,6 @@ export const,
   rating: number
   reviews: number,
 }
-=======
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string},
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const emergingTechServices: EmergingTechService[] = [,
   // Quantum Internet & Communication Services;
     tagline: 'Unhackable quantum-secured internet infrastructure',
@@ -2154,19 +2128,11 @@ export const,
   growthRate: string
   variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}
     website: string}
   }
-=======
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2247,13 +2213,8 @@ export const,
   o: {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -2265,12 +2226,7 @@ export const,
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
-=======
-  s: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   emergingTechServices: EmergingTechService[] = [;
   // Quantum Internet & Communication Services;
@@ -2302,7 +2258,6 @@ export const,
     roi: 'Prevents cyber attacks worth $6 M+ annually, 500% ROI through security cost avoidance';
     competitors: ['Traditional cybersecurity (Palo Alto) CrowdStrike)No direct quantum internet competitors'],
     marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually';
-<<<<<<< HEAD
     growthRate: '400% annual growth',
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -2318,23 +2273,6 @@ export const,
     reviews: 28,
   {/* TODO: Fix JSX expression */}
   t: 'quantum-advanced'}
-=======
-    growthRate: '400% annual growth';
-    variant: 'quantum-advanced'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
-    launch_date: '2024 - 09 - 01',
-    customers: 35;
-    rating: 4.8;
-    reviews: 28;
-  {/* TODO: Fix JSX expression */};
-  t: 'quantum-advanced'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contactInf,
   o: {};
       mobil,
@@ -2359,32 +2297,16 @@ export const,
   g: 4.8,
     review,
   s: 28};
-export interface EmergingTechService {/* TODO: Fix JSX expression */};
-  };
-];
-<<<<<<< HEAD
-}
-=======
-;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export interface EmergingTechService {/* TODO: Fix JSX expression */}}]}
 ];
 realImplementation: true,
     implementationDetails:,
       'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.'
-<<<<<<< HEAD
     launchDate: '2024-11-15'
     customers: 45
     rating: 4.7
     reviews: 23,
   }
-=======
-    launchDate: '2024-11-15',
-    customers:
-        customers: 45;
-    rating: 4.7;
-    reviews: 23};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Energy & Sustainability Services;
     id: 'quantum-energy-optimization',
     name: 'Quantum Energy Optimization Platform',
@@ -2500,7 +2422,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2510,17 +2431,6 @@ realImplementation: true,
     rating: 4.8
     reviews: 5,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Fully functional quantum energy optimization platform with quantum AI algorithms, smart grid management, and renewable energy optimization. Includes energy operations center and 24/7 monitoring.'
-    launchDate: '2024-12-15',
-    customers:
-        customers: 8;
-    rating: 4.8;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Advanced Metaverse & AR/VR Services;
     id: 'metaverse-ai-development-platform',
     name: 'Metaverse AI Development Platform',
@@ -2671,7 +2581,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2681,17 +2590,6 @@ realImplementation: true,
     rating: 4.6
     reviews: 67,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Fully functional metaverse development platform with AI content generation, VR experiences, and 3D world building tools. Includes metaverse operations center and 24/7 support.'
-    launchDate: '2024-10-01',
-    customers:
-        customers: 120;
-    rating: 4.6;
-    reviews: 67};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Logistics & Supply Chain Services;
     id: 'quantum-logistics-optimization',
     name: 'Quantum Logistics Optimization Platform',
@@ -2843,7 +2741,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2853,17 +2750,6 @@ realImplementation: true,
     rating: 4.7
     reviews: 19,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Fully functional quantum logistics platform with quantum AI optimization, real-time tracking, and supply chain management. Includes logistics operations center and 24/7 support.'
-    launchDate: '2024-11-01',
-    customers:
-        customers: 35;
-    rating: 4.7;
-    reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Advanced Cybersecurity & Threat Intelligence;
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
@@ -3015,7 +2901,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3025,17 +2910,6 @@ realImplementation: true,
     rating: 4.8
     reviews: 42,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Fully functional quantum cybersecurity platform with quantum-resistant encryption, AI threat detection, and security operations center. Includes 24/7 security monitoring and support.'
-    launchDate: '2024-10-15',
-    customers:
-        customers: 85;
-    rating: 4.8;
-    reviews: 42};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Financial Trading & Analytics;
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
@@ -3187,7 +3061,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3197,17 +3070,6 @@ realImplementation: true,
     rating: 4.9
     reviews: 6,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Fully functional quantum financial trading platform with quantum AI algorithms, nanosecond execution, and advanced risk management. Includes trading operations center and 24/7 support.'
-    launchDate: '2024-09-01',
-    customers:
-        customers: 12;
-    rating: 4.9;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Advanced IoT & Smart City Services;
     id: 'ai-iot-smart-city-platform',
     name: 'AI IoT Smart City Platform',
@@ -3359,7 +3221,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3369,17 +3230,6 @@ realImplementation: true,
     rating: 4.6
     reviews: 15,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Fully functional AI IoT smart city platform with infrastructure management, environmental monitoring, and citizen services. Includes smart city operations center and 24/7 support.'
-    launchDate: '2024-08-15',
-    customers:
-        customers: 28;
-    rating: 4.6;
-    reviews: 15};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'quantum-space-communications',
     name: 'Quantum Space Communications',
     tagline: 'Revolutionary quantum-secured space communication network',
@@ -3526,7 +3376,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3536,17 +3385,6 @@ realImplementation: true,
     rating: 5.0
     reviews: 12,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced quantum space communication network with satellite quantum key distribution, interplanetary protocols, and comprehensive space operations.'
-    launchDate: '2024-08-01',
-    customers:
-        customers: 15;
-    rating: 5.0;
-    reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai-biotech-drug-discovery',
     name: 'AI Biotech Drug Discovery Platform',
     tagline: 'Revolutionary AI-powered drug discovery and development',
@@ -3688,7 +3526,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3698,17 +3535,6 @@ realImplementation: true,
     rating: 4.9
     reviews: 6,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI biotech drug discovery platform with quantum computing capabilities, advanced drug modeling, and automated development processes.'
-    launchDate: '2024-07-15',
-    customers:
-        customers: 8;
-    rating: 4.9;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'autonomous-ai-factory',
     name: 'Autonomous AI Factory Platform',
     tagline: 'Fully autonomous AI-powered manufacturing and production',
@@ -3851,7 +3677,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3861,17 +3686,6 @@ realImplementation: true,
     rating: 4.8
     reviews: 28,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.'
-    launchDate: '2024-09-01',
-    customers:
-        customers: 35;
-    rating: 4.8;
-    reviews: 28};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
     launchDate: '2024-09-01'
     customers: 35
@@ -3881,7 +3695,6 @@ realImplementation: true,
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.'
@@ -3889,15 +3702,6 @@ realImplementation: true,
     customers: 35
     rating: 4.8
     reviews: 28,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
-    launchDate: '2024-09-01',
-    customers: 35;
-    rating: 4.8;
-    reviews: 28;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     ro,
   i: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.'
     competitor,
@@ -3966,18 +3770,12 @@ realImplementation: true,
     ratin,
   g: 4.8,
     review,
-  s: 28};
-];
+  s: 28}];
 export interface EmergingTechService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -3995,12 +3793,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */};
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
-=======
-  s: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   emergingTechServices: EmergingTechService[] = [;
   // Quantum Internet & Communication Services;
@@ -4032,7 +3825,6 @@ export const,
     roi: 'Prevents cyber attacks worth $6 M+ annually, 500% ROI through security cost avoidance';
     competitors: ['Traditional cybersecurity (Palo Alto) CrowdStrike)No direct quantum internet competitors'],
     marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually';
-<<<<<<< HEAD
     growthRate: '400% annual growth',
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4041,16 +3833,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '400% annual growth';
-    variant: 'quantum-advanced'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Fully functional quantum internet platform with quantum key distribution, post-quantum cryptography, and quantum network infrastructure. Includes quantum security operations center and 24/7 monitoring.';
     launchDate: '2024-12-01';
     customers: 15
@@ -4086,7 +3868,6 @@ export const,
     roi: 'Reduces labor costs by 60%, increases productivity by 200%, 400% ROI within 18 months';
     competitors: ['ABB RoboticsKUKAFANUCYaskawaUniversal Robots'],
     marketSize: '$45 B robotics market, 25% annual growth';
-<<<<<<< HEAD
     growthRate: '25% annual growth',
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4095,16 +3876,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '25% annual growth';
-    variant: 'ai-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.';
     launchDate: '2024-11-15';
     customers: 45
@@ -4140,7 +3911,6 @@ export const,
     roi: 'Reduces energy costs by 30%, increases renewable energy efficiency by 40%, 600% ROI through energy savings';
     competitors: ['Traditional energy management (Siemens) GE)No direct quantum energy competitors'],
     marketSize: '$200 B energy management market, smart grid segment growing 300% annually';
-<<<<<<< HEAD
     growthRate: '300% annual growth',
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4149,16 +3919,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '300% annual growth';
-    variant: 'quantum-advanced'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Fully functional quantum energy optimization platform with quantum AI algorithms, smart grid management, and renewable energy optimization. Includes energy operations center and 24/7 monitoring.';
     launchDate: '2024-12-15';
     customers: 8
@@ -4194,7 +3954,6 @@ export const,
     roi: 'Increases customer engagement by 300%, reduces physical event costs by 70%, 350% ROI through virtual experiences';
     competitors: ['UnityUnreal EngineRoblox StudioVRChatAltspaceVR'],
     marketSize: '$800 B metaverse market, 400% annual growth';
-<<<<<<< HEAD
     growthRate: '400% annual growth',
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4203,16 +3962,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '400% annual growth';
-    variant: 'ai-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Fully functional metaverse development platform with AI content generation, VR experiences, and 3 D world building tools. Includes metaverse operations center and 24/7 support.';
     launchDate: '2024-10-01';
     customers: 120
@@ -4248,7 +3997,6 @@ export const,
     roi: 'Reduces logistics costs by 25%, improves delivery times by 40%, 450% ROI through operational efficiency';
     competitors: ['SAP SCMOracle SCMManhattan AssociatesJDA SoftwareBlue Yonder'],
     marketSize: '$30 B supply chain management market, 20% annual growth';
-<<<<<<< HEAD
     growthRate: '20% annual growth',
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4257,16 +4005,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '20% annual growth';
-    variant: 'quantum-advanced'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Fully functional quantum logistics platform with quantum AI optimization, real-time tracking, and supply chain management. Includes logistics operations center and 24/7 support.';
     launchDate: '2024-11-01';
     customers: 35
@@ -4302,7 +4040,6 @@ export const,
     roi: 'Prevents cyber attacks worth $4 M+ annually, reduces security incidents by 80%, 400% ROI through security cost avoidance';
     competitors: ['CrowdStrikePalo Alto NetworksSentinelOneCarbon BlackCylance'],
     marketSize: '$200 B cybersecurity market, 15% annual growth';
-<<<<<<< HEAD
     growthRate: '15% annual growth',
     variant: 'quantum-cyberpunk'}
     contactInfo: {}
@@ -4311,16 +4048,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '15% annual growth';
-    variant: 'quantum-cyberpunk'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Fully functional quantum cybersecurity platform with quantum-resistant encryption, AI threat detection, and security operations center. Includes 24/7 security monitoring and support.';
     launchDate: '2024-10-15';
     customers: 85
@@ -4356,7 +4083,6 @@ export const,
     roi: 'Increases trading profits by 200%, reduces execution costs by 60%, 800% ROI through trading performance';
     competitors: ['Renaissance TechnologiesTwo SigmaCitadelBridgewater AssociatesAQR Capital'],
     marketSize: '$15 T algorithmic trading market, 150% annual growth';
-<<<<<<< HEAD
     growthRate: '150% annual growth',
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4365,16 +4091,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '150% annual growth';
-    variant: 'quantum-advanced'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Fully functional quantum financial trading platform with quantum AI algorithms, nanosecond execution, and advanced risk management. Includes trading operations center and 24/7 support.';
     launchDate: '2024-09-01';
     customers: 12
@@ -4410,7 +4126,6 @@ export const,
     roi: 'Reduces city operational costs by 25%, improves citizen services by 40%, 500% ROI through efficiency gains';
     competitors: ['Cisco Smart CitiesSiemens City PerformanceIBM Smart CitiesMicrosoft CityNextOracle Smart Cities'],
     marketSize: '$400 B smart city market, 300% annual growth';
-<<<<<<< HEAD
     growthRate: '300% annual growth',
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4419,16 +4134,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '300% annual growth';
-    variant: 'ai-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Fully functional AI IoT smart city platform with infrastructure management, environmental monitoring, and citizen services. Includes smart city operations center and 24/7 support.';
     launchDate: '2024-08-15';
     customers: 28
@@ -4463,7 +4168,6 @@ export const,
     roi: 'Space organizations report 600% ROI through enhanced communication security and operational efficiency.'
     competitors: ['Traditional space communicationBasic satellite networksManual space operations'],
     marketSize: '$350 B space market, quantum segment growing 500% annually';
-<<<<<<< HEAD
     growthRate: '500% annual growth',
     variant: 'quantum-space'}
     contactInfo: {}
@@ -4472,16 +4176,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '500% annual growth';
-    variant: 'quantum-space'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced quantum space communication network with satellite quantum key distribution, interplanetary protocols, and comprehensive space operations.';
     launchDate: '2024-08-01';
     customers: 15
@@ -4516,7 +4210,6 @@ export const,
     roi: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.'
     competitors: ['Traditional drug discoveryBasic AI drug toolsManual research methods'],
     marketSize: '$1.5 T pharmaceutical market, AI segment growing 600% annually';
-<<<<<<< HEAD
     growthRate: '600% annual growth',
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4525,16 +4218,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    growthRate: '600% annual growth';
-    variant: 'ai-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Comprehensive AI biotech drug discovery platform with quantum computing capabilities, advanced drug modeling, and automated development processes.';
     launchDate: '2024-07-15';
     customers: 8
@@ -4569,7 +4252,6 @@ export const,
     roi: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.'
     competitors: ['Traditional manufacturingBasic automationManual production processes'],
     marketSize: '$12 T manufacturing market, AI segment growing 350% annually';
-<<<<<<< HEAD
     growthRate: '350% annual growth',
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4585,23 +4267,6 @@ export const,
     reviews: 28,
   {/* TODO: Fix JSX expression */}
   t: 'quantum-advanced'}
-=======
-    growthRate: '350% annual growth';
-    variant: 'ai-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.';
-    launchDate: '2024-09-01';
-    customers: 35;
-    rating: 4.8;
-    reviews: 28;
-  {/* TODO: Fix JSX expression */};
-  t: 'quantum-advanced'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contactInf,
   o: {};
       mobil,
@@ -4814,15 +4479,9 @@ export const,
     ratin,
   g: 4.6,
     review,
-<<<<<<< HEAD
   s: 15}
   {/* TODO: Fix JSX expression */}
   t: 'quantum-space'}
-=======
-  s: 15};
-  {/* TODO: Fix JSX expression */};
-  t: 'quantum-space'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contactInf,
   o: {};
       mobil,
@@ -4846,15 +4505,9 @@ export const,
     ratin,
   g: 5.0,
     review,
-<<<<<<< HEAD
   s: 12}
   {/* TODO: Fix JSX expression */}
   t: 'ai-futuristic'}
-=======
-  s: 12};
-  {/* TODO: Fix JSX expression */};
-  t: 'ai-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contactInf,
   o: {};
       mobil,
@@ -4878,15 +4531,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 6}
   {/* TODO: Fix JSX expression */}
   t: 'ai-futuristic'}
-=======
-  s: 6};
-  {/* TODO: Fix JSX expression */};
-  t: 'ai-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contactInf,
   o: {};
       mobil,
@@ -4910,18 +4557,11 @@ export const,
     ratin,
   g: 4.8,
     review,
-<<<<<<< HEAD
   s: 28}
-];
-  }
-=======
-  s: 28};
-]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+]}
 ];
 export interface EmergingTechService {
-id: string;
-}
+id: string}
   name: string;
   tagline: string;
   price: string;
@@ -4999,8 +4639,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */};
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'};
-    },
+      website: 'https://ziontechgroup && ziontechgroup.com'}},
     real_implementation: true
     implementation_details: unknown,
       'Advanced quantum space communication network with satellite quantum key distribution, interplanetary protocols, and comprehensive space operations.',
@@ -5032,8 +4671,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */};
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'};
-    },
+  s://ziontechgroup && ziontechgroup.com'}},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -5250,7 +4888,6 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */};
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',
-<<<<<<< HEAD
   contactInfo: unknown,
     mobile: string, email: string
     address: string
@@ -5261,20 +4898,9 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */};
   rating: number
   reviews: number,
 }
-=======
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string},
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services,
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     reviews: 28,
       website: 'https://ziontechgroup.com'}
     real_implementation: true,
@@ -5283,16 +4909,6 @@ export const emergingTechServices: EmergingTechService[] = [
     customers: 35
     rating: 4.8
     reviews: 28,
-=======
-    reviews: 28;
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
-    launch_date: '2024 - 09 - 01',
-    customers: 35;
-    rating: 4.8;
-    reviews: 28;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     ro,
   i: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.'
     competitor,
@@ -5413,12 +5029,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-<<<<<<< HEAD
   s: 28}
-=======
-  s: 28};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 'Quantum-secured space communication',' i,
   d: 'quantum - space - communications',' nam,
   e: 'Quantum Space Communications',' taglin,
@@ -6024,7 +5635,6 @@ export const,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-<<<<<<< HEAD
   n: string, feature,
   s: string[], popula,
   r: boolean, ico,
@@ -6056,39 +5666,6 @@ export const,
   g: number, review,
   s: number} export const,
   emergingTechServices: EmergingTechService[] = [; // Quantum Internet & Communication Services, {/* TODO: Fix JSX expression */}
-=======
-  n: string; feature,
-  s: string[]; popula,
-  r: boolean; ico,
-  n: string; colo,
-  r: string; textColo,
-  r: string; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string; trialDay,
-  s: number; setupTim,
-  e: string; categor,
-  y: string; realServic,
-  e: boolean; technolog,
-  y: string[]; integration,
-  s: string[]; useCase,
-  s: string[]; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string;' varian,
-  t: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk'; contactInf,
-  o: {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  emergingTechServices: EmergingTechService[] = [; // Quantum Internet & Communication Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -6098,7 +5675,7 @@ export const,
   e: '2024 - 09 - 01' customer,
   s: 35, ratin,
   g: 4.8, review,
-  s: 28} export interface EmergingTechService { } ]; ; } ]; realImplementatio,
+  s: 28} export interface EmergingTechService { } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.'' launchDat,
   e: '2024-11-15' customer,
@@ -6477,7 +6054,6 @@ export const,
   g: 4.8,
   reviews: 28 } ]; export interface EmergingTechService {/* TODO: Fix JSX expression */};
   s: string} websit,
-<<<<<<< HEAD
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
@@ -6486,186 +6062,106 @@ export const,
   g: number, review,
   s: number} export const,
   emergingTechServices: EmergingTechService[] = [; // Quantum Internet & Communication Services, {/* TODO: Fix JSX expression */}
-=======
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  emergingTechServices: EmergingTechService[] = [; // Quantum Internet & Communication Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional quantum internet platform with quantum key distribution, post-quantum cryptography, and quantum network infrastructure. Includes quantum security operations center and 24/7 monitoring.';' launchDat,
-<<<<<<< HEAD
   e: '2024-12-01', customer,
   s: 15, ratin,
   g: 4.9, review,
   s: 8} // Advanced AI & Robotics Services; {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-12-01'; customer,
-  s: 15; ratin,
-  g: 4.9; review,
-  s: 8}; // Advanced AI & Robotics Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.';' launchDat,
-<<<<<<< HEAD
   e: '2024-11-15', customer,
   s: 45, ratin,
   g: 4.7, review,
   s: 23} // Quantum Energy & Sustainability Services; {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-11-15'; customer,
-  s: 45; ratin,
-  g: 4.7; review,
-  s: 23}; // Quantum Energy & Sustainability Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional quantum energy optimization platform with quantum AI algorithms, smart grid management, and renewable energy optimization. Includes energy operations center and 24/7 monitoring.';' launchDat,
-<<<<<<< HEAD
   e: '2024-12-15', customer,
   s: 8, ratin,
   g: 4.8, review,
   s: 5} // Advanced Metaverse & AR/VR Services; {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-12-15'; customer,
-  s: 8; ratin,
-  g: 4.8; review,
-  s: 5}; // Advanced Metaverse & AR/VR Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional metaverse development platform with AI content generation, VR experiences, and 3D world building tools. Includes metaverse operations center and 24/7 support.';' launchDat,
-<<<<<<< HEAD
   e: '2024-10-01', customer,
   s: 120, ratin,
   g: 4.6, review,
   s: 67} // Quantum Logistics & Supply Chain Services; {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-10-01'; customer,
-  s: 120; ratin,
-  g: 4.6; review,
-  s: 67}; // Quantum Logistics & Supply Chain Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional quantum logistics platform with quantum AI optimization, real-time tracking, and supply chain management. Includes logistics operations center and 24/7 support.';' launchDat,
-<<<<<<< HEAD
   e: '2024-11-01', customer,
   s: 35, ratin,
   g: 4.7, review,
   s: 19} // Advanced Cybersecurity & Threat Intelligence; {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-11-01'; customer,
-  s: 35; ratin,
-  g: 4.7; review,
-  s: 19}; // Advanced Cybersecurity & Threat Intelligence; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional quantum cybersecurity platform with quantum-resistant encryption, AI threat detection, and security operations center. Includes 24/7 security monitoring and support.';' launchDat,
-<<<<<<< HEAD
   e: '2024-10-15', customer,
   s: 85, ratin,
   g: 4.8, review,
   s: 42} // Quantum Financial Trading & Analytics; {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-10-15'; customer,
-  s: 85; ratin,
-  g: 4.8; review,
-  s: 42}; // Quantum Financial Trading & Analytics; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional quantum financial trading platform with quantum AI algorithms, nanosecond execution, and advanced risk management. Includes trading operations center and 24/7 support.';' launchDat,
-<<<<<<< HEAD
   e: '2024-09-01', customer,
   s: 12, ratin,
   g: 4.9, review,
   s: 6} // Advanced IoT & Smart City Services; {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-09-01'; customer,
-  s: 12; ratin,
-  g: 4.9; review,
-  s: 6}; // Advanced IoT & Smart City Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Fully functional AI IoT smart city platform with infrastructure management, environmental monitoring, and citizen services. Includes smart city operations center and 24/7 support.';' launchDat,
-<<<<<<< HEAD
   e: '2024-08-15', customer,
   s: 28, ratin,
   g: 4.6, review,
   s: 15} {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-08-15'; customer,
-  s: 28; ratin,
-  g: 4.6; review,
-  s: 15}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced quantum space communication network with satellite quantum key distribution, interplanetary protocols, and comprehensive space operations.';' launchDat,
-<<<<<<< HEAD
   e: '2024-08-01', customer,
   s: 15, ratin,
   g: 5.0, review,
   s: 12} {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-08-01'; customer,
-  s: 15; ratin,
-  g: 5.0; review,
-  s: 12}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Comprehensive AI biotech drug discovery platform with quantum computing capabilities, advanced drug modeling, and automated development processes.';' launchDat,
-<<<<<<< HEAD
   e: '2024-07-15', customer,
   s: 8, ratin,
   g: 4.9, review,
   s: 6} {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-07-15'; customer,
-  s: 8; ratin,
-  g: 4.9; review,
-  s: 6}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -6675,7 +6171,7 @@ export const,
   e: '2024-09-01', customer,
   s: 35, ratin,
   g: 4.8, review,
-  s: 28} ]; } ]; export interface EmergingTechService,
+  s: 28} ]} ]; export interface EmergingTechService,
   id: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -6828,8 +6324,4 @@ export const,
   e: '2024 - 09 - 01' customer,
   s: 35, ratin,
   g: 4.8, review,
-<<<<<<< HEAD
   s: 28} '"
-=======
-  s: 28} ; '"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

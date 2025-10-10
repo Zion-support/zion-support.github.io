@@ -12,47 +12,37 @@ function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-<<<<<<< HEAD
 
     // Remove merge conflict markers and keep the HEAD version (first part)
     const conflictRegex = /\n([\s\S]*?)\n;
-=======
-    // Remove merge conflict markers and keep the HEAD version (first part);
-const conflictRegex = /\n([\s\S]*?)\n;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const originalContent = content;
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
       return headContent.trim();
-function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */};
-    });
+function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}});
     // Remove any remaining conflict markers;
     content = content;
       .replace(/[\s\S]*?)
       .replace(//g, '')
       .replace(/)
 )
-    // Clean up the content;)
+    // Clean up the content)
       .replace(/
     // Clean up the content;
-    content = content;)
+    content = content)
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive empty lines;
       .replace(/^\s*\n/gm, '\n') // Remove empty lines with just spaces;
       .replace(/\s+$/gm, ''); // Remove trailing spaces;
     if (modified || content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-<<<<<<< HEAD
       console.log(`Fixed: ${filePath}`);
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return false} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/React files;
@@ -64,42 +54,14 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-=======
-      // console.log removed for production
-if (modified || content !== originalContent) {/* TODO: Fix JSX expression */};
-  d: ${filePath}`);
-      return true};
-    return false} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-return false};
-};
-// Function to find all TypeScript/React files;
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;
-const files = [];
-  ;
-function traverse(currentDir) {;
-const items = fs.readdirSync(currentDir);
-    for (const item of items) {;
-const fullPath = path.join(currentDir, item);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */};
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */};
-      };
-    };
-  };
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}}}};
   traverse(dir);
-<<<<<<< HEAD
-  return files;
-}
+  return files}
 
-=======
-  return files};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution;
 console.log('Starting comprehensive merge conflict resolution...');
 
@@ -108,19 +70,10 @@ const files = findFiles(srcDir);
 
 let fixedCount = 0;
 let errorCount = 0;
-for (const file of files) {/* TODO: Fix JSX expression */};
-    };
-  } catch (error) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
+for (const file of files) {/* TODO: Fix JSX expression */}}} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Failed to process ${file}:`, error.message);
-    errorCount++;
-  }
+    errorCount++}
 }
-=======
-    // console.error removed for production
-errorCount++};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `
 console.log(`\nMerge conflict resolution)`
   complete:`);`
@@ -130,7 +83,6 @@ console.log(`- Files)`
   fixed: ${fixedCount}`);`
 console.log(`- Error)`
   s: ${errorCount}`);
-<<<<<<< HEAD
 
 console.log(`\nMerge conflict resolution complete: `);
 console.log(`- Files processed: ${files.length}`);
@@ -141,33 +93,12 @@ console.log(`- Errors: ${errorCount}`);
 console.log('\nRunning linting to check for remaining issues...');
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-  console.log('Linting passed!');
-} catch (error) {/* TODO: Fix JSX expression */}
+  console.log('Linting passed!')} catch (error) {/* TODO: Fix JSX expression */}
 }
 
 // Try building;
 console.log('\nTrying to build...');
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-  console.log('Build successful!');
-} catch (error) {/* TODO: Fix JSX expression */}
-=======
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// Run linting to check for remaining issues;
-// console.log removed for production
-try {/* TODO: Fix JSX expression */};
-  o: 'inherit' });
-  // console.log removed for production
-} catch (error) {/* TODO: Fix JSX expression */};
-};
-// Try building;
-// console.log removed for production
-try {/* TODO: Fix JSX expression */};
-  o: 'inherit' });
-  // console.log removed for production
-} catch (error) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  console.log('Build successful!')} catch (error) {/* TODO: Fix JSX expression */}
 }`

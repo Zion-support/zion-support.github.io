@@ -1,15 +1,9 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    };
-  ]; return(<div , classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
+const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; return(<div , classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
       {/* Animated, backgro, u, n, d */};
       <div , classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" />
   ]; return (
@@ -55,11 +49,7 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */};
         {/* Articles, G, r, i, d */};
         <div , classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
-<<<<<<< HEAD
             <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">
-=======
-            <Link , ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div, className="flex, item, s-start, ga, p-4"></div>
                 <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-60, 0, p-3, rounde, d-xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m"></div>
                   <artic , l, e.icon, className="w-6 h-6"</div>
@@ -87,15 +77,9 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */};
             </L, i, n, k>)
           ))};
           {/* Additional, promotional, card */}"
-<<<<<<< HEAD
           <Link, t, o = "/bl, o, g""
             className="group, b, g-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-yell, o, w-4, 0, 0/30, hove, r: bord, e, r-yell, o, w-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, flex, flex-col, item, s-center, justif, y-center, tex, t-cent, e, r">
             <Sparkles, className="w-1, 2, h-12, tex, t-yell, o, w-400, m, b-4, grou, p-hov, e, r:sca, l, e-125, transitio, n-transfo, r, m" />
-=======
-          <Link , t, o = "/bl, o, g""
-            className="group, b, g-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-yell, o, w-4, 0, 0/30, hove, r: bord, e, r-yell, o, w-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, flex, flex-col, item, s-center, justif, y-center, tex, t-cent, e, r">
-            <Sparkles , className="w-1, 2, h-12, tex, t-yell, o, w-400, m, b-4, grou, p-hov, e, r:sca, l, e-125, transitio, n-transfo, r, m" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">View, All, Articles</h3>
             <p, className="te, x, t-sm, tex, t-yell, o, w-200, m, b-4">2, 0, 0+ groundbreaking, insight, s</p>
             <div , className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-400, fon, t-semibo, l, d">
@@ -145,27 +129,15 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */};
         </div>
         {/* CTA, Butt, o, n, s */};
         <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r"></div>
-<<<<<<< HEAD
           <Link, t, o="/bl, o, g"
             className="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, inlin, e-flex, item, s-center, ga, p-3, grou, p">
             <Brain, className="w-6 h-6, grou, p-hov, e, r:rota, t, e-12, transitio, n-transfo, r, m" />
-=======
-          <Link , t, o="/bl, o, g"
-            className="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, inlin, e-flex, item, s-center, ga, p-3, grou, p">
-            <Brain , className="w-6 h-6, grou, p-hov, e, r:rota, t, e-12, transitio, n-transfo, r, m" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             Explore, All, Breakthroughs;
             <Link , className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
           </Li, n, k>
-<<<<<<< HEAD
           <Link, t, o="/conta, c, t"
             className="bord, e, r-2, borde, r-cy, a, n-400, hove, r:bg-cy, a, n-400, hove, r:te, x, t-gr, a, y-900, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3">
             <Sparkles, className="w-5 h-5" />
-=======
-          <Link , t, o="/conta, c, t"
-            className="bord, e, r-2, borde, r-cy, a, n-400, hove, r:bg-cy, a, n-400, hove, r:te, x, t-gr, a, y-900, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3">
-            <Sparkles , className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             Getted, Today;
           </Li, n, k>
         </div>
@@ -218,6 +190,5 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */};
         </div>
       </div>
     </di, v>
-  );
-}
+  )}
 export default September30NewContentMegaBanner;"

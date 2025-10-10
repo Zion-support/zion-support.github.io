@@ -19,17 +19,11 @@ export type Zion2026AIMarketplaceService =
   support: string[];
   contactInfo: unknown;
     phone: string;
-<<<<<<< HEAD
     email: string
     website: string
     address: string,
   }
 }
-=======
-    email: string;
-    website: string;
-    address: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
@@ -83,12 +77,8 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     websit,
   e: string,
     addres,
-<<<<<<< HEAD
   s: string}
 }
-=======
-  s: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     i,
@@ -171,8 +161,7 @@ export const,
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'}},
     id: 'ai-marketplace-002',
     name: 'AI Service Integration Hub',
     description: 'A centralized platform for integrating multiple AI services into existing business workflows, providing seamless connectivity and unified management.',
@@ -193,8 +182,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  },
+    }},
     i,
   d: 'ai-marketplace-002',
     nam,
@@ -275,8 +263,7 @@ export const,
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'}},
     id: 'ai-marketplace-003',
     name: 'AI Service Quality Assurance Platform',
     description: 'An automated platform for testing, validating, and ensuring the quality of AI services through comprehensive testing frameworks and continuous monitoring.',
@@ -297,8 +284,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  },
+    }},
     i,
   d: 'ai-marketplace-003',
     nam,
@@ -379,8 +365,7 @@ export const,
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'}},
     id: 'ai-marketplace-004',
     name: 'AI Service Analytics Dashboard',
     description: 'A comprehensive analytics platform that provides insights into AI service performance, usage patterns, and business impact across the organization.',
@@ -401,8 +386,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  },
+    }},
     i,
   d: 'ai-marketplace-004',
     nam,
@@ -483,8 +467,7 @@ export const,
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'}},
     id: 'ai-marketplace-005',
     name: 'AI Service Development Studio',
     description: 'A comprehensive development environment for creating, testing, and deploying custom AI services with pre-built templates and automated deployment pipelines.',
@@ -505,8 +488,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  },
+    }},
     i,
   d: 'ai-marketplace-005',
     nam,
@@ -599,9 +581,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
-];
+    }}];
 export type Zion2026AIMarketplaceService = i,
   d: string, nam,
   e: string, descriptio,

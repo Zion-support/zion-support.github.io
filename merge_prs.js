@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 
@@ -6,11 +5,6 @@ import https from 'https';
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
     const options = {
-=======
-  return new Promise((resolve, reject) => {;
-const options = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       hostname: 'api.github.com'
       port: 443
       path: endpoint
@@ -29,12 +23,9 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix 
     const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
-  a: jsonData });
-        } catch (error) {/* TODO: Fix JSX expression */}
-  JSON: ${error.message}`));
-        }
-      });
-    });
+  a: jsonData })} catch (error) {/* TODO: Fix JSX expression */}
+  JSON: ${error.message}`))}
+      })});
 
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
     });
@@ -42,9 +33,7 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix 
     if (data) {/* TODO: Fix JSX expression */}
     }
 
-    req.end();
-  });
-}
+    req.end()})}
 
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
@@ -87,8 +76,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
 
     const response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`)
       'PUT')
-      mergeData;
-    );
+      mergeData);
 
     if (response.status === 200) {
     return true
@@ -102,7 +90,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
 `
     const response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       'PUT',
-      mergeData;)
+      mergeData)
     );
 
     if (response.status === 200) {/* TODO: Fix JSX expression */}
@@ -147,8 +135,7 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
       }
       
       // Add a small delay between merges;
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    }
+      await new Promise(resolve => setTimeout(resolve, 1000))}
 
   } catch (error) {/* TODO: Fix JSX expression */}
   }

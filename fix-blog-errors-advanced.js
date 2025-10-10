@@ -31,7 +31,7 @@ const fixes = [
   {
     pattern: /return \(\s*<div></div>\{\/\* content \*\/\}\s*return \(/g,
     replacement: 'return ('})
-  //Fix malformed object syntax in metadata;)
+  //Fix malformed object syntax in metadata)
   {)
     pattern: /export const metadata: Metadata = \{\/\* content \*\/\}/g)
     replacement: 'export const metadata: Metadata = {')})
@@ -53,8 +53,7 @@ const fixes = [
   t: `export const metadata = {/* TODO: Fix JSX expression */}`
 };`},
   //Fix missing commas in metadata;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix malformed JSX - unclosed tags;
   {/* TODO: Fix JSX expression */};
   n: /<div>\{\/\* content \*\/\}/g,
@@ -75,8 +74,7 @@ const fixes = [
   metadata: Metadata = \{\/\* content \*\/\}/g,
     replacemen,
   t: 'export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */};
-  },
+  metadata: Metadata = {/* TODO: Fix JSX expression */}},
   //Fix missing closing braces in metadata;
   {/* TODO: Fix JSX expression */})
   n: /(\s+);\s*;\s*\}/g,
@@ -120,7 +118,7 @@ const fixes = [
   {
     pattern: /\/\* content \*\/\}/g,
     replacement: '{/* content */}'})
-  //Fix malformed JSX structure in return;)
+  //Fix malformed JSX structure in return)
   {)
     pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g)
     replacement: 'return (\n    <div>{/* content */}')
@@ -134,11 +132,9 @@ function fixFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix missing commas in object properties;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix malformed JSX structure;
   {/* TODO: Fix JSX expression */};
   n: /<div>\s*\{\/\* content \*\/\}\s*<div>/g,
@@ -158,9 +154,7 @@ function fixFile(filePath) {
   {/* TODO: Fix JSX expression */};
   n: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g,
     replacemen,
-  t: 'return (\n    <div>{/* content */}'}];
-<<<<<<< HEAD
-)
+  t: 'return (\n    <div>{/* content */}'}])
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
     });
@@ -168,42 +162,21 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 async function main() {/* TODO: Fix JSX expression */}
 }
-=======
-);
-function fixFile(filePath) {/* TODO: Fix JSX expression */};
-      };
-    });
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-async function main() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
-  if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */};
-  };
+  if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */}};
   //Find all .tsx and .jsx files in blog directory;
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
   //   let fixedCount = 0;
   files.forEach(file => {)
     if (fixFile(file)) {
-<<<<<<< HEAD
-      fixedCount++;
-    }
+      fixedCount++}
   files.forEach(file => {/* TODO: Fix JSX expression */}
-=======
-      fixedCount++};
-  files.forEach(file => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     })
   });
   //   };

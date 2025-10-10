@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */}
  }
 export default function NewServices2026Bann, e, r({)
@@ -7,66 +6,34 @@ export default function NewServices2026Bann, e, r({)
   classNa, m, e = '')
 }: NewServices2026BannerPro, p, s) {
   const services = [
-=======
-type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */};
- };
-export default function NewServices2026Bann, e, r({);
-varia, n, t = 'showc, a, s, e')
-  showCou, n, t =  , 6)
-  classNa, m, e = '')
-}: NewServices2026BannerPro, p, s) {;
-const services = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       title: 'AI, Autonomous, Cloud O, p, s',
       li, n, k: '/servic, e, s/ai-autonomo, u, s-infrastructu, r, e-platf, o, r, m',
       t, a, g: 'Cl, o, u, d',
 export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression */})
-}: NewServices2026BannerPro, p, s) {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-<<<<<<< HEAD
+}: NewServices2026BannerPro, p, s) {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
     {/* TODO: Fix JSX expression */}
     }].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<section, classNam, e = { `w-fu, l, l ${
         varia, n, t === 'he, r, o'
-=======
-    {/* TODO: Fix JSX expression */};
-    }].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<section , classNam, e = { `w-fu, l, l ${;
-varia, n, t === 'he, r, o'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           ? 'bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0'
           : varia, n, t === 'in, f, o'
              ? 'bg-gradie, n, t-to-r, fro, m-emera, l, d-50, t, o-te, a, l-50'
              : 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`};>
       <div, className='container, m, x-auto, p, x-6'></section>
-<<<<<<< HEAD
         <div, className='te, x, t-center, m, b-8' ></div> <div, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${
               varia, n, t === 'in, f, o'
                  ? 'bg-white, tex, t-gr, a, y-9, 0, 0'}
                  : 'bg-whi, t, e/20, tex, t-whi, t, e'}
              }`}
           >
-=======
-        <div, className='te, x, t-center, m, b-8' ></div> <div , className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${;
-varia, n, t === 'in, f, o'
-                 ? 'bg-white, tex, t-gr, a, y-9, 0, 0'};
-                 : 'bg-whi, t, e/20, tex, t-whi, t, e'};
-             }`};>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             NEW, 2026, SERVICES;
           </d, i, v > <h2 , className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`};>
-            Latest, AI, Services;
-  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<section, classNam, e = {/* TODO: Fix JSX expression */};
-       } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`};
+            Latest, AI, Services].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<section, classNam, e = {/* TODO: Fix JSX expression */}} ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`};
     ></section>
       <div, className='container, m, x-auto, p, x-6'></div>
         <div, className='te, x, t-center, m, b-8' > <div, className={/* TODO: Fix JSX expression */}`
@@ -81,11 +48,7 @@ varia, n, t === 'in, f, o'
             Accelerate, transformation, with our, newest, AI-powered, solution, s.
           </p>
         </div>
-<<<<<<< HEAD
         <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'>
-=======
-        <div , classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           { servic, e, s.m, a, p(s =  > (</div>
         <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'></div>
           {/* TODO: Fix JSX expression */}`
@@ -107,10 +70,5 @@ varia, n, t === 'in, f, o'
         </div>
       </div>
     </secti, o, n>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 `

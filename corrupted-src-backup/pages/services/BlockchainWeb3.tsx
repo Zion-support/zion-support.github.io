@@ -8,13 +8,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-<<<<<<< HEAD
 const, BlockchainWeb, 3: Rea, c, t.FC = () => {
   const, feature, s = [
-=======
-const, BlockchainWeb, 3: Rea, c, t.FC = () => {;
-const, feature, s = [
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       i, c, o;
   n: Shie, l, d;
@@ -63,8 +58,7 @@ const, feature, s = [
       tit, l, e: "Web3, Integratio, n",";
       descripti, o, n: "Seamless, Web3, integration for, existing, applications with, wallet, connectivity and, decentralized, identity.",";
       benef, i, t: "Smooth, user, experience"
-    };
-  ];
+    }];
   const, pricin, g = [
     {
     na, m, e: "Start, u, p"
@@ -82,12 +76,8 @@ const, feature, s = [
         "Standard, token, development"
         "Basic, analytics, dashboard"
       ]
-<<<<<<< HEAD
       popul, a, r: fal, s, e
   }
-=======
-      popul, a, r: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     na, m, e: "Grow, t, h"
       pri, c, e: "$25,0, 0, 0"
@@ -107,12 +97,8 @@ const, feature, s = [
         "DAO, governance, setup"
         "Yield, farming, protocols"
       ]
-<<<<<<< HEAD
       popul, a, r: tr, u, e
   }
-=======
-      popul, a, r: tr, u, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     na, m, e: "Enterpri, s, e"
       pri, c, e: "$75,0, 0, 0"
@@ -151,12 +137,8 @@ const, feature, s = [
         "Standard, token, development",";
         "Basic, analytics, dashboard"
       ]
-<<<<<<< HEAD
       popul, a, r: fal, s, e
   }
-=======
-      popul, a, r: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     na, m, e: "Grow, t, h",";
       pri, c, e: "$25,0, 0, 0",";
@@ -176,12 +158,8 @@ const, feature, s = [
         "DAO, governance, setup",";
         "Yield, farming, protocols"
       ]
-<<<<<<< HEAD
       popul, a, r: tr, u, e
   }
-=======
-      popul, a, r: tr, u, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     na, m, e: "Enterpri, s, e",";
       pri, c, e: "$75,0, 0, 0",";
@@ -203,12 +181,8 @@ const, feature, s = [
         "SLA, guarante, e",";
         "24/7, monitorin, g & suppo, r, t"
       ]
-<<<<<<< HEAD
       popul, a, r: fal, s, e
   }
-=======
-      popul, a, r: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const, testimonial, s = [
     {
@@ -240,8 +214,7 @@ const, feature, s = [
       conte, n, t: "The, DAO, governance system, and, tokenomics design, created, a thriving, community, of 50,000, member, s. The, transparency, and security, features, are exception, a, l.",";
       rati, n, g: 5,
       compa, n, y: "Healthcare, DA, O"
-    };
-  ];
+    }];
   const, service, s = [
     {
       tit, l, e: "DeFi, Developmen, t","
@@ -274,41 +247,28 @@ const, feature, s = [
       ic, o, n: Trending, U, p;
       descripti, o, n: "Complete, DeFi, protocol development, including, DEXs, lending, platform, s, and, yield, farming syste, m, s.",";
       metri, c, s: "$50, 0, M+ TVL, manage, d",";
-<<<<<<< HEAD
       benefi, t, s: ["Automated, market, makers", "Liquidity, minin, g", "Cro, s, s-chain, swap, s"]"
   }
-=======
-      benefi, t, s: ["Automated, market, makers", "Liquidity, minin, g", "Cro, s, s-chain, swap, s"]"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     tit, l, e: "NFT, Solution, s",";
       ic, o, n: Coi, n, s;
       descripti, o, n: "E, n, d-to-end, NFT, marketplace development, with, advanced features, and, tokenization servic, e, s.",";
       metri, c, s: "10, 0, K+ users, supporte, d",";
-<<<<<<< HEAD
       benefi, t, s: ["Custom, marketplac, e", "Royalty, managemen, t", "Metadata, optimizatio, n"]"
   }
-=======
-      benefi, t, s: ["Custom, marketplac, e", "Royalty, managemen, t", "Metadata, optimizatio, n"]"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     tit, l, e: "DAO, Governanc, e",";
       ic, o, n: Glo, b, e;
       descripti, o, n: "Decentralized, autonomous, organization setup, with, voting mechanisms, and, treasury manageme, n, t.",";
       metri, c, s: "5, 0, K+ community, member, s",";
-<<<<<<< HEAD
       benefi, t, s: ["Voting, system, s", "Treasury, managemen, t", "Proposal, mechanism, s"]"
   }
-=======
-      benefi, t, s: ["Voting, system, s", "Treasury, managemen, t", "Proposal, mechanism, s"]"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       tit, l, e: "Token, Developmen, t",";
       ic, o, n: Databa, s, e;
       descripti, o, n: "Custom, token, creation with, advanced, tokenomics, vesting, schedule, s, and, utility, mechanisms.",";
       metri, c, s: "Zero, security, incidents",";
       benefi, t, s: ["Custom, tokenomic, s", "Vesting, schedule, s", "Utility, mechanism, s"]";
-<<<<<<< HEAD
 const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -357,56 +317,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-  ];
-  const, pricin, g = [
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-  ];
-  const, testimonial, s = [
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-  ];
-  const, service, s = [
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
-    {/* TODO: Fix JSX expression *
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const, technologie, s = ["
     { na, m, e: "Ethere, u, m", ty, p, e: "Smart, Contract, s" }"
@@ -432,13 +342,8 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     { na, m, e: "Cosm, o, s", ty, p, e: "Int, e, r-Blockcha, i, n" },";"
     { na, m, e: "Near, Protoco, l", ty, p, e: "Developer, Friendl, y" },";"
     { na, m, e: "Algora, n, d", ty, p, e: "Pure, Proof, of Sta, k, e" },";"
-    { na, m, e: "Fant, o, m", ty, p, e: "Fast, Finalit, y" }";
-  ];
-<<<<<<< HEAD
+    { na, m, e: "Fant, o, m", ty, p, e: "Fast, Finalit, y" }"];
   return(<React.Fragment>
-=======
-  return(<React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
         <title>Blockcha, i, n & Web3, Service, s - Zion, Tech, Group | De, F, i, N, F, T, DAO, Solution, s</title>
         <me, t, a;
@@ -451,7 +356,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   na, m, e="descripti, o, n""
           content="Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s, DAO, governanc, e, and, smart, contract developme, n, t. Enterpri, s, e-grade, security, and mul, t, i-chain, integratio, n." /><meta name="keywor, d, s" content="blockchain, developmen, t, Web3, service, s, DeFi, protocol, s, NFT, marketplac, e, DAO, governanc, e, smart, contract, s, cryptocurrency, developmen, t" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/blockcha, i, n-we, b, 3/>""
           content="Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s, DAO, governanc, e, and, smart, contract developme, n, t. Enterpri, s, e-grade, security, and mul, t, i-chain, integratio, n."
-<<<<<<< HEAD
          />"
         <meta name="keywor, d, s" content="blockchain, developmen, t, Web3, service, s, DeFi, protocol, s, NFT, marketplac, e, DAO, governanc, e, smart, contract, s, cryptocurrency, developmen, t" />";"
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/blockcha, i, n-we, b, 3" />";
@@ -463,32 +367,13 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
-=======
-        <meta name="keywor, d, s" content="blockchain, developmen, t, Web3, service, s, DeFi, protocol, s, NFT, marketplac, e, DAO, governanc, e, smart, contract, s, cryptocurrency, developmen, t" 
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/blockcha, i, n-we, b, 3" 
-      <
-      <Head, e, r   /><
-      <main, className="m, i, n-h-screen, b, g-whi, t, e">";
-        {/* Hero, Sectio, n *
-        <section , className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-indi, g, o-800, t, o-purp, l, e-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-cent, e, r">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
-<<<<<<< HEAD
                 Blockcha, i, n &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">We, b, 3</sp, a, n>
               </h1>
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">
-=======
-                Blockcha, i, n &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">We, b, 3<
-              <
-              <p , className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s;
   DAO, governanc, e, and, enterpris, e-grade, smart, contract development, with, multi-chain, integratio, n.
               </p>
@@ -555,7 +440,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   r:te, x, t-indi, g, o-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   View, Pricin, g;"
-<<<<<<< HEAD
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
                   <Link, className="w-5 h-5, m, l-2" />";
                 </a>
@@ -569,14 +453,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   g:px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                  <Link, className="w-5 h-5, m, l-2  /><
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="text-center mb-12">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="text-center mb-12">";
@@ -672,7 +548,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   <Globe, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  /></Globe>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";"
-<<<<<<< HEAD
                   <Globe, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Web3, Read, y</h3>";"
@@ -685,24 +560,9 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="py-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
-=======
-                  <Globe, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" 
-                <
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Web3, Read, y<
-                <p, className="te, x, t-gr, a, y-6, 0, 0">Futu, r, e-proof, solution, s<
-              <
-            <
-          <
-        <
-        {/* Servic, e, s *
-        <section , className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
-        <section, className="py-20">";)
+        <section, className="py-20">")
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -731,13 +591,12 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
-<<<<<<< HEAD
                 const, Ico, n = servi, c, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-4, ga, p-8">";)
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-4, ga, p-8">")
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
                 const, Ico, n = servi, c, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
@@ -752,57 +611,17 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 const, Ico, n = servi, c, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
-=======
-return (
-;
-const, Ico, n = servi, c, e.ic, o, n;
-                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}"
-                    <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">
-                      <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-4, ga, p-8">";)
-              {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
-return (
-;
-const, Ico, n = servi, c, e.ic, o, n;
-                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}";
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">";
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6"><
-                      <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-4, ga, p-8"><
-              {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
-return (
-;
-const, Ico, n = servi, c, e.ic, o, n;
-                return (</div>
-                  <div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">";</div>
                       <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />";
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{servi, c, e.tit, l, e}</h3>";
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{servi, c, e.descripti, o, n}</p>";)
-                    <div, className="te, x, t-indi, g, o-600, fon, t-semibold, m, b-4">{servi, c, e.metri, c, s}</d, i, v>";)
-                    <ul, className="spa, c, e-y-2">";)
-<<<<<<< HEAD
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{servi, c, e.descripti, o, n}</p>")
+                    <div, className="te, x, t-indi, g, o-600, fon, t-semibold, m, b-4">{servi, c, e.metri, c, s}</d, i, v>")
+                    <ul, className="spa, c, e-y-2">")
                       {servi, c, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                           <CheckCircle, className="w-4 h-4, tex, t-indi, g, o-500, m, r-2, fle, x-shri, n, k-0  />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
-=======
-                      {servi, c, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (<li , ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-indi, g, o-500, m, r-2, fle, x-shri, n, k-0  
-                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
                           <CheckCircle, className="w-4 h-4, tex, t-indi, g, o-500, m, r-2, fle, x-shri, n, k-0" />";
             </d, i, v>"
@@ -828,15 +647,13 @@ const, Ico, n = servi, c, e.ic, o, n;
                           <CheckCircle, className="w-4 h-4, tex, t-indi, g, o-500, m, r-2, fle, x-shri, n, k-0  /></CheckCircle>"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";"
-<<<<<<< HEAD
                           <CheckCircle, className="w-4 h-4, tex, t-indi, g, o-500, m, r-2, fle, x-shri, n, k-0" />";"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
                         </li>)
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -846,25 +663,6 @@ const, Ico, n = servi, c, e.ic, o, n;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                          <CheckCircle, className="w-4 h-4, tex, t-indi, g, o-500, m, r-2, fle, x-shri, n, k-0" 
-                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}<
-                        <)
-                      ))};
-                    </ul>
-                  </d, i, v>
-                )})};
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-        {/* Featur, e, s */};
-        <section , className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-center, m, b-16">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g: px-8">",
@@ -897,7 +695,6 @@ const, Ico, n = servi, c, e.ic, o, n;
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-<<<<<<< HEAD
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">
@@ -910,57 +707,20 @@ const, Ico, n = servi, c, e.ic, o, n;
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
                     <div, className="inli, n, e-flex, item, s-center, tex, t-indi, g, o-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-3, ga, p-8">";)
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-3, ga, p-8">")
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
-=======
-return (
-;
-const, Ico, n = featu, r, e.ic, o, n;
-                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}"
-                    <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4"><
-                      <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  
-                    <
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
-                    <div , className="inli, n, e-flex, item, s-center, tex, t-indi, g, o-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-3, ga, p-8">";)
-              {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-return (
-;
-const, Ico, n = featu, r, e.ic, o, n;
-                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}";
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-indi, g, o-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-<<<<<<< HEAD
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
-=======
-return (
-;
-const, Ico, n = featu, r, e.ic, o, n;
-                return (</div>
-                  <div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
-);
-}";</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" />";
                     </d, i, v>
@@ -993,9 +753,7 @@ const, Ico, n = featu, r, e.ic, o, n;
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-<<<<<<< HEAD
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -1005,19 +763,6 @@ const, Ico, n = featu, r, e.ic, o, n;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                )})};
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-        {/* Technologi, e, s */};
-        <section , className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-center, m, b-16">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
@@ -1067,7 +812,6 @@ const, Ico, n = featu, r, e.ic, o, n;
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-6, rounde, d-xl, shado, w-md, border, border-gr, a, y-200, tex, t-center, hove, r: shad, o, w-lg, transitio, n-shad, o, w">";"
                   <div, className="w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-3">";"
-<<<<<<< HEAD
                     <Network, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" />";
                   </d, i, v>"
                   <div, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-1">{te, c, h.na, m, e}</d, i, v>";"
@@ -1083,24 +827,6 @@ const, Ico, n = featu, r, e.ic, o, n;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                    <Network, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" 
-                  <
-                  <div, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-1">{te, c, h.na, m, e}<
-                  <div, className="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">{te, c, h.ty, p, e}<
-                <)
-              ))};
-            <
-          <
-        <
-        {/* Prici, n, g *
-        <section , i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-center, m, b-16">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
@@ -1138,7 +864,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
                       <span, className="bg-indi, g, o-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
                         Most, Popula, r;
-<<<<<<< HEAD
                       </sp, a, n>
                     </d, i, v>
                   )}
@@ -1147,16 +872,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <div, className="flex, item, s-center, justif, y-center, m, b-2">";</div>
                       <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
             </d, i, v>"
-=======
-                      <
-                    <
-                  )};
-                  <div, className="te, x, t-center, m, b-8">";<
-                    <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}<
-                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";<
-                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}<
-            <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
@@ -1178,19 +893,11 @@ const, Ico, n = featu, r, e.ic, o, n;
                         <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-500, m, r-3, fle, x-shri, n, k-0  /></CheckCircle>"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";"
-<<<<<<< HEAD
                         <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-500, m, r-3, fle, x-shri, n, k-0" />";"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
                   </ul>
-=======
-                        <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-500, m, r-3, fle, x-shri, n, k-0" 
-                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}<
-                      <
-                    ))};
-                  <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <a;
   hr, e, f="/conta, c, t"
                     classNa, m, e={
@@ -1198,7 +905,6 @@ const, Ico, n = featu, r, e.ic, o, n;
 pl, a, n.popul, a, r;
 ? 'bg-indi, g, o-600, tex, t-white, hove, r: bg-indi, g, o-7, 0, 0'
 ? 'bg-indi, g, o-600, tex, t-white, hov, e;
-<<<<<<< HEAD
   r: bg-indi, g, o-7, 0, 0','
   }
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
@@ -1214,22 +920,6 @@ pl, a, n.popul, a, r;
             </d, i, v>
             <div, className="te, x, t-center, m, t-12">";</div>
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom blockchain, solutio, n?</p>";
-=======
-  r: bg-indi, g, o-7, 0, 0','};
-: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'};
-                  <a><
-  hr, e, f="
-                    classNa, m, e={/* TODO: Fix JSX expression *
-}`}`;`
-                  >
-                    Get, Starte, d;
-                  <
-                <
-              ))};
-            <
-            <div, className="te, x, t-center, m, t-12">";<
-              <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom blockchain, solutio, n?<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <a;
   hr, e, f="/conta, c, t"
             </d, i, v>"
@@ -1240,7 +930,6 @@ pl, a, n.popul, a, r;
                 classNa, m, e="inli, n, e-flex, item, s-center, tex, t-indi, g, o-600, hove, r: te, x, t-indi, g, o-700, fon, t-semibo, l, d"
               >
                 Contact, our, Blockchain Exper, t, s;"
-<<<<<<< HEAD
                 <Link, className="w-4 h-4, m, l-1  /></Link>"
                 <Link, className="w-4 h-4, m, l-1" />";
               </a>
@@ -1253,14 +942,6 @@ pl, a, n.popul, a, r;
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
-                <Link, className="w-4 h-4, m, l-1  /><
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8">",
-            <div , className="te, x, t-center, m, b-16">
-              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
@@ -1304,11 +985,9 @@ pl, a, n.popul, a, r;
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <div, className="flex, item, s-center, m, b-4">";
-<<<<<<< HEAD
                     {/* TODO: Fix JSX expression */}"
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
-                    ))}
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />"))}
                   </d, i, v>"
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
                     "{testimoni, a, l.conte, n, t}"
@@ -1328,32 +1007,6 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-=======
-                    {/* TODO: Fix JSX expression *
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /><
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t")
-                    ))};
-                  <
-                  <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
-                    "{testimoni, a, l.conte, n, t}"
-                  <
-                  <d, i, v><
-                    <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}<
-                    <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}<
-                    <div, className="te, x, t-indi, g, o-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}<
-                  <
-                <
-              ))};
-            <
-          <
-        <
-        {/* CTA, Sectio, n *
-        <section , className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-indi, g, o-800, t, o-purp, l, e-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
-  ,
-    g:px-8, tex, t-cent, e, r">"
-            <h2 , className="te, x, t-4xl, fon, t-bold, m, b-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
@@ -1413,12 +1066,5 @@ pl, a, n.popul, a, r;
       </ma, i, n>
       <Foot, e, r   /></Foot>
     </React.Fragment>
-<<<<<<< HEAD
-  );
-}
-export default BlockchainWeb3;
-}}}}}"`
-=======
-  )};
+  )}
 export default BlockchainWeb3}}}}}"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

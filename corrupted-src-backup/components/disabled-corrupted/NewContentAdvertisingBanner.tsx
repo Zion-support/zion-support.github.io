@@ -1,17 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 interface FeaturedConten, t {/* TODO: Fix JSX expression */}
 }
 const NewContentAdvertisingBanne, r: React.FC = () => { ,
   const featuredConten, t: FeaturedConte, n, t[] = [
-=======
-interface FeaturedConten, t {/* TODO: Fix JSX expression */};
-};
-const NewContentAdvertisingBanne, r: React.FC = () => {
-return (
- ,;
-const featuredConten, t: FeaturedConte, n, t[] = [
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       id: , 0,
       title: 'Governed, Agent, Rollback, s',
@@ -21,32 +12,18 @@ const featuredConten, t: FeaturedConte, n, t[] = [
       reade, r, s: '25, K+',
       bad, g, e: 'NE, W',
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-50, 0',
-<<<<<<< HEAD
       ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s'
 const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      ic, o, n: <Sparkles , classNam, e = "w-6 , h-, 6" />
-);
-} ,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s';
-const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     };
-  ]; const achievement, s = [
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; const achievement, s = [
     {  val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / >  },"
     {  val, u, e: '9, 8%', lab, e, l: 'Customer, Satisfacti, o, n', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / >  },"
     {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / >  },"
-    {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  };
-  ]; return(<div , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
+    {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  }]; return(<div , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};
       <div , className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -320,6 +297,5 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
         </div>
       </div>
     </div>
-  );
-}
+  )}
 export default NewContentAdvertisingBanner;"`

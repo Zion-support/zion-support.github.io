@@ -32,17 +32,10 @@ export type EmergingTechService2027 =
   roi: string;
   estimatedDelivery: string;
   contactInfo: unknown;
-<<<<<<< HEAD
     phone: string
     email: string
     website: string,
     address: string}}
-=======
-    phone: string;
-    email: string;
-    website: string;
-    address: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   // Quantum Internet Infrastructure,
     id: "quantum-internet-infrastructure",
@@ -222,8 +215,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"};
-  },
+      address: "364 E Main St STE 1008 Middletown DE 19709"}},
   // Space-Based Quantum Computing;
     id: "space-based-quantum-computing",
     title: "Space-Based Quantum Computing",
@@ -276,8 +268,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  },
+    }},
   // Space-Based Quantum Computing,"
   id: "space-based-quantum-computing",
     titl,"
@@ -368,8 +359,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"};
-  },
+      address: "364 E Main St STE 1008 Middletown DE 19709"}},
   // Biocomputing Platform;
     id: "biocomputing-platform",
     title: "Biocomputing Platform",
@@ -422,8 +412,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  },
+    }},
   // Biocomputing Platform,"
   id: "biocomputing-platform",
     titl,"
@@ -514,8 +503,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"};
-  },
+      address: "364 E Main St STE 1008 Middletown DE 19709"}},
   // Neuromorphic Computing Platform;
     id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing Platform",
@@ -568,8 +556,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  },
+    }},
   // Neuromorphic Computing Platform,"
   id: "neuromorphic-computing-platform",
     titl,"
@@ -660,8 +647,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"};
-  },
+      address: "364 E Main St STE 1008 Middletown DE 19709"}},
   // Fusion Energy Computing Platform;
     id: "fusion-energy-computing-platform",
     title: "Fusion Energy Computing Platform",
@@ -714,8 +700,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  },
+    }},
   // Fusion Energy Computing Platform,"
   id: "fusion-energy-computing-platform",
     titl,"
@@ -847,9 +832,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  };
-];
+    }}];
 export type EmergingTechService2027 = i,
   d: string, titl,
   e: string, descriptio,

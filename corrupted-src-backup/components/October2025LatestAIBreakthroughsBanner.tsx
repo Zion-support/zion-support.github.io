@@ -233,11 +233,5 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
       </d, i, v>)
     </d, i, v>)
   );
-<<<<<<< HEAD
 export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
 }
-=======
-export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

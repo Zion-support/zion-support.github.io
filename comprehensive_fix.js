@@ -39,8 +39,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */};
   e: 'Zion Tech Group' }]")
     );
     fs.writeFileSync(pagePath, content);
-    //         };
-});
+    //         }});
 // 4. Fix Calculator import;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {
@@ -61,7 +60,6 @@ if (fs.existsSync(seoOptimizerPath)) {
     title: string;
     description: string;
     keywords: string[];
-<<<<<<< HEAD
     canonicalUrl: string
     ogImage: string
     structuredData?: unknown,,
@@ -69,15 +67,6 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
   }
-=======
-    canonicalUrl: string;
-    ogImage: string;
-    structuredData?: unknown;,
-if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */};
-    /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
-    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
@@ -99,9 +88,7 @@ if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */};
   content = content.replace(/declare global \{[^}]*\}/g, '');
   // Add proper imports and declarations at the top;`
   content = `
-declare global {/* TODO: Fix JSX expression */};
-  };
-};
+declare global {/* TODO: Fix JSX expression */}}};
 `
 ${content}`;
   fs.writeFileSync(analyticsTrackerPath, content);
@@ -132,7 +119,6 @@ if (fs.existsSync(performancePath)) {
   // Add proper declaration at the top;
   content = `declare global {
   interface Window {
-<<<<<<< HEAD
     gtag: (...args: unknown[]) => void,
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
@@ -140,16 +126,12 @@ if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   // Add proper declaration at the top;`
   content = `declare global {/* TODO: Fix JSX expression */}
   }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 }
     gtag: (...args: unknown[]) => void;
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */};
   content = content.replace(/declare global \{[^}]*\}/g, '');
   // Add proper declaration at the top;`
-  content = `declare global {/* TODO: Fix JSX expression */};
-  };
-};
+  content = `declare global {/* TODO: Fix JSX expression */}}};
 `
 ${content}`;
   fs.writeFileSync(performancePath, content);

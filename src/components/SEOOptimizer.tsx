@@ -1,66 +1,35 @@
 import React from 'react';
 'use client';
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
 }
 const,
   SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-=======
-};
-;
-const,
-  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Add breadcrumb structured data;
     addBreadcrumbStructuredData();
     // Add FAQ structured data;
     addFAQStructuredData();
     // Add organization structured data;
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    addOrganizationStructuredData()}, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
     }
-    meta.setAttribute('content', content);
-  }
+    meta.setAttribute('content', content)}
   const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
-    canonical.setAttribute('href', url);
-  }
+    canonical.setAttribute('href', url)}
   const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(script);
-  }
+    document.head.appendChild(script)}
   const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
-=======
-    };
-    meta.setAttribute('content', content)};
-;
-const updateCanonicalUrl = (ur)
-  l: string) => {/* TODO: Fix JSX expression */}
-    };
-    canonical.setAttribute('href', url)};
-;
-const addStructuredData = (dat)
-  a: any) => {/* TODO: Fix JSX expression */}
-    };
-    document.head.appendChild(script)};
-;
-const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
-        };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       ]
     }
     const script = document.createElement('script');
@@ -70,27 +39,15 @@ const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
     // Remove existing breadcrumb data;
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
     }
-    document.head.appendChild(script);
-  }
+    document.head.appendChild(script)}
   const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
-=======
-    };
-    document.head.appendChild(script)};
-;
-const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
-          };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         },
         {/* TODO: Fix JSX expression */}
-          };
-        },
+          }},
         {/* TODO: Fix JSX expression */}
-          };
-        };
-      ]
+          }}]
     }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -99,17 +56,9 @@ const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
     // Remove existing FAQ data;
     const existing = document.getElementById('faq-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
     }
-    document.head.appendChild(script);
-  }
+    document.head.appendChild(script)}
   const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
-=======
-    };
-    document.head.appendChild(script)};
-;
-const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       },
       'address': {/* TODO: Fix JSX expression */}
       },
@@ -127,16 +76,9 @@ const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
     // Remove existing organization data;
     const existing = document.getElementById('organization-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
     }
   }
   const mergedSEOData = { ...defaultSEOData, ...seoData }
-=======
-    };
-  };
-;
-const mergedSEOData = { ...defaultSEOData, ...seoData }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   useEffect(() => {
     // Log SEO optimization
     logger.info('SEO optimization applied', { 
@@ -152,12 +94,7 @@ const mergedSEOData = { ...defaultSEOData, ...seoData }
         custom_map: {
           page_type: page
         }
-<<<<<<< HEAD
-      });
-    }
-=======
-      })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      })}
   }, [mergedSEOData, page]);
   return (
     <Helmet>
@@ -254,20 +191,11 @@ const mergedSEOData = { ...defaultSEOData, ...seoData }
                   name: 'Cloud Infrastructure',
                   description: 'Scalable cloud infrastructure solutions'
                 }
-              };
-            ]
-          };
-        })};
+              }]
+          }})};
       </script>
     </Helmet>
-<<<<<<< HEAD
-  );
-}
+  )}
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
   </SEOOptimizerProps>
-=======
-  )};
-SEOOptimizer.displayName = 'SEOOptimizer';
-export default SEOOptimizer;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

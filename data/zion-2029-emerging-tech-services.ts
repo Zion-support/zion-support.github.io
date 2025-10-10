@@ -42,17 +42,11 @@ export type ZionEmergingTechService2029 =
   pricing: unknown;
     starter: number;
     professional: number;
-<<<<<<< HEAD
     enterprise: number
     currency: string
     period: string,
   }
 }
-=======
-    enterprise: number;
-    currency: string;
-    period: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // 1. Space Technology & Satellite Management Platform,
     id: 'space-technology-satellite-management',
@@ -151,12 +145,8 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     currenc,
   y: string,
     perio,
-<<<<<<< HEAD
   d: string}
 }
-=======
-  d: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [,
   // 1. Space Technology & Satellite Management Platform,
@@ -227,8 +217,7 @@ export const,
       professional: 14999
       enterprise: 39999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 2. Biotechnology & Synthetic Biology Platform;
     id: 'biotechnology-synthetic-biology',
     name: 'Biotechnology & Synthetic Biology Platform',
@@ -314,8 +303,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 2. Biotechnology & Synthetic Biology Platform,
   id: 'biotechnology-synthetic-biology',
     nam,
@@ -384,8 +372,7 @@ export const,
       professional: 9999
       enterprise: 24999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 3. Renewable Energy & Smart Grid Optimization;
     id: 'renewable-energy-smart-grid',
     name: 'Renewable Energy & Smart Grid Optimization Platform',
@@ -471,8 +458,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 3. Renewable Energy & Smart Grid Optimization,
   id: 'renewable-energy-smart-grid',
     nam,
@@ -541,8 +527,7 @@ export const,
       professional: 7499
       enterprise: 18999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 4. Advanced Robotics & Automation Platform;
     id: 'advanced-robotics-automation',
     name: 'Advanced Robotics & Automation Platform',
@@ -628,8 +613,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 4. Advanced Robotics & Automation Platform,
   id: 'advanced-robotics-automation',
     nam,
@@ -698,8 +682,7 @@ export const,
       professional: 12999
       enterprise: 29999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 5. Quantum Internet & Secure Communications;
     id: 'quantum-internet-secure-communications',
     name: 'Quantum Internet & Secure Communications Platform',
@@ -785,8 +768,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 5. Quantum Internet & Secure Communications,
   id: 'quantum-internet-secure-communications',
     nam,
@@ -855,8 +837,7 @@ export const,
       professional: 17999
       enterprise: 44999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 6. Advanced Materials & Nanotechnology Platform;
     id: 'advanced-materials-nanotechnology',
     name: 'Advanced Materials & Nanotechnology Platform',
@@ -942,8 +923,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 6. Advanced Materials & Nanotechnology Platform,
   id: 'advanced-materials-nanotechnology',
     nam,
@@ -1012,8 +992,7 @@ export const,
       professional: 8999
       enterprise: 21999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 7. Autonomous Transportation & Mobility Platform;
     id: 'autonomous-transportation-mobility',
     name: 'Autonomous Transportation & Mobility Platform',
@@ -1099,8 +1078,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 7. Autonomous Transportation & Mobility Platform,
   id: 'autonomous-transportation-mobility',
     nam,
@@ -1169,8 +1147,7 @@ export const,
       professional: 11999
       enterprise: 28999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 8. Digital Twin & Simulation Platform;
     id: 'digital-twin-simulation',
     name: 'Digital Twin & Simulation Platform',
@@ -1256,8 +1233,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 8. Digital Twin & Simulation Platform,
   id: 'digital-twin-simulation',
     nam,
@@ -1326,8 +1302,7 @@ export const,
       professional: 6999
       enterprise: 17999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 9. Edge Computing & IoT Platform;
     id: 'edge-computing-iot-platform',
     name: 'Edge Computing & IoT Platform',
@@ -1413,8 +1388,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 9. Edge Computing & IoT Platform,
   id: 'edge-computing-iot-platform',
     nam,
@@ -1483,8 +1457,7 @@ export const,
       professional: 4999
       enterprise: 12999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 10. Metaverse & Virtual Reality Platform;
     id: 'metaverse-virtual-reality',
     name: 'Metaverse & Virtual Reality Platform',
@@ -1570,8 +1543,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 10. Metaverse & Virtual Reality Platform,
   id: 'metaverse-virtual-reality',
     nam,
@@ -1640,9 +1612,7 @@ export const,
       professional: 8299
       enterprise: 20999,
       currency: 'USD',
-      period: 'month'};
-  };
-];
+      period: 'month'}}];
 export const getServicesByCategory = (category: string) =>
   return zionEmergingTechServices2029.filter(service => service.category === category),,
     popula,
@@ -1722,20 +1692,16 @@ export const getServicesByCategory = (category: string) =>
   y: 'USD',
       perio,
   d: 'month'
-    };
-  };
-];
+    }}];
 export const getServicesByCategory = (categor)
   y: string) =>
   return zionEmergingTechServices2029.filter(service => service.category === category),
 }
 export const getPopularServices = () =>
-  return zionEmergingTechServices2029.filter(service => service.popular);
-}
+  return zionEmergingTechServices2029.filter(service => service.popular)}
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
   return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter,)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
-}
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})}
 export const getServicesByTechnology = (technology: string) =>,
   return zionEmergingTechServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
@@ -1745,8 +1711,7 @@ export const getServicesByPriceRange = (minPric)
   return zionEmergingTechServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
-}
+  })}
 export const getServicesByTechnology = (technolog)
   y: string) =>
   return zionEmergingTechServices2029.filter(service =>)
@@ -2270,12 +2235,7 @@ export type ZionEmergingTechService2029 = i,
   e: 20999,' currenc,
   y: 'USD',' perio,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category), } export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular); } export const getServicesByPriceRange = (minPric)
+  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category), } export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular)} export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-<<<<<<< HEAD
-  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter, return starterPrice >= minPrice && starterPrice <= maxPrice) }); } export const getServicesByTechnology = (technolog)
+  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter, return starterPrice >= minPrice && starterPrice <= maxPrice) })} export const getServicesByTechnology = (technolog)
   y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ), }'
-=======
-  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

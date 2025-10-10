@@ -1,17 +1,11 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';
-const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-  ];
+const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}}];
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
       {/* Animated, background, effect */};
       <div, className="absolute, inse, t-0, opacit, y-20">";
@@ -68,7 +62,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         </d, i, v>
         {/* Featured, Articles, Grid */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
           {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
             <Li, n, k;
         {/* Featured, Articles, Grid */};
@@ -232,7 +226,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           </p>
         </d, i, v>
       </d, i, v>
-<<<<<<< HEAD
       <sty, l, e>{/* TODO: Fix JSX expression */}
           0%, 1, 0, 0% {
     transfo, r, m: transla, t, e(0, 0) sca, l, e(1)
@@ -250,33 +243,16 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         .animati, o, n-del, a, y-20, 0, 0 {
     animati, o, n-del, a, y: 2 s
   }
-=======
-      <sty, l, e>{/* TODO: Fix JSX expression */};
-          0%, 1, 0, 0% { transfo, r, m: transla, t, e(0, 0) sca, l, e(1)};
-          33% { transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1)};
-          66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9)};
-        };
-        .anima, t, e-bl, o, b {
-          animati, o, n: blob, 7s, infinite};
-        .animati, o, n-del, a, y-20, 0, 0 {
-          animati, o, n-del, a, y: 2 s};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s,
           animati, o, n: blob, 7s, infinite;
-        .anima, t, e-bl, o, b {/* TODO: Fix JSX expression */};
-        };
-        .animati, o, n-del, a, y-20, 0, 0 {/* TODO: Fix JSX expression */};
-        };
-        .animati, o, n-del, a, y-40, 0, 0 {/* TODO: Fix JSX expression */};
-        };
-        .animati, o, n-del, a, y-20, 0, 0 {/* TODO: Fix JSX expression */};
-        };
-        .animati, o, n-del, a, y-40, 0, 0 {/* TODO: Fix JSX expression */};
-        }`
+        .anima, t, e-bl, o, b {/* TODO: Fix JSX expression */}};
+        .animati, o, n-del, a, y-20, 0, 0 {/* TODO: Fix JSX expression */}};
+        .animati, o, n-del, a, y-40, 0, 0 {/* TODO: Fix JSX expression */}};
+        .animati, o, n-del, a, y-20, 0, 0 {/* TODO: Fix JSX expression */}};
+        .animati, o, n-del, a, y-40, 0, 0 {/* TODO: Fix JSX expression */}}`
       `}</sty, l, e>`;`
     </d, i, v>
-  );
-}
+  )}
 export default October2025CuttingEdgeContentBanner;
 "`

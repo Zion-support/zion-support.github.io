@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -1139,8 +1135,4 @@ i,
   s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
   n: true, implementation_detail,
   s:  ,' 'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',' launch_dat,
-<<<<<<< HEAD
   e: '2024 - 07 - 15', '
-=======
-  e: '2024 - 07 - 15', '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

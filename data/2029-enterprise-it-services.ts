@@ -23,21 +23,11 @@
   marketSize: string;
   growthRate: string;
   variant: string;
-<<<<<<< HEAD
   contactInfo: unknown
     mobile: string
     email: string,
 export interface EnterpriseItService2029 {,
     address: string}
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface EnterpriseItService2029 {
-;,
-}
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -93,17 +83,10 @@ export interface EnterpriseItService2029 {
     mobil,
   e: string,
     emai,
-<<<<<<< HEAD
   l: string,
 export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   s: string}
 }
-=======
-  l: string;
-export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */};
-  s: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -126,16 +109,11 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */};
   o: {/* TODO: Fix JSX expression */};
   l: string};
     addres,
-  s: string};
-  };
-};
-      address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
-];
+  s: string}}};
+      address: "364 E Main St STE 1008 Middletown DE 19709"}}];
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
   link: string, category: string
   realImplementation: boolean
   contactInfo: unknown,
@@ -143,14 +121,6 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */};
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const enterpriseITServices2029: EnterpriseItService2029[] = [,
     id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029", price: "$599/month"
@@ -162,27 +132,17 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [,
       "24/7 support",
       "Custom integration"],
     link: "/services/2029-enterprise-it", category: "Enterprise IT Services 2029",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-=======
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
-];
+      address: "364 E Main St STE 1008 Middletown DE 19709"}}];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  };
-];
+    }}];
   i,
   d: string, nam,
   e: string,
@@ -203,8 +163,7 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [,
   e: string, emai,
   l: string,
     addres,
-  s: string};
-};
+  s: string}};
 export const,
   enterpriseITServices2029: EnterpriseItService2029[] = [,
     i,"
@@ -231,24 +190,18 @@ export const,
     contactInf,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  };
-];
+    }}];
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  };
-];
+    }}];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  };
-];
+    }}];
 id: "2029-enterprise-it"
     name: "2029 Enterprise IT Service Platform",
     tagline: "Enterprise IT services for 2029",
@@ -321,9 +274,7 @@ id: "2029-enterprise-it"
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  };
-];
+    }}];
 i,
   d: string, nam,
   e: string, taglin,
@@ -351,7 +302,6 @@ i,
   e: string, varian,
   t: string, contactInf,
   o: mobil,
-<<<<<<< HEAD
   e: string, emai,
   l: string, export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   s: string } i,
@@ -365,21 +315,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  e: string; emai,
-  l: string; export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */};
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

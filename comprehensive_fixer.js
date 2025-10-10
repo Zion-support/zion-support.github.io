@@ -65,7 +65,7 @@ const fixes = [
     replacement: '$1() { $2 }, $3'},
   //Fix class property syntax;
   {
-    pattern: /(\w+)\s*=\s*([^;]+);\s*(\w+)/g
+    pattern: /(\w+)\s*=\s*([^]+);\s*(\w+)/g
     replacement: '$1 = $2, $3'},
   //Fix import statements;
   {
@@ -80,7 +80,7 @@ const fixes = [
     replacement: 'interface $1 { $2 } $3'},
   //Fix type definitions;
   {
-    pattern: /type\s+(\w+)\s*=\s*([^;]+);\s*(\w+)/g
+    pattern: /type\s+(\w+)\s*=\s*([^]+);\s*(\w+)/g
     replacement: 'type $1 = $2, $3'},
   //Fix React component syntax;
   {
@@ -138,8 +138,7 @@ const fixes = [
     replacemen,
   t: '$1 = { $2 }, $3'},
   //Fix JSX syntax issues;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix unescaped > in JSX;
   {/* TODO: Fix JSX expression */};
   n: /{'>'}/g,
@@ -156,22 +155,18 @@ const fixes = [
     replacemen,
   t: '$1: $2, $3'},
   //Fix function parameter syntax;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix JSX closing tags;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix missing commas in arrays;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix JSX attribute syntax;
   {/* TODO: Fix JSX expression */};
   n: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: '$1={ $2 } $3'},
   //Fix template literal syntax;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix destructuring syntax;
   {/* TODO: Fix JSX expression */};
   n: /{\s*(\w+)\s*:\s*(\w+)\s*}\s*=\s*(\w+)/g,
@@ -198,30 +193,26 @@ const fixes = [
     replacemen,
   t: '$1() { $2 }, $3'},
   //Fix class property syntax;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix import statements;
   {/* TODO: Fix JSX expression */}"
   n: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(\w+)/g},
   //Fix export statements;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix interface syntax;
   {/* TODO: Fix JSX expression */};
   n: /interface\s+(\w+)\s*{\s*([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'interface $1 { $2 } $3'},
   //Fix type definitions;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix React component syntax;
   {/* TODO: Fix JSX expression */};
   n: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'const $1 = () => { $2 } $3'},
   //Fix JSX return statements;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix event handlers;
   {/* TODO: Fix JSX expression */};
   n: /onClick\s*=\s*{([^}]+)}\s*(\w+)/g,
@@ -248,17 +239,13 @@ const fixes = [
     replacemen,
   t: '{ $1 && <$2> $3 </$2> }'},
   //Fix map functions;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix filter functions;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix reduce functions;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix useState hooks;
-  {/* TODO: Fix JSX expression */};
-  },
+  {/* TODO: Fix JSX expression */}},
   //Fix useEffect hooks;
   {/* TODO: Fix JSX expression */};
   n: /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
@@ -284,45 +271,27 @@ function fixFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
-function fixFile(filePath) {/* TODO: Fix JSX expression */};
-      };
-    });
-<<<<<<< HEAD
+function fixFile(filePath) {/* TODO: Fix JSX expression */}}});
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Main function;
 async function main() {
     //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
   files.forEach(file => {)
     if (fixFile(file)) {
-<<<<<<< HEAD
       fixedCount++
   }
 async function main() {/* TODO: Fix JSX expression */}
 }
-=======
-      fixedCount++};
-async function main() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
-  files.forEach(file => {/* TODO: Fix JSX expression */};
-    })
+  files.forEach(file => {/* TODO: Fix JSX expression */}})
   });
   //   };
 // main().catch(console.error);

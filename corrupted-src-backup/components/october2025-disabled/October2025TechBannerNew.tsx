@@ -1,13 +1,8 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n";
-const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    };
-  ]; return(<moti , o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }};
-  ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }};
+const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; return(<moti , o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }};
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }};
       transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 6 }}"
@@ -70,7 +65,6 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */};
               transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 5, del, a, y: ind, e, x * 0., 1 }};
               whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}"
-<<<<<<< HEAD
               classNa, m, e = "relative, grou, p"
             >
               <Link, t, o={`/bl, o, g/${artic, l, e.slug}`}>
@@ -78,14 +72,6 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */};
                   <div, classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}>
                     {artic, l, e.highlig, h, t}
                   </d, i, v  > {/* Ic, o, n */}
-=======
-              classNa, m, e = "relative, grou, p">
-              <Link , t, o={`/bl, o, g/${artic, l, e.slug}`}>
-                <div, className="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"  > {/* Highlight, Ba, d, g, e */}</div>
-                  <div , classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}>
-                    {artic, l, e.highlig, h, t};
-                  </d, i, v  > {/* Ic, o, n */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <div, classNam, e = { `w-1, 4, h-14, rounde, d-lg, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>
                     <artic , l, e.icon, classNam, e = "w-7 h-7, tex, t-whi, t, e"</div>
                   {/* Conte, n, t */};
@@ -131,11 +117,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */};
               <sp, a, n>Explore, All, Articles</sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
             </Li, n, k>"
-<<<<<<< HEAD
             <Link, t, o="/conta, c, t""
-=======
-            <Link , t, o="/conta, c, t""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-lg, tex, t-white, fon, t-bold, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-3, 0, 0">
               Get, Expert, Consultation;
             </Li, n, k>
@@ -168,14 +150,10 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */};
             sty, l, e={/* TODO: Fix JSX expression */}`
               le, f, t: `${Ma, t, h.ran, d, o, m() * 10, 0}%`,`
               t, o, p: `${Ma, t, h.rand, o, m() * 10, 0}%`}};
-            anima, t, e = {/* TODO: Fix JSX expression */};
-            }};
-            transiti, o, n = {/* TODO: Fix JSX expression */};
-            }};
-        ))};
+            anima, t, e = {/* TODO: Fix JSX expression */}}};
+            transiti, o, n = {/* TODO: Fix JSX expression */}}}))};
       </div></moti>
     </moti, o, n.d, i, v>
-  );
-}
+  )}
 export default October2025TechBannerNew;
 "`

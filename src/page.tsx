@@ -113,57 +113,31 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
-<<<<<<< HEAD
 // Dynamically import heavy components for better performance
-=======
-// Dynamically import heavy components for better performance;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-<<<<<<< HEAD
 // Preload critical components
 const preloadComponents = () => {
     if (typeof window !== 'undefined') {
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel')
-  }, 100);
-  }
+  }, 100)}
 }
 // Loading skeleton component
-=======
-// Preload critical components;
-const preloadComponents = () => {
-};
-  if (typeof window !== 'undefined') {
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel')}, 100)};
-};
-// Loading skeleton component;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-<<<<<<< HEAD
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 const HomePage: React.FC = () => {
     const [isLoaded, setIsLoaded] = useState(false);
-=======
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-;
-const HomePage: React.FC = () => {
-};
-const [isLoaded, setIsLoaded] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsLoaded(true);
@@ -171,35 +145,19 @@ const [isLoaded, setIsLoaded] = useState(false);
     preloadComponents();
     // Initialize performance optimizations
     initializePerformanceOptimizations();
-<<<<<<< HEAD
     return () => clearTimeout(timer)
   }, []);
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
-=======
-    return () => clearTimeout(timer)}, []);
-  // Analytics tracking for phone clicks - optimized;
-const handlePhoneClick = useCallback(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-<<<<<<< HEAD
-      });
-    }
+      })}
   }, []);
   // Enhanced Micro SAAS Services with real functionality and pricing
   const microSAASServices = [
     {
-=======
-      })};
-  }, []);
-  // Enhanced Micro SAAS Services with real functionality and pricing;
-const microSAASServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
       icon: '📊',
@@ -406,18 +364,10 @@ const microSAASServices = [
       category: 'Sales',
       marketPrice: '$499',
       savings: '40%'
-    };
-  ];
-<<<<<<< HEAD
+    }];
   // Enhanced AI Services with real capabilities and market pricing
   const aiServices = [
     {
-=======
-  // Enhanced AI Services with real capabilities and market pricing;
-const aiServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
       icon: Brain,
@@ -512,18 +462,10 @@ const aiServices = [
       marketPrice: '$3,800',
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
-    };
-  ];
-<<<<<<< HEAD
+    }];
   // Enhanced IT Services with comprehensive capabilities
   const itServices = [
     {
-=======
-  // Enhanced IT Services with comprehensive capabilities;
-const itServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
       icon: Cloud,
@@ -618,18 +560,10 @@ const itServices = [
       marketPrice: '$1,400',
       savings: '43%',
       contact: '+1 302 464 0950'
-    };
-  ];
-<<<<<<< HEAD
+    }];
   // Specialized Services
   const specializedServices = [
     {
-=======
-  // Specialized Services;
-const specializedServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
       icon: BarChart,
@@ -700,13 +634,11 @@ const specializedServices = [
       marketPrice: '$2,800',
       savings: '46%',
       contact: '+1 302 464 0950'
-    };
-  ];
+    }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */};
       <PerformanceOptimizer />
-<<<<<<< HEAD
       {/* SEO Optimizer */}
       <SEOOptimizer />
       {/* Accessibility Enhancer */}
@@ -718,28 +650,11 @@ const specializedServices = [
       {/* Navigation */}
       <Navigation />
       {/* Hero Section with Futuristic Design */}
-=======
-      {/* SEO Optimizer */};
-      <SEOOptimizer />
-      {/* Accessibility Enhancer */};
-      <AccessibilityEnhancer />
-      {/* Analytics */};
-      <Analytics />
-      {/* Security Enhancer */};
-      <SecurityEnhancer />
-      {/* Navigation */};
-      <Navigation />
-      {/* Hero Section with Futuristic Design */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */};
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-<<<<<<< HEAD
         {/* Neon Grid Overlay */}
-=======
-        {/* Neon Grid Overlay */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
@@ -793,11 +708,7 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Micro SAAS Services Section */}
-=======
-      {/* Micro SAAS Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -818,11 +729,7 @@ const specializedServices = [
                       🔥 POPULAR,
   </
                   </div>
-<<<<<<< HEAD
                 )}
-=======
-                )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div className="text-center mb-4">
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon};
@@ -868,12 +775,8 @@ const specializedServices = [
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={service.link}
-=======
-                  <a href={service.link};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -884,11 +787,7 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* AI Services Section */}
-=======
-      {/* AI Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -948,12 +847,8 @@ const specializedServices = [
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={`mailto:${service.contact}?subject=Interest in ${service.title}`}
-=======
-                  <a href={`mailto:${service.contact}?subject=Interest in ${service.title}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     Contact Us
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -964,11 +859,7 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* IT Services Section */}
-=======
-      {/* IT Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1028,12 +919,8 @@ const specializedServices = [
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={`tel:${service.contact}`}
-=======
-                  <a href={`tel:${service.contact}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     Call Now
                     <Phone className="w-4 h-4 ml-2" />
@@ -1044,11 +931,7 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Specialized Services Section */}
-=======
-      {/* Specialized Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1108,16 +991,10 @@ const specializedServices = [
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
-=======
-                  <a href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`};
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -1126,11 +1003,7 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Section */}
-=======
-      {/* Contact Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1170,12 +1043,10 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Footer */}
       <Footer />
     </div>
-  );
-}
+  )}
 export default HomePage;
   </p>
   </a>
@@ -1189,10 +1060,3 @@ export default HomePage;
   </p>
   </h1>
   </div>
-=======
-      {/* Footer */};
-      <Footer />
-    </div>
-  )};
-export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

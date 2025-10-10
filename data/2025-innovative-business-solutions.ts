@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -31,7 +27,6 @@ import React from 'react';
   variant: string;
   contact_info: unknown;
     mobile: string;
-<<<<<<< HEAD
     email: string
     address: string
     website: string,
@@ -42,24 +37,10 @@ export interface InnovativeBusinessSolution {id: string, name: string,
   features: string[], popular: boolean,
   icon: string, color: string,
   textColor: string, link: string,
-=======
-    email: string;
-    address: string;
-    website: string};
-export interface InnovativeBusinessSolution {
-id: string, name: string;
-}
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   marketPosition: string, targetAudience: string[],
   trialDays: number, setupTime: string,
   category: string, realService: boolean,
   technology: string[], integrations: string[],
-<<<<<<< HEAD
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string
@@ -73,20 +54,6 @@ id: string, name: string;
   rating: number
   reviews: number,
 }
-=======
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string};
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite;
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
@@ -111,17 +78,10 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     real_implementation: true,
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
     launch_date: '2025 - 05 - 01'
-=======
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
-    launch_date: '2025 - 05 - 01',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     customers: 38;
     rating: 4.7
     reviews: 26
@@ -192,8 +152,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     websit,
   e: string};
 export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */};
-  e: string};
-    },
+  e: string}},
     realImplementatio,
   n: boolean, implementationDetail,
   s: string,
@@ -283,26 +242,15 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    };
-];
-};
-];
+    }]}];
 realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
-<<<<<<< HEAD
     launchDate: '2025-02-15'
     customers: 89
     rating: 4.7
     reviews: 62,
   }
-=======
-    launchDate: '2025-02-15',
-    customers:
-        customers: 89;
-    rating: 4.7;
-    reviews: 62};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -419,7 +367,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -429,17 +376,6 @@ realImplementation: true,
     rating: 4.9
     reviews: 45,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered sales intelligence platform with intelligent optimization, forecasting, and seamless CRM integration.'
-    launchDate: '2025-03-01',
-    customers:
-        customers: 67;
-    rating: 4.9;
-    reviews: 45};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
@@ -579,7 +515,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -589,17 +524,6 @@ realImplementation: true,
     rating: 4.7
     reviews: 38,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered customer service platform with intelligent automation, support optimization, and seamless support tool integration.'
-    launchDate: '2025-03-15',
-    customers:
-        customers: 54;
-    rating: 4.7;
-    reviews: 38};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
@@ -739,7 +663,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -749,17 +672,6 @@ realImplementation: true,
     rating: 4.8
     reviews: 29,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered HR management platform with intelligent automation, workforce optimization, and seamless HR system integration.'
-    launchDate: '2025-04-01',
-    customers:
-        customers: 42;
-    rating: 4.8;
-    reviews: 29};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
@@ -899,7 +811,6 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -909,17 +820,6 @@ realImplementation: true,
     rating: 4.9
     reviews: 19,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered financial analytics platform with intelligent analysis, risk management, and seamless financial system integration.'
-    launchDate: '2025-04-15',
-    customers:
-        customers: 28;
-    rating: 4.9;
-    reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
@@ -1059,13 +959,8 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails:,
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
     launchDate: '2025-05-01'
@@ -1075,7 +970,6 @@ realImplementation: true,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
@@ -1083,15 +977,6 @@ realImplementation: true,
     customers: 38
     rating: 4.7
     reviews: 26,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
-    launchDate: '2025-05-01',
-    customers: 38;
-    rating: 4.7;
-    reviews: 26;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Team collaboration'
     ]
     ro,
@@ -1148,12 +1033,10 @@ realImplementation: true,
     ratin,
   g: 4.7,
     review,
-  s: 26};
-];
+  s: 26}];
 export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
   realImplementation: boolean;
@@ -1171,25 +1054,6 @@ realImplementation: true,
     rating: 4.7
     reviews: 62,
   }
-=======
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-;
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
-    launchDate: '2025-02-15',
-    customers:
-        customers: 89;
-    rating: 4.7;
-    reviews: 62};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -1211,14 +1075,8 @@ realImplementation: true,
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
 realImplementatio,
-=======
-  s: number};
-;
-    realImplementatio,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   n: true,
     implementationDetail,
   s:
@@ -1546,12 +1404,7 @@ realImplementatio,
       'Communication tools'
     ]
     useCase,
-<<<<<<< HEAD
   s: [}
-=======
-  s: [};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
   // AI Business Intelligence Suite;
@@ -1586,7 +1439,6 @@ export const,
     growthRate: '28% annual growth'
     variant: 'ai-business-intelligence',
     contactInfo: {,
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -1603,24 +1455,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     reviews: 26,
   {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
-  // AI Business Intelligence Suite;
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    reviews: 26};
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
-    launch_date: '2025 - 05 - 01',
-    customers: 38;
-    rating: 4.7;
-    reviews: 26;
-  {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite,
@@ -1642,8 +1476,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 26};
-];
+  s: 26}];
 i,
   d: string, nam,
   e: string, taglin,
@@ -1755,7 +1588,7 @@ i,
   s: 26, ],' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com' } ]; } ]; realImplementatio,
+  s://ziontechgroup.com' } ]} ]; realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'' launchDat,
   e: '2025-02-15' customer,
@@ -2061,13 +1894,8 @@ i,
   e: true,
   technology: [' 'Artificial Intelligence'' 'Machine Learning'' 'Project Management'' 'Resource Optimization'' 'Python'' 'TensorFlow'' 'React' ] integration,
   s: [' 'Project management tools'' 'Collaboration platforms'' 'Time tracking tools'' 'Resource management systems'' 'Communication tools' ] useCase,
-<<<<<<< HEAD
   s: [ } export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite, {/* TODO: Fix JSX expression */}
-=======
-  s: [ } ; export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: '364 E Main St STE 1008 Middletown DE 19709'} export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite ' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'} review,
@@ -2079,8 +1907,4 @@ i,
   e: '2025 - 05 - 01' customer,
   s: 38, ratin,
   g: 4.7, review,
-<<<<<<< HEAD
   s: 26} ]; '
-=======
-  s: 26} ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

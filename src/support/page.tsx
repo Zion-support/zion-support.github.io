@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
 const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -19,28 +18,6 @@ const SupportPage: React.FC = () => {
   ];
   const faqs = [
     {
-=======
-;
-const SupportPage: React.FC = () => {
-};
-const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-;
-const supportCategories = [
-[
-        { id: 'all', name: 'All Topics', icon: Search, count: 45 },
-        { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
-        { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
-        { id: 'billing', name: 'Billing & Pricing', icon: CreditCard, count: 6 },
-        { id: 'technical', name: 'Technical Support', icon: Code, count: 10 },
-        { id: 'account', name: 'Account Management', icon: Users, count: 5 },
-        { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 };
-  ];
-;
-const faqs = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       id: 1,
       question: 'How do I get started with Zion Tech Group services?',
       answer: 'Getting started is easy! Contact our team at +1 302 464 0950 or email kleber@ziontechgroup.com for a free consultation. We\'ll assess your needs and recommend the best AI solutions for your business.',
@@ -75,17 +52,9 @@ const faqs = [
       question: 'What is your typical project timeline?',
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
       category: 'getting-started'
-    };
-  ];
-<<<<<<< HEAD
+    }];
   const supportChannels = [
     {
-=======
-;
-const supportChannels = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: Phone,
       title: 'Phone Support',
       description: 'Speak directly with our AI experts',
@@ -116,17 +85,9 @@ const supportChannels = [
       contact: 'Book Now',
       availability: 'Flexible scheduling',
       color: 'text-cyan-400'
-    };
-  ];
-<<<<<<< HEAD
+    }];
   const resources = [
     {
-=======
-;
-const resources = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
@@ -160,23 +121,13 @@ const resources = [
       title: 'Community Forum',
       description: 'Connect with other users and experts',
       icon: Users,
-<<<<<<< HEAD
       link: '/community'
     }
-=======
-      link: '
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
-<<<<<<< HEAD
   const searchResults = searchQuery 
-=======
-;
-const searchResults = searchQuery 
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
@@ -192,11 +143,7 @@ const searchResults = searchQuery
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
           {/* Hero Section */}
-=======
-          {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
               Support Center
@@ -207,15 +154,9 @@ const searchResults = searchQuery
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Get instant answers to your questions, access comprehensive resources, 
               and connect with our expert support team.
-<<<<<<< HEAD
             </p>
           </section>
           {/* Search Section */}
-=======
-            <
-          <
-          {/* Search Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="mb-16">
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -223,7 +164,6 @@ const searchResults = searchQuery
                 <input
                   type="text"
                   placeholder="Search for help..."
-<<<<<<< HEAD
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
@@ -249,32 +189,6 @@ const searchResults = searchQuery
             </div>
           </section>
           {/* FAQ Categories */}
-=======
-                  value = { searchQuery };)
-                  onChange = { (e) => setSearchQuery(e.target.value) };
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none"
-              <
-            <
-          <
-          {/* Support Channels *
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Get Support
-            <
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-6">
-              {supportChannels.map((channel), index) => (<div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`};
-                  <h3 className="text-xl font-bold text-white mb-2">{channel.title}<
-                  <p className="text-gray-300 mb-4">{channel.description}<
-                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact}<
-                  <div className="text-gray-400 text-sm">{channel.availability}<
-                <)
-              ))};
-            <
-          <
-          {/* FAQ Categories *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Browse by Category;
@@ -290,7 +204,6 @@ const searchResults = searchQuery
                       : 'bg-slate-800 text-white hover:bg-slate-700'
                   }`};
                 >
-<<<<<<< HEAD
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
                   <div className="text-sm font-semibold">{category.name}</div>
                   <div className="text-xs opacity-75">{category.count} topics</div>
@@ -299,22 +212,11 @@ const searchResults = searchQuery
             </div>
           </section>
           {/* FAQ Section */}
-=======
-                  <category.icon className="w-6 h-6 mx-auto mb-2" 
-                  <div className="text-sm font-semibold">{category.name}<
-                  <div className="text-xs opacity-75">{category.count} topics<
-                <
-              ))};
-            <
-          <
-          {/* FAQ Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Frequently Asked Questions;
   </
             <div className="max-w-4xl mx-auto space-y-4">
-<<<<<<< HEAD
               {searchResults.map((faq) => (
                 <div key={faq.id} className="cyber-card p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
@@ -324,16 +226,6 @@ const searchResults = searchQuery
             </div>
           </section>
           {/* Resources Section */}
-=======
-              {searchResults.map((faq) => (<div key={faq.id} className="cyber-card p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}<
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}<
-                <)
-              ))};
-            <
-          <
-          {/* Resources Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Helpful Resources;
@@ -345,7 +237,6 @@ const searchResults = searchQuery
                   to={resource.link}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
-<<<<<<< HEAD
                     <resource.icon className="w-8 h-8 text-cyan-400 mr-4" />
                     <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -358,17 +249,6 @@ const searchResults = searchQuery
             </div>
           </section>
           {/* Contact CTA */}
-=======
-                    <resource.icon className="w-8 h-8 text-cyan-400 mr-4" 
-                    {resource.title};
-                  <
-                  <p className="text-gray-300">{resource.description}<
-                <)
-              ))};
-            <
-          <
-          {/* Contact CTA *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
@@ -378,7 +258,6 @@ const searchResults = searchQuery
                 Our expert team is ready to assist you with any questions or issues;
   </
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <a
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
@@ -411,20 +290,3 @@ export default SupportPage;
   </p>
   </h1>
   </SEOOptimizer>
-=======
-                <a href="te,
-    l:+13024640950"
-                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
-                  <Mail className="w-5 h-5 mr-2" 
-                  Send Email
-                <
-              <
-            <
-          <
-        <
-        <Footer />
-      </div>
-    </React.Fragment>
-  )};
-export default SupportPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

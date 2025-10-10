@@ -8,36 +8,20 @@ const LatestContentBanner202, 5: React.FC = () => {,
       category: "Revolutionar, y, A, I",
       emo, j, i: "🚀",
       highlig, h, t: "BREAKTHRO, U, G, H",
-<<<<<<< HEAD
       impa, c, t: "$5, 0, M+ Savi, n, g, s"
 const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      impa, c, t: "$5, 0, M+ Savi, n, g, s";
-const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
     {
       id:  , 2,
       title: 'AI, Enterprise, Transformation: $50 M, Annual, Savings Bluepr, i, n, t',
@@ -67,8 +51,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       date: '20, 2, 5-01-2, 0',
       readTime: '45, m, i, n',
       trendi, n, g: t, r, u, e,
-      ic, o, n: '⚙️'};
-  ]; return(<div , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+      ic, o, n: '⚙️'}]; return(<div , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};
       <div , className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">
         <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -110,13 +93,9 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         {/* Featured, highligh, t, s */};
         <div , classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-4, m, b-8">
           { latestArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    };
-  ]; return (<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div>
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; return (<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
@@ -301,6 +280,5 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         </div>
       </div>
     </di, v>
-  );
-}
+  )}
 export default LatestContentBanner2025;"`

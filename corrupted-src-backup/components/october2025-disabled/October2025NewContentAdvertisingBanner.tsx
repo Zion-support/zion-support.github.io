@@ -140,10 +140,5 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
         </div>
       </div>
     </sec, t, i, o, n>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 "

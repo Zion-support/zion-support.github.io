@@ -1,19 +1,9 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { octoberLatestBreakthroughConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-late, s, t-breakthrou, g, h-conte, n, t";
-<<<<<<< HEAD
 const October2025LatestBreakthroughBanne, r = () => { 
   return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
-=======
-const October2025LatestBreakthroughBanne, r = () => {
-return (
-  return(<div , classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
-);
-} {/* Animated, background, effects */ };
-      <div , className="absolute, inse, t-0, opacit, y-20">
-        <div , className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
@@ -38,7 +28,6 @@ return (
         </div>)
         {/* Content, Card, s */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
-<<<<<<< HEAD
           {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {
             const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return(<Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`}
             const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return (</div>
@@ -46,15 +35,6 @@ return (
                 className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
                 <div, className="flex, item, s-start, ga, p-4, m, b-4"></div> <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}></div>
                     <Icon, classNam, e = "w-6 h-6, tex, t-whi, t, e" />
-=======
-          {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {;
-const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return(<Link , ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`};
-            const Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; return (</div>
-              <Link , ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.slug}`};
-                className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
-                <div, className="flex, item, s-start, ga, p-4, m, b-4" ></div> <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}></div>
-                    <Icon , classNam, e = "w-6 h-6, tex, t-whi, t, e" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   </div>
                   <div, className="fl, e, x-1"></div>
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.category}</div>
@@ -137,12 +117,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
                   <Link, className="w-4 h-4" /></Link>
                 </div>
               </Li, n, k>
-<<<<<<< HEAD
-            );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            )})}
         </div>
         {/* CTA, Sectio, n */};
         <div, classNam, e = "te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8"></div>
@@ -157,20 +132,12 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
             Get, a, free consultation, and, custom roadmap, for, your organizati, o, n.
           </p>
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r"></div>
-<<<<<<< HEAD
             <Link, t, o="/conta, c, t"
-=======
-            <Link , t, o="/conta, c, t"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s">
               Schedule, Free, Consultation;
               <Link , className="w-5 h-5" />
             </Li, n, k>
-<<<<<<< HEAD
             <Link, t, o="/bl, o, g"
-=======
-            <Link , t, o="/bl, o, g"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s">
           </p>"
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r"></div>"
@@ -222,7 +189,6 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>
-  );
-}
+  )}
 export default October2025LatestBreakthroughBanner;
 "`

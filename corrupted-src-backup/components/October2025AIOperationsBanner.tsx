@@ -44,8 +44,7 @@ const, October2025AIOperationsBanne, r = () => {
       ic, o, n: Activi, t, y;
       sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I",";
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
-    };
-  ];
+    }];
   return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,)
   g:px-8, relative, overflow-hidd, e, n">")
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,),
@@ -57,17 +56,11 @@ const, October2025AIOperationsBanne, r = () => {
       {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-  ];
+const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}}];
   return (<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,"
   g:px-8, relative, overflow-hidd, e, n">""
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,"
@@ -117,15 +110,8 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */};
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {
-<<<<<<< HEAD
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
-=======
-return (
-;
-const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li , n, k;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             return (</div>
               <Li , n, k
   k, e, y={ind, e, x};
@@ -195,12 +181,7 @@ const, Ico, n = artic, l, e.ic, o, n;
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>)
-<<<<<<< HEAD
-            );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            )})}
         </d, i, v>
         {/* Bottom, CT, A */};
         <div , className="te, x, t-cent, e, r">
@@ -268,7 +249,6 @@ const, Ico, n = artic, l, e.ic, o, n;
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-}
+  )}
 export default October2025AIOperationsBanner;
 "`

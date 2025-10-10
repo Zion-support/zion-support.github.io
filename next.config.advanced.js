@@ -43,16 +43,11 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-<<<<<<< HEAD
             value: 'public, max-age=3600, s-maxage=3600',
           },
         ],
       },
-    ];
-  },
+    ]},
 };
 
-=======
-            value: 'public, max-age=3600, s-maxage=3600'}]}]}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 module.exports = nextConfig;

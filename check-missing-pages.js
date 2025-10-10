@@ -28,8 +28,7 @@ function scanDirectory(dir) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-      scanDirectory(fullPath);
-    } else if (item === 'page.tsx') {
+      scanDirectory(fullPath)} else if (item === 'page.tsx') {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/';
       existingPages.push(route);
@@ -40,20 +39,14 @@ const routeMatches = appTsxContent.match(/path="([^"]+)"/g);"
 const routes = routeMatches ? routeMatches.map(match => match.replace('path="', '').replace('"', '')) : [];
 // Get existing pages;
 const existingPages = [];
-function findPages(dir) {/* TODO: Fix JSX expression */};
-    } else if (file === 'page.tsx') {/* TODO: Fix JSX expression */};
-    };
-  };
-};
+function findPages(dir) {/* TODO: Fix JSX expression */}} else if (file === 'page.tsx') {/* TODO: Fix JSX expression */}}}};
 scanDirectory(appDir);
 // Check for missing pages;
 const missingPages = [];
 const existingPagesSet = new Set(existingPages);
 for (const link of allLinks) {
   if (!existingPagesSet.has(link)) {
-<<<<<<< HEAD
-    missingPages.push(link);
-  }
+    missingPages.push(link)}
 }
 
 console.log('=== MISSING PAGES ANALYSIS ===');
@@ -66,30 +59,14 @@ missingPages.forEach(page => console.log(`- ${page}`));
 console.log('\n=== EXISTING PAGES ===');
 existingPages.sort().forEach(page => console.log(`✓ ${page}`));
 
-=======
-    missingPages.push(link)};
-};
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-missingPages.forEach(page => // console.log removed for production
-);
-// console.log removed for production
-existingPages.sort().forEach(page => // console.log removed for production
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Write missing pages to a file;
 fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
-  totalLinks: allLinks.length;)
-  existingPages: existingPages.length;)
-  missingPages: missingPages.length;)
+  totalLinks: allLinks.length)
+  existingPages: existingPages.length)
+  missingPages: missingPages.length)
   missingPagesList: missingPages),
   allLinks: allLinks),
-<<<<<<< HEAD
-  existingPagesList: existingPages;
-}, null, 2));
+  existingPagesList: existingPages}, null, 2));
 
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Results saved to missing-pages.json');
@@ -100,20 +77,6 @@ const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
 console.log('Missing)
   pages:');
 missingPages.forEach(page => console.log(`- ${page}`));
-=======
-  existingPagesList: existingPages}, null, 2));
-// console.log removed for production
-// console.log removed for production
-// Find missing pages;
-const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
-});
-// console.log removed for production
-pages:');
-missingPages.forEach(page => // console.log removed for production
-);
-`
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `
 console.log(`\nTotal missing)`
   pages: ${missingPages.length}`);`

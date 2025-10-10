@@ -1,15 +1,8 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 interface ErrorFallbackProps {
-<<<<<<< HEAD
     error: Error,
   resetError: () => void
   }
-=======
-}
-  error: Error;
-  resetError: () => void};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -38,7 +31,6 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           </pre>
         </div>
         <div className="flex space-x-3">
-<<<<<<< HEAD
           <button
             onClick={resetError}
             className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -80,51 +72,8 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     if (this.state.hasError && this.state.error) {
       return <ErrorFallback>
     }
-    return this.props.children;
-  }
+    return this.props.children}
 }
   </button>
   </button>
   </path>
-=======
-          <button onClick={resetError};
-            className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            Try again
-          </button>
-          <button
-            onClick={() => window?.location.reload()};
-            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
-          >
-            Reload page
-          </button>
-        </div>
-      </div>
-    </div>
-  )};
-interface AppErrorBoundaryProps {
-}
-  children: ReactNode};
-interface AppErrorBoundaryState {
-}
-  hasError: boolean;
-  error: Error | undefined};
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {;
-constructor(props: AppErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: undefined }};
-  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
-    return { hasError: true, error }};
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    if (process.env['NODE_ENV'] === 'development') {
-      // console.error removed for production
-};
-    // Here you could send error to monitoring service
-  };
-  resetError = () => {
-    this.setState({ hasError: false, error: undefined })};
-  render() {
-    if (this.state.hasError && this.state.error) {
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />};
-    return this.props.children};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

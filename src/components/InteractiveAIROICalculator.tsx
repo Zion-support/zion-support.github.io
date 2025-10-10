@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 const,
   InteractiveAIROICalculator: React.FC = () => {return (}
     <div>Coming Soon</div>)
-  );
-}
+  )}
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
@@ -61,12 +60,8 @@ Expected Efficiency Gain (%)
                   Expected return on investment over {timeframe} months</p>
     </section>
   );
-<<<<<<< HEAD
 export default InteractiveAIROICalculator</div>
   </div>
   </div>
   </h2>
   </div>
-=======
-export default InteractiveAIROICalculator;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

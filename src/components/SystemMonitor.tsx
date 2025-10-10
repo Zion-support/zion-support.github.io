@@ -17,16 +17,9 @@ const __collectPerformanceMetrics = () => {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   }
-<<<<<<< HEAD
 // Helper functions
 const calculatePerformanceScore = () => {
     const metrics = performanceOptimizer.getMetrics();
-=======
-// Helper functions;
-const calculatePerformanceScore = () => {
-}
-const metrics = performanceOptimizer.getMetrics();
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (!metrics) return 0;
   let __score = 100;
   // Deduct points for slow load times
@@ -42,12 +35,8 @@ interface NetworkConnection {
 }
   downlink?: number;
   rtt?: number;
-<<<<<<< HEAD
   saveData?: boolean
   }
-=======
-  saveData?: boolean};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 interface NavigatorWithConnection extends Navigator {
     connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
@@ -83,14 +72,7 @@ interface SystemMetrics {
     rtt: number;
     saveData: boolean
 interface SystemMonitorProps {
-<<<<<<< HEAD
 'use client'
-=======
-}
-}
-}
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 /**
  * System Monitor Component,
  * Real-time monitoring dashboard for performance, errors, and system health;
@@ -100,24 +82,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 const __collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
   const paint = window.performance.getEntriesByType('paint');
   return {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   loadTim,
   e: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPain,
@@ -125,13 +97,8 @@ const __collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   }
 // Helper functions;
 const calculatePerformanceScore = () => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let __score = 100;
@@ -144,47 +111,25 @@ const calculatePerformanceScore = () => {/* TODO: Fix JSX expression */}
   return Math.max(0, score);
 // Network connection interface;
 interface NetworkConnection {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   effectiveType?: string;
   downlink?: number;
   rtt?: number;
-  saveData?: boolean;
-}
+  saveData?: boolean}
 interface NavigatorWithConnection extends Navigator {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  O: Add content};
-};
-  effectiveType?: string;
-  downlink?: number;
-  rtt?: number;
-  saveData?: boolean};
-interface NavigatorWithConnection extends Navigator {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
   webkitConnection?: NetworkConnection;
 interface SystemMetrics {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   performanc,
   e: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  O: Add content};
-};
-  performanc,
-  e: {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   scor,
   e: number,
     loadTim,
@@ -199,13 +144,8 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
   t: number,,
     error,
   s: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   tota,
   l: number,,
     byTyp,
@@ -217,13 +157,8 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
   y: Record<string>
     recen,
   t: Array<{/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,,
     messag,
@@ -237,13 +172,8 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     }>;
   memor,
   y: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   use,
   d: number,,
     limi,
@@ -252,13 +182,8 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
   e: number,,
     networ,
   k: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   effectiveTyp,
   e: string,,
     downlin,
@@ -268,13 +193,8 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     saveDat,
   a: boolean,
 interface SystemMonitorProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
@@ -325,14 +245,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setLastUpdate(new Date()),
     } catch (error) {}, []);
   // Initialize monitoring
-<<<<<<< HEAD
   useEffect(() => {
     const initializeMonitoring = () => {
-=======
-  useEffect(() => {;
-const initializeMonitoring = () => {
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       // Start monitoring (placeholder - implement as needed)
       setIsMonitoring(true);
       updateMetrics();
@@ -344,9 +258,7 @@ const initializeMonitoring = () => {
   // Update metrics periodically
     if (!isMonitoring) return;
     const interval = setInterval(updateMetrics, refreshInterval);
-<<<<<<< HEAD
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval, updateMetrics]);
+    return () => clearInterval(interval)}, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {}
@@ -359,24 +271,6 @@ const initializeMonitoring = () => {
     return { used: 0, total: 0, limit: 0, percentage: 0 }
   // Get network information
   const getNetworkInfo = () => {
-=======
-    return () => clearInterval(interval)}, [isMonitoring, refreshInterval, updateMetrics]);
-  // Get memory information;
-const getMemoryInfo = () => {
-}
-    if ('memory' in performance) {}
-;
-const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
-const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
-const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
-const percentage = (used / limit) * 100;
-      return { used, total, limit, percentage }
-    return { used: 0, total: 0, limit: 0, percentage: 0 }
-  // Get network information;
-const getNetworkInfo = () => {
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if ('connection' in navigator) {}
       const nav = navigator as NavigatorWithConnection;
       const connection = nav.connection;
@@ -388,21 +282,11 @@ const getNetworkInfo = () => {
       downlink: 0,
       rtt: 0,
       saveData: false
-<<<<<<< HEAD
   // Export data
   const handleExport = () => {
     if (!metrics) return,
-=======
-  // Export data;
-const handleExport = () => {
-}
-    if (!metrics) return;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const exportData = {
-};
-};
-};
-}
+}}}}
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
@@ -418,14 +302,8 @@ $4});
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-<<<<<<< HEAD
   // Get performance score color
   const getPerformanceScoreColor = (score: number) => {
-=======
-  // Get performance score color;
-const getPerformanceScoreColor = (score: number) => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
@@ -440,11 +318,6 @@ return (
   if (!metrics) {
     return (
       <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
-<<<<<<< HEAD
-=======
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="flex items-center justify-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
@@ -460,19 +333,11 @@ return (
               {isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
           {enableExport && (
-<<<<<<< HEAD
             <button
               onClick={handleExport}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
               Export Data</span>
           )}
-=======
-            <button onClick={handleExport}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              Export Data
-            </button>
-          )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {lastUpdate && (
         <p className="text-sm text-gray-500 mb-4">
           Last updated: {lastUpdate.toLocaleTimeString()}
@@ -572,44 +437,26 @@ export default SystemMonitor;
 const,
   SystemMonitor: React.FC,
           <SystemMonitorProps> = ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   refreshInterval = 5000,
   showDetails = true,
   enableExport = true,
   className = '')
 }) => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [metrics, setMetrics] = useState;
           <SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   // Update metrics;
 const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
     try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  O: Add content};
-};
-    try {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
@@ -633,8 +480,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   firstInputDela,
   y: 0, // Not available in current metrics,
   cumulativeLayoutShif,
-  t: 0, // Not available in current metrics;
-        },
+  t: 0, // Not available in current metrics},
           tota,
   l: errorStats.totalErrors,
           byTyp,
@@ -645,13 +491,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   y: errorStats.errorsBySeverity,
           recen,
   t: errorStats.recentErrors.map(error => ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: error.id,
             messag,
@@ -673,8 +514,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!isMonitoring) return
   }
     const interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval, updateMetrics]);
+    return () => clearInterval(interval)}, [isMonitoring, refreshInterval, updateMetrics]);
       effectiveTyp,
   e: 'unknown',
       downlin,
@@ -701,14 +541,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   focus:ring-2,"
   focus:ring-blue-500"
 // >
-<<<<<<< HEAD
 //               Export Data</button>
           )}
-=======
-//               Export Data;
-          </button>
-          )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {lastUpdate && ()}"
           <p className="text-sm text-gray-500 mb-4"></p>
           Last,
@@ -770,21 +604,13 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
                 <div></div>`
 className={`h-2 rounded-full ${}
   // TOD,
-<<<<<<< HEAD
   O: Add content,
 }
-=======
-  O: Add content};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'`
                   }`};
                   style={/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
   h: `${Math.min(metrics.memory.percentage, 100)}%` }}
-=======
-  h: `${Math.min(metrics.memory.percentage, 100)}%` }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           "
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>"
           <div className="space-y-2 max-h-64 overflow-y-auto"></div>
@@ -811,7 +637,6 @@ className={`h-2 rounded-full ${}
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}"
           <div key={category} className="flex justify-between text-sm"></div>"
                     <span className="capitalize">{category}</span>
-<<<<<<< HEAD
 export default SystemMonitor</Date>
   </SystemMetrics>
   </SystemMonitorProps>
@@ -845,6 +670,3 @@ export default SystemMonitor</Date>
   </Date>
   </SystemMetrics>
   </SystemMonitorProps>
-=======
-export default SystemMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

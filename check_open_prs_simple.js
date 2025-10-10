@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 
 const makeGitHubRequest = (path) => {
   return new Promise((resolve, reject) => {
     const options = {
-=======
-  return new Promise((resolve, reject) => {;
-const options = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       hostname: 'api.github.com'
       path: path,
       method: 'GET'
@@ -28,13 +22,10 @@ const makeGitHubRequest = (path) => {/* TODO: Fix JSX expression */}
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
         }
-      });
-    });
+      })});
 
     req.on('error', error => reject(error));
-    req.end();
-  });
-}
+    req.end()})}
 
 async function main() {/* TODO: Fix JSX expression */}
 }
@@ -44,8 +35,7 @@ async function main() {/* TODO: Fix JSX expression */}
     prs.forEach(pr => {)
 )
     prs.forEach(pr => {/* TODO: Fix JSX expression */})
-    });
-  }
+    })}
 }
 
 main().catch(console.error);

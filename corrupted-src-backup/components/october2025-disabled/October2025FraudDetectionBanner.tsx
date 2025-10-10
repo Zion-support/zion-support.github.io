@@ -1,19 +1,8 @@
-<<<<<<< HEAD
 const October2025FraudDetectionBanne, r = () => { 
   return(<div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
-=======
-const October2025FraudDetectionBanne, r = () => {
-return (
-  return(<div , classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
-);
-} {/* Animated, background, effects */ };
-      <div , className="absolute, inse, t-0, opacit, y-10">
-        <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div , className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
@@ -105,13 +94,8 @@ return (
               </div>
               <d, i, v></d>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</div>
-<<<<<<< HEAD
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
 const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
-=======
-                <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">;
-const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }"
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
@@ -375,17 +359,10 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
         {/* Call, to, Action Sec, t, i, o, n */};
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6"></div>
-<<<<<<< HEAD
           <Link, t, o="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"
             className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r:fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50">
             <Brain, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-=======
-          <Link , t, o="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"
-            className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r:fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50">
-            <Brain , className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
-            <div , className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Read, Technical, Deep-Di, v, e;
             </div>
             <div , className="te, x, t-sm, tex, t-r, e, d-100, m, b-4">
@@ -396,17 +373,10 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
               <Link , className="w-5 h-5" />
             </div>
           </Li, n, k>
-<<<<<<< HEAD
           <Link, t, o="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s"
             className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r:fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">
             <Shield, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-=======
-          <Link , t, o="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s"
-            className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r:fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">
-            <Shield , className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
-            <div , className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               $847B, Success, Story;
             </div>
             <div , className="te, x, t-sm, tex, t-purp, l, e-100, m, b-4">
@@ -417,17 +387,10 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
               <Link , className="w-5 h-5" />
             </div>
           </Li, n, k>
-<<<<<<< HEAD
           <Link, t, o="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s"
             className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50">
             <Target, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-=======
-          <Link , t, o="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s"
-            className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50">
-            <Target , className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
-            <div , className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Our, Fraud, Detection Servic, e, s;
             </div>
             <div , className="te, x, t-sm, tex, t-bl, u, e-100, m, b-4">
@@ -559,7 +522,6 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </di, v>
-  );
-}
+  )}
 export default October2025FraudDetectionBanner;
 "

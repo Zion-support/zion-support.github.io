@@ -1,13 +1,9 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
-<<<<<<< HEAD
 
 console.log('🔧 Starting manual merge handling...\n');
 
-=======
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to execute git commands safely;
 function execGitCommand(command, description) {
   try {
@@ -16,22 +12,12 @@ function execGitCommand(command, description) {
       encoding: 'utf8'),
       cwd: process.cwd(),
       stdio: 'pipe'});
-<<<<<<< HEAD
     console.log(`✅ ${description} completed`);
-    return result;
-  } catch (error) {
+    return result} catch (error) {
     console.log(`❌ ${description} failed: ${error.message}`);
-    return null;
-  }
+    return null}
 }
 
-=======
-    // console.log removed for production
-return result} catch (error) {
-    // console.log removed for production
-return null};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // List of important branches to merge;
 const importantBranches = [
 ];
@@ -46,19 +32,12 @@ const importantBranches = [
   'ai-dashboard-improvements'
 ];
 async function main() {
-<<<<<<< HEAD
   console.log('🚀 Starting manual merge handling for important branches...\n');
   
   // Check current status;
   console.log('📊 Current Status: '),
   execGitCommand('git status --porcelain', 'Checking git status');
   
-=======
-  // console.log removed for production
-// Check current status;
-  // console.log removed for production
-execGitCommand('git status --porcelain', 'Checking git status');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Try to merge each important branch;
   for (const branch of importantBranches) {
     console.log(`\n🔄 Attempting to merge ${branch}...`);
@@ -70,47 +49,21 @@ execGitCommand('git status --porcelain', 'Checking git status');
         // Try to merge;
         const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);
         if (mergeResult) {
-<<<<<<< HEAD
-          console.log(`✅ Successfully merged ${branch}`);
-        } else {
-          console.log(`⚠️  ${branch} had conflicts or issues`);
-        }
+          console.log(`✅ Successfully merged ${branch}`)} else {
+          console.log(`⚠️  ${branch} had conflicts or issues`)}
       } else {
-        console.log(`⚠️  Branch ${branch} does not exist, skipping...`);
-      }
+        console.log(`⚠️  Branch ${branch} does not exist, skipping...`)}
     } catch (error) {
-      console.log(`❌ Error with ${branch}: ${error.message}`);
-    }
+      console.log(`❌ Error with ${branch}: ${error.message}`)}
     
     // Small delay between merges;
-    await new Promise(resolve => setTimeout(resolve, 500));
-  }
+    await new Promise(resolve => setTimeout(resolve, 500))}
   
-=======
-          // console.log removed for production
-} else {
-          // console.log removed for production
-};
-      } else {
-        // console.log removed for production
-};
-    } catch (error) {
-      // console.log removed for production
-};
-    // Small delay between merges;
-    await new Promise(resolve => setTimeout(resolve, 500))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Final status;
   console.log('\n📊 Final Status: '),
   execGitCommand('git status', 'Final git status');
   execGitCommand('git log --oneline -5', 'Recent commits');
-<<<<<<< HEAD
   
-  console.log('\n🎉 Manual merge handling completed!');
-}
+  console.log('\n🎉 Manual merge handling completed!')}
 
-=======
-  // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 main().catch(console.error);

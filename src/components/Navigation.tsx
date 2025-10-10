@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
 const Navigation: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-=======
-;
-const Navigation: React.FC = () => {
-}
-const [isOpen, setIsOpen] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -33,31 +25,10 @@ const [isOpen, setIsOpen] = useState(false);
   }
   }, []);
   const closeAllMenus = () => {
-=======
-  useEffect(() => {;
-const handleResize = () => {
-}
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false)}
-    };
-;
-const handleScroll = () => {
-}
-      setIsScrolled(window.scrollY > 50)};
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll)}}, []);
-;
-const closeAllMenus = () => {
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
-<<<<<<< HEAD
     setIsOpen(false)
   }
   const toggleMenu = () => {
@@ -67,19 +38,6 @@ const closeAllMenus = () => {
   }
   }
   const serviceCategories = [
-=======
-    setIsOpen(false)};
-;
-const toggleMenu = () => {
-}
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus()}
-  };
-;
-const serviceCategories = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       title: 'Micro SAAS Solutions',
       icon: Zap,
@@ -95,8 +53,7 @@ const serviceCategories = [
             { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
             { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI-powered content creation', icon: '✍️', popular: false },
             { name: 'AI SEO Optimizer', path: '/ai-marketing', description: 'AI-driven SEO optimization', icon: '🎯', popular: false }
-];
-    },
+]},
     {
       title: 'AI Services',
       icon: Brain,
@@ -126,8 +83,7 @@ const serviceCategories = [
         { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
         { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
         { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
-];
-    },
+]},
     {
       title: 'IT Services',
       icon: Cloud,
@@ -151,8 +107,7 @@ const serviceCategories = [
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
-];
-    },
+]},
     {
       title: 'Specialized Solutions',
       icon: Sparkles,
@@ -183,8 +138,7 @@ const serviceCategories = [
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
-];
-    },
+]},
     {
       title: 'Specialized',
       icon: Zap,
@@ -204,9 +158,7 @@ const serviceCategories = [
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
         { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
-];
-    };
-  ];
+]}];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -229,17 +181,10 @@ const serviceCategories = [
           <div className="hidden lg: flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
-<<<<<<< HEAD
   </
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About,
   </
-=======
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -292,15 +237,9 @@ const serviceCategories = [
                     <Link href="/services"
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
-<<<<<<< HEAD
                     >
                       View All Services;
   </
-=======
-                >
-                      View All Services
-                    </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   </div>
                 </div>
               )};
@@ -311,7 +250,6 @@ const serviceCategories = [
             <Link href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
-<<<<<<< HEAD
             >
               Case Studies;
   </
@@ -329,23 +267,6 @@ const serviceCategories = [
             >
               Contact;
   </
-=======
-                >
-              Case Studies
-            </Link>
-            <Link href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-                >
-              Blog
-            </Link>
-            <Link href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-                >
-              Contact
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             {/* CTA Button */}
             <Link href="/contact"
               className="cyber-button inline-flex items-center"
@@ -371,7 +292,6 @@ const serviceCategories = [
               <Link href="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
-<<<<<<< HEAD
               >
                 Home;
   </
@@ -382,17 +302,6 @@ const serviceCategories = [
               >
                 About;
   </
-=======
-                >
-                Home
-              </Link>
-              <Link href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-                >
-                About
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               {/* Mobile Services */}
               <div>
                 <button
@@ -416,14 +325,9 @@ const serviceCategories = [
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1">
                               {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
                             </Link>
-<<<<<<< HEAD
                           ))}
                           <Link
                             href="/services"
-=======
-                          ))};
-                          <Link href="/services"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">
                             View All →
                           </Link>
@@ -434,40 +338,24 @@ const serviceCategories = [
                 </div>
               </div>
           {/* Contact Info */}
-<<<<<<< HEAD
           <div className="hidden lg: flex items-center space-x-4">
             <a
               href="tel:+13024640950"
-=======
-          <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">+1 302 464 0950</span>
             </a>
-<<<<<<< HEAD
             <a
               href="mailto:kleber@ziontechgroup.com"
-=======
-            <a href="mailto:kleber@ziontechgroup.com"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors duration-300">
               <Mail className="w-4 h-4" />
               <span className="text-sm font-medium">Email</span>
             </a>
-<<<<<<< HEAD
             <a
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
               Get Started,
   </
-=======
-            <a href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started
-            </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </div>
           {/* Mobile Menu Button */}
           <button onClick={toggleMenu}
@@ -493,12 +381,8 @@ const serviceCategories = [
                   </Link>
                 ))};
               </div>
-<<<<<<< HEAD
               <a
                 href="tel:+13024640950"
-=======
-              <a href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
                 >
@@ -510,12 +394,7 @@ const serviceCategories = [
         )};
       </div>
     </nav>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 export default Navigation;
   </a>
   </a>

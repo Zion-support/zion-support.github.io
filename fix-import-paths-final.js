@@ -7,31 +7,19 @@ function processFile(filePath) {
     // Determine correct relative paths based on file location;
     const isInApp =
       filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
-<<<<<<< HEAD
 
     let utilsPath, typesPath;
 
-=======
-;
-let utilsPath, typesPath;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
-      typesPath = '../../types/';
-    } else if (isInComponents) {
+      typesPath = '../../types/'} else if (isInComponents) {
       utilsPath = '../utils/';
-      typesPath = '../types/';
-    } else if (isInApp) {
+      typesPath = '../types/'} else if (isInApp) {
+      utilsPath = './utils/';
+      typesPath = './types/'} else {
       utilsPath = './utils/';
       typesPath = './types/';
-    } else {
-      utilsPath = './utils/';
-      typesPath = './types/';
-function processFile(filePath) {/* TODO: Fix JSX expression */};
-    } else if (isInComponents) {/* TODO: Fix JSX expression */};
-    } else if (isInApp) {/* TODO: Fix JSX expression */};
-    } else {/* TODO: Fix JSX expression */};
-    };
+function processFile(filePath) {/* TODO: Fix JSX expression */}} else if (isInComponents) {/* TODO: Fix JSX expression */}} else if (isInApp) {/* TODO: Fix JSX expression */}} else {/* TODO: Fix JSX expression */}};
     // Fix import paths;
     const replacements = [
 ];
@@ -74,54 +62,30 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   n: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,`
   t: `import type { Metadata } from '${typesPath}next';`}];
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */};
-      };
-    });
+    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}}});
     // Fix MetadataRoute namespace issue;
     if (content.includes('MetadataRoute.')) {
       content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
       modified = true;
-<<<<<<< HEAD
     if (content.includes('MetadataRoute.')) {/* TODO: Fix JSX expression */}
     }
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-    if (content.includes('MetadataRoute.')) {/* TODO: Fix JSX expression */};
-    };
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processDirectory(dirPath) {
   items.forEach(item => {)
 )
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
-function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */};
-      };
-    };
-  });
-<<<<<<< HEAD
+function processDirectory(dirPath) {/* TODO: Fix JSX expression */}} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}}}});
 
-  return totalFixed;
-}
+  return totalFixed}
 
-=======
-  return totalFixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process the app directory;
 // Process the app directory;`

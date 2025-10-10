@@ -1,18 +1,11 @@
-<<<<<<< HEAD
 
 export interface AdditionalRealService {id: string;
-=======
-export interface AdditionalRealService {
-id: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   name: string;
   tagline: string;
   price: string;
   description: string;
   features: string[];
   link: string;
-<<<<<<< HEAD
   category: string
   real_implementation: boolean
   contact_info: unknown,
@@ -24,46 +17,22 @@ id: string;
 export const additionalEnhancedServices: AdditionalRealService[] = [
     address: string,
   }
-=======
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string};
-    email: string};
-};
-    address: string};
-export const additionalEnhancedServices: AdditionalRealService[] = [;
-    address: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const additionalEnhancedServices: AdditionalRealService[] = [
     id: 'ai - automation - suite',
     name: 'AI Automation Suite',
     tagline: 'Intelligent automation for modern businesses',
     price: '$79 / month',
-<<<<<<< HEAD
     description: unknown,
 export interface AdditionalRealService {/* TODO: Fix JSX expression */}
   e: string}
-=======
-    description: unknown;
-export interface AdditionalRealService {/* TODO: Fix JSX expression */};
-  e: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     emai,
-  l: string};
-};
+  l: string}};
     addres,
   s: string};
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
     addres,
-<<<<<<< HEAD
   s: string}
-=======
-  s: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
     i,
@@ -109,7 +78,6 @@ export const,
   category: string;
   realImplementation: boolean;
   contactInfo: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
     address: string,
@@ -117,13 +85,6 @@ export const,
 }
 }
     address: string,
-=======
-    mobile: string;
-    email: string;
-    address: string}};
-};
-    address: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     lin,
   k: '/services / ai - automation - suite',
     categor,
@@ -184,14 +145,9 @@ export const,
     emai,
   l: string,
     addres,
-<<<<<<< HEAD
   s: string}
 }
 }
-=======
-  s: string}};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     addres,
   s: string};
 export const,
@@ -233,8 +189,7 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
+    }};
     i,
   d: 'data-warehouse-solution'
     nam,
@@ -258,17 +213,10 @@ export const,
     realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];      mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  };
-];      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'data - warehouse - solution',
     name: 'Data Warehouse Solution',
     tagline: 'Enterprise - grade data management and analytics',
@@ -287,9 +235,7 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
-];      mobil,
+    }}];      mobil,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com"
@@ -336,8 +282,7 @@ export const,
     contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"};
-  },
+      address: "364 E Main St STE 1008 Middletown DE 19709"}},
     id: "data-warehouse-solution"
     name: "Data Warehouse Solution",
     tagline: "Enterprise-grade data management and analytics",
@@ -403,8 +348,7 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  },
+    }},
     i,"
   d: "data-warehouse-solution",
     nam,"
@@ -436,10 +380,7 @@ export const,
   l: "kleber@ziontechgroup.com"
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  };
-];
-];
+    }}]];
     id: "ai-automation-suite"
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
@@ -491,8 +432,7 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  },
+    }},
     i,
   d: 'mobile-first-survey',
     nam,
@@ -7501,9 +7441,7 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    };
-  };
-];
+    }}];
 export interface AdditionalRealService,
   id: string, nam,
   e: string, taglin,
@@ -7632,7 +7570,7 @@ export interface AdditionalRealService,
   s: "364 E Main St STE 1008 Middletown DE 19709",
   emai,"
   l: "kleber@ziontechgroup.com" addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; ]; i,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]; i,"
   d: "ai-automation-suite", nam,"
   e: "AI Automation Suite", taglin,"
   e: "Intelligent automation for modern businesses", pric,"
@@ -10045,8 +9983,4 @@ export interface AdditionalRealService,
   l: "kleber@ziontechgroup.com" mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
-<<<<<<< HEAD
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
-=======
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,23 +1,13 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 interface PerformanceOptimizerProps {
-<<<<<<< HEAD
     enableImageOptimization?: boolean;
-=======
-  enableImageOptimization?: boolean
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
   enableResourceHints?: boolean;
-<<<<<<< HEAD
   enableServiceWorker?: boolean
   }
-=======
-  enableServiceWorker?: boolean};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -54,96 +44,51 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     registerServiceWorker()
   }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
-<<<<<<< HEAD
   const optimizeImages = () => {
     const images = document.querySelectorAll('img');
-=======
-;
-const optimizeImages = () => {
-}
-const images = document.querySelectorAll('img');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     let optimized = 0;
     images.forEach((img) => {
       // Add loading="lazy" for images below the fold
       if (img.getBoundingClientRect().top > window.innerHeight) {
         img.setAttribute('loading', 'lazy');
-<<<<<<< HEAD
         optimized++
   }
-=======
-        optimized++}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       // Add decoding="async" for better performance
       img.setAttribute('decoding', 'async');
       // Add fetchpriority="high" for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
-<<<<<<< HEAD
     img.setAttribute('fetchpriority', 'high')
   }
-=======
-        img.setAttribute('fetchpriority', 'high')}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       // Add proper alt text if missing
       if (!img.getAttribute('alt')) {
     img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')
   }
     });
-<<<<<<< HEAD
-    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
-  }
+    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }))}
   const setupLazyLoading = () => {
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
-=======
-    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }))};
-;
-const setupLazyLoading = () => {
-}
-    if ('IntersectionObserver' in window) {;
-const observer = new IntersectionObserver((entries) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
-<<<<<<< HEAD
               observer.unobserve(img)
   }
           }
-        });
-      }, {
-=======
-              observer.unobserve(img)}
-          };
         })}, {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         rootMargin: '50px 0px',
         threshold: 0.1
       });
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach((img) => observer.observe(img));
-<<<<<<< HEAD
-      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
-    }
+      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }))}
   }
   const preloadCriticalResources = () => {
     const criticalResources = [
       {
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600,700&display=swap',
-=======
-      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }))};
-  };
-;
-const preloadCriticalResources = () => {
-}
-const criticalResources = [
-[
-    {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         as: 'style',
         type: 'text/css'
       },
@@ -152,30 +97,20 @@ const criticalResources = [
         as: 'style',
         type: 'text/css'
       }
-<<<<<<< HEAD
     ];
     criticalResources.forEach((resource) => {
     const link = document.createElement('link');
-=======
-];;
-    criticalResources.forEach((resource) => {;
-const link = document.createElement('link');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
       if (resource.type) {
-<<<<<<< HEAD
         link.type = resource.type
   }
-      document.head.appendChild(link);
-    });
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
-  }
+      document.head.appendChild(link)});
+    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }))}
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
-  }
+    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }))}
   const addResourceHints = () => {
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
@@ -192,57 +127,17 @@ const link = document.createElement('link');
       if (hint.crossorigin) {
         link.crossOrigin = hint.crossorigin
   }
-      document.head.appendChild(link);
-    });
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
-  }
+      document.head.appendChild(link)});
+    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))}
   const registerServiceWorker = async () => {
-=======
-        link.type = resource.type}
-      document.head.appendChild(link)});
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }))};
-;
-const setupCodeSplitting = () => {
-}
-    // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }))};
-;
-const addResourceHints = () => {
-}
-const hints = [
-[
-    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-          { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-          { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-          { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-          { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-          { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-];;
-    hints.forEach((hint) => {;
-const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossorigin) {
-        link.crossOrigin = hint.crossorigin}
-      document.head.appendChild(link)});
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))};
-;
-const registerServiceWorker = async () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
-        } catch (error) {
+        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }))} catch (error) {
           // Service Worker registration failed - handled silently in production
         }
-<<<<<<< HEAD
     }
   }
-=======
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -255,26 +150,12 @@ const registerServiceWorker = async () => {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category: 'Performance'
-<<<<<<< HEAD
-              });
-            }
+              })}
           }
         }
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    }
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })}
   }, []);
-  return null;
-}
+  return null}
 export default PerformanceOptimizer;
   </PerformanceOptimizerProps>
-=======
-              })};
-          };
-        };
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })};
-  }, []);
-  return null};
-export default PerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

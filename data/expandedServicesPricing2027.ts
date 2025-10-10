@@ -59,17 +59,10 @@ export type ExpandedServicePricing =
     supportIncluded: string,
     customizationOptions: string[]}
   contactInfo: unknown;
-<<<<<<< HEAD
     phone: string
     email: string
     website: string,
     address: string}}
-=======
-    phone: string;
-    email: string;
-    website: string;
-    address: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 1. CYBERSECURITY SERVICES PRICING;
 export const cybersecurityPricing: ExpandedServicePricing[] = [
     serviceId: 'quantum-threat-hunter'
@@ -367,13 +360,8 @@ export const,
           'Highly regulated industries',
           'Custom security requirements'
         ],
-<<<<<<< HEAD
         setupFee: 50000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 50000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
@@ -388,8 +376,7 @@ export const,
   e: 50000,
         contractTer,
   m: 'negotiable'
-      };
-    },
+      }},
     marketCompariso,
   n: unknown,
       competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
@@ -449,8 +436,7 @@ export const,
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'}},
     serviceId: 'ai-compliance-automator'
     serviceName: 'AI Compliance Automator'
     category: 'Cybersecurity'
@@ -471,8 +457,7 @@ export const,
   s://ziontechgroup.com/quantum-threat-hunter',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  },
+    }},
     serviceI,
   d: 'ai-compliance-automator',
     serviceNam,
@@ -620,13 +605,8 @@ export const,
           'Military organizations',
           'Custom compliance requirements'
         ],
-<<<<<<< HEAD
         setupFee: 20000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 20000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['OneTrust', 'TrustArc', 'LogicGate'],
@@ -641,8 +621,7 @@ export const,
   e: 20000,
         contractTer,
   m: 'negotiable'
-      };
-    },
+      }},
     marketCompariso,
   n: unknown,
       competitors['OneTrust', 'TrustArc', 'LogicGate'],
@@ -714,9 +693,7 @@ export const,
   s://ziontechgroup.com/ai-compliance-automator',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
-];
+    }}];
 // 2. DATA ANALYTICS SERVICES PRICING;
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [
     serviceId: 'predictive-insights-engine'
@@ -876,13 +853,8 @@ export const,
           'Government agencies',
           'Custom AI requirements'
         ],
-<<<<<<< HEAD
         setupFee: 30000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 30000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
@@ -897,8 +869,7 @@ export const,
   e: 30000,
         contractTer,
   m: 'negotiable'
-      };
-    },
+      }},
     marketCompariso,
   n: unknown,
       competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
@@ -970,9 +941,7 @@ export const,
   s://ziontechgroup.com/predictive-insights-engine',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
-];
+    }}];
 // 3. CLOUD & DEVOPS SERVICES PRICING;
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [
     serviceId: 'multi-cloud-orchestrator'
@@ -1132,13 +1101,8 @@ export const,
           'Military organizations',
           'Custom cloud requirements'
         ],
-<<<<<<< HEAD
         setupFee: 40000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 40000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
@@ -1153,8 +1117,7 @@ export const,
   e: 40000,
         contractTer,
   m: 'negotiable'
-      };
-    },
+      }},
     marketCompariso,
   n: unknown,
       competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
@@ -1226,9 +1189,7 @@ export const,
   s://ziontechgroup.com/multi-cloud-orchestrator',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
-];
+    }}];
 // 4. IOT & EDGE COMPUTING SERVICES PRICING;
 export const iotEdgePricing: ExpandedServicePricing[] = [
     serviceId: 'industrial-iot-intelligence'
@@ -1388,13 +1349,8 @@ export const,
           'Military installations',
           'Custom IoT requirements'
         ],
-<<<<<<< HEAD
         setupFee: 50000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 50000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
@@ -1409,8 +1365,7 @@ export const,
   e: 50000,
         contractTer,
   m: 'negotiable'
-      };
-    },
+      }},
     marketCompariso,
   n: unknown,
       competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
@@ -1482,9 +1437,7 @@ export const,
   s://ziontechgroup.com/industrial-iot-intelligence',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
-];
+    }}];
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
 export const finTechPricing: ExpandedServicePricing[] = [
     serviceId: 'quantum-financial-modeling'
@@ -1644,13 +1597,8 @@ export const,
           'Military organizations',
           'Custom quantum requirements'
         ],
-<<<<<<< HEAD
         setupFee: 150000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 150000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
@@ -1665,8 +1613,7 @@ export const,
   e: 150000,
         contractTer,
   m: 'negotiable'
-      };
-    },
+      }},
     marketCompariso,
   n: unknown,
       competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
@@ -1738,9 +1685,7 @@ export const,
   s://ziontechgroup.com/quantum-financial-modeling',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
-];
+    }}];
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
 export const healthcarePricing: ExpandedServicePricing[] = [
     serviceId: 'ai-diagnostic-assistant'
@@ -1900,13 +1845,8 @@ export const,
           'Military medical facilities',
           'Custom medical requirements'
         ],
-<<<<<<< HEAD
         setupFee: 70000,
         contractTerm: 'negotiable'}
-=======
-        setupFee: 70000;
-        contractTerm: 'negotiable'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     marketComparison: unknown,
       competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
@@ -1921,8 +1861,7 @@ export const,
   e: 70000,
         contractTer,
   m: 'negotiable'
-      };
-    },
+      }},
     marketCompariso,
   n: unknown,
       competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
@@ -1994,9 +1933,7 @@ export const,
   s://ziontechgroup.com/ai-diagnostic-assistant',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    };
-  };
-];
+    }}];
 // Export all pricing data;
 export const ALL_EXPANDED_SERVICES_PRICING = [
 ];
@@ -2005,8 +1942,7 @@ export const ALL_EXPANDED_SERVICES_PRICING = [
   ...cloudDevOpsPricing,
   ...iotEdgePricing,
   ...finTechPricing,
-  ...healthcarePricing;
-];
+  ...healthcarePricing];
 // Helper functions;
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined =>,
 export const getPricingByServiceId = (serviceI)

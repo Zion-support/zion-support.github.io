@@ -3,7 +3,6 @@
  * Advanced Caching Utility;
  * Provides intelligent caching with TTL, LRU eviction, and storage options;
  */
-<<<<<<< HEAD
 
 export interface CacheOptions {
     // TODO: Add content
@@ -12,8 +11,7 @@ export interface CacheOptions {
 }
   ttl?: number; // Time to live in milliseconds;
   storage?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries;
-}
+  maxSize?: number; // Maximum number of entries}
 export interface CacheEntry;
           <T> {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -22,32 +20,12 @@ export interface CacheEntry;
   value: T,,
     expiry: number,,
     hits: number,,
-=======
-export interface CacheOptions {// TODO: Add content};
-};
-  ttl?: number; // Time to live in milliseconds;
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries};
-export interface CacheEntry;
-          <T> {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-  value: T;,
-    expiry: number;,
-    hits: number;,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     lastAccessed: number
 };
 class AdvancedCache;
-<<<<<<< HEAD
           <T = unknown> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-          <T = unknown> {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   private,
   cache: Map,
           <string, CacheEntry<T>> = new Map();
@@ -57,21 +35,12 @@ class AdvancedCache;
   options: Required<CacheOptions>
   private storageKey = 'advanced-cache',
   constructor(_option)
-<<<<<<< HEAD
   s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     this.options = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  s: CacheOptions = {}) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    this.options = {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   tt,
   l: options.ttl || 5 * 60 * 1000, // Default 5 minutes,
   storag,
@@ -80,15 +49,12 @@ class AdvancedCache;
   e: options.maxSize || 100,
     }
     // Load from persistent storage if needed;
-<<<<<<< HEAD
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.loadFromStorage();
-    }
+      this.loadFromStorage()}
     // Setup periodic cleanup;
-    this.setupCleanup();
-  }
+    this.setupCleanup()}
   private setupCleanup(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -99,9 +65,7 @@ class AdvancedCache;
       setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        this.cleanExpired();
-      }, 60 * 1000);
-    }
+        this.cleanExpired()}, 60 * 1000)}
   }
   private loadFromStorage(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -115,8 +79,7 @@ class AdvancedCache;
 }
         const parsed = JSON.parse(data);
         this.cache = new Map(Object.entries(parsed.cache));
-        this.accessOrder = parsed.accessOrder || [];
-      }
+        this.accessOrder = parsed.accessOrder || []}
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -138,8 +101,7 @@ class AdvancedCache;
         accessOrde,
   r: this.accessOrder,
       }
-      storage?.setItem(this.storageKey, JSON.stringify(data));
-    } catch (error) {/* TODO: Fix JSX expression */}
+      storage?.setItem(this.storageKey, JSON.stringify(data))} catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       }
@@ -151,14 +113,11 @@ class AdvancedCache;
     if (this.options.storage === 'localStorage') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return window.localStorage;
-    } else if (this.options.storage === 'sessionStorage') {/* TODO: Fix JSX expression */}
+      return window.localStorage} else if (this.options.storage === 'sessionStorage') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return window.sessionStorage;
-    }
-    return null;
-  }
+      return window.sessionStorage}
+    return null}
 
   public set(key: string, value: T, ttl?: number): void {
     // TODO: Add content
@@ -170,90 +129,10 @@ class AdvancedCache;
     if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.evictLRU();
-    }
+      this.evictLRU()}
     this.cache.set(key, {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      this.loadFromStorage()};
-    // Setup periodic cleanup;
-    this.setupCleanup()};
-  private setupCleanup(): void {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      // Clean expired entries every minute;
-      setInterval(() => {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-        this.cleanExpired()}, 60 * 1000)};
-  };
-  private loadFromStorage(): void {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    if (typeof window === 'undefined') return;
-    try {const data = storage?.getItem(this.storageKey)};
-      if (data) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-        const parsed = JSON.parse(data);
-        this.cache = new Map(Object.entries(parsed.cache));
-        this.accessOrder = parsed.accessOrder || []};
-    } catch (error) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      };
-  };
-  private saveToStorage(): void {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return;
-    try {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      const storage = this.getStorage();
-      const data = {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-  cach,
-  e: Object.fromEntries(this.cache.entries()),
-        accessOrde,
-  r: this.accessOrder};
-      storage?.setItem(this.storageKey, JSON.stringify(data))} catch (error) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      };
-  };
-  private getStorage(): Storage | null {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    if (typeof window === 'undefined') return null;
-    if (this.options.storage === 'localStorage') {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      return window.localStorage} else if (this.options.storage === 'sessionStorage') {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      return window.sessionStorage};
-    return null};
-  public set(key: string, value: T, ttl?: number): void {// TODO: Add content};
-};
-    const expiry = Date.now() + (ttl || this.options.ttl);
-    // Check if we need to evict;
-    if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      this.evictLRU()};
-    this.cache.set(key, {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //       value,
 //       expiry,
       hits: 0,
@@ -262,12 +141,10 @@ class AdvancedCache;
     // Update access order;
     this.updateAccessOrder(key);
     // Save to storage if needed;
-<<<<<<< HEAD
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.saveToStorage();
-    }
+      this.saveToStorage()}
   }
   public get(ke)
   y: string): T | null {/* TODO: Fix JSX expression */}
@@ -277,46 +154,19 @@ class AdvancedCache;
     if (!entry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return null;
-    }
+      return null}
     // Check if expired;
     if (Date.now() > entry.expiry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       this.cache.delete(key);
       this.removeFromAccessOrder(key);
-      return null;
-    }
-=======
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      this.saveToStorage()};
-  };
-  public get(ke)
-  y: string): T | null {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    const entry = this.cache.get(key);
-    if (!entry) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      return null};
-    // Check if expired;
-    if (Date.now() > entry.expiry) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      this.cache.delete(key);
-      this.removeFromAccessOrder(key);
-      return null};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      return null}
     // Update stats;
     entry.hits++;
     entry.lastAccessed = Date.now();
     this.updateAccessOrder(key);
-<<<<<<< HEAD
-    return entry.value;
-  }
+    return entry.value}
   public has(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -329,10 +179,8 @@ class AdvancedCache;
 }
       this.cache.delete(key);
       this.removeFromAccessOrder(key);
-      return false;
-    }
-    return true;
-  }
+      return false}
+    return true}
 
   public delete(key: string): boolean {
     // TODO: Add content
@@ -340,8 +188,7 @@ class AdvancedCache;
 
 }
     this.removeFromAccessOrder(key);
-    return this.cache.delete(key);
-  }
+    return this.cache.delete(key)}
   public clear(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -351,54 +198,16 @@ class AdvancedCache;
   O: Add content,}
 }
       const storage = this.getStorage();
-      storage?.removeItem(this.storageKey);
-    }
+      storage?.removeItem(this.storageKey)}
   }
   private updateAccessOrder(ke)
   y: string): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    return entry.value};
-  public has(ke)
-  y: string): boolean {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    const entry = this.cache.get(key);
-    if (!entry) return false;
-    // Check if expired;
-    if (Date.now() > entry.expiry) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      this.cache.delete(key);
-      this.removeFromAccessOrder(key);
-      return false};
-    return true};
-  public delete(key: string): boolean {// TODO: Add content};
-};
-    this.removeFromAccessOrder(key);
-    return this.cache.delete(key)};
-  public clear(): void {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    this.cache.clear();
-    this.accessOrder = [];
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      const storage = this.getStorage();
-      storage?.removeItem(this.storageKey)};
-  };
-  private updateAccessOrder(ke)
-  y: string): void {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Remove if exists;
     this.removeFromAccessOrder(key);
     // Add to end (most recently used)
     this.accessOrder.push(key)
-<<<<<<< HEAD
   }
 
   private removeFromAccessOrder(key: string): void {
@@ -410,8 +219,7 @@ class AdvancedCache;
     if (index > -1) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.accessOrder.splice(index, 1);
-    }
+      this.accessOrder.splice(index, 1)}
   }
   private evictLRU(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -421,8 +229,7 @@ class AdvancedCache;
   O: Add content,}
 }
       const lruKey = this.accessOrder[0];
-      this.delete(lruKey);
-    }
+      this.delete(lruKey)}
   }
   private cleanExpired(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -436,63 +243,17 @@ class AdvancedCache;
       if (now > entry.expiry) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        keysToDelete.push(key);
-      }
+        keysToDelete.push(key)}
     });
     keysToDelete.forEach(key => this.delete(key));
     if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.saveToStorage();
-    }
+      this.saveToStorage()}
   }
   public getStats(): {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  };
-  private removeFromAccessOrder(key: string): void {// TODO: Add content};
-};
-    const index = this.accessOrder.indexOf(key);
-    if (index > -1) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      this.accessOrder.splice(index, 1)};
-  };
-  private evictLRU(): void {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    // Remove least recently used (first in array)
-    if (this.accessOrder.length > 0) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      const lruKey = this.accessOrder[0];
-      this.delete(lruKey)};
-  };
-  private cleanExpired(): void {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    const now = Date.now();
-    const,
-  keysToDelete: string[] = [];
-    this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      if (now > entry.expiry) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-        keysToDelete.push(key)};
-    });
-    keysToDelete.forEach(key => this.delete(key));
-    if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      this.saveToStorage()};
-  };
-  public getStats(): {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   siz,
   e: number,,
     maxSiz,
@@ -500,26 +261,17 @@ class AdvancedCache;
     hitRat,
   e: number,,
     entrie,
-<<<<<<< HEAD
   s: Array,
           <{/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  s: Array;
-          <{/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ke,
   y: string,,
     hit,
   s: number,,
     ag,
-<<<<<<< HEAD
   e: number,
-    }>;
-  } {/* TODO: Fix JSX expression */}
+    }>} {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const,
@@ -534,48 +286,21 @@ class AdvancedCache;
       entries.push({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  e: number}>} {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    const,
-  entries: Array;
-          <{/* TODO: Fix JSX expression */};
-  e: number }> = [];
-    const now = Date.now();
-    this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      totalHits += entry.hits;
-      entries.push({/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //         key,
         hit,
   s: entry.hits,
         ag,
-<<<<<<< HEAD
   e: now - entry.lastAccessed,)
-      });
-    });
+      })});
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-=======
-  e: now - entry.lastAccessed;)
-      })});
-    return {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   size: this.cache.size,
       maxSize: this.options.maxSize,
       hitRate: totalHits / Math.max(this.cache.size, 1),
       entries: entries.sort((a, b) => b.hits - a.hits)
-    };
-  };
+    }};
   // Utility method for async operations with caching;
 //   public async getOrFetch;
           <R extends T>()
@@ -584,7 +309,6 @@ class AdvancedCache;
     fetche,
   r: () => Promise,
           <R>,
-<<<<<<< HEAD
     ttl?: number): Promise<R> {
     // TODO: Add content
   }
@@ -594,12 +318,10 @@ class AdvancedCache;
     if (cached !== null) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return cached as unknown as R;
-    }
+      return cached as unknown as R}
     const value = await fetcher()
     this.set(key, value, ttl)
-    return value;
-  }
+    return value}
 }
 // Export factory function;
 export function createCache;
@@ -607,30 +329,7 @@ export function createCache;
   O: Add content,}
 }
   return new AdvancedCache;
-          <T>(options);
-}
+          <T>(options)}
 // Export default cache instance;
 export const defaultCache = new AdvancedCache();
 
-=======
-    ttl?: number): Promise<R> {// TODO: Add content};
-};
-    const cached = this.get(key);
-    if (cached !== null) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      return cached as unknown as R};
-    const value = await fetcher()
-    this.set(key, value, ttl)
-    return value};
-};
-// Export factory function;
-export function createCache;
-          <T = unknown>(options?: CacheOptions): AdvancedCache<T> {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-  return new AdvancedCache;
-          <T>(options)};
-// Export default cache instance;
-export const defaultCache = new AdvancedCache();
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

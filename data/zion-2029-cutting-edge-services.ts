@@ -42,17 +42,11 @@ export type ZionCuttingEdgeService2029 =
   pricing: unknown;
     starter: number;
     professional: number;
-<<<<<<< HEAD
     enterprise: number
     currency: string
     period: string,
   }
 }
-=======
-    enterprise: number;
-    currency: string;
-    period: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // 1. AI-Powered Quantum Computing Optimization Platform,
     id: 'ai-quantum-computing-optimization',
@@ -151,12 +145,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     currenc,
   y: string,
     perio,
-<<<<<<< HEAD
   d: string}
 }
-=======
-  d: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
@@ -227,8 +217,7 @@ export const,
       professional: 7999
       enterprise: 19999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 2. Autonomous Drone Fleet Management System;
     id: 'autonomous-drone-fleet-management',
     name: 'Autonomous Drone Fleet Management System',
@@ -314,8 +303,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 2. Autonomous Drone Fleet Management System,
   id: 'autonomous-drone-fleet-management',
     nam,
@@ -384,8 +372,7 @@ export const,
       professional: 3999
       enterprise: 9999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 3. Blockchain-Based Decentralized Identity Management;
     id: 'blockchain-decentralized-identity',
     name: 'Blockchain-Based Decentralized Identity Management',
@@ -471,8 +458,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 3. Blockchain-Based Decentralized Identity Management,
   id: 'blockchain-decentralized-identity',
     nam,
@@ -541,8 +527,7 @@ export const,
       professional: 799
       enterprise: 1999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 4. AI-Powered Climate Change Prediction & Mitigation Platform;
     id: 'ai-climate-change-prediction',
     name: 'AI-Powered Climate Change Prediction & Mitigation Platform',
@@ -628,8 +613,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 4. AI-Powered Climate Change Prediction & Mitigation Platform,
   id: 'ai-climate-change-prediction',
     nam,
@@ -698,8 +682,7 @@ export const,
       professional: 4999
       enterprise: 12999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 5. Neuromorphic Computing AI Platform;
     id: 'neuromorphic-computing-ai',
     name: 'Neuromorphic Computing AI Platform',
@@ -785,8 +768,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 5. Neuromorphic Computing AI Platform,
   id: 'neuromorphic-computing-ai',
     nam,
@@ -855,8 +837,7 @@ export const,
       professional: 9999
       enterprise: 24999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 6. Autonomous Supply Chain Optimization Platform;
     id: 'autonomous-supply-chain-optimization',
     name: 'Autonomous Supply Chain Optimization Platform',
@@ -942,8 +923,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 6. Autonomous Supply Chain Optimization Platform,
   id: 'autonomous-supply-chain-optimization',
     nam,
@@ -1012,8 +992,7 @@ export const,
       professional: 5999
       enterprise: 14999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 7. AI-Powered Healthcare Diagnostics & Treatment Platform;
     id: 'ai-healthcare-diagnostics-treatment',
     name: 'AI-Powered Healthcare Diagnostics & Treatment Platform',
@@ -1099,8 +1078,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 7. AI-Powered Healthcare Diagnostics & Treatment Platform,
   id: 'ai-healthcare-diagnostics-treatment',
     nam,
@@ -1169,8 +1147,7 @@ export const,
       professional: 4499
       enterprise: 11999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 8. Autonomous Financial Trading & Portfolio Management;
     id: 'autonomous-financial-trading',
     name: 'Autonomous Financial Trading & Portfolio Management',
@@ -1256,8 +1233,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 8. Autonomous Financial Trading & Portfolio Management,
   id: 'autonomous-financial-trading',
     nam,
@@ -1326,8 +1302,7 @@ export const,
       professional: 9999
       enterprise: 24999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 9. AI-Powered Cybersecurity Threat Intelligence Platform;
     id: 'ai-cybersecurity-threat-intelligence',
     name: 'AI-Powered Cybersecurity Threat Intelligence Platform',
@@ -1413,8 +1388,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 9. AI-Powered Cybersecurity Threat Intelligence Platform,
   id: 'ai-cybersecurity-threat-intelligence',
     nam,
@@ -1483,8 +1457,7 @@ export const,
       professional: 5499
       enterprise: 13999,
       currency: 'USD',
-      period: 'month'};
-  },
+      period: 'month'}},
   // 10. Autonomous Smart City Infrastructure Management;
     id: 'autonomous-smart-city-infrastructure',
     name: 'Autonomous Smart City Infrastructure Management',
@@ -1570,8 +1543,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    };
-  },
+    }},
   // 10. Autonomous Smart City Infrastructure Management,
   id: 'autonomous-smart-city-infrastructure',
     nam,
@@ -1640,9 +1612,7 @@ export const,
       professional: 12999
       enterprise: 29999,
       currency: 'USD',
-      period: 'month'};
-  };
-];
+      period: 'month'}}];
 export const getServicesByCategory = (category: string) =>
   return zionCuttingEdgeServices2029.filter(service => service.category === category),,
     popula,
@@ -1722,20 +1692,16 @@ export const getServicesByCategory = (category: string) =>
   y: 'USD',
       perio,
   d: 'month'
-    };
-  };
-];
+    }}];
 export const getServicesByCategory = (categor)
   y: string) =>
   return zionCuttingEdgeServices2029.filter(service => service.category === category),
 }
 export const getPopularServices = () =>
-  return zionCuttingEdgeServices2029.filter(service => service.popular);
-}
+  return zionCuttingEdgeServices2029.filter(service => service.popular)}
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
   return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter,)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
-}
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})}
 export const getServicesByTechnology = (technology: string) =>,
   return zionCuttingEdgeServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
@@ -1745,8 +1711,7 @@ export const getServicesByPriceRange = (minPric)
   return zionCuttingEdgeServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
-}
+  })}
 export const getServicesByTechnology = (technolog)
   y: string) =>
   return zionCuttingEdgeServices2029.filter(service =>)
@@ -2270,12 +2235,7 @@ export type ZionCuttingEdgeService2029 = i,
   e: 29999,' currenc,
   y: 'USD',' perio,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category), } export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); } export const getServicesByPriceRange = (minPric)
+  y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category), } export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular)} export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-<<<<<<< HEAD
-  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter, return starterPrice >= minPrice && starterPrice <= maxPrice) }); } export const getServicesByTechnology = (technolog)
+  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter, return starterPrice >= minPrice && starterPrice <= maxPrice) })} export const getServicesByTechnology = (technolog)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ), }'
-=======
-  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

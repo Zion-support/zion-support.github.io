@@ -73,21 +73,15 @@ const accessibilityChecklist = {
       'Text is not cut off on small screens',
       'Touch targets are at least 44 px'
     ]
-<<<<<<< HEAD
   }
 }
 
-=======
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Check HTML files for accessibility issues;
 function auditHTMLFiles() {
   console.log('📄 Auditing HTML files...');
   
   const distDir = path.join(__dirname, '../dist');
   const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'));
-<<<<<<< HEAD
   
   htmlFiles.forEach(file => {)
     const filePath = path.join(distDir, file);
@@ -104,38 +98,17 @@ function auditHTMLFiles() {
       console.log('    ⚠️  Missing <nav>element</nav>');</nav>
     }
     
-=======
-  htmlFiles.forEach(file => {);
-const filePath = path.join(distDir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
-    // console.log removed for production
-// Check for semantic HTML;
-    if (!content.includes('<main ')) {
-      // console.log removed for production
-</main>
-    };
-    if (!content.includes('<nav ')) {
-      // console.log removed for production
-</nav>
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Check for alt attributes;
     const imgTags = content.match(/<img[^>]*>/g) || [];
     imgTags.forEach(img => {
     )
       if (!img.includes('alt=')) {
-<<<<<<< HEAD
         console.log('    ⚠️  Image missing alt attribute')
   }
-=======
-        // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
     // Check for heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     if (headings.length === 0) {
-<<<<<<< HEAD
     console.log('    ⚠️  No heading elements found')
   }
     
@@ -143,25 +116,14 @@ const filePath = path.join(distDir, file);
     if (!content.includes('skip') && !content.includes('Skip')) {
     console.log('    ⚠️  No skip links found')
   }
-  });
-}
+  })}
 
-=======
-      // console.log removed for production
-};
-    // Check for skip links;
-    if (!content.includes('skip') && !content.includes('Skip')) {
-      // console.log removed for production
-};
-  })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Check CSS files for accessibility issues;
 function auditCSSFiles() {
   console.log('🎨 Auditing CSS files...');
   
   const distDir = path.join(__dirname, '../dist');
   const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
-<<<<<<< HEAD
   
   cssFiles.forEach(file => {)
     const filePath = path.join(distDir, file);
@@ -183,39 +145,13 @@ function auditCSSFiles() {
     if (!content.includes('prefers-reduced-motion')) {
     console.log('    ⚠️  No reduced motion support')
   }
-  });
-}
+  })}
 
 // Generate accessibility report;
 function generateAccessibilityReport() {
   console.log('📊 Generating accessibility report...');
   
   const report = {
-=======
-  cssFiles.forEach(file => {);
-const filePath = path.join(distDir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
-    // console.log removed for production
-// Check for focus styles;
-    if (!content.includes(':focus')) {
-      // console.log removed for production
-};
-    // Check for high contrast support;
-    if (!content.includes('prefers-contrast')) {
-      // console.log removed for production
-};
-    // Check for reduced motion support;
-    if (!content.includes('prefers-reduced-motion')) {
-      // console.log removed for production
-};
-  })};
-// Generate accessibility report;
-function generateAccessibilityReport() {
-  // console.log removed for production
-;
-const report = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     timestamp: new Date().toISOString()
     checklist: accessibilityChecklist,
     recommendations: [,
@@ -238,25 +174,15 @@ const report = {
       'Keyboard-only navigation testing',
       'Color contrast analyzers'
     ]
-<<<<<<< HEAD
   }
   
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync(
     path.join(__dirname, '../accessibility-report.json'), 
     JSON.stringify(report, null, 2)
   );
-<<<<<<< HEAD
   
-  console.log('  - Generated accessibility-report.json');
-}
+  console.log('  - Generated accessibility-report.json')}
 
-=======
-  // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Generate accessibility improvements;
 function generateAccessibilityImprovements() {
     console.log('🔧 Generating accessibility improvements...');
@@ -279,29 +205,17 @@ const trapFocus = (element) => {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-<<<<<<< HEAD
           e.preventDefault()
   }
-=======
-          e.preventDefault()};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       } else {
     if (document.activeElement === lastElement) {
           firstElement.focus();
-<<<<<<< HEAD
           e.preventDefault()
   }
       }
     }
-  });
-}
+  })}
 
-=======
-          e.preventDefault()};
-      };
-    };
-  })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 3. Add live regions for dynamic content;
 <div aria-live="polite" aria-atomic="true" className="sr-only">
   {announcement};
@@ -364,17 +278,10 @@ const trapFocus = (element) => {
 ,
   fs.writeFileSync()
     path.join(__dirname, '../accessibility-improvements.js'), 
-    improvements;
-  );
-<<<<<<< HEAD
+    improvements);
   
-  console.log('  - Generated accessibility-improvements.js');
-}
+  console.log('  - Generated accessibility-improvements.js')}
 
-=======
-  // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main audit function;
 function audit() {
     try {
@@ -382,7 +289,6 @@ function audit() {
     auditCSSFiles();
     generateAccessibilityReport();
     generateAccessibilityImprovements();
-<<<<<<< HEAD
     
     console.log('✅ Accessibility audit completed successfully!');
     console.log('📋 Check accessibility-report.json for detailed results');
@@ -393,14 +299,5 @@ function audit() {
   }
 }
 
-=======
-    // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-} catch (error) {
-    // console.error removed for production
-process.exit(1)};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Run audit;
 audit();

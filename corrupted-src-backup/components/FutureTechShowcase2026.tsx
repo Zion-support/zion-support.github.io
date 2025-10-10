@@ -10,13 +10,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '18, mi, n','
       trendi, n, g: tr, u, e;
-<<<<<<< HEAD
       ic, o, n: <Atom, className="w-8 h-8/>,"
-=======
-      ic, o, n: <Atom , className="w-8 h-8/>
-);
-},"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','
       sta, t, s: '10,000 x, Speed, Boost};
@@ -83,7 +77,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: <Bot, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
-<<<<<<< HEAD
       bad, g, e: 'ME, T, A-COGNITI, V, E','
 const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       sta, t, s: '10,000x, Speed, Boost}
@@ -97,21 +90,6 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: 'Unbreakable, Securit, y}
     {/* TODO: Fix JSX expression */}
       sta, t, s: 'Autonomous, Orchestratio, n}
-=======
-      bad, g, e: 'ME, T, A-COGNITI, V, E',';
-const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-      sta, t, s: '10,000x, Speed, Boost};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: '99.7% Au, t, o-Improveme, n, t};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: '99.9% Accura, c, y};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: '1, 0, 0% Integrati, o, n};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: 'Unbreakable, Securit, y};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: 'Autonomous, Orchestratio, n};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       tit, l, e: 'Neur, a, l-Quantum, Hybrid, Computing',';
       sl, u, g: 'neur, a, l-quant, u, m-hybr, i, d-20, 2, 6',';
       excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experience, 1, 0,000 x, faster, AI inference, with, quantum-enhanced, deep, learning.',';
@@ -193,8 +171,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
       bad, g, e: 'ME, T, A-COGNITI, V, E',';
       sta, t, s: 'Autonomous, Orchestratio, n'
-    };
-  ];
+    }];
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */};
       <div , classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
@@ -204,17 +181,11 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       {/* Animated, background, effects */}</div>
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-  ];
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}}];
   return ("
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */};

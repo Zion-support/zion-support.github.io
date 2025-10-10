@@ -1,13 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-=======
-interface SEOProps {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
@@ -25,15 +19,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   canonical}) => {
   const _location = useLocation();
 const,
-<<<<<<< HEAD
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-=======
-  EnhancedSEO: React.FC<SEOProps>
-);
-} = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
@@ -61,8 +48,7 @@ const,
       'http,
   s://github.com/zion-tech-group'],
     contactPoin,
-  t: {/* TODO: Fix JSX expression */};
-    },
+  t: {/* TODO: Fix JSX expression */}},
     address: {
       '@type': 'PostalAddress'
       streetAddress: '123 Tech Street',
@@ -71,20 +57,11 @@ const,
       postalCode: '94105',
       addressCountry: 'US',
     addres,
-<<<<<<< HEAD
   s: {/* TODO: Fix JSX expression */}
     }}
   // Add article structured data if type is article;
   if (type === 'article') {
     const articleData = {
-=======
-  s: {/* TODO: Fix JSX expression */};
-    }};
-  // Add article structured data if type is article;
-  if (type === 'article') {;
-const articleData = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       '@context': 'https: //schema.org',
       '@type': 'Article',
       headline: title
@@ -105,8 +82,7 @@ const articleData = {
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
-  if (type === 'article') {/* TODO: Fix JSX expression */};
-      },
+  if (type === 'article') {/* TODO: Fix JSX expression */}},
       publishe,
   r: {/* TODO: Fix JSX expression */}`
   l: `${window.location.origin}/images/logo.png`}},
@@ -115,24 +91,13 @@ const articleData = {
       dateModifie,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
-<<<<<<< HEAD
   e: {/* TODO: Fix JSX expression */}
       }}
     if (section) {/* TODO: Fix JSX expression */}
     }
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-    (structuredData as any)['@graph'] = [structuredData, articleData];
-  }
-=======
-  e: {/* TODO: Fix JSX expression */};
-      }};
-    if (section) {/* TODO: Fix JSX expression */};
-    };
-    if (tags.length > 0) {/* TODO: Fix JSX expression */};
-    };
-    (structuredData as any)['@graph'] = [structuredData, articleData]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    (structuredData as any)['@graph'] = [structuredData, articleData]}
   // Track page view;
   useEffect(() => {
     // Google Analytics tracking;
@@ -140,28 +105,16 @@ const articleData = {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
-<<<<<<< HEAD
   useEffect(() => {/* TODO: Fix JSX expression */}
-      });
-    }
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */};
-      })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      })}
     // Custom analytics tracking;
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
         type),
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
-      });
-    }
-=======
-    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */};
-      })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      })}
   }, [title, currentUrl, type]);
   return(<Helmet>
       {/* Basic Meta Tags */};
@@ -180,7 +133,7 @@ const articleData = {
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />)
       <meta property="og:description" content={description} />)
-      <meta ;)
+      <meta )
         property="og: image"),
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`};
       />
@@ -225,14 +178,9 @@ const articleData = {
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       {/* Structured Data */};
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-<<<<<<< HEAD
       {/* Additional structured data for breadcrumbs */}
       {
     location.pathname !== '/' && (
-=======
-      {/* Additional structured data for breadcrumbs */};
-      {location.pathname !== '/' && (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <script type="application/ld+json"></scrip>
           {JSON.stringify({
             '@context': 'https: //schema.org',
@@ -246,8 +194,8 @@ const articleData = {
   },
               {
                 '@type': 'ListItem')
-                position: 2;)
-                name: title;)
+                position: 2)
+                name: title)
                 item: currentUrl,)})
             ])
   return (<Helmet></Helmet>
@@ -325,25 +273,14 @@ const articleData = {
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       {/* Structured Data */}"
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-<<<<<<< HEAD
       {/* Additional structured data for breadcrumbs */}
       {/* TODO: Fix JSX expression */}
-=======
-      {/* Additional structured data for breadcrumbs */};
-      {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               },
-              {/* TODO: Fix JSX expression */};
-              }]})};
+              {/* TODO: Fix JSX expression */}}]})};
         </script>
       )};
     </Helmet>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 export default EnhancedSEO;
 "`
   </SEOProps>

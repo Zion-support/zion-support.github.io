@@ -14,8 +14,7 @@ export default function EnterpriseSolutionsBanner() {
         </div>)
       </div>)
     </div>)
-export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression */};
-};
+export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression */}};
   return (<div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"></div>"
       <div className="max-w-7xl mx-auto px-4,
   sm:px-6,"
@@ -28,10 +27,5 @@ export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>)
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 "

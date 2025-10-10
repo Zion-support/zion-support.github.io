@@ -1,22 +1,10 @@
 const, October2025LatestBreakthroughBanne, r = () => {
-<<<<<<< HEAD
   return(<div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
     <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
-=======
-return (
-  return(<div , className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
-);
-};
-      {/* Animated, background, effects */};
-      <div , className="absolute, inse, t-0, opacit, y-20">
-  return (
-    <div , className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
@@ -24,13 +12,8 @@ return (
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-<<<<<<< HEAD
 const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, effects */}
-=======
-const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, background, effects */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>"
@@ -85,7 +68,6 @@ const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n
           {
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;";
-<<<<<<< HEAD
 return(<Li, n, k;
   k, e, y={conte, n, t.id
   }
@@ -94,15 +76,6 @@ return (</div>
   k, e, y={
     conte, n, t.id
   }
-=======
-return(<Li , n, k;
-  k, e, y={conte, n, t.id};
-return (</div>
-);
-};
-<Li , n, k
-  k, e, y={conte, n, t.id};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e;
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
@@ -121,8 +94,7 @@ return (</div>
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>";
         {/* Content, Card, s */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-          {/* TODO: Fix JSX expression */};
-};
+          {/* TODO: Fix JSX expression */}};
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e,"
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
@@ -149,7 +121,7 @@ return (</div>
                   {conte, n, t.descripti, o, n};
                 </p>)
                 {/* Key, Metric, s */})
-                <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">";)
+                <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">")
                   {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) => (
                     <div , ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2">
                 </p>
@@ -194,12 +166,7 @@ return (</div>
                   <Link, className="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>
-<<<<<<< HEAD
-            );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            )})}
         </d, i, v>
         {/* CTA, Sectio, n */};
         <div, className="te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8">";</div>
@@ -282,7 +249,5 @@ return (</div>
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-}
-export default October2025 LatestBreakthroughBanner;
-}}"`
+  )}
+export default October2025 LatestBreakthroughBanner}}"`

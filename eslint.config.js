@@ -60,19 +60,12 @@ export default [
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
-        };
-      };
-    },
+        }}},
     rules: {
       ...js.configs.recommended.rules,
       'no-unused-vars': 'warn',
-<<<<<<< HEAD
       'no-console': 'off'
     }
-=======
-      'no-console': 'warn'
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
   // TypeScript configuration
   {
@@ -85,9 +78,7 @@ export default [
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
-        };
-      };
-    },
+        }}},
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
@@ -98,8 +89,7 @@ export default [
 ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true };
-      ],
+        { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
@@ -107,6 +97,4 @@ export default [
       '@typescript-eslint/no-non-null-assertion': 'off',
       'no-console': 'off',
       'no-unused-vars': 'off'
-    };
-  };
-];
+    }}];

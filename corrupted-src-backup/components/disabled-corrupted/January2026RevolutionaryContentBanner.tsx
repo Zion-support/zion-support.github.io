@@ -10,18 +10,11 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {,
       highlig, h, t: 'BREAKTHRO, U, G, H',
       impa, c, t: '98% Automat, i, o, n',
       ty, p, e: 'b, l, o, g',
-<<<<<<< HEAD
       readTime: '15, m, i, n',
 const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      readTime: '15, m, i, n',;
-const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    }]; return(<section , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; return(<section , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, Backgroun, d */};
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
   ]; return (<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>
@@ -129,14 +122,10 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         </div>
         {/* Stats, Sectio, n */};
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'></div>
-          {/* TODO: Fix JSX expression */};
-            },
-            {/* TODO: Fix JSX expression */};
-            },
-            {/* TODO: Fix JSX expression */};
-            },
-            {/* TODO: Fix JSX expression */};
-            }].m, a, p((st, a, t, ind, e, x) => (</div>
+          {/* TODO: Fix JSX expression */}},
+            {/* TODO: Fix JSX expression */}},
+            {/* TODO: Fix JSX expression */}},
+            {/* TODO: Fix JSX expression */}}].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
             ></div>
           ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
@@ -179,7 +168,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-}
+  )}
 export default January2026RevolutionaryContentBanner;
 `

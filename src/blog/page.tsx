@@ -2,13 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
-<<<<<<< HEAD
     id: string;
-=======
-}
-}
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   title: string;
   description: string;
   category: string;
@@ -18,19 +12,12 @@ interface BlogPost {
   image: string
   featured: boolean
   stats?: {
-<<<<<<< HEAD
     views: number,
     engagement: number
   }
 }
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
-=======
-    views: number;
-    engagement: number}};
-export default function BlogPage() {;
-const [posts, setPosts] = useState<BlogPost[]>([]);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [
@@ -44,8 +31,7 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
       path: '/blog/ai-enterprise-transformation-2025',
       image: '💰',
       featured: true,
-      stats: { views: 18750, engagement: 97 };
-    },
+      stats: { views: 18750, engagement: 97 }},
     {
       id: 'ai-2025-2026-mega-trends-breakthrough',
       title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
@@ -56,8 +42,7 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
       path: '/blog/ai-2025-2026-mega-trends-breakthrough',
       image: '🚀',
       featured: true,
-      stats: { views: 12500, engagement: 94 };
-    },
+      stats: { views: 12500, engagement: 94 }},
     {
       id: 'ai-2026-autonomous-enterprise-architecture',
       title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
@@ -68,8 +53,7 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
       path: '/blog/ai-2026-autonomous-enterprise-architecture',
       image: '🏗️',
       featured: true,
-      stats: { views: 8900, engagement: 91 };
-    },
+      stats: { views: 8900, engagement: 91 }},
     {
       id: 'ai-2026-autonomous-agent-factories',
       title: 'AI 2026: Autonomous Agent Factories Revolution',
@@ -80,8 +64,7 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
       path: '/blog/ai-2026-autonomous-agent-factories',
       image: '🤖',
       featured: false,
-      stats: { views: 7200, engagement: 88 };
-    },
+      stats: { views: 7200, engagement: 88 }},
     {
       id: 'ai-2026-consensus-intelligence-breakthrough',
       title: 'AI 2026: Consensus Intelligence Breakthrough',
@@ -92,8 +75,7 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
       path: '/blog/ai-2026-consensus-intelligence-breakthrough',
       image: '🧠',
       featured: false,
-      stats: { views: 6500, engagement: 85 };
-    },
+      stats: { views: 6500, engagement: 85 }},
     {
       id: 'ai-cost-optimization-breakthrough-2026',
       title: 'AI Cost Optimization Breakthrough 2026',
@@ -104,8 +86,7 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
       path: '/blog/ai-cost-optimization-breakthrough-2026',
       image: '💡',
       featured: false,
-      stats: { views: 9800, engagement: 92 };
-    },
+      stats: { views: 9800, engagement: 92 }},
     {
       id: 'ai-2026-hyperconscious-computing-revolution',
       title: 'AI 2026: Hyperconscious Computing Revolution',
@@ -116,8 +97,7 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
       path: '/blog/ai-2026-hyperconscious-computing-revolution',
       image: '⚡',
       featured: false,
-      stats: { views: 5800, engagement: 87 };
-    },
+      stats: { views: 5800, engagement: 87 }},
     {
       id: 'ai-enterprise-transformation-ultimate-guide-2025',
       title: 'AI Enterprise Transformation: Ultimate Guide 2025',
@@ -128,16 +108,13 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
       path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
       image: '📚',
       featured: false,
-      stats: { views: 11200, engagement: 93 };
-    };
-  ], []);
+      stats: { views: 11200, engagement: 93 }}], []);
   useEffect(() => {
     const timer = setTimeout(() => {
       setPosts(blogPosts);
       setLoading(false)
   }, 500);
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
+    return () => clearTimeout(timer)}, [blogPosts]);
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
     ? posts 
@@ -163,12 +140,7 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    );
-  }
-=======
-    )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    )}
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
@@ -233,21 +205,15 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
               and breakthrough content delivered directly to your inbox.
             </p>
-<<<<<<< HEAD
             <Link
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
-=======
-            <Link to="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Subscribe to Newsletter
   </
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   ),
 }
   </Link>
@@ -257,6 +223,3 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
   </h2>
   </p>
   </string>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

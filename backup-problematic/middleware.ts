@@ -2,15 +2,10 @@
  * Security Middleware;
  * Applies security headers and implements security policies;
  */
-<<<<<<< HEAD
 
 export function middleware(request: NextRequest) {
   const _response = NextResponse.next();
 
-=======
-export function middleware(request: NextRequest) {;
-const _response = NextResponse.next();
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Security Headers;
   const securityHeaders = {
 ,
@@ -52,51 +47,30 @@ const _response = NextResponse.next();
     'X-Permitted-Cross-Domain-Policies': 'none'};
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {
-<<<<<<< HEAD
-    response.headers.set(key, value);
-  });
-
-=======
     response.headers.set(key, value)});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+
   // CORS headers for API routes;
   if (request.nextUrl.pathname.startsWith('/api/')) {
     response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*');
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-<<<<<<< HEAD
-    response.headers.set('Access-Control-Max-Age', '86400');
-  }
+    response.headers.set('Access-Control-Max-Age', '86400')}
 
-=======
-    response.headers.set('Access-Control-Max-Age', '86400')};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { status: 204, headers: response.headers });
 export function middleware(reques)
-  t: NextRequest) {/* TODO: Fix JSX expression */};
-  };
+  t: NextRequest) {/* TODO: Fix JSX expression */}};
   // Apply all security headers;
-  Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */};
-  });
+  Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}});
   // CORS headers for API routes;
-  if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */};
-  };
+  if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}};
   // Handle preflight requests;
-<<<<<<< HEAD
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
-  s: response.headers });
-  }
+  s: response.headers })}
 
-  return response;
-}
+  return response}
 
-=======
-  if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */};
-  s: response.headers })};
-  return response};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const config = {
 };
   matcher: [
@@ -108,5 +82,4 @@ export const config = {
      * - public folder;
      */,
     '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
-export const config = {/* TODO: Fix JSX expression */};
-};
+export const config = {/* TODO: Fix JSX expression */}};

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'}
     realImplementation: true;
@@ -1835,7 +1831,6 @@ import React from 'react';
   trialDays: number, setupTime: string,
   category: string, realService: boolean,
   technology: string[], integrations: string[],
-<<<<<<< HEAD
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string
@@ -1849,19 +1844,6 @@ import React from 'react';
   rating: number
   reviews: number,
 }
-=======
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string},
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
   // Quantum Computing & AI Services;
     id: 'quantum-ai-brain-computer-interface', name: 'Quantum AI Brain-Computer Interface',
@@ -1886,7 +1868,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -1896,17 +1877,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
     rating: 4.8
     reviews: 12,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive space operations platform with real-time satellite tracking, mission planning tools, and advanced analytics. Includes regulatory compliance and safety protocols.'
-    launchDate: '2024-11-15',
-    customers:
-        customers: 8;
-    rating: 4.8;
-    reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Biotech AI Services;
     id: 'biotech-ai-platform',
     name: 'Biotech AI Platform',
@@ -2163,7 +2133,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2173,17 +2142,6 @@ export const,
     rating: 4.7
     reviews: 18,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced AI platform for biotech research with machine learning algorithms, data analysis tools, and research collaboration features. Includes regulatory compliance and safety protocols.'
-    launchDate: '2024-10-01',
-    customers:
-        customers: 25;
-    rating: 4.7;
-    reviews: 18};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Financial Trading;
     id: 'quantum-financial-trading',
     name: 'Quantum Financial Trading Platform',
@@ -2319,7 +2277,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2329,17 +2286,6 @@ export const,
     rating: 4.9
     reviews: 15,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced quantum AI trading platform with real-time market analysis, algorithmic trading capabilities, and comprehensive risk management. Includes regulatory compliance and performance analytics.'
-    launchDate: '2024-09-01',
-    customers:
-        customers: 12;
-    rating: 4.9;
-    reviews: 15};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Cybersecurity;
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
@@ -2469,7 +2415,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2479,17 +2424,6 @@ export const,
     rating: 4.8
     reviews: 32,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive cybersecurity platform with quantum-resistant encryption, AI-powered threat detection, and automated incident response. Includes compliance reporting and security analytics.'
-    launchDate: '2024-08-15',
-    customers:
-        customers: 45;
-    rating: 4.8;
-    reviews: 32};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Internet Security;
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
@@ -2610,7 +2544,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2620,17 +2553,6 @@ export const,
     rating: 4.7
     reviews: 22,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced quantum internet security platform with quantum key distribution, AI-powered monitoring, and comprehensive network protection. Includes compliance tools and security analytics.'
-    launchDate: '2024-07-01',
-    customers:
-        customers: 28;
-    rating: 4.7;
-    reviews: 22};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum IoT Platform;
     id: 'quantum-iot-platform'
     name: 'Quantum IoT Platform',
@@ -2766,7 +2688,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2776,17 +2697,6 @@ export const,
     rating: 4.6
     reviews: 48,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced IoT platform with quantum security, AI analytics, and edge computing capabilities. Includes device management, monitoring, and automation tools.'
-    launchDate: '2024-06-15',
-    customers:
-        customers: 65;
-    rating: 4.6;
-    reviews: 48};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Logistics;
     id: 'quantum-logistics-platform',
     name: 'Quantum Logistics Platform',
@@ -2917,7 +2827,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -2927,17 +2836,6 @@ export const,
     rating: 4.7
     reviews: 29,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced logistics platform with quantum AI optimization, real-time tracking, and comprehensive supply chain management. Includes analytics, compliance, and sustainability tools.'
-    launchDate: '2024-05-01',
-    customers:
-        customers: 38;
-    rating: 4.7;
-    reviews: 29};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Metaverse;
     id: 'quantum-metaverse-platform',
     name: 'Quantum Metaverse Platform',
@@ -3064,7 +2962,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3074,17 +2971,6 @@ export const,
     rating: 4.8
     reviews: 41,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced metaverse platform with quantum rendering, AI-powered experiences, and blockchain integration. Includes content creation tools and monetization features.'
-    launchDate: '2024-04-15',
-    customers:
-        customers: 52;
-    rating: 4.8;
-    reviews: 41};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Quantum Robotics;
     id: 'quantum-robotics-platform',
     name: 'Quantum Robotics Platform',
@@ -3221,7 +3107,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3231,17 +3116,6 @@ export const,
     rating: 4.9
     reviews: 14,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced robotics platform with quantum AI, autonomous learning, and multi-robot coordination. Includes safety protocols, monitoring, and analytics tools.'
-    launchDate: '2024-03-01',
-    customers:
-        customers: 18;
-    rating: 4.9;
-    reviews: 14};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Autonomous Manufacturing;
     id: 'autonomous-manufacturing-platform',
     name: 'Autonomous Manufacturing Platform',
@@ -3378,7 +3252,6 @@ export const,
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -3388,17 +3261,6 @@ export const,
     rating: 4.7
     reviews: 19,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced autonomous manufacturing platform with AI optimization, IoT integration, and predictive analytics. Includes quality control, maintenance, and compliance automation.'
-    launchDate: '2024-02-15',
-    customers:
-        customers: 22;
-    rating: 4.7;
-    reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Autonomous Vehicle AI;
     id: 'autonomous-vehicle-ai-platform',
     name: 'Autonomous Vehicle AI Platform',
@@ -3519,13 +3381,8 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails:,
       'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.'
     launchDate: '2024-01-01'
@@ -3540,7 +3397,6 @@ export const,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.'
@@ -3548,15 +3404,6 @@ export const,
     customers: 8
     rating: 4 && 4.9
     reviews: 6,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.',
-    launchDate: '2024-01-01',
-    customers: 8;
-    rating: 4 && 4.9;
-    reviews: 6;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Defense applications'
     ]
     ro,
@@ -3623,25 +3470,16 @@ export const,
     ratin,
   g: 4 && 4.9,
     review,
-  s: 6};
-];
+  s: 6}];
 // New Innovative Micro-SaaS Services;
 export const newInnovativeServices = [
 ];
       'Complete space mission control platform with AI integration and real-time operations'
-<<<<<<< HEAD
     launchDate: '2024-08-01'
     customers: 12
     rating: 4.9
     reviews: 6,
   }
-=======
-    launchDate: '2024-08-01',
-    customers:
-        customers: 12;
-    rating: 4.9;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Complete space mission control platform with AI integration and real-time operations',
     launchDate: '2024-08-01'
     customers: 12
@@ -3696,12 +3534,10 @@ export const newInnovativeServices = [
     ratin,
   g: 4.9,
     review,
-  s: 6};
-];
+  s: 6}];
 export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
   realImplementation: boolean;
@@ -3711,17 +3547,6 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
   rating: number
   reviews: number,
 }
-=======
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // New Innovative Micro - SaaS Services;
 export const newInnovativeServices = [
 {id: 'quantum - ai - brain - computer - interface',
@@ -3782,8 +3607,7 @@ export const newInnovativeServices = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'};
-    },
+      website: 'https://ziontechgroup && ziontechgroup.com'}},
     real_implementation: true
     implementation_details: unknown,
       'Advanced quantum neural interface system with real - time processing, secure encryption, and comprehensive analytics',
@@ -3802,18 +3626,11 @@ export const newInnovativeServices = [
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
-=======
-  s: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // New Innovative Micro - SaaS Services;
 export const newInnovativeServices = [
-{/* TODO: Fix JSX expression */};
-];
-  s://ziontechgroup && ziontechgroup.com'};
-    },
+{/* TODO: Fix JSX expression */}];
+  s://ziontechgroup && ziontechgroup.com'}},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -3842,15 +3659,9 @@ export const,
     tagline: 'Unhackable quantum - secured internet infrastructure',
     price: '$12, 999',
     period: '/month',
-<<<<<<< HEAD
     description: unknown,
   {/* TODO: Fix JSX expression */}
   n: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.'}
-=======
-    description: unknown;
-  {/* TODO: Fix JSX expression */};
-  n: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'quantum - internet - security - platform',
     nam,
@@ -3944,8 +3755,7 @@ export const,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'};
-    },
+      website: 'https://ziontechgroup && ziontechgroup.com'}},
     real_implementation: true
     implementation_details: unknown,
       'Complete quantum internet security platform with real - time monitoring and enterprise integration',
@@ -3974,8 +3784,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'};
-    },
+  s://ziontechgroup && ziontechgroup.com'}},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -4386,7 +4195,6 @@ export const,
     real_implementation: true
     implementation_details: unknown,
       'Complete space mission control platform with AI integration and real - time operations',
-<<<<<<< HEAD
     launch_date: '2024 - 08 - 01'
     customers: 12
     rating: 4 && 4.9
@@ -4398,20 +4206,6 @@ export const,
     rating: 4 && 4.9
     reviews: 6,
   }
-=======
-    launch_date: '2024 - 08 - 01',
-    customers:
-        customers: 12;
-    rating: 4 && 4.9;
-reviews: 6;
-  }];      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    customers:
-        customers: 12;
-    rating: 4 && 4.9;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -4528,7 +4322,6 @@ reviews: 6;
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true, implementationDetails: 'Complete space mission control platform with AI integration and real-time operations',
-<<<<<<< HEAD
     launchDate: '2024-08-01', customers: 12
     rating: 4.9
     reviews: 6,
@@ -4536,13 +4329,6 @@ reviews: 6;
 ];
     website: string,
   }
-=======
-    launchDate: '2024-08-01', customers: 12;
-    rating: 4.9;
-    reviews: 6};
-];
-    website: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Direct neural interface with quantum AI for unprecedented cognitive enhancement',
     price: '$2, 999',
     period: '/month',
@@ -4587,8 +4373,7 @@ reviews: 6;
     ratin,
   g: 4 && 4.9,
     review,
-  s: 6};
-];
+  s: 6}];
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
@@ -4876,8 +4661,7 @@ reviews: 6;
     ratin,
   g: 4.9,
     review,
-  s: 6};
-];
+  s: 6}];
     websit,
   e: string};
       'Direct neural interface with quantum AI for unprecedented cognitive enhancement',
@@ -5066,7 +4850,6 @@ reviews: 6;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
@@ -5076,17 +4859,6 @@ reviews: 6;
     rating: 4.9
     reviews: 8,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Advanced BCI hardware with quantum AI processing, real-time neural signal analysis, and comprehensive research tools. Includes safety protocols and medical compliance.'
-    launchDate: '2024-12-01',
-    customers:
-        customers: 15;
-    rating: 4.9;
-    reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Space Technology Services;
     id: 'space-technology-platform',
     name: 'Space Technology Platform',
@@ -6602,7 +6374,6 @@ reviews: 6;
     real_implementation: true
     implementation_details: unknown,
       'Advanced autonomous vehicle platform with quantum AI, real - time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.',
-<<<<<<< HEAD
     launch_date: '2024 - 01 - 01'
     customers: 8
     rating: 4 && 4.9
@@ -6622,30 +6393,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
 // New Innovative Micro-SaaS Services;
 export interface InnovativeMicroSaasService {
 export const newInnovativeServices = [{
-=======
-    launch_date: '2024 - 01 - 01',
-    customers:
-        customers: 8;
-    rating: 4 && 4.9;
-    reviews: 6};
-export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [,
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.',
-    launchDate: '2024-01-01',
-    customers: 8;
-    rating: 4 && 4.9;
-    reviews: 6};
-];
-// New Innovative Micro-SaaS Services;
-export interface InnovativeMicroSaasService {
-;
-}
-export const newInnovativeServices = [
-{
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   tagline: 'Direct neural interface with quantum AI for cognitive enhancement',
     price: '$25,999'
     period: '/month',
@@ -6732,8 +6479,7 @@ export const,
     ratin,
   g: 4 && 4.9,
     review,
-  s: 6};
-];
+  s: 6}];
 // New Innovative Micro-SaaS Services;
 export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
   s: [};
@@ -6757,8 +6503,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'};
-    },
+      website: 'https://ziontechgroup && ziontechgroup.com'}},
     real_implementation: true
     implementation_details: unknown,
       'Advanced quantum neural interface system with real - time processing, secure encryption, and comprehensive analytics',
@@ -6794,8 +6539,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'};
-    },
+  s://ziontechgroup && ziontechgroup.com'}},
     real_implementatio,
   n: true,
     implementation_detail,
@@ -7217,7 +6961,6 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
     realImplementation: true,
     implementationDetails: 'Complete space mission control platform with AI integration and real-time operations',
     launchDate: '2024-08-01',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     real_implementation: true,
     implementation_details: 'Complete space mission control platform with AI integration and real - time operations'
@@ -7225,14 +6968,6 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
     customers: 12
     reviews: 6,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Complete space mission control platform with AI integration and real - time operations',
-    launch_date: '2024 - 08 - 01',
-    customers: 12;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
     id: 'quantum-ai-brain-computer-interface', name: 'Quantum AI Brain-Computer Interface',
     tagline: 'Direct neural interface with quantum AI for cognitive enhancement',
@@ -7432,8 +7167,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
     customer,
   s: 12,
     review,
-  s: 6};
-];
+  s: 6}];
     i,
   d: 'quantum-ai-brain-computer-interface', nam,
   e: 'Quantum AI Brain-Computer Interface',
@@ -7772,8 +7506,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
     ratin,
   g: 4.9,
     review,
-  s: 6};
-];
+  s: 6}];
 addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
@@ -8748,7 +8481,6 @@ addres,
   g: 4.9,
   reviews: 6 } ]; export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */};
   s: string} websit,
-<<<<<<< HEAD
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
@@ -8756,17 +8488,6 @@ addres,
   s: number, ratin,
   g: number, review,
   s: number} // New Innovative Micro - SaaS Services; export const newInnovativeServices = [ ' i,
-=======
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; // New Innovative Micro - SaaS Services; export const newInnovativeServices = [
-; ' i,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: 'quantum - ai - brain - computer - interface',' nam,
   e: 'Quantum AI Brain - Computer Interface', taglin,
   e:  ,' 'Direct neural interface with quantum AI for cognitive enhancement',' pric,
@@ -8805,11 +8526,7 @@ addres,
   s: 15, ratin,
   g: 4 && 4.9, review,
   s: 8}, export const,
-<<<<<<< HEAD
   innovativeMicroSaasServices: InnovativeMicroSaasService[] = [; // Quantum Computing & AI Services, {/* TODO: Fix JSX expression */}
-=======
-  innovativeMicroSaasServices: InnovativeMicroSaasService[] = [; // Quantum Computing & AI Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   n: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.'} ' i,
   d: 'quantum - internet - security - platform',' nam,
   e: 'Quantum Internet Security Platform',' taglin,
@@ -9923,8 +9640,4 @@ addres,
   e: '2024-08-01', customer,
   s: 12, ratin,
   g: 4.9, review,
-<<<<<<< HEAD
   s: 6} ]; '"
-=======
-  s: 6} ]; '"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

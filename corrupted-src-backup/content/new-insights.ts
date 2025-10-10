@@ -1,5 +1,4 @@
-export interface Insight {/* TODO: Fix JSX expression */};
-};
+export interface Insight {/* TODO: Fix JSX expression */}};
 export const newInsights: Insight[] = [
   {
     id: 'ai-platform-optimization-insights'
@@ -13,14 +12,9 @@ export const newInsights: Insight[] = [
     content: `
 # AI Platform Optimization Insights;
 Transform your AI platform with intelligent scorecards and performance monitoring that deliver measurable ROI.
-<<<<<<< HEAD
 
 ## Key Insights
 - Intelligent performance scorecards drive 300% ROI improvement
-=======
-## Key Insights;
-- Intelligent performance scorecards drive 300% ROI improvement;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 - Real-time optimization recommendations reduce costs by 40%
 - Comprehensive ROI tracking enables data-driven decisions,
 - Automated performance tuning increases efficiency by 60%,
@@ -45,7 +39,5 @@ Protect your AI systems with next-generation quantum security frameworks.
     `,
 export const,
   newInsights: Insight[] = [
-  {/* TODO: Fix JSX expression */};
-  },
-  {/* TODO: Fix JSX expression */};
-  }];
+  {/* TODO: Fix JSX expression */}},
+  {/* TODO: Fix JSX expression */}}];

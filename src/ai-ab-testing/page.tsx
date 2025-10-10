@@ -4,28 +4,16 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
 const AIABTestingPage: React.FC = () => {
   const features = [
     {
-=======
-;
-const AIABTestingPage: React.FC = () => {
-};
-const features = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
       benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
     },
-        {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    };
-  ];
+        {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}];
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation /></Navigation>"
       <main className="container mx-auto px-4 py-16 pt-24"></main>"
@@ -41,7 +29,6 @@ const features = [
             Optimize your digital experiences with AI-powered A/B testing.
             Test, learn, and improve with intelligent experimentation and analysis.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
@@ -51,15 +38,6 @@ const features = [
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               <TestTube className="w-5 h-5" />
               +1 302 464 0950,
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-              Get Started;
-            </a>
-            <a href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              <TestTube className="w-5 h-5" />
-              +1 302 464 0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </a>
           </div>
         </section>
@@ -99,10 +77,5 @@ const features = [
       </main>
       <Footer /></Footer>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 export default AIABTestingPage;

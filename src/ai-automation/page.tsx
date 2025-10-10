@@ -5,18 +5,9 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
-=======
-;
-const AIAutomationPage: React.FC = () => {
-};
-const features = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
@@ -39,17 +30,9 @@ const features = [
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
-    };
-  ];
-<<<<<<< HEAD
+    }];
   const pricingPlans = [
     {
-=======
-;
-const pricingPlans = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       name: 'Starter',
       price: '$1,400',
       period: '/month',
@@ -93,23 +76,12 @@ const pricingPlans = [
         'Dedicated support'
       ],
       popular: false
-    };
-  ];
-<<<<<<< HEAD
+    }];
   const stats = [
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
-=======
-;
-const stats = [
-[
-        { icon: Users, value: '200+', label: 'Automated Processes' },
-        { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-        { icon: Clock, value: '60%', label: 'Time Saved' },
-        { icon: Star, value: '4.9/5', label: 'Client Rating' };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
 export default function AIAutomationPage() {
     return (
@@ -127,12 +99,8 @@ export default function AIAutomationPage() {
             <p className="text-gray-300 mb-6">
               Transform your business processes with intelligent automation that learns and adapts to your needs.
             </p>
-<<<<<<< HEAD
             <a
               href="/contact"
-=======
-            <a href="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
               Contact Us,
@@ -141,11 +109,7 @@ export default function AIAutomationPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
   }
   </a>
   </h1>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -12,32 +12,20 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {,
       trendi, n, g: t, r, u, e,",
       ic, o, n: "📊",
       impa, c, t: "$10, 0, M+ Savi, n, g, s",
-<<<<<<< HEAD
       featured: t, r, u, e,",
 const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
       sta, t, s: { savin, g, s: "$1, 0, 0, M+", automati, o, n: "9, 5%", r, o, i: "30, 0%" }
-=======
-      featured: t, r, u, e,",;
-const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */};
-      sta, t, s: { savin, g, s: "$1, 0, 0, M+", automati, o, n: "9, 5%", r, o, i: "30, 0%" };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
-      sta, t, s: { securi, t, y: "99.9, 9%", complian, c, e: "10, 0%", threa, t, s: ", 0" };
-    },
+      sta, t, s: { securi, t, y: "99.9, 9%", complian, c, e: "10, 0%", threa, t, s: ", 0" }},
     {/* TODO: Fix JSX expression */}"
-      sta, t, s: { performan, c, e: "10, 0, 0, x", efficien, c, y: "9, 5%", spe, e, d: "Lightn, i, n, g" };
-    },
+      sta, t, s: { performan, c, e: "10, 0, 0, x", efficien, c, y: "9, 5%", spe, e, d: "Lightn, i, n, g" }},
     {/* TODO: Fix JSX expression */}"
-      sta, t, s: { automati, o, n: "9, 8%", upti, m, e: "99., 9%", efficien, c, y: "8, 5%" };
-    },
+      sta, t, s: { automati, o, n: "9, 8%", upti, m, e: "99., 9%", efficien, c, y: "8, 5%" }},
     {/* TODO: Fix JSX expression */}"
-      sta, t, s: { nod, e, s: "1, 0,0, 0, 0+", laten, c, y: "<1m , s", reliabili, t, y: "99., 9%" };
-    },
+      sta, t, s: { nod, e, s: "1, 0,0, 0, 0+", laten, c, y: "<1m , s", reliabili, t, y: "99., 9%" }},
     {/* TODO: Fix JSX expression */}"
-      sta, t, s: { reasoni, n, g: "Advan, c, e, d", learni, n, g: "Se, l, f-Improv, i, n, g", accura, c, y: "9, 8%" };
-    };
-  ]; return(<div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+      sta, t, s: { reasoni, n, g: "Advan, c, e, d", learni, n, g: "Se, l, f-Improv, i, n, g", accura, c, y: "9, 8%" }}]; return(<div, classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};
       <div , className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">
         <div , className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -384,6 +372,5 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
         </div>
       </div>
     </div>
-  );
-}
+  )}
 export default Ultimate2026ContentShowcase;"`

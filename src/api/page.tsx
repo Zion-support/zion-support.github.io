@@ -3,12 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
-<<<<<<< HEAD
   const _features = [],
-=======
-};
-const _features = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -24,11 +19,7 @@ const _features = [];
     title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
-<<<<<<< HEAD
     }
-=======
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
       <Helmet></Helmet>
@@ -59,11 +50,7 @@ const _features = [];
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
-=======
-        {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
@@ -77,11 +64,7 @@ const _features = [];
                     {feature.benefits.map((benefit, idx) => (};
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-<<<<<<< HEAD
                         {benefit}
-=======
-                        {benefit};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       </li>)
                     ))};
                   </ul>

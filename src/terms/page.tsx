@@ -1,19 +1,10 @@
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-<<<<<<< HEAD
 export default function TermsPage() {
   const lastUpdated = 'January 1, 2024';
   const sections = [
     {
-=======
-export default function TermsPage() {;
-const lastUpdated = 'January 1, 2024';
-;
-const sections = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
@@ -42,15 +33,8 @@ const sections = [
       title: 'Limitation of Liability',
       icon: Shield,
       content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
-    };
-  ];
-<<<<<<< HEAD
+    }];
   const prohibitedUses = [
-=======
-;
-const prohibitedUses = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Violating any applicable laws or regulations',
     'Transmitting malicious code or harmful content',
     'Attempting to gain unauthorized access to our systems',
@@ -60,15 +44,8 @@ const prohibitedUses = [
     'Collecting user information without consent',
     'Engaging in any form of harassment or abuse'
   ];
-<<<<<<< HEAD
   const serviceLevels = [
     {
-=======
-;
-const serviceLevels = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       service: 'AI Services',
       uptime: '99.9%',
       support: '24/7',
@@ -91,17 +68,11 @@ const serviceLevels = [
       uptime: 'N/A',
       support: 'Business Hours',
       response: '4 hours'
-    };
-  ];
+    }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">
-=======
-      {/* Hero Section */};
-      <section className="relative py-20 lg:py-32 overflow-hidden">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -128,11 +99,7 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Last Updated */}
-=======
-      {/* Last Updated */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -147,11 +114,7 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Key Terms */}
-=======
-      {/* Key Terms */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -170,11 +133,7 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Prohibited Uses */}
-=======
-      {/* Prohibited Uses */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -193,11 +152,7 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Service Level Agreements */}
-=======
-      {/* Service Level Agreements */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -227,11 +182,7 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Payment Terms */}
-=======
-      {/* Payment Terms */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -261,11 +212,7 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Termination */}
-=======
-      {/* Termination */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -296,11 +243,7 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Governing Law */}
-=======
-      {/* Governing Law */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -326,11 +269,7 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Information */}
-=======
-      {/* Contact Information */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -352,14 +291,9 @@ const serviceLevels = [
                 <span className="text-white">Middletown, DE</span>
               </div>
             </div>
-<<<<<<< HEAD
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
-=======
-            <a href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
   </
@@ -367,11 +301,7 @@ const serviceLevels = [
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   ),
 }
   </a>
   </h1>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

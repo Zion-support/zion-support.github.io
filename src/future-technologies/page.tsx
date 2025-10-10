@@ -4,19 +4,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Rocket, Target, Zap, Settings, CheckCircle, Star,  Rocket,  Target,  Settings } from 'lucide-react';
 const FutureTechnologiesPage: React.FC = () => {
-<<<<<<< HEAD
     const features = [],
   return (
     {// TODO: Add content
   }
 }
-=======
-};
-const features = [];
-  return (
-    {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Rocket,
       titl,
@@ -24,8 +16,7 @@ const features = [];
       descriptio,
   n: 'Cutting-edge technologies and future innovations',
       benefit,
-  s: ['AI advancement', 'Quantum computing', 'Blockchain'];
-    },
+  s: ['AI advancement', 'Quantum computing', 'Blockchain']},
       ico,
   n: Target,
       titl,
@@ -42,20 +33,14 @@ const features = [];
   n: 'Integrate emerging technologies with existing systems',
       benefit,
   s: ['System integration', 'Migration support', 'Compatibility']
-    };
-  ];
+    }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // Future Technologies
-=======
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// Future Technologies;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
 // Emerging Technology Solutions,
@@ -63,7 +48,6 @@ const features = [];
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 // Stay ahead of the curve with our future technology solutions. From AI advancement to quantum computing,
             we help you prepare for and adopt the technologies of tomorrow.
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -73,16 +57,6 @@ const features = [];
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Rocket className="w-5 h-5" />
               +1 302 464 0950,
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-//>
-//               Get Started;
-          </a>
-              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-<Rocket className="w-5 h-5" />
-              +1 302 464 0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </div>
         </section>"
         <section className="mb-16"></section>"
@@ -114,10 +88,5 @@ const features = [];
       </main>
       <Footer /></Footer>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 export default FutureTechnologiesPage;

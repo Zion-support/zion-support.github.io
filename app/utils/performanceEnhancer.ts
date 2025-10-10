@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**;
  * Performance Enhancement Utilities;
@@ -19,8 +18,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {}
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  }
+    timeout = setTimeout(() => func(...args), wait)}
 }
 // Throttle function for performance optimization;
 export const throttle = <T extends (...args: unknown[]) => unknown>(,
@@ -39,19 +37,10 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
     if (!inThrottle) {}
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
+      setTimeout(() => (inThrottle = false), limit)}
   }
 }
 // Performance monitoring utilities;
-=======
-      setTimeout(() => (inThrottle = false), limit););
-      setTimeout(() => (inThrottle = false), limit)]
-    };
-  }});
-};
-// Performance monitoring utilities
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export class PerformanceMonitor {
     private static instance: PerformanceMonitor,
   private metrics: Map<string, number> = new Map();
@@ -59,7 +48,6 @@ export class PerformanceMonitor {
   static getInstance(): PerformanceMonitor {,;
     if (!PerformanceMonitor.instance) {,;
 // Performance monitoring utilities
-<<<<<<< HEAD
   }
 export class PerformanceMonitor {}
   private static instance: PerformanceMonitor,
@@ -67,44 +55,23 @@ export class PerformanceMonitor {}
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor {}
     if (!PerformanceMonitor.instance) {}
-      PerformanceMonitor.instance = new PerformanceMonitor();
-    }
-    return PerformanceMonitor.instance;
-  }
-=======
-export class PerformanceMonitor {};
-  private static instance: PerformanceMonitor,
-  private metrics: Map<string></string> = new Map();
-  private observers: PerformanceObserver[] = [];
-  static getInstance(): PerformanceMonitor {};
-    if (!PerformanceMonitor.instance) {};
-      PerformanceMonitor.instance = new PerformanceMonitor(););
-    return PerformanceMonitor.instance});
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      PerformanceMonitor.instance = new PerformanceMonitor()}
+    return PerformanceMonitor.instance}
   // Track component render time;
   trackRender(componentName: string, renderTime: number) {
     ,
   // Track component render time
-<<<<<<< HEAD
   }
   trackRender(componentName: string, renderTime: number) {}
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {}
       }
   }
-=======
-  trackRender(componentName: string, renderTime: number) {};
-    this.metrics.set(`${componentName}_render`, renderTime);
-    if (process.env['NODE_ENV'] === 'development') {});;);
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Track memory usage;
   trackMemory(componentName: string) {
     ,
     if ('memory' in performance) {,;
   // Track memory usage
-<<<<<<< HEAD
   }
   trackMemory(componentName: string) {}
     if ('memory' in performance) {}
@@ -114,7 +81,7 @@ export const debounce = <T extends (...arg);
   s: unknown[]) => unknown>(fun,
   c: T,
   wai,;
-  t: number;)
+  t: number)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
   }
@@ -124,7 +91,7 @@ export const throttle = <T extends (...arg);
   s: unknown[]) => unknown>(fun,
   c: T,
   limi,;
-  t: number;)
+  t: number)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
     }
@@ -133,24 +100,20 @@ export const throttle = <T extends (...arg);
 // Performance monitoring utilities;
 export class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
-    return PerformanceMonitor.instance;
-  }
+    return PerformanceMonitor.instance}
   // Track component render time;
   trackRender(componentNam,;
   e: string, renderTim);
   e: number) {/* TODO: Fix JSX expression */}
     this.metrics.set(`${componentName}_render`, renderTime);
-if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`;
-      }ms`);
-}
+if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`}ms`)}
   }
   // Track memory usage;
   trackMemory(componentNam);
   e: string) {/* TODO: Fix JSX expression */}
   e: number } }).memory;
       if (memory) {/* TODO: Fix JSX expression */}`;
-        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
-      }
+        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)}
     }
   }
   // Get performance metrics;
@@ -163,73 +126,14 @@ if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`
     this.metrics.clear()
   }
   }
-=======
-  trackMemory(componentName: string) {};
-    if ('memory' in performance) {};
-      const memory = (performance as { memory?: { usedJSHeapSize: number } });.memory;
-      if (memory) {};
-export const debounce = <T></T> unknown>(fun,
-  c: T,
-  wai,
-  t: number};
-): ((...arg)
-  s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */});]
-    }});
-};
-// Throttle function for performance optimization
-export const throttle = <T></T> unknown>(fun,
-  c: T,
-  limi,
-  t: number};
-): ((...arg)
-  s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */});;);
-  }});
-};
-// Performance monitoring utilities
-export class PerformanceMonitor {/* TODO: Fix JSX expression */});;);
-    return PerformanceMonitor.instance});
-};
-  // Track component render time;
-  trackRender(componentNam,
-  e: string, renderTim)
-  e: number) {/* TODO: Fix JSX expression */};
-    this.metrics.set(`${componentName}_render`, renderTime);
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`});
-}ms`)]
-    };
-});
-};
-  // Track memory usage;
-  trackMemory(componentNam)
-  e: string) {/* TODO: Fix JSX expression */};
-  e: number } });.memory;
-      if (memory) {/* TODO: Fix JSX expression */}`
-this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)]
-    };
-    });]
-    };
-  // Get performance metrics;
-  getMetrics() {
-    return Object.fromEntries(this.metrics)]
-    };
-  // Clear metrics;
-  clearMetrics() {
-    this.metrics.clear()]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Monitor long tasks;
   startLongTaskMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
-<<<<<<< HEAD
   // Get performance metrics
   }
   getMetrics() {/* TODO: Fix JSX expression */}
   }
-=======
-  // Get performance metrics;
-  getMetrics() {/* TODO: Fix JSX expression */});;);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Clear metrics;
   clearMetrics() {/* TODO: Fix JSX expression */}
   }
@@ -237,31 +141,25 @@ this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)]
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}
     }
 const observer = new PerformanceObserver((list) => {
-<<<<<<< HEAD
     list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms;
   // Get performance metrics
   }
   getMetrics() {}
-    return Object.fromEntries(this.metrics);
-  }
+    return Object.fromEntries(this.metrics)}
   // Clear metrics;
   clearMetrics() {}
-    this.metrics.clear();
-  }
+    this.metrics.clear()}
   // Monitor long tasks;
   startLongTaskMonitoring() {}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
-      return;
-    }
+      return}
     const observer = new PerformanceObserver((list) => {}
       list.getEntries().forEach((entry) => {}
         if (entry.duration > 50) { // Tasks longer than 50ms}
-          }ms`);
-        }
+          }ms`)}
 observer.observe({ entryTypes: ['longtask'] })
-    this.observers.push(observer);
-  }
+    this.observers.push(observer)}
   // Cleanup observers;
   cleanup() {
     // Cleanup observers
@@ -272,12 +170,12 @@ observer.observe({ entryTypes: ['longtask'] })
   }
 }
 // React hook for performance monitoring;
-export const usePerformanceMonitor = (;) => {
+export const usePerformanceMonitor = () => {
     return (
     $3
   )
   }
-// React hook for performance monitoring;}
+// React hook for performance monitoring}
 export const usePerformanceMonitor = (componentName: string) => {}
   const renderStartTime = useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
@@ -289,8 +187,7 @@ export const usePerformanceMonitor = (componentName: string) => {}
     return () => {}
       const renderTime = performance.now() - renderStartTime.current;
       monitor.trackRender(componentName, renderTime);
-      monitor.trackMemory(componentName);
-    }
+      monitor.trackMemory(componentName)}
   }, [componentName, monitor]);
   return {}
     trackRender: (fn: () => void) => {}
@@ -305,8 +202,7 @@ export const usePerformanceMonitor = (componentName: string) => {}
     })
     observer.observe({/* TODO: Fix JSX expression */})
   s: ['longtask'] })
-    this.observers.push(observer);
-  }
+    this.observers.push(observer)}
   // Cleanup observers;
   cleanup() {/* TODO: Fix JSX expression */}
   }
@@ -317,214 +213,88 @@ export const usePerformanceMonitor = (componentNam);
     }
   }, [componentName, monitor]);
   return {/* TODO: Fix JSX expression */}`;
-      monitor.trackRender(`${componentName}_function`, duration);
-    }
+      monitor.trackRender(`${componentName}_function`, duration)}
   }
 }
 // Image lazy loading utility;
-export const lazyLoadImages = (;) => {
+export const lazyLoadImages = () => {
     return (
     $3
   )
   }
-// Image lazy loading utility;}
+// Image lazy loading utility}
 export const lazyLoadImages = () => {}
   if (typeof window === 'undefined') return;
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries) => {}
     entries.forEach((entry) => {}
       if (entry.isIntersecting) {}
-=======
-      list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms;
-  // Get performance metrics
-  getMetrics() {};
-return Object.fromEntries(this.metrics)]
-    };
-  // Clear metrics
-  clearMetrics() {};
-    this.metrics.clear()]
-    };
-  // Monitor long tasks
-  startLongTaskMonitoring() {};
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {};
-      return});
-};
-    const observer = new PerformanceObserver((list) => {};
-      list.getEntries().forEach((entry) => {};
-        if (entry.duration > 50) { // Tasks longer than 50ms});;)
-}ms`););
-    observer.observe({ entryTypes: ['longtask'] });;
-    this.observers.push(observer););
-  // Cleanup observers;
-  cleanup() {
-  // Cleanup observers
-  cleanup() {};
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = []});
-};
-};
-// React hook for performance monitoring
-export const usePerformanceMonitor = (componentName: string) => {
-// React hook for performance monitoring
-export const usePerformanceMonitor = (componentName: string) => {};
-  const renderStartTime = useRef<number></number>(0);
-const monitor = PerformanceMonitor.getInstance();
-  useEffect(() => {};
-    renderStartTime.current = performance.now();
-    return () => {,
-    return () => {};
-      const renderTime = performance.now() - renderStartTime.current;
-      monitor.trackRender(componentName, renderTime);
-      monitor.trackMemory(componentName)]
-    }});
-}, [componentName, monitor]);
-  return {};
-    trackRender: (fn: () => void) => {};
-      const start = performance.now();
-      fn();,;
-const duration = performance.now() - start;
-        if (entry.duration > 50) { // Tasks longer than 50ms});
-};
-      });]
-    });;
-    observer.observe({/* TODO: Fix JSX expression */});
-  s: ['longtask'] });;
-this.observers.push(observer)]
-    };
-  // Cleanup observers;
-  cleanup() {/* TODO: Fix JSX expression */});]
-    };
-};
-// React hook for performance monitoring;
-export const usePerformanceMonitor = (componentNam)
-  e: string) => {/* TODO: Fix JSX expression */});]
-    }});
-}, [componentName, monitor]);
-  return {/* TODO: Fix JSX expression */}`
-monitor.trackRender(`${componentName}_function`, duration)]
-    };
-  }});
-};
-// Image lazy loading utility
-export const lazyLoadImages = () => {
-};
-// Image lazy loading utility
-export const lazyLoadImages = () => {};
-  if (typeof window === 'undefined') return;
-const images = document.querySelectorAll('img[data-src]');
-const imageObserver = new IntersectionObserver((entries) => {};
-    entries.forEach((entry) => {};
-      if (entry.isIntersecting) {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         const img = entry.target as HTMLImageElement;
         img['src'] = img.dataset['src'] || '';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
-<<<<<<< HEAD
 // Image lazy loading utility;
 export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}
       }
-images.forEach((img) => imageObserver.observe(img));
-}
+images.forEach((img) => imageObserver.observe(img))}
 // Preload critical resources;
-export const preloadCriticalResources = (;) => {
+export const preloadCriticalResources = () => {
     return (
     $3
   )
   }
-// Preload critical resources;}
+// Preload critical resources}
 export const preloadCriticalResources = () => {}
   if (typeof window === 'undefined') return;
   const criticalResources = [
     '/fonts/inter-var.woff2',
     '/css/critical.css']
   criticalResources.forEach((resource) => {}
-=======
-// Image lazy loading utility
-export const lazyLoadImages = () => {/* TODO: Fix JSX expression */});;);
-  images.forEach((img) => imageObserver.observe(img)););
-// Preload critical resources
-export const preloadCriticalResources = () => {
-};
-// Preload critical resources
-export const preloadCriticalResources = () => {};
-  if (typeof window === 'undefined') return;
-const criticalResources = [
-];
-    '/fonts/inter-var.woff2',
-    '/css/critical.css'];
-  criticalResources.forEach((resource) => {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.woff2') ? 'font' : 'style';
     if (resource.endsWith('.woff2')) {};
       link.crossOrigin = 'anonymous';
-<<<<<<< HEAD
 // Preload critical resources;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
     }
-    document.head.appendChild(link);
-}
+    document.head.appendChild(link)}
 // Optimize scroll performance;
 export const optimizeScrollPerformance = (;
   if (typeof window === 'undefined') return;
   let ticking = false;
   const updateScrollPosition = () => {
-    // Update scroll position indicators;) => {
+    // Update scroll position indicators) => {
   return (
     $3
   )
   }
-// Optimize scroll performance;}
+// Optimize scroll performance}
 export const optimizeScrollPerformance = () => {}
   if (typeof window === 'undefined') return;
   let ticking = false;
   const updateScrollPosition = () => {}
-=======
-// Preload critical resources
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */});;);
-    document.head.appendChild(link););
-};
-// Optimize scroll performance
-export const optimizeScrollPerformance = () => {
-};
-  if (typeof window === 'undefined') return;
-  let ticking = false;
-const updateScrollPosition = () => {
-};
-    // Update scroll position indicators;
-// Optimize scroll performance
-export const optimizeScrollPerformance = () => {};
-  if (typeof window === 'undefined') return;
-  let ticking = false;
-const updateScrollPosition = () => {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Update scroll position indicators;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
-<<<<<<< HEAD
-    ticking = false;
-  }
+    ticking = false}
   const requestTick = () => {}
     if (!ticking) {}
       requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
+      ticking = true}
   }
   // Track Core Web Vitals;
   const trackCLS = (;
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [],
     interface LayoutShiftEntry extends PerformanceEntry {
-    ,;) => {
+    ,) => {
   return (
     $3
   )
   }
-  // Track Core Web Vitals;}
+  // Track Core Web Vitals}
   const trackCLS = () => {}
     let clsValue = 0;
     let clsEntries: PerformanceEntry[] = [],
@@ -534,44 +304,15 @@ const updateScrollPosition = () => {};
     }
     const observer = new PerformanceObserver((list) => {}
       for (const entry of list.getEntries()) {}
-=======
-    ticking = false});
-};
-const requestTick = () => {};
-    if (!ticking) {};
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true});
-};
-  };
-  // Track Core Web Vitals;
-const trackCLS = () => {
-let clsValue = 0;
-};
-    let clsEntries: PerformanceEntry[] = [];
-    interface LayoutShiftEntry extends PerformanceEntry {,
-  // Track Core Web Vitals;
-const trackCLS = () => {};
-    let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
-    interface LayoutShiftEntry extends PerformanceEntry {};
-      hadRecentInput?: boolean;
-      value: number,});
-};
-    const observer = new PerformanceObserver((list) => {};
-      for (const entry of list.getEntries()) {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {};
           clsEntries.push(entry);
-<<<<<<< HEAD
-          clsValue += layoutEntry.value;
-        }
+          clsValue += layoutEntry.value}
       }
 observer.observe({ entryTypes: ['layout-shift'] })
     return () => {}
       observer.disconnect();
-      return clsValue;
-    }
+      return clsValue}
   }
   const trackLCP = () => {}
     const observer = new PerformanceObserver((list) => {}
@@ -580,8 +321,7 @@ observer.observe({ entryTypes: ['layout-shift'] })
           }
       }
 observer.observe({ entryTypes: ['largest-contentful-paint'] })
-    return () => observer.disconnect();
-  }
+    return () => observer.disconnect()}
   const trackFID = () => {}
     interface FirstInputEntry extends PerformanceEntry {}
       processingStart: number,
@@ -594,14 +334,12 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] })
           }
       }
 observer.observe({ entryTypes: ['first-input'] })
-    return () => observer.disconnect();
-  }
+    return () => observer.disconnect()}
   window.addEventListener('scroll', requestTick, { passive: true })
 // Optimize scroll performance;
 export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`;
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
-    ticking = false;
-  }
+    ticking = false}
   const requestTick = () => {/* TODO: Fix JSX expression */}
     }
   }
@@ -623,8 +361,7 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
     })
     observer.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })
-    return () => observer.disconnect();
-  }
+    return () => observer.disconnect()}
   const trackFID = () => {/* TODO: Fix JSX expression */}
     }
     const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
@@ -633,8 +370,7 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
     })
     observer.observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] })
-    return () => observer.disconnect();
-  }
+    return () => observer.disconnect()}
   window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})
   e: true })
   // Start tracking;
@@ -644,8 +380,7 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
   return () => {}
     cleanupCLS();
     cleanupLCP();
-    cleanupFID();
-  }
+    cleanupFID()}
 }
 // Memory usage monitoring;
 export const getMemoryUsage = (;
@@ -655,7 +390,7 @@ export const getMemoryUsage = (;
     $3
   )
   }
-    return null;}
+    return null}
   }
   const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
   return {
@@ -668,96 +403,6 @@ export const getMemoryUsage = (;
 }
 // Performance metrics collection;
 export const collectPerformanceMetrics = (;
-=======
-          clsValue += layoutEntry.value});
-};
-      };
-    observer.observe({ entryTypes: ['layout-shift'] });;
-    return () => {};
-      observer.disconnect();
-      return clsValue});
-}});
-};
-const trackLCP = () => {};
-    const observer = new PerformanceObserver((list) => {};
-      for (const entry of list.getEntries()) {};
-        if (process.env['NODE_ENV'] === 'development') {});;);
-      };
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });;
-    return () => observer.disconnect(););
-const trackFID = () => {};
-    interface FirstInputEntry extends PerformanceEntry {};
-      processingStart: number,});
-};
-    const observer = new PerformanceObserver((list) => {};
-      for (const entry of list.getEntries()) {};
-        const fidEntry = entry as FirstInputEntry;
-const fid = fidEntry.processingStart - entry.startTime;
-        if (process.env['NODE_ENV'] === 'development') {});;);
-      };
-    observer.observe({ entryTypes: ['first-input'] });;
-    return () => observer.disconnect(););
-  window.addEventListener('scroll', requestTick, { passive: true });;
-// Optimize scroll performance
-export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
-    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
-    ticking = false});
-};
-const requestTick = () => {/* TODO: Fix JSX expression */});;);
-  };
-  // Track Core Web Vitals;
-const trackCLS = () => {/* TODO: Fix JSX expression */});;);
-const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});;);
-      });;)
-});;
-    observer.observe({/* TODO: Fix JSX expression */});
-  s: ['layout-shift'] });;
-    return () => {/* TODO: Fix JSX expression */});;)
-}});
-};
-const trackLCP = () => {/* TODO: Fix JSX expression */});;);
-      });;)
-});;
-    observer.observe({/* TODO: Fix JSX expression */});
-  s: ['largest-contentful-paint'] });;
-    return () => observer.disconnect(););
-const trackFID = () => {/* TODO: Fix JSX expression */});;);
-const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});;);
-      });;)
-});;
-    observer.observe({/* TODO: Fix JSX expression */});
-  s: ['first-input'] });;
-    return () => observer.disconnect(););
-  window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */});
-  e: true });;
-  // Start tracking;
-const cleanupCLS = trackCLS();
-const cleanupLCP = trackLCP();
-const cleanupFID = trackFID();
-  return () => {};
-    cleanupCLS();
-    cleanupLCP();
-    cleanupFID()]
-    }});
-};
-// Memory usage monitoring
-export const getMemoryUsage = () => {
-};
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null});
-};
-  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} });.memory;
-  return {
-    used: memory.usedJSHeapSize;
-    total: memory.totalJSHeapSize;
-    limit: memory.jsHeapSizeLimit;
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100});
-}});
-};
-// Performance metrics collection
-export const collectPerformanceMetrics = () => {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (typeof window === 'undefined') return null;
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
@@ -775,12 +420,10 @@ export const collectPerformanceMetrics = () => {
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
 // Memory usage monitoring
-<<<<<<< HEAD
   }
 export const getMemoryUsage = () => {}
   if (typeof window === 'undefined' || !('memory' in performance)) {}
-    return null;
-  }
+    return null}
   const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
   return {}
     used: memory.usedJSHeapSize,
@@ -807,49 +450,13 @@ export const collectPerformanceMetrics = () => {}
     memory: getMemoryUsage()}
 }
 // Initialize performance enhancements;
-export const initializePerformanceEnhancements = (;) => {
+export const initializePerformanceEnhancements = () => {
     return (
     $3
   )
   }
-// Initialize performance enhancements;}
+// Initialize performance enhancements}
 export const initializePerformanceEnhancements = () => {}
-=======
-export const getMemoryUsage = () => {};
-  if (typeof window === 'undefined' || !('memory' in performance)) {};
-    return null});
-};
-  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} });.memory;
-  return {};
-    used: memory.usedJSHeapSize,
-    total: memory.totalJSHeapSize,
-    limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100});
-}});
-};
-// Performance metrics collection
-export const collectPerformanceMetrics = () => {};
-  if (typeof window === 'undefined') return null;
-const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-const paint = performance.getEntriesByType('paint');
-  return {};
-    navigation: {};
-// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-// loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-// totalTime: navigation.loadEventEnd - navigation.fetchStart});
-},
-    paint: {};
-      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0});
-},
-    memory: getMemoryUsage();});
-};
-// Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {
-};
-// Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (typeof window === 'undefined') return;
   // Initialize lazy loading;
   lazyLoadImages();
@@ -858,7 +465,6 @@ export const initializePerformanceEnhancements = () => {};
   // Optimize scroll performance;
   optimizeScrollPerformance();
   // Collect performance metrics;
-<<<<<<< HEAD
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {}
   return () => {/* TODO: Fix JSX expression */}
@@ -884,31 +490,3 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
     }
 }`;
-=======
-const metrics = collectPerformanceMetrics();
-  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {};
-  return () => {/* TODO: Fix JSX expression */});]
-    }});
-};
-// Memory usage monitoring
-export const getMemoryUsage = () => {/* TODO: Fix JSX expression */});;);
-const memory = (performance as unknown as {/* TODO: Fix JSX expression */});
-  t: number} });.memory;
-  return {/* TODO: Fix JSX expression */});]
-    }});
-};
-// Performance metrics collection
-export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */});;)
-},
-    pain,
-  t: {/* TODO: Fix JSX expression */});]
-    },
-    memor,
-  y: getMemoryUsage()]
-    }});
-};
-// Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */});;);
-};`
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

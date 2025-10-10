@@ -2,8 +2,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
   return(<section, className="py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-20">";
-        <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
-        <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";)
+        <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>")
+        <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>")
       </d, i, v>)
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
   g:px-8, relative, z-10">"
@@ -478,11 +478,5 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-<<<<<<< HEAD
-  );
-}
+  )}
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

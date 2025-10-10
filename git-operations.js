@@ -10,24 +10,13 @@ const { execSync } = require('child_process');
         timeout: 30000};
 // try {/* TODO: Fix JSX expression */};
   function execGit(command} description) {/* TODO: Fix JSX expression */};
-  t: 30000};
-      });
-<<<<<<< HEAD
-//       return result;
-    } catch (error) {/* TODO: Fix JSX expression */}
+  t: 30000}});
+//       return result} catch (error) {/* TODO: Fix JSX expression */}
 //       // console.log(`⚠️ ${description} faile)`
   d: `) error.message)
       return null,
     }
   }
-=======
-//       return result} catch (error) {/* TODO: Fix JSX expression */};
-//       // // console.log removed for production
-`
-  d: `) error.message);
-      return null};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //Step 1: Check current status;
 //   execGit('git status --porcelain') 'Checking git status');
   execGit('git branch -a') 'Checking branches');
@@ -84,23 +73,14 @@ const { execSync } = require('child_process');
   )
   execGit('git push origin main') 'Pushing merged changes to main'),
   //Step,
-<<<<<<< HEAD
   6: Check final status
 //   execGit('git status') 'Final status check')
   execGit('git log --oneline -5') 'Recent commits'),
 //   // } catch (error) {/* TODO: Fix JSX expression */}
 }
 // #!/usr/bin/env node const { execSync } = require('child_process');' const fs = require('fs');' const path = require('path'); ' try {//Function to execute git commands safely function execGit(command} description) {/* TODO: Fix JSX expression */}
-=======
-  6: Check final status;
-//   execGit('git status') 'Final status check');
-  execGit('git log --oneline -5') 'Recent commits');
-//   // } catch (error) {/* TODO: Fix JSX expression */};
-};
-// #!/usr/bin/env node const { execSync } = require('child_process');' const fs = require('fs');' const path = require('path'); ' try {//Function to execute git commands safely function execGit(command} description) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   g: 'utf8'} timeou,`
-  t: 30000 }); return result; } catch (error) { // console.log(`⚠️ ${description} faile)`
+  t: 30000 }); return result} catch (error) { // console.log(`⚠️ ${description} faile)`
   d: `) error.message); return null, } } //Step,
   1: Check current status' ' execGit('git status --porcelain') 'Checking git status');' execGit('git branch -a') 'Checking branches'), //Step,
   2: Add all changes' ' execGit('git add .') 'Adding all changes'), //Step,`

@@ -13,16 +13,9 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
         /></meta>
       </Helm, e, t>
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
-<<<<<<< HEAD
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
 const CognitiveAutomationEnterpriseRevolution: () => {
-=======
-      <div , classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r />;
-const CognitiveAutomationEnterpriseRevolution: () => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div>),
       <Helmet>),
         <title>Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>),
@@ -48,13 +41,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
         <Header />
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
-<<<<<<< HEAD
           {/* Back Link */}
-=======
-);
-};
-          {/* Back Link */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <Link to="/blog">
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">,
@@ -67,29 +54,17 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             <ArrowLeft className="w-4 h-4 mr-2" />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
         <Header />
-<<<<<<< HEAD
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
           <Link, t, o='/bl, o, g'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
-=======
-        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ };
-          <Link , t, o='/bl, o, g'
-            className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'>
-            <ArrowLeft , className='w-4 h-4, m, r-2' />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r /></Head>
 const,
-<<<<<<< HEAD
   CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */}
           {/* Back Link */}
-=======
-  CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */};
-          {/* Back Link */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <Link to="/blog"></Link>"
   className="inline-flex items-center text-zion-cyan,"
   hover:text-zion-blue-light mb-8 transition-colors">"
@@ -236,11 +211,7 @@ const,
               innovators. Discover the cognitive automation revolution delivering 92% efficiency gains,
               $3.2M average cost savings, and 10x productivity increases across Fortune 500 companies.
             </p>
-<<<<<<< HEAD
             {/* Key Stats */}
-=======
-            {/* Key Stats */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div></div>
                 <div>Efficiency Gains</div>
             <div></div>
@@ -522,13 +493,8 @@ const,
   </div>
   </div>
             </section>
-<<<<<<< HEAD
             {/* Business Impact */}
             <section >
-=======
-            {/* Business Impact */};
-            <section>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
               <p className="text-lg leading-relaxed mb-6">
 Real-world implementations across industries are delivering transformational results: </p>
@@ -1233,11 +1199,7 @@ Real-world implementations across industries are delivering transformational,
   </div>
   </div>
             </section>
-<<<<<<< HEAD
             {/* Call to Action */}
-=======
-            {/* Call to Action */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <section className="bg-gradient-to-r from-purple-900/60 to-blue-900/60 rounded-2xl p-12 border-2 border-purple-500/40 text-center">
               <Rocket className="w-16 h-16 text-purple-400 mx-auto mb-6 ">
               <h2 className="text-4xl font-bold text-white mb-6"></h2>
@@ -1423,14 +1385,8 @@ Real-world implementations across industries are delivering transformational,
                   Schedule, Consultatio, n;
                   <TrendingUp , classNam, e='w-5 h-5' />
                   Explore, AI, Services;
-<<<<<<< HEAD
                   <TrendingUp, className='w-5 h-5' />
-                  Explore, AI, Services;
-}
-=======
-                  <TrendingUp , className='w-5 h-5' />
-                  Explore, AI, Services};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                  Explore, AI, Services}
                       <p, classNam, e = 'mb-4'></p>
                         Identify, hig, h-value, automation, opportunities through, process, mini, n, g, stakeholder, interview, s, and, ROI, modeling. Prioritize, use, cases based, on, business impact, and, technical feasibili, t, y.
             <section, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, tex, t-cent, e, r'></section>
@@ -1448,8 +1404,7 @@ Real-world implementations across industries are delivering transformational,
                   <TrendingUp, classNam, e='w-5 h-5' /></TrendingUp>
                   Explore, AI, Services;
                   <TrendingUp, className='w-5 h-5' /></TrendingUp>
-                  Explore, AI, Services;
-}"
+                  Explore, AI, Services}"
   </span>
   </span>
   </span>

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 interface SEOProps {/* TODO: Fix JSX expression */}
-=======
-interface SEOProps {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />

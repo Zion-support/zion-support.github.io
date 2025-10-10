@@ -39,8 +39,7 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
         "95% fewer, false, positives"
       ],",
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
-     };
-  ]; return(<section , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
+     }]; return(<section , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
       <div , className="container, m, x-auto, p, x-6">
         <div , className="te, x, t-center, m, b-16">
   ]; return (
@@ -66,21 +65,12 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
               <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>
                 <div , classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
                   {sto, r, y.ic, o, n}</div>
-<<<<<<< HEAD
                   <d, i, v>
                     <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>
 const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-                  <d , i, v>
-                    <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>;
-const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     };
-  ]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>"
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>"
       <div, className="container, m, x-auto, p, x-6"></div>"
         <div, className="te, x, t-center, m, b-16"></div>"
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -121,11 +111,7 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                     </di, v>)
                   ))};
                 </div>"
-<<<<<<< HEAD
                 <Link, t, o = "/ca, s, e-studi, e, s""
-=======
-                <Link , t, o = "/ca, s, e-studi, e, s""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">
                   Read, Full, Story;
                   <Link , className="w-4 h-4" />
@@ -138,11 +124,7 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
           ))};
         </div>
         <div, classNam, e = "te, x, t-cent, e, r"></div>
-<<<<<<< HEAD
           <Link, t, o="/ca, s, e-studi, e, s"
-=======
-          <Link , t, o="/ca, s, e-studi, e, s"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg">
             View, All, Success Stori, e, s;
             <Link , className="w-6 h-6" />
@@ -156,6 +138,5 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-}
+  )}
 export default SuccessStoriesShowcase;"`

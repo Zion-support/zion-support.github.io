@@ -8,7 +8,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
   e: "🚀 Autonomous, DevOps, Platforms","
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s","
-<<<<<<< HEAD
       catego, r, y: "DevO, p, s & Infrastructu, r, e"
 const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -22,21 +21,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-      catego, r, y: "DevO, p, s & Infrastructu, r, e";
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';
 impo, r, t {/* TODO: Fix JSX expression */}"
@@ -48,7 +32,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
   e: "🚀 Autonomous, DevOps, Platforms",";
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s",";
-<<<<<<< HEAD
       catego, r, y: "DevO, p, s & Infrastructu, r, e"
 const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -64,23 +47,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-      catego, r, y: "DevO, p, s & Infrastructu, r, e";
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   return(<div , className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
       <div , className="te, x, t-center, m, b-8">
@@ -118,8 +84,8 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       </d, i, v>
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l)
+  g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
         {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
           <Li, n, k;
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
@@ -167,7 +133,5 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </Li, n, k>
       </d, i, v>
     </d, i, v>
-  );
-}
-export default October2025MegaLaunchBanner;
-}}"
+  )}
+export default October2025MegaLaunchBanner}}"

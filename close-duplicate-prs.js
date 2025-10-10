@@ -4,21 +4,12 @@ async function closeDuplicatePRs() {
   try {
 //     //Get all open PRs;
     const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100')
-<<<<<<< HEAD
     )
 //     const duplicatePRs = prs.filter(pr =>)
         pr.title === 'Fix errors and merge to main' &&)
         (pr.draft || pr.mergeable === false || pr.mergeable_state === 'dirty')
     )
 //     let closedCount = 0,
-=======
-    );
-//     const duplicatePRs = prs.filter(pr =>)
-        pr.title === 'Fix errors and merge to main' &&)
-        (pr.draft || pr.mergeable === false || pr.mergeable_state === 'dirty')
-    );
-//     let closedCount = 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ,
     for (const pr of duplicatePRs) {,
       try {,
@@ -32,23 +23,16 @@ async function closeDuplicatePRs() {
             body: JSON.stringify({)
               state: 'closed'),
               body: `This PR has been automatically closed as it was a duplicate. The main fixes have already been merged into the main branch.\n\n**Reason for closure:** Duplicate PR with merge conflicts or draft status.\n\n**Status:** ✅ All critical fixes have been successfully merged.`),
-async function closeDuplicatePRs() {/* TODO: Fix JSX expression */};
-};
+async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}};
   try {/* TODO: Fix JSX expression */};
   s://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
-          {/* TODO: Fix JSX expression */};
-            },
+          {/* TODO: Fix JSX expression */}},
             bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
-            })};
-        );
-        if (closeResponse.ok) {/* TODO: Fix JSX expression */};
-        } else {/* TODO: Fix JSX expression */};
-        };
+            })});
+        if (closeResponse.ok) {/* TODO: Fix JSX expression */}} else {/* TODO: Fix JSX expression */}};
         // Add a small delay to avoid rate limiting;
-<<<<<<< HEAD
-        await new Promise(resolve => setTimeout(resolve, 100));
-      } catch (error) {/* TODO: Fix JSX expression */}
+        await new Promise(resolve => setTimeout(resolve, 100))} catch (error) {/* TODO: Fix JSX expression */}
       }
     }
 
@@ -56,13 +40,5 @@ async function closeDuplicatePRs() {/* TODO: Fix JSX expression */};
 //     }
 }
 
-=======
-        await new Promise(resolve => setTimeout(resolve, 100))} catch (error) {/* TODO: Fix JSX expression */};
-      };
-    };
-//     //     //     } catch (error) {/* TODO: Fix JSX expression */};
-//     };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // closeDuplicatePRs().catch(console.error);
 `

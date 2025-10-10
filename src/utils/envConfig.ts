@@ -3,7 +3,6 @@
  * Environment Configuration Manager;
  * Provides type-safe access to environment variables with validation;
  */
-<<<<<<< HEAD
 
 export interface EnvConfig {
     // TODO: Add content
@@ -13,20 +12,12 @@ export interface EnvConfig {
     apiUrl: string
 
   apiKey?: string,,
-=======
-export interface EnvConfig {// TODO: Add content};
-};
-  nodeEnv: 'development' | 'production' | 'test';,
-    apiUrl: string
-  apiKey?: string;,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     enableAnalytic,
   s: boolean,,
     enableLoggin,
   g: boolean,,
     logLeve,
   l: 'debug' | 'info' | 'warn' | 'error'
-<<<<<<< HEAD
   sentryDsn?: string
   gaTrackingId?: string,
 }
@@ -43,32 +34,13 @@ class EnvironmentConfig {
   O: Add content,}
 }
     this.config = this.loadConfig();
-    this.isInitialized = true;
-  }
+    this.isInitialized = true}
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults
   }
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  sentryDsn?: string;
-  gaTrackingId?: string};
-class EnvironmentConfig {// TODO: Add content};
-};
-  private,
-  config: EnvConfig;
-  private isInitialized = false;
-  constructor() {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    this.config = this.loadConfig();
-    this.isInitialized = true};
-  private loadConfig(): EnvConfig {// Safely access environment variables with defaults};
-    return {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //       nodeEnv,
       apiUr,
   l:
@@ -86,41 +58,27 @@ class EnvironmentConfig {// TODO: Add content};
   l: (process.env.NEXT_PUBLIC_LOG_LEVEL ||)
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-<<<<<<< HEAD
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,
 
     }
   }
-=======
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get the entire configuration object;
    */
   public getConfig(): Readonly;
-<<<<<<< HEAD
           <EnvConfig> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return Object.freeze({ ...this.config });
-  }
-=======
-          <EnvConfig> {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    return Object.freeze({ ...this.config })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    return Object.freeze({ ...this.config })}
   /**
    * Get a specific configuration value;
    */
   public get;
           <K extends keyof EnvConfig>(ke)
-<<<<<<< HEAD
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return this.config[key];
-  }
+    return this.config[key]}
   /**
    * Check if running in production;
    */
@@ -130,8 +88,7 @@ class EnvironmentConfig {// TODO: Add content};
   }
 
 }
-    return this.config.nodeEnv === 'production';
-  }
+    return this.config.nodeEnv === 'production'}
   /**
    * Check if running in development;
    */
@@ -141,8 +98,7 @@ class EnvironmentConfig {// TODO: Add content};
   }
 
 }
-    return this.config.nodeEnv === 'development';
-  }
+    return this.config.nodeEnv === 'development'}
   /**
    * Check if running in test mode;
    */
@@ -152,8 +108,7 @@ class EnvironmentConfig {// TODO: Add content};
   }
 
 }
-    return this.config.nodeEnv === 'test';
-  }
+    return this.config.nodeEnv === 'test'}
   /**
    * Validate required environment variables;
    */
@@ -163,39 +118,9 @@ class EnvironmentConfig {// TODO: Add content};
   }
 
 }
-=======
-  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    return this.config[key]};
-  /**
-   * Check if running in production;
-   */
-  public isProduction(): boolean {// TODO: Add content};
-};
-    return this.config.nodeEnv === 'production'};
-  /**
-   * Check if running in development;
-   */
-  public isDevelopment(): boolean {// TODO: Add content};
-};
-    return this.config.nodeEnv === 'development'};
-  /**
-   * Check if running in test mode;
-   */
-  public isTest(): boolean {// TODO: Add content};
-};
-    return this.config.nodeEnv === 'test'};
-  /**
-   * Validate required environment variables;
-   */
-  public validate(requiredVars: (keyof EnvConfig)[]): {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   vali,
   d: boolean,,
     missin,
-<<<<<<< HEAD
   g: string[],
   } {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -208,43 +133,19 @@ class EnvironmentConfig {// TODO: Add content};
       if (!this.config[varName]) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        missing.push(varName);
-      }
+        missing.push(varName)}
     }
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   vali,
   d: missing.length === 0,
-//       missing;
-    }
+//       missing}
   }
-=======
-  g: string[]} {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    const,
-  missing: string[] = [];
-    for (const varName of requiredVars) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      if (!this.config[varName]) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-        missing.push(varName)};
-    };
-    return {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-  vali,
-  d: missing.length === 0,
-//       missing}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get API headers with authentication;
    */
   public getApiHeaders(): Record;
-<<<<<<< HEAD
           <string, string> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -258,14 +159,12 @@ class EnvironmentConfig {// TODO: Add content};
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
-    }
+      headers['Authorization'] = `Bearer ${this.config.apiKey}`}
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
   }`
       headers['Authorization'] = `Bearer ${this.config.apiKey}`
     }
-    return headers;
-  }
+    return headers}
   /**
    * Log configuration in development mode;
    */
@@ -283,39 +182,6 @@ class EnvironmentConfig {// TODO: Add content};
   O: Add content,}
 }
 
-=======
-          <string, string> {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    const,
-  headers: Record;
-          <string, string> = {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      'Content-Type': 'application/json'
-    };
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`};
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */};
-  }`
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`
-    };
-    return headers};
-  /**
-   * Log configuration in development mode;
-   */
-  public logConfig(): void {// TODO: Add content};
-};
-    if (this.isDevelopment()) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-      console.group(' Environment Configuration');
-      console.table({/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   Environment: this.config.nodeEnv,
         'API URL': this.config.apiUrl,
         'Analytics Enabled': this.config.enableAnalytics,
@@ -323,21 +189,11 @@ class EnvironmentConfig {// TODO: Add content};
         'Log Level': this.config.logLevel,
         'API Key Set': !!this.config.apiKey,
         'Sentry DSN Set': !!this.config.sentryDsn,
-<<<<<<< HEAD
 
-        'GA Tracking ID Set': !!this.config.gaTrackingId;
-
-      });
-      console.groupEnd();
-    }
+        'GA Tracking ID Set': !!this.config.gaTrackingId});
+      console.groupEnd()}
   }
 }
-=======
-        'GA Tracking ID Set': !!this.config.gaTrackingId});
-      console.groupEnd()};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Export singleton instance;
 export const envConfig = new EnvironmentConfig()
 // Export convenient helper functions;
@@ -346,7 +202,4 @@ export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()
 export const getConfig = () => envConfig.getConfig()
 export const getApiHeaders = () => envConfig.getApiHeaders()`
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

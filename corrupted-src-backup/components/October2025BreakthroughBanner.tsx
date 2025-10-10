@@ -1,14 +1,6 @@
 const, October2025BreakthroughBanne, r = () => {
-<<<<<<< HEAD
   return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">)
       {/* Background, Effect, s */})
-=======
-return (
-  return(<section , className="relative, p, y-20, overflo, w-hidd, e, n">
-);
-})
-      {/* Background, Effect, s */};)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  />)
       <div , className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  />
   return (
@@ -39,17 +31,10 @@ return (
   d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-indi, g, o-300, t, o-emera, l, d-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
             Revolutionary, AI, Technologies Transforming, Enterprise, Operations;
           </h2>
-<<<<<<< HEAD
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d">
             Explore, three, groundbreaking AI, innovations, delivering unprecedented, result, s: Sovereign, Agents, with 94% decision, accurac, y;</p>
 const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Background, Effect, s */}
-=======
-          <p , className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d">
-            Explore, three, groundbreaking AI, innovations, delivering unprecedented, result, s: Sovereign, Agents, with 94% decision, accurac, y;</p>;
-const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Background, Effect, s */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></div>"
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  /></div>"
       <div, className="container, m, x-auto, p, x-6, relative, z-10"></div>
@@ -345,7 +330,6 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */};
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
-}
+  )}
 export default October2025BreakthroughBanner;
 "

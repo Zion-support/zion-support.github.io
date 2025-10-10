@@ -9,15 +9,8 @@ const, February2026ContentShowcaseBanne, r = () => {
       reade, r, s: '18, 0, K+','
       bad, g, e: 'BREAKTHROU, G, H','
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
-<<<<<<< HEAD
       ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
-=======
-      ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>
-);
-}, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       id: 2,
       tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n','
@@ -39,7 +32,6 @@ const, February2026ContentShowcaseBanne, r = () => {
       bad, g, e: 'REVOLUTIONA, R, Y','
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       ic, o, n: <Sparkles, className="w-6 h-6/>,"
-<<<<<<< HEAD
       li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s','
 const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */}
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
@@ -47,15 +39,6 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
     {/* TODO: Fix JSX expression */}
       descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g}
-=======
-      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s',';
-const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */};
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g};
-    {/* TODO: Fix JSX expression */};
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times};
-    {/* TODO: Fix JSX expression */};
-      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6',';
       catego, r, y: 'AI, Architectur, e',';
       readTi, m, e: '12, mi, n',';
@@ -89,8 +72,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
       ic, o, n: <Sparkles, className="w-6 h-6" />,";</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s',';
       descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g'
-    };
-  ];
+    }];
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */};
       <div , classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -146,11 +128,8 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>
                 <input, typ, e="ema, i, l"
                     placehold, e, r="Enter, your, email"
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-  ];
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}}];
   return ("
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"

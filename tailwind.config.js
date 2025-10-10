@@ -138,16 +138,9 @@ export default {
         '80': '80',
         '90': '90',
         '100': '100'}}},
-<<<<<<< HEAD
   plugins: [,
     function({ addUtilities }) {
       const newUtilities = {
-=======
-  plugins: [,;
-function({ addUtilities }) {;
-const newUtilities = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         '.neon-text': {
           color: 'var(--neon-cyan)',
           animation: 'neon-glow 2 s ease-in-out infinite alternate'},
@@ -221,10 +214,5 @@ const newUtilities = {
           clip: 'auto',
           whiteSpace: 'normal'}};
       addUtilities(newUtilities)
-<<<<<<< HEAD
     }
   ]}
-=======
-    };
-  ]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,15 +1,9 @@
-export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-  ];
-  return(<section, className="relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n">";)
+export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}}];
+  return(<section, className="relative, p, y-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, overflo, w-hidd, e, n">")
       {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0">)
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_rig, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]/>"
@@ -222,11 +216,5 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-<<<<<<< HEAD
-  );
-}
+  )}
 "`
-=======
-  )};
-;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

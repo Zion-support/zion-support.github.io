@@ -14,7 +14,6 @@ const newestCursorBranches = [
 function safeGitCommand(command, description) {
   try {
 //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-<<<<<<< HEAD
 //     return { success: true, result }
   } catch (error) {
 //     return { success: false, error: error.message }
@@ -27,16 +26,6 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-//     return { success: true, result }} catch (error) {
-//     return { success: false, error: error.message };
-function safeGitCommand(command, description) {/* TODO: Fix JSX expression */};
-  o: 'pipe' });
-//     return {/* TODO: Fix JSX expression */};
-  s: true, result }} catch (error) {/* TODO: Fix JSX expression */};
-  r: error.message }};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to check if branch exists;
 function branchExists(branchName) {
   try {
@@ -45,19 +34,11 @@ function branchExists(branchName) {
 function branchExists(branchName) {/* TODO: Fix JSX expression */};
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
       {/* TODO: Fix JSX expression */};
-  o: 'pipe' };
-    );
-<<<<<<< HEAD
-    return true;
-  } catch {/* TODO: Fix JSX expression */}
+  o: 'pipe' });
+    return true} catch {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-    return true} catch {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Ensure we're on main branch;
 // safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
@@ -70,15 +51,9 @@ for (const branch of newestCursorBranches) {
     results.push({)
       branch)
       status: 'not_found'),
-for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */};
-    });
-<<<<<<< HEAD
-    continue;
-  }
+for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */}});
+    continue}
 
-=======
-    continue};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //   //Try to merge the branch;
   const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`)
     `Merge ${branch}`
@@ -87,8 +62,7 @@ for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */};
     mergedCount++;
 //     results.push({)
       branch)
-      status: 'merged')});
-  } else {
+      status: 'merged')})} else {
 //     //Try to abort the merge if there was a conflict;
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
     results.push({)
@@ -99,39 +73,22 @@ for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */};
   const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,`
     `Merge ${branch}`)
   );
-<<<<<<< HEAD
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
-    });
-  } else {/* TODO: Fix JSX expression */}`
-=======
-  if (mergeResult.success) {/* TODO: Fix JSX expression */};
     })} else {/* TODO: Fix JSX expression */}`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
     results.push({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
-    });
-  }
+    })}
 }
 
-=======
-    })};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Run system checks;
 // const typeCheck = safeGitCommand('pnpm run type-check')
   'TypeScript type checking'
 );
 const buildCheck = safeGitCommand('pnpm run build: no-check')
   'Production build'
-<<<<<<< HEAD
 )
 //Push changes if any were merged
-=======
-);
-//Push changes if any were merged;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 if (mergedCount > 0) {
 //   const pushResult = safeGitCommand('git push origin main')
     'Push changes to main'),
@@ -147,8 +104,7 @@ const buildCheck = safeGitCommand('pnpm run,
 //Push changes if any were merged;
 if (mergedCount > 0) {/* TODO: Fix JSX expression */};
 //     } else {/* TODO: Fix JSX expression */};
-//     };
-};
+//     }};
 //Generate comprehensive report;
 const report = {
 };
@@ -166,33 +122,22 @@ const report = {
     allPassed: typeCheck.success &&
       lintCheck.success &&,
       testCheck.success &&,
-<<<<<<< HEAD
       buildCheck.success
   },
   results: results,
   status: mergedCount > 0 ? 'success' : 'no-changes'}
 
-=======
-      buildCheck.success},
-  results: results;
-  status: mergedCount > 0 ? 'success' : 'no-changes'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Save detailed report;
 fs.writeFileSync('newest-cursor-branches-merge-report.json')
 const report = {/* TODO: Fix JSX expression */}`
   e: `${Math.round((mergedCount / newestCursorBranches.length) * 100)}%`},
   systemCheck,
-  s: {/* TODO: Fix JSX expression */};
-  },
+  s: {/* TODO: Fix JSX expression */}},
   result,
   s: results,
   statu,
-<<<<<<< HEAD
   s: mergedCount > 0 ? 'success' : 'no-changes'}
 
-=======
-  s: mergedCount > 0 ? 'success' : 'no-changes'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Save detailed report;
 fs.writeFileSync('newest-cursor-branches-merge-report.json')
   JSON.stringify(report, null, 2)

@@ -2,36 +2,22 @@
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
  */
-<<<<<<< HEAD
 
 export interface SecurityHeadersConfig {
     // TODO: Add content
   }
 
 }
-=======
-export interface SecurityHeadersConfig {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
   xFrameOptions?: string;
   xContentTypeOptions?: string;
   referrerPolicy?: string;
-<<<<<<< HEAD
-  permissionsPolicy?: string;
-}
+  permissionsPolicy?: string}
 export const,
   _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  permissionsPolicy?: string};
-export const,
-  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Content Security Policy,
   contentSecurityPolic,
   y: [
@@ -89,7 +75,6 @@ export const,
 export function getSecurityHeaders()
   customConfig?: Partial;
           <SecurityHeadersConfig>
-<<<<<<< HEAD
 ): Record<string, string> {const headers: Record<string, string> = {}
   // TODO: Add content,
 
@@ -100,77 +85,35 @@ export function getSecurityHeaders()
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;
-  }
+    headers['Content-Security-Policy'] = config.contentSecurityPolicy}
   if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;
-  }
+    headers['Strict-Transport-Security'] = config.strictTransportSecurity}
   if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    headers['X-Frame-Options'] = config.xFrameOptions;
-  }
+    headers['X-Frame-Options'] = config.xFrameOptions}
   if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;
-  }
+    headers['X-Content-Type-Options'] = config.xContentTypeOptions}
   if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    headers['Referrer-Policy'] = config.referrerPolicy;
-  }
+    headers['Referrer-Policy'] = config.referrerPolicy}
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    headers['Permissions-Policy'] = config.permissionsPolicy;
-  }
-    headers['Permissions-Policy'] = config.permissionsPolicy;
-  }
-  return headers;
-}
-=======
-): Record<string, string> {const headers: Record<string, string> = {};
-  // TODO: Add content};
-    'X-XSS-Protection': '1; mode=block',
-    'X-DNS-Prefetch-Control': 'on'
-  };
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy};
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity};
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    headers['X-Frame-Options'] = config.xFrameOptions};
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions};
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    headers['Referrer-Policy'] = config.referrerPolicy};
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    headers['Permissions-Policy'] = config.permissionsPolicy};
-    headers['Permissions-Policy'] = config.permissionsPolicy};
-  return headers};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    headers['Permissions-Policy'] = config.permissionsPolicy}
+    headers['Permissions-Policy'] = config.permissionsPolicy}
+  return headers}
 /**
  * Get security headers in Next.js format;
  */
 export function getNextSecurityHeaders()
   customConfig?: Partial;
           <SecurityHeadersConfig>
-<<<<<<< HEAD
 ): Array<{ key: string, value: string }> {
     // TODO: Add content
   }
@@ -181,20 +124,7 @@ export function getNextSecurityHeaders()
   O: Add content,}
 }
 //     key,
-//     value;)
-  }));
-}
+//     value)
+  }))}
 export default defaultSecurityHeaders;"
 
-=======
-): Array<{ key: string; value: string }> {// TODO: Add content};
-};
-  const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-//     key,
-//     value;)
-  }))};
-export default defaultSecurityHeaders;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

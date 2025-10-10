@@ -498,30 +498,17 @@ const pageConfigs = {
     benefits: ['Faster Insights', 'Automated Analysis', 'Better Predictions', 'Competitive Advantage'],
     price: '$1,400/month',
     keywords: ['smart analytics', 'AI analytics', 'automated reporting', 'predictive analytics', 'intelligent insights']
-<<<<<<< HEAD
   }
 }
 
-=======
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Create missing pages;
 missingPages.forEach(pageName => {)
-  const config = pageConfigs[pageName];)
+  const config = pageConfigs[pageName])
   if (!config) {
-<<<<<<< HEAD
     console.log(`No configuration found for ${pageName}`);
-    return;
-  }
+    return}
 
   const pageContent = `'use client';
-=======
-    // console.log removed for production
-return};
-;
-const pageContent = `'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -530,17 +517,12 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain,
 
 const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {,
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
-      <SEOOptimizer ;),
+      <SEOOptimizer ),
         title="${config.title} - Zion Tech Group"
         description="${config.description}"
         keywords={${JSON.stringify(config.keywords)}};
         canonicalUrl="https://ziontechgroup.com/${pageName}"
       />
-<<<<<<< HEAD
-=======
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */};
@@ -558,18 +540,11 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a ;
                 href="/contact"
-<<<<<<< HEAD
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
                 Get Started Today
               </a>
               <a
-=======
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                Get Started Today;
-              </a>
-              <a ;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 <Phone className="w-5 h-5" />
@@ -635,14 +610,9 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               <p className="text-gray-300 mb-6">per month</p>
               <a ;
                 href="/contact"
-<<<<<<< HEAD
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
               >
                 Get Started,
-=======
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block">
-                Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </a>
             </div>
           </div>,
@@ -688,31 +658,16 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
         </section>
       </main>
       <Footer />,
-<<<<<<< HEAD
-    </div>);
-}
+    </div>)}
 
-=======
-    </div>)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
   // Create directory if it doesn't exist;
   const dirPath = `app/${pageName}`;
   if (!fs.existsSync(dirPath)) {
-<<<<<<< HEAD
-    fs.mkdirSync(dirPath, { recursive: true });
-  }
+    fs.mkdirSync(dirPath, { recursive: true })}
 
-=======
-    fs.mkdirSync(dirPath, { recursive: true })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Write the page file;
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
-  console.log(`Created page: ${pageName}`);
-});
-<<<<<<< HEAD
+  console.log(`Created page: ${pageName}`)});
 
 console.log(`Created ${missingPages.length} missing pages`);
-=======
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

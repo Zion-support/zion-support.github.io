@@ -52,7 +52,6 @@ export default function HeroSection() {
             </div>
           </div>
           {/* CTA Buttons */}
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mt-12">
             <a
               href="#services"
@@ -64,17 +63,6 @@ export default function HeroSection() {
               className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
               Get Started,
   </
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <a href="#services"
-              className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-              Explore Services
-            </a>
-            <a href="#contact"
-              className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-              Get Started
-            </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </div>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
@@ -104,15 +92,9 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-}
+  )}
 export default HeroSection;"`
   </a>
   </a>
   </span>
   </span>
-=======
-  )};
-export default HeroSection;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

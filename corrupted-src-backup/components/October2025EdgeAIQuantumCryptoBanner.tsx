@@ -31,8 +31,8 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
               Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;
             </h2>)
-            <p, className="te, x, t-l, g, m;)
-  d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">";)
+            <p, className="te, x, t-l, g, m)
+  d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">")
 export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */};
           {/* Head, e, r */};
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
@@ -301,11 +301,5 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-<<<<<<< HEAD
-  );
-}
+  )}
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -3,10 +3,8 @@
  * Provides structured logging with levels and formatting;
 //  * Replaces direct console.log usage throughout the application;
  */
-export enum LogLevel {/* TODO: Fix JSX expression */};
-};
-interface LoggerConfig {/* TODO: Fix JSX expression */};
-};
+export enum LogLevel {/* TODO: Fix JSX expression */}};
+interface LoggerConfig {/* TODO: Fix JSX expression */}};
 class Logger {
   private config: LoggerConfig
   private static instance: Logger,
@@ -17,7 +15,6 @@ class Logger {
       prefix: config.prefix || 'APP',
       timestamp: config.timestamp !== false,
       colorize: config.colorize !== false && typeof window !== 'undefined',
-<<<<<<< HEAD
 class Logger {/* TODO: Fix JSX expression */}
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
     }
@@ -25,33 +22,16 @@ class Logger {/* TODO: Fix JSX expression */}
 
   public static getInstance(config?: Partial<LoggerConfig>): Logger {/* TODO: Fix JSX expression */}
     }
-    return Logger.instance;
-  }
+    return Logger.instance}
 
   private getLogLevelFromEnv(): LogLevel {/* TODO: Fix JSX expression */}
       }
     }
     // Default to INFO in production, DEBUG in development;
-    return process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG;
-  }
+    return process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG}
 
   private formatMessage(level: string, message: string, ...args: unknown[]): string {,
     const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
-=======
-class Logger {/* TODO: Fix JSX expression */};
-  g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */};
-    }};
-  public static getInstance(config?: Partial<LoggerConfig>): Logger {/* TODO: Fix JSX expression */};
-    };
-    return Logger.instance};
-  private getLogLevelFromEnv(): LogLevel {/* TODO: Fix JSX expression */};
-      };
-    };
-    // Default to INFO in production, DEBUG in development;
-    return process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG};
-  private formatMessage(level: string, message: string, ...args: unknown[]): string {,;
-const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   private formatMessage(leve,
   l: string, messag,
   e: string, ...arg)
@@ -59,9 +39,7 @@ const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
     const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';`
     //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : '';
     //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';`
-<<<<<<< HEAD
-    return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim();
-  }
+    return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim()}
 
   private shouldLog(level: LogLevel): boolean {
     ,
@@ -89,30 +67,11 @@ const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
   }
   }
 
-=======
-    return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim()};
-  private shouldLog(level: LogLevel): boolean {,
-    return level >= this.config.level};
-  public debug(message: string, ...args: unknown[]): void {,
-    if (this.shouldLog(LogLevel.DEBUG)) {,
-      //       // )};
-  };
-  public info(message: string, ...args: unknown[]): void {,
-    if (this.shouldLog(LogLevel.INFO)) {,
-      //       )};
-  };
-  public warn(message: string, ...args: unknown[]): void {,
-    if (this.shouldLog(LogLevel.WARN)) {,
-      //       // )};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   public error(message: string, error?: Error | any, ...args: unknown[]): void {,
     if (this.shouldLog(LogLevel.ERROR)) {,
       const errorDetails =,
         error instanceof Error ? { message: error.message, stack: error.stack } : error;
-<<<<<<< HEAD
-      //       // );
-    }
+      //       // )}
   }
 
   public setLevel(level: LogLevel): void {
@@ -120,53 +79,30 @@ const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
     this.config.level = level
   }
 
-=======
-      //       // )};
-  };
-  public setLevel(level: LogLevel): void {,
-    this.config.level = level};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   public setPrefix(prefix: string): void {,
     this.config.prefix = prefix;
   private shouldLog(leve)
-  l: LogLevel): boolean {/* TODO: Fix JSX expression */};
-  };
+  l: LogLevel): boolean {/* TODO: Fix JSX expression */}};
   public debug(messag,
   e: string, ...arg)
-  s: unknown[]): void {/* TODO: Fix JSX expression */};
-    };
-  };
+  s: unknown[]): void {/* TODO: Fix JSX expression */}}};
   public info(messag,
   e: string, ...arg)
-  s: unknown[]): void {/* TODO: Fix JSX expression */};
-    };
-  };
+  s: unknown[]): void {/* TODO: Fix JSX expression */}}};
   public warn(messag,
   e: string, ...arg)
-  s: unknown[]): void {/* TODO: Fix JSX expression */};
-    };
-  };
+  s: unknown[]): void {/* TODO: Fix JSX expression */}}};
   public error(messag,
   e: string, error?: Error | any, ...arg)
   s: unknown[]): void {/* TODO: Fix JSX expression */};
   k: error.stack } : error;
-<<<<<<< HEAD
-      //       // console.error(this.formatMessage('ERROR', message, errorDetails, ...args));
-    }
+      //       // console.error(this.formatMessage('ERROR', message, errorDetails, ...args))}
   }
 
-=======
-      //       // // console.error removed for production
-)};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   public setLevel(leve)
-  l: LogLevel): void {/* TODO: Fix JSX expression */};
-  };
+  l: LogLevel): void {/* TODO: Fix JSX expression */}};
   public setPrefix(prefi)
-  x: string): void {/* TODO: Fix JSX expression */};
-  };
-};
+  x: string): void {/* TODO: Fix JSX expression */}}};
 // Export singleton instance;
 export const logger = Logger.getInstance();
 // Export convenience functions;

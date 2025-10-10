@@ -32,12 +32,8 @@ function processFile(filePath) {
         ) {
           lastClosingTagIndex = i;
           break;
-function processFile(filePath) {/* TODO: Fix JSX expression */};
-        };
-      };
-      if (lastClosingTagIndex !== -1) {/* TODO: Fix JSX expression */};
-      };
-    };
+function processFile(filePath) {/* TODO: Fix JSX expression */}}};
+      if (lastClosingTagIndex !== -1) {/* TODO: Fix JSX expression */}}};
     // Fix function declarations;
     content = content.replace(
       /export default function (\w+)\(\) \{/,
@@ -50,15 +46,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */};
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
-<<<<<<< HEAD
-        modified = true;
-      }
+        modified = true}
     }
 
-=======
-        modified = true};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Fix any remaining syntax issues;
     content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g)
       ''
@@ -66,34 +56,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   l:\s*['"`][^'"`]*['"`]\s*\}/g,
       '')
     );
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 // Process all files;
 filesToFix.forEach(file => {)
   if (processFile(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-// Process all files;
-filesToFix.forEach(file => {)
-  if (processFile(file)) {
-    fixedCount++};
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   })
 });
 // "`

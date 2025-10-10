@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 export type Notification = {/* TODO: Fix JSX expression */}
 }
 type NotificationSystemProp, s = {/* TODO: Fix JSX expression */}
  }
-=======
-export type Notification = {/* TODO: Fix JSX expression */};
-};
-type NotificationSystemProp, s = {/* TODO: Fix JSX expression */};
- };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default function NotificationSyst, e, m({)
   notificatio, n, s)
   onAddNotificati, o, n)
@@ -27,9 +20,4 @@ export default function NotificationSyst, e, m({/* TODO: Fix JSX expression */})
         </button>
       ))};
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}

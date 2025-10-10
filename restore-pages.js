@@ -2,10 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // List of all page files that need to be restored;
 const pageFiles = [
 ];
@@ -69,27 +66,15 @@ function createPageComponent(pageName) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
   return `import React from 'react';
-<<<<<<< HEAD
 
 const ${componentName}: React.FC = () => {
-=======
-;
-const ${componentName}: React.FC = () => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)
       <div className="text-center">)
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>)
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>
-<<<<<<< HEAD
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
 function createPageComponent(pageName) {/* TODO: Fix JSX expression */}
 const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">;
-function createPageComponent(pageName) {/* TODO: Fix JSX expression */};
-const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
@@ -97,17 +82,10 @@ const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */};
           Contact Us,
         </a>
       </div>,
-<<<<<<< HEAD
-    </div>);
-}
+    </div>)}
 
-export default ${componentName}`;
-}
+export default ${componentName}`}
 
-=======
-    </div>)};
-export default ${componentName};`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to restore a page file;
 function restorePageFile(pagePath) {
   const fullPath = path.join(__dirname, 'src', pagePath);
@@ -115,45 +93,22 @@ function restorePageFile(pagePath) {
   // Create directory if it doesn't exist;
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
-<<<<<<< HEAD
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
-  e: true });
-  }
+  e: true })}
   
   const pageName = pagePath.replace('.tsx', '');
-=======
-function restorePageFile(pagePath) {/* TODO: Fix JSX expression */};
-  e: true })};
-  ;
-const pageName = pagePath.replace('.tsx', '');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const content = createPageComponent(pageName);
   fs.writeFileSync(fullPath, content, 'utf8');`
-<<<<<<< HEAD
   console.log(`Restore)`
-  d: ${pagePath}`);
-}
+  d: ${pagePath}`)}
 
-=======
-  // console.log removed for production
-`
-  d: ${pagePath}`)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution;
 console.log('Starting page restoration...');
 
 let restoredCount = 0;
-for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */};
-  } catch (error) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-    console.error(`Error restoring ${pageFile}:`, error.message);
-  }
+for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */}} catch (error) {/* TODO: Fix JSX expression */}`
+    console.error(`Error restoring ${pageFile}:`, error.message)}
 }
-=======
-    // console.error removed for production
-};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `
 console.log(`Restored ${restoredCount} page files`);
 console.log('Page restoration complete!');"`

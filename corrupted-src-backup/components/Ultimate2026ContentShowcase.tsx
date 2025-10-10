@@ -23,12 +23,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "$10, 0, M+ Savin, g, s",";
       featur, e, d: tr, u, e;
       sta, t, s: { savi, n, g;
-<<<<<<< HEAD
-  s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }";
-    }
-=======
-  s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"}
     {
       id: 2,
       tit, l, e: "AI, Securit, y & Compliance, Masterclas, s","
@@ -51,12 +46,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "99.99% Securi, t, y",";
       featur, e, d: tr, u, e;
       sta, t, s: { secur, i, t;
-<<<<<<< HEAD
-  y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }";
-    }
-=======
-  y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }"}
     {
       id: 3,
       tit, l, e: "Quant, u, m-Neural, Computing, Implementation","
@@ -79,12 +69,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "1000x, Performanc, e",";
       featur, e, d: tr, u, e;
       sta, t, s: { performa, n, c;
-<<<<<<< HEAD
-  e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }";
-    }
-=======
-  e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }"}
     {
       id: 4,
       tit, l, e: "Autonomous, Operations, Framework","
@@ -107,12 +92,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "98% Automati, o, n",";
       featur, e, d: fal, s, e;
       sta, t, s: { automat, i, o;
-<<<<<<< HEAD
-  n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }";
-    }
-=======
-  n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }"}
     {
       id: 5,
       tit, l, e: "Edge, AI, Deployment at, Enterprise, Scale","
@@ -135,12 +115,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "10,0, 0, 0+ Nod, e, s",";
       featur, e, d: fal, s, e;
       sta, t, s: { no, d, e;
-<<<<<<< HEAD
-  s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }";
-    }
-=======
-  s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }"}
     {
       id: 6,
       tit, l, e: "Me, t, a-Cognitive, AI, Development Gui, d, e","
@@ -163,12 +138,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "Me, t, a-Thinki, n, g",";
       featur, e, d: fal, s, e;
       sta, t, s: { reason, i, n;
-<<<<<<< HEAD
-  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }";
-    }
-=======
-  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }"}
   ];
   return(<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */};
@@ -183,39 +153,18 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">";</div>
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
-<<<<<<< HEAD
 const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-  s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }";
-    }
+  s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"}
     {/* TODO: Fix JSX expression */}"
-  y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }";
-    }
+  y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }"}
     {/* TODO: Fix JSX expression */}"
-  e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }";
-    }
+  e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }"}
     {/* TODO: Fix JSX expression */}"
-  n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }";
-    }
+  n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }"}
     {/* TODO: Fix JSX expression */}"
-  s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }";
-    }
+  s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }"}
     {/* TODO: Fix JSX expression */}"
-  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }";
-    }
-=======
-const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-  s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"};
-    {/* TODO: Fix JSX expression */}"
-  y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }"};
-    {/* TODO: Fix JSX expression */}"
-  e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }"};
-    {/* TODO: Fix JSX expression */}"
-  n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }"};
-    {/* TODO: Fix JSX expression */}"
-  s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }"};
-    {/* TODO: Fix JSX expression */}"
-  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }"}
   ];
   return ("
     <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
@@ -375,8 +324,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         {/* Showcase, Gri, d */};
         <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">")
-        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;)
-  l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";)
+        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x)
+  l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">")
           {showcaseConte, n, t.m, a, p((conte, n, t, ind, e, x) => (
             <moti, o, n.d, i, v;
         <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x
@@ -448,8 +397,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                         <sp, a, n>TRENDI, N, G</sp, a, n>
                       </d, i, v>
                     )};
-                    {/* TODO: Fix JSX expression */};
-                    )}"
+                    {/* TODO: Fix JSX expression */})}"
                     <span, className="px-4, p, y-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/25, tex, t-bl, u, e-300, tex, t-xs, fon, t-bold, border, border-bl, u, e-5, 0, 0/40">";
                       MASTERCLA, S, S;
                     </sp, a, n>
@@ -683,6 +631,5 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-}
+  )}
 export default Ultimate2026ContentShowcase;"`

@@ -5,40 +5,23 @@ import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileTe
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
-<<<<<<< HEAD
   const certifications = [],
-=======
-};
-const certifications = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
     { name: 'HIPAA Compliant', status: 'Certified' },
     { name: 'PCI DSS Level 1', status: 'Certified' },
-<<<<<<< HEAD
     { name: 'NIST Framework', status: 'Implemented' }
-=======
-    { name: 'NIST Framework', status: 'Implemented' };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const complianceAreas = [
 ];
   // TOD,
-<<<<<<< HEAD
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Shield,
       titl,
@@ -73,14 +56,9 @@ const certifications = [];
         <section className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
             <div className="flex items-center">
-<<<<<<< HEAD
               <Link
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 // >
-=======
-              <Link to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-//>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           "
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Privacy Policy,
@@ -141,25 +119,14 @@ Compliance Areas;"
               Our compliance team is available to answer any questions about our certifications,
               security measures, or data protection practices.
             <a
-<<<<<<< HEAD
               href="mailto: compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
               Contact Compliance Team,
-=======
-              href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-              Contact Compliance Team;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </a>"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
-<<<<<<< HEAD
-  );
-}
+  )}
 export default CompliancePage;
   </div>
   </div>
-=======
-  )};
-export default CompliancePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

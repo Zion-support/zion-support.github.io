@@ -16,30 +16,18 @@ const NewBlogContentShowcase202, 6: React.FC = () => { ,
       featured: t, r, u, e,
       ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
       bad, g, e: 'FEATU, R, E, D',
-<<<<<<< HEAD
       tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
 const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e'];
-const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     };
-  ]; const blogStat, s = [
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; const blogStat, s = [
     {  val, u, e: '5, 0, 0+', lab, e, l: 'Published, Articl, e, s', ic, o, n: <Award, classNam, e = "w-6 , h-, 6" / >  },"
     {  val, u, e: '2, M+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-6 , h-, 6" / >  },"
     {  val, u, e: '4., 8', lab, e, l: 'Average, Rati, n, g', ic, o, n: <Star, classNam, e = "w-6 , h-, 6" / >  },"
-    {  val, u, e: '15, 0+', lab, e, l: 'Expert, Autho, r, s', ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / >  };
-  ]; return(<div , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
+    {  val, u, e: '15, 0+', lab, e, l: 'Expert, Autho, r, s', ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / >  }]; return(<div , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};
       <div , className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -332,6 +320,5 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         </div>
       </div>
     </div>
-  );
-}
+  )}
 export default NewBlogContentShowcase2026;"`

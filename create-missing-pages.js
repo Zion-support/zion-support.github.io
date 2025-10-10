@@ -17,14 +17,8 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-<<<<<<< HEAD
 
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
-=======
-;
-const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer ;
         title="${title} - Zion Tech Group"
@@ -112,13 +106,8 @@ return (
         </div>
       </section>
       <Footer />,
-<<<<<<< HEAD
-    </div>);
-}
+    </div>)}
 
-=======
-    </div>)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
 `;
 // Function to create a page;
@@ -128,22 +117,12 @@ const createPage = (route, title, description, category) => {
   // Create directory if it doesn't exist;
   const dir = path.dirname(pagePath);
   if (!fs.existsSync(dir)) {
-<<<<<<< HEAD
-    fs.mkdirSync(dir, { recursive: true });
-  }
+    fs.mkdirSync(dir, { recursive: true })}
   
   // Write the page file;
   fs.writeFileSync(pagePath, pageContent);
-  console.log(`Created page: ${route}`);
-}
+  console.log(`Created page: ${route}`)}
 
-=======
-    fs.mkdirSync(dir, { recursive: true })};
-  // Write the page file;
-  fs.writeFileSync(pagePath, pageContent);
-  // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Page configurations;
 const pageConfigs = {
 };
@@ -290,7 +269,6 @@ const pageConfigs = {
   '/tech-transfer': { title: 'Technology Transfer', description: 'Technology transfer and commercialization services', category: 'Transfer' },
   '/space-technology': { title: 'Space Technology', description: 'Space technology solutions and satellite systems', category: 'Space' },
   '/climate-tech': { title: 'Climate Technology', description: 'Climate technology solutions and sustainability', category: 'Climate' },
-<<<<<<< HEAD
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
 }
 
@@ -300,43 +278,21 @@ const batchSize = 10;
 
 console.log(`Creating ${missingPages.length} missing pages...`);
 
-=======
-  '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' };
-};
-// Create pages in batches;
-let createdCount = 0;
-const batchSize = 10;
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 for (const route of missingPages) {
   if (pageConfigs[route]) {
     const config = pageConfigs[route];
     createPage(route, config.title, config.description, config.category);
     createdCount++;
     if (createdCount % batchSize === 0) {
-<<<<<<< HEAD
-      console.log(`Created ${createdCount} pages...`);
-    }
-=======
-      // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      console.log(`Created ${createdCount} pages...`)}
   } else {
     // Create a generic page for routes without specific configs;
     const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;
     const category = 'Technology';
     createPage(route, title, description, category);
-<<<<<<< HEAD
-    createdCount++;
-  }
+    createdCount++}
 }
 
 console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
 console.log('All navigation links should now work properly.');
-=======
-    createdCount++};
-};
-// console.log removed for production
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

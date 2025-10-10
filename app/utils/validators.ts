@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 /**;
  * Validation Utilities;
  * Provides common validation functions for forms and data;
@@ -132,21 +131,21 @@ export function maxLength(value: string, max: number): boolean {
 export function isAlphanumeric(value: string): boolean {
     ,
   }
-  return /^[a-zA-Z0-9]+$/.test(value);}
+  return /^[a-zA-Z0-9]+$/.test(value)}
 /**;
  * Validate string contains only letters;
  */;
 export function isAlpha(value: string): boolean {
     ,
   }
-  return /^[a-zA-Z]+$/.test(value);}
+  return /^[a-zA-Z]+$/.test(value)}
 /**;
  * Validate string contains only numbers;
  */;
 export function isNumeric(value: string): boolean {
     ,
   }
-  return /^[0-9]+$/.test(value);}
+  return /^[0-9]+$/.test(value)}
 /**;
  * Validate password strength;
  * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number;
@@ -195,18 +194,15 @@ export function isValidCreditCard(cardNumber: string): boolean {
       }
     }
     sum += digit;
-    isEven = !isEven;
-  }
-  return sum % 10 === 0;
-}
+    isEven = !isEven}
+  return sum % 10 === 0}
 /**;
  * Validate US ZIP code;
  */;
 export function isValidZipCode(zipCode: string): boolean {
     ,
   }
-  return /^\d{5}(-\d{4})?$/.test(zipCode);
-}
+  return /^\d{5}(-\d{4})?$/.test(zipCode)}
 /**;
  * Sanitize HTML to prevent XSS;
  */;
@@ -221,16 +217,14 @@ export function sanitizeHtml(html: string): string {
  */;
 export function validateObject<T extends Record<string, unknown>>(;
   obj: T,
-  schema: Record<keyof T, (value: unknown) => boolean>;
-): ValidationResult {
+  schema: Record<keyof T, (value: unknown) => boolean>): ValidationResult {
     const errors: string[] = []
   for (const key in schema) {
     const validator = schema[key]
     const value = obj[key],,;
     if (!validator(value)) {,
   }
-      errors.push(`Invalid value for field: ${String(key)}`);
-    }
+      errors.push(`Invalid value for field: ${String(key)}`)}
   }
   return {
     isValid: errors.length === 0,
@@ -247,10 +241,8 @@ export interface FormField {
     validate: (value: string) => boolean,
     message: string,
   }
-  }>;
-}
-export function validateForm(fields: Record<string, FormField>);
-): Record<string, string[]> {}
+  }>}
+export function validateForm(fields: Record<string, FormField>)): Record<string, string[]> {}
   const errors: Record<string, string[]> = {}
   for (const fieldName in fields) {
     const field = fields[fieldName]
@@ -266,8 +258,7 @@ export function validateForm(fields: Record<string, FormField>);
   }
     }
   }
-  return errors;
-}
+  return errors}
 /**;
  * Common form validators;
  */;
@@ -319,8 +310,7 @@ const hasUpperCase = /[A-Z]/.test(password)
   const hasNumbers = /\d/.test(password)
   }
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
-return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
-}
+return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar}
 /**;
  * Sanitize user input;
  */;
@@ -335,8 +325,7 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
     sanitized = sanitized.substring(0, maxLength)
   }
   }
-return sanitized || null;
-}
+return sanitized || null}
 /**;
  * Validation result interface;
  */;
@@ -483,8 +472,7 @@ export function isValidDate(date: string): boolean {
   const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!isoDateRegex.test(date)) return false;
 const dateObj = new Date(date);
-  return !isNaN(dateObj.getTime()) && dateObj.toISOString().split('T')[0] === date;
-}
+  return !isNaN(dateObj.getTime()) && dateObj.toISOString().split('T')[0] === date}
 /**;
  * Validate past date;
  */;
@@ -520,10 +508,8 @@ if (isEven) {
       }
     }
 sum += digit;
-    isEven = !isEven;
-  }
-return sum % 10 === 0;
-}
+    isEven = !isEven}
+return sum % 10 === 0}
 /**;
  * Validate ZIP code (US format);
  */;
@@ -531,8 +517,7 @@ export function isValidZipCode(zipCode: string): boolean {
     if (!zipCode || typeof zipCode !== 'string') return false
   }
   const zipRegex = /^\d{5}(-\d{4})?$/;
-  return zipRegex.test(zipCode.trim());
-}
+  return zipRegex.test(zipCode.trim())}
 /**;
  * Validate state (US states);
  */;
@@ -543,8 +528,7 @@ export function isValidState(state: string): boolean {
     'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',;
     'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',;
     'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',;
-    'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY';
-  ]
+    'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
   return states.includes(state.toUpperCase())
   }
 }
@@ -559,8 +543,7 @@ export function validateFormData(;
 for (const [field, validator] of Object.entries(rules)) {
     const value = data[field]
     if (!validator(value)) {}
-      errors.push(`Invalid value for field: ${String(field)}`);
-    }
+      errors.push(`Invalid value for field: ${String(field)}`)}
   }
 return {
     isValid: errors.length === 0,
@@ -625,8 +608,7 @@ export function sanitizeHtml(input: string): string {
     .replace(/>/g, '&gt;');
     .replace(/"/g, '&quot;');
     .replace(/'/g, '&#x27;');
-    .replace(/\//g, '&#x2F;');
-}
+    .replace(/\//g, '&#x2F;')}
 /**;
  * Validate string length with detailed result;
  */;
@@ -790,145 +772,3 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' }
   }
 }
-=======
-/**
- * Validation Utilities
- * Provides common validation functions for forms and data
- */
-export interface ValidationResult {
-}
-}
-  isValid: boolean;
-  errors: string[];
-  error?: string;
-};
-/**
- * Email validation regex pattern
- */
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-/**
- * Phone number validation regex (US format)
- */
-const PHONE_REGEX = /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
-/**
- * Name validation regex (letters, spaces, hyphens, apostrophes)
- */
-const NAME_REGEX = /^[a-zA-Z\s\-'\.]+$/;
-/**
- * URL validation regex
- */
-const URL_REGEX = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
-/**
- * Validate email address
- */
-export function validateEmail(email: string): ValidationResult {
-  const errors: string[] = [];
-  if (!email) {
-    errors.push('Email is required');
-  } else if (email.length > 254) {
-    errors.push('Email is too long');
-  } else if (!EMAIL_REGEX.test(email)) {
-    errors.push('Invalid email format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate phone number
- */
-export function validatePhone(phone: string): ValidationResult {
-  const errors: string[] = [];
-  if (!phone) {
-    errors.push('Phone number is required');
-  } else if (!PHONE_REGEX.test(phone)) {
-    errors.push('Invalid phone number format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate name
- */
-export function validateName(name: string): ValidationResult {
-  const errors: string[] = [];
-  if (!name) {
-    errors.push('Name is required');
-  } else if (name.length > 100) {
-    errors.push('Name is too long');
-  } else if (!NAME_REGEX.test(name)) {
-    errors.push('Name contains invalid characters');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate URL
- */
-export function validateUrl(url: string): ValidationResult {
-  const errors: string[] = [];
-  if (!url) {
-    errors.push('URL is required');
-  } else if (!URL_REGEX.test(url)) {
-    errors.push('Invalid URL format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate message
- */
-export function validateMessage(message: string): ValidationResult {
-  const errors: string[] = [];
-  if (!message) {
-    errors.push('Message is required');
-  } else if (message.length > 1000) {
-    errors.push('Message is too long');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate form data
- */
-export function validateFormData(data: Record<string, any>): ValidationResult {
-  const errors: string[] = [];
-  if (data.email) {
-    const emailResult = validateEmail(data.email);
-    if (!emailResult.isValid) {
-      errors.push(...emailResult.errors);
-    };
-  };
-  if (data.phone) {
-    const phoneResult = validatePhone(data.phone);
-    if (!phoneResult.isValid) {
-      errors.push(...phoneResult.errors);
-    };
-  };
-  if (data.name) {
-    const nameResult = validateName(data.name);
-    if (!nameResult.isValid) {
-      errors.push(...nameResult.errors);
-    };
-  };
-  if (data.message) {
-    const messageResult = validateMessage(data.message);
-    if (!messageResult.isValid) {
-      errors.push(...messageResult.errors);
-    };
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

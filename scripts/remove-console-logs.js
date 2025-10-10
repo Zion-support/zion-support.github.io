@@ -10,32 +10,19 @@ const __dirname = path.dirname(__filename);
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     let files = [];
   const items = fs.readdirSync(dir);
-<<<<<<< HEAD
   
   for (const item of items) {
     const fullPath = path.join(dir, item);
-=======
-  for (const item of items) {;
-const fullPath = path.join(dir, item);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-<<<<<<< HEAD
       files = files.concat(findFiles(fullPath, extensions))
   } else if (extensions.some(ext => item.endsWith(ext))) {
     files.push(fullPath)
   }
   }
   
-  return files;
-}
+  return files}
 
-=======
-      files = files.concat(findFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath)};
-  };
-  return files};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Remove console.log statements;
 const removeConsoleLogs = (filePath) => {
   try {
@@ -43,10 +30,10 @@ const removeConsoleLogs = (filePath) => {
     const originalContent = content;
     // Remove console.log, console.warn, console.error, console.info statements;
     // This regex matches console.method() calls including multi-line ones;
-    const consoleRegex = /console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*/g;
+    const consoleRegex = /console\.(log|warn|error|info|debug)\s*\([^]*\);?\s*/g;
     content = content.replace(consoleRegex, '');
     // Remove standalone console statements;
-    const standaloneConsoleRegex = /^\s*console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*$/gm;
+    const standaloneConsoleRegex = /^\s*console\.(log|warn|error|info|debug)\s*\([^]*\);?\s*$/gm;
     content = content.replace(standaloneConsoleRegex, '');
     // Remove console statements that might be in template literals or complex expressions;
     const complexConsoleRegex = /console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g;
@@ -77,15 +64,10 @@ const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */
 
 let totalRemoved = 0;
 let filesProcessed = 0;
-<<<<<<< HEAD
 
 console.log('🧹 Removing console.log statements from production code...\n');
 
 for (const file of files) {/* TODO: Fix JSX expression */}
-=======
-// console.log removed for production
-for (const file of files) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       .replace(/\.then\([^)]*console\.log[^)]*\)/g, '.then(() => {})')
       .replace(/\.catch\([^)]*console\.log[^)]*\)/g, '.catch(() => {})')
       // Clean up empty lines;
@@ -94,53 +76,31 @@ for (const file of files) {/* TODO: Fix JSX expression */};
       .replace(/catch\s*\(\s*[^)]*\s*\)\s*{\s*}\s*/g, 'catch () {}');
     // Count removed statements;
     const removedCount = (originalContent.match(/console\.(log|warn|info|debug)\(/g) || []).length;
-<<<<<<< HEAD
     
     if (removedCount > 0) {/* TODO: Fix JSX expression */}
       console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`);
-=======
-    if (removedCount > 0) {/* TODO: Fix JSX expression */};
-      // console.log removed for production
-`);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       totalRemoved += removedCount;
-    patterns.forEach(pattern => {/* TODO: Fix JSX expression */};
-      };
-    // Remove empty lines that might be left behind;)
+    patterns.forEach(pattern => {/* TODO: Fix JSX expression */}};
+    // Remove empty lines that might be left behind)
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     if (modified) {/* TODO: Fix JSX expression */}`
   from: ${filePath}`);
-<<<<<<< HEAD
-      return true;
-    }
+      return true}
     
-    filesProcessed++;
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`❌ Error processing ${file}:`, error.message);
-=======
-      return true};
     filesProcessed++} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-`
-// console.log removed for production
-`
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    console.error(`❌ Error processing ${file}:`, error.message);
 `
 console.log(`\n🎉 Console log cleanup complete!`);`
 console.log(`📊 Files)`
   processed: ${filesProcessed}`);`
 console.log(`🗑️  Total console statements)`
   removed: ${totalRemoved}`);`
-<<<<<<< HEAD
 console.log(`\n💡 Not)`
   e: console.error statements in development mode checks were preserved.`),`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Main execution;
@@ -149,25 +109,10 @@ const appDir = path.join(__dirname, '..', 'app');
 
 console.log('Starting console.log removal...');
 
-=======
-// console.log removed for production
-`
-  e: console.error statements in development mode checks were preserved.`);`
-    // // console.error removed for production
-return false} catch (error) {
-    // console.error removed for production
-return false};
-};
-// Main execution;
-const srcDir = path.join(__dirname, '..', 'src');
-const appDir = path.join(__dirname, '..', 'app');
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Find all files;
 const srcFiles = findFiles(srcDir);
 const appFiles = findFiles(appDir);
 const allFiles = [...srcFiles, ...appFiles];
-<<<<<<< HEAD
 
 console.log(`Found ${allFiles.length} files to process`);
 
@@ -180,20 +125,8 @@ for (const file of allFiles) {
 
 console.log(`Cleaned console statements from ${cleanedCount} files`);
 console.log('Console.log removal completed!');
-=======
-// console.log removed for production
-;
-let cleanedCount = 0;
-for (const file of allFiles) {
-  if (removeConsoleLogs(file)) {
-    cleanedCount++};
-};
-// console.log removed for production
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to process all TypeScript and JavaScript files;
-async function processFiles() {/* TODO: Fix JSX expression */};
-};
+async function processFiles() {/* TODO: Fix JSX expression */}};
   const patterns = [
 ];
     'app/**/*.{ts,tsx,js,jsx}',
@@ -208,14 +141,8 @@ async function processFiles() {/* TODO: Fix JSX expression */};
   modified: ${modifiedFiles}`);`
   // console.log(`   Files)`
   unchanged: ${totalFiles - modifiedFiles}`);
-<<<<<<< HEAD
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
 export { removeConsoleLogs, processFiles }
-=======
-  if (modifiedFiles > 0) {/* TODO: Fix JSX expression */};
-  } else {/* TODO: Fix JSX expression */};
-export { removeConsoleLogs, processFiles };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `

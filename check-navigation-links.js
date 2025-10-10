@@ -29,30 +29,20 @@ function scanDirectory(dir) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-      scanDirectory(fullPath);
-    } else if (item === 'page.tsx') {
+      scanDirectory(fullPath)} else if (item === 'page.tsx') {
       // Extract the route from the path;
       const route = fullPath.replace('/workspace/src', '').replace('/page.tsx', '') || '/';
-<<<<<<< HEAD
-      existingPages.push(route);
-    }
+      existingPages.push(route)}
   }
 }
 
-=======
-      existingPages.push(route)};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 scanDirectory(srcDir);
 // Check for missing pages;
 const missingPages = [];
 const existingPagesSet = new Set(existingPages);
 for (const link of allLinks) {
   if (!existingPagesSet.has(link)) {
-<<<<<<< HEAD
-    missingPages.push(link);
-  }
+    missingPages.push(link)}
 }
 
 console.log('=== NAVIGATION LINKS ANALYSIS ===');
@@ -62,46 +52,20 @@ console.log(`Missing pages: ${missingPages.length}`);
 
 if (missingPages.length > 0) {
   console.log('\n=== MISSING PAGES ===');
-  missingPages.forEach(page => console.log(`- ${page}`));
-} else {
-  console.log('\n✅ All navigation links have corresponding pages!');
-}
+  missingPages.forEach(page => console.log(`- ${page}`))} else {
+  console.log('\n✅ All navigation links have corresponding pages!')}
 
 console.log('\n=== NAVIGATION LINKS ===');
 allLinks.forEach(link => console.log(`✓ ${link}`));
 
-=======
-    missingPages.push(link)};
-};
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-if (missingPages.length > 0) {
-  // console.log removed for production
-missingPages.forEach(page => // console.log removed for production
-)} else {
-  // console.log removed for production
-};
-// console.log removed for production
-allLinks.forEach(link => // console.log removed for production
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Write results to a file;
 fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
-  totalLinks: allLinks.length;)
-  existingPages: existingPages.length;)
-  missingPages: missingPages.length;)
+  totalLinks: allLinks.length)
+  existingPages: existingPages.length)
+  missingPages: missingPages.length)
   missingPagesList: missingPages),
   allLinks: allLinks),
-<<<<<<< HEAD
-  existingPagesList: existingPages;
-}, null, 2));
+  existingPagesList: existingPages}, null, 2));
 
 console.log('\n=== ANALYSIS COMPLETE ===');
 console.log('Results saved to navigation-analysis.json');
-=======
-  existingPagesList: existingPages}, null, 2));
-// console.log removed for production
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

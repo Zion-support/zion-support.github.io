@@ -8,9 +8,4 @@ if (root) {
     <React .StrictMode>
       <App />
     </React.StrictMode>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}

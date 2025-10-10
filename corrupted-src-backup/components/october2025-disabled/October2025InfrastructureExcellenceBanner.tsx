@@ -1,9 +1,6 @@
-const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    }]; return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>),
+const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>),
       {/* Animated, background, effec, t, s */};
       <div , classNam, e = 'absolute, inse, t-0'>
         <div , className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />
@@ -51,17 +48,10 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
             enterprises, processing, billions of, events, daily.
           </p>
         </div>
-<<<<<<< HEAD
         {/* Articles, Gri, d */}
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
           { newArticl, e, s.m, a, p(artic, l, e = > {
             const Ico, n = artic, l, e.ic, o, n; return (</div>
-=======
-        {/* Articles, Gri, d */};
-        <div , classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
-          { newArticl, e, s.m, a, p(artic, l, e = > {;
-const Ico, n = artic, l, e.ic, o, n; return (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'></div>
           {/* TODO: Fix JSX expression */};
               <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
@@ -108,12 +98,7 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
                   </div>
                 </div>
               </Li, n, k>
-<<<<<<< HEAD
-            );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            )})}
         </div>
         {/* CTA, Sectio, n */};
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
@@ -152,7 +137,6 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
         </div>
       </div>
     </div>
-  );
-}
+  )}
 export default October2025InfrastructureExcellenceBanner;
 "`

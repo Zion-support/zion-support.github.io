@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 import { execSync } from 'child_process';
@@ -7,11 +6,6 @@ import { execSync } from 'child_process';
 function makeGitHubRequest(endpoint) {
   return new Promise((resolve, reject) => {
     const options = {
-=======
-  return new Promise((resolve, reject) => {;
-const options = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       hostname: 'api.github.com'
       port: 443
       path: endpoint,
@@ -27,17 +21,13 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
-  JSON: ${error.message}`));
-        }
-      });
-    });
+  JSON: ${error.message}`))}
+      })});
 
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
     });
 
-    req.end();
-  });
-}
+    req.end()})}
 
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
@@ -168,8 +158,7 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
       }
       
       // Add a small delay between merges;
-      await new Promise(resolve => setTimeout(resolve, 2000));
-    }
+      await new Promise(resolve => setTimeout(resolve, 2000))}
 
   } catch (error) {/* TODO: Fix JSX expression */}
   }

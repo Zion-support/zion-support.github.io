@@ -1,18 +1,11 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import crypto from 'crypto';
-<<<<<<< HEAD
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
 /** @type {import('next').NextConfig} */
-=======
-;
-const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true'});
-/** @type {import('next').NextConfig} */;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const nextConfig = {
 };
   reactStrictMode: true,
@@ -23,13 +16,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   typescript: {
-<<<<<<< HEAD
     ignoreBuildErrors: true,
   },
   
-=======
-    ignoreBuildErrors: true},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
@@ -37,28 +26,18 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-<<<<<<< HEAD
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox,",
   },
 
-=======
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Fix for "self is not defined" error by providing a polyfill
     if (isServer) {
       config.plugins.push(
         new webpack.DefinePlugin({
-<<<<<<< HEAD
           'self': 'undefined',
         })
-      );
-    }
+      )}
 
-=======
-          'self': 'undefined'})
-      )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Optimize bundle size
     config.optimization = {
       ...config.optimization,
@@ -112,7 +91,6 @@ const nextConfig = {
           },
         },
         maxInitialRequests: 25,
-<<<<<<< HEAD
         minSize: 20000,
       },
       minimize: !dev,
@@ -121,16 +99,8 @@ const nextConfig = {
     // Tree shaking
     config.optimization.usedExports = true;
 
-    return config;
-  },
-
-=======
-        minSize: 20000},
-      minimize: !dev};
-    // Tree shaking
-    config.optimization.usedExports = true;
     return config},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+
   async headers() {
     return [
       {
@@ -180,27 +150,20 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-<<<<<<< HEAD
             value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate',
           },
         ],
       },
-    ];
-  },
+    ]},
 
-=======
-            value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate'}]}]},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   async redirects() {
     return [
       {
         source: '/home',
         destination: '/',
-<<<<<<< HEAD
         permanent: true,
       },
-    ];
-  },
+    ]},
 
   experimental: {
     optimizeCss: true,
@@ -208,20 +171,12 @@ const nextConfig = {
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
 
-=======
-        permanent: true}]},
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@heroicons/react'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB']},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Performance optimizations
   modularizeImports: {
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
     },
     '@heroicons/react': {
-<<<<<<< HEAD
       transform: '@heroicons/react/{{member}}',
     },
   },
@@ -234,11 +189,4 @@ const nextConfig = {
   },
 }
 
-=======
-      transform: '@heroicons/react/{{member}}'}},
-  // Compiler optimizations
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error', 'warn']} : false}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default bundleAnalyzer(nextConfig);

@@ -2,10 +2,8 @@
  * Advanced Performance Monitor;
  * Real-time performance monitoring and optimization;
  */
-interface PerformanceData {/* TODO: Fix JSX expression */};
-};
-interface PerformanceThresholds {/* TODO: Fix JSX expression */};
-};
+interface PerformanceData {/* TODO: Fix JSX expression */}};
+interface PerformanceThresholds {/* TODO: Fix JSX expression */}};
 class AdvancedPerformanceMonitor {
   private data: PerformanceData[] = [];
   private thresholds: PerformanceThresholds
@@ -20,17 +18,11 @@ class AdvancedPerformanceMonitor {
       cumulativeLayoutShift: 0.1
       firstInputDelay: 100,
       ...thresholds,
-<<<<<<< HEAD
 class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   s: Partial<PerformanceThresholds> = {}) {/* TODO: Fix JSX expression */}
     }
   }
 
-=======
-class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */};
-  s: Partial<PerformanceThresholds> = {}) {/* TODO: Fix JSX expression */};
-    }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Start performance monitoring;
    */
@@ -39,14 +31,12 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */};
   /**
    * Stop performance monitoring;
    */
-  public stopMonitoring(): void {/* TODO: Fix JSX expression */};
-    };
+  public stopMonitoring(): void {/* TODO: Fix JSX expression */}};
     //     };
   /**
    * Get performance data;
    */
-  public getPerformanceData(): PerformanceData[] {/* TODO: Fix JSX expression */};
-  };
+  public getPerformanceData(): PerformanceData[] {/* TODO: Fix JSX expression */}};
   /**
    * Get performance summary;
    */
@@ -63,7 +53,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */};
         averageLoadTime: 0;
         averageFCP: 0;
         averageLCP: 0;
-<<<<<<< HEAD
         averageCLS: 0
         averageFID: 0
         performanceScore: 0,
@@ -73,32 +62,17 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */};
     }
 
     const _avgLoadTime = this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
-=======
-        averageCLS: 0;
-        averageFID: 0;
-        performanceScore: 0;
-  public getPerformanceSummary(): {/* TODO: Fix JSX expression */};
-  } {/* TODO: Fix JSX expression */};
-      }};
-;
-const _avgLoadTime = this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const _avgFCP = this.data.reduce((sum, d) => sum + d.firstContentfulPaint, 0) / this.data.length;
     const avgLCP =
       this.data.reduce((sum, d) => sum + d.largestContentfulPaint, 0) / this.data.length;
     const avgCLS =
       this.data.reduce((sum, d) => sum + d.cumulativeLayoutShift, 0) / this.data.length;
     const _avgFID = this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) / this.data.length;
-<<<<<<< HEAD
 
     // Calculate performance score (0-100)
     const performanceScore = this.calculatePerformanceScore({)
-=======
-    // Calculate performance score (0-100);
-const performanceScore = this.calculatePerformanceScore({)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      loadTime: avgLoadTime;)
-      firstContentfulPaint: avgFCP;)
+      loadTime: avgLoadTime)
+      firstContentfulPaint: avgFCP)
       largestContentfulPaint: avgLCP,),
       cumulativeLayoutShift: avgCLS),
       firstInputDelay: avgFID)});
@@ -111,58 +85,34 @@ const performanceScore = this.calculatePerformanceScore({)
       performanceScore,
     const performanceScore = this.calculatePerformanceScore({/* TODO: Fix JSX expression */})
     });
-<<<<<<< HEAD
 
     return {/* TODO: Fix JSX expression */}
     }
   }
 
-=======
-    return {/* TODO: Fix JSX expression */};
-    }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Setup Performance Observer;
    */
   private setupPerformanceObserver(): void {
     if (!('PerformanceObserver' in window)) return;
-<<<<<<< HEAD
 
     this.observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries();
       entries.forEach(entry => {)
         this.handlePerformanceEntry(entry)
-  });
-    });
+  })});
 
     try {
       this.observer.observe({)
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
   private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */}
-      });
-    });
+      })});
 
     try {/* TODO: Fix JSX expression */}
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
+      })} catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
 
-=======
-    this.observer = new PerformanceObserver(list => {);
-const _entries = list.getEntries();
-      entries.forEach(entry => {)
-        this.handlePerformanceEntry(entry)})});
-    try {
-      this.observer.observe({)
-        entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
-  private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */};
-      })});
-    try {/* TODO: Fix JSX expression */};
-      })} catch (error) {/* TODO: Fix JSX expression */};
-      //       };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Setup Web Vitals monitoring;
    */
@@ -171,7 +121,6 @@ const _entries = list.getEntries();
     // Dynamic import to avoid bundle size impact;
     import('web-vitals')
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-<<<<<<< HEAD
     getCLS(metric => {)
           this.updateMetric('cumulativeLayoutShift', metric.value)
   });
@@ -194,24 +143,10 @@ const _entries = list.getEntries();
         getTTFB(metric => {
     )
           this.updateMetric('loadTime', metric.value)
-  });
-      })
-=======
-        getCLS(metric => {)
-          this.updateMetric('cumulativeLayoutShift', metric.value)});
-        getFID(metric => {)
-          this.updateMetric('firstInputDelay', metric.value)});
-        getFCP(metric => {)
-          this.updateMetric('firstContentfulPaint', metric.value)});
-        getLCP(metric => {)
-          this.updateMetric('largestContentfulPaint', metric.value)});
-        getTTFB(metric => {)
-          this.updateMetric('loadTime', metric.value)})})
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  })})
       .catch(error => {)
   private setupWebVitals(): void {/* TODO: Fix JSX expression */};
-      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */};
-        });
+      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}});
         getFID(metric => {/* TODO: Fix JSX expression */})
         });
         getFCP(metric => {/* TODO: Fix JSX expression */})
@@ -219,12 +154,9 @@ const _entries = list.getEntries();
         getLCP(metric => {/* TODO: Fix JSX expression */})
         });
         getTTFB(metric => {/* TODO: Fix JSX expression */})
-        });
-      })
+        })})
       .catch(error => {/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
-        //         });
-  }
+        //         })}
 
   /**
    * Setup memory monitoring;
@@ -235,27 +167,12 @@ const _entries = list.getEntries();
 
     // Check memory every 30 seconds;
     setInterval(checkMemory, 30000);
-    checkMemory(); // Initial check;
-  }
+    checkMemory(); // Initial check}
 
-=======
-        //         })};
-  /**
-   * Setup memory monitoring;
-   */
-  private setupMemoryMonitoring(): void {/* TODO: Fix JSX expression */};
-      };
-    };
-    // Check memory every 30 seconds;
-    setInterval(checkMemory, 30000);
-    checkMemory(); // Initial check};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Setup network monitoring;
    */
-  private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */};
-    };
-  };
+  private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}}};
   /**
    * Handle performance entry;
    */
@@ -264,43 +181,25 @@ const _entries = list.getEntries();
       timestamp: Date.now(),
       url: window.location.href,
   private handlePerformanceEntry(entr)
-<<<<<<< HEAD
   y: PerformanceEntry): void {/* TODO: Fix JSX expression */}
     }
 
     switch (entry.entryType) {/* TODO: Fix JSX expression */}
         }
-=======
-  y: PerformanceEntry): void {/* TODO: Fix JSX expression */};
-    };
-    switch (entry.entryType) {/* TODO: Fix JSX expression */};
-        };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         break;
       case 'largest-contentful-paint':
         data.largestContentfulPaint = entry.startTime;
         break;
-<<<<<<< HEAD
       case 'layout-shift':
         const _layoutShiftEntry = entry as any;
         if (!layoutShiftEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
         }
-        break;
-    }
+        break}
 
-=======
-      case 'layout-shift':;
-const _layoutShiftEntry = entry as any;
-        if (!layoutShiftEntry.hadRecentInput) {/* TODO: Fix JSX expression */};
-        };
-        break};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (Object.keys(data).length > 2) {
       // More than just timestamp and url;
       this.addPerformanceData(data as PerformanceData);
-    if (Object.keys(data).length > 2) {/* TODO: Fix JSX expression */};
-    };
-  };
+    if (Object.keys(data).length > 2) {/* TODO: Fix JSX expression */}}};
   /**
    * Update metric;
    */
@@ -325,43 +224,24 @@ const _layoutShiftEntry = entry as any;
         [metric]: value,
   private updateMetric(metri,
   c: keyof PerformanceData, valu)
-<<<<<<< HEAD
   e: unknown): void {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-      } as PerformanceData);
-    }
+      } as PerformanceData)}
   }
 
-=======
-  e: unknown): void {/* TODO: Fix JSX expression */};
-    } else {/* TODO: Fix JSX expression */};
-      } as PerformanceData)};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Add performance data;
    */
   private addPerformanceData(data: PerformanceData): void {
-<<<<<<< HEAD
     this.data.push(data)
     // Keep only last 100 entries to prevent memory issues,
-=======
-    this.data.push(data);
-    // Keep only last 100 entries to prevent memory issues;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (this.data.length > 100) {,
       this.data = this.data.slice(-100);
   private addPerformanceData(dat)
-  a: PerformanceData): void {/* TODO: Fix JSX expression */};
-    };
+  a: PerformanceData): void {/* TODO: Fix JSX expression */}};
     // Check thresholds and log warnings;
-<<<<<<< HEAD
-    this.checkThresholds(data);
-  }
+    this.checkThresholds(data)}
 
-=======
-    this.checkThresholds(data)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Check performance thresholds;
    */
@@ -369,97 +249,49 @@ const _layoutShiftEntry = entry as any;
     const warnings: string[] = [],
 ,
     if (data.loadTime > this.thresholds.loadTime) {,
-<<<<<<< HEAD
-      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
-    }
+      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
       warnings.push(`FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`)
-      );
-    }
+      )}
     if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {
       warnings.push(`LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`)
-      );
-    }
+      )}
     if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {
       warnings.push(`CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`)
-      );
-    }
+      )}
     if (data.firstInputDelay > this.thresholds.firstInputDelay) {
       warnings.push(`FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`)
   private checkThresholds(dat)
   a: PerformanceData): void {/* TODO: Fix JSX expression */}
-      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
-    }
+      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {/* TODO: Fix JSX expression */}`
         `FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`
-      );
-    }
+      )}
     if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {/* TODO: Fix JSX expression */}`
         `LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`
-      );
-    }
+      )}
     if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {/* TODO: Fix JSX expression */}`
         `CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`
-      );
-    }
+      )}
     if (data.firstInputDelay > this.thresholds.firstInputDelay) {/* TODO: Fix JSX expression */}`
         `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`
-      );
-    }
+      )}
 
     if (warnings.length > 0) {/* TODO: Fix JSX expression */}
       //       }
   }
 
-=======
-      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)};
-    if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
-      warnings.push(`FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`)
-      )};
-    if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {
-      warnings.push(`LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`)
-      )};
-    if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {
-      warnings.push(`CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`)
-      )};
-    if (data.firstInputDelay > this.thresholds.firstInputDelay) {
-      warnings.push(`FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`)
-  private checkThresholds(dat)
-  a: PerformanceData): void {/* TODO: Fix JSX expression */};
-      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)};
-    if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {/* TODO: Fix JSX expression */}`
-        `FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`
-      )};
-    if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {/* TODO: Fix JSX expression */}`
-        `LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`
-      )};
-    if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {/* TODO: Fix JSX expression */}`
-        `CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`
-      )};
-    if (data.firstInputDelay > this.thresholds.firstInputDelay) {/* TODO: Fix JSX expression */}`
-        `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`
-      )};
-    if (warnings.length > 0) {/* TODO: Fix JSX expression */};
-      //       };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Calculate performance score;
    */
   private calculatePerformanceScore(metrics: {)
-    loadTime: number;)
-    firstContentfulPaint: number;)
-    largestContentfulPaint: number;)
-<<<<<<< HEAD
+    loadTime: number)
+    firstContentfulPaint: number)
+    largestContentfulPaint: number)
     cumulativeLayoutShift: number,),
     firstInputDelay: number,)}): number {
     let _score = 100;
 
-=======
-    cumulativeLayoutShift: number;),
-    firstInputDelay: number;)}): number {;
-let _score = 100;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Load time scoring (40% weight)
     if (metrics.loadTime > 3000) score -= 40;
     else if (metrics.loadTime > 2000) score -= 20;
@@ -481,8 +313,7 @@ let _score = 100;
     return Math.max(0, Math.min(100, score));
   private calculatePerformanceScore(metric,
   s: {/* TODO: Fix JSX expression */})
-  }): number {/* TODO: Fix JSX expression */};
-  };
+  }): number {/* TODO: Fix JSX expression */}};
   /**
    * Export performance data;
    */
@@ -492,23 +323,14 @@ let _score = 100;
         summary: this.getPerformanceSummary(),
         thresholds: this.thresholds,
         timestamp: new Date().toISOString(),
-  public exportData(): string {/* TODO: Fix JSX expression */};
-      },
+  public exportData(): string {/* TODO: Fix JSX expression */}},
       null,
-      2;
-<<<<<<< HEAD
-    );
-  }
+      2)}
 
-=======
-    )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Clear performance data;
    */
-  public clearData(): void {/* TODO: Fix JSX expression */};
-  };
-};
+  public clearData(): void {/* TODO: Fix JSX expression */}}};
 // Export singleton instance;
 // const performanceMonitor = new AdvancedPerformanceMonitor();
 export default performanceMonitor;

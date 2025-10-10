@@ -40,23 +40,16 @@ const, October2025LatestContentBanne, r = () => {
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n",";
       gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"
-    };
-  ];
+    }];
   return(<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-30">";</section>
         <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-  ];
+const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}}];
   return (<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */}"
       <div, className="absolute, inse, t-0, opacit, y-30">";"
@@ -95,23 +88,12 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
         {/* Articles, Gri, d */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">")
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">")
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
-<<<<<<< HEAD
             const, IconComponen, t = artic, l, e.ic, o, n;
             return(<Li, n, k;
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>
-=======
-return (
-;
-const, IconComponen, t = artic, l, e.ic, o, n;
-            return(<Li , n, k;
-        {/* Articles, Gri, d */};
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">
-);
-}"</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
             const, IconComponen, t = artic, l, e.ic, o, n;
@@ -120,14 +102,8 @@ const, IconComponen, t = artic, l, e.ic, o, n;
   k, e, y={i, d, x};
                 to={artic, l, e.li, n, k};
                 classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;
-<<<<<<< HEAD
   r:shad, o, w-viol, e, t-5, 0, 0/20"
               >
-=======
-  r:shad, o, w-viol, e, t-5, 0, 0/20">
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div, className={`w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m`}>`;`</div>
                   <IconComponent , className="w-6 h-6, tex, t-whi, t, e  />
                 </d, i, v>
@@ -158,7 +134,7 @@ const, IconComponen, t = artic, l, e.ic, o, n;
                   <Link , className="w-4 h-4  />
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>
                   <sp, a, n>Read, Mor, e</sp, a, n>
-                  <Link, className="w-4 h-4" />";)
+                  <Link, className="w-4 h-4" />")
                 </d, i, v>)
                 </p>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
@@ -169,12 +145,7 @@ const, IconComponen, t = artic, l, e.ic, o, n;
                   <Link, className="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>)
-<<<<<<< HEAD
-            );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            )})}
         </d, i, v>
         {/* Stats, Ba, r */};
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8">"</div>
@@ -239,7 +210,6 @@ const, IconComponen, t = artic, l, e.ic, o, n;
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
-}
+  )}
 export default October2025LatestContentBanner;
 "`

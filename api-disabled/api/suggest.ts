@@ -17,32 +17,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {,
     return res.status(405).json({ error: 'Method not allowed' });
 export default function handler(re,
   q: NextApiRequest, re)
-<<<<<<< HEAD
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method not allowed' });
-  }
+  r: 'Method not allowed' })}
 
   try {/* TODO: Fix JSX expression */}
-=======
-  s: NextApiResponse) {/* TODO: Fix JSX expression */};
-  r: 'Method not allowed' })};
-  try {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const { q = '' } = req.query;
     const _query = Array.isArray(q) ? q[0] : q;
 
     const suggestions = SAMPLE_QUERIES.filter(s =>)
       s.toLowerCase().includes(query.toLowerCase())
     ).slice(0, 5);
-<<<<<<< HEAD
 
-    return res.status(200).json({ suggestions });
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: 'Internal server error' });
-  }
+    return res.status(200).json({ suggestions })} catch (error) {/* TODO: Fix JSX expression */}
+  r: 'Internal server error' })}
 }
-=======
-    return res.status(200).json({ suggestions })} catch (error) {/* TODO: Fix JSX expression */};
-  r: 'Internal server error' })};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
@@ -10,19 +9,6 @@ const ResearchDevelopmentPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
   const _researchAreas = [
     {
-=======
-import Navigation from '../components
-import Footer from '../components
-'use client';
-import React, { useState } from 'react';
-const ResearchDevelopmentPage: React.FC = () => {
-};
-const [activeTab, setActiveTab] = useState('ai');
-;
-const _researchAreas = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       id: 'ai',
       name: 'Artificial Intelligence',
       icon: Brain,
@@ -51,23 +37,11 @@ $4},
       name: 'Emerging Technologies',
       icon: Lightbulb,
       color: 'text-yellow-400',
-<<<<<<< HEAD
       bgColor: 'bg-yellow-500/10',
       description:     ,
 $4}
   ];
   const researchProjects = {
-=======
-      bgColor: 'bg-yellow-500
-      descriptio,
-    n:     ,
-$4};
-  ];
-;
-const researchProjects = {
-};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     ai: [
       {
         title: 'Consensus Intelligence Framework',
@@ -113,8 +87,7 @@ $4},
         ],
         icon: Microscope,
         color:       ,
-$4};
-    ],
+$4}],
     quantum: [
       {
         title: 'Quantum Machine Learning Algorithms',
@@ -145,8 +118,7 @@ $4},
         ],
         icon: Zap,
         color:       ,
-$4};
-    ],
+$4}],
     autonomous: [
       {
         title: 'Autonomous Enterprise Operations',
@@ -177,8 +149,7 @@ $4},
         ],
         icon: Users,
         color:       ,
-$4};
-    ],
+$4}],
     emerging: [
       {
         title: 'Neuromorphic Computing for AI',
@@ -209,22 +180,11 @@ $4},
         ],
         icon: Globe,
         color:       ,
-$4};
-    ]
-<<<<<<< HEAD
+$4}]
   }
   const publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
-=======
-  };
-;
-const publications = [
-[
-        {
-      title: 'Consensus Intelligenc,
-    e: A Framework for Multi-Agent Decision Making',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
       journal: 'Nature Machine Intelligence',
       year: '2025',
@@ -254,17 +214,9 @@ $4},
       year: '2024',
       impact: 'High',
       link:     ,
-$4};
-  ];
-<<<<<<< HEAD
+$4}];
   const achievements = [
     {
-=======
-;
-const achievements = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: Award,
       title: '50+ Research Papers',
       description:     ,
@@ -283,8 +235,7 @@ $4},
       icon: Globe,
       title: 'Global Collaborations',
       description:     ,
-$4};
-  ];
+$4}];
   return (
     <React .Fragment>
       <Navigation />
@@ -298,15 +249,9 @@ $4};
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Pushing the boundaries of technology through cutting-edge research and innovation. 
               Our R&D team is dedicated to creating the next generation of AI and IT solutions.
-<<<<<<< HEAD
             </p>
           </div>
           {/* Research Areas Tabs */}
-=======
-            <
-          <
-          {/* Research Areas Tabs *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {researchAreas.map((area) => (
@@ -316,7 +261,6 @@ $4};
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === area.id
                       ? `${area.bgColor} ${area.color} border-2 border-current`
-<<<<<<< HEAD
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -328,8 +272,7 @@ $4};
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
-  );
-}
+  )}
   const [activeTab, setActiveTab] = useState('ai');
   const _researchAreas = [
   // TOD,
@@ -338,29 +281,6 @@ $4};
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700
-                  }`};
-                >
-                  <area.icon className="w-5 h-5 mr-2" 
-                  <span className="font-medium">{area.name}<
-                <
-              ))};
-            <
-            <div className="text-center">
-              <p className="text-gray-300 max-w-2xl mx-auto">
-    <div>Coming Soon<
-  )};
-  const [activeTab, setActiveTab] = useState('ai');
-  const _researchAreas = [
-];
-  /
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'ai',
       nam,
@@ -374,15 +294,9 @@ $4};
       descriptio,
   n: 'Advancing the frontiers of AI and machine learning'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'quantum',
       nam,
@@ -396,15 +310,9 @@ $4};
       descriptio,
   n: 'Exploring quantum algorithms and quantum advantage'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'autonomous',
       nam,
@@ -418,15 +326,9 @@ $4};
       descriptio,
   n: 'Developing self-managing and intelligent systems'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: 'emerging',
       nam,
@@ -439,30 +341,17 @@ $4};
   r: 'bg-yellow-500/10',
       descriptio,
   n: 'Researching next-generation technologies'
-    };
-  ];
-<<<<<<< HEAD
+    }];
   const researchProjects = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  const researchProjects = {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   a,
   i: [
   // TOD,
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Consensus Intelligence Framework',
         descriptio,
@@ -488,15 +377,9 @@ $4};
         colo,
   r: 'text-purple-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Autonomous Business Intelligence',
         descriptio,
@@ -522,15 +405,9 @@ $4};
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Neural Architecture Search for Enterprise',
         descriptio,
@@ -555,26 +432,15 @@ $4};
   n: Microscope,
         colo,
   r: 'text-blue-400'
-<<<<<<< HEAD
       }
 //     ],
-=======
-      };
-/
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     quantu,
   m: [
   // TOD,
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Quantum Machine Learning Algorithms',
         descriptio,
@@ -600,15 +466,9 @@ $4};
         colo,
   r: 'text-blue-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Quantum Error Correction for Business Applications',
         descriptio,
@@ -633,26 +493,15 @@ $4};
   n: Zap,
         colo,
   r: 'text-yellow-400'
-<<<<<<< HEAD
       }
 //     ],
-=======
-      };
-/
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     autonomou,
   s: [
   // TOD,
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Autonomous Enterprise Operations',
         descriptio,
@@ -678,15 +527,9 @@ $4};
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Multi-Agent Coordination Systems',
         descriptio,
@@ -711,26 +554,15 @@ $4};
   n: Users,
         colo,
   r: 'text-purple-400'
-<<<<<<< HEAD
       }
 //     ],
-=======
-      };
-/
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     emergin,
   g: [
   // TOD,
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Neuromorphic Computing for AI',
         descriptio,
@@ -756,15 +588,9 @@ $4};
         colo,
   r: 'text-yellow-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Edge AI for IoT Systems',
         descriptio,
@@ -789,7 +615,6 @@ $4};
   n: Globe,
         colo,
   r: 'text-blue-400'
-<<<<<<< HEAD
       }
 //     ]
   }
@@ -800,19 +625,6 @@ $4};
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-      };
-/
-  };
-  const publications = [
-];
-  /
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Consensus,
   Intelligence: A Framework for Multi-Agent Decision Making',
@@ -827,15 +639,9 @@ $4};
       lin,
   k: '#'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       author,
@@ -849,15 +655,9 @@ $4};
       lin,
   k: '#'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment',
       author,
@@ -871,15 +671,9 @@ $4};
       lin,
   k: '#'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: 'Multi-Agent Coordination in Distributed Systems',
       author,
@@ -892,25 +686,14 @@ $4};
   t: 'High',
       lin,
   k: '#'
-    };
-  ];
+    }];
   const achievements = [
-<<<<<<< HEAD
   // TOD,
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-];
-  /
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Award,
       titl,
@@ -918,15 +701,9 @@ $4};
       descriptio,
   n: 'Published in top-tier conferences and journals'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Users,
       titl,
@@ -934,15 +711,9 @@ $4};
       descriptio,
   n: 'World-class research team across multiple disciplines'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Target,
       titl,
@@ -950,37 +721,25 @@ $4};
       descriptio,
   n: 'Innovative technologies and methodologies'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Globe,
       titl,
   e: 'Global Collaborations',
       descriptio,
   n: 'Partnerships with leading universities and research institutions'
-    };
-  ];
+    }];
   return (<div>Coming Soon</div>)
   )
-<<<<<<< HEAD
           <React.Fragment>
-=======
-          <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-<<<<<<< HEAD
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Research & Development
           </h1>
@@ -992,25 +751,11 @@ $4};
           <div className="mb-12"></div>"
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
               {researchAreas.map((area) => ()}
-=======
-  md:text-5xl font-bold text-white mb-6 neon-text"><
-/
-          <
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          <
-          <
-          {/* Research Areas Tabs *
-          <div className="mb-12"><
-            <div className="flex flex-wrap justify-center gap-4 mb-8"><
-              {researchAreas.map((area) => ()};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <button></button>
                   key={area.id};
                   onClick={() => setActiveTab(area.id)};
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${};
   // TOD,
-<<<<<<< HEAD
   O: Add content,
 }
                     activeTab === area.id;`
@@ -1032,28 +777,6 @@ $4};
             </div>
           </div>
           {/* Research Projects */}
-=======
-  O: Add content};
-                    activeTab === area.id;`
-                      ? `${area.bgColor} ${area.color} border-2 border-current`
-                      : 'bg-slate-800
-  hover:bg-slate-700
-                  }`};
-/
-          "
-          <area.icon className="w-5 h-5 mr-2" /><
-                  <span className="font-medium">{area.name}<
-                <
-              ))};
-            <
-            <div className="text-center"><
-              <p className="text-gray-300 max-w-2xl mx-auto"><
-                {researchAreas.find(area => area.id === activeTab)?.description};
-              <
-            <
-          <
-          {/* Research Projects *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Current Research Projects;
@@ -1062,7 +785,6 @@ $4};
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
-<<<<<<< HEAD
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                       <project.icon className={`w-6 h-6 ${project.color}`} />
                     </div>
@@ -1071,16 +793,6 @@ $4};
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                     </div>
                   </div>
-=======
-                    <div className={`w-12 h-12 bg-slate-700
-                      <project.icon className={`w-6 h-6 ${project.color}`};
-                    <
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}<
-                      <p className="text-gray-300 text-sm mb-4">{project.description}<
-                    <
-                  <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Status</div>
@@ -1088,15 +800,9 @@ $4};
                         project.status === 'Completed' ? 'text-green-400' : 
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
                       }`}>
-<<<<<<< HEAD
                         {project.status}
                       </div>
                     </div>
-=======
-                        {project.status};
-                      <
-                    <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>
                       <div className="text-sm text-white">{project.timeline}</div>
@@ -1106,17 +812,10 @@ $4};
                       <div className="text-sm text-white">{project.team}</div>
                     </div>
                     <div>
-<<<<<<< HEAD
                       <div className="text-sm text-gray-400 mb-1">Funding</div>
                       <div className="text-sm text-white">{project.funding}</div>
                     </div>
                   </div>
-=======
-                      <div className="text-sm text-gray-400 mb-1">Funding<
-                      <div className="text-sm text-white">{project.funding}<
-                    <
-                  <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <div>
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key Outcomes:</div>
                     <ul className="space-y-1">
@@ -1146,7 +845,6 @@ $4};
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
                       <div className={`text-sm font-medium ${};
   // TOD,
-<<<<<<< HEAD
   O: Add content,
 }
                         project.status === 'Completed' ? 'text-green-400' :
@@ -1185,45 +883,6 @@ $4};
             </div>
           </div>
           {/* Publications */}
-=======
-  O: Add content};
-                        project.status === 'Completed' ? 'text-green-400' :
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
-                      }`}><
-                        {project.status};
-          <
-                    <
-                    <div><
-                      <div className="text-sm text-gray-400 mb-1">Timeline<
-                      <div className="text-sm text-white">{project.timeline}<
-                    <
-                    <div><
-                      <div className="text-sm text-gray-400 mb-1">Team<
-                      <div className="text-sm text-white">{project.team}<
-                    <
-                    <div><
-                      <div className="text-sm text-gray-400 mb-1">Funding<
-                      <div className="text-sm text-white">{project.funding}<
-                    <
-                  <
-                  <div><
-                    <div className="text-sm font-semibold text-cyan-400 mb-2">Key,
-  Outcomes: <
-                    <ul className="space-y-1"><
-                      {project.outcomes.map((outcome), outcomeIndex) => ()}"
-          <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start"><
-                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"><
-                          {outcome};
-                        <
-                      ))};
-                    <
-                  <
-                <
-              ))};
-            <
-          <
-          {/* Publications *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Recent Publications;
@@ -1242,20 +901,12 @@ $4};
                         <span className={`px-2 py-1 rounded text-xs ${
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
                         }`}>
-<<<<<<< HEAD
                           {pub.impact} Impact;
   </
                       </div>
                       <a
                         href={pub.link}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-=======
-                          {pub.impact} Impact
-                        <
-                      <
-                      <a href = { pub.link };
-                        className="text-cyan-400 hover: text-cyan-300 text-sm font-medium">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                         Read Paper →
                       </a>
           {/* Publications */}"
@@ -1277,12 +928,8 @@ $4};
                         <span>{pub.year}</span>`
                         <span className={`px-2 py-1 rounded text-xs ${};
   // TOD,
-<<<<<<< HEAD
   O: Add content,
 }
-=======
-  O: Add content};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
                         }`}></span>
                           {pub.impact} Impact;
@@ -1291,7 +938,6 @@ $4};
                       <a></a>
                         href={pub.link}"
                         className="text-cyan-400,"
-<<<<<<< HEAD
   hover: text-cyan-300 text-sm font-medium"
 // >
 //                         Read Paper,
@@ -1303,19 +949,6 @@ $4};
             </div>
           </div>
           {/* Achievements */}
-=======
-  hover:text-cyan-300 text-sm font-medium"
-/
-/
-          <
-                    <
-                  <
-                ))};
-              <
-            <
-          <
-          {/* Achievements *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Research Achievements;
@@ -1334,7 +967,6 @@ $4};
           </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
-<<<<<<< HEAD
   lg:grid-cols-4 gap-6"></div>
               {achievements.map((achievement, index) => ()}"
           <div key={index} className="text-center"></div>"
@@ -1349,22 +981,6 @@ $4};
           </div>
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-=======
-  lg: grid-cols-4 gap-6"><)
-              {achievements.map((achievement), index) => ()}"
-          <div key={index} className="text-center"><
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><
-                    <achievement.icon className="w-8 h-8 text-cyan-400" /><
-                  <
-                  <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}<
-                  <p className="text-gray-300 text-sm">{achievement.description}<
-                <
-              ))};
-            <
-          <
-          {/* CTA Section *
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <h2 className="text-2xl font-bold text-white mb-4">
               Collaborate With Our Research Team;
   </
@@ -1373,7 +989,6 @@ $4};
               universities, research institutions, and industry leaders.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-<<<<<<< HEAD
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -1436,52 +1051,3 @@ export default ResearchDevelopmentPage;
   </a>
   </a>
   </a>
-=======
-              <a href="
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hove,
-    r:scale-105">
-                <Mail className="w-4 h-4 mr-2" 
-                Email Us
-              <
-          {/* CTA Section *
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"><
-            <h2 className="text-2xl font-bold text-white mb-4"><
-/
-          <
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"><
-/
-              universities, research institutions, and industry leaders.
-          <
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
-                href="
-/
-          "
-          <BookOpen className="w-5 h-5 mr-2" /><
-/
-          <
-              <a
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-/
-          "
-          <Phone className="w-4 h-4 mr-2" /><
-/
-          <
-              <a
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
-    r:text-slate-900 transition-all duration-300 inline-flex items-center"
-/
-          "
-          <Mail className="w-4 h-4 mr-2" /><
-/
-          <
-            <
-          <
-        <
-      <
-      <Footer />
-    </React.Fragment>
-    </div>
-  )};
-export default ResearchDevelopmentPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

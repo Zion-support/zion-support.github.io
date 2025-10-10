@@ -1,6 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-<<<<<<< HEAD
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
@@ -10,46 +9,23 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false }
   }
-=======
-interface Props {/* TODO: Fix JSX expression */};
-};
-interface State {/* TODO: Fix JSX expression */};
-};
-class ErrorBoundary extends Component<Props, State> {;
-constructor(props: Props) {,
-    super(props);
-    this.state = { hasError: false }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   static getDerivedStateFromError(error: Error): State {,
     return {,
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-<<<<<<< HEAD
     }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     ,
-=======
-    }};
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //     // Report error to analytics/monitoring service;
     this.reportError(error, errorInfo);
     // Call custom error handler if provided;
     if (this.props.onError) {
-<<<<<<< HEAD
       this.props.onError(error, errorInfo)
   }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {,
-=======
-      this.props.onError(error, errorInfo)};
-  };
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-return (
-,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {)
@@ -57,22 +33,13 @@ return (
         fatal: false)
         custom_map: {,
           error_id: this.state.errorId),
-<<<<<<< HEAD
           component_stack: errorInfo.componentStack,
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false }
   }
-=======
-          component_stack: errorInfo.componentStack;
-class ErrorBoundary extends Component<Props , State>
-);
-} {/* TODO: Fix JSX expression */};
-  r: false }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */};
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-<<<<<<< HEAD
     }
   }
   componentDidCatch(erro,
@@ -84,32 +51,12 @@ class ErrorBoundary extends Component<Props , State>
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
         }
-      });
-    }
+      })}
   }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-  d: undefined });
-  }
+  d: undefined })}
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   }
-=======
-    }};
-  componentDidCatch(erro,
-  r: Error, errorInf)
-  o: ErrorInfo) {/* TODO: Fix JSX expression */};
-    };
-  };
-  private reportError = (erro,
-  r: Error, errorInf)
-  o: ErrorInfo) => {/* TODO: Fix JSX expression */};
-        };
-      })};
-  };
-  private handleRetry = () => {/* TODO: Fix JSX expression */};
-  d: undefined })};
-  private handleGoHome = () => {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -129,23 +76,14 @@ class ErrorBoundary extends Component<Props , State>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<<<<<<< HEAD
               <button
                 onClick={this.handleRetry}
-=======
-              <button onClick={this.handleRetry};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <RefreshCw className="w-4 h-4" />
                 Try Again,
               </button>,
-<<<<<<< HEAD
               <button;
                 onClick={this.handleGoHome}
-=======
-              <button ;
-                onClick={this.handleGoHome};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <Home className="w-4 h-4" />
                 Go Home,
@@ -192,15 +130,7 @@ class ErrorBoundary extends Component<Props , State>
               Or refresh the page,
             </button>
           </div>,
-<<<<<<< HEAD
-        </div>);
-    }
-    return this.props.children;
-  }
+        </div>)}
+    return this.props.children}
 }
-=======
-        </div>)};
-    return this.props.children};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default ErrorBoundary;"`

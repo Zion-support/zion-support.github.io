@@ -12,24 +12,14 @@ const FutureTechShowcase202, 6: React.FC = () => { ,
       trendi, n, g: t, r, u, e,
       ic, o, n: <Atom, classNam, e = 'w-8 , h-, 8' / > ,</Atom>gradie</Atom>, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
       bad, g, e: 'QUANTU, M, A, I',
-<<<<<<< HEAD
       sta, t, s: '1, 0,000x, Speed, Boost',
 const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      sta, t, s: '1, 0,000x, Speed, Boost',;
-const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     },
-    {/* TODO: Fix JSX expression */};
-     }]; return(<div , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; return(<div , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */};
       <div , className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div , className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
@@ -159,8 +149,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                     {artic, l, e.readTime};
                   </sp, a, n>
                   <sp, a, n></sp>
-                    {/* TODO: Fix JSX expression */};
-                    })};
+                    {/* TODO: Fix JSX expression */}})};
                   </sp, a, n>
                 </d, i, v > {/* CTA, Butto, n */}`
                 <a, hre, f = {`/bl, o, g/${artic, l, e.slug}`}`
@@ -227,7 +216,6 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-}
+  )}
 export default FutureTechShowcase2026;
 `

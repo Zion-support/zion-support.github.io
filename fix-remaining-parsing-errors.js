@@ -26,52 +26,25 @@ function fixParsingError(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Check if file ends with ); but is missing the closing brace;
-<<<<<<< HEAD
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {
 function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
       content = content.trim() + '\n};';
-      modified = true;
-    }
+      modified = true}
 
     if (modified) {/* TODO: Fix JSX expression */}
-  d: ${path.relative(__dirname, filePath)}`);
-    }
+  d: ${path.relative(__dirname, filePath)}`)}
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    console.error(`Error processing ${filePath}:`, error.message)}
 }
 
-=======
-    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {;
-function fixParsingError(filePath) {/* TODO: Fix JSX expression */};
-    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */};
-      content = content.trim() + '\n};';
-      modified = true};
-    if (modified) {/* TODO: Fix JSX expression */};
-  d: ${path.relative(__dirname, filePath)}`)};
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process all files;
 filesWithErrors.forEach(file => {)
   const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
-<<<<<<< HEAD
-    fixParsingError(fullPath);
-  }
+    fixParsingError(fullPath)}
 filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
   })
 });
 
 console.log('Fixed remaining parsing errors!');`
-=======
-    fixParsingError(fullPath)};
-filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */};
-  })
-});
-// console.log removed for production
-`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,35 +1,16 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
-=======
-interface SEOEnhancerProps {
-}
-}
-/* TODO: Fix JSX expression *
-}
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     },
     addres,
-<<<<<<< HEAD
   s: {/* TODO: Fix JSX expression */}
     }}
   const finalStructuredData = structuredData || defaultStructuredData;
   return (<React.Fragment>
-=======
-  s: {/* TOD,
-    O: Fix JSX expression *
-    }};
-;
-const finalStructuredData = structuredData || defaultStructuredData;
-  return (<React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
@@ -44,7 +25,6 @@ const finalStructuredData = structuredData || defaultStructuredData;
         <meta name="distribution" content="global" /></meta>"
         <meta name="rating" content="general" /></meta>
         {/* Canonical URL */}"
-<<<<<<< HEAD
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {/* Open Graph Tags */}"
         <meta property="o,"
@@ -84,10 +64,6 @@ const finalStructuredData = structuredData || defaultStructuredData;
         {/* Structured Data */}"
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
         {/* Preconnect to external domains */}"
-=======
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};
-        {/* Preconnect to external domains *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <link rel="preconnect" href="http,"
   s://fonts.googleapis.com" /></link>"
         <link rel="preconnect" href="http,"
@@ -103,12 +79,7 @@ const finalStructuredData = structuredData || defaultStructuredData;
       </Helmet>
       {children}
     </React.Fragment>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 export default SEOEnhancer;
 "
   </SEOEnhancerProps>

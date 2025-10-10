@@ -1,11 +1,7 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    };
-  ]; return(<section , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; return(<section , classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-30"></section>
         <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>
@@ -27,17 +23,10 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */};
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">)
-<<<<<<< HEAD
           { articl, e, s.m, a, p((art, i, c, l, e, i, d, x) = > {
             const IconComponen, t = artic, l, e.ic, o, n; return(<Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
             const IconComponen, t = artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20">
-=======
-          { articl, e, s.m, a, p((art, i, c, l, e, i, d, x) = > {;
-const IconComponen, t = artic, l, e.ic, o, n; return(<Link , ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20";
-const IconComponen, t = artic, l, e.ic, o, n; return (</div>
-              <Link , ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div, classNam, e = { `w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.grad, i, e, n, t }, round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transf, o, r, m`}></div>
                   <IconComponent , classNam, e = "w-6 h-6, tex, t-whi, t, e" />
                 </div>
@@ -86,12 +75,7 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
                   <Link, className="w-4 h-4" /></Link>
                 </div>
               </Li, n, k>)
-<<<<<<< HEAD
-            );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            )})}
         </div>
         {/* Stats, Ba, r */};
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8"></div>
@@ -132,11 +116,7 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
         </div>
         {/* C, T, A */};
         <div, classNam, e = "te, x, t-center, m, t-12"></div>
-<<<<<<< HEAD
           <Link, t, o="/bl, o, g"
-=======
-          <Link , t, o="/bl, o, g"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50">
             Explore, All, Articles;
             <Link , className="w-5 h-5" />
@@ -164,7 +144,6 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-}
+  )}
 export default October2025LatestContentBanner;
 "`

@@ -1,34 +1,18 @@
-const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-  ];
+const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}};
+    {/* TODO: Fix JSX expression */}}];
   return(<moti , o, n.d, i, v;
   return (<moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 40 }};
@@ -39,16 +23,11 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */};
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">";</div>
         <div, className="absolu, t, e -t, o, p-1/2 -rig, h, t-1/2 w-[800, p, x] h-[800, p, x] bg-cy, a, n-5, 0, 0/30, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolu, t, e -bott, o, m-1/2 -le, f, t-1/2 w-[800, p, x] h-[800, p, x] bg-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "1s" }}></d, i, v>";
-        <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>";)
+        <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>")
       </d, i, v>)
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">")
-<<<<<<< HEAD
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">",),
         {/* Header, Sectio, n */}
-=======
-      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">";),
-        {/* Header, Sectio, n */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div, className="text-center mb-12">";
           <moti, o, n.d, i, v;
         <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>";
@@ -455,7 +434,5 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */};
         </d, i, v>
       </d, i, v>
     </moti, o, n.d, i, v>
-  );
-}
-export default September30MegaBanner2025;
-}"`
+  )}
+export default September30MegaBanner2025}"`

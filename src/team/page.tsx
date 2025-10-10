@@ -3,18 +3,9 @@ import { Link } from 'react-router-dom';
 import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const TeamPage: React.FC = () => {
   const teamMembers = [
     {
-=======
-;
-const TeamPage: React.FC = () => {
-};
-const teamMembers = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
@@ -67,9 +58,7 @@ const teamMembers = [
       linkedin: 'https://linkedin.com/in/james-park-security',
       email: 'james@ziontechgroup.com',
       expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
-    };
-  ];
-<<<<<<< HEAD
+    }];
   const stats = [
     { icon: Users, label: 'Team Members', value: '50+' },
     { icon: Award, label: 'Awards Won', value: '25+' },
@@ -78,20 +67,6 @@ const teamMembers = [
   ];
   const values = [
     {
-=======
-;
-const stats = [
-[
-        { icon: Users, label: 'Team Members', value: '50+' },
-        { icon: Award, label: 'Awards Won', value: '25+' },
-        { icon: Brain, label: 'Years Experience', value: '15+' },
-        { icon: Shield, label: 'Client Satisfaction', value: '99%' };
-  ];
-;
-const values = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
       icon: Brain
@@ -110,16 +85,11 @@ const values = [
       title: 'Security',
       description: 'We prioritize the security and privacy of our clients\' data and systems.',
       icon: Shield
-    };
-  ];
+    }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
       {/* Hero Section */}
-=======
-      {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -130,11 +100,7 @@ const values = [
           </p>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Stats Section */}
-=======
-      {/* Stats Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -150,11 +116,7 @@ const values = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Team Members */}
-=======
-      {/* Team Members */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -194,12 +156,8 @@ const values = [
                       className="text-gray-400 hover:text-cyan-600 transition-colors">
                       <Linkedin className="w-5 h-5" />
                     </a>
-<<<<<<< HEAD
                     <a
                       href={`mailto:${member.email}`}
-=======
-                    <a href={`mailto:${member.email}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       className="text-gray-400 hover:text-cyan-600 transition-colors">
                       <Mail className="w-5 h-5" />
                     </a>
@@ -210,11 +168,7 @@ const values = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Values Section */}
-=======
-      {/* Values Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -238,11 +192,7 @@ const values = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}
-=======
-      {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -252,7 +202,6 @@ const values = [
             We're always looking for talented individuals who share our passion for innovation and excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <Link
               to="/careers"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -260,13 +209,6 @@ const values = [
   </
             <Link
               to="/contact"
-=======
-            <Link to="/careers"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              View Open Positions
-            </Link>
-            <Link to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Get in Touch
   </
@@ -275,7 +217,6 @@ const values = [
       </section>
       <Footer />
     </div>
-<<<<<<< HEAD
   ),
 }
 export default TeamPage;
@@ -286,7 +227,3 @@ export default TeamPage;
   </h2>
   </p>
   </h2>
-=======
-  )};
-export default TeamPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

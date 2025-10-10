@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import React from 'reac,
   t: ", import {createRoot} hydrateRoot } from "react-dom/clien,"
   t: " import App from "../App.ts,"
@@ -19,12 +18,9 @@
   t: " // import { ViewModeProvider } from "./context/ViewModeContex,"
   t: " // Initialize a React Query client with global error handling const queryClient = new QueryClient({/* TODO: Fix JSX expression */}")
   s: ""false""} }}) }); const rootElement = document.getElementById("roo,")
-  t: "), function renderApp() { const app = ( <React.StrictMode> <HelmetProvider> <QueryClientProvider client={queryClient}> <Router> <App /> </Router> </QueryClientProvider> </HelmetProvider> </React.StrictMode> ); if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement} app); } else if (rootElement) {createRoot(rootElement).render(app)} } } function displayFatalError(message) {/* TODO: Fix JSX expression */}
-=======
-  t: "), function renderApp() { const app = ( <React.StrictMode> <HelmetProvider> <QueryClientProvider client={queryClient}> <Router> <App /> </Router> </QueryClientProvider> </HelmetProvider> </React.StrictMode> ); if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement} app)} else if (rootElement) {createRoot(rootElement).render(app)} } } function displayFatalError(message) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  t: "), function renderApp() { const app = ( <React.StrictMode> <HelmetProvider> <QueryClientProvider client={queryClient}> <Router> <App /> </Router> </QueryClientProvider> </HelmetProvider> </React.StrictMode> ); if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement} app)} else if (rootElement) {createRoot(rootElement).render(app)} } } function displayFatalError(message) {/* TODO: Fix JSX expression */}
   n:center}font-famil,"
-  y:sans-serif}"> <h1>Application Error</h1> <p>${message}</p> </div>`; } } try {renderApp()} } catch (error) {
+  y:sans-serif}"> <h1>Application Error</h1> <p>${message}</p> </div>`} } try {renderApp()} } catch (error) {
     ' displayFatalError(error.message)
   } ' window.addEventListener('erro,")
   r: """) (e) => {

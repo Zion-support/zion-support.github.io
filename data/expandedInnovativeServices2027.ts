@@ -46,17 +46,10 @@ export type ExpandedService2027 =
     scalability: string,
   }
   support: string;
-<<<<<<< HEAD
   rating: number
   reviews: number
   launchDate: string,
   status: 'active' | 'beta' | 'coming-soon'}
-=======
-  rating: number;
-  reviews: number;
-  launchDate: string;
-  status: 'active' | 'beta' | 'coming-soon'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const advancedCybersecurityServices: ExpandedService2027[] = [
     id: 'quantum-threat-hunter'
@@ -410,8 +403,7 @@ export const,
     rating: 4.8
     reviews: 189,
     launchDate: '2027-02-01',
-    status: 'active'};
-];
+    status: 'active'}];
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     id: 'predictive-insights-engine'
@@ -497,8 +489,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
   e: '2027-02-01',
     statu,
   s: 'active'
-  };
-];
+  }];
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const,
   advancedDataAnalyticsServices: ExpandedService2027[] = [,
@@ -753,8 +744,7 @@ export const,
     rating: 4.8
     reviews: 198,
     launchDate: '2027-02-15',
-    status: 'active'};
-];
+    status: 'active'}];
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     id: 'multi-cloud-orchestrator'
@@ -840,8 +830,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
   e: '2027-02-15',
     statu,
   s: 'active'
-  };
-];
+  }];
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const,
   advancedCloudDevOpsServices: ExpandedService2027[] = [,
@@ -1090,8 +1079,7 @@ export const,
     rating: 4.7
     reviews: 245,
     launchDate: '2027-02-05',
-    status: 'active'};
-];
+    status: 'active'}];
 // 4. ADVANCED IOT & EDGE COMPUTING;
 export const advancedIoTServices: ExpandedService2027[] = [,
     id: 'industrial-iot-intelligence',
@@ -1177,8 +1165,7 @@ export const advancedIoTServices: ExpandedService2027[] = [,
   e: '2027-02-05',
     statu,
   s: 'active'
-  };
-];
+  }];
 // 4. ADVANCED IOT & EDGE COMPUTING;
 export const,
   advancedIoTServices: ExpandedService2027[] = [,
@@ -1427,8 +1414,7 @@ export const,
     rating: 4.9
     reviews: 156,
     launchDate: '2027-02-10',
-    status: 'active'};
-];
+    status: 'active'}];
 // 5. ADVANCED FINANCIAL TECHNOLOGY;
 export const advancedFinTechServices: ExpandedService2027[] = [
     id: 'quantum-financial-modeling'
@@ -1514,8 +1500,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
   e: '2027-02-10',
     statu,
   s: 'active'
-  };
-];
+  }];
 // 5. ADVANCED FINANCIAL TECHNOLOGY;
 export const,
   advancedFinTechServices: ExpandedService2027[] = [,
@@ -1764,8 +1749,7 @@ export const,
     rating: 4.6
     reviews: 423,
     launchDate: '2027-01-01',
-    status: 'active'};
-];
+    status: 'active'}];
 // 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export const advancedHealthcareServices: ExpandedService2027[] = [
     id: 'ai-diagnostic-assistant'
@@ -1851,8 +1835,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
   e: '2027-01-01',
     statu,
   s: 'active'
-  };
-];
+  }];
 // 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export const,
   advancedHealthcareServices: ExpandedService2027[] = [,
@@ -2179,8 +2162,7 @@ export const,
   e: '2027-01-15',
     statu,
   s: 'active'
-  };
-];
+  }];
 // Export all expanded services;
 export const ALL_EXPANDED_SERVICES_2027 = [
 ];
@@ -2189,8 +2171,7 @@ export const ALL_EXPANDED_SERVICES_2027 = [
   ...advancedCloudDevOpsServices,
   ...advancedIoTServices,
   ...advancedFinTechServices,
-  ...advancedHealthcareServices;
-];
+  ...advancedHealthcareServices];
 // Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [
 ];
@@ -2208,15 +2189,9 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
 export const getExpandedServicesByCategory = (categor)
   y: string): ExpandedService2027[] =>
   if (category === 'All')
-<<<<<<< HEAD
     return ALL_EXPANDED_SERVICES_2027,
   }
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
-}
-=======
-    return ALL_EXPANDED_SERVICES_2027};
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)}
 // Helper function to get services by subcategory;
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),}
@@ -2236,8 +2211,7 @@ export const searchExpandedServices = (quer)
     service.category.toLowerCase().includes(lowercaseQuery) ||
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||,
-    service.subcategory.toLowerCase().includes(lowercaseQuery));
-}
+    service.subcategory.toLowerCase().includes(lowercaseQuery))}
 // Expanded Innovative Services 2027 - Zion Tech Group // Additional Micro SAAS, IT Infrastructure, and AI Services export type ExpandedService2027 = i,
   d: string, nam,
   e: string, categor,
@@ -2842,6 +2816,6 @@ export const searchExpandedServices = (quer)
   s: 289,' launchDat,
   e: '2027-01-15',' statu,
   s: 'active' } ]; // Export all expanded services export const ALL_EXPANDED_SERVICES_2027 = [ ...advancedCybersecurityServices, ...advancedDataAnalyticsServices, ...advancedCloudDevOpsServices, ...advancedIoTServices, ...advancedFinTechServices, ...advancedHealthcareServices ]; // Service categories for filtering export const EXPANDED_SERVICE_CATEGORIES = [' 'All',' 'Cybersecurity',' 'Data Analytics',' 'Cloud & DevOps',' 'IoT & Edge Computing',' 'Financial Technology',' 'Healthcare Technology' ]; // Helper function to get services by category export const getExpandedServicesByCategory = (categor)
-  y: string): ExpandedService2027[] => ' if (category === 'All') return ALL_EXPANDED_SERVICES_2027, } return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category); } // Helper function to get services by subcategory export const getExpandedServicesBySubcategory = (subcategor)
+  y: string): ExpandedService2027[] => ' if (category === 'All') return ALL_EXPANDED_SERVICES_2027, } return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)} // Helper function to get services by subcategory export const getExpandedServicesBySubcategory = (subcategor)
   y: string): ExpandedService2027[] => return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory), } // Helper function to search services export const searchExpandedServices = (quer)
   y: string): ExpandedService2027[] => const lowercaseQuery = query.toLowerCase(); return ALL_EXPANDED_SERVICES_2027.filter(service => service.name.toLowerCase().includes(lowercaseQuery) || service.description.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) || service.category.toLowerCase().includes(lowercaseQuery) || service.subcategory.toLowerCase().includes(lowercaseQuery) ), }'

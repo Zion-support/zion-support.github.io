@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 
 export interface BiotechAIService {id: string;
-=======
-import React from 'react';
-export interface BiotechAIService {
-id: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   name: string;
   tagline: string;
   price: string;
@@ -32,7 +25,6 @@ id: string;
   market_size: string;
   growth_rate: string;
   variant: string;
-<<<<<<< HEAD
   contact_info: unknown
     mobile: string
     email: string,
@@ -40,18 +32,8 @@ id: string;
     website: string}
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string}
-=======
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-export interface BiotechAIService {/* TODO: Fix JSX expression */};
-  s: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     websit,
-  e: string};
-  };
+  e: string}};
       'Machine Learning',
       'Bioinformatics',
       'React',
@@ -1238,7 +1220,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */};
   trialDays: number, setupTime: string,
   category: string, realService: boolean,
   technology: string[], integrations: string[],
-<<<<<<< HEAD
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string
@@ -1252,19 +1233,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */};
   rating: number
   reviews: number,
 }
-=======
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string},
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const biotechAIServices: BiotechAIService[] = [,
     id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform',
     tagline: 'Accelerate drug development with AI-powered discovery',
@@ -1286,7 +1254,6 @@ export const biotechAIServices: BiotechAIService[] = [,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     real_implementation: true,
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.'
@@ -1294,15 +1261,6 @@ export const biotechAIServices: BiotechAIService[] = [,
     customers: 90
     rating: 4.9
     reviews: 45,
-=======
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.',
-    launch_date: '2024 - 03 - 10',
-    customers: 90;
-    rating: 4.9;
-    reviews: 45;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     ro,
   i: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
     competitor,
@@ -1469,32 +1427,16 @@ export const,
   g: 4.9,
     review,
   s: 45};
-export interface BiotechAIService {/* TODO: Fix JSX expression */};
-  };
-];
-<<<<<<< HEAD
-}
-=======
-;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export interface BiotechAIService {/* TODO: Fix JSX expression */}}]}
 ];
 realImplementation: true,
     implementationDetails:,
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
-<<<<<<< HEAD
     launchDate: '2024-01-15'
     customers: 120
     rating: 5.0
     reviews: 60,
   }
-=======
-    launchDate: '2024-01-15',
-    customers:
-        customers: 120;
-    rating: 5.0;
-    reviews: 60};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai-genetic-engineering-suite',
     name: 'AI Genetic Engineering Suite',
     tagline: 'Revolutionary genetic engineering with AI precision',
@@ -1984,13 +1926,8 @@ realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails:,
       'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.'
     launchDate: '2024-03-10'
@@ -2000,7 +1937,6 @@ realImplementation: true,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.'
@@ -2008,15 +1944,6 @@ realImplementation: true,
     customers: 90
     rating: 4.9
     reviews: 45,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.',
-    launchDate: '2024-03-10',
-    customers: 90;
-    rating: 4.9;
-    reviews: 45;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Performance monitoring'
     ]
     ro,
@@ -2073,12 +2000,10 @@ realImplementation: true,
     ratin,
   g: 4.9,
     review,
-  s: 45};
-];
+  s: 45}];
 export interface BiotechAIService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
   realImplementation: boolean;
@@ -2088,17 +2013,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */};
   rating: number
   reviews: number,
 }
-=======
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const biotechAIServices: BiotechAIService[] = [;
   {
     id: 'ai-drug-discovery-platform'
@@ -2126,7 +2040,6 @@ export const biotechAIServices: BiotechAIService[] = [;
     integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'];
     useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'];
     roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.';
-<<<<<<< HEAD
     competitors: ['InsitroRecursionBasic research tools']
     marketSize: '$150 B AI in healthcare market'
     growthRate: '250% annual growth',
@@ -2142,23 +2055,6 @@ export const biotechAIServices: BiotechAIService[] = [;
     customers: 90
     rating: 4.9
     reviews: 45,
-=======
-    competitors: ['InsitroRecursionBasic research tools'];
-    marketSize: '$150 B AI in healthcare market';
-    growthRate: '250% annual growth';
-    variant: 'biotech-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.',
-    launch_date: '2024 - 03 - 10',
-    customers: 90;
-    rating: 4.9;
-    reviews: 45;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -2170,20 +2066,11 @@ export const biotechAIServices: BiotechAIService[] = [;
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
 export const,
   biotechAIServices: BiotechAIService[] = [,
   {/* TODO: Fix JSX expression */}
   t: 'biotech-futuristic'}
-=======
-  s: number};
-;
-export const,
-  biotechAIServices: BiotechAIService[] = [;
-  {/* TODO: Fix JSX expression */};
-  t: 'biotech-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contactInf,
   o: {};
       mobil,
@@ -2207,15 +2094,8 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 45}
-];
-  }
-=======
-  s: 45};
-]};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+]}
 export interface BiotechAIService,
   id: string, nam,
   e: string, taglin,
@@ -2657,7 +2537,7 @@ export interface BiotechAIService,
   e: '2024 - 03 - 10' customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} export interface BiotechAIService { } ]; ; } ]; realImplementatio,
+  s: 45} export interface BiotechAIService { } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'' launchDat,
   e: '2024-01-15' customer,
@@ -2828,7 +2708,6 @@ export interface BiotechAIService,
   g: 4.9,
   reviews: 45 } ]; export interface BiotechAIService {/* TODO: Fix JSX expression */};
   s: string} websit,
-<<<<<<< HEAD
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
@@ -2837,16 +2716,6 @@ export interface BiotechAIService,
   g: number, review,
   s: number} export const,
   biotechAIServices: BiotechAIService[] = [, {/* TODO: Fix JSX expression */}
-=======
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  biotechAIServices: BiotechAIService[] = [; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -2856,8 +2725,4 @@ export interface BiotechAIService,
   e: '2024 - 03 - 10' customer,
   s: 90, ratin,
   g: 4.9, review,
-<<<<<<< HEAD
-  s: 45} ]; } '
-=======
-  s: 45} ]} ; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  s: 45} ]} '

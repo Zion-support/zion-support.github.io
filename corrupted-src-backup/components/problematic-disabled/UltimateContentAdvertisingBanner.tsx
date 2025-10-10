@@ -5,26 +5,16 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {,
       ic, o, n: "🚀",
       title: "Revolutionary, AI, Technologie, s",",
       description: "Me, t, a-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations",
-<<<<<<< HEAD
       highlig, h, t: "1000x, Performan, c, e"
 const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      highlig, h, t: "1000x, Performan, c, e";
-const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    },
-    {/* TODO: Fix JSX expression */};
-    };
-  ]; const successStat, s = [
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}},
+    {/* TODO: Fix JSX expression */}}]; const successStat, s = [
     { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Clien, t, s", ic, o, n: Us, e, r, s },"
     { val, u, e: "$5, 0, 0, M+", lab, e, l: "Cost, Savin, g, s", ic, o, n: DollarS, i, g, n },"
     { val, u, e: "9, 8%", lab, e, l: "Automation, Ra, t, e", ic, o, n: Tar, g, e, t },"
-    { val, u, e: "99.9, 9%", lab, e, l: "Security, Accura, c, y", ic, o, n: Shi, e, l, d };
-  ]; return(<div , classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+    { val, u, e: "99.9, 9%", lab, e, l: "Security, Accura, c, y", ic, o, n: Shi, e, l, d }]; return(<div , classNam, e = "py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};
       <div , className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
@@ -302,6 +292,5 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         </div>
       </div>
     </div>
-  );
-}
+  )}
 export default UltimateContentAdvertisingBanner;"

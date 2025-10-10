@@ -8,13 +8,8 @@ interface SEOHeadProp, s {
   image?: string;
   u, r, l?: string;
   ty, p, e?: string;
-<<<<<<< HEAD
   author ?  : string
   }
-=======
-  author ?  : string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
   description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",
   keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n',
@@ -50,19 +45,11 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     numberOfEmploye, e, s: '50, 0+',
     industry: 'Artificial, Intelligen, c, e',
     servic, e, s: [,
-<<<<<<< HEAD
 interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
  }
-=======
-interface SEOHeadProp, s {/* TODO: Fix JSX expression */};
- };
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */};
-     },
-    addre, s, s: {/* TODO: Fix JSX expression */};
-    },
+}) => {/* TODO: Fix JSX expression */}},
+    addre, s, s: {/* TODO: Fix JSX expression */}},
     foundingDa, t, e: '2, 0, 2, 0',
     numberOfEmploye, e, s: '50, 0+',
     industr,
@@ -73,11 +60,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       'AI, Data, Analytics',
       'Cybersecurity, A, I',
       'Quantum, Computin, g',
-<<<<<<< HEAD
       'AI, Consultin, g']} return(<Helm, e, t>
-=======
-      'AI, Consultin, g']}; return(<Helm , e, t>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <title>{title}</title>
       <meta , nam, e = 'description' conte, n, t={description} />
       <meta , nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} />
@@ -159,10 +142,5 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
         {JS, O, N.stringi, f, y(structuredD, a, t, a)};
       </scri, p, t>
     </Helm, e, t>
-<<<<<<< HEAD
-  );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  )}
 export default EnhancedSEOHead;

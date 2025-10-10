@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: string}
-=======
-export interface ComprehensiveService {/* TODO: Fix JSX expression */};
-  e: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     emai,
   l: string};
     addres,
@@ -29,17 +24,10 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */};
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
   launchDate: string
   customers: number
   rating: number,
   reviews: number}
-=======
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const contact =
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -2265,7 +2253,6 @@ export const,
     useCases: ['Supply chain tracking', 'Digital assets', 'DeFi applications'],
     roi: 'Enables new business models and efficiency gains',
     competitors: ['ConsenSys', 'R3 Corda', 'Hyperledger'],
-<<<<<<< HEAD
     marketSize: '$1.9B enterprise blockchain market'
     growthRate: '38% CAGR'
     launchDate: '2025-02-15'
@@ -2273,18 +2260,6 @@ export const,
     rating: 4.7
     reviews: 28,
   }
-=======
-    marketSize: '$1.9B enterprise blockchain market',
-    growthRate: '38% CAGR',
-    launchDate: '2025-02-15',
-    customers:
-        customers: 34;
-    rating: 4.7;
-    reviews: 28};
-];
-export const serviceCategories = [
-{name: 'Micro SaaS',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
     description: 'Affordable, specialized software solutions for small businesses',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
@@ -2373,11 +2348,9 @@ export const serviceCategories = [
     ratin,
   g: 4.7,
     review,
-  s: 28};
-];
+  s: 28}];
 export const serviceCategories = [
-{/* TODO: Fix JSX expression */};
-];
+{/* TODO: Fix JSX expression */}];
   n: ''};
     colo,
   r: 'from-blue-600 to-cyan-700'
@@ -2458,8 +2431,7 @@ export const serviceCategories = [
   n: '',
     colo,
   r: 'from-violet-600 to-purple-700'
-  };
-];
+  }];
 export interface ComprehensiveService,
   id: string, nam,
   e: string, taglin,
@@ -3274,8 +3246,4 @@ export interface ComprehensiveService,
   n: 'Cutting-edge technology solutions and platforms',' service,
   s: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),' ico,
   n: '🚀',' colo,
-<<<<<<< HEAD
   r: 'from-violet-600 to-purple-700' } ];'"
-=======
-  r: 'from-violet-600 to-purple-700' } ];'"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

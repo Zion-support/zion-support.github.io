@@ -3,18 +3,9 @@ import React from 'react';
 import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const DatabaseManagementPage: React.FC = () => {
   const features = [
     {
-=======
-;
-const DatabaseManagementPage: React.FC = () => {
-};
-const features = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: Database,
       title: 'Database Administration',
       description: 'Comprehensive database management and optimization',
@@ -37,8 +28,7 @@ const features = [
       title: 'Automated Maintenance',
       description: 'Automated database maintenance and updates',
       benefits: ['Automated backups', 'Patch management', 'Health checks']
-    };
-  ];
+    }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -53,20 +43,12 @@ const features = [
             From design to deployment, we ensure your data infrastructure is robust and efficient.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<<<<<<< HEAD
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
               Get Started</span>
             <a
               href="tel:+13024640950"
-=======
-            <a href="/contact"
-              className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-              Get Started
-            </a>
-            <a href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               <Database className="w-5 h-5" />
               +1 302 464 0950</span>
@@ -74,12 +56,7 @@ const features = [
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-<<<<<<< HEAD
             Database Services</span>
-=======
-            Database Services
-          </h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -107,15 +84,9 @@ const features = [
       </main>
       <Footer />
     </div>
-<<<<<<< HEAD
-  );
-}
+  )}
 export default DatabaseManagementPage</h2>
   </a>
   </a>
   </p>
   </h1>
-=======
-  )};
-export default DatabaseManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

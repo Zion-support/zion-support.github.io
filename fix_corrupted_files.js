@@ -115,12 +115,7 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */};
   fixed = fixed.replace(/;+/g, ';');
   fixed = fixed.replace(/,\s*,/g, ',');
   fixed = fixed.replace(/;\s*;/g, ';');
-<<<<<<< HEAD
-  return fixed;
-}
-=======
-  return fixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  return fixed}
 //Function to process a file;
 function processFile(filePath) {
   try {
@@ -129,20 +124,11 @@ function processFile(filePath) {
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
-<<<<<<< HEAD
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-=======
-function processFile(filePath) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to recursively find and process files;
 function processDirectory(dirPath) {
   try {
@@ -153,31 +139,18 @@ function processDirectory(dirPath) {
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
-function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
-        };
-      } else if ()
+function processDirectory(dirPath) {/* TODO: Fix JSX expression */}}} else if ()
         item.endsWith('.ts') ||
         item.endsWith('.tsx') ||
         item.endsWith('.js') ||
         item.endsWith('.jsx')
-<<<<<<< HEAD
       ) {/* TODO: Fix JSX expression */}
         }
       }
     }
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
-  return processedCount;
-}
-=======
-      ) {/* TODO: Fix JSX expression */};
-        };
-      };
-    };
-  } catch (error) {/* TODO: Fix JSX expression */};
-    //     };
-  return processedCount};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  return processedCount}
 //Main execution;
 // // const processedCount = processDirectory('./src');
 // 

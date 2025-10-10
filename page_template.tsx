@@ -7,43 +7,24 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain,
 const PageTemplate: React.FC<{
     title: string;
   description: string;
-<<<<<<< HEAD
   icon: React.ComponentType<any></any>features</any>: string[];
   benefits: string[]
   price: string
   category: string,
   keywords: string[]
   }> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
-=======
-  icon: React.ComponentType<any>;</any>features</any>: string[];
-  benefits: string[];
-  price: string;
-  category: string;
-  keywords: string[]}> = ({ title, description, icon: Icon, features, benefits, price, category, keywords }) => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
-      <SEOOptimizer ;)
+      <SEOOptimizer )
         title={`${title} - Zion Tech Group`})
         description={description})
         keywords={keywords})
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title={`${title} - Zion Tech Group`}
         description={description}
         keywords={keywords}
         canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-);
-}</div>
-      <SEOOptimizer title={`${title} - Zion Tech Group`};
-        description={description};
-        keywords={keywords};
-        canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -62,20 +43,12 @@ return (
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-<<<<<<< HEAD
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Get Started Today
               </a>
               <a
-=======
-              <a href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                Get Started Today;
-              </a>
-              <a ;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 <Phone className="w-5 h-5" />
@@ -114,11 +87,7 @@ return (
             ))};
           </div>
         </section>
-<<<<<<< HEAD
         {/* Benefits Section */}
-=======
-        {/* Benefits Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
@@ -144,11 +113,7 @@ return (
             ))};
           </div>
         </section>
-<<<<<<< HEAD
         {/* Pricing Section */}
-=======
-        {/* Pricing Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
@@ -172,11 +137,7 @@ return (
               <a ;
                 href="/contact"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block">
-<<<<<<< HEAD
                 Get Started,
-=======
-                Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </a>
             </div>
           </div>,
@@ -226,9 +187,7 @@ return (
         </section>
       </main>
       <Footer />,
-<<<<<<< HEAD
-    </div>);
-}
+    </div>)}
 export default PageTemplate;
   </h2>
   </h2>
@@ -237,7 +196,3 @@ export default PageTemplate;
   </h2>
   </h2>
   </SEOOptimizer>
-=======
-    </div>)};
-export default PageTemplate;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

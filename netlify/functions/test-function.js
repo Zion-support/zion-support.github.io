@@ -7,7 +7,6 @@ exports.handler = async function (event, context) {
         timestamp: new Date().toISOString()
         event: event,
         context: {,
-<<<<<<< HEAD
           awsRequestId: context.awsRequestId
           functionName: context.functionName,
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
@@ -18,31 +17,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }
   } catch (error) {
 
-=======
-          awsRequestId: context.awsRequestId;
-          functionName: context.functionName;
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */};
-        };
-      }),
-      header,
-  s: {'Content-Type': 'application/json'};
-    }} catch (error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return {
       statusCode: 500,
       body: JSON.stringify({)
         error: 'Test function failed'),
         message: error.message),
-        timestamp: new Date().toISOString()} catch (error) {/* TODO: Fix JSX expression */};
-      }),
+        timestamp: new Date().toISOString()} catch (error) {/* TODO: Fix JSX expression */}}),
       header,
-<<<<<<< HEAD
   s: {'Content-Type': 'application/json'}
     }
   }
 }
-=======
-  s: {'Content-Type': 'application/json'};
-    }};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
