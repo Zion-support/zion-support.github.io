@@ -1,11 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, Monitor, Package } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,74 +48,48 @@ const Navigation: React.FC = () => {
   // Service data
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
-<<<<<<< HEAD
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
     { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'Customer relationship management' },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Automated content creation' },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: '24/7 customer service' },
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
-=======
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
-    { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent chatbots' },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Automated content creation' },
-    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: '24/7 customer service' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'AI-powered security' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data intelligence' },
-    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' }
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   ];
 
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
-<<<<<<< HEAD
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
     { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' }
-  ];
-
-  const microSaasServices = [
-    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' },
-    { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
-    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Prospect identification' },
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination' }
-  ];
-
-  const emergingTech = [
-    { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
-    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
-    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
-    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
-=======
-    { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
-    { name: 'API Management', href: '/ai-api-management', icon: Settings, description: 'API development & management' },
+    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
     { name: 'Infrastructure Monitoring', href: '/ai-infrastructure-monitoring', icon: Monitor, description: 'System monitoring' },
     { name: 'Edge Computing', href: '/ai-edge-computing', icon: Cpu, description: 'Edge AI solutions' },
     { name: 'Content Delivery', href: '/ai-content-delivery-network', icon: Globe, description: 'Global CDN services' }
   ];
 
   const microSaasServices = [
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
     { name: 'AI CRM Assistant', href: '/ai-crm-assistant', icon: Users, description: 'Customer relationship management' },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' },
     { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
     { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead management' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Prospect identification' },
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination' },
     { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package, description: 'Inventory optimization' }
   ];
 
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Next-gen computing' },
-    { name: '5G Implementation', href: '/5g-implementation', icon: Smartphone, description: '5G network solutions' },
-    { name: 'Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock, description: 'Blockchain integration' },
-    { name: 'Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings, description: 'Self-managing systems' }
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
+    { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
+    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
   ];
 
   return (
@@ -140,11 +110,7 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-=======
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
               Home
             </Link>
             
@@ -391,7 +357,6 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-<<<<<<< HEAD
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -405,21 +370,6 @@ const Navigation: React.FC = () => {
               Blog
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-=======
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
-            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing
-            </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
               Contact
             </Link>
           </div>
@@ -453,17 +403,9 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-=======
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
-            <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
                 Home
               </Link>
               
@@ -562,7 +504,6 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-<<<<<<< HEAD
               <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
@@ -576,50 +517,6 @@ const Navigation: React.FC = () => {
                 Blog
               </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-=======
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
-              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Home
-              </Link>
-              <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                AI Services
-              </Link>
-              <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                IT Services
-              </Link>
-              <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Micro SaaS
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                About
-              </Link>
-              <Link to="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Case Studies
-              </Link>
-              <Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Blog
-              </Link>
-              <Link to="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Pricing
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About
-              </Link>
-              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
-              </Link>
-              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Pricing
-              </Link>
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
                 Contact
               </Link>
 
@@ -640,49 +537,6 @@ const Navigation: React.FC = () => {
                 <div className="flex items-center space-x-2 text-gray-400">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
-<<<<<<< HEAD
-=======
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-white/10">
-              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Home
-              </Link>
-              <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                AI Services
-              </Link>
-              <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                IT Services
-              </Link>
-              <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Micro SaaS
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                About
-              </Link>
-              <Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Blog
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Contact
-              </Link>
-              
-              {/* Mobile Contact Info */}
-              <div className="border-t border-white/10 pt-3 mt-3">
-                <a href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">
-                  <Phone className="w-4 h-4 mr-2" />
-                  +1 302 464 0950
-                </a>
-                <a href="mailto:kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">
-                  <Mail className="w-4 h-4 mr-2" />
-                  kleber@ziontechgroup.com
-                </a>
-                <div className="flex items-center text-gray-400 px-3 py-2 text-sm">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
                 </div>
               </div>
             </div>
