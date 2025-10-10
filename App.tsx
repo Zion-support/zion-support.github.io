@@ -37,6 +37,41 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+
+// AI Services Pages
+const AiMarketingPage = React.lazy(() => import('./app/ai-marketing/page'));
+const AiCustomerSupportPage = React.lazy(() => import('./app/ai-customer-support/page'));
+const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'));
+const AiContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'));
+const AiHealthcarePage = React.lazy(() => import('./app/ai-healthcare/page'));
+const AiFintechPage = React.lazy(() => import('./app/ai-fintech/page'));
+const AiEcommerceSolutionsPage = React.lazy(() => import('./app/ai-ecommerce-solutions/page'));
+const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+const AiMobileAppDevelopmentPage = React.lazy(() => import('./app/ai-mobile-app-development/page'));
+const AiSalesAutomationPage = React.lazy(() => import('./app/ai-sales-automation/page'));
+const AiWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'));
+const AiDataVisualizationPage = React.lazy(() => import('./app/ai-data-visualization/page'));
+const AiLeadGenerationPage = React.lazy(() => import('./app/ai-lead-generation/page'));
+const AiDocumentProcessingPage = React.lazy(() => import('./app/ai-document-processing/page'));
+const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
+const AiVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AiPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AiSupplyChainPage = React.lazy(() => import('./app/ai-supply-chain/page'));
+const AiQualityControlPage = React.lazy(() => import('./app/ai-quality-control/page'));
+const AiEnergyManagementPage = React.lazy(() => import('./app/ai-energy-management/page'));
+const AiLegalAnalysisPage = React.lazy(() => import('./app/ai-legal-analysis/page'));
+const AiRealEstatePage = React.lazy(() => import('./app/ai-real-estate/page'));
+const AiHrAssistantPage = React.lazy(() => import('./app/ai-hr-assistant/page'));
+const AiInsurancePage = React.lazy(() => import('./app/ai-insurance/page'));
+const AiEducationPage = React.lazy(() => import('./app/ai-education/page'));
+const AiTransportationPage = React.lazy(() => import('./app/ai-transportation/page'));
+const AiEnvironmentalPage = React.lazy(() => import('./app/ai-environmental/page'));
+const AiRetailPage = React.lazy(() => import('./app/ai-retail/page'));
+const AiSportsPage = React.lazy(() => import('./app/ai-sports/page'));
+const AiMentalHealthPage = React.lazy(() => import('./app/ai-mental-health/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -80,6 +115,41 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            
+                            {/* AI Services Routes */}
+                            <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                            <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                            <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                            <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                            <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                            <Route path="/ai-fintech" element={<AiFintechPage />} />
+                            <Route path="/ai-ecommerce-solutions" element={<AiEcommerceSolutionsPage />} />
+                            <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-mobile-app-development" element={<AiMobileAppDevelopmentPage />} />
+                            <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
+                            <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                            <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
+                            <Route path="/ai-lead-generation" element={<AiLeadGenerationPage />} />
+                            <Route path="/ai-document-processing" element={<AiDocumentProcessingPage />} />
+                            <Route path="/ai-automation" element={<AiAutomationPage />} />
+                            <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
+                            <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+                            <Route path="/ai-supply-chain" element={<AiSupplyChainPage />} />
+                            <Route path="/ai-quality-control" element={<AiQualityControlPage />} />
+                            <Route path="/ai-energy-management" element={<AiEnergyManagementPage />} />
+                            <Route path="/ai-legal-analysis" element={<AiLegalAnalysisPage />} />
+                            <Route path="/ai-real-estate" element={<AiRealEstatePage />} />
+                            <Route path="/ai-hr-assistant" element={<AiHrAssistantPage />} />
+                            <Route path="/ai-insurance" element={<AiInsurancePage />} />
+                            <Route path="/ai-education" element={<AiEducationPage />} />
+                            <Route path="/ai-transportation" element={<AiTransportationPage />} />
+                            <Route path="/ai-environmental" element={<AiEnvironmentalPage />} />
+                            <Route path="/ai-retail" element={<AiRetailPage />} />
+                            <Route path="/ai-sports" element={<AiSportsPage />} />
+                            <Route path="/ai-mental-health" element={<AiMentalHealthPage />} />
                           </Routes>
                         </Suspense>
                       </main>
