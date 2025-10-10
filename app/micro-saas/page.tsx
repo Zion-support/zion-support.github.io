@@ -552,6 +552,526 @@ const MicroSaasPage: React.FC = () => {
       category: 'Collaboration',
       popular: true,
       users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-video-editor',
+      name: 'Zion AI Video Editor',
+      description: 'AI-powered video editing platform with automated editing, effects, and content optimization',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'AI-powered auto-editing and trimming',
+        'Smart scene detection and transitions',
+        'Automated color correction and enhancement',
+        'AI-generated subtitles and captions',
+        'Background removal and replacement',
+        'Voice enhancement and noise reduction',
+        'Social media optimization',
+        'Cloud-based rendering and storage'
+      ],
+      benefits: [
+        'Reduce video editing time by 80%',
+        'Professional quality output',
+        'Automated optimization',
+        'Multi-platform publishing'
+      ],
+      category: 'Video Production',
+      popular: true,
+      users: 'Up to 10 users'
+    },
+    {
+      id: 'ai-translator-pro',
+      name: 'Zion AI Translator Pro',
+      description: 'Advanced AI translation platform with real-time translation and localization services',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'Real-time translation for 100+ languages',
+        'Context-aware translation accuracy',
+        'Document translation with formatting preservation',
+        'Voice translation and transcription',
+        'Website localization automation',
+        'Translation memory and consistency',
+        'API integration for apps',
+        'Human review and quality assurance'
+      ],
+      benefits: [
+        'Break language barriers instantly',
+        'Maintain brand consistency',
+        'Automated localization',
+        'Professional translation quality'
+      ],
+      category: 'Translation',
+      popular: true,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'ai-code-reviewer',
+      name: 'Zion AI Code Reviewer',
+      description: 'Intelligent code review platform with automated analysis, security scanning, and optimization suggestions',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'Automated code quality analysis',
+        'Security vulnerability detection',
+        'Performance optimization suggestions',
+        'Code style and best practices enforcement',
+        'Automated testing recommendations',
+        'Integration with Git workflows',
+        'Team collaboration and comments',
+        'Custom rule configuration'
+      ],
+      benefits: [
+        'Improve code quality by 60%',
+        'Reduce security vulnerabilities',
+        'Faster development cycles',
+        'Consistent coding standards'
+      ],
+      category: 'Development Tools',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-customer-insights',
+      name: 'Zion Customer Insights Pro',
+      description: 'Advanced customer analytics platform with AI-powered insights and behavioral analysis',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'AI-powered customer segmentation',
+        'Behavioral pattern analysis',
+        'Churn prediction and prevention',
+        'Customer lifetime value calculation',
+        'Sentiment analysis across channels',
+        'Personalization recommendations',
+        'Real-time customer journey mapping',
+        'Integration with CRM and marketing tools'
+      ],
+      benefits: [
+        'Increase customer retention by 45%',
+        'Better customer understanding',
+        'Predictive insights',
+        'Data-driven decisions'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      users: 'Up to 40 users'
+    },
+    {
+      id: 'ai-email-assistant',
+      name: 'Zion AI Email Assistant',
+      description: 'Intelligent email management platform with smart scheduling, prioritization, and response suggestions',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: [
+        'Smart email prioritization and sorting',
+        'AI-powered response suggestions',
+        'Automated email scheduling',
+        'Spam and phishing detection',
+        'Email template generation',
+        'Follow-up reminders and automation',
+        'Integration with calendar and CRM',
+        'Mobile app with offline support'
+      ],
+      benefits: [
+        'Save 70% email management time',
+        'Never miss important emails',
+        'Professional communication',
+        'Improved productivity'
+      ],
+      category: 'Email Management',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-meeting-assistant',
+      name: 'Zion AI Meeting Assistant',
+      description: 'AI-powered meeting platform with transcription, action items, and intelligent scheduling',
+      price: '$129/month',
+      marketPrice: '$250-700/month',
+      features: [
+        'Real-time meeting transcription',
+        'AI-generated meeting summaries',
+        'Automatic action item extraction',
+        'Smart meeting scheduling',
+        'Voice recognition and speaker identification',
+        'Integration with calendar and productivity tools',
+        'Meeting analytics and insights',
+        'Multi-language support'
+      ],
+      benefits: [
+        'Capture every important detail',
+        'Automated follow-up actions',
+        'Better meeting efficiency',
+        'Comprehensive meeting records'
+      ],
+      category: 'Meeting Management',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-seo-optimizer',
+      name: 'Zion AI SEO Optimizer',
+      description: 'Advanced SEO platform with AI-powered content optimization and ranking analysis',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'AI-powered keyword research and analysis',
+        'Content optimization suggestions',
+        'Competitor analysis and tracking',
+        'Technical SEO auditing',
+        'Link building recommendations',
+        'Local SEO optimization',
+        'Ranking tracking and reporting',
+        'Integration with CMS and analytics'
+      ],
+      benefits: [
+        'Increase organic traffic by 200%',
+        'Better search rankings',
+        'Automated optimization',
+        'Comprehensive SEO insights'
+      ],
+      category: 'SEO & Marketing',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'ai-data-cleaner',
+      name: 'Zion AI Data Cleaner',
+      description: 'Intelligent data cleaning and validation platform with automated error detection and correction',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'Automated data validation and cleaning',
+        'Duplicate detection and removal',
+        'Data format standardization',
+        'Missing data imputation',
+        'Data quality scoring and reporting',
+        'Integration with databases and APIs',
+        'Custom validation rules',
+        'Real-time data monitoring'
+      ],
+      benefits: [
+        'Improve data quality by 95%',
+        'Reduce manual data work',
+        'Automated error detection',
+        'Better data insights'
+      ],
+      category: 'Data Management',
+      popular: false,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-contract-analyzer',
+      name: 'Zion AI Contract Analyzer',
+      description: 'AI-powered contract analysis platform with risk assessment and compliance checking',
+      price: '$399/month',
+      marketPrice: '$800-2000/month',
+      features: [
+        'Automated contract analysis and review',
+        'Risk assessment and flagging',
+        'Compliance checking and validation',
+        'Contract comparison and version control',
+        'Key terms extraction and summarization',
+        'Integration with legal databases',
+        'Custom clause analysis',
+        'Automated reporting and alerts'
+      ],
+      benefits: [
+        'Reduce contract review time by 90%',
+        'Identify risks early',
+        'Ensure compliance',
+        'Better contract management'
+      ],
+      category: 'Legal Tech',
+      popular: false,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'ai-survey-builder',
+      name: 'Zion AI Survey Builder',
+      description: 'Intelligent survey creation platform with AI-powered question generation and analysis',
+      price: '$89/month',
+      marketPrice: '$180-500/month',
+      features: [
+        'AI-powered question generation',
+        'Smart survey design recommendations',
+        'Real-time response analysis',
+        'Automated insights and reporting',
+        'Multi-channel distribution',
+        'Advanced analytics and visualization',
+        'Integration with CRM and marketing tools',
+        'Custom branding and white-labeling'
+      ],
+      benefits: [
+        'Create better surveys faster',
+        'Get actionable insights',
+        'Automated analysis',
+        'Professional survey design'
+      ],
+      category: 'Survey & Research',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-accounting-assistant',
+      name: 'Zion AI Accounting Assistant',
+      description: 'AI-powered accounting platform with automated bookkeeping and financial analysis',
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      features: [
+        'Automated bookkeeping and categorization',
+        'Invoice processing and payment tracking',
+        'Expense management and receipt scanning',
+        'Financial reporting and analysis',
+        'Tax preparation assistance',
+        'Integration with banking and payment systems',
+        'Compliance monitoring and alerts',
+        'Custom financial dashboards'
+      ],
+      benefits: [
+        'Reduce accounting time by 80%',
+        'Automated financial processes',
+        'Better financial insights',
+        'Compliance assurance'
+      ],
+      category: 'Accounting & Finance',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'ai-recruitment-pro',
+      name: 'Zion AI Recruitment Pro',
+      description: 'Advanced recruitment platform with AI-powered candidate screening and matching',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'AI-powered resume screening and ranking',
+        'Intelligent candidate matching',
+        'Automated interview scheduling',
+        'Skills assessment and testing',
+        'Background check integration',
+        'Candidate pipeline management',
+        'Integration with job boards and ATS',
+        'Diversity and bias monitoring'
+      ],
+      benefits: [
+        'Reduce hiring time by 60%',
+        'Better candidate matching',
+        'Automated screening process',
+        'Improved hiring quality'
+      ],
+      category: 'Human Resources',
+      popular: true,
+      users: 'Up to 35 users'
+    },
+    {
+      id: 'ai-content-moderation',
+      name: 'Zion AI Content Moderation',
+      description: 'AI-powered content moderation platform with automated detection and filtering',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Automated content filtering and moderation',
+        'Image and video content analysis',
+        'Text sentiment and toxicity detection',
+        'Custom moderation rules and policies',
+        'Real-time content monitoring',
+        'Integration with social media platforms',
+        'Human review workflow',
+        'Detailed moderation reports'
+      ],
+      benefits: [
+        'Maintain platform safety',
+        'Automated content filtering',
+        'Reduce manual moderation',
+        'Consistent policy enforcement'
+      ],
+      category: 'Content Moderation',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'ai-predictive-maintenance',
+      name: 'Zion AI Predictive Maintenance',
+      description: 'AI-powered equipment maintenance platform with predictive analytics and optimization',
+      price: '$599/month',
+      marketPrice: '$1200-3000/month',
+      features: [
+        'Predictive failure analysis',
+        'Equipment health monitoring',
+        'Maintenance scheduling optimization',
+        'IoT sensor integration',
+        'Cost optimization recommendations',
+        'Real-time alerts and notifications',
+        'Integration with CMMS systems',
+        'Custom maintenance workflows'
+      ],
+      benefits: [
+        'Reduce downtime by 70%',
+        'Optimize maintenance costs',
+        'Prevent equipment failures',
+        'Extend equipment lifespan'
+      ],
+      category: 'Industrial AI',
+      popular: false,
+      users: 'Up to 40 users'
+    },
+    {
+      id: 'ai-energy-manager',
+      name: 'Zion AI Energy Manager',
+      description: 'Smart energy management platform with AI-powered optimization and monitoring',
+      price: '$399/month',
+      marketPrice: '$800-2000/month',
+      features: [
+        'Energy consumption analysis and optimization',
+        'Smart grid integration and management',
+        'Renewable energy optimization',
+        'Cost analysis and forecasting',
+        'Real-time energy monitoring',
+        'Integration with IoT devices',
+        'Carbon footprint tracking',
+        'Custom energy reports'
+      ],
+      benefits: [
+        'Reduce energy costs by 30%',
+        'Optimize renewable energy usage',
+        'Environmental sustainability',
+        'Better energy insights'
+      ],
+      category: 'Energy Management',
+      popular: false,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'ai-supply-chain-optimizer',
+      name: 'Zion AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with AI-powered optimization and forecasting',
+      price: '$799/month',
+      marketPrice: '$1500-4000/month',
+      features: [
+        'Demand forecasting and planning',
+        'Inventory optimization algorithms',
+        'Supplier risk assessment',
+        'Route optimization and logistics',
+        'Cost optimization analysis',
+        'Integration with ERP systems',
+        'Real-time supply chain monitoring',
+        'Custom optimization models'
+      ],
+      benefits: [
+        'Reduce supply chain costs by 25%',
+        'Improve delivery efficiency',
+        'Minimize inventory waste',
+        'Better supplier management'
+      ],
+      category: 'Supply Chain',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'ai-fraud-detector',
+      name: 'Zion AI Fraud Detector',
+      description: 'Advanced fraud detection platform with real-time monitoring and prevention',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Real-time fraud detection and prevention',
+        'Machine learning risk scoring',
+        'Behavioral analysis and pattern recognition',
+        'Multi-channel fraud monitoring',
+        'Integration with payment systems',
+        'Custom fraud rules and policies',
+        'Real-time alerts and notifications',
+        'Comprehensive fraud reporting'
+      ],
+      benefits: [
+        'Reduce fraud losses by 85%',
+        'Real-time protection',
+        'Automated detection',
+        'Better risk management'
+      ],
+      category: 'Security & Fraud',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'ai-customer-service-pro',
+      name: 'Zion AI Customer Service Pro',
+      description: 'Advanced AI customer service platform with multi-channel support and automation',
+      price: '$349/month',
+      marketPrice: '$700-2000/month',
+      features: [
+        'Multi-channel customer support (chat, email, phone)',
+        'AI-powered ticket routing and prioritization',
+        'Automated response generation',
+        'Sentiment analysis and emotion detection',
+        'Knowledge base integration',
+        'Live agent handoff with context',
+        'Customer satisfaction tracking',
+        'Integration with CRM systems'
+      ],
+      benefits: [
+        'Improve customer satisfaction by 60%',
+        'Reduce response time by 80%',
+        '24/7 automated support',
+        'Better customer insights'
+      ],
+      category: 'Customer Service',
+      popular: true,
+      users: 'Up to 40 users'
+    },
+    {
+      id: 'ai-marketing-automation',
+      name: 'Zion AI Marketing Automation',
+      description: 'Intelligent marketing automation platform with AI-powered campaigns and optimization',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'AI-powered campaign optimization',
+        'Customer journey mapping and automation',
+        'Personalized content generation',
+        'Multi-channel campaign management',
+        'A/B testing and optimization',
+        'Lead scoring and qualification',
+        'Integration with marketing tools',
+        'Advanced analytics and reporting'
+      ],
+      benefits: [
+        'Increase conversion rates by 150%',
+        'Automated personalization',
+        'Better lead qualification',
+        'Comprehensive marketing insights'
+      ],
+      category: 'Marketing Automation',
+      popular: true,
+      users: 'Up to 35 users'
+    },
+    {
+      id: 'ai-document-ai',
+      name: 'Zion AI Document AI',
+      description: 'Advanced document processing platform with AI-powered extraction and analysis',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Automated document classification',
+        'Text extraction and OCR',
+        'Data extraction and validation',
+        'Document comparison and analysis',
+        'Integration with document management systems',
+        'Custom extraction templates',
+        'Batch processing capabilities',
+        'API integration for automation'
+      ],
+      benefits: [
+        'Process documents 10x faster',
+        'Automated data extraction',
+        'Reduce manual errors',
+        'Better document insights'
+      ],
+      category: 'Document Processing',
+      popular: true,
+      users: 'Up to 25 users'
     }
   ];
 
@@ -576,7 +1096,25 @@ const MicroSaasPage: React.FC = () => {
     { id: 'Data Management', name: 'Data Management', count: products.filter(p => p.category === 'Data Management').length },
     { id: 'Monitoring', name: 'Monitoring', count: products.filter(p => p.category === 'Monitoring').length },
     { id: 'Compliance', name: 'Compliance', count: products.filter(p => p.category === 'Compliance').length },
-    { id: 'Collaboration', name: 'Collaboration', count: products.filter(p => p.category === 'Collaboration').length }
+    { id: 'Collaboration', name: 'Collaboration', count: products.filter(p => p.category === 'Collaboration').length },
+    { id: 'Video Production', name: 'Video Production', count: products.filter(p => p.category === 'Video Production').length },
+    { id: 'Translation', name: 'Translation', count: products.filter(p => p.category === 'Translation').length },
+    { id: 'Development Tools', name: 'Development Tools', count: products.filter(p => p.category === 'Development Tools').length },
+    { id: 'Customer Analytics', name: 'Customer Analytics', count: products.filter(p => p.category === 'Customer Analytics').length },
+    { id: 'Email Management', name: 'Email Management', count: products.filter(p => p.category === 'Email Management').length },
+    { id: 'Meeting Management', name: 'Meeting Management', count: products.filter(p => p.category === 'Meeting Management').length },
+    { id: 'SEO & Marketing', name: 'SEO & Marketing', count: products.filter(p => p.category === 'SEO & Marketing').length },
+    { id: 'Legal Tech', name: 'Legal Tech', count: products.filter(p => p.category === 'Legal Tech').length },
+    { id: 'Survey & Research', name: 'Survey & Research', count: products.filter(p => p.category === 'Survey & Research').length },
+    { id: 'Accounting & Finance', name: 'Accounting & Finance', count: products.filter(p => p.category === 'Accounting & Finance').length },
+    { id: 'Content Moderation', name: 'Content Moderation', count: products.filter(p => p.category === 'Content Moderation').length },
+    { id: 'Industrial AI', name: 'Industrial AI', count: products.filter(p => p.category === 'Industrial AI').length },
+    { id: 'Energy Management', name: 'Energy Management', count: products.filter(p => p.category === 'Energy Management').length },
+    { id: 'Supply Chain', name: 'Supply Chain', count: products.filter(p => p.category === 'Supply Chain').length },
+    { id: 'Security & Fraud', name: 'Security & Fraud', count: products.filter(p => p.category === 'Security & Fraud').length },
+    { id: 'Customer Service', name: 'Customer Service', count: products.filter(p => p.category === 'Customer Service').length },
+    { id: 'Marketing Automation', name: 'Marketing Automation', count: products.filter(p => p.category === 'Marketing Automation').length },
+    { id: 'Document Processing', name: 'Document Processing', count: products.filter(p => p.category === 'Document Processing').length }
   ];
 
   return (
