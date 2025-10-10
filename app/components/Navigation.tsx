@@ -71,15 +71,27 @@ const Navigation: React.FC = () => {
                 </button>
                 
                 {servicesOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                  <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                     <Link href="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      <Brain className="inline w-4 h-4 mr-2" />
                       AI Services
                     </Link>
                     <Link href="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      <Code className="inline w-4 h-4 mr-2" />
                       IT Services
                     </Link>
                     <Link href="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      <Zap className="inline w-4 h-4 mr-2" />
                       Micro SaaS
+                    </Link>
+                    <div className="border-t border-gray-700 my-1"></div>
+                    <Link href="/pricing" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      <Target className="inline w-4 h-4 mr-2" />
+                      Pricing
+                    </Link>
+                    <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      <FileText className="inline w-4 h-4 mr-2" />
+                      Case Studies
                     </Link>
                   </div>
                 )}
@@ -87,6 +99,12 @@ const Navigation: React.FC = () => {
 
               <Link href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
+              </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Blog
+              </Link>
+              <Link href="/careers" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Careers
               </Link>
               <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
@@ -112,8 +130,29 @@ const Navigation: React.FC = () => {
               <Link href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Home
               </Link>
+              <div className="border-t border-gray-700 my-2"></div>
+              <div className="text-gray-400 text-sm font-semibold px-3 py-2">Services</div>
+              <Link href="/ai-services" className="text-gray-300 hover:text-white block px-6 py-2 rounded-md text-base font-medium">
+                AI Services
+              </Link>
+              <Link href="/it-services" className="text-gray-300 hover:text-white block px-6 py-2 rounded-md text-base font-medium">
+                IT Services
+              </Link>
+              <Link href="/micro-saas" className="text-gray-300 hover:text-white block px-6 py-2 rounded-md text-base font-medium">
+                Micro SaaS
+              </Link>
+              <div className="border-t border-gray-700 my-2"></div>
               <Link href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
+              </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Blog
+              </Link>
+              <Link href="/careers" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Careers
+              </Link>
+              <Link href="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Pricing
               </Link>
               <Link href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact

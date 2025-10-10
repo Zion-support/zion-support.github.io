@@ -29,8 +29,9 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive artificial intelligence solutions for business automation and optimization.',
       icon: Brain,
       category: 'AI',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $5,000/month'
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting', 'Custom AI Models'],
+      price: 'Starting at $2,500/month',
+      benefits: ['95% accuracy rate', '10x faster processing', '24/7 AI support', 'Custom training']
     },
     {
       id: 2,
@@ -38,8 +39,9 @@ const ServicesPage: React.FC = () => {
       description: 'Scalable cloud infrastructure and migration services for modern businesses.',
       icon: Cloud,
       category: 'Cloud',
-      features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'Starting at $2,000/month'
+      features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery', 'Load Balancing', 'Cost Optimization'],
+      price: 'Starting at $1,500/month',
+      benefits: ['99.9% uptime', 'Global CDN', 'Auto-scaling', '24/7 monitoring']
     },
     {
       id: 3,
@@ -47,8 +49,9 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced security solutions to protect your digital assets and data.',
       icon: Shield,
       category: 'Security',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
-      price: 'Starting at $3,000/month'
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response', 'Penetration Testing', 'Security Training'],
+      price: 'Starting at $2,500/month',
+      benefits: ['Real-time monitoring', 'Automated response', 'Compliance reporting', 'Expert support']
     },
     {
       id: 4,
@@ -56,8 +59,9 @@ const ServicesPage: React.FC = () => {
       description: 'Transform your data into actionable insights with advanced analytics tools.',
       icon: BarChart3,
       category: 'Analytics',
-      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
-      price: 'Starting at $1,500/month'
+      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting', 'Predictive Analytics', 'Data Warehousing'],
+      price: 'Starting at $2,200/month',
+      benefits: ['Real-time insights', 'Custom dashboards', 'Automated reports', 'Data integration']
     },
     {
       id: 5,
@@ -65,8 +69,9 @@ const ServicesPage: React.FC = () => {
       description: 'Custom mobile applications for iOS and Android platforms.',
       icon: Smartphone,
       category: 'Development',
-      features: ['iOS Apps', 'Android Apps', 'Cross-platform', 'UI/UX Design'],
-      price: 'Starting at $8,000/project'
+      features: ['iOS Apps', 'Android Apps', 'Cross-platform', 'UI/UX Design', 'App Store Optimization', 'Maintenance & Support'],
+      price: 'Starting at $8,000/app',
+      benefits: ['Native performance', 'Cross-platform', 'App store optimization', 'Ongoing support']
     },
     {
       id: 6,
@@ -74,12 +79,43 @@ const ServicesPage: React.FC = () => {
       description: 'Database design, optimization, and management services.',
       icon: Database,
       category: 'Database',
-      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
-      price: 'Starting at $1,000/month'
+      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery', 'Security Hardening', 'Monitoring'],
+      price: 'Starting at $1,200/month',
+      benefits: ['High performance', 'Automated backups', 'Security hardening', '24/7 monitoring']
+    },
+    {
+      id: 7,
+      title: 'Web Development',
+      description: 'Modern web applications and e-commerce solutions.',
+      icon: Globe,
+      category: 'Development',
+      features: ['Responsive Design', 'E-commerce Integration', 'API Development', 'Performance Optimization', 'SEO Optimization', 'Security'],
+      price: 'Starting at $5,000/project',
+      benefits: ['Responsive design', 'Fast loading', 'SEO optimized', 'Secure']
+    },
+    {
+      id: 8,
+      title: 'DevOps & CI/CD',
+      description: 'Complete DevOps implementation with automated CI/CD pipelines.',
+      icon: Settings,
+      category: 'DevOps',
+      features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Monitoring & Logging', 'Security Integration', 'Auto-deployment', 'Container Orchestration'],
+      price: 'Starting at $3,000/month',
+      benefits: ['Automated deployment', 'Infrastructure as code', 'Continuous monitoring', 'Faster releases']
+    },
+    {
+      id: 9,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to optimize your technology stack.',
+      icon: Users,
+      category: 'Consulting',
+      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Guidance', 'Digital Transformation', 'Process Optimization'],
+      price: 'Starting at $200/hour',
+      benefits: ['Expert guidance', 'Cost optimization', 'Technology roadmap', 'Vendor management']
     }
   ];
 
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database', 'DevOps', 'Consulting'];
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -155,19 +191,41 @@ const ServicesPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex items-center justify-between">
-                    <span className="text-blue-400 font-semibold">{service.price}</span>
-                    <button className="flex items-center text-white hover:text-blue-400 transition-colors">
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                      {service.features.length > 4 && (
+                        <li className="text-xs text-gray-500 ml-5">
+                          +{service.features.length - 4} more features
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-400">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center justify-between mt-6">
+                    <span className="text-blue-400 font-semibold text-lg">{service.price}</span>
+                    <button className="flex items-center text-white hover:text-blue-400 transition-colors group">
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 </div>
