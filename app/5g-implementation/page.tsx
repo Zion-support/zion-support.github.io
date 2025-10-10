@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight } from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
