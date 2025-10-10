@@ -151,7 +151,7 @@ const AiTaskManagerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiTaskManagerPage;
+export default AiTaskManagerPage
   </button>
   </button>
   </p>

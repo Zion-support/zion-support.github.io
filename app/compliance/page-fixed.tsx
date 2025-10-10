@@ -120,7 +120,7 @@ const PageFixedPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default PageFixedPage;
+export default PageFixedPage
   </button>
   </button>
   </p>

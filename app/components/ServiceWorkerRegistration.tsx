@@ -139,7 +139,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
     </div>
   );
 };
-export default ServiceWorkerRegistrationPage;
+export default ServiceWorkerRegistrationPage
   </button>
   </button>
   </h2>

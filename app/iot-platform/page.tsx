@@ -90,6 +90,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 </div>
   );
 };
-export default PagePage;
+export default PagePage
   </button>
   </h2>

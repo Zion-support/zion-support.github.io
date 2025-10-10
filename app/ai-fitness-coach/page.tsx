@@ -151,7 +151,7 @@ const AiFitnessCoachPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiFitnessCoachPage;
+export default AiFitnessCoachPage
   </button>
   </button>
   </p>

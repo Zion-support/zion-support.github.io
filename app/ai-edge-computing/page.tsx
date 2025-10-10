@@ -151,7 +151,7 @@ const AiEdgeComputingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiEdgeComputingPage;
+export default AiEdgeComputingPage
   </button>
   </button>
   </p>

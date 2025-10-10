@@ -161,7 +161,7 @@ const PenetrationTestingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default PenetrationTestingPage;
+export default PenetrationTestingPage
   </button>
   </button>
   </h2>

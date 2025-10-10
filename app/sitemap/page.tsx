@@ -83,7 +83,7 @@ const SitemapPage: React.FC = () => {
     </div>
   );
 };
-export default SitemapPage;
+export default SitemapPage
   </a>
   </a>
   </p>

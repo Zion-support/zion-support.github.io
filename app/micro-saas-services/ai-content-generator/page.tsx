@@ -151,7 +151,7 @@ const AiContentGeneratorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiContentGeneratorPage;
+export default AiContentGeneratorPage
   </button>
   </button>
   </p>

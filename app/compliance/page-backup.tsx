@@ -120,7 +120,7 @@ const PageBackupPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default PageBackupPage;
+export default PageBackupPage
   </button>
   </button>
   </p>

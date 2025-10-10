@@ -139,7 +139,7 @@ const MainPage: React.FC = () => {
     </div>
   );
 };
-export default MainPage;
+export default MainPage
   </button>
   </button>
   </h2>

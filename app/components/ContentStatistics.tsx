@@ -285,7 +285,7 @@ setCounters(prev => {
     </div>
   );
 };
-export default ContentStatistics;
+export default ContentStatistics
   </button>
   </h2>
   </div>

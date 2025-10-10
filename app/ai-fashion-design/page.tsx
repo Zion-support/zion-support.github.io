@@ -151,7 +151,7 @@ const AiFashionDesignPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiFashionDesignPage;
+export default AiFashionDesignPage
   </button>
   </button>
   </p>

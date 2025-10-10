@@ -112,7 +112,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
       </section>
     </div>
   );
-};
+}
   </button>
   </button>
   </h2>

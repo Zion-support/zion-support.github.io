@@ -169,7 +169,7 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiCodeSecurityAuditorPage;
+export default AiCodeSecurityAuditorPage
   </button>
   </button>
   </p>

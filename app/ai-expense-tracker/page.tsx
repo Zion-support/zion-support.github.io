@@ -151,7 +151,7 @@ const AiExpenseTrackerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiExpenseTrackerPage;
+export default AiExpenseTrackerPage
   </button>
   </button>
   </p>

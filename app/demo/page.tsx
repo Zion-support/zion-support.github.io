@@ -34,7 +34,7 @@ const DemoPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              See Our <span className="text-cyan-400">Solutions</span> in Action;
+              See Our <span className="text-cyan-400">Solutions</span> in Action</span>
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
@@ -89,6 +89,6 @@ const DemoPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default DemoPage;
+export default DemoPage
   </button>
   </h1>

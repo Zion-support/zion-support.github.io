@@ -88,7 +88,7 @@
     </div>
   );
 };
-export default GlobalErrorBoundaryPage;
+export default GlobalErrorBoundaryPage
   </button>
   </button>
   </h2>

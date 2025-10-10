@@ -151,7 +151,7 @@ const AiQuantumFinancialOraclePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiQuantumFinancialOraclePage;
+export default AiQuantumFinancialOraclePage
   </button>
   </button>
   </p>

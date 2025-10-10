@@ -151,7 +151,7 @@ const AiVoiceCloningStudioPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiVoiceCloningStudioPage;
+export default AiVoiceCloningStudioPage
   </button>
   </button>
   </p>

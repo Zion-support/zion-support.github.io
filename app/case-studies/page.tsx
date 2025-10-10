@@ -194,7 +194,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
     </div>
   );
 };
-export default CaseStudiesPage;
+export default CaseStudiesPage
   </button>
   </div>
   </div>

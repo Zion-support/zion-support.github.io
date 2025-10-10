@@ -169,7 +169,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
     </div>
   );
 };
-export default PagePage;
+export default PagePage
   </button>
   </button>
   </p>

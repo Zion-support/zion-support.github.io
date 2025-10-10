@@ -123,7 +123,7 @@ icon: Zap,
     </div>
   );
 };
-export default CloudMigrationPage;
+export default CloudMigrationPage
   </button>
   </button>
   </h2>

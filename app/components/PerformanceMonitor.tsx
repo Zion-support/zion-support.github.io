@@ -48,5 +48,5 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 };
-export default PerformanceMonitor;
+export default PerformanceMonitor
   </PerformanceMetrics>

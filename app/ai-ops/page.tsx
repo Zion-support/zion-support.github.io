@@ -151,7 +151,7 @@ const AiOpsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiOpsPage;
+export default AiOpsPage
   </button>
   </button>
   </p>

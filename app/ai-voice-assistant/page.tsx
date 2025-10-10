@@ -151,7 +151,7 @@ const AiVoiceAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiVoiceAssistantPage;
+export default AiVoiceAssistantPage
   </button>
   </button>
   </p>

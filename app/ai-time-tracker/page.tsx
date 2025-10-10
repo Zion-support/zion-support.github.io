@@ -151,7 +151,7 @@ const AiTimeTrackerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiTimeTrackerPage;
+export default AiTimeTrackerPage
   </button>
   </button>
   </p>

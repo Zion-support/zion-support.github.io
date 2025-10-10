@@ -178,7 +178,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     </div>
   );
 };
-export default PerformanceDashboard;
+export default PerformanceDashboard
   </div>
   </h3>
   </div>

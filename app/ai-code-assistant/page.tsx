@@ -112,7 +112,7 @@ const AiCodeAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiCodeAssistantPage;
+export default AiCodeAssistantPage
   </button>
   </h2>
   </button>

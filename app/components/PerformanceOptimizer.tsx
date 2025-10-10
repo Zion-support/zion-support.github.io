@@ -115,7 +115,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     </React.Fragment>
   );
 };
-export default PerformanceOptimizer;
+export default PerformanceOptimizer
   </h3>
   </div>
   </number>

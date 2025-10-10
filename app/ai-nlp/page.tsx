@@ -151,7 +151,7 @@ const AiNlpPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiNlpPage;
+export default AiNlpPage
   </button>
   </button>
   </p>

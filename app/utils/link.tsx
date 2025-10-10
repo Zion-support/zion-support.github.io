@@ -80,7 +80,7 @@ export default Link;
     </a>)
   );
 };
-export default Link;
+export default Link
   </LinkProps>
   </LinkProps>
   </LinkProps>

@@ -151,7 +151,7 @@ const AiPredictiveMaintenancePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiPredictiveMaintenancePage;
+export default AiPredictiveMaintenancePage
   </button>
   </button>
   </p>

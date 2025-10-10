@@ -151,7 +151,7 @@ const AiCodeGenerationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiCodeGenerationPage;
+export default AiCodeGenerationPage
   </button>
   </button>
   </p>

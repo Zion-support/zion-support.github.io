@@ -314,7 +314,7 @@ logo: '/api/placeholder/200/100',
     </React.Fragment>
   );
 };
-export default PartnersPage;
+export default PartnersPage
   </button>
   </h2>
   </div>

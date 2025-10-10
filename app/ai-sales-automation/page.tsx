@@ -151,7 +151,7 @@ const AiSalesAutomationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSalesAutomationPage;
+export default AiSalesAutomationPage
   </button>
   </button>
   </p>

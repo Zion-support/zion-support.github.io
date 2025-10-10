@@ -151,7 +151,7 @@ const AiChatbotBuilderPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiChatbotBuilderPage;
+export default AiChatbotBuilderPage
   </button>
   </button>
   </p>

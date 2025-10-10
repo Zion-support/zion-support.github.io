@@ -161,7 +161,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default CloudInfrastructureManagerPage;
+export default CloudInfrastructureManagerPage
   </button>
   </button>
   </h2>

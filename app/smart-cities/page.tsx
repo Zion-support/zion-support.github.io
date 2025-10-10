@@ -120,7 +120,7 @@ const PagePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default PagePage;
+export default PagePage
   </button>
   </button>
   </p>

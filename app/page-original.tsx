@@ -1452,7 +1452,7 @@ const HomePage: React.FC = memo(() => {
   );
 });
 HomePage.displayName = 'HomePage';
-export default HomePage;
+export default HomePage
   </button>
   </label>
   </label>

@@ -201,7 +201,7 @@ const PricingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default PricingPage;
+export default PricingPage
   </Link>
   </div>
   </button>

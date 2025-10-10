@@ -151,7 +151,7 @@ const AiDrugDiscoveryProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiDrugDiscoveryProPage;
+export default AiDrugDiscoveryProPage
   </button>
   </button>
   </p>

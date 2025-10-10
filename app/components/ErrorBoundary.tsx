@@ -51,8 +51,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong;
-  </
+              Oops! Something went wrong
+            </h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
@@ -101,7 +101,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     return this.props.children;
   }
 }
-export default ErrorBoundary;
+export default ErrorBoundary
   </a>
   </button>
   </button>

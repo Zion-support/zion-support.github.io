@@ -99,7 +99,7 @@ const CompliancePage: React.FC = () => {
     </div>
   );
 };
-export default CompliancePage;
+export default CompliancePage
   </button>
   </button>
   </h1>

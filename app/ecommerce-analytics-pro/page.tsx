@@ -72,5 +72,5 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default EcommerceAnalyticsProPage;
+export default EcommerceAnalyticsProPage
   </h1>

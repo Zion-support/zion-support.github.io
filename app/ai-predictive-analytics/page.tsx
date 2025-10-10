@@ -151,7 +151,7 @@ const AiPredictiveAnalyticsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiPredictiveAnalyticsPage;
+export default AiPredictiveAnalyticsPage
   </button>
   </button>
   </p>

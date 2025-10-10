@@ -112,7 +112,7 @@ const AiClimateSolutionsProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiClimateSolutionsProPage;
+export default AiClimateSolutionsProPage
   </button>
   </h2>
   </button>

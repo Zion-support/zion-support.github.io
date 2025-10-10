@@ -120,7 +120,7 @@ const ServiceWorkerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default ServiceWorkerPage;
+export default ServiceWorkerPage
   </button>
   </button>
   </p>

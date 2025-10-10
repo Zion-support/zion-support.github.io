@@ -151,7 +151,7 @@ const AiInvestmentOptimizerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiInvestmentOptimizerPage;
+export default AiInvestmentOptimizerPage
   </button>
   </button>
   </p>

@@ -138,7 +138,7 @@ icon: Shield,
     </div>
   );
 };
-export default BackupRecoveryPage;
+export default BackupRecoveryPage
   </button>
   </button>
   </button>

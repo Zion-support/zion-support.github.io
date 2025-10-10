@@ -151,7 +151,7 @@ const AiStockPortfolioManagerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiStockPortfolioManagerPage;
+export default AiStockPortfolioManagerPage
   </button>
   </button>
   </p>

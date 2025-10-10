@@ -151,7 +151,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiInvoiceGeneratorPage;
+export default AiInvoiceGeneratorPage
   </button>
   </button>
   </p>

@@ -151,7 +151,7 @@ const AiRoboticsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiRoboticsPage;
+export default AiRoboticsPage
   </button>
   </button>
   </p>

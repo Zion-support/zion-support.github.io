@@ -151,7 +151,7 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSocialMediaSchedulerPage;
+export default AiSocialMediaSchedulerPage
   </button>
   </button>
   </p>

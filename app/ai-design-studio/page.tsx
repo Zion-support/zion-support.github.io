@@ -151,7 +151,7 @@ const AiDesignStudioPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiDesignStudioPage;
+export default AiDesignStudioPage
   </button>
   </button>
   </p>

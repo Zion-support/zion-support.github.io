@@ -80,6 +80,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   );
 };
-export default PagePage;
+export default PagePage
   </button>
   </button>

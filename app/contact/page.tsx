@@ -255,7 +255,7 @@ const ContactPage: React.FC = () => {
     </div>
   );
 };
-export default ContactPage;
+export default ContactPage
   </textarea>
   </label>
   </label>

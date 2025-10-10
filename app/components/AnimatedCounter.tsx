@@ -43,5 +43,5 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     </span>
   );
 };
-export default AnimatedCounter;
+export default AnimatedCounter
   </AnimatedCounterProps>

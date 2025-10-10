@@ -133,7 +133,7 @@ const FiveGImplementationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default FiveGImplementationPage;
+export default FiveGImplementationPage
   </button>
   </button>
   </p>

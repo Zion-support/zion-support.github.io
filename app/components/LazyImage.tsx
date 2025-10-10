@@ -90,7 +90,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   );
 };
-export default LazyImagePage;
+export default LazyImagePage
   </button>
   </button>
   </h2>

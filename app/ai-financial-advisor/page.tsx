@@ -151,7 +151,7 @@ const AiFinancialAdvisorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiFinancialAdvisorPage;
+export default AiFinancialAdvisorPage
   </button>
   </button>
   </p>

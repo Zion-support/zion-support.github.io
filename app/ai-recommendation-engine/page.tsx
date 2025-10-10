@@ -151,7 +151,7 @@ const AiRecommendationEnginePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiRecommendationEnginePage;
+export default AiRecommendationEnginePage
   </button>
   </button>
   </p>

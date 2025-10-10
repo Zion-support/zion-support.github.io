@@ -326,7 +326,7 @@ phone: '',
 </div>
   );
 };
-export default ContactPage;
+export default ContactPage
   </textarea>
   </label>
   </label>

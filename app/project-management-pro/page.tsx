@@ -160,7 +160,7 @@ const ProjectManagementProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default ProjectManagementProPage;
+export default ProjectManagementProPage
   </button>
   </button>
   </h2>

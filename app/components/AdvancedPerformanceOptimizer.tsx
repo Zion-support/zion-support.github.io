@@ -119,5 +119,5 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     </div>
   );
 };
-export default AdvancedPerformanceOptimizer;
+export default AdvancedPerformanceOptimizer
   </PerformanceOptimizerProps>

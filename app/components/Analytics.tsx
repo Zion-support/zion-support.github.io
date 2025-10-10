@@ -180,5 +180,5 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       {children}
     </React.Fragment>
   );
-};
+}
   </AnalyticsProps>

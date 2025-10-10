@@ -80,7 +80,7 @@ const PagePage: React.FC = () => {
     </div>
   );
 };
-export default PagePage;
+export default PagePage
   </button>
   </button>
   </h2>

@@ -120,7 +120,7 @@ const FuturisticBackgroundPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default FuturisticBackgroundPage;
+export default FuturisticBackgroundPage
   </button>
   </button>
   </p>

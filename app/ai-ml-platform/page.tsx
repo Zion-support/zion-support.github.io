@@ -151,7 +151,7 @@ const AiMlPlatformPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiMlPlatformPage;
+export default AiMlPlatformPage
   </button>
   </button>
   </p>

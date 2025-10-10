@@ -151,7 +151,7 @@ const AiProjectManagementPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiProjectManagementPage;
+export default AiProjectManagementPage
   </button>
   </button>
   </p>

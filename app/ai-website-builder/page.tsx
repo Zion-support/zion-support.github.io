@@ -151,7 +151,7 @@ const AiWebsiteBuilderPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiWebsiteBuilderPage;
+export default AiWebsiteBuilderPage
   </button>
   </button>
   </p>

@@ -151,7 +151,7 @@ const AiEnergyGridManagementProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiEnergyGridManagementProPage;
+export default AiEnergyGridManagementProPage
   </button>
   </button>
   </p>

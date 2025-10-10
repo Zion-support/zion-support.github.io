@@ -151,7 +151,7 @@ const AiDocumentProcessingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiDocumentProcessingPage;
+export default AiDocumentProcessingPage
   </button>
   </button>
   </p>

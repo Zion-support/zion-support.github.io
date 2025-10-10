@@ -140,7 +140,7 @@ const ServicesPage: React.FC = () => {
     </div>
   );
 };
-export default ServicesPage;
+export default ServicesPage
   </button>
   </button>
   </h2>

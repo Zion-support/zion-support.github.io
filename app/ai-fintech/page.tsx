@@ -151,7 +151,7 @@ const AiFintechPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiFintechPage;
+export default AiFintechPage
   </button>
   </button>
   </p>

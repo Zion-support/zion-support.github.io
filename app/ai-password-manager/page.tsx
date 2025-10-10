@@ -151,7 +151,7 @@ const AiPasswordManagerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiPasswordManagerPage;
+export default AiPasswordManagerPage
   </button>
   </button>
   </p>

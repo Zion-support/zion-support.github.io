@@ -151,7 +151,7 @@ const AiInventoryManagementPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiInventoryManagementPage;
+export default AiInventoryManagementPage
   </button>
   </button>
   </p>

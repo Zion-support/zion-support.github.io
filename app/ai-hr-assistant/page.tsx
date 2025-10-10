@@ -151,7 +151,7 @@ const AiHrAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiHrAssistantPage;
+export default AiHrAssistantPage
   </button>
   </button>
   </p>

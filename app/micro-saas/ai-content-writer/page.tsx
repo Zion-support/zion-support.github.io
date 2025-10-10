@@ -151,7 +151,7 @@ const AiContentWriterPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiContentWriterPage;
+export default AiContentWriterPage
   </button>
   </button>
   </p>

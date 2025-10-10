@@ -49,5 +49,5 @@ const EmailMarketingSuitePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default EmailMarketingSuitePage;
+export default EmailMarketingSuitePage
   </button>

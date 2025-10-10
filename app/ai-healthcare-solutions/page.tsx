@@ -151,7 +151,7 @@ const AiHealthcareSolutionsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiHealthcareSolutionsPage;
+export default AiHealthcareSolutionsPage
   </button>
   </button>
   </p>

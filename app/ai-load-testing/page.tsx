@@ -151,7 +151,7 @@ const AiLoadTestingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiLoadTestingPage;
+export default AiLoadTestingPage
   </button>
   </button>
   </p>

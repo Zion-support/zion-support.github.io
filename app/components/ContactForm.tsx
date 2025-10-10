@@ -66,7 +66,7 @@ interface FormStatus {
     'Cybersecurity',
     'IT Consulting',
     'Other'
-  ];
+  ]
               </label>
               <input
                 type="text"
@@ -191,7 +191,7 @@ interface FormStatus {
     </div>
   );
 };
-export default ContactForm;
+export default ContactForm
   </select>
   </label>
   </label>

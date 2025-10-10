@@ -160,7 +160,7 @@ const ProcessAutomationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default ProcessAutomationPage;
+export default ProcessAutomationPage
   </button>
   </button>
   </h2>

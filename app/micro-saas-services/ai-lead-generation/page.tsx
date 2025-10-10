@@ -151,7 +151,7 @@ const AiLeadGenerationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiLeadGenerationPage;
+export default AiLeadGenerationPage
   </button>
   </button>
   </p>

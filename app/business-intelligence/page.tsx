@@ -122,7 +122,7 @@ icon: Brain,
     </div>
   );
 };
-export default BusinessIntelligencePage;
+export default BusinessIntelligencePage
   </button>
   </button>
   </h2>

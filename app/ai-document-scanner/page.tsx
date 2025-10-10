@@ -151,7 +151,7 @@ const AiDocumentScannerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiDocumentScannerPage;
+export default AiDocumentScannerPage
   </button>
   </button>
   </p>

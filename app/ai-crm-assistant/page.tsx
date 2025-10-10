@@ -169,7 +169,7 @@ const AiCrmAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiCrmAssistantPage;
+export default AiCrmAssistantPage
   </button>
   </button>
   </p>

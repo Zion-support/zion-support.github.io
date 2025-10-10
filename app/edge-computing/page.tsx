@@ -251,7 +251,7 @@ const EdgeComputingPage: React.FC = () => {
     </div>
   );
 };
-export default EdgeComputingPage;
+export default EdgeComputingPage
   </button>
   </button>
   </p>

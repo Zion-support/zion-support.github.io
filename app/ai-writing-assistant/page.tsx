@@ -151,7 +151,7 @@ const AiWritingAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiWritingAssistantPage;
+export default AiWritingAssistantPage
   </button>
   </button>
   </p>

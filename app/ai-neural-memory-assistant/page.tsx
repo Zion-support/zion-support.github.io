@@ -151,7 +151,7 @@ const AiNeuralMemoryAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiNeuralMemoryAssistantPage;
+export default AiNeuralMemoryAssistantPage
   </button>
   </button>
   </p>

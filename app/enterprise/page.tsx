@@ -211,7 +211,7 @@ const EnterprisePage: React.FC = () => {
     </div>
   );
 };
-export default EnterprisePage;
+export default EnterprisePage
   </button>
   </h2>
   </h2>

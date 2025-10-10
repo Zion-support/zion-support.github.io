@@ -83,6 +83,6 @@ const EnhancedServicesShowcase: React.FC = () => {
     </section>
   );
 };
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcase
   </p>
   </h2>

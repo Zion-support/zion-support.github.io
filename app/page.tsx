@@ -1,23 +1,23 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+'use client'
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
+      import('./components/ContentPromotionBanner')
       import('./components/ContentCarousel');
     }, 100);
   }
@@ -29,29 +29,29 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+))
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
-    preloadComponents();
+    preloadComponents()
     return () => clearTimeout(timer);
   }, []);
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
     }
-  }, []);
+  }, [])
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -113,8 +113,8 @@ const HomePage: React.FC = () => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-          Skip to main content;
-  </
+          Skip to main content
+        </a>
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
@@ -135,11 +135,11 @@ const HomePage: React.FC = () => {
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
             >
-              Zion Tech Group;
-  </
+              Zion Tech Group
+            </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-              Advanced AI and IT Solutions;
-  </
+              Advanced AI and IT Solutions
+            </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
@@ -176,38 +176,38 @@ const HomePage: React.FC = () => {
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
               >
-                📞 Call: (302) 464-0950;
-  </
+                📞 Call: (302) 464-0950
+              </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                📧 Email Us;
-  </
+                📧 Email Us
+              </a>
               <a 
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Consultation;
-  </
+                Get Free Consultation
+              </a>
             </div>
             {/* Contact Info */}
             <div className="mt-8 text-center">
               <p className="text-gray-300 text-sm mb-2">
-                📍 364 E Main St STE 1008, Middletown, DE 19709;
-  </
+                📍 364 E Main St STE 1008, Middletown, DE 19709
+              </p>
               <p className="text-gray-300 text-sm">
-                ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available;
-  </
+                ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
+              </p>
             </div>
           </div>
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services;
-  </
+            Our Services
+          </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations;
-  </
+            Comprehensive AI and IT solutions designed to transform your business operations
+          </p>
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -307,7 +307,7 @@ const HomePage: React.FC = () => {
           {/* Micro SAAS Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Solutions;
+              Micro SAAS Solutions
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>
@@ -435,7 +435,7 @@ const HomePage: React.FC = () => {
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure;
+              IT Services & Infrastructure
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -547,7 +547,7 @@ const HomePage: React.FC = () => {
           {/* New AI Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced AI Services;
+              Advanced AI Services
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -633,7 +633,7 @@ const HomePage: React.FC = () => {
           {/* Emerging Technologies Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Emerging Technologies;
+              Emerging Technologies
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -693,7 +693,7 @@ const HomePage: React.FC = () => {
           {/* IT Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure;
+              IT Services & Infrastructure
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -741,7 +741,7 @@ const HomePage: React.FC = () => {
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Micro SAAS Solutions;
+            Micro SAAS Solutions
   </
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
@@ -749,7 +749,7 @@ const HomePage: React.FC = () => {
           {/* Productivity Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Productivity & Business Tools;
+              Productivity & Business Tools
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -861,7 +861,7 @@ const HomePage: React.FC = () => {
           {/* Marketing & Sales Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Marketing & Sales Tools;
+              Marketing & Sales Tools
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -921,7 +921,7 @@ const HomePage: React.FC = () => {
           {/* Developer Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Developer Tools;
+              Developer Tools
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -1016,7 +1016,7 @@ const HomePage: React.FC = () => {
                     <div>
                       <p className="text-gray-300 text-sm">Phone</p>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        +1 (302) 464-0950;
+                        +1 (302) 464-0950
   </
                     </div>
                   </div>
@@ -1027,7 +1027,7 @@ const HomePage: React.FC = () => {
                     <div>
                       <p className="text-gray-300 text-sm">Email</p>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        kleber@ziontechgroup.com;
+                        kleber@ziontechgroup.com
   </
                     </div>
                   </div>
@@ -1039,7 +1039,7 @@ const HomePage: React.FC = () => {
                       <p className="text-gray-300 text-sm">Address</p>
                       <p className="text-white font-semibold">
                         364 E Main St STE 1008<br />
-                        Middletown, DE 19709;
+                        Middletown, DE 19709
   </
                     </div>
                   </div>
@@ -1051,7 +1051,7 @@ const HomePage: React.FC = () => {
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p className="text-white font-semibold">
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-                        24/7 Emergency Support Available;
+                        24/7 Emergency Support Available
   </
                     </div>
                   </div>
@@ -1063,7 +1063,7 @@ const HomePage: React.FC = () => {
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name;
+                      Full Name
   </
                     <input
                       type="text"
@@ -1076,7 +1076,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address;
+                      Email Address
   </
                     <input
                       type="email"
@@ -1089,7 +1089,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number;
+                      Phone Number
   </
                     <input
                       type="tel"
@@ -1101,7 +1101,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest;
+                      Service Interest
   </
                     <select
                       id="service"
@@ -1112,12 +1112,12 @@ const HomePage: React.FC = () => {
                       <option value="it-services">IT Services</option>
                       <option value="micro-saas">Micro SAAS Solutions</option>
                       <option value="consulting">IT Consulting</option>
-                      <option value="other">Other</option>
+                      <option value="other">Other</option></option>
                     </select>
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message;
+                      Message
   </
                     <textarea
                       id="message"
@@ -1125,12 +1125,12 @@ const HomePage: React.FC = () => {
                       rows={4}
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                       placeholder="Tell us about your project or requirements"
-                    ></textarea>
+                    ></textarea></textarea>
                   </div>
                   <button
                     type="submit"
                     className="w-full cyber-button text-center py-4">
-                    Send Message;
+                    Send Message
   </
                 </form>
               </div>
@@ -1143,8 +1143,8 @@ const HomePage: React.FC = () => {
     </div>
     </React.Fragment>
   );
-};
-export default HomePage;
+}
+export default HomePage
   </button>
   </label>
   </label>

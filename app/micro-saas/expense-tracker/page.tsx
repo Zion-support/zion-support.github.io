@@ -50,5 +50,5 @@ const MicroSaaSPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default MicroSaaSPage;
+export default MicroSaaSPage
   </button>

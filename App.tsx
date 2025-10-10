@@ -34,6 +34,10 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const AIQualityControlPage = React.lazy(() => import('./app/ai-quality-control/page'));
+const AIEnergyManagementPage = React.lazy(() => import('./app/ai-energy-management/page'));
+const AILegalAnalysisPage = React.lazy(() => import('./app/ai-legal-analysis/page'));
+const DataBackupPage = React.lazy(() => import('./app/data-backup/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -75,6 +79,10 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/ai-quality-control" element={<AIQualityControlPage />} />
+                            <Route path="/ai-energy-management" element={<AIEnergyManagementPage />} />
+                            <Route path="/ai-legal-analysis" element={<AILegalAnalysisPage />} />
+                            <Route path="/data-backup" element={<DataBackupPage />} />
                           </Routes>
                         </Suspense>
                       </main>

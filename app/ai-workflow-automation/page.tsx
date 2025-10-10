@@ -151,7 +151,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiWorkflowAutomationPage;
+export default AiWorkflowAutomationPage
   </button>
   </button>
   </p>

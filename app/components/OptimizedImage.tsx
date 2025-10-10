@@ -107,7 +107,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   );
 };
-export default OptimizedImagePage;
+export default OptimizedImagePage
   </button>
   </button>
   </h2>

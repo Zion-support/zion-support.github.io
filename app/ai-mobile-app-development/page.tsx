@@ -151,7 +151,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiMobileAppDevelopmentPage;
+export default AiMobileAppDevelopmentPage
   </button>
   </button>
   </p>

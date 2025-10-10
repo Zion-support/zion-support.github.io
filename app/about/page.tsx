@@ -164,7 +164,7 @@ const AboutPage: React.FC = () => {
     </React.Fragment>
 );
 };
-export default AboutPage;
+export default AboutPage
   </button>
   </button>
   </h1>

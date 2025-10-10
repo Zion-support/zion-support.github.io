@@ -151,7 +151,7 @@ const AiMusicCompositionPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiMusicCompositionPage;
+export default AiMusicCompositionPage
   </button>
   </button>
   </p>

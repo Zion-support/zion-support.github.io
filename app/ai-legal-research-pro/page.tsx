@@ -151,7 +151,7 @@ const AiLegalResearchProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiLegalResearchProPage;
+export default AiLegalResearchProPage
   </button>
   </button>
   </p>

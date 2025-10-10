@@ -147,5 +147,5 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </React.Fragment>
   );
 };
-export default AdvancedSEOOptimizer;
+export default AdvancedSEOOptimizer
   </SEOOptimizerProps>

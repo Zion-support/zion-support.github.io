@@ -183,7 +183,7 @@ const AiApiManagerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiApiManagerPage;
+export default AiApiManagerPage
   </button>
   </h2>
   </button>

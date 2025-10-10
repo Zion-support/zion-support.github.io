@@ -151,7 +151,7 @@ const AiCybersecurityMonitorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiCybersecurityMonitorPage;
+export default AiCybersecurityMonitorPage
   </button>
   </button>
   </p>

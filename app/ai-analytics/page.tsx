@@ -163,7 +163,7 @@ title: 'Real-Time Dashboards',
     </React.Fragment>
   );
 };
-export default AiAnalyticsPage;
+export default AiAnalyticsPage
   </button>
   </h2>
   </button>

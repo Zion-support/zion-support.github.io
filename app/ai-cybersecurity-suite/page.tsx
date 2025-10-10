@@ -151,7 +151,7 @@ const AiCybersecuritySuitePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiCybersecuritySuitePage;
+export default AiCybersecuritySuitePage
   </button>
   </button>
   </p>

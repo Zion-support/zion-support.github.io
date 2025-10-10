@@ -151,7 +151,7 @@ const AiEnergyPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiEnergyPage;
+export default AiEnergyPage
   </button>
   </button>
   </p>

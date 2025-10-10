@@ -151,7 +151,7 @@ const AiHrPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiHrPage;
+export default AiHrPage
   </button>
   </button>
   </p>

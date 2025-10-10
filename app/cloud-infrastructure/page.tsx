@@ -126,7 +126,7 @@ icon: Shield,
     </div>
   );
 };
-export default CloudInfrastructurePage;
+export default CloudInfrastructurePage
   </button>
   </button>
   </section>

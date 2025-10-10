@@ -151,7 +151,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiAnalyticsDashboardPage;
+export default AiAnalyticsDashboardPage
   </button>
   </button>
   </p>

@@ -151,7 +151,7 @@ const AiInsurancePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiInsurancePage;
+export default AiInsurancePage
   </button>
   </button>
   </p>

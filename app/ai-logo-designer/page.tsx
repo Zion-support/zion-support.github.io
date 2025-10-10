@@ -151,7 +151,7 @@ const AiLogoDesignerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiLogoDesignerPage;
+export default AiLogoDesignerPage
   </button>
   </button>
   </p>

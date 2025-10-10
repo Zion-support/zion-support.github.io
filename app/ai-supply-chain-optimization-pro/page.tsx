@@ -151,7 +151,7 @@ const AiSupplyChainOptimizationProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSupplyChainOptimizationProPage;
+export default AiSupplyChainOptimizationProPage
   </button>
   </button>
   </p>

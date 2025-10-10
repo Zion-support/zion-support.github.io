@@ -237,6 +237,6 @@ const Sidebar: React.FC = () => {
   );
 };
 Sidebar.displayName = 'Sidebar';
-export default Sidebar;
+export default Sidebar
   </div>
   </string>

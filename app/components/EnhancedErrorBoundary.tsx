@@ -92,7 +92,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   );
 };
-export default EnhancedErrorBoundaryPage;
+export default EnhancedErrorBoundaryPage
   </button>
   </button>
   </h2>

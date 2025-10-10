@@ -93,7 +93,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   );
 };
-export default EnhancedHeroPage;
+export default EnhancedHeroPage
   </button>
   </button>
   </h2>

@@ -151,7 +151,7 @@ const AiQuantumOptimizationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiQuantumOptimizationPage;
+export default AiQuantumOptimizationPage
   </button>
   </button>
   </p>

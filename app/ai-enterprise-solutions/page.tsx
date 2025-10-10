@@ -151,7 +151,7 @@ const AiEnterpriseSolutionsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiEnterpriseSolutionsPage;
+export default AiEnterpriseSolutionsPage
   </button>
   </button>
   </p>

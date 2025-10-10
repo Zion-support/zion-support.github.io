@@ -152,7 +152,7 @@ const AiFraudDetectionPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiFraudDetectionPage;
+export default AiFraudDetectionPage
   </button>
   </button>
   </p>

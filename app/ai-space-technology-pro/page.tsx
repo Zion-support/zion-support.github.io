@@ -151,7 +151,7 @@ const AiSpaceTechnologyProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSpaceTechnologyProPage;
+export default AiSpaceTechnologyProPage
   </button>
   </button>
   </p>

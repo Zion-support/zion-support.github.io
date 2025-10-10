@@ -151,7 +151,7 @@ const AiSentimentAnalyzerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSentimentAnalyzerPage;
+export default AiSentimentAnalyzerPage
   </button>
   </button>
   </p>

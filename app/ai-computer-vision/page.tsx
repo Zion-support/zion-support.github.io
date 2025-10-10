@@ -169,7 +169,7 @@ const AiComputerVisionPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiComputerVisionPage;
+export default AiComputerVisionPage
   </button>
   </button>
   </p>

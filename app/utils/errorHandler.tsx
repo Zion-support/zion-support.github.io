@@ -971,7 +971,7 @@ export class ErrorBoundary extends React.Component<
             ></button>
               Try again</button>
             >
-              Try again;
+              Try again
             </button>
           </div>
         )

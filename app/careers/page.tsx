@@ -356,7 +356,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
     </div>
   );
 };
-export default CareersPage;
+export default CareersPage
   </Link>
   </button>
   </button>

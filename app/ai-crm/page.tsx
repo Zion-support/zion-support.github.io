@@ -151,7 +151,7 @@ const AiCrmPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiCrmPage;
+export default AiCrmPage
   </button>
   </button>
   </p>

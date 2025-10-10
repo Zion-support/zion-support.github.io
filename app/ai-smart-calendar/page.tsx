@@ -151,7 +151,7 @@ const AiSmartCalendarPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSmartCalendarPage;
+export default AiSmartCalendarPage
   </button>
   </button>
   </p>

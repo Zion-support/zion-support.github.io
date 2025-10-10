@@ -94,7 +94,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
 };
-export default PerformanceEnhancerPage;
+export default PerformanceEnhancerPage
   </h2>
   </button>
   </span>

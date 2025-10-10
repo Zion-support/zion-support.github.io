@@ -151,7 +151,7 @@ const AiEducationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiEducationPage;
+export default AiEducationPage
   </button>
   </button>
   </p>

@@ -151,7 +151,7 @@ const AiVideoGeneratorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiVideoGeneratorPage;
+export default AiVideoGeneratorPage
   </button>
   </button>
   </p>

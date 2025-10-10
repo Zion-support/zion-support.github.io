@@ -151,7 +151,7 @@ const AiCustomerSupportBotPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiCustomerSupportBotPage;
+export default AiCustomerSupportBotPage
   </button>
   </button>
   </p>

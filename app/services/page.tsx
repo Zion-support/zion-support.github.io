@@ -992,7 +992,7 @@ const ServicesPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default ServicesPage;
+export default ServicesPage
   </button>
   </button>
   </button>

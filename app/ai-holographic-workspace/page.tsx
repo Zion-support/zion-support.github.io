@@ -151,7 +151,7 @@ const AiHolographicWorkspacePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiHolographicWorkspacePage;
+export default AiHolographicWorkspacePage
   </button>
   </button>
   </p>

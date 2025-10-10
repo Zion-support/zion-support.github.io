@@ -159,7 +159,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default EmailMarketingAutomationPage;
+export default EmailMarketingAutomationPage
   </button>
   </button>
   </h2>

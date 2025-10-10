@@ -141,7 +141,7 @@ icon: Shield,
     </div>
   );
 };
-export default CloudMigrationServicesPage;
+export default CloudMigrationServicesPage
   </button>
   </button>
   </h2>

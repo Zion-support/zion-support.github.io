@@ -203,7 +203,7 @@ const FinancialITPage: React.FC = () => {
     </div>
   );
 };
-export default FinancialITPage;
+export default FinancialITPage
   </button>
   </button>
   </p>

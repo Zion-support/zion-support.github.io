@@ -606,7 +606,7 @@ const ITConsultingPage: React.FC = () => {
     </div>
   );
 };
-export default ITConsultingPage;
+export default ITConsultingPage
   </a>
   </a>
   </a>

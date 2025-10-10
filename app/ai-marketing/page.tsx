@@ -151,7 +151,7 @@ const AiMarketingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiMarketingPage;
+export default AiMarketingPage
   </button>
   </button>
   </p>

@@ -486,7 +486,7 @@ const ConsultationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default ConsultationPage;
+export default ConsultationPage
   </button>
   </button>
   </Link>

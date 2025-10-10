@@ -186,7 +186,7 @@ const AccessibilityPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AccessibilityPage;
+export default AccessibilityPage
   </button>
   </button>
   </h2>

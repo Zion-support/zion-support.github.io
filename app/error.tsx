@@ -112,7 +112,7 @@ const ErrorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default ErrorPage;
+export default ErrorPage
   </button>
   </h2>
   </button>

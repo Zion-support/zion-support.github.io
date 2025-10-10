@@ -169,7 +169,7 @@ const AiContentGenerationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiContentGenerationPage;
+export default AiContentGenerationPage
   </button>
   </button>
   </p>

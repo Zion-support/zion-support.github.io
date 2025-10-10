@@ -151,7 +151,7 @@ const AiRealEstatePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiRealEstatePage;
+export default AiRealEstatePage
   </button>
   </button>
   </p>

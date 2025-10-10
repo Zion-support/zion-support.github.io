@@ -151,7 +151,7 @@ const AiEmailMarketingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiEmailMarketingPage;
+export default AiEmailMarketingPage
   </button>
   </button>
   </p>

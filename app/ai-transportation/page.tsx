@@ -151,7 +151,7 @@ const AiTransportationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiTransportationPage;
+export default AiTransportationPage
   </button>
   </button>
   </p>

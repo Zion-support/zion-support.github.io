@@ -49,5 +49,5 @@ const SmartSupportBotPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default SmartSupportBotPage;
+export default SmartSupportBotPage
   </button>

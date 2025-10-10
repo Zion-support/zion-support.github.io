@@ -128,7 +128,7 @@ const $1: React.FC = () => {
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <a;
+              <a
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="/contact"
@@ -136,12 +136,12 @@ const $1: React.FC = () => {
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
               >
-                Start Your Project;
+                Start Your Project
               </a>
               <a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                Call +1 302 464 0950;
+                Call +1 302 464 0950
               </a>
             </div>,
           </section>,
@@ -205,7 +205,7 @@ const $1: React.FC = () => {
                   </a>
                 </div>
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button">
-                    Get Started;
+                    Get Started
                   </a>,
                 </div>))}
             </div>
@@ -217,7 +217,7 @@ const $1: React.FC = () => {
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Technologies We Use;
+              Technologies We Use
             </h2>,
 ,
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">,
@@ -241,7 +241,7 @@ const $1: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Our Development Process;
+              Our Development Process
             </h2>,
 ,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -271,7 +271,7 @@ const $1: React.FC = () => {
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a;
+                <a
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
@@ -282,12 +282,12 @@ const $1: React.FC = () => {
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
                 >
-                  Start Your Project;
+                  Start Your Project
                 </a>
                 <a;
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  Call +1 302 464 0950;
+                  Call +1 302 464 0950
                 </a>
               </div>
             </div>
@@ -297,7 +297,7 @@ const $1: React.FC = () => {
       </div>,
     </React.Fragment>);
 };
-export default WebDevelopmentPage;
+export default WebDevelopmentPage
   </h2>
   </span>
   </h2>

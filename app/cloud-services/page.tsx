@@ -153,7 +153,7 @@ const features = [
     </React.Fragment>
   );
 };
-export default CloudServicesPage;
+export default CloudServicesPage
   </button>
   </button>
   </h1>

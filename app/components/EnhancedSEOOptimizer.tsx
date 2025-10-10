@@ -129,7 +129,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     </div>
   );
 };
-export default EnhancedSEOOptimizerPage;
+export default EnhancedSEOOptimizerPage
   </button>
   </button>
   </button>

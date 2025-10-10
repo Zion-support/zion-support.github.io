@@ -169,7 +169,7 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiContentDeliveryNetworkPage;
+export default AiContentDeliveryNetworkPage
   </button>
   </button>
   </p>

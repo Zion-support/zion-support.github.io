@@ -72,5 +72,5 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AIRecruitmentAssistantPage;
+export default AIRecruitmentAssistantPage
   </h1>

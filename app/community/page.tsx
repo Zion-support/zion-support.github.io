@@ -99,7 +99,7 @@ const CommunityPage: React.FC = () => {
     </div>
   );
 };
-export default CommunityPage;
+export default CommunityPage
   </button>
   </button>
   </h1>

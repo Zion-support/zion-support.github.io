@@ -151,7 +151,7 @@ const AiSchedulerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSchedulerPage;
+export default AiSchedulerPage
   </button>
   </button>
   </p>

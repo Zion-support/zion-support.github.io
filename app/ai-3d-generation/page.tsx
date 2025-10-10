@@ -151,7 +151,7 @@ const Ai3dGenerationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default Ai3dGenerationPage;
+export default Ai3dGenerationPage
   </button>
   </button>
   </p>

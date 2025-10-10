@@ -151,7 +151,7 @@ const AiTelepathicInterfacePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiTelepathicInterfacePage;
+export default AiTelepathicInterfacePage
   </button>
   </button>
   </p>

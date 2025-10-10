@@ -321,7 +321,7 @@ const BlogPage: React.FC = () => {
     </div>
   );
 };
-export default BlogPage;
+export default BlogPage
   </span>
   </section>
   </h1>

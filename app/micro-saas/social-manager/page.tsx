@@ -49,5 +49,5 @@ const SocialMediaManagerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default SocialMediaManagerPage;
+export default SocialMediaManagerPage
   </button>

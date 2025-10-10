@@ -151,7 +151,7 @@ const AiSupplyChainPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSupplyChainPage;
+export default AiSupplyChainPage
   </button>
   </button>
   </p>

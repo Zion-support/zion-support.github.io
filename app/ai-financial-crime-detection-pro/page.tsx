@@ -151,7 +151,7 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiFinancialCrimeDetectionProPage;
+export default AiFinancialCrimeDetectionProPage
   </button>
   </button>
   </p>

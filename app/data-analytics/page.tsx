@@ -160,7 +160,7 @@ const DataAnalyticsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default DataAnalyticsPage;
+export default DataAnalyticsPage
   </button>
   </button>
   </h2>

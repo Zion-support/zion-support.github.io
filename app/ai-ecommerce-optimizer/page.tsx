@@ -151,7 +151,7 @@ const AiEcommerceOptimizerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiEcommerceOptimizerPage;
+export default AiEcommerceOptimizerPage
   </button>
   </button>
   </p>

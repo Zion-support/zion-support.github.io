@@ -151,7 +151,7 @@ const AiSeoOptimizerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSeoOptimizerPage;
+export default AiSeoOptimizerPage
   </button>
   </button>
   </p>

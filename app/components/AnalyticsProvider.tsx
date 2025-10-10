@@ -45,5 +45,5 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     </AnalyticsContext.Provider>
   );
 };
-export { AnalyticsProvider };
+export { AnalyticsProvider }
   </AnalyticsContextType>

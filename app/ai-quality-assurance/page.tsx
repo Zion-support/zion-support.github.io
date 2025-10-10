@@ -151,7 +151,7 @@ const AiQualityAssurancePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiQualityAssurancePage;
+export default AiQualityAssurancePage
   </button>
   </button>
   </p>

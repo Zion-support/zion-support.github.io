@@ -151,7 +151,7 @@ const AiQuantumComputingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiQuantumComputingPage;
+export default AiQuantumComputingPage
   </button>
   </button>
   </p>

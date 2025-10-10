@@ -151,7 +151,7 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiAgriculturalIntelligenceProPage;
+export default AiAgriculturalIntelligenceProPage
   </button>
   </button>
   </p>

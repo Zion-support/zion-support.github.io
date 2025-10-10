@@ -151,7 +151,7 @@ const AiMentalHealthCompanionPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiMentalHealthCompanionPage;
+export default AiMentalHealthCompanionPage
   </button>
   </button>
   </p>

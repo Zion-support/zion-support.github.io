@@ -151,7 +151,7 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiInfrastructureMonitoringPage;
+export default AiInfrastructureMonitoringPage
   </button>
   </button>
   </p>

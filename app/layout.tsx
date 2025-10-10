@@ -140,7 +140,7 @@ const LayoutPage: React.FC = () => {
     </div>
   );
 };
-export default LayoutPage;
+export default LayoutPage
   </button>
   </button>
   </h2>

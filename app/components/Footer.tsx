@@ -1,6 +1,6 @@
 'use client';
 import React, { memo } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -99,8 +99,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Brain className="w-5 h-5 mr-2" />
-              AI Services;
-  </
+              AI Services
+            </h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
@@ -124,8 +124,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Cloud className="w-5 h-5 mr-2" />
-              IT Services;
-  </
+              IT Services
+            </h3>
             <ul className="space-y-2">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -149,8 +149,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Code className="w-5 h-5 mr-2" />
-              Micro SAAS;
-  </
+              Micro SAAS
+            </h3>
             <ul className="space-y-2">
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
@@ -174,8 +174,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech;
-  </
+              Emerging Tech
+            </h3>
             <ul className="space-y-2">
               {emergingTech.map((service, index) => (
                 <li key={index}>
@@ -192,8 +192,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Users className="w-5 h-5 mr-2" />
-              Company;
-  </
+              Company
+            </h3>
             <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -251,14 +251,14 @@ const Footer: React.FC = memo(() => {
             </div>
             <div className="flex space-x-6">
               <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy;
-  </
+                Privacy Policy
+              </a>
               <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service;
-  </
+                Terms of Service
+              </a>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy;
-  </
+                Cookie Policy
+              </a>
             </div>
           </div>
         </div>
@@ -268,11 +268,3 @@ const Footer: React.FC = memo(() => {
 });
 Footer.displayName = 'Footer';
 export default Footer;
-  </a>
-  </a>
-  </a>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-  </h3>

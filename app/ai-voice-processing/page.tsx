@@ -151,7 +151,7 @@ const AiVoiceProcessingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiVoiceProcessingPage;
+export default AiVoiceProcessingPage
   </button>
   </button>
   </p>

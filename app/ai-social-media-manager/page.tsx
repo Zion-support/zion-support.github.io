@@ -151,7 +151,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSocialMediaManagerPage;
+export default AiSocialMediaManagerPage
   </button>
   </button>
   </p>

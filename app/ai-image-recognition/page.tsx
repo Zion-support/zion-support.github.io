@@ -151,7 +151,7 @@ const AiImageRecognitionPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiImageRecognitionPage;
+export default AiImageRecognitionPage
   </button>
   </button>
   </p>

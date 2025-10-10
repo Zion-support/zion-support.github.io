@@ -151,7 +151,7 @@ const AiVisionPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiVisionPage;
+export default AiVisionPage
   </button>
   </button>
   </p>

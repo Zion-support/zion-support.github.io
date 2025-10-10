@@ -147,7 +147,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     </div>
   );
 };
-export default ContentNewsletterSignup;
+export default ContentNewsletterSignup
   </label>
   </button>
   </ContentNewsletterSignupProps>

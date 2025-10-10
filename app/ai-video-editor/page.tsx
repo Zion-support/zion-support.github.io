@@ -151,7 +151,7 @@ const AiVideoEditorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiVideoEditorPage;
+export default AiVideoEditorPage
   </button>
   </button>
   </p>

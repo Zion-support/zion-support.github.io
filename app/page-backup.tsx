@@ -79,6 +79,6 @@ const PageBackupPage: React.FC = () => {
     </div>
   );
 };
-export default PageBackupPage;
+export default PageBackupPage
   </button>
   </button>

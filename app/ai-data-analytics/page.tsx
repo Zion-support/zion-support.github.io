@@ -151,7 +151,7 @@ const AiDataAnalyticsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiDataAnalyticsPage;
+export default AiDataAnalyticsPage
   </button>
   </button>
   </p>

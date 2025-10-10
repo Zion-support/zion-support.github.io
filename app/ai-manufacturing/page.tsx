@@ -151,7 +151,7 @@ const AiManufacturingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiManufacturingPage;
+export default AiManufacturingPage
   </button>
   </button>
   </p>

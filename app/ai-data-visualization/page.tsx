@@ -151,7 +151,7 @@ const AiDataVisualizationPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiDataVisualizationPage;
+export default AiDataVisualizationPage
   </button>
   </button>
   </p>

@@ -356,7 +356,7 @@ const IoTPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default IoTPage;
+export default IoTPage
   </a>
   </a>
   </p>

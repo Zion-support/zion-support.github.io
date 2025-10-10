@@ -151,7 +151,7 @@ const AiMlPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiMlPage;
+export default AiMlPage
   </button>
   </button>
   </p>

@@ -169,7 +169,7 @@ icon: Brain,
     </React.Fragment>
   );
 };
-export default AiContentStudioPage;
+export default AiContentStudioPage
   </button>
   </button>
   </p>

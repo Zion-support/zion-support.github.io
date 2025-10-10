@@ -152,7 +152,7 @@ const AIServicesPagePage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AIServicesPagePage;
+export default AIServicesPagePage
   </button>
   </button>
   </p>

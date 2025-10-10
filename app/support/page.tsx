@@ -352,7 +352,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
     </React.Fragment>
   );
 };
-export default SupportPage;
+export default SupportPage
   </button>
   </button>
   </div>

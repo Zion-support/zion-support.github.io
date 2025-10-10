@@ -151,7 +151,7 @@ const AiSmartHomeControllerPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiSmartHomeControllerPage;
+export default AiSmartHomeControllerPage
   </button>
   </button>
   </p>

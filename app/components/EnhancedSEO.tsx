@@ -117,7 +117,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   );
 };
-export default EnhancedSEOPage;
+export default EnhancedSEOPage
   </button>
   </button>
   </h2>

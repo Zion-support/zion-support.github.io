@@ -140,7 +140,7 @@ const EnhancedAnalyticsPage: React.FC = () => {
     </div>
   );
 };
-export default EnhancedAnalyticsPage;
+export default EnhancedAnalyticsPage
   </button>
   </button>
   </h2>
