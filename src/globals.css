@@ -426,6 +426,101 @@ body {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .md\\:grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .lg\\:grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .lg\\:grid-cols-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.875rem;
+  }
+  
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+  
+  .px-8 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .py-4 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .space-y-8 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  .space-y-12 > * + * {
+    margin-top: 2rem;
+  }
+  
+  .space-y-16 > * + * {
+    margin-top: 2.5rem;
+  }
+  
+  .sm\\:flex-row {
+    flex-direction: column;
+  }
+  
+  .sm\\:space-x-4 > * + * {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .sm\\:space-x-2 > * + * {
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+  
+  .sm\\:text-left {
+    text-align: center;
+  }
+  
+  .sm\\:text-right {
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -435,6 +530,262 @@ body {
   
   .cyber-card {
     padding: 15px;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.625rem;
+  }
+  
+  .text-6xl {
+    font-size: 2rem;
+  }
+  
+  .px-4 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .py-8 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .py-16 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .space-y-6 > * + * {
+    margin-top: 1rem;
+  }
+  
+  .space-y-8 > * + * {
+    margin-top: 1.25rem;
+  }
+  
+  .space-y-12 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  .space-y-16 > * + * {
+    margin-top: 2rem;
+  }
+  
+  .gap-8 {
+    gap: 1rem;
+  }
+  
+  .gap-6 {
+    gap: 0.75rem;
+  }
+  
+  .gap-4 {
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile-first responsive utilities */
+.responsive-text {
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+.responsive-heading {
+  font-size: clamp(1.5rem, 6vw, 4rem);
+}
+
+.responsive-subheading {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+}
+
+.responsive-padding {
+  padding: clamp(1rem, 4vw, 4rem);
+}
+
+.responsive-margin {
+  margin: clamp(0.5rem, 2vw, 2rem);
+}
+
+/* Container responsive improvements */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Navigation responsive improvements */
+@media (max-width: 1024px) {
+  .lg\\:flex {
+    display: none;
+  }
+  
+  .lg\\:hidden {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .lg\\:hidden {
+    display: none;
+  }
+  
+  .lg\\:flex {
+    display: flex;
+  }
+}
+
+/* Grid responsive improvements */
+@media (max-width: 640px) {
+  .sm\\:grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .md\\:grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1025px) {
+  .lg\\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .lg\\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Flex responsive improvements */
+@media (min-width: 641px) {
+  .sm\\:flex-row {
+    flex-direction: row;
+  }
+  
+  .sm\\:space-x-4 > * + * {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+  
+  .sm\\:space-x-2 > * + * {
+    margin-left: 0.5rem;
+    margin-top: 0;
+  }
+}
+
+/* Text responsive improvements */
+@media (min-width: 641px) {
+  .sm\\:text-left {
+    text-align: left;
+  }
+  
+  .sm\\:text-right {
+    text-align: right;
+  }
+}
+
+/* Spacing responsive improvements */
+@media (max-width: 640px) {
+  .sm\\:mb-0 {
+    margin-bottom: 1rem;
+  }
+  
+  .sm\\:mt-0 {
+    margin-top: 1rem;
+  }
+  
+  .sm\\:py-0 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .sm\\:px-0 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .sm\\:mb-0 {
+    margin-bottom: 0;
+  }
+  
+  .sm\\:mt-0 {
+    margin-top: 0;
+  }
+  
+  .sm\\:py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .sm\\:px-0 {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

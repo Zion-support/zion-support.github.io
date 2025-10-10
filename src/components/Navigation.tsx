@@ -44,39 +44,51 @@ const Navigation: React.FC = () => {
   };
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart, category: 'Productivity' },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, category: 'Productivity' },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity' },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity' },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText, category: 'Content' },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, category: 'Content' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, category: 'Marketing' },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, category: 'Marketing' },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, category: 'Marketing' },
-    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users, category: 'Business' },
-    { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard, category: 'Finance' },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance' },
-    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, category: 'Finance' },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, category: 'Business' },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Support' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot, category: 'Support' },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, category: 'Support' },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, category: 'Development' },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone, category: 'Development' },
-    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield, category: 'Security' },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, category: 'Development' },
-    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics' },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative' },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, category: 'Creative' },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, category: 'Creative' },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, category: 'Creative' },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, category: 'Creative' },
-    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart, category: 'Health' },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, category: 'Health' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' }
+    // Productivity Tools
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', popular: true },
+    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, category: 'Productivity', popular: true },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity', popular: true },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity', popular: false },
+    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, category: 'Productivity', popular: false },
+    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Productivity', popular: false },
+    
+    // Content & Marketing
+    { name: 'AI Writing Assistant Pro', href: '/ai-writing-assistant', icon: FileText, category: 'Content', popular: true },
+    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, category: 'Content', popular: true },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing', popular: true },
+    { name: 'AI Email Marketing Pro', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', popular: true },
+    { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing', popular: true },
+    { name: 'AI Lead Generation Pro', href: '/ai-lead-generation', icon: Target, category: 'Marketing', popular: true },
+    
+    // Business Solutions
+    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users, category: 'Business', popular: true },
+    { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance', popular: true },
+    { name: 'AI Invoice Generator Pro', href: '/ai-invoice-generator', icon: CreditCard, category: 'Finance', popular: true },
+    { name: 'AI Expense Tracker Pro', href: '/expense-tracker', icon: Calculator, category: 'Finance', popular: false },
+    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, category: 'Business', popular: true },
+    { name: 'AI Sales Automation Pro', href: '/ai-sales-automation', icon: Target, category: 'Sales', popular: true },
+    
+    // Creative & Media
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative', popular: true },
+    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, category: 'Creative', popular: true },
+    { name: 'AI Music Composer Pro', href: '/ai-music-composition', icon: Music, category: 'Creative', popular: false },
+    { name: 'AI Fashion Designer Pro', href: '/ai-fashion-design', icon: Palette, category: 'Creative', popular: false },
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, category: 'Creative', popular: false },
+    { name: 'AI Photo Editor Pro', href: '/ai-photo-editor', icon: Camera, category: 'Creative', popular: false },
+    
+    // Health & Wellness
+    { name: 'AI Healthcare Assistant Pro', href: '/ai-healthcare', icon: Heart, category: 'Health', popular: true },
+    { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Heart, category: 'Health', popular: false },
+    { name: 'AI Mental Health Companion', href: '/ai-mental-health', icon: Heart, category: 'Health', popular: false },
+    { name: 'AI Nutrition Planner Pro', href: '/ai-nutrition-planner', icon: Heart, category: 'Health', popular: false },
+    
+    // Development & Security
+    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, category: 'Development', popular: true },
+    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone, category: 'Development', popular: true },
+    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield, category: 'Security', popular: true },
+    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics', popular: true },
+    { name: 'AI Data Visualization Pro', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics', popular: false },
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Support', popular: true }
   ];
 
   const aiServices = [
@@ -177,18 +189,19 @@ const Navigation: React.FC = () => {
                         Micro SAAS
                       </h3>
                       <div className="space-y-3">
-                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance'].map(category => (
+                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Creative', 'Health', 'Development'].map(category => (
                           <div key={category}>
                             <h4 className="text-xs font-medium text-purple-400 mb-2 uppercase tracking-wide">{category}</h4>
                             <div className="space-y-1">
-                              {microSAASServices.filter(service => service.category === category).slice(0, 2).map((service) => (
+                              {microSAASServices.filter(service => service.category === category && service.popular).slice(0, 2).map((service) => (
                                 <Link key={service.name}
                                   to={service.href}
-                                  className="flex items-center space-x-2 text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+                                  className="flex items-center space-x-2 text-xs text-gray-300 hover:text-cyan-400 transition-colors group"
                                   onClick={closeAllMenus}
                                 >
                                   <service.icon className="w-3 h-3" />
-                                  <span>{service.name}</span>
+                                  <span className="group-hover:text-cyan-400">{service.name}</span>
+                                  {service.popular && <span className="text-xs bg-cyan-500 text-white px-1 rounded">Popular</span>}
                                 </Link>
                               ))}
                             </div>
@@ -345,13 +358,14 @@ const Navigation: React.FC = () => {
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
                       <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
+                        {microSAASServices.filter(service => service.popular).slice(0, 6).map((service) => (
                           <Link key={service.name}
                             to={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors flex items-center justify-between"
                             onClick={closeAllMenus}
                           >
-                            {service.name}
+                            <span>{service.name}</span>
+                            <span className="text-xs bg-cyan-500 text-white px-2 py-1 rounded">Popular</span>
                           </Link>
                         ))}
                       </div>
