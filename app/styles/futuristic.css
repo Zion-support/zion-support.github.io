@@ -1,6 +1,5 @@
 /* Futuristic CSS Styles for Zion Tech Group */
 
-<<<<<<< HEAD
 /* Import accessibility styles */
 @import './accessibility.css';
 
@@ -115,10 +114,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-=======
+}
+
 /* Cyber Grid Background */
 .cyber-grid {
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   background-image: 
     linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
@@ -370,7 +369,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
 /* Advanced Cyber Effects */
 .cyber-matrix {
   position: relative;
@@ -546,23 +544,6 @@ body {
   100% { transform: translate(50px, 50px); }
 }
 
-/* Performance Optimizations */
-@media (prefers-reduced-motion: reduce) {
-  .quantum-field::before,
-  .neural-network::before,
-  .holographic-stream::before,
-  .matrix-effect::before,
-  .quantum-entanglement::before,
-  .quantum-entanglement::after,
-  .neon-glow-advanced::before,
-  .data-grid::before,
-  .quantum-tunnel::before,
-  .cyber-matrix::before,
-  .holographic-card-advanced::before,
-  .quantum-particle,
-  .neural-network-advanced::before,
-  .cyber-grid-advanced::before {
-=======
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .cyber-card {
@@ -578,12 +559,25 @@ body {
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
+  .quantum-field::before,
+  .neural-network::before,
+  .holographic-stream::before,
+  .matrix-effect::before,
+  .quantum-entanglement::before,
+  .quantum-entanglement::after,
+  .neon-glow-advanced::before,
+  .data-grid::before,
+  .quantum-tunnel::before,
+  .cyber-matrix::before,
+  .holographic-card-advanced::before,
+  .quantum-particle,
+  .neural-network-advanced::before,
+  .cyber-grid-advanced::before,
   .neural-network-bg::before,
   .matrix-rain::after,
   .cyber-card::before,
   .hologram-card::before,
   .quantum-pulse::after {
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
     animation: none;
   }
   
