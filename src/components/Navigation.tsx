@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, memo } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, DollarSign } from 'lucide-react';
+import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Building, Factory, Home, Heart, Stethoscope, GraduationCap, Briefcase, Calculator, Calendar, Globe, Truck, Smartphone, TrendingUp, DollarSign } from 'lucide-react';
+import { microSAASServices, aiServices, itServices, specializedServices } from '../data/services';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,124 +44,31 @@ const Navigation: React.FC = () => {
     }
   };
 
-  const microSAASServices = [
-    // Productivity & Management
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart, category: 'Productivity' },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, category: 'Productivity' },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity' },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity' },
-    
-    // Content & Marketing
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText, category: 'Content' },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, category: 'Content' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, category: 'Marketing' },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, category: 'Marketing' },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, category: 'Marketing' },
-    
-    // Business & Finance
-    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users, category: 'Business' },
-    { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard, category: 'Finance' },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance' },
-    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, category: 'Finance' },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, category: 'Business' },
-    
-    // Customer Service
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Support' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot, category: 'Support' },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, category: 'Support' },
-    
-    // Development & Technical
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, category: 'Development' },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone, category: 'Development' },
-    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield, category: 'Security' },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, category: 'Development' },
-    
-    // Analytics & Data
-    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics' },
-    
-    // Creative & Media
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative' },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, category: 'Creative' },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, category: 'Creative' },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, category: 'Creative' },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, category: 'Creative' },
-    
-    // Health & Wellness
-    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart, category: 'Health' },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, category: 'Health' },
-    
-    // Sales & Business
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' }
-  ];
+  // Convert services to navigation format
+  const microSAASNav = microSAASServices.map(service => ({
+    name: service.title,
+    href: service.link,
+    icon: service.icon,
+    category: service.category
+  }));
 
-  const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
-    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
-    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe },
-    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield },
-    { name: 'AI Human Resources', href: '/ai-hr', icon: Users },
-    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText },
-    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home },
-    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory },
-    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck },
-    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap },
-    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
-    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield },
-    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
-    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
-    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
-  ];
+  const aiServicesNav = aiServices.map(service => ({
+    name: service.title,
+    href: service.link,
+    icon: service.icon
+  }));
 
-  const itServices = [
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
-    { name: 'Enterprise Security Solutions', href: '/enterprise-security', icon: Shield },
-    { name: 'IT Infrastructure Management', href: '/it-infrastructure', icon: Settings },
-    { name: 'Data Center Solutions', href: '/data-center', icon: Database },
-    { name: 'Network Security & Firewall', href: '/network-security', icon: Lock },
-    { name: 'IT Consulting & Strategy', href: '/it-consulting', icon: Briefcase },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Users },
-    { name: 'Cloud Security & Compliance', href: '/cloud-security', icon: Shield },
-    { name: 'IT Asset Management', href: '/it-asset-management', icon: BarChart },
-    { name: 'Backup & Disaster Recovery', href: '/backup-recovery', icon: Database },
-    { name: 'IT Training & Support', href: '/it-training', icon: GraduationCap },
-    { name: 'IT Performance Optimization', href: '/it-performance', icon: Zap },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
-    { name: 'Database Services', href: '/database-services', icon: Database },
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
-    { name: 'Developer Tools', href: '/developer-tools', icon: Code },
-    { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
-  ];
+  const itServicesNav = itServices.map(service => ({
+    name: service.title,
+    href: service.link,
+    icon: service.icon
+  }));
 
-  const specializedServices = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
-    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
-    { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
-    { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Check },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
-  ];
+  const specializedServicesNav = specializedServices.map(service => ({
+    name: service.title,
+    href: service.link,
+    icon: service.icon
+  }));
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -198,7 +106,7 @@ const Navigation: React.FC = () => {
                           <div key={category}>
                             <h4 className="text-xs font-medium text-purple-400 mb-2 uppercase tracking-wide">{category}</h4>
                             <div className="space-y-1">
-                              {microSAASServices.filter(service => service.category === category).slice(0, 2).map((service) => (
+                              {microSAASNav.filter(service => service.category === category).slice(0, 2).map((service) => (
                                 <Link key={service.name}
                                   to={service.href}
                                   className="flex items-center space-x-2 text-xs text-gray-300 hover:text-cyan-400 transition-colors"
@@ -219,7 +127,7 @@ const Navigation: React.FC = () => {
                         AI Services
                       </h3>
                       <div className="space-y-2">
-                        {aiServices.slice(0, 8).map((service) => (
+                        {aiServicesNav.slice(0, 8).map((service) => (
                           <Link key={service.name}
                             to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
@@ -237,7 +145,7 @@ const Navigation: React.FC = () => {
                         IT Services
                       </h3>
                       <div className="space-y-2">
-                        {itServices.slice(0, 8).map((service) => (
+                        {itServicesNav.slice(0, 8).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
@@ -256,7 +164,7 @@ const Navigation: React.FC = () => {
                         Specialized
                       </h3>
                       <div className="space-y-2">
-                        {specializedServices.slice(0, 8).map((service) => (
+                        {specializedServicesNav.slice(0, 8).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
@@ -362,7 +270,7 @@ const Navigation: React.FC = () => {
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
                       <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
+                        {microSAASNav.slice(0, 4).map((service) => (
                           <Link key={service.name}
                             to={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
@@ -376,7 +284,7 @@ const Navigation: React.FC = () => {
                     <div>
                       <h4 className="text-purple-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
+                        {aiServicesNav.slice(0, 4).map((service) => (
                           <Link key={service.name}
                             to={service.href}
                             className="block text-sm text-gray-300 hover:text-purple-400 transition-colors"
@@ -390,7 +298,7 @@ const Navigation: React.FC = () => {
                     <div>
                       <h4 className="text-green-400 font-semibold mb-2">IT Services</h4>
                       <div className="space-y-2">
-                        {itServices.slice(0, 4).map((service) => (
+                        {itServicesNav.slice(0, 4).map((service) => (
                           <Link key={service.name}
                             to={service.href}
                             className="block text-sm text-gray-300 hover:text-green-400 transition-colors"
@@ -404,7 +312,7 @@ const Navigation: React.FC = () => {
                     <div>
                       <h4 className="text-orange-400 font-semibold mb-2">Specialized</h4>
                       <div className="space-y-2">
-                        {specializedServices.slice(0, 4).map((service) => (
+                        {specializedServicesNav.slice(0, 4).map((service) => (
                           <Link key={service.name}
                             to={service.href}
                             className="block text-sm text-gray-300 hover:text-orange-400 transition-colors"

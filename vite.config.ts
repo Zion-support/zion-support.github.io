@@ -19,6 +19,8 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
