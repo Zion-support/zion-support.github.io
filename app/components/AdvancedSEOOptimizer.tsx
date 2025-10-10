@@ -1,132 +1,160 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
+  children?: React.ReactNode;
+}
+
+const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Professional AI and IT solutions by Zion Tech Group. Advanced technology services for modern businesses.',
+  keywords = 'AI solutions, IT services, technology consulting, Zion Tech Group',
+  canonicalUrl,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  children
+}) => {
+  const [seoScore, setSeoScore] = useState(0);
+  const [recommendations, setRecommendations] = useState<string[]>([]);
+
+  const analyzeSEO = useCallback(() => {
+    const issues: string[] = [];
+    let score = 100;
+
+    // Check title length
+    if (title.length < 30 || title.length > 60) {
+      issues.push('Title should be between 30-60 characters');
+      score -= 10;
     }
-  ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    // Check description length
+    if (description.length < 120 || description.length > 160) {
+      issues.push('Description should be between 120-160 characters');
+      score -= 10;
+    }
+
+    // Check for keywords in title
+    if (!title.toLowerCase().includes('zion') && !title.toLowerCase().includes('tech')) {
+      issues.push('Include brand keywords in title');
+      score -= 5;
+    }
+
+    // Check for H1 tag
+    const h1Tags = document.querySelectorAll('h1');
+    if (h1Tags.length === 0) {
+      issues.push('Add an H1 tag to your page');
+      score -= 15;
+    } else if (h1Tags.length > 1) {
+      issues.push('Use only one H1 tag per page');
+      score -= 5;
+    }
+
+    // Check for alt text on images
+    const images = document.querySelectorAll('img');
+    const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
+    if (imagesWithoutAlt.length > 0) {
+      issues.push(`Add alt text to ${imagesWithoutAlt.length} images`);
+      score -= imagesWithoutAlt.length * 2;
+    }
+
+    // Check for internal links
+    const internalLinks = document.querySelectorAll('a[href^="/"]');
+    if (internalLinks.length < 3) {
+      issues.push('Add more internal links (minimum 3)');
+      score -= 5;
+    }
+
+    setRecommendations(issues);
+    setSeoScore(Math.max(0, score));
+  }, [title, description]);
+
+  useEffect(() => {
+    analyzeSEO();
+  }, [analyzeSEO]);
+
+  const generateStructuredData = () => {
+    const defaultStructuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: description,
+      url: canonicalUrl || window.location.href,
+      logo: ogImage,
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup'
+      ]
+    };
+
+    return structuredData || defaultStructuredData;
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AdvancedSEOOptimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedSEOOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AdvancedSEOOptimizer, AI solutions, IT services, Zion Tech Group, advancedseooptimizer" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content={ogType} />
+        <meta property="og:image" content={ogImage} />
+        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content={twitterCard} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateStructuredData())}
+        </script>
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedSEOOptimizer
+      {children}
+
+      {/* SEO Analysis (Development Only) */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed top-4 right-4 bg-white border rounded-lg shadow-lg p-4 z-50 max-w-sm">
+          <h3 className="font-semibold text-sm mb-2">SEO Analysis</h3>
+          <div className="text-sm">
+            <div className="mb-2">
+              <span className="font-medium">Score: </span>
+              <span className={`font-bold ${seoScore >= 80 ? 'text-green-600' : seoScore >= 60 ? 'text-yellow-600' : 'text-red-600'}`}>
+                {seoScore}/100
               </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced advancedseooptimizer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AdvancedSEOOptimizer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advancedseooptimizer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+            {recommendations.length > 0 && (
+              <div>
+                <div className="font-medium text-xs text-red-600 mb-1">Issues:</div>
+                <ul className="text-xs text-red-600 space-y-1">
+                  {recommendations.map((rec, index) => (
+                    <li key={index}>• {rec}</li>
+                  ))}
+                </ul>
               </div>
-            ))}
+            )}
           </div>
         </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our advancedseooptimizer solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedseooptimizer needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+      )}
+    </>
   );
 };
 
-export default AdvancedSEOOptimizerPage;
+export default AdvancedSEOOptimizer;
