@@ -1,6 +1,7 @@
 'use client';
+
 import React, { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+import { CheckCircle, Star, Users, Globe, Mail, ArrowRight } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
   title?: string;
@@ -9,12 +10,12 @@ interface ContentNewsletterSignupProps {
   buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>;
-    text: string;)
-}>;
-  onSubscribe?: (email: string) => void;)
+    text: string;
+  }>;
+  onSubscribe?: (email: string) => void;
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
   placeholder = "Enter your email address",
@@ -22,145 +23,148 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
   features = [
     {
       icon: CheckCircle,
-      text: "Weekly industry insights";)
-},
+      text: "Weekly industry insights"
+    },
     {
       icon: Star,
-      text: "Exclusive content and tips";)
-},
+      text: "Exclusive content and tips"
+    },
     {
       icon: Users,
-      text: "Join 10,000+ subscribers";)
-},
+      text: "Join 10,000+ subscribers"
+    },
     {
       icon: Globe,
-      text: "Global community access";)
-}
+      text: "Global community access"
+    }
   ],
-  onSubscribe;)
-}); => {
+  onSubscribe
+}) => {
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
-
-    setIsLoading(true);
     
+    if (!email || !email.includes('@')) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
     try {
       if (onSubscribe) {
-        await onSubscribe(email);)
-} else {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));)
-}
+        await onSubscribe(email);
+      } else {
+        // Default subscription logic
+        console.log('Subscribing email:', email);
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+      }
       
       setIsSubscribed(true);
-      setEmail('');)
-} catch (error) {
-      console.error('Subscription failed:', error);)
-} finally {
-      setIsLoading(false);)
-}
+      setEmail('');
+    } catch (error) {
+      console.error('Subscription error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4"></div>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+      <section className="py-16 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-2xl">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-            Welcome to Our Community!
-          </h2>
-          <p className="text-xl text-blue-100 mb-8"></p>
-            Thank you for subscribing. You'll receive our latest insights and updates soon.
+          <h2 className="text-3xl font-bold text-white mb-4">Thank You for Subscribing!</h2>
+          <p className="text-lg text-gray-300">
+            You'll receive our latest insights and updates directly in your inbox.
           </p>
-          <button
-            onClick={() =></button> setIsSubscribed(false);
-            className="text-white underline hover:text-blue-200 transition-colors"
-          >
-            Subscribe another email
-          </button>
         </div>
-      </div>
-    );)
-}
+      </section>
+    );
+  }
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
-      <div className="max-w-6xl mx-auto"></div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
+    <section className="py-16 bg-gradient-to-r from-slate-800/50 to-purple-800/50 border border-slate-700/50 rounded-2xl">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               {title}
             </h2>
-            <p className="text-xl text-blue-100 mb-8"></p>
+            <p className="text-lg text-gray-300 mb-8">
               {subtitle}
             </p>
             
-            <div className="space-y-4"></div>
+            {/* Features */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3"></div>
-                  <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"></div>
-                    <feature.icon className="w-4 h-4 text-white" />
+                <div key={index} className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                    <feature.icon className="w-4 h-4 text-cyan-400" />
                   </div>
-                  <span className="text-blue-100"></spa>{feature.text}</span>
+                  <span className="text-gray-300 text-sm">{feature.text}</span>
                 </div>
-              ));
+              ))}
             </div>
           </div>
 
           {/* Newsletter Form */}
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"></div>
-            <form onSubmit={handleSubmit} className="space-y-6"></form>
-              <div></div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2"></label>
+          <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <Mail className="w-5 h-5 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white">Newsletter Signup</h3>
+            </div>
+            
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="newsletter-email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email Address
                 </label>
                 <input
                   type="email"
-                  id="email"
+                  id="newsletter-email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value);
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder={placeholder}
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                   required
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
                 />
               </div>
               
               <button
                 type="submit"
-                disabled={isLoading || !email}
-                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
-              ></button>
-                {isLoading ? (
+                disabled={isSubmitting || !email}
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              >
+                {isSubmitting ? (
                   <>
-                    <div></div>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                     Subscribing...
                   </>
                 ) : (
                   <>
                     {buttonText}
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </>
-                );
+                )}
               </button>
-              
-              <p className="text-sm text-blue-200 text-center"></p>
-                We respect your privacy. Unsubscribe at any time.
-              </p>
             </form>
+            
+            <p className="text-xs text-gray-400 mt-4 text-center">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  );)
+    </section>
+  );
 };
 
 export default ContentNewsletterSignup;
-}
