@@ -244,8 +244,8 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial'
     },
     { 
-      name: 'AI API Builder Pro', 
-      href: '/ai-api-builder', 
+      name: 'AI API Manager Pro', 
+      href: '/ai-api-manager', 
       icon: Settings, 
       category: 'Development', 
       price: '$249/mo',
@@ -257,8 +257,8 @@ const MicroSAASPage: React.FC = () => {
       trial: '21-day free trial'
     },
     { 
-      name: 'AI Database Optimizer', 
-      href: '/ai-database-optimizer', 
+      name: 'AI Database Management', 
+      href: '/database-management', 
       icon: Database, 
       category: 'Development', 
       price: '$199/mo',
@@ -273,7 +273,7 @@ const MicroSAASPage: React.FC = () => {
     // Security & Compliance
     { 
       name: 'AI Security Monitor Pro', 
-      href: '/ai-security-monitor', 
+      href: '/ai-cybersecurity-monitor', 
       icon: Shield, 
       category: 'Security', 
       price: '$299/mo',
@@ -301,7 +301,7 @@ const MicroSAASPage: React.FC = () => {
     // Specialized Industry Solutions
     { 
       name: 'AI Healthcare Assistant Pro', 
-      href: '/ai-healthcare-assistant', 
+      href: '/ai-healthcare', 
       icon: Stethoscope, 
       category: 'Healthcare', 
       price: '$399/mo',
@@ -349,6 +349,7 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
+<<<<<<< HEAD
 <<<<<<< HEAD
       trial: '21-day free trial',
       link: 'https://ziontechgroup.com/ai-hr-assistant'
@@ -663,10 +664,13 @@ const MicroSAASPage: React.FC = () => {
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f31a
     },
     { 
       name: 'AI Logo Designer Pro', 
       href: '/ai-logo-designer', 
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: Palette, 
       category: 'Design', 
@@ -1374,6 +1378,8 @@ const MicroSAASPage: React.FC = () => {
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'Cognitive AI', 'Immersive Tech', 'Autonomous AI', 'Blockchain AI', 'Energy AI', 'Space Tech', 'Environmental AI', 'Pharma AI'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f31a
 
   if (!isLoaded) {
     return (
