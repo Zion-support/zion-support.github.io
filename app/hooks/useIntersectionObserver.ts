@@ -10,7 +10,7 @@ interface UseIntersectionObserverOptions {
 interface UseIntersectionObserverReturn {
   ref: React.RefObject<Element>;
   isIntersecting: boolean;
-  entry?: IntersectionObserverEntry;
+  entry: IntersectionObserverEntry | undefined;
 }
 
 export function useIntersectionObserver(
@@ -28,16 +28,15 @@ export function useIntersectionObserver(
   const ref = useRef<Element>(null);
 
   useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
+    const element = ref.current;
+    if (!element) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const isElementIntersecting = entry.isIntersecting;
-        setIsIntersecting(isElementIntersecting);
+        setIsIntersecting(entry.isIntersecting);
         setEntry(entry);
 
-        if (isElementIntersecting && freezeOnceVisible) {
+        if (entry.isIntersecting && freezeOnceVisible) {
           observer.disconnect();
         }
       },
@@ -48,7 +47,7 @@ export function useIntersectionObserver(
       }
     );
 
-    observer.observe(node);
+    observer.observe(element);
 
     return () => {
       observer.disconnect();
