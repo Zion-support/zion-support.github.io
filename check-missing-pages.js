@@ -5,171 +5,97 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Navigation links from the Navigation component
-const navigationLinks = [
-  // Main navigation
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
-  { name: 'Pricing', path: '/pricing' },
-  { name: 'Case Studies', path: '/case-studies' },
-  { name: 'Blog', path: '/blog' },
-  { name: 'Contact', path: '/contact' },
-  
-  // Company links from Footer
-  { name: 'Our Team', path: '/team' },
-  { name: 'Careers', path: '/careers' },
-  
-  // Support links from Footer
-  { name: 'Support Center', path: '/support' },
-  { name: 'Documentation', path: '/docs' },
-  { name: 'API Reference', path: '/api-docs' },
-  { name: 'Status Page', path: '/status' },
-  { name: 'System Health', path: '/health' },
-  
-  // Legal links from Footer
-  { name: 'Privacy Policy', path: '/privacy' },
-  { name: 'Terms of Service', path: '/terms' },
-  { name: 'Cookie Policy', path: '/cookies' },
-  { name: 'GDPR Compliance', path: '/gdpr' },
-  { name: 'Security', path: '/security' },
-  { name: 'Compliance', path: '/compliance' },
-  
-  // Micro SAAS Services
-  { name: 'AI Project Manager Pro', path: '/ai-project-manager' },
-  { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-  { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-  { name: 'AI Email Marketing Suite', path: '/ai-email-marketing' },
-  { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot' },
-  { name: 'AI Content Studio', path: '/ai-content-studio' },
-  { name: 'AI Financial Advisor', path: '/ai-financial-advisor' },
-  { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-  { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-  { name: 'AI Content Writer', path: '/ai-content-writer' },
-  { name: 'AI Video Generator', path: '/ai-video-generator' },
-  { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-  
+// Pages referenced in Footer component
+const footerPages = [
   // AI Services
-  { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation' },
-  { name: 'AI Customer Support Suite', path: '/ai-customer-support' },
-  { name: 'AI Data Analytics Platform', path: '/ai-data-analytics' },
-  { name: 'AI Content Generation Studio', path: '/ai-content-generation' },
-  { name: 'AI Healthcare Solutions', path: '/ai-healthcare' },
-  { name: 'AI Fintech Platform', path: '/ai-fintech' },
-  { name: 'AI Computer Vision Platform', path: '/ai-computer-vision' },
-  { name: 'AI Machine Learning Platform', path: '/ai-ml-platform' },
-  { name: 'AI Quantum Computing', path: '/ai-quantum-computing' },
-  { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
-  { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
-  { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro' },
+  '/ai-workflow-automation', '/ai-customer-support', '/ai-data-analytics', '/ai-content-generation',
+  '/ai-healthcare', '/ai-fintech', '/ai-computer-vision', '/ai-ml-platform', '/ai-quantum-computing',
+  '/ai-drug-discovery-pro', '/ai-climate-solutions-pro', '/ai-space-technology-pro', '/ai-autonomous-systems',
+  '/ai-blockchain-solutions', '/ai-edge-computing', '/ai-cybersecurity',
   
   // IT Services
-  { name: 'Cloud Migration & Setup', path: '/cloud-migration' },
-  { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity' },
-  { name: 'IT Infrastructure Design', path: '/it-infrastructure' },
-  { name: '24/7 IT Support & Monitoring', path: '/it-support' },
-  { name: 'Custom Software Development', path: '/custom-development' },
-  { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd' },
-  { name: 'Database Management & Optimization', path: '/database-management' },
-  { name: 'Network Design & Implementation', path: '/network-design' },
-  { name: 'AI Infrastructure Monitoring', path: '/ai-infrastructure-monitoring' },
-  { name: 'Blockchain Integration Services', path: '/blockchain-integration-services' },
-  { name: 'AI API Management', path: '/ai-api-management' },
-  { name: 'Smart Contract Security Audit', path: '/smart-contract-security-audit' },
+  '/cloud-migration', '/cybersecurity', '/it-infrastructure', '/it-support', '/custom-development',
+  '/devops-cicd', '/database-management', '/network-design', '/ai-infrastructure-monitoring',
+  '/blockchain-integration-services', '/ai-api-management', '/smart-contract-security-audit',
+  '/healthcare-it', '/financial-it', '/edge-computing', '/5g-implementation',
+  
+  // Micro SAAS
+  '/ai-project-manager', '/ai-social-media-manager', '/ai-analytics-dashboard', '/ai-email-marketing',
+  '/ai-customer-support-bot', '/ai-content-studio', '/ai-financial-advisor', '/ai-workflow-automation',
+  '/ai-smart-calendar', '/ai-content-writer', '/ai-video-generator', '/ai-crm-assistant',
+  '/ai-quantum-financial-oracle', '/ai-neural-memory-assistant', '/ai-holographic-workspace', '/ai-3d-generation',
   
   // Emerging Technologies
-  { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing' },
-  { name: 'Autonomous Systems', path: '/autonomous-systems' },
-  { name: 'Blockchain & Web3', path: '/blockchain-web3' },
-  { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-  { name: 'AR/VR Solutions', path: '/ar-vr-solutions' },
-  { name: 'Smart Cities', path: '/smart-cities' },
-  { name: 'Digital Transformation', path: '/digital-transformation' },
-  { name: 'Innovation Labs', path: '/innovation-labs' },
-  { name: 'AI Financial Crime Detection Pro', path: '/ai-financial-crime-detection-pro' },
-  { name: 'AI Supply Chain Optimization Pro', path: '/ai-supply-chain-optimization-pro' },
-  { name: 'AI Energy Grid Management Pro', path: '/ai-energy-grid-management-pro' },
-  { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro' }
+  '/ai-quantum-computing', '/ai-autonomous-systems', '/ai-blockchain-solutions', '/ai-edge-computing',
+  '/ar-vr-platform', '/smart-city-infrastructure', '/digital-transformation', '/innovation-labs',
+  '/ai-business-intelligence', '/robotics-integration', '/digital-twin-platform', '/ai-space-technology-pro',
+  
+  // Company
+  '/about', '/team', '/careers', '/case-studies', '/blog', '/pricing', '/news', '/partners', '/investors',
+  
+  // Support
+  '/contact', '/support', '/docs', '/api-docs', '/status', '/health', '/help', '/community', '/training',
+  
+  // Legal
+  '/privacy', '/terms', '/cookies', '/gdpr', '/security', '/compliance', '/data-protection', '/accessibility', '/sitemap'
 ];
 
-function checkPageExists(pagePath) {
-  if (pagePath === '/') {
-    return fs.existsSync(path.join(__dirname, 'app', 'page.tsx'));
-  }
-  
-  const pageDir = path.join(__dirname, 'app', pagePath);
-  const pageFile = path.join(pageDir, 'page.tsx');
-  
-  return fs.existsSync(pageFile);
-}
+// Get all existing pages
+const appDir = '/workspace/app';
+const existingPages = [];
 
-function findMissingPages() {
-  const missingPages = [];
+function scanDirectory(dir) {
+  const items = fs.readdirSync(dir);
   
-  for (const link of navigationLinks) {
-    if (!checkPageExists(link.path)) {
-      missingPages.push(link);
-    }
-  }
-  
-  return missingPages;
-}
-
-const missingPages = findMissingPages();
-
-console.log('Missing Pages Analysis:');
-console.log('======================');
-
-if (missingPages.length === 0) {
-  console.log('✅ All navigation pages exist!');
-} else {
-  console.log(`❌ Found ${missingPages.length} missing pages:`);
-  console.log('');
-  
-  missingPages.forEach((page, index) => {
-    console.log(`${index + 1}. ${page.name}`);
-    console.log(`   Path: ${page.path}`);
-    console.log(`   Expected file: app${page.path}/page.tsx`);
-    console.log('');
-  });
-}
-
-// Also check for pages that exist but might not be linked
-function findUnlinkedPages() {
-  const appDir = path.join(__dirname, 'app');
-  const unlinkedPages = [];
-  
-  function scanDirectory(dir, basePath = '') {
-    const items = fs.readdirSync(dir);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    for (const item of items) {
-      const itemPath = path.join(dir, item);
-      const stat = fs.statSync(itemPath);
-      
-      if (stat.isDirectory()) {
-        const pageFile = path.join(itemPath, 'page.tsx');
-        if (fs.existsSync(pageFile)) {
-          const fullPath = basePath + '/' + item;
-          const isLinked = navigationLinks.some(link => link.path === fullPath);
-          if (!isLinked && fullPath !== '/page') {
-            unlinkedPages.push(fullPath);
-          }
-        }
-        scanDirectory(itemPath, basePath + '/' + item);
+    if (stat.isDirectory()) {
+      // Check if this directory has a page.tsx file
+      const pagePath = path.join(fullPath, 'page.tsx');
+      if (fs.existsSync(pagePath)) {
+        const relativePath = fullPath.replace(appDir, '');
+        existingPages.push(relativePath);
       }
+      // Recursively scan subdirectories
+      scanDirectory(fullPath);
     }
   }
+}
+
+scanDirectory(appDir);
+
+// Find missing pages
+const missingPages = footerPages.filter(page => !existingPages.includes(page));
+
+console.log('=== MISSING PAGES ===');
+missingPages.forEach(page => {
+  console.log(`❌ ${page}`);
+});
+
+console.log(`\nTotal missing pages: ${missingPages.length}`);
+console.log(`Total existing pages: ${existingPages.length}`);
+console.log(`Total referenced pages: ${footerPages.length}`);
+
+// Check for pages that exist but might have broken links
+console.log('\n=== POTENTIAL BROKEN LINKS ===');
+const existingPagePaths = existingPages.map(p => p.replace(/\\/g, '/'));
+const brokenLinks = footerPages.filter(page => {
+  // Check for exact match or similar patterns
+  const exactMatch = existingPagePaths.includes(page);
+  if (exactMatch) return false;
   
-  scanDirectory(appDir);
-  return unlinkedPages;
-}
-
-const unlinkedPages = findUnlinkedPages();
-
-if (unlinkedPages.length > 0) {
-  console.log('📄 Unlinked pages (exist but not in navigation):');
-  console.log('================================================');
-  unlinkedPages.forEach((page, index) => {
-    console.log(`${index + 1}. ${page}`);
+  // Check for similar patterns (e.g., /ai-ml-platform vs /ai-ml)
+  const similarMatch = existingPagePaths.some(existing => {
+    const pageBase = page.replace(/^\/+/, '').replace(/\/+$/, '');
+    const existingBase = existing.replace(/^\/+/, '').replace(/\/+$/, '');
+    return pageBase === existingBase || existingBase.includes(pageBase) || pageBase.includes(existingBase);
   });
-}
+  
+  return !similarMatch;
+});
+
+brokenLinks.forEach(link => {
+  console.log(`⚠️  ${link} - might be broken or needs redirect`);
+});
