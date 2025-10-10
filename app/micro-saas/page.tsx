@@ -86,12 +86,14 @@ const MicroSaasPage: React.FC = () => {
       link: 'https://ziontechgroup.com/zion-invoice-genius-ai'
     },
     {
-<<<<<<< HEAD
       title: 'Security Monitor',
       description: 'Advanced security monitoring and threat detection for your applications.',
       features: ['Real-time monitoring', 'Threat detection', 'Automated alerts', 'Compliance reporting'],
       price: '$39/month',
-      icon: Shield    },
+      icon: Shield,
+      category: 'security',
+      link: 'https://ziontechgroup.com/zion-security-monitor'
+    },
     {
       title: 'Zion AI Video Editor Pro',
       description: 'AI-powered video editing platform with automatic editing, voice synthesis, and multi-format export.',
@@ -135,7 +137,8 @@ const MicroSaasPage: React.FC = () => {
       icon: Users,
       category: 'analytics',
       link: 'https://ziontechgroup.com/zion-ai-customer-insights'
-=======
+    },
+    {
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
       features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
@@ -354,7 +357,6 @@ const MicroSaasPage: React.FC = () => {
       icon: Zap,
       category: 'Legal',
       popular: false
->>>>>>> cursor/website-audit-and-update-with-deployment-9351
     }
   ]
 
@@ -558,8 +560,7 @@ const MicroSaasPage: React.FC = () => {
                 </a>
               </div>
               <div className="mt-6 text-sm text-gray-400">
-                <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
+                  <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </div>
           </div>

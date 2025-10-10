@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom'
-import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react'
+import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react';
+
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -60,7 +61,8 @@ const CaseStudiesPage: React.FC = () => {
                 <div className="h-48 bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center">
                   <div className="text-white text-center">
                     <Building className="w-16 h-16 mx-auto mb-4" />
-                    <div className="text-sm opacity-80">{study.industry}</div>                  </div>
+                    <div className="text-sm opacity-80">{study.industry}</div>
+                  </div>
                 </div>
                 
                 <div className="p-6">
@@ -91,7 +93,8 @@ const CaseStudiesPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
-              ))}
+              </div>
+            ))}
             </div>
           </div>
         </section>
@@ -115,11 +118,8 @@ const CaseStudiesPage: React.FC = () => {
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   Explore Our Services
                 </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </div>
-            ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 

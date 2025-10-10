@@ -6,7 +6,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const DemoPage: React.FC = () => {
-};
   const demos = [
     {      title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
@@ -17,8 +16,9 @@ const DemoPage: React.FC = () => {
       title: 'AI Customer Support Bot',
       description: 'Experience our intelligent customer support automation',
       duration: '3 min',
-      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']    },
-        {
+      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']
+    },
+    {
       title: 'AI Content Generation',
       description: 'Watch our AI create high-quality content in seconds',
       duration: '4 min',
@@ -108,4 +108,4 @@ const DemoPage: React.FC = () => {
   )
 }
 
-export default DemoPage
+export default DemoPage;
