@@ -19,7 +19,10 @@ import {
   Users,
   MessageSquare,
   FileText,
-  Target
+  Target,
+  Cpu,
+  Mail,
+  MapPin
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -330,6 +333,97 @@ const ServicesPage: React.FC = () => {
               ))}
             </div>
 
+            {/* Pricing Overview Section */}
+            <div className="mt-16 mb-16">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Competitive Pricing & Value
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Our services are priced competitively with significant savings compared to market rates, 
+                  while delivering exceptional value and results.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="bg-slate-800/50 rounded-lg p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">AI Services</h3>
+                  <p className="text-gray-300 mb-4">Starting from $199/month</p>
+                  <p className="text-sm text-gray-400">Market rates: $400-3000/month</p>
+                  <div className="mt-4 text-green-400 font-semibold">Save up to 50%</div>
+                </div>
+                
+                <div className="bg-slate-800/50 rounded-lg p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Cloud className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">IT Services</h3>
+                  <p className="text-gray-300 mb-4">Starting from $800/month</p>
+                  <p className="text-sm text-gray-400">Market rates: $1500-8000/month</p>
+                  <div className="mt-4 text-green-400 font-semibold">Save up to 40%</div>
+                </div>
+                
+                <div className="bg-slate-800/50 rounded-lg p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Cpu className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Micro SaaS</h3>
+                  <p className="text-gray-300 mb-4">Starting from $29/month</p>
+                  <p className="text-sm text-gray-400">Market rates: $60-500/month</p>
+                  <div className="mt-4 text-green-400 font-semibold">Save up to 60%</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Why Choose Us Section */}
+            <div className="mb-16">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Why Choose Zion Tech Group?
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  We combine cutting-edge technology with proven expertise to deliver exceptional results for your business.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Rapid Deployment</h3>
+                  <p className="text-gray-300 text-sm">Get your solutions up and running in days, not months</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
+                  <p className="text-gray-300 text-sm">Bank-level security and compliance for all our solutions</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Expert Support</h3>
+                  <p className="text-gray-300 text-sm">24/7 support from our team of certified professionals</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>
+                  <p className="text-gray-300 text-sm">Track record of delivering measurable business value</p>
+                </div>
+              </div>
+            </div>
+
             {/* CTA Section */}
             <div className="mt-16 text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
@@ -339,7 +433,7 @@ const ServicesPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                   Contact our experts for a free consultation and discover how our services can transform your business.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
@@ -352,6 +446,19 @@ const ServicesPage: React.FC = () => {
                   >
                     Call: (302) 464-0950
                   </a>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400">
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="flex items-center justify-center space-x-2 hover:text-cyan-400 transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </a>
+                  <div className="flex items-center justify-center space-x-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  </div>
                 </div>
               </div>
             </div>

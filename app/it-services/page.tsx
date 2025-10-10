@@ -1008,6 +1008,474 @@ const ItServicesPage: React.FC = () => {
       category: 'Cloud Security',
       popular: true,
       icon: Shield
+    },
+    {
+      id: 'ai-infrastructure-optimization',
+      name: 'AI Infrastructure Optimization',
+      description: 'AI-powered infrastructure optimization for performance, cost, and resource management',
+      price: '$2,200/month',
+      marketPrice: '$4000-12000/month',
+      features: [
+        'AI-powered resource optimization',
+        'Predictive scaling',
+        'Cost optimization algorithms',
+        'Performance monitoring',
+        'Automated capacity planning',
+        'Energy efficiency optimization',
+        'Load balancing intelligence',
+        'Real-time optimization'
+      ],
+      benefits: [
+        'Reduce infrastructure costs by 30%',
+        'Improve performance efficiency',
+        'Automated optimization',
+        'Better resource utilization'
+      ],
+      category: 'AI Integration',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'quantum-computing-services',
+      name: 'Quantum Computing Services',
+      description: 'Quantum computing solutions and consulting for complex computational problems',
+      price: '$5,000/month',
+      marketPrice: '$10000-50000/month',
+      features: [
+        'Quantum algorithm development',
+        'Quantum simulation services',
+        'Quantum machine learning',
+        'Cryptography solutions',
+        'Optimization problems solving',
+        'Quantum cloud access',
+        'Expert consultation',
+        'Custom quantum solutions'
+      ],
+      benefits: [
+        'Solve complex computational problems',
+        'Exponential speed improvements',
+        'Future-proof technology',
+        'Competitive advantage'
+      ],
+      category: 'Emerging Technologies',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'edge-computing-infrastructure',
+      name: 'Edge Computing Infrastructure',
+      description: 'Edge computing solutions for low-latency applications and distributed processing',
+      price: '$1,800/month',
+      marketPrice: '$3500-10000/month',
+      features: [
+        'Edge server deployment',
+        'Distributed processing setup',
+        'Low-latency optimization',
+        'Edge data management',
+        'IoT integration',
+        'Real-time processing',
+        'Edge security implementation',
+        'Monitoring and management'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Improve user experience',
+        'Distributed processing',
+        'Better data privacy'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: 'zero-trust-security',
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation for modern enterprise environments',
+      price: '$2,800/month',
+      marketPrice: '$5500-15000/month',
+      features: [
+        'Identity verification',
+        'Device trust assessment',
+        'Network segmentation',
+        'Continuous monitoring',
+        'Policy enforcement',
+        'Threat detection',
+        'Access control',
+        'Compliance management'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Better compliance',
+        'Proactive threat protection'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-powered-monitoring',
+      name: 'AI-Powered Infrastructure Monitoring',
+      description: 'Intelligent monitoring and alerting system with predictive analytics and automated responses',
+      price: '$1,500/month',
+      marketPrice: '$3000-8000/month',
+      features: [
+        'AI-powered anomaly detection',
+        'Predictive failure analysis',
+        'Automated incident response',
+        'Intelligent alerting',
+        'Performance optimization',
+        'Capacity planning',
+        'Root cause analysis',
+        'Custom monitoring dashboards'
+      ],
+      benefits: [
+        'Proactive issue detection',
+        'Reduce downtime by 60%',
+        'Automated responses',
+        'Better system insights'
+      ],
+      category: 'Monitoring',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'green-it-solutions',
+      name: 'Green IT Solutions',
+      description: 'Sustainable IT solutions for energy efficiency and environmental responsibility',
+      price: '$1,200/month',
+      marketPrice: '$2500-6000/month',
+      features: [
+        'Energy-efficient hardware',
+        'Power management optimization',
+        'Carbon footprint tracking',
+        'Sustainable procurement',
+        'Waste reduction strategies',
+        'Green data center design',
+        'Renewable energy integration',
+        'Environmental reporting'
+      ],
+      benefits: [
+        'Reduce energy costs by 40%',
+        'Environmental responsibility',
+        'Compliance with green standards',
+        'Improved brand reputation'
+      ],
+      category: 'Sustainability',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation strategy and implementation services',
+      price: '$3,500/month',
+      marketPrice: '$7000-20000/month',
+      features: [
+        'Digital strategy development',
+        'Technology roadmap planning',
+        'Process digitization',
+        'Change management',
+        'Staff training programs',
+        'Legacy system modernization',
+        'Cloud migration planning',
+        'Digital culture transformation'
+      ],
+      benefits: [
+        'Modernize business operations',
+        'Improve efficiency',
+        'Competitive advantage',
+        'Future-ready organization'
+      ],
+      category: 'Consulting',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'cyber-threat-intelligence',
+      name: 'Cyber Threat Intelligence',
+      description: 'Advanced threat intelligence and security research services for proactive defense',
+      price: '$2,500/month',
+      marketPrice: '$5000-15000/month',
+      features: [
+        'Threat intelligence gathering',
+        'Security research and analysis',
+        'Threat hunting services',
+        'Vulnerability assessments',
+        'Incident response planning',
+        'Security awareness training',
+        'Threat landscape monitoring',
+        'Custom intelligence reports'
+      ],
+      benefits: [
+        'Proactive threat protection',
+        'Early warning system',
+        'Better security posture',
+        'Reduced security incidents'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'hyperautomation',
+      name: 'Hyperautomation Solutions',
+      description: 'End-to-end automation solutions combining RPA, AI, and process mining',
+      price: '$2,600/month',
+      marketPrice: '$5000-15000/month',
+      features: [
+        'Process mining and analysis',
+        'RPA implementation',
+        'AI-powered automation',
+        'Workflow optimization',
+        'Integration automation',
+        'Document processing automation',
+        'Decision automation',
+        'Continuous improvement'
+      ],
+      benefits: [
+        'Reduce manual work by 90%',
+        'Improve process efficiency',
+        'Better accuracy',
+        'Cost savings'
+      ],
+      category: 'Automation',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'data-governance',
+      name: 'Data Governance & Compliance',
+      description: 'Comprehensive data governance framework and compliance management services',
+      price: '$1,800/month',
+      marketPrice: '$3500-10000/month',
+      features: [
+        'Data governance framework',
+        'Data quality management',
+        'Privacy compliance (GDPR, CCPA)',
+        'Data classification and tagging',
+        'Access control policies',
+        'Data lineage tracking',
+        'Audit and reporting',
+        'Training and awareness'
+      ],
+      benefits: [
+        'Ensure data compliance',
+        'Improve data quality',
+        'Reduce regulatory risks',
+        'Better data management'
+      ],
+      category: 'Compliance',
+      popular: true,
+      icon: CheckCircle
+    },
+    {
+      id: 'microservices-architecture',
+      name: 'Microservices Architecture',
+      description: 'Design and implementation of microservices architecture for scalable applications',
+      price: '$3,200/month',
+      marketPrice: '$6000-18000/month',
+      features: [
+        'Microservices design',
+        'API gateway implementation',
+        'Service mesh configuration',
+        'Container orchestration',
+        'Service discovery',
+        'Load balancing',
+        'Monitoring and logging',
+        'DevOps integration'
+      ],
+      benefits: [
+        'Scalable architecture',
+        'Independent deployments',
+        'Better fault tolerance',
+        'Technology diversity'
+      ],
+      category: 'Architecture',
+      popular: true,
+      icon: Code
+    },
+    {
+      id: 'ai-ops',
+      name: 'AI Operations (AIOps)',
+      description: 'AI-powered IT operations for intelligent monitoring, automation, and incident management',
+      price: '$2,400/month',
+      marketPrice: '$4800-12000/month',
+      features: [
+        'Intelligent monitoring',
+        'Automated incident response',
+        'Predictive maintenance',
+        'Anomaly detection',
+        'Root cause analysis',
+        'Capacity planning',
+        'Performance optimization',
+        'Self-healing systems'
+      ],
+      benefits: [
+        'Reduce MTTR by 70%',
+        'Proactive operations',
+        'Automated responses',
+        'Better system reliability'
+      ],
+      category: 'AIOps',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'cloud-finops',
+      name: 'Cloud FinOps',
+      description: 'Cloud financial operations and cost optimization services for better cloud spend management',
+      price: '$1,600/month',
+      marketPrice: '$3200-8000/month',
+      features: [
+        'Cloud cost analysis',
+        'Budget management',
+        'Cost allocation and tagging',
+        'Resource optimization',
+        'Reserved instance planning',
+        'Cost forecasting',
+        'Showback and chargeback',
+        'Cost governance'
+      ],
+      benefits: [
+        'Reduce cloud costs by 35%',
+        'Better budget control',
+        'Transparent cost allocation',
+        'Optimized resource usage'
+      ],
+      category: 'Cloud Optimization',
+      popular: true,
+      icon: DollarSign
+    },
+    {
+      id: 'api-economy',
+      name: 'API Economy Solutions',
+      description: 'API strategy and management services for digital business transformation',
+      price: '$2,200/month',
+      marketPrice: '$4400-12000/month',
+      features: [
+        'API strategy development',
+        'API design and development',
+        'API gateway management',
+        'API security implementation',
+        'API analytics and monitoring',
+        'Developer portal creation',
+        'API monetization strategies',
+        'API lifecycle management'
+      ],
+      benefits: [
+        'Enable digital transformation',
+        'Create new revenue streams',
+        'Improve developer experience',
+        'Better API governance'
+      ],
+      category: 'API Development',
+      popular: true,
+      icon: Code
+    },
+    {
+      id: 'immersive-technologies',
+      name: 'Immersive Technologies (AR/VR)',
+      description: 'Augmented and virtual reality solutions for training, visualization, and customer engagement',
+      price: '$3,800/month',
+      marketPrice: '$7500-20000/month',
+      features: [
+        'AR/VR application development',
+        '3D content creation',
+        'Immersive training solutions',
+        'Virtual collaboration spaces',
+        'Mixed reality experiences',
+        'Hardware integration',
+        'Performance optimization',
+        'User experience design'
+      ],
+      benefits: [
+        'Enhanced user engagement',
+        'Improved training effectiveness',
+        'Innovative customer experiences',
+        'Competitive differentiation'
+      ],
+      category: 'Emerging Technologies',
+      popular: false,
+      icon: Monitor
+    },
+    {
+      id: 'intelligent-document-processing',
+      name: 'Intelligent Document Processing',
+      description: 'AI-powered document processing and automation for business workflows',
+      price: '$1,900/month',
+      marketPrice: '$3800-10000/month',
+      features: [
+        'OCR and text extraction',
+        'Document classification',
+        'Data validation and verification',
+        'Workflow automation',
+        'Integration with business systems',
+        'Custom extraction rules',
+        'Batch processing',
+        'Quality assurance'
+      ],
+      benefits: [
+        'Process documents 10x faster',
+        'Reduce manual errors',
+        'Automated data entry',
+        'Better document insights'
+      ],
+      category: 'Document Processing',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'intelligent-rpa',
+      name: 'Intelligent RPA',
+      description: 'AI-enhanced robotic process automation with cognitive capabilities',
+      price: '$2,100/month',
+      marketPrice: '$4200-12000/month',
+      features: [
+        'AI-powered process automation',
+        'Cognitive document processing',
+        'Intelligent decision making',
+        'Exception handling',
+        'Process optimization',
+        'Integration capabilities',
+        'Monitoring and analytics',
+        'Continuous learning'
+      ],
+      benefits: [
+        'Automate complex processes',
+        'Reduce processing time by 80%',
+        'Improve accuracy',
+        'Better exception handling'
+      ],
+      category: 'Automation',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'cloud-native-security',
+      name: 'Cloud-Native Security',
+      description: 'Specialized security services for cloud-native applications and infrastructure',
+      price: '$3,100/month',
+      marketPrice: '$6000-18000/month',
+      features: [
+        'Container security',
+        'Kubernetes security',
+        'Serverless security',
+        'Cloud security posture management',
+        'Identity and access management',
+        'Network security',
+        'Data protection',
+        'Compliance automation'
+      ],
+      benefits: [
+        'Enhanced cloud security',
+        'Automated security management',
+        'Better compliance',
+        'Reduced security risks'
+      ],
+      category: 'Cloud Security',
+      popular: true,
+      icon: Shield
     }
   ];
 
@@ -1044,7 +1512,15 @@ const ItServicesPage: React.FC = () => {
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length },
+    { id: 'Emerging Technologies', name: 'Emerging Technologies', count: services.filter(s => s.category === 'Emerging Technologies').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Monitoring', name: 'Monitoring', count: services.filter(s => s.category === 'Monitoring').length },
+    { id: 'Sustainability', name: 'Sustainability', count: services.filter(s => s.category === 'Sustainability').length },
+    { id: 'Architecture', name: 'Architecture', count: services.filter(s => s.category === 'Architecture').length },
+    { id: 'AIOps', name: 'AIOps', count: services.filter(s => s.category === 'AIOps').length },
+    { id: 'Document Processing', name: 'Document Processing', count: services.filter(s => s.category === 'Document Processing').length }
   ];
 
   const filteredServices = services.filter(service => 

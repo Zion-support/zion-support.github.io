@@ -1011,6 +1011,812 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
+    },
+    {
+      id: 'ai-voice-cloning',
+      name: 'AI Voice Cloning',
+      description: 'Advanced voice cloning technology for creating custom voice models and synthetic speech',
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      features: [
+        'High-quality voice cloning',
+        'Custom voice model training',
+        'Multi-language support',
+        'Emotion and tone control',
+        'Real-time voice synthesis',
+        'API integration',
+        'Voice authentication',
+        'Custom voice library'
+      ],
+      benefits: [
+        'Create unique voice experiences',
+        'Maintain brand voice consistency',
+        'Reduce voice talent costs',
+        'Scalable voice production'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      icon: Mic
+    },
+    {
+      id: 'ai-image-generation',
+      name: 'AI Image Generation',
+      description: 'Advanced AI image generation with custom model training and style transfer capabilities',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Custom model training',
+        'Style transfer and adaptation',
+        'High-resolution image generation',
+        'Batch processing capabilities',
+        'API integration',
+        'Brand-specific image generation',
+        'Image editing and enhancement',
+        'Multi-format export'
+      ],
+      benefits: [
+        'Generate unique visual content',
+        'Reduce design costs',
+        'Maintain brand consistency',
+        'Scale visual content production'
+      ],
+      category: 'Computer Vision',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-code-generation',
+      name: 'AI Code Generation',
+      description: 'Intelligent code generation platform with multi-language support and automated testing',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Multi-language code generation',
+        'Automated testing generation',
+        'Code optimization suggestions',
+        'Documentation generation',
+        'Integration with IDEs',
+        'Custom model training',
+        'Code review automation',
+        'Performance analysis'
+      ],
+      benefits: [
+        'Accelerate development cycles',
+        'Improve code quality',
+        'Reduce development costs',
+        'Automated testing'
+      ],
+      category: 'Development',
+      popular: true,
+      icon: Code
+    },
+    {
+      id: 'ai-customer-segmentation',
+      name: 'AI Customer Segmentation',
+      description: 'Advanced customer segmentation using machine learning for targeted marketing and personalization',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Behavioral segmentation',
+        'Predictive customer modeling',
+        'Real-time segmentation updates',
+        'Multi-dimensional analysis',
+        'Integration with marketing tools',
+        'Custom segmentation rules',
+        'Performance analytics',
+        'A/B testing support'
+      ],
+      benefits: [
+        'Improve marketing targeting',
+        'Increase conversion rates',
+        'Better customer understanding',
+        'Personalized experiences'
+      ],
+      category: 'Marketing',
+      popular: true,
+      icon: Target
+    },
+    {
+      id: 'ai-price-optimization',
+      name: 'AI Price Optimization',
+      description: 'Dynamic pricing optimization using AI to maximize revenue and competitive positioning',
+      price: '$799/month',
+      marketPrice: '$1600-5000/month',
+      features: [
+        'Dynamic pricing algorithms',
+        'Competitor price monitoring',
+        'Demand forecasting',
+        'Price elasticity analysis',
+        'Real-time price adjustments',
+        'A/B testing for pricing',
+        'Revenue optimization',
+        'Integration with e-commerce platforms'
+      ],
+      benefits: [
+        'Increase revenue by 15-25%',
+        'Optimize pricing strategies',
+        'Competitive advantage',
+        'Data-driven pricing decisions'
+      ],
+      category: 'E-commerce',
+      popular: true,
+      icon: DollarSign
+    },
+    {
+      id: 'ai-workforce-planning',
+      name: 'AI Workforce Planning',
+      description: 'Intelligent workforce planning and optimization using predictive analytics and demand forecasting',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Workforce demand forecasting',
+        'Skills gap analysis',
+        'Optimal staffing recommendations',
+        'Performance prediction',
+        'Retention risk analysis',
+        'Training recommendations',
+        'Cost optimization',
+        'Integration with HR systems'
+      ],
+      benefits: [
+        'Optimize workforce efficiency',
+        'Reduce hiring costs',
+        'Improve employee retention',
+        'Better resource allocation'
+      ],
+      category: 'Human Resources',
+      popular: false,
+      icon: Users
+    },
+    {
+      id: 'ai-quality-control',
+      name: 'AI Quality Control',
+      description: 'Automated quality control using computer vision and machine learning for manufacturing and production',
+      price: '$1,499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Real-time defect detection',
+        'Computer vision analysis',
+        'Quality prediction models',
+        'Automated inspection',
+        'Statistical process control',
+        'Integration with production systems',
+        'Custom quality rules',
+        'Performance analytics'
+      ],
+      benefits: [
+        'Reduce defects by 90%',
+        'Improve product quality',
+        'Automated inspection',
+        'Cost savings'
+      ],
+      category: 'Manufacturing',
+      popular: false,
+      icon: CheckCircle
+    },
+    {
+      id: 'ai-risk-assessment',
+      name: 'AI Risk Assessment',
+      description: 'Comprehensive risk assessment platform using machine learning for financial and operational risks',
+      price: '$999/month',
+      marketPrice: '$2000-6000/month',
+      features: [
+        'Multi-dimensional risk analysis',
+        'Predictive risk modeling',
+        'Real-time risk monitoring',
+        'Scenario analysis',
+        'Risk scoring algorithms',
+        'Compliance monitoring',
+        'Integration with existing systems',
+        'Custom risk models'
+      ],
+      benefits: [
+        'Proactive risk management',
+        'Reduce financial losses',
+        'Better decision making',
+        'Compliance assurance'
+      ],
+      category: 'Risk Management',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-supply-chain-optimization',
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain optimization with demand forecasting, inventory management, and logistics optimization',
+      price: '$1,799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Demand forecasting',
+        'Inventory optimization',
+        'Route optimization',
+        'Supplier risk assessment',
+        'Cost optimization',
+        'Real-time monitoring',
+        'Integration with ERP systems',
+        'Custom optimization models'
+      ],
+      benefits: [
+        'Reduce supply chain costs by 30%',
+        'Improve delivery efficiency',
+        'Minimize inventory waste',
+        'Better supplier management'
+      ],
+      category: 'Supply Chain',
+      popular: true,
+      icon: Box
+    },
+    {
+      id: 'ai-emotion-recognition',
+      name: 'AI Emotion Recognition',
+      description: 'Advanced emotion recognition technology for customer experience optimization and behavioral analysis',
+      price: '$699/month',
+      marketPrice: '$1400-4000/month',
+      features: [
+        'Facial emotion recognition',
+        'Voice emotion analysis',
+        'Text sentiment analysis',
+        'Real-time emotion tracking',
+        'Multi-modal emotion fusion',
+        'Custom emotion models',
+        'API integration',
+        'Analytics dashboard'
+      ],
+      benefits: [
+        'Improve customer experience',
+        'Better understanding of user emotions',
+        'Enhanced personalization',
+        'Data-driven insights'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-automated-testing',
+      name: 'AI Automated Testing',
+      description: 'Intelligent software testing platform with automated test generation and execution',
+      price: '$799/month',
+      marketPrice: '$1600-5000/month',
+      features: [
+        'Automated test case generation',
+        'Intelligent test execution',
+        'Bug detection and reporting',
+        'Performance testing automation',
+        'Regression testing automation',
+        'Integration with CI/CD pipelines',
+        'Custom testing frameworks',
+        'Detailed test analytics'
+      ],
+      benefits: [
+        'Reduce testing time by 80%',
+        'Improve test coverage',
+        'Automated bug detection',
+        'Faster release cycles'
+      ],
+      category: 'Software Testing',
+      popular: true,
+      icon: CheckCircle
+    },
+    {
+      id: 'ai-knowledge-graph',
+      name: 'AI Knowledge Graph',
+      description: 'Intelligent knowledge graph construction and management for enterprise knowledge discovery',
+      price: '$1,199/month',
+      marketPrice: '$2400-7000/month',
+      features: [
+        'Automated knowledge extraction',
+        'Entity relationship mapping',
+        'Knowledge graph construction',
+        'Semantic search capabilities',
+        'Integration with existing systems',
+        'Custom knowledge models',
+        'Real-time updates',
+        'Advanced analytics'
+      ],
+      benefits: [
+        'Improve knowledge discovery',
+        'Better information retrieval',
+        'Enhanced collaboration',
+        'Automated knowledge management'
+      ],
+      category: 'Knowledge Management',
+      popular: false,
+      icon: FileText
+    },
+    {
+      id: 'ai-predictive-maintenance',
+      name: 'AI Predictive Maintenance',
+      description: 'IoT-powered predictive maintenance with equipment monitoring and failure prediction',
+      price: '$1,499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Equipment monitoring',
+        'Failure prediction models',
+        'Maintenance scheduling optimization',
+        'IoT sensor integration',
+        'Cost optimization analysis',
+        'Real-time alerts',
+        'Integration with maintenance systems',
+        'Performance analytics'
+      ],
+      benefits: [
+        'Reduce downtime by 70%',
+        'Extend equipment life',
+        'Optimize maintenance costs',
+        'Prevent catastrophic failures'
+      ],
+      category: 'IoT & Maintenance',
+      popular: true,
+      icon: Settings
+    },
+    {
+      id: 'ai-conversation-intelligence',
+      name: 'AI Conversation Intelligence',
+      description: 'Advanced conversation analysis platform with insights, sentiment tracking, and optimization',
+      price: '$899/month',
+      marketPrice: '$1800-5000/month',
+      features: [
+        'Conversation sentiment analysis',
+        'Topic modeling and extraction',
+        'Customer journey mapping',
+        'Agent performance analytics',
+        'Real-time conversation monitoring',
+        'Custom analytics dashboards',
+        'Integration with CRM systems',
+        'Automated insights and alerts'
+      ],
+      benefits: [
+        'Improve conversation quality',
+        'Better customer understanding',
+        'Optimize agent performance',
+        'Data-driven insights'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-automated-reporting',
+      name: 'AI Automated Reporting',
+      description: 'Intelligent reporting platform with automated data analysis and report generation',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Automated report generation',
+        'Data analysis and insights',
+        'Custom report templates',
+        'Scheduled report delivery',
+        'Interactive dashboards',
+        'Integration with data sources',
+        'Natural language queries',
+        'Advanced visualization options'
+      ],
+      benefits: [
+        'Save 90% report creation time',
+        'Automated data analysis',
+        'Consistent reporting',
+        'Better business insights'
+      ],
+      category: 'Reporting & Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-voice-assistant',
+      name: 'AI Voice Assistant Platform',
+      description: 'Enterprise voice assistant platform with custom voice commands and integrations',
+      price: '$1,199/month',
+      marketPrice: '$2400-7000/month',
+      features: [
+        'Custom voice command training',
+        'Multi-language voice support',
+        'Integration with business systems',
+        'Voice analytics and insights',
+        'Custom wake word training',
+        'Offline voice processing',
+        'API integration capabilities',
+        'Advanced voice customization'
+      ],
+      benefits: [
+        'Hands-free business operations',
+        'Improve accessibility',
+        'Automate voice interactions',
+        'Enhanced user experience'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      icon: Mic
+    },
+    {
+      id: 'ai-content-moderation',
+      name: 'AI Content Moderation',
+      description: 'Automated content moderation with image, video, and text analysis for platform safety',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Image and video content analysis',
+        'Text toxicity detection',
+        'Real-time content filtering',
+        'Custom moderation rules',
+        'Human review workflows',
+        'Multi-language support',
+        'API integration',
+        'Detailed moderation reports'
+      ],
+      benefits: [
+        'Maintain platform safety',
+        'Reduce manual moderation',
+        'Consistent policy enforcement',
+        'Real-time content protection'
+      ],
+      category: 'Content Moderation',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-predictive-modeling',
+      name: 'AI Predictive Modeling',
+      description: 'Advanced predictive modeling platform with machine learning algorithms for business forecasting',
+      price: '$1,499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Multiple ML algorithms',
+        'Automated feature engineering',
+        'Model training and validation',
+        'Real-time predictions',
+        'Custom model development',
+        'Integration with data sources',
+        'Model performance monitoring',
+        'A/B testing capabilities'
+      ],
+      benefits: [
+        'Improve business forecasting',
+        'Data-driven decision making',
+        'Automated model development',
+        'Better risk assessment'
+      ],
+      category: 'Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-document-intelligence',
+      name: 'AI Document Intelligence',
+      description: 'Intelligent document processing with OCR, data extraction, and automated classification',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Advanced OCR and text extraction',
+        'Document classification and routing',
+        'Data extraction and validation',
+        'Document comparison and analysis',
+        'Integration with document management',
+        'Custom extraction templates',
+        'Batch processing capabilities',
+        'API integration for automation'
+      ],
+      benefits: [
+        'Process documents 10x faster',
+        'Automated data extraction',
+        'Reduce manual errors',
+        'Better document insights'
+      ],
+      category: 'Document Processing',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-conversation-analytics',
+      name: 'AI Conversation Analytics',
+      description: 'Advanced conversation analysis platform with insights, sentiment tracking, and optimization',
+      price: '$699/month',
+      marketPrice: '$1400-4000/month',
+      features: [
+        'Conversation sentiment analysis',
+        'Topic modeling and extraction',
+        'Customer journey mapping',
+        'Agent performance analytics',
+        'Real-time conversation monitoring',
+        'Custom analytics dashboards',
+        'Integration with CRM systems',
+        'Automated insights and alerts'
+      ],
+      benefits: [
+        'Improve conversation quality',
+        'Better customer understanding',
+        'Optimize agent performance',
+        'Data-driven insights'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-supply-chain-ai',
+      name: 'AI Supply Chain Intelligence',
+      description: 'Intelligent supply chain optimization with demand forecasting and risk management',
+      price: '$1,999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Demand forecasting algorithms',
+        'Inventory optimization',
+        'Supplier risk assessment',
+        'Route optimization',
+        'Cost optimization analysis',
+        'Real-time supply chain monitoring',
+        'Integration with ERP systems',
+        'Custom optimization models'
+      ],
+      benefits: [
+        'Reduce supply chain costs by 30%',
+        'Improve delivery efficiency',
+        'Minimize inventory waste',
+        'Better supplier management'
+      ],
+      category: 'Supply Chain',
+      popular: true,
+      icon: Box
+    },
+    {
+      id: 'ai-healthcare-diagnostics',
+      name: 'AI Healthcare Diagnostics',
+      description: 'Medical AI platform with diagnostic assistance, image analysis, and patient monitoring',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Medical image analysis',
+        'Diagnostic assistance tools',
+        'Patient risk assessment',
+        'Treatment recommendations',
+        'Drug interaction checking',
+        'HIPAA compliance',
+        'Integration with EMR systems',
+        'Clinical decision support'
+      ],
+      benefits: [
+        'Improve diagnostic accuracy',
+        'Reduce diagnostic time',
+        'Early disease detection',
+        'Better patient outcomes'
+      ],
+      category: 'Healthcare',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-financial-forecasting',
+      name: 'AI Financial Forecasting',
+      description: 'Advanced financial forecasting platform with market analysis and investment insights',
+      price: '$1,799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Market trend analysis',
+        'Investment portfolio optimization',
+        'Risk assessment and management',
+        'Real-time market monitoring',
+        'Custom financial models',
+        'Integration with trading platforms',
+        'Regulatory compliance',
+        'Advanced reporting and analytics'
+      ],
+      benefits: [
+        'Improve investment decisions',
+        'Better risk management',
+        'Automated market analysis',
+        'Enhanced portfolio performance'
+      ],
+      category: 'Finance',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-iot-analytics',
+      name: 'AI IoT Analytics',
+      description: 'Intelligent IoT data analysis platform with real-time monitoring and predictive maintenance',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Real-time IoT data processing',
+        'Predictive maintenance algorithms',
+        'Anomaly detection and alerting',
+        'Device health monitoring',
+        'Integration with IoT platforms',
+        'Custom analytics models',
+        'Edge computing capabilities',
+        'Comprehensive reporting'
+      ],
+      benefits: [
+        'Optimize IoT operations',
+        'Prevent equipment failures',
+        'Reduce maintenance costs',
+        'Better device insights'
+      ],
+      category: 'IoT & Analytics',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'ai-conversational-ai',
+      name: 'AI Conversational AI Platform',
+      description: 'Advanced conversational AI platform with natural language understanding and generation',
+      price: '$999/month',
+      marketPrice: '$2000-6000/month',
+      features: [
+        'Natural language understanding',
+        'Context-aware conversations',
+        'Multi-turn dialogue management',
+        'Intent recognition and classification',
+        'Entity extraction and recognition',
+        'Conversation flow management',
+        'Integration with messaging platforms',
+        'Custom conversation training'
+      ],
+      benefits: [
+        'Create natural conversations',
+        'Improve user engagement',
+        'Automate customer interactions',
+        'Better conversation quality'
+      ],
+      category: 'Conversational AI',
+      popular: true,
+      icon: MessageCircle
+    },
+    {
+      id: 'ai-automated-testing',
+      name: 'AI Automated Testing',
+      description: 'Intelligent software testing platform with automated test generation and execution',
+      price: '$799/month',
+      marketPrice: '$1600-5000/month',
+      features: [
+        'Automated test case generation',
+        'Intelligent test execution',
+        'Bug detection and reporting',
+        'Performance testing automation',
+        'Regression testing automation',
+        'Integration with CI/CD pipelines',
+        'Custom testing frameworks',
+        'Detailed test analytics'
+      ],
+      benefits: [
+        'Reduce testing time by 80%',
+        'Improve test coverage',
+        'Automated bug detection',
+        'Faster release cycles'
+      ],
+      category: 'Software Testing',
+      popular: true,
+      icon: CheckCircle
+    },
+    {
+      id: 'ai-knowledge-management',
+      name: 'AI Knowledge Management',
+      description: 'Intelligent knowledge management platform with automated content organization and search',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Automated content categorization',
+        'Intelligent search and retrieval',
+        'Knowledge graph construction',
+        'Content recommendation',
+        'Expert identification',
+        'Integration with existing systems',
+        'Custom knowledge models',
+        'Advanced analytics and insights'
+      ],
+      benefits: [
+        'Improve knowledge discovery',
+        'Automated content organization',
+        'Better information retrieval',
+        'Enhanced collaboration'
+      ],
+      category: 'Knowledge Management',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-customer-churn',
+      name: 'AI Customer Churn Prediction',
+      description: 'Advanced customer churn prediction platform with retention strategies and analytics',
+      price: '$899/month',
+      marketPrice: '$1800-5000/month',
+      features: [
+        'Churn prediction algorithms',
+        'Customer segmentation analysis',
+        'Retention strategy recommendations',
+        'Real-time churn monitoring',
+        'Integration with CRM systems',
+        'Custom prediction models',
+        'A/B testing for strategies',
+        'Detailed analytics and reporting'
+      ],
+      benefits: [
+        'Reduce customer churn by 40%',
+        'Improve retention strategies',
+        'Better customer insights',
+        'Data-driven retention'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-automated-reporting',
+      name: 'AI Automated Reporting',
+      description: 'Intelligent reporting platform with automated data analysis and report generation',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Automated report generation',
+        'Data analysis and insights',
+        'Custom report templates',
+        'Scheduled report delivery',
+        'Interactive dashboards',
+        'Integration with data sources',
+        'Natural language queries',
+        'Advanced visualization options'
+      ],
+      benefits: [
+        'Save 90% report creation time',
+        'Automated data analysis',
+        'Consistent reporting',
+        'Better business insights'
+      ],
+      category: 'Reporting & Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-voice-assistant',
+      name: 'AI Voice Assistant Platform',
+      description: 'Enterprise voice assistant platform with custom voice commands and integrations',
+      price: '$1,199/month',
+      marketPrice: '$2400-7000/month',
+      features: [
+        'Custom voice command training',
+        'Multi-language voice support',
+        'Integration with business systems',
+        'Voice analytics and insights',
+        'Custom wake word training',
+        'Offline voice processing',
+        'API integration capabilities',
+        'Advanced voice customization'
+      ],
+      benefits: [
+        'Hands-free business operations',
+        'Improve accessibility',
+        'Automate voice interactions',
+        'Enhanced user experience'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      icon: Mic
+    },
+    {
+      id: 'ai-content-generation',
+      name: 'AI Content Generation Pro',
+      description: 'Advanced content generation platform with multi-format support and brand consistency',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Multi-format content generation',
+        'Brand voice customization',
+        'SEO-optimized content',
+        'Content planning and scheduling',
+        'Plagiarism detection',
+        'Content performance analytics',
+        'Integration with CMS platforms',
+        'Custom content templates'
+      ],
+      benefits: [
+        'Scale content production',
+        'Maintain brand consistency',
+        'Improve SEO performance',
+        'Reduce content costs'
+      ],
+      category: 'Content Generation',
+      popular: true,
+      icon: FileText
     }
   ];
 
@@ -1042,7 +1848,12 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: 'Development', name: 'Development', count: services.filter(s => s.category === 'Development').length },
+    { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
+    { id: 'Manufacturing', name: 'Manufacturing', count: services.filter(s => s.category === 'Manufacturing').length },
+    { id: 'Risk Management', name: 'Risk Management', count: services.filter(s => s.category === 'Risk Management').length },
+    { id: 'IoT & Maintenance', name: 'IoT & Maintenance', count: services.filter(s => s.category === 'IoT & Maintenance').length }
   ];
 
   const filteredServices = services.filter(service => 
