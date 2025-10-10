@@ -36,6 +36,22 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+// Missing IT Services
+const NetworkSolutionsPage = React.lazy(() => import('./app/ai-network-solutions/page'));
+const MobileDevelopmentPage = React.lazy(() => import('./app/ai-mobile-development/page'));
+const SystemIntegrationPage = React.lazy(() => import('./app/ai-system-integration/page'));
+// Missing Micro SaaS Services
+const MicroSaasProjectManagementPage = React.lazy(() => import('./app/micro-saas-project-management/page'));
+const MicroSaasCustomerSupportPage = React.lazy(() => import('./app/micro-saas-customer-support/page'));
+const MicroSaasAnalyticsPage = React.lazy(() => import('./app/micro-saas-analytics/page'));
+const MicroSaasCmsPage = React.lazy(() => import('./app/micro-saas-cms/page'));
+const MicroSaasCollaborationPage = React.lazy(() => import('./app/micro-saas-collaboration/page'));
+const MicroSaasFinancePage = React.lazy(() => import('./app/micro-saas-finance/page'));
+const MicroSaasInventoryPage = React.lazy(() => import('./app/micro-saas-inventory/page'));
+const MicroSaasMonitoringPage = React.lazy(() => import('./app/micro-saas-monitoring/page'));
+// Additional pages
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
 // New AI Services
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
 const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
@@ -95,6 +111,22 @@ const App: React.FC = () => {
                             <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
                             <Route path="/ai-supply-chain-optimization" element={<AISupplyChainOptimizationPage />} />
                             <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructurePage />} />
+                            {/* Missing IT Services Routes */}
+                            <Route path="/ai-network-solutions" element={<NetworkSolutionsPage />} />
+                            <Route path="/ai-mobile-development" element={<MobileDevelopmentPage />} />
+                            <Route path="/ai-system-integration" element={<SystemIntegrationPage />} />
+                            {/* Missing Micro SaaS Routes */}
+                            <Route path="/micro-saas-project-management" element={<MicroSaasProjectManagementPage />} />
+                            <Route path="/micro-saas-customer-support" element={<MicroSaasCustomerSupportPage />} />
+                            <Route path="/micro-saas-analytics" element={<MicroSaasAnalyticsPage />} />
+                            <Route path="/micro-saas-cms" element={<MicroSaasCmsPage />} />
+                            <Route path="/micro-saas-collaboration" element={<MicroSaasCollaborationPage />} />
+                            <Route path="/micro-saas-finance" element={<MicroSaasFinancePage />} />
+                            <Route path="/micro-saas-inventory" element={<MicroSaasInventoryPage />} />
+                            <Route path="/micro-saas-monitoring" element={<MicroSaasMonitoringPage />} />
+                            {/* Additional Routes */}
+                            <Route path="/docs" element={<DocsPage />} />
+                            <Route path="/api-docs" element={<ApiDocsPage />} />
                           </Routes>
                         </Suspense>
                       </main>
