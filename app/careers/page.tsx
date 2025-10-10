@@ -379,6 +379,38 @@ const CareersPage: React.FC = () => {
                   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Requirements:</h4>
+                    <ul className="space-y-1">
+                      {position.requirements.slice(0, 3).map((req, index) => (
+                        <li key={index} className="text-sm text-gray-300 flex items-center">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {req}
+                        </li>
+                      ))}
+                      {position.requirements.length > 3 && (
+                        <li className="text-sm text-gray-400">
+                          +{position.requirements.length - 3} more requirements
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-400">
+                      {position.benefits.length} benefits included
+                    </div>
+                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                      Apply Now
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a15
           </div>
         </section>
 
@@ -447,6 +479,7 @@ const CareersPage: React.FC = () => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
           </div>
         </section>
 
@@ -542,6 +575,8 @@ const CareersPage: React.FC = () => {
               Get in Touch
               <ArrowRight className="w-4 h-4" />
             </Link>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a15
           </div>
         </section>
       </div>
