@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -12,6 +13,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in Computer Science or related field']
     },
     {
       title: 'Cloud Architect',
@@ -23,6 +26,22 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
+      title: 'DevOps Engineer',
+      department: 'Infrastructure',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Build and maintain CI/CD pipelines, infrastructure automation, and monitoring systems.',
+      requirements: ['Docker, Kubernetes, Terraform', '4+ years DevOps experience', 'Linux administration']
+    },
+    {
+      title: 'Data Scientist',
+      department: 'AI Solutions',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Analyze complex data sets and develop predictive models to drive business insights.',
+      requirements: ['R, Python, SQL', '3+ years data science experience', 'Statistics and ML expertise']
     }
   ];
 
@@ -127,10 +146,43 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
+                  >
+                    Apply Now →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Join Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
                 </div>
               ))}
             </div>
 
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Benefits & Perks</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    {benefit}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -34,17 +32,6 @@ const ContentCarousel: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -59,6 +46,45 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="py-16 px-4 bg-gradient-to-br from-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Why Choose Our Solutions?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the key features that make our AI and IT solutions stand out from the competition
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-12">
+                    <div className="text-center mb-8">
+                      <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <slide.icon className="w-10 h-10 text-white" />
+                      </div>
+                      <h3 className="text-3xl font-bold text-white mb-4">{slide.title}</h3>
+                      <p className="text-xl text-gray-300 max-w-2xl mx-auto">{slide.description}</p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {slide.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-3">
+                          <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                          <span className="text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 

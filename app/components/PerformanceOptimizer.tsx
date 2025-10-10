@@ -1,139 +1,197 @@
 'use client';
-import React from 'react';
-'use client';
-
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
   children: React.ReactNode;
-  className?: string;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [performanceScore, setPerformanceScore] = useState<number | null>(null);
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  children
+}) => {
+  useEffect(() => {
+    // Image optimization
+    if (enableImageOptimization) {
+      const optimizeImages = () => {
+        const images = document.querySelectorAll('img');
+        images.forEach((img) => {
+          // Add loading="lazy" if not already present
+          if (enableLazyLoading && !img.getAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+          }
+          
+          // Add decoding="async" for better performance
+          if (!img.getAttribute('decoding')) {
+            img.setAttribute('decoding', 'async');
+          }
+          
+          // Add error handling
+          img.addEventListener('error', () => {
+            img.style.display = 'none';
+          });
+        });
+      };
 
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
+      // Run on initial load
+      optimizeImages();
+
+      // Run on dynamic content changes
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'childList') {
+            mutation.addedNodes.forEach((node) => {
+              if (node.nodeType === Node.ELEMENT_NODE) {
+                const element = node as Element;
+                if (element.tagName === 'IMG' || element.querySelector('img')) {
+                  optimizeImages();
+                }
+              }
+            });
+          }
+        });
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      return () => observer.disconnect();
+    }
+  }, [enableImageOptimization, enableLazyLoading]);
+
+  useEffect(() => {
+    // Preload critical resources
+    if (enablePreloading) {
+      const preloadCriticalResources = () => {
+        // Preload critical CSS
+        const criticalCSS = document.createElement('link');
+        criticalCSS.rel = 'preload';
+        criticalCSS.href = '/critical.css';
+        criticalCSS.as = 'style';
+        criticalCSS.onload = () => {
+          criticalCSS.rel = 'stylesheet';
+        };
+        document.head.appendChild(criticalCSS);
+
+        // Preload critical fonts
+        const fontPreload = document.createElement('link');
+        fontPreload.rel = 'preload';
+        fontPreload.href = '/fonts/inter-var.woff2';
+        fontPreload.as = 'font';
+        fontPreload.type = 'font/woff2';
+        fontPreload.crossOrigin = 'anonymous';
+        document.head.appendChild(fontPreload);
+
+        // Preload critical images
+        const criticalImages = [
+          '/og-image.jpg',
+          '/logo.png'
+        ];
+
+        criticalImages.forEach((src) => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.href = src;
+          link.as = 'image';
+          document.head.appendChild(link);
+        });
+      };
+
+      preloadCriticalResources();
+    }
+  }, [enablePreloading]);
+
+  useEffect(() => {
+    // Resource hints
+    const addResourceHints = () => {
+      // DNS prefetch for external domains
+      const externalDomains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://www.google-analytics.com',
+        'https://www.googletagmanager.com'
+      ];
+
+      externalDomains.forEach((domain) => {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = domain;
+        document.head.appendChild(link);
+      });
+
+      // Preconnect to critical domains
+      const criticalDomains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com'
+      ];
+
+      criticalDomains.forEach((domain) => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      });
+    };
+
+    addResourceHints();
   }, []);
 
-  const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        // Trigger garbage collection if available
-        if (window.gc) {
-          window.gc();
-        }
-      }
+  useEffect(() => {
+    // Service Worker registration for caching
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
     }
   }, []);
 
-  const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    const newOptimizations: string[] = [];
-
-    // Optimize images
-    optimizeImages();
-    newOptimizations.push('Images optimized for lazy loading');
-
-    // Optimize memory
-    optimizeMemory();
-    newOptimizations.push('Memory optimization applied');
-
-    // Calculate performance score
-    const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
-    setPerformanceScore(score);
-    newOptimizations.push(`Performance score: ${score}/100`);
-
-    setOptimizations(newOptimizations);
-    setIsOptimizing(false);
-  }, [optimizeImages, optimizeMemory]);
-
   useEffect(() => {
-    // Initial optimization
-    optimizeImages();
-    
-    // Re-optimize on route changes
-    const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Performance monitoring
+    const measurePerformance = () => {
+      if ('performance' in window) {
+        // Measure First Contentful Paint
+        const fcpObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              console.log('FCP:', entry.startTime);
+            }
+          });
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
 
-    return () => observer.disconnect();
-  }, [optimizeImages]);
+        // Measure Largest Contentful Paint
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          console.log('LCP:', lastEntry.startTime);
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-  useEffect(() => {
-    const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
-  }, [optimizeMemory]);
+        return () => {
+          fcpObserver.disconnect();
+          lcpObserver.disconnect();
+        };
+      }
+    };
 
-  return (
-    <>
-      {children}
-      <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-            <Settings className="h-5 w-5 mr-2 text-blue-600" />
-            Performance Optimizer
-          </h3>
-          <button
-            onClick={runOptimizations}
-            disabled={isOptimizing}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-          >
-            <Zap className="h-4 w-4 mr-2" />
-            {isOptimizing ? 'Optimizing...' : 'Optimize'}
-          </button>
-        </div>
+    const cleanup = measurePerformance();
+    return cleanup;
+  }, []);
 
-        {optimizations.length > 0 && (
-          <div className="space-y-2 mb-4">
-            {optimizations.map((optimization, index) => (
-              <div key={index} className="flex items-center text-sm text-green-600">
-                <CheckCircle className="h-4 w-4 mr-2" />
-                {optimization}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {performanceScore && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Performance Score</span>
-              <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  performanceScore >= 90 ? 'bg-green-500' : 
-                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${performanceScore}%` }}
-              />
-            </div>
-            {performanceScore < 90 && (
-              <div className="mt-2 flex items-center">
-                <AlertTriangle className="h-4 w-4 text-yellow-600" />
-                <span className="text-sm text-yellow-800 ml-2">
-                  Performance can be improved. Consider additional optimizations.
-                </span>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    </>
-  );
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;
