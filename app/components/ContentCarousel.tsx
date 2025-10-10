@@ -1,209 +1,179 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-
-interface Slide {
-  id: number;
-  title: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  features: string[];
-  stats: { value: string; label: string }[];
-}
+import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from 'lucide-react';
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides: Slide[] = [
+  const testimonials = [
     {
       id: 1,
-      title: 'AI-Powered Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
-      icon: Brain,
-      features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-        'Automated Decision Making',
-        'Real-time Insights'
-      ],
-      stats: [
-        { value: '95%', label: 'Accuracy' },
-        { value: '50%', label: 'Cost Reduction' },
-        { value: '24/7', label: 'Availability' }
-      ]
+      name: 'Sarah Johnson',
+      role: 'CEO, TechCorp',
+      company: 'Fortune 500 Technology Company',
+      content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our operational efficiency by 300% and reduced costs by 60%. The ROI has been outstanding.',
+      rating: 5,
+      image: 'SJ',
+      color: 'from-cyan-500 to-blue-600'
     },
     {
       id: 2,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern businesses',
-      icon: Globe,
-      features: [
-        'Auto-scaling Resources',
-        'Global CDN',
-        'Disaster Recovery',
-        'Security Compliance',
-        'Cost Optimization',
-        '24/7 Monitoring'
-      ],
-      stats: [
-        { value: '99.9%', label: 'Uptime' },
-        { value: '40%', label: 'Faster Deploy' },
-        { value: '60%', label: 'Cost Savings' }
-      ]
+      name: 'Michael Chen',
+      role: 'CTO, InnovateLabs',
+      company: 'Leading AI Research Lab',
+      content: 'The AI project management platform has revolutionized how we handle complex projects. The intelligent automation and predictive analytics are game-changers for our team.',
+      rating: 5,
+      image: 'MC',
+      color: 'from-purple-500 to-pink-600'
     },
     {
       id: 3,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets',
-      icon: Shield,
-      features: [
-        'Threat Detection',
-        'Vulnerability Assessment',
-        'Incident Response',
-        'Compliance Management',
-        'Security Training',
-        'Continuous Monitoring'
-      ],
-      stats: [
-        { value: '100%', label: 'Secure' },
-        { value: '0', label: 'Breaches' },
-        { value: '24/7', label: 'Protection' }
-      ]
+      name: 'Emily Rodriguez',
+      role: 'Marketing Director, GrowthCo',
+      company: 'Digital Marketing Agency',
+      content: 'Their AI social media management tool has been incredible. We\'ve seen a 400% increase in engagement and 250% more leads. The automation saves us 20 hours per week.',
+      rating: 5,
+      image: 'ER',
+      color: 'from-green-500 to-teal-600'
     },
     {
       id: 4,
-      title: 'Data Analytics',
-      description: 'Turn your data into actionable insights and business intelligence',
-      icon: TrendingUp,
-      features: [
-        'Real-time Dashboards',
-        'Predictive Modeling',
-        'Custom Reports',
-        'Data Visualization',
-        'Business Intelligence',
-        'Performance Metrics'
-      ],
-      stats: [
-        { value: '85%', label: 'Better Decisions' },
-        { value: '30%', label: 'Revenue Growth' },
-        { value: '50%', label: 'Time Saved' }
-      ]
+      name: 'David Kim',
+      role: 'IT Director, Enterprise Solutions',
+      company: 'Global Enterprise',
+      content: 'The AI cloud infrastructure management has been a game-changer. We\'ve reduced our cloud costs by 50% while improving performance by 200%. The security features are top-notch.',
+      rating: 5,
+      image: 'DK',
+      color: 'from-orange-500 to-red-600'
+    },
+    {
+      id: 5,
+      name: 'Lisa Thompson',
+      role: 'Operations Manager, RetailMax',
+      company: 'E-commerce Platform',
+      content: 'The AI email marketing automation has transformed our customer engagement. Open rates increased by 45% and click-through rates by 60%. The personalization is incredible.',
+      rating: 5,
+      image: 'LT',
+      color: 'from-pink-500 to-purple-600'
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [testimonials.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const currentSlideData = slides[currentSlide];
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6 neon-text">
+            What Our Clients Say
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI and IT solutions designed to transform your business.
+            Don't just take our word for it. Here's what industry leaders say about our AI and IT solutions.
           </p>
         </div>
 
-        {/* Carousel */}
         <div className="relative">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center space-x-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
-                  <currentSlideData.icon className="w-8 h-8 text-slate-900" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {currentSlideData.title}
-                  </h3>
-                  <p className="text-gray-300 text-lg">
-                    {currentSlideData.description}
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Carousel Container */}
+          <div className="overflow-hidden rounded-3xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {testimonials.map((testimonial) => (
+                <div key={testimonial.id} className="w-full flex-shrink-0">
+                  <div className="holographic-stream p-12 mx-4">
+                    <div className="text-center mb-8">
+                      <div className="flex justify-center mb-6">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                      <Quote className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
+                      <blockquote className="text-2xl text-white font-medium leading-relaxed max-w-4xl mx-auto">
+                        "{testimonial.content}"
+                      </blockquote>
+                    </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {currentSlideData.features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">
-              {currentSlideData.stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="flex items-center justify-center space-x-6">
+                      <div className={`w-16 h-16 bg-gradient-to-r ${testimonial.color} rounded-full flex items-center justify-center text-white font-bold text-xl`}>
+                        {testimonial.image}
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xl font-bold text-white">{testimonial.name}</div>
+                        <div className="text-cyan-400 font-semibold">{testimonial.role}</div>
+                        <div className="text-gray-300 text-sm">{testimonial.company}</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-slate-800/80 hover:bg-slate-700/80 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+            aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
+
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-slate-800/80 hover:bg-slate-700/80 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+            aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
-        </div>
 
-        {/* Slide Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses already using our solutions to drive growth and innovation.
-            </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto">
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-cyan-400 scale-125' 
+                    : 'bg-gray-600 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <a
+            href="/case-studies"
+            className="cyber-button inline-flex items-center space-x-2"
+          >
+            <span>Read More Success Stories</span>
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

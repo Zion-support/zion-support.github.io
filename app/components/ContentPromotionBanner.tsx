@@ -1,109 +1,109 @@
 'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Star, Users, TrendingUp, Shield } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Happy Clients' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' }
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentPromo, setCurrentPromo] = useState(0);
+
+  const promotions = [
+    {
+      id: 1,
+      title: '🚀 New AI Project Manager Available!',
+      description: 'Intelligent project management with AI-powered insights. Start your free trial today.',
+      cta: 'Try Free',
+      href: '/ai-project-manager',
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      id: 2,
+      title: '📱 AI Social Media Manager Launch',
+      description: 'Automate your social media with AI. Get 50% off your first month.',
+      cta: 'Get 50% Off',
+      href: '/ai-social-media-manager',
+      color: 'from-pink-500 to-purple-600'
+    },
+    {
+      id: 3,
+      title: '☁️ AI Cloud Infrastructure Update',
+      description: 'Advanced cloud optimization with AI. Reduce costs by up to 60%.',
+      cta: 'Learn More',
+      href: '/ai-cloud-infrastructure',
+      color: 'from-green-500 to-teal-600'
+    }
   ];
 
-  const features = [
-    { title: 'AI-Powered Solutions', description: 'Cutting-edge artificial intelligence' },
-    { title: '24/7 Support', description: 'Round-the-clock assistance' },
-    { title: 'Scalable Infrastructure', description: 'Grows with your business' },
-    { title: 'Expert Team', description: 'Industry-leading professionals' }
-  ];
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentPromo((prev) => (prev + 1) % promotions.length);
+    }, 5000);
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce operational costs by 30%',
-    'Improve customer satisfaction',
-    'Scale without limits',
-    'Stay ahead of competition',
-    'Future-proof your business'
-  ];
+    return () => clearInterval(timer);
+  }, [promotions.length]);
+
+  if (!isVisible) return null;
+
+  const currentPromotion = promotions[currentPromo];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Transform Your Business
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              with AI & Technology
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already using our AI and IT solutions to drive growth and innovation.
-          </p>
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="flex justify-center mb-4">
-                {stat.icon}
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
+    <div className="relative bg-gradient-to-r from-slate-800 to-slate-900 border-b border-cyan-500/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-3">
+          {/* Left side - Promotion content */}
+          <div className="flex items-center space-x-4 flex-1">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+              <span className="text-cyan-400 text-sm font-medium">NEW</span>
             </div>
-          ))}
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+            
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm sm:text-base font-semibold text-white truncate">
+                {currentPromotion.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 truncate">
+                {currentPromotion.description}
+              </p>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Solutions?</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
+          {/* Right side - CTA and close */}
+          <div className="flex items-center space-x-3">
+            <a
+              href={currentPromotion.href}
+              className={`bg-gradient-to-r ${currentPromotion.color} text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity duration-300 flex items-center space-x-1`}
+            >
+              <span>{currentPromotion.cta}</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
+              aria-label="Close promotion banner"
+            >
+              <X className="w-4 h-4" />
+            </button>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied customers and transform your business today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <span>Get Started Now</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/consultation"
-                className="border border-cyan-500 text-cyan-400 font-semibold py-3 px-8 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <span>Schedule Demo</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
+        {/* Progress indicator */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-700">
+          <div 
+            className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-5000 ease-linear"
+            style={{ 
+              width: '100%',
+              animation: 'progressBar 5s linear infinite'
+            }}
+          />
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes progressBar {
+          from { width: 100%; }
+          to { width: 0%; }
+        }
+      `}</style>
     </div>
   );
 };

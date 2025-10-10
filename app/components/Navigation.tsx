@@ -47,6 +47,10 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Smart project management' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Share2, description: 'Social media automation' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: Mail, description: 'Email automation' },
+    { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Intelligent cloud management' },
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -55,13 +59,9 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' },
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Smart project management' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Share2, description: 'Social media automation' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: Mail, description: 'Email automation' },
     { name: 'AI Voice Assistant', href: '/ai-voice-assistant-platform', icon: Mic, description: 'Voice AI platform' },
     { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Wrench, description: 'Equipment monitoring' },
-    { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain optimization' },
-    { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Intelligent cloud management' }
+    { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain optimization' }
   ];
 
   const itServices = [

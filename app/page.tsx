@@ -4,10 +4,6 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-<<<<<<< HEAD
-import StructuredData from './components/StructuredData';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Dynamically import heavy components for better performance
@@ -51,50 +47,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions tailored to your business needs.'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern businesses.'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.'
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Bespoke software solutions designed specifically for your requirements.'
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our analytics solutions.'
-    },
-    {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Enhance productivity with our collaboration and communication tools.'
-    }
-  ];
-
-  return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="Zion Tech Group - AI & IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services."
-        keywords="AI solutions, IT services, cybersecurity, cloud computing, digital transformation"
-        image="/images/og-image.jpg"
-        url="https://ziontechgroup.com"
-        type="website"
-=======
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -139,24 +91,17 @@ const HomePage: React.FC = () => {
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
-<<<<<<< HEAD
-        enableScreenReader={true}
+        enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <PerformanceOptimizer
-        enableLazyLoading={true}
-        enablePreloading={true}
-        enableCodeSplitting={true}
-      >
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain quantum-particles">
           {/* Hero Section */}
           <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
             {/* Animated Background Elements */}
@@ -487,15 +432,6 @@ const HomePage: React.FC = () => {
           <StructuredData type="WebSite" />
           <StructuredData type="WebPage" />
           <StructuredData type="Service" />
-          <StructuredData type="LocalBusiness" />
-        </div>
-      </PerformanceOptimizer>
-=======
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -658,6 +594,70 @@ const HomePage: React.FC = () => {
                 Micro SAAS Solutions
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                <Suspense fallback={<ServiceCardSkeleton />}>
+                  <article className="quantum-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
+                    <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📋</div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Project Manager</h3>
+                    <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                      Intelligent project management with AI-powered task prioritization, resource allocation, and automated insights.
+                    </p>
+                    <div className="text-center">
+                      <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">$99/month</div>
+                      <a href="/ai-project-manager" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base hover:neon-glow">
+                        Learn More →
+                      </a>
+                    </div>
+                  </article>
+                </Suspense>
+                
+                <Suspense fallback={<ServiceCardSkeleton />}>
+                  <article className="quantum-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
+                    <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📱</div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Social Media Manager</h3>
+                    <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                      Automated social media management with AI content generation, smart scheduling, and advanced analytics.
+                    </p>
+                    <div className="text-center">
+                      <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">$149/month</div>
+                      <a href="/ai-social-media-manager" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base hover:neon-glow">
+                        Learn More →
+                      </a>
+                    </div>
+                  </article>
+                </Suspense>
+                
+                <Suspense fallback={<ServiceCardSkeleton />}>
+                  <article className="quantum-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
+                    <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📧</div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Email Marketing</h3>
+                    <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                      Intelligent email automation with AI content generation, smart segmentation, and optimal send times.
+                    </p>
+                    <div className="text-center">
+                      <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2 neon-text">$99/month</div>
+                      <a href="/ai-email-marketing-automation" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base hover:neon-glow">
+                        Learn More →
+                      </a>
+                    </div>
+                  </article>
+                </Suspense>
+                
+                <Suspense fallback={<ServiceCardSkeleton />}>
+                  <article className="quantum-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
+                    <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">☁️</div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Cloud Infrastructure</h3>
+                    <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                      Intelligent cloud management with AI optimization, automated scaling, and cost reduction across all platforms.
+                    </p>
+                    <div className="text-center">
+                      <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">$2,500/month</div>
+                      <a href="/ai-cloud-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base hover:neon-glow">
+                        Learn More →
+                      </a>
+                    </div>
+                  </article>
+                </Suspense>
+                
                 <Suspense fallback={<ServiceCardSkeleton />}>
                   <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                     <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
@@ -891,7 +891,6 @@ const HomePage: React.FC = () => {
         </main>
         <Footer />
       </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </React.Fragment>
   );
 };

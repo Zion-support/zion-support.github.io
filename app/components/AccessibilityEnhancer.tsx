@@ -1,10 +1,10 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
+  enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
 }
@@ -12,26 +12,24 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
-  enableScreenReader = true,
+  enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
-  // Keyboard navigation enhancements
+  // Keyboard navigation
   useEffect(() => {
-    if (enableKeyboardNavigation) {
+    if (enableKeyboardNavigation && typeof window !== 'undefined') {
       const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const mainContent = document.getElementById('main-content');
-          if (mainContent) {
-            mainContent.focus();
-            event.preventDefault();
+        // Skip to main content with Tab key
+        if (event.key === 'Tab' && !event.shiftKey) {
+          const skipLink = document.querySelector('a[href="#main-content"]');
+          if (skipLink && document.activeElement === document.body) {
+            skipLink.focus();
           }
         }
         
-        // Escape key handling
+        // Escape key to close modals/dropdowns
         if (event.key === 'Escape') {
-          // Close any open modals or dropdowns
           const activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
@@ -44,103 +42,100 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableKeyboardNavigation]);
 
-  // Screen reader enhancements
+  // Screen reader support
   useEffect(() => {
-    if (enableScreenReader) {
-      // Add ARIA live region for announcements
-      const liveRegion = document.createElement('div');
-      liveRegion.id = 'aria-live-region';
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      document.body.appendChild(liveRegion);
-
-      return () => {
-        const existingLiveRegion = document.getElementById('aria-live-region');
-        if (existingLiveRegion) {
-          existingLiveRegion.remove();
-        }
-      };
-    }
-  }, [enableScreenReader]);
-
-  // High contrast mode detection
-  useEffect(() => {
-    if (enableHighContrast) {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      
-      const handleContrastChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
-          document.documentElement.classList.remove('high-contrast');
-        }
-      };
-
-      // Set initial state
-      if (mediaQuery.matches) {
-        document.documentElement.classList.add('high-contrast');
+    if (enableScreenReaderSupport && typeof window !== 'undefined') {
+      // Add ARIA landmarks
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
       }
 
-      mediaQuery.addEventListener('change', handleContrastChange);
-      return () => mediaQuery.removeEventListener('change', handleContrastChange);
+      // Add skip links
+      const skipLink = document.querySelector('a[href="#main-content"]');
+      if (skipLink) {
+        skipLink.setAttribute('aria-label', 'Skip to main content');
+      }
+
+      // Ensure all interactive elements have proper labels
+      const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+      buttons.forEach((button) => {
+        if (!button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Button');
+        }
+      });
+
+      const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+      links.forEach((link) => {
+        if (!link.textContent?.trim()) {
+          link.setAttribute('aria-label', 'Link');
+        }
+      });
+    }
+  }, [enableScreenReaderSupport]);
+
+  // High contrast mode
+  useEffect(() => {
+    if (enableHighContrast && typeof window !== 'undefined') {
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+      
+      const updateHighContrast = () => {
+        if (prefersHighContrast.matches) {
+          document.body.classList.add('high-contrast');
+        } else {
+          document.body.classList.remove('high-contrast');
+        }
+      };
+
+      updateHighContrast();
+      prefersHighContrast.addEventListener('change', updateHighContrast);
+
+      return () => prefersHighContrast.removeEventListener('change', updateHighContrast);
     }
   }, [enableHighContrast]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
   // Focus management
   useEffect(() => {
-    if (enableFocusManagement) {
-      // Store the last focused element before navigation
-      let lastFocusedElement: HTMLElement | null = null;
+    if (enableFocusManagement && typeof window !== 'undefined') {
+      // Ensure focus is visible
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #06b6d4 !important;
+          outline-offset: 2px !important;
+        }
+        
+        .high-contrast *:focus {
+          outline: 3px solid #ffffff !important;
+          outline-offset: 3px !important;
+        }
+      `;
+      document.head.appendChild(style);
 
-      const handleFocusIn = (event: FocusEvent) => {
-        lastFocusedElement = event.target as HTMLElement;
-      };
-
-      const handleFocusOut = (event: FocusEvent) => {
-        // Ensure focus is visible
-        const target = event.target as HTMLElement;
-        if (target && target.style) {
-          target.style.outline = '2px solid #00ffff';
-          target.style.outlineOffset = '2px';
+      // Focus trap for modals
+      const handleFocusTrap = (event: FocusEvent) => {
+        const modal = document.querySelector('[role="dialog"]');
+        if (modal && !modal.contains(event.target as Node)) {
+          const focusableElements = modal.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          if (focusableElements.length > 0) {
+            (focusableElements[0] as HTMLElement).focus();
+          }
         }
       };
 
-      document.addEventListener('focusin', handleFocusIn);
-      document.addEventListener('focusout', handleFocusOut);
-
+      document.addEventListener('focusin', handleFocusTrap);
       return () => {
-        document.removeEventListener('focusin', handleFocusIn);
-        document.removeEventListener('focusout', handleFocusOut);
+        document.removeEventListener('focusin', handleFocusTrap);
+        document.head.removeChild(style);
       };
     }
   }, [enableFocusManagement]);
 
-  // Announce page changes to screen readers
-  const announcePageChange = useCallback((message: string) => {
-    const liveRegion = document.getElementById('aria-live-region');
-    if (liveRegion) {
-      liveRegion.textContent = message;
-    }
-  }, []);
-
-  // Expose announcement function globally for use in other components
-  useEffect(() => {
-    (window as any).announcePageChange = announcePageChange;
-    return () => {
-      delete (window as any).announcePageChange;
-    };
-  }, [announcePageChange]);
-
-  return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
+  return <React.Fragment>{children}</React.Fragment>;
 };
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
 
 export default AccessibilityEnhancer;
