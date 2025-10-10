@@ -29,7 +29,7 @@ const DocsPage: React.FC = () => {
         'First API Call',
         'Authentication',
         'Basic Configuration'
-      ]
+      ],
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ const DocsPage: React.FC = () => {
         'Content Generation',
         'Data Analytics',
         'Computer Vision'
-      ]
+      ],
     },
     {
       id: 3,
@@ -59,7 +59,7 @@ const DocsPage: React.FC = () => {
         'DevOps & CI/CD',
         'Cybersecurity',
         'Database Management'
-      ]
+      ],
     },
     {
       id: 4,
@@ -74,7 +74,7 @@ const DocsPage: React.FC = () => {
         'Endpoints',
         'Error Handling',
         'Rate Limits'
-      ]
+      ],
     },
     {
       id: 5,
@@ -89,7 +89,7 @@ const DocsPage: React.FC = () => {
         'Access Control',
         'Encryption',
         'Compliance'
-      ]
+      ],
     },
     {
       id: 6,
@@ -104,7 +104,7 @@ const DocsPage: React.FC = () => {
         'Debugging Tips',
         'Performance Issues',
         'Support Resources'
-      ]
+      ],
     }
   ];
   const quickLinks = [

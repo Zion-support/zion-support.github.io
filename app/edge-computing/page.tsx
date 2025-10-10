@@ -10,37 +10,37 @@ const EdgeComputingPage: React.FC = () => {
       icon: Cpu,
       title: 'Edge Processing',
       description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
-      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
+      benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage'],
   },
     {
     icon: Globe,
       title: 'Global Distribution',
       description: 'Deploy edge nodes worldwide for optimal performance and coverage.',
-      benefits: ['Global edge network', 'Geographic distribution', 'CDN integration', 'Multi-region support']
+      benefits: ['Global edge network', 'Geographic distribution', 'CDN integration', 'Multi-region support'],
   },
     {
     icon: Shield,
       title: 'Edge Security',
       description: 'Advanced security measures designed specifically for edge computing environments.',
-      benefits: ['Zero-trust architecture', 'Encrypted communications', 'Secure boot', 'Threat detection']
+      benefits: ['Zero-trust architecture', 'Encrypted communications', 'Secure boot', 'Threat detection'],
   },
     {
     icon: Database,
       title: 'Edge Storage',
       description: 'Distributed storage solutions optimized for edge computing workloads.',
-      benefits: ['Local data storage', 'Distributed databases', 'Data synchronization', 'Backup strategies']
+      benefits: ['Local data storage', 'Distributed databases', 'Data synchronization', 'Backup strategies'],
   },
     {
     icon: Wifi,
       title: 'IoT Integration',
       description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',
-      benefits: ['Device management', 'Protocol support', 'Data collection', 'Real-time monitoring']
+      benefits: ['Device management', 'Protocol support', 'Data collection', 'Real-time monitoring'],
   },
     {
     icon: Server,
       title: 'Edge Infrastructure',
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
-      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
+      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance'],
   }
     ]
 const services = [

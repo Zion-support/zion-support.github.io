@@ -42,7 +42,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     }
 enhanceSecurity();
   }, []);
-return <>{children}</>
+return <React.Fragment>{children}</React.Fragment>
 };
 
 export default SecurityEnhancer;

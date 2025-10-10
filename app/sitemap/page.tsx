@@ -16,7 +16,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Services', url: '/services', description: 'Our service offerings' },
         { name: 'Pricing', url: '/pricing', description: 'Service pricing plans' },
         { name: 'Contact', url: '/contact', description: 'Contact information' }
-      ]
+      ],
     },
     {
       title: 'AI Services',
@@ -31,7 +31,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analytics' },
         { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Healthcare AI solutions' },
         { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial technology AI' }
-      ]
+      ],
     },
     {
       title: 'IT Services',
@@ -43,7 +43,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Cybersecurity Suite', url: '/ai-cybersecurity-suite', description: 'Comprehensive security solutions' },
         { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
         { name: 'Web Development', url: '/web-development', description: 'Modern web application development' }
-      ]
+      ],
     },
     {
       title: 'Micro SaaS',
@@ -56,7 +56,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
         { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Prospect identification' },
         { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project coordination tool' }
-      ]
+      ],
     },
     {
       title: 'Emerging Technologies',
@@ -68,7 +68,7 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Autonomous Systems', url: '/ai-autonomous-systems', description: 'Self-operating systems' },
         { name: 'AI Blockchain Solutions', url: '/ai-blockchain-solutions', description: 'Decentralized AI solutions' },
         { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed processing' }
-      ]
+      ],
     },
     {
       title: 'Resources',
@@ -82,7 +82,7 @@ const SitemapPage: React.FC = () => {
         { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
         { name: 'Demo', url: '/demo', description: 'Request a demo' },
         { name: 'Consultation', url: '/consultation', description: 'Free consultation' }
-      ]
+      ],
     },
     {
       title: 'Documentation',
@@ -92,7 +92,7 @@ const SitemapPage: React.FC = () => {
         { name: 'API Reference', url: '/api', description: 'API documentation' },
         { name: 'Tutorials', url: '/tutorials', description: 'Learning resources' },
         { name: 'Community', url: '/community', description: 'Developer community' }
-      ]
+      ],
     },
     {
       title: 'Legal',
@@ -102,7 +102,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
         { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' },
         { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }
-      ]
+      ],
     }
   ]
 

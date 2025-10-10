@@ -317,7 +317,7 @@ const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password),,;
   const hasNumbers = /\d/.test(password)
   }
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{}</React.Fragment>{}{}]/.test(password);
 return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
 /**;
@@ -610,7 +610,7 @@ return {
  */;
 export function sanitizeString(input: string): string {
     if (!input || typeof input !== 'string') return '',
-  return input.trim().replace(/[<>{]/g, '')
+  return input.trim().replace(/[<React.Fragment>{]/g, '')
   }
 }
 /**;
@@ -619,7 +619,7 @@ export function sanitizeString(input: string): string {
 export function sanitizeHtml(input: string): string {
     if (!input || typeof input !== 'string') return ''
   }
-  return input}</>
+  return input}</React.Fragment>
     .replace(/</g, '&lt;');
     .replace(/>/g, '&gt;');
     .replace(/"/g, '&quot;');

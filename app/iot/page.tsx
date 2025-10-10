@@ -12,7 +12,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs'],
       marketPrice: '$4,000-15,000/month',;
       category: 'Device Management',
-      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']
+      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'],
   },
     {
     title: 'Smart City Solutions',
@@ -23,7 +23,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve city efficiency', 'Enhance citizen satisfaction', 'Reduce operational costs'],
       marketPrice: '$25,000-100,000/month',;
       category: 'Smart Cities',
-      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']
+      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics'],
   },
     {
     title: 'Industrial IoT (IIoT)',
@@ -34,7 +34,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce downtime by 40%', 'Improve product quality', 'Lower energy costs'],
       marketPrice: '$15,000-60,000/month',;
       category: 'Industrial IoT',
-      technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning']
+      technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning'],
   },
     {
     title: 'Smart Agriculture Platform',
@@ -45,7 +45,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Increase crop yields by 25%', 'Reduce water usage', 'Improve sustainability'],
       marketPrice: '$6,000-25,000/month',;
       category: 'Smart Agriculture',
-      technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision']
+      technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision'],
   },
     {
     title: 'Smart Home Automation',
@@ -56,7 +56,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce energy costs by 30%', 'Improve home security', 'Enhance comfort'],
       marketPrice: '$2,500-10,000/month',;
       category: 'Smart Homes',
-      technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter']
+      technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter'],
   },
     {
     title: 'Healthcare IoT Solutions',
@@ -67,7 +67,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve patient care', 'Reduce hospital visits', 'Enable remote monitoring'],
       marketPrice: '$10,000-40,000/month',;
       category: 'Healthcare IoT',
-      technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics']
+      technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics'],
   },
     {
     title: 'Fleet Management IoT',
@@ -78,7 +78,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce fuel costs by 20%', 'Improve driver safety', 'Optimize routes'],
       marketPrice: '$3,500-15,000/month',;
       category: 'Fleet Management',
-      technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics']
+      technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics'],
   },
     {
     title: 'Environmental Monitoring',
@@ -89,7 +89,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Improve environmental awareness', 'Enable data-driven decisions', 'Support sustainability goals'],
       marketPrice: '$5,000-20,000/month',;
       category: 'Environmental',
-      technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics']
+      technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics'],
   },
     {
     title: 'Retail IoT Solutions',
@@ -100,7 +100,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce inventory costs', 'Improve customer experience', 'Increase sales'],
       marketPrice: '$7,000-30,000/month',;
       category: 'Retail IoT',
-      technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics']
+      technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics'],
   },
     {
     title: 'Energy Management IoT',
@@ -111,7 +111,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Reduce energy costs by 35%', 'Improve grid stability', 'Support renewable energy'],
       marketPrice: '$6,000-25,000/month',;
       category: 'Energy Management',
-      technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization']
+      technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization'],
   },
     {
     title: 'IoT Security Solutions',
@@ -122,7 +122,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Protect IoT devices', 'Ensure data privacy', 'Meet compliance requirements'],
       marketPrice: '$5,000-20,000/month',;
       category: 'IoT Security',
-      technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence']
+      technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence'],
   },
     {
     title: 'IoT Data Analytics Platform',
@@ -133,7 +133,7 @@ const IoTPage: React.FC = () => {
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',;
       category: 'Analytics',
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'],
   }
     }
   ]

@@ -15,25 +15,25 @@ const AISpaceMissionOptimizer: React.FC = () => {
       icon: Rocket,
       title: 'Mission Trajectory Optimization',
       description: 'AI-powered trajectory planning for optimal fuel efficiency and mission success',
-      benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments']
+      benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments'],
     },
     {
       icon: Target,
       title: 'Payload Optimization',
       description: 'Intelligent payload configuration and resource allocation for maximum mission value',
-      benefits: ['Optimal payload distribution', 'Resource efficiency', 'Mission success maximization']
+      benefits: ['Optimal payload distribution', 'Resource efficiency', 'Mission success maximization'],
     },
     {
       icon: BarChart,
       title: 'Risk Assessment & Mitigation',
       description: 'Advanced risk analysis and mitigation strategies for space missions',
-      benefits: ['Comprehensive risk analysis', 'Mitigation strategies', 'Success probability optimization']
+      benefits: ['Comprehensive risk analysis', 'Mitigation strategies', 'Success probability optimization'],
     },
     {
       icon: Globe,
       title: 'Multi-Planetary Mission Planning',
       description: 'Complex mission planning for interplanetary and deep space exploration',
-      benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization']
+      benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization'],
     }
   ];
 

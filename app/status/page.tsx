@@ -76,7 +76,7 @@ const incidents = [
       startTime: '2024-01-15T10:30:00Z',
       endTime: '2024-01-15T11:45:00Z',
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
-      affectedServices: ['API Services', 'AI Services']
+      affectedServices: ['API Services', 'AI Services'],
   },
     {
     id: 2,
@@ -86,7 +86,7 @@ const incidents = [
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']
+      affectedServices: ['Database', 'API Services'],
   }
     }
   ]

@@ -15,25 +15,25 @@ const AINeuralInterface: React.FC = () => {
       icon: Brain,
       title: 'Neural Signal Processing',
       description: 'Advanced AI algorithms for real-time neural signal interpretation and processing',
-      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response']
+      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'],
     },
     {
       icon: Eye,
       title: 'Visual Cortex Interface',
       description: 'Direct interface with visual cortex for enhanced vision and augmented reality',
-      benefits: ['Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition']
+      benefits: ['Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition'],
     },
     {
       icon: Mic,
       title: 'Auditory Neural Interface',
       description: 'Neural interface for auditory processing and enhanced hearing capabilities',
-      benefits: ['Enhanced hearing', 'Noise filtering', 'Audio pattern recognition']
+      benefits: ['Enhanced hearing', 'Noise filtering', 'Audio pattern recognition'],
     },
     {
       icon: Target,
       title: 'Motor Control Interface',
       description: 'Precise motor control interface for prosthetics and assistive devices',
-      benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']
+      benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology'],
     }
   ];
 

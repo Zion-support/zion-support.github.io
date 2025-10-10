@@ -11,25 +11,25 @@ const AiChatbotBuilderPage: React.FC = () => {
       icon: Brain,
       title: 'No-Code Builder',
       description: 'Create sophisticated chatbots without any coding knowledge.',
-      benefits: ['Drag-and-drop interface', 'Visual workflow builder', 'Pre-built templates', 'Easy customization']
+      benefits: ['Drag-and-drop interface', 'Visual workflow builder', 'Pre-built templates', 'Easy customization'],
     },
     {
       icon: MessageCircle,
       title: 'Multi-Channel Support',
       description: 'Deploy your chatbot across multiple platforms and channels.',
-      benefits: ['Website integration', 'Social media bots', 'Mobile apps', 'API integration']
+      benefits: ['Website integration', 'Social media bots', 'Mobile apps', 'API integration'],
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Track performance and optimize your chatbot with detailed analytics.',
-      benefits: ['Conversation analytics', 'User engagement metrics', 'Performance insights', 'A/B testing']
+      benefits: ['Conversation analytics', 'User engagement metrics', 'Performance insights', 'A/B testing'],
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Built with enterprise-grade security and compliance features.',
-      benefits: ['Data encryption', 'GDPR compliance', 'SOC 2 certified', 'Secure hosting']
+      benefits: ['Data encryption', 'GDPR compliance', 'SOC 2 certified', 'Secure hosting'],
     }
   ];
 
@@ -37,22 +37,22 @@ const AiChatbotBuilderPage: React.FC = () => {
     {
       title: 'Customer Support',
       description: 'Provide 24/7 customer support with intelligent responses.',
-      benefits: ['Instant responses', 'Reduced support costs', 'Improved satisfaction', 'Scalable support']
+      benefits: ['Instant responses', 'Reduced support costs', 'Improved satisfaction', 'Scalable support'],
     },
     {
       title: 'Lead Generation',
       description: 'Capture and qualify leads automatically.',
-      benefits: ['Qualified leads', 'Higher conversion rates', 'Automated follow-up', 'Lead scoring']
+      benefits: ['Qualified leads', 'Higher conversion rates', 'Automated follow-up', 'Lead scoring'],
     },
     {
       title: 'E-commerce Assistant',
       description: 'Help customers find products and complete purchases.',
-      benefits: ['Product recommendations', 'Order assistance', 'Inventory queries', 'Checkout support']
+      benefits: ['Product recommendations', 'Order assistance', 'Inventory queries', 'Checkout support'],
     },
     {
       title: 'Internal Support',
       description: 'Streamline internal processes and employee support.',
-      benefits: ['HR assistance', 'IT support', 'Process automation', 'Knowledge base']
+      benefits: ['HR assistance', 'IT support', 'Process automation', 'Knowledge base'],
     }
   ];
 
@@ -126,50 +126,7 @@ const AiChatbotBuilderPage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-<<<<<<< HEAD
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
-            Use Cases
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="hologram-card-enhanced p-8 hover:scale-105 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl text-green-400">
-                    <useCase.icon className="w-10 h-10" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-3">{useCase.title}</h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
-                    <ul className="space-y-2">
-                      {useCase.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
 
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>
-                Why Choose Our Solution?;
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Use Cases
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
               </h2>
               <p className="text-xl text-gray-300">
                 Discover how chatbots can transform your business
@@ -225,8 +182,4 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AIChatbotBuilder;
-=======
-export default AiChatbotBuilderPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
+

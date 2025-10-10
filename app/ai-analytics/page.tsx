@@ -10,36 +10,36 @@ const AiAnalyticsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
     },
     {
       icon: BarChart,
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
+      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive'],
     },
     {
       icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'Optimize your business performance with AI-driven recommendations and insights.',
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
+      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies'],
     },
     {
       icon: Zap,
       title: 'Fast Processing',
       description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
+      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing'],
     },
     {
       icon: Eye,
       title: 'Visual Analytics',
       description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
+      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities'],
     },
     {
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support'],
     },
   ];
   const benefits = [

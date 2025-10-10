@@ -15,25 +15,25 @@ const AISmartContractAuditor: React.FC = () => {
       icon: Shield,
       title: 'Automated Security Analysis',
       description: 'AI-powered vulnerability detection in smart contracts using advanced static analysis',
-      benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives']
+      benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives'],
     },
     {
       icon: Code,
       title: 'Code Quality Assessment',
       description: 'Comprehensive code review with best practices compliance and optimization suggestions',
-      benefits: ['Gas optimization recommendations', 'Code complexity analysis', 'Best practices compliance']
+      benefits: ['Gas optimization recommendations', 'Code complexity analysis', 'Best practices compliance'],
     },
     {
       icon: BarChart,
       title: 'Risk Scoring System',
       description: 'Intelligent risk assessment with detailed scoring and mitigation strategies',
-      benefits: ['Real-time risk scoring', 'Priority-based recommendations', 'Historical trend analysis']
+      benefits: ['Real-time risk scoring', 'Priority-based recommendations', 'Historical trend analysis'],
     },
     {
       icon: Brain,
       title: 'Machine Learning Models',
       description: 'Advanced ML models trained on thousands of audited contracts for pattern recognition',
-      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']
+      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis'],
     }
   ];
 

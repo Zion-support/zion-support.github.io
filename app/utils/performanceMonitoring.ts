@@ -603,8 +603,8 @@ export const recordMetric = useCallback((...args) => {}
     existing.max = Math.max(existing.max, value);}
   } else {
     simpleMetrics.set(name, {
-      values: [value]
-      count: 1;)
+      values: [value],
+    count: 1;)
       average: value;)
       min: value;),
       max: value),

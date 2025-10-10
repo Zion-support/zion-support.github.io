@@ -47,37 +47,37 @@ const HomePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
+      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
-      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
+      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
     },
     {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions designed specifically for your business requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
     },
     {
       icon: BarChart,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics tools.',
-      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']
+      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
     },
     {
       icon: Users,
       title: 'Consulting Services',
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
-      benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
+      benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training'],
     },
   ];
   const services = [
@@ -86,21 +86,21 @@ const HomePage: React.FC = () => {
       title: 'AI Services',
       description: 'Comprehensive AI solutions including machine learning, natural language processing, and computer vision.',
       href: '/ai-services',
-      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics']
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
       title: 'IT Services',
       description: 'Complete IT infrastructure and cloud solutions to modernize your business operations.',
       href: '/it-services',
-      features: ['Cloud Migration', 'Infrastructure Management', 'DevOps', 'Monitoring']
+      features: ['Cloud Migration', 'Infrastructure Management', 'DevOps', 'Monitoring'],
     },
     {
       icon: Cpu,
       title: 'Micro SaaS',
       description: 'Specialized software-as-a-service solutions designed for specific business needs.',
       href: '/micro-saas',
-      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
+      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance'],
     }
   ]
 
@@ -247,37 +247,37 @@ const HomePage: React.FC = memo(() => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
+      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
-      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
+      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
     },
     {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions designed specifically for your business requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
     },
     {
       icon: BarChart,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics tools.',
-      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']
+      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
     },
     {
       icon: Users,
       title: 'IT Consulting',
       description: 'Expert guidance to help you make the right technology decisions.',
-      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
+      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training'],
     },
   ];
   const stats = [

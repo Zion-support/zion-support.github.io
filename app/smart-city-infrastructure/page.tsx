@@ -65,25 +65,25 @@ const PagePage: React.FC = () => {
       icon: Building,
       title: 'Smart Buildings',
       description: 'Intelligent building management systems with IoT integration',
-      features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort']
+      features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort'],
     },
     {
       icon: Wifi,
       title: 'IoT Networks',
       description: 'Comprehensive IoT infrastructure for city-wide connectivity',
-      features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']
+      features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing'],
     },
     {
       icon: Cpu,
       title: 'Data Analytics',
       description: 'Advanced analytics platform for city data processing',
-      features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management']
+      features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management'],
     },
     {
       icon: Database,
       title: 'Digital Infrastructure',
       description: 'Robust digital infrastructure for smart city operations',
-      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
+      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols'],
     }
   ]
 

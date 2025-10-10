@@ -96,7 +96,7 @@ const ApiPage: React.FC = () => {
             response: {
               vulnerabilities: [],
               score: 95,
-              recommendations: ["Keep SSL certificates updated"]
+              recommendations: ["Keep SSL certificates updated"],
             }
           }
         }
@@ -113,7 +113,7 @@ const ApiPage: React.FC = () => {
           example: {
             request: {
               date_range: "last_30_days",
-              metrics: ["visitors", "conversions", "revenue"]
+              metrics: ["visitors", "conversions", "revenue"],
             },
             response: {
               visitors: 15420,

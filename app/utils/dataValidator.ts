@@ -482,7 +482,7 @@ export function validatePassword(passwor);
   r: 'Password must contain at least one lowercase letter' }
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one number' }
-  if (!/[!@#$%^&*(),.?":{}|<>{]/.test(password)) return {/* TODO: Fix JSX expression */}
+  if (!/[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one special character' }
   return {/* TODO: Fix JSX expression */}
   d: true }
@@ -492,7 +492,7 @@ export function sanitizeHTML(html: string): string {
 ,;
   // First escape HTML entities
   }
-  let clean = html.replace(/&/g, '&amp;');}</>
+  let clean = html.replace(/&/g, '&amp;');}</React.Fragment>
   clean = clean.replace(/</g, '&lt;');
   clean = clean.replace(/>/g, '&gt;');
   clean = clean.replace(/"/g, '&quot;');

@@ -36,7 +36,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   }
   sanitizeInput(input: string): string {}
     return input;
-      .replace(/[<>{
+      .replace(/[<React.Fragment>{
     ]/g, '');
       .replace(/javascript:/gi, '');
       .replace(/on\w+=/gi, '')
@@ -122,7 +122,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
-  }}</>
+  }}</React.Fragment>
   private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}

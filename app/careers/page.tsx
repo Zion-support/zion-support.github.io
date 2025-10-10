@@ -13,7 +13,7 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '5+ years',
       description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
-      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise'],
     },
     {
       title: 'Cloud Architect',
@@ -22,7 +22,7 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications'],
     },
     {
       title: 'Data Scientist',
@@ -31,7 +31,7 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '3+ years',
       description: 'Extract insights from complex datasets to drive business decisions.',
-      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
+      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills'],
     }
   ];
   const benefits = [

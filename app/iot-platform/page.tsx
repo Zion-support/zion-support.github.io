@@ -9,7 +9,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
     icon: Clock,
       title: '24/7 Monitoring',
       description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
-      benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
+      benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance'],
   },
     {}
     }

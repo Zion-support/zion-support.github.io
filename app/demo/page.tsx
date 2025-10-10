@@ -11,19 +11,19 @@ const DemoPage: React.FC = () => {
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
       duration: '5 min',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
+      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports'],
     },
     {
       title: 'AI Customer Support Bot',
       description: 'Experience our intelligent customer support automation',
       duration: '3 min',
-      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']
+      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis'],
     },
     {
       title: 'AI Content Generation',
       description: 'Watch our AI create high-quality content in seconds',
       duration: '4 min',
-      features: ['Blog posts', 'Social media content', 'Product descriptions']
+      features: ['Blog posts', 'Social media content', 'Product descriptions'],
     }
   ]
 

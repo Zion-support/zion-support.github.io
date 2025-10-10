@@ -9,17 +9,17 @@ const AIContentWriterPage: React.FC = () => {
     {
       title: 'AI-Powered Writing',
       description: 'Generate high-quality content using advanced AI algorithms that understand context, tone, and audience.',
-      benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization']
+      benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization'],
     },
     {
       title: 'Content Optimization',
       description: 'Automatically optimize content for SEO, readability, and engagement with intelligent suggestions.',
-      benefits: ['SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing']
+      benefits: ['SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing'],
     },
     {
       title: 'Multi-Format Support',
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
-      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
+      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy'],
     },
   ];
   const benefits = [

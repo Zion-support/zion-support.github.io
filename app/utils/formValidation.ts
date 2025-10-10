@@ -175,13 +175,13 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{
     ]/.test(value);
   strongPasswor,
   }
-  d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')}</>
+  d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')}</React.Fragment>
   ): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{
     ]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength
@@ -190,7 +190,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   }),;
   /**;
    * Validate matching fields (e.g., password confirmation);
-   */}</>
+   */}</React.Fragment>
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
     ,
   }
@@ -327,12 +327,12 @@ export function sanitizeInput(input: string): string {
     ,
   return input;
     .trim(),;
-    .replace(/[<>{]/g, '') // Remove potential HTML tags
+    .replace(/[<React.Fragment>{]/g, '') // Remove potential HTML tags
   }
 export function sanitizeInput(input: string): string {}
   return input;
-    .trim()}</>
-    .replace(/[<>{
+    .trim()}</React.Fragment>
+    .replace(/[<React.Fragment>{
     ]/g, '') // Remove potential HTML tags
   }
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
@@ -341,7 +341,7 @@ export function sanitizeInput(inpu);
 }
 /**;
  * Debounce function for form validation;
- */}</>
+ */}</React.Fragment>
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
   func: T,
   wait: number,

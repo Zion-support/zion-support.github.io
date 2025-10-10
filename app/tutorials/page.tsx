@@ -35,7 +35,7 @@ const TutorialsPage: React.FC = () => {
           'Make your first API call',
           'Handle responses and errors',
           'Implement advanced features'
-        ]
+        ],
       }
     },
     {
@@ -58,7 +58,7 @@ const TutorialsPage: React.FC = () => {
           'Configure security groups and firewalls',
           'Implement monitoring and logging',
           'Deploy and test your infrastructure'
-        ]
+        ],
       }
     },
     {
@@ -81,7 +81,7 @@ const TutorialsPage: React.FC = () => {
           'Create the main application features',
           'Add payment processing',
           'Deploy and monitor your application'
-        ]
+        ],
       }
     },
     {
@@ -104,7 +104,7 @@ const TutorialsPage: React.FC = () => {
           'Create interactive charts and graphs',
           'Implement AI-powered insights',
           'Add real-time data updates'
-        ]
+        ],
       }
     },
     {
@@ -127,7 +127,7 @@ const TutorialsPage: React.FC = () => {
           'Use encryption properly',
           'Set up monitoring and logging',
           'Follow compliance guidelines'
-        ]
+        ],
       }
     },
     {
@@ -150,7 +150,7 @@ const TutorialsPage: React.FC = () => {
           'Handle rate limiting and throttling',
           'Manage API versioning',
           'Monitor and debug integrations'
-        ]
+        ],
       }
     }
   ]

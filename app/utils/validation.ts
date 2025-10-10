@@ -119,7 +119,7 @@ if (password.length > 128) {/* TODO: Fix JSX expression */}
 const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password);
 if (!hasUpperCase) {}
     return { isValid: false, error: 'Password must contain at least one uppercase letter' }
   }
@@ -233,7 +233,7 @@ const cleaned = cardNumber.replace(/[\s-]/g, '');
   if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */}
   r: 'Credit card number must contain only digits' }
   }
-}</>
+}</React.Fragment>
   if (cleaned.length < 13 || cleaned.length > 19) {}
     return { isValid: false, error: 'Credit card number must be between 13 and 19 digits' }
 if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}

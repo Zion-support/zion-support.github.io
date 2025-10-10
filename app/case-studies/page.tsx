@@ -12,7 +12,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'E-commerce',
       image: '/api/placeholder/600/400',
       description: 'Implemented AI chatbots and automated customer service solutions resulting in 40% reduction in response time.',
-      results: ['40% faster response time', '60% cost reduction', '95% customer satisfaction']
+      results: ['40% faster response time', '60% cost reduction', '95% customer satisfaction'],
     },
     {
       title: 'Cloud Migration for Financial Services',
@@ -20,7 +20,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Financial Services',
       image: '/api/placeholder/600/400',
       description: 'Migrated legacy systems to cloud infrastructure with zero downtime and enhanced security.',
-      results: ['Zero downtime migration', '50% cost savings', 'Enhanced security compliance']
+      results: ['Zero downtime migration', '50% cost savings', 'Enhanced security compliance'],
     },
     {
       title: 'Cybersecurity Enhancement for Healthcare',
@@ -28,7 +28,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Healthcare',
       image: '/api/placeholder/600/400',
       description: 'Implemented comprehensive cybersecurity solutions to protect sensitive patient data.',
-      results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']
+      results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%'],
     }
   ]
 
