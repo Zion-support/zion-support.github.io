@@ -159,8 +159,4 @@ const AiAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AIAnalyticsDashboard;
-=======
 export default AiAnalyticsDashboardPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
