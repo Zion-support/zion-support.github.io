@@ -1,235 +1,146 @@
 'use client';
+
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
-
   enableLazyLoading?: boolean;
-
-  enablePreloading?: boolean';
-
-  enableCodeSplitting?: boolean';
-
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
+  children: React.ReactNode;
+  className?: string;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), className = '' }) => {
+  children,
+  className = ''
+}) => {
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [performanceScore, setPerformanceScore] = useState<number | null>(null);
 
-  const optimizeImages = useCallback (() => {
-    const images = document.querySelectorAll('img');
-    images.forEach ((img) => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      if (!img.decoding) {
-        img.decoding = 'async';
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach((img) => {
+      const imageElement = img as HTMLImageElement;
+      if (imageElement.dataset.src) {
+        imageElement.src = imageElement.dataset.src;
+        imageElement.removeAttribute('data-src');
       }
     });
   }, []);
 
-  const optimizeMemory = useCallback (() => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        /
-        if (window.gc) {
-          window.gc();
-        }
+  const enableLazyLoading = useCallback(() => {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach((img) => {
+      const imageElement = img as HTMLImageElement;
+      if (imageElement.dataset.src) {
+        imageElement.src = imageElement.dataset.src;
+        imageElement.removeAttribute('data-src');
       }
+    });
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/fonts/main.woff2',
+      '/css/critical.css'
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const measurePerformance = useCallback(() => {
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      const score = Math.max(0, 100 - (loadTime / 100));
+      setPerformanceScore(Math.round(score));
     }
   }, []);
 
-  const runOptimizations = useCallback (async () => {
+  useEffect(() => {
     setIsOptimizing(true);
-    const newOptimizations: string[] = [];
-
-    /
-    optimizeImages();
-    newOptimizations.push('Images optimized for lazy loading');
-
-    /
-    optimizeMemory();
-    newOptimizations.push('Memory optimization applied');
-
-    /
-    const score = Math.floor(Math.random() * 30) + 70; /
-    setPerformanceScore(score);
-    newOptimizations.push(`Performance scor,
-    e: ${score});
-    setOptimizations(newOptimizations);
-    setIsOptimizing(false);
-  }, [optimizeImages, optimizeMemory]);
-
-  useEffect (() => {
-    /
-    optimizeImages();
     
-    /
-    const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
-    return (<div>)
-      {) => observer.disconnect(}
-    </div>)
-  );
-  }, [optimizeImages]);
-
-  useEffect (() => {
-    const interval = setInterval(optimizeMemory, 30000); /
-    return (<div>)
-      {) => clearInterval(interval}
-    </div>)
-  );
-  }, [optimizeMemory]);
+    const optimizations: string[] = [];
+    
+    // Image optimization
+    optimizeImages();
+    optimizations.push('Images optimized');
+    
+    // Lazy loading
+    enableLazyLoading();
+    optimizations.push('Lazy loading enabled');
+    
+    // Preload critical resources
+    preloadCriticalResources();
+    optimizations.push('Critical resources preloaded');
+    
+    // Measure performance
+    measurePerformance();
+    optimizations.push('Performance measured');
+    
+    setOptimizations(optimizations);
+    setIsOptimizing(false);
+  }, [optimizeImages, enableLazyLoading, preloadCriticalResources, measurePerformance]);
 
   return (
-    <>
+    <div className={`performance-optimizer ${className}`}>
       {children}
-      <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-            
-            <Zap className="h-4 w-4 mr-2" 
-            {isOptimizing ? 'Optimizing...' : 'Optimize'}
-          <
-        <
-
-        {optimizations.length > 0 && (
-          <div className="space-y-2 mb-4">
-            {optimizations.map((optimization, index) => (<div key={index} className="flex items-center text-sm text-green-600">
-                
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Performance Score<
-              <span className="text-sm font-bold text-gray-900">{performanceScore}/100<
-            <
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  performanceScore >= 90 ? 'bg-green-500' : 
-                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${performanceScore}%` }}
+      
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
+          <div className="flex items-center gap-2 mb-2">
+            <Settings className="w-4 h-4" />
+            <span className="font-medium">Performance Optimizer</span>
+          </div>
+          
+          {isOptimizing ? (
+            <div className="flex items-center gap-2 text-cyan-400">
+              <Zap className="w-4 h-4 animate-pulse" />
+              <span>Optimizing...</span>
+            </div>
+          ) : (
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span>Optimizations Applied</span>
+              </div>
               
-            <
-            {performanceScore < 90 && (
-              <div className="mt-2 flex items-center">
-                
-                  Performance can be improved. Consider additional optimizations.
-                <
-              <
-            )}
-          <
-        )}
-      <
-    <
+              <ul className="space-y-1 text-xs text-gray-300">
+                {optimizations.map((optimization, index) => (
+                  <li key={index} className="flex items-center gap-1">
+                    <CheckCircle className="w-3 h-3 text-green-400" />
+                    {optimization}
+                  </li>
+                ))}
+              </ul>
+              
+              {performanceScore !== null && (
+                <div className="mt-2 pt-2 border-t border-slate-600">
+                  <div className="flex items-center gap-2">
+                    {performanceScore >= 80 ? (
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                    ) : (
+                      <AlertTriangle className="w-4 h-4 text-yellow-400" />
+                    )}
+                    <span>Score: {performanceScore}/100</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
-  enableImageOptimization = true,  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
-  useEffect(() => {
-    // Preload critical resources
-    if (enablePreloading && typeof window !== 'undefined') {
-      // Preload critical fonts
-      const fontPreload = document.createElement('link);;
-
-      fontPreload.rel = 'preload;
-
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap;
-
-      fontPreload.as = 'style;
-
-      document.head.appendChild(fontPreload);
-
-      // Preload critical images
-      const criticalImages = [;;
-
-        '/images/hero-bg.jpg',
-        /images/logo.png
-      ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link);;
-
-        link.rel = 'preload;
-
-        link.href = src;
-
-        link.as = 'image;
-
-        document.head.appendChild(link);
-      })    }
-
-    // Optimize images
-    if (enableImageOptimization && typeof window !== 'undefined') {
-      const images = document.querySelectorAll('img);;
-
-      images.forEach(img => {
-        // Add loading="lazy" for non-critical images
-        if (enableLazyLoading && !img.hasAttribute('loading')) {
-          img.loading = 'lazy;
-
-        }
-
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.decoding = 'async;
-
-        }
-      })    }
-
-    // Intersection Observer for lazy loading
-    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {;;
-
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;;
-
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-
-              img.removeAttribute('data-src);
-
-              observer.unobserve(img);
-
-            }
-
-          }
-        })
-      })
-
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img))    }
-
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {;;
-
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:, entry.startTime);
-
-          }
-
-          if (entry.entryType === 'first-input') {
-            console.log('FID:, entry.processingStart - entry.startTime);
-
-          }
-        })
-      })
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })      } catch (e) {
-        // Fallback for browsers that don't support these entry types
-      }
-
-    }
-
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
-
-  return null;
 };
+
 export default PerformanceOptimizer;

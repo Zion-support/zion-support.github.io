@@ -4,13 +4,12 @@ import React, { memo } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react;
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 
-const Footer: React.FC = memo(() => {;
+const Footer: React.FC = memo(() => {
+  const currentYear = new Date().getFullYear();
 
-const currentYear = new Date().getFullYear();';
-
-const aiServices = [;';
+  const aiServices = [
 
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -31,8 +30,7 @@ const aiServices = [;';
 
   ];
 
-const itServices = [;;
-
+  const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
@@ -50,8 +48,7 @@ const itServices = [;;
 
   ];
 
-const microSaasServices = [;;
-
+  const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business intelligence' },
     { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Customer management' },
@@ -71,8 +68,7 @@ const microSaasServices = [;;
 
   ];
 
-const emergingTech = [;;
-
+  const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics & Automation', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
@@ -85,8 +81,7 @@ const emergingTech = [;;
 
   ];
 
-const companyLinks = [;;
-
+  const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Case Studies', url: '/case-studies' },
@@ -97,8 +92,7 @@ const companyLinks = [;;
 
   ];
 
-const supportLinks = [;;
-
+  const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
@@ -108,13 +102,12 @@ const supportLinks = [;;
 
   ];
 
-const contactInfo = {;;
-
+  const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST',
-    emergency: 24/7 Emergency Support Available
+    emergency: '24/7 Emergency Support Available'
   };
 
   return (

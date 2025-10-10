@@ -65,10 +65,8 @@ const ApiDocsPage = lazy(() => import('./api-docs/page'))
 const SupportPage = lazy(() => import('./support/page'))
 const StatusPage = lazy(() => import('./status/page'))
 const ConsultationPage = lazy(() => import('./consultation/page'))
-// Loading component;
-
-const AppLoadingSpinner = () => (;;
-
+// Loading component
+const AppLoadingSpinner = () => (
   <LoadingSpinner 
     size="xl" 
     text="Loading Zion Tech Group..." 

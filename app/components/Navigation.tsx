@@ -3,49 +3,36 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-const [servicesOpen, setServicesOpen] = useState(false);
-const [aiServicesOpen, setAiServicesOpen] = useState(false);
-const [itServicesOpen, setItServicesOpen] = useState(false);
-const [microSaasOpen, setMicroSaasOpen] = useState(false);
-const [isScrolled, setIsScrolled] = useState(false);
-const handleResize = () => {
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleResize = () => {
     if (window.innerWidth >= 1024) {
       setIsOpen(false);
     }
-  }
-const handleScroll = () => {
+  };
+
+  const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
   };
-  
-const Navigation: React.FC = () => {  const [isOpen, setIsOpen] = useState(false);
-
-  const [servicesOpen, setServicesOpen] = useState(false);
-
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('resize, handleResize);
-
-    window.addEventListener('scroll, handleScroll);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('resize, handleResize);
-
-      window.removeEventListener('scroll, handleScroll);
-
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
-
   }, []);
 
-const closeAllMenus = () => {;;
+  const closeAllMenus = () => {
 
     setServicesOpen(false);
 
@@ -59,13 +46,11 @@ const closeAllMenus = () => {;;
 
   }
 
-const toggleMenu = () => {;;
-
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
 
-  }
-
-const aiServices = [;;
+  const aiServices = [
 
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
@@ -101,7 +86,7 @@ const aiServices = [;;
 
   ];
 
-const itServices = [;;
+  const itServices = [
 
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
@@ -135,7 +120,7 @@ const itServices = [;;
 
   ];
 
-const microSaasServices = [;;
+  const microSaasServices = [
 
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
@@ -172,7 +157,7 @@ const microSaasServices = [;;
 
   ];
 
-const emergingTech = [;;
+  const emergingTech = [
 
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },

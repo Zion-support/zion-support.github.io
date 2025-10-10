@@ -2,15 +2,14 @@ import { Menu, X } from 'lucide-react';
 
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-const EnhancedHeader: React.FC = () => {';
+const EnhancedHeader: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-const [isMenuOpen, setIsMenuOpen] = useState(false)';
-
-const toggleMenu = () => {;
-
-    setIsMenuOpen(!isMenuOpen)}';
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
 

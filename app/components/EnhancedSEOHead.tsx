@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOHeadProps {
   title?: string;
@@ -25,9 +25,9 @@ interface EnhancedSEOHeadProps {
 
   modifiedTime?: string;
 
-  section?: string';
+  section?: string;
 
-  tags?: string[]';
+  tags?: string[];
 
 }
 
@@ -45,11 +45,11 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   section = 'Technology',
   tags = []
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '... : description;;
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
 
-  const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', 'IT services];;
+  const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', 'IT services'];
 
   return (
 
