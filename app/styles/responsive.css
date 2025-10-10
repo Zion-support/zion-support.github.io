@@ -1,0 +1,639 @@
+/* Responsive Design Utilities for Zion Tech Group */
+
+/* Mobile First Approach */
+@media (max-width: 640px) {
+  /* Typography */
+  .text-responsive {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 1.875rem;
+    line-height: 1.3;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+
+  /* Spacing */
+  .p-responsive {
+    padding: 1rem;
+  }
+  
+  .px-responsive {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-responsive {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .m-responsive {
+    margin: 1rem;
+  }
+  
+  .mx-responsive {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .my-responsive {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Grid */
+  .grid-responsive {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .grid-responsive-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .grid-responsive-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .grid-responsive-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Cards */
+  .card-responsive {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.75rem;
+  }
+  
+  .card-responsive-lg {
+    padding: 1.25rem;
+    margin: 0.75rem;
+    border-radius: 1rem;
+  }
+
+  /* Buttons */
+  .btn-responsive {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .btn-responsive-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .btn-responsive-lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Navigation */
+  .nav-responsive {
+    padding: 0.75rem 1rem;
+  }
+  
+  .nav-item-responsive {
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer-responsive {
+    padding: 2rem 1rem;
+  }
+  
+  .footer-grid-responsive {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Neon text adjustments */
+  .neon-text-responsive {
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      0 0 9px currentColor,
+      0 0 12px currentColor;
+  }
+
+  /* Cyber card adjustments */
+  .cyber-card-responsive {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.75rem;
+  }
+
+  /* Holographic effects - reduced for mobile */
+  .holographic-responsive::before {
+    animation: none;
+  }
+
+  /* Particle effects - disabled on mobile for performance */
+  .particle-bg-responsive::before {
+    display: none;
+  }
+
+  /* Matrix rain - disabled on mobile for performance */
+  .matrix-rain-responsive::after {
+    display: none;
+  }
+}
+
+/* Small tablets */
+@media (min-width: 641px) and (max-width: 768px) {
+  .text-responsive {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.75rem;
+    line-height: 1.4;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 2.25rem;
+    line-height: 1.3;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 2.75rem;
+    line-height: 1.2;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 3.25rem;
+    line-height: 1.1;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 4.25rem;
+    line-height: 1;
+  }
+
+  .grid-responsive-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .grid-responsive-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .grid-responsive-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .btn-responsive {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .btn-responsive-sm {
+    width: auto;
+    padding: 0.5rem 1rem;
+  }
+  
+  .btn-responsive-lg {
+    width: auto;
+    padding: 1rem 2rem;
+  }
+
+  .footer-grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .text-responsive {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.875rem;
+    line-height: 1.4;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 2.5rem;
+    line-height: 1.3;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .grid-responsive-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .grid-responsive-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .grid-responsive-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .text-responsive {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  
+  .text-responsive-xl {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 2.75rem;
+    line-height: 1.3;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 5rem;
+    line-height: 1;
+  }
+
+  .grid-responsive-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .grid-responsive-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .grid-responsive-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1441px) {
+  .text-responsive {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.375rem;
+    line-height: 1.6;
+  }
+  
+  .text-responsive-xl {
+    font-size: 2.25rem;
+    line-height: 1.4;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 3.75rem;
+    line-height: 1.2;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 4.5rem;
+    line-height: 1.1;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 5rem;
+    line-height: 1;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 5.5rem;
+    line-height: 1;
+  }
+
+  .grid-responsive-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .grid-responsive-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .grid-responsive-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  .footer-grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .container-responsive {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 6rem;
+  }
+  
+  .grid-responsive-4 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  .nav-responsive {
+    padding: 0.5rem 1rem;
+  }
+  
+  .footer-responsive {
+    padding: 1rem;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 1.75rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cyber-card-responsive {
+    border-width: 0.5px;
+  }
+  
+  .neon-text-responsive {
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 4px currentColor,
+      0 0 6px currentColor,
+      0 0 8px currentColor;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .card-responsive {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: rgba(6, 182, 212, 0.3);
+  }
+  
+  .cyber-card-responsive {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(6, 182, 212, 0.4);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .holographic-responsive::before,
+  .particle-bg-responsive::before,
+  .matrix-rain-responsive::after {
+    animation: none;
+  }
+  
+  .cyber-card-responsive:hover {
+    transform: none;
+  }
+  
+  .btn-responsive:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .nav-responsive,
+  .footer-responsive,
+  .btn-responsive,
+  .cyber-card-responsive {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .neon-text-responsive {
+    color: black !important;
+    text-shadow: none !important;
+  }
+  
+  .grid-responsive-2,
+  .grid-responsive-3,
+  .grid-responsive-4 {
+    display: block;
+  }
+  
+  .grid-responsive-2 > *,
+  .grid-responsive-3 > *,
+  .grid-responsive-4 > * {
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+}
+
+/* Focus styles for accessibility */
+.btn-responsive:focus,
+.card-responsive:focus,
+.cyber-card-responsive:focus {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .cyber-card-responsive {
+    border-color: rgba(6, 182, 212, 0.9);
+    background: rgba(15, 23, 42, 0.98);
+  }
+  
+  .neon-text-responsive {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ffff;
+  }
+  
+  .btn-responsive {
+    border: 3px solid #ffffff;
+  }
+}
+
+/* Container queries for modern browsers */
+@container (max-width: 400px) {
+  .card-responsive {
+    padding: 0.75rem;
+    margin: 0.25rem;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 2rem;
+  }
+}
+
+@container (min-width: 800px) {
+  .grid-responsive-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-responsive-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-responsive-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

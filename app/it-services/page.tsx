@@ -1,1253 +1,653 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom'
-import { 
-  Cloud, 
-  Shield, 
-  Settings, 
-  Database, 
-  Smartphone, 
-  Globe, 
-  Zap, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Clock,
-  Users,
-  TrendingUp,
-  Wifi,
-  Server,
-  Code,
-  ShoppingCart,
-  Monitor,
-  Headphones,
-  BarChart
-} from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-const ItServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const services = [
+import Footer from '../components/Footer';
+import { 
+  Search, 
+  Filter, 
+  CheckCircle, 
+  ArrowRight, 
+  ExternalLink,
+  Cloud,
+  Shield,
+  Database,
+  Settings,
+  Users,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Laptop,
+  Headphones,
+  Camera,
+  Video,
+  Mic,
+  Image,
+  FileText,
+  Mail,
+  Calendar,
+  DollarSign,
+  Target,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Signal,
+  Battery,
+  Power,
+  Zap,
+  Globe,
+  Lock,
+  Key,
+  Fingerprint,
+  AlertTriangle,
+  RefreshCw,
+  Download,
+  Upload,
+  Share,
+  Link,
+  Star,
+  TrendingUp,
+  TrendingDown,
+  Activity,
+  Clock,
+  MapPin,
+  Phone,
+  User,
+  UserPlus,
+  UserCheck,
+  UserX,
+  Crown,
+  Award,
+  Trophy,
+  Medal,
+  Gift,
+  ShoppingCart,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PieChart,
+  BarChart,
+  LineChart,
+  Minus,
+  Plus,
+  X,
+  Check,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  Lightbulb,
+  BookOpen,
+  GraduationCap,
+  Briefcase,
+  Home,
+  Building,
+  Factory,
+  Store,
+  ShoppingBag,
+  Package,
+  Truck,
+  Plane,
+  Car,
+  Bike,
+  Train,
+  Ship,
+  Rocket,
+  Satellite,
+  Sun,
+  Moon,
+  CloudRain,
+  CloudSnow,
+  CloudLightning,
+  Wind,
+  Thermometer,
+  Droplets,
+  Flame,
+  Snowflake,
+  Umbrella,
+  TreePine,
+  Flower,
+  Leaf,
+  Sprout,
+  Tree,
+  Mountain,
+  Waves,
+  Fish,
+  Bird,
+  Cat,
+  Dog,
+  Rabbit,
+  Mouse,
+  Bug,
+  Spider,
+  Butterfly,
+  Bee,
+  Ant,
+  Ladybug,
+  Snail,
+  Octopus,
+  Whale,
+  Shark,
+  Dolphin,
+  Penguin,
+  Eagle,
+  Owl,
+  Parrot,
+  Peacock,
+  Flamingo,
+  Toucan,
+  Hummingbird,
+  Robin,
+  Sparrow,
+  Crow,
+  Raven,
+  Dove,
+  Pigeon,
+  Chicken,
+  Rooster,
+  Duck,
+  Goose,
+  Swan,
+  Turkey
+} from 'lucide-react';
+
+interface ITService {
+  id: string;
+  icon: React.ComponentType<any>;
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  marketPrice: string;
+  benefits: string[];
+  category: string;
+  link: string;
+  popular?: boolean;
+  sla: string;
+}
+
+const ITServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const itServices: ITService[] = [
     {
-      id: 'cloud-infrastructure',
-      name: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services',
-      price: '$2,500/month',
+      id: '1',
+      icon: Cloud,
+      title: 'Cloud Infrastructure & Migration',
+      description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services, cost optimization, and 99.9% uptime guarantee.',
+      features: ['Cloud Architecture Design', 'Multi-cloud Strategies', 'Cost Optimization', 'Disaster Recovery', 'Auto-scaling', 'Security Compliance', 'Migration Planning', 'Performance Monitoring', 'Backup & Recovery', 'Load Balancing'],
+      price: 'Starting at $2,500/month',
       marketPrice: '$4000-15000/month',
-      features: [
-        'Cloud architecture design',
-        'Multi-cloud strategies',
-        'Cost optimization',
-        'Disaster recovery',
-        'Auto-scaling solutions',
-        'Security compliance'
-      ],
-      benefits: [
-        '99.9% uptime guarantee',
-        'Cost reduction up to 40%',
-        'Scalable infrastructure',
-        'Expert migration support'
-      ],
-      category: 'Cloud',
+      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support', 'Enhanced security'],
+      category: 'cloud',
+      link: 'https://ziontechgroup.com/cloud-infrastructure',
       popular: true,
-      icon: Cloud
+      sla: '99.9% Uptime SLA'
     },
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity Solutions',
-      description: 'Comprehensive security services including threat detection, compliance, and incident response',
-      price: '$1,800/month',
+      id: '2',
+      icon: Shield,
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security services including threat detection, compliance, incident response, and 24/7 security monitoring.',
+      features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring', 'Compliance Management', 'Employee Training', 'Incident Response', 'Security Audits', 'Risk Assessment', 'Security Policies'],
+      price: 'Starting at $1,800/month',
       marketPrice: '$3000-12000/month',
-      features: [
-        'Threat detection & response',
-        'Vulnerability assessments',
-        'Penetration testing',
-        'Security monitoring',
-        'Compliance management',
-        'Employee training'
-      ],
-      benefits: [
-        '24/7 security monitoring',
-        'Reduced security incidents',
-        'Compliance assurance',
-        'Expert security team'
-      ],
-      category: 'Security',
+      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team', 'Proactive threat prevention'],
+      category: 'security',
+      link: 'https://ziontechgroup.com/cybersecurity',
       popular: true,
-      icon: Shield
+      sla: '24/7 Security Monitoring'
     },
     {
-      id: 'devops',
-      name: 'DevOps & CI/CD',
-      description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code',
-      price: '$2,200/month',
-      marketPrice: '$3500-10000/month',
-      features: [
-        'CI/CD pipeline setup',
-        'Infrastructure as Code',
-        'Container orchestration',
-        'Monitoring & logging',
-        'Automated testing',
-        'Deployment automation'
-      ],
-      benefits: [
-        'Faster deployments',
-        'Reduced downtime',
-        'Improved code quality',
-        'Automated workflows'
-      ],
-      category: 'DevOps',
-      popular: false,
-      icon: Settings
-    },
-    {
-      id: 'database-management',
-      name: 'Database Management',
-      description: 'Expert database design, optimization, and management for all major database systems',
-      price: '$1,200/month',
+      id: '3',
+      icon: Database,
+      title: 'Database Management & Optimization',
+      description: 'Expert database design, optimization, and management for all major database systems with performance tuning and automated backups.',
+      features: ['Database Design & Optimization', 'Performance Tuning', 'Backup & Recovery', 'Data Migration', 'Security Hardening', 'Monitoring & Maintenance', 'Query Optimization', 'Index Management', 'Capacity Planning', 'Disaster Recovery'],
+      price: 'Starting at $1,200/month',
       marketPrice: '$2000-8000/month',
-      features: [
-        'Database design & optimization',
-        'Performance tuning',
-        'Backup & recovery',
-        'Data migration',
-        'Security hardening',
-        'Monitoring & maintenance'
-      ],
-      benefits: [
-        'Improved performance',
-        'Data security',
-        'Automated backups',
-        'Expert DBA support'
-      ],
-      category: 'Database',
-      popular: false,
-      icon: Database
-    },
-    {
-      id: 'mobile-development',
-      name: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      price: '$8,000/project',
-      marketPrice: '$15000-50000/project',
-      features: [
-        'iOS & Android apps',
-        'Cross-platform development',
-        'App store optimization',
-        'Push notifications',
-        'Offline functionality',
-        'Performance optimization'
-      ],
-      benefits: [
-        'Native performance',
-        'Cross-platform compatibility',
-        'App store success',
-        'User engagement'
-      ],
-      category: 'Development',
-      popular: false,
-      icon: Smartphone
-    },
-    {
-      id: 'web-development',
-      name: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies',
-      price: '$5,000/project',
-      marketPrice: '$10000-30000/project',
-      features: [
-        'React/Next.js development',
-        'Responsive design',
-        'SEO optimization',
-        'Performance tuning',
-        'Security implementation',
-        'Content management'
-      ],
-      benefits: [
-        'Modern technology stack',
-        'SEO optimized',
-        'Mobile responsive',
-        'Fast loading times'
-      ],
-      category: 'Development',
-      popular: false,
-      icon: Globe
-    },
-    {
-      id: 'network-infrastructure',
-      name: 'Network Infrastructure',
-      description: 'Complete network design, implementation, and management for enterprise environments',
-      price: '$1,500/month',
-      marketPrice: '$2500-8000/month',
-      features: [
-        'Network architecture design',
-        'Wireless network deployment',
-        'Network security implementation',
-        'Performance monitoring',
-        'Disaster recovery planning',
-        '24/7 network support'
-      ],
-      benefits: [
-        'Improved network performance',
-        'Enhanced security',
-        'Reduced downtime',
-        'Scalable infrastructure'
-      ],
-      category: 'Networking',
-      popular: false,
-      icon: Wifi
-    },
-    {
-      id: 'data-center-services',
-      name: 'Data Center Services',
-      description: 'Comprehensive data center management including colocation, cloud, and hybrid solutions',
-      price: '$3,000/month',
-      marketPrice: '$5000-20000/month',
-      features: [
-        'Data center design and setup',
-        'Server and storage management',
-        'Power and cooling optimization',
-        'Disaster recovery solutions',
-        'Compliance and security',
-        '24/7 monitoring and support'
-      ],
-      benefits: [
-        '99.99% uptime guarantee',
-        'Cost optimization',
-        'Scalable infrastructure',
-        'Expert management'
-      ],
-      category: 'Data Center',
-      popular: false,
-      icon: Server
-    },
-    {
-      id: 'it-consulting',
-      name: 'IT Consulting',
-      description: 'Strategic IT consulting and digital transformation services for enterprise organizations',
-      price: '$200/hour',
-      marketPrice: '$300-800/hour',
-      features: [
-        'IT strategy development',
-        'Technology assessment',
-        'Digital transformation planning',
-        'Vendor evaluation',
-        'Process optimization',
-        'Change management'
-      ],
-      benefits: [
-        'Strategic guidance',
-        'Cost optimization',
-        'Technology alignment',
-        'Competitive advantage'
-      ],
-      category: 'Consulting',
+      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support', 'Reduced downtime'],
+      category: 'database',
+      link: 'https://ziontechgroup.com/database-management',
       popular: true,
-      icon: Users
+      sla: '99.5% Database Uptime'
     },
     {
-      id: 'managed-services',
-      name: 'Managed IT Services',
-      description: 'Comprehensive managed IT services including monitoring, maintenance, and support',
-      price: '$1,000/month',
-      marketPrice: '$2000-6000/month',
-      features: [
-        '24/7 system monitoring',
-        'Proactive maintenance',
-        'Help desk support',
-        'Security management',
-        'Backup and recovery',
-        'Software updates'
-      ],
-      benefits: [
-        'Reduced IT costs',
-        'Improved reliability',
-        'Expert support',
-        'Focus on core business'
-      ],
-      category: 'Managed Services',
-      popular: true,
-      icon: Settings
-    },
-    {
-      id: 'api-development',
-      name: 'API Development & Integration',
-      description: 'Custom API development and integration services for seamless system connectivity',
-      price: '$2,000/project',
-      marketPrice: '$5000-15000/project',
-      features: [
-        'RESTful API development',
-        'GraphQL implementation',
-        'API documentation',
-        'Third-party integrations',
-        'API security and authentication',
-        'Performance optimization'
-      ],
-      benefits: [
-        'Improved system integration',
-        'Enhanced functionality',
-        'Better performance',
-        'Scalable architecture'
-      ],
-      category: 'API Development',
-      popular: false,
-      icon: Code
-    },
-    {
-      id: 'ecommerce-solutions',
-      name: 'E-commerce Solutions',
-      description: 'Complete e-commerce platform development and optimization services',
-      price: '$10,000/project',
-      marketPrice: '$20000-100000/project',
-      features: [
-        'Custom e-commerce development',
-        'Payment gateway integration',
-        'Inventory management',
-        'Order processing automation',
-        'Mobile commerce optimization',
-        'SEO and marketing tools'
-      ],
-      benefits: [
-        'Increased online sales',
-        'Better user experience',
-        'Mobile optimization',
-        'Scalable platform'
-      ],
-      category: 'E-commerce',
-      popular: true,
-      icon: ShoppingCart
-    },
-    {
-      id: 'enterprise-software',
-      name: 'Enterprise Software Development',
-      description: 'Custom enterprise software solutions tailored to specific business requirements',
-      price: '$15,000/project',
-      marketPrice: '$30000-200000/project',
-      features: [
-        'Custom software development',
-        'Legacy system modernization',
-        'Integration with existing systems',
-        'User interface design',
-        'Testing and quality assurance',
-        'Training and documentation'
-      ],
-      benefits: [
-        'Tailored solutions',
-        'Improved efficiency',
-        'Better user experience',
-        'Competitive advantage'
-      ],
-      category: 'Software Development',
-      popular: false,
-      icon: Monitor
-    },
-    {
-      id: 'it-support',
-      name: 'IT Support & Help Desk',
-      description: 'Comprehensive IT support services including help desk, troubleshooting, and maintenance',
-      price: '$800/month',
-      marketPrice: '$1500-4000/month',
-      features: [
-        '24/7 help desk support',
-        'Remote troubleshooting',
-        'Hardware and software support',
-        'User training and onboarding',
-        'System maintenance',
-        'Incident management'
-      ],
-      benefits: [
-        'Reduced downtime',
-        'Improved productivity',
-        'Expert support',
-        'Cost-effective solutions'
-      ],
-      category: 'Support',
-      popular: true,
-      icon: Headphones
-    },
-    {
-      id: 'cloud-security',
-      name: 'Cloud Security Services',
-      description: 'Specialized cloud security services including compliance, monitoring, and threat protection',
-      price: '$2,200/month',
-      marketPrice: '$4000-12000/month',
-      features: [
-        'Cloud security assessment',
-        'Identity and access management',
-        'Data encryption and protection',
-        'Compliance monitoring',
-        'Threat detection and response',
-        'Security training and awareness'
-      ],
-      benefits: [
-        'Enhanced cloud security',
-        'Compliance assurance',
-        'Threat protection',
-        'Expert guidance'
-      ],
-      category: 'Cloud Security',
-      popular: false,
-      icon: Shield
-    },
-    {
-      id: 'data-analytics',
-      name: 'Data Analytics & BI',
-      description: 'Advanced data analytics and business intelligence solutions for data-driven decisions',
-      price: '$1,800/month',
-      marketPrice: '$3000-10000/month',
-      features: [
-        'Data warehouse design',
-        'ETL process development',
-        'Dashboard and reporting',
-        'Predictive analytics',
-        'Data visualization',
-        'Machine learning integration'
-      ],
-      benefits: [
-        'Data-driven insights',
-        'Better decision making',
-        'Competitive advantage',
-        'Improved efficiency'
-      ],
-      category: 'Data Analytics',
-      popular: true,
-      icon: BarChart
-    },
-    {
-      id: 'disaster-recovery',
-      name: 'Disaster Recovery & Business Continuity',
-      description: 'Comprehensive disaster recovery and business continuity planning and implementation',
-      price: '$1,600/month',
-      marketPrice: '$3000-8000/month',
-      features: [
-        'Disaster recovery planning',
-        'Backup and recovery solutions',
-        'Business continuity testing',
-        'RTO and RPO optimization',
-        'Cloud-based recovery',
-        'Regular testing and updates'
-      ],
-      benefits: [
-        'Minimized downtime',
-        'Data protection',
-        'Business continuity',
-        'Peace of mind'
-      ],
-      category: 'Disaster Recovery',
-      popular: false,
-      icon: Shield
-    },
-    {
-      id: 'it-audit',
-      name: 'IT Audit & Compliance',
-      description: 'Comprehensive IT audit and compliance services for regulatory requirements',
-      price: '$1,400/month',
-      marketPrice: '$2500-6000/month',
-      features: [
-        'IT security audits',
-        'Compliance assessments',
-        'Risk analysis and mitigation',
-        'Policy development',
-        'Training and awareness',
-        'Ongoing monitoring'
-      ],
-      benefits: [
-        'Regulatory compliance',
-        'Risk mitigation',
-        'Improved security posture',
-        'Audit readiness'
-      ],
-      category: 'Compliance',
-      popular: false,
-      icon: CheckCircle
-    },
-    {
-      id: 'cloud-native-development',
-      name: 'Cloud-Native Development',
-      description: 'Modern cloud-native application development with microservices and containerization',
-      price: '$3,500/month',
-      marketPrice: '$6000-20000/month',
-      features: [
-        'Microservices architecture design',
-        'Container orchestration (Kubernetes)',
-        'Serverless application development',
-        'API gateway implementation',
-        'Service mesh configuration',
-        'Cloud-native monitoring',
-        'CI/CD pipeline setup',
-        'Auto-scaling implementation'
-      ],
-      benefits: [
-        'Scalable and resilient applications',
-        'Faster deployment cycles',
-        'Cost-effective scaling',
-        'Modern development practices'
-      ],
-      category: 'Cloud Development',
-      popular: true,
-      icon: Cloud
-    },
-    {
-      id: 'ai-integration-services',
-      name: 'AI Integration Services',
-      description: 'AI model integration and deployment services for existing business systems',
-      price: '$2,800/month',
-      marketPrice: '$5000-15000/month',
-      features: [
-        'AI model integration',
-        'API development for AI services',
-        'Data pipeline setup',
-        'Model deployment and monitoring',
-        'Performance optimization',
-        'Integration with existing systems',
-        'Custom AI solution development',
-        'Training and support'
-      ],
-      benefits: [
-        'Leverage AI capabilities',
-        'Seamless integration',
-        'Improved business processes',
-        'Competitive advantage'
-      ],
-      category: 'AI Integration',
-      popular: true,
-      icon: Brain
-    },
-    {
-      id: 'blockchain-development',
-      name: 'Blockchain Development',
-      description: 'Blockchain application development and smart contract implementation',
-      price: '$4,500/month',
-      marketPrice: '$8000-25000/month',
-      features: [
-        'Smart contract development',
-        'Blockchain platform integration',
-        'DeFi application development',
-        'NFT marketplace creation',
-        'Cryptocurrency integration',
-        'Blockchain security auditing',
-        'Token development',
-        'Web3 integration'
-      ],
-      benefits: [
-        'Decentralized applications',
-        'Enhanced security',
-        'Transparent transactions',
-        'Future-proof technology'
-      ],
-      category: 'Blockchain',
-      popular: false,
-      icon: Link
-    },
-    {
-      id: 'iot-development',
-      name: 'IoT Development & Integration',
-      description: 'Internet of Things solution development and device integration services',
-      price: '$2,200/month',
-      marketPrice: '$4000-12000/month',
-      features: [
-        'IoT device development',
-        'Sensor integration',
-        'Data collection and processing',
-        'Real-time monitoring systems',
-        'IoT platform development',
-        'Device management solutions',
-        'Edge computing implementation',
-        'IoT security implementation'
-      ],
-      benefits: [
-        'Connected device solutions',
-        'Real-time data insights',
-        'Automated processes',
-        'Improved efficiency'
-      ],
-      category: 'IoT Development',
-      popular: true,
-      icon: Wifi
-    },
-    {
-      id: 'mobile-app-development',
-      name: 'Mobile App Development',
-      description: 'Native and cross-platform mobile application development for iOS and Android',
-      price: '$8,000/project',
-      marketPrice: '$15000-50000/project',
-      features: [
-        'iOS and Android development',
-        'Cross-platform solutions (React Native, Flutter)',
-        'App store optimization',
-        'Push notification implementation',
-        'Offline functionality',
-        'Performance optimization',
-        'Security implementation',
-        'App maintenance and updates'
-      ],
-      benefits: [
-        'Native performance',
-        'Cross-platform compatibility',
-        'App store success',
-        'User engagement'
-      ],
-      category: 'Mobile Development',
-      popular: true,
-      icon: Smartphone
-    },
-    {
-      id: 'e-commerce-development',
-      name: 'E-commerce Development',
-      description: 'Complete e-commerce platform development with payment integration and inventory management',
-      price: '$12,000/project',
-      marketPrice: '$25000-100000/project',
-      features: [
-        'Custom e-commerce development',
-        'Payment gateway integration',
-        'Inventory management system',
-        'Order processing automation',
-        'Customer management',
-        'Analytics and reporting',
-        'Mobile commerce optimization',
-        'SEO and marketing tools'
-      ],
-      benefits: [
-        'Increased online sales',
-        'Better user experience',
-        'Mobile optimization',
-        'Scalable platform'
-      ],
-      category: 'E-commerce',
-      popular: true,
-      icon: ShoppingCart
-    },
-    {
-      id: 'api-development-advanced',
-      name: 'Advanced API Development',
-      description: 'Enterprise-grade API development with microservices architecture and advanced security',
-      price: '$3,200/month',
-      marketPrice: '$6000-18000/month',
-      features: [
-        'RESTful and GraphQL APIs',
-        'Microservices architecture',
-        'API gateway implementation',
-        'Rate limiting and throttling',
-        'API security and authentication',
-        'API documentation and testing',
-        'Performance optimization',
-        'Monitoring and analytics'
-      ],
-      benefits: [
-        'Scalable API architecture',
-        'Enhanced security',
-        'Better performance',
-        'Developer-friendly APIs'
-      ],
-      category: 'API Development',
-      popular: true,
-      icon: Code
-    },
-    {
-      id: 'data-engineering',
-      name: 'Data Engineering Services',
-      description: 'Data pipeline development and data infrastructure setup for analytics and AI',
-      price: '$2,600/month',
-      marketPrice: '$5000-15000/month',
-      features: [
-        'Data pipeline development',
-        'ETL/ELT process implementation',
-        'Data warehouse design',
-        'Real-time data processing',
-        'Data quality management',
-        'Data integration services',
-        'Cloud data platform setup',
-        'Data governance implementation'
-      ],
-      benefits: [
-        'Efficient data processing',
-        'Better data quality',
-        'Scalable data infrastructure',
-        'Data-driven insights'
-      ],
-      category: 'Data Engineering',
-      popular: true,
-      icon: Database
-    },
-    {
-      id: 'cybersecurity-advanced',
-      name: 'Advanced Cybersecurity',
-      description: 'Comprehensive cybersecurity services including threat hunting and incident response',
-      price: '$3,800/month',
-      marketPrice: '$7000-25000/month',
-      features: [
-        'Threat hunting and detection',
-        'Incident response planning',
-        'Security architecture design',
-        'Penetration testing',
-        'Vulnerability assessments',
-        'Security monitoring (SOC)',
-        'Compliance management',
-        'Security training programs'
-      ],
-      benefits: [
-        'Proactive threat protection',
-        'Reduced security risks',
-        'Compliance assurance',
-        'Expert security guidance'
-      ],
-      category: 'Cybersecurity',
-      popular: true,
-      icon: Shield
-    },
-    {
-      id: 'cloud-migration-advanced',
-      name: 'Advanced Cloud Migration',
-      description: 'Complex cloud migration services with zero-downtime and data integrity assurance',
-      price: '$4,200/month',
-      marketPrice: '$8000-30000/month',
-      features: [
-        'Zero-downtime migration',
-        'Data integrity verification',
-        'Application modernization',
-        'Cloud cost optimization',
-        'Disaster recovery setup',
-        'Security compliance migration',
-        'Performance optimization',
-        'Training and documentation'
-      ],
-      benefits: [
-        'Seamless cloud transition',
-        'Improved performance',
-        'Cost optimization',
-        'Enhanced security'
-      ],
-      category: 'Cloud Migration',
-      popular: true,
-      icon: Cloud
-    },
-    {
-      id: 'devops-advanced',
-      name: 'Advanced DevOps & SRE',
-      description: 'Site Reliability Engineering and advanced DevOps practices for high-availability systems',
-      price: '$3,600/month',
-      marketPrice: '$7000-20000/month',
-      features: [
-        'Site Reliability Engineering',
-        'Infrastructure as Code',
-        'Advanced monitoring and alerting',
-        'Chaos engineering',
-        'Performance optimization',
-        'Disaster recovery automation',
-        'Security automation',
-        'Team training and mentoring'
-      ],
-      benefits: [
-        'High system availability',
-        'Faster incident response',
-        'Improved system reliability',
-        'Reduced operational costs'
-      ],
-      category: 'DevOps',
-      popular: true,
-      icon: Settings
-    },
-    {
-      id: 'machine-learning-ops',
-      name: 'MLOps & AI Operations',
-      description: 'Machine Learning Operations and AI model deployment and monitoring services',
-      price: '$2,900/month',
-      marketPrice: '$5500-18000/month',
-      features: [
-        'ML model deployment',
-        'Model versioning and management',
-        'A/B testing for ML models',
-        'Model monitoring and alerting',
-        'Data drift detection',
-        'Model retraining automation',
-        'ML pipeline development',
-        'Performance optimization'
-      ],
-      benefits: [
-        'Reliable ML operations',
-        'Automated model management',
-        'Better model performance',
-        'Reduced operational overhead'
-      ],
-      category: 'MLOps',
-      popular: true,
-      icon: Cpu
-    },
-    {
-      id: 'enterprise-integration',
-      name: 'Enterprise Integration',
-      description: 'Complex enterprise system integration with legacy and modern systems',
-      price: '$3,400/month',
-      marketPrice: '$6500-20000/month',
-      features: [
-        'Legacy system integration',
-        'Enterprise Service Bus (ESB)',
-        'API management platform',
-        'Data synchronization',
-        'Workflow automation',
-        'System monitoring',
-        'Error handling and recovery',
-        'Documentation and training'
-      ],
-      benefits: [
-        'Seamless system connectivity',
-        'Improved data flow',
-        'Reduced manual processes',
-        'Better system visibility'
-      ],
-      category: 'Integration',
-      popular: true,
-      icon: Link
-    },
-    {
-      id: 'performance-optimization',
-      name: 'Performance Optimization',
-      description: 'Application and infrastructure performance optimization for better user experience',
-      price: '$1,800/month',
+      id: '4',
+      icon: Settings,
+      title: 'DevOps & CI/CD',
+      description: 'Modern development operations with automated deployment, monitoring, infrastructure as code, and continuous integration.',
+      features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging', 'Automated Testing', 'Deployment Automation', 'Version Control', 'Environment Management', 'Performance Monitoring', 'Security Scanning'],
+      price: 'Starting at $2,200/month',
       marketPrice: '$3500-10000/month',
-      features: [
-        'Application performance analysis',
-        'Database optimization',
-        'Code optimization',
-        'Caching implementation',
-        'CDN setup and optimization',
-        'Load testing and optimization',
-        'Performance monitoring',
-        'Capacity planning'
-      ],
-      benefits: [
-        'Faster application response',
-        'Better user experience',
-        'Reduced infrastructure costs',
-        'Improved scalability'
-      ],
-      category: 'Performance',
+      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows', 'Better collaboration'],
+      category: 'devops',
+      link: 'https://ziontechgroup.com/devops',
       popular: true,
-      icon: Zap
+      sla: '4-Hour Deployment SLA'
     },
     {
-      id: 'disaster-recovery-advanced',
-      name: 'Advanced Disaster Recovery',
-      description: 'Comprehensive disaster recovery and business continuity solutions',
-      price: '$2,400/month',
-      marketPrice: '$4500-15000/month',
-      features: [
-        'Disaster recovery planning',
-        'Backup and recovery automation',
-        'Business continuity testing',
-        'RTO and RPO optimization',
-        'Cloud-based recovery solutions',
-        'Data replication setup',
-        'Recovery testing automation',
-        'Documentation and training'
-      ],
-      benefits: [
-        'Minimized business downtime',
-        'Data protection assurance',
-        'Rapid recovery capabilities',
-        'Peace of mind'
-      ],
-      category: 'Disaster Recovery',
-      popular: false,
+      id: '5',
+      icon: Users,
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting and digital transformation services for enterprise organizations with technology roadmaps and vendor evaluation.',
+      features: ['IT Strategy Development', 'Technology Assessment', 'Digital Transformation Planning', 'Vendor Evaluation', 'Process Optimization', 'Change Management', 'Technology Roadmaps', 'Cost Optimization', 'Risk Assessment', 'Implementation Planning'],
+      price: 'Starting at $200/hour',
+      marketPrice: '$300-800/hour',
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage', 'Future-proof solutions'],
+      category: 'consulting',
+      link: 'https://ziontechgroup.com/it-consulting',
+      popular: true,
+      sla: '24-Hour Response Time'
+    },
+    {
+      id: '6',
+      icon: Network,
+      title: 'Network Infrastructure & Management',
+      description: 'Complete network design, implementation, and management for enterprise environments with wireless solutions and security.',
+      features: ['Network Design', 'Wireless Solutions', 'Security Implementation', 'Performance Optimization', 'Monitoring & Maintenance', 'Disaster Recovery', 'VLAN Configuration', 'Firewall Management', 'VPN Solutions', 'Network Monitoring'],
+      price: 'Starting at $1,500/month',
+      marketPrice: '$2500-8000/month',
+      benefits: ['Reliable connectivity', 'Enhanced security', 'Optimized performance', '24/7 monitoring', 'Reduced network issues'],
+      category: 'network',
+      link: 'https://ziontechgroup.com/network-infrastructure',
+      popular: true,
+      sla: '99.8% Network Uptime'
+    },
+    {
+      id: '7',
+      icon: Server,
+      title: 'Server Management & Administration',
+      description: 'Comprehensive server administration, monitoring, and maintenance services with performance optimization and security hardening.',
+      features: ['Server Administration', 'Performance Monitoring', 'Security Hardening', 'Backup & Recovery', 'Patch Management', 'Capacity Planning', 'Load Balancing', 'Virtualization', 'Server Migration', 'Disaster Recovery'],
+      price: 'Starting at $800/month',
+      marketPrice: '$1200-4000/month',
+      benefits: ['Optimal performance', 'Enhanced security', 'Reduced downtime', 'Expert administration', 'Automated maintenance'],
+      category: 'servers',
+      link: 'https://ziontechgroup.com/server-management',
+      popular: true,
+      sla: '99.7% Server Uptime'
+    },
+    {
+      id: '8',
+      icon: Monitor,
+      title: 'IT Support & Helpdesk',
+      description: '24/7 technical support and helpdesk services for your organization with remote assistance and issue resolution.',
+      features: ['24/7 Support', 'Remote Assistance', 'Issue Resolution', 'User Training', 'Documentation', 'SLA Management', 'Ticket Management', 'Knowledge Base', 'User Onboarding', 'Software Installation'],
+      price: 'Starting at $500/month',
+      marketPrice: '$800-2500/month',
+      benefits: ['Quick issue resolution', 'Reduced downtime', 'User satisfaction', 'Cost-effective support', 'Proactive maintenance'],
+      category: 'support',
+      link: 'https://ziontechgroup.com/it-support',
+      popular: true,
+      sla: '2-Hour Response Time'
+    },
+    {
+      id: '9',
+      icon: Smartphone,
+      title: 'Mobile Device Management (MDM)',
+      description: 'Enterprise mobile device management with security policies, app management, and remote control for iOS and Android devices.',
+      features: ['Device Security', 'App Management', 'Remote Control', 'Policy Enforcement', 'Data Protection', 'Device Enrollment', 'Compliance Monitoring', 'Location Tracking', 'Remote Wipe', 'App Distribution'],
+      price: 'Starting at $99/month',
+      marketPrice: '$150-500/month',
+      benefits: ['Enhanced security', 'Centralized management', 'Compliance assurance', 'Cost control', 'Improved productivity'],
+      category: 'mobile',
+      link: 'https://ziontechgroup.com/mobile-device-management',
+      popular: true,
+      sla: '99.5% Device Management Uptime'
+    },
+    {
+      id: '10',
+      icon: Shield,
+      title: 'Compliance & Audit Services',
+      description: 'Ensure regulatory compliance with automated monitoring, audit trails, and compliance reporting for various industry standards.',
+      features: ['Regulatory Compliance', 'Audit Trails', 'Compliance Reporting', 'Risk Assessment', 'Documentation', 'Policy Management', 'Training Programs', 'Incident Management', 'Continuous Monitoring', 'Certification Support'],
+      price: 'Starting at $399/month',
+      marketPrice: '$600-2000/month',
+      benefits: ['Compliance assurance', 'Reduced audit risks', 'Automated monitoring', 'Expert guidance', 'Cost savings'],
+      category: 'compliance',
+      link: 'https://ziontechgroup.com/compliance-audit',
+      popular: true,
+      sla: '100% Compliance Monitoring'
+    },
+    {
+      id: '11',
+      icon: BarChart,
+      title: 'IT Performance Monitoring',
+      description: 'Real-time IT performance monitoring with alerting, reporting, and optimization recommendations for all infrastructure components.',
+      features: ['Real-time Monitoring', 'Performance Alerts', 'Optimization Recommendations', 'Capacity Planning', 'Trend Analysis', 'Dashboard Creation', 'Custom Metrics', 'Automated Reporting', 'Threshold Management', 'Historical Analysis'],
+      price: 'Starting at $299/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Proactive issue detection', 'Performance optimization', 'Capacity planning', 'Reduced downtime', 'Better resource utilization'],
+      category: 'monitoring',
+      link: 'https://ziontechgroup.com/it-performance-monitoring',
+      popular: true,
+      sla: 'Real-time Monitoring'
+    },
+    {
+      id: '12',
+      icon: Users,
+      title: 'IT Training & Support',
+      description: 'Comprehensive IT training programs and ongoing support for your team and end users with custom training materials.',
+      features: ['Custom Training Programs', 'End-user Support', 'Technical Documentation', 'Video Tutorials', 'Certification', 'On-site Training', 'Online Learning', 'Skill Assessment', 'Training Analytics', 'Knowledge Transfer'],
+      price: 'Starting at $199/month',
+      marketPrice: '$300-1000/month',
+      benefits: ['Improved user productivity', 'Reduced support tickets', 'Better technology adoption', 'Enhanced security awareness', 'Cost-effective training'],
+      category: 'training',
+      link: 'https://ziontechgroup.com/it-training',
+      popular: true,
+      sla: 'Custom Training Delivery'
+    },
+    {
+      id: '13',
+      icon: Settings,
+      title: 'IT Project Management',
+      description: 'Professional IT project management with planning, execution, and delivery of technology initiatives and digital transformation projects.',
+      features: ['Project Planning', 'Resource Management', 'Timeline Tracking', 'Risk Management', 'Quality Assurance', 'Stakeholder Communication', 'Budget Management', 'Change Management', 'Documentation', 'Post-Implementation Support'],
+      price: 'Starting at $399/month',
+      marketPrice: '$600-2000/month',
+      benefits: ['Successful project delivery', 'Risk mitigation', 'Cost control', 'Timeline adherence', 'Quality assurance'],
+      category: 'project',
+      link: 'https://ziontechgroup.com/it-project-management',
+      popular: true,
+      sla: 'Project Delivery SLA'
+    },
+    {
+      id: '14',
+      icon: Shield,
+      title: 'Vulnerability Assessment & Penetration Testing',
+      description: 'Comprehensive security vulnerability assessment with penetration testing and remediation guidance for enhanced security posture.',
+      features: ['Vulnerability Scanning', 'Penetration Testing', 'Remediation Guidance', 'Security Reports', 'Follow-up Testing', 'Risk Assessment', 'Compliance Testing', 'Social Engineering Tests', 'Web Application Testing', 'Network Security Testing'],
+      price: 'Starting at $1,999/assessment',
+      marketPrice: '$3000-10000/assessment',
+      benefits: ['Enhanced security posture', 'Risk identification', 'Compliance assurance', 'Expert guidance', 'Ongoing security'],
+      category: 'security',
+      link: 'https://ziontechgroup.com/vulnerability-assessment',
+      popular: true,
+      sla: 'Detailed Security Report'
+    },
+    {
+      id: '15',
+      icon: Cloud,
+      title: 'Hybrid Cloud Solutions',
+      description: 'Seamless hybrid cloud solutions combining on-premises and cloud infrastructure for optimal performance and cost efficiency.',
+      features: ['Hybrid Architecture', 'Data Synchronization', 'Workload Migration', 'Cost Optimization', 'Security Integration', 'Disaster Recovery', 'Performance Optimization', 'Compliance Management', 'Monitoring & Management', 'Scalability Planning'],
+      price: 'Starting at $1,599/month',
+      marketPrice: '$2500-8000/month',
+      benefits: ['Optimal performance', 'Cost efficiency', 'Flexibility', 'Enhanced security', 'Scalable solutions'],
+      category: 'cloud',
+      link: 'https://ziontechgroup.com/hybrid-cloud',
+      popular: true,
+      sla: '99.8% Hybrid Cloud Uptime'
+    },
+    {
+      id: '16',
+      icon: Database,
+      title: 'Data Migration Services',
+      description: 'Secure and efficient data migration between systems with zero downtime and data integrity preservation.',
+      features: ['Zero Downtime', 'Data Integrity', 'Migration Planning', 'Testing & Validation', 'Rollback Capability', 'Data Mapping', 'Transformation', 'Validation', 'Documentation', 'Post-Migration Support'],
+      price: 'Starting at $2,999/project',
+      marketPrice: '$5000-20000/project',
+      benefits: ['Zero downtime migration', 'Data integrity', 'Risk mitigation', 'Expert execution', 'Minimal disruption'],
+      category: 'migration',
+      link: 'https://ziontechgroup.com/data-migration',
+      popular: true,
+      sla: 'Zero Data Loss Guarantee'
+    },
+    {
+      id: '17',
+      icon: Globe,
+      title: 'API Development & Integration',
+      description: 'Custom API development and integration services for seamless data exchange between systems and applications.',
+      features: ['Custom API Development', 'System Integration', 'API Documentation', 'Testing & Validation', 'Performance Optimization', 'Security Implementation', 'Version Management', 'Monitoring & Analytics', 'Rate Limiting', 'Authentication'],
+      price: 'Starting at $799/month',
+      marketPrice: '$1200-4000/month',
+      benefits: ['Seamless integration', 'Improved efficiency', 'Better data flow', 'Enhanced security', 'Scalable solutions'],
+      category: 'integration',
+      link: 'https://ziontechgroup.com/api-development',
+      popular: true,
+      sla: '99.9% API Uptime'
+    },
+    {
+      id: '18',
+      icon: Settings,
+      title: 'IT Governance & Strategy',
+      description: 'Strategic IT governance and technology roadmap development for long-term business success and digital transformation.',
+      features: ['IT Strategy Development', 'Technology Roadmaps', 'Governance Frameworks', 'Risk Management', 'Performance Metrics', 'Policy Development', 'Compliance Management', 'Vendor Management', 'Budget Planning', 'Technology Assessment'],
+      price: 'Starting at $499/month',
+      marketPrice: '$800-2500/month',
+      benefits: ['Strategic alignment', 'Risk mitigation', 'Cost optimization', 'Future planning', 'Competitive advantage'],
+      category: 'governance',
+      link: 'https://ziontechgroup.com/it-governance',
+      popular: true,
+      sla: 'Strategic Planning Delivery'
+    }
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All IT Services', count: itServices.length },
+    { id: 'cloud', name: 'Cloud Services', count: itServices.filter(s => s.category === 'cloud').length },
+    { id: 'security', name: 'Security', count: itServices.filter(s => s.category === 'security').length },
+    { id: 'database', name: 'Database', count: itServices.filter(s => s.category === 'database').length },
+    { id: 'devops', name: 'DevOps', count: itServices.filter(s => s.category === 'devops').length },
+    { id: 'consulting', name: 'Consulting', count: itServices.filter(s => s.category === 'consulting').length },
+    { id: 'network', name: 'Network', count: itServices.filter(s => s.category === 'network').length },
+    { id: 'servers', name: 'Servers', count: itServices.filter(s => s.category === 'servers').length },
+    { id: 'support', name: 'Support', count: itServices.filter(s => s.category === 'support').length },
+    { id: 'mobile', name: 'Mobile', count: itServices.filter(s => s.category === 'mobile').length },
+    { id: 'compliance', name: 'Compliance', count: itServices.filter(s => s.category === 'compliance').length },
+    { id: 'monitoring', name: 'Monitoring', count: itServices.filter(s => s.category === 'monitoring').length },
+    { id: 'training', name: 'Training', count: itServices.filter(s => s.category === 'training').length },
+    { id: 'project', name: 'Project Management', count: itServices.filter(s => s.category === 'project').length },
+    { id: 'migration', name: 'Migration', count: itServices.filter(s => s.category === 'migration').length },
+    { id: 'integration', name: 'Integration', count: itServices.filter(s => s.category === 'integration').length },
+    { id: 'governance', name: 'Governance', count: itServices.filter(s => s.category === 'governance').length }
+  ];
+
+  const filteredServices = itServices.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const features = [
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and monitoring for all your IT infrastructure.',
+      icon: Clock
+    },
+    {
+      title: 'Enterprise-Grade Security',
+      description: 'Advanced security measures and compliance with industry standards.',
       icon: Shield
     },
     {
-      id: 'compliance-automation',
-      name: 'Compliance Automation',
-      description: 'Automated compliance monitoring and reporting for various regulatory frameworks',
-      price: '$2,100/month',
-      marketPrice: '$4000-12000/month',
-      features: [
-        'Automated compliance monitoring',
-        'Regulatory reporting automation',
-        'Policy management systems',
-        'Audit trail automation',
-        'Risk assessment automation',
-        'Compliance dashboard',
-        'Alert and notification systems',
-        'Integration with existing systems'
-      ],
-      benefits: [
-        'Reduced compliance costs',
-        'Automated reporting',
-        'Better risk management',
-        'Audit readiness'
-      ],
-      category: 'Compliance',
-      popular: true,
-      icon: CheckCircle
-    },
-    {
-      id: 'cloud-cost-optimization',
-      name: 'Cloud Cost Optimization',
-      description: 'Cloud cost analysis and optimization services to reduce infrastructure spending',
-      price: '$1,600/month',
-      marketPrice: '$3000-8000/month',
-      features: [
-        'Cloud cost analysis',
-        'Resource optimization recommendations',
-        'Reserved instance planning',
-        'Spot instance utilization',
-        'Cost monitoring and alerting',
-        'Budget management',
-        'Cost allocation and reporting',
-        'Optimization automation'
-      ],
-      benefits: [
-        'Reduce cloud costs by 30-50%',
-        'Better resource utilization',
-        'Automated cost management',
-        'Improved budget control'
-      ],
-      category: 'Cloud Optimization',
-      popular: true,
+      title: 'Scalable Solutions',
+      description: 'IT services that grow with your business from startup to enterprise.',
       icon: TrendingUp
     },
     {
-      id: 'security-automation',
-      name: 'Security Automation',
-      description: 'Automated security monitoring, incident response, and threat detection',
-      price: '$2,700/month',
-      marketPrice: '$5000-15000/month',
-      features: [
-        'Automated threat detection',
-        'Incident response automation',
-        'Security orchestration',
-        'Vulnerability scanning automation',
-        'Compliance monitoring automation',
-        'Security analytics automation',
-        'Threat intelligence integration',
-        'Custom security workflows'
-      ],
-      benefits: [
-        'Faster threat response',
-        'Reduced security incidents',
-        'Automated compliance',
-        'Better security posture'
-      ],
-      category: 'Security Automation',
-      popular: true,
-      icon: Shield
-    },
-    {
-      id: 'data-visualization',
-      name: 'Data Visualization & BI',
-      description: 'Advanced data visualization and business intelligence dashboard development',
-      price: '$1,900/month',
-      marketPrice: '$3500-10000/month',
-      features: [
-        'Interactive dashboard development',
-        'Real-time data visualization',
-        'Custom chart and graph creation',
-        'Data storytelling',
-        'Mobile-responsive dashboards',
-        'Self-service analytics',
-        'Data integration',
-        'User training and support'
-      ],
-      benefits: [
-        'Better data insights',
-        'Improved decision making',
-        'Self-service analytics',
-        'Enhanced reporting'
-      ],
-      category: 'Data Visualization',
-      popular: true,
-      icon: BarChart
-    },
-    {
-      id: 'workflow-automation',
-      name: 'Workflow Automation',
-      description: 'Business process automation and workflow optimization services',
-      price: '$2,300/month',
-      marketPrice: '$4500-12000/month',
-      features: [
-        'Process analysis and optimization',
-        'Workflow automation design',
-        'RPA (Robotic Process Automation)',
-        'Integration with business systems',
-        'Custom automation solutions',
-        'Process monitoring and analytics',
-        'Change management',
-        'Training and documentation'
-      ],
-      benefits: [
-        'Reduced manual work',
-        'Improved process efficiency',
-        'Better accuracy',
-        'Cost savings'
-      ],
-      category: 'Automation',
-      popular: true,
-      icon: Settings
-    },
-    {
-      id: 'cloud-native-security',
-      name: 'Cloud-Native Security',
-      description: 'Specialized security services for cloud-native applications and infrastructure',
-      price: '$3,100/month',
-      marketPrice: '$6000-18000/month',
-      features: [
-        'Container security',
-        'Kubernetes security',
-        'Serverless security',
-        'Cloud security posture management',
-        'Identity and access management',
-        'Network security',
-        'Data protection',
-        'Compliance automation'
-      ],
-      benefits: [
-        'Enhanced cloud security',
-        'Automated security management',
-        'Better compliance',
-        'Reduced security risks'
-      ],
-      category: 'Cloud Security',
-      popular: true,
-      icon: Shield
+      title: 'Proven Expertise',
+      description: 'Certified professionals with years of experience in enterprise IT.',
+      icon: Award
     }
-  ]
+  ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
-    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
-    { id: 'DevOps', name: 'DevOps', count: services.filter(s => s.category === 'DevOps').length },
-    { id: 'Database', name: 'Database', count: services.filter(s => s.category === 'Database').length },
-    { id: 'Development', name: 'Development', count: services.filter(s => s.category === 'Development').length },
-    { id: 'Networking', name: 'Networking', count: services.filter(s => s.category === 'Networking').length },
-    { id: 'Data Center', name: 'Data Center', count: services.filter(s => s.category === 'Data Center').length },
-    { id: 'Consulting', name: 'Consulting', count: services.filter(s => s.category === 'Consulting').length },
-    { id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length },
-    { id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length },
-    { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
-    { id: 'Software Development', name: 'Software Development', count: services.filter(s => s.category === 'Software Development').length },
-    { id: 'Support', name: 'Support', count: services.filter(s => s.category === 'Support').length },
-    { id: 'Cloud Security', name: 'Cloud Security', count: services.filter(s => s.category === 'Cloud Security').length },
-    { id: 'Data Analytics', name: 'Data Analytics', count: services.filter(s => s.category === 'Data Analytics').length },
-    { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length },
-    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
-    { id: 'Cloud Development', name: 'Cloud Development', count: services.filter(s => s.category === 'Cloud Development').length },
-    { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length },
-    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
-    { id: 'IoT Development', name: 'IoT Development', count: services.filter(s => s.category === 'IoT Development').length },
-    { id: 'Mobile Development', name: 'Mobile Development', count: services.filter(s => s.category === 'Mobile Development').length },
-    { id: 'Data Engineering', name: 'Data Engineering', count: services.filter(s => s.category === 'Data Engineering').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'Cloud Migration', name: 'Cloud Migration', count: services.filter(s => s.category === 'Cloud Migration').length },
-    { id: 'MLOps', name: 'MLOps', count: services.filter(s => s.category === 'MLOps').length },
-    { id: 'Integration', name: 'Integration', count: services.filter(s => s.category === 'Integration').length },
-    { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
-    { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
-    { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
-    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ]
-
-  const filteredServices = services.filter(service => 
-    selectedCategory === 'all' || service.category === selectedCategory
-  )
   return (
     <>
-=======
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-;
-const ItServicesPage: React.FC = () => {
-const itServices = [
-];
-};
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Security Monitoring', href: '/security-monitoring', icon: Shield, description: '24/7 Security' },
-    { name: 'Penetration Testing', href: '/penetration-testing', icon: Shield, description: 'Security Testing' },
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Infrastructure Setup' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Globe, description: 'IT Strategy' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: Database, description: 'Business Intelligence' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
-    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' };
-  ];
-  return (
-    <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
-        <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
+        <title>IT Services | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud solutions, cybersecurity, database management, DevOps, and more. Expert IT support for your business." />
+        <meta name="keywords" content="IT services, cloud computing, cybersecurity, database management, DevOps, IT consulting, network management, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
+
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text-enhanced">
                 IT Services
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete IT solutions to modernize your infrastructure and drive business growth. 
-                From cloud migration to cybersecurity, we have the expertise you need.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive IT solutions to keep your business running smoothly, securely, and efficiently with expert support and cutting-edge technology.
               </p>
             </div>
 
-            {/* Category Filter */}
+            {/* Search and Filter */}
             <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search IT services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent backdrop-blur-sm"
+                  />
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Filter className="text-gray-400 w-5 h-5" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent backdrop-blur-sm"
                   >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.name} ({category.count})
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
 
-            {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {filteredServices.map((service) => (
-                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                        <service.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
+              {filteredServices.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group cyber-card-enhanced">
+                  {service.popular && (
+                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Popular
                     </div>
-                    {service.popular && (
-                      <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Popular
-                      </span>
-                    )}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT <span className="text-cyan-400">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth.
-            </p>
-          </div>
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <Link key={index};
-                  to={service.href};
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
-                  <service .icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {service.name};
-                  </h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                  )}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                      <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                    </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{service.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="text-2xl font-bold text-purple-400">{service.price}</span>
-                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-400">SLA:</span>
+                      <span className="text-sm text-cyan-400 font-semibold">{service.sla}</span>
                     </div>
-                    <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-start space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-gray-300">{feature}</span>
+                    <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-green-300 text-sm">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <Link
-                      to="/contact"
-                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    <a
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                      <ExternalLink className="w-4 h-4 ml-1" />
+                    </a>
+                    <a
+                      href="/contact"
+                      className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
                       Get Quote
-                    </Link>
+                    </a>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* CTA Section */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Modernize Your IT Infrastructure?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Let our IT experts help you choose the right solutions for your business needs. 
-                  Get a free consultation and see how we can transform your technology infrastructure.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    to="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Get Free Consultation
-                  </Link>
-                  <a
-                    href="tel:+13024640950"
-                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Call: (302) 464-0950
-                  </a>
-                </div>
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Our IT Services?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <feature.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300 text-sm">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center cyber-card-enhanced">
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text-enhanced">Ready to Optimize Your IT Infrastructure?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let our IT experts help you build a robust, secure, and scalable technology foundation for your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Get Free IT Consultation
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300"
+                >
+                  Call: (302) 464-0950
+                </a>
+              </div>
+              <div className="mt-6 text-sm text-gray-400">
+                <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </main>
-      
-      <Footer />
-    </>
-  )
-}
-
-export default ItServicesPage
-=======
         </section>
       </div>
-    </React.Fragment>)
+
+      <Footer />
+    </>
   );
 };
-export default ItServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+
+export default ITServicesPage;

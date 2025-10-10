@@ -1,28 +1,24 @@
-<<<<<<< HEAD
-'use client'
-import React, { useEffect, useState } from 'react'
-import { useAnalytics } from './EnhancedAnalytics'
-=======
 'use client';
 import React, { useEffect, useState } from 'react';
 import { Eye, EyeOff, Volume2, VolumeX, Type, Contrast } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 interface AccessibilitySettings {
-    highContrast: boolean
-  reducedMotion: boolean
-  fontSize: 'small' | 'medium' | 'large'
-  screenReader: boolean,
-  keyboardNavigation: boolean
-  }
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  largeText: boolean;
+  focusVisible: boolean;
+}
 
 interface EnhancedAccessibilityProps {
-    children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean,
-  enableFocusManagement?: boolean
-  }
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
@@ -36,48 +32,13 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: false,
-    keyboardNavigation: false
-  })
+    keyboardNavigation: false,
+    largeText: false,
+    focusVisible: true
+  });
 
-<<<<<<< HEAD
-  const analytics = useAnalytics()
-  useEffect(() => {
-    // Detect user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    }))
-    // Apply initial accessibility settings
-    applyAccessibilitySettings({
-      ...settings,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    })
+  const [isOpen, setIsOpen] = useState(false);
 
-    // Track accessibility usage
-    analytics?.track('accessibility_initialized', {
-      reduced_motion: prefersReducedMotion,
-      high_contrast: prefersHighContrast
-    })
-  }, []);
-
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
-    // High contrast mode
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast')
-    }
-
-    // Reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion')
-=======
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   };
@@ -100,60 +61,9 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     } else {
-      root.classList.remove('reduced-motion')
+      root.classList.remove('reduced-motion');
     }
-<<<<<<< HEAD
-
-    // Font size
-    root.classList.remove('font-small', 'font-medium', 'font-large')
-    root.classList.add(`font-${newSettings.fontSize}`)
-    // Screen reader optimizations
-    if (newSettings.screenReader) {
-    root.classList.add('screen-reader-optimized')
-  } else {
-    root.classList.remove('screen-reader-optimized')
-  }
-  }
-
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings }
-    setSettings(updatedSettings)
-    applyAccessibilitySettings(updatedSettings)
-    analytics?.track('accessibility_settings_changed', newSettings)
-  }
-
-  // Keyboard navigation support
-  useEffect(() => {
-    if (!enableKeyboardNavigation) return
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
-        if (skipLink) {
-          skipLink.focus(),
-          event.preventDefault()
-  }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
-    const activeElement = document.activeElement as HTMLElement
-        if (activeElement && activeElement.blur) {
-          activeElement.blur()
-  }
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [enableKeyboardNavigation]);
-
-  // Focus management
-  useEffect(() => {
-    if (!enableFocusManagement) return;
-=======
     
     if (settings.screenReader) {
       root.classList.add('screen-reader-mode');
@@ -167,68 +77,46 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       root.classList.remove('focus-visible');
     }
   }, [settings]);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+
+  // Focus management
+  useEffect(() => {
+    if (!enableFocusManagement) return;
 
     const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       
-<<<<<<< HEAD
       // Ensure focus is visible
       if (target && target.classList) {
-        target.classList.add('focus-visible')
+        target.classList.add('focus-visible');
       }
-    }
+    };
 
     const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement
+      const target = event.target as HTMLElement;
       // Remove focus styling
       if (target && target.classList) {
-        target.classList.remove('focus-visible')
+        target.classList.remove('focus-visible');
       }
-    }
+    };
 
-    document.addEventListener('focusin', handleFocusIn)
-    document.addEventListener('focusout', handleFocusOut)
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
     return () => {
-    document.removeEventListener('focusin', handleFocusIn)
-      document.removeEventListener('focusout', handleFocusOut)
-  }
-  }, [enableFocusManagement])
-  // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
-    if (!enableScreenReaderSupport) return
-    const announcement = document.createElement('div')
-    announcement.setAttribute('aria-live', 'polite')
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message
-    document.body.appendChild(announcement)
-    setTimeout(() => {
-      document.body.removeChild(announcement)
-    }, 1000)
-  }
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
+    };
+  }, [enableFocusManagement]);
 
-  // Expose accessibility functions to window for global access
-  useEffect(() => {
-    (window as any).accessibility = {
-      updateSettings,
-      announceToScreenReader,
-      settings
-    }
-  }, [settings])
   return (
-    <div 
-      className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}
-      data-font-size={settings.fontSize}
-      data-screen-reader={settings.screenReader}
-    >
-      {children}
-    </div>
-  )
-}
+    <>
+      <div 
+        className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}
+        data-font-size={settings.fontSize}
+        data-screen-reader={settings.screenReader}
+      >
+        {children}
+      </div>
 
-export default EnhancedAccessibility
-=======
       {/* Accessibility Panel */}
       <div className="fixed bottom-4 right-4 z-50">
         <button
@@ -268,8 +156,7 @@ export default EnhancedAccessibility
                 >
                   <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.highContrast ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                  />
+                  }`} />
                 </button>
               </div>
               
@@ -288,8 +175,7 @@ export default EnhancedAccessibility
                 >
                   <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.largeText ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                  />
+                  }`} />
                 </button>
               </div>
               
@@ -308,8 +194,7 @@ export default EnhancedAccessibility
                 >
                   <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                  />
+                  }`} />
                 </button>
               </div>
               
@@ -328,8 +213,7 @@ export default EnhancedAccessibility
                 >
                   <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.screenReader ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                  />
+                  }`} />
                 </button>
               </div>
               
@@ -348,8 +232,7 @@ export default EnhancedAccessibility
                 >
                   <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.focusVisible ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                  />
+                  }`} />
                 </button>
               </div>
             </div>
@@ -361,4 +244,3 @@ export default EnhancedAccessibility
 };
 
 export default EnhancedAccessibility;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
