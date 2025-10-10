@@ -5,14 +5,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import HomePage from './app/page';
 import { PageLoader } from './src/components/EnhancedLoadingStates';
 import EnhancedErrorBoundary from './src/components/EnhancedErrorBoundary';
 import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
-import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
-import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
-import ContentShowcase from './src/components/ContentShowcase';
-import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
@@ -125,6 +122,16 @@ const AISupplyChainOptimizationProPage = React.lazy(() => import('./app/ai-suppl
 const AIVideoGeneratorPage = React.lazy(() => import('./app/ai-video-generator/page'));
 const AIWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'));
 
+<<<<<<< HEAD
+=======
+// New Micro SAAS Services
+const AIVoiceCloningStudioPage = React.lazy(() => import('./app/ai-voice-cloning-studio/page'));
+const AICodeSecurityAuditorPage = React.lazy(() => import('./app/ai-code-security-auditor/page'));
+const AIMentalHealthCompanionPage = React.lazy(() => import('./app/ai-mental-health-companion/page'));
+const AISmartHomeControllerPage = React.lazy(() => import('./app/ai-smart-home-controller/page'));
+const AIInvestmentOptimizerPage = React.lazy(() => import('./app/ai-investment-optimizer/page'));
+
+>>>>>>> origin/main
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
@@ -181,6 +188,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
+<<<<<<< HEAD
                       <Route path="/" element={
                         <div className="w-full">
                           <UnifiedContentPromotion />
@@ -191,6 +199,9 @@ const App: React.FC = memo(() => {
                       } />
                       
                       {/* Main Pages */}
+=======
+                      <Route path="/" element={<HomePage />} />
+>>>>>>> origin/main
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
@@ -261,6 +272,16 @@ const App: React.FC = memo(() => {
                       <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
 
+<<<<<<< HEAD
+=======
+                      {/* New Micro SAAS Services */}
+                      <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
+                      <Route path="/ai-code-security-auditor" element={<AICodeSecurityAuditorPage />} />
+                      <Route path="/ai-mental-health-companion" element={<AIMentalHealthCompanionPage />} />
+                      <Route path="/ai-smart-home-controller" element={<AISmartHomeControllerPage />} />
+                      <Route path="/ai-investment-optimizer" element={<AIInvestmentOptimizerPage />} />
+
+>>>>>>> origin/main
                       {/* IT Services Pages */}
                       <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                       <Route path="/cybersecurity" element={<CybersecurityPage />} />
