@@ -49,43 +49,33 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
     'Increase trading accuracy by 85%',
     'Reduce risk exposure by 70%',
     'Improve decision-making speed by 90%',
-    'Lower analysis time by 80%',
-    'Enable real-time market insights',
-    'Automate trading strategies',
-    'Scale analytics across portfolios',
-    'Enhance competitive advantage'
+    'Save 50+ hours per week on analysis',
+    'Boost portfolio performance by 60%',
+    'Reduce manual errors by 95%',
+    'Gain 360° blockchain visibility',
+    'Make data-driven investment decisions'
   ];
 
   const useCases = [
     {
-      title: 'Crypto Trading',
-      description: 'Advanced analytics for cryptocurrency trading and investment decisions',
-      icon: '💰'
+      title: 'Trading Analytics',
+      description: 'Advanced trading insights and market analysis for cryptocurrency traders',
+      icon: TrendingUp
     },
     {
-      title: 'DeFi Protocols',
-      description: 'Monitor and analyze decentralized finance protocols and yields',
-      icon: '🏦'
+      title: 'DeFi Protocol Analysis',
+      description: 'Comprehensive analysis of DeFi protocols and yield farming opportunities',
+      icon: Zap
     },
     {
-      title: 'NFT Markets',
-      description: 'Track and analyze NFT collections and trading patterns',
-      icon: '🎨'
+      title: 'NFT Market Intelligence',
+      description: 'Intelligent analysis of NFT markets, collections, and trading patterns',
+      icon: Target
     },
     {
-      title: 'Portfolio Management',
-      description: 'Comprehensive portfolio tracking and risk management',
-      icon: '📊'
-    },
-    {
-      title: 'Compliance & Audit',
-      description: 'Blockchain compliance monitoring and audit trails',
-      icon: '🔍'
-    },
-    {
-      title: 'Research & Development',
-      description: 'Blockchain research and development insights',
-      icon: '🔬'
+      title: 'Security Monitoring',
+      description: 'Real-time security analysis and threat detection for blockchain networks',
+      icon: Shield
     }
   ];
 
@@ -93,69 +83,69 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Blockchain Analytics - Zion Tech Group</title>
-        <meta name="description" content="Unlock the power of blockchain data with our AI-powered analytics platform. Comprehensive insights for DeFi, NFT, and crypto markets with real-time intelligence." />
-        <meta name="keywords" content="blockchain analytics, crypto analytics, DeFi analytics, NFT analytics, blockchain intelligence, crypto data, blockchain AI" />
+        <meta name="description" content="Advanced AI-powered blockchain analytics platform. Real-time insights, predictive analytics, and comprehensive blockchain intelligence for traders and investors." />
+        <meta name="keywords" content="blockchain analytics, AI blockchain, cryptocurrency analysis, DeFi analytics, NFT intelligence, blockchain intelligence" />
       </Helmet>
 
       <Navigation />
-
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(16,185,129,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Blockchain
+              <span className="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                Analytics
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered blockchain analytics platform. Real-time insights, predictive analytics, 
+              and comprehensive blockchain intelligence for traders and investors.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
+                Start Analyzing
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-300 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300">
+                View Demo
+              </button>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Advanced Blockchain Analytics Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI Blockchain Analytics platform combines cutting-edge technology with blockchain expertise
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Applications & Use Cases
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From traders to institutions, our AI Blockchain Analytics serves diverse needs
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>
@@ -163,14 +153,14 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our AI Blockchain Analytics?
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Blockchain Analytics?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience the future of blockchain analytics with our revolutionary AI technology
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the future of blockchain analysis with our revolutionary AI technology
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -186,22 +176,47 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Analyze Blockchain Data?
+        {/* Use Cases Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Perfect for Every Use Case
               </h2>
-              <p className="text-xl text-emerald-100 mb-8">
-                Join thousands of users who are already using our AI Blockchain Analytics platform
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From trading to DeFi, our analytics platform adapts to your blockchain needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Analyze the Blockchain?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Start making smarter blockchain decisions with our AI-powered analytics platform today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  Get Started Now
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                <button className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started Free
                 </button>
-                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-all duration-300">
+                <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Schedule Demo
                 </button>
               </div>
@@ -210,6 +225,8 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         </section>
       </main>
 
+      <Footer />
+    </>
   );
 };
 
