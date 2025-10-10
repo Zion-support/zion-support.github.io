@@ -80,26 +80,33 @@ const Navigation: React.FC = () => {
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' },
+    { name: 'AI Financial Services', href: '/ai-financial-services', icon: DollarSign, description: 'Financial technology' },
     { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Image & video analysis' },
-    { name: 'AI Voice Processing', href: '/ai-voice-processing', icon: Mic, description: 'Speech recognition' },
-    { name: 'AI E-commerce', href: '/ai-ecommerce-optimizer', icon: Globe, description: 'E-commerce optimization' },
-    { name: 'AI HR Solutions', href: '/ai-hr', icon: Users, description: 'Human resources AI' },
+    { name: 'AI Voice Solutions', href: '/ai-voice-solutions', icon: Mic, description: 'Speech recognition' },
+    { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce optimization' },
+    { name: 'AI HR Solutions', href: '/ai-hr-solutions', icon: Users, description: 'Human resources AI' },
     { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Automated content' },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Workflow, description: 'Process optimization' }
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Workflow, description: 'Process optimization' },
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: FileText, description: 'Document analysis' },
+    { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics', icon: BarChart, description: 'Business forecasting' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu, description: 'Distributed AI processing' }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
-    { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
-    { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
+    { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
+    { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
+    { name: 'Database Management', href: '/database-management', icon: Database, description: 'Data processing & storage' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
     { name: 'DevOps & CI/CD', href: '/devops-cicd', icon: Settings, description: 'Automated deployment' },
     { name: 'IT Support', href: '/it-support', icon: Monitor, description: '24/7 technical support' },
-    { name: 'Infrastructure Management', href: '/infrastructure-management', icon: Server, description: 'IT infrastructure setup' },
-    { name: 'Software Licensing', href: '/software-licensing', icon: Package, description: 'License management' }
+    { name: 'Data Analytics & BI', href: '/data-analytics-bi', icon: BarChart, description: 'Business intelligence' },
+    { name: 'Custom Software', href: '/custom-software', icon: Code, description: 'Tailored solutions' },
+    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Wifi, description: 'Network design & setup' },
+    { name: 'IT Asset Management', href: '/it-asset-management', icon: Package, description: 'Asset lifecycle management' },
+    { name: 'IT Security Services', href: '/it-security-services', icon: Lock, description: 'Security assessment & monitoring' },
+    { name: 'IT Project Management', href: '/it-project-management', icon: Calendar, description: 'Professional project management' }
   ];
 
   const microSaasServices = [
@@ -108,17 +115,17 @@ const Navigation: React.FC = () => {
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
     { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
     { name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' },
-    { name: 'Zion HR Assistant', href: '/zion-hr-assistant', icon: Users, description: 'HR management AI' },
-    { name: 'Zion Finance Pro', href: '/zion-finance-pro', icon: DollarSign, description: 'Financial management' },
-    { name: 'Zion Lead Gen AI', href: '/zion-lead-gen-ai', icon: Target, description: 'Lead generation platform' },
-    { name: 'Zion Project Manager', href: '/zion-project-manager', icon: Calendar, description: 'Project management AI' },
-    { name: 'Zion Email Marketing', href: '/zion-email-marketing', icon: Mail, description: 'Email marketing AI' },
+    { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence', icon: Users, description: 'AI-enhanced CRM' },
     { name: 'Zion Data Sync', href: '/zion-data-sync', icon: Database, description: 'Data integration platform' },
-    { name: 'Zion Mobile Builder', href: '/zion-mobile-builder', icon: Smartphone, description: 'No-code app builder' },
-    { name: 'Zion CRM Pro', href: '/zion-crm-pro', icon: Users, description: 'AI-enhanced CRM' },
-    { name: 'Zion Workflow Engine', href: '/zion-workflow-engine', icon: Settings, description: 'Process automation' },
-    { name: 'Zion Finance AI', href: '/zion-finance-ai', icon: DollarSign, description: 'Financial management' },
-    { name: 'Zion Email Marketing Pro', href: '/zion-email-marketing-pro', icon: Mail, description: 'Email automation' }
+    { name: 'Zion Lead Magnet', href: '/zion-lead-magnet', icon: Target, description: 'Lead generation platform' },
+    { name: 'Zion Project Master', href: '/zion-project-master', icon: Calendar, description: 'Project management AI' },
+    { name: 'Zion Email Automation', href: '/zion-email-automation', icon: Mail, description: 'Email marketing AI' },
+    { name: 'Zion Inventory Smart', href: '/zion-inventory-smart', icon: Package, description: 'Inventory management' },
+    { name: 'Zion Invoice Genius', href: '/zion-invoice-genius', icon: DollarSign, description: 'Invoice generation' },
+    { name: 'Zion Workflow Automation', href: '/zion-workflow-automation', icon: Settings, description: 'Process automation' },
+    { name: 'Zion Performance Monitor', href: '/zion-performance-monitor', icon: Monitor, description: 'Performance monitoring' },
+    { name: 'Zion Compliance Manager', href: '/zion-compliance-manager', icon: CheckSquare, description: 'Compliance management' },
+    { name: 'Zion Social Scheduler', href: '/zion-social-scheduler', icon: Globe, description: 'Social media management' }
   ];
 
   const emergingTech = [
