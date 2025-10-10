@@ -15,41 +15,34 @@ export const useAnalytics = () => {
   return context;
 };
 
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    // Initialize Google Analytics
-    const initGA = () => {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX', {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
+    // Initialize analytics
+    const initAnalytics = () => {
+      // Google Analytics initialization would go here
+
     };
 
-    initGA();
+    initAnalytics();
   }, []);
 
-  const trackEvent = (eventName: string, properties: Record<string, any> = {}) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, properties);
-    }
-    console.log('Analytics Event:', eventName, properties);
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+
+    // Send to analytics service
   };
 
   const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'page_view', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
-    }
-    console.log('Page View:', pageName);
+
+    // Send to analytics service
   };
 
-  const value = {
+  const value: AnalyticsContextType = {
     trackEvent,
-    trackPageView,
+    trackPageView
   };
 
   return (
@@ -58,10 +51,3 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </AnalyticsContext.Provider>
   );
 };
-
-// Declare gtag function for TypeScript
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}

@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, Zap, Workflow, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
+import { CheckCircle, Star, Zap, Workflow, Clock, Users, Shield, BarChart } from 'lucide-react';
 
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
@@ -127,7 +127,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-        
+
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -138,7 +138,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               Automate any business process with intelligent workflows
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business operations with AI-powered workflow automation that learns, 
+              Transform your business operations with AI-powered workflow automation that learns,
               adapts, and optimizes your processes for maximum efficiency and productivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -249,7 +249,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               Ready to Automate Your Workflows?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get started with our AI workflow automation platform today. Contact us for a free consultation 
+              Get started with our AI workflow automation platform today. Contact us for a free consultation
               and custom implementation plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -268,7 +268,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
             </div>
           </section>
         </main>
-        
+
         <Footer />
       </div>
     </>

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Heart, Stethoscope, Brain, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, Zap, Target, Globe, Award, Users, Cpu, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Eye, AlertTriangle, Lock } from 'lucide-react';
+import { Heart, Stethoscope, Brain, Shield, CheckCircle, Phone, Mail, Target, Target, Shield, CheckCircle, Phone, Mail, Eye, AlertTriangle } from 'lucide-react';
 
 const AIHealthcarePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -140,13 +140,13 @@ const AIHealthcarePage: React.FC = memo(() => {
             <Heart className="w-4 h-4" />
             <span>AI-Powered Healthcare</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Healthcare Solutions
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform healthcare delivery with AI-powered medical imaging, diagnostic assistance, 
+            Transform healthcare delivery with AI-powered medical imaging, diagnostic assistance,
             and patient monitoring. Improve outcomes, reduce costs, and enhance patient care.
           </p>
 
@@ -287,7 +287,6 @@ const AIHealthcarePage: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AIHealthcarePage.displayName = 'AIHealthcarePage';
 

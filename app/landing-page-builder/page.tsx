@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Layout, Wand2, Palette, Zap, CheckCircle, ArrowRight, Phone, Monitor, Smartphone, Globe } from 'lucide-react';
+import { Layout, Wand2, Palette, Zap, CheckCircle, ArrowRight, Monitor, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 const LandingPageBuilderPage: React.FC = () => {
@@ -69,7 +69,7 @@ const LandingPageBuilderPage: React.FC = () => {
             Landing Page <span className="text-cyan-400">Builder</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Create high-converting landing pages in minutes with our AI-powered builder. 
+            Create high-converting landing pages in minutes with our AI-powered builder.
             No coding required - just drag, drop, and launch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

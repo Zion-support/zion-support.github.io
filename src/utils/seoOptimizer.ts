@@ -118,12 +118,12 @@ export class SEOOptimizer {
     ogImage?: string;
     ogType?: string;
   }) {
-    const optimizedTitle = meta.title.length > 60 
-      ? meta.title.substring(0, 57) + '...' 
+    const optimizedTitle = meta.title.length > 60
+      ? meta.title.substring(0, 57) + '...'
       : meta.title;
-    
-    const optimizedDescription = meta.description.length > 160 
-      ? meta.description.substring(0, 157) + '...' 
+
+    const optimizedDescription = meta.description.length > 160
+      ? meta.description.substring(0, 157) + '...'
       : meta.description;
 
     return {
@@ -136,13 +136,13 @@ export class SEOOptimizer {
         description: optimizedDescription,
         url: meta.canonicalUrl,
         type: meta.ogType || 'website',
-        image: meta.ogImage || `${meta.canonicalUrl}/og-image.jpg`,
+        image: meta.ogImage || `${meta.canonicalUrl}/og-image.webp`,
       },
       twitter: {
         card: 'summary_large_image',
         title: optimizedTitle,
         description: optimizedDescription,
-        image: meta.ogImage || `${meta.canonicalUrl}/og-image.jpg`,
+        image: meta.ogImage || `${meta.canonicalUrl}/og-image.webp`,
       },
     };
   }
@@ -227,6 +227,6 @@ export const defaultSEOConfig = {
     'micro SAAS'
   ],
   canonicalUrl: 'https://ziontechgroup.com',
-  ogImage: 'https://ziontechgroup.com/og-image.jpg',
+  ogImage: 'https://ziontechgroup.com/og-image.webp',
   ogType: 'website'
 };

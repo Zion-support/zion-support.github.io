@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart, TrendingUp, Target, Database, Zap, Brain, PieChart, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, Star, BarChart, TrendingUp, Target, Database, Zap, Brain, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -97,9 +97,9 @@ const BusinessIntelligencePage: React.FC = () => {
         <title>Business Intelligence Services - Zion Tech Group</title>
         <meta name="description" content="Transform your data into strategic insights with our comprehensive business intelligence services." />
       </Helmet>
-      
+
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -110,7 +110,7 @@ const BusinessIntelligencePage: React.FC = () => {
             </h1>
           </div>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your data into strategic insights that drive business growth. 
+            Transform your data into strategic insights that drive business growth.
             Make informed decisions with our comprehensive BI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -194,8 +194,8 @@ const BusinessIntelligencePage: React.FC = () => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700' 
+                  plan.popular
+                    ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   Get Started
@@ -215,14 +215,14 @@ const BusinessIntelligencePage: React.FC = () => {
               Join hundreds of businesses who have unlocked the power of their data with our BI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
               >
@@ -248,7 +248,7 @@ const BusinessIntelligencePage: React.FC = () => {
               Comprehensive business intelligence solutions to unlock the power of your data.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {biServices.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -262,7 +262,7 @@ const BusinessIntelligencePage: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
+
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-2xl font-bold text-white">{service.price}</span>
@@ -325,7 +325,7 @@ const BusinessIntelligencePage: React.FC = () => {
               A proven methodology to deliver successful business intelligence solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
@@ -351,7 +351,7 @@ const BusinessIntelligencePage: React.FC = () => {
               Experience the power of data-driven decision making with our expert BI solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -375,14 +375,14 @@ const BusinessIntelligencePage: React.FC = () => {
             Get started with our business intelligence services and unlock the power of your data.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call Now
             </a>
-            <a 
+            <a
               href="mailto:kleber@ziontechgroup.com"
               className="border border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
             >

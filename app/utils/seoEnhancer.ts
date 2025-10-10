@@ -30,7 +30,7 @@ export const generateMetaTags = (data: {
       property: 'og:description',
       content: data.ogDescription || data.description
     },
-    { property: 'og:image', content: data.ogImage || '/og-image.jpg' },
+    { property: 'og:image', content: data.ogImage || '/og-image.webp' },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'Zion Holdings' },
     {
@@ -44,7 +44,7 @@ export const generateMetaTags = (data: {
     },
     {
       name: 'twitter:image',
-      content: data.twitterImage || data.ogImage || '/og-image.jpg'
+      content: data.twitterImage || data.ogImage || '/og-image.webp'
     },
   ];
   return tags;
@@ -77,7 +77,7 @@ const defaultSEOConfig: SEOConfig = {
   description: 'Leading provider of AI-powered business solutions',
   keywords: [],
   canonicalUrl: 'https://zion.app',
-  ogImage: '/og-image.jpg',
+  ogImage: '/og-image.webp',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterSite: '@zionholdings',
@@ -149,7 +149,7 @@ export class SEOEnhancer {
   }
   // Update Open Graph tags
   updateOpenGraph(config: Partial<SEOConfig>) {
-    
+
     if (config.publishedTime) {}
       ogTags.push({ property: 'og:published_time', content: config.publishedTime })
     }
@@ -338,7 +338,7 @@ export const generateAdvancedStructuredData = (data: {
         name: 'Zion Holdings',
         logo: {
           '@type': 'ImageObject',
-          url: data.logo || '/logo.jpg'}
+          url: data.logo || '/logo.webp'}
         }
       },
       datePublished: new Date().toISOString(),
@@ -411,7 +411,7 @@ export const initializeSEOEnhancements = useCallback((...args) => {
     name: 'Zion Holdings',
     description: 'Leading provider of AI-powered business solutions',
     url: 'https://zion.app',
-    logo: 'https://zion.app/logo.jpg',
+    logo: 'https://zion.app/logo.webp',
     sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']}
   })
   const script = document.createElement('script')

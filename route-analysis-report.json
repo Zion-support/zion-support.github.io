@@ -1,0 +1,1099 @@
+{
+  "timestamp": "2025-10-10T07:29:54.982Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "summary": {
+    "total": 217,
+    "working": 217,
+    "broken": 0,
+    "errors": 0
+  },
+  "working": [
+    {
+      "route": "/about",
+      "url": "https://ziontechgroup.com/about",
+      "statusCode": 200
+    },
+    {
+      "route": "/",
+      "url": "https://ziontechgroup.com/",
+      "statusCode": 200
+    },
+    {
+      "route": "/pricing",
+      "url": "https://ziontechgroup.com/pricing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-services",
+      "url": "https://ziontechgroup.com/ai-services",
+      "statusCode": 200
+    },
+    {
+      "route": "/contact",
+      "url": "https://ziontechgroup.com/contact",
+      "statusCode": 200
+    },
+    {
+      "route": "/team",
+      "url": "https://ziontechgroup.com/team",
+      "statusCode": 200
+    },
+    {
+      "route": "/micro-saas",
+      "url": "https://ziontechgroup.com/micro-saas",
+      "statusCode": 200
+    },
+    {
+      "route": "/case-studies",
+      "url": "https://ziontechgroup.com/case-studies",
+      "statusCode": 200
+    },
+    {
+      "route": "/blog",
+      "url": "https://ziontechgroup.com/blog",
+      "statusCode": 200
+    },
+    {
+      "route": "/it-services",
+      "url": "https://ziontechgroup.com/it-services",
+      "statusCode": 200
+    },
+    {
+      "route": "/status",
+      "url": "https://ziontechgroup.com/status",
+      "statusCode": 200
+    },
+    {
+      "route": "/support",
+      "url": "https://ziontechgroup.com/support",
+      "statusCode": 200
+    },
+    {
+      "route": "/consultation",
+      "url": "https://ziontechgroup.com/consultation",
+      "statusCode": 200
+    },
+    {
+      "route": "/docs",
+      "url": "https://ziontechgroup.com/docs",
+      "statusCode": 200
+    },
+    {
+      "route": "/careers",
+      "url": "https://ziontechgroup.com/careers",
+      "statusCode": 200
+    },
+    {
+      "route": "/demo",
+      "url": "https://ziontechgroup.com/demo",
+      "statusCode": 200
+    },
+    {
+      "route": "/api-docs",
+      "url": "https://ziontechgroup.com/api-docs",
+      "statusCode": 200
+    },
+    {
+      "route": "/cookies",
+      "url": "https://ziontechgroup.com/cookies",
+      "statusCode": 200
+    },
+    {
+      "route": "/terms",
+      "url": "https://ziontechgroup.com/terms",
+      "statusCode": 200
+    },
+    {
+      "route": "/privacy",
+      "url": "https://ziontechgroup.com/privacy",
+      "statusCode": 200
+    },
+    {
+      "route": "/financial-it",
+      "url": "https://ziontechgroup.com/financial-it",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-neural-memory-assistant",
+      "url": "https://ziontechgroup.com/ai-neural-memory-assistant",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-ops",
+      "url": "https://ziontechgroup.com/ai-ops",
+      "statusCode": 200
+    },
+    {
+      "route": "/5g-implementation",
+      "url": "https://ziontechgroup.com/5g-implementation",
+      "statusCode": 200
+    },
+    {
+      "route": "/iot-platform",
+      "url": "https://ziontechgroup.com/iot-platform",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-holographic-workspace",
+      "url": "https://ziontechgroup.com/ai-holographic-workspace",
+      "statusCode": 200
+    },
+    {
+      "route": "/edge-computing",
+      "url": "https://ziontechgroup.com/edge-computing",
+      "statusCode": 200
+    },
+    {
+      "route": "/services",
+      "url": "https://ziontechgroup.com/services",
+      "statusCode": 200
+    },
+    {
+      "route": "/healthcare-it",
+      "url": "https://ziontechgroup.com/healthcare-it",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-quantum-financial-oracle",
+      "url": "https://ziontechgroup.com/ai-quantum-financial-oracle",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-project-manager",
+      "url": "https://ziontechgroup.com/ai-project-manager",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-customer-support-bot",
+      "url": "https://ziontechgroup.com/ai-customer-support-bot",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-crm-assistant",
+      "url": "https://ziontechgroup.com/ai-crm-assistant",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-smart-calendar",
+      "url": "https://ziontechgroup.com/ai-smart-calendar",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-email-marketing",
+      "url": "https://ziontechgroup.com/ai-email-marketing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-social-media-manager",
+      "url": "https://ziontechgroup.com/ai-social-media-manager",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-video-generator",
+      "url": "https://ziontechgroup.com/ai-video-generator",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-content-writer",
+      "url": "https://ziontechgroup.com/ai-content-writer",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-analytics-dashboard",
+      "url": "https://ziontechgroup.com/ai-analytics-dashboard",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-content-studio",
+      "url": "https://ziontechgroup.com/ai-content-studio",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-quantum-computing",
+      "url": "https://ziontechgroup.com/ai-quantum-computing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-financial-crime-detection-pro",
+      "url": "https://ziontechgroup.com/ai-financial-crime-detection-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-financial-advisor",
+      "url": "https://ziontechgroup.com/ai-financial-advisor",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-autonomous-systems",
+      "url": "https://ziontechgroup.com/ai-autonomous-systems",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-workflow-automation",
+      "url": "https://ziontechgroup.com/ai-workflow-automation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-space-technology-pro",
+      "url": "https://ziontechgroup.com/ai-space-technology-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-drug-discovery-pro",
+      "url": "https://ziontechgroup.com/ai-drug-discovery-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-climate-solutions-pro",
+      "url": "https://ziontechgroup.com/ai-climate-solutions-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-logo-designer",
+      "url": "https://ziontechgroup.com/ai-logo-designer",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-blockchain-solutions",
+      "url": "https://ziontechgroup.com/ai-blockchain-solutions",
+      "statusCode": 200
+    },
+    {
+      "route": "/blockchain-integration-services",
+      "url": "https://ziontechgroup.com/blockchain-integration-services",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-energy-grid-management-pro",
+      "url": "https://ziontechgroup.com/ai-energy-grid-management-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-fashion-design",
+      "url": "https://ziontechgroup.com/ai-fashion-design",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-data-center",
+      "url": "https://ziontechgroup.com/ai-data-center",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-cloud-optimization",
+      "url": "https://ziontechgroup.com/ai-cloud-optimization",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-legal-research-pro",
+      "url": "https://ziontechgroup.com/ai-legal-research-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-security-operations",
+      "url": "https://ziontechgroup.com/ai-security-operations",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-agricultural-intelligence-pro",
+      "url": "https://ziontechgroup.com/ai-agricultural-intelligence-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-infrastructure-monitoring",
+      "url": "https://ziontechgroup.com/ai-infrastructure-monitoring",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-music-composition",
+      "url": "https://ziontechgroup.com/ai-music-composition",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-api-management",
+      "url": "https://ziontechgroup.com/ai-api-management",
+      "statusCode": 200
+    },
+    {
+      "route": "/data-warehouse",
+      "url": "https://ziontechgroup.com/data-warehouse",
+      "statusCode": 200
+    },
+    {
+      "route": "/smart-contract-security-audit",
+      "url": "https://ziontechgroup.com/smart-contract-security-audit",
+      "statusCode": 200
+    },
+    {
+      "route": "/real-time-analytics",
+      "url": "https://ziontechgroup.com/real-time-analytics",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-automation",
+      "url": "https://ziontechgroup.com/ai-automation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-api-manager",
+      "url": "https://ziontechgroup.com/ai-api-manager",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-analytics",
+      "url": "https://ziontechgroup.com/ai-analytics",
+      "statusCode": 200
+    },
+    {
+      "route": "/smart-cities",
+      "url": "https://ziontechgroup.com/smart-cities",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-3d-generation",
+      "url": "https://ziontechgroup.com/ai-3d-generation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-business-intelligence",
+      "url": "https://ziontechgroup.com/ai-business-intelligence",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-computer-vision",
+      "url": "https://ziontechgroup.com/ai-computer-vision",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-climate-solutions-pro",
+      "url": "https://ziontechgroup.com/ai-climate-solutions-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-code-security-auditor",
+      "url": "https://ziontechgroup.com/ai-code-security-auditor",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-business-intelligence",
+      "url": "https://ziontechgroup.com/ai-business-intelligence",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-cloud-infrastructure",
+      "url": "https://ziontechgroup.com/ai-cloud-infrastructure",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-content-delivery-network",
+      "url": "https://ziontechgroup.com/ai-content-delivery-network",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-code-generation",
+      "url": "https://ziontechgroup.com/ai-code-generation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-chatbot-builder",
+      "url": "https://ziontechgroup.com/ai-chatbot-builder",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-code-assistant",
+      "url": "https://ziontechgroup.com/ai-code-assistant",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-blockchain-solutions",
+      "url": "https://ziontechgroup.com/ai-blockchain-solutions",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-crm-assistant",
+      "url": "https://ziontechgroup.com/ai-crm-assistant",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-content-studio",
+      "url": "https://ziontechgroup.com/ai-content-studio",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-customer-support-chatbot",
+      "url": "https://ziontechgroup.com/ai-customer-support-chatbot",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-customer-service",
+      "url": "https://ziontechgroup.com/ai-customer-service",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-content-generation",
+      "url": "https://ziontechgroup.com/ai-content-generation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-customer-support-bot",
+      "url": "https://ziontechgroup.com/ai-customer-support-bot",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-cybersecurity",
+      "url": "https://ziontechgroup.com/ai-cybersecurity",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-content-writer",
+      "url": "https://ziontechgroup.com/ai-content-writer",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-customer-support",
+      "url": "https://ziontechgroup.com/ai-customer-support",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-crm",
+      "url": "https://ziontechgroup.com/ai-crm",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-drug-discovery-pro",
+      "url": "https://ziontechgroup.com/ai-drug-discovery-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-ecommerce-solutions",
+      "url": "https://ziontechgroup.com/ai-ecommerce-solutions",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-education",
+      "url": "https://ziontechgroup.com/ai-education",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-design-studio",
+      "url": "https://ziontechgroup.com/ai-design-studio",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-document-processing",
+      "url": "https://ziontechgroup.com/ai-document-processing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-data-analytics",
+      "url": "https://ziontechgroup.com/ai-data-analytics",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-document-processor",
+      "url": "https://ziontechgroup.com/ai-document-processor",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-ecommerce-optimizer",
+      "url": "https://ziontechgroup.com/ai-ecommerce-optimizer",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-cybersecurity-monitor",
+      "url": "https://ziontechgroup.com/ai-cybersecurity-monitor",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-data-visualization",
+      "url": "https://ziontechgroup.com/ai-data-visualization",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-email-assistant",
+      "url": "https://ziontechgroup.com/ai-email-assistant",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-email-marketing-automation",
+      "url": "https://ziontechgroup.com/ai-email-marketing-automation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-energy",
+      "url": "https://ziontechgroup.com/ai-energy",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-financial-crime-detection-pro",
+      "url": "https://ziontechgroup.com/ai-financial-crime-detection-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-financial-analyzer",
+      "url": "https://ziontechgroup.com/ai-financial-analyzer",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-fashion-design",
+      "url": "https://ziontechgroup.com/ai-fashion-design",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-energy-grid-management-pro",
+      "url": "https://ziontechgroup.com/ai-energy-grid-management-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-enterprise-solutions",
+      "url": "https://ziontechgroup.com/ai-enterprise-solutions",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-financial-advisor",
+      "url": "https://ziontechgroup.com/ai-financial-advisor",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-expense-tracker",
+      "url": "https://ziontechgroup.com/ai-expense-tracker",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-holographic-workspace",
+      "url": "https://ziontechgroup.com/ai-holographic-workspace",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-healthcare",
+      "url": "https://ziontechgroup.com/ai-healthcare",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-fraud-detection",
+      "url": "https://ziontechgroup.com/ai-fraud-detection",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-infrastructure-monitoring",
+      "url": "https://ziontechgroup.com/ai-infrastructure-monitoring",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-healthcare-solutions",
+      "url": "https://ziontechgroup.com/ai-healthcare-solutions",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-fintech",
+      "url": "https://ziontechgroup.com/ai-fintech",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-image-recognition",
+      "url": "https://ziontechgroup.com/ai-image-recognition",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-hr",
+      "url": "https://ziontechgroup.com/ai-hr",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-fitness-coach",
+      "url": "https://ziontechgroup.com/ai-fitness-coach",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-hr-assistant",
+      "url": "https://ziontechgroup.com/ai-hr-assistant",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-lead-generation",
+      "url": "https://ziontechgroup.com/ai-lead-generation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-investment-optimizer",
+      "url": "https://ziontechgroup.com/ai-investment-optimizer",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-load-testing",
+      "url": "https://ziontechgroup.com/ai-load-testing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-legal-assistant",
+      "url": "https://ziontechgroup.com/ai-legal-assistant",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-inventory-management",
+      "url": "https://ziontechgroup.com/ai-inventory-management",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-invoice-generator",
+      "url": "https://ziontechgroup.com/ai-invoice-generator",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-inventory-manager",
+      "url": "https://ziontechgroup.com/ai-inventory-manager",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-legal-research-pro",
+      "url": "https://ziontechgroup.com/ai-legal-research-pro",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-legal",
+      "url": "https://ziontechgroup.com/ai-legal",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-insurance",
+      "url": "https://ziontechgroup.com/ai-insurance",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-security",
+      "url": "https://ziontechgroup.com/ai-security",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-robotics",
+      "url": "https://ziontechgroup.com/ai-robotics",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-sales-automation",
+      "url": "https://ziontechgroup.com/ai-sales-automation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-predictive-analytics",
+      "url": "https://ziontechgroup.com/ai-predictive-analytics",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-ml-platform",
+      "url": "https://ziontechgroup.com/ai-ml-platform",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-logo-designer",
+      "url": "https://ziontechgroup.com/ai-logo-designer",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-recommendation-engine",
+      "url": "https://ziontechgroup.com/ai-recommendation-engine",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-nlp-platform",
+      "url": "https://ziontechgroup.com/ai-nlp-platform",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-project-management",
+      "url": "https://ziontechgroup.com/ai-project-management",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-quantum-computing",
+      "url": "https://ziontechgroup.com/ai-quantum-computing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-workflow-automation",
+      "url": "https://ziontechgroup.com/ai-workflow-automation",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-zendesk-integration",
+      "url": "https://ziontechgroup.com/ai-zendesk-integration",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-xr-platform",
+      "url": "https://ziontechgroup.com/ai-xr-platform",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-web-scraping",
+      "url": "https://ziontechgroup.com/ai-web-scraping",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-youtube-optimizer",
+      "url": "https://ziontechgroup.com/ai-youtube-optimizer",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-voice-assistant",
+      "url": "https://ziontechgroup.com/ai-voice-assistant",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-smart-home",
+      "url": "https://ziontechgroup.com/ai-smart-home",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-video-editing",
+      "url": "https://ziontechgroup.com/ai-video-editing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-supply-chain",
+      "url": "https://ziontechgroup.com/ai-supply-chain",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-testing",
+      "url": "https://ziontechgroup.com/ai-testing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-banking",
+      "url": "https://ziontechgroup.com/ai-banking",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-blockchain",
+      "url": "https://ziontechgroup.com/ai-blockchain",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-automotive",
+      "url": "https://ziontechgroup.com/ai-automotive",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-zoom-integration",
+      "url": "https://ziontechgroup.com/ai-zoom-integration",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-construction",
+      "url": "https://ziontechgroup.com/ai-construction",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-advertising",
+      "url": "https://ziontechgroup.com/ai-advertising",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-agriculture",
+      "url": "https://ziontechgroup.com/ai-agriculture",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-clean-energy",
+      "url": "https://ziontechgroup.com/ai-clean-energy",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-accounting",
+      "url": "https://ziontechgroup.com/ai-accounting",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-cryptocurrency",
+      "url": "https://ziontechgroup.com/ai-cryptocurrency",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-energy-management",
+      "url": "https://ziontechgroup.com/ai-energy-management",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-insurance-platform",
+      "url": "https://ziontechgroup.com/ai-insurance-platform",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-gaming",
+      "url": "https://ziontechgroup.com/ai-gaming",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-government",
+      "url": "https://ziontechgroup.com/ai-government",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-healthcare-platform",
+      "url": "https://ziontechgroup.com/ai-healthcare-platform",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-defense",
+      "url": "https://ziontechgroup.com/ai-defense",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-environmental",
+      "url": "https://ziontechgroup.com/ai-environmental",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-finance",
+      "url": "https://ziontechgroup.com/ai-finance",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-hotel",
+      "url": "https://ziontechgroup.com/ai-hotel",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-education-platform",
+      "url": "https://ziontechgroup.com/ai-education-platform",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-media",
+      "url": "https://ziontechgroup.com/ai-media",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-sports",
+      "url": "https://ziontechgroup.com/ai-sports",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-manufacturing",
+      "url": "https://ziontechgroup.com/ai-manufacturing",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-oil-gas",
+      "url": "https://ziontechgroup.com/ai-oil-gas",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-pharmaceutical",
+      "url": "https://ziontechgroup.com/ai-pharmaceutical",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-real-estate",
+      "url": "https://ziontechgroup.com/ai-real-estate",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-nonprofit",
+      "url": "https://ziontechgroup.com/ai-nonprofit",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-retail",
+      "url": "https://ziontechgroup.com/ai-retail",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-logistics",
+      "url": "https://ziontechgroup.com/ai-logistics",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-mining",
+      "url": "https://ziontechgroup.com/ai-mining",
+      "statusCode": 200
+    },
+    {
+      "route": "/cybersecurity",
+      "url": "https://ziontechgroup.com/cybersecurity",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-workforce",
+      "url": "https://ziontechgroup.com/ai-workforce",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-weather",
+      "url": "https://ziontechgroup.com/ai-weather",
+      "statusCode": 200
+    },
+    {
+      "route": "/cloud-migration",
+      "url": "https://ziontechgroup.com/cloud-migration",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-telecommunications",
+      "url": "https://ziontechgroup.com/ai-telecommunications",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-zoo",
+      "url": "https://ziontechgroup.com/ai-zoo",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-travel",
+      "url": "https://ziontechgroup.com/ai-travel",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-utilities",
+      "url": "https://ziontechgroup.com/ai-utilities",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-warehouse",
+      "url": "https://ziontechgroup.com/ai-warehouse",
+      "statusCode": 200
+    },
+    {
+      "route": "/ai-transportation",
+      "url": "https://ziontechgroup.com/ai-transportation",
+      "statusCode": 200
+    },
+    {
+      "route": "/blockchain-web3",
+      "url": "https://ziontechgroup.com/blockchain-web3",
+      "statusCode": 200
+    },
+    {
+      "route": "/autonomous-systems",
+      "url": "https://ziontechgroup.com/autonomous-systems",
+      "statusCode": 200
+    },
+    {
+      "route": "/devops-cicd",
+      "url": "https://ziontechgroup.com/devops-cicd",
+      "statusCode": 200
+    },
+    {
+      "route": "/it-infrastructure",
+      "url": "https://ziontechgroup.com/it-infrastructure",
+      "statusCode": 200
+    },
+    {
+      "route": "/it-support",
+      "url": "https://ziontechgroup.com/it-support",
+      "statusCode": 200
+    },
+    {
+      "route": "/ar-vr-solutions",
+      "url": "https://ziontechgroup.com/ar-vr-solutions",
+      "statusCode": 200
+    },
+    {
+      "route": "/custom-development",
+      "url": "https://ziontechgroup.com/custom-development",
+      "statusCode": 200
+    },
+    {
+      "route": "/iot-edge-computing",
+      "url": "https://ziontechgroup.com/iot-edge-computing",
+      "statusCode": 200
+    },
+    {
+      "route": "/network-design",
+      "url": "https://ziontechgroup.com/network-design",
+      "statusCode": 200
+    },
+    {
+      "route": "/database-management",
+      "url": "https://ziontechgroup.com/database-management",
+      "statusCode": 200
+    },
+    {
+      "route": "/business-intelligence",
+      "url": "https://ziontechgroup.com/business-intelligence",
+      "statusCode": 200
+    },
+    {
+      "route": "/community",
+      "url": "https://ziontechgroup.com/community",
+      "statusCode": 200
+    },
+    {
+      "route": "/help",
+      "url": "https://ziontechgroup.com/help",
+      "statusCode": 200
+    },
+    {
+      "route": "/partners",
+      "url": "https://ziontechgroup.com/partners",
+      "statusCode": 200
+    },
+    {
+      "route": "/health",
+      "url": "https://ziontechgroup.com/health",
+      "statusCode": 200
+    },
+    {
+      "route": "/robotics",
+      "url": "https://ziontechgroup.com/robotics",
+      "statusCode": 200
+    },
+    {
+      "route": "/investors",
+      "url": "https://ziontechgroup.com/investors",
+      "statusCode": 200
+    },
+    {
+      "route": "/digital-transformation",
+      "url": "https://ziontechgroup.com/digital-transformation",
+      "statusCode": 200
+    },
+    {
+      "route": "/innovation-labs",
+      "url": "https://ziontechgroup.com/innovation-labs",
+      "statusCode": 200
+    },
+    {
+      "route": "/news",
+      "url": "https://ziontechgroup.com/news",
+      "statusCode": 200
+    },
+    {
+      "route": "/training",
+      "url": "https://ziontechgroup.com/training",
+      "statusCode": 200
+    },
+    {
+      "route": "/gdpr",
+      "url": "https://ziontechgroup.com/gdpr",
+      "statusCode": 200
+    },
+    {
+      "route": "/data-protection",
+      "url": "https://ziontechgroup.com/data-protection",
+      "statusCode": 200
+    },
+    {
+      "route": "/accessibility",
+      "url": "https://ziontechgroup.com/accessibility",
+      "statusCode": 200
+    },
+    {
+      "route": "/compliance",
+      "url": "https://ziontechgroup.com/compliance",
+      "statusCode": 200
+    },
+    {
+      "route": "/sitemap",
+      "url": "https://ziontechgroup.com/sitemap",
+      "statusCode": 200
+    },
+    {
+      "route": "/security",
+      "url": "https://ziontechgroup.com/security",
+      "statusCode": 200
+    }
+  ],
+  "broken": [],
+  "errors": []
+}

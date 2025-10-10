@@ -21,13 +21,12 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   const [ref, entry] = useIntersectionObserver({
     threshold,
     freezeOnceVisible: true,
-  });
 
   const isVisible = entry?.isIntersecting;
 
   const getAnimationClasses = () => {
     const baseClasses = 'transition-all ease-out';
-    
+
     if (!isVisible) {
       switch (animation) {
         case 'fadeInUp':
@@ -44,7 +43,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
           return `${baseClasses} opacity-0 translate-y-8`;
       }
     }
-    
+
     return `${baseClasses} opacity-100 translate-y-0 translate-x-0 scale-100`;
   };
 

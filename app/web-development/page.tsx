@@ -1,14 +1,12 @@
 'use client';
 import React from 'react';
-import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone, Mail, CheckCircle, ArrowRight, Cloud } from 'lucide-react';
+import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-import { AnalyticsProvider } from '../components/Analytics';
-
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
@@ -101,7 +99,7 @@ const WebDevelopmentPage: React.FC = () => {
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
         canonicalUrl="https://ziontechgroup.com/web-development"
       />
-        <PerformanceOptimizer 
+        <PerformanceOptimizer
           enableImageOptimization={true}
           enableLazyLoading={true}
           enableCodeSplitting={true}
@@ -120,10 +118,10 @@ const WebDevelopmentPage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
+
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -131,7 +129,7 @@ const WebDevelopmentPage: React.FC = () => {
               Web Development Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build modern, scalable, and high-performance web applications with our expert development team. 
+              Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -155,7 +153,7 @@ const WebDevelopmentPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Our Web Development Services
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {webServices.map((service, index) => (
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
@@ -213,7 +211,7 @@ const WebDevelopmentPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Technologies We Use
             </h2>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {technologies.map((tech, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -230,7 +228,7 @@ const WebDevelopmentPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Our Development Process
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {process.map((step, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">

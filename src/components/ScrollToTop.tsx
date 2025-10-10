@@ -5,9 +5,9 @@ interface ScrollToTopProps {
   children?: React.ReactNode;
 }
 
-export default function ScrollToTop({ 
-  className = '', 
-  children 
+export default function ScrollToTop({
+  className = '',
+  children
 }: ScrollToTopProps) {
   return (
     <div className={`scrolltotop ${className}`}>

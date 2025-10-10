@@ -40,7 +40,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableSchemaMarkup = true,
 }) => {
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  
+
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) {
       return null;
@@ -52,7 +52,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       name: 'Zion Tech Group',
       description: seoData.description,
       url: seoData.canonicalUrl,
-      logo: 'https://ziontechgroup.com/logo.png',
+      logo: 'https://ziontechgroup.com/logo.webp',
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup',
@@ -146,7 +146,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'og:description': seoData.ogDescription || seoData.description,
       'og:url': seoData.canonicalUrl,
       'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.jpg',
+      'og:image': seoData.ogImage || '/og-image.webp',
       'og:site_name': 'Zion Tech Group',
       'og:locale': 'en_US',
     };
@@ -160,7 +160,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'twitter:card': 'summary_large_image',
       'twitter:title': seoData.ogTitle || seoData.title,
       'twitter:description': seoData.ogDescription || seoData.description,
-      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg',
+      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.webp',
       'twitter:site': '@ziontechgroup',
       'twitter:creator': '@ziontechgroup',
     };
@@ -226,7 +226,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {
       document.title = seoData.title;
-      
+
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
@@ -251,7 +251,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
     }
-    
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -276,7 +276,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
+
         }
       }
     }
@@ -314,9 +314,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
       <link rel="manifest" href="/site.webmanifest" />
 
       {/* Preconnect to external domains */}

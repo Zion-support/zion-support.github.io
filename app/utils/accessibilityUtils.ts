@@ -14,9 +14,9 @@ export const announceToScreenReader = (message: string): void => {
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
-  
+
   document.body.appendChild(announcement);
-  
+
   // Remove after announcement
   setTimeout(() => {
     document.body.removeChild(announcement);
@@ -27,10 +27,10 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
-  
+
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-  
+
   const handleTabKey = (e: KeyboardEvent) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -46,10 +46,10 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
       }
     }
   };
-  
+
   element.addEventListener('keydown', handleTabKey);
   firstElement?.focus();
-  
+
   return () => {
     element.removeEventListener('keydown', handleTabKey);
   };
@@ -60,7 +60,7 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
-  
+
   return skipLink;
 };
 
@@ -71,15 +71,15 @@ export const validateColorContrast = (foreground: string, background: string): b
     const [r, g, b] = rgb.map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-    });
+
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
-  
+
   const fgLuminance = getLuminance(foreground);
   const bgLuminance = getLuminance(background);
-  
+
   const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
-  
+
   return contrast >= 4.5; // WCAG AA standard
 };
 
@@ -157,14 +157,14 @@ export const setupKeyboardNavigation = (): void => {
         activeElement.blur();
       }
     }
-    
+
     // Enter key to activate buttons
     if (e.key === 'Enter' && e.target instanceof HTMLElement) {
       if (e.target.getAttribute('role') === 'button' || e.target.tagName === 'BUTTON') {
         e.target.click();
       }
     }
-  });
+
 };
 
 export const createScreenReaderOnly = (): void => {
@@ -223,28 +223,27 @@ export const updateLiveRegion = (message: string): void => {
 
 export const createLandmarkNavigation = (): void => {
   const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
-  
+
   landmarks.forEach((landmark, index) => {
     const role = landmark.getAttribute('role') || landmark.tagName.toLowerCase();
     const label = landmark.getAttribute('aria-label') || landmark.getAttribute('aria-labelledby') || `${role} ${index + 1}`;
-    
+
     landmark.setAttribute('tabindex', '-1');
     landmark.setAttribute('aria-label', label);
-  });
+
 };
 
 export const setupLandmarkNavigation = (): void => {
   createLandmarkNavigation();
-  
+
   // Update landmarks when content changes
   const observer = new MutationObserver(() => {
     createLandmarkNavigation();
-  });
-  
+
   observer.observe(document.body, {
     childList: true,
     subtree: true
-  });
+
 };
 
 /**
@@ -324,7 +323,7 @@ class AccessibilityEnhancer {
           background: #000000 !important;
           color: #ffffff !important;
         }
-        
+
         .neon-text, .cyber-text {
           text-shadow: 0 0 5px #00ffff !important;
         }
@@ -339,11 +338,9 @@ class AccessibilityEnhancer {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
-    });
 
     document.addEventListener('mousedown', () => {
       document.body.classList.remove('keyboard-navigation');
-    });
 
     // Add focus styles
     const focusStyle = document.createElement('style');
@@ -378,7 +375,6 @@ class AccessibilityEnhancer {
           previousElement.focus();
         }
       }
-    });
 
     // Track focus changes
     document.addEventListener('focusin', (event) => {
@@ -388,7 +384,7 @@ class AccessibilityEnhancer {
           focusHistory.shift();
         }
       }
-    });
+
   }
 
   private setupAriaLabels(): void {
@@ -398,14 +394,13 @@ class AccessibilityEnhancer {
       if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
       }
-    });
 
     const links = document.querySelectorAll('a:not([aria-label])');
     links.forEach((link) => {
       if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
         link.setAttribute('aria-label', 'Link');
       }
-    });
+
   }
 
   collectMetrics(): AccessibilityMetrics {
@@ -438,7 +433,7 @@ class AccessibilityEnhancer {
       const styles = window.getComputedStyle(element);
       const color = styles.color;
       const backgroundColor = styles.backgroundColor;
-      
+
       if (color && backgroundColor && color !== backgroundColor) {
         totalElements++;
         // This is a simplified check - in reality, you'd calculate actual contrast ratio
@@ -446,7 +441,6 @@ class AccessibilityEnhancer {
           goodContrast++;
         }
       }
-    });
 
     return totalElements > 0 ? (goodContrast / totalElements) * 100 : 0;
   }
@@ -464,7 +458,6 @@ class AccessibilityEnhancer {
           accessibleElements++;
         }
       }
-    });
 
     return focusableElements.length > 0 ? (accessibleElements / focusableElements.length) * 100 : 0;
   }
@@ -479,12 +472,11 @@ class AccessibilityEnhancer {
         const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
         const hasRole = element.hasAttribute('role');
         const hasTextContent = element.textContent?.trim().length > 0;
-        
+
         if (hasAriaLabel || hasAriaLabelledBy || hasRole || hasTextContent) {
           compatibleElements++;
         }
       }
-    });
 
     return elements.length > 0 ? (compatibleElements / elements.length) * 100 : 0;
   }
@@ -494,7 +486,7 @@ class AccessibilityEnhancer {
     const focusableElements = document.querySelectorAll(
       'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
     );
-    
+
     let properlyManaged = 0;
     focusableElements.forEach((element) => {
       if (element instanceof HTMLElement) {
@@ -503,7 +495,6 @@ class AccessibilityEnhancer {
           properlyManaged++;
         }
       }
-    });
 
     return focusableElements.length > 0 ? (properlyManaged / focusableElements.length) * 100 : 0;
   }
@@ -512,17 +503,16 @@ class AccessibilityEnhancer {
     const interactiveElements = document.querySelectorAll(
       'button, input, textarea, select, [role="button"], [role="link"]'
     );
-    
+
     let labeledElements = 0;
     interactiveElements.forEach((element) => {
       const hasAriaLabel = element.hasAttribute('aria-label');
       const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
       const hasTextContent = element.textContent?.trim().length > 0;
-      
+
       if (hasAriaLabel || hasAriaLabelledBy || hasTextContent) {
         labeledElements++;
       }
-    });
 
     return interactiveElements.length > 0 ? (labeledElements / interactiveElements.length) * 100 : 0;
   }
@@ -538,7 +528,6 @@ class AccessibilityEnhancer {
         properStructure++;
         previousLevel = level;
       }
-    });
 
     return headings.length > 0 ? (properStructure / headings.length) * 100 : 0;
   }
@@ -551,7 +540,6 @@ class AccessibilityEnhancer {
       if (img.hasAttribute('alt')) {
         imagesWithAlt++;
       }
-    });
 
     return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0;
   }

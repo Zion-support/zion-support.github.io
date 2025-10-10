@@ -60,7 +60,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 }
 //       error,
 //       errorInfo
-    });
+
     if (this.props.onError) {
   // TODO: Add content
 }
@@ -98,7 +98,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
           error_id: this.state.errorId,
           retry_count: this.state.retryCount
         }
-      });
+
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {

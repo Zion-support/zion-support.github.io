@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star } from 'lucide-react';
 
 const AICustomerSupportPage: React.FC = () => {
   const features = [
@@ -126,7 +126,7 @@ const AICustomerSupportPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation />
-        
+
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -137,7 +137,7 @@ const AICustomerSupportPage: React.FC = () => {
               Revolutionary AI-powered customer support solutions
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your customer service with intelligent chatbots, omnichannel communication, 
+              Transform your customer service with intelligent chatbots, omnichannel communication,
               and automated workflows that deliver exceptional customer experiences 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -248,7 +248,7 @@ const AICustomerSupportPage: React.FC = () => {
               Ready to Transform Your Customer Support?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get started with our AI customer support solutions today. Contact us for a free consultation 
+              Get started with our AI customer support solutions today. Contact us for a free consultation
               and custom implementation plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -267,7 +267,7 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
           </section>
         </main>
-        
+
         <Footer />
       </div>
     </>

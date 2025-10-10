@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Settings, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Users, Building, Factory, Car, Stethoscope, Clock3, Navigation, TrendingDown, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, TrendingUp } from 'lucide-react'
+import { Settings, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Users, Building, Factory, Car, Stethoscope, Clock3, Navigation, TrendingDown, Zap, Target, Shield, Users, CheckCircle, ArrowRight, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -158,7 +158,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -171,7 +171,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
               AI Autonomous <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build intelligent systems that operate independently, make decisions autonomously, and adapt to changing 
+              Build intelligent systems that operate independently, make decisions autonomously, and adapt to changing
               environments without human intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -208,7 +208,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
               Autonomous AI Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our autonomous systems platform provides the intelligence and capabilities needed for 
+              Our autonomous systems platform provides the intelligence and capabilities needed for
               truly independent operation.
             </p>
           </div>
@@ -284,8 +284,8 @@ const AIAutonomousSystemsPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular 
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' 
+                plan.popular
+                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
                   : 'border-gray-600/50'
               }`}>
                 {plan.popular && (

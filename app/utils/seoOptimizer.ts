@@ -57,7 +57,7 @@ class SEOOptimizer {
    */
   generateTitle(pageTitle?: string): string {
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
-    return title.includes(this.config.siteName) 
+    return title.includes(this.config.siteName)
       ? title }
       : `${title} | ${this.config.siteName}`
   }
@@ -66,8 +66,8 @@ class SEOOptimizer {
    */
   generateDescription(pageDescription?: string): string {
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription
-    return description.length > 160 
-      ? description.substring(0, 157) + '...' 
+    return description.length > 160
+      ? description.substring(0, 157) + '...'
       : description;}
   }
   /**
@@ -146,7 +146,7 @@ class SEOOptimizer {
    * Setup structured data
    */
   private setupStructuredData(): void {
-    
+
     this.addStructuredData(structuredData)
   }
   /**
@@ -321,7 +321,7 @@ const defaultConfig: SEOConfig = {
   siteUrl: 'https://zion.app',
   defaultTitle: 'Advanced AI and IT Solutions',
   defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
-  defaultImage: 'https://zion.app/og-image.jpg',
+  defaultImage: 'https://zion.app/og-image.webp',
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}

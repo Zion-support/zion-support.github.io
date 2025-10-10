@@ -3,7 +3,7 @@ import React, { lazy } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
-const AI3DGenerationPage: React.FC = React.memo((props) => {
+const AI3DGenerationPage: React.FC = () => {
   const features = [
     'Generate high-quality 3D models from text descriptions',
     'Create photorealistic textures and materials',
@@ -161,10 +161,10 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
             AI 3D Model Generation
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create stunning 3D models, characters, and environments from simple text descriptions. 
+            Create stunning 3D models, characters, and environments from simple text descriptions.
             Transform your ideas into photorealistic 3D assets in minutes, not months.
           </p>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

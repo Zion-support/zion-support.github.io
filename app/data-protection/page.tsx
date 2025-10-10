@@ -3,12 +3,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  FileText, 
-  CheckCircle, 
+import {
+  Shield,
+  Lock,
+  Eye,
+  FileText,
+  CheckCircle,
   AlertTriangle,
   Users,
   Database,
@@ -97,11 +97,11 @@ const DataProtectionPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Data Protection
@@ -123,7 +123,7 @@ const DataProtectionPage: React.FC = () => {
               We follow strict data protection principles to ensure your privacy and security
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {principles.map((principle, index) => (
               <div key={index} className="text-center">
@@ -149,7 +149,7 @@ const DataProtectionPage: React.FC = () => {
               Under GDPR and other data protection laws, you have specific rights regarding your personal data
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rights.map((right, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -177,7 +177,7 @@ const DataProtectionPage: React.FC = () => {
               We implement comprehensive security measures to protect your data
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {securityMeasures.map((measure, index) => (
               <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
@@ -205,7 +205,7 @@ const DataProtectionPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact our Data Protection Officer for any questions about data protection or to exercise your rights
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="cyber-card p-6">
               <div className="flex items-center space-x-4 mb-4">
@@ -214,7 +214,7 @@ const DataProtectionPage: React.FC = () => {
               </div>
               <p className="text-gray-300">dpo@ziontechgroup.com</p>
             </div>
-            
+
             <div className="cyber-card p-6">
               <div className="flex items-center space-x-4 mb-4">
                 <Phone className="w-6 h-6 text-cyan-400" />

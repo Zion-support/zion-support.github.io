@@ -46,7 +46,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true,
-    });
 
     // Enhanced ecommerce tracking
     gtag('config', GA_MEASUREMENT_ID, {
@@ -55,7 +54,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         'custom_parameter_2': 'service_type',
         'custom_parameter_3': 'user_type'
       }
-    });
 
   }, [enableGoogleAnalytics]);
 
@@ -112,7 +110,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    
+
     window.fbq?.('init', PIXEL_ID);
     window.fbq?.('track', 'PageView');
 
@@ -126,12 +124,12 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const trackButtonClick = (event: Event) => {
       const target = event.target as HTMLElement;
       const button = target.closest('button, a[role="button"]');
-      
+
       if (button) {
         const buttonText = button.textContent?.trim() || '';
         const buttonClass = button.className || '';
         const buttonId = button.id || '';
-        
+
         // Send to analytics
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'button_click', {
@@ -141,7 +139,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             button_id: buttonId,
             page_location: window.location.href,
             page_title: document.title
-          });
+
         }
       }
     };
@@ -152,7 +150,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const formId = form.id || '';
       const formClass = form.className || '';
       const formAction = form.action || '';
-      
+
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'form_submit', {
           event_category: 'Engagement',
@@ -161,7 +159,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           form_class: formClass,
           form_action: formAction,
           page_location: window.location.href
-        });
+
       }
     };
 
@@ -171,7 +169,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       if (target.tagName === 'A' && target.href) {
         const url = new URL(target.href);
         const currentDomain = window.location.hostname;
-        
+
         if (url.hostname !== currentDomain) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'click', {
@@ -179,7 +177,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               event_label: target.href,
               transport_type: 'beacon',
               page_location: window.location.href
-            });
+
           }
         }
       }
@@ -191,10 +189,10 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = Math.round((scrollTop / documentHeight) * 100);
-      
+
       if (scrollPercent > maxScrollDepth) {
         maxScrollDepth = scrollPercent;
-        
+
         // Track at 25%, 50%, 75%, 100%
         if ([25, 50, 75, 100].includes(scrollPercent)) {
           if (typeof window !== 'undefined' && window.gtag) {
@@ -202,7 +200,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               event_category: 'Engagement',
               event_label: `${scrollPercent}%`,
               page_location: window.location.href
-            });
+
           }
         }
       }
@@ -221,14 +219,14 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           window.gtag('event', 'page_hide', {
             event_category: 'Engagement',
             page_location: window.location.href
-          });
+
         }
       } else {
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'page_show', {
             event_category: 'Engagement',
             page_location: window.location.href
-          });
+
         }
       }
     };
@@ -255,14 +253,14 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries();
         const lastEntry = entries[entries.length - 1];
-        
+
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'LCP',
             value: Math.round(lastEntry.startTime),
             custom_parameter_1: 'largest_contentful_paint'
-          });
+
         }
       }).observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -271,16 +269,16 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         const entries = entryList.getEntries();
         entries.forEach((entry) => {
           const fid = entry.processingStart - entry.startTime;
-          
+
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'FID',
               value: Math.round(fid),
               custom_parameter_1: 'first_input_delay'
-            });
+
           }
-        });
+
       }).observe({ entryTypes: ['first-input'] });
 
       // CLS
@@ -292,15 +290,14 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           if (!layoutShiftEntry.hadRecentInput) {
             clsValue += layoutShiftEntry.value || 0;
           }
-        });
-        
+
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
             event_label: 'CLS',
             value: Math.round(clsValue * 1000),
             custom_parameter_1: 'cumulative_layout_shift'
-          });
+
         }
       }).observe({ entryTypes: ['layout-shift'] });
     };
@@ -311,16 +308,15 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     window.addEventListener('load', () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-      
+
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'page_load_time', {
           event_category: 'Performance',
           event_label: 'Page Load',
           value: Math.round(loadTime),
           custom_parameter_1: 'load_time'
-        });
+
       }
-    });
 
   }, [enablePerformanceTracking]);
 
@@ -330,17 +326,17 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     // Track time on page
     const startTime = Date.now();
-    
+
     const trackTimeOnPage = () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      
+
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'time_on_page', {
           event_category: 'Engagement',
           event_label: 'Time on Page',
           value: timeOnPage,
           custom_parameter_1: 'seconds'
-        });
+
       }
     };
 
@@ -352,7 +348,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       let mouseMovements = 0;
       const trackMouseMovement = () => {
         mouseMovements++;
-        
+
         if (mouseMovements % 10 === 0) { // Track every 10 movements
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'mouse_movement', {
@@ -360,7 +356,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               event_label: 'Mouse Activity',
               value: mouseMovements,
               custom_parameter_1: 'movement_count'
-            });
+
           }
         }
       };
@@ -387,7 +383,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             event_label: 'Contact Form Submission',
             value: 1,
             custom_parameter_1: 'lead_generation'
-          });
+
         }
       }
     };
@@ -402,7 +398,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             event_label: 'Phone Click',
             value: 1,
             custom_parameter_1: 'phone_lead'
-          });
+
         }
       }
     };
@@ -417,7 +413,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             event_label: 'Email Click',
             value: 1,
             custom_parameter_1: 'email_lead'
-          });
+
         }
       }
     };

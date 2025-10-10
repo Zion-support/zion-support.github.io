@@ -15,10 +15,10 @@ export class AppError extends Error {
 export const errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development'
   const appError = error instanceof AppError ? error : new AppError(error.message);
-  
+
   .toISOString(),
     statusCode: appError.statusCode || 500
-  });
+
   return {
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500
@@ -29,5 +29,5 @@ export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => 
     if (next && typeof next === 'function') {
       next(error);
     }
-  });
+
 };

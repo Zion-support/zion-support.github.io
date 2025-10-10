@@ -14,11 +14,11 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
-Allow: /ai-services/
-Allow: /it-services/
-Allow: /micro-saas/
-Allow: /about/
-Allow: /contact/
-Allow: /pricing/
-Allow: /blog/
-Allow: /case-studies/
+Allow: /ai-services
+Allow: /it-services
+Allow: /micro-saas
+Allow: /about
+Allow: /contact
+Allow: /pricing
+Allow: /case-studies
+Allow: /blog

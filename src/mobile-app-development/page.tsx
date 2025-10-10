@@ -84,7 +84,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
@@ -97,7 +97,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 </h1>
               </div>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your ideas into powerful mobile applications that engage users and drive business growth. 
+                Transform your ideas into powerful mobile applications that engage users and drive business growth.
                 From concept to deployment, we deliver exceptional mobile experiences.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -141,7 +141,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 Why Choose Our Mobile Development Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine cutting-edge technology with proven development methodologies to deliver 
+                We combine cutting-edge technology with proven development methodologies to deliver
                 mobile applications that exceed expectations.
               </p>
             </div>
@@ -178,7 +178,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 Our Mobile Development Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From native iOS and Android apps to cross-platform solutions, we offer comprehensive 
+                From native iOS and Android apps to cross-platform solutions, we offer comprehensive
                 mobile development services tailored to your needs.
               </p>
             </div>
@@ -217,7 +217,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 Technologies We Use
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We leverage the latest mobile development technologies and frameworks to build 
+                We leverage the latest mobile development technologies and frameworks to build
                 high-performance, scalable applications.
               </p>
             </div>
@@ -243,7 +243,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 Our Development Process
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We follow a proven development methodology to ensure your mobile app is delivered 
+                We follow a proven development methodology to ensure your mobile app is delivered
                 on time, on budget, and exceeds your expectations.
               </p>
             </div>
@@ -301,7 +301,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
               Ready to Build Your Mobile App?
             </h2>
             <p className="text-xl text-cyan-100 mb-8">
-              Let's discuss your mobile app idea and turn it into a reality. Our team of expert 
+              Let's discuss your mobile app idea and turn it into a reality. Our team of expert
               developers is ready to help you create an amazing mobile experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

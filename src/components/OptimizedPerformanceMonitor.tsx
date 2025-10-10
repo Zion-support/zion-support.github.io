@@ -39,7 +39,6 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     fmp: null,
     tti: null,
     tbt: null
-  });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
 
@@ -55,7 +54,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         logger.debug('FCP measured', { fcp: fcpEntry.startTime });
       }
-    });
+
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Largest Contentful Paint (LCP)
@@ -64,7 +63,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const lastEntry = entries[entries.length - 1];
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       logger.debug('LCP measured', { lcp: lastEntry.startTime });
-    });
+
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // First Input Delay (FID)
@@ -76,8 +75,8 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, fid }));
           logger.debug('FID measured', { fid });
         }
-      });
-    });
+
+
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Cumulative Layout Shift (CLS)
@@ -90,8 +89,8 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, cls: clsValue }));
           logger.debug('CLS measured', { cls: clsValue });
         }
-      });
-    });
+
+
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     return () => {
@@ -124,10 +123,10 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       return acc + transferSize;
     }, 0);
 
-    logger.debug('Resource timing measured', { 
-      resourceCount: resources.length, 
-      totalSize: `${(totalSize / 1024).toFixed(2)}KB` 
-    });
+    logger.debug('Resource timing measured', {
+      resourceCount: resources.length,
+      totalSize: `${(totalSize / 1024).toFixed(2)}KB`
+
   }, [enableResourceTiming]);
 
   // Custom metrics
@@ -137,17 +136,17 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Time to Interactive (TTI) - simplified
     const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
     setMetrics(prev => ({ ...prev, tti: domContentLoaded }));
-    
+
     // First Meaningful Paint (FMP) - simplified
     const firstPaint = performance.getEntriesByName('first-paint')[0];
     if (firstPaint) {
       setMetrics(prev => ({ ...prev, fmp: firstPaint.startTime }));
     }
 
-    logger.debug('Custom metrics measured', { 
-      tti: domContentLoaded, 
-      fmp: firstPaint?.startTime 
-    });
+    logger.debug('Custom metrics measured', {
+      tti: domContentLoaded,
+      fmp: firstPaint?.startTime
+
   }, [enableCustomMetrics]);
 
   // Report metrics
@@ -164,7 +163,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Send to analytics service (replace with actual implementation)
     logger.info('Performance metrics reported', report);
-    
+
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'performance_metrics', {
@@ -177,7 +176,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           cls: metrics.cls,
           ttfb: metrics.ttfb
         }
-      });
+
     }
   }, [metrics, enableRealUserMonitoring]);
 
@@ -186,7 +185,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined') return;
 
     setIsMonitoring(true);
-    
+
     // Measure initial metrics
     measureCoreWebVitals();
     measureNavigationTiming();
@@ -221,7 +220,7 @@ const OptimizedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
 
     const violations: string[] = [];
-    
+
     if (metrics.fcp && metrics.fcp > budget.fcp) {
       violations.push(`FCP: ${metrics.fcp}ms > ${budget.fcp}ms`);
     }
