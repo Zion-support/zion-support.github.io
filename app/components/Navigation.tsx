@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Search from './Search';
 import { 
   ChevronDown, 
   Phone, 
@@ -29,7 +30,7 @@ import {
   Lock,
   BarChart3,
   FileText,
-  Search,
+  Search as SearchIcon,
   Bot,
   Palette,
   Camera,
@@ -233,6 +234,11 @@ const Navigation: React.FC = () => {
             >
               Pricing
             </Link>
+            
+            {/* Search */}
+            <div className="w-64">
+              <Search />
+            </div>
 
             {/* Services Dropdown */}
             <div className="relative">
@@ -332,6 +338,11 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
             <div className="space-y-4">
+              {/* Mobile Search */}
+              <div className="mb-4">
+                <Search />
+              </div>
+              
               <Link
                 to="/"
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"

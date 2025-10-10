@@ -33,6 +33,8 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     setIsLoaded(true);
+    // Set page title
+    document.title = 'Zion Tech Group - Advanced AI and IT Solutions';
   }, []);
 
   const services = [
