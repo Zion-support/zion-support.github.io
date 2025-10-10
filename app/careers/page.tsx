@@ -60,7 +60,7 @@ const CareersPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
@@ -130,12 +130,10 @@ const CareersPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
-            </div>
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
