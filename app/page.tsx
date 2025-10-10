@@ -1,12 +1,10 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect, Suspense, memo } from 'react;
+import React, { useState, useEffect, Suspense, memo } from 'react';
+import { Navigation } from './components/Navigation';
 
-import { Navigation } from './components/Navigation;
-
-import { Footer } from './components/Footer;
-
-import { ContentPromotionBanner } from './components/ContentPromotionBanner;
+import { Footer } from './components/Footer';
+import { ContentPromotionBanner } from './components/ContentPromotionBanner';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (

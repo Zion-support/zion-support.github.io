@@ -25,17 +25,18 @@ class PerformanceMonitor {
   private isInitialized = false;
 
   init(): void {
-    if (this.isInitialized || typeof window === 'undefined) return;
+    if (this.isInitialized || typeof window === 'undefined') return;
 
     this.isInitialized = true;
 
     this.setupWebVitals();
 
-    this.setupCustomMetrics()}
+    this.setupCustomMetrics();
+  }
 
   private setupWebVitals(): void {
     // First Contentful Paint
-    this.observePaint('first-contentful-paint', 'fcp);
+    this.observePaint('first-contentful-paint', 'fcp');
 
     // Largest Contentful Paint
     this.observeLCP();
@@ -60,7 +61,7 @@ const entries = list.getEntries();;
 
       });
 
-      observer.observe({ entryTypes: ['paint] });
+      observer.observe({ entryTypes: ['paint'] });
 
       this.observers.push(observer)} catch (error) {
       // console.warn removed for production
@@ -82,7 +83,7 @@ const entries = list.getEntries();;
 
       });
 
-      observer.observe({ entryTypes: ['largest-contentful-paint] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
 
       this.observers.push(observer)} catch (error) {
       // console.warn removed for production
@@ -100,7 +101,7 @@ const entries = list.getEntries();;
         entries.forEach((entry) => {
           this._metrics.fid = entry.processingStart - entry.startTime})});
 
-      observer.observe({ entryTypes: ['first-input] });
+      observer.observe({ entryTypes: ['first-input'] });
 
       this.observers.push(observer)} catch (error) {
       // console.warn removed for production
@@ -125,7 +126,7 @@ const entries = list.getEntries();;
 
         this._metrics.cls = clsValue});
 
-      observer.observe({ entryTypes: ['layout-shift] });
+      observer.observe({ entryTypes: ['layout-shift'] });
 
       this.observers.push(observer)} catch (error) {
       // console.warn removed for production
@@ -140,18 +141,21 @@ const entries = list.getEntries();;
 
     // Navigation timing
     if (performance.navigation) {
-      this.addCustomMetric('navigation_type', performance.navigation.type)}
+      this.addCustomMetric('navigation_type', performance.navigation.type);
+    }
 
   }
 
   addCustomMetric(name: string, value: number): void {
-    this._metrics.customMetrics[name] = value}
+    this._metrics.customMetrics[name] = value;
+  }
 
   getMetrics(): PerformanceMetrics {
-    return { ...this._metrics }}
+    return { ...this._metrics };
+  }
 
   reportMetrics(): void {
-    if (typeof window === 'undefined) return;
+    if (typeof window === 'undefined') return;
 
     // console.log removed for production
 // Send to analytics service
