@@ -6,8 +6,9 @@ interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean}
-;
+  enableCodeSplitting?: boolean;
+}
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -17,77 +18,94 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     // Preload critical resources
     if (enablePreloading && typeof window !== 'undefined') {
-      // Preload critical fonts;
-const fontPreload = document.createElement('link');
+      // Preload critical fonts
+      const fontPreload = document.createElement('link');
       fontPreload.rel = 'preload';
       fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontPreload.as = 'style';
       document.head.appendChild(fontPreload);
 
-      // Preload critical images;
-const criticalImages = [
+      // Preload critical images
+      const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
 
-      criticalImages.forEach(src => {;
-const link = document.createElement('link');
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
-        document.head.appendChild(link)});
+        document.head.appendChild(link);
+      });
+    }
+
     // Optimize images
-    if ($1) { const images = document.querySelectorAll('img');
+    if (enableImageOptimization && typeof window !== 'undefined') {
+      const images = document.querySelectorAll('img');
       images.forEach(img => {
         // Add loading="lazy" for non-critical images
         if (enableLazyLoading && !img.hasAttribute('loading')) {
-          img.loading = 'lazy'}
+          img.loading = 'lazy';
+        }
 
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
-          img.decoding = 'async'}
+          img.decoding = 'async';
+        }
       });
+    }
+
     // Intersection Observer for lazy loading
-    if ($1) { const imageObserver = new IntersectionObserver((entries, observer) => {
+    if (enableLazyLoading && typeof window !== 'undefined') {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if ($1) { const img = entry.target as HTMLImageElement;
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
               observer.unobserve(img);
+            }
           }
-        })});
-;
-const lazyImages = document.querySelectorAll('img[data-src]');
+        });
+      });
+
+      const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
+    }
+
     // Performance monitoring
-    if ($1) { const observer = new PerformanceObserver((list) => {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
             // console.log removed for production
-}
+          }
           if (entry.entryType === 'first-input') {
             // console.log removed for production
-}
-        })});
+          }
+        });
+      });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })} catch (e) {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      } catch (e) {
         // Fallback for browsers that don't support these entry types
       }
     }
 
     // Resource hints for better performance
     if (typeof window !== 'undefined') {
-      // DNS prefetch for external domains;
-const dnsPrefetchDomains = [
+      // DNS prefetch for external domains
+      const dnsPrefetchDomains = [
         'fonts.googleapis.com',
         'fonts.gstatic.com',
         'www.google-analytics.com'
       ];
 
-      dnsPrefetchDomains.forEach(domain => {;
-const link = document.createElement('link');
+      dnsPrefetchDomains.forEach(domain => {
+        const link = document.createElement('link');
         link.rel = 'dns-prefetch';
         link.href = `//${domain}`;
         document.head.appendChild(link);
@@ -95,5 +113,7 @@ const link = document.createElement('link');
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-  return null}
+  return null;
+};
+
 export default PerformanceOptimizer;

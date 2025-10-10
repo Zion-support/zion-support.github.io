@@ -2,13 +2,43 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const EnhancedSEOHead: React.FC = () => {
-  return (;
-const EnhancedSEOHead: React.FC = () => {
-return (
-    <Helmet>
-);
+
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  structuredData?: any;
+  breadcrumbStructuredData?: any;
 }
+
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  noIndex = false,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  structuredData,
+  breadcrumbStructuredData
+}) => {
+  const author = 'Zion Tech Group';
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullDescription = description;
+  const fullKeywords = keywords;
+
+  return (
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -51,18 +81,22 @@ return (
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
       {/* Article specific tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
-      ));
+      ))}
+      
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData);
-        </script>);
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
       {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -94,12 +128,14 @@ return (
             'https://linkedin.com/company/ziontechgroup',
             'https://twitter.com/ziontechgroup'
           ]
-        });
+        })}
       </script>
       
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbStructuredData);
-      </script>
+      {breadcrumbStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
+      )}
       
       {/* Additional SEO Meta Tags */}
       <meta name="format-detection" content="telephone=yes" />
@@ -124,5 +160,6 @@ return (
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Helmet>
   );
-}
+};
+
 export default EnhancedSEOHead;
