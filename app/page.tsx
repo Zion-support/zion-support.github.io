@@ -18,6 +18,7 @@ import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton'
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import EnhancedSEO from './components/EnhancedSEO';
+import FuturisticHero from './components/FuturisticHero';
 'use client';
 
 // Dynamically import heavy components for better performance
@@ -3847,79 +3848,8 @@ const HomePage: React.FC = () => {
           
           <Navigation />
           
-          {/* Hero Section */}
-          <section className="relative pt-20 pb-16 overflow-hidden cyber-grid neural-network-bg particle-field">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
-            
-            {/* Floating Elements */}
-            <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full animate-bounce delay-100"></div>
-            <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full animate-bounce delay-300"></div>
-            <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-cyan-300 rounded-full animate-bounce delay-500"></div>
-            <div className="absolute top-60 right-1/3 w-3 h-3 bg-purple-300 rounded-full animate-bounce delay-700"></div>
-            
-            <div className="container mx-auto px-4 relative z-10">
-              <div className="text-center max-w-5xl mx-auto">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 mb-8 backdrop-blur-sm">
-                  <Sparkles className="w-4 h-4 text-cyan-400 mr-2 animate-pulse" />
-                  <span className="text-cyan-300 text-sm font-medium">Trusted by 500+ Fortune 500 Companies</span>
-                </div>
-                
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-                  Transform Your Business with
-                  <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-                    AI-Powered Solutions
-                  </span>
-                </h1>
-                
-                <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 
-                  <span className="text-cyan-400 font-semibold"> Achieve 300% ROI</span> with our cutting-edge technology.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-                  <a
-                    href="/contact"
-                    className="group relative px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white text-lg font-semibold rounded-xl hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-                    onClick={handlePhoneClick}
-                  >
-                    <span className="relative z-10">Get Started Today</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
-                  <a
-                    href="tel:+13024640950"
-                    className="flex items-center space-x-3 text-cyan-400 hover:text-white transition-all duration-300 text-lg font-medium group"
-                    onClick={handlePhoneClick}
-                  >
-                    <div className="p-2 bg-cyan-500/10 rounded-full group-hover:bg-cyan-500/20 transition-colors duration-300">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <span>+1 302 464 0950</span>
-                  </a>
-                </div>
-                
-                {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                    <div className="text-gray-300 text-sm">Enterprise Clients</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                    <div className="text-gray-300 text-sm">Uptime SLA</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">300%</div>
-                    <div className="text-gray-300 text-sm">Average ROI</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                    <div className="text-gray-300 text-sm">Expert Support</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          {/* Futuristic Hero Section */}
+          <FuturisticHero />
 
           {/* Micro SAAS Services Section */}
           <section className="py-20 bg-slate-800/50 relative overflow-hidden">
