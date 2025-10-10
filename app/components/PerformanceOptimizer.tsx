@@ -66,8 +66,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900 flex items-center">
             <Settings className="h-5 w-5 mr-2 text-blue-600" />
-            Performance Optimizer;
-  </
+            Performance Optimizer
+          </h3>
           <button
             onClick={runOptimizations}
             disabled={isOptimizing}
@@ -116,7 +116,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
   );
 };
 export default PerformanceOptimizer;
-  </h3>
-  </div>
-  </number>
-  </PerformanceOptimizerProps>
