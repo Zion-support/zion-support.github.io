@@ -1,8 +1,8 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('repo-radar-runner function triggered')}
-    // Repository radar simulation;
+    // Repository radar simulation
     const result = {
-      statusCode: 200;
+      statusCode: 200
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
@@ -13,8 +13,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         source: event.source || 'unknown',
         radar: {,
           status: 'scanning',
-          repositories: 0;
-          signals: 0;
+          repositories: 0
+          signals: 0
           lastScan: new Date().toISOString()}
     const result = {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
@@ -22,12 +22,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   n: new Date().toISOString()}
-        }})};
-    return result;
-//   } catch (error) {// console.error('Error in repo-radar-runner: ') error;
+        }})}
+    return result
+//   } catch (error) {// console.error('Error in repo-radar-runner: ') error
       }
     return {
-      statusCode: 500;
+      statusCode: 500
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
@@ -43,12 +43,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'repo-radar-runner'})
-      });
-    };
+      })
+    }
   }
-};
-        timestamp: new Date().toISOString(),' function: 'repo-radar-runner',' source: event.source || 'unknown', radar: {' status: 'scanning', repositories: 0, signals: 0;
-        lastScan: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in repo-radar-runner: ') error;
+}
+        timestamp: new Date().toISOString(),' function: 'repo-radar-runner',' source: event.source || 'unknown', radar: {' status: 'scanning', repositories: 0, signals: 0
+        lastScan: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in repo-radar-runner: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'repo-radar-runner' }) }; } };'
         timestam,
   p: new Date().toISOString(),' functio,

@@ -103,16 +103,14 @@ import React {useState} useEffect } from 'react'' import { Link } from 'react-ro
   y: 1} heigh,
   t: 'auto' }} exit={/* TODO: Fix JSX expression */}
   y: 0} heigh,"
-  t: 0 }} className="text-left"> {section.items.map((item} itemIndex) => (<div key={itemIndex}> <Link href={item.href} onClick={onClose} className={/* TODO: Fix JSX expression */}")`
+  t: 0 }} className="text-left"> {section.items.map((item} itemIndex) => (<div key={itemIndex}> < href={item.href} onClick={onClose} className={/* TODO: Fix JSX expression */}")`$2 />
   hover:bg-gray-50' }`} > <item.icon className="text-left" /> <div className="text-left"> <div className="text-left">{item.name}</div> {item.description && ( <div className="text-left"> {item.description} </div> )} </div> {item.children && ( <button onClick={e => { e.preventDefault()} toggleItem(item.name)}} className="text-left"> {expandedItems.includes(item.name) ? ( <ChevronDown className="text-left" /> ) : ( <ChevronRight className="text-left" /> )} </button> )} </Link> {/* TODO: Fix JSX expression */}
   y: 0} heigh,
   t: 0 }}' animate={/* TODO: Fix JSX expression */}
   y: 1} heigh,
   t: 'auto' }} exit={/* TODO: Fix JSX expression */}
   y: 0} heigh,"
-  t: 0 }} className="text-left"> {item.children.map((child} childIndex) => (<Link key={childIndex} href={child.href} onClick={onClose} className={/* TODO: Fix JSX expression */}")`
-  hover:bg-gray-50' }`} > {child.name} </Link> ))} </motion.div> )} </AnimatePresence> )} </div> ))} </motion.div> )} </AnimatePresence> </div> ))} </div> </div> {/* Footer */} <div className="text-left"> <div className="text-left"> <a href="http,"
-  s://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener <noreferrer" className="text-left"> <Globe className="text-left" /> </a> <a href="mailt,"
-  o:info@ziontechgroup.<com" className="text-left"> <Mail className="text-left" /> </a> </div> <p className="text-left"> © 2025 Zion Tech Group. All rights reserved. </p> </div> </div> </motion.div> </React.Fragment> )}; export default EnhancedSidebar2025; '"`
-  </div>
-  </EnhancedSidebar2025Props>
+  t: 0 }} className="text-left"> {item.children.map((child} childIndex) => (< key={childIndex} href={child.href} onClick={onClose} className={/* TODO: Fix JSX expression */}")`$2 />
+  hover:bg-gray-50' }`} > {child.name} </Link> ))} </motion.div> )} </AnimatePresence> )} </div> ))} </motion.div> )} </AnimatePresence> </div> ))} </div> </div> {/* Footer */} <div className="text-left"> <div className="text-left"> < href="http,"$2 />
+  s://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener <noreferrer" className="text-left"> <Globe className="text-left" /> </a> < href="mailt,"$2 />
+  o:info@ziontechgroup.<com" className="text-left"> <Mail className="text-left" /> </a> </div> <p className="text-left"> © 2025 Zion Tech Group. All rights reserved. </p> </div> </div> </motion.div> </React.Fragment> )}; export default EnhancedSidebar2025; '"`</span></span></section>

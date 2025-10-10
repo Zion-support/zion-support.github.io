@@ -1,20 +1,20 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: object;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  structuredData?: object
+  canonical?: string
+  noindex?: boolean
+  nofollow?: boolean
 }
-const SEOHead: React.FC;
+const SEOHead: React.FC
           <SEOHeadProps> = ({// TODO: Add content;}
 }
 const SEOHead: React.FC<SEOProps> = ({
@@ -28,9 +28,7 @@ const SEOHead: React.FC<SEOProps> = ({
 //   canonical,
   noindex = false,
   nofollow = false}) => {const canonicalUrl = canonical || url;}
-  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
-  return null;
-};
+  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
+  return null
+}
 export default SEOHead;`
-  </SEOProps>
-  </SEOHeadProps>

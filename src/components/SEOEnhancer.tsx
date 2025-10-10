@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { ReactNode } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -8,12 +8,12 @@ const,
     },
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }};
-  const finalStructuredData = structuredData || defaultStructuredData;
+    }}
+  const finalStructuredData = structuredData || defaultStructuredData
   return (<React.Fragment>
-      <Helmet></Helmet>
+      <Helmet>
         {/* Basic Meta Tags */}
-        <title>{title}</title>
+        <title>{title}
         <meta name="description" content={description} /></meta>")
         <meta name="keywords" content={keywords.join(', ')} /></meta>"
         <meta name="author" content="Zion Tech Group" /></meta>"
@@ -23,7 +23,7 @@ const,
         <meta name="language" content="English" /></meta>"
         <meta name="revisit-after" content="7 days" /></meta>"
         <meta name="distribution" content="global" /></meta>"
-        <meta name="rating" content="general" /></meta>
+        <meta name="rating" content="general" />
         {/* Canonical URL */}"
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {/* Open Graph Tags */}"
@@ -41,7 +41,7 @@ const,
         <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>"
         <meta property="o,"
-  g:locale" content="en_US" /></meta>
+  g:locale" content="en_US" />
         {/* Twitter Card Tags */}"
         <meta name="twitte,"
   r:card" content="summary_large_image" /></meta>"
@@ -54,33 +54,30 @@ const,
         <meta name="twitte,"
   r:site" content="@ziontechgroup" /></meta>"
         <meta name="twitte,"
-  r:creator" content="@ziontechgroup" /></meta>
+  r:creator" content="@ziontechgroup" />
         {/* Additional SEO Tags */}"
         <meta name="theme-color" content="#1f2937" /></meta>"
         <meta name="msapplication-TileColor" content="#1f2937" /></meta>"
         <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /></meta>"
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
         {/* Structured Data */}"
-        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
         {/* Preconnect to external domains */}"
-        <link rel="preconnect" href="http,"
+        <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
-        <link rel="preconnect" href="http,"
+        <nk rel="preconnect" href="http,"$2 />
   s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
-        <link rel="preconnect" href="http,"
+        <nk rel="preconnect" href="http,"$2 />
   s://www.google-analytics.com" /></link>"
-        <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
+        <nk rel="preconnect" href="http,"$2 />
+  s://www.googletagmanager.com" />
         {/* DNS Prefetch */}"
         <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
         <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
-      </Helmet>
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       {children}
-    </React.Fragment>
-  );
-};
-export default SEOEnhancer;
-"
-  </SEOEnhancerProps>
+  )
+}
+export default SEOEnhancer
+"</li></li></li></li>

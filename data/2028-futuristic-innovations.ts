@@ -1,50 +1,50 @@
 
-export interface FuturisticInnovation2028;
-export interface FuturisticInnovation2028 {id: string;
-export interface FuturisticInnovation2028 {  id: string;
+export interface FuturisticInnovation2028
+export interface FuturisticInnovation2028 {id: string
+export interface FuturisticInnovation2028 {  id: string
 export interface FuturisticInnovation2028 {
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  real_implementation: boolean
+  contact_info: unknown
+    mobile: string
     email: string}
     address: string}
 export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
-  };
+  }
 export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
   }
 }
-    address: string;
+    address: string
   }
-export const futuristic2028Services: FuturisticInnovation2028[] = [;
-    address: string;
+export const futuristic2028Services: FuturisticInnovation2028[] = [
+    address: string
   }
-;
+
 export const futuristic2028Services: FuturisticInnovation2028[] = [
     id: '2028 - futuristic - innovation',
     name: '2028 Futuristic Innovation Platform',
     tagline: 'Futuristic innovations for 2028',
     price: '$399 / month',
-    description: unknown;
+    description: unknown
     addres,
   s: string}
 export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [;
+  futuristic2028Services: FuturisticInnovation2028[] = [
     addres,
   s: string}
-;
+
 export const,
   futuristic2028Services: FuturisticInnovation2028[] = [,
     i,
@@ -67,8 +67,8 @@ export const,
       'Expert insights'],
     link: '/services / 2028 - futuristic - innovation'
     category: 'Futuristic Innovations 2028'
-    real_implementation: true;
-    contact_info: unknown;
+    real_implementation: true
+    contact_info: unknown
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
@@ -86,42 +86,42 @@ export const,
     ],
     link: "/services/2028-futuristic-innovation"
     category: "Futuristic Innovations 2028"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-  id: string, name: string;
-  tagline: string, price: string;
+]
+  id: string, name: string
+  tagline: string, price: string
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown
+    mobile: string, email: string
+    address: string
   }
 }
 export const futuristic2028 Services: FuturisticInnovation2028[] = [,
     id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028", price: "$399/month"
     description: "Futuristic innovation platform that showcases breakthrough technologies for 2028."
-    features: [;
+    features: [
       "Futuristic innovations"
       "Breakthrough technologies"
       "Future capabilities"
       "Innovation platform",
       "Expert insights"],
     link: "/services/2028-futuristic-innovation", category: "Futuristic Innovations 2028",
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
+]
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,
@@ -171,12 +171,12 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
   i,
   d: string, nam,
   e: string,
@@ -231,15 +231,14 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
-;
+]
     id: "2028-futuristic-innovation"
     name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028",
@@ -254,13 +253,13 @@ export const,
     ],
     link: "/services/2028-futuristic-innovation"
     category: "Futuristic Innovations 2028"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
@@ -301,7 +300,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobil,"
   e: "+1 302 464 0950",
   emai,"
@@ -314,7 +313,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+]
 export interface FuturisticInnovation2028 export interface FuturisticInnovation2028,
   id: string; export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   l: string} addres,

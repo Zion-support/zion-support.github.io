@@ -33,4 +33,4 @@
   e: true }); } // Write sitemap fs.writeFileSync(OUTPUT_FILE) xml); ' // Generate stats const stats = {/* TODO: Fix JSX expression */}
   s: entries.filter(e => e.loc.includes('/guides/')).length}' stati,
   c: entries.filter(e => !e.loc.includes('/blog/') && !e.loc.includes('/case-studies/') && !e.loc.includes('/services/') && !e.loc.includes('/guides/')).length }; ' // console.log('\n📈 Content)
-  Breakdown: ')} catch (error) {' process.exit(1); } } // Run if called directly if (require.main === module) {main()} } module.exports = {generateSitemap} createXMLSitemap }; '"`
+  Breakdown: ')} catch (error) {' process.exit(1); } } // Run if called directly if (require.main === module) {main()} } module.exports = {generateSitemap} createXMLSitemap }; '"`</p>

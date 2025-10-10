@@ -1,8 +1,8 @@
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react'
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -19,14 +19,14 @@ const AIAnalyticsPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIAnalyticsPage: React.FC = () => {
-  const features = [];
+  const features = []
   return (
     {// TODO: Add content;}
-};
+}
   ico,
   n: Brain,
       titl,
@@ -36,7 +36,7 @@ const AIAnalyticsPage: React.FC = () => {
       benefit,
   s: [
   // TOD,
-  O: Add items];
+  O: Add items]
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
 //         'Automated trend detection',
@@ -80,7 +80,7 @@ ico,
         'Risk assessment',
         'Automated responses'
     }
-  ];
+  ]
   const useCases = [
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
@@ -158,29 +158,23 @@ icon$5: Award,
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              AI Analytics Services;
-  </
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">AI Analytics Services
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
               Make data-driven decisions that drive growth and optimize performance.
-            </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" />
-                <span className="font-medium">AI-Powered Insights</span>
-              </div>
+                <span className="font-medium">AI-Powered Insights
               <div className="flex items-center text-purple-400">
                 <BarChart className="w-5 h-5 mr-2" />
-                <span className="font-medium">Real-time Analytics</span>
+                <span className="font-medium">Real-time Analytics
               <div className="flex items-center text-green-400">
                 <Target className="w-5 h-5 mr-2" />
-                <span className="font-medium">Predictive Intelligence</span>
+                <span className="font-medium">Predictive Intelligence
           {/* Features */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Key Features;
-  </
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Key Features
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
@@ -188,52 +182,46 @@ icon$5: Award,
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                      <p className="text-gray-300 mb-4">{feature.description}</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">{feature.title}
+                      <p className="text-gray-300 mb-4">{feature.description}
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-// AI Analytics Services;
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+// AI Analytics Services
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Coming Soon
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" />
-                <span className="font-medium">AI-Powered Insights</span>
+                <span className="font-medium">AI-Powered Insights
               </div>"
               <div className="flex items-center text-purple-400"></div>"
                 <BarChart className="w-5 h-5 mr-2" /></BarChart>"
                 <span className="font-medium">Real-time Analytics</span>"
               <div className="flex items-center text-green-400"></div>"
                 <Target className="w-5 h-5 mr-2" /></Target>"
-                <span className="font-medium">Predictive Intelligence</span>
+                <span className="font-medium">Predictive Intelligence
           {/* Features */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Key Features;
-          </h2>"
-            <div className="grid grid-cols-1,"
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+// Key Features</$1>"
+            < className="grid grid-cols-1,"$2 />
   md:grid-cols-2 gap-8"></div>)
               {features.map((feature, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
+          < key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>"
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4"></div>"
-                      <feature.icon className="w-6 h-6 text-cyan-400" /></feature>
+                      <feature.icon className="w-6 h-6 text-cyan-400" />
                     <div></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
                       <p className="text-gray-300 mb-4">{feature.description}</p>"
-                  <ul className="space-y-2"></ul>
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-300 flex items-start"></li>"
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircle>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         {benefit}
-                      </li>
                     ))}
-                  </ul>
           {/* Use Cases */}
               Use Cases
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -241,8 +229,8 @@ icon$5: Award,
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${useCase.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                     <useCase.icon className={`w-8 h-8 ${useCase.color}`} />
-                  <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}
+                  <p className="text-gray-300 text-sm">{useCase.description}
           {/* Pricing */}
               Pricing Plans
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -250,21 +238,19 @@ icon$5: Award,
                 <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {tier.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular;
-  </
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular
                   )}
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{tier.name}
                     <div className="flex items-baseline justify-center">
-                      <span className={`text-3xl font-bold ${tier.color}`}>{tier.price}</span>
-                      <span className="text-gray-400 ml-1">{tier.period}</span>
-                    <p className="text-gray-300 text-sm mt-2">{tier.description}</p>
+                      <span className={`text-3xl font-bold ${tier.color}`}>{tier.price}
+                      <span className="text-gray-400 ml-1">{tier.period}
+                    <p className="text-gray-300 text-sm mt-2">{tier.description}
                   <ul className="space-y-3 mb-6">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                         {feature}
-                  <a
+                  <$2 />
                     href="/contact"
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
                       tier.popular
@@ -272,16 +258,12 @@ icon$5: Award,
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
                   >
-                    Get Started;
-  </
-          {/* Benefits */}
-              Why Choose Our AI Analytics?
-              {benefits.map((benefit, index) => (
+                    Get Started</$1> (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}
+                  <p className="text-gray-300 text-sm">{benefit.description}
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -301,33 +283,31 @@ icon$5: Award,
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </React.Fragment>
-  );
-};
-export default AIAnalyticsPage;
+  )
+}
+export default AIAnalyticsPage
 {/* Use Cases */}
               Use Cases;"
-            <div className="grid grid-cols-1,
+            < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>
+  lg:grid-cols-4 gap-6">
               {useCases.map((useCase, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
-  hover:border-cyan-400/50 transition-all duration-300 text-center"></div>
+          < key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />
+  hover:border-cyan-400/50 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${useCase.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>`
                     <useCase.icon className={`w-8 h-8 ${useCase.color}`} /></useCase>"
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>"
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
+                  <p className="text-gray-300 text-sm">{useCase.description}
 {/* Pricing */}
               Pricing Plans;"
-            <div className="grid grid-cols-1,"
-  md:grid-cols-3 gap-8"></div>
+            < className="grid grid-cols-1,"$2 />
+  md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => ()}`
-          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
+          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {tier.popular && ()}"
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium"></span>
-// Most Popular;
-          </span>
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
+// Most Popular
                   )}"
                   <div className="text-center mb-6"></div>"
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>"
@@ -335,23 +315,22 @@ export default AIAnalyticsPage;
                       <span className={`text-3xl font-bold ${tier.color}`}>{tier.price}</span>"
                       <span className="text-gray-400 ml-1">{tier.period}</span>"
                     <p className="text-gray-300 text-sm mt-2">{tier.description}</p>"
-                  <ul className="space-y-3 mb-6"></ul>
+                  <ul className="space-y-3 mb-6">
                     {tier.features.map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="text-sm text-gray-300 flex items-start"></li>
+          <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                         {feature}
-                  <a
+                  <$2 />
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content;
+  // TODO: Add content
 }
-//                       tier.popular;
+//                       tier.popular
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
                         : 'bg-slate-700 text-white,
   hover:bg-slate-600'`
                     }`}
 //                   >
-//                     Get Started;
-          </a>
+//                     Get Started
 {/* Benefits */}
               Why Choose Our AI Analytics?
               {benefits.map((benefit, index) => ()}"
@@ -359,55 +338,23 @@ export default AIAnalyticsPage;
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                     <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>"
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <p className="text-gray-300 text-sm">{benefit.description}
 {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4"></h2>
+            <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Data?"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
-              Start your journey with AI analytics today. Get a free consultation and discover;
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Start your journey with AI analytics today. Get a free consultation and discover
               how our platform can revolutionize your business intelligence.
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
       <Footer />
-    </div>
-  );
-};
-export default AiAnalyticsPage;
-  </div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </a>
-  </li>
-  </ul>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </p>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+  )
+}
+export default AiAnalyticsPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li>

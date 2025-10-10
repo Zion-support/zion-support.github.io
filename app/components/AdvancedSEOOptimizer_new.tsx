@@ -1,15 +1,15 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  children: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  twitterCard?: string
+  structuredData?: object
+  children: React.ReactNode
 }
 const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -21,64 +21,64 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   structuredData,
   children
 }) => {
-  const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const [seoScore, setSeoScore] = useState(0)
+  const [recommendations, setRecommendations] = useState<string[]>([])
   const analyzeSEO = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    let score = 0;
-    const newRecommendations: string[] = [];
+    if (typeof window === 'undefined') return
+    let score = 0
+    const newRecommendations: string[] = []
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
-      score += 20;
+      score += 20
     } else {
-      newRecommendations.push('Title should be between 30-60 characters');
+      newRecommendations.push('Title should be between 30-60 characters')
     }
     // Check description length
     if (description.length >= 120 && description.length <= 160) {
-      score += 20;
+      score += 20
     } else {
-      newRecommendations.push('Description should be between 120-160 characters');
+      newRecommendations.push('Description should be between 120-160 characters')
     }
     // Check for keywords in title
     if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
-      score += 15;
+      score += 15
     } else {
-      newRecommendations.push('Include primary keyword in title');
+      newRecommendations.push('Include primary keyword in title')
     }
     // Check for keywords in description
     if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
-      score += 15;
+      score += 15
     } else {
-      newRecommendations.push('Include primary keyword in description');
+      newRecommendations.push('Include primary keyword in description')
     }
     // Check for heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     if (headings.length > 0) {
-      score += 10;
+      score += 10
     } else {
-      newRecommendations.push('Add proper heading structure');
+      newRecommendations.push('Add proper heading structure')
     }
     // Check for images with alt text
-    const images = document.querySelectorAll('img');
-    const imagesWithAlt = document.querySelectorAll('img[alt]');
+    const images = document.querySelectorAll('img')
+    const imagesWithAlt = document.querySelectorAll('img[alt]')
     if (images.length === imagesWithAlt.length && images.length > 0) {
-      score += 10;
+      score += 10
     } else {
-      newRecommendations.push('Add alt text to all images');
+      newRecommendations.push('Add alt text to all images')
     }
     // Check for internal links
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
     if (internalLinks.length > 0) {
-      score += 10;
+      score += 10
     } else {
-      newRecommendations.push('Add internal links for better SEO');
+      newRecommendations.push('Add internal links for better SEO')
     }
-    setSeoScore(score);
-    setRecommendations(newRecommendations);
-  }, [title, description, keywords]);
+    setSeoScore(score)
+    setRecommendations(newRecommendations)
+  }, [title, description, keywords])
   useEffect(() => {
-    analyzeSEO();
-  }, [analyzeSEO]);
+    analyzeSEO()
+  }, [analyzeSEO])
   const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
@@ -91,13 +91,13 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
       ]
-    };
-    return structuredData || defaultStructuredData;
-  };
+    }
+    return structuredData || defaultStructuredData
+  }
   return (
     <React.Fragment>
       <Helmet>
-        <title>{title}</title>
+        <title>{title}
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -115,11 +115,9 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())}
-        </script>
-      </Helmet>
       {children}
       {process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style={{
+        < className="seo-debug" style={{$2 />
           position: 'fixed',
           top: '10px',
           left: '10px',
@@ -131,21 +129,16 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           zIndex: 1000,
           maxWidth: '300px'
         }}>
-          <div>SEO Score: {seoScore}/100</div>
+          <div>SEO Score: {seoScore}/100
           {recommendations.length > 0 && (
             <div>
-              <div>Recommendations:</div>
+              <div>Recommendations:
               <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
-                  <li key={index}>{rec}</li>
+                  <li key={index}>{rec}
                 ))}
-              </ul>
-            </div>
           )}
-        </div>
       )}
-    </React.Fragment>
-  );
-};
-export default AdvancedSEOOptimizerNew;
-  </SEOOptimizerProps>
+  )
+}
+export default AdvancedSEOOptimizerNew</div></div></div></ul></li></li>

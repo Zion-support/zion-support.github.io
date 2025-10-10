@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
+import fs from 'fs'
 function fixFooter() {
-  const filePath = 'app/components/Footer.tsx';
-  let content = fs.readFileSync(filePath, 'utf8');
-  
+  const filePath = 'app/components/Footer.tsx'
+  let content = fs.readFileSync(filePath, 'utf8')
   // Fix malformed JSX elements
   const fixes = [
     // Fix malformed company name
@@ -28,14 +26,12 @@ function fixFooter() {
       pattern: /<a href="https:\/\/maps.google.com\/\?q=364\+E\+Main\+St\+STE\+1008\+Middletown\+DE\+19709" className="hover:text-cyan-400 transition-colors font-medium">364 E Main St STE 1008, Middletown, DE 19709<\/a>\n                <\/a>/g,
       replacement: '<a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" className="hover:text-cyan-400 transition-colors font-medium">364 E Main St STE 1008, Middletown, DE 19709</a>'
     }
-  ];
-  
+  ]
   fixes.forEach(fix => {
-    content = content.replace(fix.pattern, fix.replacement);
-  });
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed Footer component');
+    content = content.replace(fix.pattern, fix.replacement)
+  })
+  fs.writeFileSync(filePath, content, 'utf8')
+  console.log('Fixed Footer component')
 }
 
-fixFooter();
+fixFooter()</span></a></a></a>
