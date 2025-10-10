@@ -7,37 +7,37 @@ import { CheckCircle, Zap, Cpu, Clock, Users, Shield, BarChart, ArrowRight } fro
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
-      icon: Cpu;
+        icon: Cpu,
       title: 'Low-Latency Processing',
       description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
       benefits: ['< 1 ms latency', 'Real-time processing', 'Instant responses']
     },
     {
-      icon: Zap;
+      icon: Zap,
       title: 'Distributed Architecture',
       description: 'Deploy computing resources closer to data sources for optimal performance and efficiency.',
       benefits: ['Reduced bandwidth', 'Faster processing', 'Cost optimization']
     },
     {
-      icon: Clock;
+      icon: Clock,
       title: '24/7 Availability',
       description: 'Ensure continuous operation with edge nodes that work independently of central infrastructure.',
       benefits: ['High availability', 'Fault tolerance', 'Resilient design']
     },
     {
-      icon: Users;
+      icon: Users,
       title: 'Scalable Infrastructure',
       description: 'Easily scale your edge computing infrastructure as your needs grow.',
       benefits: ['Auto-scaling', 'Flexible deployment', 'Resource optimization']
     },
     {
-      icon: Shield;
+      icon: Shield,
       title: 'Edge Security',
 description: 'Comprehensive security measures designed specifically for edge computing environments.',
       benefits: ['Data protection', 'Secure communication', 'Compliance ready']
     },
     {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Monitor edge performance with real-time analytics and optimization recommendations.',
       benefits: ['Live monitoring', 'Performance insights', 'Proactive optimization']
