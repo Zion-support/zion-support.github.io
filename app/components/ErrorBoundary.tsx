@@ -1,7 +1,8 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { logger } from '../utils/productionLogger';
-import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import Link from 'next/link';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -93,9 +94,10 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+              
+              <Link
+                href="/"
+                className="flex items-center justify-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors"
               >
                 <RefreshCw className="w-4 h-4" />
                 Reload Page
@@ -107,7 +109,7 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 <Home className="w-4 h-4" />
                 Go Home
-              </button>
+              </Link>
             </div>
 
             <div className="mt-6 text-sm text-gray-400">
