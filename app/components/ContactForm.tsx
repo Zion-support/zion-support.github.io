@@ -78,7 +78,6 @@ interface FormStatus {
     'Other'
   ];
 
-              </label>
               <input
                 type="text"
                 id="name"
