@@ -1,18 +1,18 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const EnhancedAnalyticsPage: React.FC = () => {
+
+const EnhancedAnalytics: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      title: 'AI-Powered Analytics',
+      description: 'Advanced artificial intelligence technology to analyze your data and provide actionable insights'
     },
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      title: 'Real-Time Processing',
+      description: 'Lightning-fast data processing and real-time analytics for immediate results'
     },
     {
       icon: Shield,
@@ -25,23 +25,18 @@ const EnhancedAnalyticsPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
+    'Enterprise-grade security',
+    'Global deployment capabilities',
     '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Customizable solutions'
   ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>EnhancedAnalytics | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedAnalytics services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedAnalytics, AI solutions, IT services, Zion Tech Group, enhancedanalytics" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -54,7 +49,7 @@ const EnhancedAnalyticsPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhancedanalytics solutions. 
+              Transform your business with our advanced enhanced analytics solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -63,45 +58,45 @@ const EnhancedAnalyticsPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
-  </
+                Learn More
+              </button>
             </div>
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedAnalytics?
+              Key Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enhancedanalytics solutions deliver unmatched performance, security, and scalability.
+              Discover the powerful features that make our enhanced analytics the best choice for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+                <feature.icon className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
+              Key Benefits
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhancedanalytics solutions for your business.
+              Experience the power of our enhanced analytics solutions for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -114,25 +109,26 @@ const EnhancedAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Enhance Your Analytics?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancedanalytics needs and get a customized solution.
+              Contact our experts to discuss your enhanced analytics needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
-  </
+                Call Now
+              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
-  </
+                Email Us
+              </button>
             </div>
           </div>
         </div>
@@ -140,40 +136,5 @@ const EnhancedAnalyticsPage: React.FC = () => {
     </div>
   );
 };
-export default EnhancedAnalyticsPage;
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>
-    }
-  }
 
-  private sendToAnalytics = (metric: any) => {
-    this.trackEvent(metric.name, {
-      category: 'performance',
-      value: Math.round(metric.value),
-      label: metric.id
-    });
-  };
-}
-
-const analyticsService = new AnalyticsService();
-
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    analyticsService.init();
-  }, []);
-
-  return <>{children}</>;
-};
-;
-export default EnhancedAnalyticsPage;
-
-export const useAnalytics = () => {
-  return {
-    trackEvent: analyticsService.trackEvent.bind(analyticsService)
-  };
-};
-
-export default AnalyticsService;
+export default EnhancedAnalytics;
