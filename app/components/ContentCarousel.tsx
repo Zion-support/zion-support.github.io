@@ -157,42 +157,8 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-between mt-8">
-            <button
-              onClick={prevSlide}
-              className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <ChevronLeft className="w-6 h-6 text-white" />
-            </button>
-
-            {/* Dots */}
-            <div className="flex space-x-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
 
-<<<<<<< HEAD
-            <button
-              onClick={nextSlide}
-              className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <ChevronRight className="w-6 h-6 text-white" />
-            </button>
-=======
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
@@ -245,7 +211,6 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
           </div>
         </div>
       </div>

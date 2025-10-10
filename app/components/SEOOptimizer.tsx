@@ -1,6 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
 
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -58,7 +56,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           }
         ]
       };
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
       const script = document.createElement('script');
       script.type = 'application/ld+json';

@@ -1,117 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
-  });
-
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return;
-    }
-
-    // Web Vitals measurement
-    const measureWebVitals = () => {
-      // First Contentful Paint (FCP)
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-        }
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
-          }
-        });
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Time to First Byte (TTFB)
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-      }
-
-      // Cleanup observers after 10 seconds
-      setTimeout(() => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      }, 10000);
-    };
-
-<<<<<<< HEAD
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
-  }
-
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  };
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-=======
 import { useAnalytics } from './AnalyticsProvider';
 
 interface PerformanceMetrics {
@@ -314,18 +203,14 @@ const PerformanceMonitor: React.FC = () => {
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-gray-600"
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
         >
           ×
         </button>
       </div>
-<<<<<<< HEAD
-=======
     // Resource timing analysis
     const analyzeResources = () => {
       const resources = performance.getEntriesByType('resource');
       const slowResources = resources.filter((resource: any) => resource.duration > 1000);
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       
       if (slowResources.length > 0) {
         console.warn('Slow resources detected:', slowResources.map((r: any) => ({
@@ -379,26 +264,6 @@ const PerformanceMonitor: React.FC = () => {
       // Send to analytics if available
       if (typeof window !== 'undefined' && 'gtag' in window) {
         const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-        
-<<<<<<< HEAD
-        {metrics.fcp && (
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.ttfb && (
-          <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
-            </span>
-          </div>
-        )}
-=======
 
       <div className="space-y-3">
         {/* FCP */}
@@ -474,11 +339,9 @@ const PerformanceMonitor: React.FC = () => {
         >
           Refresh Metrics
         </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </div>
     </div>
   );
-=======
         if (metrics.fcp) gtag('event', 'web_vitals', { metric_name: 'FCP', metric_value: Math.round(metrics.fcp) });
         if (metrics.lcp) gtag('event', 'web_vitals', { metric_name: 'LCP', metric_value: Math.round(metrics.lcp) });
         if (metrics.fid) gtag('event', 'web_vitals', { metric_name: 'FID', metric_value: Math.round(metrics.fid) });
@@ -497,7 +360,6 @@ const PerformanceMonitor: React.FC = () => {
 
   // Don't render anything visible
   return null;
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 };
 
 export default PerformanceMonitor;

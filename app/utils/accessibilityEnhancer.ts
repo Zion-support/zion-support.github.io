@@ -1,31 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
-export interface AccessibilityOptions {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableColorContrast?: boolean;
-  enableTextScaling?: boolean;
-  enableReducedMotion?: boolean;
-}
-
-export class AccessibilityEnhancer {
-  private options: AccessibilityOptions;
-
-  constructor(options: AccessibilityOptions = {}) {
-    this.options = {
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrast: true,
-      enableFocusManagement: true,
-      enableColorContrast: true,
-      enableTextScaling: true,
-      enableReducedMotion: true,
-      ...options
-    };
-=======
 const AccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -50,7 +24,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
     }
     focusableElements[nextIndex]?.focus();
     event.preventDefault();
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
   }
 
   public initialize(): void {
@@ -284,8 +257,3 @@ const AccessibilityEnhancerPage: React.FC = () => {
     });
   }
 }
-<<<<<<< HEAD
-
-export default AccessibilityEnhancer;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f

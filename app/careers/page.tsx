@@ -3,11 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award, ArrowRight, Briefcase, GraduationCap, Zap } from 'lucide-react';
-=======
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
 interface JobPosition {
   id: string;
@@ -17,18 +13,10 @@ interface JobPosition {
   type: string;
   experience: string;
   description: string;
-<<<<<<< HEAD
-  requirements: string[];
-  benefits: string[];
-  salary: string;
-  posted: string;
-  featured: boolean;
-=======
   requirements?: string[];
   benefits?: string[];
   posted: string;
   featured?: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 }
 
 const CareersPage: React.FC = () => {
@@ -61,158 +49,6 @@ const CareersPage: React.FC = () => {
     },
     {
       id: '2',
-<<<<<<< HEAD
-      title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Protect our clients\' digital assets and infrastructure from cyber threats and vulnerabilities.',
-      requirements: [
-        '3+ years in cybersecurity',
-        'Certifications: CISSP, CISM, or equivalent',
-        'Experience with security tools and frameworks',
-        'Knowledge of compliance standards (SOC 2, ISO 27001)',
-        'Strong analytical and problem-solving skills'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Comprehensive health insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        '401k with company matching'
-      ],
-      salary: '$90,000 - $130,000',
-      posted: '2024-01-12',
-      featured: true
-    },
-    {
-      id: '3',
-      title: 'Cloud Solutions Architect',
-      department: 'Cloud Services',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Design and implement scalable cloud solutions for enterprise clients across multiple platforms.',
-      requirements: [
-        '4+ years cloud architecture experience',
-        'Expertise in AWS, Azure, or GCP',
-        'Experience with containerization (Docker, Kubernetes)',
-        'Strong understanding of microservices architecture',
-        'Excellent communication and client-facing skills'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Comprehensive health insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        '401k with company matching'
-      ],
-      salary: '$110,000 - $160,000',
-      posted: '2024-01-10',
-      featured: false
-    },
-    {
-      id: '4',
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Austin, TX',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Streamline our development and deployment processes through automation and infrastructure as code.',
-      requirements: [
-        '3+ years DevOps experience',
-        'Proficiency in CI/CD pipelines',
-        'Experience with infrastructure as code (Terraform, CloudFormation)',
-        'Knowledge of monitoring and logging tools',
-        'Scripting skills (Python, Bash, PowerShell)'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Comprehensive health insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        '401k with company matching'
-      ],
-      salary: '$85,000 - $125,000',
-      posted: '2024-01-08',
-      featured: false
-    },
-    {
-      id: '5',
-      title: 'Data Scientist',
-      department: 'Data Analytics',
-      location: 'New York, NY',
-      type: 'Full-time',
-      experience: '2+ years',
-      description: 'Extract insights from complex datasets to drive business decisions and improve client outcomes.',
-      requirements: [
-        '2+ years data science experience',
-        'Proficiency in Python, R, SQL',
-        'Experience with machine learning libraries',
-        'Strong statistical analysis skills',
-        'Experience with data visualization tools'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Comprehensive health insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        '401k with company matching'
-      ],
-      salary: '$80,000 - $120,000',
-      posted: '2024-01-05',
-      featured: false
-    },
-    {
-      id: '6',
-      title: 'Frontend Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '2+ years',
-      description: 'Build beautiful, responsive user interfaces for our web applications and client portals.',
-      requirements: [
-        '2+ years frontend development experience',
-        'Proficiency in React, TypeScript, CSS',
-        'Experience with modern build tools',
-        'Understanding of UX/UI principles',
-        'Experience with responsive design'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Comprehensive health insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        '401k with company matching'
-      ],
-      salary: '$70,000 - $100,000',
-      posted: '2024-01-03',
-      featured: false
-    }
-  ];
-
-  const companyValues = [
-    {
-      icon: <Star className="w-8 h-8 text-blue-600" />,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, delivering exceptional results for our clients.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-600" />,
-      title: 'Collaboration',
-      description: 'We believe in the power of teamwork and collaboration to achieve great things together.'
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-blue-600" />,
-      title: 'Passion',
-      description: 'We are passionate about technology and its potential to transform businesses and lives.'
-    },
-    {
-      icon: <Award className="w-8 h-8 text-blue-600" />,
-      title: 'Innovation',
-      description: 'We embrace innovation and continuously seek new ways to solve complex problems.'
-=======
       title: 'Cloud Architect',
       department: 'Cloud Services',
       location: 'New York, NY',
@@ -282,27 +118,10 @@ const CareersPage: React.FC = () => {
       ],
       posted: '5 days ago',
       featured: false
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Competitive salary and equity packages',
-    'Comprehensive health, dental, and vision insurance',
-    'Flexible work arrangements and remote options',
-    'Professional development and training budget',
-    '401k with company matching',
-    'Unlimited paid time off',
-    'Modern equipment and tools',
-    'Team building events and activities',
-    'Mentorship and career growth opportunities',
-    'Stock options for all employees'
-  ];
-
-  const featuredPositions = openPositions.filter(position => position.featured);
-  const regularPositions = openPositions.filter(position => !position.featured);
-=======
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',
@@ -335,43 +154,17 @@ const CareersPage: React.FC = () => {
       description: 'We embrace innovation and are always looking for new ways to solve complex problems.'
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of innovative technology professionals. Explore career opportunities at Zion Tech Group and help shape the future of AI and IT solutions." />
-        <meta name="keywords" content="careers, jobs, technology careers, AI jobs, software engineering, remote work" />
-=======
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of AI and technology. Explore our open positions and benefits." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, frontend developer, DevOps, remote work, tech jobs" />
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Join Our Team
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Build the future of technology with us. We're looking for passionate individuals who want to make a difference.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                  View Open Positions
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
-                  Learn About Our Culture
-                </button>
-              </div>
-=======
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -387,30 +180,11 @@ const CareersPage: React.FC = () => {
               <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 Learn About Our Culture
               </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
           </div>
         </section>
 
         {/* Company Values */}
-<<<<<<< HEAD
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                These core values guide everything we do and shape our company culture.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {companyValues.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    {value.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
@@ -422,109 +196,12 @@ const CareersPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Work With Us?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We offer comprehensive benefits and a supportive work environment to help you thrive.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Positions */}
-        {featuredPositions.length > 0 && (
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Positions</h2>
-                <p className="text-xl text-gray-600">Check out our most exciting open roles</p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8">
-                {featuredPositions.map((position) => (
-                  <div key={position.id} className="bg-white border-2 border-blue-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{position.title}</h3>
-                        <p className="text-blue-600 font-medium">{position.department}</p>
-                      </div>
-                      <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                        Featured
-                      </span>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600 mb-4">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      <span className="mr-4">{position.location}</span>
-                      <Clock className="w-4 h-4 mr-1" />
-                      <span className="mr-4">{position.type}</span>
-                      <Briefcase className="w-4 h-4 mr-1" />
-                      <span>{position.experience}</span>
-                    </div>
-                    <p className="text-gray-600 mb-4">{position.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-green-600">{position.salary}</span>
-                      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
-                        Apply Now
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* All Positions */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">All Open Positions</h2>
-              <p className="text-xl text-gray-600">Explore all available opportunities</p>
-            </div>
-            <div className="space-y-6">
-              {regularPositions.map((position) => (
-                <div key={position.id} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{position.title}</h3>
-                      <p className="text-blue-600 font-medium mb-3">{position.department}</p>
-                      <div className="flex items-center text-sm text-gray-600 mb-3">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        <span className="mr-4">{position.location}</span>
-                        <Clock className="w-4 h-4 mr-1" />
-                        <span className="mr-4">{position.type}</span>
-                        <Briefcase className="w-4 h-4 mr-1" />
-                        <span>{position.experience}</span>
-                      </div>
-                      <p className="text-gray-600 mb-3">{position.description}</p>
-                    </div>
-                    <div className="flex flex-col md:items-end md:ml-6">
-                      <span className="text-lg font-bold text-green-600 mb-3">{position.salary}</span>
-                      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
-                        Apply Now
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </button>
-                    </div>
-=======
         {/* Open Positions */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -580,7 +257,6 @@ const CareersPage: React.FC = () => {
                     <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
                       Apply Now
                     </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
                   </div>
                 </div>
               ))}
@@ -588,18 +264,6 @@ const CareersPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Don't See the Right Role?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
-            </p>
-            <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-              Submit Your Resume
-            </button>
-=======
         {/* Benefits Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -636,7 +300,6 @@ const CareersPage: React.FC = () => {
                 </button>
               </div>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
           </div>
         </section>
       </div>

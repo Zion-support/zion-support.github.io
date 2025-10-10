@@ -134,8 +134,6 @@ const ContentPromotionBanner: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
         {/* CTA Section */}
         <div className="text-center">
@@ -157,7 +155,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       </div>
     </div>
   );

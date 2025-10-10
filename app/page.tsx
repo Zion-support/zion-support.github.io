@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-    return () => clearTimeout(timer);)
+    return () => clearTimeout(timer);
 }, []);
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
