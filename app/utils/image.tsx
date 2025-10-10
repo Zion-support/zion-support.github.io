@@ -1,125 +1,37 @@
-<<<<<<< HEAD
 'use client';
-import React from 'react'
-'use client';
-import React, { useState, useCallback } from 'react'
-interface ImageProps {
-  src: string,
-    alt: string}
-interface ImageProps {}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
-  src: string,
-    alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
-  src: string,
-  alt: string,  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
-  src: string,
-  alt: string,
-<<<<<<< HEAD
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  src: string,;
-  alt: string,;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;}
-}
-export const Image: React.FC<ImageProps>= ({}
-export const Image: React.FC</ImageProps><ImageProps> = ({}
-  src,export const Image: React.FC</ImageProps><ImageProps> = ({,
-  src
-  alt,
-  width,
-  height,
-  className,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  fill = false,
-  sizes,
-  style,
-  onLoad,
-  onError,}
-  ...props}
-}) => {}
-  ;
 
-const [, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const handleLoad = useCallback(() => {}
-    setIsLoaded(true)
-    if (onLoad) onLoad()}
-  }, [onLoad])
-  ;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const handleError = useCallback(() => {}
-    setHasError(true)
-    if (onError) onError()}
-  }, [onError])
-  const imageStyle: React.CSSProperties = {
-    ...style
-    ...(fill && {
-      position: 'absolute'
-      top: 0,
-      left: 0,}
-  const imageStyle: React.CSSProperties = {}
-    ...style,
-    ...(fill && {}
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover'}
-    })
-  }
-  if (hasError) {</ImageProps>;
-
-return (</ImageProps>}
-  if (hasError) {}
-    return (
-      <div}
-  if (hasError) {}
-    return(<div}
-'use client';
-import React, { useState, useCallback } from 'react'
-interface ImageProps {/* TODO: Fix JSX expression */}
-}
-export const,
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  }, [onLoad])
-  const handleError;
-
-export default Image;
-    />);
+const Image = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Image | Zion Tech Group</title>
+        <meta name="description" content="Image - Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="image, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Image
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
+
 export default Image;
-"`
-  </div>
-  </ImageProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,61 +1,37 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'import React from 'react'
-import { Loader2  } from 'lucide-react'export const PageLoader: React.FC = () => {
-=======
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
-import React from 'react';
 
-export const PageLoader: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const LoadingStates = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
-    </div>
-<<<<<<< HEAD
-  )}
-export const ComponentLoader: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center p-8">
-      <div className="flex items-center space-x-2 text-cyan-400">
-        <Loader2 className="w-5 h-5 animate-spin" />
-        <span>Loading component...</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>LoadingStates | Zion Tech Group</title>
+        <meta name="description" content="LoadingStates - Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="loadingstates, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            LoadingStates
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  )}
-export const ServiceCardSkeleton: React.FC = () => {
-  return (
-    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
-      <div className="w-12 h-12 bg-slate-700 rounded-lg mb-4"></div>
-      <div className="h-6 bg-slate-700 rounded mb-3 w-3/4"></div>
-      <div className="h-4 bg-slate-700 rounded mb-2"></div>
-      <div className="h-4 bg-slate-700 rounded w-5/6 mb-4"></div>
-      <div className="h-8 bg-slate-700 rounded w-1/2 mx-auto"></div>
-    </div>
-  )}
-export const ContentSkeleton: React.FC = () => {
-  return (
-    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
-      <div className="h-8 bg-slate-700 rounded mb-4 w-1/2"></div>
-      <div className="h-4 bg-slate-700 rounded mb-2"></div>
-      <div className="h-4 bg-slate-700 rounded mb-2"></div>
-      <div className="h-4 bg-slate-700 rounded w-3/4"></div>
-    </div>
-<<<<<<< HEAD
-  )}
-=======
   );
 };
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-export const LoadingSpinner: React.FC = () => (
-  <div className="flex items-center justify-center p-8">
-    <div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-  </div>
-);
-=======
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
+export default LoadingStates;

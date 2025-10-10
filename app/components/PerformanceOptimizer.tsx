@@ -1,126 +1,37 @@
-<<<<<<< HEAD
 'use client';
-;
-;
-;
-import React, { useEffect, useState, useCallback } from 'react'
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
-interface PerformanceOptimizerProps {
-  children: React.ReactNode
-  enableImageOptimization?: boolean
-  enableLazyLoading?: boolean
-  enablePreloading?: boolean
-  enableCodeSplitting?: boolean
-}
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
-  children, 
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
-  ;
 
-const [isOptimizing, setIsOptimizing] = useState(false)
-  const [optimizations, setOptimizations] = useState</PerformanceOptimizerProps><string[]>([])
-  const [performanceScore, setPerformanceScore] = useState</string><number | null>(null)
-  const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization) ;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-return
-    const images = document.querySelectorAll('img')
-    images.forEach((img) => {
-      if (!img.loading) {
-        img.loading = 'lazy'
-      }
-      if (!img.decoding) {
-        img.decoding = 'async'
-      }
-    })
-  }, [enableImageOptimization])
-  ;
-
-const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {
-      ;
-
-const memory = (performance as any).memory
-      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        // Trigger garbage collection if available
-        if (window.gc) {
-          window.gc()
-        }
-      }
-    }
-  }, [])
-  const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true)
-    const newOptimizations: string[] = []
-    if (enableImageOptimization) {
-      optimizeImages()
-      newOptimizations.push('Images optimized for lazy loading')
-    }
-    // Optimize memory
-    optimizeMemory()
-    newOptimizations.push('Memory optimization applied')
-    const score = Math.floor(Math.random() * 30) + 70
-    setPerformanceScore(score)
-    newOptimizations.push(`Performance score: ${score}/100`)
-    setOptimizations(newOptimizations)
-    setIsOptimizing(false)
-  }, [enableImageOptimization, optimizeImages, optimizeMemory])
-  useEffect(() => {
-    // Run initial optimizations
-    const timer = setTimeout(() => {
-      runOptimizations()
-    }, 1000);
-
-return () => clearTimeout(timer)
-  }, [runOptimizations])return (</number>
-    <div className="performance-optimizer">
-      {children}
-      {/* Performance Status Indicator (only in development) */}
-      {process.env.NODE_ENV === 'development' && (</div>
-        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs"></div>
-          <div className="flex items-center space-x-2 mb-2"></div>
-            <Settings className="w-4 h-4 text-cyan-400" /></Settings>
-            <span className="font-semibold">Performance Optimizer</span>
+const PerformanceOptimizer = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>PerformanceOptimizer | Zion Tech Group</title>
+        <meta name="description" content="PerformanceOptimizer - Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="performanceoptimizer, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            PerformanceOptimizer
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
           </div>
-          {isOptimizing ? (
-            <div className="flex items-center space-x-2 text-yellow-400"></div>
-              <Zap className="w-4 h-4 animate-pulse" /></Zap>
-              <span>Optimizing...</span>
-            </div>
-          ) : (
-            <div className="space-y-2">
-              {performanceScore && (</div>
-                <div className="flex items-center space-x-2"></div>
-                  <CheckCircle className="w-4 h-4 text-green-400" /></CheckCircle>
-                  <span>Score: {performanceScore}/100</span>
-                </div>
-              )}
-              <div className="text-xs text-gray-300">
-                {optimizations.length > 0 ? (</div>
-                  <ul className="space-y-1">
-                    {optimizations.map((opt, index) => (</ul>
-                      <li key={index} className="flex items-center space-x-1"></li>
-                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" /></CheckCircle>
-                        <span>{opt}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <span>No optimizations applied</span>
-                )}
-              </div>
-            </div>
-          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };
 
 export default PerformanceOptimizer;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

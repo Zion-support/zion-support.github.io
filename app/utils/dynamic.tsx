@@ -1,39 +1,37 @@
 'use client';
-import React, { lazy, Suspense, ComponentType } from 'react'
-interface DynamicOptions {
-  loading?: () => React.ReactElement}
-interface DynamicOptions {}
-  loading?: () => React.ReactElement
-  ssr?: boolean}
-}
-export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{ default: T }>,
-  options: DynamicOptions = {}
-): ComponentType<unknown>{
-  ;
 
-const LazyComponent = lazy(importFunc)</unknown>}
-  ;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>
-): ComponentType<unknown> {}
-  ;
+const Dynamic = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Dynamic | Zion Tech Group</title>
+        <meta name="description" content="Dynamic - Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="dynamic, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Dynamic
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-const LazyComponent = lazy(importFunc);
-
-return (props: unknown) => (}</unknown>
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}><LazyComponent {...props}  />
-'use client';
-import React, { lazy, Suspense, ComponentType } from 'react'
-interface DynamicOptions {/* TODO: Fix JSX expression */}
-}
-export function dynamic</LazyComponent><T extends ComponentType<unknown>>(importFun)
-  c: () => Promise</T><{/* TODO: Fix JSX expression */}
-  t: T }>,
-  option,
-  s: DynamicOptions;
-
-export default dynamic
-  </unknown>
-  </T>
-  </Suspense>
-  </unknown>
+export default Dynamic;

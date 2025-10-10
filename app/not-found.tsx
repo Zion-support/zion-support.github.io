@@ -1,47 +1,37 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
-export default function NotFound() {
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const Notfound = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center"></div>
-        <div className="flex justify-center mb-6"></div>
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center"></div>
-            <span className="text-4xl">404</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Notfound | Zion Tech Group</title>
+        <meta name="description" content="Notfound - Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="notfound, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Notfound
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
           </div>
-        </div>
-        <h1 className="text-2xl font-bold text-white mb-4">
-          Page Not Found
-  </
-        <p className="text-gray-300 mb-6">
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3"></div>
-          <Link
-            href="/"
-            className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"></Link>
-            <Home className="w-4 h-4 mr-2" />
-            Go Home
-  </
-          <button
-            onClick={() => window.history.back()}
-            className="flex items-center justify-center px-6 py-3 border-2 border-gray-600 text-gray-300 hover:bg-gray-700 font-medium rounded-lg transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Go Back
-  </
-        </div>
-        <div className="mt-6 text-sm text-gray-400">
-          If you believe this is an error, please contact our support team.
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
-}
-  </button>
-  </Link>
-  </h1>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
+};
+
+export default Notfound;

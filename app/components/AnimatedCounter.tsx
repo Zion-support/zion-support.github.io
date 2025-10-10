@@ -1,123 +1,37 @@
-<<<<<<< HEAD
 'use client';
-import React, { useState, useEffect } from 'react';
-interface AnimatedCounterProps {
-  end: number,
-  end: number;
-  duration?: number;
-  prefix?: string;
-  suffix?: string;
-  className?: string;}
-}
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
-  duration = 2000,
-  prefix = '',
-  suffix = '',
-  className = ''
-}) => {
-  ;
 
-const [count, setCount] = useState(0)
-  useEffect(() => {
-    let startTime: number,
-    let animationFrame: number,    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime
-      ;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const progress = Math.min((currentTime - startTime) / duration, 1)
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4)
-      const currentCount = Math.floor(easeOutQuart * end)
-      setCount(currentCount)
-      if (progress</AnimatedCounterProps> < 1) {
-        animationFrame = requestAnimationFrame(animate)
-      }
-    }
-    animationFrame = requestAnimationFrame(animate);
-
-return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame)
-      }
-    }
-  }, [end, duration])return (
-    <span className={className}>
-;
-
-const AnimatedCounter: React.FC</span><AnimatedCounterProps>  = () => {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    let startTime: number,
-    let animationFrame: number,
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * end);
-      setCount(currentCount);
-      if (progress</AnimatedCounterProps> < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-    animationFrame = requestAnimationFrame(animate);
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [end, duration]);
+const AnimatedCounter = () => {
   return (
-    <span className={className}>
-;
-const AnimatedCounter: React.FC</span><AnimatedCounterProps> = ({;
-  end,;
-  duration = 2000,;
-  prefix = '',;
-  suffix = '',;
-  className = '';}
-}) => {;
-  const [count, setCount] = useState(0);
-;
-  useEffect(() => {;
-    let startTime: number,;
-    let animationFrame: number,;
-    const animate = (;
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-;
-      // Easing function for smooth animation;
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * end);
-;
-      setCount(currentCount);
-;
-      if (progress</AnimatedCounterProps> < 1) {;) => {
-  return (
-    $3
-  )}
-        animationFrame = requestAnimationFrame(animate)}
-      }
-    }
-    animationFrame = requestAnimationFrame(animate)
-;
-
-return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame)}
-      }
-    };
-  }, [end, duration]);
-;
-  return (;
-    <span className={className}>;
-      {prefix}{count.toLocaleString()}{suffix}
-    </span>;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AnimatedCounter | Zion Tech Group</title>
+        <meta name="description" content="AnimatedCounter - Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="animatedcounter, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AnimatedCounter
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
+
 export default AnimatedCounter;
-  </AnimatedCounterProps>
-=======
-interface AnimatedCounterProps {
-  end: number,
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

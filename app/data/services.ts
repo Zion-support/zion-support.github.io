@@ -1,15 +1,31 @@
-import {
-  Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
-  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon}
-} from 'lucide-react'
-export const microSAASServices;
+// Services data
 
-export const contactInfo = {
-  phone: '+1 (302) 464-0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709',
-  website: 'https://ziontechgroup.com',
-  hours: 'Mon-Fri: 9AM-6PM EST'}
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
 }
+
+export const services: Service[] = [
+  {
+    id: 'ai-solutions',
+    name: 'AI Solutions',
+    description: 'Advanced AI and machine learning solutions',
+    category: 'AI'
+  },
+  {
+    id: 'it-services',
+    name: 'IT Services',
+    description: 'Comprehensive IT infrastructure and support',
+    category: 'IT'
+  },
+  {
+    id: 'cloud-services',
+    name: 'Cloud Services',
+    description: 'Cloud migration and management services',
+    category: 'Cloud'
+  }
+];
+
+export default services;

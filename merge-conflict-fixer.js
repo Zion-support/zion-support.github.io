@@ -1,3 +1,0 @@
-// #!/usr/bin/env node const fs = require('fs');' const path = require('path'); ' //Function to resolve merge conflicts in a file function resolveMergeConflicts(filePath) { try { ' let content = fs.readFileSync(filePath) 'utf8')
-  y: `), if (resolvedCount === conflictFiles.length) {' // console.log('🎉 All merge conflicts have been resolved!')} } else {' // console.log('⚠️ Some files could not be resolved automatically')} } } } catch (error) {' process.exit(1)}'
-`

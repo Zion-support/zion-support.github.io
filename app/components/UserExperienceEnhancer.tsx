@@ -1,50 +1,37 @@
-<<<<<<< HEAD
 'use client';
+
 import React from 'react';
-'use client';
-import React, { useEffect, useState } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
-interface UserExperienceEnhancerProps {
-  children: React.ReactNode
-}
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
-  useEffect(() => {
-    // UX enhancement logic
-    const enhanceUX = () => {
-      // Add smooth scrolling
-      document.documentElement.style.scrollBehavior = 'smooth';
-      // Add loading states for interactive elements
-<<<<<<< HEAD
-      const interactiveElements = document.querySelectorAll('button, a, input');
-      interactiveElements.forEach((element, index) => {;) => {
+import { Helmet } from 'react-helmet-async';
+
+const UserExperienceEnhancer = () => {
   return (
-    $3
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>UserExperienceEnhancer | Zion Tech Group</title>
+        <meta name="description" content="UserExperienceEnhancer - Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="userexperienceenhancer, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            UserExperienceEnhancer
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
-        element.addEventListener('click', () => {;}
-          setLoadingStates(prev => ({ ...prev, [index]: true }));
-          setTimeout(() => {;}
-            setLoadingStates(prev => ({ ...prev, [index]: false }));
-          }, 1000);
-        });
-      });
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `;
-        *:focus {;
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px,;}
-        }
-      `;
-      document.head.appendChild(style);
-    };
-    enhanceUX();
-  }, []);
-  return <React.Fragment>{children}</React.Fragment>;
-};
+
 export default UserExperienceEnhancer;
-  </UserExperienceEnhancerProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b853

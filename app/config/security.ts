@@ -1,7 +1,9 @@
 /**
  * Security Configuration
  * Defines security headers and policies for the application
- */export const securityHeaders = {
+ */
+
+export const securityHeaders = {
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
@@ -18,22 +20,19 @@
       connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
-      upgradeInsecureRequests: true,}
+      upgradeInsecureRequests: true,
     },
   },
   headers: {
     'X-DNS-Prefetch-Control': 'on',
     'Strict-Transport-Security': 'max-age=63072000 includeSubDomains preload',
-    'X-XSS-Protection': '1; mode;
+    'X-XSS-Protection': '1; mode=block',
+    'X-Frame-Options': 'DENY',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'origin-when-cross-origin',
+  },
+};
 
 export default {
   securityHeaders,
-  rateLimitConfig,
-  corsConfig,
-  sessionConfig,
-  validationPatterns,
-  sanitizeInput,
-  validateEmail,
-  validateUrl,
-  generateSecureToken,}
-}
+};

@@ -1,97 +1,37 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;}
-}
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
-  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
-}) => {
-  ;
 
-const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  ;
-
-const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-
-return (</SEOHeadProps>
-    <Helmet>
-      {/* Basic Meta Tags */}</Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} /></meta>
-      <meta name="keywords" content={keywords} /></meta>
-      <meta name="author" content="Zion Tech Group" /></meta>
-      <meta name="robots" content="index, follow" /></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {/* Canonical URL */}
-      {canonicalUrl &&</meta> <link rel="canonical" href={canonicalUrl} />}
-      {/* Open Graph Meta Tags */}</link>
-      <meta property="og:title" content={fullTitle} /></meta>
-      <meta property="og:description" content={description} /></meta>
-      <meta property="og:type" content={ogType} /></meta>
-      <meta property="og:url" content={canonicalUrl} /></meta>
-      <meta property="og:image" content={ogImage} /></meta>
-      <meta property="og:site_name" content="Zion Tech Group" /></meta>
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}</meta>
-      <meta name="twitter:card" content={twitterCard} /></meta>
-      <meta name="twitter:title" content={fullTitle} /></meta>
-      <meta name="twitter:description" content={description} /></meta>
-      <meta name="twitter:image" content={ogImage} />
-      {/* Additional SEO Meta Tags */}</meta>
-      <meta name="theme-color" content="#0f172a" /></meta>
-      <meta name="msapplication-TileColor" content="#0f172a" /></meta>
-      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      {/* Structured Data */}</meta>
-      <script type="application/ld+json">;
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>;
-    </Helmet>;
+const SEOHead = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>SEOHead | Zion Tech Group</title>
+        <meta name="description" content="SEOHead - Advanced AI and IT solutions by Zion Tech Group" />
+        <meta name="keywords" content="seohead, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            SEOHead
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT solutions powered by cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
+
 export default SEOHead;
-  </SEOHeadProps>
-=======
-interface SEOHeadProps {
->>>>>>> cursor/fix-errors-and-merge-to-main-b853
