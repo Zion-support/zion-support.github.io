@@ -1,35 +1,27 @@
-
-
 'use client';
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  loadTim,
-  e: number;,
-    renderTim,
-  e: number;,
-    memoryUsag,
-  e: number;,
-    fp,
-  s: number;
-}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
 
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
+import React, { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
   [key: string]: number;
-
 }
 
-const,
-  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
+interface PerformanceProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+}
+
+const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0
   });
 
-<<<<<<< HEAD
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -42,6 +34,7 @@ const,
       // Measure render time
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
+      
       // Measure memory usage
       let memoryUsage = 0;
       if ('memory' in performance) {
@@ -71,22 +64,28 @@ const,
         renderTime,
         memoryUsage,
         fps
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        }
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
       });
-    });
+    };
 
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'paint') {
+            updateMetrics();
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['paint'] });
       return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
   }, []);
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {
+    if (onMetricsUpdate) {
+      onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
 
@@ -94,6 +93,3 @@ const,
 };
 
 export default PerformanceDashboard;
-
-
-

@@ -16,6 +16,8 @@ import { Helmet } from 'react-helmet-async';
         </div>
       </div>
     </div>
+      </div>
+    </>
   );
 };
 

@@ -115,7 +115,10 @@ export default function APIDocsPage() {
       />
       <Navigation />
       
-            </div>
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">API Documentation</h1>
+            <p className="text-xl text-gray-300">Comprehensive API documentation for our services</p>
           </div>
         </div>
       </section>

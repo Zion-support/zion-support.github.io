@@ -1,40 +1,40 @@
-'use client';
+'use client'
 /**
  * Enhanced Error Reporting Utility
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
 export interface ErrorReport {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  context?: Record<string, unknown>;
+  message: string
+  stack?: string
+  componentStack?: string
+  timestamp: string
+  userAgent: string
+  url: string
+  severity: 'low' | 'medium' | 'high' | 'critical'
+  context?: Record<string, unknown>
 }
 export interface ErrorReporterConfig {
-  enableConsoleLogging: boolean;
-  enableRemoteLogging: boolean;
-  remoteEndpoint?: string;
-  maxErrorsInMemory: number;
-  captureContext: boolean;
+  enableConsoleLogging: boolean
+  enableRemoteLogging: boolean
+  remoteEndpoint?: string
+  maxErrorsInMemory: number
+  captureContext: boolean
 }
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
+  enableConsoleLogging: process.env['NODE_ENV'] === 'development'
+  enableRemoteLogging: process.env['NODE_ENV'] === 'production'
+  maxErrorsInMemory: 50
   captureContext: true
-};
+}
 /**
  * ErrorReporter class for comprehensive error handling
  */
 export class ErrorReporter {
-  private static instance: ErrorReporter;
-  private config: ErrorReporterConfig;
-  private errorQueue: ErrorReport[] = [];
-  private errorCount: Map<string, number> = new Map();
+  private static instance: ErrorReporter
+  private config: ErrorReporterConfig
+  private errorQueue: ErrorReport[] = []
+  private errorCount: Map<string, number> = new Map()
   private constructor(config: Partial<ErrorReporterConfig> = {}) {
-    this.config = { ...defaultConfig, ...config };
+    this.config = { ...defaultConfig, ...config }
   }
   /**
    * Get singleton instance
@@ -45,164 +45,152 @@ export class ErrorReporter {
 import React from 'react'
 'use client'
 /**
- * Enhanced Error Reporting Utility;
- * Provides comprehensive error tracking, logging, and reporting capabilities;
+ * Enhanced Error Reporting Utility
+ * Provides comprehensive error tracking, logging, and reporting capabilities
  */
 
 export interface ErrorReport {// TODO: Add content;}
-
-};
-  messag,
-  e: string;
-  stack?: string;
-  componentStack?: string;,
-
-    timestamp: string;,
-    userAgent: string;,
-    url: string;,
-    severity: 'low' | 'medium' | 'high' | 'critical';
-
-  context?: Record;
-          <string, unknown>;
 }
-export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
+  messag
+  e: string
+  stack?: string
+  componentStack?: string;
+    timestamp: string;
+    userAgent: string;
+    url: string;
+    severity: 'low' | 'medium' | 'high' | 'critical'
+  context?: Record
+          <string, unknown>
+}
+export interface ErrorReporterConfig {}
   O: Add content;}
-};
-
-  enableConsoleLogging: boolean;,
+}
+  enableConsoleLogging: boolean;
     enableRemoteLogging: boolean
 
-  remoteEndpoint?: string;,
-    maxErrorsInMemor,
-  y: number;,
-    captureContex,
-  t: boolean;
+  remoteEndpoint?: string;
+    maxErrorsInMemor
+  y: number;
+    captureContex
+  t: boolean
 }
-
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
-  captureContext: true;
-
-};
+  enableConsoleLogging: process.env['NODE_ENV'] === 'development'
+  enableRemoteLogging: process.env['NODE_ENV'] === 'production'
+  maxErrorsInMemory: 50
+  captureContext: true
+}
 /**
- * ErrorReporter class for comprehensive error handling;
+ * ErrorReporter class for comprehensive error handling
  */
 
 export class ErrorReporter {// TODO: Add content;}
-
 }
-  private static,
-  instance: ErrorReporter;
-  private,
-  config: ErrorReporterConfig;
-  private,
-  errorQueue: ErrorReport[] = [];
-  private,
-  errorCount: Map;
-          <string, number> = new Map();
+  private static
+  instance: ErrorReporter
+  private
+  config: ErrorReporterConfig
+  private
+  errorQueue: ErrorReport[] = []
+  private
+  errorCount: Map
+          <string, number> = new Map()
   private constructor(confi)
-  g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
+  g: Partial<ErrorReporterConfig> = {}) {}
   O: Add content;}
 }
-    this.config = { ...defaultConfig, ...config };
+    this.config = { ...defaultConfig, ...config }
   }
   /**
-   * Get singleton instance;
+   * Get singleton instance
    */
 
-  static getInstance(config?: Partial;
+  static getInstance(config?: Partial
           <ErrorReporterConfig>): ErrorReporter {// TODO: Add content;}
-
 }
-    if (!ErrorReporter.instance) {/* TODO: Fix JSX expression */}
+    if (!ErrorReporter.instance) {}
   O: Add content;}
 }
-      ErrorReporter.instance = new ErrorReporter(config);
+      ErrorReporter.instance = new ErrorReporter(config)
     }
-    return ErrorReporter.instance;
+    return ErrorReporter.instance
   }
   /**
    * Report an error with full context
    */
   reportError(
-    error: Error,
-    severity: ErrorReport['severity'] = 'medium',
+    error: Error
+    severity: ErrorReport['severity'] = 'medium'
     context?: Record<string, unknown>
   ): void {
     const errorReport: ErrorReport = {
-      message: error.message,
-   * Report an error with full context;
+      message: error.message
+   * Report an error with full context
    */
 //   reportError()
-    erro,
-  r: Error,
-    severit,
-  y: ErrorReport['severity'] = 'medium',
-    context?: Record;
-
+    erro
+  r: Error
+    severit
+  y: ErrorReport['severity'] = 'medium'
+    context?: Record
           <string, unknown>
   ): void {// TODO: Add content;}
-
 }
-    const,
-  errorReport: ErrorReport = {/* TODO: Fix JSX expression */}
+    const
+  errorReport: ErrorReport = {}
   O: Add content;}
-};
-
-  message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-      severity,
+}
+  message: error.message
+      stack: error.stack
+      timestamp: new Date().toISOString()
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+      severity
       context: this.config.captureContext ? context : undefined
-    };
+    }
     // Track error frequency
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
+    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
     // Add to queue (with size limit)
-    this.errorQueue.push(errorReport);
+    this.errorQueue.push(errorReport)
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {
-      this.errorQueue.shift();
+      this.errorQueue.shift()
     }
     // Console logging
     if (this.config.enableConsoleLogging) {
-      this.logToConsole(errorReport);
+      this.logToConsole(errorReport)
     }
     // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
-//       severity,
-      context: this.config.captureContext ? context : undefined;
-
-    };
-    // Track error frequency;
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
+//       severity
+      context: this.config.captureContext ? context : undefined
+    }
+    // Track error frequency
+    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
     // Add to queue (with size limit)
-    this.errorQueue.push(errorReport);
-    if (this.errorQueue.length > this.config.maxErrorsInMemory) {/* TODO: Fix JSX expression */}
+    this.errorQueue.push(errorReport)
+    if (this.errorQueue.length > this.config.maxErrorsInMemory) {}
   O: Add content;}
 }
-      this.errorQueue.shift();
+      this.errorQueue.shift()
     }
-    // Console logging;
-    if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
+    // Console logging
+    if (this.config.enableConsoleLogging) {}
   O: Add content;}
 }
-      this.logToConsole(errorReport);
+      this.logToConsole(errorReport)
     }
-    // Remote logging;
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */}
+    // Remote logging
+    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
   O: Add content;}
 }
-      this.sendToRemote(errorReport);
+      this.sendToRemote(errorReport)
     }
   }
   /**
    * Log error to console with formatting
    */
   private logToConsole(report: ErrorReport): void {
-    const style = this.getConsoleStyle(report.severity);
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
+    const style = this.getConsoleStyle(report.severity)
+    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style)
     if (process.env['NODE_ENV'] === 'development') {}
     if (process.env['NODE_ENV'] === 'development') {}
     if (process.env['NODE_ENV'] === 'development') {}
@@ -212,69 +200,68 @@ export class ErrorReporter {// TODO: Add content;}
     if (report.context) {
       if (process.env['NODE_ENV'] === 'development') {}
     }
-    console.groupEnd();
+    console.groupEnd()
   }
   /**
    * Get console styling based on severity
    */
   private getConsoleStyle(severity: ErrorReport['severity']): string {
     const styles = {
-      low: 'color: #2196F3; font-weight: bold',
-      medium: 'color: #FF9800; font-weight: bold',
-      high: 'color: #F44336; font-weight: bold',
-      critical:     ,
-$4};
-    return styles[severity];
+      low: 'color: #2196F3; font-weight: bold'
+      medium: 'color: #FF9800; font-weight: bold'
+      high: 'color: #F44336; font-weight: bold'
+      critical:     
+$4}
+    return styles[severity]
   }
   /**
    * Send error to remote logging service
    */
   private async sendToRemote(report: ErrorReport): Promise<void> {
-    if (!this.config.remoteEndpoint) return;
+    if (!this.config.remoteEndpoint) return
     try {
       await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
+        method: 'POST'
         headers: {
           'Content-Type': 'application/json'
-        },
+        }
         body: JSON.stringify(report)
-      });
+      })
     } catch (error) {
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
-        logger.warn('Failed to send error to remote endpoint:', error);
-   * Log error to console with formatting;
+        logger.warn('Failed to send error to remote endpoint:', error)
+   * Log error to console with formatting
    */
 
   private logToConsole(report: ErrorReport): void {// TODO: Add content;}
-
 }
-    const style = this.getConsoleStyle(report.severity);
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+    const style = this.getConsoleStyle(report.severity)
+    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style)
+    if (process.env['NODE_ENV'] === 'development') {}
   O: Add content;}
 }
       }
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env['NODE_ENV'] === 'development') {}
   O: Add content;}
 }
       }
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env['NODE_ENV'] === 'development') {}
   O: Add content;}
 }
       }
-    if (report.stack) {/* TODO: Fix JSX expression */}
+    if (report.stack) {}
   O: Add content;}
 }
-      if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+      if (process.env['NODE_ENV'] === 'development') {}
   O: Add content;}
 }
         }
     }
-    if (report.context) {/* TODO: Fix JSX expression */}
+    if (report.context) {}
   O: Add content;}
 }
-      if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+      if (process.env['NODE_ENV'] === 'development') {}
   O: Add content;}
 }
         }
@@ -282,60 +269,55 @@ $4};
     console.groupEnd()
   }
   /**
-   * Get console styling based on severity;
+   * Get console styling based on severity
    */
 
   private getConsoleStyle(severity: ErrorReport['severity']): string {// TODO: Add content;}
-
 }
-    const styles = {/* TODO: Fix JSX expression */}
+    const styles = {}
   O: Add content;}
-};
-
-  low: 'color: #2196F3; font-weight: bold',
-      medium: 'color: #FF9800; font-weight: bold',
-      high: 'color: #F44336; font-weight: bold',
+}
+  low: 'color: #2196F3; font-weight: bold'
+      medium: 'color: #FF9800; font-weight: bold'
+      high: 'color: #F44336; font-weight: bold'
       critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'
 
     }
     return styles[severity]
   }
   /**
-   * Send error to remote logging service;
+   * Send error to remote logging service
    */
 
-  private async sendToRemote(report: ErrorReport): Promise;
+  private async sendToRemote(report: ErrorReport): Promise
           <void> {// TODO: Add content;}
-
 }
-    if (!this.config.remoteEndpoint) return;
-    try {/* TODO: Fix JSX expression */}
+    if (!this.config.remoteEndpoint) return
+    try {}
   O: Add content;}
 }
-      await fetch(this.config.remoteEndpoint, {/* TODO: Fix JSX expression */}
+      await fetch(this.config.remoteEndpoint, {}
   O: Add content;}
-};
-  metho,
-  d: 'POST',
-        header,
-  s: {/* TODO: Fix JSX expression */}
+}
+  metho
+  d: 'POST'
+        header
+  s: {}
   O: Add content;}
 }
           'Content-Type': 'application/json'
-        },
+        }
         bod)
   y: JSON.stringify(report)
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
+      })
+    } catch (error) {}
   O: Add content;}
 }
-      // Silently fail to avoid infinite loop;
-      if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
+      // Silently fail to avoid infinite loop
+      if (this.config.enableConsoleLogging) {}
   O: Add content;}
 }
-
-        logger.warn('Failed to send error to remote endpoint:', error);
-
+        logger.warn('Failed to send error to remote endpoint:', error)
       }
     }
   }
@@ -343,70 +325,66 @@ $4};
    * Get all errors in queue
    */
   getErrorQueue(): ErrorReport[] {
-    return [...this.errorQueue];
+    return [...this.errorQueue]
   }
   /**
    * Get error statistics
    */
   getErrorStats(): {
-    totalErrors: number;
-    uniqueErrors: number;
-    errorsByType: Record<string, number>;
+    totalErrors: number
+    uniqueErrors: number
+    errorsByType: Record<string, number>
   } {
     return {
-      totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size,
+      totalErrors: this.errorQueue.length
+      uniqueErrors: this.errorCount.size
       errorsByType: Object.fromEntries(this.errorCount)
-    };
+    }
   }
   /**
    * Clear error queue
    */
   clearQueue(): void {
-   * Get all errors in queue;
+   * Get all errors in queue
    */
 
   getErrorQueue(): ErrorReport[] {// TODO: Add content;}
-
 }
-    return [...this.errorQueue];
+    return [...this.errorQueue]
   }
   /**
-   * Get error statistics;
+   * Get error statistics
    */
 
   getErrorStats(): {// TODO: Add content;}
-
-};
-  totalError,
-  s: number;,
-    uniqueError,
-  s: number;,
-    errorsByTyp,
-  e: Record;
-          <string, number>;
-  } {/* TODO: Fix JSX expression */}
+}
+  totalError
+  s: number;
+    uniqueError
+  s: number;
+    errorsByTyp
+  e: Record
+          <string, number>
+  } {}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
+    return {}
   O: Add content;}
-};
-
-  totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size,
+}
+  totalErrors: this.errorQueue.length
+      uniqueErrors: this.errorCount.size
       errorsByType: Object.fromEntries(this.errorCount)
 
     }
   }
   /**
-   * Clear error queue;
+   * Clear error queue
    */
 
   clearQueue(): void {// TODO: Add content;}
-
 }
-    this.errorQueue = [];
-    this.errorCount.clear();
+    this.errorQueue = []
+    this.errorCount.clear()
   }
   /**
    * Export errors as JSON
@@ -414,93 +392,100 @@ $4};
   exportErrors(): string {
     return JSON.stringify(
       {
-        timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
+        timestamp: new Date().toISOString()
+        stats: this.getErrorStats()
         errors: this.errorQueue
-      },
-      null,
+      }
+      null
       2
-    );
+    )
   }
 }
 /**
  * Convenience function to report errors
  */
 export const reportError = (
-  error: Error,
-  severity?: ErrorReport['severity'],
+  error: Error
+  severity?: ErrorReport['severity']
   context?: Record<string, unknown>
 ): void => {
-  ErrorReporter.getInstance().reportError(error, severity, context);
-};
+  ErrorReporter.getInstance().reportError(error, severity, context)
+}
 /**
  * React error boundary helper
  */
 export const captureComponentError = (
-  error: Error,
-  errorInfo: { componentStack: string },
+  error: Error
+  errorInfo: { componentStack: string }
   componentName: string
 ): void => {
-  const report = ErrorReporter.getInstance();
+  const report = ErrorReporter.getInstance()
   report.reportError(error, 'high', {
-    componentName,
+    componentName
     componentStack: errorInfo.componentStack
-  });
-};
-export default ErrorReporter;
-   * Export errors as JSON;
+  })
+}
+export default ErrorReporter
+   * Export errors as JSON
    */
 
   exportErrors(): string {// TODO: Add content;}
-
 }
     return JSON.stringify()
-      {/* TODO: Fix JSX expression */}
+      {}
   O: Add content;}
-};
-
-  timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
-        errors: this.errorQueue;
-
-      },
-//       null,
+}
+  timestamp: new Date().toISOString()
+        stats: this.getErrorStats()
+        errors: this.errorQueue
+      }
+//       null
 //       2)
   }
 }
 /**
- * Convenience function to report errors;
+ * Convenience function to report errors
  */
 export const reportError = ()
-  erro,
-  r: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record;
-
+  erro
+  r: Error
+  severity?: ErrorReport['severity']
+  context?: Record
           <string, unknown>
 ): void => {// TODO: Add content;}
-
 }
 /**
- * React error boundary helper;
+ * React error boundary helper
  */
 export const captureComponentError = ()
 
-  error: Error,
-  errorInfo: { componentStack: string },
+  error: Error
+  errorInfo: { componentStack: string }
   componentName: string): void => {// TODO: Add content;}
-
 }
-  const report = ErrorReporter.getInstance();
-  report.reportError(error, 'high', {/* TODO: Fix JSX expression */}
+  const report = ErrorReporter.getInstance()
+  report.reportError(error, 'high', {}
   O: Add content;}
 }
-//     componentName,
-    componentStac,
+//     componentName
+    componentStac
   k: errorInfo.componentStack;)
-  });
-};
-export default ErrorReporter;
-
-
-
+  })
+}
+export default ErrorReporter
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
