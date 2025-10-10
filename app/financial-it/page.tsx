@@ -1,159 +1,158 @@
 'use client';
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import {
+  DollarSign,
+  Shield,
+  BarChart,
+  Lock,
+  TrendingUp,
+  Users,
+  CreditCard,
+  Building,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Target,
+  Zap,
+  Phone,
+  Mail,
+  MessageCircle,
+  Calendar,
+  ExternalLink,
+  Play,
+  Pause,
+  RefreshCw,
+  Settings,
+  Activity,
+  Database,
+  Globe,
+  Award
+} from 'lucide-react';
 
 const FinancialITPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview');
+  const [isMonitoring, setIsMonitoring] = useState(true);
+
   const features = [
     {
-      icon: DollarSign,
-      title: 'Financial Data Management',
-      description: 'Secure and efficient management of financial data with real-time processing and compliance.',
-      benefits: ['Real-time processing', 'Data security', 'Compliance ready']
-    },
-    {
       icon: Shield,
-      title: 'Regulatory Compliance',
-      description: 'Ensure full compliance with financial regulations including SOX, PCI-DSS, and GDPR.',
-      benefits: ['SOX compliance', 'PCI-DSS ready', 'GDPR compliant']
+      title: 'Bank-Grade Security',
+      description: 'Enterprise-level security with encryption, multi-factor authentication, and compliance.',
+      benefits: ['End-to-end encryption', 'Multi-factor auth', 'SOC 2 compliance', 'Regular audits']
     },
     {
       icon: BarChart,
-      title: 'Financial Analytics',
-      description: 'Advanced analytics and reporting tools for financial insights and decision making.',
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Custom dashboards']
+      title: 'Real-time Analytics',
+      description: 'Advanced analytics and reporting for informed financial decision making.',
+      benefits: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization']
     },
     {
-      icon: Clock,
-      title: '24/7 Monitoring',
-      description: 'Continuous monitoring of financial systems with automated alerts and responses.',
-      benefits: ['Round-the-clock monitoring', 'Automated alerts', 'System health checks']
-    },
-    {
-      icon: Users,
-      title: 'Multi-User Access',
-      description: 'Secure multi-user access with role-based permissions and audit trails.',
-      benefits: ['Role-based access', 'Audit trails', 'User management']
+      icon: Lock,
+      title: 'Regulatory Compliance',
+      description: 'Full compliance with financial regulations and industry standards.',
+      benefits: ['PCI DSS', 'SOX compliance', 'GDPR', 'Basel III']
     },
     {
       icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Streamline financial processes with automated workflows and integrations.',
-      benefits: ['Process automation', 'System integrations', 'Workflow optimization']
+      title: 'High Performance',
+      description: 'Ultra-fast processing for high-frequency trading and real-time transactions.',
+      benefits: ['Microsecond latency', 'High throughput', 'Auto-scaling', 'Load balancing']
     }
-  ];
-
-  const benefits = [
-    'Reduce financial processing time by 80%',
-    'Improve compliance accuracy by 95%',
-    'Cut operational costs by 70%',
-    'Enhance data security and privacy',
-    'Streamline financial workflows',
-    'Real-time financial insights'
   ];
 
   const services = [
     {
-      title: 'Core Banking Systems',
-      description: 'Modernize your core banking infrastructure with cloud-native solutions',
-      icon: '🏦'
-    },
-    {
+      icon: CreditCard,
       title: 'Payment Processing',
-      description: 'Secure and fast payment processing with fraud detection',
-      icon: '💳'
+      description: 'Secure and efficient payment processing solutions for all transaction types.',
+      features: ['Credit card processing', 'ACH transfers', 'Wire transfers', 'Cryptocurrency'],
+      pricing: 'Starting at $0.29 per transaction'
     },
     {
+      icon: Building,
+      title: 'Core Banking Systems',
+      description: 'Modern core banking platforms with real-time processing capabilities.',
+      features: ['Account management', 'Loan processing', 'Deposit systems', 'Customer portal'],
+      pricing: 'Custom pricing based on scale'
+    },
+    {
+      icon: BarChart,
       title: 'Risk Management',
-      description: 'Advanced risk assessment and management tools',
-      icon: '⚠️'
+      description: 'Advanced risk assessment and management tools for financial institutions.',
+      features: ['Credit risk analysis', 'Fraud detection', 'Compliance monitoring', 'Stress testing'],
+      pricing: 'Starting at $5,000/month'
     },
     {
-      title: 'Trading Systems',
-      description: 'High-performance trading platforms with real-time data',
-      icon: '📈'
+      icon: Users,
+      title: 'Customer Analytics',
+      description: 'AI-powered customer insights and behavior analysis for better service delivery.',
+      features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Personalization'],
+      pricing: 'Starting at $2,500/month'
     }
   ];
+
+  const complianceStandards = [
+    { name: 'PCI DSS', description: 'Payment Card Industry Data Security Standard', status: 'Compliant' },
+    { name: 'SOX', description: 'Sarbanes-Oxley Act compliance', status: 'Compliant' },
+    { name: 'GDPR', description: 'General Data Protection Regulation', status: 'Compliant' },
+    { name: 'Basel III', description: 'International banking regulations', status: 'Compliant' },
+    { name: 'ISO 27001', description: 'Information security management', status: 'Certified' },
+    { name: 'SOC 2', description: 'Security, availability, and confidentiality', status: 'Certified' }
+  ];
+
+  const securityMetrics = [
+    { label: 'Security Incidents', value: '0', trend: '0%' },
+    { label: 'Uptime', value: '99.99%', trend: '+0.1%' },
+    { label: 'Compliance Score', value: '100%', trend: '+5%' },
+    { label: 'Response Time', value: '< 50ms', trend: '-20%' }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'First National Bank',
+      role: 'CTO',
+      content: 'Zion Tech Group\'s financial IT solutions have transformed our operations. The security and compliance features are outstanding.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'Global Finance Corp',
+      role: 'VP of Technology',
+      content: 'The real-time analytics and risk management tools have given us unprecedented insights into our business.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'SecureBank Ltd',
+      role: 'Head of IT',
+      content: 'Outstanding security and compliance. We\'ve achieved 100% regulatory compliance with their solutions.',
+      rating: 5
+    }
+  ];
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'Compliant':
+        return 'text-green-400';
+      case 'Certified':
+        return 'text-blue-400';
+      case 'In Progress':
+        return 'text-yellow-400';
+      default:
+        return 'text-gray-400';
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Financial IT Solutions - Zion Tech Group | Banking & Finance Technology</title>
-        <meta name="description" content="Transform your financial institution with our comprehensive IT solutions. Secure, compliant, and efficient technology for banking, payments, and financial services." />
-        <meta name="keywords" content="financial IT, banking technology, payment processing, financial compliance, core banking, risk management" />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Financial IT
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your financial institution with secure, compliant, and efficient technology solutions. 
-            From core banking to payment processing, we deliver cutting-edge financial IT services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Financial IT Demo
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-            </button>
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <meta name="description" content="Transform your financial institution with our secure, compliant IT solutions. Bank-grade security, real-time analytics, and regulatory compliance for the finance industry." />
+        <meta name="keywords" content="financial IT, banking technology, payment processing, risk management, compliance, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -162,152 +161,241 @@ const PagePage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
+                Financial IT
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
+              Transform your financial institution with secure, compliant, and innovative IT solutions. 
+              Built for the unique needs of the banking and finance industry.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <a
+                href="#features"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                <DollarSign className="mr-2 h-5 w-5" />
+                Explore Solutions
+              </a>
+              <a
+                href="/contact"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
+              </a>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4">
+      {/* Navigation Tabs */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Financial Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our financial IT solutions are designed to meet the unique needs of financial institutions, 
-              ensuring security, compliance, and operational excellence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { id: 'overview', label: 'Overview', icon: BarChart },
+              { id: 'features', label: 'Features', icon: Shield },
+              { id: 'services', label: 'Services', icon: Building },
+              { id: 'compliance', label: 'Compliance', icon: Lock }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <tab.icon className="mr-2 h-5 w-5" />
+                {tab.label}
+              </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Overview Tab */}
+      {activeTab === 'overview' && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Financial IT Overview
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our financial IT solutions are designed specifically for the banking and finance industry, 
+                providing the security, compliance, and performance you need.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {securityMetrics.map((metric, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-2">
+                    {metric.value}
+                  </div>
+                  <p className="text-gray-300 mb-1">{metric.label}</p>
+                  <p className="text-green-400 text-sm">{metric.trend}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Features Tab */}
+      {activeTab === 'features' && (
+        <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our financial IT solutions provide the security, compliance, and performance 
+                required for modern financial institutions.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                      <feature.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Services Tab */}
+      {activeTab === 'services' && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive financial IT services designed to meet the unique needs of your institution.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                      <p className="text-gray-400">{service.pricing}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Compliance Tab */}
+      {activeTab === 'compliance' && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Regulatory Compliance
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Full compliance with financial regulations and industry standards to ensure 
+                your institution meets all regulatory requirements.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {complianceStandards.map((standard, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-white">{standard.name}</h3>
+                    <span className={`text-sm font-semibold ${getStatusColor(standard.status)}`}>
+                      {standard.status}
+                    </span>
+                  </div>
+                  <p className="text-gray-300 text-sm">{standard.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Testimonials */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
+              Don't just take our word for it. Here's what our satisfied clients have to say about our financial IT solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Financial Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions for all aspects of financial services and banking operations.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Financial IT Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of modern financial technology with our proven solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-semibold">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -315,54 +403,37 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Modernize Your Financial IT?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your financial institution with our cutting-edge IT solutions. 
-            Get started with a free consultation and discover how we can help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Get Free Consultation
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
+              Ready to Transform Your Financial Institution?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
+              Let's discuss how our financial IT solutions can help you achieve your goals 
+              while maintaining the highest standards of security and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
+              <a
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+              >
+                <DollarSign className="mr-2 h-5 w-5" />
+                Get Started
+              </a>
+              <a
+                href="/consultation"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
+                Free Consultation
+              </a>
             </div>
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
     </div>
   );
 };
 
-export default PagePage;
+export default FinancialITPage;

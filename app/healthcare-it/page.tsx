@@ -1,159 +1,159 @@
 'use client';
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import {
+  Heart,
+  Shield,
+  Activity,
+  Users,
+  Stethoscope,
+  Pill,
+  FileText,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Target,
+  Zap,
+  Phone,
+  Mail,
+  MessageCircle,
+  Calendar,
+  ExternalLink,
+  Play,
+  Pause,
+  RefreshCw,
+  Settings,
+  BarChart,
+  Database,
+  Globe,
+  Award,
+  Lock,
+  TrendingUp
+} from 'lucide-react';
 
 const HealthcareITPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview');
+  const [isMonitoring, setIsMonitoring] = useState(true);
+
   const features = [
-    {
-      icon: Heart,
-      title: 'Electronic Health Records',
-      description: 'Comprehensive EHR systems that streamline patient data management and improve care coordination.',
-      benefits: ['Patient data management', 'Care coordination', 'Interoperability']
-    },
     {
       icon: Shield,
       title: 'HIPAA Compliance',
-      description: 'Ensure full compliance with healthcare regulations and data protection standards.',
-      benefits: ['HIPAA compliant', 'Data encryption', 'Audit trails']
+      description: 'Full compliance with HIPAA regulations and healthcare data protection standards.',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Breach prevention']
     },
     {
-      icon: BarChart,
-      title: 'Healthcare Analytics',
-      description: 'Advanced analytics and reporting tools for healthcare insights and decision making.',
-      benefits: ['Patient insights', 'Performance metrics', 'Predictive analytics']
-    },
-    {
-      icon: Clock,
-      title: '24/7 Support',
-      description: 'Round-the-clock technical support for critical healthcare systems.',
-      benefits: ['Critical system support', 'Rapid response', 'Minimal downtime']
+      icon: Activity,
+      title: 'Real-time Monitoring',
+      description: 'Continuous monitoring of patient vitals and health metrics with AI-powered insights.',
+      benefits: ['Vital signs tracking', 'Alert systems', 'Predictive analytics', 'Remote monitoring']
     },
     {
       icon: Users,
-      title: 'Multi-User Access',
-      description: 'Secure access for healthcare professionals with role-based permissions.',
-      benefits: ['Role-based access', 'Secure authentication', 'User management']
+      title: 'Patient Management',
+      description: 'Comprehensive patient management system with integrated care coordination.',
+      benefits: ['Electronic health records', 'Appointment scheduling', 'Care plans', 'Communication tools']
     },
     {
-      icon: Zap,
-      title: 'Telemedicine Solutions',
-      description: 'Remote healthcare delivery platforms for virtual consultations and monitoring.',
-      benefits: ['Virtual consultations', 'Remote monitoring', 'Patient engagement']
+      icon: Stethoscope,
+      title: 'Clinical Decision Support',
+      description: 'AI-powered clinical decision support tools for improved patient outcomes.',
+      benefits: ['Diagnosis assistance', 'Treatment recommendations', 'Drug interactions', 'Risk assessment']
     }
-  ];
-
-  const benefits = [
-    'Improve patient care quality by 40%',
-    'Reduce administrative costs by 60%',
-    'Enhance data security and privacy',
-    'Streamline healthcare workflows',
-    'Enable better care coordination',
-    'Support telemedicine initiatives'
   ];
 
   const services = [
     {
-      title: 'EHR Systems',
-      description: 'Comprehensive electronic health record management',
-      icon: '📋'
+      icon: FileText,
+      title: 'Electronic Health Records (EHR)',
+      description: 'Comprehensive EHR system with integrated patient data management.',
+      features: ['Patient records', 'Medical history', 'Prescriptions', 'Lab results'],
+      pricing: 'Starting at $150/user/month'
     },
     {
-      title: 'Telemedicine',
-      description: 'Virtual healthcare delivery platforms',
-      icon: '💻'
+      icon: Activity,
+      title: 'Telemedicine Platform',
+      description: 'Secure video conferencing and remote patient monitoring solutions.',
+      features: ['Video consultations', 'Remote monitoring', 'Mobile access', 'Integration'],
+      pricing: 'Starting at $200/month'
     },
     {
-      title: 'Medical Imaging',
-      description: 'Advanced medical imaging and diagnostic tools',
-      icon: '🩺'
+      icon: Pill,
+      title: 'Pharmacy Management',
+      description: 'Integrated pharmacy management system with inventory and prescription tracking.',
+      features: ['Inventory management', 'Prescription tracking', 'Drug interactions', 'Billing'],
+      pricing: 'Starting at $300/month'
     },
     {
-      title: 'Patient Portal',
-      description: 'Secure patient access to health information',
-      icon: '👤'
+      icon: BarChart,
+      title: 'Healthcare Analytics',
+      description: 'Advanced analytics and reporting for healthcare operations and outcomes.',
+      features: ['Performance metrics', 'Patient outcomes', 'Cost analysis', 'Predictive modeling'],
+      pricing: 'Starting at $500/month'
     }
   ];
+
+  const complianceStandards = [
+    { name: 'HIPAA', description: 'Health Insurance Portability and Accountability Act', status: 'Compliant' },
+    { name: 'HITECH', description: 'Health Information Technology for Economic and Clinical Health', status: 'Compliant' },
+    { name: 'FDA 21 CFR Part 11', description: 'Electronic records and signatures', status: 'Compliant' },
+    { name: 'SOC 2', description: 'Security, availability, and confidentiality', status: 'Certified' },
+    { name: 'ISO 27001', description: 'Information security management', status: 'Certified' },
+    { name: 'GDPR', description: 'General Data Protection Regulation', status: 'Compliant' }
+  ];
+
+  const healthMetrics = [
+    { label: 'Patient Satisfaction', value: '98%', trend: '+5%' },
+    { label: 'System Uptime', value: '99.9%', trend: '+0.1%' },
+    { label: 'Compliance Score', value: '100%', trend: '+2%' },
+    { label: 'Response Time', value: '< 100ms', trend: '-15%' }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Dr. Sarah Johnson',
+      company: 'Metro General Hospital',
+      role: 'Chief Medical Officer',
+      content: 'The healthcare IT solutions have revolutionized our patient care. The real-time monitoring and clinical decision support are game-changers.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'Regional Medical Center',
+      role: 'IT Director',
+      content: 'Outstanding HIPAA compliance and security features. We\'ve achieved 100% regulatory compliance with their solutions.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'Community Health Clinic',
+      role: 'Practice Manager',
+      content: 'The telemedicine platform has enabled us to reach more patients and provide better care, especially during the pandemic.',
+      rating: 5
+    }
+  ];
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'Compliant':
+        return 'text-green-400';
+      case 'Certified':
+        return 'text-blue-400';
+      case 'In Progress':
+        return 'text-yellow-400';
+      default:
+        return 'text-gray-400';
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Healthcare IT Solutions - Zion Tech Group | Medical Technology</title>
-        <meta name="description" content="Transform healthcare delivery with our comprehensive IT solutions. EHR systems, telemedicine, and HIPAA-compliant technology for modern healthcare." />
-        <meta name="keywords" content="healthcare IT, EHR systems, telemedicine, HIPAA compliance, medical technology, healthcare software" />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Healthcare IT
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform healthcare delivery with our comprehensive IT solutions. From EHR systems to telemedicine, 
-            we deliver secure, compliant, and efficient technology for modern healthcare.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Healthcare IT Demo
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-            </button>
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <meta name="description" content="Transform your healthcare organization with our secure, compliant IT solutions. HIPAA-compliant EHR, telemedicine, and clinical decision support for better patient care." />
+        <meta name="keywords" content="healthcare IT, medical technology, EHR, telemedicine, HIPAA compliance, clinical decision support, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -162,152 +162,241 @@ const PagePage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
+                Healthcare IT
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
+              Transform your healthcare organization with secure, compliant, and innovative IT solutions. 
+              Built for the unique needs of the healthcare industry.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <a
+                href="#features"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                <Heart className="mr-2 h-5 w-5" />
+                Explore Solutions
+              </a>
+              <a
+                href="/contact"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
+              </a>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4">
+      {/* Navigation Tabs */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Healthcare Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our healthcare IT solutions are designed to meet the unique needs of healthcare providers, 
-              ensuring compliance, security, and improved patient care.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { id: 'overview', label: 'Overview', icon: BarChart },
+              { id: 'features', label: 'Features', icon: Shield },
+              { id: 'services', label: 'Services', icon: Stethoscope },
+              { id: 'compliance', label: 'Compliance', icon: Lock }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <tab.icon className="mr-2 h-5 w-5" />
+                {tab.label}
+              </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Overview Tab */}
+      {activeTab === 'overview' && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Healthcare IT Overview
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our healthcare IT solutions are designed specifically for the medical industry, 
+                providing the security, compliance, and functionality you need.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {healthMetrics.map((metric, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-2">
+                    {metric.value}
+                  </div>
+                  <p className="text-gray-300 mb-1">{metric.label}</p>
+                  <p className="text-green-400 text-sm">{metric.trend}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Features Tab */}
+      {activeTab === 'features' && (
+        <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our healthcare IT solutions provide the security, compliance, and functionality 
+                required for modern healthcare organizations.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                      <feature.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Services Tab */}
+      {activeTab === 'services' && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive healthcare IT services designed to meet the unique needs of your organization.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                      <p className="text-gray-400">{service.pricing}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Compliance Tab */}
+      {activeTab === 'compliance' && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Regulatory Compliance
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Full compliance with healthcare regulations and industry standards to ensure 
+                your organization meets all regulatory requirements.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {complianceStandards.map((standard, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-white">{standard.name}</h3>
+                    <span className={`text-sm font-semibold ${getStatusColor(standard.status)}`}>
+                      {standard.status}
+                    </span>
+                  </div>
+                  <p className="text-gray-300 text-sm">{standard.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Testimonials */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
+              Don't just take our word for it. Here's what our satisfied clients have to say about our healthcare IT solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Healthcare Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions for all aspects of healthcare delivery and management.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Healthcare IT Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of modern healthcare technology with our proven solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-semibold">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -315,54 +404,37 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Healthcare Delivery?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your healthcare practice with our cutting-edge IT solutions. 
-            Get started with a free consultation and discover how we can help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Get Free Consultation
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
+              Ready to Transform Your Healthcare Organization?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
+              Let's discuss how our healthcare IT solutions can help you provide better patient care 
+              while maintaining the highest standards of security and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
+              <a
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+              >
+                <Heart className="mr-2 h-5 w-5" />
+                Get Started
+              </a>
+              <a
+                href="/consultation"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
+                Free Consultation
+              </a>
             </div>
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
     </div>
   );
 };
 
-export default PagePage;
+export default HealthcareITPage;

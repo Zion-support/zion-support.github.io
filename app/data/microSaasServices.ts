@@ -1,153 +1,133 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+export interface MicroSaasService {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price: string;
+  features: string[];
+  benefits: string[];
+  icon: string;
+  popular: boolean;
+}
 
-const MicroSaasServicesPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+export const microSaasServices: MicroSaasService[] = [
+  {
+    id: 'task-automation',
+    name: 'Task Automation',
+    description: 'Automate repetitive tasks and workflows to increase productivity',
+    category: 'Productivity',
+    price: '$29/month',
+    features: ['Workflow automation', 'Task scheduling', 'Integration APIs', 'Custom triggers'],
+    benefits: ['Save 10+ hours/week', 'Reduce errors', 'Increase efficiency', 'Scale operations'],
+    icon: 'Zap',
+    popular: true
+  },
+  {
+    id: 'data-analytics',
+    name: 'Data Analytics',
+    description: 'Transform raw data into actionable insights with AI-powered analytics',
+    category: 'Analytics',
+    price: '$49/month',
+    features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization'],
+    benefits: ['Data-driven decisions', 'Identify trends', 'Optimize performance', 'ROI tracking'],
+    icon: 'BarChart',
+    popular: false
+  },
+  {
+    id: 'customer-support',
+    name: 'Customer Support',
+    description: 'AI-powered customer support with chatbots and ticket management',
+    category: 'Support',
+    price: '$39/month',
+    features: ['AI chatbots', 'Ticket management', 'Knowledge base', 'Multi-channel support'],
+    benefits: ['24/7 support', 'Faster response', 'Reduced costs', 'Better satisfaction'],
+    icon: 'MessageCircle',
+    popular: true
+  },
+  {
+    id: 'inventory-management',
+    name: 'Inventory Management',
+    description: 'Smart inventory tracking and management with predictive restocking',
+    category: 'Operations',
+    price: '$59/month',
+    features: ['Real-time tracking', 'Predictive restocking', 'Supplier management', 'Cost optimization'],
+    benefits: ['Reduce stockouts', 'Optimize costs', 'Improve cash flow', 'Automate ordering'],
+    icon: 'Package',
+    popular: false
+  },
+  {
+    id: 'social-media',
+    name: 'Social Media Management',
+    description: 'Automated social media posting and engagement across platforms',
+    category: 'Marketing',
+    price: '$34/month',
+    features: ['Auto-posting', 'Content scheduling', 'Engagement tracking', 'Analytics'],
+    benefits: ['Consistent posting', 'Save time', 'Increase engagement', 'Track performance'],
+    icon: 'Share2',
+    popular: false
+  },
+  {
+    id: 'email-marketing',
+    name: 'Email Marketing',
+    description: 'Automated email campaigns with personalization and analytics',
+    category: 'Marketing',
+    price: '$24/month',
+    features: ['Email automation', 'Personalization', 'A/B testing', 'Analytics'],
+    benefits: ['Higher open rates', 'Better conversions', 'Automated nurturing', 'ROI tracking'],
+    icon: 'Mail',
+    popular: true
+  },
+  {
+    id: 'project-management',
+    name: 'Project Management',
+    description: 'Streamlined project tracking and team collaboration tools',
+    category: 'Productivity',
+    price: '$44/month',
+    features: ['Task tracking', 'Team collaboration', 'Time tracking', 'Progress reports'],
+    benefits: ['Better organization', 'Team alignment', 'Deadline tracking', 'Resource optimization'],
+    icon: 'CheckSquare',
+    popular: false
+  },
+  {
+    id: 'financial-tracking',
+    name: 'Financial Tracking',
+    description: 'Automated expense tracking and financial reporting for small businesses',
+    category: 'Finance',
+    price: '$39/month',
+    features: ['Expense tracking', 'Invoice generation', 'Financial reports', 'Tax preparation'],
+    benefits: ['Better cash flow', 'Tax compliance', 'Financial insights', 'Time savings'],
+    icon: 'DollarSign',
+    popular: false
+  }
+];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+export const microSaasCategories = [
+  { id: 'all', name: 'All Services', count: microSaasServices.length },
+  { id: 'Productivity', name: 'Productivity', count: microSaasServices.filter(s => s.category === 'Productivity').length },
+  { id: 'Analytics', name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
+  { id: 'Support', name: 'Support', count: microSaasServices.filter(s => s.category === 'Support').length },
+  { id: 'Operations', name: 'Operations', count: microSaasServices.filter(s => s.category === 'Operations').length },
+  { id: 'Marketing', name: 'Marketing', count: microSaasServices.filter(s => s.category === 'Marketing').length },
+  { id: 'Finance', name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length }
+];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>MicroSaasServices | Zion Tech Group</title>
-        <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                MicroSaasServices
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced microsaasservices solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our MicroSaasServices?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our microsaasservices solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our microsaasservices solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your microsaasservices needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+export const microSaasPricing = {
+  basic: {
+    name: 'Basic',
+    price: '$29/month',
+    features: ['Up to 3 services', 'Basic support', 'Standard features', 'Email support'],
+    popular: false
+  },
+  professional: {
+    name: 'Professional',
+    price: '$59/month',
+    features: ['Up to 10 services', 'Priority support', 'Advanced features', 'Phone support'],
+    popular: true
+  },
+  enterprise: {
+    name: 'Enterprise',
+    price: '$99/month',
+    features: ['Unlimited services', '24/7 support', 'Custom features', 'Dedicated manager'],
+    popular: false
+  }
 };
-
-export default MicroSaasServicesPage;
