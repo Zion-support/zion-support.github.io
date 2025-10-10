@@ -21,6 +21,8 @@ export default defineConfig({
     minify: 'terser',
     sourcemap: false,
     cssMinify: true,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
     terserOptions: {
       compress: {
         drop_console: true,
@@ -79,10 +81,8 @@ export default defineConfig({
         wrap_func_args: true,
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: false,
-    cssCodeSplit: true,
-    assetsInlineLimit: 2048,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {

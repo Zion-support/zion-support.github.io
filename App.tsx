@@ -17,6 +17,8 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
+import ServiceWorker from './src/components/ServiceWorker';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
 
 // Structured data for SEO
 const structuredData = {
@@ -97,6 +99,8 @@ const App: React.FC = memo(() => {
             <AccessibilityEnhancer>
               <AppWithPerformanceMonitoring>
                 <SEOHead />
+                <ServiceWorker />
+                <PerformanceMonitor />
                 <Router>
                 <div className="min-h-screen bg-white overflow-x-hidden">
                   <SkipLink to="#main-content">Skip to main content</SkipLink>
