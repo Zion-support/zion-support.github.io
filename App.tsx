@@ -154,3 +154,5 @@ const App: React.FC = memo(() => {
     </ErrorBoundary>
   );
 }
+
+export default App;
