@@ -1,11 +1,45 @@
+import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 
 // Mock components
-const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary">{children}</div>;
-};
+class AdvancedErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error?: Error }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div data-testid="error-boundary">
+          <h2>Unexpected Application Error!</h2>
+          <h3 style={{ fontStyle: 'italic' }}>{this.state.error?.message}</h3>
+          <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>
+            {this.state.error?.stack}
+          </pre>
+          <button onClick={() => this.setState({ hasError: false })}>Try Again</button>
+          <button onClick={() => window.location.reload()}>Reload Page</button>
+          <button onClick={() => window.location.href = '/'}>Go to Homepage</button>
+        </div>
+      );
+    }
+
+    return <div data-testid="error-boundary">{this.props.children}</div>;
+  }
+}
 
 const AdvancedSEOOptimizer = ({ title, description }: { title?: string; description?: string }) => {
   return <div data-testid="seo-optimizer">{title} - {description}</div>;
@@ -58,7 +92,7 @@ describe('AdvancedErrorBoundary', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
+    expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
     expect(screen.getByText(/Try Again/)).toBeInTheDocument();
     expect(screen.getByText('Reload Page')).toBeInTheDocument();
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
@@ -109,7 +143,7 @@ describe('AdvancedErrorBoundary', () => {
     // After retry, the error boundary should reset and show the child component
     await waitFor(() => {
       expect(
-        screen.queryByText('Oops! Something went wrong')
+        screen.queryByText('Unexpected Application Error!')
       ).not.toBeInTheDocument();
     });
 

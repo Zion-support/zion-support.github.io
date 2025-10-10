@@ -3,6 +3,40 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+const SEOEnhancer: React.FC = () => {
+  const features = [
+    {
+      icon: CheckCircle,
+      title: 'SEO Optimization',
+      description: 'Advanced SEO strategies and optimization techniques'
+    },
+    {
+      icon: ArrowRight,
+      title: 'Performance',
+      description: 'High-performance SEO solutions for better rankings'
+    },
+    {
+      icon: Phone,
+      title: 'Analytics',
+      description: 'Comprehensive SEO analytics and reporting'
+    },
+    {
+      icon: Mail,
+      title: 'Strategy',
+      description: 'Strategic SEO planning and implementation'
+    }
+  ];
+
+  const benefits = [
+    'Advanced SEO technology integration',
+    'Real-time performance and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -116,4 +150,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   );
 };
 
-export default SEOEnhancerPage;
+export default SEOEnhancer;

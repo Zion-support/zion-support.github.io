@@ -224,7 +224,6 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
       <Footer />
     </div>
   );
