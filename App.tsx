@@ -118,6 +118,7 @@ const AIWebsiteBuilderPage = React.lazy(() => import('./app/ai-website-builder/p
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
 =======
 
+<<<<<<< HEAD
 // New service pages
 const AISentimentAnalyzerProPage = React.lazy(() => import('./app/ai-sentiment-analyzer-pro/page'));
 const AIWorkflowAutomationProPage = React.lazy(() => import('./app/ai-workflow-automation-pro/page'));
@@ -127,6 +128,19 @@ const AISmartCalendarProPage = React.lazy(() => import('./app/ai-smart-calendar-
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+// New AI Services
+const AIVoiceCloningStudioPage = React.lazy(() => import('./app/ai-voice-cloning-studio/page'));
+const AIFinancialAnalyzerProPage = React.lazy(() => import('./app/ai-financial-analyzer-pro/page'));
+const AIInfrastructureMonitoringProPage = React.lazy(() => import('./app/ai-infrastructure-monitoring-pro/page'));
+const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'));
+
+// Error Boundary Component
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
 
 // AI Services Pages
 const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
@@ -241,6 +255,7 @@ const App: React.FC = memo(() => {
   return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
+<<<<<<< HEAD
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer>
@@ -419,6 +434,79 @@ const App: React.FC = memo(() => {
             </AccessibilityEnhancer>
           </PerformanceOptimizer>
         </AnalyticsProvider>
+=======
+        <Helmet>
+          <title>Zion Tech Group - AI & IT Solutions</title>
+          <meta
+            name="description"
+            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
+          />
+          <meta
+            name="keywords"
+            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
+          />
+          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+          <meta
+            property="og:description"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
+          <meta
+            name="twitter:description"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+          />
+          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        </Helmet>
+        <Router>
+          <div className="min-h-screen bg-white">
+            <Navigation />
+            <main>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={
+                    <>
+                      <UnifiedContentPromotion />
+                      <InteractiveAIROICalculator />
+                      <ContentShowcase />
+                      <InteractiveContentShowcase2026 />
+                    </>
+                  } />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/docs" element={<DocsPage />} />
+                  <Route path="/api-docs" element={<ApiDocsPage />} />
+                  <Route path="/support" element={<SupportPage />} />
+                  <Route path="/status" element={<StatusPage />} />
+                  <Route path="/demo" element={<DemoPage />} />
+                  <Route path="/consultation" element={<ConsultationPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  
+                  {/* New AI Services Routes */}
+                  <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
+                  <Route path="/ai-financial-analyzer-pro" element={<AIFinancialAnalyzerProPage />} />
+                  <Route path="/ai-infrastructure-monitoring-pro" element={<AIInfrastructureMonitoringProPage />} />
+                  <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
       </HelmetProvider>
     </EnhancedErrorBoundary>
   );
