@@ -3,7 +3,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare, Brain, Code, Database, Smartphone, Globe, Lock, FileText, Mail, Calendar, Target, Cpu, Settings, Monitor, Wifi, Smartphone as Phone, CreditCard, PieChart, Search, Filter, Download, Upload, Eye, AlertTriangle, CheckSquare, Clock, DollarSign, Award, Rocket, Sparkles } from 'lucide-react';
@@ -23,9 +22,6 @@ interface MicroSaasProduct {
   marketPrice: string;
   savings?: string;
 }
-=======
-import { Zap, CheckCircle, ArrowRight, Brain, Shield, BarChart, Star, Clock, Users } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
 
 const MicroSaasPage: React.FC = () => {
   const products = [
