@@ -130,7 +130,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' },
     { name: 'Demo', url: '/demo' },
-    { name: 'Compliance', url: '/compliance' }
+    { name: 'Compliance', url: '/compliance' },
+    { name: 'Sitemap', url: '/sitemap' },
+    { name: 'Accessibility', url: '/accessibility' }
   ]
 
   const enterpriseLinks = [
