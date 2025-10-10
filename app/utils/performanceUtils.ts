@@ -146,7 +146,9 @@ export const measureFunction = <T extends (...args: any[]) => any>(,
     const result = fn(...args)
     const end = performance.now(),
 if (name) {}
-      console.log(`${name} took ${end - start} milliseconds`);
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`${name} took ${end - start} milliseconds`);
+      }
     }
 return result;
   }) as T;

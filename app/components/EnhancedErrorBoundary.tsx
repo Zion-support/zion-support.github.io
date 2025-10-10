@@ -43,6 +43,30 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  handleReportError = () => {
+    if (this.state.error) {
+      // Send error report to support
+      const errorReport = {
+        message: this.state.error.message,
+        stack: this.state.error.stack,
+        componentStack: this.state.errorInfo?.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      };
+      
+      // In a real app, you would send this to your error reporting service
+      console.log('Error report:', errorReport);
+      
+      // For now, we'll just show an alert
+      alert('Error has been reported. Thank you for your patience.');
+    }
+  };
+
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -59,14 +83,28 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. You can try refreshing the page or report the issue.
             </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Refresh Page
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleRetry}
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              >
+                Try Again
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              >
+                Refresh Page
+              </button>
+              <button
+                onClick={this.handleReportError}
+                className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              >
+                Report Issue
+              </button>
+            </div>
           </div>
         </div>
       );

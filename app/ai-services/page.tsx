@@ -987,7 +987,6 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-<<<<<<< HEAD
       id: 'ai-content-generation',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
@@ -1012,8 +1011,10 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
-=======
-      title: 'AI-Powered Parenting Assistant',
+    },
+    {
+      id: 'ai-parenting-assistant',
+      name: 'AI-Powered Parenting Assistant',
       description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
       icon: '👶',
       price: 'Starting at $1,500/month',
@@ -1144,7 +1145,6 @@ const AiServicesPage: React.FC = () => {
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
     }
   ]
 

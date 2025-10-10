@@ -2,52 +2,55 @@ const fs = require('fs');
 const path = require('path');
 
 // Define all the pages in your application
+const baseUrl = 'https://ziontechgroup.com';
+const currentDate = new Date().toISOString().split('T')[0];
+
 const pages = [
   {
-    url: 'https://ziontechgroup.com/',
-    lastmod: new Date().toISOString().split('T')[0],
+    url: `${baseUrl}/`,
+    lastmod: currentDate,
     changefreq: 'daily',
     priority: '1.0'
   },
   {
-    url: 'https://ziontechgroup.com/about',
-    lastmod: new Date().toISOString().split('T')[0],
+    url: `${baseUrl}/about`,
+    lastmod: currentDate,
     changefreq: 'monthly',
     priority: '0.8'
   },
   {
-    url: 'https://ziontechgroup.com/services',
-    lastmod: new Date().toISOString().split('T')[0],
+    url: `${baseUrl}/services`,
+    lastmod: currentDate,
     changefreq: 'weekly',
     priority: '0.9'
   },
   {
-    url: 'https://ziontechgroup.com/ai-services',
-    lastmod: new Date().toISOString().split('T')[0],
+    url: `${baseUrl}/ai-services`,
+    lastmod: currentDate,
     changefreq: 'weekly',
     priority: '0.9'
   },
   {
-    url: 'https://ziontechgroup.com/it-services',
-    lastmod: new Date().toISOString().split('T')[0],
+    url: `${baseUrl}/it-services`,
+    lastmod: currentDate,
     changefreq: 'weekly',
     priority: '0.9'
   },
   {
-    url: 'https://ziontechgroup.com/pricing',
-    lastmod: new Date().toISOString().split('T')[0],
+    url: `${baseUrl}/pricing`,
+    lastmod: currentDate,
     changefreq: 'monthly',
     priority: '0.8'
   },
   {
-    url: 'https://ziontechgroup.com/contact',
-    lastmod: new Date().toISOString().split('T')[0],
+    url: `${baseUrl}/contact`,
+    lastmod: currentDate,
     changefreq: 'monthly',
     priority: '0.8'
   },
   {
-    url: 'https://ziontechgroup.com/blog',
-    lastmod: new Date().toISOString().split('T')[0],
+    url: `${baseUrl}/blog`,
+    lastmod: currentDate,
     changefreq: 'daily',
     priority: '0.7'
   },

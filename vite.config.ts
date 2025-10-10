@@ -25,7 +25,7 @@ export default defineConfig({
     target: 'es2020',
     cssTarget: 'chrome80',
     reportCompressedSize: true,
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 400,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
