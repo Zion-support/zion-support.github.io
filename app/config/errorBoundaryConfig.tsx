@@ -47,9 +47,7 @@ export interface ErrorBoundaryConfig {
   default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;)
-};)
-}
-
+};);
 /**
  * Default error messages
  */;
@@ -59,9 +57,7 @@ const DEFAULT_ERROR_MESSAGES = {
   notFound: 'The requested resource was not found.',
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',;)
-};
-
+  validation: 'Validation error. Please check your input.',;);
 /**
  * Get error boundary configuration based on environment
  */
@@ -78,12 +74,10 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
       network: NetworkErrorFallback,
       notFound: NotFoundFallback,;)
 },;)
-};)
-}
-
+};);
 /**
  * Default error fallback component
- */
+ */;
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }); {
   return (
     <div></div>
@@ -128,12 +122,10 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </div>
       </div>
     </div>
-  );)
-}
-
+  ););
 /**
  * Network error fallback component
- */
+ */;
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }); {
   return (
     <div></div>
@@ -167,9 +159,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </div>
       </div>
     </div>
-  );)
-}
-
+  ););
 /**
  * Not found error fallback component
  */;
@@ -198,31 +188,22 @@ function NotFoundFallback(): JSX.Element {
         </div>
       </div>
     </div>
-  );)
-}
-
+  ););
 /**
  * Get error type from error object
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-    return 'network';)
-}
+    return 'network';);
   if (error.message.includes('404') || error.message.includes('not found')) {
-    return 'notFound';)
-}
+    return 'notFound';);
   if (error.message.includes('timeout')) {
-    return 'timeout';)
-}
+    return 'timeout';);
   if (error.message.includes('500') || error.message.includes('server')) {
-    return 'serverError';)
-}
+    return 'serverError';);
   if (error.message.includes('validation')) {
-    return 'validation';)
-}
-  return 'default';)
-}
-
+    return 'validation';);
+  return 'default';);
 /**
  * Format error for logging
  */
@@ -236,7 +217,5 @@ export function formatErrorForLogging(error: Error): Record<string, unknown></st
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',;)
 };)
-}
-
 export default getErrorBoundaryConfig;
 }

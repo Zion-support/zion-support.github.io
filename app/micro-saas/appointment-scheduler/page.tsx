@@ -54,7 +54,5 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
       </div>
     </>
   );)
-};
-
 export default MicroSaaSPage;
 }

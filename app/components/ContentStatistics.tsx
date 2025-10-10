@@ -254,7 +254,6 @@ const increment = target / steps;
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                 <span>{benefit}</span>
               </div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -277,9 +276,6 @@ const increment = target / steps;
                 View Case Studies
               </button>
             </div>
-=======
-            ));
->>>>>>> main
           </div>
         </div>
       </div>

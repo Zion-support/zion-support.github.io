@@ -22,8 +22,7 @@ const PagePage: React.FC = () => {const features = [
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -89,10 +88,8 @@ const PagePage: React.FC = () => {const features = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
-;
+                      ));
+                    </ul>);
 const benefits = [
     'Benefit 1',
                   )}    'Benefit 1',
@@ -190,7 +187,7 @@ const benefits = [
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -265,5 +262,6 @@ const benefits = [
 };
 
     </div>)
+export default PagePage
+export default AiCodeAssistantPage
 export default PagePage;
-export default AiCodeAssistantPage;export default PagePage;

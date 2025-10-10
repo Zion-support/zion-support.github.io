@@ -133,8 +133,7 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       benefits: ['Make informed decisions', 'Reduce implementation risks', 'Maximize blockchain value'],
       marketPrice: '$500-1,500/hour',
       category: 'Consulting',
-      technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis'];)
-}
+      technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis'];);
   ];
 ;
 const categories = [...new Set(blockchainServices.map(service => service.category))];
@@ -369,6 +368,4 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
       </div>
     </>
   );)
-};
-
 export default BlockchainPage;

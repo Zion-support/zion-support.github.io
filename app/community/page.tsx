@@ -2,9 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, MessageCircle, Calendar, Award, Globe, Heart } from 'lucide-react';
-
-const CommunityPage: React.FC = () => {
-  const communityFeatures = [
+const CommunityPage: React.FC = () => {const communityFeatures = [
     {
       icon: Users,
       title: 'Expert Network',
@@ -55,7 +53,7 @@ const CommunityPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Connect with like-minded professionals, share knowledge, and grow together in the world of AI and technology.
             </p>
-            ))}
+            ));
           </div>
         </section>
 
@@ -71,7 +69,7 @@ const CommunityPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -123,8 +121,7 @@ const CommunityPage: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
+}
 export default CommunityPage;
     </div>)
 export default PagePage;

@@ -7,9 +7,7 @@ export interface ValidationResult {
   isValid: boolean,
   error?: string;
   errors?: string[];,
-export interface ValidationResult {/* TODO: Fix JSX expression */});;)
-}
-
+export interface ValidationResult {/* TODO: Fix JSX expression */});;);
 /**
  * Email validation with length check;
  */
@@ -20,9 +18,9 @@ export function validateEmail(emai)
   l: string): ValidationResult {/* TODO: Fix JSX expression */}
   r: 'Email is too long' }});
 }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const isValid = emailRegex.test(email.trim());
+;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const isValid = emailRegex.test(email.trim());
 
   return {
     isValid,
@@ -121,11 +119,11 @@ export function validatePassword(passwor)
   if (password.length > 128) {/* TODO: Fix JSX expression */}
   r: 'Password is too long' }});
 }
-
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+;
+const hasUpperCase = /[A-Z]/.test(password);
+const hasLowerCase = /[a-z]/.test(password);
+const hasNumbers = /\d/.test(password);
+const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
   if (!hasUpperCase) {
     return { isValid: false, error: 'Password must contain at least one uppercase letter' }});
@@ -218,8 +216,8 @@ const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
   r: 'Date must be in YYYY-MM-DD format' }});
 }
-
-  const date = new Date(dateString);
+;
+const date = new Date(dateString);
   if (isNaN(date.getTime())) {/* TODO: Fix JSX expression */}
   r: 'Invalid date' }});
 }
@@ -254,8 +252,8 @@ export function validateCreditCard(cardNumbe)
   r: string): ValidationResult {/* TODO: Fix JSX expression */}
   r: 'Credit card number is required' }});
 }
-
-  const cleaned = cardNumber.replace(/[\s-]/g, '');
+;
+const cleaned = cardNumber.replace(/[\s-]/g, '');
   if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */}
   r: 'Credit card number must contain only digits' }});
 }
@@ -266,8 +264,8 @@ export function validateCreditCard(cardNumbe)
   if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
   r: 'Credit card number must be between 13 and 19 digits' }});
 }
-
-  let sum = 0;
+;
+let sum = 0;
   let isEven = false;
 
   for (let i = cleaned.length - 1; i >= 0; i--) {;
@@ -277,14 +275,13 @@ let digit = parseInt(cleaned[i], 10);
       if (digit > 9) {
         digit -= 9;
   
-  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});;)
-}
+  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});;);
     }
     sum += digit;
     isEven = !isEven});
 }
-
-  const isValid = sum % 10 === 0;
+;
+const isValid = sum % 10 === 0;
   return {
     isValid,
     error: isValid ? undefined : 'Invalid credit card number',
@@ -304,7 +301,7 @@ export function validateJSON(jsonString: string): ValidationResult {,
     JSON.parse(jsonString);
     return { isValid: true }});
 } catch {
-    return { isValid: false, error: 'Invalid JSON format' };
+    return { isValid: false, error: 'Invalid JSON format' }
 export function validateJSON(jsonStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
   r: 'JSON string is required' }});
@@ -331,9 +328,7 @@ export function sanitizeHTML(html: string): string {
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;')
 export function sanitizeHTML(htm)
-  l: string): string {/* TODO: Fix JSX expression */});;)
-}
-
+  l: string): string {/* TODO: Fix JSX expression */});;);
 /**
  * Composite validation;
  */
@@ -349,8 +344,7 @@ export function validateComposite(valu,
   validator,
   s: Array<(va),
   l: unknown) => ValidationResult>
-): ValidationResult {/* TODO: Fix JSX expression */});;)
-}
+): ValidationResult {/* TODO: Fix JSX expression */});;);
   }
   return {/* TODO: Fix JSX expression */}
   d: true }});
@@ -388,7 +382,7 @@ export {
   isRequired,
   isValidPassword,
   sanitizeInput});
-} from './validators';
+} from './validators'
 export {/* TODO: Fix JSX expression */});;)
 } from './validators';"`
 }

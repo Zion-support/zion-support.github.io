@@ -21,8 +21,7 @@ const dataTypes = [
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];)
-}
+      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];);
   ];
 ;
 const purposes = [
@@ -44,8 +43,7 @@ const purposes = [
     {
       title: 'Security',
       icon: Shield,
-      description: 'To protect against fraud and abuse';)
-}
+      description: 'To protect against fraud and abuse';);
   ];
 ;
 const rights = [
@@ -67,8 +65,7 @@ const rights = [
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database;)
-}
+      icon: Database;);
   ];
 
   return (
@@ -223,5 +220,4 @@ const rights = [
         </div>
       </div>
     </div>
-  );)
-}
+  ););

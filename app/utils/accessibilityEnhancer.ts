@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 export interface AccessibilityOptions {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -65,17 +64,15 @@ export class AccessibilityEnhancer {
 
     document.addEventListener('keydown', (event) => {
       // Skip links for keyboard navigation
-      if (event.key === 'Tab' && event.shiftKey) {
-        const focusableElements = this.getFocusableElements();
-        const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+      if ($1) { const focusableElements = this.getFocusableElements();
+const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
         
         if (currentIndex > 0) {
           focusableElements[currentIndex - 1]?.focus();
           event.preventDefault();
         }
-      } else if (event.key === 'Tab' && !event.shiftKey) {
-        const focusableElements = this.getFocusableElements();
-        const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+      } else if ($1) { const focusableElements = this.getFocusableElements();
+const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
         
         if (currentIndex < focusableElements.length - 1) {
           focusableElements[currentIndex + 1]?.focus();
@@ -88,22 +85,22 @@ export class AccessibilityEnhancer {
   private setupScreenReaderSupport(): void {
     if (!this.options.enableScreenReaderSupport) return;
 
-    // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
+    // Add ARIA labels to interactive elements;
+const buttons = document.querySelectorAll('button:not([aria-label])');
     buttons.forEach((button) => {
       if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
       }
     });
 
-    // Add ARIA labels to images
-    const images = document.querySelectorAll('img:not([alt])');
+    // Add ARIA labels to images;
+const images = document.querySelectorAll('img:not([alt])');
     images.forEach((img) => {
       img.setAttribute('alt', 'Image');
     });
 
-    // Add role attributes where needed
-    const sections = document.querySelectorAll('section:not([role])');
+    // Add role attributes where needed;
+const sections = document.querySelectorAll('section:not([role])');
     sections.forEach((section) => {
       section.setAttribute('role', 'region');
     });
@@ -325,8 +322,8 @@ const element = event.target as HTMLElement;
   private setupFocusManagement(): void {
     if (!this.options.enableFocusManagement) return;
 
-    // Add focus indicators
-    const style = document.createElement('style');
+    // Add focus indicators;
+const style = document.createElement('style');
     style.textContent = `
       *:focus {
         outline: 2px solid #0066cc;
@@ -342,8 +339,7 @@ const element = event.target as HTMLElement;
 
     // Manage focus for modals and dropdowns
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        const modal = document.querySelector('[role="dialog"]');
+      if ($1) { const modal = document.querySelector('[role="dialog"]');
         if (modal) {
           (modal as HTMLElement).focus();
         }
@@ -372,15 +368,15 @@ const element = event.target as HTMLElement;
   private setupTextScaling(): void {
     if (!this.options.enableTextScaling) return;
 
-    // Check for text scaling preference
-    const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    // Check for text scaling preference;
+const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
     if (fontSize > 16) {
       document.body.classList.add('text-scaled');
     }
 
-    // Listen for changes in text scaling
-    const observer = new ResizeObserver(() => {
-      const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    // Listen for changes in text scaling;
+const observer = new ResizeObserver(() => {;
+const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
       if (fontSize > 16) {
         document.body.classList.add('text-scaled');
       } else {
@@ -407,8 +403,8 @@ const element = event.target as HTMLElement;
     });
   }
 
-  private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
+  private getFocusableElements(): HTMLElement[] {;
+const focusableSelectors = [
       'a[href]',
       'button:not([disabled])',
       'input:not([disabled])',
@@ -423,8 +419,7 @@ const element = event.target as HTMLElement;
 
   public announceToScreenReader(message: string): void {
     if (!this.options.enableScreenReaderSupport) return;
-
-    const announcement = document.createElement('div');
+const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -445,15 +440,13 @@ const element = event.target as HTMLElement;
 
   public trapFocus(container: HTMLElement): void {
     if (!this.options.enableFocusManagement) return;
-
-    const focusableElements = this.getFocusableElements().filter(el => 
+const focusableElements = this.getFocusableElements().filter(el => 
       container.contains(el)
     );
 
     if (focusableElements.length === 0) return;
-
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
+const firstElement = focusableElements[0];
+const lastElement = focusableElements[focusableElements.length - 1];
 
     container.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {

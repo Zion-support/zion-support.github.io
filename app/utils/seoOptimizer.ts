@@ -12,8 +12,7 @@ interface SEOConfig {
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string;
-  googleTagManagerId?: string;});;)
-}
+  googleTagManagerId?: string;});;);
 interface PageSEOData {
   title: string,
   description: string,
@@ -26,8 +25,7 @@ interface SEOConfig {}
   twitterHandle?: string
   facebookAppId?: string
   googleAnalyticsId?: string
-  googleTagManagerId?: string;});;)
-}
+  googleTagManagerId?: string;});;);
 interface PageSEOData {}
   title: string,
   description: string,
@@ -41,8 +39,7 @@ interface PageSEOData {}
   section?: string;
   tags?: string[],
   noindex?: boolean;
-  nofollow?: boolean;});;)
-}
+  nofollow?: boolean;});;);
 class SEOOptimizer {
   private config: SEOConfig,
   private currentPageData: PageSEOData | null = null;
@@ -52,12 +49,9 @@ class SEOOptimizer {}
   private currentPageData: PageSEOData | null = null
   constructor(config: SEOConfig) {}
     this.config = config;}
-interface SEOConfig {/* TODO: Fix JSX expression */});;)
-}
-interface PageSEOData {/* TODO: Fix JSX expression */});;)
-}
-class SEOOptimizer {/* TODO: Fix JSX expression */});;)
-}
+interface SEOConfig {/* TODO: Fix JSX expression */});;);
+interface PageSEOData {/* TODO: Fix JSX expression */});;);
+class SEOOptimizer {/* TODO: Fix JSX expression */});;);
   /**
    * Initialize SEO optimization;
    */
@@ -66,8 +60,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
     this.setupCanonicalUrls()
     // Meta tags are set individually;
     this.setupPerformanceMonitoring();}
-  init(): void {/* TODO: Fix JSX expression */});;)
-}
+  init(): void {/* TODO: Fix JSX expression */});;);
   /**
    * Set page-specific SEO data;
    */
@@ -79,8 +72,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */});;)
     this.updateMetaTags()
     this.updateStructuredData();
   setPageData(dat)
-  a: PageSEOData): void {/* TODO: Fix JSX expression */});;)
-}
+  a: PageSEOData): void {/* TODO: Fix JSX expression */});;);
   /**
    * Generate optimized title;
    */
@@ -105,16 +97,14 @@ const description = pageDescription || this.currentPageData?.description || this
     return description.length > 160
       ? description.substring(0, 157) + '...'
       : description;}
-  generateDescription(pageDescription?: string): string {/* TODO: Fix JSX expression */});;)
-}
+  generateDescription(pageDescription?: string): string {/* TODO: Fix JSX expression */});;);
   /**
    * Generate keywords string;
    */
   generateKeywords(pageKeywords?: string[]): string {}
     const keywords = pageKeywords || this.currentPageData?.keywords || []
     return keywords.join(', ');}
-  generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */});;)
-}
+  generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */});;);
   /**
    * Update meta tags;
    */
@@ -149,8 +139,7 @@ const url = this.currentPageData.url || window.location.href;
       this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)
       this.setMetaTag('twitter:title', title)
       this.setMetaTag('twitter:description', description)
-      this.setMetaTag('twitter:image', image);)
-}
+      this.setMetaTag('twitter:image', image););
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
     this.setMetaTag('theme-color', '#1e40af')
@@ -162,13 +151,11 @@ const url = this.currentPageData.url || window.location.href;
       this.setMetaTag('twitte)
   r:description', description);
       this.setMetaTag('twitte)
-  r:image', image);)
-}
+  r:image', image););
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
-    this.setMetaTag('msapplication-TileColor', '#1e40af');)
-}
+    this.setMetaTag('msapplication-TileColor', '#1e40af'););
   /**
    * Set meta tag;
    */
@@ -182,10 +169,9 @@ const url = this.currentPageData.url || window.location.href;
   private setMetaTag(nam,
   e: string, conten,
   t: string, attribut)
-  e: string = 'name'): void {/* TODO: Fix JSX expression */}`
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    if (!meta) {/* TODO: Fix JSX expression */});;)
-}
+  e: string = 'name'): void {/* TODO: Fix JSX expression */}`;
+let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    if (!meta) {/* TODO: Fix JSX expression */});;);
     meta.content = content});
 }
   /**
@@ -195,19 +181,15 @@ const url = this.currentPageData.url || window.location.href;
     if (!this.currentPageData) return 'index, follow';
 const directives = []
     if (!this.currentPageData.noindex) {}
-      directives.push('noindex');});;)
-}
+      directives.push('noindex');});;);
     if (!this.currentPageData.nofollow) {}
       directives.push('follow');});;)
 } else {}
       directives.push('nofollow');}
-  private getRobotsContent(): string {/* TODO: Fix JSX expression */});;)
-}
+  private getRobotsContent(): string {/* TODO: Fix JSX expression */});;);
     if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */});;)
-} else {/* TODO: Fix JSX expression */});;)
-}
-    return directives.join(', ');)
-}
+} else {/* TODO: Fix JSX expression */});;);
+    return directives.join(', '););
   /**
    * Setup structured data;
    */
@@ -218,8 +200,7 @@ const directives = []
         'query-input': 'required name=search_term_string'});
 }
     };
-    this.addStructuredData(structuredData);)
-}
+    this.addStructuredData(structuredData););
   /**
    * Update structured data for current page;
    */
@@ -245,8 +226,7 @@ const structuredData = {}
       publisher: {}
         '@type': 'Organization',
         name: this.config.siteName;
-        url: this.config.siteUrl});;)
-}
+        url: this.config.siteUrl});;);
     }
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {
@@ -271,8 +251,7 @@ const structuredData = {}
         articleSection: this.currentPageData.section,
         keywords: this.generateKeywords();)
 });
-  private updateStructuredData(): void {/* TODO: Fix JSX expression */});;)
-}
+  private updateStructuredData(): void {/* TODO: Fix JSX expression */});;);
     };
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */});;)
@@ -285,10 +264,8 @@ const structuredData = {}
   n: this.currentPageData.section,
         keyword,
   s: this.generateKeywords();)
-});;)
-}
-    this.addStructuredData(structuredData);)
-}
+});;);
+    this.addStructuredData(structuredData););
   /**
    * Add structured data to page;
    */
@@ -298,8 +275,7 @@ const structuredData = {}
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   private addStructuredData(dat)
-  a: unknown): void {/* TODO: Fix JSX expression */});;)
-}
+  a: unknown): void {/* TODO: Fix JSX expression */});;);
   /**
    * Setup canonical URLs;
    */
@@ -308,8 +284,7 @@ const structuredData = {}
     canonical.rel = 'canonical'
     canonical.href = window.location.href;
     document.head.appendChild(canonical);}
-  private setupCanonicalUrls(): void {/* TODO: Fix JSX expression */});;)
-}
+  private setupCanonicalUrls(): void {/* TODO: Fix JSX expression */});;);
   /**
    * Setup performance monitoring for SEO;
    */
@@ -325,41 +300,33 @@ const structuredData = {}
 const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) { // Poor LCP;
         if (lastEntry.startTime > 4000) { // Poor LCP}
-          this.trackSEOMetric('poor_lcp', lastEntry.startTime);});;)
-}
+          this.trackSEOMetric('poor_lcp', lastEntry.startTime);});;);
       });.observe({ entryTypes: ['largest-contentful-paint'] });
-  private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */});;)
-}
+  private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */});;);
       });.observe({/* TODO: Fix JSX expression */});
   s: ['largest-contentful-paint'] });;
-      // Monitor CLS (Cumulative Layout Shift)
-      let clsValue = 0;
+      // Monitor CLS (Cumulative Layout Shift);
+let clsValue = 0;
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;});;)
-}
+            clsValue += (entry as any).value;});;);
         }
         if (clsValue > 0.25) { // Poor CLS;
       let clsValue = 0
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (!(entry as any).hadRecentInput) {}
-            clsValue += (entry as any).value;});;)
-}
+            clsValue += (entry as any).value;});;);
         }
         if (clsValue > 0.25) { // Poor CLS}
-          this.trackSEOMetric('poor_cls', clsValue);});;)
-}
+          this.trackSEOMetric('poor_cls', clsValue);});;);
       });.observe({ entryTypes: ['layout-shift'] });
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});;)
-}
+      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});;);
         }
-        if (clsValue > 0.25) {/* TODO: Fix JSX expression */});;)
-}
+        if (clsValue > 0.25) {/* TODO: Fix JSX expression */});;);
       });.observe({/* TODO: Fix JSX expression */});
-  s: ['layout-shift'] });;)
-}
+  s: ['layout-shift'] });;);
   }
   /**
    * Track SEO-related metrics;
@@ -378,8 +345,7 @@ const lastEntry = entries[entries.length - 1]
   private trackSEOMetric(metri,
   c: string, valu)
   e: number): void {/* TODO: Fix JSX expression */});;)
-});;)
-}
+});;);
   }
   /**
    * Generate sitemap data;
@@ -398,8 +364,7 @@ const lastEntry = entries[entries.length - 1]
         changefreq: 'daily',
         priority: '1.0'}
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
-  y: number }> {/* TODO: Fix JSX expression */});;)
-}
+  y: number }> {/* TODO: Fix JSX expression */});;);
     ]});
 }
   /**
@@ -443,8 +408,7 @@ const title = document.title
     if (title.length < 30) {}
       issues.push('Title is too short (less than 30 characters)');});;)
 } else if (title.length > 60) {}
-      issues.push('Title is too long (more than 60 characters)');});;)
-}
+      issues.push('Title is too long (more than 60 characters)');});;);
     // Check description length;
 const description = document.querySelector('meta[name="description"]')?.getAttribute('content')
     if (!description) {}
@@ -452,14 +416,12 @@ const description = document.querySelector('meta[name="description"]')?.getAttri
 } else if (description.length < 120) {}
       issues.push('Description is too short (less than 120 characters)');});;)
 } else if (description.length > 160) {}
-      issues.push('Description is too long (more than 160 characters)');});;)
-}
+      issues.push('Description is too long (more than 160 characters)');});;);
     // Check for images without alt text;
 const images = document.querySelectorAll('img')
     images.forEach((img, index) => {}
       if (!img.alt) {`}
-        issues.push(`Image ${index + 1} is missing alt text`);)
-}
+        issues.push(`Image ${index + 1} is missing alt text`););
     });
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1')
@@ -468,36 +430,31 @@ const h1s = document.querySelectorAll('h1')
 } else if (h1s.length > 1) {}
       issues.push('Page has multiple H1 tags');}
   checkSEOIssues(): string[] {/* TODO: Fix JSX expression */});;)
-} else if (title.length > 60) {/* TODO: Fix JSX expression */});;)
-}
-    // Check description length;"
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
+} else if (title.length > 60) {/* TODO: Fix JSX expression */});;);
+    // Check description length;";
+const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
     if (!description) {/* TODO: Fix JSX expression */});;)
 } else if (description.length < 120) {/* TODO: Fix JSX expression */});;)
-} else if (description.length > 160) {/* TODO: Fix JSX expression */});;)
-}
+} else if (description.length > 160) {/* TODO: Fix JSX expression */});;);
     // Check for images without alt text;
 const images = document.querySelectorAll('img');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
-        issues.push(`Image ${index + 1} is missing alt text`);)
-}
+        issues.push(`Image ${index + 1} is missing alt text`););
     });;
     // Check for heading structure;
-    const h1s = document.querySelectorAll('h1');
+const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {/* TODO: Fix JSX expression */});;)
-} else if (h1s.length > 1) {/* TODO: Fix JSX expression */});;)
-}
+} else if (h1s.length > 1) {/* TODO: Fix JSX expression */});;);
     return issues});
 }
   /**
    * Get SEO score;
    */
   getSEOScore(): number {}
-    const issues = this.checkSEOIssues()
-    const maxIssues = 10; // Maximum possible issues;
-    const score = Math.max(0, 100 - (issues.length / maxIssues) * 100)
-    return Math.round(score);});;)
-}
+    const issues = this.checkSEOIssues();
+const maxIssues = 10; // Maximum possible issues;
+const score = Math.max(0, 100 - (issues.length / maxIssues) * 100)
+    return Math.round(score);});;);
 }
 // Default configuration;
 const defaultConfig: SEOConfig = {,
@@ -513,16 +470,13 @@ const defaultConfig: SEOConfig = {}
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID;
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID});;)
-}
 export const seoOptimizer = new SEOOptimizer(defaultConfig)
 export default seoOptimizer;
-  getSEOScore(): number {/* TODO: Fix JSX expression */});;)
-}
+  getSEOScore(): number {/* TODO: Fix JSX expression */});;);
 }
 // Default configuration;
 const,
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */});;)
-};
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
+export const seoOptimizer = new SEOOptimizer(defaultConfig)
 export default seoOptimizer;"`
 }

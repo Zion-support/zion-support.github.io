@@ -22,8 +22,7 @@ const PagePage: React.FC = () => {const features = [
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -89,11 +88,10 @@ const PagePage: React.FC = () => {const features = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -116,8 +114,7 @@ const PagePage: React.FC = () => {const features = [
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-;
+                  <p className="text-lg text-white font-medium">{benefit}</p>;
 const benefits = [
     'Benefit 1',
                   <p className="text-lg text-white font-medium">{benefit}</p>    'Benefit 1',
@@ -265,5 +262,6 @@ const benefits = [
 };
 
     </div>)
+export default PagePage
+export default AiCloudInfrastructurePage
 export default PagePage;
-export default AiCloudInfrastructurePage;export default PagePage;

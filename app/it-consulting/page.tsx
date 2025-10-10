@@ -398,8 +398,7 @@ const itServices = [
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';)
-}
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';);
   ];
 ;
 const categories = [
@@ -627,6 +626,4 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
       </section>
     </div>
   );)
-};
-
 export default ITConsultingPage;

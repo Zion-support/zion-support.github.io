@@ -42,17 +42,17 @@ const [isVisible, setIsVisible] = useState(false);
 const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-    return () => clearTimeout(timer);)
-}, []);
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown></string>) => void });.gtag;
+    return () => clearTimeout(timer);
+  }, []);
+  
+  // Analytics tracking for phone clicks - optimized;
+const handlePhoneClick = useCallback(() => {
+    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number';)
-});;)
-}
+        event_label: 'main_phone_number'
+      });
+    }
   }, []);
   return (
     <React.Fragment>
@@ -92,8 +92,7 @@ const timer = setTimeout(() => setIsVisible(true), 100);
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US';)
-}
+            addressCountry: 'US';);
         }}
       />
       <PerformanceOptimizer
@@ -1158,5 +1157,4 @@ const timer = setTimeout(() => setIsVisible(true), 100);
     </div>
     </>
   );)
-};
 export default HomePage;

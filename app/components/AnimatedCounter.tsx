@@ -18,11 +18,10 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 return (;
 const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    let startTime: number;
+  useEffect(() => {;
+let startTime: number;
     let animationFrame: number;
-
-    const animate = (currentTime: number) => {
+const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
 const progress = Math.min((currentTime - startTime) / duration, 1);
       

@@ -303,6 +303,4 @@ const process = [
         <Footer />
       </div>,
     </>);)
-};
-
 export default WebDevelopmentPage;

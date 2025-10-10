@@ -56,10 +56,9 @@ const benefits = [
       <Helmet>
         <title>Ai Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
-  const useCases = [
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [
-;
+        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />;
+const useCases = [
+        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [;
 const useCases = [
     {
       title: 'Business Intelligence',
@@ -209,8 +208,7 @@ const useCases = [
       <Footer />
     </>
   );
-};
-
+}
 export default AiAnalyticsPage;
     </React.Fragment>)
 export default AiAnalyticsPage;

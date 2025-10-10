@@ -10,18 +10,16 @@ interface BreadcrumbItem {
   href: string;
   current?: boolean;
 }
-
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();
+;
+const Breadcrumb: React.FC = () => {const location = useLocation();
   
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null;
   }
-
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-  
-  const breadcrumbItems = [
+;
+const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+const breadcrumbItems = [
     { name: 'Home', path: '/', icon: Home }
   ];
 
@@ -58,9 +56,7 @@ const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' 
           {breadcrumbs.map((item, index) => (
             <li key={item.href} className="flex items-center">
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true" />
-              )}
-              
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true" />);
               {index === 0 ? (
                 <Link
                   to={item.href}
@@ -80,8 +76,7 @@ const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   {item.name}
-                </Link>
-              )}
+                </Link>);
             </li>
           ));
         </ol>

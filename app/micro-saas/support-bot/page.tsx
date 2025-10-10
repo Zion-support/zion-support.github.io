@@ -51,6 +51,4 @@ const SmartSupportBotPage: React.FC = () => {
       </div>
     </>
   );)
-};
-
 export default SmartSupportBotPage;

@@ -79,15 +79,15 @@ const lazyImages = document.querySelectorAll('img[data-src]');
 
     // Resource hints for better performance
     if (typeof window !== 'undefined') {
-      // DNS prefetch for external domains
-      const dnsPrefetchDomains = [
+      // DNS prefetch for external domains;
+const dnsPrefetchDomains = [
         'fonts.googleapis.com',
         'fonts.gstatic.com',
         'www.google-analytics.com'
       ];
 
-      dnsPrefetchDomains.forEach(domain => {
-        const link = document.createElement('link');
+      dnsPrefetchDomains.forEach(domain => {;
+const link = document.createElement('link');
         link.rel = 'dns-prefetch';
         link.href = `//${domain}`;
         document.head.appendChild(link);

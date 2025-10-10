@@ -12,19 +12,16 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     phone: '',
     service: '',
     message: '';)
-});;
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+});
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value;)
 }););)
 }, []);
-
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -43,8 +40,7 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
 } catch (error) {
       setSubmitStatus('error');)
 } finally {
-      setIsSubmitting(false);)
-}
+      setIsSubmitting(false););
   }, []);
 
   return (
@@ -277,7 +273,5 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
       <Footer />
     </div>
   );)
-};
-
 export default ContactPage;
 }

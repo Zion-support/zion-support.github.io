@@ -14,9 +14,8 @@ interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error';
   message: string;
 }
-
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+;
+const ContactForm: React.FC = () => {const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
@@ -63,9 +62,8 @@ const handleSubmit = async (e: React.FormEvent) => {
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'
       });
-  };
-
-  const services = [
+  }
+const services = [
     'AI & Machine Learning',
     'Cloud Computing',
     'Cybersecurity',
@@ -168,7 +166,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <option key={service} value={service}>
                   {service}
                 </option>
-              ))}
+              ));
             </select>
           </div>
 
@@ -202,9 +200,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 <AlertCircle className="w-5 h-5 mr-2" />
               ) : null}
               <span>{status.message}</span>
-            </div>
-          )}
-
+            </div>);
           <button
             type="submit"
             disabled={status.type === 'loading'}
@@ -219,8 +215,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <>
                 Send Message
                 <Send className="w-5 h-5 ml-2" />
-              </>
-            )}
+              </>);
           </button>
         </form>
 
@@ -246,6 +241,5 @@ const handleSubmit = async (e: React.FormEvent) => {
       </div>
     </div>
   );
-};
-
+}
 export default ContactForm;

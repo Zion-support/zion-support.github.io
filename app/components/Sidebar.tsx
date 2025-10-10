@@ -21,33 +21,27 @@ import {
   Clock;)
 } from 'lucide-react';
 ;
-const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
-  const location = useLocation();
+const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
+const location = useLocation();
 
   useEffect(() => {;
 const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);)
-}
+        setIsOpen(false););
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);)
 }, []);
-
-  const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
+const toggleSection = (section: string) => {;
+const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);)
 } else {
-      newExpanded.add(section);)
-}
-    setExpandedSections(newExpanded);)
-};
-
-  const navigationSections = [
+      newExpanded.add(section););
+    setExpandedSections(newExpanded););
+const navigationSections = [
     {
       title: 'Main',
       items: [
@@ -128,17 +122,14 @@ const handleResize = () => {
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-      ];)
-}
+      ];);
   ];
 ;
 const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST';)
-};
-
+    hours: 'Mon-Fri 9AM-6PM EST';);
   return (
     <React.Fragment>
       {/* Mobile Menu Button */}
@@ -247,9 +238,6 @@ const contactInfo = {
           </div>
       </aside>
     </>
-  );)
-};
-
-Sidebar.displayName = 'Sidebar';
-
+  ););
+Sidebar.displayName = 'Sidebar'
 export default Sidebar;

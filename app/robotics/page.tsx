@@ -22,8 +22,7 @@ const PagePage: React.FC = () => {const features = [
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses';)
-}
+      description: 'Worldwide deployment and support for international businesses';);
   ];
 ;
 const benefits = [
@@ -77,6 +76,4 @@ const benefits = [
       </section>
     </div>
   );)
-};
-
 export default PagePage;

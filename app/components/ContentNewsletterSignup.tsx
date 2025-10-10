@@ -11,9 +11,7 @@ interface ContentNewsletterSignupProps {
     icon: React.ComponentType<{ className?: string }>;
     text: string;)
 }>;
-  onSubscribe?: (email: string) => void;)
-}
-
+  onSubscribe?: (email: string) => void;);
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -34,16 +32,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
 },
     {
       icon: Globe,
-      text: "Global community access";)
-}
+      text: "Global community access";);
   ],
   onSubscribe;)
-}); => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+}); => {;
+const [email, setEmail] = useState('');
+const [isSubscribed, setIsSubscribed] = useState(false);
+const [isLoading, setIsLoading] = useState(false);
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
@@ -54,16 +50,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
         await onSubscribe(email);)
 } else {
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));)
-}
-      
+        await new Promise(resolve => setTimeout(resolve, 1000)););
       setIsSubscribed(true);
       setEmail('');)
 } catch (error) {
-      console.error('Subscription failed:', error);)
+      // console.error removed for production
+)
 } finally {
-      setIsLoading(false);)
-}
+      setIsLoading(false););
   };
 
   if (isSubscribed) {
@@ -87,9 +81,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
           </button>
         </div>
       </div>
-    );)
-}
-
+    ););
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
       <div className="max-w-6xl mx-auto"></div>
@@ -160,7 +152,5 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
       </div>
     </div>
   );)
-};
-
 export default ContentNewsletterSignup;
 }

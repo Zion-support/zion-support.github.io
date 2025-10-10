@@ -9,12 +9,10 @@ interface FAQ {
   answer: string;
   category: string}
 ;
-const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
-  const faqs: FAQ[] = [
+const SupportPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
+const [selectedCategory, setSelectedCategory] = useState('all');
+const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
       answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll assess your needs and recommend the best AI solutions for your business. We provide comprehensive onboarding and training.',
@@ -54,7 +52,6 @@ const SupportPage: React.FC = () => {
       category: 'technical'
     },
     {
-<<<<<<< HEAD
       question: 'Do you provide custom development?',
       answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.',
       category: 'development'
@@ -95,32 +92,26 @@ const SupportPage: React.FC = () => {
       color: 'text-red-400'
     }
   ];
-=======
-      question: 'What happens if I need to scale up?',
-      answer: 'Our solutions are designed to scale with your business. We can easily upgrade your plan or add additional features as your needs grow.',
-      category: 'general'
-    }
-  ];
 
   const categories = ['all', 'general', 'technical', 'billing', 'implementation'];
->>>>>>> main
 
   const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
 
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const categories = ['all', 'general', 'technical', 'billing', 'implementation'];
+const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
+const filteredFAQs = faqs.filter(faq => {;
+const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-<<<<<<< HEAD
   const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
-=======
-  const supportChannels = [
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone Support',
@@ -150,7 +141,6 @@ const SupportPage: React.FC = () => {
       availability: 'Always Available'
     }
   ];
-
 ;
 const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
 ;
@@ -162,16 +152,9 @@ const matchesCategory = selectedCategory === 'all' || faq.category === selectedC
 ;
 const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
->>>>>>> main
   return (
     <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
-=======
-        <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Get help and support for your AI and IT solutions. Find answers to common questions, contact our support team, and access comprehensive documentation." />
-        <meta name="keywords" content="support, help, FAQ, technical support, customer service, documentation" />
->>>>>>> main
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
         <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
         <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
@@ -179,7 +162,6 @@ const toggleFAQ = (index: number) => {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -239,29 +221,6 @@ const toggleFAQ = (index: number) => {
                   <p className="text-gray-300 mb-4">{channel.description}</p>
                   <p className={`${channel.color} font-medium mb-2`}>{channel.contact}</p>
                   <p className="text-sm text-gray-400">{channel.availability}</p>
-=======
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                How Can We Help?
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Get the support you need to succeed with our AI and IT solutions
-              </p>
-              
-              {/* Search Bar */}
-              <div className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search for help..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
->>>>>>> main
                 </div>
               </div>
             </div>
@@ -306,19 +265,18 @@ const toggleFAQ = (index: number) => {
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => setSelectedCategory(category);
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                     selectedCategory === category
                       ? 'bg-blue-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-200'
                   }`}
                 >
-                  {category === 'all' ? 'All Topics' : category.charAt(0).toUpperCase() + category.slice(1)}
+                  {category === 'all' ? 'All Topics' : category.charAt(0).toUpperCase() + category.slice(1);
                 </button>
-                    </div>
-                  )}
+                    </div>);
                 </div>
-              ))}
+              ));
             </div>
 
             {/* FAQ List */}
@@ -328,7 +286,7 @@ const toggleFAQ = (index: number) => {
                   <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200">
                     <button
                       className="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
+                      onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index);
                     >
                       <div className="flex items-center justify-between">
                         <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
@@ -336,18 +294,16 @@ const toggleFAQ = (index: number) => {
                           {expandedFAQ === index ? (
                             <span className="text-blue-600">−</span>
                           ) : (
-                            <span className="text-blue-600">+</span>
-                          )}
+                            <span className="text-blue-600">+</span>);
                         </div>
                       </div>
                     </button>
                     {expandedFAQ === index && (
                       <div className="px-6 pb-6">
                         <p className="text-gray-600">{faq.answer}</p>
-                      </div>
-                    )}
+                      </div>);
                   </div>
-                ))}
+                ));
                     </div>);
                 </div>
               ));
@@ -388,13 +344,11 @@ const toggleFAQ = (index: number) => {
                   </div>
                   <h3 className="text-xl font-medium text-gray-900 mb-2">No FAQs found</h3>
                   <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
-                </div>
-              )}
+                </div>);
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Contact CTA */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -413,22 +367,6 @@ const toggleFAQ = (index: number) => {
                   Email Support
                 </button>
               </div>
-=======
-        {/* CTA Section */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Still Need Help?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Can't find what you're looking for? Our support team is here to help.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Contact Support
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
-                Schedule a Call
-              </button>
->>>>>>> main
             </div>
           </div>
         </section>

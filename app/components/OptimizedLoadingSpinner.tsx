@@ -9,9 +9,7 @@ interface OptimizedLoadingSpinnerProps {
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-  fullScreen?: boolean;)
-}
-
+  fullScreen?: boolean;);
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',;
@@ -20,8 +18,8 @@ variant = 'spinner',
     className = '',
     color = 'blue',
     fullScreen = false,;)
-}); => {
-    const sizeClasses = useMemo(
+}); => {;
+const sizeClasses = useMemo(
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -109,11 +107,9 @@ switch (variant) {
               role='status'
               aria-label='Loading'
             />
-          );)
-}
+          ););
     }, [size, variant, color, sizeClasses, colorClasses]);
-
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
+const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
 }, [fullScreen, className]);
 
     return (</div>
@@ -126,8 +122,7 @@ switch (variant) {
             </p>
           );
         </div>
-    );)
-}
+    ););
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'

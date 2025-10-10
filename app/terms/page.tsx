@@ -43,8 +43,7 @@ const sections = [
     {
       title: 'Governing Law',
       icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';)
-}
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';);
   ];
 
   return (
@@ -121,5 +120,4 @@ const sections = [
         </div>
       </div>
     </div>
-  );)
-}
+  ););

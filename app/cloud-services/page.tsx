@@ -4,9 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react';
-
-const CloudServicesPage: React.FC = () => {
-  const features = [
+const CloudServicesPage: React.FC = () => {const features = [
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -28,8 +26,7 @@ const CloudServicesPage: React.FC = () => {
       description: 'Worldwide cloud deployment and support for international businesses'
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Scalable cloud infrastructure',
     'Enterprise-grade security',
     '24/7 monitoring and support',
@@ -79,7 +76,7 @@ const CloudServicesPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -94,7 +91,7 @@ const CloudServicesPage: React.FC = () => {
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -128,8 +125,7 @@ const CloudServicesPage: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
+}
 export default CloudServicesPage;
     </div>)
 export default PagePage;

@@ -49,8 +49,7 @@ const entry: LogEntry = {,
     if (this.isProduction && level === 'error') {
     // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {}
-      this.sendToMonitoring(entry);)
-}
+      this.sendToMonitoring(entry););
   }
 
   private sendToMonitoring(entry: LogEntry): void {,
@@ -74,20 +73,13 @@ const entry: LogEntry = {,
   }
 
   debug(message: string, data?: unknown, context?: string): void {}
-    this.log('debug', message, data, context);)
-}
-
+    this.log('debug', message, data, context););
   info(message: string, data?: unknown, context?: string): void {}
-    this.log('info', message, data, context);)
-}
-
+    this.log('info', message, data, context););
   warn(message: string, data?: unknown, context?: string): void {}
-    this.log('warn', message, data, context);)
-}
-
+    this.log('warn', message, data, context););
   error(message: string, data?: unknown, context?: string): void {}
-    this.log('error', message, data, context);)
-}
+    this.log('error', message, data, context););
 }
 
 export const logger = new ProductionLogger()

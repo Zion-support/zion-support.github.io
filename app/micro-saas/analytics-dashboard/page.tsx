@@ -31,8 +31,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
     {
       icon: Target,
       title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.';)
-}
+      description: 'Monitor KPIs and business objectives with automated alerts.';);
   ];
 ;
 const benefits = [
@@ -201,6 +200,4 @@ const metrics = [
       </div>
     </>
   );)
-};
-
 export default AIAnalyticsDashboardPage;

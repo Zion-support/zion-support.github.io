@@ -82,8 +82,7 @@ const consultationTypes: ConsultationType[] = [
       popular: false
     }
   ];
-
-  const benefits = [
+const benefits = [
     {
       icon: <Users className="w-8 h-8 text-blue-600" />,
       title: 'Expert Guidance',
@@ -105,8 +104,7 @@ const consultationTypes: ConsultationType[] = [
       description: 'Receive concrete recommendations and implementation plans you can execute immediately'
     }
   ];
-
-  const contactInfo = [
+const contactInfo = [
     {
       icon: <Phone className="w-6 h-6 text-blue-600" />,
       title: 'Phone',
@@ -130,13 +128,8 @@ const consultationTypes: ConsultationType[] = [
 const handleBooking = (typeId: string) => {
     setSelectedType(typeId);
     // In a real app, this would open a booking modal or redirect to a booking page
-<<<<<<< HEAD
     console.log(`Booking consultation: ${typeId}`);
   };
-=======
-    // console.log removed for production
-};
->>>>>>> main
 
   return (
     <>
@@ -235,13 +228,12 @@ const handleBooking = (typeId: string) => {
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer ${
                     selectedType === type.id ? 'ring-2 ring-blue-500' : ''
                   } ${type.popular ? 'border-2 border-blue-200' : ''}`}
-                  onClick={() => setSelectedType(type.id)}
+                  onClick={() => setSelectedType(type.id);
                 >
                   {type.popular && (
                     <div className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full text-center mb-4">
                       Most Popular
-                    </div>
-                  )}
+                    </div>);
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{type.name}</h3>
                   <p className="text-gray-600 mb-4">{type.description}</p>
                   <div className="space-y-2 mb-6">
@@ -250,7 +242,7 @@ const handleBooking = (typeId: string) => {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
-                    ))}
+                    ));
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -265,7 +257,7 @@ const handleBooking = (typeId: string) => {
                     Select This Service
                   </button>
                 </div>
-              ))}
+              ));
                   Schedule Consultation
                 </button>
               </form>
@@ -361,7 +353,7 @@ const handleBooking = (typeId: string) => {
                   <p className="text-blue-600 font-medium mb-2">{contact.details}</p>
                   <p className="text-gray-600">{contact.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>

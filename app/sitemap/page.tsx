@@ -87,6 +87,4 @@ const SitemapPage: React.FC = () => {const pages = [
       </div>
     </div>
   );)
-};
-
 export default SitemapPage;

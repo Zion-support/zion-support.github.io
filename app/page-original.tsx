@@ -23,8 +23,7 @@ const preloadComponents = () => {
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');)
-}, 100);)
-}
+}, 100););
 };
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -47,14 +46,13 @@ const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     return () => clearTimeout(timer);)
 }, []);
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  // Analytics tracking for phone clicks - optimized;
+const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number';)
-});;)
-}
+});;);
   }, []);
   return (
     <React.Fragment>
@@ -94,8 +92,7 @@ const timer = setTimeout(() => setIsVisible(true), 100);
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US';)
-}
+            addressCountry: 'US';);
         }}
       />
       <PerformanceOptimizer

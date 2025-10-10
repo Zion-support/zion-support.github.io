@@ -2,10 +2,8 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const EnhancedSEOHead: React.FC = () => {
-  return (
-;
+  return (;
 const EnhancedSEOHead: React.FC = () => {
 return (
     <Helmet>
@@ -59,15 +57,12 @@ return (
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
-      ))}
-      
+      ));
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-      
+          {JSON.stringify(structuredData);
+        </script>);
       {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -103,7 +98,7 @@ return (
       </script>
       
       <script type="application/ld+json">
-        {JSON.stringify(breadcrumbStructuredData)}
+        {JSON.stringify(breadcrumbStructuredData);
       </script>
       
       {/* Additional SEO Meta Tags */}
@@ -129,6 +124,5 @@ return (
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Helmet>
   );
-};
-
+}
 export default EnhancedSEOHead;

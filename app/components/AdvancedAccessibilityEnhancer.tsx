@@ -4,27 +4,27 @@ import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-
-const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isEnhanced, setIsEnhanced] = useState(false);
+;
+const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
+const [isEnhanced, setIsEnhanced] = useState(false);
 
   useEffect(() => {
-    // Initialize accessibility enhancements
-    const initAccessibility = () => {
-      // Add high contrast mode support
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    // Initialize accessibility enhancements;
+const initAccessibility = () => {
+      // Add high contrast mode support;
+const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
       if (prefersHighContrast) {
         document.documentElement.classList.add('high-contrast');
       }
 
-      // Add reduced motion support
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      // Add reduced motion support;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) {
         document.documentElement.classList.add('reduced-motion');
       }
 
-      // Add focus indicators
-      const style = document.createElement('style');
+      // Add focus indicators;
+const style = document.createElement('style');
       style.textContent = `
         .focus-visible {
           outline: 2px solid #3b82f6;
@@ -43,14 +43,13 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       `;
       document.head.appendChild(style);
 
-      // Add keyboard navigation support
-      const handleKeyDown = (e: KeyboardEvent) => {
+      // Add keyboard navigation support;
+const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
-      };
-
-      const handleMouseDown = () => {
+      }
+const handleMouseDown = () => {
         document.body.classList.remove('keyboard-navigation');
       };
 
@@ -64,9 +63,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
         document.removeEventListener('mousedown', handleMouseDown);
         document.head.removeChild(style);
       };
-    };
-
-    const cleanup = initAccessibility();
+    }
+const cleanup = initAccessibility();
     return cleanup;
   }, []);
 
@@ -79,6 +77,5 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       {children}
     </div>
   );
-};
-
+}
 export default AdvancedAccessibilityEnhancer;

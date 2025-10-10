@@ -39,7 +39,5 @@ const TeamPage: React.FC = () => {
       </div>
     </>
   );)
-};
-
 export default TeamPage;
 }

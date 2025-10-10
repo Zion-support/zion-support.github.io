@@ -22,9 +22,7 @@ const AICrmAssistantPage: React.FC = () => {const features = [
       benefits: ['Ticket management', 'Response automation', 'Customer satisfaction']
     }
   ];
-
-  const benefits = [
-;
+const benefits = [;
 const benefits = [
     'Increase sales by 30%',
       benefits: ['Ticket management', 'Response automation', 'Customer satisfaction']    'Increase efficiency by up to 50%',
@@ -99,11 +97,10 @@ const benefits = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -128,7 +125,7 @@ const benefits = [
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -202,7 +199,7 @@ const benefits = [
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
             ));
@@ -259,5 +256,6 @@ const benefits = [
 };
 
     </div>)
+export default AICrmAssistantPage
+export default AiCrmAssistantPage
 export default AICrmAssistantPage;
-export default AiCrmAssistantPage;export default AICrmAssistantPage;

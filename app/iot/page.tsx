@@ -133,8 +133,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];)
-}
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];);
   ];
 ;
 const categories = [...new Set(iotServices.map(service => service.category))];
@@ -369,6 +368,4 @@ const categories = [...new Set(iotServices.map(service => service.category))];
       </div>
     </>
   );)
-};
-
 export default IoTPage;

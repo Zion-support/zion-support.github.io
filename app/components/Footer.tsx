@@ -111,7 +111,7 @@ const contactInfo = {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+                ))}
               <li>
                 <Link 
                   href="/ai-services"
@@ -138,7 +138,7 @@ const contactInfo = {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+                ))}
               <li>
                 <Link 
                   href="/it-services"
@@ -165,7 +165,7 @@ const contactInfo = {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+                ))}
               <li>
                 <Link 
                   href="/micro-saas"
@@ -192,7 +192,7 @@ const contactInfo = {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+                ))}
             </ul>
           </div>
           {/* Company & Support */}
@@ -211,7 +211,7 @@ const contactInfo = {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+                ))}
             </ul>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
             <ul className="space-y-2 mb-6">
@@ -224,7 +224,7 @@ const contactInfo = {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+                ))}
             </ul>
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-300">

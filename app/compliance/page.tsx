@@ -2,9 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, CheckCircle, FileText, Lock, Award, Globe } from 'lucide-react';
-
-const CompliancePage: React.FC = () => {
-  const complianceStandards = [
+const CompliancePage: React.FC = () => {const complianceStandards = [
     {
       icon: Shield,
       title: 'SOC 2 Type II',
@@ -70,7 +68,7 @@ const CompliancePage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{standard.title}</h3>
                   <p className="text-gray-300">{standard.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -99,8 +97,7 @@ const CompliancePage: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
+}
 export default CompliancePage;
 }
 export default PagePage;

@@ -9,9 +9,8 @@ interface PerformanceMetrics {
   cls: number | null;
   ttfb: number | null;
 }
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+;
+const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -24,39 +23,39 @@ const PerformanceMonitor: React.FC = () => {
       return;
     }
 
-    // Web Vitals measurement
-    const measureWebVitals = () => {
-      // First Contentful Paint (FCP)
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+    // Web Vitals measurement;
+const measureWebVitals = () => {
+      // First Contentful Paint (FCP);
+const fcpObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
+const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+      // Largest Contentful Paint (LCP);
+const lcpObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
+const lastEntry = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+      // First Input Delay (FID);
+const fidObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
         entries.forEach((entry: any) => {
           setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
-      // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+      // Cumulative Layout Shift (CLS);
+let clsValue = 0;
+const clsObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
@@ -66,8 +65,8 @@ const PerformanceMonitor: React.FC = () => {
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-      // Time to First Byte (TTFB)
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      // Time to First Byte (TTFB);
+const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
       }
@@ -81,8 +80,8 @@ const PerformanceMonitor: React.FC = () => {
       }, 10000);
     };
 
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
+    // Show performance panel after 3 seconds;
+const timer = setTimeout(() => setIsVisible(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -118,9 +117,8 @@ interface PerformanceMetrics {
   ttfb: number | null; // Time to First Byte
   fmp: number | null; // First Meaningful Paint
 }
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+;
+const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -128,8 +126,8 @@ const PerformanceMonitor: React.FC = () => {
     ttfb: null,
     fmp: null
   });
-  const [isVisible, setIsVisible] = useState(false);
-  const { trackEvent } = useAnalytics();
+const [isVisible, setIsVisible] = useState(false);
+const { trackEvent } = useAnalytics();
 
   useEffect(() => {
     // Only run in browser
@@ -152,13 +150,11 @@ const PerformanceMonitor: React.FC = () => {
       setIsVisible(true);
     }
   }, []);
-
-  const monitorCoreWebVitals = () => {
+const monitorCoreWebVitals = () => {
     // First Contentful Paint (FCP)
-    if ('PerformanceObserver' in window) {
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+    if ($1) { const fcpObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
+const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
           trackEvent('performance_metric', {
@@ -170,10 +166,10 @@ const PerformanceMonitor: React.FC = () => {
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+      // Largest Contentful Paint (LCP);
+const lcpObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
+const lastEntry = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         trackEvent('performance_metric', {
           metric: 'LCP',
@@ -183,9 +179,9 @@ const PerformanceMonitor: React.FC = () => {
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+      // First Input Delay (FID);
+const fidObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
         entries.forEach((entry: any) => {
           setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           trackEvent('performance_metric', {
@@ -197,10 +193,10 @@ const PerformanceMonitor: React.FC = () => {
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
-      // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+      // Cumulative Layout Shift (CLS);
+let clsValue = 0;
+const clsObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
@@ -215,14 +211,12 @@ const PerformanceMonitor: React.FC = () => {
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
-  };
-
-  const monitorPerformanceMetrics = () => {
+  }
+const monitorPerformanceMetrics = () => {
     // Time to First Byte (TTFB)
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        const ttfb = navigation.responseStart - navigation.requestStart;
+    window.addEventListener('load', () => {;
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if ($1) { const ttfb = navigation.responseStart - navigation.requestStart;
         setMetrics(prev => ({ ...prev, ttfb }));
         trackEvent('performance_metric', {
           metric: 'TTFB',
@@ -233,10 +227,9 @@ const PerformanceMonitor: React.FC = () => {
     });
 
     // First Meaningful Paint (FMP) - approximation
-    if ('PerformanceObserver' in window) {
-      const fmpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fmpEntry = entries.find(entry => entry.name === 'first-meaningful-paint');
+    if ($1) { const fmpObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
+const fmpEntry = entries.find(entry => entry.name === 'first-meaningful-paint');
         if (fmpEntry) {
           setMetrics(prev => ({ ...prev, fmp: fmpEntry.startTime }));
           trackEvent('performance_metric', {
@@ -248,12 +241,10 @@ const PerformanceMonitor: React.FC = () => {
       });
       fmpObserver.observe({ entryTypes: ['paint'] });
     }
-  };
-
-  const monitorResourceLoading = () => {
-    if ('PerformanceObserver' in window) {
-      const resourceObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+  }
+const monitorResourceLoading = () => {
+    if ($1) { const resourceObserver = new PerformanceObserver((list) => {;
+const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (entry.duration > 1000) { // Resources taking more than 1 second
             trackEvent('slow_resource', {
@@ -267,12 +258,9 @@ const PerformanceMonitor: React.FC = () => {
       });
       resourceObserver.observe({ entryTypes: ['resource'] });
     }
-  };
-
-  const monitorMemoryUsage = () => {
-    if ('memory' in performance) {
-      const checkMemory = () => {
-        const memory = (performance as any).memory;
+  }
+const monitorMemoryUsage = () => {
+    if ($1) { const checkMemory = () => {const memory = (performance as any).memory;
         trackEvent('memory_usage', {
           used: Math.round(memory.usedJSHeapSize / 1024 / 1024), // MB
           total: Math.round(memory.totalJSHeapSize / 1024 / 1024), // MB
@@ -285,16 +273,14 @@ const PerformanceMonitor: React.FC = () => {
       setInterval(checkMemory, 30000);
       checkMemory(); // Initial check
     }
-  };
-
-  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+  }
+const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
     if (value === null) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500';
-  };
-
-  const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+  }
+const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
     if (value === null) return 'N/A';
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
@@ -308,7 +294,7 @@ const PerformanceMonitor: React.FC = () => {
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900">Performance Monitor</h3>
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={() => setIsVisible(false);
           className="text-gray-400 hover:text-gray-600"
         >
           ×
@@ -316,7 +302,8 @@ const PerformanceMonitor: React.FC = () => {
       </div>
       
       if (slowResources.length > 0) {
-        console.warn('Slow resources detected:', slowResources.map((r: any) => ({
+        // console.warn removed for production
+=> ({
           name: r.name,
           duration: r.duration,
           size: r.transferSize
@@ -324,34 +311,32 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Memory usage monitoring
-    const monitorMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = {
+    // Memory usage monitoring;
+const monitorMemory = () => {
+      if ($1) { const memory = (performance as any).memory;
+const memoryUsage = {
           used: Math.round(memory.usedJSHeapSize / 1048576), // MB
           total: Math.round(memory.totalJSHeapSize / 1048576), // MB
           limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
         };
         
         if (memoryUsage.used > memoryUsage.limit * 0.8) {
-          console.warn('High memory usage detected:', memoryUsage);
-        }
+          // console.warn removed for production
+}
       }
     };
 
-    // Network information
-    const monitorNetwork = () => {
-      if ('connection' in navigator) {
-        const connection = (navigator as any).connection;
-        const networkInfo = {
+    // Network information;
+const monitorNetwork = () => {
+      if ($1) { const connection = (navigator as any).connection;
+const networkInfo = {
           effectiveType: connection.effectiveType,
           downlink: connection.downlink,
           rtt: connection.rtt
         };
         
-        console.log('Network information:', networkInfo);
-      }
+        // console.log removed for production
+}
     };
 
     // Run measurements
@@ -360,13 +345,11 @@ const PerformanceMonitor: React.FC = () => {
     monitorMemory();
     monitorNetwork();
 
-    // Log performance metrics
-    const logMetrics = () => {
-      console.log('Performance Metrics:', metrics);
-      
-      // Send to analytics if available
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+    // Log performance metrics;
+const logMetrics = () => {
+      // console.log removed for production
+// Send to analytics if available
+      if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
         
         {metrics.fcp && (
           <div className="flex justify-between">
@@ -381,8 +364,7 @@ const PerformanceMonitor: React.FC = () => {
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>
-          </div>
-        )}
+          </div>);
       </div>
     </div>
   );
@@ -394,8 +376,8 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Log metrics after a delay to allow for measurements
-    const timeoutId = setTimeout(logMetrics, 5000);
+    // Log metrics after a delay to allow for measurements;
+const timeoutId = setTimeout(logMetrics, 5000);
 
     return () => {
       clearTimeout(timeoutId);

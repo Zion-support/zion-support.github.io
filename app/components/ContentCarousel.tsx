@@ -123,10 +123,8 @@ const currentSlideData = slides[currentSlide];
                         <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                         <div className="text-sm text-gray-400">{stat.label}</div>
                       </div>
-                    ))}
-                  </div>
-                )}
-
+                    ));
+                  </div>);
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                     Learn More
@@ -150,35 +148,10 @@ const currentSlideData = slides[currentSlide];
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-between mt-8">
-            <button
-              onClick={prevSlide}
-              className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <ChevronLeft className="w-6 h-6 text-white" />
-            </button>
-
-            {/* Dots */}
-            <div className="flex space-x-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
-                  }`}
-                />
               ))}
->>>>>>> main
+              ));
             </div>
 
-<<<<<<< HEAD
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
@@ -231,14 +204,6 @@ const currentSlideData = slides[currentSlide];
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
             </div>
-=======
-            <button
-              onClick={nextSlide}
-              className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <ChevronRight className="w-6 h-6 text-white" />
-            </button>
->>>>>>> main
           </div>
         </div>
       </div>

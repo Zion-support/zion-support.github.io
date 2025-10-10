@@ -22,9 +22,7 @@ const PagePage: React.FC = () => {const features = [
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
-
-  const benefits = [
-;
+const benefits = [;
 const benefits = [
     'Benefit 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
@@ -268,4 +266,5 @@ const benefits = [
 
     </div>)
 export default PagePage;
-      </section>export default AiApiManagementPage;export default PagePage;
+      </section>export default AiApiManagementPage
+export default PagePage;

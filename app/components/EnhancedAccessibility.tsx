@@ -10,21 +10,20 @@ interface AccessibilitySettings {
   screenReader: boolean;
   focusVisible: boolean;
 }
-
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+;
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
+const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
     focusVisible: true
   });
-
-  const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings');
+    // Load saved settings from localStorage;
+const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       setSettings(JSON.parse(savedSettings));
     }
@@ -32,9 +31,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Apply initial settings
     applyAccessibilitySettings(settings);
   }, []);
-
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
+const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {;
+const root = document.documentElement;
     
     // High contrast
     if (newSettings.highContrast) {
@@ -70,10 +68,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     } else {
       root.classList.remove('focus-visible');
     }
-  };
-
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
+  }
+const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {;
+const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applyAccessibilitySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
@@ -85,7 +82,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       
       {/* Accessibility Toggle Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(!isOpen);
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         aria-label="Toggle accessibility settings"
       >
@@ -105,7 +102,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
                 <span className="text-sm font-medium text-gray-700">High Contrast</span>
               </div>
               <button
-                onClick={() => updateSetting('highContrast', !settings.highContrast)}
+                onClick={() => updateSetting('highContrast', !settings.highContrast);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
@@ -126,7 +123,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
                 <span className="text-sm font-medium text-gray-700">Large Text</span>
               </div>
               <button
-                onClick={() => updateSetting('largeText', !settings.largeText)}
+                onClick={() => updateSetting('largeText', !settings.largeText);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.largeText ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
@@ -147,7 +144,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
                 <span className="text-sm font-medium text-gray-700">Reduce Motion</span>
               </div>
               <button
-                onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
+                onClick={() => updateSetting('reducedMotion', !settings.reducedMotion);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
@@ -168,7 +165,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
                 <span className="text-sm font-medium text-gray-700">Screen Reader Mode</span>
               </div>
               <button
-                onClick={() => updateSetting('screenReader', !settings.screenReader)}
+                onClick={() => updateSetting('screenReader', !settings.screenReader);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.screenReader ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
@@ -189,7 +186,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
                 <span className="text-sm font-medium text-gray-700">Enhanced Focus</span>
               </div>
               <button
-                onClick={() => updateSetting('focusVisible', !settings.focusVisible)}
+                onClick={() => updateSetting('focusVisible', !settings.focusVisible);
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   settings.focusVisible ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
@@ -206,15 +203,13 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
           <div className="mt-6 pt-4 border-t border-gray-200">
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsOpen(false);
               className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
             >
               Close
             </button>
           </div>
-        </div>
-      )}
-
+        </div>);
       <style jsx global>{`
         .high-contrast {
           --tw-bg-opacity: 1;
@@ -288,11 +283,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
 
     // Keyboard navigation enhancements
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
+    if ($1) { const handleKeyDown = (event: KeyboardEvent) => {
         // Escape key to close modals/dropdowns
-        if (event.key === 'Escape') {
-          const activeElement = document.activeElement as HTMLElement;
+        if ($1) { const activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
           }
@@ -302,9 +295,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         if (event.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
-      };
-
-      const handleMouseDown = () => {
+      }
+const handleMouseDown = () => {
         document.body.classList.remove('keyboard-navigation');
       };
 
@@ -318,9 +310,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
 
     // Screen reader announcements
-    if (enableScreenReaderSupport && typeof window !== 'undefined') {
-      const announceToScreenReader = (message: string) => {
-        const announcement = document.createElement('div');
+    if ($1) { const announceToScreenReader = (message: string) => {;
+const announcement = document.createElement('div');
         announcement.setAttribute('aria-live', 'polite');
         announcement.setAttribute('aria-atomic', 'true');
         announcement.className = 'sr-only';
@@ -332,11 +323,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         }, 1000);
       };
 
-      // Announce page changes
-      const observer = new MutationObserver((mutations) => {
+      // Announce page changes;
+const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
-          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-            const addedNode = mutation.addedNodes[0] as Element;
+          if ($1) { const addedNode = mutation.addedNodes[0] as Element;
             if (addedNode && addedNode.getAttribute && addedNode.getAttribute('role') === 'main') {
               announceToScreenReader('Main content has loaded');
             }
@@ -352,9 +342,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
 
     // High contrast mode detection
-    if (enableHighContrast && typeof window !== 'undefined') {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      const handleContrastChange = (e: MediaQueryListEvent) => {
+    if ($1) { const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+const handleContrastChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.body.classList.add('high-contrast');
         } else {
@@ -371,9 +360,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
 
     // Reduced motion support
-    if (enableReducedMotion && typeof window !== 'undefined') {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleMotionChange = (e: MediaQueryListEvent) => {
+    if ($1) { const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+const handleMotionChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.body.classList.add('reduced-motion');
         } else {
@@ -390,13 +378,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
 
     // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      const trapFocus = (element: HTMLElement) => {
-        const focusableContent = element.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0] as HTMLElement;
-        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
+    if ($1) { const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+const trapFocus = (element: HTMLElement) => {;
+const focusableContent = element.querySelectorAll(focusableElements);
+const firstFocusableElement = focusableContent[0] as HTMLElement;
+const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
         element.addEventListener('keydown', (e) => {
           if (e.key === 'Tab') {
@@ -415,15 +401,14 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         });
       };
 
-      // Apply focus trapping to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      // Apply focus trapping to modals and dropdowns;
+const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
       modals.forEach(modal => trapFocus(modal as HTMLElement));
     }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement, enableReducedMotion]);
 
   return null;
-};
-
+}
 export default EnhancedAccessibility;
     // Enhance focus management;
 const enhanceFocusManagement = () => {

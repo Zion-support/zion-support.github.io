@@ -22,9 +22,7 @@ const PagePage: React.FC = () => {const features = [
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
-
-  const benefits = [
-;
+const benefits = [;
 const benefits = [
     'Benefit 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
@@ -120,11 +118,10 @@ const benefits = [
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -149,7 +146,7 @@ const benefits = [
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -196,7 +193,7 @@ const benefits = [
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
             ));
@@ -205,8 +202,7 @@ const benefits = [
       <Footer />
     </>
   );
-};
-
+}
 export default AiBlockchainAnalyticsPage;
         </div>
 export default AiBlockchainAnalyticsPage;        </div>
@@ -256,7 +252,6 @@ export default AiBlockchainAnalyticsPage;        </div>
       <Footer />
     </div>
   );
-};
-
-export default PagePage;
+}
+export default PagePage
 export default PagePage;

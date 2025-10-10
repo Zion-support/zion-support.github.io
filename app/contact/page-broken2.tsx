@@ -22,20 +22,17 @@ phone: '',
     budget: '',
     timeline: '',
     message: '';)
-});;
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    const { name, value } = e.target;
+});
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
+const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value;)
 }););)
 }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -57,8 +54,7 @@ phone: '',
 } catch (error) {
       setSubmitStatus('error');)
 } finally {
-      setIsSubmitting(false);)
-}
+      setIsSubmitting(false););
   };
 ;
 const services = [
@@ -96,8 +92,7 @@ const contactInfo = [
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time';)
-}
+      description: 'Eastern Time';);
   ];
 
   return (
@@ -356,6 +351,4 @@ const contactInfo = [
 </div>
 
   );)
-};
-
 export default ContactPage;

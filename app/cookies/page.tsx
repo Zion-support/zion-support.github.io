@@ -50,6 +50,4 @@ const CookiesPage: React.FC = () => {
       </div>
     </>
   );)
-};
-
 export default CookiesPage;

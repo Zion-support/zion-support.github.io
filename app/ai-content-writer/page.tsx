@@ -23,8 +23,7 @@ const AIContentWriterPage: React.FC = () => {const features = [
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
     }
   ];
-
-  const benefits = [
+const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -61,8 +60,7 @@ const AIContentWriterPage: React.FC = () => {const features = [
               </button>
             </div>
           </div>
-        </section>
-;
+        </section>;
 const benefits = [
     'Increase content production by 10x',
         </section>    'Increase content production by 10x',
@@ -280,4 +278,5 @@ const benefits = [
 
     </div>)
 export default AIContentWriterPage;
-      </section>export default AiContentWriterPage;export default AIContentWriterPage;
+      </section>export default AiContentWriterPage
+export default AIContentWriterPage;

@@ -20,13 +20,12 @@ interface BlogPost {
   featured: boolean;
   image: string;
 }
+;
+const BlogPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
+const [selectedCategory, setSelectedCategory] = useState('all');
 
-const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  // Sample blog posts data
-  const blogPosts: BlogPost[] = [
+  // Sample blog posts data;
+const blogPosts: BlogPost[] = [
   image: string;
   featured: boolean}
 ;
@@ -118,21 +117,18 @@ const blogPosts: BlogPost[] = [
       image: '/images/blog/data-analytics.jpg'
     }
   ];
-
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-
-  const filteredPosts = useMemo(() => {
-    return blogPosts.filter(post => {
-      const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+const filteredPosts = useMemo(() => {
+    return blogPosts.filter(post => {;
+const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
   }, [searchTerm, selectedCategory, blogPosts]);
-
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.slice(0, 3);
+const featuredPosts = blogPosts.filter(post => post.featured);
+const recentPosts = blogPosts.slice(0, 3);
     }
 
     setFilteredPosts(filtered);
@@ -167,7 +163,7 @@ const blogPosts: BlogPost[] = [
                     type="text"
                     placeholder="Search articles..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => setSearchTerm(e.target.value);
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -189,7 +185,7 @@ const blogPosts: BlogPost[] = [
                   type="text"
                   placeholder="Search articles..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e) => setSearchTerm(e.target.value);
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
@@ -200,7 +196,7 @@ const blogPosts: BlogPost[] = [
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => setSelectedCategory(category);
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-cyan-500 text-white'
@@ -209,7 +205,7 @@ const blogPosts: BlogPost[] = [
                 >
                   {category}
                 </button>
-              ))}
+              ));
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value);
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -261,12 +257,10 @@ const blogPosts: BlogPost[] = [
                       </div>
                     </div>
                   </article>
-                ))}
+                ));
               </div>
             </div>
-          </section>
-        )}
-
+          </section>);
         {/* Main Content */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -279,7 +273,7 @@ const blogPosts: BlogPost[] = [
                     {categories.map((category) => (
                       <button
                         key={category}
-                        onClick={() => setSelectedCategory(category)}
+                        onClick={() => setSelectedCategory(category);
                         className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
                           selectedCategory === category
                             ? 'bg-blue-100 text-blue-800 font-medium'
@@ -288,7 +282,7 @@ const blogPosts: BlogPost[] = [
                       >
                         {category === 'all' ? 'All Categories' : category}
                       </button>
-                    ))}
+                    ));
                   </div>
                 </div>
 
@@ -312,7 +306,7 @@ const blogPosts: BlogPost[] = [
                           </div>
                         </div>
                       </div>
-                    ))}
+                    ));
                   </div>
                 </div>
               </aside>
@@ -367,7 +361,7 @@ const blogPosts: BlogPost[] = [
                                   <Tag className="w-3 h-3 mr-1" />
                                   {tag}
                                 </span>
-                              ))}
+                              ));
                             </div>
                             <button className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
                               Read More
@@ -377,7 +371,7 @@ const blogPosts: BlogPost[] = [
                         </div>
                       </div>
                     </article>
-                  ))}
+                  ));
                 </div>
 
                 {filteredPosts.length === 0 && (
@@ -387,8 +381,7 @@ const blogPosts: BlogPost[] = [
                     </div>
                     <h3 className="text-xl font-medium text-gray-900 mb-2">No articles found</h3>
                     <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
-                  </div>
-                )}
+                  </div>);
               </main>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -424,7 +417,7 @@ const blogPosts: BlogPost[] = [
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </article>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -475,8 +468,7 @@ const blogPosts: BlogPost[] = [
             {filteredPosts.length === 0 && searchTerm && (
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
-              </div>
-            )}
+              </div>);
           </div>
         </section>
 
@@ -504,6 +496,5 @@ const blogPosts: BlogPost[] = [
       </div>
     </>
   );
-};
-
+}
 export default BlogPage;

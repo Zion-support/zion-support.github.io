@@ -130,7 +130,6 @@ const stats = [
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                 <span>{benefit}</span>
               </div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -153,9 +152,6 @@ const stats = [
                 Schedule Demo
               </button>
             </div>
-=======
-            ));
->>>>>>> main
           </div>
         </div>
       </div>
