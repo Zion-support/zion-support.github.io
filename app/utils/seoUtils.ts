@@ -3,24 +3,18 @@
  * Provides SEO optimization and meta tag management
  */
 
-<<<<<<< HEAD
 export interface SEOConfig {
-=======
-export interface SEOData {
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl: string;
-<<<<<<< HEAD
-=======
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: unknown;
 }
 
-export const generateMetaTags = (data: SEOData): string => {
+export const generateMetaTags = (data: SEOConfig): string => {
   const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
 
   return `

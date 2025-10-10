@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Performance utilities for optimizing React components and application performance
 
 export const debounce = <T extends (...args: any[]) => any>(
