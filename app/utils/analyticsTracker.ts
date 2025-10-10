@@ -1,381 +1,334 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+// Analytics Tracker Utility
 
-const AnalyticsTrackerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
-interface AnalyticsEvent {}
-  action: string,
-  category: string,
+export interface AnalyticsEvent {
+  action: string;
+  category: string;
   label?: string;
   value?: number;
-  nonInteraction?: boolean;
+  customParameters?: Record<string, any>;
 }
 
-interface PerformanceMetrics {}
-  metric: string,
-  value: number,
-  rating?: 'good' | 'needs-improvement' | 'poor';
+export interface AnalyticsConfig {
+  trackingId?: string;
+  enabled: boolean;
+  debug: boolean;
+  respectDoNotTrack: boolean;
+  anonymizeIP: boolean;
+  customDimensions?: Record<string, string>;
 }
 
-interface ErrorReport {}
-  message: string,
-  stack?: string;
-  componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+export interface UserProperties {
+  userId?: string;
+  sessionId?: string;
+  userType?: string;
+  customProperties?: Record<string, any>;
 }
 
-class AnalyticsTracker {}
-  private isInitialized = false;
-  private queue: Array<() => void> = [];
+class AnalyticsTracker {
+  private config: AnalyticsConfig;
+  private userProperties: UserProperties = {};
+  private sessionId: string;
+  private eventQueue: AnalyticsEvent[] = [];
+  private isOnline: boolean = true;
 
-  /**
-   * Initialize the analytics tracker;
-   */
-  initialize(): void {}
-    if (typeof window === 'undefined') return;
-
-    this.isInitialized = true;
-
-    // Process queued events;
-    this.queue.forEach(fn => fn());
-    this.queue = [];
-,
-    // Track initial page view;
-    this.trackPageView(window.location.pathname);
- * Enhanced Analytics Tracker;
- * Provides comprehensive tracking for user interactions, performance metrics, and errors;
- */
-interface AnalyticsEvent {/* TODO: Fix JSX expression */}
-}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-}
-interface ErrorReport {/* TODO: Fix JSX expression */}
-}
-class AnalyticsTracker {/* TODO: Fix JSX expression */}
+  constructor(config: AnalyticsConfig = { enabled: true, debug: false, respectDoNotTrack: true, anonymizeIP: true }) {
+    this.config = config;
+    this.sessionId = this.generateSessionId();
+    this.setupOnlineStatusListener();
   }
 
-  /**
-   * Track a page view;
-   */
-  trackPageView(path: string): void {,
-    const event = () => {,
-      // Add your analytics implementation here;
-  trackPageView(path: string): void {}
-    const event = () => {}
-      // Add your analytics implementation here
-    };
-
-    if (this.isInitialized) {}
-      event();
-    } else {}
-      this.queue.push(event);
-   * Track a custom event;
-   */
-  trackEvent(even)
-  t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
-        });
-      }
-      // Also log to console in development;
-      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-        }
-    };
-    if (this.isInitialized) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/main
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AnalyticsTracker | Zion Tech Group</title>
-        <meta name="description" content="Professional AnalyticsTracker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="analyticsTracker, AI solutions, IT services, Zion Tech Group, analyticstracker" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AnalyticsTracker
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced analyticstracker solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AnalyticsTracker?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our analyticstracker solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our analyticstracker solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
-  /**
-   * Track user interaction;
-   */
-  trackInteraction(action: string, element?: string): void {
-    this.trackEvent({)
-      action)
-      category: 'user-interaction'),
-      label: element,
-  trackInteraction(action: string, element?: string): void {}
-    this.trackEvent({)}
-      action,
-      category: 'user-interaction',
-      label: element
->>>>>>> origin/main
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your analyticstracker needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AnalyticsTrackerPage;
-<<<<<<< HEAD
-=======
-  /**
-   * Track conversion;
-   */
-  trackConversion(conversionType: string, value?: number): void {
-    this.trackEvent({)
-      action: 'conversion'),
-      category: conversionType),
-      value;
-  trackConversion(conversionType: string, value?: number): void {}
-    this.trackEvent({)}
-      action: 'conversion',
-      category: conversionType,
-      value
-
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  /**
-   * Track external link clicks;
-   */
-  trackExternalLink(url: string, linkText?: string): void {
-    this.trackEvent({)
-      category: 'Outbound'),
-      action: 'click'),
-      label: linkText || url;
-  trackExternalLink(url: string, linkText?: string): void {}
-    this.trackEvent({)}
-      category: 'Outbound',
-      action: 'click',
-      label: linkText || url
+  private setupOnlineStatusListener(): void {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('online', () => {
+        this.isOnline = true;
+        this.flushEventQueue();
+      });
 
-  }
-
-  /**
-   * Track search queries;
-   */
-  trackSearch(query: string, resultsCount?: number): void {
-    this.trackEvent({)
-      category: 'Search'),
-      action: 'search'),
-      label: query),
-      value: resultsCount,
-  trackSearch(query: string, resultsCount?: number): void {}
-    this.trackEvent({)}
-      category: 'Search',
-      action: 'search',
-      label: query,
-      value: resultsCount
-
-  }
-
-  /**
-   * Track video interactions;
-   */
-  trackVideoInteraction(videoId: string, action: 'play' | 'pause' | 'complete', progress?: number): void {
-    this.trackEvent({)
-      category: 'Video'),
-      action),
-      label: videoId),
-      value: progress,
-  trackVideoInteraction(videoId: string, action: 'play' | 'pause' | 'complete', progress?: number): void {}
-    this.trackEvent({)}
-      category: 'Video',
-      action,
-      label: videoId,
-      value: progress
-
-  }
-
-  /**
-   * Track download events;
-   */
-  trackDownload(fileName: string, fileType: string): void {,
-    this.trackEvent({)
-      category: 'Download'),
-      action: 'download'),
-  trackDownload(fileName: string, fileType: string): void {}
-    this.trackEvent({)}
-      category: 'Download',
-      action: 'download',
-      label: `${fileName}.${fileType}`
-
-  }
-
-  /**
-   * Get analytics data (for debugging)
-   */
-  getAnalyticsData(): {}
-    isInitialized: boolean,
-    queueLength: number,
-  } {
-    return {
-      isInitialized: this.isInitialized;
-      queueLength: this.queue.length;
-  } {}
-    return {}
-      isInitialized: this.isInitialized,
-      queueLength: this.queue.length
-    };
-  }
-}
-
-// Create singleton instance;
-export const analyticsTracker = new AnalyticsTracker();
-
-export default AnalyticsTracker;
-   * Track conversions;
-   */
-  trackConversion(conversionI)
-  d: string, value?: number): void {/* TODO: Fix JSX expression */}
-        });
-      }
-      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-        }
-    };
-    if (this.isInitialized) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
+      window.addEventListener('offline', () => {
+        this.isOnline = false;
+      });
     }
   }
-}
-// Export singleton instance;
-export const analyticsTracker = new AnalyticsTracker();
-// Auto-initialize when window is available;
-if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
+
+  public setUserProperties(properties: UserProperties): void {
+    this.userProperties = { ...this.userProperties, ...properties };
+  }
+
+  public track(event: AnalyticsEvent): void {
+    if (!this.config.enabled) return;
+
+    // Check Do Not Track
+    if (this.config.respectDoNotTrack && this.isDoNotTrackEnabled()) {
+      return;
+    }
+
+    const enrichedEvent = {
+      ...event,
+      timestamp: Date.now(),
+      sessionId: this.sessionId,
+      userId: this.userProperties.userId,
+      userType: this.userProperties.userType,
+      customParameters: {
+        ...event.customParameters,
+        ...this.userProperties.customProperties,
+        ...this.config.customDimensions
+      }
+    };
+
+    if (this.config.debug) {
+      console.log('Analytics Event:', enrichedEvent);
+    }
+
+    if (this.isOnline) {
+      this.sendEvent(enrichedEvent);
+    } else {
+      this.eventQueue.push(enrichedEvent);
+    }
+  }
+
+  public pageView(page: string, title?: string): void {
+    this.track({
+      action: 'page_view',
+      category: 'navigation',
+      label: page,
+      customParameters: {
+        page_title: title || document.title,
+        page_url: window.location.href,
+        referrer: document.referrer
+      }
     });
   }
+
+  public click(element: string, context?: string): void {
+    this.track({
+      action: 'click',
+      category: 'interaction',
+      label: element,
+      customParameters: {
+        context: context || 'unknown',
+        element_type: this.getElementType(element)
+      }
+    });
+  }
+
+  public formSubmit(formName: string, success: boolean = true): void {
+    this.track({
+      action: 'form_submit',
+      category: 'form',
+      label: formName,
+      value: success ? 1 : 0,
+      customParameters: {
+        form_success: success
+      }
+    });
+  }
+
+  public search(query: string, resultsCount?: number): void {
+    this.track({
+      action: 'search',
+      category: 'search',
+      label: query,
+      value: resultsCount,
+      customParameters: {
+        search_query: query,
+        results_count: resultsCount
+      }
+    });
+  }
+
+  public error(error: string, context?: string): void {
+    this.track({
+      action: 'error',
+      category: 'error',
+      label: error,
+      customParameters: {
+        error_message: error,
+        error_context: context || 'unknown',
+        error_url: window.location.href,
+        error_line: this.getErrorLine()
+      }
+    });
+  }
+
+  public customEvent(action: string, category: string, parameters?: Record<string, any>): void {
+    this.track({
+      action,
+      category,
+      customParameters: parameters
+    });
+  }
+
+  public setCustomDimension(key: string, value: string): void {
+    this.config.customDimensions = {
+      ...this.config.customDimensions,
+      [key]: value
+    };
+  }
+
+  public flushEventQueue(): void {
+    if (this.eventQueue.length === 0) return;
+
+    const events = [...this.eventQueue];
+    this.eventQueue = [];
+
+    events.forEach(event => {
+      this.sendEvent(event);
+    });
+  }
+
+  private sendEvent(event: AnalyticsEvent): void {
+    // This would integrate with your analytics service
+    // For example, Google Analytics, Mixpanel, etc.
+    
+    if (this.config.trackingId) {
+      // Google Analytics 4 example
+      if (typeof gtag !== 'undefined') {
+        gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          ...event.customParameters
+        });
+      }
+    }
+
+    // Send to custom analytics endpoint
+    this.sendToCustomEndpoint(event);
+  }
+
+  private sendToCustomEndpoint(event: AnalyticsEvent): void {
+    if (typeof window === 'undefined') return;
+
+    fetch('/api/analytics', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(event)
+    }).catch(error => {
+      if (this.config.debug) {
+        console.error('Analytics tracking failed:', error);
+      }
+    });
+  }
+
+  private isDoNotTrackEnabled(): boolean {
+    if (typeof navigator !== 'undefined') {
+      return navigator.doNotTrack === '1' || navigator.doNotTrack === 'yes';
+    }
+    return false;
+  }
+
+  private getElementType(element: string): string {
+    const el = document.querySelector(element);
+    return el ? el.tagName.toLowerCase() : 'unknown';
+  }
+
+  private getErrorLine(): number | undefined {
+    const error = new Error();
+    const stack = error.stack;
+    if (stack) {
+      const lines = stack.split('\n');
+      for (const line of lines) {
+        const match = line.match(/:(\d+):\d+/);
+        if (match) {
+          return parseInt(match[1], 10);
+        }
+      }
+    }
+    return undefined;
+  }
+
+  public getSessionId(): string {
+    return this.sessionId;
+  }
+
+  public getEventQueueLength(): number {
+    return this.eventQueue.length;
+  }
+
+  public clearEventQueue(): void {
+    this.eventQueue = [];
+  }
+
+  public enable(): void {
+    this.config.enabled = true;
+  }
+
+  public disable(): void {
+    this.config.enabled = false;
+  }
+
+  public setDebugMode(enabled: boolean): void {
+    this.config.debug = enabled;
+  }
 }
-export default analyticsTracker;
->>>>>>> origin/main
+
+// Singleton instance
+export const analyticsTracker = new AnalyticsTracker({
+  enabled: true,
+  debug: process.env.NODE_ENV === 'development',
+  respectDoNotTrack: true,
+  anonymizeIP: true
+});
+
+// Utility functions
+export const trackEvent = (event: AnalyticsEvent): void => {
+  analyticsTracker.track(event);
+};
+
+export const trackPageView = (page: string, title?: string): void => {
+  analyticsTracker.pageView(page, title);
+};
+
+export const trackClick = (element: string, context?: string): void => {
+  analyticsTracker.click(element, context);
+};
+
+export const trackFormSubmit = (formName: string, success: boolean = true): void => {
+  analyticsTracker.formSubmit(formName, success);
+};
+
+export const trackSearch = (query: string, resultsCount?: number): void => {
+  analyticsTracker.search(query, resultsCount);
+};
+
+export const trackError = (error: string, context?: string): void => {
+  analyticsTracker.error(error, context);
+};
+
+export const trackCustomEvent = (action: string, category: string, parameters?: Record<string, any>): void => {
+  analyticsTracker.customEvent(action, category, parameters);
+};
+
+export const setUserProperties = (properties: UserProperties): void => {
+  analyticsTracker.setUserProperties(properties);
+};
+
+export const setCustomDimension = (key: string, value: string): void => {
+  analyticsTracker.setCustomDimension(key, value);
+};
+
+// Auto-track page views
+if (typeof window !== 'undefined') {
+  // Track initial page view
+  analyticsTracker.pageView(window.location.pathname);
+
+  // Track page changes (for SPAs)
+  let currentPath = window.location.pathname;
+  const observer = new MutationObserver(() => {
+    if (window.location.pathname !== currentPath) {
+      currentPath = window.location.pathname;
+      analyticsTracker.pageView(currentPath);
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+}

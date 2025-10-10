@@ -2,34 +2,11 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-const AIAgriculturalIntelligenceProPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered agricultural intelligence solutions for modern farming operations." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              AI Agricultural Intelligence <span className="text-cyan-400">Pro</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI-powered agricultural intelligence solutions for modern farming operations.
-            </p>
-          </div>
-        </div>
-      </div>
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const PagePage: React.FC = () => {
+const AIAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -60,8 +37,8 @@ const PagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions powered by AI technology." />
+        <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered agricultural intelligence solutions for modern farming operations." />
       </Helmet>
 
       <Navigation />
@@ -72,10 +49,10 @@ const PagePage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+              AI Agricultural Intelligence <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Pro</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced page solutions powered by AI technology.
+              Advanced AI-powered agricultural intelligence solutions for modern farming operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -147,13 +124,8 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
     </>
   );
 };
 
-<<<<<<< HEAD
 export default AIAgriculturalIntelligenceProPage;
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3

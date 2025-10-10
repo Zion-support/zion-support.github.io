@@ -1,769 +1,519 @@
-<<<<<<< HEAD
-=======
-'use client'
+// Advanced Analytics Utility
 
 interface UserEvent {
-  id: string,
-  type: string,
-  name: string,
+  id: string;
+  type: string;
+  name: string;
   value?: number;
-  timestamp: string,
-  sessionId: string,
+  timestamp: string;
+  sessionId: string;
   userId?: string;
-  url: string,
-  metadata?: Record<string, unknown>
+  url: string;
+  metadata?: Record<string, unknown>;
 }
 
 interface UserSession {
-  id: string,
-  startTime: string,
+  id: string;
+  startTime: string;
   endTime?: string;
   duration?: number;
-  pageViews: number,
-interface UserEvent {}
-  id: string
-  type: string
-  name: string
-  value?: number
-  timestamp: string,
-    sessionId: string
-  userId?: string
-  url: string
-  metadata?: Record<string, unknown></strin>
-}
-
-interface UserSession {}
-  id: string
-  startTime: string
-  endTime?: string
-  duration?: number
-  pageViews: number
-  events: UserEvent[]
+  pageViews: number;
+  events: UserEvent[];
+  userAgent: string;
   referrer?: string;
-  userAgent: string,
-  device: 'desktop' | 'mobile' | 'tablet'
-  browser: string,
-  os: string,
-  country?: string;,
-  city?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmTerm?: string;
+  utmContent?: string;
 }
 
 interface AnalyticsConfig {
-  enableTracking: boolean,
-  enableHeatmaps: boolean,
-  enableSessionRecording: boolean,
-  enableA_BTesting: boolean,
-  enableConversionTracking: boolean,
-  enablePerformanceTracking: boolean,
-  enableErrorTracking: boolean,
-  enableUserJourneyTracking: boolean,
+  trackingId: string;
+  enabled: boolean;
+  debug: boolean;
+  respectDoNotTrack: boolean;
+  anonymizeIP: boolean;
+  customDimensions?: Record<string, string>;
+  batchSize: number;
+  flushInterval: number;
+  maxRetries: number;
+}
+
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  totalBlockingTime: number;
+  speedIndex: number;
+  timeToInteractive: number;
 }
 
 class AdvancedAnalytics {
-  private static instance: AdvancedAnalytics,
-  private config: AnalyticsConfig,
-  private currentSession: UserSession,
-  private eventQueue: UserEvent[] = []
+  private config: AnalyticsConfig;
+  private session: UserSession;
+  private eventQueue: UserEvent[] = [];
+  private flushTimer: NodeJS.Timeout | null = null;
+  private isOnline: boolean = true;
+  private retryCount: number = 0;
 
-  constructor() {
+  constructor(config: Partial<AnalyticsConfig> = {}) {
     this.config = {
-      enableTracking: true,
-      enableHeatmaps: true,
-      enableSessionRecording: false,
-      enableA_BTesting: true,
-      enableConversionTracking: true,
-      enablePerformanceTracking: true,
-      enableErrorTracking: true,
-      enableUserJourneyTracking: true,
-interface AnalyticsConfig {}
-  enableTracking: boolean
-  enableHeatmaps: boolean
-  enableSessionRecording: boolean
-  enableA_BTesting: boolean
-  enableConversionTracking: boolean
-  enablePerformanceTracking: boolean
-  enableErrorTracking: boolean
-  enableUserJourneyTracking: boolean
-}
+      trackingId: '',
+      enabled: true,
+      debug: false,
+      respectDoNotTrack: true,
+      anonymizeIP: true,
+      batchSize: 20,
+      flushInterval: 30000, // 30 seconds
+      maxRetries: 3,
+      ...config
+    };
 
-class AdvancedAnalytics {}
-  private static instance: AdvancedAnalytics
-  private config: AnalyticsConfig
-  private currentSession: UserSession
-  private eventQueue: UserEvent[] = []
-
-  constructor() {}
-    this.config = {}
-      enableTracking: true,
-      enableHeatmaps: true,
-      enableSessionRecording: false,
-      enableA_BTesting: true,
-      enableConversionTracking: true,
-      enablePerformanceTracking: true,
-      enableErrorTracking: true,
-      enableUserJourneyTracking: true
-    }
-    this.currentSession = this.createNewSession()
-    this.initializeTracking()
+    this.session = this.createSession();
+    this.setupEventListeners();
+    this.startFlushTimer();
   }
 
-  static getInstance(): AdvancedAnalytics {}
-    if (!AdvancedAnalytics.instance) {}
-      AdvancedAnalytics.instance = new AdvancedAnalytics()
->>>>>>> origin/main
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const AdvancedAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AdvancedAnalytics | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedAnalytics services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="advancedAnalytics, AI solutions, IT services, Zion Tech Group, advancedanalytics" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedAnalytics
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced advancedanalytics solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AdvancedAnalytics?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advancedanalytics solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our advancedanalytics solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedanalytics needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AdvancedAnalyticsPage;
-<<<<<<< HEAD
-=======
-    // Track user journey
-    if (this.config.enableUserJourneyTracking) {}
-      this.trackUserJourney()
-    }
-
-    // Setup network monitoring;
-    this.setupNetworkMonitoring()
-  private initializeTracking(): void {/* TODO: Fix JSX expression */}
-    }
-    // Track user journey;
-    if (this.config.enableUserJourneyTracking) {/* TODO: Fix JSX expression */}
-    }
-    // Setup network monitoring;
-    this.setupNetworkMonitoring();
-  }
-
-  /**
-   * Create new user session;
-   */
-  private createNewSession(): UserSession {
+  private createSession(): UserSession {
+    const sessionId = this.generateId();
+    const startTime = new Date().toISOString();
+    
     return {
-      id: this.generateSessionId()
-      startTime: new Date().toISOString()
-      pageViews: 0,
-      events: []
-      userAgent: navigator.userAgent;
-      device: this.detectDevice()
-  private createNewSession(): UserSession {}
-    return {}
-      id: this.generateSessionId(),
-      startTime: new Date().toISOString(),
+      id: sessionId,
+      startTime,
       pageViews: 0,
       events: [],
       userAgent: navigator.userAgent,
-      device: this.detectDevice(),
-      browser: this.detectBrowser(),
-      os: this.detectOS(),
-      referrer: document.referrer;
-    }
-  private createNewSession(): UserSession {/* TODO: Fix JSX expression */}
+      referrer: document.referrer,
+      utmSource: this.getUTMParameter('utm_source'),
+      utmMedium: this.getUTMParameter('utm_medium'),
+      utmCampaign: this.getUTMParameter('utm_campaign'),
+      utmTerm: this.getUTMParameter('utm_term'),
+      utmContent: this.getUTMParameter('utm_content')
     };
   }
 
-  /**
-   * Track page views;
-   */
-  trackPageView(url?: string, title?: string): void {
-    const event: UserEvent = {
-      id: this.generateEventId()
-      type: 'page_view'
-      name: 'Page View'
-      timestamp: new Date().toISOString()
-      sessionId: this.currentSession.id;
-      url: url || window.location.href;
-      metadata: {,
-        title: title || document.title;
-        referrer: document.referrer;
-  trackPageView(url?: string, title?: string): void {}
-    const event: UserEvent = {}
-      id: this.generateEventId(),
-      type: 'page_view',
-      name: 'Page View',
-      timestamp: new Date().toISOString(),
-      sessionId: this.currentSession.id,
-      url: url || window.location.href,
-      metadata: {}
-        title: title || document.title,
-        referrer: document.referrer
-  trackPageView(url?: string, title?: string): void {/* TODO: Fix JSX expression */}
-        }
-      }
-    }
-
-    this.addEvent(event)
-    this.currentSession.pageViews++
+  private generateId(): string {
+    return `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  /**
-   * Track custom events;
-   */
-  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {
-    const event: UserEvent = {,
-  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {}
-    const event: UserEvent = {}
-      id: this.generateEventId(),
-      type: 'custom_event',
+  private getUTMParameter(name: string): string | undefined {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name) || undefined;
+  }
+
+  private setupEventListeners(): void {
+    if (typeof window === 'undefined') return;
+
+    // Online/offline status
+    window.addEventListener('online', () => {
+      this.isOnline = true;
+      this.flushEvents();
+    });
+
+    window.addEventListener('offline', () => {
+      this.isOnline = false;
+    });
+
+    // Page visibility
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.trackEvent('page_hidden', 'engagement');
+      } else {
+        this.trackEvent('page_visible', 'engagement');
+      }
+    });
+
+    // Before unload
+    window.addEventListener('beforeunload', () => {
+      this.endSession();
+      this.flushEvents(true);
+    });
+
+    // Performance monitoring
+    this.setupPerformanceMonitoring();
+  }
+
+  private setupPerformanceMonitoring(): void {
+    if (typeof window === 'undefined') return;
+
+    // Web Vitals
+    this.measureWebVitals();
+
+    // Page load time
+    window.addEventListener('load', () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      
+      this.trackEvent('page_load', 'performance', {
+        load_time: loadTime,
+        dom_content_loaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        first_byte: navigation.responseStart - navigation.requestStart
+      });
+    });
+  }
+
+  private measureWebVitals(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    // First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.name === 'first-contentful-paint') {
+          this.trackEvent('web_vital', 'performance', {
+            metric: 'FCP',
+            value: entry.startTime
+          });
+        }
+      }
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+
+    // Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      this.trackEvent('web_vital', 'performance', {
+        metric: 'LCP',
+        value: lastEntry.startTime
+      });
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        this.trackEvent('web_vital', 'performance', {
+          metric: 'FID',
+          value: entry.processingStart - entry.startTime
+        });
+      }
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (!(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value;
+        }
+      }
+      this.trackEvent('web_vital', 'performance', {
+        metric: 'CLS',
+        value: clsValue
+      });
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+  }
+
+  public trackEvent(
+    name: string,
+    type: string = 'custom',
+    metadata?: Record<string, unknown>,
+    value?: number
+  ): void {
+    if (!this.config.enabled) return;
+
+    // Check Do Not Track
+    if (this.config.respectDoNotTrack && this.isDoNotTrackEnabled()) {
+      return;
+    }
+
+    const event: UserEvent = {
+      id: this.generateId(),
+      type,
       name,
       value,
-      timestamp: new Date().toISOString()
-      sessionId: this.currentSession.id;
-      url: window.location.href;
-      metadata;
-    }
-
-    this.addEvent(event)
-  }
-
-  /**
-   * Track clicks;
-   */
-  private trackClicks(): void {
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      const element = target.closest('a, button, [role="button"]')
-
-      if (element) {
-        this.trackEvent('click', undefined, {)
-  private trackClicks(): void {}
-    document.addEventListener('click', (event) => {}
-      const target = event.target as HTMLElement
-      const element = target.closest('a, button, [role="button"]')
-
-      if (element) {}
-        this.trackEvent('click', undefined, {)}
-          element: element.tagName.toLowerCase(),
-          text: element.textContent?.trim(),
-          href: (element as HTMLAnchorElement).href;
-          className: element.className;
-        })
+      timestamp: new Date().toISOString(),
+      sessionId: this.session.id,
+      userId: this.session.userId,
+      url: window.location.href,
+      metadata: {
+        ...metadata,
+        page_title: document.title,
+        viewport_width: window.innerWidth,
+        viewport_height: window.innerHeight,
+        screen_width: screen.width,
+        screen_height: screen.height,
+        color_depth: screen.colorDepth,
+        pixel_ratio: window.devicePixelRatio,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
       }
-    })
-   * Track clicks;
-   */
-  private trackClicks(): void {/* TODO: Fix JSX expression */}
-          }
-        }
-      };
-      this.trackEvent(clickEvent);
-    });
-  }
+    };
 
-  /**
-   * Track scrolls;
-   */
-  private trackScrolls(): void {
-    let scrollTimeout: NodeJS.Timeout;
-    window.addEventListener('scroll', () => {
-      clearTimeout(scrollTimeout)
-      scrollTimeout = setTimeout(() => {
-        const scrollPercent = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        )
+    this.session.events.push(event);
+    this.eventQueue.push(event);
 
-        this.trackEvent('scroll', scrollPercent, {)
-          scrollY: window.scrollY),
-          scrollPercent;
-  private trackScrolls(): void {}
-    let scrollTimeout: NodeJS.Timeout
+    if (this.config.debug) {
+      console.log('Analytics Event:', event);
+    }
 
-    window.addEventListener('scroll', () => {}
-      clearTimeout(scrollTimeout)
-      scrollTimeout = setTimeout(() => {}
-        const scrollPercent = Math.round()
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-        )
-
-        this.trackEvent('scroll', scrollPercent, {)}
-          scrollY: window.scrollY,
-          scrollPercent
-        })
-      }, 150)
-    })
-  private trackScrolls(): void {/* TODO: Fix JSX expression */}
-          }
-        };
-        this.trackEvent(scrollEvent);
-      }, 100);
-    });
-  }
-
-  /**
-   * Track form submissions;
-   */
-  private trackFormSubmissions(): void {
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      this.trackEvent('form_submit', undefined, {)
-        formId: form.id;)
-        formAction: form.action),
-        formMethod: form.method),
-        fieldCount: form.elements.length;
-  private trackFormSubmissions(): void {}
-    document.addEventListener('submit', (event) => {}
-      const form = event.target as HTMLFormElement
-      this.trackEvent('form_submit', undefined, {)}
-        formId: form.id,
-        formAction: form.action,
-        formMethod: form.method,
-        fieldCount: form.elements.length
-      })
-    })
-  private trackFormSubmissions(): void {/* TODO: Fix JSX expression */}
-        }
-      };
-      this.trackEvent(submitEvent);
-    });
-  }
-
-  /**
-   * Track downloads;
-   */
-  private trackDownloads(): void {
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      const link = target.closest('a[href]') as HTMLAnchorElement;
-      if (link && this.isDownloadLink(link.href)) {
-        this.trackEvent('download', undefined, {)
-  private trackDownloads(): void {}
-    document.addEventListener('click', (event) => {}
-      const target = event.target as HTMLElement
-      const link = target.closest('a[href]') as HTMLAnchorElement
-
-      if (link && this.isDownloadLink(link.href)) {}
-        this.trackEvent('download', undefined, {)}
-          fileName: link.href.split('/').pop(),
-          fileType: link.href.split('.').pop(),
-          href: link.href;
-        })
-  private trackDownloads(): void {/* TODO: Fix JSX expression */}
-          }
-        };
-        this.trackEvent(downloadEvent);
-      }
-    })
-  }
-
-  /**
-   * Track performance metrics;
-   */
-  private trackPerformance(): void {
-    if (typeof window.performance === 'undefined') return;
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint')
-
-        this.trackEvent('performance', undefined, {)
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart),
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime;
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-  private trackPerformance(): void {}
-    if (typeof window.performance === 'undefined') return
-
-    window.addEventListener('load', () => {}
-      setTimeout(() => {}
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        const paint = performance.getEntriesByType('paint')
-
-        this.trackEvent('performance', undefined, {)}
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-        })
-      }, 0)
-    })
-  private trackPerformance(): void {/* TODO: Fix JSX expression */}
-              }
-            };
-            this.trackEvent(paintEvent);
-          }
-        }
-      }).observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-      // Track navigation timing;
-      window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-          }
-        };
-        this.trackEvent(performanceEvent);
-      });
+    // Flush if batch size reached
+    if (this.eventQueue.length >= this.config.batchSize) {
+      this.flushEvents();
     }
   }
 
-  /**
-   * Track user journey;
-   */
-  private trackUserJourney(): void {
-    // Track page visibility changes;
-    document.addEventListener('visibilitychange', () => {
-      this.trackEvent('visibility_change', undefined, {)
-        hidden: document.hidden),
-        visibilityState: document.visibilityState;
-      })
-    })
-
-    // Track focus changes;
-    window.addEventListener('focus', () => {
-  private trackUserJourney(): void {}
-    // Track page visibility changes
-    document.addEventListener('visibilitychange', () => {}
-      this.trackEvent('visibility_change', undefined, {)}
-        hidden: document.hidden,
-        visibilityState: document.visibilityState
-      })
-    })
-
-    // Track focus changes
-    window.addEventListener('focus', () => {}
-      this.trackEvent('window_focus')
-    })
-
-    window.addEventListener('blur', () => {}
-      this.trackEvent('window_blur')
-    })
-  private trackUserJourney(): void {/* TODO: Fix JSX expression */}
-      }
-    });
-    observer.observe(document.body, {/* TODO: Fix JSX expression */})
+  public trackPageView(page: string, title?: string): void {
+    this.session.pageViews++;
+    this.trackEvent('page_view', 'navigation', {
+      page,
+      page_title: title || document.title,
+      referrer: document.referrer
     });
   }
 
-  /**
-   * Setup network monitoring;
-   */
-  private setupNetworkMonitoring(): void {
-    if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
-      this.trackEvent('connection_info', undefined, {)
-        effectiveType: connection.effectiveType),
-        downlink: connection.downlink),
-        rtt: connection.rtt;
-  private setupNetworkMonitoring(): void {}
-    if ('connection' in navigator) {}
-      const connection = (navigator as any).connection
-      this.trackEvent('connection_info', undefined, {)}
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt
-      })
-  private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
-    });
-    window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
+  public trackClick(element: string, context?: string): void {
+    this.trackEvent('click', 'interaction', {
+      element,
+      context: context || 'unknown',
+      element_type: this.getElementType(element)
     });
   }
-  /**
-   * Track custom event;
-   */
-  trackEvent(even)
-  t: UserEvent): void {/* TODO: Fix JSX expression */}
-    }
-    // Send to analytics service;
-    if (this.isOnline) {/* TODO: Fix JSX expression */}
-    }
+
+  public trackFormSubmit(formName: string, success: boolean = true): void {
+    this.trackEvent('form_submit', 'form', {
+      form_name: formName,
+      success,
+      form_success: success
+    }, success ? 1 : 0);
   }
 
-  /**
-   * Add event to queue and session;
-   */
-  private addEvent(event: UserEvent): void {
-    this.eventQueue.push(event),
-    this.currentSession.events.push(event),
-,
-    // Send to analytics service (implement based on your needs),
-    this.sendToAnalytics(event),
-  private addEvent(event: UserEvent): void {}
-    this.eventQueue.push(event)
-    this.currentSession.events.push(event)
-
-    // Send to analytics service (implement based on your needs)
-    this.sendToAnalytics(event)
-   * Send event to analytics service;
-   */
-  private async sendEvent(even)
-  t: UserEvent): Promise<void> {/* TODO: Fix JSX expression */}
-        },
-        bod,
-  y: JSON.stringify(event)
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
+  public trackSearch(query: string, resultsCount?: number): void {
+    this.trackEvent('search', 'search', {
+      search_query: query,
+      results_count: resultsCount
+    }, resultsCount);
   }
 
-  /**
-   * Send event to analytics service;
-   */
-  private sendToAnalytics(event: UserEvent): void {,
-    // Implement your analytics service integration here;
-  private sendToAnalytics(event: UserEvent): void {}
-    // Implement your analytics service integration here
-   * Flush event queue when back online;
-   */
-  private async flushEventQueue(): Promise<void> {/* TODO: Fix JSX expression */}
-    }
+  public trackError(error: string, context?: string): void {
+    this.trackEvent('error', 'error', {
+      error_message: error,
+      error_context: context || 'unknown',
+      error_url: window.location.href,
+      error_line: this.getErrorLine()
+    });
   }
-  /**
-   * Get element information for tracking;
-   */
-  private getElementInfo(elemen)
-  t: HTMLElement): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-    } else if (tagName === 'a' || element.closest('a')) {/* TODO: Fix JSX expression */}
-    } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {/* TODO: Fix JSX expression */}
-    }
-    // Create label;
-    let label = id || className || text?.substring(0, 50) || tagName;
-    return {/* TODO: Fix JSX expression */}
+
+  public trackConversion(conversionName: string, value?: number): void {
+    this.trackEvent('conversion', 'conversion', {
+      conversion_name: conversionName
+    }, value);
+  }
+
+  public setUserId(userId: string): void {
+    this.session.userId = userId;
+  }
+
+  public setCustomDimension(key: string, value: string): void {
+    this.config.customDimensions = {
+      ...this.config.customDimensions,
+      [key]: value
     };
   }
-  /**
-   * Check if link is a download;
-   */
-  private isDownloadLink(lin)
-  k: HTMLAnchorElement): boolean {/* TODO: Fix JSX expression */}
+
+  private startFlushTimer(): void {
+    this.flushTimer = setInterval(() => {
+      this.flushEvents();
+    }, this.config.flushInterval);
   }
-  /**
-   * Detect device type;
-   */
-  private detectDevice(): 'desktop' | 'mobile' | 'tablet' {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Detect browser;
-   */
-  private detectBrowser(): string {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Detect operating system;
-   */
-  private detectOS(): string {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Generate session ID;
-   */
-  private generateSessionId(): string {/* TODO: Fix JSX expression */}
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-  /**
-   * Generate event ID;
-   */
-  private generateEventId(): string {/* TODO: Fix JSX expression */}`
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-  /**
-   * Get user ID from storage or generate one;
-   */
-  private getUserId(): string | undefined {/* TODO: Fix JSX expression */}`
-      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      localStorage.setItem('analytics_user_id', userId);
+
+  private flushEvents(sync: boolean = false): void {
+    if (this.eventQueue.length === 0) return;
+
+    const events = [...this.eventQueue];
+    this.eventQueue = [];
+
+    if (this.isOnline) {
+      this.sendEvents(events, sync);
     }
-    return userId;
   }
-  /**
-   * Get analytics summary;
-   */
-  getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
-  s: number }>;
-    conversionRat,
-  e: number,
-  } {/* TODO: Fix JSX expression */}
-      },
-      {} as Record<string, number></string>
-    );
-    const eventsByCategory = events.reduce()
-      (acc, event) => {/* TODO: Fix JSX expression */}
-      },
-      {} as Record<string, number></string>
-    );
-    const pageViews = events.filter(e => e.type === 'page_view');
-    const topPages = pageViews;
-      .reduce()
-        (acc, event) => {/* TODO: Fix JSX expression */}
-          } else {/* TODO: Fix JSX expression */}
-  s: 1 });
-          }
-          return acc;
-        },
-        [] as Array<{/* TODO: Fix JSX expression */}
-  s: number }>
-      )
-      .sort((a, b) => b.views - a.views);
-    const conversions = events.filter(e => e.category === 'conversion').length;
-    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
-    return {/* TODO: Fix JSX expression */}
-    };
-  }
-  /**
-   * Send session data to analytics service;
-   */
-  private async sendSessionData(sessio)
-  n: UserSession): Promise<void> {/* TODO: Fix JSX expression */}
-        },
-        bod,
-  y: JSON.stringify(session)
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
+
+  private async sendEvents(events: UserEvent[], sync: boolean = false): Promise<void> {
+    try {
+      const payload = {
+        events,
+        session: this.session,
+        config: {
+          trackingId: this.config.trackingId,
+          anonymizeIP: this.config.anonymizeIP,
+          customDimensions: this.config.customDimensions
+        }
+      };
+
+      if (sync) {
+        // Synchronous request for beforeunload
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/api/analytics', false);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(payload));
+      } else {
+        // Asynchronous request
+        const response = await fetch('/api/analytics', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        this.retryCount = 0;
       }
-  }
-  /**
-   * End current session;
-   */
-  endSession(): void {/* TODO: Fix JSX expression */}
+    } catch (error) {
+      if (this.config.debug) {
+        console.error('Analytics tracking failed:', error);
+      }
+
+      // Retry logic
+      if (this.retryCount < this.config.maxRetries) {
+        this.retryCount++;
+        setTimeout(() => {
+          this.sendEvents(events, sync);
+        }, Math.pow(2, this.retryCount) * 1000); // Exponential backoff
+      } else {
+        // Store events for later retry
+        this.eventQueue.unshift(...events);
+      }
     }
-    // Create new session;
-    this.currentSession = this.createNewSession();
+  }
+
+  private endSession(): void {
+    this.session.endTime = new Date().toISOString();
+    this.session.duration = new Date(this.session.endTime).getTime() - new Date(this.session.startTime).getTime();
+  }
+
+  private isDoNotTrackEnabled(): boolean {
+    if (typeof navigator !== 'undefined') {
+      return navigator.doNotTrack === '1' || navigator.doNotTrack === 'yes';
+    }
+    return false;
+  }
+
+  private getElementType(element: string): string {
+    const el = document.querySelector(element);
+    return el ? el.tagName.toLowerCase() : 'unknown';
+  }
+
+  private getErrorLine(): number | undefined {
+    const error = new Error();
+    const stack = error.stack;
+    if (stack) {
+      const lines = stack.split('\n');
+      for (const line of lines) {
+        const match = line.match(/:(\d+):\d+/);
+        if (match) {
+          return parseInt(match[1], 10);
+        }
+      }
+    }
+    return undefined;
+  }
+
+  public getSession(): UserSession {
+    return { ...this.session };
+  }
+
+  public getEventQueueLength(): number {
+    return this.eventQueue.length;
+  }
+
+  public clearEventQueue(): void {
+    this.eventQueue = [];
+  }
+
+  public enable(): void {
+    this.config.enabled = true;
+  }
+
+  public disable(): void {
+    this.config.enabled = false;
+  }
+
+  public setDebugMode(enabled: boolean): void {
+    this.config.debug = enabled;
+  }
+
+  public cleanup(): void {
+    if (this.flushTimer) {
+      clearInterval(this.flushTimer);
+    }
+    this.flushEvents(true);
   }
 }
-// Export singleton instance;
-export const advancedAnalytics = AdvancedAnalytics.getInstance();
-export default advancedAnalytics;
-`
->>>>>>> origin/main
+
+// Singleton instance
+export const advancedAnalytics = new AdvancedAnalytics({
+  enabled: true,
+  debug: process.env.NODE_ENV === 'development',
+  respectDoNotTrack: true,
+  anonymizeIP: true,
+  batchSize: 20,
+  flushInterval: 30000,
+  maxRetries: 3
+});
+
+// Utility functions
+export const trackEvent = (name: string, type?: string, metadata?: Record<string, unknown>, value?: number): void => {
+  advancedAnalytics.trackEvent(name, type, metadata, value);
+};
+
+export const trackPageView = (page: string, title?: string): void => {
+  advancedAnalytics.trackPageView(page, title);
+};
+
+export const trackClick = (element: string, context?: string): void => {
+  advancedAnalytics.trackClick(element, context);
+};
+
+export const trackFormSubmit = (formName: string, success: boolean = true): void => {
+  advancedAnalytics.trackFormSubmit(formName, success);
+};
+
+export const trackSearch = (query: string, resultsCount?: number): void => {
+  advancedAnalytics.trackSearch(query, resultsCount);
+};
+
+export const trackError = (error: string, context?: string): void => {
+  advancedAnalytics.trackError(error, context);
+};
+
+export const trackConversion = (conversionName: string, value?: number): void => {
+  advancedAnalytics.trackConversion(conversionName, value);
+};
+
+export const setUserId = (userId: string): void => {
+  advancedAnalytics.setUserId(userId);
+};
+
+export const setCustomDimension = (key: string, value: string): void => {
+  advancedAnalytics.setCustomDimension(key, value);
+};
+
+// Auto-track page views
+if (typeof window !== 'undefined') {
+  // Track initial page view
+  advancedAnalytics.trackPageView(window.location.pathname);
+
+  // Track page changes (for SPAs)
+  let currentPath = window.location.pathname;
+  const observer = new MutationObserver(() => {
+    if (window.location.pathname !== currentPath) {
+      currentPath = window.location.pathname;
+      advancedAnalytics.trackPageView(currentPath);
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+}
