@@ -24,6 +24,7 @@ const PartnersPage: React.FC = () => {
     {
       name: 'IBM',
       logo: '/api/placeholder/200/100',
+    }
   ];
 
   return (

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -13,300 +13,56 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Star,
+  Clock,
+  Users,
+  TrendingUp,
+  Award,
+  Phone,
+  Mail,
+  ExternalLink
 } from 'lucide-react';
+import { services, serviceCategories, getServicesByCategory, getPopularServices } from '../data/services';
 
 const ServicesPage: React.FC = () => {
-  const services = [
-    // AI Services
-    {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
-      price: 'Starting at $1,500/month',
-      category: 'AI Services',
-      popular: true
-    },
-    {
-      icon: Brain,
-      title: 'AI Marketing Automation',
-      description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
-      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
-      price: 'Starting at $299/month',
-      category: 'AI Services'
-    },
-    {
-      icon: Brain,
-      title: 'AI Customer Support',
-      description: 'Intelligent customer support with chatbots, sentiment analysis, and automated ticket routing.',
-      features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base', '24/7 Support'],
-      price: 'Starting at $199/month',
-      category: 'AI Services'
-    },
-    {
-      icon: Brain,
-      title: 'AI Data Analytics',
-      description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling.',
-      features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards', 'ML Models'],
-      price: 'Starting at $399/month',
-      category: 'AI Services'
-    },
-    {
-      icon: Brain,
-      title: 'AI Content Generation',
-      description: 'Create high-quality content at scale with AI-powered writing, image generation, and video production.',
-      features: ['Content Writing', 'Image Generation', 'Video Creation', 'SEO Optimization', 'Multi-language'],
-      price: 'Starting at $149/month',
-      category: 'AI Services'
-    },
-    {
-      icon: Brain,
-      title: 'AI Healthcare Solutions',
-      description: 'HIPAA-compliant AI solutions for medical imaging, drug discovery, and patient care optimization.',
-      features: ['Medical Imaging', 'Drug Discovery', 'Patient Analytics', 'Diagnostic Support', 'HIPAA Compliance'],
-      price: 'Starting at $1,999/month',
-      category: 'AI Services'
-    },
-    {
-      icon: Brain,
-      title: 'AI Financial Services',
-      description: 'Advanced AI solutions for fraud detection, risk assessment, and algorithmic trading.',
-      features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring', 'Compliance'],
-      price: 'Starting at $1,499/month',
-      category: 'AI Services'
-    },
-    {
-      icon: Brain,
-      title: 'AI E-commerce Solutions',
-      description: 'Intelligent e-commerce platform with recommendation engines and dynamic pricing.',
-      features: ['Recommendation Engine', 'Dynamic Pricing', 'Inventory Optimization', 'Customer Insights', 'Sales Forecasting'],
-      price: 'Starting at $799/month',
-      category: 'AI Services'
-    },
-    
-    // Cloud Services
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for enhanced performance and reliability.',
-      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud'],
-      price: 'Starting at $1,299/month',
-      category: 'Cloud Services',
-      popular: true
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime and data integrity.',
-      features: ['Zero Downtime', 'Data Integrity', 'Cost Optimization', 'Security Compliance', '24/7 Support'],
-      price: 'Starting at $2,999/project',
-      category: 'Cloud Services'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Security',
-      description: 'Comprehensive cloud security solutions with threat detection and compliance management.',
-      features: ['Threat Detection', 'Compliance Management', 'Access Control', 'Data Encryption', 'Monitoring'],
-      price: 'Starting at $599/month',
-      category: 'Cloud Services'
-    },
-    {
-      icon: Cloud,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
-      features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure Monitoring', 'Version Control', 'Collaboration'],
-      price: 'Starting at $799/month',
-      category: 'Cloud Services'
-    },
-    
-    // Cybersecurity
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your business from evolving threats.',
-      features: ['Security Audits', 'Penetration Testing', 'Incident Response', 'Compliance', 'Threat Intelligence'],
-      price: 'Starting at $799/month',
-      category: 'Cybersecurity',
-      popular: true
-    },
-    {
-      icon: Shield,
-      title: 'Security Monitoring',
-      description: '24/7 security monitoring with AI-powered threat detection and automated response.',
-      features: ['24/7 Monitoring', 'AI Threat Detection', 'Automated Response', 'Incident Management', 'Compliance Reporting'],
-      price: 'Starting at $499/month',
-      category: 'Cybersecurity'
-    },
-    {
-      icon: Shield,
-      title: 'Penetration Testing',
-      description: 'Comprehensive security testing to identify vulnerabilities and strengthen your defenses.',
-      features: ['Vulnerability Assessment', 'Social Engineering Tests', 'Network Security', 'Web Application Testing', 'Reporting'],
-      price: 'Starting at $2,999/assessment',
-      category: 'Cybersecurity'
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Management',
-      description: 'Ensure regulatory compliance with automated monitoring and reporting solutions.',
-      features: ['Regulatory Compliance', 'Automated Monitoring', 'Audit Trails', 'Risk Assessment', 'Documentation'],
-      price: 'Starting at $399/month',
-      category: 'Cybersecurity'
-    },
-    
-    // Data Analytics
-    {
-      icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
-      features: ['Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Reporting', 'Predictive Modeling'],
-      price: 'Starting at $599/month',
-      category: 'Data Analytics',
-      popular: true
-    },
-    {
-      icon: BarChart3,
-      title: 'Big Data Solutions',
-      description: 'Handle massive datasets with scalable big data processing and analytics platforms.',
-      features: ['Data Processing', 'Real-time Analytics', 'Scalable Infrastructure', 'Machine Learning', 'Data Lakes'],
-      price: 'Starting at $1,299/month',
-      category: 'Data Analytics'
-    },
-    {
-      icon: BarChart3,
-      title: 'Business Intelligence',
-      description: 'Comprehensive BI solutions with interactive dashboards and automated reporting.',
-      features: ['Interactive Dashboards', 'Automated Reports', 'Data Integration', 'Self-service Analytics', 'Mobile Access'],
-      price: 'Starting at $899/month',
-      category: 'Data Analytics'
-    },
-    
-    // Mobile Development
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Custom mobile applications for iOS and Android platforms with modern technologies.',
-      features: ['Native Apps', 'Cross-platform', 'UI/UX Design', 'App Store Optimization', 'Push Notifications'],
-      price: 'Starting at $1,999/month',
-      category: 'Mobile Development',
-      popular: true
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile App Maintenance',
-      description: 'Ongoing maintenance and updates for your mobile applications with performance optimization.',
-      features: ['Bug Fixes', 'Performance Optimization', 'Security Updates', 'Feature Enhancements', 'App Store Management'],
-      price: 'Starting at $299/month',
-      category: 'Mobile Development'
-    },
-    
-    // Database Services
-    {
-      icon: Database,
-      title: 'Database Services',
-      description: 'Database design, optimization, and management for optimal performance and reliability.',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration', 'Monitoring'],
-      price: 'Starting at $399/month',
-      category: 'Database Services',
-      popular: true
-    },
-    {
-      icon: Database,
-      title: 'Database Migration',
-      description: 'Seamless database migration with zero downtime and data integrity preservation.',
-      features: ['Zero Downtime', 'Data Integrity', 'Performance Optimization', 'Testing', 'Documentation'],
-      price: 'Starting at $1,999/migration',
-      category: 'Database Services'
-    },
-    
-    // Automation
-    {
-      icon: Zap,
-      title: 'Process Automation',
-      description: 'Streamline your workflows with intelligent automation solutions and RPA.',
-      features: ['Workflow Automation', 'RPA Implementation', 'Integration', 'Monitoring', 'Optimization'],
-      price: 'Starting at $599/month',
-      category: 'Automation',
-      popular: true
-    },
-    {
-      icon: Zap,
-      title: 'IT Automation',
-      description: 'Automate IT operations with intelligent monitoring, deployment, and maintenance solutions.',
-      features: ['Infrastructure Automation', 'Deployment Automation', 'Monitoring', 'Self-healing', 'Cost Optimization'],
-      price: 'Starting at $799/month',
-      category: 'Automation'
-    },
-    
-    // Web Development
-    {
-      icon: Globe,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies.',
-      features: ['React/Next.js', 'Full-stack Development', 'API Development', 'Performance Optimization', 'SEO'],
-      price: 'Starting at $1,299/month',
-      category: 'Web Development',
-      popular: true
-    },
-    {
-      icon: Globe,
-      title: 'E-commerce Development',
-      description: 'Custom e-commerce solutions with advanced features and integrations.',
-      features: ['Custom E-commerce', 'Payment Integration', 'Inventory Management', 'Analytics', 'Mobile Optimization'],
-      price: 'Starting at $1,999/month',
-      category: 'Web Development'
-    },
-    
-    // IT Services
-    {
-      icon: Database,
-      title: 'IT Infrastructure',
-      description: 'Complete IT infrastructure setup and management for enterprise environments.',
-      features: ['Server Setup', 'Network Configuration', 'Security Implementation', 'Monitoring', 'Maintenance'],
-      price: 'Starting at $1,499/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Shield,
-      title: 'Managed IT Services',
-      description: 'Comprehensive IT management with 24/7 support and proactive monitoring.',
-      features: ['24/7 Support', 'Proactive Monitoring', 'Help Desk', 'Security Management', 'Backup Solutions'],
-      price: 'Starting at $999/month',
-      category: 'IT Services'
-    },
-    {
-      icon: BarChart3,
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting to optimize your technology infrastructure and processes.',
-      features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
-      price: 'Starting at $299/hour',
-      category: 'IT Services'
-    }
-  ];
-
-  const categories = [
-    'All',
-    'AI Services',
-    'Cloud Services',
-    'Cybersecurity',
-    'Data Analytics',
-    'Mobile Development',
-    'Database Services',
-    'Automation',
-    'Web Development',
-    'IT Services'
-  ];
-
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('popularity');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.pricing.monthly - b.pricing.monthly;
+      case 'price-high':
+        return b.pricing.monthly - a.pricing.monthly;
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'popularity':
+      default:
+        return b.pricing.monthly - a.pricing.monthly;
+    }
+  });
+
+  const formatPrice = (pricing: any) => {
+    if (pricing.custom) return 'Custom Pricing';
+    if (pricing.monthly === 0) return 'Contact for Pricing';
+    return `$${pricing.monthly.toLocaleString()}/month`;
+  };
+
+  const getCategoryIcon = (category: string) => {
+    const categoryData = serviceCategories.find(cat => cat.name === category);
+    return categoryData?.icon || '⚙️';
+  };
 
   return (
     <>
@@ -316,68 +72,90 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text glitch" data-text="Our Services">
               Our Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business and drive growth.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-text">
+              Comprehensive AI and IT solutions designed to transform your business and drive unprecedented growth.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              {serviceCategories.map((category) => (
+                <div key={category.id} className="cyber-card hologram-card p-4 text-center">
+                  <div className="text-3xl mb-2">{category.icon}</div>
+                  <h3 className="text-white font-semibold">{category.name}</h3>
+                  <p className="text-gray-400 text-sm">{category.count} services</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Search and Filter Section */}
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <div className="cyber-card hologram-card p-6 border border-cyan-500/20">
+              <div className="flex flex-col lg:flex-row gap-4 mb-6">
                 <div className="flex-1">
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5" />
                     <input
                       type="text"
-                      placeholder="Search services..."
+                      placeholder="Search services, features, or use cases..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                     />
                   </div>
                 </div>
-                <div className="md:w-64">
+                <div className="flex gap-4">
                   <div className="relative">
-                    <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5" />
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
+                      className="pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
                     >
-                      {categories.map((category) => (
-                        <option key={category} value={category} className="bg-gray-800">
-                          {category}
+                      <option value="All" className="bg-slate-800">All Categories</option>
+                      {serviceCategories.map((category) => (
+                        <option key={category.id} value={category.name} className="bg-slate-800">
+                          {category.name}
                         </option>
                       ))}
                     </select>
                   </div>
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="px-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                  >
+                    <option value="popularity">Sort by Popularity</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Sort by Name</option>
+                  </select>
                 </div>
               </div>
               
               <div className="flex flex-wrap gap-2 justify-center">
-                {categories.slice(1).map((category) => (
+                {serviceCategories.map((category) => (
                   <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      selectedCategory === category
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
+                      selectedCategory === category.name
+                        ? 'bg-cyan-500 text-white neon-glow'
+                        : 'bg-white/10 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
                     }`}
                   >
-                    {category}
+                    <span>{category.icon}</span>
+                    <span>{category.name}</span>
+                    <span className="text-xs opacity-75">({category.count})</span>
                   </button>
                 ))}
               </div>
@@ -388,70 +166,143 @@ const ServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-bold text-white">
-                {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
-              </h2>
-              <span className="text-gray-300">
-                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
-              </span>
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+              <div>
+                <h2 className="text-3xl font-bold text-white neon-text">
+                  {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
+                </h2>
+                <p className="text-gray-300 mt-2">
+                  {sortedServices.length} service{sortedServices.length !== 1 ? 's' : ''} found
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="flex bg-slate-800/50 rounded-lg p-1">
+                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${
+                      viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-300 hover:text-cyan-400'
+                    }`}
+                  >
+                    Grid
+                  </button>
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${
+                      viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-300 hover:text-cyan-400'
+                    }`}
+                  >
+                    List
+                  </button>
+                </div>
+              </div>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
-                  {service.popular && (
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+            <div className={`grid gap-8 ${
+              viewMode === 'grid' 
+                ? 'md:grid-cols-2 lg:grid-cols-3' 
+                : 'grid-cols-1'
+            }`}>
+              {sortedServices.map((service, index) => (
+                <div key={service.id} className={`cyber-card hologram-card p-8 hover:scale-105 transition-all duration-300 group relative ${
+                  viewMode === 'list' ? 'flex flex-col lg:flex-row gap-6' : ''
+                }`}>
+                  {service.status === 'Popular' && (
+                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium neon-glow">
                       Popular
                     </div>
                   )}
                   
-                  <div className="flex items-start mb-6">
-                    <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
-                      <service.icon className="w-8 h-8 text-cyan-400" />
+                  <div className={`flex items-start mb-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>
+                    <div className="bg-cyan-500/20 p-4 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
+                      <div className="text-3xl">{service.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                      <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">
-                        {service.category}
-                      </span>
+                      <h3 className="text-xl font-bold text-white mb-2 neon-text">{service.name}</h3>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-block bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded-full">
+                          {service.category}
+                        </span>
+                        <span className="inline-block bg-purple-500/20 text-purple-400 text-xs px-2 py-1 rounded-full">
+                          {service.subcategory}
+                        </span>
+                      </div>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                      {service.features.length > 4 && (
-                        <li className="text-gray-400 text-sm">
-                          +{service.features.length - 4} more features
-                        </li>
+                  <div className={`${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+                        <Star className="w-4 h-4 text-yellow-400" />
+                        Key Features:
+                      </h4>
+                      <ul className="space-y-2">
+                        {service.features.slice(0, 4).map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                        {service.features.length > 4 && (
+                          <li className="text-gray-400 text-sm">
+                            +{service.features.length - 4} more features
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                      <div className="cyber-card p-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <TrendingUp className="w-4 h-4 text-green-400" />
+                          <span className="text-sm font-semibold text-white">ROI</span>
+                        </div>
+                        <p className="text-xs text-gray-300">{service.roi.timeToValue} to value</p>
+                        <p className="text-xs text-green-400">{service.roi.averageSavings} savings</p>
+                      </div>
+                      <div className="cyber-card p-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Clock className="w-4 h-4 text-blue-400" />
+                          <span className="text-sm font-semibold text-white">Setup</span>
+                        </div>
+                        <p className="text-xs text-gray-300">{service.deployment.setupTime}</p>
+                        <p className="text-xs text-blue-400">{service.deployment.cloud ? 'Cloud' : 'On-premise'}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <div className="text-3xl font-bold text-cyan-400 mb-2 neon-text">
+                        {formatPrice(service.pricing)}
+                      </div>
+                      {service.pricing.yearly > 0 && (
+                        <div className="text-sm text-gray-300">
+                          Save ${((service.pricing.monthly * 12) - service.pricing.yearly).toLocaleString()} with annual billing
+                        </div>
                       )}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-sm text-gray-300">Contact for custom pricing</div>
-                  </div>
-                  
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
-                      Get Quote
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                      Learn More
-                    </button>
+                    </div>
+                    
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <button className="flex-1 cyber-button text-center py-3 group-hover:scale-105 transition-all duration-300">
+                        Get Quote
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform inline" />
+                      </button>
+                      <button className="flex-1 border border-cyan-500/30 text-cyan-400 font-semibold py-3 px-6 rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
+                        Learn More
+                      </button>
+                    </div>
+                    
+                    {service.trial.available && (
+                      <div className="mt-4 p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
+                        <div className="flex items-center gap-2 text-green-400 text-sm">
+                          <Award className="w-4 h-4" />
+                          <span className="font-semibold">Free Trial Available</span>
+                        </div>
+                        <p className="text-xs text-gray-300 mt-1">{service.trial.duration} trial with {service.trial.features.join(', ')}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -461,20 +312,152 @@ const ServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss your project and find the perfect solution for your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Free Consultation
-              </button>
-              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
-                View Portfolio
-              </button>
+          <div className="max-w-6xl mx-auto">
+            <div className="cyber-card hologram-card p-12 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Let's discuss your project and find the perfect solution for your business needs. 
+                Our experts are ready to help you achieve unprecedented growth.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="cyber-card p-6">
+                  <div className="text-4xl mb-4">📞</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
+                  <p className="text-gray-300 mb-4">Speak directly with our experts</p>
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
+                    +1 (302) 464-0950
+                  </a>
+                </div>
+                
+                <div className="cyber-card p-6">
+                  <div className="text-4xl mb-4">✉️</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
+                  <p className="text-gray-300 mb-4">Get detailed information</p>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                
+                <div className="cyber-card p-6">
+                  <div className="text-4xl mb-4">💬</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Live Chat</h3>
+                  <p className="text-gray-300 mb-4">Instant support available</p>
+                  <button className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
+                    Start Chat
+                  </button>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="cyber-button text-center py-4 px-8 group-hover:scale-105 transition-all duration-300">
+                  Get Free Consultation
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform inline" />
+                </button>
+                <button className="border border-cyan-500/30 text-cyan-400 font-semibold py-4 px-8 rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
+                  View Case Studies
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-16 px-4 bg-slate-900/50">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 neon-text">Contact Information</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-300 text-sm">Phone</p>
+                      <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
+                        +1 (302) 464-0950
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-300 text-sm">Email</p>
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
+                        kleber@ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+                      <Globe className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-300 text-sm">Website</p>
+                      <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
+                        ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-300 text-sm">Address</p>
+                      <p className="text-white font-semibold">
+                        364 E Main St STE 1008<br />
+                        Middletown, DE 19709
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 neon-text">Why Choose Zion Tech Group?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white font-semibold mb-1">Proven Track Record</h4>
+                      <p className="text-gray-300 text-sm">$50M+ in client savings, 95% automation success rate</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white font-semibold mb-1">24/7 Expert Support</h4>
+                      <p className="text-gray-300 text-sm">Round-the-clock assistance from our technical team</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white font-semibold mb-1">Cutting-Edge Technology</h4>
+                      <p className="text-gray-300 text-sm">Latest AI and IT solutions for maximum efficiency</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white font-semibold mb-1">Custom Solutions</h4>
+                      <p className="text-gray-300 text-sm">Tailored to your specific business needs and goals</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
