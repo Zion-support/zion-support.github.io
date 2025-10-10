@@ -36,6 +36,16 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+// IT Services
+const AINetworkSolutionsPage = React.lazy(() => import('./app/ai-network-solutions/page'));
+const AIMobileDevelopmentPage = React.lazy(() => import('./app/ai-mobile-development/page'));
+const AISystemIntegrationPage = React.lazy(() => import('./app/ai-system-integration/page'));
+// Micro SaaS Services
+const MicroSaasProjectManagementPage = React.lazy(() => import('./app/micro-saas-project-management/page'));
+const MicroSaasCustomerSupportPage = React.lazy(() => import('./app/micro-saas-customer-support/page'));
 // New AI Services
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
 const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
@@ -95,6 +105,17 @@ const App: React.FC = () => {
                             <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
                             <Route path="/ai-supply-chain-optimization" element={<AISupplyChainOptimizationPage />} />
                             <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructurePage />} />
+                            {/* Legal Pages */}
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            {/* IT Services */}
+                            <Route path="/ai-network-solutions" element={<AINetworkSolutionsPage />} />
+                            <Route path="/ai-mobile-development" element={<AIMobileDevelopmentPage />} />
+                            <Route path="/ai-system-integration" element={<AISystemIntegrationPage />} />
+                            {/* Micro SaaS Services */}
+                            <Route path="/micro-saas-project-management" element={<MicroSaasProjectManagementPage />} />
+                            <Route path="/micro-saas-customer-support" element={<MicroSaasCustomerSupportPage />} />
                           </Routes>
                         </Suspense>
                       </main>

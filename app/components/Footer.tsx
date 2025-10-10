@@ -37,15 +37,24 @@ const Footer: React.FC = () => {
     { name: 'Blog', url: '/blog' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
     { name: 'Support', url: '/support' },
-    { name: 'FAQ', url: '/faq' }
+    { name: 'FAQ', url: '/faq' },
+    { name: 'Pricing', url: '/pricing' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Contact', url: '/contact' },
+    { name: 'Demo', url: '/demo' },
+    { name: 'Consultation', url: '/consultation' }
   ];
 
   return (
     <footer className="bg-slate-900 border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -72,6 +81,25 @@ const Footer: React.FC = () => {
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
+          </div>
+
+          {/* Company Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white flex items-center">
+              <Users className="w-5 h-5 mr-2" />
+              Company
+            </h3>
+            <ul className="space-y-2">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* AI Services */}
@@ -125,6 +153,25 @@ const Footer: React.FC = () => {
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-orange-400 flex items-center">
+              <FileText className="w-5 h-5 mr-2" />
+              Resources
+            </h3>
+            <ul className="space-y-2">
+              {resourcesLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    {link.name}
                   </Link>
                 </li>
               ))}
