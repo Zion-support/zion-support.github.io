@@ -103,96 +103,12 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
-        {/* Navigation */}
-=======
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
         <Navigation />
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
-<<<<<<< HEAD
-          <section
-className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
-              isLoaded && isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
-            }`}
-            aria-labelledby="hero-heading"
-          >
-            <div className="max-w-6xl mx-auto">
-              <h1 
-                id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
-                data-text="Zion Tech Group"
-              >
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
-                Advanced AI and IT Solutions
-              </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-                Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
-                startups, and enterprises worldwide with proven results and 24/7 expert support.
-              </p>
-              {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
-                </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-                </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-                </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
-                  <div className="text-2xl sm:text-3xl mb-3">🌐</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
-                </div>
-              </div>
-              {/* CTA Buttons */}
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="tel:+13024640950"
-                  onClick={handlePhoneClick}
-                  className="cyber-button-enhanced w-full sm:w-auto text-center"
-                  aria-label="Call us at (302) 464-0950"
-                >
-                  📞 Call: (302) 464-0950
-                </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  📧 Email Us
-                </a>
-                <a 
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                  Get Free Consultation
-                </a>
-              </div>
-              {/* Contact Info */}
-              <div className="mt-8 text-center">
-                <p className="text-gray-300 text-sm mb-2">
-                  📍 364 E Main St STE 1008, Middletown, DE 19709
-                </p>
-                <p className="text-gray-300 text-sm">
-                  ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
-                </p>
-              </div>
-=======
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Zion Tech Group
@@ -216,7 +132,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                 Get Free Consultation
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
             </div>
           </section>
 
