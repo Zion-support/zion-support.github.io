@@ -1,43 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home } from 'lucide-react';
 import Footer from './components/Footer';
-<<<<<<< HEAD
-import SEOHead from './components/SEOHead';
-import ErrorBoundary from './components/ErrorBoundary';
-import Loading from './components/Loading';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ServiceCardSkeleton from './components/ServiceCardSkeleton';
-import LazyImage from './components/LazyImage';
-import AnimatedCounter from './components/AnimatedCounter';
-import { 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  Settings, 
-  FileText,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Award,
-  Rocket,
-  Code,
-  Cloud,
-  Smartphone,
-  TrendingUp,
-  Award as Trophy,
-  Users as People,
-  CheckCircle2
-} from 'lucide-react';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-0ad0
+
+// Lazy load heavy components for better performance
+const LazyImage = lazy(() => import('./components/LazyImage'));
+const AnimatedCounter = lazy(() => import('./components/AnimatedCounter'));
 
 // Service data
 const microSAASServices = [
@@ -188,13 +157,63 @@ const stats = [
 ];
 
 const HomePage: React.FC = () => {
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Advanced AI and IT Solutions for Enterprise",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://ziontechgroup.com"
+    ]
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      {/* SEO Meta Tags */}
+      <head>
+        <title>Zion Tech Group - Advanced AI & IT Solutions | Enterprise AI Services</title>
+        <meta name="description" content="Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains with our enterprise AI solutions." />
+        <meta name="keywords" content="AI solutions, enterprise AI, IT services, artificial intelligence, machine learning, automation, cloud migration, cybersecurity" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains." />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      </head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Skip to main content for accessibility */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50">
+        Skip to main content
+      </a>
+      
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden" role="banner" aria-label="Hero section">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div id="main-content" className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AI-Powered Enterprise Solutions
           </h1>
@@ -203,31 +222,45 @@ const HomePage: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+            <button 
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-opacity-50"
+              aria-label="Get started with our AI solutions"
+            >
               Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+            <button 
+              className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-opacity-50"
+              aria-label="Watch our product demo"
+            >
               Watch Demo
             </button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8" role="region" aria-label="Company statistics">
+            <div className="text-center" role="img" aria-label="300% Average ROI">
+              <Suspense fallback={<div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>}>
+                <AnimatedCounter end={300} duration={2000} className="text-4xl font-bold text-cyan-400 mb-2" suffix="%" />
+              </Suspense>
               <div className="text-gray-400">Average ROI</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
+            <div className="text-center" role="img" aria-label="70% Cost Reduction">
+              <Suspense fallback={<div className="text-4xl font-bold text-purple-400 mb-2">70%</div>}>
+                <AnimatedCounter end={70} duration={2000} className="text-4xl font-bold text-purple-400 mb-2" suffix="%" />
+              </Suspense>
               <div className="text-gray-400">Cost Reduction</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
+            <div className="text-center" role="img" aria-label="90% Efficiency Gains">
+              <Suspense fallback={<div className="text-4xl font-bold text-pink-400 mb-2">90%</div>}>
+                <AnimatedCounter end={90} duration={2000} className="text-4xl font-bold text-pink-400 mb-2" suffix="%" />
+              </Suspense>
               <div className="text-gray-400">Efficiency Gains</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+            <div className="text-center" role="img" aria-label="99.9% Uptime Guarantee">
+              <Suspense fallback={<div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>}>
+                <AnimatedCounter end={99.9} duration={2000} className="text-4xl font-bold text-green-400 mb-2" suffix="%" />
+              </Suspense>
               <div className="text-gray-400">Uptime Guarantee</div>
             </div>
           </div>
@@ -235,10 +268,10 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Micro SAAS Section */}
-      <section className="py-16 bg-white/5">
+      <section className="py-16 bg-white/5" role="region" aria-labelledby="micro-saas-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
               Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -246,11 +279,13 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Micro SAAS solutions">
             {microSAASServices.map((service, index) => (
-              <div
+              <article
                 key={index}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative"
+                role="listitem"
+                aria-labelledby={`service-${index}-title`}
               >
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -262,29 +297,32 @@ const HomePage: React.FC = () => {
                 )}
                 
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                  <h3 id={`service-${index}-title`} className="text-xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                   
-                  <div className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-6" role="list" aria-label={`${service.name} features`}>
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" aria-hidden="true" />
                         {feature}
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                   
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2" aria-label={`Price: ${service.price}`}>{service.price}</div>
+                    <button 
+                      className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-opacity-50 rounded"
+                      aria-label={`Learn more about ${service.name}`}
+                    >
                       Learn More →
                     </button>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
