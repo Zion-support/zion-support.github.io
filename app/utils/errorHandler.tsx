@@ -25,10 +25,10 @@ export enum ErrorSeverity {
 }
 // Error interface
 export interface AppError {
-  id: string;
-  type: ErrorType;
-  severity: ErrorSeverity;
-  message: string;
+  id: string;,
+    type: ErrorType;
+  severity: ErrorSeverity;,
+    message: string;
   stack?: string;
   timestamp: Date;
   userId?: string;
@@ -42,20 +42,20 @@ export interface AppError {
 }
 // Error handler configuration
 export interface ErrorHandlerConfig {
-  enableLogging: boolean;
-  enableReporting: boolean;
-  enableRetry: boolean;
-  maxRetries: number;
-  retryDelay: number;
-  enableUserNotification: boolean;
-  enableConsoleLogging: boolean;
-  enableNetworkLogging: boolean;
+  enableLogging: boolean;,
+    enableReporting: boolean;
+  enableRetry: boolean;,
+    maxRetries: number;
+  retryDelay: number;,
+    enableUserNotification: boolean;
+  enableConsoleLogging: boolean;,
+    enableNetworkLogging: boolean;
   reportEndpoint?: string;
   logLevel: 'debug' | 'info' | 'warn' | 'error';
 }
 // Default configuration
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
-  enableLogging: true,
+export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
+    enableLogging: true,
   enableReporting: true,
   enableRetry: true,
   maxRetries: 3,
@@ -68,22 +68,22 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
 // Error Handler class
 export class ErrorHandler {
   private static instance: ErrorHandler;
-  private config: ErrorHandlerConfig;
-  private errors: AppError[] = [];
+  private config: ErrorHandlerConfig;</string>
+  private errors: AppError[] = [];</string>
   private retryQueue: Array<{ error: AppError; retryCount: number }> = [];
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    this.config = { ...defaultErrorHandlerConfig, ...config };
-  }
+  constructor(config: Partial<ErrorHandlerConfig>= {}) {
+    this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>
+  }</ErrorHandlerConfig>
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler(config);
     }
     return ErrorHandler.instance;
-  }
-  // Handle error
+  }</ErrorHandlerConfig>
+  // Handle error</ErrorHandlerConfig>
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
-    const appError: AppError = {
-      id: this.generateErrorId(),
+    const appError: AppError = {,
+    id: this.generateErrorId(),
       type: this.determineErrorType(error),
       severity: this.determineErrorSeverity(error),
       message: error.message,
@@ -113,8 +113,8 @@ export class ErrorHandler {
   }
   // Handle network error
   handleNetworkError(error: Error, url: string, status?: number): AppError {
-    const appError: AppError = {
-      id: this.generateErrorId(),
+    const appError: AppError = {,
+    id: this.generateErrorId(),
       type: ErrorType.NETWORK,
       severity: this.determineNetworkErrorSeverity(status),
       message: error.message,
@@ -137,8 +137,8 @@ export class ErrorHandler {
   }
   // Handle validation error
   handleValidationError(field: string, message: string, value?: unknown): AppError {
-    const appError: AppError = {
-      id: this.generateErrorId(),
+    const appError: AppError = {,
+    id: this.generateErrorId(),
       type: ErrorType.VALIDATION,
       severity: ErrorSeverity.LOW,
       message: `Validation error in ${field}: ${message}`,
@@ -236,8 +236,8 @@ export class ErrorHandler {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(error)
+        },)
+    body: JSON.stringify(error)
 
     } catch (err) {
       }
@@ -252,8 +252,8 @@ export class ErrorHandler {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ...error,
-          timestamp: error.timestamp.toISOString()
+          ...error,)
+    timestamp: error.timestamp.toISOString()
         })
 
     } catch (err) {
@@ -265,25 +265,22 @@ export class ErrorHandler {
     const notification = document.createElement('div');
     notification.className = 'error-notification';
     notification.style.cssText = `
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: ${this.getNotificationColor(error.severity)};
-      color: white;
-      padding: 15px;
+      position: fixed;,
+    top: 20px;
+      right: 20px;,
+    background: ${this.getNotificationColor(error.severity)};
+      color: white;,
+    padding: 15px;
       border-radius: 5px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
       z-index: 10000;
       max-width: 400px;
       font-family: Arial, sans-serif;
-    `;
-    notification.innerHTML = `
+    `;</string>
+    notification.innerHTML = `</string>
       <div style="display:flex;justify-content:space-between;align-items:center;">
         <div>
-          <strong>${error.severity} Error</strong>
-          <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>
-        </div>
-        <button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
       </div>
     `;
     document.body.appendChild(notification);
@@ -305,9 +302,8 @@ export class ErrorHandler {
         return '#fd7e14';
       case ErrorSeverity.MEDIUM:
         return '#ffc107';
-      case ErrorSeverity.LOW:
-        return '#28a745';
-      default:
+      case ErrorSeverity.LOW: return '#28a745';,
+    default:
         return '#6c757d';
     }
   }
@@ -388,15 +384,13 @@ export class ErrorHandler {
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },
-      {} as Record<ErrorType, number>
-    );
+      {} as Record<ErrorType, number>);
     const bySeverity = this.errors.reduce(
       (acc, error) => {
         acc[error.severity] = (acc[error.severity] || 0) + 1;
-        return acc;
-      },
-      {} as Record<ErrorSeverity, number>
-    );
+        return acc;</ErrorType>
+      },</ErrorType>
+      {} as Record<ErrorSeverity, number>);
     const resolved = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
     return {
@@ -413,17 +407,17 @@ export class ErrorHandler {
   init(): void {
     if (typeof window !== 'undefined') {
       // Set up global error handler
-      window.addEventListener('error', event => {
-        this.handleError(event.error || new Error(event.message));
+      window.addEventListener('error', event => {)
+    this.handleError(event.error || new Error(event.message));
 
       // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection', event => {
-        this.handleError(new Error(event.reason));
+      window.addEventListener('unhandledrejection', event => {)
+    this.handleError(new Error(event.reason));
 
     }
   }
-}
-// React error boundary component
+}</ErrorSeverity>
+// React error boundary component</ErrorSeverity>
 export class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean; error?: Error }
@@ -441,16 +435,14 @@ export class ErrorBoundary extends React.Component<
     this.errorHandler.handleError(error, errorInfo, {
       component: 'ErrorBoundary'
 
-  }
-  render() {
+  })
+    render() {
     if (this.state.hasError) {
       return (
         this.props.fallback || (
           <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h2>Something went wrong</h2>
-            <p>We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
+            <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button
+              onClick={() =>this.setState({ hasError: false, error: undefined })}
               style={{
                 padding: '10px 20px',
                 backgroundColor: '#007bff',
@@ -459,8 +451,8 @@ export class ErrorBoundary extends React.Component<
                 borderRadius: '4px',
                 cursor: 'pointer'
               }}
-            >
-              Try again
+            ></button>
+              Try again</button>
             </button>
           </div>
         )
@@ -499,4 +491,5 @@ export const useErrorHandler = () => {
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()
   };
 };
-export default ErrorHandler;
+export default ErrorHandler;</string>
+</string>

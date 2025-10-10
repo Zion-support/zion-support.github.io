@@ -139,21 +139,13 @@ const HelpPage: React.FC = () => {
   const toggleCategory = (categoryTitle: string) => {
     setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
   };
-
-  return (
+</string>
+  return (</string>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Help Center
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Find answers, get support, and learn how to make the most of our AI solutions
+      <Navigation >{/* Hero Section */}</Navigation>
+      </Navigation><section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25239C92AC%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"><div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Help Center<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Find answers, get support, and learn how to make the most of our AI solutions</p>
           </p>
 
           {/* Search Bar */}
@@ -164,9 +156,9 @@ const HelpPage: React.FC = () => {
                 type="text"
                 placeholder="Search for help articles, guides, and FAQs..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              />
+                onChange={(e) =>setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"</input>
+              /></input>
             </div>
           </div>
         </div>
@@ -176,16 +168,7 @@ const HelpPage: React.FC = () => {
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quick Links
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access our most popular resources and support channels
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quickLinks.map((link, index) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Quick Links<p className="text-xl text-gray-300 max-w-3xl mx-auto">Access our most popular resources and support channels<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{quickLinks.map((link, index) => (</div>
               <a
                 key={index}
                 href={link.link}
@@ -193,11 +176,7 @@ const HelpPage: React.FC = () => {
               >
                 <div className="flex items-center mb-4">
                   <link.icon className={`w-8 h-8 ${link.color} mr-3`} />
-                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                    {link.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300 mb-4">{link.description}</p>
+                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">{link.title}<p className="text-gray-300 mb-4">{link.description}</p>
                 <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                   <span className="text-sm font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -212,38 +191,24 @@ const HelpPage: React.FC = () => {
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find answers to common questions about our services and solutions
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {faqCategories.map((category, categoryIndex) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-xl text-gray-300 max-w-3xl mx-auto">Find answers to common questions about our services and solutions<div className="space-y-6">{faqCategories.map((category, categoryIndex) => (</div>
               <div key={categoryIndex} className="cyber-card">
                 <button
-                  onClick={() => toggleCategory(category.title)}
-                  className="w-full flex items-center justify-between p-6 text-left"
-                >
+                  onClick={() =>toggleCategory(category.title)}
+                  className="w-full flex items-center justify-between p-6 text-left"</button>
+                ></button>
                   <div className="flex items-center">
                     <category.icon className="w-6 h-6 text-cyan-400 mr-4" />
                     <h3 className="text-xl font-bold text-white">{category.title}</h3>
                   </div>
                   {expandedCategory === category.title ? (
-                    <ChevronDown className="w-6 h-6 text-cyan-400" />
-                  ) : (
-                    <ChevronRight className="w-6 h-6 text-cyan-400" />
-                  )}
-                </button>
+                    <ChevronDown className="w-6 h-6 text-cyan-400" >) : (<ChevronRight className="w-6 h-6 text-cyan-400" >)}</ChevronRight>
+                </ChevronRight>
 
                 {expandedCategory === category.title && (
-                  <div className="px-6 pb-6 space-y-4">
-                    {category.questions.map((faq, faqIndex) => (
+                  <div className="px-6 pb-6 space-y-4">{category.questions.map((faq, faqIndex) => (</div>
                       <div key={faqIndex} className="border-l-2 border-cyan-400/30 pl-4">
-                        <h4 className="text-lg font-semibold text-white mb-2">{faq.question}</h4>
-                        <p className="text-gray-300">{faq.answer}</p>
+                        <h4 className="text-lg font-semibold text-white mb-2">{faq.question}<p className="text-gray-300">{faq.answer}</p>
                       </div>
                     ))}
                   </div>
@@ -258,25 +223,12 @@ const HelpPage: React.FC = () => {
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Still Need Help?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our support team is here to help you succeed
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {contactMethods.map((method, index) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Still Need Help?<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our support team is here to help you succeed<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{contactMethods.map((method, index) => (</div>
               <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <method.icon className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>
-                <p className="text-gray-300 mb-4">{method.description}</p>
-                <div className="text-cyan-400 font-semibold mb-4">{method.contact}</div>
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all">
-                  {method.action}
+                <p className="text-gray-300 mb-4">{method.description}<div className="text-cyan-400 font-semibold mb-4">{method.contact}<button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all">{method.action}</button>
                 </button>
               </div>
             ))}

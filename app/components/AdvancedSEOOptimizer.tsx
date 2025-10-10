@@ -3,10 +3,10 @@ import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
+  title: string;,
+    description: string;
+  keywords: string[];,
+    canonicalUrl: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -30,15 +30,15 @@ interface AdvancedSEOOptimizerProps {
   enableOpenGraph?: boolean;
   enableTwitterCards?: boolean;
   enableSchemaMarkup?: boolean;
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+}</string>
+</string>
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>= ({
   seoData,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
-  enableSchemaMarkup = true,
-}) => {
+  enableSchemaMarkup = true,</AdvancedSEOOptimizerProps>
+}) => {</AdvancedSEOOptimizerProps>
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {
@@ -210,8 +210,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
+          '@type': 'Answer',)
+    text: faq.answer
         }
       }))
     };
@@ -244,8 +244,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
-  }, [seoData]);
-
+  }, [seoData]);</HTMLScriptElement>
+</HTMLScriptElement>
   const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data
     if (structuredDataRef.current) {
@@ -274,59 +274,43 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         if (typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+            event_label: 'Page Load',)
+    value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
 
         }
       }
     }
   }, []);
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
+</string>
+  return (<Helmet>{/* Basic Meta Tags */}<title>{seoData.title}</title>
       {metaTags.map((tag, index) => (
-        <meta key={index} name={tag.name} content={tag.content} />
-      ))}
+        <meta key={index} name={tag.name} content={tag.content} >))}
 
-      {/* Canonical URL */}
-      {seoData.canonicalUrl && (
-        <link rel="canonical" href={seoData.canonicalUrl} />
-      )}
+      {/* Canonical URL */}</meta>
+      {seoData.canonicalUrl && (<link rel="canonical" href={seoData.canonicalUrl} >)}
 
-      {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
-        <meta key={property} property={property} content={content} />
-      ))}
+      {/* Open Graph Tags */}</link>
+      {Object.entries(openGraphData).map(([property, content]) => (<meta key={property} property={property} content={content} >))}
 
-      {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
-        <meta key={name} name={name} content={content} />
-      ))}
-
-      {/* Additional SEO Tags */}
-      <meta name="format-detection" content="telephone=no" />
+      {/* Twitter Card Tags */}</meta>
+      {Object.entries(twitterCardData).map(([name, content]) => (<meta key={name} name={name} content={content} >))}
+</meta>
+      {/* Additional SEO Tags */}</meta>
+      </meta><meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Favicon and Icons */}</meta>
+      </meta><link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
-      <link rel="manifest" href="/site.webmanifest" />
-
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="manifest" href="/site.webmanifest" >{/* Preconnect to external domains */}</link>
+      </link><link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" >{/* DNS Prefetch */}</link>
+      </link><link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>

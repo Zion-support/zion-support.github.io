@@ -1,19 +1,19 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
+  track: (event: string, properties?: Record<string, any>) => void;</string>
+  page: (name: string, properties?: Record<string, any>) => void;</string>
   identify: (userId: string, traits?: Record<string, any>) => void;
-}
-
+}</string>
+</string>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: ReactNode;
   trackingId?: string;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+}</AnalyticsContextType>
+</AnalyticsContextType>
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps>= ({
   children,
   trackingId = 'G-XXXXXXXXXX'
 }) => {
@@ -35,12 +35,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
       gtag('js', new Date());
       gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href,
+        page_title: document.title,)
+    page_location: window.location.href,
 
     }
-  }, [trackingId]);
-
+  }, [trackingId]);</AnalyticsProviderProps>
+</AnalyticsProviderProps>
   const track = (event: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties);
@@ -49,8 +49,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
       }
-  };
-
+  };</string>
+</string>
   const page = (name: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
@@ -60,11 +60,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     }
 
-    // Also log in development
+    // Also log in development)
     if (process.env.NODE_ENV === 'development') {
       }
-  };
-
+  };</string>
+</string>
   const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
@@ -73,7 +73,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
     }
 
-    // Also log in development
+    // Also log in development)
     if (process.env.NODE_ENV === 'development') {
       }
   };
@@ -83,10 +83,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     page,
     identify,
   };
-
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
+</string>
+  return (<AnalyticsContext.Provider value={value}>{children}</AnalyticsContext>
     </AnalyticsContext.Provider>
   );
 };
@@ -102,7 +100,7 @@ export const useAnalytics = (): AnalyticsContextType => {
 // Declare global gtag function
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: any[];,
     gtag: (...args: any[]) => void;
   }
 }

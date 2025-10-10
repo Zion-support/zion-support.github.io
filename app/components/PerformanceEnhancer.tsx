@@ -28,7 +28,7 @@ interface PerformanceEnhancerProps {
   };
 }
 
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
   enableWebVitals = true,
   enableResourceTiming = true,
   enableMemoryMonitoring = true,
@@ -54,8 +54,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   }
 }) => {
 
-  // Performance metrics storage
-  const performanceMetrics = useMemo(() => ({
+  // Performance metrics storage</PerformanceEnhancerProps>
+  const performanceMetrics = useMemo(() => ({</PerformanceEnhancerProps>
     webVitals: {} as Record<string, any>,
     resourceTiming: [] as PerformanceEntry[],
     userTiming: [] as PerformanceEntry[],
@@ -93,7 +93,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
     }
 
-    // Send to custom endpoint
+    // Send to custom endpoint)
     if (typeof window !== 'undefined' && navigator.sendBeacon) {
       navigator.sendBeacon('/api/analytics/performance-errors', JSON.stringify(errorData));
     }
@@ -119,8 +119,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'web_vitals', {
             event_category: 'Performance',
-            event_label: metric.name,
-            value: Math.round(metric.value),
+            event_label: metric.name,)
+    value: Math.round(metric.value),
             non_interaction: true,
             custom_parameter_1: metric.delta,
             custom_parameter_2: metric.id
@@ -134,8 +134,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
             value: metric.value,
             delta: metric.delta,
             id: metric.id,
-            navigationType: metric.navigationType,
-            timestamp: Date.now(),
+            navigationType: metric.navigationType,)
+    timestamp: Date.now(),
             url: window.location.href,
             userAgent: navigator.userAgent,
             performanceMetrics: performanceMetrics
@@ -191,8 +191,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         performanceMetrics.resourceTiming = resources;
 
         // Analyze resource performance
-        const slowResources = resources.filter(resource =>
-          resource.duration > 1000 || resource.transferSize > 1000000
+        const slowResources = resources.filter(resource =>)
+    resource.duration > 1000 || resource.transferSize > 1000000
         );
 
         if (slowResources.length > 0) {
@@ -289,8 +289,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         performanceMetrics.longTasks.push(...entries);
 
         // Report long tasks
-        entries.forEach(entry => {
-          if (entry.duration > 50) {
+        entries.forEach(entry => {)
+    if (entry.duration > 50) {
             reportError(new Error(`Long task detected: ${entry.duration}ms`), 'LongTaskMonitoring');
           }
 
@@ -315,8 +315,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         performanceMetrics.layoutShifts.push(...entries);
 
         // Report significant layout shifts
-        entries.forEach(entry => {
-          if (entry.value > 0.1) {
+        entries.forEach(entry => {)
+    if (entry.value > 0.1) {
             reportError(new Error(`Significant layout shift detected: ${entry.value}`), 'LayoutShiftMonitoring');
           }
 
@@ -378,8 +378,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           (window as any).gtag('event', 'performance_summary', {
             event_category: 'Performance',
             event_label: 'Summary',
-            value: 1,
-            custom_parameter_1: JSON.stringify(summary)
+            value: 1,)
+    custom_parameter_1: JSON.stringify(summary)
 
         }
 
@@ -398,5 +398,5 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
   return null;
 };
-
-export default PerformanceEnhancer;
+</string>
+export default PerformanceEnhancer;</string>

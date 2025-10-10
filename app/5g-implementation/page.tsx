@@ -47,7 +47,6 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -76,16 +75,13 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
         </div>
       </section>
 
-{/* Features Section */}
+      {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">5G Implementation Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive 5G network implementation designed for modern connectivity needs
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive 5G network implementation designed for modern connectivity needs</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 group">
@@ -109,12 +105,10 @@ description: 'Comprehensive security measures designed specifically for 5G netwo
       </section>
 
       {/* CTA Section */}
-<section className="py-20 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for 5G Implementation?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join leading organizations using our 5G implementation services for next-generation connectivity
-          </p>
+          <p className="text-xl text-gray-300 mb-8">Join leading organizations using our 5G implementation services for next-generation connectivity</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial

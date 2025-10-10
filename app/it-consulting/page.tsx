@@ -76,60 +76,45 @@ const ITConsultingPage: React.FC = () => {
         <Navigation />
 
         <main className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            {/* Hero Section */}
+          <div className="max-w-7xl mx-auto">{/* Hero Section */}</div>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                IT Consulting Services
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Transform your business with expert IT consulting. We provide strategic guidance,
-                digital transformation, and technology solutions that drive growth and efficiency.
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">IT Consulting Services<p className="text-xl text-gray-600 max-w-3xl mx-auto">Transform your business with expert IT consulting. We provide strategic guidance,</p>
+                digital transformation, and technology solutions that drive growth and efficiency.</p>
               </p>
             </div>
 
             {/* Services Section */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              {consultingServices.map((service, index) => (
+            <div className="grid md:grid-cols-2 gap-8 mb-16">{consultingServices.map((service, index) => (</div>
                 <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-6">
                     <div className="p-3 bg-blue-100 rounded-xl mr-4">
                       <service.icon className="w-8 h-8 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-                      <p className="text-gray-600">{service.description}</p>
+                      <h3 className="text-2xl font-bold text-gray-900">{service.title}<p className="text-gray-600">{service.description}</p>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:<ul className="space-y-2">{service.features.map((feature, idx) => (</ul>
                         <li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          {feature}
-                        </li>
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" >{feature}</CheckCircle>
+                        </CheckCircle>
                       ))}
                     </ul>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, idx) => (
+                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:<ul className="space-y-2">{service.benefits.map((benefit, idx) => (</ul>
                         <li key={idx} className="flex items-center text-gray-600">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                        </li>
+                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" >{benefit}</ArrowRight>
+                        </ArrowRight>
                       ))}
                     </ul>
                   </div>
 
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
-                    <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-                      Get Started
+                    <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}<button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Get Started</button>
                     </button>
                   </div>
                 </div>
@@ -139,17 +124,11 @@ const ITConsultingPage: React.FC = () => {
             {/* Benefits Section */}
             <section className="py-16 bg-white rounded-2xl shadow-lg mb-16">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our IT Consulting?</h2>
-                <p className="text-xl text-gray-600">Proven benefits that drive business success</p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {benefits.map((benefit, index) => (
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our IT Consulting?<p className="text-xl text-gray-600">Proven benefits that drive business success<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <benefit.icon className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}<p className="text-gray-600">{benefit.description}</p>
                   </div>
                 ))}
               </div>
@@ -157,25 +136,21 @@ const ITConsultingPage: React.FC = () => {
 
             {/* CTA Section */}
             <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT?</h2>
-              <p className="text-xl mb-8">
-                Contact our experts for a free consultation and discover how we can help your business.
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT?<p className="text-xl mb-8">Contact our experts for a free consultation and discover how we can help your business.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="bg-white text-blue-600 py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950
-                </a>
+                  <Phone className="w-5 h-5 mr-2" >Call (302) 464-0950</Phone>
+                </Phone>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-transparent border-2 border-white text-white py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Email Us
-                </a>
+                  <Mail className="w-5 h-5 mr-2" >Email Us</Mail>
+                </Mail>
               </div>
             </section>
           </div>

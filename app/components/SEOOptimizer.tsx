@@ -3,17 +3,17 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonical: string;
-  ogImage: string;
-  twitterCard: string;
+  title: string;,
+    description: string;
+  keywords: string[];,
+    canonical: string;
+  ogImage: string;,
+    twitterCard: string;
   structuredData: object;
 }
 
 export const SEOOptimizer: React.FC = () => {
-  const seoData: SEOData = {
+  const seoData: SEOData = {,
     title: 'Zion Tech Group - AI-Powered Enterprise Solutions',
     description: 'Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.',
     keywords: [
@@ -136,24 +136,18 @@ export const SEOOptimizer: React.FC = () => {
       <meta name="description" content={seoData.description} />
       <meta name="keywords" content={seoData.keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-
-      {/* Open Graph */}
-      <meta property="og:title" content={seoData.title} />
+      <meta name="robots" content="index, follow" >{/* Open Graph */}</meta>
+      </meta><meta property="og:title" content={seoData.title} />
       <meta property="og:description" content={seoData.description} />
       <meta property="og:url" content={seoData.canonical} />
       <meta property="og:image" content={seoData.ogImage} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={seoData.twitterCard} />
+      <meta property="og:site_name" content="Zion Tech Group" >{/* Twitter Card */}</meta>
+      </meta><meta name="twitter:card" content={seoData.twitterCard} />
       <meta name="twitter:title" content={seoData.title} />
       <meta name="twitter:description" content={seoData.description} />
-      <meta name="twitter:image" content={seoData.ogImage} />
-
-      {/* Canonical */}
-      <link rel="canonical" href={seoData.canonical} />
+      <meta name="twitter:image" content={seoData.ogImage} >{/* Canonical */}</meta>
+      </meta><link rel="canonical" href={seoData.canonical} />
     </Helmet>
   );
 };

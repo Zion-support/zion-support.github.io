@@ -138,14 +138,9 @@ const SecurityPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
 
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Header */}
+      <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Security & Compliance
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Security & Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
@@ -165,21 +160,14 @@ const SecurityPage: React.FC = () => {
 
         {/* Security Measures */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Measures</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityMeasures.map((measure, index) => (
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Measures<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityMeasures.map((measure, index) => (</div>
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center mb-4">
                   <measure.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">{measure.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{measure.description}</p>
-                <ul className="space-y-2">
-                  {measure.details.map((detail, detailIndex) => (
+                  <h3 className="text-xl font-bold text-white">{measure.title}<p className="text-gray-300 mb-4">{measure.description}<ul className="space-y-2">{measure.details.map((detail, detailIndex) => (</ul>
                     <li key={detailIndex} className="flex items-start text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                      {detail}
-                    </li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" >{detail}</CheckCircle>
+                    </CheckCircle>
                   ))}
                 </ul>
               </div>
@@ -190,20 +178,12 @@ const SecurityPage: React.FC = () => {
         {/* Compliance Standards */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certifications</h2>
-            <p className="text-gray-300 mb-8">
-              We maintain compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {complianceStandards.map((standard, index) => (
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-gray-300 mb-8">We maintain compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{complianceStandards.map((standard, index) => (</div>
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-lg font-semibold text-white">{standard.name}</h3>
                     <standard.icon className="w-6 h-6 text-green-400" />
-                  </div>
-                  <p className="text-gray-300 text-sm mb-3">{standard.description}</p>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
-                    {standard.status}
+                  <p className="text-gray-300 text-sm mb-3">{standard.description}<span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">{standard.status}</span>
                   </span>
                 </div>
               ))}
@@ -213,18 +193,12 @@ const SecurityPage: React.FC = () => {
 
         {/* Security Features */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityFeatures.map((feature, index) => (
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityFeatures.map((feature, index) => (</div>
               <div key={index} className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.features.map((item, itemIndex) => (
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.features.map((item, itemIndex) => (</ul>
                     <li key={itemIndex} className="flex items-start text-sm text-gray-300">
-                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                      {item}
-                    </li>
+                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">{item}</span>
+                    </span>
                   ))}
                 </ul>
               </div>
@@ -294,9 +268,7 @@ const SecurityPage: React.FC = () => {
         {/* Incident Response */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Incident Response</h2>
-            <p className="text-gray-300 mb-6">
-              In the unlikely event of a security incident, we have a comprehensive incident response plan to minimize impact and restore services quickly.
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Incident Response<p className="text-gray-300 mb-6">In the unlikely event of a security incident, we have a comprehensive incident response plan to minimize impact and restore services quickly.</p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -352,26 +324,22 @@ const SecurityPage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Questions?</h2>
-            <p className="text-gray-300 mb-6">
-              If you have any questions about our security measures or need to report a security concern, please contact our security team:
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Questions?<p className="text-gray-300 mb-6">If you have any questions about our security measures or need to report a security concern, please contact our security team:</p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Security Team</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>Chief Information Security Officer</p>
-                  <p>Zion Tech Group</p>
-                  <p>364 E Main St STE 1008</p>
-                  <p>Middletown, DE 19709</p>
+                  <p>Chief Information Security Officer<p>Zion Tech Group</p>
+                  <p>364 E Main St STE 1008<p>Middletown, DE 19709</p>
                 </div>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p>Email: <a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">security@ziontechgroup.com</a></p>
-                  <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
-                  <p>Emergency: <a href="tel:+13024640951" className="text-red-400 hover:text-red-300">+1 302 464 0951</a></p>
+                  <p>Email: <a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">security@ziontechgroup.com</a>
+                  <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
+                  <p>Emergency: <a href="tel:+13024640951" className="text-red-400 hover:text-red-300">+1 302 464 0951</a>
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ interface EnhancedAccessibilityEnhancerProps {
   enableFontScaling?: boolean;
 }
 
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>= ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
@@ -159,13 +159,13 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         outline-offset: 2px !important;
       }
 
-      .focus-visible:focus {
-        outline: 2px solid #3b82f6 !important;
+      .focus-visible: focus {,
+    outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
       }
 
-      .focus-visible:focus:not(:focus-visible) {
-        outline: none !important;
+      .focus-visible: focus:not(:focus-visible) {,
+    outline: none !important;
       }
     `;
     document.head.appendChild(style);
@@ -278,8 +278,8 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.style.cssText = `
-      position: absolute;
-      top: -40px;
+      position: absolute;,
+    top: -40px;
       left: 6px;
       z-index: 1000;
     `;
@@ -290,15 +290,15 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       link.textContent = text;
       link.className = 'skip-link';
       link.style.cssText = `
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #000;
-        color: #fff;
-        padding: 8px;
+        position: absolute;,
+    top: -40px;
+        left: 6px;,
+    background: #000;
+        color: #fff;,
+    padding: 8px;
         text-decoration: none;
-        z-index: 1000;
-        transition: top 0.3s;
+        z-index: 1000;,
+    transition: top 0.3s;
       `;
 
       link.addEventListener('focus', () => {
@@ -409,5 +409,5 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
   return null;
 };
-
-export default EnhancedAccessibilityEnhancer;
+</EnhancedAccessibilityEnhancerProps>
+export default EnhancedAccessibilityEnhancer;</EnhancedAccessibilityEnhancerProps>

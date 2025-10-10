@@ -1,14 +1,14 @@
 
 interface LinkProps {
-  href: string
-  children: React.ReactNode
+  href: string,
+    children: React.ReactNode
   className?: string
   target?: string
   rel?: string
   onClick?: () => void
   'aria-label'?: string;}
 }
-export const Link: React.FC<LinkProps> = ({
+export const Link: React.FC<LinkProps>= ({
   href,
   children,
   className,
@@ -27,9 +27,8 @@ export const Link: React.FC<LinkProps> = ({
       e.preventDefault()
       window.location.href = href;}
     }
-  }
-  return (
-    <a
+  }</LinkProps>
+  return (<a
       href={href}
       className={className}
       target={target}
@@ -37,8 +36,7 @@ export const Link: React.FC<LinkProps> = ({
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-    >
-      {children}
+    >{children}</a>
     </a>
   )
 }

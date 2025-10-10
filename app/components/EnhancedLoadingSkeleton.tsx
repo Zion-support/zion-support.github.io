@@ -6,9 +6,7 @@ interface SkeletonProps {
   children?: React.ReactNode;
 }
 
-const Skeleton: React.FC<SkeletonProps> = ({ className = '', children }) => (
-  <div className={`animate-pulse bg-gray-700/50 rounded ${className}`}>
-    {children}
+const Skeleton: React.FC<SkeletonProps>= ({ className = '', children }) => (<div className={`animate-pulse bg-gray-700/50 rounded ${className}`}>{children}</div>
   </div>
 );
 
@@ -18,8 +16,7 @@ export const HeroSkeleton: React.FC = React.memo(() => (
     <Skeleton className="h-6 w-80 mx-auto mb-4" />
     <Skeleton className="h-4 w-96 mx-auto mb-8" />
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-      {Array.from({ length: 4 }).map((_, i) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">{Array.from({ length: 4 }).map((_, i) => (</div>
         <div key={i} className="cyber-card p-6">
           <Skeleton className="h-12 w-12 mx-auto mb-4 rounded-full" />
           <Skeleton className="h-6 w-24 mx-auto mb-2" />
@@ -67,11 +64,8 @@ export const NavigationSkeleton: React.FC = React.memo(() => (
     <div className="container mx-auto px-4">
       <div className="flex items-center justify-between h-16">
         <Skeleton className="h-8 w-32" />
-        <div className="hidden md:flex space-x-8">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Skeleton key={i} className="h-4 w-16" />
-          ))}
-        </div>
+        <div className="hidden md:flex space-x-8">{Array.from({ length: 5 }).map((_, i) => (<Skeleton key={i} className="h-4 w-16" >))}</Skeleton>
+        </Skeleton>
         <div className="flex items-center space-x-4">
           <Skeleton className="h-8 w-20" />
           <Skeleton className="h-8 w-24" />
@@ -84,15 +78,11 @@ export const NavigationSkeleton: React.FC = React.memo(() => (
 export const FooterSkeleton: React.FC = React.memo(() => (
   <footer className="bg-slate-900 border-t border-cyan-400/20">
     <div className="container mx-auto px-4 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        {Array.from({ length: 4 }).map((_, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">{Array.from({ length: 4 }).map((_, i) => (</div>
           <div key={i}>
             <Skeleton className="h-6 w-32 mb-4" />
-            <div className="space-y-2">
-              {Array.from({ length: 4 }).map((_, j) => (
-                <Skeleton key={j} className="h-4 w-24" />
-              ))}
-            </div>
+            <div className="space-y-2">{Array.from({ length: 4 }).map((_, j) => (<Skeleton key={j} className="h-4 w-24" >))}</Skeleton>
+            </Skeleton>
           </div>
         ))}
       </div>
@@ -110,11 +100,8 @@ export const ContentSkeleton: React.FC = React.memo(() => (
       <Skeleton className="h-6 w-full mb-4" />
       <Skeleton className="h-6 w-5/6 mb-8" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <ServiceCardSkeleton key={i} />
-        ))}
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: 6 }).map((_, i) => (<ServiceCardSkeleton key={i} >))}</ServiceCardSkeleton>
+      </ServiceCardSkeleton>
     </div>
   </div>
 );

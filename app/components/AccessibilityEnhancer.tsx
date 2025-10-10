@@ -3,16 +3,16 @@
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  focusVisible: boolean;
+  highContrast: boolean;,
+    reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';,
+    focusVisible: boolean;
 }
 
 const AccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    reducedMotion: false,
+    highContrast: false,</AccessibilitySettings>
+    reducedMotion: false,</AccessibilitySettings>
 <<<<<<< HEAD
     focusVisible: true,
     screenReader: false,
@@ -32,8 +32,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
     setSettings(prev => ({
       ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      reducedMotion: prefersReducedMotion,)
+    highContrast: prefersHighContrast
     }));
 
     // Listen for changes in user preferences
@@ -188,33 +188,33 @@ const AccessibilityEnhancer: React.FC = () => {
 
       /* Skip link */
       .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: var(--neon-cyan);
-        color: #000;
-        padding: 8px;
+        position: absolute;,
+    top: -40px;
+        left: 6px;,
+    background: var(--neon-cyan);
+        color: #000;,
+    padding: 8px;
         text-decoration: none;
         border-radius: 4px;
         z-index: 1000;
         font-weight: bold;
       }
 
-      .skip-link:focus {
-        top: 6px;
+      .skip-link: focus {,
+    top: 6px;
       }
 
       /* Screen reader only content */
       .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
+        position: absolute;,
+    width: 1px;
+        height: 1px;,
+    padding: 0;
+        margin: -1px;,
+    overflow: hidden;
         clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
+        white-space: nowrap;,
+    border: 0;
       }
 
       /* High contrast text */

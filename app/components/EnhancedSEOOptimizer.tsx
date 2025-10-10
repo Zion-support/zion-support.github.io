@@ -15,9 +15,9 @@ interface SEOOptimizerProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-}
-
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+}</string>
+</string>
+const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -66,8 +66,8 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         updateMetaTag('article:section', section, 'property');
       }
       if (tags.length > 0) {
-        tags.forEach(tag => {
-          updateMetaTag('article:tag', tag, 'property');
+        tags.forEach(tag => {)
+    updateMetaTag('article:tag', tag, 'property');
 
       }
 
@@ -126,8 +126,8 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       document.head.appendChild(canonical);
     }
     canonical.setAttribute('href', url);
-  };
-
+  };</SEOOptimizerProps>
+</SEOOptimizerProps>
   const addStructuredData = (data: Record<string, unknown>): void => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -340,5 +340,5 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   return null;
 };
-
-export default EnhancedSEOOptimizer;
+</string>
+export default EnhancedSEOOptimizer;</string>

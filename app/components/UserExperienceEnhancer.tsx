@@ -4,10 +4,10 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { logger } from '../utils/logger';
 
 interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
-  language: string;
-  notifications: boolean;
-  analytics: boolean;
+  theme: 'light' | 'dark' | 'auto';,
+    language: string;
+  notifications: boolean;,
+    analytics: boolean;
 }
 
 export const UserExperienceEnhancer: React.FC = () => {
@@ -90,8 +90,8 @@ export const UserExperienceEnhancer: React.FC = () => {
     setPreferences(prev => ({ ...prev, notifications }));
 
     if (notifications && 'Notification' in window) {
-      Notification.requestPermission().then(permission => {
-        if (permission === 'granted') {
+      Notification.requestPermission().then(permission => {)
+    if (permission === 'granted') {
           logger.info('Notification permission granted');
         }
 
@@ -115,8 +115,8 @@ export const UserExperienceEnhancer: React.FC = () => {
 
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', action, {
-        event_category: 'User Interaction',
-        event_label: element,
+        event_category: 'User Interaction',)
+    event_label: element,
 
     }
   }, [preferences.analytics]);
@@ -174,12 +174,12 @@ export const UserExperienceEnhancer: React.FC = () => {
   }, [preferences.theme, handleThemeChange]);
 
   if (isLoading) return null;
-
-  return (
+</UserPreferences>
+  return (</UserPreferences>
     <>
       {/* Theme Toggle Button */}
       <button
-        onClick={() => {
+        onClick={() =>{
           const newTheme = preferences.theme === 'dark' ? 'light' : 'dark';
           handleThemeChange(newTheme);
           trackInteraction('theme_toggle', newTheme);
@@ -187,8 +187,8 @@ export const UserExperienceEnhancer: React.FC = () => {
         className="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors z-40"
         aria-label={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
         title={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
-      >
-        {preferences.theme === 'dark' ? '☀️' : '🌙'}
+      ></button>
+        {preferences.theme === 'dark' ? '☀️' : '🌙'}</button>
       </button>
 
       {/* User Preferences Panel */}
@@ -197,29 +197,23 @@ export const UserExperienceEnhancer: React.FC = () => {
 
         <div className="space-y-2 text-sm">
           <div>
-            <label className="block text-xs text-gray-300 mb-1">Theme</label>
-            <select
+            <label className="block text-xs text-gray-300 mb-1">Theme<select
               value={preferences.theme}
-              onChange={(e) => handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
-              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"
-            >
-              <option value="auto">Auto</option>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
+              onChange={(e) =>handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
+              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"</select>
+            ></select>
+              <option value="auto">Auto<option value="light">Light<option value="dark">Dark</option>
             </select>
           </div>
 
           <div>
-            <label className="block text-xs text-gray-300 mb-1">Language</label>
-            <select
+            <label className="block text-xs text-gray-300 mb-1">Language<select
               value={preferences.language}
-              onChange={(e) => handleLanguageChange(e.target.value)}
-              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"
-            >
-              <option value="en">English</option>
-              <option value="es">Español</option>
-              <option value="fr">Français</option>
-              <option value="de">Deutsch</option>
+              onChange={(e) =>handleLanguageChange(e.target.value)}
+              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"</select>
+            ></select>
+              <option value="en">English<option value="es">Español</option>
+              <option value="fr">Français<option value="de">Deutsch</option>
             </select>
           </div>
 
@@ -228,10 +222,9 @@ export const UserExperienceEnhancer: React.FC = () => {
               type="checkbox"
               id="notifications"
               checked={preferences.notifications}
-              onChange={(e) => handleNotificationChange(e.target.checked)}
-              className="rounded"
-            />
-            <label htmlFor="notifications" className="text-xs">Notifications</label>
+              onChange={(e) =>handleNotificationChange(e.target.checked)}
+              className="rounded"</input>
+            /><label htmlFor="notifications" className="text-xs">Notifications</label>
           </div>
 
           <div className="flex items-center space-x-2">
@@ -239,16 +232,14 @@ export const UserExperienceEnhancer: React.FC = () => {
               type="checkbox"
               id="analytics"
               checked={preferences.analytics}
-              onChange={(e) => setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
-              className="rounded"
-            />
-            <label htmlFor="analytics" className="text-xs">Analytics</label>
+              onChange={(e) =>setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
+              className="rounded"</input>
+            /><label htmlFor="analytics" className="text-xs">Analytics</label>
           </div>
         </div>
 
         <div className="mt-3 pt-2 border-t border-gray-700">
-          <p className="text-xs text-gray-400">
-            Shortcuts: Ctrl+K (search), Ctrl+D (theme)
+          <p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (theme)</p>
           </p>
         </div>
       </div>

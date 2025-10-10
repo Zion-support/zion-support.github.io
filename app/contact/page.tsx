@@ -119,26 +119,15 @@ const ContactPage: React.FC = () => {
         title="Contact Zion Tech Group - AI & IT Solutions"
         description="Get in touch with our AI and IT experts. Contact us for consultations, project inquiries, and enterprise solutions. Call (302) 464-0950 or email kleber@ziontechgroup.com"
         keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
-      />
-
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      >{/* Hero Section */}</SEOOptimizer>
+      </SEOOptimizer><section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
               <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-400 text-sm font-medium">Get In Touch</span>
-            </div>
-
-            <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
-              Let's Build the
-              <span className="block holographic-text cyber-text">Future Together</span>
-            </h1>
-
-            <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-              Ready to transform your business with AI and cutting-edge technology?
-              Our experts are here to help you achieve your goals.
+              <span className="text-cyan-400 text-sm font-medium">Get In Touch<h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">Let's Build the</h1>
+              <span className="block holographic-text cyber-text">Future Together<p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">Ready to transform your business with AI and cutting-edge technology?</p>
+              Our experts are here to help you achieve your goals.</p>
             </p>
 
             <div className="flex flex-wrap justify-center gap-6">
@@ -158,25 +147,21 @@ const ContactPage: React.FC = () => {
       {/* Contact Methods */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {contactMethods.map((method, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{contactMethods.map((method, index) => (</div>
               <div key={index} className="quantum-card p-6 text-center space-y-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
                   <method.icon className="w-8 h-8 text-cyan-400" />
-                </div>
                 <h3 className="text-xl font-bold text-white">{method.title}</h3>
                 <div className="space-y-2">
-                  <div className="text-cyan-400 font-medium">{method.value}</div>
-                  <div className="text-gray-300 text-sm">{method.description}</div>
+                  <div className="text-cyan-400 font-medium">{method.value}<div className="text-gray-300 text-sm">{method.description}</div>
                   {method.action && (
                     <a
                       href={method.action}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                     >
-                      <ArrowRight className="w-4 h-4 mr-1" />
-                      {method.action.startsWith('tel:') ? 'Call Now' :
-                       method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}
-                    </a>
+                      <ArrowRight className="w-4 h-4 mr-1" >{method.action.startsWith('tel:') ? 'Call Now' :</ArrowRight>
+                       method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}</ArrowRight>
+                    </ArrowRight>
                   )}
                 </div>
               </div>
@@ -196,15 +181,7 @@ const ContactPage: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Global Offices
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              We're here to serve you wherever you are in the world
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {offices.map((office, index) => (
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Offices<p className="text-lg text-gray-300 max-w-3xl mx-auto">We're here to serve you wherever you are in the world<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
                 <div className="space-y-3">
@@ -222,9 +199,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Clock className="w-4 h-4 text-yellow-400" />
-                    <span className="text-gray-300 text-sm">{office.hours}</span>
-                  </div>
-                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}</div>
+                    <span className="text-gray-300 text-sm">{office.hours}<div className="text-cyan-400 text-sm font-medium">{office.timezone}</div>
                 </div>
               </div>
             ))}
@@ -236,19 +211,13 @@ const ContactPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Common questions about our services and process
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
+            <div className="space-y-6">{faqs.map((faq, index) => (</div>
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}<p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
             </div>

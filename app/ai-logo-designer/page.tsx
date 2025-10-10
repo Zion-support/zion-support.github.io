@@ -143,20 +143,13 @@ const AILogoDesignerPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
+      <Navigation >{/* Hero Section */}</Navigation>
+      </Navigation><section className="pt-20 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6">
               <Palette className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Logo Designer Pro
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create stunning, professional logos in minutes with AI-powered design generation. From concept to completion, get the perfect logo for your brand with unlimited variations and commercial rights.
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Logo Designer Pro<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning, professional logos in minutes with AI-powered design generation. From concept to completion, get the perfect logo for your brand with unlimited variations and commercial rights.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="flex items-center space-x-2 text-green-400">
@@ -176,15 +169,12 @@ const AILogoDesignerPage: React.FC = () => {
               <a
                 href="#pricing"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Creating Free
+              >Start Creating Free</a>
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
               <a
                 href="#demo"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
-                Watch Demo
+              >Watch Demo</a>
               </a>
             </div>
           </div>
@@ -195,25 +185,12 @@ const AILogoDesignerPage: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Powerful Logo Design Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional logos that represent your brand perfectly.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Powerful Logo Design Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to create professional logos that represent your brand perfectly.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
                     <Sparkles className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{feature}</h3>
-                </div>
-                <p className="text-gray-300 text-sm">
-                  {feature === 'AI-powered logo generation' && 'Advanced AI analyzes your brand description and generates unique, professional logo concepts tailored to your industry.'}
+                  <h3 className="text-lg font-semibold text-white">{feature}<p className="text-gray-300 text-sm">{feature === 'AI-powered logo generation' && 'Advanced AI analyzes your brand description and generates unique, professional logo concepts tailored to your industry.'}
                   {feature === 'Unlimited logo variations' && 'Generate unlimited variations of your logo with different colors, fonts, and layouts until you find the perfect match.'}
                   {feature === 'High-resolution downloads' && 'Download your logos in high resolution (up to 4K) for use in print, web, and any other medium.'}
                   {feature === 'Vector format support' && 'Get your logos in vector format (SVG) for infinite scalability without quality loss.'}
@@ -223,8 +200,8 @@ const AILogoDesignerPage: React.FC = () => {
                   {feature === 'Custom logo editing' && 'Fine-tune your logo with our advanced editing tools for perfect customization.'}
                   {feature === 'Brand guidelines generation' && 'Automatically generate comprehensive brand guidelines including logo usage, colors, and typography.'}
                   {feature === 'Social media templates' && 'Get pre-made social media templates featuring your logo for consistent branding.'}
-                  {feature === 'Business card designs' && 'Create matching business cards and stationery with your new logo design.'}
-                  {feature === 'Watermark removal' && 'Remove watermarks from your final logo designs for professional use.'}
+                  {feature === 'Business card designs' && 'Create matching business cards and stationery with your new logo design.'}</p>
+                  {feature === 'Watermark removal' && 'Remove watermarks from your final logo designs for professional use.'}</p>
                 </p>
               </div>
             ))}
@@ -236,35 +213,19 @@ const AILogoDesignerPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Logo Design Styles
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from various design styles or let AI suggest the perfect style for your brand.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {logoStyles.map((style, index) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Logo Design Styles<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose from various design styles or let AI suggest the perfect style for your brand.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{logoStyles.map((style, index) => (</div>
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
                 <div className="h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <Palette className="w-16 h-16 text-white opacity-50" />
                 </div>
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-white">{style.name}</h3>
-                  <span className="text-purple-400 font-semibold">{style.price}</span>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">{style.description}</p>
-                <ul className="space-y-1">
-                  {style.examples.map((example, exampleIndex) => (
+                  <h3 className="text-lg font-semibold text-white">{style.name}<span className="text-purple-400 font-semibold">{style.price}<p className="text-gray-300 text-sm mb-4">{style.description}<ul className="space-y-1">{style.examples.map((example, exampleIndex) => (</ul>
                     <li key={exampleIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                       <CheckCircle className="w-3 h-3 text-green-400" />
                       <span>{example}</span>
                     </li>
                   ))}
-                </ul>
-                <button className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
-                  Try This Style
+                <button className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">Try This Style</button>
                 </button>
               </div>
             ))}
@@ -276,28 +237,16 @@ const AILogoDesignerPage: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Choose AI Logo Designer Pro?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of logo design with AI-powered creativity and professional results.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose AI Logo Designer Pro?<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of logo design with AI-powered creativity and professional results.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
-                <p className="text-gray-300">
-                  {benefit === 'Create logos in minutes' && 'AI-powered generation means you can have a professional logo ready in minutes, not days or weeks.'}
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit}<p className="text-gray-300">{benefit === 'Create logos in minutes' && 'AI-powered generation means you can have a professional logo ready in minutes, not days or weeks.'}
                   {benefit === 'Professional quality guaranteed' && 'Our AI is trained on thousands of professional logos to ensure high-quality, industry-standard designs.'}
                   {benefit === 'Unlimited revisions' && 'Generate as many variations as you need until you find the perfect logo for your brand.'}
                   {benefit === 'Commercial use rights' && 'All logos come with full commercial use rights, so you can use them for any business purpose.'}
-                  {benefit === 'Brand consistency tools' && 'Generate brand guidelines and templates to maintain consistency across all your marketing materials.'}
-                  {benefit === '24/7 design support' && 'Get help from our design experts whenever you need assistance with your logo creation process.'}
+                  {benefit === 'Brand consistency tools' && 'Generate brand guidelines and templates to maintain consistency across all your marketing materials.'}</p>
+                  {benefit === '24/7 design support' && 'Get help from our design experts whenever you need assistance with your logo creation process.'}</p>
                 </p>
               </div>
             ))}
@@ -309,21 +258,9 @@ const AILogoDesignerPage: React.FC = () => {
       <section id="pricing" className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Choose Your Design Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing plans designed to meet your logo design needs, from personal projects to enterprise branding.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}>
-                {plan.popular && (
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Choose Your Design Plan<p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your logo design needs, from personal projects to enterprise branding.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                     </span>
                   </div>
                 )}
@@ -331,23 +268,17 @@ const AILogoDesignerPage: React.FC = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="flex items-center justify-center space-x-2 mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
+                    <span className="text-4xl font-bold text-white">{plan.price}<span className="text-gray-400">{plan.period}</span>
                   </div>
                   {plan.originalPrice && (
                     <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</span>
                   )}
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                <ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
-                </ul>
-
                 <a
                   href="#contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -355,8 +286,7 @@ const AILogoDesignerPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
                   }`}
-                >
-                  Get Started
+                >Get Started</a>
                 </a>
               </div>
             ))}
@@ -368,26 +298,11 @@ const AILogoDesignerPage: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Success Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how AI Logo Designer Pro has helped businesses create amazing brand identities.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Success Stories<p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Logo Designer Pro has helped businesses create amazing brand identities.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6">
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                  <p className="font-semibold text-white">{testimonial.name}<p className="text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             ))}
@@ -398,11 +313,7 @@ const AILogoDesignerPage: React.FC = () => {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Create Your Logo?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Start designing your perfect logo today with AI Logo Designer Pro.
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Create Your Logo?<p className="text-xl text-purple-100 mb-8">Start designing your perfect logo today with AI Logo Designer Pro.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

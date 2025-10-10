@@ -12,7 +12,7 @@ interface EnhancedAnalyticsProps {
   enableHeatmapTracking?: boolean;
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({
   enableGoogleAnalytics = true,
   enableGoogleTagManager = true,
   enableFacebookPixel = false,
@@ -48,8 +48,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       send_page_view: true,
 
     // Enhanced ecommerce tracking
-    gtag('config', GA_MEASUREMENT_ID, {
-      custom_map: {
+    gtag('config', GA_MEASUREMENT_ID, {)
+    custom_map: {
         'custom_parameter_1': 'service_category',
         'custom_parameter_2': 'service_type',
         'custom_parameter_3': 'user_type'
@@ -66,8 +66,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // GTM script
     const gtmScript = document.createElement('script');
     gtmScript.innerHTML = `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':)
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','${GTM_ID}');
@@ -144,7 +144,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
 
-    // Track form submissions
+    // Track form submissions)
     const trackFormSubmission = (event: Event) => {
       const form = event.target as HTMLFormElement;
       const formId = form.id || '';
@@ -163,7 +163,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
 
-    // Track external link clicks
+    // Track external link clicks)
     const trackExternalLinkClick = (event: Event) => {
       const target = event.target as HTMLAnchorElement;
       if (target.tagName === 'A' && target.href) {
@@ -184,7 +184,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     };
 
     // Track scroll depth
-    let maxScrollDepth = 0;
+    let maxScrollDepth = 0;)
     const trackScrollDepth = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -206,7 +206,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
 
-    // Add event listeners
+    // Add event listeners)
     document.addEventListener('click', trackButtonClick);
     document.addEventListener('submit', trackFormSubmission);
     document.addEventListener('click', trackExternalLinkClick);
@@ -221,8 +221,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             page_location: window.location.href
 
         }
-      } else {
-        if (typeof window !== 'undefined' && window.gtag) {
+      } else {)
+    if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'page_show', {
             event_category: 'Engagement',
             page_location: window.location.href
@@ -230,7 +230,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         }
       }
     };
-
+)
     document.addEventListener('visibilitychange', trackVisibilityChange);
 
     // Cleanup
@@ -257,8 +257,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
-            event_label: 'LCP',
-            value: Math.round(lastEntry.startTime),
+            event_label: 'LCP',)
+    value: Math.round(lastEntry.startTime),
             custom_parameter_1: 'largest_contentful_paint'
 
         }
@@ -273,8 +273,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'web_vitals', {
               event_category: 'Performance',
-              event_label: 'FID',
-              value: Math.round(fid),
+              event_label: 'FID',)
+    value: Math.round(fid),
               custom_parameter_1: 'first_input_delay'
 
           }
@@ -294,8 +294,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
-            event_label: 'CLS',
-            value: Math.round(clsValue * 1000),
+            event_label: 'CLS',)
+    value: Math.round(clsValue * 1000),
             custom_parameter_1: 'cumulative_layout_shift'
 
         }
@@ -312,8 +312,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'page_load_time', {
           event_category: 'Performance',
-          event_label: 'Page Load',
-          value: Math.round(loadTime),
+          event_label: 'Page Load',)
+    value: Math.round(loadTime),
           custom_parameter_1: 'load_time'
 
       }
@@ -340,7 +340,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
 
-    // Track before page unload
+    // Track before page unload)
     window.addEventListener('beforeunload', trackTimeOnPage);
 
     // Track mouse movements (heatmap data)
@@ -360,8 +360,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           }
         }
       };
-
-      document.addEventListener('mousemove', trackMouseMovement);
+)
+    document.addEventListener('mousemove', trackMouseMovement);
     }
 
     return () => {
@@ -388,7 +388,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
 
-    // Track phone number clicks
+    // Track phone number clicks)
     const trackPhoneClick = (event: Event) => {
       const target = event.target as HTMLElement;
       if (target.closest('a[href^="tel:"]')) {
@@ -403,7 +403,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
 
-    // Track email clicks
+    // Track email clicks)
     const trackEmailClick = (event: Event) => {
       const target = event.target as HTMLElement;
       if (target.closest('a[href^="mailto:"]')) {
@@ -417,7 +417,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         }
       }
     };
-
+)
     document.addEventListener('submit', trackContactForm);
     document.addEventListener('click', trackPhoneClick);
     document.addEventListener('click', trackEmailClick);
@@ -456,4 +456,5 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return null;
 };
 
-export default EnhancedAnalytics;
+export default EnhancedAnalytics;</EnhancedAnalyticsProps>
+</EnhancedAnalyticsProps>
