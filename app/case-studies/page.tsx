@@ -38,10 +38,9 @@ const CaseStudiesPage: React.FC = () => {
         <title>Case Studies | Zion Tech Group</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
-      </Helmet>
-
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 overflow-hidden">
+        </Helmet>
+  
+        <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -122,11 +121,10 @@ const CaseStudiesPage: React.FC = () => {
                   </Link>
                 </div>
               ))}
+              </div>
             </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
