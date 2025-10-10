@@ -63,17 +63,6 @@ const DemoPage: React.FC = () => {
     {
       id: 'ai-analytics',
       title: 'AI Analytics Dashboard',
-<<<<<<< HEAD
-      description: 'See how our AI analytics can transform your business intelligence',
-      duration: '5 min',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports'];
-=======
-      description: 'See how our AI-powered analytics can transform your data into actionable insights',
-      icon: BarChart,
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom visualizations', 'Automated reporting'],
-      duration: '20 minutes',
-      category: 'AI Services'
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
     },
     {
       id: 'cloud-infrastructure',
@@ -111,20 +100,6 @@ const DemoPage: React.FC = () => {
       duration: '30 minutes',
       category: 'Micro SaaS'
     }
-<<<<<<< HEAD
-  ];];
-=======
-  ];
-
-  const benefits = [
-    'See our solutions in action',
-    'Get personalized recommendations',
-    'Ask questions to our experts',
-    'Understand implementation process',
-    'See ROI calculations for your business'
-  ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   return (
     <>
       <Helmet>

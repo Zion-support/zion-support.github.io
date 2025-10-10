@@ -1,48 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-=======
-import { Cookie, Shield, Settings, Eye, Database, Users, Mail, Phone, Calendar } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const CookiesPage: React.FC = () => {
-  const lastUpdated = 'December 2024';
-
-  const cookieTypes = [
-    {
-      icon: Settings,
-      title: 'Essential Cookies',
-      description: 'These cookies are necessary for the website to function and cannot be switched off in our systems.',
-      examples: ['Authentication cookies', 'Security cookies', 'Load balancing cookies', 'User interface customization'],
-      necessary: true
-    },
-    {
-      icon: Eye,
-      title: 'Analytics Cookies',
-      description: 'These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.',
-      examples: ['Google Analytics', 'Page view tracking', 'User behavior analysis', 'Performance monitoring'],
-      necessary: false
-    },
-    {
-      icon: Users,
-      title: 'Functional Cookies',
-      description: 'These cookies enable the website to provide enhanced functionality and personalization.',
-      examples: ['Language preferences', 'Region settings', 'User preferences', 'Chat widget functionality'],
-      necessary: false
-    },
-    {
-      icon: Database,
-      title: 'Marketing Cookies',
-      description: 'These cookies may be set through our site by our advertising partners to build a profile of your interests.',
-      examples: ['Advertising cookies', 'Social media cookies', 'Retargeting cookies', 'Conversion tracking'],
-      necessary: false
-    }
-  ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   return (
     <>
       <Helmet>

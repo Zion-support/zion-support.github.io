@@ -3,11 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Code, Cloud, Smartphone } from 'lucide-react';
 
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
@@ -57,7 +54,6 @@ const AccessibilityEnhancer = ({
 
   return null;
 };
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
 const HomePage: React.FC = () => {
   const features = [
@@ -140,16 +136,12 @@ const HomePage: React.FC = () => {
         enableFocusManagement={true}
       />
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
         <Navigation />
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
-<<<<<<< HEAD
           <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -220,7 +212,6 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
               ))}
-=======
           <section
             className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
               isLoaded && isVisible 
@@ -297,13 +288,11 @@ const HomePage: React.FC = () => {
                   ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
                 </p>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
             </div>
           </section>
 
           {/* Stats Section */}
           <section className="mb-16">
-<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
                 {stats.map((stat, index) => (
@@ -312,7 +301,6 @@ const HomePage: React.FC = () => {
                     <div className="text-gray-300">{stat.label}</div>
                   </div>
                 ))}
-=======
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -395,12 +383,10 @@ const HomePage: React.FC = () => {
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                   Get Free Consultation
                 </a>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
               </div>
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* CTA Section */}
           <section className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -413,7 +399,6 @@ const HomePage: React.FC = () => {
               Start Your Project Today
             </button>
           </section>
-=======
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -882,7 +867,6 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
         </main>
 
         <Footer />
