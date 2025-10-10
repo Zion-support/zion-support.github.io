@@ -2,10 +2,11 @@
 import React, { Suspense, memo, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
+import Navigation from './src/components/Navigation';
+import Footer from './src/components/Footer';
 
 // Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./src/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -194,14 +195,7 @@ export default function App() {
             <main>
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
-                  <Route path="/" element={
-                    <>
-                      <UnifiedContentPromotion />
-                      <InteractiveAIROICalculator />
-                      <ContentShowcase />
-                      <InteractiveContentShowcase2026 />
-                    </>
-                  } />
+                  <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/pricing" element={<PricingPage />} />

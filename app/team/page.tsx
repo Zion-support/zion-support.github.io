@@ -18,7 +18,11 @@ const TeamPage: React.FC = () => {
   ];
 
   const stats = [
-  );
+    { number: '500+', label: 'Projects Completed' },
+    { number: '100+', label: 'Enterprise Clients' },
+    { number: '300%', label: 'Average ROI' },
+    { number: '99.9%', label: 'Uptime' }
+  ];
 };
 
 export default TeamPage;
