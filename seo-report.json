@@ -1,36 +1,25 @@
 {
-  "timestamp": "2025-10-09T03:35:30.965Z",
-  "website": "Zion Tech Group",
-  "url": "https://ziontechgroup.com",
-  "seoScore": 98,
-  "improvements": [
-    "Enhanced meta tags with targeted keywords",
-    "Added comprehensive structured data",
-    "Optimized title tags for better CTR",
-    "Improved meta descriptions",
-    "Added Open Graph tags for social sharing",
-    "Generated comprehensive sitemap",
-    "Created robots.txt for better crawling",
-    "Added canonical URLs",
-    "Enhanced internal linking structure"
-  ],
-  "keywords": [
-    "AI solutions",
-    "artificial intelligence",
-    "enterprise AI",
-    "machine learning",
-    "quantum computing",
-    "autonomous systems",
-    "digital transformation",
-    "IT services",
-    "automation",
-    "business intelligence"
-  ],
+  "timestamp": "2025-10-10T04:58:23.416Z",
+  "optimizations": {
+    "metaTags": true,
+    "sitemap": true,
+    "robotsTxt": true,
+    "structuredData": true
+  },
   "recommendations": [
-    "Regular content updates to maintain freshness",
-    "Monitor keyword rankings and adjust strategy",
-    "Track Core Web Vitals for better user experience",
-    "Build quality backlinks from relevant domains",
-    "Optimize for local SEO if targeting specific regions"
-  ]
+    "Add alt text to all images",
+    "Implement breadcrumb navigation",
+    "Add internal linking strategy",
+    "Optimize page loading speed",
+    "Implement schema markup for services",
+    "Add FAQ schema for common questions",
+    "Create XML sitemap for blog posts",
+    "Implement hreflang for internationalization"
+  ],
+  "metrics": {
+    "pagesInSitemap": 12,
+    "metaTagsOptimized": true,
+    "structuredDataPresent": true,
+    "robotsTxtConfigured": true
+  }
 }

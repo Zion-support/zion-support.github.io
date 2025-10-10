@@ -21,7 +21,9 @@ import {
   Play,
   Award,
   Clock,
-  DollarSign
+  DollarSign,
+  Mic,
+  Activity
 } from 'lucide-react';
 
 interface UnifiedContentPromotionProps {
@@ -86,15 +88,22 @@ export default function UnifiedContentPromotion({
   const featuredServices = [
     {
       title: "AI Drug Discovery Pro",
+<<<<<<< HEAD
       description: "Accelerate pharmaceutical research with AI-powered molecular analysis and clinical trial optimization",
       price: "$4,500/mo",
       features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Side Effect Prediction"],
+=======
+      description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug design",
+      price: "$7,500/mo",
+      features: ["Molecular Design", "Virtual Screening", "ADMET Prediction", "Clinical Optimization"],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
       icon: Brain,
       category: "Healthcare AI",
       link: "/ai-drug-discovery-pro",
       benefits: "10x faster drug discovery, 95% accuracy in predictions, reduced clinical trial costs"
     },
     {
+<<<<<<< HEAD
       title: "AI Climate Solutions Pro",
       description: "Combat climate change with intelligent environmental monitoring, carbon tracking, and sustainability optimization",
       price: "$3,200/mo",
@@ -143,11 +152,39 @@ export default function UnifiedContentPromotion({
       category: "Energy AI",
       link: "/ai-energy-grid-management-pro",
       benefits: "40% energy efficiency improvement, real-time grid optimization, renewable energy integration"
+=======
+      title: "AI Voice Cloning Studio Pro",
+      description: "Create perfect voice clones with AI-powered technology for content and applications",
+      price: "$149/mo",
+      features: ["Voice Cloning", "Multi-language Support", "Real-time Generation", "Enterprise Security"],
+      icon: Mic,
+      category: "Creative AI",
+      link: "/ai-voice-cloning-studio"
+    },
+    {
+      title: "AI Financial Analyzer Pro",
+      description: "Transform financial management with AI-powered analysis and investment optimization",
+      price: "$299/mo",
+      features: ["Investment Optimization", "Fraud Detection", "Tax Planning", "Multi-currency Support"],
+      icon: DollarSign,
+      category: "Financial AI",
+      link: "/ai-financial-analyzer-pro"
+    },
+    {
+      title: "AI Infrastructure Monitoring Pro",
+      description: "Monitor and optimize infrastructure with AI-powered insights and automated remediation",
+      price: "$499/mo",
+      features: ["Real-time Monitoring", "AI Analytics", "Security Monitoring", "Multi-cloud Support"],
+      icon: Activity,
+      category: "IT Infrastructure",
+      link: "/ai-infrastructure-monitoring-pro"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
     }
   ];
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
+<<<<<<< HEAD
       {/* Futuristic Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Cyber Grid Pattern */}
@@ -175,14 +212,41 @@ export default function UnifiedContentPromotion({
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-ping"></div>
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400/50 to-transparent animate-ping delay-1000"></div>
         </div>
+=======
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-matrix">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        {/* Enhanced Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/10 rounded-full blur-xl quantum-float"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400/10 rounded-full blur-xl quantum-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-blue-400/10 rounded-full blur-xl quantum-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-pink-400/10 rounded-full blur-xl quantum-float" style={{ animationDelay: '3s' }}></div>
+        
+        {/* Neural Network Pattern */}
+        <div className="absolute inset-0 neural-pulse-advanced"></div>
+        
+        {/* Quantum Ripples */}
+        <div className="absolute top-1/4 left-1/4 w-40 h-40 quantum-ripple"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-60 h-60 quantum-ripple" style={{ animationDelay: '1s' }}></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
       </div>
 
       {/* Hero Section */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="text-center mb-16" role="region" aria-label="Hero content">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+<<<<<<< HEAD
+<<<<<<< HEAD
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text cyber-text">
+=======
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 cyber-text-ultra neon-text-advanced">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
               {currentSlideData.title}
+=======
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
+              Zion Tech Group - {currentSlideData.title}
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light neon-pulse">
               {currentSlideData.subtitle}
@@ -254,8 +318,13 @@ export default function UnifiedContentPromotion({
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
+<<<<<<< HEAD
               <div key={index} className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+=======
+              <div key={index} className="group relative cyber-card-ultra p-6 hover:scale-105 transition-all duration-300">
+                <div className="absolute inset-0 holographic-shimmer rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
                 
                 {service.popular && (
                   <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full neon-glow">

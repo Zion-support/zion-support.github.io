@@ -3,18 +3,27 @@
  * Provides SEO optimization and meta tag management
  */
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface SEOData {
+=======
+export interface SEOConfig {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
+=======
+export interface SEOConfig {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl: string;
+<<<<<<< HEAD
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: unknown;
 }
 
-export const generateMetaTags = (data: SEOData): string => {
+export const generateMetaTags = (data: SEOConfig): string => {
   const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.jpg', ogType = 'website', twitterCard = 'summary_large_image' } = data;
 
   return `
@@ -361,6 +370,12 @@ const addStructuredData = (data: unknown): void => {
   
   document.head.appendChild(script);
 };
+=======
+  ogImage: string;
+  twitterCard: string;
+  structuredData: Record<string, any>;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
 
 class SEOOptimizer {
   private config: Partial<SEOConfig> = {};

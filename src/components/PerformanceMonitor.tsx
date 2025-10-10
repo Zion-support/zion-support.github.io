@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 'use client';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
 import React, { useEffect, useState } from 'react';
+import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -7,75 +12,119 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   firstInputDelay: number;
   cumulativeLayoutShift: number;
-  totalBlockingTime: number;
-  speedIndex: number;
   timeToInteractive: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  showMetrics?: boolean;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  showMetrics = false,
+  onMetricsUpdate
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV !== 'development') {
-      return;
-    }
-
-    const collectMetrics = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) {
-        return;
-      }
+    const measurePerformance = () => {
+      if (typeof window === 'undefined') return;
 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
-
-      const firstContentfulPaint = paintEntries.find(
-        (entry) => entry.name === 'first-contentful-paint'
-      )?.startTime || 0;
-
-      const largestContentfulPaint = paintEntries.find(
-        (entry) => entry.name === 'largest-contentful-paint'
-      )?.startTime || 0;
+      
+      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
 
       const performanceMetrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint,
         largestContentfulPaint,
-        firstInputDelay: 0, // Would need to be measured separately
-        cumulativeLayoutShift: 0, // Would need to be measured separately
-        totalBlockingTime: 0, // Would need to be measured separately
-        speedIndex: 0, // Would need to be measured separately
+        firstInputDelay: 0, // Would need to measure this separately
+        cumulativeLayoutShift: 0, // Would need to measure this separately
         timeToInteractive: navigation.domInteractive - navigation.navigationStart,
       };
 
       setMetrics(performanceMetrics);
-    };
+      
+      if (onMetricsUpdate) {
+        onMetricsUpdate(performanceMetrics);
+      }
 
-    // Collect metrics after page load
-    const timer = setTimeout(collectMetrics, 1000);
+      // Report to analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'performance_metrics', {
+          event_category: 'performance',
+          event_label: 'page_load',
+          value: Math.round(performanceMetrics.loadTime),
+          custom_parameters: performanceMetrics,
+=======
+import React, { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-    // Show/hide with keyboard shortcut
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault();
-        setIsVisible(prev => !prev);
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    const sendToAnalytics = (metric: any) => {
+      // Send to Google Analytics
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        });
+      }
+      
+      // Send to custom analytics
+      if (typeof window !== 'undefined' && 'dataLayer' in window) {
+        (window as any).dataLayer.push({
+          event: 'web_vitals',
+          metric_name: metric.name,
+          metric_value: metric.value,
+          metric_delta: metric.delta,
+          metric_id: metric.id,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
+        });
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
+<<<<<<< HEAD
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    // Set up performance observer for continuous monitoring
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => prev ? {
+              ...prev,
+              largestContentfulPaint: entry.startTime
+            } : null);
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    }
 
     return () => {
-      clearTimeout(timer);
-      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('load', measurePerformance);
     };
-  }, []);
+  }, [onMetricsUpdate]);
 
-  if (process.env.NODE_ENV !== 'development' || !isVisible || !metrics) {
-    return null;
-  }
-
-  const getScore = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getPerformanceScore = (value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'good';
     if (value <= thresholds.needsImprovement) return 'needs-improvement';
     return 'poor';
@@ -90,53 +139,123 @@ const PerformanceMonitor: React.FC = () => {
     }
   };
 
+  if (!showMetrics || !metrics) return null;
+
   return (
-    <div className="fixed bottom-4 right-4 bg-black/90 backdrop-blur-lg rounded-lg p-4 text-white text-xs font-mono max-w-sm z-50 border border-white/20">
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-4 text-white text-sm border border-white/20 z-50">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
+        <div className="flex items-center">
+          <Activity className="w-4 h-4 mr-2 text-cyan-400" />
+          <span className="font-semibold">Performance</span>
+        </div>
         <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
+          onClick={() => setIsVisible(!isVisible)}
+          className="text-gray-400 hover:text-white transition-colors"
         >
-          ×
+          {isVisible ? '−' : '+'}
         </button>
       </div>
-      
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
-          <span className={getScoreColor(getScore(metrics.loadTime, { good: 2000, needsImprovement: 4000 }))}>
-            {metrics.loadTime.toFixed(0)}ms
-          </span>
+
+      {isVisible && (
+        <div className="space-y-2">
+          <div className="flex items-center justify-between">
+            <span className="text-gray-300">Load Time</span>
+            <span className={getScoreColor(getPerformanceScore(metrics.loadTime, { good: 1000, needsImprovement: 3000 }))}>
+              {Math.round(metrics.loadTime)}ms
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-gray-300">FCP</span>
+            <span className={getScoreColor(getPerformanceScore(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 }))}>
+              {Math.round(metrics.firstContentfulPaint)}ms
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-gray-300">LCP</span>
+            <span className={getScoreColor(getPerformanceScore(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 }))}>
+              {Math.round(metrics.largestContentfulPaint)}ms
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-gray-300">TTI</span>
+            <span className={getScoreColor(getPerformanceScore(metrics.timeToInteractive, { good: 3800, needsImprovement: 7300 }))}>
+              {Math.round(metrics.timeToInteractive)}ms
+            </span>
+          </div>
+
+          <div className="pt-2 border-t border-white/20">
+            <div className="flex items-center text-xs text-gray-400">
+              <Zap className="w-3 h-3 mr-1" />
+              Core Web Vitals
+            </div>
+          </div>
         </div>
-        
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(getScore(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 }))}>
-            {metrics.firstContentfulPaint.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(getScore(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 }))}>
-            {metrics.largestContentfulPaint.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>TTI:</span>
-          <span className={getScoreColor(getScore(metrics.timeToInteractive, { good: 3800, needsImprovement: 7300 }))}>
-            {metrics.timeToInteractive.toFixed(0)}ms
-          </span>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-white/20 text-gray-400">
-        Press Ctrl+Shift+P to toggle
-      </div>
+      )}
     </div>
   );
+=======
+    // Measure Core Web Vitals
+    getCLS(sendToAnalytics);
+    getFID(sendToAnalytics);
+    getFCP(sendToAnalytics);
+    getLCP(sendToAnalytics);
+    getTTFB(sendToAnalytics);
+
+    // Monitor page load performance
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.fetchStart;
+          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart;
+          
+          // Send performance metrics
+          if (typeof window !== 'undefined' && 'gtag' in window) {
+            (window as any).gtag('event', 'page_load_time', {
+              event_category: 'Performance',
+              event_label: 'Page Load',
+              value: Math.round(loadTime),
+            });
+            
+            (window as any).gtag('event', 'dom_content_loaded', {
+              event_category: 'Performance',
+              event_label: 'DOM Content Loaded',
+              value: Math.round(domContentLoaded),
+            });
+          }
+        }
+      });
+    }
+
+    // Monitor resource loading
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'resource') {
+            const resource = entry as PerformanceResourceTiming;
+            if (resource.duration > 1000) { // Log slow resources
+              console.warn('Slow resource detected:', {
+                name: resource.name,
+                duration: resource.duration,
+                size: resource.transferSize,
+              });
+            }
+          }
+        }
+      });
+      
+      observer.observe({ entryTypes: ['resource'] });
+      
+      return () => observer.disconnect();
+    }
+  }, []);
+
+  return <>{children}</>;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
 };
 
 export default PerformanceMonitor;

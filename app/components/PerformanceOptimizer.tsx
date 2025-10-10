@@ -53,6 +53,7 @@ export const PerformanceOptimizer: React.FC = () => {
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
+<<<<<<< HEAD
     // CLS - Cumulative Layout Shift
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
@@ -105,6 +106,10 @@ export const PerformanceOptimizer: React.FC = () => {
 
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
   }, []);
+=======
+    setOptimizationStatus(prev => ({ ...prev, preloaded: 5 }));
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0013
 
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports

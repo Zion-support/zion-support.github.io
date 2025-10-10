@@ -29,6 +29,10 @@
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
     "prebuild": "npm run clean",
+<<<<<<< HEAD
+=======
+    "postbuild": "node scripts/generate-sitemap.js && echo \"Build completed successfully\"",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
     "optimize": "node scripts/performance-optimizer.cjs",
@@ -45,10 +49,11 @@
     "preload:critical": "echo \"Preloading critical resources...\"",
     "optimize:advanced": "node scripts/advanced-performance-optimizer.js",
     "analyze:performance": "node scripts/performance-optimizer.js",
-    "audit:accessibility": "echo \"Running accessibility audit...\"",
+    "audit:accessibility-old": "echo \"Running accessibility audit...\"",
     "audit:seo": "echo \"Running SEO audit...\"",
     "audit:all": "npm audit && npm audit --audit-level moderate",
     "perf:monitor": "node scripts/performance-monitor.cjs",
+    "perf:analyze": "npm run build && node scripts/performance-monitor.cjs",
     "perf:analyze:full": "pnpm run build:analyze && pnpm run perf:monitor",
     "perf:optimize": "node scripts/advanced-performance-optimizer.cjs && pnpm run perf:monitor",
     "optimize:final": "node scripts/final-optimization.cjs",
@@ -59,7 +64,7 @@
     "enhance:accessibility": "node scripts/accessibility-enhancer.cjs",
     "enhance:seo": "node scripts/seo-enhancer.cjs",
     "optimize:all": "npm run clean && npm run build && npm run optimize:assets",
-    "perf:analyze": "node scripts/performance-optimizer.js",
+    "perf:analyze-old": "node scripts/performance-optimizer.js",
     "perf:build": "pnpm run build && pnpm run perf:analyze",
     "netlify:optimize": "node scripts/netlify-optimizer.js",
     "build:check": "pnpm run type-check && pnpm run lint && pnpm run build:production",
@@ -70,6 +75,7 @@
     "type-check:enhanced": "tsc --noEmit --strict",
     "security:audit": "npm audit --audit-level=moderate",
     "accessibility:audit": "node scripts/accessibility-audit.js",
+    "audit:accessibility": "node scripts/accessibility-audit.js",
     "test:comprehensive": "jest --coverage --watchAll=false --passWithNoTests",
     "lint:comprehensive": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
     "type-check:comprehensive": "tsc --noEmit --strict",
@@ -114,7 +120,19 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "react-helmet-async": "^2.0.5",
+=======
+    "react-helmet-async": "^1.3.0",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-05c4
+=======
+    "react-helmet-async": "^2.0.5",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
+=======
+    "react-helmet-async": "^2.0.0",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f7de
     "react-lazy-load-image-component": "^1.6.3",
     "react-responsive": "^10.0.1",
     "react-router-dom": "^7.9.4",

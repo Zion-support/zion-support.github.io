@@ -1,10 +1,802 @@
 {
-  "timestamp": "2025-10-09T01:54:34.096Z",
-  "buildSize": 837,
-  "pageCount": 0,
+<<<<<<< HEAD
+  "timestamp": "2025-10-10T04:59:51.892Z",
+  "metrics": {
+    "bundleSize": 1626589,
+    "imageCount": 0,
+    "cssSize": 45434,
+    "jsSize": 551226,
+    "totalSize": 1626589,
+    "recommendations": [
+      {
+        "type": "warning",
+        "category": "Bundle Size",
+        "message": "JavaScript bundle is large. Consider code splitting or tree shaking.",
+        "impact": "high"
+      },
+      {
+        "type": "info",
+        "category": "Performance",
+        "message": "Enable gzip compression on your server.",
+        "impact": "high"
+      },
+      {
+        "type": "info",
+        "category": "Caching",
+        "message": "Set appropriate cache headers for static assets.",
+        "impact": "medium"
+      }
+    ]
+  },
+  "score": 80
+=======
+  "timestamp": "2025-10-10T04:58:19.862Z",
+  "totalSize": 1581,
+  "files": [
+    {
+      "name": "EmptyComponent-B90jtZ85.js",
+      "size": 0,
+      "type": ".js"
+    },
+    {
+      "name": "Footer-hAOvEnPE.js",
+      "size": 14,
+      "type": ".js"
+    },
+    {
+      "name": "Navigation-B_ggunbD.js",
+      "size": 15,
+      "type": ".js"
+    },
+    {
+      "name": "NewestContent2025Banner-D-WFcStH.js",
+      "size": 0,
+      "type": ".js"
+    },
+    {
+      "name": "NotFoundPage-DKFOV0cT.js",
+      "size": 3,
+      "type": ".js"
+    },
+    {
+      "name": "SEOOptimizer-CpMF4pF6.js",
+      "size": 4,
+      "type": ".js"
+    },
+    {
+      "name": "UltimateBusinessIntelligence2025Banner-CvKle0eO.js",
+      "size": 0,
+      "type": ".js"
+    },
+    {
+      "name": "UltimateBusinessIntelligenceShowcase2025-DqxqI6X0.js",
+      "size": 0,
+      "type": ".js"
+    },
+    {
+      "name": "index-BhcyQfI_.js",
+      "size": 46,
+      "type": ".js"
+    },
+    {
+      "name": "index-CeNhJ2pd.css",
+      "size": 43,
+      "type": ".css"
+    },
+    {
+      "name": "libs-Bw648KPF.js",
+      "size": 5,
+      "type": ".js"
+    },
+    {
+      "name": "page-37zPoMj5.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-3TJI7gE5.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-7_CjMkcK.js",
+      "size": 0,
+      "type": ".js"
+    },
+    {
+      "name": "page-9bAuXJbM.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-9khHR46X.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-B-fERDRu.js",
+      "size": 4,
+      "type": ".js"
+    },
+    {
+      "name": "page-B-irCT83.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-B11Udopg.js",
+      "size": 13,
+      "type": ".js"
+    },
+    {
+      "name": "page-B3ATfZiB.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-B5jX6g8j.js",
+      "size": 6,
+      "type": ".js"
+    },
+    {
+      "name": "page-B6Ub2Qjr.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-B9U-7Wdw.js",
+      "size": 2,
+      "type": ".js"
+    },
+    {
+      "name": "page-BBKrK46t.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BEsb9Hih.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BF8b4_OP.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BNdxMLfT.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BO-rXLcd.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BObIWlWk.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BOxlxND2.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BP1PaKbk.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BQe21om2.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BSIsrDoq.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BUwbZdtg.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BZWj_nun.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-B_xn4_wN.js",
+      "size": 12,
+      "type": ".js"
+    },
+    {
+      "name": "page-Ba_E-iaU.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BatcVeJa.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BbhnRq62.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BcQ4D2l9.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Bjpnlcg6.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BmqWs76D.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BoZ8Hh2R.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Bpb7wm09.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BrNmkTF-.js",
+      "size": 12,
+      "type": ".js"
+    },
+    {
+      "name": "page-Bv3DfMdJ.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-BwdtYEn1.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Bzh_SwMJ.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-C-6Y7y7c.js",
+      "size": 5,
+      "type": ".js"
+    },
+    {
+      "name": "page-C0hiIFeO.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-C2IfEmgj.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-C2W1iQjq.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-C3dOVD8y.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-C7W1DU2E.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-C7gbf6-8.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-C9Y5CwDd.js",
+      "size": 12,
+      "type": ".js"
+    },
+    {
+      "name": "page-CBNNyLP1.js",
+      "size": 6,
+      "type": ".js"
+    },
+    {
+      "name": "page-CCtvBYvQ.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CEoxpW8y.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CGHcVup2.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CR7jgBML.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CW4R66uw.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CZEwOQUd.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CbHqtV68.js",
+      "size": 6,
+      "type": ".js"
+    },
+    {
+      "name": "page-CcsBkOrw.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Cf7qIJQN.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-ChvjczCO.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Ci959pup.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Ck-rLIFf.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Cn5pXdE5.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CnZ-QPgT.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CnZCFMMX.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-CpO9hOfv.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Csav7DR7.js",
+      "size": 6,
+      "type": ".js"
+    },
+    {
+      "name": "page-Ct3Euu4X.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Cwv2sr91.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Cx-1CSpd.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-D-LFoiir.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-D1cqwVpy.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-D37e8WZY.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-D45wFDfe.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-D4qYgeRQ.js",
+      "size": 11,
+      "type": ".js"
+    },
+    {
+      "name": "page-D8E6zCQ0.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-D8QD42nV.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-D8wKKDd6.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DBBt8Kfi.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DEYAqYzk.js",
+      "size": 6,
+      "type": ".js"
+    },
+    {
+      "name": "page-DI8cf8MV.js",
+      "size": 5,
+      "type": ".js"
+    },
+    {
+      "name": "page-DIENlu6L.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DLIKPAMW.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DMgu_CGh.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DPYGX1gA.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DPYp9k6d.js",
+      "size": 0,
+      "type": ".js"
+    },
+    {
+      "name": "page-DPwGEJDI.js",
+      "size": 12,
+      "type": ".js"
+    },
+    {
+      "name": "page-DQffyGm7.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DRp-b_aq.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DUHfI_RS.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DUOlqxbF.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-D_qK5hf-.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DaHRSP1g.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DaHr8PPM.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Dampxt5k.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DcHFEjz2.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DckN5PQJ.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Dcn6bxV9.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DdgB_19_.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-De7a1z5L.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DfosCHov.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DiuPejgb.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Dk5WUjeZ.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Dmld76wt.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Dptg6Mow.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Dr3ZSsBl.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Dr505ux-.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Dw3942Cp.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DxATl4ST.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-DzkXTRaN.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-Hi5tWo5N.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-IJrbVd4t.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-JL7kRiZG.js",
+      "size": 10,
+      "type": ".js"
+    },
+    {
+      "name": "page-LPLMj0e8.js",
+      "size": 6,
+      "type": ".js"
+    },
+    {
+      "name": "page-Mm4lDzoO.js",
+      "size": 0,
+      "type": ".js"
+    },
+    {
+      "name": "page-PumDLW6x.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-QuXP_eTT.js",
+      "size": 12,
+      "type": ".js"
+    },
+    {
+      "name": "page-S8SYxZWz.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-UH0HizHB.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-VYZsWg6P.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-YwwrHdjW.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-ZJOMs3Wt.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-f8AMKY22.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-hexmNk0f.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-hoR9mdUK.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-k63TelmM.js",
+      "size": 0,
+      "type": ".js"
+    },
+    {
+      "name": "page-lzDA62ad.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-mZWV8ZCN.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-nBBSA7lu.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-noMFGpVO.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-optimized-Djkbuik9.js",
+      "size": 7,
+      "type": ".js"
+    },
+    {
+      "name": "page-q-UU1lnG.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-rv6HEh2D.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-wWe5LTut.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-wxnk3Go4.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-xAapFLjr.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "page-xDLodkBY.js",
+      "size": 3,
+      "type": ".js"
+    },
+    {
+      "name": "ui-D2BT0I9j.js",
+      "size": 17,
+      "type": ".js"
+    },
+    {
+      "name": "vendor-C9djO9cG.js",
+      "size": 176,
+      "type": ".js"
+    },
+    {
+      "name": "index.html",
+      "size": 4,
+      "type": ".html"
+    },
+    {
+      "name": "performance-monitor.js",
+      "size": 1,
+      "type": ".js"
+    },
+    {
+      "name": "robots.txt",
+      "size": 0,
+      "type": ".txt"
+    },
+    {
+      "name": "sitemap.xml",
+      "size": 2,
+      "type": ".xml"
+    },
+    {
+      "name": "stats.html",
+      "size": 985,
+      "type": ".html"
+    },
+    {
+      "name": "sw.js",
+      "size": 1,
+      "type": ".js"
+    }
+  ],
   "recommendations": [
-    "Consider code splitting to reduce bundle size",
-    "Enable gzip compression on server",
-    "Consider using a CDN for static assets"
+    "Consider implementing code splitting to reduce bundle size",
+    "Large files detected - consider optimization"
   ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 }

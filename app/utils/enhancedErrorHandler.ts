@@ -1,630 +1,521 @@
 'use client';
+
 /**
  * Enhanced Error Handling System
  * Provides comprehensive error tracking, reporting, and recovery mechanisms
  */
+
 interface ErrorContext {
-  userId?: string
-  sessionId?: string
-  url: string
-  userAgent: string
-  timestamp: string
-  component?: string
-  action?: string
-  props?: Record<string, unknown>
-  state?: Record<string, unknown>;}
+  userId?: string;
+  sessionId?: string;
+  url: string;
+  userAgent: string;
+  timestamp: string;
+  component?: string;
+  action?: string;
+  props?: Record<string, unknown>;
+  state?: Record<string, unknown>;
 }
+
 interface ErrorReport {
-  id: string
-  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom'
-  message: string
-  stack?: string
-  context: ErrorContext
-  severity: 'low' | 'medium' | 'high' | 'critical'
-  category:
-    | 'syntax'
-    | 'runtime'
-    | 'network'
-    | 'security'
-    | 'performance'
-    | 'unknown'
-  tags: string[]
-  metadata: Record<string, unknown>
-  resolved: boolean
-  resolvedAt?: string
-  resolvedBy?: string;}
+  id: string;
+  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
+  message: string;
+  stack?: string;
+  context: ErrorContext;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  category: 'syntax' | 'runtime' | 'network' | 'security' | 'performance' | 'unknown';
+  fingerprint: string;
+  count: number;
+  firstOccurrence: string;
+  lastOccurrence: string;
 }
+
 interface ErrorHandlerConfig {
-  enableConsoleLogging: boolean
-  enableRemoteReporting: boolean
-  enableErrorRecovery: boolean
-  enableErrorCategorization: boolean
-  enableErrorAggregation: boolean
-  enablePerformanceImpact: boolean
-  maxErrorsPerMinute: number
-  errorRetentionDays: number
-  remoteEndpoint?: string
-  apiKey?: string;}
+  enableReporting: boolean;
+  enableRecovery: boolean;
+  enableRetry: boolean;
+  maxRetries: number;
+  retryDelay: number;
+  enableOfflineQueue: boolean;
+  enableUserFeedback: boolean;
+  enableAutoRecovery: boolean;
+  enablePerformanceTracking: boolean;
 }
+
 class EnhancedErrorHandler {
-  private config: ErrorHandlerConfig
-  private errors: ErrorReport[] = []
-  private errorCounts: Map<string, number> = new Map()
-  private errorCategories: Map<string, number> = new Map()
-  private lastErrorTime: number = 0
-  private errorRateLimit: number = 0
-  private isInitialized: boolean = false;}
+  private config: ErrorHandlerConfig;
+  private errorQueue: ErrorReport[] = [];
+  private errorCounts: Map<string, number> = new Map();
+  private retryAttempts: Map<string, number> = new Map();
+  private isInitialized = false;
+
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
     this.config = {
-      enableConsoleLogging: true,
-      enableRemoteReporting: false,
-      enableErrorRecovery: true,
-      enableErrorCategorization: true,
-      enableErrorAggregation: true,
-      enablePerformanceImpact: true,
-      maxErrorsPerMinute: 10,
-      errorRetentionDays: 30,
-      ...config}
-    }
-    this.initialize()
+      enableReporting: true,
+      enableRecovery: true,
+      enableRetry: true,
+      maxRetries: 3,
+      retryDelay: 1000,
+      enableOfflineQueue: true,
+      enableUserFeedback: true,
+      enableAutoRecovery: true,
+      enablePerformanceTracking: true,
+      ...config
+    };
+
+    this.initialize();
   }
+
   /**
-   * Initialize the error handler
+   * Initialize error handler
    */
   private initialize(): void {
-    if (this.isInitialized) return
-    this.setupGlobalErrorHandlers()
-    this.setupUnhandledRejectionHandler()
-    this.setupResourceErrorHandler()
-    this.setupNetworkErrorHandler()
-    this.setupPerformanceErrorHandler()
-    this.setupErrorRecovery()
-    this.setupErrorCleanup()
-    this.isInitialized = true
-    if (process.env['NODE_ENV'] === 'development') {}
-      }
+    if (this.isInitialized) return;
+
+    this.setupGlobalErrorHandlers();
+    this.setupUnhandledRejectionHandler();
+    this.setupResourceErrorHandler();
+    this.setupNetworkErrorHandler();
+    this.setupPerformanceErrorHandler();
+    this.setupOfflineQueue();
+
+    this.isInitialized = true;
   }
+
   /**
    * Setup global error handlers
    */
   private setupGlobalErrorHandlers(): void {
-    window.addEventListener('error', event => {
-      this.handleError({
+    window.addEventListener('error', (event) => {
+      this.handleError(event.error, {
         type: 'javascript',
         message: event.message,
-        stack: event.error?.stack,
         filename: event.filename,
         lineno: event.lineno,
-        colno: event.colno,
-        error: event.error}
-      })
-    })
+        colno: event.colno
+      });
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      this.handleError(event.reason, {
+        type: 'promise',
+        message: event.reason?.message || 'Unhandled Promise Rejection'
+      });
+    });
   }
+
   /**
-   * Setup unhandled promise rejection handler
+   * Setup unhandled rejection handler
    */
   private setupUnhandledRejectionHandler(): void {
-    window.addEventListener('unhandledrejection', event => {
-      this.handleError({
+    window.addEventListener('unhandledrejection', (event) => {
+      this.handleError(event.reason, {
         type: 'promise',
-        message: event.reason?.message || String(event.reason),
-        stack: event.reason?.stack,
-        reason: event.reason}
-      })
-    })
+        message: event.reason?.message || 'Unhandled Promise Rejection'
+      });
+    });
   }
+
   /**
    * Setup resource error handler
    */
   private setupResourceErrorHandler(): void {
-    window.addEventListener(
-      'error',
-      event => {
-        if (event.target !== window) {
-          const target = event.target as HTMLElement & {
-            src?: string
-            href?: string;}
-          }
-          this.handleError({
-            type: 'resource',}
-            message: `Failed to load resource: ${target?.src || target?.href}`,
-            element: event.target?.constructor.name,
-            src: target?.src || target?.href
-          })
-        }
-      },
-      true
-    )
+    window.addEventListener('error', (event) => {
+      if (event.target !== window) {
+        this.handleError(new Error(`Resource failed to load: ${event.target}`), {
+          type: 'resource',
+          message: `Failed to load resource: ${event.target}`,
+          element: event.target
+        });
+      }
+    }, true);
   }
+
   /**
    * Setup network error handler
    */
   private setupNetworkErrorHandler(): void {
-    // Monitor fetch requests
-    const originalFetch = window.fetch
-    window.fetch = async (...args: Parameters<typeof fetch>) => {
+    // Override fetch to catch network errors
+    const originalFetch = window.fetch;
+    window.fetch = async (...args) => {
       try {
-        const response = await originalFetch(...args)
+        const response = await originalFetch(...args);
         if (!response.ok) {
-          this.handleError({
-            type: 'network',`}
-            message: `Network request failed: ${response.status} ${response.statusText}`,
-            url: args[0] as string,
-            status: response.status,
-            statusText: response.statusText
-          })
+          this.handleError(new Error(`Network error: ${response.status}`), {
+            type: 'network',
+            message: `HTTP ${response.status}: ${response.statusText}`,
+            url: args[0] as string
+          });
         }
-        return response
+        return response;
       } catch (error) {
-        this.handleError({
-          type: 'network',`}
-          message: `Network request failed: ${error}`,
-          url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error))
-        })
-        throw error
+        this.handleError(error as Error, {
+          type: 'network',
+          message: 'Network request failed',
+          url: args[0] as string
+        });
+        throw error;
       }
-    }
+    };
   }
+
   /**
    * Setup performance error handler
    */
   private setupPerformanceErrorHandler(): void {
-    if (!this.config.enablePerformanceImpact) return
-    // Monitor long tasks that might indicate performance issues
+    if (!this.config.enablePerformanceTracking) return;
+
+    // Monitor long tasks
     if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver(list => {
-          list.getEntries().forEach(entry => {
-            if (entry.duration > 100) {
-              // Tasks longer than 100ms
-              this.handleError({
-                type: 'custom',`}
-                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
-                duration: entry.duration,
-                category: 'performance'
-              })
-            }
-          })
-        })
-        observer.observe({ type: 'longtask', buffered: true })
-      } catch (error) {}
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.duration > 50) { // Tasks longer than 50ms
+            this.handleError(new Error('Long task detected'), {
+              type: 'performance',
+              message: `Long task: ${entry.duration}ms`,
+              duration: entry.duration
+            });
+          }
         }
+      });
+      observer.observe({ entryTypes: ['longtask'] });
     }
   }
+
   /**
-   * Setup error recovery mechanisms
+   * Setup offline queue
    */
-  private setupErrorRecovery(): void {
-    if (!this.config.enableErrorRecovery) return
-    // Auto-recovery for common errors
-    setInterval(() => {
-      this.attemptErrorRecovery();}
-    }, 30000); // Check every 30 seconds
+  private setupOfflineQueue(): void {
+    if (!this.config.enableOfflineQueue) return;
+
+    window.addEventListener('online', () => {
+      this.flushOfflineQueue();
+    });
+
+    // Load offline queue on initialization
+    this.loadOfflineQueue();
   }
+
   /**
-   * Setup error cleanup
+   * Handle error
    */
-  private setupErrorCleanup(): void {
-    // Clean up old errors
-    setInterval(
-      () => {
-        this.cleanupOldErrors();}
-      },
-      24 * 60 * 60 * 1000
-    ); // Daily cleanup
-  }
-  /**
-   * Handle error with comprehensive processing
-   */
-  private handleError(errorData: {
-// type: ErrorReport['type'];
-// message: string;
-// stack?: string;
-// filename?: string;
-// lineno?: number;
-// colno?: number;
-// error?: Error;
-// reason?: unknown;
-// element?: string;
-// src?: string;
-// url?: string;
-// status?: number;
-// statusText?: string;
-// duration?: number;
-// category?: string;
-  }): void {
-    // Rate limiting
-    if (!this.checkRateLimit()) {
-      return;}
+  private handleError(error: Error, context: Partial<ErrorContext> = {}): void {
+    const errorReport = this.createErrorReport(error, context);
+    
+    // Update error counts
+    const count = this.errorCounts.get(errorReport.fingerprint) || 0;
+    this.errorCounts.set(errorReport.fingerprint, count + 1);
+    errorReport.count = count + 1;
+
+    // Add to queue
+    this.errorQueue.push(errorReport);
+
+    // Attempt recovery
+    if (this.config.enableRecovery) {
+      this.attemptRecovery(error, errorReport);
     }
-    const errorReport = this.createErrorReport(errorData)
-    this.processError(errorReport)
+
+    // Report error
+    if (this.config.enableReporting) {
+      this.reportError(errorReport);
+    }
+
+    // Show user feedback
+    if (this.config.enableUserFeedback && errorReport.severity === 'critical') {
+      this.showUserFeedback(errorReport);
+    }
   }
+
   /**
-   * Create comprehensive error report
+   * Create error report
    */
-  private createErrorReport(errorData: {
-// type: ErrorReport['type'];
-// message: string;
-// stack?: string;
-// filename?: string;
-// lineno?: number;
-// colno?: number;
-// error?: Error;
-// reason?: unknown;
-// element?: string;
-// src?: string;
-// url?: string;
-// status?: number;
-// statusText?: string;
-// duration?: number;
-// category?: string;
-  }): ErrorReport {
-    const context = this.getErrorContext()
-    const severity = this.determineSeverity(errorData)
-    const category = this.categorizeError(errorData)
-    const tags = this.generateTags(errorData)
+  private createErrorReport(error: Error, context: Partial<ErrorContext> = {}): ErrorReport {
+    const fingerprint = this.generateFingerprint(error, context);
+    const now = new Date().toISOString();
+
     return {
-      id: this.generateErrorId(),
-      type: errorData.type,
-      message: errorData.message,
-      stack: errorData.stack,
-      context,
-      severity,
-      category,
-      tags,
-      metadata: {
-        filename: errorData.filename,
-        lineno: errorData.lineno,
-        colno: errorData.colno,
-        element: errorData.element,
-        src: errorData['src'],
-        url: errorData.url,
-        status: errorData.status,
-        statusText: errorData.statusText,
-        duration: errorData.duration}
+      id: this.generateId(),
+      type: context.type || 'javascript',
+      message: error.message,
+      stack: error.stack,
+      context: {
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        timestamp: now,
+        ...context
       },
-      resolved: false
-    }
+      severity: this.determineSeverity(error, context),
+      category: this.categorizeError(error, context),
+      fingerprint,
+      count: 1,
+      firstOccurrence: now,
+      lastOccurrence: now
+    };
   }
+
   /**
-   * Process error report
+   * Generate error fingerprint
    */
-  private processError(errorReport: ErrorReport): void {
-    // Add to errors array
-    this.errors.push(errorReport)
-    // Update counters
-    this.updateErrorCounts(errorReport)
-    // Console logging
-    if (this.config.enableConsoleLogging) {
-      this.logError(errorReport);}
-    }
-    // Remote reporting
-    if (this.config.enableRemoteReporting) {
-      this.reportToRemote(errorReport);}
-    }
-    // Error aggregation
-    if (this.config.enableErrorAggregation) {
-      this.aggregateError(errorReport);}
-    }
-    // Performance impact
-    if (this.config.enablePerformanceImpact) {
-      this.assessPerformanceImpact(errorReport);}
-    }
+  private generateFingerprint(error: Error, context: Partial<ErrorContext> = {}): string {
+    const key = `${error.message}-${context.component}-${context.url}`;
+    return btoa(key).replace(/[^a-zA-Z0-9]/g, '');
   }
-  /**
-   * Get error context
-   */
-  private getErrorContext(): ErrorContext {
-    return {
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-      timestamp: new Date().toISOString(),
-      sessionId: this.getSessionId(),
-      userId: this.getUserId()}
-    }
-  }
+
   /**
    * Determine error severity
    */
-  private determineSeverity(errorData: {
-    type: ErrorReport['type']
-    message: string
-    status?: number
-    element?: string;}
-  }): ErrorReport['severity'] {
-    if (
-      errorData.type === 'network' &&
-      errorData.status &&
-      errorData.status >= 500
-    ) {
-      return 'critical';}
+  private determineSeverity(error: Error, context: Partial<ErrorContext> = {}): ErrorReport['severity'] {
+    if (error.message.includes('ChunkLoadError') || error.message.includes('Loading chunk')) {
+      return 'medium';
     }
-    if (
-      errorData.type === 'javascript' &&
-      errorData.message.includes('Cannot read property')
-    ) {
-      return 'high';}
+    
+    if (error.message.includes('NetworkError') || error.message.includes('fetch')) {
+      return 'medium';
     }
-    if (errorData.type === 'resource' && errorData.element === 'img') {
-      return 'medium';}
+    
+    if (error.message.includes('SyntaxError') || error.message.includes('ReferenceError')) {
+      return 'high';
     }
-    if (errorData.type === 'promise') {
-      return 'medium';}
+    
+    if (error.message.includes('TypeError') && error.message.includes('Cannot read property')) {
+      return 'high';
     }
-    return 'low'
+    
+    return 'low';
   }
+
   /**
    * Categorize error
    */
-  private categorizeError(errorData: {
-    type: ErrorReport['type']
-    message: string;}
-  }): ErrorReport['category'] {
-    if (errorData.type === 'network') {
-      return 'network';}
+  private categorizeError(error: Error, context: Partial<ErrorContext> = {}): ErrorReport['category'] {
+    if (error.message.includes('SyntaxError')) {
+      return 'syntax';
     }
-    if (errorData.type === 'resource') {
-      return 'performance';}
+    
+    if (error.message.includes('NetworkError') || error.message.includes('fetch')) {
+      return 'network';
     }
-    if (
-      errorData.message.includes('SecurityError') ||
-      errorData.message.includes('CORS')
-    ) {
-      return 'security';}
+    
+    if (error.message.includes('SecurityError')) {
+      return 'security';
     }
-    if (errorData.message.includes('SyntaxError')) {
-      return 'syntax';}
+    
+    if (context.type === 'performance') {
+      return 'performance';
     }
-    if (errorData.type === 'promise') {
-      return 'runtime';}
-    }
-    return 'unknown'
+    
+    return 'runtime';
   }
+
   /**
-   * Generate error tags
+   * Attempt recovery
    */
-  private generateTags(errorData: {
-    filename?: string
-    type: ErrorReport['type']
-    duration?: number;}
-  }): string[] {
-    const tags: string[] = []
-    if (errorData.filename) {
-      tags.push('client-side');}
+  private attemptRecovery(error: Error, errorReport: ErrorReport): void {
+    if (!this.config.enableAutoRecovery) return;
+
+    const fingerprint = errorReport.fingerprint;
+    const attempts = this.retryAttempts.get(fingerprint) || 0;
+
+    if (attempts < this.config.maxRetries) {
+      this.retryAttempts.set(fingerprint, attempts + 1);
+      
+      setTimeout(() => {
+        this.executeRecoveryStrategy(error, errorReport);
+      }, this.config.retryDelay * Math.pow(2, attempts));
     }
-    if (errorData.type === 'network') {
-      tags.push('network');}
-    }
-    if (errorData.type === 'resource') {
-      tags.push('resource');}
-    }
-    if (errorData.duration && errorData.duration > 1000) {
-      tags.push('slow');}
-    }
-    return tags
   }
+
   /**
-   * Generate unique error ID
+   * Execute recovery strategy
    */
-  private generateErrorId(): string {`}
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  }
-  /**
-   * Get session ID
-   */
-  private getSessionId(): string {
-    let sessionId = sessionStorage.getItem('error_session_id')
-    if (!sessionId) {`}
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-      sessionStorage.setItem('error_session_id', sessionId)
-    }
-    return sessionId
-  }
-  /**
-   * Get user ID
-   */
-  private getUserId(): string | undefined {
-    return localStorage.getItem('user_id') || undefined;}
-  }
-  /**
-   * Check rate limiting
-   */
-  private checkRateLimit(): boolean {
-    const now = Date.now()
-    const timeDiff = now - this.lastErrorTime
-    if (timeDiff < 60000) {
-      // Within 1 minute
-      this.errorRateLimit++
-      if (this.errorRateLimit > this.config.maxErrorsPerMinute) {
-        return false;}
-      }
-    } else {
-      this.errorRateLimit = 1;}
-    }
-    this.lastErrorTime = now
-    return true
-  }
-  /**
-   * Update error counters
-   */
-  private updateErrorCounts(errorReport: ErrorReport): void {`}
-    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1)
-    this.errorCategories.set(
-      errorReport.category,
-      (this.errorCategories.get(errorReport.category) || 0) + 1
-    )
-  }
-  /**
-   * Log error to console
-   */
-  private logError(errorReport: ErrorReport): void {
-    const emoji = this.getSeverityEmoji(errorReport.severity);`}
-    console.group(`${emoji} Error Report: ${errorReport.id}`)
-    if (errorReport.stack) {}
-      }
-    console.groupEnd()
-  }
-  /**
-   * Get severity emoji
-   */
-  private getSeverityEmoji(severity: ErrorReport['severity']): string {
-    switch (severity) {
-      case 'critical':
-        return '🚨'
-      case 'high':
-        return '🔴'
-      case 'medium':
-        return '🟡'
-      case 'low':
-        return '🟢'
+  private executeRecoveryStrategy(error: Error, errorReport: ErrorReport): void {
+    switch (errorReport.category) {
+      case 'network':
+        this.recoverFromNetworkError(error, errorReport);
+        break;
+      case 'runtime':
+        this.recoverFromRuntimeError(error, errorReport);
+        break;
+      case 'performance':
+        this.recoverFromPerformanceError(error, errorReport);
+        break;
       default:
-        return '❓';}
+        this.recoverFromGenericError(error, errorReport);
     }
   }
+
   /**
-   * Report to remote service
+   * Recover from network error
    */
-  private async reportToRemote(errorReport: ErrorReport): Promise<void> {
-    if (!this.config.remoteEndpoint) return
+  private recoverFromNetworkError(error: Error, errorReport: ErrorReport): void {
+    // Retry failed requests
+    if (error.message.includes('fetch')) {
+      // Implementation would retry the failed request
+      console.log('Retrying failed network request...');
+    }
+  }
+
+  /**
+   * Recover from runtime error
+   */
+  private recoverFromRuntimeError(error: Error, errorReport: ErrorReport): void {
+    // Reload page for critical errors
+    if (errorReport.severity === 'critical') {
+      window.location.reload();
+    }
+  }
+
+  /**
+   * Recover from performance error
+   */
+  private recoverFromPerformanceError(error: Error, errorReport: ErrorReport): void {
+    // Clear caches or reduce load
+    if ('caches' in window) {
+      caches.keys().then(names => {
+        names.forEach(name => caches.delete(name));
+      });
+    }
+  }
+
+  /**
+   * Recover from generic error
+   */
+  private recoverFromGenericError(error: Error, errorReport: ErrorReport): void {
+    // Log error and continue
+    console.warn('Error recovered:', error.message);
+  }
+
+  /**
+   * Report error
+   */
+  private async reportError(errorReport: ErrorReport): Promise<void> {
     try {
-      await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',`}
-          Authorization: `Bearer ${this.config.apiKey}
-        },
-        body: JSON.stringify(errorReport)
-      })
-    } catch (error) {}
+      if (navigator.onLine) {
+        await this.sendErrorReport(errorReport);
+      } else {
+        this.addToOfflineQueue(errorReport);
       }
-  }
-  /**
-   * Aggregate error data
-   */
-  private aggregateError(errorReport: ErrorReport): void {
-    // This could be expanded to include more sophisticated aggregation}
-    }
-  /**
-   * Assess performance impact
-   */
-  private assessPerformanceImpact(errorReport: ErrorReport): void {
-    if (
-      errorReport.type === 'resource' ||
-      errorReport.category === 'performance'
-    ) {}
-      }
-  }
-  /**
-   * Attempt error recovery
-   */
-  private attemptErrorRecovery(): void {
-    const recentErrors = this.errors.filter(
-      error =>
-        !error.resolved &&
-        Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
-    )
-    if (recentErrors.length > 5) {
-      if (process.env['NODE_ENV'] === 'development') { }
-        }
-      // Implement recovery strategies here
-      this.clearErrorState()
+    } catch (error) {
+      console.error('Failed to report error:', error);
     }
   }
+
   /**
-   * Clear error state
+   * Send error report
    */
-  private clearErrorState(): void {
-    // Reset error counters
-    this.errorCounts.clear()
-    this.errorCategories.clear()
-    this.errorRateLimit = 0
-    if (process.env['NODE_ENV'] === 'development') { }
-      }
+  private async sendErrorReport(errorReport: ErrorReport): Promise<void> {
+    const response = await fetch('/api/errors', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(errorReport)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to send error report: ${response.status}`);
+    }
   }
+
   /**
-   * Clean up old errors
+   * Add to offline queue
    */
-  private cleanupOldErrors(): void {
-    const cutoffDate = new Date()
-    cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays)
-    this.errors = this.errors.filter(
-      error => new Date(error.context.timestamp) > cutoffDate
-    )
-    if (process.env['NODE_ENV'] === 'development') { }
-      }
+  private addToOfflineQueue(errorReport: ErrorReport): void {
+    if (!this.config.enableOfflineQueue) return;
+
+    const queue = this.getOfflineQueue();
+    queue.push(errorReport);
+    localStorage.setItem('error-queue', JSON.stringify(queue));
   }
+
+  /**
+   * Get offline queue
+   */
+  private getOfflineQueue(): ErrorReport[] {
+    try {
+      const stored = localStorage.getItem('error-queue');
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  }
+
+  /**
+   * Load offline queue
+   */
+  private loadOfflineQueue(): void {
+    const queue = this.getOfflineQueue();
+    this.errorQueue.push(...queue);
+    localStorage.removeItem('error-queue');
+  }
+
+  /**
+   * Flush offline queue
+   */
+  private async flushOfflineQueue(): Promise<void> {
+    const queue = this.getOfflineQueue();
+    for (const errorReport of queue) {
+      try {
+        await this.sendErrorReport(errorReport);
+      } catch (error) {
+        console.error('Failed to flush error report:', error);
+      }
+    }
+    localStorage.removeItem('error-queue');
+  }
+
+  /**
+   * Show user feedback
+   */
+  private showUserFeedback(errorReport: ErrorReport): void {
+    // Implementation would show user-friendly error message
+    console.error('Critical error occurred:', errorReport.message);
+  }
+
+  /**
+   * Generate unique ID
+   */
+  private generateId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
   /**
    * Get error statistics
    */
-  public getErrorStatistics(): {
-    totalErrors: number
-    errorsByType: Record<string, number>
-    errorsByCategory: Record<string, number>
-    errorsBySeverity: Record<string, number>
-    recentErrors: ErrorReport[];}
-  } {}
-    const errorsByType: Record<string, number> = {}
-    const errorsByCategory: Record<string, number> = {}
-    const errorsBySeverity: Record<string, number> = {}
-    this.errors.forEach(error => {
-      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
-      errorsByCategory[error.category] =
-        (errorsByCategory[error.category] || 0) + 1
-      errorsBySeverity[error.severity] =
-        (errorsBySeverity[error.severity] || 0) + 1;}
-    })
-    const recentErrors = this.errors
-      .filter(error => !error.resolved)
-      .sort(
-        (a, b) =>
-          new Date(b.context.timestamp).getTime() -
-          new Date(a.context.timestamp).getTime()
-      )
-      .slice(0, 10)
+  getErrorStatistics(): {
+    totalErrors: number;
+    errorCounts: Record<string, number>;
+    errorTypes: Record<string, number>;
+    errorSeverities: Record<string, number>;
+  } {
+    const errorTypes: Record<string, number> = {};
+    const errorSeverities: Record<string, number> = {};
+
+    this.errorQueue.forEach(error => {
+      errorTypes[error.type] = (errorTypes[error.type] || 0) + 1;
+      errorSeverities[error.severity] = (errorSeverities[error.severity] || 0) + 1;
+    });
+
     return {
-      totalErrors: this.errors.length,
-      errorsByType,
-      errorsByCategory,
-      errorsBySeverity,
-      recentErrors}
-    }
+      totalErrors: this.errorQueue.length,
+      errorCounts: Object.fromEntries(this.errorCounts),
+      errorTypes,
+      errorSeverities
+    };
   }
+
   /**
-   * Export error data
+   * Clear error queue
    */
-  public exportErrorData(): string {
-    return JSON.stringify(
-      {
-        errors: this.errors,
-        statistics: this.getErrorStatistics(),
-        config: this.config,
-        timestamp: new Date().toISOString()}
-      },
-      null,
-      2
-    )
-  }
-  /**
-   * Manually report error
-   */
-  public reportError(message: string, context?: Partial<ErrorContext>): string {
-    const errorReport = this.createErrorReport({
-      type: 'custom',
-      message,
-      ...context}
-    })
-    this.processError(errorReport)
-    return errorReport.id
+  clearErrorQueue(): void {
+    this.errorQueue = [];
+    this.errorCounts.clear();
+    this.retryAttempts.clear();
   }
 }
-// Export singleton instance
-export const errorHandler = new EnhancedErrorHandler()
-// Export class for custom instances
-export {
-  EnhancedErrorHandler,
-  type ErrorReport,
-  type ErrorContext,
-  type ErrorHandlerConfig}
-}
+
+// Create singleton instance
+export const errorHandler = new EnhancedErrorHandler();
+
+export default EnhancedErrorHandler;

@@ -1,117 +1,109 @@
-'use client'
+'use client';
+
 /**
  * Enhanced Error Tracking Utility
  * Provides comprehensive error tracking with detailed context
  */
+
 export interface ErrorContext {
-  component?: string
-  action?: string
-  userId?: string
-  sessionId?: string
-  metadata?: Record<string, unknown>;}
+  component?: string;
+  action?: string;
+  userId?: string;
+  sessionId?: string;
+  metadata?: Record<string, unknown>;
 }
+
 export interface TrackedError {
-  message: string
-  stack?: string
-  context: ErrorContext
-  timestamp: string
-  userAgent: string
-  url: string;}
+  message: string;
+  stack?: string;
+  context: ErrorContext;
+  timestamp: string;
+  userAgent: string;
+  url: string;
 }
+
 class EnhancedErrorTracker {
-  private errors: TrackedError[] = []
-  private maxErrors = 100
-  private sessionId: string
+  private errors: TrackedError[] = [];
+  private maxErrors = 100;
+  private sessionId: string;
+
   constructor() {
-    this.sessionId = this.generateSessionId()
-    this.setupGlobalErrorHandler();}
+    this.sessionId = this.generateSessionId();
+    this.setupGlobalErrorHandler();
   }
-  private generateSessionId(): string {}
-    return `${Date.now()}-${Math.random().toString(36).substring(7)}`
+
+  private generateSessionId(): string {
+    return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
+
   private setupGlobalErrorHandler(): void {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', event => {
-        this.trackError(event.error, {
-          component: 'Global',
-          action: 'Uncaught Error'}
-        })
-      })
-      window.addEventListener('unhandledrejection', event => {
-        this.trackError(new Error(event.reason), {
-          component: 'Global',
-          action: 'Unhandled Promise Rejection'}
-        })
-      })
-    }
+    window.addEventListener('error', (event) => {
+      this.trackError(event.error, {
+        component: 'global',
+        action: 'error'
+      });
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      this.trackError(event.reason, {
+        component: 'global',
+        action: 'unhandledrejection'
+      });
+    });
   }
-  public trackError(error: Error, context: ErrorContext = {}): void {
-    if (typeof window === 'undefined') return
+
+  trackError(error: Error, context: ErrorContext = {}): void {
     const trackedError: TrackedError = {
       message: error.message,
       stack: error.stack,
       context: {
         ...context,
-        sessionId: this.sessionId}
+        sessionId: this.sessionId
       },
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    }
-    this.errors.push(trackedError)
+    };
+
+    this.errors.push(trackedError);
+
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
-      this.errors.shift();}
+      this.errors = this.errors.slice(-this.maxErrors);
     }
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {}
-      }
-    // Send to analytics if available
-    this.sendToAnalytics(trackedError)
+
+    // Send to error reporting service
+    this.sendErrorReport(trackedError);
   }
-  private sendToAnalytics(error: TrackedError): void {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        component: error.context.component}
-      })
+
+  private async sendErrorReport(error: TrackedError): Promise<void> {
+    try {
+      await fetch('/api/errors', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(error)
+      });
+    } catch (err) {
+      console.error('Failed to send error report:', err);
     }
   }
-  public getErrors(): TrackedError[] {
-    return [...this.errors];}
+
+  getErrors(): TrackedError[] {
+    return [...this.errors];
   }
-  public clearErrors(): void {
-    this.errors = [];}
+
+  clearErrors(): void {
+    this.errors = [];
   }
-  public getErrorStats(): {
-    total: number
-    byComponent: Record<string, number>
-    recent: TrackedError[];}
-  } {}
-    const byComponent: Record<string, number> = {}
-    this.errors.forEach(error => {
-      const component = error.context.component || 'Unknown'
-      byComponent[component] = (byComponent[component] || 0) + 1;}
-    })
-    return {
-      total: this.errors.length,
-      byComponent,
-      recent: this.errors.slice(-10)}
-    }
+
+  getErrorCount(): number {
+    return this.errors.length;
   }
 }
-// Export singleton instance
-export const errorTracker = new EnhancedErrorTracker()
-export default errorTracker
+
+// Create singleton instance
+export const errorTracker = new EnhancedErrorTracker();
+
+export default EnhancedErrorTracker;
