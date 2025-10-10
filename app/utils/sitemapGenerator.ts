@@ -1,261 +1,54 @@
-<<<<<<< HEAD
-export const generateSitemap = useCallback((...args) => {
-    const baseUrl = 'https: //ziontechgroup.com',
-  const staticPages = [,
-  }
-export const generateSitemap = useCallback((...args) => {}
-  const baseUrl = 'https: //ziontechgroup.com',
-  const staticPages = [
-=======
-export const generateSitemap = useCallback((...args) => {;
-const baseUrl = 'https: //ziontechgroup.com',;
-const staticPages = [
-,
-];
-export const generateSitemap = useCallback((...args) => {};
-  const baseUrl = 'https://ziontechgroup.com';
-const staticPages = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    '',
-    '/services',;
-    '/contact',;
-    '/ai-solutions',;
-    '/it-services',;
-    '/about',;
-    '/blog',;
-    '/case-studies',;
-    '/pricing',;
-    '/ai-project-manager',;
-    '/ai-social-media-manager',;
-    '/ai-analytics',;
-    '/ai-email-marketing',;
-    '/ai-customer-support-bot',;
-    '/ai-code-generation',;
-    '/ai-video-generation',;
-    '/ai-voice-cloning',;
-    '/ai-workflow-automation',;
-    '/ai-sales-automation',;
-    '/ai-content-writer',;
-    '/ai-financial-advisor',;
-    '/ai-data-visualization',;
-    '/ai-3 d-generation',;
-    '/ai-customer-support',;
-    '/ai-inventory-manager',;
-    '/ai-hr-assistant',;
-    '/ai-legal-assistant',;
-    '/cloud-migration',;
-    '/it-consulting',;
-    '/cybersecurity',;
-    '/devops',;
-    '/database-services',;
-    '/network-infrastructure',;
-    '/it-support',;
-    '/compliance',;
-    '/developer-tools',;
-    '/marketing-tools',;
-    '/productivity';
-  ]
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  ${
-    staticPages.map(page =>),;
+/**
+ * Sitemap Generation Utility
+ * Generates XML sitemaps for better SEO and search engine crawling
+ * @module sitemapGenerator
+ */
+
+export interface SitemapURL {
+  loc: string;
+  lastmod?: string;
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
+}
+
+export interface SitemapOptions {
+  hostname: string;
+  urls: SitemapURL[];
+}
+
+/**
+ * Generate XML sitemap
+ * @param options - Sitemap configuration
+ * @returns Complete XML sitemap string
+ */
+export function generateSitemap(options: SitemapOptions): string {
+  const { hostname, urls } = options;
+  
+  const urlEntries = urls.map((url) => {
+    const loc = url.loc.startsWith('http') ? url.loc : `${hostname}${url.loc}`;
+    return `  <url>
+    <loc>${loc}</loc>
+    ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
+    ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
+    ${url.priority !== undefined ? `<priority>${url.priority.toFixed(1)}</priority>` : ''}
+  </url>`;
+  }).join('\n');
+  
+  return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<<<<<<< HEAD
-  }
-  ${staticPages.map(page =>)}
-  <url>}
-=======
-  ${staticPages.map(page =>);
-  <url>};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
-<<<<<<< HEAD
-  </url>`).join('')}
+${urlEntries}
 </urlset>`;
-  return sitemap;
 }
-export const generateRobotsTxt = useCallback((...args) => {}
-  return `User-agent: *;
-Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
-# Crawl-delay for better server performance,
-=======
-  </url>`).join('');
-</urlset>`
-  return sitemap};
-export const generateRobotsTxt = useCallback((...args) => {};
+
+/**
+ * Generate robots.txt content
+ * @param hostname - Base hostname
+ * @param sitemapPath - Path to sitemap
+ * @returns robots.txt content
+ */
+export function generateRobotsTxt(hostname: string, sitemapPath = '/sitemap.xml'): string {
   return `User-agent: *
-Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Crawl-delay for better server performance;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-Crawl-delay: 1,
-# Disallow admin and private areas;
-Disallow: /admin/,
-Disallow: /api/,
-Disallow: /_next/,
-<<<<<<< HEAD
-Disallow: /private/`,}
+Disallow:
+
+Sitemap: ${hostname}${sitemapPath}`;
 }
-export interface SitemapEntry {/* TODO: Fix JSX expression */}
-}
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
-  l: `${baseUrl}/`,;
-      lastmo,;
-=======
-Disallow: /private/`};
-};
-export interface SitemapEntry {/* TODO: Fix JSX expression */};
-};
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */};
-  l: `${baseUrl}/`,
-      lastmo,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  d: currentDate,
-      changefre,;
-  q: 'daily',
-      priorit,;
-  y: 1.0,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/about`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'monthly',
-      priorit,;
-  y: 0.8,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/services`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'weekly',
-      priorit,;
-  y: 0.9,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/ai-services`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'weekly',
-      priorit,;
-  y: 0.9,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/it-services`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'weekly',
-      priorit,;
-  y: 0.9,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/quantum-computing`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'weekly',
-      priorit,;
-  y: 0.9,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/autonomous-systems`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'weekly',
-      priorit,;
-  y: 0.9,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/micro-saas`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'weekly',
-      priorit,;
-  y: 0.8,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/enterprise`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'weekly',
-      priorit,;
-  y: 0.9,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/contact`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'monthly',
-      priorit,;
-  y: 0.8,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/team`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'monthly',
-      priorit,;
-  y: 0.7,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/case-studies`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'weekly',
-      priorit,;
-  y: 0.8,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/blog`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'daily',
-      priorit,;
-  y: 0.8,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/privacy`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'yearly',
-      priorit,;
-  y: 0.3,
-    },;
-    {/* TODO: Fix JSX expression */}`;
-  l: `${baseUrl}/terms`,;
-      lastmo,;
-  d: currentDate,
-      changefre,;
-  q: 'yearly',
-<<<<<<< HEAD
-      priorit,;
-  y: 0.3,
-    }
-  ]
-}
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
-}`;
-=======
-      priorit,
-  y: 0.3};
-  ]};
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */};
-};`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

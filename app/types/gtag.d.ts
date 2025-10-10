@@ -1,29 +1,20 @@
-/**;
- * Google Analytics gtag types;
- */;
+/**
+ * Google Analytics gtag types
+ */
 interface GtagEvent {
-<<<<<<< HEAD
-    event_category?: string;
-  event_label?: string;
-  value?: number;
-  [key: string]: unknown
-  }
-}
-type GtagCommand = 'config' | 'set' | 'event' | 'js';
-interface Window {
-    gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void
-  }
-}
-=======
-}
-}
   event_category?: string;
   event_label?: string;
   value?: number;
-  [key: string]: unknown};
+  [key: string]: unknown;
+}
+
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
+
 interface Window {
+  gtag: (
+    command: GtagCommand,
+    targetId: string | Date,
+    config?: GtagEvent
+  ) => void;
+  dataLayer: unknown[];
 }
-}
-  gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

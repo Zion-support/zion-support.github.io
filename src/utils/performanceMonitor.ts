@@ -51,11 +51,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-<<<<<<< HEAD
       console.warn(`Failed to observe ${name}:`, error);
-=======
-      // console.warn removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -71,11 +67,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-<<<<<<< HEAD
       console.warn('Failed to observe LCP:', error);
-=======
-      // console.warn removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -90,11 +82,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-<<<<<<< HEAD
       console.warn('Failed to observe FID:', error);
-=======
-      // console.warn removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -113,11 +101,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-<<<<<<< HEAD
       console.warn('Failed to observe CLS:', error);
-=======
-      // console.warn removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -126,10 +110,6 @@ class PerformanceMonitor {
     if (performance.timing) {
       this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Navigation timing
     if (performance.navigation) {
       this.addCustomMetric('navigation_type', performance.navigation.type);
@@ -146,13 +126,8 @@ class PerformanceMonitor {
 
   reportMetrics(): void {
     if (typeof window === 'undefined') return;
-<<<<<<< HEAD
     
     console.log('Performance Metrics:', this._metrics);
-    
-=======
-    // console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Send to analytics service
     if (typeof gtag !== 'undefined') {
       gtag('event', 'performance_metrics', {

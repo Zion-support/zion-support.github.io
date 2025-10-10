@@ -1,265 +1,227 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-const AnalyticsTrackerPage: React.FC = () => {
-    const features = [
-=======
-;
-const AnalyticsTrackerPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
-    {
-    icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
-    {
-    icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
-    {
-    icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-  }
-    }
-  ]
-=======
-    };
-  ];
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const benefits = [
-];
-    'Advanced AI technology integration',
-<<<<<<< HEAD
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>AnalyticsTracker | Zion Tech Group</title>
-        <meta>
-        <meta>
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1>
-              <span>
-                AnalyticsTracker;
-              </span>
-              <br>
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p>
-              Transform your business with our advanced analyticstracker solutions.;
-=======
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <title>AnalyticsTracker | Zion Tech Group<
-        <meta name="description" content="Professional AnalyticsTracker services by Zion Tech Group. Advanced AI and IT solutions for your business." 
-        <meta name="keywords" content="analyticsTracker, AI solutions, IT services, Zion Tech Group, analyticstracker" 
-      <
-      {/* Hero Section *
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              <
-              <br 
-              <span className="text-white">Solutions<
-            <
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced analyticstracker solutions. 
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                Get Started
-<<<<<<< HEAD
-                <ArrowRight>
-              </button>
-              <button>
-                Learn More,
-=======
-                Learn More
-              <
-            <
-          <
-        <
-      <
-      {/* Features Section *
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl m,
-    d:text-4xl font-bold text-white mb-4">
-              Why Choose Our AnalyticsTracker?
-            <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our analyticstracker solutions deliver unmatched performance, security, and scalability.
-            <
-          <
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-8">)
-            {features.map((feature), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature .icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ));
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section *
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our analyticstracker solutions for your business.
-            <
-          <
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ));
-          </div>
-        </div>
-      </section>
-      {/* CTA Section *
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            <
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your analyticstracker needs and get a customized solution.
-            <
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,
-    r:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" 
-                Email Us
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-      {/* Features Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
-              Why Choose Our AnalyticsTracker?,
-            </h2>
-            <p>
-              Our analyticstracker solutions deliver unmatched performance, security, and scalability.;
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {
-    features.map((feature, index) => (
-  }
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
-              Key Benefits
-            </h2>
-            <p>
-              Experience the power of our analyticstracker solutions for your business.,
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {
-    benefits.map((benefit, index) => (
-  }
-              <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle>
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
-              Ready to Get Started?;
-            </h2>
-            <p>
-              Contact our experts to discuss your analyticstracker needs and get a customized solution.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                <Phone>
-                Call Now
-              </button>
-              <button>
-                <Mail>
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  ),
+/**
+ * Enhanced Analytics Tracker
+ * Provides comprehensive tracking for user interactions, performance metrics, and errors
+ */
+
+interface AnalyticsEvent {
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+  nonInteraction?: boolean;
 }
-=======
-    </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default AnalyticsTrackerPage;
+
+interface PerformanceMetrics {
+  metric: string;
+  value: number;
+  rating?: 'good' | 'needs-improvement' | 'poor';
+}
+
+interface ErrorReport {
+  message: string;
+  stack?: string;
+  componentStack?: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+}
+
+class AnalyticsTracker {
+  private isInitialized = false;
+  private queue: Array<() => void> = [];
+
+  /**
+   * Initialize the analytics tracker
+   */
+  initialize(): void {
+    if (typeof window === 'undefined') return;
+
+    this.isInitialized = true;
+    
+    // Process queued events
+    this.queue.forEach((fn) => fn());
+    this.queue = [];
+
+    // Track initial page view
+    this.trackPageView(window.location.pathname);
+  }
+
+  /**
+   * Track a custom event
+   */
+  trackEvent(event: AnalyticsEvent): void {
+    if (typeof window === 'undefined') return;
+
+    const track = () => {
+      if (window.gtag) {
+        window.gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          non_interaction: event.nonInteraction,
+        });
+      }
+
+      // Also log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[Analytics Event]', event);
+      }
+    };
+
+    if (this.isInitialized) {
+      track();
+    } else {
+      this.queue.push(track);
+    }
+  }
+
+  /**
+   * Track page views
+   */
+  trackPageView(path: string): void {
+    if (typeof window === 'undefined') return;
+
+    const track = () => {
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_path: path,
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
+
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[Analytics Page View]', path);
+      }
+    };
+
+    if (this.isInitialized) {
+      track();
+    } else {
+      this.queue.push(track);
+    }
+  }
+
+  /**
+   * Track performance metrics
+   */
+  trackPerformance(metrics: PerformanceMetrics): void {
+    if (typeof window === 'undefined') return;
+
+    const track = () => {
+      if (window.gtag) {
+        window.gtag('event', 'performance', {
+          event_category: 'Web Vitals',
+          event_label: metrics.metric,
+          value: Math.round(metrics.value),
+          metric_rating: metrics.rating,
+        });
+      }
+
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[Analytics Performance]', metrics);
+      }
+    };
+
+    if (this.isInitialized) {
+      track();
+    } else {
+      this.queue.push(track);
+    }
+  }
+
+  /**
+   * Track errors
+   */
+  trackError(error: ErrorReport): void {
+    if (typeof window === 'undefined') return;
+
+    const track = () => {
+      if (window.gtag) {
+        window.gtag('event', 'exception', {
+          description: error.message,
+          fatal: error.severity === 'critical',
+          error_severity: error.severity,
+        });
+      }
+
+      // Always log errors to console
+      console.error('[Analytics Error]', error);
+    };
+
+    if (this.isInitialized) {
+      track();
+    } else {
+      this.queue.push(track);
+    }
+  }
+
+  /**
+   * Track user timing
+   */
+  trackTiming(category: string, variable: string, value: number, label?: string): void {
+    if (typeof window === 'undefined') return;
+
+    const track = () => {
+      if (window.gtag) {
+        window.gtag('event', 'timing_complete', {
+          name: variable,
+          value: Math.round(value),
+          event_category: category,
+          event_label: label,
+        });
+      }
+
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[Analytics Timing]', { category, variable, value, label });
+      }
+    };
+
+    if (this.isInitialized) {
+      track();
+    } else {
+      this.queue.push(track);
+    }
+  }
+
+  /**
+   * Track conversions
+   */
+  trackConversion(conversionId: string, value?: number): void {
+    if (typeof window === 'undefined') return;
+
+    const track = () => {
+      if (window.gtag) {
+        window.gtag('event', 'conversion', {
+          send_to: conversionId,
+          value: value,
+          currency: 'USD',
+        });
+      }
+
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[Analytics Conversion]', { conversionId, value });
+      }
+    };
+
+    if (this.isInitialized) {
+      track();
+    } else {
+      this.queue.push(track);
+    }
+  }
+}
+
+// Export singleton instance
+export const analyticsTracker = new AnalyticsTracker();
+
+// Auto-initialize when window is available
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'complete') {
+    analyticsTracker.initialize();
+  } else {
+    window.addEventListener('load', () => {
+      analyticsTracker.initialize();
+    });
+  }
+}
+
+export default analyticsTracker;
