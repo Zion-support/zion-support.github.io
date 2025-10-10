@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -7,12 +6,8 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
-<<<<<<< HEAD
+
 // Lazy load pages for better performance
-=======
-;
-// Lazy load pages for better performance;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -25,12 +20,8 @@ const CareersPage = lazy(() => import('./careers/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
-<<<<<<< HEAD
+
 // AI Services
-=======
-;
-// AI Services;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -43,39 +34,25 @@ const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/pag
 const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
-<<<<<<< HEAD
+
 // IT Services
-=======
-;
-// IT Services;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
 const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-<<<<<<< HEAD
+
 // Emerging Technologies
-=======
-;
-// Emerging Technologies;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const BlockchainPage = lazy(() => import('./blockchain/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
-<<<<<<< HEAD
+
 // Micro SaaS
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+
 // Support Pages
-=======
-;
-// Micro SaaS;
-const MicroSaasPage = lazy(() => import('./micro-saas/page'));
-;
-// Support Pages;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const DocsPage = lazy(() => import('./docs/page'));
 const ApiDocsPage = lazy(() => import('./api-docs/page'));
 const SupportPage = lazy(() => import('./support/page'));
