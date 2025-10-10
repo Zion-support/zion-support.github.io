@@ -4295,7 +4295,7 @@ const HomePage: React.FC = () => {
               {aiServices.map((service, index) => (
                 <div key={index} className={`holographic-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer ${service.enterprise ? 'ring-2 ring-purple-400/30' : ''}`} onClick={() => window.open(service.link, '_blank')}>
                   {service.enterprise && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                         Enterprise
                       </span>

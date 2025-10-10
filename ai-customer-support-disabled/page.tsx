@@ -71,7 +71,7 @@ const AICustomerSupportPage: React.FC = () => {
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto"></section>
+            <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Customer Support Solutions
               </h1>
