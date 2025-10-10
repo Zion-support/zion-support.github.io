@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, DollarSign, Users, Settings, Box, MessageSquare, Target, FileText, Package, Globe, Mail, Calendar, Database, Eye, Code } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasTools = [
@@ -227,6 +227,237 @@ const MicroSaasPage: React.FC = () => {
       icon: Zap,
       category: 'Legal',
       popular: false
+    },
+    {
+      title: 'Zion AI Survey Builder',
+      description: 'Intelligent survey creation and analysis platform with AI-powered question generation and insights.',
+      features: ['AI Question Generation', 'Smart Survey Logic', 'Real-time Analytics', 'Response Analysis', 'A/B Testing', 'Multi-platform Distribution'],
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Create surveys 5x faster', 'Better response rates', 'Automated insights', 'Professional surveys'],
+      icon: CheckCircle,
+      category: 'Research',
+      popular: true
+    },
+    {
+      title: 'Zion AI Accounting Assistant',
+      description: 'AI-powered accounting automation with expense tracking, invoice processing, and financial insights.',
+      features: ['Automated Expense Tracking', 'Invoice Processing', 'Tax Calculation', 'Financial Reporting', 'Receipt OCR', 'Bank Reconciliation'],
+      price: '$129/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Save 10 hours weekly', 'Reduce accounting errors', 'Automated tax prep', 'Better financial insights'],
+      icon: DollarSign,
+      category: 'Finance',
+      popular: true
+    },
+    {
+      title: 'Zion AI Recruitment Pro',
+      description: 'Intelligent recruitment platform with resume screening, candidate matching, and interview scheduling.',
+      features: ['AI Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Skills Assessment', 'Background Checks', 'Onboarding Automation'],
+      price: '$199/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['Hire 3x faster', 'Better candidate quality', 'Reduce bias', 'Streamlined process'],
+      icon: Users,
+      category: 'HR',
+      popular: true
+    },
+    {
+      title: 'Zion AI Content Moderation',
+      description: 'Automated content moderation with image, video, and text analysis for platform safety.',
+      features: ['Image Content Analysis', 'Video Moderation', 'Text Toxicity Detection', 'Real-time Filtering', 'Custom Rules', 'Human Review Workflow'],
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Maintain platform safety', 'Reduce manual work', 'Consistent moderation', 'Real-time protection'],
+      icon: Shield,
+      category: 'Moderation',
+      popular: false
+    },
+    {
+      title: 'Zion AI Predictive Maintenance',
+      description: 'Intelligent equipment maintenance with failure prediction and optimization scheduling.',
+      features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'IoT Integration', 'Real-time Monitoring', 'Custom Alerts'],
+      price: '$299/month',
+      marketPrice: '$600-1500/month',
+      benefits: ['Reduce downtime by 70%', 'Extend equipment life', 'Lower maintenance costs', 'Prevent failures'],
+      icon: Settings,
+      category: 'Maintenance',
+      popular: false
+    },
+    {
+      title: 'Zion AI Energy Manager',
+      description: 'Smart energy management with consumption analysis and optimization recommendations.',
+      features: ['Energy Consumption Analysis', 'Cost Optimization', 'Renewable Integration', 'Smart Grid Management', 'Usage Forecasting', 'Carbon Tracking'],
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Reduce energy costs by 25%', 'Improve efficiency', 'Track carbon footprint', 'Smart optimization'],
+      icon: Zap,
+      category: 'Energy',
+      popular: false
+    },
+    {
+      title: 'Zion AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting and inventory optimization.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Route Optimization', 'Cost Analysis', 'Risk Assessment'],
+      price: '$399/month',
+      marketPrice: '$800-2000/month',
+      benefits: ['Reduce costs by 30%', 'Improve delivery times', 'Minimize stockouts', 'Better supplier relations'],
+      icon: Box,
+      category: 'Supply Chain',
+      popular: true
+    },
+    {
+      title: 'Zion AI Fraud Detector',
+      description: 'Advanced fraud detection with real-time monitoring and automated prevention.',
+      features: ['Real-time Monitoring', 'Pattern Recognition', 'Risk Scoring', 'Automated Alerts', 'Transaction Analysis', 'Custom Rules'],
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Reduce fraud by 85%', 'Real-time protection', 'Lower false positives', 'Compliance ready'],
+      icon: Shield,
+      category: 'Security',
+      popular: true
+    },
+    {
+      title: 'Zion AI Customer Service Pro',
+      description: 'Advanced customer service platform with AI-powered support and analytics.',
+      features: ['AI Chat Support', 'Ticket Management', 'Sentiment Analysis', 'Knowledge Base', 'Performance Analytics', 'Multi-channel Support'],
+      price: '$179/month',
+      marketPrice: '$350-900/month',
+      benefits: ['Improve satisfaction by 40%', 'Reduce response time', '24/7 support', 'Better insights'],
+      icon: MessageSquare,
+      category: 'Customer Service',
+      popular: true
+    },
+    {
+      title: 'Zion AI Marketing Automation',
+      description: 'Intelligent marketing automation with campaign optimization and lead nurturing.',
+      features: ['Campaign Automation', 'Lead Scoring', 'Email Personalization', 'A/B Testing', 'ROI Analytics', 'Multi-channel Marketing'],
+      price: '$159/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Increase conversions by 200%', 'Automated campaigns', 'Better targeting', 'ROI optimization'],
+      icon: Target,
+      category: 'Marketing',
+      popular: true
+    },
+    {
+      title: 'Zion AI Document AI',
+      description: 'Intelligent document processing with OCR, data extraction, and automated workflows.',
+      features: ['Advanced OCR', 'Data Extraction', 'Document Classification', 'Workflow Automation', 'Integration APIs', 'Batch Processing'],
+      price: '$89/month',
+      marketPrice: '$180-500/month',
+      benefits: ['Process documents 10x faster', 'Reduce manual errors', 'Automated workflows', 'Better accuracy'],
+      icon: FileText,
+      category: 'Document Processing',
+      popular: false
+    },
+    {
+      title: 'Zion AI Inventory Smart Pro',
+      description: 'Advanced inventory management with AI-powered forecasting and optimization.',
+      features: ['Demand Forecasting', 'Stock Optimization', 'Reorder Automation', 'Supplier Analytics', 'Cost Tracking', 'Multi-location Management'],
+      price: '$119/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs', 'Automated reordering', 'Better forecasting'],
+      icon: Package,
+      category: 'Inventory',
+      popular: true
+    },
+    {
+      title: 'Zion AI Social Media Manager',
+      description: 'AI-powered social media management with content optimization and scheduling.',
+      features: ['Content Generation', 'Optimal Timing', 'Hashtag Research', 'Engagement Analytics', 'Multi-platform Posting', 'Competitor Analysis'],
+      price: '$69/month',
+      marketPrice: '$140-350/month',
+      benefits: ['Increase engagement by 60%', 'Save 5 hours weekly', 'Better content strategy', 'Automated posting'],
+      icon: Globe,
+      category: 'Social Media',
+      popular: true
+    },
+    {
+      title: 'Zion AI Email Assistant Pro',
+      description: 'Advanced email management with AI-powered sorting, drafting, and response automation.',
+      features: ['Smart Email Sorting', 'AI Draft Suggestions', 'Priority Classification', 'Auto-responses', 'Calendar Integration', 'Email Analytics'],
+      price: '$49/month',
+      marketPrice: '$100-250/month',
+      benefits: ['Save 2 hours daily', 'Better organization', 'Faster responses', 'Reduced email stress'],
+      icon: Mail,
+      category: 'Productivity',
+      popular: true
+    },
+    {
+      title: 'Zion AI Meeting Assistant Pro',
+      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+      features: ['Live Transcription', 'Action Item Extraction', 'Meeting Summaries', 'Calendar Integration', 'Follow-up Automation', 'Team Collaboration'],
+      price: '$79/month',
+      marketPrice: '$160-400/month',
+      benefits: ['Better meeting efficiency', 'Automated follow-ups', 'Improved accountability', 'Time savings'],
+      icon: Calendar,
+      category: 'Productivity',
+      popular: true
+    },
+    {
+      title: 'Zion AI SEO Optimizer Pro',
+      description: 'Advanced SEO optimization with keyword research, content analysis, and ranking tracking.',
+      features: ['Keyword Research', 'Content Optimization', 'Competitor Analysis', 'Rank Tracking', 'Technical SEO Audit', 'Performance Monitoring'],
+      price: '$89/month',
+      marketPrice: '$180-450/month',
+      benefits: ['Increase organic traffic by 150%', 'Better search rankings', 'Automated optimization', 'Competitive advantage'],
+      icon: Target,
+      category: 'SEO',
+      popular: true
+    },
+    {
+      title: 'Zion AI Data Cleaner Pro',
+      description: 'Advanced data cleaning and validation with automated quality management.',
+      features: ['Automated Data Cleaning', 'Duplicate Detection', 'Data Validation', 'Format Standardization', 'Quality Scoring', 'Error Reporting'],
+      price: '$69/month',
+      marketPrice: '$140-350/month',
+      benefits: ['Improve data quality by 90%', 'Reduce errors', 'Automated cleaning', 'Better analytics'],
+      icon: Database,
+      category: 'Data',
+      popular: false
+    },
+    {
+      title: 'Zion AI Video Editor Pro',
+      description: 'AI-powered video editing with automated editing, effects, and optimization.',
+      features: ['AI Auto-editing', 'Smart Cut Detection', 'Automated Subtitles', 'Color Correction', 'Audio Enhancement', 'Multi-format Export'],
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Save 70% editing time', 'Professional quality', 'Automated features', 'Easy to use'],
+      icon: Eye,
+      category: 'Video',
+      popular: true
+    },
+    {
+      title: 'Zion AI Translator Pro Plus',
+      description: 'Advanced AI translation with context-aware translations and real-time processing.',
+      features: ['100+ Languages', 'Context-aware Translation', 'Real-time Processing', 'Document Translation', 'Voice Translation', 'API Integration'],
+      price: '$79/month',
+      marketPrice: '$160-400/month',
+      benefits: ['Accurate translations', 'Real-time processing', 'Multiple formats', 'API integration'],
+      icon: Globe,
+      category: 'Translation',
+      popular: true
+    },
+    {
+      title: 'Zion AI Code Reviewer Pro',
+      description: 'Intelligent code review with automated bug detection and security analysis.',
+      features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Analysis', 'Code Quality Metrics', 'Best Practice Suggestions', 'Team Collaboration'],
+      price: '$129/month',
+      marketPrice: '$260-650/month',
+      benefits: ['Reduce bugs by 50%', 'Improve code quality', 'Security enhancement', 'Team learning'],
+      icon: Code,
+      category: 'Development',
+      popular: true
+    },
+    {
+      title: 'Zion AI Customer Insights Pro Plus',
+      description: 'Advanced customer analytics with sentiment analysis and behavioral insights.',
+      features: ['Sentiment Analysis', 'Behavioral Tracking', 'Customer Segmentation', 'Churn Prediction', 'Lifetime Value Analysis', 'Real-time Dashboards'],
+      price: '$149/month',
+      marketPrice: '$300-750/month',
+      benefits: ['Better customer understanding', 'Churn prevention', 'Personalized experiences', 'Data-driven decisions'],
+      icon: Users,
+      category: 'Analytics',
+      popular: true
     }
   ]
 

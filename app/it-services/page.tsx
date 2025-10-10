@@ -22,7 +22,10 @@ import {
   ShoppingCart,
   Monitor,
   Headphones,
-  BarChart
+  BarChart,
+  Brain,
+  Link,
+  Cpu
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

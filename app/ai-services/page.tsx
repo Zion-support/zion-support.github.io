@@ -987,8 +987,7 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-<<<<<<< HEAD
-      id: 'ai-content-generation',
+      id: 'ai-content-generation-pro',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
       price: '$499/month',
@@ -1012,139 +1011,6 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
-=======
-      title: 'AI-Powered Parenting Assistant',
-      description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
-      icon: '👶',
-      price: 'Starting at $1,500/month',
-      features: ['Development monitoring', 'Activity recommendations', 'Safety alerts', 'Progress tracking', 'Expert guidance'],
-      benefits: ['Support child development', 'Improve parenting confidence', 'Ensure child safety'],
-      marketPrice: '$2,500-6,000/month',
-      category: 'Family AI',
-      technologies: ['Child Development Models', 'Safety Monitoring', 'Custom Family Models', 'Mobile Apps', 'Expert Systems']
-    },
-    {
-      title: 'AI-Powered Elderly Care',
-      description: 'Intelligent elderly care monitoring with health tracking and safety assistance.',
-      icon: '👴',
-      price: 'Starting at $2,500/month',
-      features: ['Health monitoring', 'Safety assistance', 'Medication reminders', 'Emergency alerts', 'Family communication'],
-      benefits: ['Improve elderly care', 'Ensure safety', 'Reduce care costs'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Elderly Care AI',
-      technologies: ['Health Monitoring', 'Safety Systems', 'Custom Care Models', 'IoT Integration', 'Mobile Apps']
-    },
-    {
-      title: 'AI-Powered Accessibility Assistant',
-      description: 'Intelligent accessibility support with adaptive interfaces and assistive technology.',
-      icon: '♿',
-      price: 'Starting at $1,800/month',
-      features: ['Adaptive interfaces', 'Voice control', 'Visual assistance', 'Mobility support', 'Communication aids'],
-      benefits: ['Improve accessibility', 'Enhance independence', 'Support inclusion'],
-      marketPrice: '$3,000-7,000/month',
-      category: 'Accessibility AI',
-      technologies: ['Accessibility APIs', 'Assistive Technology', 'Custom Accessibility Models', 'Mobile Apps', 'IoT Integration']
-    },
-    {
-      title: 'AI-Powered Environmental Monitoring',
-      description: 'Intelligent environmental monitoring with pollution detection and sustainability recommendations.',
-      icon: '🌱',
-      price: 'Starting at $2,000/month',
-      features: ['Pollution monitoring', 'Sustainability analysis', 'Environmental alerts', 'Carbon tracking', 'Green recommendations'],
-      benefits: ['Monitor environmental impact', 'Improve sustainability', 'Reduce carbon footprint'],
-      marketPrice: '$3,500-8,000/month',
-      category: 'Environmental AI',
-      technologies: ['Environmental Sensors', 'Pollution Detection', 'Custom Environmental Models', 'IoT Integration', 'Analytics']
-    },
-    {
-      title: 'AI-Powered Wildlife Conservation',
-      description: 'Intelligent wildlife monitoring and conservation with species identification and behavior analysis.',
-      icon: '🦁',
-      price: 'Starting at $3,500/month',
-      features: ['Species identification', 'Behavior analysis', 'Population monitoring', 'Threat detection', 'Conservation planning'],
-      benefits: ['Protect wildlife', 'Monitor populations', 'Prevent poaching'],
-      marketPrice: '$6,000-15,000/month',
-      category: 'Conservation AI',
-      technologies: ['Computer Vision', 'Wildlife Detection', 'Custom Conservation Models', 'Satellite Data', 'IoT Sensors']
-    },
-    {
-      title: 'AI-Powered Disaster Response',
-      description: 'Intelligent disaster prediction and response coordination with real-time monitoring.',
-      icon: '🚨',
-      price: 'Starting at $5,000/month',
-      features: ['Disaster prediction', 'Response coordination', 'Resource optimization', 'Evacuation planning', 'Damage assessment'],
-      benefits: ['Save lives', 'Reduce damage', 'Improve response time'],
-      marketPrice: '$8,000-20,000/month',
-      category: 'Emergency AI',
-      technologies: ['Disaster Prediction', 'Response Coordination', 'Custom Emergency Models', 'Satellite Data', 'IoT Sensors']
-    },
-    {
-      title: 'AI-Powered Urban Planning',
-      description: 'Intelligent urban planning with traffic optimization and infrastructure analysis.',
-      icon: '🏙️',
-      price: 'Starting at $4,500/month',
-      features: ['Traffic optimization', 'Infrastructure analysis', 'Population modeling', 'Resource planning', 'Sustainability analysis'],
-      benefits: ['Improve city efficiency', 'Reduce traffic congestion', 'Optimize resource use'],
-      marketPrice: '$7,500-18,000/month',
-      category: 'Urban AI',
-      technologies: ['Traffic Analysis', 'Infrastructure Modeling', 'Custom Urban Models', 'Satellite Data', 'IoT Integration']
-    },
-    {
-      title: 'AI-Powered Agriculture Optimization',
-      description: 'Intelligent agricultural optimization with crop monitoring and yield prediction.',
-      icon: '🌾',
-      price: 'Starting at $3,000/month',
-      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis'],
-      benefits: ['Increase crop yields', 'Reduce resource use', 'Improve sustainability'],
-      marketPrice: '$5,000-12,000/month',
-      category: 'Agriculture AI',
-      technologies: ['Satellite Imagery', 'IoT Sensors', 'Custom Agriculture Models', 'Drone Data', 'Weather APIs']
-    },
-    {
-      title: 'AI-Powered Water Management',
-      description: 'Intelligent water resource management with quality monitoring and distribution optimization.',
-      icon: '💧',
-      price: 'Starting at $2,800/month',
-      features: ['Water quality monitoring', 'Distribution optimization', 'Leak detection', 'Usage analysis', 'Treatment optimization'],
-      benefits: ['Improve water quality', 'Reduce waste', 'Optimize distribution'],
-      marketPrice: '$4,500-11,000/month',
-      category: 'Water AI',
-      technologies: ['Water Quality Sensors', 'Distribution Networks', 'Custom Water Models', 'IoT Integration', 'Analytics']
-    },
-    {
-      title: 'AI-Powered Waste Management',
-      description: 'Intelligent waste management with collection optimization and recycling analysis.',
-      icon: '♻️',
-      price: 'Starting at $2,200/month',
-      features: ['Collection optimization', 'Recycling analysis', 'Waste sorting', 'Route planning', 'Sustainability tracking'],
-      benefits: ['Reduce waste', 'Improve recycling', 'Optimize collection'],
-      marketPrice: '$3,500-8,000/month',
-      category: 'Waste AI',
-      technologies: ['Waste Sensors', 'Route Optimization', 'Custom Waste Models', 'IoT Integration', 'Analytics']
-    },
-    {
-      title: 'AI-Powered Energy Grid Management',
-      description: 'Intelligent energy grid optimization with demand prediction and renewable integration.',
-      icon: '⚡',
-      price: 'Starting at $4,000/month',
-      features: ['Demand prediction', 'Grid optimization', 'Renewable integration', 'Load balancing', 'Outage prevention'],
-      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Prevent outages'],
-      marketPrice: '$6,500-16,000/month',
-      category: 'Energy AI',
-      technologies: ['Grid Data', 'Demand Forecasting', 'Custom Energy Models', 'IoT Sensors', 'Renewable APIs']
-    },
-    {
-      title: 'AI-Powered Smart City Management',
-      description: 'Comprehensive smart city management with integrated AI services and citizen engagement.',
-      icon: '🏛️',
-      price: 'Starting at $8,000/month',
-      features: ['Integrated services', 'Citizen engagement', 'Resource optimization', 'Service delivery', 'Data analytics'],
-      benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
-      marketPrice: '$15,000-40,000/month',
-      category: 'Smart City AI',
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
     }
   ]
 
