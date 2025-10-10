@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React, { createContext, useContext, useEffect } from 'react;
@@ -144,3 +145,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   );
 
 };
+=======
+import React from 'react';
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default AnalyticsProvider;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8

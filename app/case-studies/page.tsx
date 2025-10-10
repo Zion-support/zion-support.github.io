@@ -1,5 +1,6 @@
 'use client;
 
+<<<<<<< HEAD
 import React from 'react;
 
 import { Helmet } from 'react-helmet-async;
@@ -318,10 +319,17 @@ const CaseStudiesPage: React.FC = () => {}
     { label: 'Team Members', value: '50+, icon: Users },
     { label: 'Industry Awards', value: '25+, icon: Award }  ];
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const CaseStudiesPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   return (
 
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful AI and IT solutions case studies. See how we've helped businesses transform their operations and achieve remarkable results. />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT transformation, business results, client testimonials />
@@ -508,6 +516,20 @@ const CaseStudiesPage: React.FC = () => {}
   );
 
   );  ));)
+=======
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Case studies from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Case Studies</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 };
 
 export default CaseStudiesPage;

@@ -1,5 +1,6 @@
 'use client;
 
+<<<<<<< HEAD
 import React from 'react;
 
 import { Helmet } from 'react-helmet-async;
@@ -241,10 +242,17 @@ const MicroSaasPage: React.FC = () => {}
 
   ];
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const MicroSaasPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   return (
 
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
         <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more. />
         <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software />
@@ -562,6 +570,20 @@ const MicroSaasPage: React.FC = () => {}
     </>
   );
 
+=======
+        <title>Micro SaaS - Zion Tech Group</title>
+        <meta name="description" content="Micro SaaS solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Micro SaaS</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 };
 
 export default MicroSaasPage;

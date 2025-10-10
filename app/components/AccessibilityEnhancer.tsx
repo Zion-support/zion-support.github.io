@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React, { useEffect } from 'react;
@@ -44,8 +45,35 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
 
           }
 
-        }
+=======
+import React, { useEffect } from 'react';
 
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Accessibility enhancements
+    const enhanceAccessibility = () => {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+
+      // Add ARIA labels to interactive elements
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach((button) => {
+        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Button');
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+        }
+      });
+    };
+
+<<<<<<< HEAD
         // Close dropdowns with Escape key
 <<<<<<< HEAD
         if (event.key === 'Escape) {
@@ -240,6 +268,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
 
   return null;
 
+=======
+    enhanceAccessibility();
+  }, []);
+
+  return <>{children}</>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 };
 
 export default AccessibilityEnhancer;

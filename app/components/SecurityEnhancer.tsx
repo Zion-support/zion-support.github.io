@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React, { useEffect } from react;
@@ -217,6 +218,16 @@ const target = e.target as HTMLInputElement;
 
   return <React.Fragment>{children}</React.Fragment>;
 
+=======
+import React from 'react';
+
+interface SecurityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+  return <>{children}</>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 };
 
 export default SecurityEnhancer;

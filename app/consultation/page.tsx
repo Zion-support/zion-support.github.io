@@ -1,5 +1,6 @@
 'use client;
 
+<<<<<<< HEAD
 import React from 'react;
 
 import { Helmet } from 'react-helmet-async;
@@ -302,10 +303,17 @@ const ConsultationPage: React.FC = () => {}
   };
 
 const PagePage: React.FC = () => {}
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ConsultationPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   return (
 
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
         <meta name="description" content="Get expert consultation on AI implementation, digital transformation, and IT strategy. Free discovery calls and comprehensive planning sessions available. />
         <meta name="keywords" content="AI consultation, IT consulting, digital transformation, technology strategy, business consulting />
@@ -739,12 +747,24 @@ const PagePage: React.FC = () => {}
             </div>
           </div>
         </section>
+=======
+        <title>Consultation - Zion Tech Group</title>
+        <meta name="description" content="Consultation services from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Consultation</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
       </div>
     </>
   );
 
 };
 
+<<<<<<< HEAD
 export default ConsultationPage;      <section className="py-16 px-4>
         <div className="max-w-4xl mx-auto text-center>
           <h2 className="text-3xl font-bold text-white mb-6>Ready to Get Started?</h2>
@@ -775,3 +795,6 @@ export default ConsultationPage;      <section className="py-16 px-4>
 };
 
 export default PagePage;
+=======
+export default ConsultationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8

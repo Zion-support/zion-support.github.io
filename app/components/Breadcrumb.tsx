@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -16,6 +17,10 @@ interface BreadcrumbItem {}
   current?: boolean;
 
 }
+=======
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 
 <<<<<<< HEAD
 const Breadcrumb: React.FC = () => {
@@ -29,6 +34,7 @@ const Breadcrumb: React.FC = () => {
 const Breadcrumb: React.FC = () => {}
   const location = useLocation();
   
+<<<<<<< HEAD
   const generateBreadcrumbs = (): BreadcrumbItem[] => {}
     const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
 >>>>>>> cursor/fix-errors-and-merge-to-main-d054
@@ -63,9 +69,22 @@ const Breadcrumb: React.FC = () => {}
         name,
         href: currentPath,
         current: isLast
+=======
+  const getBreadcrumbItems = () => {
+    const pathSegments = location.pathname.split('/').filter(Boolean);
+    const items = [{ name: 'Home', path: '/' }];
+    
+    let currentPath = '';
+    pathSegments.forEach((segment) => {
+      currentPath += `/${segment}`;
+      items.push({
+        name: segment.charAt(0).toUpperCase() + segment.slice(1),
+        path: currentPath
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
       });
 
     });
+<<<<<<< HEAD
 
     return breadcrumbs;
 
@@ -138,6 +157,22 @@ const Breadcrumb: React.FC = () => {}
                 </Link>
               )}
 
+=======
+    
+    return items;
+  };
+
+  const breadcrumbItems = getBreadcrumbItems();
+
+  return (
+    <nav className="bg-slate-800/50 py-2 px-4">
+      <div className="max-w-7xl mx-auto">
+        <ol className="flex items-center space-x-2 text-sm">
+          {breadcrumbItems.map((item, index) => (
+            <li key={item.path} className="flex items-center">
+              {index > 0 && <span className="text-gray-400 mx-2">/</span>}
+              <span className="text-gray-300">{item.name}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
             </li>
           ))}
 

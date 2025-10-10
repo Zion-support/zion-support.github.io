@@ -1,10 +1,11 @@
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-    return}
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-  try {;
-const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+  try {
+    const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
 
     // Log error details (in production you would send this to your monitoring service)
     // In a real application, you would:
@@ -12,10 +13,20 @@ const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
     // 2. Store in your database
     // 3. Send alerts to your team
 
+<<<<<<< HEAD
     // console.error removed for production
     console.log('Error report received:', {
       error: req.body.error,
       timestamp: new Date().toISOString()
+=======
+    console.log('Error report received:', {
+      error,
+      stack,
+      componentStack,
+      timestamp: timestamp || new Date().toISOString(),
+      userAgent,
+      url
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
     });
 
     // For now, just acknowledge receipt
@@ -26,9 +37,17 @@ const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
       message: 'Error report received' 
     }));
   } catch (error) {
+<<<<<<< HEAD
     // console.error removed for production
+=======
+    console.error('Failed to process error report:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to process error report' }));
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8

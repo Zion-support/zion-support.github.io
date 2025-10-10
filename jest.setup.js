@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react;
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 // Learn more: https://github.com/testing-library/jest-dom
 require(@testing-library/jest-dom);
 
@@ -41,16 +44,23 @@ jest.mock('./src/hooks/usePerformanceMonitoring.ts, () => ({
     report: {}}))}));
 
 // Mock React Router (this is a Vite project, not Next.js)
+<<<<<<< HEAD
 jest.mock(react-router-dom, () => {;
 
 const actual = jest.requireActual(react-router-dom);;
 
   const React = require(react);;
 
+=======
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
+  const React = require('react');
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   return {
     ...actual,
     useNavigate: () => jest.fn(),
     useLocation: () => ({
+<<<<<<< HEAD
       pathname: '/,
       search: ',
       hash: ',
@@ -75,6 +85,37 @@ const { createMemoryRouter, RouterProvider } = actual;
 
       return React.createElement(RouterProvider, { router })},
     RouterProvider: ({ router }) => null}});
+=======
+      pathname: '/',
+      search: '',
+      hash: '',
+      state: null
+    }),
+    useParams: () => ({}),
+    Link: ({ children, to, ...props }) => {
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    NavLink: ({ children, to, ...props }) => {
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    BrowserRouter: ({ children }) => children,
+    MemoryRouter: ({ children }) => {
+      const { createMemoryRouter, RouterProvider } = actual;
+      const router = createMemoryRouter([
+        {
+          path: '/',
+          element: children
+        }
+      ], {
+        initialEntries: ['/'],
+        initialIndex: 0
+      });
+      return React.createElement(RouterProvider, { router });
+    },
+    RouterProvider: ({ router }) => null
+  };
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia, {
@@ -87,28 +128,45 @@ Object.defineProperty(window, 'matchMedia, {
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()}))});
+    dispatchEvent: jest.fn()
+  }))
+});
 
 // Mock IntersectionObserver
+<<<<<<< HEAD
 global.IntersectionObserver = class IntersectionObserver {;
 
 constructor() {}
 
+=======
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   disconnect() {}
 
   observe() {}
 
   takeRecords() {
+<<<<<<< HEAD
     return []}
 
+=======
+    return [];
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   unobserve() {}
 
 };
 
+<<<<<<< HEAD
 // Suppress console errors in tests;
 
 const originalError = console.error;;
 
+=======
+// Suppress console errors in tests
+const originalError = console.error;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 beforeAll(() => {
   console.error = jest.fn((...args) => {
     if (
@@ -117,9 +175,21 @@ beforeAll(() => {
       (args[0].includes('Warning: ReactDOM.render) ||
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit))
     ) {
+<<<<<<< HEAD
       return}
 
     originalError.call(console, ...args)})});
 
 afterAll(() => {
   console.error = originalError});
+=======
+      return;
+    }
+    originalError.call(console, ...args);
+  });
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8

@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async;
 import { Search, Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface BlogPost {
   id: number;  title: string;
 
@@ -32,9 +33,14 @@ interface BlogPost {}
   featured: boolean;
 
 }
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 
 <<<<<<< HEAD
 const BlogPage: React.FC = () => {
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(');
 
   const [selectedCategory, setSelectedCategory] = useState('all);
@@ -150,10 +156,13 @@ const BlogPage: React.FC = () => {}
 
   const regularPosts = filteredPosts.filter(post => !post.featured);;
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   return (
 
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Blog - Zion Tech Group | AI & Technology Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group experts. />
         <meta name="keywords" content="AI blog, technology insights, quantum computing, cybersecurity, autonomous systems, tech trends />
@@ -431,6 +440,17 @@ const BlogPage: React.FC = () => {}
             </div>
           </div>
         </section>
+=======
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Blog services from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
       </div>
     </>
   );

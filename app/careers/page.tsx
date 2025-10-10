@@ -1,5 +1,6 @@
 'use client;
 
+<<<<<<< HEAD
 import React, { useState } from 'react;
 
 import { Helmet } from 'react-helmet-async;
@@ -33,9 +34,14 @@ const PagePage: React.FC = () => {}
   featured: boolean;
 
 }
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 
 <<<<<<< HEAD
 const CareersPage: React.FC = () => {
+<<<<<<< HEAD
   const [selectedDepartment, setSelectedDepartment] = useState('all);
 
   const [selectedLocation, setSelectedLocation] = useState('all);
@@ -544,10 +550,13 @@ const CareersPage: React.FC = () => {}
 
   ];
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   return (
 
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />
         <meta name="keywords" content="careers, jobs, AI engineer, quantum computing, tech jobs, remote work, engineering positions />
@@ -976,6 +985,20 @@ const CareersPage: React.FC = () => {}
               ))}
 
             </div>  ));)
+=======
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Careers services from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Careers</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 };
 
 export default CareersPage;

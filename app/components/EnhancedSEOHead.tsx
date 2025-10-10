@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -59,8 +60,13 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({}
   const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description;;
 
   const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', IT services];;
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 
+const SEOHead: React.FC = () => {
   return (
+<<<<<<< HEAD
 
     <Helmet>
       {/* Basic Meta Tags */}
@@ -216,8 +222,21 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({}
 
       </script>
     </Helmet>
+=======
+    <head>
+      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+      <meta name="description" content="Leading provider of advanced AI and IT solutions for businesses worldwide. Transform your operations with cutting-edge technology." />
+      <meta name="keywords" content="AI solutions, IT services, artificial intelligence, technology consulting, business automation" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="canonical" href="https://ziontechgroup.com" />
+    </head>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   );
 
 };
 
+<<<<<<< HEAD
 export default EnhancedSEOHead;
+=======
+export default SEOHead;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8

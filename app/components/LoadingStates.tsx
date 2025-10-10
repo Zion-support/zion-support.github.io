@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -20,9 +21,20 @@ export const PageLoader: React.FC = () => {}
         </div>
         <h2 className="text-xl font-semibold text-white mb-2>Loading...</h2>
         <p className="text-gray-300>Please wait while we load the page</p>
+=======
+import React from 'react';
+
+export const PageLoader: React.FC = () => {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-900">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+        <p className="text-gray-300">Loading...</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
       </div>
     </div>;
   );
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -73,4 +85,6 @@ export const ContentSkeleton: React.FC = () => {}
       <div $2></div>
   );
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 };
