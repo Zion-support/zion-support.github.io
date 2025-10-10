@@ -89,7 +89,7 @@ export async function registerServiceWorker();
             // Content cached for offline use;
             if (config.onSuccess) {}
               config.onSuccess(registration);}
-export async function registerServiceWorker(confi,;
+export async function registerServiceWorker(confi,
   g: ServiceWorkerConfig = {});
 ): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   }
@@ -200,14 +200,14 @@ export function clearCaches(): void {/* TODO: Fix JSX expression */}
  * Get service worker registration status;
  */;
 export async function getServiceWorkerStatus(): Promise<{
-    supported: boolean,;
+    supported: boolean,
   registered: boolean,
   }
   active: boolean,}
 }> {
     if (!('serviceWorker' in navigator)) {
     return {
-      supported: false,;
+      supported: false,
       registered: false,
   }
 export async function getServiceWorkerStatus(): Promise<{}
@@ -217,33 +217,33 @@ export async function getServiceWorkerStatus(): Promise<{}
 }> {}
   if (!('serviceWorker' in navigator)) {}
     return {}
-      supported: false,;
-      registered: false,;
+      supported: false,
+      registered: false,
       active: false}
     }
   }
   try {}
     const registration = await navigator.serviceWorker.getRegistration();
     return {
-    supported: true,;
+    supported: true,
       registered: !!registration
   }
       active: !!registration?.active}
     }
   } catch {
     return {
-      supported: true,;
+      supported: true,
       registered: false,
   }
     return {}
-      supported: true,;
-      registered: !!registration,;
+      supported: true,
+      registered: !!registration,
       active: !!registration?.active}
     }
   } catch {}
     return {}
-      supported: true,;
-      registered: false,;
+      supported: true,
+      registered: false,
       active: false}
     }
 export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expression */}

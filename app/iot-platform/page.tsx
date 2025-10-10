@@ -4,28 +4,27 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-},;
+},
     {
-    icon: Clock,;
-      title: '24/7 Monitoring',;
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',;
+    icon: Clock,
+      title: '24/7 Monitoring',
+      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
   }
-    },;
+    },
     {}
     }
-  ];
+    ];
 return (
             <p>
               Our IoT platform provides everything you need to build, deploy, and scale;
               Internet of Things solutions for any industry or use case.;
             </p>
           </div>
-
-                  ))}
+              ))}
                 </ul>
 </div>
-            ))}
+              ))}
 
           </div>
         </div>
@@ -38,7 +37,7 @@ return (
               IoT Use Cases;
             </h2>
             <p>
-              Our IoT platform supports a wide range of industries and applications,;
+              Our IoT platform supports a wide range of industries and applications,
               from smart manufacturing to connected cities.;
             </p>
           </div>
@@ -51,7 +50,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -63,7 +62,7 @@ return (
               Why Choose Our IoT Platform?;
             </h2>
             <p>
-              Experience the benefits of a comprehensive IoT platform designed for scale,;
+              Experience the benefits of a comprehensive IoT platform designed for scale,
               security, and performance.;
             </p>
           </div>
@@ -77,7 +76,7 @@ return (
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

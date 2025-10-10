@@ -24,7 +24,7 @@ const BlockchainPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses'
     }
-  ];
+    ];
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -62,7 +62,7 @@ const BlockchainPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
-          ))}
+              ))}
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -74,7 +74,7 @@ const BlockchainPage: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
 {/* Key Benefits */}
@@ -120,7 +120,7 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Services by Category */}
+        {/* Services by Category */},
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,8 +156,8 @@ const BlockchainPage: React.FC = () => {
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
-                            </li>
-                          ))}
+                            </div>
+              ))}
                         </ul>
                       </div>
                       <div className="mb-4">
@@ -166,8 +166,8 @@ const BlockchainPage: React.FC = () => {
                           {service.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
-                            </span>
-                          ))}
+                            </div>
+              ))}
                         </div>
                       </div>
                       <div className="mb-6">
@@ -177,19 +177,19 @@ const BlockchainPage: React.FC = () => {
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
-                            </li>
-                          ))}
+                            </div>
+              ))}
                         </ul>
                       </div>
                       <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors">
                         Get Blockchain Quote,
   </
                     </div>
-                  ))}
+              ))}
               </div>
             </div>
-          </section>
-        ))}
+          </div>
+              ))},
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">

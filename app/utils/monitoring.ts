@@ -15,11 +15,11 @@ export interface PerformanceMetrics {
   }
 }
 export interface ErrorReport {
-    message: string,;
+    message: string,
   stack?: string;
   component?: string;
-  timestamp: number,;
-  userAgent: string,;
+  timestamp: number,
+  userAgent: string,
   url: string,
   }
 }
@@ -129,10 +129,10 @@ class MonitoringService {}
     // Global error handler;
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message,;
-        stack: event.error?.stack,;
-        timestamp: Date.now(),;
-        userAgent: navigator.userAgent,;
+        message: event.message,
+        stack: event.error?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
   }
       });
@@ -140,9 +140,9 @@ class MonitoringService {}
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({}
-        message: `Unhandled Promise Rejection: ${event.reason}`,;
-        timestamp: Date.now(),;
-        userAgent: navigator.userAgent,;
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href,
       });
     });
@@ -160,7 +160,7 @@ class MonitoringService {}
     // Send to analytics (if configured);
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 1000 : value),;
+        value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
   }
       });

@@ -128,8 +128,8 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
           </div>
           <ul className="space-y-1">
             {alerts.map((alert, index) => (
-              <li key={index} className="text-red-300 text-sm">• {alert}</li>
-            ))}
+              <li key={index} className="text-red-300 text-sm">• {alert}</div>
+              ))}
           </ul>
         </div>
       )}

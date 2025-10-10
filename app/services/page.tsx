@@ -194,14 +194,14 @@ const ServicesPage: React.FC = () => {
       marketPrice: '$200-600/month',
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
     }
-  ];
+    ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
-  ];
+    ];
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -256,7 +256,7 @@ const ServicesPage: React.FC = () => {
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
-                    ))}
+              ))}
                   </select>
                 </div>
               </div>
@@ -293,7 +293,7 @@ const ServicesPage: React.FC = () => {
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
+              ))}
                     </ul>
                   </div>
 
@@ -306,7 +306,7 @@ const ServicesPage: React.FC = () => {
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
                           </li>
-                        ))}
+              ))}
                       </ul>
                     </div>
                   )}

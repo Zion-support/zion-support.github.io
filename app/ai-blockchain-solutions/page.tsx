@@ -30,7 +30,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+    ];
   return (
     <React.Fragment>
       <Helmet>
@@ -85,8 +85,8 @@ const AiBlockchainSolutionsPage: React.FC = () => {
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
-                    ))}
+                      </div>
+              ))}
                   </ul>
                 </div>
               ))}
@@ -119,11 +119,11 @@ const AiBlockchainSolutionsPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
-                  ))}
+                    </div>
+              ))}
                 </ul>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -144,7 +144,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

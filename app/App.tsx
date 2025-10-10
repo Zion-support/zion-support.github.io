@@ -6,13 +6,8 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
-<<<<<<< HEAD
-// Lazy load pages for better performance
-
-=======
 
 // Lazy load pages for better performance
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -25,13 +20,8 @@ const CareersPage = lazy(() => import('./careers/page'));
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
-<<<<<<< HEAD
-// AI Services
-
-=======
 
 // AI Services
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -44,10 +34,6 @@ const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/pag
 const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
-<<<<<<< HEAD
-// IT Services
-
-=======
 
 // Additional AI Services
 const AiAnalyticsPage = lazy(() => import('./ai-analytics/page'));
@@ -66,16 +52,11 @@ const AiVoiceSolutionsPage = lazy(() => import('./ai-voice-solutions/page'));
 const AiHrSolutionsPage = lazy(() => import('./ai-hr-solutions/page'));
 
 // IT Services
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
 const ItServicesPage = lazy(() => import('./it-services/page'));
 const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
 const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-<<<<<<< HEAD
-// Emerging Technologies
-
-=======
 
 // Additional IT Services
 const ApiDevelopmentPage = lazy(() => import('./api/page'));
@@ -88,20 +69,17 @@ const CustomSoftwarePage = lazy(() => import('./custom-development/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ItAssetManagementPage = lazy(() => import('./it-asset-management/page'));
 const PerformanceOptimizationPage = lazy(() => import('./performance-optimization/page'));
-const ApiDevelopmentPage = lazy(() => import('./api-development/page'));
+const ApiDevelopmentPage2 = lazy(() => import('./api-development/page'));
 const CybersecuritySolutionsPage = lazy(() => import('./cybersecurity-solutions/page'));
 const DataAnalyticsBiPage = lazy(() => import('./data-analytics-bi/page'));
-const CustomSoftwarePage = lazy(() => import('./custom-software/page'));
+const CustomSoftwarePage2 = lazy(() => import('./custom-software/page'));
 
 // Emerging Technologies
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
 const BlockchainPage = lazy(() => import('./blockchain/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
-<<<<<<< HEAD
-=======
 
 // Additional Emerging Technologies
 const FiveGImplementationPage = lazy(() => import('./5g-implementation/page'));
@@ -110,23 +88,15 @@ const AiHolographicWorkspacePage = lazy(() => import('./ai-holographic-workspace
 const AiBlockchainSolutionsPage = lazy(() => import('./ai-blockchain-solutions/page'));
 const MachineLearningPage = lazy(() => import('./machine-learning/page'));
 const IotPage = lazy(() => import('./iot/page'));
-
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
 // Micro SaaS
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 
 // Support Pages
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
 const DocsPage = lazy(() => import('./docs/page'));
 const ApiDocsPage = lazy(() => import('./api-docs/page'));
 const SupportPage = lazy(() => import('./support/page'));
 const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
-<<<<<<< HEAD
-=======
 
 // Additional Important Pages
 const FaqPage = lazy(() => import('./faq/page'));
@@ -139,8 +109,6 @@ const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const DigitalTransformationPage = lazy(() => import('./digital-transformation/page'));
 const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
-
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
 // Loading component
 const AppLoadingSpinner = () => (
   <LoadingSpinner />
@@ -215,10 +183,10 @@ const App: React.FC = () => {
                 <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                 <Route path="/it-asset-management" element={<ItAssetManagementPage />} />
                 <Route path="/performance-optimization" element={<PerformanceOptimizationPage />} />
-                <Route path="/api-development" element={<ApiDevelopmentPage />} />
+                <Route path="/api-development" element={<ApiDevelopmentPage2 />} />
                 <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                 <Route path="/data-analytics-bi" element={<DataAnalyticsBiPage />} />
-                <Route path="/custom-software" element={<CustomSoftwarePage />} />
+                <Route path="/custom-software" element={<CustomSoftwarePage2 />} />
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
@@ -234,18 +202,12 @@ const App: React.FC = () => {
                 <Route path="/iot" element={<IotPage />} />
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
-<<<<<<< HEAD
-=======
                 {/* Additional Important Pages */}
                 <Route path="/faq" element={<FaqPage />} />
                 <Route path="/demo" element={<DemoPage />} />
@@ -257,7 +219,6 @@ const App: React.FC = () => {
                 <Route path="/enterprise" element={<EnterprisePage />} />
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/edge-computing" element={<EdgeComputingPage />} />
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
               </Routes>
             </Suspense>
           </div>
@@ -265,10 +226,5 @@ const App: React.FC = () => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-<<<<<<< HEAD
-}
-=======
 };
-
->>>>>>> cursor/website-audit-and-update-with-deployment-c4cd
 export default App;

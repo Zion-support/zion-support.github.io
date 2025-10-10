@@ -45,12 +45,7 @@ const AiServicesPage: React.FC = () => {
         'CRM integration',
         'Real-time learning'
       ],
-      benefits: [
-        'Reduce support costs by 60%',
-        '24/7 availability',
-        'Instant responses',
-        'Scalable solutions'
-      ],
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
       category: 'Customer Service',
       popular: true,
       icon: MessageSquare
@@ -68,12 +63,7 @@ const AiServicesPage: React.FC = () => {
         'SEO optimization',
         'Brand voice customization'
       ],
-      benefits: [
-        'Save 80% content creation time',
-        'Consistent brand voice',
-        'SEO optimization',
-        'Multi-platform publishing'
-      ],
+      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
       category: 'Content',
       popular: true,
       icon: Brain
@@ -91,12 +81,7 @@ const AiServicesPage: React.FC = () => {
         'Anomaly detection',
         'Custom data models'
       ],
-      benefits: [
-        'Data-driven insights',
-        'Predictive forecasting',
-        'Automated reporting',
-        'ROI optimization'
-      ],
+      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization'],
       category: 'Analytics',
       popular: false,
       icon: BarChart
@@ -114,12 +99,7 @@ const AiServicesPage: React.FC = () => {
         'Video analytics',
         'Real-time processing'
       ],
-      benefits: [
-        'Automated quality control',
-        'Enhanced security',
-        'Real-time monitoring',
-        'Cost reduction'
-      ],
+      benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
       category: 'Computer Vision',
       popular: false,
       icon: Eye
@@ -137,12 +117,7 @@ const AiServicesPage: React.FC = () => {
         'Call analytics',
         'Multi-language support'
       ],
-      benefits: [
-        'Improved accessibility',
-        'Voice automation',
-        'Call quality insights',
-        'Multi-language support'
-      ],
+      benefits: ['Improved accessibility', 'Voice automation', 'Call quality insights', 'Multi-language support'],
       category: 'Voice AI',
       popular: false,
       icon: Mic
@@ -160,12 +135,7 @@ const AiServicesPage: React.FC = () => {
         'Exception handling',
         'Performance monitoring'
       ],
-      benefits: [
-        'Process efficiency',
-        'Error reduction',
-        'Cost savings',
-        'Scalable automation'
-      ],
+      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
       category: 'Automation',
       popular: true,
       icon: Zap
@@ -183,12 +153,7 @@ const AiServicesPage: React.FC = () => {
         'Anomaly detection',
         'Automated alert systems'
       ],
-      benefits: [
-        'Reduce fraud losses by 85%',
-        'Real-time protection',
-        'False positive reduction',
-        'Compliance ready'
-      ],
+      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready'],
       category: 'Security',
       popular: true,
       icon: Shield
@@ -206,12 +171,7 @@ const AiServicesPage: React.FC = () => {
         'Cost reduction analysis',
         'Real-time monitoring'
       ],
-      benefits: [
-        'Reduce downtime by 70%',
-        'Extend equipment life',
-        'Optimize maintenance costs',
-        'Prevent catastrophic failures'
-      ],
+      benefits: ['Reduce downtime by 70%', 'Extend equipment life', 'Optimize maintenance costs', 'Prevent catastrophic failures'],
       category: 'Industrial AI',
       popular: false,
       icon: Settings
@@ -229,12 +189,7 @@ const AiServicesPage: React.FC = () => {
         'A/B testing automation',
         'Cross-platform personalization'
       ],
-      benefits: [
-        'Increase conversions by 40%',
-        'Improve customer engagement',
-        'Higher customer lifetime value',
-        'Automated optimization'
-      ],
+      benefits: ['Increase conversions by 40%', 'Improve customer engagement', 'Higher customer lifetime value', 'Automated optimization'],
       category: 'Marketing',
       popular: true,
       icon: Target
@@ -252,12 +207,7 @@ const AiServicesPage: React.FC = () => {
         'Supplier risk assessment',
         'Cost optimization'
       ],
-      benefits: [
-        'Reduce inventory costs by 30%',
-        'Improve delivery times',
-        'Minimize stockouts',
-        'Optimize supplier relationships'
-      ],
+      benefits: ['Reduce inventory costs by 30%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],
       category: 'Supply Chain',
       popular: false,
       icon: Box
@@ -275,12 +225,7 @@ const AiServicesPage: React.FC = () => {
         'Treatment recommendations',
         'HIPAA compliance'
       ],
-      benefits: [
-        'Improve diagnostic accuracy',
-        'Reduce diagnostic time',
-        'Early disease detection',
-        'Better patient outcomes'
-      ],
+      benefits: ['Improve diagnostic accuracy', 'Reduce diagnostic time', 'Early disease detection', 'Better patient outcomes'],
       category: 'Healthcare',
       popular: false,
       icon: Heart
@@ -298,12 +243,7 @@ const AiServicesPage: React.FC = () => {
         'Algorithmic trading',
         'Compliance monitoring'
       ],
-      benefits: [
-        'Improve investment returns',
-        'Reduce financial risk',
-        'Automated trading strategies',
-        'Real-time market analysis'
-      ],
+      benefits: ['Improve investment returns', 'Reduce financial risk', 'Automated trading strategies', 'Real-time market analysis'],
       category: 'Finance',
       popular: true,
       icon: TrendingUp
@@ -321,12 +261,7 @@ const AiServicesPage: React.FC = () => {
         'Language translation',
         'Document summarization'
       ],
-      benefits: [
-        'Automate text processing',
-        'Extract business insights',
-        'Improve customer understanding',
-        'Multi-language support'
-      ],
+      benefits: ['Automate text processing', 'Extract business insights', 'Improve customer understanding', 'Multi-language support'],
       category: 'Language Processing',
       popular: false,
       icon: FileText
@@ -344,12 +279,7 @@ const AiServicesPage: React.FC = () => {
         'Process optimization',
         'Integration capabilities'
       ],
-      benefits: [
-        'Reduce manual work by 90%',
-        'Improve accuracy',
-        '24/7 operation',
-        'Scalable automation'
-      ],
+      benefits: ['Reduce manual work by 90%', 'Improve accuracy', '24/7 operation', 'Scalable automation'],
       category: 'Automation',
       popular: true,
       icon: Cpu
@@ -367,12 +297,7 @@ const AiServicesPage: React.FC = () => {
         'Lifetime value calculation',
         'Segmentation analysis'
       ],
-      benefits: [
-        'Improve customer retention',
-        'Increase customer lifetime value',
-        'Predict customer behavior',
-        'Optimize marketing campaigns'
-      ],
+      benefits: ['Improve customer retention', 'Increase customer lifetime value', 'Predict customer behavior', 'Optimize marketing campaigns'],
       category: 'Customer Analytics',
       popular: true,
       icon: Users
@@ -390,12 +315,7 @@ const AiServicesPage: React.FC = () => {
         'Code quality analysis',
         'Regression testing'
       ],
-      benefits: [
-        'Reduce testing time by 80%',
-        'Improve software quality',
-        'Automated test maintenance',
-        'Faster release cycles'
-      ],
+      benefits: ['Reduce testing time by 80%', 'Improve software quality', 'Automated test maintenance', 'Faster release cycles'],
       category: 'Software Testing',
       popular: false,
       icon: CheckCircle
@@ -413,12 +333,7 @@ const AiServicesPage: React.FC = () => {
         'Renewable energy integration',
         'Cost optimization'
       ],
-      benefits: [
-        'Reduce energy costs by 25%',
-        'Improve energy efficiency',
-        'Optimize renewable usage',
-        'Environmental sustainability'
-      ],
+      benefits: ['Reduce energy costs by 25%', 'Improve energy efficiency', 'Optimize renewable usage', 'Environmental sustainability'],
       category: 'Energy',
       popular: false,
       icon: Zap
@@ -436,12 +351,7 @@ const AiServicesPage: React.FC = () => {
         'Workforce planning',
         'Skills gap analysis'
       ],
-      benefits: [
-        'Improve hiring decisions',
-        'Reduce employee turnover',
-        'Optimize workforce planning',
-        'Enhance employee satisfaction'
-      ],
+      benefits: ['Improve hiring decisions', 'Reduce employee turnover', 'Optimize workforce planning', 'Enhance employee satisfaction'],
       category: 'Human Resources',
       popular: false,
       icon: Users
@@ -459,12 +369,7 @@ const AiServicesPage: React.FC = () => {
         'DeFi protocol analysis',
         'Risk assessment'
       ],
-      benefits: [
-        'Better investment decisions',
-        'Risk mitigation',
-        'Market opportunity identification',
-        'Compliance monitoring'
-      ],
+      benefits: ['Better investment decisions', 'Risk mitigation', 'Market opportunity identification', 'Compliance monitoring'],
       category: 'Blockchain',
       popular: false,
       icon: Link
@@ -482,12 +387,7 @@ const AiServicesPage: React.FC = () => {
         'Offline capabilities',
         'Distributed computing'
       ],
-      benefits: [
-        'Reduce latency by 90%',
-        'Improve response times',
-        'Enable offline AI',
-        'Reduce bandwidth costs'
-      ],
+      benefits: ['Reduce latency by 90%', 'Improve response times', 'Enable offline AI', 'Reduce bandwidth costs'],
       category: 'Edge Computing',
       popular: false,
       icon: Server
@@ -508,12 +408,7 @@ const AiServicesPage: React.FC = () => {
         'Custom model training',
         'API integration for applications'
       ],
-      benefits: [
-        'Automate video content processing',
-        'Improve content discoverability',
-        'Enhanced video search capabilities',
-        'Real-time content monitoring'
-      ],
+      benefits: ['Automate video content processing', 'Improve content discoverability', 'Enhanced video search capabilities', 'Real-time content monitoring'],
       category: 'Computer Vision',
       popular: true,
       icon: Eye
@@ -534,12 +429,7 @@ const AiServicesPage: React.FC = () => {
         'API integration for applications',
         'Batch processing capabilities'
       ],
-      benefits: [
-        'Create engaging audio content',
-        'Improve accessibility',
-        'Automate voice generation',
-        'Professional audio quality'
-      ],
+      benefits: ['Create engaging audio content', 'Improve accessibility', 'Automate voice generation', 'Professional audio quality'],
       category: 'Voice AI',
       popular: true,
       icon: Mic
@@ -560,12 +450,7 @@ const AiServicesPage: React.FC = () => {
         'Scalable architecture',
         'Integration with existing systems'
       ],
-      benefits: [
-        'Increase user engagement by 200%',
-        'Improve conversion rates',
-        'Personalized user experience',
-        'Better content discovery'
-      ],
+      benefits: ['Increase user engagement by 200%', 'Improve conversion rates', 'Personalized user experience', 'Better content discovery'],
       category: 'Personalization',
       popular: true,
       icon: Target
@@ -586,12 +471,7 @@ const AiServicesPage: React.FC = () => {
         'API integration',
         'Detailed analytics and reporting'
       ],
-      benefits: [
-        'Understand customer emotions',
-        'Monitor brand sentiment',
-        'Improve customer experience',
-        'Data-driven insights'
-      ],
+      benefits: ['Understand customer emotions', 'Monitor brand sentiment', 'Improve customer experience', 'Data-driven insights'],
       category: 'Language Processing',
       popular: true,
       icon: Heart
@@ -612,12 +492,7 @@ const AiServicesPage: React.FC = () => {
         'White-label solutions',
         '24/7 support and maintenance'
       ],
-      benefits: [
-        'Reduce support costs by 70%',
-        'Improve customer satisfaction',
-        '24/7 availability',
-        'Scalable customer service'
-      ],
+      benefits: ['Reduce support costs by 70%', 'Improve customer satisfaction', '24/7 availability', 'Scalable customer service'],
       category: 'Customer Service',
       popular: true,
       icon: MessageSquare
@@ -638,12 +513,7 @@ const AiServicesPage: React.FC = () => {
         'API integration',
         'Detailed moderation reports'
       ],
-      benefits: [
-        'Maintain platform safety',
-        'Reduce manual moderation',
-        'Consistent policy enforcement',
-        'Real-time content protection'
-      ],
+      benefits: ['Maintain platform safety', 'Reduce manual moderation', 'Consistent policy enforcement', 'Real-time content protection'],
       category: 'Content Moderation',
       popular: false,
       icon: Shield
@@ -664,12 +534,7 @@ const AiServicesPage: React.FC = () => {
         'Model performance monitoring',
         'A/B testing capabilities'
       ],
-      benefits: [
-        'Improve business forecasting',
-        'Data-driven decision making',
-        'Automated model development',
-        'Better risk assessment'
-      ],
+      benefits: ['Improve business forecasting', 'Data-driven decision making', 'Automated model development', 'Better risk assessment'],
       category: 'Analytics',
       popular: true,
       icon: BarChart
@@ -690,12 +555,7 @@ const AiServicesPage: React.FC = () => {
         'Batch processing capabilities',
         'API integration for automation'
       ],
-      benefits: [
-        'Process documents 10x faster',
-        'Automated data extraction',
-        'Reduce manual errors',
-        'Better document insights'
-      ],
+      benefits: ['Process documents 10x faster', 'Automated data extraction', 'Reduce manual errors', 'Better document insights'],
       category: 'Document Processing',
       popular: true,
       icon: FileText
@@ -716,12 +576,7 @@ const AiServicesPage: React.FC = () => {
         'Integration with CRM systems',
         'Automated insights and alerts'
       ],
-      benefits: [
-        'Improve conversation quality',
-        'Better customer understanding',
-        'Optimize agent performance',
-        'Data-driven insights'
-      ],
+      benefits: ['Improve conversation quality', 'Better customer understanding', 'Optimize agent performance', 'Data-driven insights'],
       category: 'Customer Analytics',
       popular: true,
       icon: Users
@@ -742,12 +597,7 @@ const AiServicesPage: React.FC = () => {
         'Integration with ERP systems',
         'Custom optimization models'
       ],
-      benefits: [
-        'Reduce supply chain costs by 30%',
-        'Improve delivery efficiency',
-        'Minimize inventory waste',
-        'Better supplier management'
-      ],
+      benefits: ['Reduce supply chain costs by 30%', 'Improve delivery efficiency', 'Minimize inventory waste', 'Better supplier management'],
       category: 'Supply Chain',
       popular: false,
       icon: Box
@@ -768,12 +618,7 @@ const AiServicesPage: React.FC = () => {
         'Integration with EMR systems',
         'Clinical decision support'
       ],
-      benefits: [
-        'Improve diagnostic accuracy',
-        'Reduce diagnostic time',
-        'Early disease detection',
-        'Better patient outcomes'
-      ],
+      benefits: ['Improve diagnostic accuracy', 'Reduce diagnostic time', 'Early disease detection', 'Better patient outcomes'],
       category: 'Healthcare',
       popular: false,
       icon: Heart
@@ -794,12 +639,7 @@ const AiServicesPage: React.FC = () => {
         'Regulatory compliance',
         'Advanced reporting and analytics'
       ],
-      benefits: [
-        'Improve investment decisions',
-        'Better risk management',
-        'Automated market analysis',
-        'Enhanced portfolio performance'
-      ],
+      benefits: ['Improve investment decisions', 'Better risk management', 'Automated market analysis', 'Enhanced portfolio performance'],
       category: 'Finance',
       popular: true,
       icon: TrendingUp
@@ -820,12 +660,7 @@ const AiServicesPage: React.FC = () => {
         'Edge computing capabilities',
         'Comprehensive reporting'
       ],
-      benefits: [
-        'Optimize IoT operations',
-        'Prevent equipment failures',
-        'Reduce maintenance costs',
-        'Better device insights'
-      ],
+      benefits: ['Optimize IoT operations', 'Prevent equipment failures', 'Reduce maintenance costs', 'Better device insights'],
       category: 'IoT & Analytics',
       popular: false,
       icon: Cpu
@@ -846,12 +681,7 @@ const AiServicesPage: React.FC = () => {
         'Integration with messaging platforms',
         'Custom conversation training'
       ],
-      benefits: [
-        'Create natural conversations',
-        'Improve user engagement',
-        'Automate customer interactions',
-        'Better conversation quality'
-      ],
+      benefits: ['Create natural conversations', 'Improve user engagement', 'Automate customer interactions', 'Better conversation quality'],
       category: 'Conversational AI',
       popular: true,
       icon: MessageCircle
@@ -872,12 +702,7 @@ const AiServicesPage: React.FC = () => {
         'Custom testing frameworks',
         'Detailed test analytics'
       ],
-      benefits: [
-        'Reduce testing time by 80%',
-        'Improve test coverage',
-        'Automated bug detection',
-        'Faster release cycles'
-      ],
+      benefits: ['Reduce testing time by 80%', 'Improve test coverage', 'Automated bug detection', 'Faster release cycles'],
       category: 'Software Testing',
       popular: true,
       icon: CheckCircle
@@ -898,12 +723,7 @@ const AiServicesPage: React.FC = () => {
         'Custom knowledge models',
         'Advanced analytics and insights'
       ],
-      benefits: [
-        'Improve knowledge discovery',
-        'Automated content organization',
-        'Better information retrieval',
-        'Enhanced collaboration'
-      ],
+      benefits: ['Improve knowledge discovery', 'Automated content organization', 'Better information retrieval', 'Enhanced collaboration'],
       category: 'Knowledge Management',
       popular: false,
       icon: FileText
@@ -924,12 +744,7 @@ const AiServicesPage: React.FC = () => {
         'A/B testing for strategies',
         'Detailed analytics and reporting'
       ],
-      benefits: [
-        'Reduce customer churn by 40%',
-        'Improve retention strategies',
-        'Better customer insights',
-        'Data-driven retention'
-      ],
+      benefits: ['Reduce customer churn by 40%', 'Improve retention strategies', 'Better customer insights', 'Data-driven retention'],
       category: 'Customer Analytics',
       popular: true,
       icon: Users
@@ -950,12 +765,7 @@ const AiServicesPage: React.FC = () => {
         'Natural language queries',
         'Advanced visualization options'
       ],
-      benefits: [
-        'Save 90% report creation time',
-        'Automated data analysis',
-        'Consistent reporting',
-        'Better business insights'
-      ],
+      benefits: ['Save 90% report creation time', 'Automated data analysis', 'Consistent reporting', 'Better business insights'],
       category: 'Reporting & Analytics',
       popular: true,
       icon: BarChart
@@ -976,12 +786,7 @@ const AiServicesPage: React.FC = () => {
         'API integration capabilities',
         'Advanced voice customization'
       ],
-      benefits: [
-        'Hands-free business operations',
-        'Improve accessibility',
-        'Automate voice interactions',
-        'Enhanced user experience'
-      ],
+      benefits: ['Hands-free business operations', 'Improve accessibility', 'Automate voice interactions', 'Enhanced user experience'],
       category: 'Voice AI',
       popular: true,
       icon: Mic
@@ -1002,17 +807,12 @@ const AiServicesPage: React.FC = () => {
         'Integration with CMS platforms',
         'Custom content templates'
       ],
-      benefits: [
-        'Scale content production',
-        'Maintain brand consistency',
-        'Improve SEO performance',
-        'Reduce content costs'
-      ],
+      benefits: ['Scale content production', 'Maintain brand consistency', 'Improve SEO performance', 'Reduce content costs'],
       category: 'Content Generation',
       popular: true,
       icon: FileText
     }
-  ];
+    ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1043,7 +843,7 @@ const AiServicesPage: React.FC = () => {
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
     { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
-  ];
+    ];
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
@@ -1087,7 +887,7 @@ const AiServicesPage: React.FC = () => {
                   >
                     {category.name} ({category.count})
                   </button>
-                ))}
+              ))}
               </div>
             </div>
 
@@ -1128,7 +928,7 @@ const AiServicesPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
-                      ))}
+              ))}
                     </ul>
                   </div>
 

@@ -38,8 +38,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       
-      {/* Structured Data */}
-      {structuredData && (
+      {/* Structured Data */},
+        {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

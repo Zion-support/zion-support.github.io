@@ -8,43 +8,43 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 const technologies = [
-    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },;
-    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },;
-    { name: 'Python/Django', icon: Globe, description: 'Backend development' },;
-    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },;
-    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },;
+    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
+    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
+    { name: 'Python/Django', icon: Globe, description: 'Backend development' },
+    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
+    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
+    ];
 const process = [
     {
-    step: '01',;
-      title: 'Discovery & Planning',;
-      description: 'We analyze your requirements and create a detailed project plan',;
+    step: '01',
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a detailed project plan',
       icon: BarChart,
   }
-    },;
+    },
     {
-    step: '02',;
-      title: 'Design & Prototyping',;
-      description: 'Create wireframes and prototypes to visualize your solution',;
+    step: '02',
+      title: 'Design & Prototyping',
+      description: 'Create wireframes and prototypes to visualize your solution',
       icon: Code,
   }
-    },;
+    },
     {
-    step: '03',;
-      title: 'Development',;
-      description: 'Build your web application using modern technologies and best practices',;
+    step: '03',
+      title: 'Development',
+      description: 'Build your web application using modern technologies and best practices',
       icon: Globe,
   }
-    },;
+    },
     {
-    step: '04',;
-      title: 'Testing & Launch',;
-      description: 'Thorough testing and deployment with ongoing support',;
+    step: '04',
+      title: 'Testing & Launch',
+      description: 'Thorough testing and deployment with ongoing support',
       icon: Shield,
   }
     }
-  ];
+    ];
 return(<></>
 
       <SEOOptimizer;
@@ -97,7 +97,7 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
     }
-  ];
+    ];
 
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
@@ -106,7 +106,7 @@ const WebDevelopmentPage: React.FC = () => {
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
+    ];
 
   const process = [
     {
@@ -133,7 +133,7 @@ const WebDevelopmentPage: React.FC = () => {
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield
     }
-  ];
+    ];
 
   return (
     <>
@@ -172,8 +172,8 @@ const WebDevelopmentPage: React.FC = () => {
           <section className="text-center mb-16"></section>
             <h1>
               Web Development Services;</h1>
-            </h1>,;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,;
+            </h1>,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Build modern, scalable, and high-performance web applications with our expert development team.;
               From frontend to backend, we deliver solutions that drive business growth.;
             </p>
@@ -195,9 +195,9 @@ const WebDevelopmentPage: React.FC = () => {
 
                 Call +1 302 464 0950,
               </a>
-            </div>,;
-          </section>,;
-,;
+            </div>,
+          </section>,
+,
           {/* Services Grid */}
 
       />
@@ -258,21 +258,21 @@ const WebDevelopmentPage: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
                       <service>
                     </div>
-                    <div></div>
+                    <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2>
               Our Web Development Services;);
             </h2>);
 );
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
               {
     webServices.map((service, index) => (</div>
   }
                 <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6">,</div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,</div>
-                      <service.icon className="w-8 h-8 text-white" />,;
-                    </div>,;
+                      <service.icon className="w-8 h-8 text-white" />,
+                    </div>,
                     <div>,</div>
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
                       <div className={`font-semibold ${service.color}`}>{service.price}</div>
@@ -287,7 +287,7 @@ const WebDevelopmentPage: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
                       <service>
                     </div>
-                    <div></div>
+                    <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   <div className="mb-6"></div>
                     <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{
@@ -295,8 +295,8 @@ const WebDevelopmentPage: React.FC = () => {
   }
                         <li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
-                        </CheckCircle>
-                      ))}
+                        </div>
+              ))}
                     </ul>
                   </div>
                   {
@@ -315,8 +315,8 @@ const WebDevelopmentPage: React.FC = () => {
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
-                        </li>
-                      ))}
+                        </div>
+              ))}
                     </ul>
                   </div>
                   
@@ -328,9 +328,8 @@ const WebDevelopmentPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center text-gray-300">
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                             {benefit}
-                          </li>
-
-                        ))}
+                          </div>
+              ))}
                       </ul>
                     </div>
                   )}
@@ -343,8 +342,9 @@ const WebDevelopmentPage: React.FC = () => {
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >
                     Get Started,
-                  </a>,;
-                </div>))}
+                  </a>,
+                </div>
+              ))}
 
             </div>
           </section>
@@ -470,7 +470,7 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
         </main>
         <Footer>
-      </div>,;
+      </div>,
     </>);
 }
 export default WebDevelopmentPage;

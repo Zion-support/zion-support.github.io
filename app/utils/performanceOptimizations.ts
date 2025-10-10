@@ -2,13 +2,13 @@
 // Performance optimization utilities;
 // Debounce utility for performance;
 export const debounce = <T extends (...args: any[]) => any>(,
-  func: T,;
-  wait: number,;
+  func: T,
+  wait: number,
 ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {,;
-    clearTimeout(timeout),;
-  func: T,;
+  return (...args: Parameters<T>) => {,
+    clearTimeout(timeout),
+  func: T,
   wait: number
   }
 ): ((...args: Parameters<T>) => void) => {}
@@ -20,15 +20,15 @@ export const debounce = <T extends (...args: any[]) => any>(,
 }
 // Throttle utility for performance;
 export const throttle = <T extends (...args: any[]) => any>(,
-  func: T,;
-  limit: number,;
+  func: T,
+  limit: number,
 ): ((...args: Parameters<T>) => void) => {
-    let inThrottle: boolean,;
+    let inThrottle: boolean,
   return (...args: Parameters<T>) => {
-    if (!inThrottle) {,;
-      func(...args),;
+    if (!inThrottle) {,
+      func(...args),
       inThrottle = true;
-  func: T,;
+  func: T,
   limit: number
   }
 ): ((...args: Parameters<T>) => void) => {}
@@ -51,22 +51,22 @@ export const useIntersectionObserver = (;
       typeof window !== 'undefined';
         ? new IntersectionObserver(callback, {
     );
-            threshold: 0.1),;
+            threshold: 0.1),
             rootMargin: '50px'),
   }
         ? new IntersectionObserver(callback, {)}
-            threshold: 0.1,;
-            rootMargin: '50px',;
+            threshold: 0.1,
+            rootMargin: '50px',
             ...options}
           });
-        : null,;
+        : null,
     [callback, options];
   );
   const observe = useCallback(;
     (element: Element | null) => {
-    ,;
-      if (observer && element) {,;
-        observer.observe(element),;
+    ,
+      if (observer && element) {,
+        observer.observe(element),
   const observe = useCallback()
   }
     (element: Element | null) => {}
@@ -77,9 +77,9 @@ export const useIntersectionObserver = (;
 // Performance optimization utilities;
 // Debounce utility for performance;
 export const debounce = <T extends (...arg);
-  s: any[]) => any>(fun,;
-  c: T,;
-  wai,;
+  s: any[]) => any>(fun,
+  c: T,
+  wai,
   t: number;)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
@@ -87,9 +87,9 @@ export const debounce = <T extends (...arg);
 }
 // Throttle utility for performance;
 export const throttle = <T extends (...arg);
-  s: any[]) => any>(fun,;
-  c: T,;
-  limi,;
+  s: any[]) => any>(fun,
+  c: T,
+  limi,
   t: number;)
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
@@ -97,21 +97,21 @@ export const throttle = <T extends (...arg);
   }
 }
 // Intersection Observer hook for lazy loading;
-export const useIntersectionObserver = (callbac,;
+export const useIntersectionObserver = (callbac,
   k: (entrie),
-  s: IntersectionObserverEntry[]) => void,;
-  option,;
+  s: IntersectionObserverEntry[]) => void,
+  option,
   s: IntersectionObserverInit = {}
 ) => {/* TODO: Fix JSX expression */}
           });
-        : null,;
+        : null,
     [callback, options];
   );
   const observe = useCallback((elemen);
   t: Element | null) => {/* TODO: Fix JSX expression */}
       }
       return () => {}
-    },;
+    },
     [observer];
   );
   const disconnect = useCallback(() => {}
@@ -172,7 +172,7 @@ export const useLazyImage = (sr);
             img.src = src;
           }
         });
-      },;
+      },
       [src, isLoaded, isError];
     );
   );
@@ -222,8 +222,8 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({)}
-        fcp,;
-        lcp,;
+        fcp,
+        lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart}
       });
     }
@@ -263,8 +263,8 @@ export const useMemoryMonitoring = useCallback((...args) => {
       const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({);
-          usedJSHeapSize: memory.usedJSHeapSize),;
-          totalJSHeapSize: memory.totalJSHeapSize),;
+          usedJSHeapSize: memory.usedJSHeapSize),
+          totalJSHeapSize: memory.totalJSHeapSize),
 // Memory usage monitoring
   }
 export const useMemoryMonitoring = useCallback((...args) => {}
@@ -279,8 +279,8 @@ export const useMemoryMonitoring = useCallback((...args) => {}
       const memory = (performance as any).memory;
       if (memory) {}
         setMemoryInfo({)}
-          usedJSHeapSize: memory.usedJSHeapSize,;
-          totalJSHeapSize: memory.totalJSHeapSize,;
+          usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit}
         });
   );
@@ -419,9 +419,9 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
     // Calculate after page load;
     if (document.readyState === 'complete') {}
       setBundleSize({)}
-        totalSize,;
-        jsSize,;
-        cssSize,;
+        totalSize,
+        jsSize,
+        cssSize,
         imageSize}
       });
     }
@@ -438,19 +438,19 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
   return bundleSize;
 }
 export default {}
-  debounce,;
-  throttle,;
-  useIntersectionObserver,;
-  useLazyImage,;
-  usePerformanceMonitoring,;
-  useMemoryMonitoring,;
-  preloadResource,;
-  preloadCriticalResources,;
+  debounce,
+  throttle,
+  useIntersectionObserver,
+  useLazyImage,
+  usePerformanceMonitoring,
+  useMemoryMonitoring,
+  preloadResource,
+  preloadCriticalResources,
   useBundleSizeMonitoring}
 }
 }
 // Resource preloading utility;
-export const preloadResource = (hre,;
+export const preloadResource = (hre,
   f: string, a);
   s: string) => {/* TODO: Fix JSX expression */}
 }

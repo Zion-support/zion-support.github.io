@@ -10,34 +10,19 @@ const PrivacyPage: React.FC = () => {
     {
       category: 'Personal Information',
       icon: User,
-      items: [
-        'Name and contact information',
-        'Email address and phone number',
-        'Company and job title',
-        'Account credentials'
-      ]
+      items: ['Name and contact information', 'Email address and phone number', 'Company and job title', 'Account credentials']
     },
     {
       category: 'Usage Data',
       icon: Database,
-      items: [
-        'Website usage patterns',
-        'Service interaction data',
-        'Device and browser information',
-        'IP address and location data'
-      ]
+      items: ['Website usage patterns', 'Service interaction data', 'Device and browser information', 'IP address and location data']
     },
     {
       category: 'Technical Data',
       icon: Server,
-      items: [
-        'Log files and error reports',
-        'Performance metrics',
-        'Security event data',
-        'System configuration information'
-      ]
+      items: ['Log files and error reports', 'Performance metrics', 'Security event data', 'System configuration information']
     }
-  ];
+    ];
 
   const purposes = [
     {
@@ -60,7 +45,7 @@ const PrivacyPage: React.FC = () => {
       description: 'To analyze usage patterns and improve our services',
       icon: Eye
     }
-  ];
+    ];
 
   const rights = [
     {
@@ -93,7 +78,7 @@ const PrivacyPage: React.FC = () => {
       description: 'Object to certain types of processing',
       icon: Shield
     }
-  ];
+    ];
 
   const contactInfo = {
     email: 'privacy@ziontechgroup.com',
@@ -176,7 +161,7 @@ const PrivacyPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {item}
                       </li>
-                    ))}
+              ))}
                   </ul>
                 </div>
               ))}

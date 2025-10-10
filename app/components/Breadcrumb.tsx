@@ -15,7 +15,7 @@ const Breadcrumb: React.FC = () => {
   
   const breadcrumbItems = [
     { name: 'Home', path: '/', icon: Home }
-  ];
+    ];
 
   pathSegments.forEach((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
@@ -44,7 +44,7 @@ const Breadcrumb: React.FC = () => {
                 <span>{item.name}</span>
               </a>
             </li>
-          ))}
+              ))}
         </ol>
       </div>
     </nav>

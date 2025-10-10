@@ -4,11 +4,11 @@
  * Provides comprehensive SEO enhancements and monitoring;
  */;
 interface SEOConfig {
-    siteName: string,;
-  siteUrl: string,;
-  defaultTitle: string,;
-  defaultDescription: string,;
-  defaultImage: string,;
+    siteName: string,
+  siteUrl: string,
+  defaultTitle: string,
+  defaultDescription: string,
+  defaultImage: string,
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string
@@ -16,7 +16,7 @@ interface SEOConfig {
   googleTagManagerId?: string;}
 }
 interface PageSEOData {
-    title: string,;
+    title: string,
   description: string,
   }
 interface SEOConfig {}
@@ -41,12 +41,12 @@ interface PageSEOData {}
   modifiedTime?: string
   author?: string
   section?: string,
-  tags?: string[],;
+  tags?: string[],
   noindex?: boolean;
   nofollow?: boolean;}
 }
 class SEOOptimizer {
-    private config: SEOConfig,;
+    private config: SEOConfig,
   private currentPageData: PageSEOData | null = null,
   constructor(config: SEOConfig) {,
   }
@@ -75,7 +75,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Set page-specific SEO data;
    */;
   setPageData(data: PageSEOData): void {
-    ,;
+    ,
     this.currentPageData = data;
     this.updateMetaTags(),
   }
@@ -189,8 +189,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);}
-  private setMetaTag(nam,;
-  e: string, conten,;
+  private setMetaTag(nam,
+  e: string, conten,
   t: string, attribut);
   e: string = 'name'): void {/* TODO: Fix JSX expression */}`;
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
@@ -224,7 +224,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private setupStructuredData(): void {}
     this.addStructuredData(structuredData);
   private setupStructuredData(): void {/* TODO: Fix JSX expression */}`;
-  t: `${this.config.siteUrl}/search?q={search_term_string}`,;
+  t: `${this.config.siteUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string';
       }
     }
@@ -236,8 +236,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
     const structuredData = {
-      '@context': 'https: //schema.org',;
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
+      '@context': 'https: //schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle();
       description: this.generateDescription()
       url: this.currentPageData.url || window.location.href
@@ -247,14 +247,14 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private updateStructuredData(): void {}
     if (!this.currentPageData) return;
     const structuredData = {}
-      '@context': 'https://schema.org',;
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
-      headline: this.generateTitle(),;
-      description: this.generateDescription(),;
-      url: this.currentPageData.url || window.location.href,;
-      image: this.currentPageData.image || this.config.defaultImage,;
+      '@context': 'https://schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle(),
+      description: this.generateDescription(),
+      url: this.currentPageData.url || window.location.href,
+      image: this.currentPageData.image || this.config.defaultImage,
       publisher: {}
-        '@type': 'Organization',;
+        '@type': 'Organization',
         name: this.config.siteName,
         url: this.config.siteUrl}
       }
@@ -268,19 +268,19 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
         });
         datePublished: this.currentPageData.publishedTime,
-        dateModified: this.currentPageData.modifiedTime),;
-        articleSection: this.currentPageData.section),;
-        keywords: this.generateKeywords(),;
+        dateModified: this.currentPageData.modifiedTime),
+        articleSection: this.currentPageData.section),
+        keywords: this.generateKeywords(),
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {}
       Object.assign(structuredData, {)}
         author: {}
-// '@type': 'Person',;
+// '@type': 'Person',
 // name: this.currentPageData.author || this.config.siteName,
-        },;
-        datePublished: this.currentPageData.publishedTime,;
-        dateModified: this.currentPageData.modifiedTime,;
-        articleSection: this.currentPageData.section,;
+        },
+        datePublished: this.currentPageData.publishedTime,
+        dateModified: this.currentPageData.modifiedTime,
+        articleSection: this.currentPageData.section,
         keywords: this.generateKeywords(),
       });
   private updateStructuredData(): void {/* TODO: Fix JSX expression */}
@@ -288,14 +288,14 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     }
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
-        },;
-        datePublishe,;
-  d: this.currentPageData.publishedTime,;
-        dateModifie,;
-  d: this.currentPageData.modifiedTime,;
-        articleSectio,;
-  n: this.currentPageData.section,;
-        keyword,;
+        },
+        datePublishe,
+  d: this.currentPageData.publishedTime,
+        dateModifie,
+  d: this.currentPageData.modifiedTime,
+        articleSectio,
+  n: this.currentPageData.section,
+        keyword,
   s: this.generateKeywords(),
       });
     }
@@ -381,19 +381,19 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Track SEO-related metrics;
    */;
   private trackSEOMetric(metric: string, value: number): void {
-    ,;
-    if (typeof window !== 'undefined' && (window as any).gtag) {,;
+    ,
+    if (typeof window !== 'undefined' && (window as any).gtag) {,
       (window as any).gtag('event', 'seo_metric', {);
         metric_name: metric),
   }
   private trackSEOMetric(metric: string, value: number): void {}
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'seo_metric', {)}
-        metric_name: metric,;
-        metric_value: Math.round(value),;
+        metric_name: metric,
+        metric_value: Math.round(value),
         event_category: 'seo'}
       });
-  private trackSEOMetric(metri,;
+  private trackSEOMetric(metri,
   c: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}
       });
@@ -412,9 +412,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     // This would typically come from your CMS or routing system;
     return [;
       {}
-        url: this.config.siteUrl,;
-        lastmod: new Date().toISOString(),;
-        changefreq: 'daily',;
+        url: this.config.siteUrl,
+        lastmod: new Date().toISOString(),
+        changefreq: 'daily',
         priority: '1.0'}
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
   y: number }> {/* TODO: Fix JSX expression */}
@@ -432,20 +432,20 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 Allow: /}
 Sitemap: ${this.config.siteUrl}/sitemap.xml;
 # Disallow admin and private areas;
-Disallow: /admin/,;
-Disallow: /private/,;
-Disallow: /api/,;
-Disallow: /_next/,;
-Disallow: /static/`,;
+Disallow: /admin/,
+Disallow: /private/,
+Disallow: /api/,
+Disallow: /_next/,
+Disallow: /static/`,
   generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
   p: ${this.config.siteUrl}/sitemap.xml;
-# Disallow admin and private areas,;
+# Disallow admin and private areas,
   Disallow: /admin/,
-Disallo,;
+Disallo,
   w: /private/,
-Disallo,;
+Disallo,
   w: /api/,
-Disallo,;
+Disallo,
   w: /_next/,
 Disallo,`;
   w: /static/`,
@@ -456,9 +456,9 @@ Disallo,`;
   checkSEOIssues(): string[] {}
     const issues: string[] = []
     // Check title length
-    const title = document.title,,;
+    const title = document.title,,
     if (title.length < 30) {
-    ,;
+    ,
     // Check title length;
     const title = document.title
   }
@@ -528,12 +528,12 @@ const defaultConfig: SEOConfig = {
 // Default configuration
   }
 const defaultConfig: SEOConfig = {}
-  siteName: 'Zion Tech Group',;
-  siteUrl: 'https://zion.app',;
-  defaultTitle: 'Advanced AI and IT Solutions',;
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',;
-  defaultImage: 'https://zion.app/og-image.webp',;
-  twitterHandle: 'ZionTechGroup',;
+  siteName: 'Zion Tech Group',
+  siteUrl: 'https://zion.app',
+  defaultTitle: 'Advanced AI and IT Solutions',
+  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
+  defaultImage: 'https://zion.app/og-image.webp',
+  twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
 }
@@ -543,7 +543,7 @@ export default seoOptimizer;
   }
 }
 // Default configuration;
-const,;
+const,
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig);

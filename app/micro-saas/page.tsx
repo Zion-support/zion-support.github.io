@@ -23,12 +23,7 @@ const MicroSaasPage: React.FC = () => {
         'API access for custom integrations',
         'White-label solution available'
       ],
-      benefits: [
-        'Data-driven decision making',
-        'Real-time insights',
-        'Custom dashboards',
-        'Automated reporting'
-      ],
+      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
       category: 'Analytics',
       popular: true,
       users: 'Up to 25 users'
@@ -49,12 +44,7 @@ const MicroSaasPage: React.FC = () => {
         'Advanced analytics and conversation insights',
         'CRM integration and lead qualification'
       ],
-      benefits: [
-        '24/7 customer support',
-        'Reduced response time',
-        'Improved customer satisfaction',
-        'Lead generation'
-      ],
+      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation'],
       category: 'Communication',
       popular: true,
       users: 'Up to 50 users'
@@ -75,12 +65,7 @@ const MicroSaasPage: React.FC = () => {
         'Dark web monitoring and breach detection',
         '24/7 SOC (Security Operations Center) support'
       ],
-      benefits: [
-        'Proactive security',
-        'Automated response',
-        'Compliance assurance',
-        'Expert monitoring'
-      ],
+      benefits: ['Proactive security', 'Automated response', 'Compliance assurance', 'Expert monitoring'],
       category: 'Security',
       popular: false,
       users: 'Up to 100 users'
@@ -101,12 +86,7 @@ const MicroSaasPage: React.FC = () => {
         'Automated testing and recovery validation',
         'Global CDN for fast data access'
       ],
-      benefits: [
-        'Data protection',
-        'Fast recovery',
-        'Cost optimization',
-        'Compliance ready'
-      ],
+      benefits: ['Data protection', 'Fast recovery', 'Cost optimization', 'Compliance ready'],
       category: 'Storage',
       popular: false,
       users: 'Up to 30 users'
@@ -127,12 +107,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with accounting software (QuickBooks, Xero)',
         'Mobile app for on-the-go invoicing'
       ],
-      benefits: [
-        'Save 90% invoice creation time',
-        'Reduce payment delays',
-        'Automated follow-ups',
-        'Professional invoices'
-      ],
+      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices'],
       category: 'Finance',
       popular: true,
       users: 'Up to 10 users'
@@ -153,12 +128,7 @@ const MicroSaasPage: React.FC = () => {
         'Email sequence automation',
         'Lead source attribution and ROI tracking'
       ],
-      benefits: [
-        'Increase qualified leads by 300%',
-        'Automated lead nurturing',
-        'Better conversion rates',
-        'ROI optimization'
-      ],
+      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization'],
       category: 'Marketing',
       popular: true,
       users: 'Up to 20 users'
@@ -179,12 +149,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with popular tools (Slack, Teams, Jira)',
         'Custom reporting and dashboards'
       ],
-      benefits: [
-        'Improve project delivery by 40%',
-        'Better resource utilization',
-        'Predictive risk management',
-        'Enhanced team collaboration'
-      ],
+      benefits: ['Improve project delivery by 40%', 'Better resource utilization', 'Predictive risk management', 'Enhanced team collaboration'],
       category: 'Project Management',
       popular: true,
       users: 'Up to 15 users'
@@ -205,12 +170,7 @@ const MicroSaasPage: React.FC = () => {
         'Social listening and trend analysis',
         'Team collaboration and approval workflows'
       ],
-      benefits: [
-        'Increase engagement by 250%',
-        'Save 80% content creation time',
-        'Optimal posting times',
-        'Comprehensive analytics'
-      ],
+      benefits: ['Increase engagement by 250%', 'Save 80% content creation time', 'Optimal posting times', 'Comprehensive analytics'],
       category: 'Social Media',
       popular: true,
       users: 'Up to 5 users'
@@ -231,12 +191,7 @@ const MicroSaasPage: React.FC = () => {
         'Advanced analytics and reporting',
         'Integration with CRM and e-commerce platforms'
       ],
-      benefits: [
-        'Increase open rates by 60%',
-        'Automated personalization',
-        'Better deliverability',
-        'Comprehensive analytics'
-      ],
+      benefits: ['Increase open rates by 60%', 'Automated personalization', 'Better deliverability', 'Comprehensive analytics'],
       category: 'Email Marketing',
       popular: true,
       users: 'Up to 25 users'
@@ -257,12 +212,7 @@ const MicroSaasPage: React.FC = () => {
         'Barcode scanning and mobile app',
         'Advanced reporting and analytics'
       ],
-      benefits: [
-        'Reduce inventory costs by 35%',
-        'Prevent stockouts and overstock',
-        'Automated reordering',
-        'Better supplier management'
-      ],
+      benefits: ['Reduce inventory costs by 35%', 'Prevent stockouts and overstock', 'Automated reordering', 'Better supplier management'],
       category: 'Inventory',
       popular: false,
       users: 'Up to 20 users'
@@ -283,12 +233,7 @@ const MicroSaasPage: React.FC = () => {
         'Compliance tracking and reporting',
         'Integration with payroll systems'
       ],
-      benefits: [
-        'Reduce hiring time by 50%',
-        'Better candidate matching',
-        'Automated HR processes',
-        'Compliance assurance'
-      ],
+      benefits: ['Reduce hiring time by 50%', 'Better candidate matching', 'Automated HR processes', 'Compliance assurance'],
       category: 'Human Resources',
       popular: false,
       users: 'Up to 50 users'
@@ -309,12 +254,7 @@ const MicroSaasPage: React.FC = () => {
         'Mobile app for sales teams',
         'Custom field and workflow builder'
       ],
-      benefits: [
-        'Increase sales by 45%',
-        'Better lead qualification',
-        'Automated follow-ups',
-        'Predictive insights'
-      ],
+      benefits: ['Increase sales by 45%', 'Better lead qualification', 'Automated follow-ups', 'Predictive insights'],
       category: 'CRM',
       popular: true,
       users: 'Up to 30 users'
@@ -335,12 +275,7 @@ const MicroSaasPage: React.FC = () => {
         'Advanced reporting and analytics',
         'Multi-currency support'
       ],
-      benefits: [
-        'Save 90% expense entry time',
-        'Automated categorization',
-        'Policy compliance',
-        'Better expense control'
-      ],
+      benefits: ['Save 90% expense entry time', 'Automated categorization', 'Policy compliance', 'Better expense control'],
       category: 'Finance',
       popular: true,
       users: 'Up to 15 users'
@@ -361,12 +296,7 @@ const MicroSaasPage: React.FC = () => {
         'Social media integration',
         'Team workflow management'
       ],
-      benefits: [
-        'Increase content engagement by 200%',
-        'Better SEO performance',
-        'Streamlined content creation',
-        'Comprehensive analytics'
-      ],
+      benefits: ['Increase content engagement by 200%', 'Better SEO performance', 'Streamlined content creation', 'Comprehensive analytics'],
       category: 'Content Management',
       popular: true,
       users: 'Up to 10 users'
@@ -387,12 +317,7 @@ const MicroSaasPage: React.FC = () => {
         'Advanced analytics and reporting',
         'Custom feedback forms and widgets'
       ],
-      benefits: [
-        'Improve customer satisfaction by 40%',
-        'Real-time feedback insights',
-        'Automated analysis',
-        'Better customer understanding'
-      ],
+      benefits: ['Improve customer satisfaction by 40%', 'Real-time feedback insights', 'Automated analysis', 'Better customer understanding'],
       category: 'Customer Experience',
       popular: false,
       users: 'Up to 25 users'
@@ -413,12 +338,7 @@ const MicroSaasPage: React.FC = () => {
         'Advanced security and authentication',
         'Custom API analytics and reporting'
       ],
-      benefits: [
-        'Improve API reliability by 95%',
-        'Automated testing',
-        'Better developer experience',
-        'Enhanced security'
-      ],
+      benefits: ['Improve API reliability by 95%', 'Automated testing', 'Better developer experience', 'Enhanced security'],
       category: 'API Management',
       popular: false,
       users: 'Up to 20 users'
@@ -439,12 +359,7 @@ const MicroSaasPage: React.FC = () => {
         'Custom triggers and actions',
         'Team collaboration and approval workflows'
       ],
-      benefits: [
-        'Reduce manual work by 85%',
-        'Process optimization',
-        'Error reduction',
-        'Scalable automation'
-      ],
+      benefits: ['Reduce manual work by 85%', 'Process optimization', 'Error reduction', 'Scalable automation'],
       category: 'Automation',
       popular: true,
       users: 'Up to 25 users'
@@ -465,12 +380,7 @@ const MicroSaasPage: React.FC = () => {
         'Cloud and local storage options',
         'Advanced monitoring and alerts'
       ],
-      benefits: [
-        '99.9% data protection',
-        'Automated optimization',
-        'Fast recovery times',
-        'Compliance ready'
-      ],
+      benefits: ['99.9% data protection', 'Automated optimization', 'Fast recovery times', 'Compliance ready'],
       category: 'Data Management',
       popular: false,
       users: 'Up to 20 users'
@@ -491,12 +401,7 @@ const MicroSaasPage: React.FC = () => {
         'User experience tracking',
         'Performance optimization recommendations'
       ],
-      benefits: [
-        'Reduce downtime by 70%',
-        'Proactive issue detection',
-        'Better user experience',
-        'Performance optimization'
-      ],
+      benefits: ['Reduce downtime by 70%', 'Proactive issue detection', 'Better user experience', 'Performance optimization'],
       category: 'Monitoring',
       popular: false,
       users: 'Up to 30 users'
@@ -517,12 +422,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with security tools',
         'Custom compliance reporting'
       ],
-      benefits: [
-        'Reduce compliance costs by 60%',
-        'Automated monitoring',
-        'Risk mitigation',
-        'Audit readiness'
-      ],
+      benefits: ['Reduce compliance costs by 60%', 'Automated monitoring', 'Risk mitigation', 'Audit readiness'],
       category: 'Compliance',
       popular: false,
       users: 'Up to 50 users'
@@ -543,12 +443,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with popular tools',
         'Mobile app for remote teams'
       ],
-      benefits: [
-        'Improve team productivity by 50%',
-        'Better task allocation',
-        'Enhanced communication',
-        'Performance insights'
-      ],
+      benefits: ['Improve team productivity by 50%', 'Better task allocation', 'Enhanced communication', 'Performance insights'],
       category: 'Collaboration',
       popular: true,
       users: 'Up to 25 users'
@@ -569,12 +464,7 @@ const MicroSaasPage: React.FC = () => {
         'Social media optimization',
         'Cloud-based rendering and storage'
       ],
-      benefits: [
-        'Reduce video editing time by 80%',
-        'Professional quality output',
-        'Automated optimization',
-        'Multi-platform publishing'
-      ],
+      benefits: ['Reduce video editing time by 80%', 'Professional quality output', 'Automated optimization', 'Multi-platform publishing'],
       category: 'Video Production',
       popular: true,
       users: 'Up to 10 users'
@@ -595,12 +485,7 @@ const MicroSaasPage: React.FC = () => {
         'API integration for apps',
         'Human review and quality assurance'
       ],
-      benefits: [
-        'Break language barriers instantly',
-        'Maintain brand consistency',
-        'Automated localization',
-        'Professional translation quality'
-      ],
+      benefits: ['Break language barriers instantly', 'Maintain brand consistency', 'Automated localization', 'Professional translation quality'],
       category: 'Translation',
       popular: true,
       users: 'Up to 50 users'
@@ -621,12 +506,7 @@ const MicroSaasPage: React.FC = () => {
         'Team collaboration and comments',
         'Custom rule configuration'
       ],
-      benefits: [
-        'Improve code quality by 60%',
-        'Reduce security vulnerabilities',
-        'Faster development cycles',
-        'Consistent coding standards'
-      ],
+      benefits: ['Improve code quality by 60%', 'Reduce security vulnerabilities', 'Faster development cycles', 'Consistent coding standards'],
       category: 'Development Tools',
       popular: true,
       users: 'Up to 30 users'
@@ -647,12 +527,7 @@ const MicroSaasPage: React.FC = () => {
         'Real-time customer journey mapping',
         'Integration with CRM and marketing tools'
       ],
-      benefits: [
-        'Increase customer retention by 45%',
-        'Better customer understanding',
-        'Predictive insights',
-        'Data-driven decisions'
-      ],
+      benefits: ['Increase customer retention by 45%', 'Better customer understanding', 'Predictive insights', 'Data-driven decisions'],
       category: 'Customer Analytics',
       popular: true,
       users: 'Up to 40 users'
@@ -673,12 +548,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with calendar and CRM',
         'Mobile app with offline support'
       ],
-      benefits: [
-        'Save 70% email management time',
-        'Never miss important emails',
-        'Professional communication',
-        'Improved productivity'
-      ],
+      benefits: ['Save 70% email management time', 'Never miss important emails', 'Professional communication', 'Improved productivity'],
       category: 'Email Management',
       popular: true,
       users: 'Up to 20 users'
@@ -699,12 +569,7 @@ const MicroSaasPage: React.FC = () => {
         'Meeting analytics and insights',
         'Multi-language support'
       ],
-      benefits: [
-        'Capture every important detail',
-        'Automated follow-up actions',
-        'Better meeting efficiency',
-        'Comprehensive meeting records'
-      ],
+      benefits: ['Capture every important detail', 'Automated follow-up actions', 'Better meeting efficiency', 'Comprehensive meeting records'],
       category: 'Meeting Management',
       popular: true,
       users: 'Up to 25 users'
@@ -725,12 +590,7 @@ const MicroSaasPage: React.FC = () => {
         'Ranking tracking and reporting',
         'Integration with CMS and analytics'
       ],
-      benefits: [
-        'Increase organic traffic by 200%',
-        'Better search rankings',
-        'Automated optimization',
-        'Comprehensive SEO insights'
-      ],
+      benefits: ['Increase organic traffic by 200%', 'Better search rankings', 'Automated optimization', 'Comprehensive SEO insights'],
       category: 'SEO & Marketing',
       popular: true,
       users: 'Up to 15 users'
@@ -751,12 +611,7 @@ const MicroSaasPage: React.FC = () => {
         'Custom validation rules',
         'Real-time data monitoring'
       ],
-      benefits: [
-        'Improve data quality by 95%',
-        'Reduce manual data work',
-        'Automated error detection',
-        'Better data insights'
-      ],
+      benefits: ['Improve data quality by 95%', 'Reduce manual data work', 'Automated error detection', 'Better data insights'],
       category: 'Data Management',
       popular: false,
       users: 'Up to 30 users'
@@ -777,12 +632,7 @@ const MicroSaasPage: React.FC = () => {
         'Custom clause analysis',
         'Automated reporting and alerts'
       ],
-      benefits: [
-        'Reduce contract review time by 90%',
-        'Identify risks early',
-        'Ensure compliance',
-        'Better contract management'
-      ],
+      benefits: ['Reduce contract review time by 90%', 'Identify risks early', 'Ensure compliance', 'Better contract management'],
       category: 'Legal Tech',
       popular: false,
       users: 'Up to 20 users'
@@ -803,12 +653,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with CRM and marketing tools',
         'Custom branding and white-labeling'
       ],
-      benefits: [
-        'Create better surveys faster',
-        'Get actionable insights',
-        'Automated analysis',
-        'Professional survey design'
-      ],
+      benefits: ['Create better surveys faster', 'Get actionable insights', 'Automated analysis', 'Professional survey design'],
       category: 'Survey & Research',
       popular: true,
       users: 'Up to 25 users'
@@ -829,12 +674,7 @@ const MicroSaasPage: React.FC = () => {
         'Compliance monitoring and alerts',
         'Custom financial dashboards'
       ],
-      benefits: [
-        'Reduce accounting time by 80%',
-        'Automated financial processes',
-        'Better financial insights',
-        'Compliance assurance'
-      ],
+      benefits: ['Reduce accounting time by 80%', 'Automated financial processes', 'Better financial insights', 'Compliance assurance'],
       category: 'Accounting & Finance',
       popular: true,
       users: 'Up to 15 users'
@@ -855,12 +695,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with job boards and ATS',
         'Diversity and bias monitoring'
       ],
-      benefits: [
-        'Reduce hiring time by 60%',
-        'Better candidate matching',
-        'Automated screening process',
-        'Improved hiring quality'
-      ],
+      benefits: ['Reduce hiring time by 60%', 'Better candidate matching', 'Automated screening process', 'Improved hiring quality'],
       category: 'Human Resources',
       popular: true,
       users: 'Up to 35 users'
@@ -881,12 +716,7 @@ const MicroSaasPage: React.FC = () => {
         'Human review workflow',
         'Detailed moderation reports'
       ],
-      benefits: [
-        'Maintain platform safety',
-        'Automated content filtering',
-        'Reduce manual moderation',
-        'Consistent policy enforcement'
-      ],
+      benefits: ['Maintain platform safety', 'Automated content filtering', 'Reduce manual moderation', 'Consistent policy enforcement'],
       category: 'Content Moderation',
       popular: false,
       users: 'Up to 50 users'
@@ -907,12 +737,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with CMMS systems',
         'Custom maintenance workflows'
       ],
-      benefits: [
-        'Reduce downtime by 70%',
-        'Optimize maintenance costs',
-        'Prevent equipment failures',
-        'Extend equipment lifespan'
-      ],
+      benefits: ['Reduce downtime by 70%', 'Optimize maintenance costs', 'Prevent equipment failures', 'Extend equipment lifespan'],
       category: 'Industrial AI',
       popular: false,
       users: 'Up to 40 users'
@@ -933,12 +758,7 @@ const MicroSaasPage: React.FC = () => {
         'Carbon footprint tracking',
         'Custom energy reports'
       ],
-      benefits: [
-        'Reduce energy costs by 30%',
-        'Optimize renewable energy usage',
-        'Environmental sustainability',
-        'Better energy insights'
-      ],
+      benefits: ['Reduce energy costs by 30%', 'Optimize renewable energy usage', 'Environmental sustainability', 'Better energy insights'],
       category: 'Energy Management',
       popular: false,
       users: 'Up to 25 users'
@@ -959,12 +779,7 @@ const MicroSaasPage: React.FC = () => {
         'Real-time supply chain monitoring',
         'Custom optimization models'
       ],
-      benefits: [
-        'Reduce supply chain costs by 25%',
-        'Improve delivery efficiency',
-        'Minimize inventory waste',
-        'Better supplier management'
-      ],
+      benefits: ['Reduce supply chain costs by 25%', 'Improve delivery efficiency', 'Minimize inventory waste', 'Better supplier management'],
       category: 'Supply Chain',
       popular: false,
       users: 'Up to 50 users'
@@ -985,12 +800,7 @@ const MicroSaasPage: React.FC = () => {
         'Real-time alerts and notifications',
         'Comprehensive fraud reporting'
       ],
-      benefits: [
-        'Reduce fraud losses by 85%',
-        'Real-time protection',
-        'Automated detection',
-        'Better risk management'
-      ],
+      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'Automated detection', 'Better risk management'],
       category: 'Security & Fraud',
       popular: true,
       users: 'Up to 30 users'
@@ -1011,12 +821,7 @@ const MicroSaasPage: React.FC = () => {
         'Customer satisfaction tracking',
         'Integration with CRM systems'
       ],
-      benefits: [
-        'Improve customer satisfaction by 60%',
-        'Reduce response time by 80%',
-        '24/7 automated support',
-        'Better customer insights'
-      ],
+      benefits: ['Improve customer satisfaction by 60%', 'Reduce response time by 80%', '24/7 automated support', 'Better customer insights'],
       category: 'Customer Service',
       popular: true,
       users: 'Up to 40 users'
@@ -1037,12 +842,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration with marketing tools',
         'Advanced analytics and reporting'
       ],
-      benefits: [
-        'Increase conversion rates by 150%',
-        'Automated personalization',
-        'Better lead qualification',
-        'Comprehensive marketing insights'
-      ],
+      benefits: ['Increase conversion rates by 150%', 'Automated personalization', 'Better lead qualification', 'Comprehensive marketing insights'],
       category: 'Marketing Automation',
       popular: true,
       users: 'Up to 35 users'
@@ -1063,17 +863,12 @@ const MicroSaasPage: React.FC = () => {
         'Batch processing capabilities',
         'API integration for automation'
       ],
-      benefits: [
-        'Process documents 10x faster',
-        'Automated data extraction',
-        'Reduce manual errors',
-        'Better document insights'
-      ],
+      benefits: ['Process documents 10x faster', 'Automated data extraction', 'Reduce manual errors', 'Better document insights'],
       category: 'Document Processing',
       popular: true,
       users: 'Up to 25 users'
     }
-  ];
+    ];
 
   const categories = [
     { id: 'all', name: 'All Products', count: products.length },
@@ -1115,7 +910,7 @@ const MicroSaasPage: React.FC = () => {
     { id: 'Customer Service', name: 'Customer Service', count: products.filter(p => p.category === 'Customer Service').length },
     { id: 'Marketing Automation', name: 'Marketing Automation', count: products.filter(p => p.category === 'Marketing Automation').length },
     { id: 'Document Processing', name: 'Document Processing', count: products.filter(p => p.category === 'Document Processing').length }
-  ];
+    ];
 
   return (
     <>
@@ -1172,7 +967,7 @@ const MicroSaasPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
-                      ))}
+              ))}
                     </ul>
                   </div>
 

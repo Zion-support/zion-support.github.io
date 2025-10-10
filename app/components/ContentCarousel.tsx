@@ -31,7 +31,7 @@ const ContentCarousel: React.FC = () => {
       cta: 'Explore',
       href: '/micro-saas'
     }
-  ];
+    ];
 
   useEffect(() => {
     if (isPlaying) {
@@ -84,7 +84,7 @@ const ContentCarousel: React.FC = () => {
               </div>
             </div>
           </div>
-        ))}
+              ))}
       </div>
 
       {/* Navigation Controls */}

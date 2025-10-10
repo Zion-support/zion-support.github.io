@@ -25,7 +25,7 @@ const AIApiManagerPage: React.FC = () => {
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
     }
-  ];
+    ];
 
   const benefits = [
     'Centralized API management',
@@ -41,7 +41,7 @@ const AIApiManagerPage: React.FC = () => {
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
-  ];
+    ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -88,7 +88,7 @@ const AIApiManagerPage: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -117,11 +117,11 @@ const AIApiManagerPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{benefit}</span>
-                    </li>
-                  ))}
+                    </div>
+              ))}
                 </ul>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -144,7 +144,7 @@ const AIApiManagerPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

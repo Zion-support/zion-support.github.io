@@ -16,9 +16,9 @@ export function useIntersectionObserver(;
   options: UseIntersectionObserverOptions = {}
 ): UseIntersectionObserverReturn {
     const {
-    threshold = 0,;
-    root = null,;
-    rootMargin = '0%',;
+    threshold = 0,
+    root = null,
+    rootMargin = '0%',
     freezeOnceVisible = false,
   }
   } = options;
@@ -36,10 +36,10 @@ if (entry.isIntersecting && freezeOnceVisible) {
           observer.disconnect()
   }
         }
-      },;
+      },
       {
-    threshold,;
-        root,;
+    threshold,
+        root,
         rootMargin,
   }
       }

@@ -7,88 +7,88 @@ import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRigh
 const FinancialITPage: React.FC = () => {
     const features = [
     {
-      icon: DollarSign,;
-      title: 'SOX Compliance',;
-      description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',;
+      icon: DollarSign,
+      title: 'SOX Compliance',
+      description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',
       benefits: ['Automated controls', 'Compliance reporting', 'Audit trails']
   }
-    },;
+    },
     {
-    icon: Zap,;
-      title: 'Financial Data Security',;
-      description: 'Bank-level security for financial data with encryption, access controls, and monitoring.',;
+    icon: Zap,
+      title: 'Financial Data Security',
+      description: 'Bank-level security for financial data with encryption, access controls, and monitoring.',
       benefits: ['Data encryption', 'Access controls', 'Security monitoring']
   }
-    },;
+    },
     {
-    icon: Clock,;
-      title: 'Real-time Processing',;
-      description: 'High-frequency trading and real-time financial data processing capabilities.',;
+    icon: Clock,
+      title: 'Real-time Processing',
+      description: 'High-frequency trading and real-time financial data processing capabilities.',
       benefits: ['Low latency', 'High throughput', 'Real-time analytics']
   }
-    },;
+    },
     {
-    icon: Users,;
-      title: 'Regulatory Compliance',;
-      description: 'Comprehensive compliance with financial regulations including PCI DSS, GDPR, and more.',;
+    icon: Users,
+      title: 'Regulatory Compliance',
+      description: 'Comprehensive compliance with financial regulations including PCI DSS, GDPR, and more.',
       benefits: ['Multi-regulation support', 'Automated compliance', 'Risk management']
   }
-    },;
+    },
     {
-    icon: Shield,;
-      title: 'Fraud Detection',;
-      description: 'Advanced AI-powered fraud detection and prevention systems for financial transactions.',;
+    icon: Shield,
+      title: 'Fraud Detection',
+      description: 'Advanced AI-powered fraud detection and prevention systems for financial transactions.',
       benefits: ['Real-time detection', 'Machine learning', 'Risk scoring']
   }
-    },;
+    },
     {
-    icon: BarChart,;
-      title: 'Financial Analytics',;
-      description: 'Comprehensive analytics and reporting for financial operations and compliance.',;
+    icon: BarChart,
+      title: 'Financial Analytics',
+      description: 'Comprehensive analytics and reporting for financial operations and compliance.',
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
   }
     }
-  ];
+    ];
 const services = [
     {
-    icon: '🏦',;
-      title: 'Banking Solutions',;
+    icon: '🏦',
+      title: 'Banking Solutions',
       description: 'Core banking systems and digital banking platforms'
   }
-    },;
+    },
     {
-    icon: '💳',;
-      title: 'Payment Processing',;
+    icon: '💳',
+      title: 'Payment Processing',
       description: 'Secure payment gateways and transaction processing'
   }
-    },;
+    },
     {
-    icon: '📊',;
-      title: 'Risk Management',;
+    icon: '📊',
+      title: 'Risk Management',
       description: 'Advanced risk assessment and management tools'
   }
-    },;
+    },
     {
-    icon: '🔒',;
-      title: 'Security Services',;
+    icon: '🔒',
+      title: 'Security Services',
       description: 'Cybersecurity and data protection solutions'
   }
     }
-  ];
+    ];
 const benefits = [
-    'SOX Compliance Ready',;
-    'Bank-level Security',;
-    'Real-time Processing',;
-    'Regulatory Compliance',;
-    'Fraud Prevention',;
+    'SOX Compliance Ready',
+    'Bank-level Security',
+    'Real-time Processing',
+    'Regulatory Compliance',
+    'Fraud Prevention',
     'Advanced Analytics';
   ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
       <Helmet>
         <title>Financial IT Solutions | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
@@ -144,11 +144,11 @@ return (
                       <CheckCircle>
 
                       {benefit}
-                    </li>
-                  ))}
+                    </div>
+              ))}
                 </ul>
               </div>
-            ))}
+              ))}
 
           </div>
         </div>
@@ -173,7 +173,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -198,7 +198,7 @@ return (
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

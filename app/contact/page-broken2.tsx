@@ -4,23 +4,23 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  Send,;
+    Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
   CheckCircle
   }
 } from 'lucide-react';
 const ContactPage: React.FC = () => {
     const [formData, setFormData] = useState({
-    name: '',;
-    email: '',;
-    company: '',;
-phone: '',;
-    service: '',;
-    budget: '',;
-    timeline: '',;
+    name: '',
+    email: '',
+    company: '',
+phone: '',
+    service: '',
+    budget: '',
+    timeline: '',
     message: ''
   }
   });
@@ -30,7 +30,7 @@ const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | H
 
     const { name, value } = e.target;
     setFormData(prev => ({
-    ...prev,;
+    ...prev,
       [name]: value
   }
     }));
@@ -45,13 +45,13 @@ try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({
-        name: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
-        budget: '',;
-        timeline: '',;
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
         message: ''
   }
       });
@@ -64,52 +64,52 @@ try {
     }
   }
 const services = [
-    'AI Solutions',;
-    'Cloud Computing',;
-    'Mobile App Development',;
-    'Web Development',;
-    'Data Analytics',;
-    'Cybersecurity',;
-    'DevOps',;
-    'Consulting',;
+    'AI Solutions',
+    'Cloud Computing',
+    'Mobile App Development',
+    'Web Development',
+    'Data Analytics',
+    'Cybersecurity',
+    'DevOps',
+    'Consulting',
     'Other';
   ];
 const contactInfo = [
     {
-    icon: Phone,;
-      title: 'Phone',;
-      details: '+1 (302) 464-0950',;
+    icon: Phone,
+      title: 'Phone',
+      details: '+1 (302) 464-0950',
       description: 'Mon-Fri 9AM-6PM EST'
   }
-    },;
+    },
     {
-    icon: Mail,;
-      title: 'Email',;
-      details: 'kleber@ziontechgroup.com',;
+    icon: Mail,
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours'
   }
-    },;
+    },
     {
-    icon: MapPin,;
-      title: 'Address',;
-      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',;
+    icon: MapPin,
+      title: 'Address',
+      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
       description: 'Visit our office'
   }
-    },;
+    },
     {
-    icon: Clock,;
-      title: 'Business Hours',;
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',;
+    icon: Clock,
+      title: 'Business Hours',
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time'
   }
     }
-  ];
+    ];
 return (
     <></>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="container mx-auto px-4"></div>
@@ -138,8 +138,8 @@ return (
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
   }
-              )}
-{
+              )},
+        {
     submitStatus === 'error' && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
@@ -148,7 +148,7 @@ return (
               )}
 <form>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
-                  <div></div>
+                  <div />
                     <label>
                       Full Name *;
                     </label>
@@ -157,7 +157,7 @@ return (
                       <input>
                     </div>
                   </div>
-                  <div></div>
+                  <div />
                     <label>
                       Email Address *;
                     </label>
@@ -168,7 +168,7 @@ return (
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div></div>
+                  <div />
                     <label>
                       Company
                     </label>
@@ -177,7 +177,7 @@ return (
                       <input>
                     </div>
                   </div>
-                  <div></div>
+                  <div />
                     <label>
                       Phone Number
                     </label>
@@ -187,7 +187,7 @@ return (
                     </div>
                   </div>
                 </div>
-                <div></div>
+                <div />
                   <label>
                     Service Interest,
                   </label>
@@ -201,13 +201,13 @@ return (
                         <option>
 
                           {service}
-                        </option>
-                      ))}
+                        </div>
+              ))}
 
                     </select>
                   </div>
                 </div>
-                <div></div>
+                <div />
                   <label>
                     Message *;
                   </label>
@@ -235,7 +235,7 @@ return (
             </div>
             {/* Contact Information */}
             <div className="space-y-8"></div>
-              <div></div>
+              <div />
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p>
                   We're here to help! Reach out to us through any of these channels;
@@ -244,7 +244,7 @@ return (
               </div>
               {/* Contact Information */}
               <div className="space-y-8"></div>
-                <div></div>
+                <div />
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.;
@@ -255,7 +255,7 @@ return (
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Phone>
                     </div>
-                    <div></div>
+                    <div />
 <h3>
 
                         {info.title}
@@ -273,7 +273,7 @@ return (
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Mail>
                     </div>
-                    <div></div>
+                    <div />
                       <h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
                     </div>
@@ -282,7 +282,7 @@ return (
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <MapPin>
                     </div>
-                    <div></div>
+                    <div />
                       <h3 className="text-lg font-semibold text-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
                     </div>
@@ -291,7 +291,7 @@ return (
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Clock>
                     </div>
-                    <div></div>
+                    <div />
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>

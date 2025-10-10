@@ -9,8 +9,8 @@ const Header: React.FC = () => {
     return (
     <></>,
       <Navigation />
-  }
-      {/* Spacer to prevent content from going under fixed header */}
+  },
+        {/* Spacer to prevent content from going under fixed header */}
 <<<<<<< HEAD
       <div className="h-16 lg: h-20" /></div>
     </>

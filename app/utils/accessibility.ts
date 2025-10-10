@@ -8,10 +8,10 @@ export interface AccessibilityConfig {
   }
 }
 export const defaultAccessibilityConfig: AccessibilityConfig = {
-    enableHighContrast: false,;
-  enableScreenReader: true,;
-  enableKeyboardNavigation: true,;
-  fontSize: 'medium',;
+    enableHighContrast: false,
+  enableScreenReader: true,
+  enableKeyboardNavigation: true,
+  fontSize: 'medium',
   colorScheme: 'auto',
   }
 }
@@ -118,8 +118,7 @@ export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string):
   }
 }
 export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {
-    element.setAttribute('tabindex', tabIndex.toString())
-  }
+    element.setAttribute('tabindex', tabIndex.toString())}
 }
 export const removeElementFocus = (element: HTMLElement): void => {
     element.setAttribute('tabindex', '-1')

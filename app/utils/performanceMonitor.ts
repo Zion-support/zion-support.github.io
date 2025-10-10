@@ -33,14 +33,14 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 class PerformanceMonitor {/* TODO: Fix JSX expression */}
   s: {}
   }
-  private,;
+  private,
   observers: PerformanceObserver[] = []
   private isInitialized = false,
   init(): void {}
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
-    this.setupCustomMetrics();,;
+    this.setupCustomMetrics();,
     this.setupResourceTiming();
   init(): void {/* TODO: Fix JSX expression */}
   }
@@ -86,7 +86,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {}
             this.recordMetric();
-              'LCP',;
+              'LCP',
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             );
           }
@@ -100,8 +100,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {
     let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {,;
-            if (!(entry as any).hadRecentInput) {,;
+          entries.forEach((entry: PerformanceEntry) => {,
+            if (!(entry as any).hadRecentInput) {,
         // Cumulative Layout Shift
   }
         this.observeEntry('layout-shift', (entries) => {}
@@ -136,10 +136,10 @@ if (clsValue > 0) {}
     }
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
-    try {,;
-      const observer = new PerformanceObserver((list) => {,;
-        for (const entry of list.getEntries()) {,;
-          if (entry.name === name) {,;
+    try {,
+      const observer = new PerformanceObserver((list) => {,
+        for (const entry of list.getEntries()) {,
+          if (entry.name === name) {,
             (this.metrics as any)[metricKey] = entry.startTime;,
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
@@ -190,7 +190,7 @@ observer.observe({ entryTypes: ['first-input'] });
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
-  private observePaint(nam,;
+  private observePaint(nam,
   e: string, metricKe);
   y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */}
           }
@@ -292,8 +292,8 @@ observer.observe({ entryTypes: ['resource'] });
     }
   }
   addCustomMetric(name: string, value: number): void {
-    ,;
-    this.metrics.customMetrics[name] = value;,;
+    ,
+    this.metrics.customMetrics[name] = value;,
     this.logMetric(name, value)
   }
   }
@@ -305,7 +305,7 @@ observer.observe({ entryTypes: ['resource'] });
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'performance_metric', {);
-        metric_name: name),;
+        metric_name: name),
     // Track slow resources
   }
     if (duration > 1000) {}
@@ -327,9 +327,9 @@ observer.observe({ entryTypes: ['resource'] });
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'performance_metric', {)}
-        metric_name: name,;
-        metric_value: Math.round(value),;
-        event_category: 'performance',;
+        metric_name: name,
+        metric_value: Math.round(value),
+        event_category: 'performance',
 }
   }
   getMetrics(): PerformanceMetrics {}
@@ -402,11 +402,11 @@ observer.observe({ entryTypes: ['resource'] });
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
-  addCustomMetric(nam,;
+  addCustomMetric(nam,
   e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}
   }
-  private logMetric(nam,;
+  private logMetric(nam,
   e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}`;
       }ms`);

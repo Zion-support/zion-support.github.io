@@ -28,7 +28,7 @@ const ContentStatistics: React.FC = () => {
       label: 'Support Available',
       description: 'Round-the-clock technical support'
     }
-  ];
+    ];
 
   return (
     <div className="bg-slate-800/30 rounded-lg p-8">
@@ -49,7 +49,7 @@ const ContentStatistics: React.FC = () => {
             <div className="text-lg font-semibold text-cyan-400 mb-1">{stat.label}</div>
             <div className="text-sm text-gray-400">{stat.description}</div>
           </div>
-        ))}
+              ))}
       </div>
     </div>
   );

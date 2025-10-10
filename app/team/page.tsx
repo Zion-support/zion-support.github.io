@@ -8,7 +8,7 @@ const TeamPage: React.FC = () => {
     <></>
       <Helmet>
         <title>Our Team - Zion Tech Group</title>
-        <meta>
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation>

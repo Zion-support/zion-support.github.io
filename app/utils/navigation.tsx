@@ -29,10 +29,10 @@ export const useRouter = () => {}
     window.location.reload();}
   }, []);
   return {}
-    push,;
-    replace,;
-    back,;
-    forward,;
+    push,
+    replace,
+    back,
+    forward,
     refresh}
   }
 }

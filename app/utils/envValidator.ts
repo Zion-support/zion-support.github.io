@@ -10,20 +10,22 @@ export interface EnvConfig {}
   NEXT_PUBLIC_SITE_URL?: string,
 }
 class EnvValidator {
-    private errors: string[] = [],;
-  private warnings: string[] = [],;
-  /**,;
+    private errors: string[] = [],
+  private warnings: string[] = [],
+  /**,
    * Validate all environment variables;
    */,
   }
-  validate(): { isValid: boolean; errors: string[], warnings: string[] } {}
+  validate(): { isValid: boolean; errors: string[], warnings: string[] },
+        {}
 class EnvValidator {}
   private errors: string[] = [];
   private warnings: string[] = [];
   /**;
    * Validate all environment variables
    */
-  validate(): { isValid: boolean; errors: string[], warnings: string[] } {}
+  validate(): { isValid: boolean; errors: string[], warnings: string[] },
+        {}
     this.errors = [];
     this.warnings = [];
     // Validate NODE_ENV;
@@ -36,13 +38,14 @@ class EnvValidator {}
       warnings: this.warnings
   }
     return {}
-      isValid: this.errors.length === 0,;
-      errors: this.errors,;
+      isValid: this.errors.length === 0,
+      errors: this.errors,
       warnings: this.warnings,
 export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
-  s: string[] } {/* TODO: Fix JSX expression */}
+  s: string[] },
+        {/* TODO: Fix JSX expression */}
     }
   }
   /**;
@@ -60,9 +63,9 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       );
     }
     return {}
-      NODE_ENV: this.getNodeEnv(),;
-      NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],;
-      NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],;
+      NODE_ENV: this.getNodeEnv(),
+      NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
+      NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']}
   }
   private validateNodeEnv(): void {}
@@ -103,7 +106,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     const env = process.env['NODE_ENV'] || 'development';
     return env as 'development' | 'production' | 'test';
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-  failed:;
+  failed:
 ${
     validation.errors.join('
   }

@@ -89,7 +89,7 @@ const BlogPage: React.FC = () => {
       image: '/blog/edge-computing.jpg',
       featured: false
     }
-  ];
+    ];
 
   const categories = [
     { id: 'all', name: 'All Posts', count: blogPosts.length },
@@ -99,7 +99,7 @@ const BlogPage: React.FC = () => {
     { id: 'Security', name: 'Security', count: blogPosts.filter(post => post.category === 'Security').length },
     { id: 'Analytics', name: 'Analytics', count: blogPosts.filter(post => post.category === 'Analytics').length },
     { id: 'Technology', name: 'Technology', count: blogPosts.filter(post => post.category === 'Technology').length }
-  ];
+    ];
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -157,14 +157,14 @@ const BlogPage: React.FC = () => {
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
-                    ))}
+              ))}
                   </select>
                 </div>
               </div>
             </div>
 
-            {/* Featured Post */}
-            {featuredPost && (
+            {/* Featured Post */},
+        {featuredPost && (
               <div className="mb-12">
                 <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
                 <div className="bg-slate-800/50 rounded-lg overflow-hidden">
@@ -209,9 +209,8 @@ const BlogPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            )}
-
-            {/* Blog Posts Grid */}
+            )},
+        {/* Blog Posts Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {regularPosts.map((post) => (
                 <article key={post.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-800/70 transition-all duration-300">
@@ -254,16 +253,15 @@ const BlogPage: React.FC = () => {
               ))}
             </div>
 
-            {/* No Results */}
-            {filteredPosts.length === 0 && (
+            {/* No Results */},
+        {filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-xl font-semibold text-white mb-2">No articles found</h3>
                 <p className="text-gray-300">Try adjusting your search terms or category filter.</p>
               </div>
-            )}
-
-            {/* CTA Section */}
+            )},
+        {/* CTA Section */}
             <div className="mt-16 text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-white mb-4">

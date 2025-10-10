@@ -46,7 +46,7 @@ const SupportPage: React.FC = () => {
       answer: 'Our pricing is flexible and based on project scope, complexity, and requirements. We offer both fixed-price and hourly consulting options.',
       category: 'Pricing'
     }
-  ];
+    ];
 
   const supportChannels = [
     {
@@ -81,7 +81,7 @@ const SupportPage: React.FC = () => {
       availability: '24/7',
       responseTime: 'Self-service'
     }
-  ];
+    ];
 
   const categories = [
     { id: 'all', name: 'All Topics', count: faqs.length },
@@ -91,7 +91,7 @@ const SupportPage: React.FC = () => {
     { id: 'Security', name: 'Security', count: faqs.filter(faq => faq.category === 'Security').length },
     { id: 'Integration', name: 'Integration', count: faqs.filter(faq => faq.category === 'Integration').length },
     { id: 'Pricing', name: 'Pricing', count: faqs.filter(faq => faq.category === 'Pricing').length }
-  ];
+    ];
 
   const filteredFaqs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -139,7 +139,7 @@ const SupportPage: React.FC = () => {
                       <div className="text-gray-400">Response: {channel.responseTime}</div>
                     </div>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 
@@ -167,7 +167,7 @@ const SupportPage: React.FC = () => {
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
-                    ))}
+              ))}
                   </select>
                 </div>
               </div>
@@ -193,16 +193,15 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
 
-            {/* No Results */}
-            {filteredFaqs.length === 0 && (
+            {/* No Results */},
+        {filteredFaqs.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-xl font-semibold text-white mb-2">No FAQs found</h3>
                 <p className="text-gray-300">Try adjusting your search terms or category filter.</p>
               </div>
-            )}
-
-            {/* Contact Support */}
+            )},
+        {/* Contact Support */}
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-white mb-4">

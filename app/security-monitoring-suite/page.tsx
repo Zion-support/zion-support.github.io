@@ -2,72 +2,72 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Shield,;
-  Eye,;
-  AlertTriangle,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Settings,;
-  Database,;
-  Target,;
+    Shield,
+  Eye,
+  AlertTriangle,
+  CheckCircle,
+  BarChart,
+  Clock,
+  Users,
+  Zap,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Globe,
+  Lock,
+  Activity,
+  TrendingUp,
+  Settings,
+  Database,
+  Target,
   Monitor
   }
 } from 'lucide-react';
 const SecurityMonitoringSuitePage: React.FC = () => {
     const features = [
     {
-      icon: Monitor,;
-      title: 'Real-time Dashboard',;
+      icon: Monitor,
+      title: 'Real-time Dashboard',
       description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.'
   }
-    },;
+    },
     {
-    icon: AlertTriangle,;
-      title: 'Advanced Alerts',;
+    icon: AlertTriangle,
+      title: 'Advanced Alerts',
       description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.'
   }
-    },;
+    },
     {
-    icon: BarChart,;
-      title: 'Security Analytics',;
+    icon: BarChart,
+      title: 'Security Analytics',
       description: 'Detailed security reports and analytics to help you understand and improve your security posture.'
   }
-    },;
+    },
     {
-    icon: Zap,;
-      title: 'Automated Response',;
+    icon: Zap,
+      title: 'Automated Response',
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
   }
     }
-  ];
+    ];
 const benefits = [
-    '24/7 security monitoring and protection',;
-    'Real-time threat detection and alerts',;
-    'Comprehensive security analytics',;
-    'Automated incident response',;
-    'Compliance monitoring and reporting',;
-    'Easy-to-use dashboard interface',;
-    'Scalable for any business size',;
+    '24/7 security monitoring and protection',
+    'Real-time threat detection and alerts',
+    'Comprehensive security analytics',
+    'Automated incident response',
+    'Compliance monitoring and reporting',
+    'Easy-to-use dashboard interface',
+    'Scalable for any business size',
     'Expert security team support';
   ];
 return (
     <></>
       <Helmet>
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -78,7 +78,7 @@ return (
                 Security Monitoring Suite;
               </h1>
               <p>
-                Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection,;
+                Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection,
                 and automated response capabilities to protect your business 24/7.;
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>

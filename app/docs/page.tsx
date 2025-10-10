@@ -14,7 +14,7 @@ const DocsPage: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: Cloud },
     { id: 'api', name: 'API Reference', icon: Code },
     { id: 'security', name: 'Security', icon: Shield }
-  ];
+    ];
 
   const documentation = [
     {
@@ -25,12 +25,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Beginner',
       readTime: '10 min',
       lastUpdated: '2024-01-15',
-      sections: [
-        'Account Setup',
-        'First API Call',
-        'Authentication',
-        'Basic Configuration'
-      ]
+      sections: ['Account Setup', 'First API Call', 'Authentication', 'Basic Configuration']
     },
     {
       id: 2,
@@ -40,12 +35,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '25 min',
       lastUpdated: '2024-01-14',
-      sections: [
-        'AI Chat API',
-        'Content Generation',
-        'Data Analytics',
-        'Computer Vision'
-      ]
+      sections: ['AI Chat API', 'Content Generation', 'Data Analytics', 'Computer Vision']
     },
     {
       id: 3,
@@ -55,12 +45,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Advanced',
       readTime: '30 min',
       lastUpdated: '2024-01-13',
-      sections: [
-        'Cloud Infrastructure',
-        'DevOps & CI/CD',
-        'Cybersecurity',
-        'Database Management'
-      ]
+      sections: ['Cloud Infrastructure', 'DevOps & CI/CD', 'Cybersecurity', 'Database Management']
     },
     {
       id: 4,
@@ -70,12 +55,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '45 min',
       lastUpdated: '2024-01-12',
-      sections: [
-        'Authentication',
-        'Endpoints',
-        'Error Handling',
-        'Rate Limits'
-      ]
+      sections: ['Authentication', 'Endpoints', 'Error Handling', 'Rate Limits']
     },
     {
       id: 5,
@@ -85,12 +65,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '20 min',
       lastUpdated: '2024-01-11',
-      sections: [
-        'Data Protection',
-        'Access Control',
-        'Encryption',
-        'Compliance'
-      ]
+      sections: ['Data Protection', 'Access Control', 'Encryption', 'Compliance']
     },
     {
       id: 6,
@@ -100,21 +75,16 @@ const DocsPage: React.FC = () => {
       difficulty: 'Beginner',
       readTime: '15 min',
       lastUpdated: '2024-01-10',
-      sections: [
-        'Common Errors',
-        'Debugging Tips',
-        'Performance Issues',
-        'Support Resources'
-      ]
+      sections: ['Common Errors', 'Debugging Tips', 'Performance Issues', 'Support Resources']
     }
-  ];
+    ];
 
   const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
-  ];
+    ];
 
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
@@ -179,7 +149,7 @@ const DocsPage: React.FC = () => {
                 <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300" />
                 <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">{link.title}</h3>
               </a>
-            ))}
+              ))}
           </div>
 
           {/* Category Filter */}
@@ -251,7 +221,7 @@ const DocsPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {section}
                       </div>
-                    ))}
+              ))}
                   </div>
                 </div>
 
@@ -274,11 +244,11 @@ const DocsPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            ))}
+              ))}
           </div>
 
-          {/* No Results */}
-          {searchResults.length === 0 && searchQuery && (
+          {/* No Results */},
+        {searchResults.length === 0 && searchQuery && (
             <div className="cyber-card-enhanced p-8 text-center">
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
@@ -292,9 +262,8 @@ const DocsPage: React.FC = () => {
                 Clear Search
               </button>
             </div>
-          )}
-
-          {/* Additional Resources */}
+          )},
+        {/* Additional Resources */}
           <div className="cyber-card-enhanced p-8 mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

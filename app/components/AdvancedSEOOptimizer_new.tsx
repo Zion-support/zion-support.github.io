@@ -100,13 +100,13 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
         {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />},
         {/* Twitter Card */}
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
@@ -117,8 +117,8 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           {JSON.stringify(generateStructuredData())}
         </script>
       </Helmet>
-      {children}
-      {process.env.NODE_ENV === 'development' && (
+      {children},
+        {process.env.NODE_ENV === 'development' && (
         <div className="seo-debug" style={{
           position: 'fixed',
           top: '10px',
@@ -137,8 +137,8 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
               <div>Recommendations:</div>
               <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
-                  <li key={index}>{rec}</li>
-                ))}
+                  <li key={index}>{rec}</div>
+              ))}
               </ul>
             </div>
           )}

@@ -31,7 +31,7 @@ const CloudServicesPage: React.FC = () => {
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
 
     }
-  ];
+    ];
   const benefits = [
 
     'Reduced infrastructure costs by up to 40%',
@@ -87,8 +87,7 @@ const CloudServicesPage: React.FC = () => {
         'Custom development'
       ]
     }
-
-  ];
+    ];
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -161,11 +160,11 @@ const CloudServicesPage: React.FC = () => {
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </div>
+              ))}
                 </ul>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -190,7 +189,7 @@ const CloudServicesPage: React.FC = () => {
                 </div>
                 <p className="text-white font-medium">{benefit}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -230,8 +229,8 @@ const CloudServicesPage: React.FC = () => {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </div>
+              ))}
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
@@ -241,7 +240,7 @@ const CloudServicesPage: React.FC = () => {
                   Get Started
                 </button>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

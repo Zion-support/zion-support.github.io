@@ -31,7 +31,7 @@ const DynamicContentShowcase: React.FC = () => {
       image: '/images/micro-saas.jpg',
       category: 'Micro SaaS'
     }
-  ];
+    ];
 
   useEffect(() => {
     if (isPlaying) {
@@ -125,7 +125,7 @@ const DynamicContentShowcase: React.FC = () => {
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-300 text-sm">{feature}</span>
                     </div>
-                  ))}
+              ))}
                 </div>
 
                 <div className="flex space-x-4">

@@ -45,12 +45,7 @@ const ItServicesPage: React.FC = () => {
         'Auto-scaling solutions',
         'Security compliance'
       ],
-      benefits: [
-        '99.9% uptime guarantee',
-        'Cost reduction up to 40%',
-        'Scalable infrastructure',
-        'Expert migration support'
-      ],
+      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support'],
       category: 'Cloud',
       popular: true,
       icon: Cloud
@@ -69,12 +64,7 @@ const ItServicesPage: React.FC = () => {
         'Compliance management',
         'Employee training'
       ],
-      benefits: [
-        '24/7 security monitoring',
-        'Reduced security incidents',
-        'Compliance assurance',
-        'Expert security team'
-      ],
+      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team'],
       category: 'Security',
       popular: true,
       icon: Shield
@@ -93,12 +83,7 @@ const ItServicesPage: React.FC = () => {
         'Automated testing',
         'Deployment automation'
       ],
-      benefits: [
-        'Faster deployments',
-        'Reduced downtime',
-        'Improved code quality',
-        'Automated workflows'
-      ],
+      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows'],
       category: 'DevOps',
       popular: false,
       icon: Settings
@@ -117,12 +102,7 @@ const ItServicesPage: React.FC = () => {
         'Security hardening',
         'Monitoring & maintenance'
       ],
-      benefits: [
-        'Improved performance',
-        'Data security',
-        'Automated backups',
-        'Expert DBA support'
-      ],
+      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support'],
       category: 'Database',
       popular: false,
       icon: Database
@@ -141,12 +121,7 @@ const ItServicesPage: React.FC = () => {
         'Offline functionality',
         'Performance optimization'
       ],
-      benefits: [
-        'Native performance',
-        'Cross-platform compatibility',
-        'App store success',
-        'User engagement'
-      ],
+      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement'],
       category: 'Development',
       popular: false,
       icon: Smartphone
@@ -165,12 +140,7 @@ const ItServicesPage: React.FC = () => {
         'Security implementation',
         'Content management'
       ],
-      benefits: [
-        'Modern technology stack',
-        'SEO optimized',
-        'Mobile responsive',
-        'Fast loading times'
-      ],
+      benefits: ['Modern technology stack', 'SEO optimized', 'Mobile responsive', 'Fast loading times'],
       category: 'Development',
       popular: false,
       icon: Globe
@@ -189,12 +159,7 @@ const ItServicesPage: React.FC = () => {
         'Disaster recovery planning',
         '24/7 network support'
       ],
-      benefits: [
-        'Improved network performance',
-        'Enhanced security',
-        'Reduced downtime',
-        'Scalable infrastructure'
-      ],
+      benefits: ['Improved network performance', 'Enhanced security', 'Reduced downtime', 'Scalable infrastructure'],
       category: 'Networking',
       popular: false,
       icon: Wifi
@@ -213,12 +178,7 @@ const ItServicesPage: React.FC = () => {
         'Compliance and security',
         '24/7 monitoring and support'
       ],
-      benefits: [
-        '99.99% uptime guarantee',
-        'Cost optimization',
-        'Scalable infrastructure',
-        'Expert management'
-      ],
+      benefits: ['99.99% uptime guarantee', 'Cost optimization', 'Scalable infrastructure', 'Expert management'],
       category: 'Data Center',
       popular: false,
       icon: Server
@@ -237,12 +197,7 @@ const ItServicesPage: React.FC = () => {
         'Process optimization',
         'Change management'
       ],
-      benefits: [
-        'Strategic guidance',
-        'Cost optimization',
-        'Technology alignment',
-        'Competitive advantage'
-      ],
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage'],
       category: 'Consulting',
       popular: true,
       icon: Users
@@ -261,12 +216,7 @@ const ItServicesPage: React.FC = () => {
         'Backup and recovery',
         'Software updates'
       ],
-      benefits: [
-        'Reduced IT costs',
-        'Improved reliability',
-        'Expert support',
-        'Focus on core business'
-      ],
+      benefits: ['Reduced IT costs', 'Improved reliability', 'Expert support', 'Focus on core business'],
       category: 'Managed Services',
       popular: true,
       icon: Settings
@@ -285,12 +235,7 @@ const ItServicesPage: React.FC = () => {
         'API security and authentication',
         'Performance optimization'
       ],
-      benefits: [
-        'Improved system integration',
-        'Enhanced functionality',
-        'Better performance',
-        'Scalable architecture'
-      ],
+      benefits: ['Improved system integration', 'Enhanced functionality', 'Better performance', 'Scalable architecture'],
       category: 'API Development',
       popular: false,
       icon: Code
@@ -309,12 +254,7 @@ const ItServicesPage: React.FC = () => {
         'Mobile commerce optimization',
         'SEO and marketing tools'
       ],
-      benefits: [
-        'Increased online sales',
-        'Better user experience',
-        'Mobile optimization',
-        'Scalable platform'
-      ],
+      benefits: ['Increased online sales', 'Better user experience', 'Mobile optimization', 'Scalable platform'],
       category: 'E-commerce',
       popular: true,
       icon: ShoppingCart
@@ -333,12 +273,7 @@ const ItServicesPage: React.FC = () => {
         'Testing and quality assurance',
         'Training and documentation'
       ],
-      benefits: [
-        'Tailored solutions',
-        'Improved efficiency',
-        'Better user experience',
-        'Competitive advantage'
-      ],
+      benefits: ['Tailored solutions', 'Improved efficiency', 'Better user experience', 'Competitive advantage'],
       category: 'Software Development',
       popular: false,
       icon: Monitor
@@ -357,12 +292,7 @@ const ItServicesPage: React.FC = () => {
         'System maintenance',
         'Incident management'
       ],
-      benefits: [
-        'Reduced downtime',
-        'Improved productivity',
-        'Expert support',
-        'Cost-effective solutions'
-      ],
+      benefits: ['Reduced downtime', 'Improved productivity', 'Expert support', 'Cost-effective solutions'],
       category: 'Support',
       popular: true,
       icon: Headphones
@@ -381,12 +311,7 @@ const ItServicesPage: React.FC = () => {
         'Threat detection and response',
         'Security training and awareness'
       ],
-      benefits: [
-        'Enhanced cloud security',
-        'Compliance assurance',
-        'Threat protection',
-        'Expert guidance'
-      ],
+      benefits: ['Enhanced cloud security', 'Compliance assurance', 'Threat protection', 'Expert guidance'],
       category: 'Cloud Security',
       popular: false,
       icon: Shield
@@ -405,12 +330,7 @@ const ItServicesPage: React.FC = () => {
         'Data visualization',
         'Machine learning integration'
       ],
-      benefits: [
-        'Data-driven insights',
-        'Better decision making',
-        'Competitive advantage',
-        'Improved efficiency'
-      ],
+      benefits: ['Data-driven insights', 'Better decision making', 'Competitive advantage', 'Improved efficiency'],
       category: 'Data Analytics',
       popular: true,
       icon: BarChart
@@ -429,12 +349,7 @@ const ItServicesPage: React.FC = () => {
         'Cloud-based recovery',
         'Regular testing and updates'
       ],
-      benefits: [
-        'Minimized downtime',
-        'Data protection',
-        'Business continuity',
-        'Peace of mind'
-      ],
+      benefits: ['Minimized downtime', 'Data protection', 'Business continuity', 'Peace of mind'],
       category: 'Disaster Recovery',
       popular: false,
       icon: Shield
@@ -453,12 +368,7 @@ const ItServicesPage: React.FC = () => {
         'Training and awareness',
         'Ongoing monitoring'
       ],
-      benefits: [
-        'Regulatory compliance',
-        'Risk mitigation',
-        'Improved security posture',
-        'Audit readiness'
-      ],
+      benefits: ['Regulatory compliance', 'Risk mitigation', 'Improved security posture', 'Audit readiness'],
       category: 'Compliance',
       popular: false,
       icon: CheckCircle
@@ -479,12 +389,7 @@ const ItServicesPage: React.FC = () => {
         'CI/CD pipeline setup',
         'Auto-scaling implementation'
       ],
-      benefits: [
-        'Scalable and resilient applications',
-        'Faster deployment cycles',
-        'Cost-effective scaling',
-        'Modern development practices'
-      ],
+      benefits: ['Scalable and resilient applications', 'Faster deployment cycles', 'Cost-effective scaling', 'Modern development practices'],
       category: 'Cloud Development',
       popular: true,
       icon: Cloud
@@ -505,12 +410,7 @@ const ItServicesPage: React.FC = () => {
         'Custom AI solution development',
         'Training and support'
       ],
-      benefits: [
-        'Leverage AI capabilities',
-        'Seamless integration',
-        'Improved business processes',
-        'Competitive advantage'
-      ],
+      benefits: ['Leverage AI capabilities', 'Seamless integration', 'Improved business processes', 'Competitive advantage'],
       category: 'AI Integration',
       popular: true,
       icon: Brain
@@ -531,12 +431,7 @@ const ItServicesPage: React.FC = () => {
         'Token development',
         'Web3 integration'
       ],
-      benefits: [
-        'Decentralized applications',
-        'Enhanced security',
-        'Transparent transactions',
-        'Future-proof technology'
-      ],
+      benefits: ['Decentralized applications', 'Enhanced security', 'Transparent transactions', 'Future-proof technology'],
       category: 'Blockchain',
       popular: false,
       icon: Link
@@ -557,12 +452,7 @@ const ItServicesPage: React.FC = () => {
         'Edge computing implementation',
         'IoT security implementation'
       ],
-      benefits: [
-        'Connected device solutions',
-        'Real-time data insights',
-        'Automated processes',
-        'Improved efficiency'
-      ],
+      benefits: ['Connected device solutions', 'Real-time data insights', 'Automated processes', 'Improved efficiency'],
       category: 'IoT Development',
       popular: true,
       icon: Wifi
@@ -583,12 +473,7 @@ const ItServicesPage: React.FC = () => {
         'Security implementation',
         'App maintenance and updates'
       ],
-      benefits: [
-        'Native performance',
-        'Cross-platform compatibility',
-        'App store success',
-        'User engagement'
-      ],
+      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement'],
       category: 'Mobile Development',
       popular: true,
       icon: Smartphone
@@ -609,12 +494,7 @@ const ItServicesPage: React.FC = () => {
         'Mobile commerce optimization',
         'SEO and marketing tools'
       ],
-      benefits: [
-        'Increased online sales',
-        'Better user experience',
-        'Mobile optimization',
-        'Scalable platform'
-      ],
+      benefits: ['Increased online sales', 'Better user experience', 'Mobile optimization', 'Scalable platform'],
       category: 'E-commerce',
       popular: true,
       icon: ShoppingCart
@@ -635,12 +515,7 @@ const ItServicesPage: React.FC = () => {
         'Performance optimization',
         'Monitoring and analytics'
       ],
-      benefits: [
-        'Scalable API architecture',
-        'Enhanced security',
-        'Better performance',
-        'Developer-friendly APIs'
-      ],
+      benefits: ['Scalable API architecture', 'Enhanced security', 'Better performance', 'Developer-friendly APIs'],
       category: 'API Development',
       popular: true,
       icon: Code
@@ -661,12 +536,7 @@ const ItServicesPage: React.FC = () => {
         'Cloud data platform setup',
         'Data governance implementation'
       ],
-      benefits: [
-        'Efficient data processing',
-        'Better data quality',
-        'Scalable data infrastructure',
-        'Data-driven insights'
-      ],
+      benefits: ['Efficient data processing', 'Better data quality', 'Scalable data infrastructure', 'Data-driven insights'],
       category: 'Data Engineering',
       popular: true,
       icon: Database
@@ -687,12 +557,7 @@ const ItServicesPage: React.FC = () => {
         'Compliance management',
         'Security training programs'
       ],
-      benefits: [
-        'Proactive threat protection',
-        'Reduced security risks',
-        'Compliance assurance',
-        'Expert security guidance'
-      ],
+      benefits: ['Proactive threat protection', 'Reduced security risks', 'Compliance assurance', 'Expert security guidance'],
       category: 'Cybersecurity',
       popular: true,
       icon: Shield
@@ -713,12 +578,7 @@ const ItServicesPage: React.FC = () => {
         'Performance optimization',
         'Training and documentation'
       ],
-      benefits: [
-        'Seamless cloud transition',
-        'Improved performance',
-        'Cost optimization',
-        'Enhanced security'
-      ],
+      benefits: ['Seamless cloud transition', 'Improved performance', 'Cost optimization', 'Enhanced security'],
       category: 'Cloud Migration',
       popular: true,
       icon: Cloud
@@ -739,12 +599,7 @@ const ItServicesPage: React.FC = () => {
         'Security automation',
         'Team training and mentoring'
       ],
-      benefits: [
-        'High system availability',
-        'Faster incident response',
-        'Improved system reliability',
-        'Reduced operational costs'
-      ],
+      benefits: ['High system availability', 'Faster incident response', 'Improved system reliability', 'Reduced operational costs'],
       category: 'DevOps',
       popular: true,
       icon: Settings
@@ -765,12 +620,7 @@ const ItServicesPage: React.FC = () => {
         'ML pipeline development',
         'Performance optimization'
       ],
-      benefits: [
-        'Reliable ML operations',
-        'Automated model management',
-        'Better model performance',
-        'Reduced operational overhead'
-      ],
+      benefits: ['Reliable ML operations', 'Automated model management', 'Better model performance', 'Reduced operational overhead'],
       category: 'MLOps',
       popular: true,
       icon: Cpu
@@ -791,12 +641,7 @@ const ItServicesPage: React.FC = () => {
         'Error handling and recovery',
         'Documentation and training'
       ],
-      benefits: [
-        'Seamless system connectivity',
-        'Improved data flow',
-        'Reduced manual processes',
-        'Better system visibility'
-      ],
+      benefits: ['Seamless system connectivity', 'Improved data flow', 'Reduced manual processes', 'Better system visibility'],
       category: 'Integration',
       popular: true,
       icon: Link
@@ -817,12 +662,7 @@ const ItServicesPage: React.FC = () => {
         'Performance monitoring',
         'Capacity planning'
       ],
-      benefits: [
-        'Faster application response',
-        'Better user experience',
-        'Reduced infrastructure costs',
-        'Improved scalability'
-      ],
+      benefits: ['Faster application response', 'Better user experience', 'Reduced infrastructure costs', 'Improved scalability'],
       category: 'Performance',
       popular: true,
       icon: Zap
@@ -843,12 +683,7 @@ const ItServicesPage: React.FC = () => {
         'Recovery testing automation',
         'Documentation and training'
       ],
-      benefits: [
-        'Minimized business downtime',
-        'Data protection assurance',
-        'Rapid recovery capabilities',
-        'Peace of mind'
-      ],
+      benefits: ['Minimized business downtime', 'Data protection assurance', 'Rapid recovery capabilities', 'Peace of mind'],
       category: 'Disaster Recovery',
       popular: false,
       icon: Shield
@@ -869,12 +704,7 @@ const ItServicesPage: React.FC = () => {
         'Alert and notification systems',
         'Integration with existing systems'
       ],
-      benefits: [
-        'Reduced compliance costs',
-        'Automated reporting',
-        'Better risk management',
-        'Audit readiness'
-      ],
+      benefits: ['Reduced compliance costs', 'Automated reporting', 'Better risk management', 'Audit readiness'],
       category: 'Compliance',
       popular: true,
       icon: CheckCircle
@@ -895,12 +725,7 @@ const ItServicesPage: React.FC = () => {
         'Cost allocation and reporting',
         'Optimization automation'
       ],
-      benefits: [
-        'Reduce cloud costs by 30-50%',
-        'Better resource utilization',
-        'Automated cost management',
-        'Improved budget control'
-      ],
+      benefits: ['Reduce cloud costs by 30-50%', 'Better resource utilization', 'Automated cost management', 'Improved budget control'],
       category: 'Cloud Optimization',
       popular: true,
       icon: TrendingUp
@@ -921,12 +746,7 @@ const ItServicesPage: React.FC = () => {
         'Threat intelligence integration',
         'Custom security workflows'
       ],
-      benefits: [
-        'Faster threat response',
-        'Reduced security incidents',
-        'Automated compliance',
-        'Better security posture'
-      ],
+      benefits: ['Faster threat response', 'Reduced security incidents', 'Automated compliance', 'Better security posture'],
       category: 'Security Automation',
       popular: true,
       icon: Shield
@@ -947,12 +767,7 @@ const ItServicesPage: React.FC = () => {
         'Data integration',
         'User training and support'
       ],
-      benefits: [
-        'Better data insights',
-        'Improved decision making',
-        'Self-service analytics',
-        'Enhanced reporting'
-      ],
+      benefits: ['Better data insights', 'Improved decision making', 'Self-service analytics', 'Enhanced reporting'],
       category: 'Data Visualization',
       popular: true,
       icon: BarChart
@@ -973,12 +788,7 @@ const ItServicesPage: React.FC = () => {
         'Change management',
         'Training and documentation'
       ],
-      benefits: [
-        'Reduced manual work',
-        'Improved process efficiency',
-        'Better accuracy',
-        'Cost savings'
-      ],
+      benefits: ['Reduced manual work', 'Improved process efficiency', 'Better accuracy', 'Cost savings'],
       category: 'Automation',
       popular: true,
       icon: Settings
@@ -999,17 +809,12 @@ const ItServicesPage: React.FC = () => {
         'Data protection',
         'Compliance automation'
       ],
-      benefits: [
-        'Enhanced cloud security',
-        'Automated security management',
-        'Better compliance',
-        'Reduced security risks'
-      ],
+      benefits: ['Enhanced cloud security', 'Automated security management', 'Better compliance', 'Reduced security risks'],
       category: 'Cloud Security',
       popular: true,
       icon: Shield
     }
-  ];
+    ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1045,7 +850,7 @@ const ItServicesPage: React.FC = () => {
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ];
+    ];
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
@@ -1089,7 +894,7 @@ const ItServicesPage: React.FC = () => {
                   >
                     {category.name} ({category.count})
                   </button>
-                ))}
+              ))}
               </div>
             </div>
 
@@ -1130,7 +935,7 @@ const ItServicesPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
-                      ))}
+              ))}
                     </ul>
                   </div>
 

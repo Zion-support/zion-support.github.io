@@ -37,7 +37,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-))
+              ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 const HomePage: React.FC = memo(() => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -56,7 +56,7 @@ useEffect(() => {
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',;
+        event_category: 'engagement',
         event_label: 'main_phone_number'
   }
       });
@@ -1263,7 +1263,7 @@ useEffect(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
                       <Phone>
                     </div>
-                    <div></div>
+                    <div />
                       <p className="text-gray-300 text-sm">Phone</p>
                       <a>
                         +1 (302) 464-0950;
@@ -1274,7 +1274,7 @@ useEffect(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
                       <Mail>
                     </div>
-                    <div></div>
+                    <div />
                       <p className="text-gray-300 text-sm">Email</p>
                       <a>
                         kleber@ziontechgroup.com;
@@ -1285,7 +1285,7 @@ useEffect(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>
                       <MapPin>
                     </div>
-                    <div></div>
+                    <div />
                       <p className="text-gray-300 text-sm">Address</p>
                       <p>
                         364 E Main St STE 1008<br>
@@ -1297,7 +1297,7 @@ useEffect(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>
                       <Clock>
                     </div>
-                    <div></div>
+                    <div />
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p>
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br>
@@ -1311,25 +1311,25 @@ useEffect(() => {
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
                 <form>
-                  <div></div>
+                  <div />
                     <label>
                       Full Name;
                     </label>
                     <input>
                   </div>
-                  <div></div>
+                  <div />
                     <label>
                       Email Address;
                     </label>
                     <input>
                   </div>
-                  <div></div>
+                  <div />
                     <label>
                       Phone Number;
                     </label>
                     <input>
                   </div>
-                  <div></div>
+                  <div />
                     <label>
                       Service Interest;
                     </label>
@@ -1342,7 +1342,7 @@ useEffect(() => {
                       <option value="other">Other</option>
                     </select>
                   </div>
-                  <div></div>
+                  <div />
                     <label>
                       Message;
                     </label>

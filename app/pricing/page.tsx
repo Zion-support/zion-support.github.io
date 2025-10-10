@@ -68,7 +68,7 @@ const PricingPage: React.FC = () => {
       icon: Shield,
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+    ];
 
   const itPlans = [
     {
@@ -132,7 +132,7 @@ const PricingPage: React.FC = () => {
       icon: Shield,
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+    ];
 
   const saasPlans = [
     {
@@ -196,7 +196,7 @@ const PricingPage: React.FC = () => {
       icon: Shield,
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+    ];
 
   const getCurrentPlans = () => {
     switch (selectedPlan) {
@@ -301,7 +301,7 @@ const PricingPage: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{feature}</span>
                       </li>
-                    ))}
+              ))}
                   </ul>
 
                   <div className="text-center">

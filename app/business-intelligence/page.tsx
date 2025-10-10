@@ -24,7 +24,7 @@ icon: Brain,
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
     }
-  ];
+    ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -62,7 +62,7 @@ icon: Brain,
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
-          ))}
+              ))}
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -74,7 +74,7 @@ icon: Brain,
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
 {/* Benefits Section */}
@@ -94,7 +94,7 @@ icon: Brain,
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

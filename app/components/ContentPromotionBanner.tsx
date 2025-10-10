@@ -24,7 +24,7 @@ const ContentPromotionBanner: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
     }
-  ];
+    ];
 
   const benefits = [
     'Advanced AI technology integration',
@@ -56,7 +56,7 @@ const ContentPromotionBanner: React.FC = () => {
       label: 'Rating',
       description: 'Highly rated by clients'
     }
-  ];
+    ];
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -97,7 +97,7 @@ const ContentPromotionBanner: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 text-sm">{feature.description}</p>
             </div>
-          ))}
+              ))}
         </div>
 
         {/* Stats Section */}
@@ -111,7 +111,7 @@ const ContentPromotionBanner: React.FC = () => {
               <div className="text-lg font-semibold text-gray-300 mb-1">{stat.label}</div>
               <div className="text-sm text-gray-400">{stat.description}</div>
             </div>
-          ))}
+              ))}
         </div>
 
         {/* Benefits Section */}
@@ -125,7 +125,7 @@ const ContentPromotionBanner: React.FC = () => {
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>

@@ -2,70 +2,70 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Mail,;
-  Target,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Settings,;
-  Database,;
-  Send,;
+    Mail,
+  Target,
+  CheckCircle,
+  BarChart,
+  Clock,
+  Users,
+  Zap,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Globe,
+  Lock,
+  Activity,
+  TrendingUp,
+  Settings,
+  Database,
+  Send,
   PieChart
   }
 } from 'lucide-react';
 const EmailMarketingAutomationPage: React.FC = () => {
     const features = [
     {
-      icon: Mail,;
-      title: 'Automated Campaigns',;
+      icon: Mail,
+      title: 'Automated Campaigns',
       description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'
   }
-    },;
+    },
     {
-    icon: Target,;
-      title: 'Advanced Segmentation',;
+    icon: Target,
+      title: 'Advanced Segmentation',
       description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'
   }
-    },;
+    },
     {
-    icon: BarChart,;
-      title: 'Analytics & Insights',;
+    icon: BarChart,
+      title: 'Analytics & Insights',
       description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'
   }
-    },;
+    },
     {
-    icon: Zap,;
-      title: 'Smart Triggers',;
+    icon: Zap,
+      title: 'Smart Triggers',
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   }
     }
-  ];
+    ];
 const benefits = [
-    'Increase email engagement rates',;
-    'Automate repetitive marketing tasks',;
-    'Personalize customer experiences',;
-    'Track and optimize campaign performance',;
-    'Scale your email marketing efforts',;
-    'Improve customer retention',;
-    'Generate more qualified leads',;
+    'Increase email engagement rates',
+    'Automate repetitive marketing tasks',
+    'Personalize customer experiences',
+    'Track and optimize campaign performance',
+    'Scale your email marketing efforts',
+    'Improve customer retention',
+    'Generate more qualified leads',
     'Save time and resources';
   ];
 return (
     <></>
       <Helmet>
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}

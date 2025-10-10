@@ -11,51 +11,31 @@ const CookiesPage: React.FC = () => {
       type: 'Essential Cookies',
       icon: Shield,
       description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
-      examples: [
-        'Authentication cookies',
-        'Security cookies',
-        'Load balancing cookies',
-        'User interface customization'
-      ],
+      examples: ['Authentication cookies', 'Security cookies', 'Load balancing cookies', 'User interface customization'],
       required: true
     },
     {
       type: 'Analytics Cookies',
       icon: Database,
       description: 'These cookies help us understand how visitors interact with our website.',
-      examples: [
-        'Google Analytics',
-        'Page view tracking',
-        'User behavior analysis',
-        'Performance monitoring'
-      ],
+      examples: ['Google Analytics', 'Page view tracking', 'User behavior analysis', 'Performance monitoring'],
       required: false
     },
     {
       type: 'Functional Cookies',
       icon: Settings,
       description: 'These cookies enable enhanced functionality and personalization.',
-      examples: [
-        'Language preferences',
-        'Theme settings',
-        'User preferences',
-        'Form data storage'
-      ],
+      examples: ['Language preferences', 'Theme settings', 'User preferences', 'Form data storage'],
       required: false
     },
     {
       type: 'Marketing Cookies',
       icon: Eye,
       description: 'These cookies are used to deliver relevant advertisements and marketing content.',
-      examples: [
-        'Advertising targeting',
-        'Social media integration',
-        'Email marketing tracking',
-        'Campaign performance'
-      ],
+      examples: ['Advertising targeting', 'Social media integration', 'Email marketing tracking', 'Campaign performance'],
       required: false
     }
-  ];
+    ];
 
   const purposes = [
     {
@@ -78,7 +58,7 @@ const CookiesPage: React.FC = () => {
       description: 'Deliver relevant content and advertisements',
       icon: Eye
     }
-  ];
+    ];
 
   return (
     <>
@@ -154,7 +134,7 @@ const CookiesPage: React.FC = () => {
                         <div className="text-gray-300 text-sm">{purpose.description}</div>
                       </div>
                     </div>
-                  ))}
+              ))}
                 </div>
               </div>
             </div>
@@ -190,7 +170,7 @@ const CookiesPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {example}
                         </li>
-                      ))}
+              ))}
                     </ul>
                   </div>
                 </div>

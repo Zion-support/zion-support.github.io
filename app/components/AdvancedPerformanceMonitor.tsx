@@ -246,8 +246,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
           <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
           <div>
-            Memory:{' '}
-            {metrics.memory
+            Memory:{' '},
+        {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>
@@ -259,7 +259,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </h4>
             <ul className='text-xs text-red-600'>
               {_recommendations.map((rec, index) => (
-                <li key={index}>• {rec}</li>
+                <li key={index}>• {rec}</div>
               ))}
             </ul>
           </div>

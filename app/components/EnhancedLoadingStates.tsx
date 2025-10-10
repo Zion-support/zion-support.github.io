@@ -59,7 +59,7 @@ export const StatsSkeleton: React.FC = () => (
         <div className="h-8 bg-gray-600 rounded mb-2"></div>
         <div className="h-4 bg-gray-600 rounded w-3/4 mx-auto"></div>
       </div>
-    ))}
+              ))}
   </div>
 );
 

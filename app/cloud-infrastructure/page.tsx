@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Global Deployment',
       description: 'Worldwide cloud infrastructure deployment and support'
     }
-  ];
+    ];
   const benefits = [
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
@@ -78,7 +78,7 @@ icon: Shield,
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -99,7 +99,7 @@ icon: Shield,
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
 {/* CTA Section */}

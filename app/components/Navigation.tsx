@@ -110,7 +110,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Automated Reporting', href: '/ai-automated-reporting', icon: BarChart, description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', href: '/ai-voice-assistant', icon: Mic, description: 'Enterprise voice AI' },
     { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' }
-  ];
+    ];
 
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
@@ -147,7 +147,7 @@ const Navigation: React.FC = () => {
     { name: 'Data Visualization & BI', href: '/data-visualization', icon: BarChart, description: 'Advanced dashboards' },
     { name: 'Workflow Automation', href: '/workflow-automation', icon: Settings, description: 'Process automation' },
     { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' }
-  ];
+    ];
 
   const microSaasServices = [
     { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
@@ -186,7 +186,7 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro', icon: MessageSquare, description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
     { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
-  ];
+    ];
 
   const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
@@ -199,7 +199,7 @@ const Navigation: React.FC = () => {
     { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
-  ];
+    ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -249,7 +249,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                    ))}
+              ))}
                   </div>
                 </div>
               )}
@@ -281,7 +281,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                    ))}
+              ))}
                   </div>
                 </div>
               )}
@@ -313,7 +313,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                    ))}
+              ))}
                   </div>
                 </div>
               )}
@@ -345,7 +345,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                    ))}
+              ))}
                   </div>
                 </div>
               )}
@@ -398,7 +398,7 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation */},
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
@@ -428,7 +428,7 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
-                    ))}
+              ))}
                     <Link
                       to="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
@@ -462,7 +462,7 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
-                    ))}
+              ))}
                   </div>
                 )}
               </div>
@@ -489,7 +489,7 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
-                    ))}
+              ))}
                     <Link
                       to="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"

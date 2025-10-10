@@ -92,15 +92,13 @@ export default function APIDocsPage() {
         }
       ]
     }
-  ];
+    ];
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(category => category.endpoints.length > 0);
+      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()))})).filter(category => category.endpoints.length > 0);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
@@ -222,10 +220,10 @@ export default function APIDocsPage() {
                         </pre>
                       </div>
                     </div>
-                  ))}
+              ))}
                 </div>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

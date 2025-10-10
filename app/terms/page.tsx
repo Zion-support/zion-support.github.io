@@ -47,7 +47,7 @@ const TermsPage: React.FC = () => {
       icon: Scale,
       content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
     }
-  ];
+    ];
 
   const contactInfo = {
     email: 'legal@ziontechgroup.com',
@@ -119,7 +119,7 @@ const TermsPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            ))}
+              ))}
           </div>
 
           {/* Additional Terms */}

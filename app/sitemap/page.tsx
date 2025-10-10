@@ -104,7 +104,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }
       ]
     }
-  ];
+    ];
 
   const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0);
 
@@ -200,10 +200,10 @@ const SitemapPage: React.FC = () => {
                         <ExternalLink className="w-3 h-3 ml-1" />
                       </a>
                     </div>
-                  ))}
+              ))}
                 </div>
               </div>
-            ))}
+              ))}
           </div>
 
           {/* Search Functionality */}

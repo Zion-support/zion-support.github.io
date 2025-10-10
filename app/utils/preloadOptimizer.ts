@@ -19,16 +19,16 @@ export const preloadCriticalResources = useCallback((...args) => {}
   fontPreloads.forEach(href => {)}
     const link = document.createElement('link');
     link.rel = 'preload';
-    link.as = 'style',;
+    link.as = 'style',
     link.href = href;
-    link.crossOrigin = 'anonymous',;
+    link.crossOrigin = 'anonymous',
     document.head.appendChild(link)}
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   });
   // Preload critical images;
   const criticalImages = [
-    '/images/hero-bg.webp',;
-    '/images/logo.webp',;
+    '/images/hero-bg.webp',
+    '/images/logo.webp',
     '/images/favicon.ico';
   ];
   criticalImages.forEach(src => {
@@ -50,8 +50,8 @@ export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
   const routeResources = {}
-    '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],;
-    '/services': ['/api/services', '/images/services-hero.webp'],;
+    '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],
+    '/services': ['/api/services', '/images/services-hero.webp'],
     '/contact': ['/api/contact', '/images/contact-hero.webp']}
   }
   const resources = routeResources[route as keyof typeof routeResources];
@@ -99,7 +99,7 @@ export const optimizeImages = useCallback((...args) => {}
             img['src'] = img.dataset['src'];
             img.removeAttribute('data-src');
             imageObserver.unobserve(img)}
-  ];
+    ];
   criticalImages.forEach(src => {/* TODO: Fix JSX expression */});
   });
 }
@@ -157,7 +157,7 @@ const loadAnalytics = useCallback((...args) => {}
   // Load Google Analytics after page load;
   const gaScript = document.createElement('script');
   gaScript.async = true;
-  gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',;
+  gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
   document.head.appendChild(gaScript)}
 export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   });

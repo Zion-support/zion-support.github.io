@@ -105,8 +105,7 @@ const PerformanceMonitor: React.FC = () => {
               {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
             </span>
           </div>
-        )}
-        
+        )},
         {metrics.fid && (
           <div className="flex justify-between">
             <span>FID:</span>
@@ -114,8 +113,7 @@ const PerformanceMonitor: React.FC = () => {
               {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
             </span>
           </div>
-        )}
-        
+        )},
         {metrics.cls && (
           <div className="flex justify-between">
             <span>CLS:</span>
@@ -123,8 +121,7 @@ const PerformanceMonitor: React.FC = () => {
               {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
             </span>
           </div>
-        )}
-        
+        )},
         {metrics.fcp && (
           <div className="flex justify-between">
             <span>FCP:</span>
@@ -132,8 +129,7 @@ const PerformanceMonitor: React.FC = () => {
               {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
             </span>
           </div>
-        )}
-        
+        )},
         {metrics.ttfb && (
           <div className="flex justify-between">
             <span>TTFB:</span>

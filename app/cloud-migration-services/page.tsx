@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Multi-Cloud Support',
       description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
     }
-  ];
+    ];
   const benefits = [
 'Advanced cloud migration technology',
     'Real-time migration monitoring',
@@ -62,7 +62,7 @@ icon: Shield,
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
-          ))}
+              ))}
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -74,7 +74,7 @@ icon: Shield,
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
         <div className="text-center">
@@ -113,7 +113,7 @@ icon: Shield,
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

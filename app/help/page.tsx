@@ -6,8 +6,8 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
 
       {/* Hero Section */}
@@ -18,7 +18,7 @@ return (
               Our page solutions deliver unmatched performance, security, and scalability.;
             </p>
               </div>
-            ))}
+              ))}
 
           </div>
         </div>
@@ -30,7 +30,7 @@ return (
               Experience the power of our page solutions for your business.;
             </p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

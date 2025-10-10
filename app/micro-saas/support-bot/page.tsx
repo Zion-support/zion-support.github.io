@@ -6,7 +6,7 @@ const SmartSupportBotPage: React.FC = () => {
     <></>
       <Helmet>
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
-        <meta>
+        <meta />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>

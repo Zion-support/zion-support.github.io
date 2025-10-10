@@ -80,10 +80,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return (
     <div className="performance-optimizer">
-      {children}
-      
-      {/* Performance Status Indicator (only in development) */}
-      {process.env.NODE_ENV === 'development' && (
+      {children},
+        {/* Performance Status Indicator (only in development) */},
+        {process.env.NODE_ENV === 'development' && (
         <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
           <div className="flex items-center space-x-2 mb-2">
             <Settings className="w-4 h-4 text-cyan-400" />
@@ -111,8 +110,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                       <li key={index} className="flex items-center space-x-1">
                         <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span>{opt}</span>
-                      </li>
-                    ))}
+                      </div>
+              ))}
                   </ul>
                 ) : (
                   <span>No optimizations applied</span>

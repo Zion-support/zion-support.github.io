@@ -2,72 +2,72 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Cloud,;
-  Settings,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Target,;
-  Eye,;
-  Database,;
-  Server,;
+    Cloud,
+  Settings,
+  CheckCircle,
+  BarChart,
+  Clock,
+  Users,
+  Zap,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Globe,
+  Lock,
+  Activity,
+  TrendingUp,
+  Target,
+  Eye,
+  Database,
+  Server,
   Monitor
   }
 } from 'lucide-react';
 const CloudInfrastructureManagerPage: React.FC = () => {
     const features = [
     {
-      icon: Cloud,;
-      title: 'Multi-Cloud Management',;
+      icon: Cloud,
+      title: 'Multi-Cloud Management',
       description: 'Manage and monitor your infrastructure across AWS, Azure, Google Cloud, and other platforms from a single dashboard.'
   }
-    },;
+    },
     {
-    icon: Settings,;
-      title: 'Automated Scaling',;
+    icon: Settings,
+      title: 'Automated Scaling',
       description: 'Intelligent auto-scaling based on demand to optimize costs and performance automatically.'
   }
-    },;
+    },
     {
-    icon: BarChart,;
-      title: 'Cost Optimization',;
+    icon: BarChart,
+      title: 'Cost Optimization',
       description: 'Advanced analytics and recommendations to reduce cloud costs while maintaining performance.'
   }
-    },;
+    },
     {
-    icon: Zap,;
-      title: 'DevOps Integration',;
+    icon: Zap,
+      title: 'DevOps Integration',
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
   }
     }
-  ];
+    ];
 const benefits = [
-    'Centralized cloud infrastructure management',;
-    'Automated scaling and optimization',;
-    'Cost reduction and optimization',;
-    'Enhanced security and compliance',;
-    'Real-time monitoring and alerts',;
-    'Easy deployment and configuration',;
-    'Multi-cloud support',;
+    'Centralized cloud infrastructure management',
+    'Automated scaling and optimization',
+    'Cost reduction and optimization',
+    'Enhanced security and compliance',
+    'Real-time monitoring and alerts',
+    'Easy deployment and configuration',
+    'Multi-cloud support',
     'Expert technical support';
   ];
 return (
     <></>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}

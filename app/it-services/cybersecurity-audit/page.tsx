@@ -51,7 +51,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

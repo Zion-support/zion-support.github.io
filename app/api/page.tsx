@@ -143,7 +143,7 @@ const ApiPage: React.FC = () => {
         }
       ]
     }
-  ];
+    ];
 
   const authenticationMethods = [
     {
@@ -164,13 +164,13 @@ const ApiPage: React.FC = () => {
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
       security: 'High'
     }
-  ];
+    ];
 
   const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
-  ];
+    ];
 
   return (
     <>
@@ -311,7 +311,7 @@ const ApiPage: React.FC = () => {
                         <td className="py-3 px-4 text-gray-300">{limit.requests}</td>
                         <td className="py-3 px-4 text-gray-300">{limit.burst}</td>
                       </tr>
-                    ))}
+              ))}
                   </tbody>
                 </table>
               </div>
@@ -353,7 +353,7 @@ const ApiPage: React.FC = () => {
                                 <li key={paramIndex} className="text-gray-300 text-sm">
                                   <code className="text-cyan-400">{param}</code>
                                 </li>
-                              ))}
+              ))}
                             </ul>
                           </div>
                           <div>
@@ -371,7 +371,7 @@ const ApiPage: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                    ))}
+              ))}
                   </div>
                 </div>
               ))}

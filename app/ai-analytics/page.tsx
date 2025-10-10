@@ -42,7 +42,7 @@ title: 'Real-Time Dashboards',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
-  ];
+    ];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -81,7 +81,7 @@ title: 'Real-Time Dashboards',
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
     }
-  ];
+    ];
   return (
     <React.Fragment>
       <Helmet>
@@ -136,8 +136,8 @@ title: 'Real-Time Dashboards',
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
-                    ))}
+                      </div>
+              ))}
                   </ul>
                 </div>
               ))}

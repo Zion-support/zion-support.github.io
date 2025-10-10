@@ -44,7 +44,7 @@ const FAQPage: React.FC = () => {
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
-  ];
+    ];
   return (
     <React.Fragment>
       <Helmet>

@@ -15,12 +15,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'E-commerce',
       challenge: 'Low conversion rates and high cart abandonment',
       solution: 'AI-powered recommendation engine and chatbot',
-      results: [
-        '40% increase in conversion rates',
-        '60% reduction in cart abandonment',
-        '35% improvement in customer satisfaction',
-        '$2.5M additional revenue in 6 months'
-      ],
+      results: ['40% increase in conversion rates', '60% reduction in cart abandonment', '35% improvement in customer satisfaction', '$2.5M additional revenue in 6 months'],
       technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'AWS'],
       duration: '4 months',
       team: '8 developers',
@@ -34,12 +29,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Healthcare',
       challenge: 'Legacy system migration and compliance requirements',
       solution: 'Secure cloud infrastructure with HIPAA compliance',
-      results: [
-        '99.9% uptime achieved',
-        '50% reduction in infrastructure costs',
-        '100% HIPAA compliance',
-        '3x faster data processing'
-      ],
+      results: ['99.9% uptime achieved', '50% reduction in infrastructure costs', '100% HIPAA compliance', '3x faster data processing'],
       technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'PostgreSQL'],
       duration: '6 months',
       team: '12 developers',
@@ -53,12 +43,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Financial Technology',
       challenge: 'Real-time fraud detection and risk assessment',
       solution: 'AI-powered analytics platform with real-time processing',
-      results: [
-        '95% accuracy in fraud detection',
-        '80% reduction in false positives',
-        'Real-time processing capabilities',
-        '$10M in prevented fraud losses'
-      ],
+      results: ['95% accuracy in fraud detection', '80% reduction in false positives', 'Real-time processing capabilities', '$10M in prevented fraud losses'],
       technologies: ['Python', 'TensorFlow', 'Apache Kafka', 'Redis', 'MongoDB'],
       duration: '5 months',
       team: '10 developers',
@@ -72,12 +57,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Manufacturing',
       challenge: 'Production line optimization and predictive maintenance',
       solution: 'IoT sensors with AI-powered predictive analytics',
-      results: [
-        '25% increase in production efficiency',
-        '40% reduction in downtime',
-        '30% decrease in maintenance costs',
-        'Real-time production monitoring'
-      ],
+      results: ['25% increase in production efficiency', '40% reduction in downtime', '30% decrease in maintenance costs', 'Real-time production monitoring'],
       technologies: ['IoT', 'Machine Learning', 'Python', 'InfluxDB', 'Grafana'],
       duration: '7 months',
       team: '15 developers',
@@ -91,12 +71,7 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Project Management',
       challenge: 'Scalable project management platform',
       solution: 'Microservices architecture with AI-powered features',
-      results: [
-        '10x user growth in 12 months',
-        '99.95% uptime',
-        '50% faster project completion',
-        '$5M ARR achieved'
-      ],
+      results: ['10x user growth in 12 months', '99.95% uptime', '50% faster project completion', '$5M ARR achieved'],
       technologies: ['React', 'Node.js', 'Microservices', 'Docker', 'AWS'],
       duration: '8 months',
       team: '20 developers',
@@ -110,26 +85,21 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Retail',
       challenge: 'Inventory management and customer experience',
       solution: 'AI-powered inventory optimization and customer analytics',
-      results: [
-        '30% reduction in inventory costs',
-        '45% improvement in stock accuracy',
-        '25% increase in customer satisfaction',
-        'Automated reordering system'
-      ],
+      results: ['30% reduction in inventory costs', '45% improvement in stock accuracy', '25% increase in customer satisfaction', 'Automated reordering system'],
       technologies: ['AI/ML', 'React', 'Python', 'PostgreSQL', 'Redis'],
       duration: '6 months',
       team: '12 developers',
       image: '/case-studies/retail-automation.jpg',
       featured: false
     }
-  ];
+    ];
 
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Projects Completed' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '95%', label: 'Client Satisfaction' },
     { icon: <Award className="w-8 h-8 text-purple-500" />, value: '15+', label: 'Industry Awards' },
     { icon: <CheckCircle className="w-8 h-8 text-orange-500" />, value: '100%', label: 'On-Time Delivery' }
-  ];
+    ];
 
   return (
     <>
@@ -164,12 +134,12 @@ const CaseStudiesPage: React.FC = () => {
                     <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 
-            {/* Featured Case Study */}
-            {caseStudies.find(cs => cs.featured) && (
+            {/* Featured Case Study */},
+        {caseStudies.find(cs => cs.featured) && (
               <div className="mb-16">
                 <h2 className="text-2xl font-bold text-white mb-8">Featured Project</h2>
                 {(() => {
@@ -200,7 +170,7 @@ const CaseStudiesPage: React.FC = () => {
                                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span className="text-sm text-gray-300">{result}</span>
                               </div>
-                            ))}
+              ))}
                           </div>
                           <Link
                             to={`/case-studies/${featured.id}`}
@@ -215,9 +185,8 @@ const CaseStudiesPage: React.FC = () => {
                   ) : null;
                 })()}
               </div>
-            )}
-
-            {/* Case Studies Grid */}
+            )},
+        {/* Case Studies Grid */}
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8">All Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -244,7 +213,7 @@ const CaseStudiesPage: React.FC = () => {
                             <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                             <span className="text-xs text-gray-300">{result}</span>
                           </div>
-                        ))}
+              ))}
                       </div>
                       <Link
                         to={`/case-studies/${caseStudy.id}`}
@@ -255,7 +224,7 @@ const CaseStudiesPage: React.FC = () => {
                       </Link>
                     </div>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 

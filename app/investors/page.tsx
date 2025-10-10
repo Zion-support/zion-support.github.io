@@ -5,23 +5,22 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
     const features = [
     {
-      icon: Zap,;
-      title: 'High Performance',;
+      icon: Zap,
+      title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   }
-    },;
+    },
     {
     ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
-  }
-
-      {/* Hero Section */}
+  },
+        {/* Hero Section */}
             <h2>
               Why Choose Our Page?;
             </h2>
@@ -32,7 +31,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+              ))}
 
           </div>
         </div>
@@ -44,7 +43,7 @@ return (
               Experience the power of our page solutions for your business.;
             </p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

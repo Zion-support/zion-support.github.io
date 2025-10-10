@@ -67,8 +67,8 @@ class ErrorBoundary extends Component<Props, State> {
                   Error Details (Development)
                 </summary>
                 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
+                  {this.state.error.toString()},
+        {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}

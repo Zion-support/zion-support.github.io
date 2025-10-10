@@ -97,8 +97,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, []);
   return (
     <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
-      {process.env.NODE_ENV === 'development' && (
+      {children},
+        {process.env.NODE_ENV === 'development' && (
         <div className="optimization-debug" style={{
           position: 'fixed',
           bottom: '10px',

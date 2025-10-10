@@ -2,72 +2,72 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-    Shield,;
-  Search,;
-  AlertTriangle,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Settings,;
-  Database,;
-  Target,;
+    Shield,
+  Search,
+  AlertTriangle,
+  CheckCircle,
+  BarChart,
+  Clock,
+  Users,
+  Zap,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Globe,
+  Lock,
+  Activity,
+  TrendingUp,
+  Settings,
+  Database,
+  Target,
   Eye
   }
 } from 'lucide-react';
 const PenetrationTestingPage: React.FC = () => {
     const features = [
     {
-      icon: Search,;
-      title: 'Comprehensive Vulnerability Assessment',;
+      icon: Search,
+      title: 'Comprehensive Vulnerability Assessment',
       description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
   }
-    },;
+    },
     {
-    icon: Target,;
-      title: 'Simulated Attack Scenarios',;
+    icon: Target,
+      title: 'Simulated Attack Scenarios',
       description: 'Real-world attack simulations to test your defenses and response capabilities.'
   }
-    },;
+    },
     {
-    icon: BarChart,;
-      title: 'Detailed Security Reports',;
+    icon: BarChart,
+      title: 'Detailed Security Reports',
       description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
   }
-    },;
+    },
     {
-    icon: Zap,;
-      title: 'Expert Security Analysis',;
+    icon: Zap,
+      title: 'Expert Security Analysis',
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
   }
     }
-  ];
+    ];
 const benefits = [
-    'Identify security vulnerabilities before attackers do',;
-    'Comply with industry regulations and standards',;
-    'Improve your security posture and defenses',;
-    'Receive detailed remediation recommendations',;
-    'Test incident response procedures',;
-    'Validate security controls effectiveness',;
-    'Expert analysis and reporting',;
+    'Identify security vulnerabilities before attackers do',
+    'Comply with industry regulations and standards',
+    'Improve your security posture and defenses',
+    'Receive detailed remediation recommendations',
+    'Test incident response procedures',
+    'Validate security controls effectiveness',
+    'Expert analysis and reporting',
     'Ongoing security improvement guidance';
   ];
 return (
     <></>
       <Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}

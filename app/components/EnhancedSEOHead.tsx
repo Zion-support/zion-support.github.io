@@ -50,8 +50,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Structured Data */}
-      {structuredData && (
+      {/* Structured Data */},
+        {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

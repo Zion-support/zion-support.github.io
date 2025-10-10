@@ -12,7 +12,7 @@ export function generateId(prefix = 'a11y'): string {}
  * Announce message to screen readers;
  */;
 export function announceToScreenReader(;
-  message: string,;
+  message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
     const announcement = document.createElement('div'),
@@ -75,8 +75,8 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
  * Add keyboard navigation support to custom interactive elements;
  */;
 export function makeKeyboardAccessible(;
-  element: HTMLElement,;
-  onClick: (e: Event) => void,;
+  element: HTMLElement,
+  onClick: (e: Event) => void,
   options: {
     role?: string,
     tabindex?: number
@@ -127,9 +127,9 @@ return (brightest + 0.05) / (darkest + 0.05);
  * Check if contrast ratio meets WCAG standards;
  */;
 export function meetsContrastRequirements(;
-  color1: string,;
-  color2: string,;
-  level: 'AA' | 'AAA' = 'AA',;
+  color1: string,
+  color2: string,
+  level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal',
 ): boolean {
     const ratio = getContrastRatio(color1, color2);
@@ -189,8 +189,8 @@ export function getAriaInvalid(hasError: boolean): Record<string, string> {
  * Create accessible tooltip;
  */;
 export function createAccessibleTooltip(;
-  trigger: HTMLElement,;
-  content: string,;
+  trigger: HTMLElement,
+  content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top';
 ): () => void {
     const tooltip = document.createElement('div')

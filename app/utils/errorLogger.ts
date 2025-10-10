@@ -4,15 +4,15 @@
  * Provides structured error logging with different severity levels;
  */;
 export enum ErrorSeverity {}
-  LOW = 'low',;
-  MEDIUM = 'medium',;
-  HIGH = 'high',;
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
   CRITICAL = 'critical'}
 }
 export interface ErrorLogEntry {
-    timestamp: string,;
-  severity: ErrorSeverity,;
-  message: string,;
+    timestamp: string,
+  severity: ErrorSeverity,
+  message: string,
   error?: Error
   }
 export interface ErrorLogEntry {}
@@ -31,25 +31,25 @@ class ErrorLogger {}
   /**;
    * Log an error with context
    */
-  log(message: string,),;
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM),;
-    error?: Error),;
+  log(message: string,),
+    severity: ErrorSeverity = ErrorSeverity.MEDIUM),
+    error?: Error),
     context?: Record<string>
   ): void {
-    const entry: ErrorLogEntry = {,;
+    const entry: ErrorLogEntry = {,
   log();
-    message: string,;
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,;
-    error?: Error,;
+    message: string,
+    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+    error?: Error,
     context?: Record<string, unknown>
   }
   ): void {}
     const entry: ErrorLogEntry = {}
-      timestamp: new Date().toISOString(),;
-      severity,;
-      message,;
-      error,;
-      context,;
+      timestamp: new Date().toISOString(),
+      severity,
+      message,
+      error,
+      context,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       stackTrace: error?.stack}
@@ -93,13 +93,13 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   /**;
    * Log to console with appropriate styling;
    */;
-  private logToConsole(entry: ErrorLogEntry): void {,;
+  private logToConsole(entry: ErrorLogEntry): void {,
     const styles: Record<ErrorSeverity, string> = {}
   private logToConsole(entry: ErrorLogEntry): void {}
     const styles: Record<ErrorSeverity, string> = {}
-      [ErrorSeverity.LOW]: 'color: #4ade80',;
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',;
-      [ErrorSeverity.HIGH]: 'color: #fb923 c',;
+      [ErrorSeverity.LOW]: 'color: #4ade80',
+      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
+      [ErrorSeverity.HIGH]: 'color: #fb923 c',
       [ErrorSeverity.CRITICAL]: 'color: #ef4444, font-weight: bold'}
     }
     }] ${entry.message}`, styles[entry.severity]);
@@ -122,7 +122,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Send error to external logging service;
    */;
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
-    ,;
+    ,
     try {,
   }
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {}
@@ -141,21 +141,21 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
     )
           ...entry;)
           error: entry.error;),
-            ? {),;
-                message: entry.error.message),;
+            ? {),
+                message: entry.error.message),
                 name: entry.error.name),
   }
       await fetch(endpoint, {)}
-        method: 'POST',;
+        method: 'POST',
         headers: {}
           'Content-Type': 'application/json'}
-        },;
+        },
         body: JSON.stringify({)}
-          ...entry,;
+          ...entry,
           error: entry.error,
             ? {}
-                message: entry.error.message,;
-                name: entry.error.name,;
+                message: entry.error.message,
+                name: entry.error.name,
                 stack: entry.error.stack}
               }
             : undefined;
@@ -167,8 +167,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */}
       }
       await fetch(endpoint, {/* TODO: Fix JSX expression */}
-        },;
-        bod,;
+        },
+        bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
               }
             : undefined;);

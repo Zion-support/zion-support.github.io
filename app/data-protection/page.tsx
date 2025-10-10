@@ -5,34 +5,34 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
     const features = [
     {
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
+      icon: Brain,
+      title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   }
-    },;
+    },
     {
-    icon: Zap,;
-      title: 'High Performance',;
+    icon: Zap,
+      title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
   }
-    },;
+    },
     {
-    icon: Shield,;
-      title: 'Enterprise Security',;
+    icon: Shield,
+      title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
   }
-    },;
+    },
     {
     ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
-  }
-      {/* Hero Section */}
+  },
+        {/* Hero Section */}
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -82,7 +82,7 @@ return (
                 <CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

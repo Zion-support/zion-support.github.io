@@ -12,12 +12,7 @@ const PartnersPage: React.FC = () => {
       logo: '🏢',
       description: 'Strategic cloud and AI partnership',
       category: 'Technology',
-      benefits: [
-        'Azure cloud credits',
-        'Co-marketing opportunities',
-        'Technical support',
-        'Joint solution development'
-      ],
+      benefits: ['Azure cloud credits', 'Co-marketing opportunities', 'Technical support', 'Joint solution development'],
       tier: 'Platinum'
     },
     {
@@ -25,12 +20,7 @@ const PartnersPage: React.FC = () => {
       logo: '☁️',
       description: 'Cloud infrastructure and AI services',
       category: 'Cloud',
-      benefits: [
-        'AWS credits and discounts',
-        'Technical training',
-        'Marketing support',
-        'Solution architecture guidance'
-      ],
+      benefits: ['AWS credits and discounts', 'Technical training', 'Marketing support', 'Solution architecture guidance'],
       tier: 'Platinum'
     },
     {
@@ -38,12 +28,7 @@ const PartnersPage: React.FC = () => {
       logo: '🔍',
       description: 'AI and machine learning platform',
       category: 'AI/ML',
-      benefits: [
-        'GCP credits',
-        'AI/ML training',
-        'Co-innovation labs',
-        'Go-to-market support'
-      ],
+      benefits: ['GCP credits', 'AI/ML training', 'Co-innovation labs', 'Go-to-market support'],
       tier: 'Gold'
     },
     {
@@ -51,12 +36,7 @@ const PartnersPage: React.FC = () => {
       logo: '💼',
       description: 'CRM and business automation',
       category: 'CRM',
-      benefits: [
-        'Salesforce credits',
-        'AppExchange listing',
-        'Technical certification',
-        'Joint customer success'
-      ],
+      benefits: ['Salesforce credits', 'AppExchange listing', 'Technical certification', 'Joint customer success'],
       tier: 'Gold'
     },
     {
@@ -64,12 +44,7 @@ const PartnersPage: React.FC = () => {
       logo: '🔵',
       description: 'Enterprise AI and blockchain',
       category: 'Enterprise',
-      benefits: [
-        'IBM Cloud credits',
-        'Watson AI integration',
-        'Enterprise support',
-        'Industry expertise'
-      ],
+      benefits: ['IBM Cloud credits', 'Watson AI integration', 'Enterprise support', 'Industry expertise'],
       tier: 'Silver'
     },
     {
@@ -77,51 +52,31 @@ const PartnersPage: React.FC = () => {
       logo: '🗄️',
       description: 'Database and enterprise applications',
       category: 'Database',
-      benefits: [
-        'Oracle Cloud credits',
-        'Database optimization',
-        'Enterprise consulting',
-        'Migration support'
-      ],
+      benefits: ['Oracle Cloud credits', 'Database optimization', 'Enterprise consulting', 'Migration support'],
       tier: 'Silver'
     }
-  ];
+    ];
 
   const partnerTiers = [
     {
       name: 'Platinum',
       icon: <Award className="w-8 h-8 text-yellow-500" />,
       description: 'Strategic partners with deep integration',
-      benefits: [
-        'Highest level of support',
-        'Co-marketing opportunities',
-        'Joint solution development',
-        'Dedicated account management'
-      ]
+      benefits: ['Highest level of support', 'Co-marketing opportunities', 'Joint solution development', 'Dedicated account management']
     },
     {
       name: 'Gold',
       icon: <Users className="w-8 h-8 text-blue-500" />,
       description: 'Key partners with strong collaboration',
-      benefits: [
-        'Priority support',
-        'Training and certification',
-        'Marketing collaboration',
-        'Technical integration support'
-      ]
+      benefits: ['Priority support', 'Training and certification', 'Marketing collaboration', 'Technical integration support']
     },
     {
       name: 'Silver',
       icon: <Handshake className="w-8 h-8 text-gray-500" />,
       description: 'Valued partners with mutual benefits',
-      benefits: [
-        'Standard support',
-        'Partner portal access',
-        'Training resources',
-        'Referral opportunities'
-      ]
+      benefits: ['Standard support', 'Partner portal access', 'Training resources', 'Referral opportunities']
     }
-  ];
+    ];
 
   const partnershipBenefits = [
     {
@@ -144,7 +99,7 @@ const PartnersPage: React.FC = () => {
       title: 'Credibility & Trust',
       description: 'Build trust through association with established technology leaders'
     }
-  ];
+    ];
 
   return (
     <>
@@ -180,7 +135,7 @@ const PartnersPage: React.FC = () => {
                     <h3 className="text-lg font-bold text-white mb-3">{benefit.title}</h3>
                     <p className="text-gray-300 text-sm">{benefit.description}</p>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 
@@ -201,10 +156,10 @@ const PartnersPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{benefit}</span>
                         </li>
-                      ))}
+              ))}
                     </ul>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 
@@ -234,10 +189,10 @@ const PartnersPage: React.FC = () => {
                           <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                           <span className="text-xs text-gray-300">{benefit}</span>
                         </div>
-                      ))}
+              ))}
                     </div>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 

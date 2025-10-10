@@ -13,12 +13,7 @@ const ConsultationPage: React.FC = () => {
       description: 'Comprehensive evaluation of your current AI capabilities and opportunities',
       duration: '2-3 hours',
       price: 'Free',
-      features: [
-        'Current state analysis',
-        'AI readiness assessment',
-        'Technology gap analysis',
-        'Strategic recommendations'
-      ]
+      features: ['Current state analysis', 'AI readiness assessment', 'Technology gap analysis', 'Strategic recommendations']
     },
     {
       icon: <Shield className="w-8 h-8 text-cyan-400" />,
@@ -26,12 +21,7 @@ const ConsultationPage: React.FC = () => {
       description: 'Detailed analysis of your IT infrastructure and security posture',
       duration: '3-4 hours',
       price: 'Free',
-      features: [
-        'Infrastructure audit',
-        'Security assessment',
-        'Performance analysis',
-        'Optimization recommendations'
-      ]
+      features: ['Infrastructure audit', 'Security assessment', 'Performance analysis', 'Optimization recommendations']
     },
     {
       icon: <Star className="w-8 h-8 text-cyan-400" />,
@@ -39,14 +29,9 @@ const ConsultationPage: React.FC = () => {
       description: 'Strategic roadmap for your digital transformation journey',
       duration: '4-6 hours',
       price: 'Free',
-      features: [
-        'Digital maturity assessment',
-        'Transformation roadmap',
-        'Technology selection',
-        'Implementation timeline'
-      ]
+      features: ['Digital maturity assessment', 'Transformation roadmap', 'Technology selection', 'Implementation timeline']
     }
-  ];
+    ];
 
   const consultationSteps = [
     {
@@ -73,7 +58,7 @@ const ConsultationPage: React.FC = () => {
       description: 'We provide detailed recommendations and next steps',
       icon: <CheckCircle className="w-6 h-6 text-cyan-400" />
     }
-  ];
+    ];
 
   const benefits = [
     'No obligation consultation',
@@ -116,7 +101,7 @@ const ConsultationPage: React.FC = () => {
                     </div>
                     <h3 className="text-lg font-bold text-white mb-3">{benefit}</h3>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 
@@ -141,10 +126,10 @@ const ConsultationPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
-                      ))}
+              ))}
                     </ul>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 
@@ -161,7 +146,7 @@ const ConsultationPage: React.FC = () => {
                     <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
                     <p className="text-gray-300 text-sm">{step.description}</p>
                   </div>
-                ))}
+              ))}
               </div>
             </div>
 

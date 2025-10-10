@@ -12,10 +12,10 @@ export interface ErrorContext {
   metadata?: Record<string>}
 }
 export interface TrackedError {
-    message: string,;
+    message: string,
   stack?: string;
-  context: ErrorContext,;
-  timestamp: string,;
+  context: ErrorContext,
+  timestamp: string,
   userAgent: string,
   }
 export interface ErrorContext {}
@@ -36,10 +36,10 @@ export interface TrackedError {}
 class EnhancedErrorTracker {}
   private errors: TrackedError[] = []
   private maxErrors = 100,
-  private sessionId: string,;
+  private sessionId: string,
   constructor() {
-    ,;
-    this.sessionId = this.generateSessionId(),;
+    ,
+    this.sessionId = this.generateSessionId(),
   private maxErrors = 100;
   private sessionId: string
   }
@@ -65,13 +65,13 @@ class EnhancedErrorTracker {}
     if (typeof window !== 'undefined') {}
       window.addEventListener('error', event => {)}
         this.trackError(event.error, {)}
-          component: 'Global',;
+          component: 'Global',
           action: 'Uncaught Error'}
         });
       });
       window.addEventListener('unhandledrejection', event => {)}
         this.trackError(new Error(event.reason), {}
-          component: 'Global',;
+          component: 'Global',
           action: 'Unhandled Promise Rejection'}
         });
       });
@@ -82,19 +82,19 @@ class EnhancedErrorTracker {}
     const trackedError: TrackedError = {
       message: error.message
       stack: error.stack,
-      context: {,;
+      context: {,
         ...context
   }
   public trackError(error: Error, context: ErrorContext = {}): void {}
     if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {}
-      message: error.message,;
-      stack: error.stack,;
+      message: error.message,
+      stack: error.stack,
       context: {}
-        ...context,;
+        ...context,
         sessionId: this.sessionId}
-      },;
-      timestamp: new Date().toISOString(),;
+      },
+      timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent
       url: window.location.href,
     }
@@ -113,7 +113,7 @@ class EnhancedErrorTracker {}
     this.sendToAnalytics(trackedError);
   }
   private sendToAnalytics(error: TrackedError): void {
-    ,;
+    ,
     if(typeof window !== 'undefined' &&);
       ();
         window as {),
@@ -140,8 +140,8 @@ class EnhancedErrorTracker {}
         description: error.message),
   }
         fatal: false)).gtag('event', 'exception', {)}
-        description: error.message,;
-        fatal: false,;
+        description: error.message,
+        fatal: false,
         component: error.context.component}
       });
     }
@@ -159,7 +159,8 @@ class EnhancedErrorTracker {}
     total: number
     byComponent: Record<string>
     recent: TrackedError[],}
-  } {}
+  },
+        {}
     const byComponent: Record<string, number> = {}
     this.errors.forEach(error => {
     );
@@ -175,8 +176,8 @@ class EnhancedErrorTracker {}
       byComponent[component] = (byComponent[component] || 0) + 1;}
     });
     return {}
-      total: this.errors.length,;
-      byComponent,;
+      total: this.errors.length,
+      byComponent,
       recent: this.errors.slice(-10)}
     }
   }
@@ -201,15 +202,15 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
       });
     }
   }
-  public trackError(erro,;
+  public trackError(erro,
   r: Error, contex);
   t: ErrorContext = {}): void {/* TODO: Fix JSX expression */}
-      },;
-      timestam,;
-  p: new Date().toISOString(),;
-      userAgen,;
-  t: navigator.userAgent,;
-      ur,;
+      },
+      timestam,
+  p: new Date().toISOString(),
+      userAgen,
+  t: navigator.userAgent,
+      ur,
   l: window.location.href,
     }
     this.errors.push(trackedError);
@@ -237,7 +238,8 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   public clearErrors(): void {/* TODO: Fix JSX expression */}
   }
   public getErrorStats(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
+  },
+        {/* TODO: Fix JSX expression */}
   byComponent: Record<string, number> = {}
     this.errors.forEach(error => {/* TODO: Fix JSX expression */});
     });

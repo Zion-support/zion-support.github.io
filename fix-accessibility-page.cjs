@@ -1,54 +1,32 @@
-'use client';
+const fs = require('fs');
+
+// Read the current file
+const content = fs.readFileSync('app/accessibility/page.tsx', 'utf8');
+
+// Extract the data arrays and component definition
+const featuresMatch = content.match(/const features = \[[\s\S]*?\];/);
+const standardsMatch = content.match(/const standards = \[[\s\S]*?\];/);
+
+if (featuresMatch && standardsMatch) {
+    const features = featuresMatch[0];
+    const standards = standardsMatch[0];
+    
+    // Create a properly structured JSX file
+    const newContent = `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
+import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 
-const FiveGImplementationPage: React.FC = () => {
-    const features = [
-        {
-            icon: Wifi,
-            title: '5G Network Design',
-            description: 'Complete 5G network design and implementation with optimal coverage and performance.',
-            benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
-        },
-        {
-            icon: Zap,
-            title: 'Ultra-Low Latency',
-            description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
-            benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']
-        },
-        {
-            icon: Clock,
-            title: '24/7 Network Monitoring',
-            description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
-            benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']
-        },
-        {
-            icon: Users,
-            title: 'Scalable Infrastructure',
-            description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
-            benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
-        },
-        {
-            icon: Shield,
-            title: 'Enhanced Security',
-            description: 'Advanced encryption and security protocols for enterprise-grade protection',
-            benefits: ['End-to-end encryption', 'Security protocols', 'Threat detection']
-        },
-        {
-            icon: BarChart,
-            title: 'Performance Analytics',
-            description: 'Advanced analytics and reporting for 5G network performance and optimization.',
-            benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
-        }
-    ];
+const AccessibilityPage: React.FC = () => {
+    ${features}
+    ${standards}
 
     return (
         <>
             <Helmet>
-                <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
-                <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
-                <meta name="keywords" content="5G implementation, 5G network, ultra-low latency, IoT, network infrastructure, wireless technology" />
+                <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
+                <meta name="description" content="Comprehensive accessibility solutions ensuring inclusive digital experiences for all users with WCAG 2.1 AA compliance and advanced assistive technologies." />
+                <meta name="keywords" content="accessibility, WCAG, inclusive design, assistive technology, digital accessibility, ADA compliance" />
             </Helmet>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 {/* Hero Section */}
@@ -57,22 +35,22 @@ const FiveGImplementationPage: React.FC = () => {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
                     <div className="relative max-w-7xl mx-auto text-center">
                         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                            5G Network
+                            Accessibility
                             <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                                Implementation
+                                Solutions
                             </span>
                         </h1>
                         <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                            Complete 5G network implementation services with ultra-low latency, high-speed connectivity,
-                            and advanced features for modern applications and IoT ecosystems.
+                            Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure
+                            your applications are usable by people of all abilities and comply with international standards.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
-                                Get Started
+                                Get Accessibility Audit
                                 <ArrowRight className="w-5 h-5" />
                             </button>
                             <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-                                Schedule Demo
+                                Learn More
                             </button>
                         </div>
                     </div>
@@ -80,13 +58,13 @@ const FiveGImplementationPage: React.FC = () => {
 
                 {/* Features Section */}
                 <section className="py-20 px-4">
-                    <div className="container mx-auto">
+                    <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                                Advanced 5G Features
+                                Comprehensive Accessibility Features
                             </h2>
                             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                                Cutting-edge 5G technology for the next generation of connectivity
+                                Advanced accessibility solutions that make your digital products inclusive for all users
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -104,31 +82,59 @@ const FiveGImplementationPage: React.FC = () => {
                                                     <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                                                     {benefit}
                                                 </li>
-              ))}
+                                            ))}
                                         </ul>
                                     )}
                                 </div>
-              ))}
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Standards Section */}
+                <section className="py-20 px-4">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                                Compliance Standards
+                            </h2>
+                            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                                We ensure full compliance with international accessibility standards
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {standards.map((standard, index) => (
+                                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center">
+                                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <CheckCircle className="w-6 h-6 text-white" />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white mb-2">{standard.name}</h3>
+                                    <p className="text-gray-300 text-sm mb-3">{standard.description}</p>
+                                    <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
+                                        {standard.status}
+                                    </span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
 
                 {/* CTA Section */}
                 <section className="py-20 px-4">
-                    <div className="container mx-auto text-center">
+                    <div className="max-w-7xl mx-auto text-center">
                         <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
                             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                                Ready to Implement 5G?
+                                Ready to Make Your Digital Products Accessible?
                             </h2>
                             <p className="text-xl text-gray-300 mb-8">
-                                Contact our experts to discuss your 5G implementation needs and get started today.
+                                Contact our accessibility experts to audit your current solutions and implement inclusive design practices.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                                    Contact Us
+                                    Start Accessibility Audit
                                 </button>
                                 <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-                                    Learn More
+                                    View Our Standards
                                 </button>
                             </div>
                         </div>
@@ -139,5 +145,10 @@ const FiveGImplementationPage: React.FC = () => {
     );
 };
 
-export default FiveGImplementationPage;
+export default AccessibilityPage;`;
 
+    fs.writeFileSync('app/accessibility/page.tsx', newContent, 'utf8');
+    console.log('Fixed accessibility page');
+} else {
+    console.log('Could not find features or standards arrays');
+}

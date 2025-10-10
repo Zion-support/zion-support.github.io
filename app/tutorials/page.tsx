@@ -13,7 +13,7 @@ const TutorialsPage: React.FC = () => {
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'integration', name: 'Integration', icon: Code }
-  ];
+    ];
 
   const tutorials = [
     {
@@ -154,7 +154,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     }
-  ];
+    ];
 
   const filteredTutorials = selectedCategory === 'all' 
     ? tutorials 
@@ -278,7 +278,7 @@ const TutorialsPage: React.FC = () => {
                         <span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">
                           {tag}
                         </span>
-                      ))}
+              ))}
                     </div>
                     <a
                       href={`/tutorials/${tutorial.id}`}
@@ -364,7 +364,7 @@ const TutorialsPage: React.FC = () => {
                         <span key={index} className="px-2 py-1 bg-slate-700 text-cyan-400 text-xs rounded">
                           {tag}
                         </span>
-                      ))}
+              ))}
                     </div>
                     <a
                       href={`/tutorials/${tutorial.id}`}

@@ -7,126 +7,126 @@ import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi
 const EdgeComputingPage: React.FC = () => {
     const features = [
     {
-      icon: Cpu,;
-      title: 'Edge Processing',;
-      description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',;
+      icon: Cpu,
+      title: 'Edge Processing',
+      description: 'Process data locally at the edge for ultra-low latency and real-time responsiveness.',
       benefits: ['Sub-millisecond latency', 'Real-time processing', 'Local data processing', 'Reduced bandwidth usage']
   }
-    },;
+    },
     {
-    icon: Globe,;
-      title: 'Global Distribution',;
-      description: 'Deploy edge nodes worldwide for optimal performance and coverage.',;
+    icon: Globe,
+      title: 'Global Distribution',
+      description: 'Deploy edge nodes worldwide for optimal performance and coverage.',
       benefits: ['Global edge network', 'Geographic distribution', 'CDN integration', 'Multi-region support']
   }
-    },;
+    },
     {
-    icon: Shield,;
-      title: 'Edge Security',;
-      description: 'Advanced security measures designed specifically for edge computing environments.',;
+    icon: Shield,
+      title: 'Edge Security',
+      description: 'Advanced security measures designed specifically for edge computing environments.',
       benefits: ['Zero-trust architecture', 'Encrypted communications', 'Secure boot', 'Threat detection']
   }
-    },;
+    },
     {
-    icon: Database,;
-      title: 'Edge Storage',;
-      description: 'Distributed storage solutions optimized for edge computing workloads.',;
+    icon: Database,
+      title: 'Edge Storage',
+      description: 'Distributed storage solutions optimized for edge computing workloads.',
       benefits: ['Local data storage', 'Distributed databases', 'Data synchronization', 'Backup strategies']
   }
-    },;
+    },
     {
-    icon: Wifi,;
-      title: 'IoT Integration',;
-      description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',;
+    icon: Wifi,
+      title: 'IoT Integration',
+      description: 'Seamless integration with IoT devices and sensors for comprehensive edge solutions.',
       benefits: ['Device management', 'Protocol support', 'Data collection', 'Real-time monitoring']
   }
-    },;
+    },
     {
-    icon: Server,;
-      title: 'Edge Infrastructure',;
-      description: 'Robust infrastructure designed for edge computing requirements and scalability.',;
+    icon: Server,
+      title: 'Edge Infrastructure',
+      description: 'Robust infrastructure designed for edge computing requirements and scalability.',
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
   }
     }
-  ];
+    ];
 const services = [
     {
-    icon: '⚡',;
-      title: 'Edge Analytics',;
+    icon: '⚡',
+      title: 'Edge Analytics',
       description: 'Real-time data processing and analytics at the edge'
   }
-    },;
+    },
     {
-    icon: '🌐',;
-      title: 'Edge Networking',;
+    icon: '🌐',
+      title: 'Edge Networking',
       description: 'Optimized networking solutions for edge deployments'
   }
-    },;
+    },
     {
-    icon: '🔒',;
-      title: 'Edge Security',;
+    icon: '🔒',
+      title: 'Edge Security',
       description: 'Comprehensive security solutions for edge environments'
   }
-    },;
+    },
     {
-    icon: '📱',;
-      title: 'Mobile Edge',;
+    icon: '📱',
+      title: 'Mobile Edge',
       description: 'Mobile edge computing for 5G and mobile applications'
   }
     }
-  ];
+    ];
 const benefits = [
-    'Ultra-Low Latency',;
-    'Reduced Bandwidth Costs',;
-    'Improved Reliability',;
-    'Enhanced Security',;
-    'Real-time Processing',;
+    'Ultra-Low Latency',
+    'Reduced Bandwidth Costs',
+    'Improved Reliability',
+    'Enhanced Security',
+    'Real-time Processing',
     'Global Scalability';
   ];
 const useCases = [
     {
-    title: 'Autonomous Vehicles',;
-      description: 'Real-time decision making for self-driving cars',;
+    title: 'Autonomous Vehicles',
+      description: 'Real-time decision making for self-driving cars',
       icon: '🚗'
   }
-    },;
+    },
     {
-    title: 'Smart Cities',;
-      description: 'IoT sensors and real-time city management',;
+    title: 'Smart Cities',
+      description: 'IoT sensors and real-time city management',
       icon: '🏙️'
   }
-    },;
+    },
     {
-    title: 'Industrial IoT',;
-      description: 'Manufacturing automation and monitoring',;
+    title: 'Industrial IoT',
+      description: 'Manufacturing automation and monitoring',
       icon: '🏭'
   }
-    },;
+    },
     {
-    title: 'AR/VR Applications',;
-      description: 'Immersive experiences with low latency',;
+    title: 'AR/VR Applications',
+      description: 'Immersive experiences with low latency',
       icon: '🥽'
   }
-    },;
+    },
     {
-    title: 'Healthcare',;
-      description: 'Real-time patient monitoring and diagnostics',;
+    title: 'Healthcare',
+      description: 'Real-time patient monitoring and diagnostics',
       icon: '🏥'
   }
-    },;
+    },
     {
-    title: 'Gaming',;
-      description: 'Cloud gaming with minimal latency',;
+    title: 'Gaming',
+      description: 'Cloud gaming with minimal latency',
       icon: '🎮'
   }
     }
-  ];
+    ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
@@ -182,11 +182,11 @@ return (
                       <CheckCircle>
 
                       {benefit}
-                    </li>
-                  ))}
+                    </div>
+              ))}
                 </ul>
               </div>
-            ))}
+              ))}
 
           </div>
         </div>
@@ -209,7 +209,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -231,7 +231,7 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -254,7 +254,7 @@ return (
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

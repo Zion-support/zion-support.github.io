@@ -23,7 +23,7 @@ const AIContentWriterPage: React.FC = () => {
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
     }
-  ];
+    ];
   const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
@@ -38,7 +38,7 @@ const AIContentWriterPage: React.FC = () => {
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' }
-  ];
+    ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -83,7 +83,7 @@ const AIContentWriterPage: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -112,11 +112,11 @@ const AIContentWriterPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{benefit}</span>
-                    </li>
-                  ))}
+                    </div>
+              ))}
                 </ul>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -139,7 +139,7 @@ const AIContentWriterPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 interface FormData {
-    name: string,;
-  email: string,;
-  company: string,;
-  phone: string,;
-  service: string,;
+    name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
   message: string,
   }
 }
@@ -35,16 +35,16 @@ const ContactForm: React.FC = () => {
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const [formData, setFormData] = useState<FormData>({
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: ''
   }
   });
 const [status, setStatus] = useState<FormStatus>({
-    type: 'idle',;
+    type: 'idle',
     message: ''
   }
   });
@@ -52,7 +52,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
 
     const { name, value } = e.target;
     setFormData(prev => ({
-    ...prev,;
+    ...prev,
       [name]: value
   }
     }));
@@ -65,24 +65,24 @@ try {
     // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
 setStatus({
-        type: 'success',;
+        type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
   }
       });
 // Reset form;
       setFormData({
-    name: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
+    name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
         message: ''
   }
 
       });
     } catch (error) {
     setStatus({
-        type: 'error',;
+        type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'
   }
       });
@@ -175,7 +175,7 @@ setStatus({
               {services.map((service) => (
                 <option key={service} value={service}>
                   {service}
-                </option>
+                </div>
               ))}
             </select>
           </div>
@@ -210,39 +210,39 @@ setStatus({
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
 const services = [
-    'AI Solutions',;
-    'Web Development',;
-    'Mobile App Development',;
-    'Cloud Services',;
-    'Data Analytics',;
-    'Cybersecurity',;
-    'IT Consulting',;
+    'AI Solutions',
+    'Web Development',
+    'Mobile App Development',
+    'Cloud Services',
+    'Data Analytics',
+    'Cybersecurity',
+    'IT Consulting',
     'Other';
   ];
 </label>
               <input>
             </div>
-            <div></div>
+            <div />
               <label>
                 Email Address *;
               </label>
               <input>
             </div>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
-            <div></div>
+            <div />
               <label>
                 Company;
               </label>
               <input>
             </div>
-            <div></div>
+            <div />
               <label>
                 Phone Number
               </label>
               <input>
             </div>
           </div>
-          <div></div>
+          <div />
             <label>
               Service Interest
             </label>
@@ -276,7 +276,7 @@ const services = [
               <div className="p-3 bg-blue-100 rounded-full"></div>
                 <Phone>
               </div>
-              <div></div>
+              <div />
                 <p className="font-semibold text-gray-900">Phone</p>
                 <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
               </div>
@@ -285,7 +285,7 @@ const services = [
               <div className="p-3 bg-green-100 rounded-full"></div>
                 <Mail>
               </div>
-              <div></div>
+              <div />
                 <p className="font-semibold text-gray-900">Email</p>
                 <p className="text-sm text-gray-600">hello@ziontechgroup.com</p>
               </div>
@@ -294,7 +294,7 @@ const services = [
               <div className="p-3 bg-purple-100 rounded-full"></div>
                 <MapPin>
               </div>
-              <div></div>
+              <div />
                 <p className="font-semibold text-gray-900">Office</p>
                 <p className="text-sm text-gray-600">New York, NY</p>
               </div>

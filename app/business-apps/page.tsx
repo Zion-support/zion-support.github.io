@@ -39,7 +39,7 @@ title: 'AI-Powered Business Apps',
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international business applications'
     }
-  ];
+    ];
   const benefits = [
 'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -87,7 +87,7 @@ title: 'AI-Powered Business Apps',
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
 {/* Benefits Section */}
@@ -107,7 +107,7 @@ title: 'AI-Powered Business Apps',
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

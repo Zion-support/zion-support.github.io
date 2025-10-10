@@ -9,8 +9,8 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-  }
-      {/* Features Section */}
+  },
+        {/* Features Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
@@ -32,7 +32,7 @@ const PagePage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -55,7 +55,7 @@ const PagePage: React.FC = () => {
                 <CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -112,7 +112,7 @@ const SpecializedServicesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale your operations worldwide with our robust infrastructure'
     }
-  ];
+    ];
 
   const benefits = [
     'Increase efficiency by up to 50%',

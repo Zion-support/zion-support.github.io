@@ -33,7 +33,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
+              ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
@@ -267,7 +267,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Computer Vision',
       popular: false
     }
-  ];
+    ];
 
   // Real IT Services with actual capabilities and pricing
   const itServices = [
@@ -421,7 +421,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Project Management',
       popular: false
     }
-  ];
+    ];
 
   // Real Micro SaaS Services with actual capabilities and pricing
   const microSaasServices = [
@@ -617,14 +617,14 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 5 users'
     }
-  ];
+    ];
 
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }
-  ];
+    ];
 
   return (
     <React.Fragment>
@@ -830,7 +830,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
+              ))}
                     </ul>
 
                     <div className="flex items-center justify-between">
@@ -889,7 +889,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
+              ))}
                     </ul>
 
                     <div className="flex items-center justify-between">
@@ -952,7 +952,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
-                      ))}
+              ))}
                     </ul>
 
                     <div className="flex items-center justify-between">

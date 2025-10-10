@@ -24,7 +24,7 @@ const ARVRPlatformPage: React.FC = () => {
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
-  ];
+    ];
   const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
@@ -87,7 +87,7 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -108,7 +108,7 @@ Experience the power of our AR/VR platform solutions for your business.
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>

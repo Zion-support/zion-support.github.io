@@ -25,7 +25,7 @@ const DemoPage: React.FC = () => {
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
-  ];
+    ];
 
   return (
     <>
@@ -65,7 +65,7 @@ const DemoPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{feature}</span>
                       </li>
-                    ))}
+              ))}
                   </ul>
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
