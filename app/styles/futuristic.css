@@ -1,5 +1,8 @@
 /* Futuristic Design System for Zion Tech Group */
 
+/* Import accessibility styles */
+@import './accessibility.css';
+
 /* CSS Variables for Futuristic Theme */
 :root {
   /* Neon Colors */
