@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
-import { logger } from '../utils/productionLogger';
 
 interface PerformanceMetrics {
   lcp: number;
@@ -10,7 +9,21 @@ interface PerformanceMetrics {
   ttfb: number;
 }
 
+interface OptimizationStatus {
+  preloaded: number;
+  codeSplit: boolean;
+  serviceWorker: boolean;
+  optimized: boolean;
+}
+
 export const PerformanceOptimizer: React.FC = () => {
+  const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({
+    preloaded: 0,
+    codeSplit: false,
+    serviceWorker: false,
+    optimized: false
+  });
+
   const collectWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
 
@@ -28,7 +41,7 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       vitals.lcp = lastEntry.startTime;
-      logger.info('LCP measured', { lcp: vitals.lcp });
+      console.log('LCP measured', { lcp: vitals.lcp });
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -37,13 +50,66 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         vitals.fid = entry.processingStart - entry.startTime;
-        logger.info('FID measured', { fid: vitals.fid });
+        console.log('FID measured', { fid: vitals.fid });
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
+    // CLS - Cumulative Layout Shift
+    const clsObserver = new PerformanceObserver((list) => {
+      let clsValue = 0;
+      for (const entry of list.getEntries()) {
+        if (!(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value;
+        }
+      }
+      vitals.cls = clsValue;
+      console.log('CLS measured', { cls: vitals.cls });
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+    // FCP - First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        vitals.fcp = entry.startTime;
+        console.log('FCP measured', { fcp: vitals.fcp });
+      });
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+
+    // TTFB - Time to First Byte
+    const ttfbObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        vitals.ttfb = entry.responseStart - entry.requestStart;
+        console.log('TTFB measured', { ttfb: vitals.ttfb });
+      });
+    });
+    ttfbObserver.observe({ entryTypes: ['navigation'] });
+
+    setOptimizationStatus(prev => ({ ...prev, preloaded: 1 }));
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/css/critical.css',
+      '/js/critical.js'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'script';
+      document.head.appendChild(link);
+    });
+
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
-  };
+  }, []);
 
   const setupCodeSplitting = () => {
     // This would be handled by Next.js dynamic imports
@@ -57,158 +123,42 @@ export const PerformanceOptimizer: React.FC = () => {
       { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
       { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ];
 
-    hints.forEach((hint) => {
+    hints.forEach(hint => {
       const link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
-      if (hint.crossorigin) {
-        link.crossOrigin = hint.crossorigin;
-      }
       document.head.appendChild(link);
     });
-
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
   };
 
   const registerServiceWorker = async () => {
-    if ('serviceWorker' in navigator) {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
+        console.log('Service Worker registered:', registration);
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
-        logger.error('Service Worker registration failed', { error: error.message }, 'PerformanceOptimizer');
+        console.error('Service Worker registration failed:', error);
       }
     }
   };
 
-  // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Performance'
-              });
-            }
-          }
-        }
-      });
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    // FCP - First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        vitals.fcp = entry.startTime;
-        logger.info('FCP measured', { fcp: vitals.fcp });
-      });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-
-    // TTFB - Time to First Byte
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      vitals.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      logger.info('TTFB measured', { ttfb: vitals.ttfb });
-    }
-
-    // Send metrics to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        value: Math.round(vitals.lcp),
-        custom_map: {
-          lcp: vitals.lcp,
-          fid: vitals.fid,
-          cls: vitals.cls,
-          fcp: vitals.fcp,
-          ttfb: vitals.ttfb,
-        },
-      });
-    }
-  }, []);
-
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach((img) => imageObserver.observe(img));
-  }, []);
-
-  const preloadCriticalResources = useCallback(() => {
-    // Preload critical fonts
-    const fontLink = document.createElement('link');
-    fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-    fontLink.as = 'style';
-    document.head.appendChild(fontLink);
-
-    // Preload critical images
-    const criticalImages = [
-      '/logo.png',
-      '/og-image.svg',
-    ];
-
-    criticalImages.forEach((src) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = src;
-      link.as = 'image';
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  const optimizeThirdPartyScripts = useCallback(() => {
-    // Defer non-critical scripts
-    const scripts = document.querySelectorAll('script[src]');
-    scripts.forEach((script) => {
-      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-        script.setAttribute('defer', '');
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    // Collect performance metrics after page load
-    if (document.readyState === 'complete') {
+    if (typeof window !== 'undefined') {
       collectWebVitals();
-    } else {
-      window.addEventListener('load', collectWebVitals);
+      preloadCriticalResources();
+      setupCodeSplitting();
+      addResourceHints();
+      registerServiceWorker();
+      
+      setOptimizationStatus(prev => ({ ...prev, optimized: true }));
     }
+  }, [collectWebVitals, preloadCriticalResources]);
 
-    // Optimize images
-    optimizeImages();
-
-    // Preload critical resources
-    preloadCriticalResources();
-
-    // Optimize third-party scripts
-    optimizeThirdPartyScripts();
-
-    return () => {
-      window.removeEventListener('load', collectWebVitals);
-    };
-  }, [collectWebVitals, optimizeImages, preloadCriticalResources, optimizeThirdPartyScripts]);
-
+  // This component doesn't render anything visible
   return null;
 };
 

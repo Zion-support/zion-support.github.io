@@ -2,6 +2,7 @@
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import LoadingSpinner from './src/components/LoadingSpinner';
