@@ -58,16 +58,16 @@ const Footer: React.FC = memo(() => {
             <div className="flex space-x-4">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
             </div>
             <div className="flex items-center text-sm text-gray-300">
               <Mail className="w-4 h-4 mr-2" />
-              <span>info@ziontechgroup.com</span>
+              <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center text-sm text-gray-300">
               <MapPin className="w-4 h-4 mr-2" />
-              <span>San Francisco, CA</span>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
 
@@ -155,31 +155,17 @@ const Footer: React.FC = memo(() => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
-            </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy;
-  </
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service;
-  </
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy;
-  </
-=======
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <a href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </a>
+              <a href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </a>
+              <a href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
-              </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+              </a>
             </div>
           </div>
         </div>
@@ -189,17 +175,5 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
-<<<<<<< HEAD
-export default Footer;
-  </a>
-  </a>
-  </a>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-=======
 
 export default Footer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
