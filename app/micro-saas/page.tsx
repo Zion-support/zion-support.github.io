@@ -1,18 +1,64 @@
 'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { 
+  Star, 
+  Zap, 
+  Shield, 
+  Clock, 
+  CheckCircle, 
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  Award, 
+  Rocket, 
+  MessageSquare,
+  BarChart,
+  Users,
+  Settings,
+  Globe,
+  Lock,
+  TrendingUp,
+  Target,
+  Brain,
+  Database,
+  PieChart,
+  Activity,
+  Monitor,
+  Smartphone,
+  Laptop,
+  Server
+} from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const products = [
     {
-<<<<<<< HEAD
+      id: '1',
+      icon: BarChart,
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
-      features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
+      features: [
+        'Real-time Data Visualization',
+        'AI-powered Predictive Analytics', 
+        'Custom Dashboard Builder',
+        'Advanced Data Connectors',
+        'Automated Report Generation',
+        'Multi-tenant Architecture',
+        'Machine Learning Models',
+        'Custom KPI Tracking',
+        'Data Export & Integration',
+        'Advanced Security Controls'
+      ],
       price: '$89/month',
-      marketPrice: '$150-500/month',
-      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
-      icon: Star,
+      originalPrice: '$199/month',
+      users: 'Up to 50 users',
+      popular: true,
       category: 'Analytics',
-      popular: true
+      link: 'https://ziontechgroup.com/analytics-pro',
+      marketPrice: '$150-500/month',
+      savings: '55% off market rate'
     },
     {
       title: 'Zion Chat AI',
