@@ -95,7 +95,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
     return structuredData || defaultStructuredData
   }
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -144,8 +144,8 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           )}
         </div>
       )}
-    </React.Fragment>
-  )
+    </>
+  );
 }
-export default AdvancedSEOOptimizerNew
+export default AdvancedSEOOptimizerNew;
   </SEOOptimizerProps>

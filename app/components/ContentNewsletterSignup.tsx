@@ -42,7 +42,7 @@ const ContentNewsletterSignup: React.FC = () => {
           Subscribe another email
         </button>
       </div>
-    )
+    );
   }
 
   return (
@@ -100,7 +100,7 @@ const ContentNewsletterSignup: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ContentNewsletterSignup
+export default ContentNewsletterSignup;

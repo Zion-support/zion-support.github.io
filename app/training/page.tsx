@@ -27,6 +27,6 @@ return (
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Contact our experts to discuss your page needs and get a customized solution.</p>
     </div>
-  )
+  );
 }
-export default PagePage
+export default PagePage;

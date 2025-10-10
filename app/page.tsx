@@ -1443,7 +1443,7 @@ description: 'Custom API development, third-party integrations, and microservice
   ]
 
   return (
-    <React.Fragment>
+    <>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -1825,8 +1825,8 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
         
         <Footer />
       </div>
-    </React.Fragment>
-  )
+    </>
+  );
 }
 
-export default HomePage
+export default HomePage;

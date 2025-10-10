@@ -53,7 +53,7 @@ const BlogPage: React.FC = () => {
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.category.toLowerCase().includes(searchQuery.toLowerCase())
-  )
+  );
   return (
     <>
       <Helmet>
@@ -150,7 +150,7 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  )
+  );
 }
 
-export default BlogPage
+export default BlogPage;

@@ -174,7 +174,7 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default CareersPage
+export default CareersPage;

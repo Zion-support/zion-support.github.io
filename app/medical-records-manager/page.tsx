@@ -36,7 +36,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
         <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
@@ -69,8 +69,8 @@ const MedicalRecordsManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  )
+    </>
+  );
 }
-export default MedicalRecordsManagerPage
+export default MedicalRecordsManagerPage;
   </h1>

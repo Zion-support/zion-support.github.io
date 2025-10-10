@@ -11,9 +11,7 @@ export default function NotFound() {
         </div>
         <h1>
           Page Not Found
-        </h1>
-        <p>
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
+        </h1><p>Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
         </p>
         <div className="flex flex-col sm: flex-row gap-3"></div>
           <Link>
@@ -35,7 +33,7 @@ export default function NotFound() {
       </div>
     </div>
 
-  )
+  );
 }
   </button>
   </Link>

@@ -122,7 +122,7 @@ const DocsPage: React.FC = () => {
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : filteredDocs
+    : filteredDocs;
   return (
     <>
       <Helmet>
@@ -343,7 +343,7 @@ const DocsPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default DocsPage
+export default DocsPage;

@@ -49,7 +49,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         })
       },
       { threshold: 0.1 } )
-
+;
     const lazyElements = document.querySelectorAll('[data-lazy]')
     lazyElements.forEach((el) => observer.observe(el))
     return () => observer.disconnect()
@@ -131,4 +131,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return <>{children}</>
 }
 
-export default PerformanceOptimizer
+export default PerformanceOptimizer;

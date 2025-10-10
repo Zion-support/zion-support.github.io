@@ -23,7 +23,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className="mt-2 text-sm text-gray-500">{text}</p>
       )}
     </div>
-  )
+  );
 }
 
 export const PageLoader: React.FC = () => (
@@ -36,7 +36,7 @@ export const PageLoader: React.FC = () => (
       <p className="text-gray-300">Loading amazing content...</p>
     </div>
   </div>
-)
+);
 export const ServiceCardSkeleton: React.FC = () => (
   <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse">
     <div className="w-16 h-16 bg-gray-600 rounded-2xl mb-6"></div>
@@ -48,7 +48,7 @@ export const ServiceCardSkeleton: React.FC = () => (
       <div className="h-3 bg-gray-600 rounded w-3/4"></div>
     </div>
   </div>
-)
+);
 export const StatsSkeleton: React.FC = () => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
     {Array.from({ length: 4 }).map((_, index) => (
@@ -58,7 +58,7 @@ export const StatsSkeleton: React.FC = () => (
       </div>
     ))}
   </div>
-)
+);
 export const ContentSkeleton: React.FC = () => (
   <div className="space-y-6 animate-pulse">
     <div className="h-8 bg-gray-600 rounded w-3/4"></div>
@@ -68,4 +68,4 @@ export const ContentSkeleton: React.FC = () => (
       <div className="h-4 bg-gray-600 rounded w-2/3"></div>
     </div>
   </div>
-)
+);

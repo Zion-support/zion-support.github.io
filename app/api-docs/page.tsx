@@ -99,7 +99,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+    );
   })).filter(category => category.endpoints.length > 0)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -203,15 +203,15 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <React.Fragment>
+                            <>
                               <Check className="w-4 h-4" />
                               Copied!
-                            </React.Fragment>
+                            </>
                           ) : (
-                            <React.Fragment>
+                            <>
                               <Copy className="w-4 h-4" />
                               Copy
-                            </React.Fragment>
+                            </>
                           )}
                         </button>
                       </div>

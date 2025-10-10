@@ -127,9 +127,9 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default PagePage
+export default PagePage;
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -288,6 +288,6 @@ export default PagePage
       </div>
       <Footer />
     </>
-  )
+  );
 }
-export default SmartCityInfrastructurePage
+export default SmartCityInfrastructurePage;

@@ -140,7 +140,7 @@ const SEOEnhancer: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default SEOEnhancer
+export default SEOEnhancer;

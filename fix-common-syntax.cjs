@@ -4,19 +4,25 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Fix remaining syntax errors
-function fixRemainingErrors(content) {
+// Fix common syntax errors
+function fixCommonSyntax(content) {
   let fixed = content;
   
-  // Fix missing commas in object literals - more specific patterns
-  fixed = fixed.replace(/(\s+description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*}\s*\]\s*;)/g, '$1,$2');
-  fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*}\s*\]\s*;)/g, '$1,$2');
+  // Fix missing semicolons after function declarations
+  fixed = fixed.replace(/(\s+\)\s*$)/gm, '$1;');
   
-  // Fix missing commas in array elements
-  fixed = fixed.replace(/(\s+description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*}\s*\]\s*;)/g, '$1,$2');
+  // Fix missing semicolons after export statements
+  fixed = fixed.replace(/(export default \w+)(\s*$)/gm, '$1;');
   
   // Fix missing semicolons after const declarations
   fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*\]\s*$)/gm, '$1$2;');
+  
+  // Fix missing commas in object literals
+  fixed = fixed.replace(/(\s+description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*})/g, '$1,$2');
+  fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*})/g, '$1,$2');
+  
+  // Fix missing commas in array elements
+  fixed = fixed.replace(/(\s+description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*}\s*\]\s*;)/g, '$1,$2');
   
   // Fix missing commas in object properties
   fixed = fixed.replace(/(\s+title:\s*'[^']+',\s*description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*})/g, '$1,$2');
@@ -53,7 +59,7 @@ function fixSpecificFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   
   // Apply syntax fixes
-  content = fixRemainingErrors(content);
+  content = fixCommonSyntax(content);
   
   // File-specific fixes
   if (filePath.includes('ai-agricultural-intelligence-pro')) {
@@ -98,4 +104,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { fixRemainingErrors, fixSpecificFile };
+module.exports = { fixCommonSyntax, fixSpecificFile };

@@ -216,7 +216,7 @@ const { name, value } = e.target
           </div>
         </div>
     </div>
-  )
+  );
 }
 
-export default ContactForm
+export default ContactForm;

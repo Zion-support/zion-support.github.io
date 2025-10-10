@@ -82,6 +82,6 @@ return (
             </div>
           </div>
         </div>
-  )
+  );
 }
-export default EnhancedPerformanceMonitorPage
+export default EnhancedPerformanceMonitorPage;

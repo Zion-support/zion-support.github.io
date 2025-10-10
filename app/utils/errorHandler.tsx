@@ -681,7 +681,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return(error.type === ErrorType.NETWORK &&);
       error.retryCount! < this.config.maxRetries &&)
       error.severity !== ErrorSeverity.CRITICAL;)
-    )
+    );
   }
   }
   // Schedule retry
@@ -694,7 +694,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       error.type === ErrorType.NETWORK &&;
       error.retryCount! < this.config.maxRetries &&;
       error.severity !== ErrorSeverity.CRITICAL
-    )
+    );
   }
   // Schedule retry
   private scheduleRetry(error: AppError) {}
@@ -879,11 +879,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Get error statistics
   getErrorStatistics() {/* TODO: Fix JSX expression */},
       {} as Record<ErrorType, number></ErrorType>
-    )
+    );
     const bySeverity = this.errors.reduce()
       (acc, error) => {/* TODO: Fix JSX expression */},
       {} as Record<ErrorSeverity, number></ErrorSeverity>
-    )
+    );
     const bySeverity = this.errors.reduce()
       (acc, error) => {}
         acc[error.severity] = (acc[error.severity] || 0) + 1
@@ -919,7 +919,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 // React error boundary component</ErrorSeverity>
       // Set up global error handler
       window.addEventListener('error', event => {
-    )
+    );
         this.handleError(event.error || new Error(event.message))
 // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {)
@@ -1042,7 +1042,7 @@ export class ErrorBoundary extends React.Component<
 export const useErrorHandler = (;) => {
     return (
     $3
-  )
+  );
   }
 // React hook for error handling;}
 export const useErrorHandler = () => {}
@@ -1052,19 +1052,19 @@ export const useErrorHandler = () => {}
       return errorHandler.handleError(error, undefined, context)
     },
     [errorHandler]
-  )
+  );
   const handleNetworkError = useCallback()
     (error: Error, url: string, status?: number) => {}
       return errorHandler.handleNetworkError(error, url, status)
     },
     [errorHandler]
-  )
+  );
   const handleValidationError = useCallback()
     (field: string, message: string, value?: unknown) => {}
       return errorHandler.handleValidationError(field, message, value)
     },
     [errorHandler]
-  )
+  );
   return {}
     handleError,
     handleNetworkError,
@@ -1078,19 +1078,19 @@ export default ErrorHandler;</string>
 // React hook for error handling
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */},
     [errorHandler]
-  )
+  );
   const handleNetworkError = useCallback((erro,
   r: Error, ur)
   l: string, status?: number) => {/* TODO: Fix JSX expression */},
     [errorHandler]
-  )
+  );
   const handleValidationError = useCallback((fiel,
   d: string, messag)
   e: string, value?: unknown) => {/* TODO: Fix JSX expression */},
     [errorHandler]
-  )
+  );
   return {/* TODO: Fix JSX expression */}
   }
 }
-export default ErrorHandler
+export default ErrorHandler;
 "`

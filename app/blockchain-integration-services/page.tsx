@@ -121,9 +121,9 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default BlockchainIntegrationServicesPage
+export default BlockchainIntegrationServicesPage;
   </button>
   </button>
   </h2>

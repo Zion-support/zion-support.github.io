@@ -64,16 +64,13 @@ return (
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4"></section>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
+        <section className="pt-20 pb-16 px-4"></section></div>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h1>
                 Security Monitoring Suite
-              </h1>
-              <p>
-                Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection,
+              </h1><p>Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection,
                 and automated response capabilities to protect your business 24/7.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -155,6 +152,6 @@ return (
         </section>
       </div>
     </>
-  )
+  );
 }
-export default SecurityMonitoringSuitePage
+export default SecurityMonitoringSuitePage;

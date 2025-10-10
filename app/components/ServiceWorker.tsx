@@ -16,4 +16,4 @@ const ServiceWorker: React.FC = () => {
   return null
 }
 
-export default ServiceWorker
+export default ServiceWorker;

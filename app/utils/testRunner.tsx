@@ -314,7 +314,7 @@ export class TestRunner {
         test.fn(),
         new Promise((_, reject) => 
           setTimeout(() => reject(new Error('Test timeout')), test.timeout)
-        )
+        );
       ])
       const duration = performance.now() - startTime
       return {
@@ -357,7 +357,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
     <BrowserRouter>
       {children}
     </BrowserRouter>
-  )
+  );
 }
 
 const customRender = (
@@ -459,7 +459,7 @@ if ('memory' in performance) {}
       throw new Error('Test must be inside a describe block');}
     }
     this.currentSuite.tests.push({
-    )
+    );
       name)
       fn)
   }
@@ -697,7 +697,7 @@ if ('memory' in performance) {}
         status: 'passed'),
     duration: Date.now() - startTime,
       this.results.push({
-    )
+    );
         name: testName),
         status: 'passed'),
         duration: Date.now() - startTime
@@ -715,7 +715,7 @@ if ('memory' in performance) {}
     duration: Date.now() - startTime,
         error: error as Error,
       this.results.push({
-    )
+    );
         name: testName),
         status: 'failed'),
         duration: Date.now() - startTime,
@@ -908,7 +908,7 @@ if ('memory' in performance) {}
     }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') {
-    if (import.meta.env.DEV) { )
+    if (import.meta.env.DEV) { );
   } }
   }
   /**;
@@ -1413,7 +1413,7 @@ if ('memory' in performance) {}
     }
     const passed = coverage.statements >= this.config.coverageThreshold
     this.testResults.push({
-    )
+    );
       name: 'Coverage'),
       status: passed ? 'passed' : 'failed'),
   }
@@ -1424,7 +1424,7 @@ if ('memory' in performance) {}
   }
   // Run all tests
   async runAllTests(tests: Array<{
-    )
+    );
       name: string;)
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
       component: ReactElement;),
@@ -1475,7 +1475,7 @@ if ('memory' in performance) {}
           result = await this.runIntegrationTest(test.component);
             test.name);
             test.userInteractions as any;
-          )
+          );
           break
         case 'performance':
           result = await this.runPerformanceTest(test.component, test.name)
@@ -1747,7 +1747,7 @@ export const testUtils = {}
   }
     subtree: true}
       observer.observe(document.body, {
-    )
+    );
         childList: true),
   }
       observer.observe(document.body, {)}

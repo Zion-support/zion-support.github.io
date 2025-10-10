@@ -69,11 +69,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </button>
           </div>
         </div>
-      )
+      );
     }
 
     return this.props.children
   }
 }
 
-export default EnhancedErrorBoundary
+export default EnhancedErrorBoundary;

@@ -140,7 +140,7 @@ const PerformanceMonitor: React.FC = () => {
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default PerformanceMonitor
+export default PerformanceMonitor;

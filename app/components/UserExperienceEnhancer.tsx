@@ -18,7 +18,7 @@ useEffect(() => {
       interactiveElements.forEach((element, index) => {) => {
   return (
     $3
-  )
+  );
   }
         element.addEventListener('click', () => {}
           setLoadingStates(prev => ({ ...prev, [index]: true }))
@@ -42,4 +42,4 @@ enhanceUX()
   }, [])
 return <>{children}</>
 }
-export default UserExperienceEnhancer
+export default UserExperienceEnhancer;

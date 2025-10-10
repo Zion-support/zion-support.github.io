@@ -103,7 +103,7 @@ const getStatusIcon = (;
       default:;) => {
   return (
     $3
-  )
+  );
   }
         return <Clock>}
     }
@@ -119,7 +119,7 @@ const getStatusColor = (;
       default:;) => {
   return (
     $3
-  )
+  );
   }
         return 'text-gray-400';}
     }
@@ -135,7 +135,7 @@ const getSeverityColor = (;
       default:;) => {
   return (
     $3
-  )
+  );
   }
         return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
     }
@@ -293,9 +293,7 @@ return (
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Subscribe to Updates
-            </button>
-            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Support
-            </button>
+            </button><button>$2</button>
           </div>
         </div>
       </section>

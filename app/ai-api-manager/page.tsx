@@ -10,18 +10,18 @@ const AIApiManagerPage: React.FC = () => {
     {
       title: 'Centralized API Control',
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',
-      benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management']
+      benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management'],
     },
     {
       title: 'Advanced Analytics',
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
-      benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics']
+      benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics'],
     },
     {
 
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
-      benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
+      benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control'],
     }
   ]
 
@@ -157,10 +157,7 @@ const AIApiManagerPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Contact Sales
-              </button>
+              </button><button>$2</button>
             </div>
           </div>
         </div>
@@ -168,6 +165,6 @@ const AIApiManagerPage: React.FC = () => {
 
       <Footer />
     </div>
-  )
+  );
 }
-export default AIApiManagerPage
+export default AIApiManagerPage;

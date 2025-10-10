@@ -36,7 +36,7 @@ const ServicesPage: React.FC = () => {
       features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
-      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
     },
     {
       icon: BarChart3,
@@ -46,7 +46,7 @@ const ServicesPage: React.FC = () => {
       features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection', 'Custom Data Models'],
       price: 'Starting at $399/month',
       marketPrice: '$800-3000/month',
-      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization']
+      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization'],
     },
     {
       icon: Zap,
@@ -56,7 +56,7 @@ const ServicesPage: React.FC = () => {
       features: ['Process Mining', 'Workflow Optimization', 'Task Automation', 'Exception Handling', 'Performance Monitoring'],
       price: 'Starting at $349/month',
       marketPrice: '$600-2500/month',
-      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation']
+      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
     },
     {
       icon: Eye,
@@ -66,7 +66,7 @@ const ServicesPage: React.FC = () => {
       features: ['Object Detection', 'Quality Control Automation', 'Facial Recognition', 'Video Analytics', 'Real-time Processing'],
       price: 'Starting at $599/month',
       marketPrice: '$1000-5000/month',
-      benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction']
+      benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
     },
     {
       icon: Shield,
@@ -76,7 +76,7 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Anomaly Detection', 'Automated Alerts'],
       price: 'Starting at $799/month',
       marketPrice: '$1500-5000/month',
-      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']
+      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready'],
     },
     
     // IT Services
@@ -88,7 +88,7 @@ const ServicesPage: React.FC = () => {
       features: ['Cloud Architecture Design', 'Multi-cloud Strategies', 'Cost Optimization', 'Disaster Recovery', 'Auto-scaling', 'Security Compliance'],
       price: 'Starting at $2,500/month',
       marketPrice: '$4000-15000/month',
-      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support']
+      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support'],
     },
     {
       icon: Shield,
@@ -98,7 +98,7 @@ const ServicesPage: React.FC = () => {
       features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring', 'Compliance Management', 'Employee Training'],
       price: 'Starting at $1,800/month',
       marketPrice: '$3000-12000/month',
-      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team']
+      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team'],
     },
     {
       icon: Database,
@@ -108,7 +108,7 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design & Optimization', 'Performance Tuning', 'Backup & Recovery', 'Data Migration', 'Security Hardening', 'Monitoring & Maintenance'],
       price: 'Starting at $1,200/month',
       marketPrice: '$2000-8000/month',
-      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support']
+      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support'],
     },
     {
       icon: Settings,
@@ -118,7 +118,7 @@ const ServicesPage: React.FC = () => {
       features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging', 'Automated Testing', 'Deployment Automation'],
       price: 'Starting at $2,200/month',
       marketPrice: '$3500-10000/month',
-      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows']
+      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows'],
     },
     {
       icon: Users,
@@ -128,7 +128,7 @@ const ServicesPage: React.FC = () => {
       features: ['IT Strategy Development', 'Technology Assessment', 'Digital Transformation Planning', 'Vendor Evaluation', 'Process Optimization', 'Change Management'],
       price: 'Starting at $200/hour',
       marketPrice: '$300-800/hour',
-      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage'],
     },
     
     // Micro SaaS
@@ -140,7 +140,7 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
       price: 'Starting at $89/month',
       marketPrice: '$150-500/month',
-      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting']
+      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
     },
     {
       icon: MessageSquare,
@@ -150,7 +150,7 @@ const ServicesPage: React.FC = () => {
       features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
       price: 'Starting at $149/month',
       marketPrice: '$300-800/month',
-      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']
+      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation'],
     },
     {
       icon: Globe,
@@ -160,7 +160,7 @@ const ServicesPage: React.FC = () => {
       features: ['React/Next.js Development', 'Responsive Design', 'SEO Optimization', 'Performance Tuning', 'Security Implementation', 'Content Management'],
       price: 'Starting at $5,000/project',
       marketPrice: '$10000-30000/project',
-      benefits: ['Modern technology stack', 'SEO optimized', 'Mobile responsive', 'Fast loading times']
+      benefits: ['Modern technology stack', 'SEO optimized', 'Mobile responsive', 'Fast loading times'],
     },
     {
       icon: Smartphone,
@@ -170,7 +170,7 @@ const ServicesPage: React.FC = () => {
       features: ['iOS & Android Apps', 'Cross-platform Development', 'App Store Optimization', 'Push Notifications', 'Offline Functionality', 'Performance Optimization'],
       price: 'Starting at $8,000/project',
       marketPrice: '$15000-50000/project',
-      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement']
+      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement'],
     },
     {
       icon: FileText,
@@ -180,7 +180,7 @@ const ServicesPage: React.FC = () => {
       features: ['AI-powered Invoice Generation', 'Automated Recurring Billing', 'Multi-currency Support', 'Payment Tracking', 'Tax Calculation', 'Client Portal'],
       price: 'Starting at $49/month',
       marketPrice: '$100-300/month',
-      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices']
+      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices'],
     },
     {
       icon: Target,
@@ -190,7 +190,7 @@ const ServicesPage: React.FC = () => {
       features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration', 'Advanced Analytics', 'A/B Testing'],
       price: 'Starting at $99/month',
       marketPrice: '$200-600/month',
-      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
+      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization'],
     }
   ]
 
@@ -359,7 +359,7 @@ const ServicesPage: React.FC = () => {
       
       <Footer />
     </>
-  )
+  );
 }
 
-export default ServicesPage
+export default ServicesPage;

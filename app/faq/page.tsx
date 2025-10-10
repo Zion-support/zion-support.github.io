@@ -9,7 +9,7 @@ const FAQPage: React.FC = () => {
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    )
+    );
   }
   const faqs = [
     {
@@ -46,7 +46,7 @@ const FAQPage: React.FC = () => {
     }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
@@ -89,7 +89,7 @@ const FAQPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  )
+    </>
+  );
 }
-export default FAQPage
+export default FAQPage;

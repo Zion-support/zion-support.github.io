@@ -32,7 +32,7 @@ const TeamPage: React.FC = () => {
         <Footer>
       </div>
     </>,
-  )
+  );
   }
 }
-export default TeamPage
+export default TeamPage;

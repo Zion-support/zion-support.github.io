@@ -9,17 +9,17 @@ const AIContentWriterPage: React.FC = () => {
     {
       title: 'AI-Powered Writing',
       description: 'Generate high-quality content using advanced AI algorithms that understand context, tone, and audience.',
-      benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization']
+      benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization'],
     },
     {
       title: 'Content Optimization',
       description: 'Automatically optimize content for SEO, readability, and engagement with intelligent suggestions.',
-      benefits: ['SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing']
+      benefits: ['SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing'],
     },
     {
       title: 'Multi-Format Support',
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
-      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
+      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy'],
     }
   ]
   const benefits = [
@@ -60,11 +60,7 @@ const AIContentWriterPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Writing
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-
-              Try Demo
-            </button>
+            </button><button>$2</button>
           </div>
         </div>
       </section>
@@ -153,10 +149,7 @@ const AIContentWriterPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Writing Now
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
+              </button><button>$2</button>
             </div>
           </div>
         </div>
@@ -164,7 +157,7 @@ const AIContentWriterPage: React.FC = () => {
 
       <Footer />
     </div>
-  )
+  );
 }
 
-export default AIContentWriterPage
+export default AIContentWriterPage;

@@ -64,14 +64,11 @@ return (
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4"></section>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
+        <section className="pt-20 pb-16 px-4"></section></div>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Penetration Testing Services</h1>
-              <p>
-                Identify and fix security vulnerabilities before attackers exploit them.
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Penetration Testing Services</h1><p>Identify and fix security vulnerabilities before attackers exploit them.
                 Our expert penetration testing services help secure your systems and protect your business.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -153,6 +150,6 @@ return (
         </section>
       </div>
     </>
-  )
+  );
 }
-export default PenetrationTestingPage
+export default PenetrationTestingPage;

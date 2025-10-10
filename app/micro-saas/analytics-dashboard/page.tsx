@@ -193,6 +193,6 @@ return (
         </section>
       </div>
     </>
-  )
+  );
 }
-export default AIAnalyticsDashboardPage
+export default AIAnalyticsDashboardPage;

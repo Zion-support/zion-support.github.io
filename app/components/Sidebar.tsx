@@ -29,7 +29,7 @@ useEffect(() => {
       if (window.innerWidth >= 1024) {) => {
   return (
     $3
-  )
+  );
   }
         setIsOpen(false);}
       }
@@ -43,7 +43,7 @@ const toggleSection = (
     ) => {
   return (
     $3
-  )
+  );
   }
       newExpanded.delete(section);}
     } else {
@@ -267,7 +267,7 @@ return (
           </div>
       </aside>
     </>
-  )
+  );
 }
 Sidebar.displayName = 'Sidebar'
-export default Sidebar
+export default Sidebar;

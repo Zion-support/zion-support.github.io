@@ -50,7 +50,7 @@ const SupportPage: React.FC = () => {
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  )
+  );
   return (
     <>
       <Helmet>
@@ -121,17 +121,14 @@ const SupportPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                   Contact Support
-                </button>
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
-                  Schedule Call
-                </button>
+                </button><button>$2</button>
               </div>
             </div>
           </div>
         </section>
       </div>
     </>
-  )
+  );
 }
 
-export default SupportPage
+export default SupportPage;

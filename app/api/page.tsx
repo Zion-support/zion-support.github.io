@@ -440,7 +440,7 @@ const ApiPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default ApiPage
+export default ApiPage;

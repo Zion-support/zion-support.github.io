@@ -89,6 +89,6 @@ return (
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default EnhancedHeroPage
+export default EnhancedHeroPage;

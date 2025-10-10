@@ -1,129 +1,112 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix comprehensive JSX syntax errors
-function fixJsxSyntax(content) {
+// Comprehensive JSX syntax fixes
+function fixJSXComprehensive(content) {
   let fixed = content;
-
-  // Fix missing semicolons after imports
-  fixed = fixed.replace(/import ([^;]+)\nimport/g, 'import $1;\nimport');
-  fixed = fixed.replace(/import ([^;]+)\nconst/g, 'import $1;\nconst');
-  fixed = fixed.replace(/import ([^;]+)\n\s*const/g, 'import $1;\n\nconst');
   
-  // Fix array syntax issues - more comprehensive
-  // Fix missing closing brackets in features array
-  fixed = fixed.replace(/(\s+benefits: \[[^\]]+\]\s*\}\s*\}\s*\]\s*const benefits)/g, '      benefits: [\'Growth strategies\', \'Market analysis\', \'Competitive insights\', \'ROI optimization\']\n    }\n  }];\n\nconst benefits');
+  // Fix missing commas in object literals - more comprehensive patterns
+  fixed = fixed.replace(/(\s+description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*})/g, '$1,$2');
+  fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*})/g, '$1,$2');
   
-  // Fix array syntax with proper closing
-  fixed = fixed.replace(/(\s+benefits: \[[^\]]+\]\s*\}\s*\}\s*\]\s*const)/g, '      benefits: [\'Growth strategies\', \'Market analysis\', \'Competitive insights\', \'ROI optimization\']\n    }\n  }];\n\nconst');
+  // Fix missing commas in array elements
+  fixed = fixed.replace(/(\s+description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*}\s*\]\s*;)/g, '$1,$2');
   
-  // Fix specific pattern with missing closing bracket
-  fixed = fixed.replace(/(\s+benefits: \[[^\]]+\]\s*\}\s*\}\s*\]\s*const benefits)/g, '      benefits: [\'Growth strategies\', \'Market analysis\', \'Competitive insights\', \'ROI optimization\']\n    }\n  }];\n\nconst benefits');
+  // Fix missing semicolons after const declarations
+  fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*\]\s*$)/gm, '$1$2;');
   
-  // Fix array closing syntax
-  fixed = fixed.replace(/(\s+benefits: \[[^\]]+\]\s*\}\s*\}\s*\]\s*const)/g, '      benefits: [\'Growth strategies\', \'Market analysis\', \'Competitive insights\', \'ROI optimization\']\n    }\n  }];\n\nconst');
+  // Fix malformed JSX structure - ensure proper opening and closing
+  fixed = fixed.replace(/<>(\s*<Helmet>[\s\S]*?<\/Helmet>\s*<Navigation\s*\/>\s*<div[^>]*>)\s*<\/div>/g, '<>$1</div>');
   
-  // Fix missing semicolons in array elements
-  fixed = fixed.replace(/(\s+)([^,]+),;/g, '$1$2,');
-  fixed = fixed.replace(/(\s+)([^,]+);\s*$/gm, '$1$2');
+  // Fix unclosed JSX elements and malformed structure
+  fixed = fixed.replace(/(<div[^>]*>)\s*<\/div>\s*(\s*\{\/\*[^}]*\*\/\}\s*<section[^>]*>)\s*<\/section>/g, '$1$2</section></div>');
   
-  // Fix unclosed meta tags
-  fixed = fixed.replace(/<meta>\s*<meta>/g, '<meta name="description" content="Advanced AI solutions" />\n        <meta name="keywords" content="AI, artificial intelligence, business solutions" />');
+  // Fix missing closing tags for common elements
+  fixed = fixed.replace(/(<h1[^>]*>[^<]+)<\/h1>\s*<p>\s*([^<]+)<\/p>/g, '$1</h1><p>$2</p>');
+  fixed = fixed.replace(/(<button[^>]*>[^<]+)<\/button>\s*<button[^>]*>[^<]+<\/button>/g, '$1</button><button>$2</button>');
   
-  // Fix Navigation component usage
-  fixed = fixed.replace(/<Navigation>\s*<div/g, '<Navigation />\n      <div');
+  // Fix malformed JSX structure with proper nesting
+  fixed = fixed.replace(/(<div[^>]*>)\s*(\s*\{\/\*[^}]*\*\/\}\s*<section[^>]*>)\s*<\/section>\s*<\/div>/g, '$1$2</section></div>');
   
-  // Fix unclosed section tags
-  fixed = fixed.replace(/<section([^>]*)>\s*<div/g, '<section$1>\n          <div');
+  // Fix missing closing tags for sections and main elements
+  fixed = fixed.replace(/(<section[^>]*>)\s*<\/section>\s*(\s*\{\/\*[^}]*\*\/\}\s*<main[^>]*>)\s*<\/main>/g, '$1$2</main></section>');
   
-  // Fix malformed JSX structure - fix missing opening tags
-  fixed = fixed.replace(/(\s+)<h1>\s*([^<]+);\s*<\/h1>/g, '$1<h1 className="text-5xl md:text-7xl font-bold text-white mb-6">$2</h1>');
-  fixed = fixed.replace(/(\s+)<p>\s*([^<]+);\s*<\/p>/g, '$1<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">$2</p>');
-  fixed = fixed.replace(/(\s+)<h2>\s*([^<]+);\s*<\/h2>/g, '$1<h2 className="text-4xl font-bold text-white mb-4">$2</h2>');
-  fixed = fixed.replace(/(\s+)<p>\s*([^<]+);\s*<\/p>/g, '$1<p className="text-xl text-gray-300">$2</p>');
+  // Fix React.Fragment closing tags
+  fixed = fixed.replace(/(<React\.Fragment>)\s*<\/React\.Fragment>/g, '<>');
+  fixed = fixed.replace(/(<\/React\.Fragment>)/g, '</>');
   
-  // Fix button elements
-  fixed = fixed.replace(/<button>\s*([^<]+)\s*<\/button>/g, '<button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">$1</button>');
+  // Fix missing semicolons in object properties
+  fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*}\s*\]\s*;)/g, '$1,$2');
   
-  // Fix missing closing tags in divs
-  fixed = fixed.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
+  // Fix specific patterns that are causing parsing errors
+  fixed = fixed.replace(/(\s+description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*}\s*\]\s*;)/g, '$1,$2');
   
-  // Fix malformed JSX expressions
-  fixed = fixed.replace(/\{\s*features\.map\(\(feature, index\) => \(\s*\}\s*<div/g, '{features.map((feature, index) => (\n                <div');
-  fixed = fixed.replace(/\{\s*benefits\.map\(\(benefit, index\) => \(\s*\}\s*<div/g, '{benefits.map((benefit, index) => (\n                <div');
+  // Fix missing commas in object properties
+  fixed = fixed.replace(/(\s+title:\s*'[^']+',\s*description:\s*'[^']+',\s*benefits:\s*\[[^\]]+\])\s*(\n\s*})/g, '$1,$2');
   
-  // Fix feature.icon usage
-  fixed = fixed.replace(/<feature>/g, '<feature.icon className="w-8 h-8 text-white" />');
+  // Fix missing commas in array declarations
+  fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*\]\s*$)/gm, '$1$2;');
   
-  // Fix CheckCircle usage
-  fixed = fixed.replace(/<CheckCircle>\s*<\/CheckCircle>/g, '<CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />');
+  // Fix missing commas in object literals within arrays
+  fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*}\s*\]\s*;)/g, '$1,$2');
   
-  // Fix Footer component
-  fixed = fixed.replace(/<Footer>\s*<\/>/g, '<Footer />');
-  
-  // Fix return statement syntax
-  fixed = fixed.replace(/return \(\s*<>\s*<Helmet>/g, 'return (\n    <>\n      <Helmet>');
-  
-  // Fix function closing
-  fixed = fixed.replace(/,\s*}\s*export default/g, ';\n};\n\nexport default');
-  
-  // Fix specific array syntax issues
-  fixed = fixed.replace(/(\s+benefits: \[[^\]]+\]\s*\}\s*\}\s*\]\s*const benefits)/g, '      benefits: [\'Growth strategies\', \'Market analysis\', \'Competitive insights\', \'ROI optimization\']\n    }\n  }];\n\nconst benefits');
-  
-  // Fix missing closing bracket in features array
-  fixed = fixed.replace(/(\s+benefits: \[[^\]]+\]\s*\}\s*\}\s*\]\s*const)/g, '      benefits: [\'Growth strategies\', \'Market analysis\', \'Competitive insights\', \'ROI optimization\']\n    }\n  }];\n\nconst');
+  // Fix missing semicolons after const declarations
+  fixed = fixed.replace(/(\s+benefits:\s*\[[^\]]+\])\s*(\n\s*\]\s*$)/gm, '$1$2;');
   
   return fixed;
 }
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJsxSyntax(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Get all TSX files in the app directory
-function getAllTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+// Fix specific file patterns
+function fixSpecificFile(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
-    }
+  // Apply comprehensive fixes
+  content = fixJSXComprehensive(content);
+  
+  // File-specific fixes
+  if (filePath.includes('ai-agricultural-intelligence-pro')) {
+    // Fix the specific structure issues in this file
+    content = content.replace(
+      /description:\s*'Optimize your business growth with data-driven strategies\.',\s*benefits:\s*\[[^\]]+\]/g,
+      "description: 'Optimize your business growth with data-driven strategies.',\n      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']"
+    );
   }
   
-  return files;
+  return content;
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = getAllTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} TSX files to process...`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (processFile(file)) {
-    fixedCount++;
-  }
+// Main function to process all TSX files
+function main() {
+  const pattern = 'app/**/*.tsx';
+  const files = glob.sync(pattern, { cwd: process.cwd() });
+  
+  console.log(`Found ${files.length} TSX files to process`);
+  
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    try {
+      const originalContent = fs.readFileSync(file, 'utf8');
+      const fixedContent = fixSpecificFile(file);
+      
+      if (originalContent !== fixedContent) {
+        fs.writeFileSync(file, fixedContent, 'utf8');
+        console.log(`Fixed: ${file}`);
+        fixedCount++;
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+    }
+  });
+  
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-console.log(`Fixed ${fixedCount} files out of ${tsxFiles.length} total files.`);
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixJSXComprehensive, fixSpecificFile };

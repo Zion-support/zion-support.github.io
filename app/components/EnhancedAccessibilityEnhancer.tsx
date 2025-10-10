@@ -113,4 +113,4 @@ return (
         </div>
       </section>
 }
-export default EnhancedAccessibilityEnhancerPage
+export default EnhancedAccessibilityEnhancerPage;

@@ -271,7 +271,7 @@ const ContactPage: React.FC = () => {
       
       <Footer />
     </>
-  )
+  );
 }
 
-export default ContactPage
+export default ContactPage;

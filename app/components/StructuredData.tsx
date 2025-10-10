@@ -174,7 +174,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         __html: JSON.stringify(structuredData, null, 2)
       }}
     />
-  )
+  );
 }
 
-export default StructuredData
+export default StructuredData;

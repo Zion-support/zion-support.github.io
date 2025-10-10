@@ -82,6 +82,6 @@ return (
           </a>
         </div>
     </section>
-  )
+  );
 }
-export default EnhancedServicesShowcase
+export default EnhancedServicesShowcase;

@@ -114,7 +114,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       )}
     </div>
-  )
+  );
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -204,4 +204,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return null
 }
 
-export default PerformanceOptimizer
+export default PerformanceOptimizer;

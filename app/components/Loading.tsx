@@ -35,4 +35,4 @@ const benefits = [
     'Proven track record of success'
   ]
 }
-export default LoadingPage
+export default LoadingPage;

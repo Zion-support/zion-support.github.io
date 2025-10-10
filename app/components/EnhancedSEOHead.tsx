@@ -56,7 +56,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         </script>
       )}
     </Helmet>
-  )
+  );
 }
 
-export default SEOHead
+export default SEOHead;

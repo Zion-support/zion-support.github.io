@@ -29,7 +29,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
   }
       }),
       []
-    )
+    );
 const textSizeClasses = useMemo(
       () => ({
     xs: 'text-xs',
@@ -40,7 +40,7 @@ const textSizeClasses = useMemo(
   }
       }),
       []
-    )
+    );
 const colorClasses = useMemo(
       () => ({
     blue: 'border-blue-600 bg-blue-600',
@@ -51,7 +51,7 @@ const colorClasses = useMemo(
   }
       }),
       []
-    )
+    );
 const renderSpinner = useMemo(() => {
     switch (variant) {
         case 'dots':
@@ -91,7 +91,7 @@ case 'skeleton':;
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
               /></div>
-          )
+          );
 case 'bars':
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
@@ -108,7 +108,7 @@ case 'bars':
                   }}
                 /></div>
               ))}</div>
-          )
+          );
 case 'spinner':
         default:  
           return (
@@ -118,7 +118,7 @@ case 'spinner':
               role='status'
               aria-label='Loading'
             /></div>
-          )
+          );
       }
     }, [size, variant, color, sizeClasses, colorClasses])
 const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`
@@ -136,7 +136,7 @@ return (</div>
             </p>
           )}
         </div>
-    )
-  } )
+    );
+  } );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-export default OptimizedLoadingSpinner
+export default OptimizedLoadingSpinner;

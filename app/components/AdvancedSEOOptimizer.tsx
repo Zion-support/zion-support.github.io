@@ -232,7 +232,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Helmet>
     {children}
   </>
-  )
+  );
 }
 
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimizer;

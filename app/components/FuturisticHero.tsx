@@ -63,6 +63,6 @@ return (
                 Email Us
               </button>
             </div>
-  )
+  );
 }
-export default FuturisticHeroPage
+export default FuturisticHeroPage;

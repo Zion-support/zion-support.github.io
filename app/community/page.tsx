@@ -393,7 +393,7 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default CommunityPage
+export default CommunityPage;

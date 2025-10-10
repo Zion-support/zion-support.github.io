@@ -31,9 +31,9 @@ export function dynamic<T extends ComponentType<unknown>>(importFun)
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
       <LazyComponent {...props} /></LazyComponent>
     </Suspense>
-  )
+  );
 }
-export default dynamic
+export default dynamic;
   </unknown>
   </T>
   </Suspense>

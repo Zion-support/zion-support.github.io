@@ -82,9 +82,9 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       </div>
       {children}
     </div>
-  )
+  );
 }
-export default AdvancedAccessibilityEnhancer
+export default AdvancedAccessibilityEnhancer;
   </button>
   </button>
   </button>

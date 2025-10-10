@@ -46,7 +46,7 @@ const EmailMarketingSuitePage: React.FC = () => {
         </section>
       </div>
     </>,
-  )
+  );
   }
 }
-export default EmailMarketingSuitePage
+export default EmailMarketingSuitePage;

@@ -109,7 +109,7 @@ const AiHrSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default AiHrSolutionsPage
+export default AiHrSolutionsPage;

@@ -139,9 +139,9 @@ icon: Shield,
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default CloudMigrationServicesPage
+export default CloudMigrationServicesPage;
   </button>
   </button>
   </h2>

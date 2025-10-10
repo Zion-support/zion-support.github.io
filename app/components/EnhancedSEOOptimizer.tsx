@@ -123,6 +123,6 @@ return (
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default EnhancedSEOOptimizerPage
+export default EnhancedSEOOptimizerPage;

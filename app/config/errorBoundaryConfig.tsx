@@ -98,13 +98,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
         )}
         <div className="mt-6 flex gap-4"></div>
           <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Try Again
-          </button>
-          <button
-            onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors"
-          >
-            Go Home
-          </button>
+          </button><button>$2</button>
         </div>
       </div>
     </div>
@@ -147,13 +141,7 @@ function NotFoundFallback(): JSX.Element {
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
             Go Home
-          </button>
-          <button,
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors"
-          >
-            Go Back
-          </button>
+          </button><button>$2</button>
         </div>
       </div>
     </div>
@@ -201,4 +189,4 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
   }
   }
 }
-export default getErrorBoundaryConfig
+export default getErrorBoundaryConfig;

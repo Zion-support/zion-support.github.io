@@ -538,7 +538,7 @@ const TutorialsPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default TutorialsPage
+export default TutorialsPage;

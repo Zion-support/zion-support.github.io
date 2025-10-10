@@ -376,7 +376,7 @@ const CookiesPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default CookiesPage
+export default CookiesPage;

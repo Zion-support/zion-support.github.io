@@ -133,6 +133,6 @@ return (
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default MainPage
+export default MainPage;

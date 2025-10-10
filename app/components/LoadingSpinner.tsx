@@ -28,6 +28,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </p>
       )}
     </div>
-  )
+  );
 }
-export default LoadingSpinner
+export default LoadingSpinner;

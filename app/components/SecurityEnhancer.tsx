@@ -17,7 +17,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
         'X-XSS-Protection': '1; mode=block',) => {
   return (
     $3
-  )
+  );
   }
         'Referrer-Policy': 'strict-origin-when-cross-origin';}
       }
@@ -44,4 +44,4 @@ enhanceSecurity()
   }, [])
 return <>{children}</>
 }
-export default SecurityEnhancer
+export default SecurityEnhancer;

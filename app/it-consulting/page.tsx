@@ -615,6 +615,6 @@ return (
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default ITConsultingPage
+export default ITConsultingPage;

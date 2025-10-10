@@ -1047,7 +1047,7 @@ const ItServicesPage: React.FC = () => {
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
-  )
+  );
   return (
     <>
       <Helmet>
@@ -1182,7 +1182,7 @@ const ItServicesPage: React.FC = () => {
       
       <Footer />
     </>
-  )
+  );
 }
 
-export default ItServicesPage
+export default ItServicesPage;

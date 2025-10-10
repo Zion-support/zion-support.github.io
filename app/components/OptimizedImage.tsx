@@ -102,6 +102,6 @@ return (
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default OptimizedImagePage
+export default OptimizedImagePage;

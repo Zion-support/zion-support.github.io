@@ -296,6 +296,6 @@ return (
         </section>
       </div>
 </div>
-  )
+  );
 }
-export default ContactPage
+export default ContactPage;

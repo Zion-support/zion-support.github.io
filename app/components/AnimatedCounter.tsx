@@ -46,7 +46,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     <span className={className}>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
-  )
+  );
 }
 
-export default AnimatedCounter
+export default AnimatedCounter;

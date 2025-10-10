@@ -132,7 +132,7 @@ const PricingPage: React.FC = () => {
         </section>
       </div>
     </>
-  )
+  );
 }
 
-export default PricingPage
+export default PricingPage;

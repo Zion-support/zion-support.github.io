@@ -45,7 +45,7 @@ const initializeGoogleAnalytics = (;
     ) => {
   return (
     $3
-  )
+  );
   }
       (window as any).dataLayer.push(args);}
     }
@@ -66,7 +66,7 @@ const initializePerformanceMonitoring = (
           if (entry.entryType === 'largest-contentful-paint') {) => {
   return (
     $3
-  )
+  );
   }
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
           } else if (entry.entryType === 'first-input') {
@@ -102,7 +102,7 @@ const initializeErrorTracking = (
         colno: event.colno,) => {
   return (
     $3
-  )
+  );
   }
         error: event.error?.stack,}
       })
@@ -135,7 +135,7 @@ const initializeUserBehaviorTracking = (
       page_location: window.location.href,) => {
   return (
     $3
-  )
+  );
   }
       page_path: window.location.pathname,}
     })
@@ -196,7 +196,7 @@ const trackEvent = (
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
   return (
     $3
-  )
+  );
   }
         value: typeof value === 'number' ? value : undefined,}
       })
@@ -213,7 +213,7 @@ declare global {
   }
   }
 }
-export default Analytics
+export default Analytics;
 // Analytics Provider for context
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
@@ -222,5 +222,5 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   }
       {children}
     </>
-  )
+  );
 }

@@ -142,7 +142,7 @@ export default Image</img>
 }
 export default Image;
     />);
-  )
+  );
 }
-export default Image
+export default Image;
 "`

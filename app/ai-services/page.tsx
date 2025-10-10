@@ -1045,7 +1045,7 @@ const AiServicesPage: React.FC = () => {
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
-  )
+  );
   return (
     <>
       <Helmet>
@@ -1180,7 +1180,7 @@ const AiServicesPage: React.FC = () => {
       
       <Footer />
     </>
-  )
+  );
 }
 
-export default AiServicesPage
+export default AiServicesPage;

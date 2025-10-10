@@ -112,7 +112,7 @@ const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
 // Loading component
 const AppLoadingSpinner = () => (
   <LoadingSpinner />
-)
+);
 const App: React.FC = () => {
     return (
     <ErrorBoundary>
@@ -224,6 +224,6 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  )
+  );
 }
-export default App
+export default App;

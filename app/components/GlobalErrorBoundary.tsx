@@ -84,6 +84,6 @@ return (
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default GlobalErrorBoundaryPage
+export default GlobalErrorBoundaryPage;

@@ -8,37 +8,37 @@ const features = [
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
-      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
+      benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly'],
     },
     {
       icon: MousePointer,
       title: 'Motor Accessibility',
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
-      benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']
+      benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls'],
     },
     {
       icon: Volume2,
       title: 'Audio Accessibility',
       description: 'Audio alternatives and visual indicators for users with hearing impairments.',
-      benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
+      benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support'],
     },
     {
       icon: Shield,
       title: 'Security & Privacy',
       description: 'Secure accessibility features that protect user data while providing inclusive experiences.',
-      benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications']
+      benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications'],
     },
     {
       icon: Users,
       title: 'Inclusive Design',
       description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',
-      benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces']
+      benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces'],
     },
     {
       icon: Globe,
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
-      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
+      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards'],
     }
   ]
 const standards = [
@@ -87,10 +87,7 @@ const standards = [
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                 Get Accessibility Audit
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn More
-              </button>
+              </button><button>$2</button>
             </div>
           </div>
         </section>
@@ -176,16 +173,13 @@ const standards = [
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                   Get Accessibility Audit
-                </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                  Contact Us
-                </button>
+                </button><button>$2</button>
               </div>
             </div>
           </div>
         </section>
       </div>
     </>
-  )
+  );
 }
-export default AccessibilityPage
+export default AccessibilityPage;

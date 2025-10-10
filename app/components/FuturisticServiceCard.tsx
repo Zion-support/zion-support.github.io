@@ -44,6 +44,6 @@ return (
             </div>
           </div>
         </div>
-  )
+  );
 }
-export default FuturisticServiceCardPage
+export default FuturisticServiceCardPage;

@@ -160,9 +160,7 @@ return (
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Explore IoT Solutions
-                </button>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Schedule IoT Consultation,
-                </button>
+                </button><button>$2</button>
               </div>
             </div>
           </div>
@@ -361,6 +359,6 @@ return (
         </section>
       </div>
     </>
-  )
+  );
 }
-export default IoTPage
+export default IoTPage;

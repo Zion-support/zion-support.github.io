@@ -24,7 +24,7 @@ const preloadComponents = (
       import('./components/ContentPromotionBanner');) => {
   return (
     $3
-  )
+  );
   }
       import('./components/ContentCarousel');}
     }, 100)
@@ -1320,10 +1320,10 @@ useEffect(() => {
       <Footer>
     </div>
     </>
-  )
+  );
 })
 HomePage.displayName = 'HomePage'
-export default HomePage
+export default HomePage;
   </button>
   </label>
   </label>

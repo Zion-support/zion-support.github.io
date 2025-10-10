@@ -46,6 +46,6 @@ return (
         </section>
       </div>
     </>
-  )
+  );
 }
-export default MicroSaaSPage
+export default MicroSaaSPage;

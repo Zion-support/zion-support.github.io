@@ -73,6 +73,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default PagePage
+export default PagePage;

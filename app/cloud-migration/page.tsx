@@ -121,9 +121,9 @@ icon: Zap,
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default CloudMigrationPage
+export default CloudMigrationPage;
   </button>
   </button>
   </h2>

@@ -24,4 +24,4 @@ return (
         </div>
       </section>
 }
-export default PWAInstallerPage
+export default PWAInstallerPage;

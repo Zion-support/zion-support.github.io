@@ -255,7 +255,7 @@ const WebDevelopmentPage: React.FC = () => {
                     <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2 className="text-4xl font-bold text-white mb-4">Our Web Development Services;)</h2>)
-)
+);
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
               {
     webServices.map((service, index) => (</div>
@@ -461,10 +461,10 @@ const WebDevelopmentPage: React.FC = () => {
       </div>,
     </>);
 }
-export default WebDevelopmentPage
+export default WebDevelopmentPage;
       </div>
     </>
-  )
+  );
 }
 
-export default WebDevelopmentPage
+export default WebDevelopmentPage;

@@ -85,6 +85,6 @@ return (
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  )
+  );
 }
-export default SEOHead
+export default SEOHead;

@@ -93,4 +93,4 @@ return (
         </div>
       </section>
 }
-export default PerformanceEnhancerPage
+export default PerformanceEnhancerPage;

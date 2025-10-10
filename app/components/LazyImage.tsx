@@ -85,6 +85,6 @@ const benefits = [
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default LazyImagePage
+export default LazyImagePage;

@@ -10,19 +10,18 @@ const AIApiManagementPage: React.FC = () => {
     {
       title: 'Intelligent API Monitoring',
       description: 'Real-time monitoring and analytics for all your APIs with AI-powered insights and anomaly detection.',
-      benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts']
+      benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts'],
     },
     {
       title: 'Smart Rate Limiting',
       description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.',
-      benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']
+      benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling'],
     },
     {
 
       title: 'Automated Documentation',
       description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.',
-      benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']
-
+      benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal'],
     }
   ]
   const benefits = [
@@ -157,10 +156,7 @@ const AIApiManagementPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Contact Us
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
+              </button><button>$2</button>
             </div>
           </div>
         </div>
@@ -168,6 +164,6 @@ const AIApiManagementPage: React.FC = () => {
 
       <Footer />
     </div>
-  )
+  );
 }
-export default AIApiManagementPage
+export default AIApiManagementPage;

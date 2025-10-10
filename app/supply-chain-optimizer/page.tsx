@@ -12,7 +12,7 @@ const SupplyChainOptimizerPage: React.FC = () => {
     { icon: Target, title: 'Performance Analytics', description: 'Real-time performance tracking and optimization recommendations.' }
   ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Supply Chain Optimizer | Zion Tech Group - AI-Powered Supply Chain Management</title>
         <meta name="description" content="Optimize your supply chain with AI-powered tools. Logistics optimization, demand forecasting, and automated processes." />
@@ -39,7 +39,7 @@ const SupplyChainOptimizerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-  )
+    </>
+  );
 }
-export default SupplyChainOptimizerPage
+export default SupplyChainOptimizerPage;

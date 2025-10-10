@@ -135,9 +135,9 @@ icon: Shield,
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default CloudSecurityPage
+export default CloudSecurityPage;
   </button>
   </button>
   </button>

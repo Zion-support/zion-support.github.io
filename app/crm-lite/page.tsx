@@ -35,4 +35,4 @@ return (
         </div>
       </section>
 }
-export default PagePage
+export default PagePage;

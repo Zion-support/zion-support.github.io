@@ -136,9 +136,9 @@ Experience the power of our AR/VR platform solutions for your business.
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default ARVRPlatformPage
+export default ARVRPlatformPage;
   </button>
   </button>
   </h2>

@@ -135,9 +135,9 @@ const AnalyticsToolsPage: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default AnalyticsToolsPage
+export default AnalyticsToolsPage;
   </button>
   </button>
   </button>

@@ -109,7 +109,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default CybersecuritySolutionsPage
+export default CybersecuritySolutionsPage;

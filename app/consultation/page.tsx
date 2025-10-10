@@ -134,10 +134,7 @@ const ConsultationPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                   Schedule Free Consultation
-                </button>
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
-                  Download Our Guide
-                </button>
+                </button><button>$2</button>
               </div>
             </div>
           </div>
@@ -146,7 +143,7 @@ const ConsultationPage: React.FC = () => {
 
       <Footer />
     </>
-  )
+  );
 }
 
-export default ConsultationPage
+export default ConsultationPage;

@@ -218,7 +218,7 @@ const AboutPage: React.FC = () => {
       
       <Footer />
     </>
-  )
+  );
 }
 
-export default AboutPage
+export default AboutPage;

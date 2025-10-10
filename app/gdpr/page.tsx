@@ -35,4 +35,4 @@ const benefits = [
         </div>
       </section>
 }
-export default PagePage
+export default PagePage;
