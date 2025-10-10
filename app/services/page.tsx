@@ -204,6 +204,158 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $799/month',
       category: 'AI Services'
     },
+    {
+      icon: Brain,
+      title: 'AI Voice Recognition System',
+      description: 'Advanced voice recognition and speech-to-text conversion with multi-language support and real-time processing.',
+      features: ['Multi-language Support', 'Real-time Processing', 'Voice Commands', 'Speaker Identification', 'Noise Cancellation'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Image Recognition Pro',
+      description: 'Advanced computer vision for object detection, facial recognition, and image classification with 99.9% accuracy.',
+      features: ['Object Detection', 'Facial Recognition', 'Image Classification', 'Real-time Processing', 'API Integration'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Natural Language Processing',
+      description: 'Advanced NLP for text analysis, sentiment analysis, language translation, and chatbot development.',
+      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Entity Recognition'],
+      price: 'Starting at $499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Recommendation Engine',
+      description: 'Intelligent recommendation system for products, content, and services with machine learning optimization.',
+      features: ['Product Recommendations', 'Content Filtering', 'Collaborative Filtering', 'A/B Testing', 'Real-time Updates'],
+      price: 'Starting at $699/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Fraud Detection System',
+      description: 'Advanced fraud detection using machine learning algorithms for financial transactions and identity verification.',
+      features: ['Transaction Monitoring', 'Identity Verification', 'Risk Scoring', 'Real-time Alerts', 'Pattern Recognition'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Chatbot Platform',
+      description: 'Enterprise-grade chatbot platform with natural language understanding and multi-channel deployment.',
+      features: ['Natural Language Understanding', 'Multi-channel Support', 'Custom Training', 'Analytics Dashboard', 'Integration APIs'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Document Intelligence',
+      description: 'Intelligent document processing with OCR, data extraction, and automated classification for business documents.',
+      features: ['OCR Technology', 'Data Extraction', 'Document Classification', 'Automated Workflows', 'Compliance Tracking'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Predictive Analytics',
+      description: 'Advanced predictive modeling for business forecasting, risk assessment, and decision support systems.',
+      features: ['Business Forecasting', 'Risk Assessment', 'Decision Support', 'Trend Analysis', 'Scenario Planning'],
+      price: 'Starting at $1,199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Process Mining',
+      description: 'Intelligent process analysis and optimization using AI to identify bottlenecks and improve efficiency.',
+      features: ['Process Discovery', 'Bottleneck Analysis', 'Performance Optimization', 'Compliance Monitoring', 'ROI Tracking'],
+      price: 'Starting at $999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Sentiment Analysis',
+      description: 'Real-time sentiment analysis for social media, customer feedback, and market research with actionable insights.',
+      features: ['Real-time Analysis', 'Multi-language Support', 'Social Media Monitoring', 'Trend Detection', 'Custom Dashboards'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Knowledge Management',
+      description: 'Intelligent knowledge base system with automated content organization and intelligent search capabilities.',
+      features: ['Content Organization', 'Intelligent Search', 'Automated Tagging', 'Knowledge Graphs', 'Collaboration Tools'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Video Analytics',
+      description: 'Advanced video analysis for security, marketing, and business intelligence with real-time object tracking.',
+      features: ['Object Tracking', 'Behavior Analysis', 'Facial Recognition', 'Real-time Alerts', 'Video Search'],
+      price: 'Starting at $899/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Text Generation',
+      description: 'Advanced AI text generation for content creation, email automation, and document generation.',
+      features: ['Content Creation', 'Email Automation', 'Document Generation', 'Style Adaptation', 'Multi-language'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Anomaly Detection',
+      description: 'Intelligent anomaly detection for system monitoring, security, and business process optimization.',
+      features: ['System Monitoring', 'Security Alerts', 'Process Optimization', 'Pattern Recognition', 'Automated Response'],
+      price: 'Starting at $699/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Decision Support System',
+      description: 'Intelligent decision support with data analysis, scenario modeling, and recommendation engine.',
+      features: ['Data Analysis', 'Scenario Modeling', 'Recommendation Engine', 'Risk Assessment', 'Decision Trees'],
+      price: 'Starting at $1,499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Personalization Engine',
+      description: 'Advanced personalization system for websites, apps, and marketing campaigns with real-time adaptation.',
+      features: ['Real-time Adaptation', 'User Profiling', 'Content Personalization', 'A/B Testing', 'Performance Analytics'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Time Series Analysis',
+      description: 'Advanced time series forecasting and analysis for business metrics, sales, and operational data.',
+      features: ['Time Series Forecasting', 'Trend Analysis', 'Seasonality Detection', 'Anomaly Detection', 'Model Optimization'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Cognitive Services',
+      description: 'Comprehensive AI cognitive services including vision, speech, language, and decision-making capabilities.',
+      features: ['Computer Vision', 'Speech Services', 'Language Understanding', 'Decision Making', 'Custom Models'],
+      price: 'Starting at $1,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Edge Computing',
+      description: 'AI processing at the edge for real-time decision making and reduced latency in IoT and mobile applications.',
+      features: ['Edge Processing', 'Real-time Decisions', 'Reduced Latency', 'IoT Integration', 'Mobile Optimization'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services'
+    },
     
     // Cloud Services
     {
@@ -520,6 +672,118 @@ const ServicesPage: React.FC = () => {
       title: 'IT Governance & Strategy',
       description: 'Strategic IT governance and technology roadmap development for long-term business success.',
       features: ['IT Strategy Development', 'Technology Roadmaps', 'Governance Frameworks', 'Risk Management', 'Performance Metrics'],
+      price: 'Starting at $499/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Multi-Cloud Management',
+      description: 'Comprehensive multi-cloud management with cost optimization, security, and performance monitoring across AWS, Azure, and GCP.',
+      features: ['Multi-cloud Support', 'Cost Optimization', 'Security Management', 'Performance Monitoring', 'Unified Dashboard'],
+      price: 'Starting at $1,799/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Zero Trust Security',
+      description: 'Implement zero trust security architecture with identity verification, micro-segmentation, and continuous monitoring.',
+      features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement', 'Threat Detection'],
+      price: 'Starting at $1,299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Database Performance Tuning',
+      description: 'Advanced database optimization with AI-powered performance tuning, query optimization, and capacity planning.',
+      features: ['Query Optimization', 'Performance Tuning', 'Capacity Planning', 'Index Optimization', 'Monitoring'],
+      price: 'Starting at $799/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'CDN & Content Delivery',
+      description: 'Global content delivery network with edge caching, DDoS protection, and performance optimization.',
+      features: ['Edge Caching', 'DDoS Protection', 'Performance Optimization', 'Global Distribution', 'Analytics'],
+      price: 'Starting at $299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Device Management',
+      description: 'Enterprise mobile device management with security policies, app management, and remote control capabilities.',
+      features: ['Device Security', 'App Management', 'Remote Control', 'Policy Enforcement', 'Data Protection'],
+      price: 'Starting at $99/month',
+      category: 'IT Services'
+    },
+    {
+      icon: BarChart3,
+      title: 'IT Service Management',
+      description: 'Comprehensive IT service management with incident management, change management, and service desk automation.',
+      features: ['Incident Management', 'Change Management', 'Service Desk', 'Automation', 'Reporting'],
+      price: 'Starting at $599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Security Operations Center',
+      description: '24/7 security operations center with threat monitoring, incident response, and security analytics.',
+      features: ['24/7 Monitoring', 'Threat Detection', 'Incident Response', 'Security Analytics', 'Compliance'],
+      price: 'Starting at $2,999/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Disaster Recovery as a Service',
+      description: 'Comprehensive disaster recovery solution with automated backup, failover, and business continuity planning.',
+      features: ['Automated Backup', 'Failover Testing', 'Business Continuity', 'RTO/RPO Optimization', 'Testing'],
+      price: 'Starting at $1,499/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Settings,
+      title: 'IT Automation Platform',
+      description: 'Comprehensive IT automation platform with workflow automation, orchestration, and self-healing capabilities.',
+      features: ['Workflow Automation', 'Orchestration', 'Self-healing', 'Integration', 'Monitoring'],
+      price: 'Starting at $899/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Database,
+      title: 'Data Lake & Analytics',
+      description: 'Enterprise data lake with advanced analytics, machine learning, and real-time data processing capabilities.',
+      features: ['Data Lake', 'Advanced Analytics', 'Machine Learning', 'Real-time Processing', 'Data Governance'],
+      price: 'Starting at $1,999/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Globe,
+      title: 'API Gateway & Management',
+      description: 'Enterprise API gateway with rate limiting, authentication, monitoring, and developer portal management.',
+      features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Monitoring', 'Developer Portal'],
+      price: 'Starting at $599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Shield,
+      title: 'Identity & Access Management',
+      description: 'Comprehensive identity and access management with single sign-on, multi-factor authentication, and user provisioning.',
+      features: ['Single Sign-On', 'Multi-factor Auth', 'User Provisioning', 'Access Control', 'Compliance'],
+      price: 'Starting at $699/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Container Orchestration',
+      description: 'Kubernetes and container orchestration with automated scaling, service mesh, and monitoring.',
+      features: ['Kubernetes', 'Auto-scaling', 'Service Mesh', 'Monitoring', 'CI/CD Integration'],
+      price: 'Starting at $1,199/month',
+      category: 'IT Services'
+    },
+    {
+      icon: BarChart3,
+      title: 'IT Cost Optimization',
+      description: 'AI-powered IT cost optimization with resource right-sizing, unused resource detection, and budget forecasting.',
+      features: ['Resource Right-sizing', 'Unused Detection', 'Budget Forecasting', 'Cost Analytics', 'Optimization'],
       price: 'Starting at $499/month',
       category: 'IT Services'
     },

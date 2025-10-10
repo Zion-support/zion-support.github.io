@@ -18,6 +18,11 @@ interface MicroSaasProduct {
 }
 
 const MicroSaasPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [searchTerm, setSearchTerm] = React.useState('');
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const productsPerPage = 12;
+
   const microSaasProducts: MicroSaasProduct[] = [
     {
       id: '1',
@@ -84,6 +89,380 @@ const MicroSaasPage: React.FC = () => {
       users: 'Unlimited conversations',
       popular: false,
       category: 'Support'
+    },
+    {
+      id: '7',
+      icon: '🤖',
+      title: 'AI Content Generator Pro',
+      description: 'Advanced AI content creation with 50+ templates, SEO optimization, and multi-language support',
+      features: ['50+ templates', 'SEO optimization', 'Multi-language', 'Plagiarism check', 'Brand voice training'],
+      price: '$49/month',
+      users: 'Unlimited content',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      id: '8',
+      icon: '📱',
+      title: 'AI Mobile App Builder',
+      description: 'Build native mobile apps with AI assistance, drag-and-drop interface, and instant deployment',
+      features: ['Drag-and-drop builder', 'AI code generation', 'Instant deployment', 'Cross-platform', 'App store publishing'],
+      price: '$199/month',
+      users: 'Up to 10 apps',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      id: '9',
+      icon: '🔍',
+      title: 'AI SEO Optimizer',
+      description: 'Automated SEO analysis, keyword research, content optimization, and ranking tracking with AI insights',
+      features: ['Keyword research', 'Content optimization', 'Ranking tracking', 'Competitor analysis', 'Technical SEO'],
+      price: '$79/month',
+      users: 'Up to 5 websites',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '10',
+      icon: '💰',
+      title: 'AI Invoice Generator',
+      description: 'Automated invoice creation, payment tracking, and financial reporting with AI-powered insights',
+      features: ['Automated invoicing', 'Payment tracking', 'Financial reports', 'Tax calculations', 'Client portal'],
+      price: '$39/month',
+      users: 'Up to 1000 invoices',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      id: '11',
+      icon: '📝',
+      title: 'AI Writing Assistant',
+      description: 'Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates',
+      features: ['50+ templates', 'Multi-language support', 'Plagiarism check', 'SEO optimization', 'Tone adjustment'],
+      price: '$29/month',
+      users: 'Unlimited words',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      id: '12',
+      icon: '📊',
+      title: 'Smart Analytics Pro',
+      description: 'Real-time business analytics with AI insights, automated reports, and predictive forecasting',
+      features: ['Real-time analytics', 'Predictive forecasting', 'Automated reports', 'Custom metrics', 'Data integration'],
+      price: '$89/month',
+      users: 'Up to 25 users',
+      popular: false,
+      category: 'Analytics'
+    },
+    {
+      id: '13',
+      icon: '📅',
+      title: 'AI Scheduler Pro',
+      description: 'Intelligent scheduling with calendar optimization, meeting coordination, and time management',
+      features: ['Calendar optimization', 'Meeting coordination', 'Time management', 'Auto-scheduling', 'Integration APIs'],
+      price: '$19/month',
+      users: 'Up to 50 users',
+      popular: false,
+      category: 'Productivity'
+    },
+    {
+      id: '14',
+      icon: '💳',
+      title: 'Expense Tracker AI',
+      description: 'AI-powered expense management with receipt scanning, categorization, and budget insights',
+      features: ['Receipt scanning', 'Auto-categorization', 'Budget insights', 'Tax preparation', 'Multi-currency'],
+      price: '$15/month',
+      users: 'Unlimited expenses',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      id: '15',
+      icon: '✅',
+      title: 'Task Manager Pro',
+      description: 'Advanced task management with AI prioritization, team collaboration, and progress tracking',
+      features: ['AI prioritization', 'Team collaboration', 'Progress tracking', 'Time tracking', 'Project templates'],
+      price: '$39/month',
+      users: 'Up to 100 users',
+      popular: false,
+      category: 'Productivity'
+    },
+    {
+      id: '16',
+      icon: '👥',
+      title: 'CRM Lite',
+      description: 'Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation',
+      features: ['AI lead scoring', 'Contact management', 'Sales pipeline', 'Email integration', 'Mobile app'],
+      price: '$59/month',
+      users: 'Up to 25 users',
+      popular: false,
+      category: 'CRM'
+    },
+    {
+      id: '17',
+      icon: '📧',
+      title: 'Email Optimizer Pro',
+      description: 'AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing',
+      features: ['Subject line AI', 'Send time optimization', 'A/B testing', 'Open rate tracking', 'Spam analysis'],
+      price: '$25/month',
+      users: 'Up to 50,000 emails',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '18',
+      icon: '🌐',
+      title: 'Social Media Manager AI',
+      description: 'AI-driven social media management with content creation, scheduling, and performance analytics',
+      features: ['Content creation', 'Auto-scheduling', 'Performance analytics', 'Multi-platform', 'Engagement tracking'],
+      price: '$45/month',
+      users: 'Up to 20 accounts',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '19',
+      icon: '🎨',
+      title: 'AI Design Studio Pro',
+      description: 'Create stunning graphics, logos, and marketing materials with AI-powered design tools',
+      features: ['AI design tools', 'Logo generation', 'Marketing materials', 'Brand kit', 'Template library'],
+      price: '$35/month',
+      users: 'Unlimited designs',
+      popular: false,
+      category: 'Design'
+    },
+    {
+      id: '20',
+      icon: '📱',
+      title: 'Landing Page Builder AI',
+      description: 'Build high-converting landing pages with AI optimization and A/B testing capabilities',
+      features: ['Drag-and-drop builder', 'AI optimization', 'A/B testing', 'Conversion tracking', 'Mobile responsive'],
+      price: '$29/month',
+      users: 'Up to 10 pages',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      id: '21',
+      icon: '🔍',
+      title: 'SEO Optimizer Pro',
+      description: 'AI-powered SEO analysis and optimization with keyword research and content suggestions',
+      features: ['SEO analysis', 'Keyword research', 'Content suggestions', 'Ranking tracking', 'Technical audits'],
+      price: '$49/month',
+      users: 'Up to 3 websites',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '22',
+      icon: '📈',
+      title: 'Ad Campaign Manager AI',
+      description: 'Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn',
+      features: ['Multi-platform ads', 'AI optimization', 'Budget management', 'Performance tracking', 'Auto-bidding'],
+      price: '$79/month',
+      users: 'Up to $10k ad spend',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '23',
+      icon: '💻',
+      title: 'Code Assistant Pro',
+      description: 'AI-powered code completion, debugging, and optimization for multiple programming languages',
+      features: ['Code completion', 'Debugging help', 'Code optimization', 'Multi-language support', 'Documentation'],
+      price: '$39/month',
+      users: 'Unlimited usage',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      id: '24',
+      icon: '🔧',
+      title: 'API Builder Pro',
+      description: 'Create and manage APIs with AI assistance, documentation generation, and testing tools',
+      features: ['API creation', 'Documentation generation', 'Testing tools', 'Version control', 'Rate limiting'],
+      price: '$59/month',
+      users: 'Up to 50 APIs',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      id: '25',
+      icon: '🐛',
+      title: 'Bug Tracker Pro',
+      description: 'Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions',
+      features: ['AI issue detection', 'Priority scoring', 'Resolution suggestions', 'Team collaboration', 'Integration APIs'],
+      price: '$25/month',
+      users: 'Up to 50 users',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      id: '26',
+      icon: '📚',
+      title: 'Doc Generator AI',
+      description: 'Automatically generate technical documentation, API docs, and user guides from code',
+      features: ['Auto documentation', 'API docs', 'User guides', 'Code comments', 'Multiple formats'],
+      price: '$19/month',
+      users: 'Unlimited docs',
+      popular: false,
+      category: 'Development'
+    },
+    {
+      id: '27',
+      icon: '👨‍💼',
+      title: 'AI Recruitment Assistant',
+      description: 'Streamline hiring with AI-powered resume screening, candidate matching, and interview scheduling',
+      features: ['Resume screening', 'Candidate matching', 'Interview scheduling', 'Skills assessment', 'Background checks'],
+      price: '$199/month',
+      users: 'Up to 1000 candidates',
+      popular: false,
+      category: 'HR'
+    },
+    {
+      id: '28',
+      icon: '🏥',
+      title: 'Medical Records Manager',
+      description: 'HIPAA-compliant medical records management with AI-powered data extraction and analysis',
+      features: ['HIPAA compliance', 'Data extraction', 'Medical analysis', 'Patient portal', 'Integration APIs'],
+      price: '$299/month',
+      users: 'Up to 500 patients',
+      popular: false,
+      category: 'Healthcare'
+    },
+    {
+      id: '29',
+      icon: '📊',
+      title: 'AI Accounting Assistant',
+      description: 'Automated accounting with AI-powered bookkeeping, tax preparation, and financial reporting',
+      features: ['Automated bookkeeping', 'Tax preparation', 'Financial reports', 'Expense tracking', 'Compliance'],
+      price: '$149/month',
+      users: 'Up to 1000 transactions',
+      popular: false,
+      category: 'Finance'
+    },
+    {
+      id: '30',
+      icon: '🏠',
+      title: 'Property Management AI',
+      description: 'AI-powered property management with tenant screening, maintenance scheduling, and rent optimization',
+      features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Property analytics', 'Tenant portal'],
+      price: '$179/month',
+      users: 'Up to 100 properties',
+      popular: false,
+      category: 'Real Estate'
+    },
+    {
+      id: '31',
+      icon: '⚖️',
+      title: 'Legal Document Manager',
+      description: 'AI-powered legal document management with contract analysis, compliance tracking, and risk assessment',
+      features: ['Contract analysis', 'Compliance tracking', 'Risk assessment', 'Document templates', 'Legal research'],
+      price: '$249/month',
+      users: 'Up to 1000 documents',
+      popular: false,
+      category: 'Legal'
+    },
+    {
+      id: '32',
+      icon: '🎓',
+      title: 'Online Learning Platform AI',
+      description: 'AI-powered educational platform with personalized learning paths and progress tracking',
+      features: ['Personalized learning', 'Progress tracking', 'Course creation', 'Assessment tools', 'Certification'],
+      price: '$99/month',
+      users: 'Up to 500 students',
+      popular: false,
+      category: 'Education'
+    },
+    {
+      id: '33',
+      icon: '📦',
+      title: 'Supply Chain Optimizer AI',
+      description: 'AI-powered supply chain optimization with demand forecasting and inventory management',
+      features: ['Demand forecasting', 'Inventory management', 'Supplier analytics', 'Risk assessment', 'Cost optimization'],
+      price: '$399/month',
+      users: 'Up to 1000 SKUs',
+      popular: false,
+      category: 'Manufacturing'
+    },
+    {
+      id: '34',
+      icon: '🎯',
+      title: 'Lead Generation AI',
+      description: 'AI-powered lead generation with automated prospecting, email sequences, and qualification',
+      features: ['Automated prospecting', 'Email sequences', 'Lead qualification', 'CRM integration', 'Analytics'],
+      price: '$199/month',
+      users: 'Up to 10,000 leads',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      id: '35',
+      icon: '📊',
+      title: 'Business Intelligence AI',
+      description: 'Advanced business intelligence with AI insights, automated reporting, and predictive analytics',
+      features: ['AI insights', 'Automated reporting', 'Predictive analytics', 'Custom dashboards', 'Data visualization'],
+      price: '$299/month',
+      users: 'Up to 100 users',
+      popular: false,
+      category: 'Analytics'
+    },
+    {
+      id: '36',
+      icon: '🔐',
+      title: 'Password Manager Pro',
+      description: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring',
+      features: ['Password generation', 'Security recommendations', 'Breach monitoring', 'Team sharing', '2FA integration'],
+      price: '$15/month',
+      users: 'Up to 50 users',
+      popular: false,
+      category: 'Security'
+    },
+    {
+      id: '37',
+      icon: '📱',
+      title: 'App Store Optimizer',
+      description: 'AI-powered app store optimization with keyword research, ASO analysis, and conversion optimization',
+      features: ['Keyword research', 'ASO analysis', 'Conversion optimization', 'Competitor tracking', 'Performance metrics'],
+      price: '$79/month',
+      users: 'Up to 20 apps',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '38',
+      icon: '🎵',
+      title: 'AI Music Generator',
+      description: 'Create royalty-free music and sound effects with AI-powered composition and customization',
+      features: ['AI composition', 'Multiple genres', 'Customization', 'Royalty-free', 'Export options'],
+      price: '$39/month',
+      users: 'Unlimited tracks',
+      popular: false,
+      category: 'Creative'
+    },
+    {
+      id: '39',
+      icon: '🎬',
+      title: 'AI Video Editor',
+      description: 'Automated video editing with AI-powered scene detection, auto-cropping, and smart transitions',
+      features: ['Auto-editing', 'Scene detection', 'Smart transitions', 'Auto-cropping', 'Multiple formats'],
+      price: '$59/month',
+      users: 'Up to 100 videos',
+      popular: false,
+      category: 'Creative'
+    },
+    {
+      id: '40',
+      icon: '📊',
+      title: 'AI Survey Builder',
+      description: 'Create intelligent surveys with AI-powered question suggestions and automated analysis',
+      features: ['Question suggestions', 'Automated analysis', 'Response tracking', 'Custom themes', 'Integration APIs'],
+      price: '$29/month',
+      users: 'Up to 1000 responses',
+      popular: false,
+      category: 'Research'
     }
   ];
 
@@ -98,7 +477,24 @@ const MicroSaasPage: React.FC = () => {
     'Cancel anytime, no long-term contracts'
   ];
 
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
+  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support', 'Content', 'Development', 'Finance', 'Productivity', 'Design', 'HR', 'Healthcare', 'Real Estate', 'Legal', 'Education', 'Manufacturing', 'Sales', 'Creative', 'Research'];
+
+  const filteredProducts = microSaasProducts.filter(product => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
+  const currentProducts = filteredProducts.slice(startIndex, endIndex);
+
+  // Reset to first page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchTerm]);
 
   const stats = [
     {
@@ -161,22 +557,39 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Category Filter */}
+        {/* Search and Filter Section */}
         <section className="py-8 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    category === 'All'
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <div className="flex flex-col md:flex-row gap-4 mb-6">
+                <div className="flex-1">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Search micro SAAS products..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full pl-4 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-2 justify-center">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                      selectedCategory === category
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -189,10 +602,13 @@ const MicroSaasPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose from our collection of specialized business tools designed to solve specific challenges.
               </p>
+              <div className="mt-4 text-gray-300">
+                {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''} found
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product) => (
+              {currentProducts.map((product) => (
                 <div
                   key={product.id}
                   className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
@@ -245,6 +661,43 @@ const MicroSaasPage: React.FC = () => {
                 </div>
               ))}
             </div>
+            
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center mt-12 space-x-2">
+                <button
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                  disabled={currentPage === 1}
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                >
+                  Previous
+                </button>
+                
+                <div className="flex space-x-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                        currentPage === page
+                          ? 'bg-cyan-500 text-white'
+                          : 'bg-white/10 text-white hover:bg-white/20'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
+                
+                <button
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                  disabled={currentPage === totalPages}
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                >
+                  Next
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
