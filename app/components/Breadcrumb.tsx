@@ -3,7 +3,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface BreadcrumbItem {
   name: string;
@@ -14,8 +13,6 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   
-<<<<<<< HEAD
-=======
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
     const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
     const breadcrumbs: BreadcrumbItem[] = [
@@ -32,7 +29,7 @@ const Breadcrumb: React.FC = () => {
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-
+      
       breadcrumbs.push({
         name,
         href: currentPath,
@@ -43,81 +40,37 @@ const Breadcrumb: React.FC = () => {
     return breadcrumbs;
   };
 
-  const breadcrumbs = generateBreadcrumbs();
-
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null;
   }
-<<<<<<< HEAD
 
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-  
-  const breadcrumbItems = [
-    { name: 'Home', path: '/', icon: Home }
-  ];
+  const breadcrumbs = generateBreadcrumbs();
 
-  pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/');
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null });
-  });
+  if (breadcrumbs.length <= 1) {
+    return null;
+  }
 
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 py-3">
         <ol className="flex items-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
+          {breadcrumbs.map((breadcrumb, index) => (
+            <li key={breadcrumb.href} className="flex items-center">
               {index > 0 && (
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
               )}
               <a
-                href={item.path}
+                href={breadcrumb.href}
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
+                  breadcrumb.current
                     ? 'text-cyan-400 font-medium'
                     : 'text-gray-300 hover:text-cyan-400'
                 }`}
               >
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
+                {index === 0 && <Home className="w-4 h-4" />}
+                <span>{breadcrumb.name}</span>
               </a>
-=======
-
-  return (
-    <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ol className="flex items-center space-x-2 py-3 text-sm">
-          {breadcrumbs.map((item, index) => (
-            <li key={item.href} className="flex items-center">
-              {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true" />
-              )}
-              
-              {index === 0 ? (
-                <Link
-                  to={item.href}
-                  className="flex items-center text-gray-300 hover:text-white transition-colors"
-                  aria-label="Home"
-                >
-                  <Home className="w-4 h-4" aria-hidden="true" />
-                  <span className="sr-only">Home</span>
-                </Link>
-              ) : item.current ? (
-                <span className="text-white font-medium" aria-current="page">
-                  {item.name}
-                </span>
-              ) : (
-                <Link
-                  to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  {item.name}
-                </Link>
-              )}
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
             </li>
           ))}
         </ol>

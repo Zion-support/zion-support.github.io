@@ -1,12 +1,11 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react';
+import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone, CheckCircle, ArrowRight, Star, Clock, Globe, Database, Users, Settings } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AIServicesPagePage: React.FC = () => {
+const AIServicesPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -45,9 +44,9 @@ const AIServicesPagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai services service for modern businesses." />
-        <meta name="keywords" content="AI ai services, artificial intelligence, ai services, AI services, intelligent automation" />
+        <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
+        <meta name="description" content="Advanced AI-powered solutions for modern businesses. Machine learning, automation, and intelligent systems." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, intelligent systems, AI consulting" />
       </Helmet>
 
       <Navigation />
@@ -61,7 +60,7 @@ const AIServicesPagePage: React.FC = () => {
               AI Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai services service for modern businesses.
+              Advanced AI-powered solutions for modern businesses. Transform your operations with cutting-edge artificial intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -162,4 +161,4 @@ const AIServicesPagePage: React.FC = () => {
   );
 };
 
-export default AIServicesPagePage;
+export default AIServicesPage;
