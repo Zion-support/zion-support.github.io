@@ -2,7 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight, CheckCircle, Phone, Mail, MapPin, Users, TrendingUp, Cpu, Lock, Code, BarChart3, Target, FileText, Server, Wifi, Monitor } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const ItServicesPage: React.FC = () => {
   const itServices = [
