@@ -56,3 +56,8 @@ export function useIntersectionObserver(
 
   return { ref, isIntersecting, entry };
 }
+<<<<<<< HEAD
+=======
+
+export default useIntersectionObserver;
+>>>>>>> origin/main

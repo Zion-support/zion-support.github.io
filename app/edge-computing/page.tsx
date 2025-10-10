@@ -39,50 +39,89 @@ const EdgeComputingPage: React.FC = () => {
     },
     {
       icon: Server,
-      title: 'Edge Analytics',
-      description: 'Advanced analytics and machine learning capabilities at the edge.',
-      benefits: ['Real-time analytics', 'ML inference', 'Predictive maintenance', 'Anomaly detection']
+      title: 'Edge Infrastructure',
+      description: 'Robust infrastructure designed for edge computing requirements and scalability.',
+      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
     }
   ];
 
-  const applications = [
+  const services = [
     {
-      title: 'Autonomous Vehicles',
-      description: 'Real-time decision making for autonomous driving systems',
-      icon: '🚗'
+      icon: '⚡',
+      title: 'Edge Analytics',
+      description: 'Real-time data processing and analytics at the edge'
     },
     {
-      title: 'Smart Cities',
-      description: 'Intelligent traffic management and urban monitoring',
-      icon: '🏙️'
+      icon: '🌐',
+      title: 'Edge Networking',
+      description: 'Optimized networking solutions for edge deployments'
     },
     {
-      title: 'Industrial IoT',
-      description: 'Manufacturing automation and predictive maintenance',
-      icon: '🏭'
+      icon: '🔒',
+      title: 'Edge Security',
+      description: 'Comprehensive security solutions for edge environments'
     },
     {
+<<<<<<< HEAD
       title: 'Healthcare',
       description: 'Real-time patient monitoring and medical diagnostics',
       icon: '🏥'
+=======
+      icon: '📱',
+      title: 'Mobile Edge',
+      description: 'Mobile edge computing for 5G and mobile applications'
+>>>>>>> origin/main
     }
   ];
 
   const benefits = [
-    'Ultra-low latency processing',
-    'Reduced bandwidth costs',
-    'Improved data privacy',
-    'Enhanced reliability',
-    'Real-time decision making',
-    'Scalable infrastructure'
+    'Ultra-Low Latency',
+    'Reduced Bandwidth Costs',
+    'Improved Reliability',
+    'Enhanced Security',
+    'Real-time Processing',
+    'Global Scalability'
+  ];
+
+  const useCases = [
+    {
+      title: 'Autonomous Vehicles',
+      description: 'Real-time decision making for self-driving cars',
+      icon: '🚗'
+    },
+    {
+      title: 'Smart Cities',
+      description: 'IoT sensors and real-time city management',
+      icon: '🏙️'
+    },
+    {
+      title: 'Industrial IoT',
+      description: 'Manufacturing automation and monitoring',
+      icon: '🏭'
+    },
+    {
+      title: 'AR/VR Applications',
+      description: 'Immersive experiences with low latency',
+      icon: '🥽'
+    },
+    {
+      title: 'Healthcare',
+      description: 'Real-time patient monitoring and diagnostics',
+      icon: '🏥'
+    },
+    {
+      title: 'Gaming',
+      description: 'Cloud gaming with minimal latency',
+      icon: '🎮'
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and IoT integration." />
-        <meta name="keywords" content="edge computing, IoT, real-time processing, low latency, Zion Tech Group" />
+        <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and global edge infrastructure." />
+        <meta name="keywords" content="edge computing, low latency, IoT, real-time processing, edge infrastructure, Zion Tech Group" />
       </Helmet>
       
       <Navigation />
@@ -99,12 +138,12 @@ const EdgeComputingPage: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Bring computing power closer to your data and users with our advanced edge computing solutions. 
-            Achieve ultra-low latency, real-time processing, and seamless IoT integration.
+            Bring computing power closer to your data and users with our advanced edge computing solutions.
+            Ultra-low latency, real-time processing, and global edge infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started
+              Get Started Today
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -118,9 +157,13 @@ const EdgeComputingPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features</h2>
+=======
+            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
+>>>>>>> origin/main
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive edge computing solution designed for modern applications and IoT deployments
+              Advanced edge computing capabilities designed for modern applications and IoT solutions
             </p>
           </div>
           
@@ -146,22 +189,44 @@ const EdgeComputingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Applications Section */}
+      {/* Services Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Applications</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how edge computing transforms industries and enables new possibilities
+              Comprehensive edge computing solutions for all your business needs
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {applications.map((app, index) => (
+            {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{app.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
-                <p className="text-gray-300">{app.description}</p>
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Edge computing solutions for various industries and applications
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{useCase.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -174,7 +239,7 @@ const EdgeComputingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of processing data closer to where it's generated
+              Experience the benefits of edge computing with our proven solutions
             </p>
           </div>
           

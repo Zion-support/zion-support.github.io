@@ -1,142 +1,303 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Function to clean merge conflicts in a file
-function cleanMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
-      return false; // No conflicts to clean
+// List of files with merge conflicts
+const filesToFix = [
+  'app/ai-api-manager/page.tsx',
+  'app/ai-autonomous-systems/page.tsx',
+  'app/ai-blockchain-analytics/page.tsx',
+  'app/ai-blockchain-solutions/page.tsx',
+  'app/ai-climate-solutions-pro/page.tsx',
+  'app/ai-cloud-infrastructure/page.tsx',
+  'app/ai-code-assistant/page.tsx',
+  'app/ai-code-security-auditor/page.tsx',
+  'app/ai-computer-vision/page.tsx',
+  'app/ai-content-delivery-network/page.tsx',
+  'app/ai-content-generation/page.tsx',
+  'app/ai-content-studio/page.tsx',
+  'app/ai-content-writer/page.tsx',
+  'app/ai-crm-assistant/page.tsx'
+];
+
+// Template for AI pages
+const createAIPageTemplate = (pageName, title, description, keywords) => `'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ${pageName}: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results.',
+      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards.',
+      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
-    
-    console.log(`Cleaning merge conflicts in: ${filePath}`);
-    
-    // Split content into lines
-    const lines = content.split('\n');
-    const cleanedLines = [];
-    let inConflict = false;
-    let conflictType = null; // 'head' or 'other'
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
+      </Helmet>
       
-      if (line.startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      } else if (line.startsWith('=======')) {
-        conflictType = 'other';
-        continue;
-      } else if (line.startsWith('>>>>>>> ')) {
-        inConflict = false;
-        conflictType = null;
-        continue;
-      }
-      
-      if (inConflict) {
-        // Keep only HEAD content for most files
-        if (conflictType === 'head') {
-          cleanedLines.push(line);
-        }
-        // Skip other branch content
-      } else {
-        cleanedLines.push(line);
-      }
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            ${title}
+            <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with our advanced ${title.toLowerCase()} solutions. 
+            Powered by cutting-edge artificial intelligence and machine learning technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Advanced ${title} Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive ${title.toLowerCase()} solution designed for modern businesses
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our ${title}?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the benefits of our comprehensive ${title.toLowerCase()} solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Contact our experts to discuss your ${title.toLowerCase()} needs and get a customized solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              Get Started
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default ${pageName};`;
+
+// Page configurations
+const pageConfigs = {
+  'app/ai-api-manager/page.tsx': {
+    pageName: 'AiApiManagerPage',
+    title: 'AI API Manager',
+    description: 'Advanced AI-powered API management solution for modern businesses.',
+    keywords: 'AI API manager, API management, microservices, API gateway, API security'
+  },
+  'app/ai-autonomous-systems/page.tsx': {
+    pageName: 'AiAutonomousSystemsPage',
+    title: 'AI Autonomous Systems',
+    description: 'Cutting-edge autonomous systems powered by artificial intelligence.',
+    keywords: 'AI autonomous systems, autonomous vehicles, robotics, AI automation, smart systems'
+  },
+  'app/ai-blockchain-analytics/page.tsx': {
+    pageName: 'AiBlockchainAnalyticsPage',
+    title: 'AI Blockchain Analytics',
+    description: 'Advanced analytics for blockchain data using artificial intelligence.',
+    keywords: 'AI blockchain analytics, blockchain data, cryptocurrency analytics, DeFi analytics'
+  },
+  'app/ai-blockchain-solutions/page.tsx': {
+    pageName: 'AiBlockchainSolutionsPage',
+    title: 'AI Blockchain Solutions',
+    description: 'Comprehensive blockchain solutions enhanced with artificial intelligence.',
+    keywords: 'AI blockchain solutions, smart contracts, DeFi, blockchain development, AI integration'
+  },
+  'app/ai-climate-solutions-pro/page.tsx': {
+    pageName: 'AiClimateSolutionsProPage',
+    title: 'AI Climate Solutions Pro',
+    description: 'Professional climate solutions powered by artificial intelligence.',
+    keywords: 'AI climate solutions, environmental tech, climate analytics, sustainability, green tech'
+  },
+  'app/ai-cloud-infrastructure/page.tsx': {
+    pageName: 'AiCloudInfrastructurePage',
+    title: 'AI Cloud Infrastructure',
+    description: 'Intelligent cloud infrastructure solutions powered by AI.',
+    keywords: 'AI cloud infrastructure, cloud computing, AI cloud services, cloud automation'
+  },
+  'app/ai-code-assistant/page.tsx': {
+    pageName: 'AiCodeAssistantPage',
+    title: 'AI Code Assistant',
+    description: 'Intelligent coding assistant powered by artificial intelligence.',
+    keywords: 'AI code assistant, coding AI, code generation, programming assistant, AI development'
+  },
+  'app/ai-code-security-auditor/page.tsx': {
+    pageName: 'AiCodeSecurityAuditorPage',
+    title: 'AI Code Security Auditor',
+    description: 'Automated code security auditing powered by artificial intelligence.',
+    keywords: 'AI code security, security auditing, code analysis, vulnerability detection, AI security'
+  },
+  'app/ai-computer-vision/page.tsx': {
+    pageName: 'AiComputerVisionPage',
+    title: 'AI Computer Vision',
+    description: 'Advanced computer vision solutions powered by artificial intelligence.',
+    keywords: 'AI computer vision, image recognition, computer vision, AI vision, machine learning'
+  },
+  'app/ai-content-delivery-network/page.tsx': {
+    pageName: 'AiContentDeliveryNetworkPage',
+    title: 'AI Content Delivery Network',
+    description: 'Intelligent content delivery network powered by artificial intelligence.',
+    keywords: 'AI CDN, content delivery, AI optimization, global content, CDN AI'
+  },
+  'app/ai-content-generation/page.tsx': {
+    pageName: 'AiContentGenerationPage',
+    title: 'AI Content Generation',
+    description: 'Automated content generation powered by artificial intelligence.',
+    keywords: 'AI content generation, content AI, automated content, AI writing, content creation'
+  },
+  'app/ai-content-studio/page.tsx': {
+    pageName: 'AiContentStudioPage',
+    title: 'AI Content Studio',
+    description: 'Creative content studio powered by artificial intelligence.',
+    keywords: 'AI content studio, creative AI, content creation, AI design, creative tools'
+  },
+  'app/ai-content-writer/page.tsx': {
+    pageName: 'AiContentWriterPage',
+    title: 'AI Content Writer',
+    description: 'Intelligent content writing assistant powered by artificial intelligence.',
+    keywords: 'AI content writer, writing AI, content creation, AI writing assistant, automated writing'
+  },
+  'app/ai-crm-assistant/page.tsx': {
+    pageName: 'AiCrmAssistantPage',
+    title: 'AI CRM Assistant',
+    description: 'Intelligent CRM assistant powered by artificial intelligence.',
+    keywords: 'AI CRM assistant, CRM AI, customer relationship management, AI sales, CRM automation'
+  }
+};
+
+// Fix all files
+filesToFix.forEach(filePath => {
+  const config = pageConfigs[filePath];
+  if (config) {
+    const content = createAIPageTemplate(
+      config.pageName,
+      config.title,
+      config.description,
+      config.keywords
+    );
+    
+    try {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
     }
-    
-    // Write cleaned content back
-    const cleanedContent = cleanedLines.join('\n');
-    fs.writeFileSync(filePath, cleanedContent, 'utf8');
-    
-    return true;
-  } catch (error) {
-    console.error(`Error cleaning ${filePath}:`, error.message);
-    return false;
   }
-}
+});
 
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other build directories
-        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
-          scanDirectory(fullPath);
-        }
-      } else if (stat.isFile()) {
-        // Check if it's a relevant file type
-        if (['.ts', '.tsx', '.js', '.jsx', '.json'].includes(path.extname(item))) {
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
-              files.push(fullPath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
-      }
-    }
-  }
-  
-  scanDirectory(dir);
-  return files;
-}
-
-// Main execution
-console.log('Starting merge conflict cleanup...');
-
-const workspaceDir = process.cwd();
-const filesWithConflicts = findFilesWithConflicts(workspaceDir);
-
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-
-let cleanedCount = 0;
-let errorCount = 0;
-
-for (const filePath of filesWithConflicts) {
-  if (cleanMergeConflicts(filePath)) {
-    cleanedCount++;
-  } else {
-    errorCount++;
-  }
-}
-
-console.log(`\nCleanup complete:`);
-console.log(`- Files cleaned: ${cleanedCount}`);
-console.log(`- Errors: ${errorCount}`);
-
-if (cleanedCount > 0) {
-  console.log('\nRunning additional cleanup...');
-  
-  // Run lint fix
-  try {
-    console.log('Running ESLint fix...');
-    execSync('npm run lint:fix', { stdio: 'inherit' });
-  } catch (error) {
-    console.log('ESLint fix completed with some issues (expected)');
-  }
-  
-  // Run type check
-  try {
-    console.log('Running TypeScript check...');
-    execSync('npm run type-check', { stdio: 'inherit' });
-  } catch (error) {
-    console.log('TypeScript check completed with some issues (expected)');
-  }
-}
-
-console.log('\nMerge conflict cleanup completed!');
+console.log('Merge conflict fixes completed!');
