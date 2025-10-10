@@ -29,7 +29,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -37,8 +37,11 @@ export default defineConfig({
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
@@ -46,17 +49,26 @@ export default defineConfig({
             if (id.includes('web-vitals')) {
               return 'vendor-analytics';
             }
+            if (id.includes('tailwindcss')) {
+              return 'vendor-styles';
+            }
             return 'vendor-misc';
           }
-          // App chunks
+          // App chunks - better organization
           if (id.includes('/app/ai-')) {
             return 'ai-services';
           }
           if (id.includes('/app/it-')) {
             return 'it-services';
           }
+          if (id.includes('/app/components/Content')) {
+            return 'content-components';
+          }
           if (id.includes('/app/components/')) {
-            return 'components';
+            return 'ui-components';
+          }
+          if (id.includes('/app/page')) {
+            return 'pages';
           }
           return 'app';
         },

@@ -9,7 +9,7 @@ import Footer from './app/components/Footer';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
+import SEOHead from './app/components/SEOHead';
 import SkipLink from './app/components/SkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
