@@ -3,69 +3,49 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-const [servicesOpen, setServicesOpen] = useState(false);
-const [aiServicesOpen, setAiServicesOpen] = useState(false);
-const [itServicesOpen, setItServicesOpen] = useState(false);
-const [microSaasOpen, setMicroSaasOpen] = useState(false);
-const [isScrolled, setIsScrolled] = useState(false);
-const handleResize = () => {
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleResize = () => {
     if (window.innerWidth >= 1024) {
       setIsOpen(false);
     }
-  }
-const handleScroll = () => {
+  };
+
+  const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
   };
-  
-const Navigation: React.FC = () => {  const [isOpen, setIsOpen] = useState(false);
-
-  const [servicesOpen, setServicesOpen] = useState(false);
-
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('resize, handleResize);
-
-    window.addEventListener('scroll, handleScroll);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('resize, handleResize);
-
-      window.removeEventListener('scroll, handleScroll);
-
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
-
   }, []);
 
-const closeAllMenus = () => {;;
-
+  const closeAllMenus = () => {
     setServicesOpen(false);
-
     setAiServicesOpen(false);
-
     setItServicesOpen(false);
-
     setMicroSaasOpen(false);
-
     setIsOpen(false);
+  };
 
-  }
-
-const toggleMenu = () => {;;
-
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
 
-  }
-
-const aiServices = [;;
+  const aiServices = [
 
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
@@ -98,10 +78,9 @@ const aiServices = [;;
     { name: 'AI Retail', href: '/ai-retail', icon: Globe, description: 'Retail AI' },
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
-
   ];
 
-const itServices = [;;
+  const itServices = [
 
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
@@ -132,10 +111,9 @@ const itServices = [;;
     { name: 'Data Migration', href: '/data-migration', icon: Database, description: 'Migration Services' },
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
     { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
-
   ];
 
-const microSaasServices = [;;
+  const microSaasServices = [
 
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
@@ -169,10 +147,9 @@ const microSaasServices = [;;
     { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
-
   ];
 
-const emergingTech = [;;
+  const emergingTech = [
 
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
@@ -183,13 +160,12 @@ const emergingTech = [;;
     { name: '5G Implementation', href: '/5g-implementation', icon: Globe, description: '5G Solutions' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
     { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
-
   ];
 
   return (
 
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : bg-transparent
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -597,9 +573,8 @@ const emergingTech = [;;
         )}
 
       </div>
-      </nav>
-    );
-
-  }
+    </nav>
+  );
+};
 
 export default Navigation;

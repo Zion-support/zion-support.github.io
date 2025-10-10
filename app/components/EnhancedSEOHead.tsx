@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOHeadProps {
   title?: string;
@@ -25,9 +25,8 @@ interface EnhancedSEOHeadProps {
 
   modifiedTime?: string;
 
-  section?: string';
-
-  tags?: string[]';
+  section?: string;
+  tags?: string[];
 
 }
 
@@ -45,11 +44,9 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   section = 'Technology',
   tags = []
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;;
-
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '... : description;;
-
-  const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', 'IT services];;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
+  const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', 'IT services'];
 
   return (
 
@@ -152,11 +149,11 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: en
+            availableLanguage: 'en'
           },
           sameAs: [
             'https://linkedin.com/company/ziontechgroup',
-            https://twitter.com/ziontechgroup
+            'https://twitter.com/ziontechgroup'
           ]
         })}
 

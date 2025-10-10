@@ -40,7 +40,7 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded mb-4"></div>
       <div className="h-3 bg-slate-700 rounded mb-2"></div>
       <div className="h-3 bg-slate-700 rounded mb-4"></div>
-      <div $2></div>
+    </div>
   );
 
 }
@@ -52,7 +52,7 @@ export const ContentSkeleton: React.FC = () => {
       <div className="h-6 bg-slate-700 rounded mb-4"></div>
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
-      <div $2></div>
+      <div className="h-4 bg-slate-700 rounded mb-2"></div>
+    </div>
   );
-
 };

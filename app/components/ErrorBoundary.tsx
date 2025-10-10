@@ -2,7 +2,7 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react;
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -22,7 +22,7 @@ interface State {
 
 }
 
-class ErrorBoundary extends Component<Props, State> {;
+class ErrorBoundary extends Component<Props, State> {
 
 constructor(props: Props) {
     super(props);
@@ -40,7 +40,7 @@ constructor(props: Props) {
       hasError: true,
       error,
       errorInfo: null
-    }';
+    });
 
   }
 
@@ -48,7 +48,7 @@ constructor(props: Props) {
     this.setState({
       error,
       errorInfo
-    })
+    });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // console.error removed for production

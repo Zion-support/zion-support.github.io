@@ -4,13 +4,12 @@ import React, { memo } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react;
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 
-const Footer: React.FC = memo(() => {;
+const Footer: React.FC = memo(() => {
+  const currentYear = new Date().getFullYear();
 
-const currentYear = new Date().getFullYear();';
-
-const aiServices = [;';
+  const aiServices = [
 
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -28,10 +27,9 @@ const aiServices = [;';
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
-
   ];
 
-const itServices = [;;
+  const itServices = [
 
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
@@ -47,10 +45,9 @@ const itServices = [;;
     { name: 'Mobile Development', url: '/mobile-development', description: 'Mobile applications' },
     { name: 'Web Development', url: '/web-development', description: 'Web applications' },
     { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' }
-
   ];
 
-const microSaasServices = [;;
+  const microSaasServices = [
 
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business intelligence' },
@@ -68,10 +65,9 @@ const microSaasServices = [;;
     { name: 'Online Learning Platform', url: '/online-learning-platform', description: 'Education' },
     { name: 'Supply Chain Optimizer', url: '/supply-chain-optimizer', description: 'Manufacturing' },
     { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' }
-
   ];
 
-const emergingTech = [;;
+  const emergingTech = [
 
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics & Automation', url: '/robotics', description: 'Intelligent robotics' },
@@ -82,10 +78,9 @@ const emergingTech = [;;
     { name: '5G Implementation', url: '/5g-implementation', description: '5G solutions' },
     { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D AI solutions' },
     { name: 'Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic AI' }
-
   ];
 
-const companyLinks = [;;
+  const companyLinks = [
 
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -94,10 +89,9 @@ const companyLinks = [;;
     { name: 'News', url: '/news' },
     { name: 'Partners', url: '/partners' },
     { name: 'Contact', url: '/contact' }
-
   ];
 
-const supportLinks = [;;
+  const supportLinks = [
 
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -105,16 +99,14 @@ const supportLinks = [;;
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
-
   ];
 
-const contactInfo = {;;
-
+  const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST',
-    emergency: 24/7 Emergency Support Available
+    emergency: '24/7 Emergency Support Available'
   };
 
   return (
@@ -332,6 +324,8 @@ const contactInfo = {;;
         </div>
       </div>
     </footer>
-  )})
-Footer.displayName = 'Footer'
+  );
+});
+
+Footer.displayName = 'Footer';
 export default Footer;
