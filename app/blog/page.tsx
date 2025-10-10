@@ -1,77 +1,4 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calendar, User, ArrowRight, Clock, Tag } from 'lucide-react';
-
-const BlogPage: React.FC = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
-      excerpt: 'Explore the latest AI trends shaping enterprise technology and how businesses can leverage these innovations for competitive advantage.',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-15',
-      readTime: '8 min read',
-      category: 'AI & Machine Learning',
-      image: '/api/placeholder/600/400',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Best Practices: A Complete Guide',
-      excerpt: 'Learn the essential steps and strategies for successful cloud migration, including common pitfalls and how to avoid them.',
-      author: 'Michael Rodriguez',
-      date: '2024-01-12',
-      readTime: '12 min read',
-      category: 'Cloud Computing',
-      image: '/api/placeholder/600/400',
-      featured: false
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity in the Age of AI: Protecting Your Digital Assets',
-      excerpt: 'Discover how AI is both enhancing cybersecurity capabilities and creating new challenges that organizations must address.',
-      author: 'Alex Thompson',
-      date: '2024-01-10',
-      readTime: '10 min read',
-      category: 'Cybersecurity',
-      image: '/api/placeholder/600/400',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Micro SAAS Solutions: Building Scalable Business Applications',
-      excerpt: 'Learn how to build and scale micro SAAS applications that solve specific business problems and generate recurring revenue.',
-      author: 'Jennifer Liu',
-      date: '2024-01-08',
-      readTime: '15 min read',
-      category: 'Development',
-      image: '/api/placeholder/600/400',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Data Analytics and Business Intelligence: Driving Data-Driven Decisions',
-      excerpt: 'Explore how modern data analytics tools and techniques are transforming business decision-making processes.',
-      author: 'David Park',
-      date: '2024-01-05',
-      readTime: '9 min read',
-      category: 'Data Analytics',
-      image: '/api/placeholder/600/400',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'The Rise of Quantum Computing: What It Means for Your Business',
-      excerpt: 'Understand the potential impact of quantum computing on various industries and how to prepare for this technological revolution.',
-      author: 'Dr. Maria Santos',
-      date: '2024-01-03',
-      readTime: '11 min read',
-      category: 'Emerging Technology',
-      image: '/api/placeholder/600/400',
-=======
 
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -148,14 +75,10 @@ const BlogPage: React.FC = () => {
       category: 'Development',
       tags: ['Web Development', 'Scalability', 'Architecture'],
       image: '/images/blog/scalable-apps.jpg',
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
       featured: false
     }
   ];
 
-<<<<<<< HEAD
-  const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development', 'Data Analytics', 'Emerging Technology'];
-=======
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
 
   useEffect(() => {
@@ -175,7 +98,6 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
 =======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -233,74 +155,17 @@ const BlogPage: React.FC = () => {
   };
 
   const displayPosts = searchQuery ? searchResults : blogPosts;
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <title>Blog - Zion Tech Group | AI and IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and emerging technologies. Expert articles, tutorials, and industry trends." />
-        <meta name="keywords" content="AI blog, IT insights, technology trends, enterprise solutions, cloud computing, cybersecurity" />
-=======
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
         <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Blog
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay updated with the latest insights on AI, IT solutions, and emerging technologies.
-            </p>
-          </div>
-        </section>
-
-        {/* Featured Post */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Article</h2>
-            {blogPosts.filter(post => post.featured).map((post) => (
-              <div key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="flex items-center space-x-4 mb-4">
-                      <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Featured
-                      </span>
-                      <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
-                        <div className="flex items-center space-x-1">
-                          <User className="w-4 h-4" />
-                          <span>{post.author}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
-                          <span>{new Date(post.date).toLocaleDateString()}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{post.readTime}</span>
-                        </div>
-=======
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -337,7 +202,6 @@ const BlogPage: React.FC = () => {
                       <div className="flex items-center space-x-1">
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
                       </div>
                       <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                         <span>Read More</span>
@@ -512,58 +376,6 @@ const BlogPage: React.FC = () => {
                         </Link>
                       </div>
                     </div>
-<<<<<<< HEAD
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* All Posts */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                  <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500"></div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Tag className="w-4 h-4 text-purple-400" />
-                      <span className="text-purple-400 text-sm font-semibold">{post.category}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 text-sm">{post.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3 text-xs text-gray-400">
-                        <div className="flex items-center space-x-1">
-                          <User className="w-3 h-3" />
-                          <span>{post.author}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-3 h-3" />
-                          <span>{post.date}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Clock className="w-3 h-3" />
-                          <span>{post.readTime}</span>
-                        </div>
-                      </div>
-                      <Link
-                        to={`/blog/${post.id}`}
-                        className="flex items-center gap-1 text-purple-400 hover:text-purple-300 transition-colors text-sm"
-                      >
-                        Read More
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
-                    </div>
-                  </div>
-=======
                     <span className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
                       <span>{post.readTime}</span>
@@ -586,21 +398,15 @@ const BlogPage: React.FC = () => {
                       Read More <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
                 </article>
               ))}
             </div>
             
-<<<<<<< HEAD
-            {filteredPosts.length === 0 && (
-=======
             {searchResults.length === 0 && searchQuery && (
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
               </div>
             )}
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
           </div>
         </section>
       </div>
@@ -608,9 +414,5 @@ const BlogPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default BlogPage;
-=======
 export default BlogPage;
 
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7

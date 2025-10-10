@@ -3,25 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { MapPin, Clock, Users, Star, ArrowRight, CheckCircle, Heart, Lightbulb, Target, Zap } from 'lucide-react';
-
-interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  posted: string;
-  featured: boolean;
-}
-=======
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
 
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
@@ -57,121 +39,7 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-<<<<<<< HEAD
-      requirements: [
-        '7+ years cloud architecture experience',
-        'Expertise in AWS, Azure, and GCP',
-        'Certifications in cloud platforms',
-        'Experience with microservices architecture',
-        'Strong communication and leadership skills'
-      ],
-      benefits: [
-        'Competitive salary: $140,000 - $200,000',
-        'Performance bonuses',
-        'Health and dental insurance',
-        '401k matching'
-      ],
-      posted: '1 week ago',
-      featured: true
-    },
-    {
-      id: '3',
-      title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Protect our clients\' digital assets with advanced security solutions and threat detection.',
-      requirements: [
-        '4+ years cybersecurity experience',
-        'Certifications (CISSP, CISM, CEH)',
-        'Experience with SIEM tools',
-        'Knowledge of compliance frameworks',
-        'Incident response experience'
-      ],
-      benefits: [
-        'Competitive salary: $100,000 - $150,000',
-        'Security clearance support',
-        'Training and certification budget',
-        'Flexible work arrangements'
-      ],
-      posted: '3 days ago',
-      featured: false
-    },
-    {
-      id: '4',
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Streamline our development processes and maintain our cloud infrastructure.',
-      requirements: [
-        '3+ years DevOps experience',
-        'Expertise in Docker, Kubernetes',
-        'CI/CD pipeline experience',
-        'Infrastructure as Code (Terraform)',
-        'Monitoring and logging tools'
-      ],
-      benefits: [
-        'Competitive salary: $90,000 - $130,000',
-        'Remote work flexibility',
-        'Latest tools and equipment',
-        'Professional development opportunities'
-      ],
-      posted: '5 days ago',
-      featured: false
-    },
-    {
-      id: '5',
-      title: 'Frontend Developer',
-      department: 'Engineering',
-      location: 'Austin, TX',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Create beautiful and intuitive user interfaces for our AI and IT solutions.',
-      requirements: [
-        '3+ years frontend development experience',
-        'Expertise in React, TypeScript',
-        'Experience with modern CSS frameworks',
-        'UI/UX design principles',
-        'Responsive design skills'
-      ],
-      benefits: [
-        'Competitive salary: $80,000 - $120,000',
-        'Creative freedom',
-        'Design system collaboration',
-        'Modern development tools'
-      ],
-      posted: '1 week ago',
-      featured: false
-    },
-    {
-      id: '6',
-      title: 'Data Scientist',
-      department: 'AI Solutions',
-      location: 'Boston, MA',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Extract insights from complex data sets to drive business decisions and AI model development.',
-      requirements: [
-        '4+ years data science experience',
-        'Expertise in Python, R, SQL',
-        'Machine learning and statistics',
-        'Data visualization skills',
-        'Big data technologies (Spark, Hadoop)'
-      ],
-      benefits: [
-        'Competitive salary: $110,000 - $160,000',
-        'Research opportunities',
-        'Conference attendance',
-        'Academic collaboration'
-      ],
-      posted: '4 days ago',
-      featured: false
-=======
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
     }
   ];
 
@@ -370,38 +238,6 @@ const CareersPage: React.FC = () => {
                     </div>
                   </div>
 
-<<<<<<< HEAD
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Requirements:</h4>
-                    <ul className="space-y-1">
-                      {position.requirements.slice(0, 3).map((req, index) => (
-                        <li key={index} className="text-sm text-gray-300 flex items-center">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {req}
-                        </li>
-                      ))}
-                      {position.requirements.length > 3 && (
-                        <li className="text-sm text-gray-400">
-                          +{position.requirements.length - 3} more requirements
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-400">
-                      {position.benefits.length} benefits included
-                    </div>
-                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                      Apply Now
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-<<<<<<< HEAD
-=======
           </div>
         </section>
 
@@ -484,9 +320,7 @@ const CareersPage: React.FC = () => {
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
           </div>
         </section>
       </div>
