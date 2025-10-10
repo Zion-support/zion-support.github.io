@@ -6,10 +6,11 @@ import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './src/components/EnhancedLoadingStates';
-import EnhancedErrorBoundary from './src/components/EnhancedErrorBoundary';
+import { PageLoader } from './src/components/LoadingStates';
+import ErrorBoundary from './src/components/ErrorBoundary';
 import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
+import Breadcrumb from './src/components/Breadcrumb';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './src/components/EnhancedAccessibility';
@@ -95,7 +96,7 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
 
 const App: React.FC = memo(() => {
   return (
-    <EnhancedErrorBoundary>
+    <ErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
           <PerformanceOptimizer>
@@ -107,6 +108,7 @@ const App: React.FC = memo(() => {
                 <div className="min-h-screen bg-white overflow-x-hidden">
                   <SkipLink to="#main-content">Skip to main content</SkipLink>
                   <Navigation />
+                  <Breadcrumb />
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
@@ -149,6 +151,6 @@ const App: React.FC = memo(() => {
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
-    </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 }

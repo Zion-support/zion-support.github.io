@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SearchModal from '../../src/components/SearchModal';
+import EnhancedSearchModal from '../../src/components/EnhancedSearchModal';
 import { 
   ChevronDown, 
   Phone, 
@@ -452,7 +452,7 @@ const Navigation: React.FC = () => {
       </nav>
       
       {/* Search Modal */}
-      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      <EnhancedSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );
 };
