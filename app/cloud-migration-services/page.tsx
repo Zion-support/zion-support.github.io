@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -167,13 +166,10 @@ const $1: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group." />
       </Helmet>
-<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -404,8 +400,6 @@ const $1: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2><p className="text-xl text-blue-100 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert services.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <a
               href="/contact"
               className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"

@@ -46,7 +46,6 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
         <meta name="keywords" content="EnhancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, enhancedperformanceoptimizer" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -79,8 +78,6 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
   // Lazy loading for images and components
   useEffect(() => {}
     if (!enableLazyLoading || typeof window === 'undefined') return;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -158,7 +155,6 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedPerformanceOptimizerPage;
     addResourceHints();
   }, [enableResourceHints]);
@@ -444,5 +440,3 @@ export default EnhancedPerformanceOptimizerPage;
   return null;
 };
 </<<<PerformanceOptimizerProps>export</PerformanceOptimizerProps></<<PerformanceOptimizerProps>default</PerformanceOptimizerProps> EnhancedPerformanceOptimizer;</PerformanceOptimizerProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629

@@ -7,7 +7,6 @@ const ContentCarousel: React.FC = () => {
 
   const slides = [
     {
-<<<<<<< HEAD
       id: 1,
       title: "AI-Powered Business Transformation"
       description: "See how we helped a Fortune 500 company achieve 300% ROI with our AI solutions"
@@ -353,8 +352,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const ContentCarouselPage: React.FC = () => {
   const features = [
     {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
@@ -391,7 +388,6 @@ const ContentCarouselPage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -424,23 +420,6 @@ const ContentCarouselPage: React.FC = () => {
                 Learn More
               </button>
     <section className="py-16">
-=======
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16">
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -450,7 +429,6 @@ const ContentCarouselPage: React.FC = () => {
             Discover how our cutting-edge technology can transform your business operations.
           </p>
         </div>
-<<<<<<< HEAD
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (</div>
@@ -468,8 +446,6 @@ const ContentCarouselPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
         {/* Carousel */}
         <div className="relative max-w-4xl mx-auto mb-12">
@@ -556,10 +532,7 @@ const ContentCarouselPage: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
     </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

@@ -150,7 +150,6 @@ const PageOptimizedPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PageOptimizedPage;
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -175,5 +174,3 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 export default HomePage;
 
 export default HomePage;"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629

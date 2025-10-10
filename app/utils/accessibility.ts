@@ -1,10 +1,5 @@
 // Accessibility utilities for the application
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -568,26 +563,6 @@ export const accessibilityUtils = {}
     attributes.forEach(attr => {)}
       element.removeAttribute(attr);
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
-=======
-export interface AccessibilityConfig {
-  enableHighContrast: boolean;
-  enableScreenReader: boolean;
-  enableKeyboardNavigation: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  colorScheme: 'light' | 'dark' | 'auto';
-}
-
-export const defaultAccessibilityConfig: AccessibilityConfig = {
-  enableHighContrast: false,
-  enableScreenReader: true,
-  enableKeyboardNavigation: true,
-  fontSize: 'medium',
-  colorScheme: 'auto',
->>>>>>> cursor/fix-errors-and-merge-to-main-efd4
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export class AccessibilityManager {

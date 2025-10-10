@@ -26,7 +26,6 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-<<<<<<< HEAD
 
   const benefits = [
     'Advanced AI technology integration',
@@ -98,14 +97,11 @@ const PagePage: React.FC = () => {
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Data Analytics Services;</h1>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -200,14 +196,11 @@ const PagePage: React.FC = () => {
                   Get Started;
                 </a>,
               </div>))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -247,14 +240,11 @@ const PagePage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Analytics Solutions?</h2><p className="text-xl text-gray-600">Advanced technology and expert implementation for maximum ROI</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{additionalFeatures.map((feature, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4">{feature.icon}</div><h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3><p className="text-gray-600">{feature.description}</p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -340,8 +330,6 @@ const PagePage: React.FC = () => {
           <div className="mt-8 text-sm text-blue-200">,</div>
           <div className="mt-8 text-sm text-blue-200"></div>
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
       </section>
     </div>

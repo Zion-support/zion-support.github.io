@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -57,8 +56,6 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
 const PageBackupPage: React.FC = () => {
   const features = [
@@ -96,7 +93,6 @@ const PageBackupPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page Backup | Zion Tech Group</title>
@@ -214,14 +210,11 @@ const PageBackupPage: React.FC = () => {
               data-text="Zion Tech Group"
             >
               Zion Tech Group</h1>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page backup solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -1553,13 +1546,10 @@ const PageBackupPage: React.FC = () => {
           <div className="max-w-6xl mx-auto"></div>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
               Ready to Transform Your Business?
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page backup solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1622,13 +1612,10 @@ const PageBackupPage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -1735,8 +1722,6 @@ const PageBackupPage: React.FC = () => {
                     Send Message
                   </button>
                 </form>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>

@@ -11,7 +11,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
 
   const features = [
     {
-<<<<<<< HEAD
       title: 'Carbon Footprint Analysis',
       description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations',
       icon: Leaf,
@@ -20,8 +19,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations'
       icon: Leaf,
       benefits: [,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         'Real-time carbon tracking',
         'Automated reduction recommendations',
         'Industry-specific benchmarks',
@@ -29,7 +26,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Weather Prediction & Modeling',
       description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction',
       icon: Cloud,
@@ -38,8 +34,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction'
       icon: Cloud,
       benefits: [,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         '95% accuracy in weather predictions',
         'Extreme weather early warning',
         'Climate trend analysis',
@@ -47,7 +41,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Sustainability Planning',
       description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies',
       icon: Target,
@@ -56,8 +49,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies'
       icon: Target,
       benefits: [,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         'Custom sustainability roadmaps',
         'ROI analysis for green initiatives',
         'Resource optimization',
@@ -65,7 +56,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Emission Tracking & Monitoring',
       description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations',
       icon: Activity,
@@ -74,8 +64,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations'
       icon: Activity,
       benefits: [,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         'Real-time emission monitoring',
         'Automated compliance reporting',
         'Predictive emission modeling',
@@ -106,7 +94,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Reduce carbon emissions by 40%',
     'Lower energy costs by 35%',
@@ -167,8 +154,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       content: 'The sustainability planning feature helped us create a comprehensive roadmap to net-zero emissions. This is exactly what we needed for our climate goals.',
       rating: 5,
       avatar: 'SR'}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   const useCases = [
@@ -205,7 +190,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
@@ -506,13 +490,10 @@ const AIClimateSolutionsProPage: React.FC = () => {
                       <li key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -723,8 +704,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
 
       <Footer /></Footer>
     </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

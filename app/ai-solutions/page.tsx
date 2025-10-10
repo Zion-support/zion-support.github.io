@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -162,8 +161,6 @@ const AISolutionsPage: React.FC = () => {
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
       <Navigation />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -193,7 +190,6 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -266,8 +262,6 @@ const AISolutionsPage: React.FC = () => {
                     ))}
                   <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
               </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             ))}
           </div>
         </div>
@@ -280,7 +274,6 @@ const AISolutionsPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
@@ -375,8 +368,6 @@ const AISolutionsPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
                 Call +1 302 464 0950;
               </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

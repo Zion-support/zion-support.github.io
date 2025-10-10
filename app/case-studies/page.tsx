@@ -1,20 +1,11 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { ArrowRight, ExternalLink, Star, TrendingUp, Users, DollarSign, CheckCircle, Clock, Building, Target, Award } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-=======
-import { ArrowRight, CheckCircle, Star, Building, Target, Award, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-
-const CaseStudiesPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   const caseStudies = [
     {
       id: 1,
@@ -75,7 +66,6 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Projects', icon: Building },
     { id: 'ai', name: 'AI Solutions', icon: Target },
@@ -88,15 +78,6 @@ const CaseStudiesPage: React.FC = () => {
     { number: '98%', label: 'Client Satisfaction', icon: Star },
     { number: '$10M+', label: 'Cost Savings', icon: DollarSign },
     { number: '24/7', label: 'Support Available', icon: Clock }
-=======
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { name: 'all', label: 'All', count: caseStudies.length },
-    { name: 'ai', label: 'AI Solutions', count: caseStudies.filter(s => s.category === 'ai').length },
-    { name: 'cloud', label: 'Cloud', count: caseStudies.filter(s => s.category === 'cloud').length },
-    { name: 'mobile', label: 'Mobile', count: caseStudies.filter(s => s.category === 'mobile').length }
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   const filteredStudies = selectedCategory === 'all' 
@@ -112,7 +93,6 @@ const CaseStudiesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -126,45 +106,10 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Real results from real clients. Discover how we've helped businesses transform with cutting-edge technology.
               </p>
-=======
-        <Navigation />
-        
-        {/* Header */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Success <span className="text-purple-400">Stories</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how we've helped businesses transform with cutting-edge AI and technology solutions. 
-              Real results from real clients.
-            </p>
-          </div>
-        </section>
-
-        {/* Category Filter */}
-        <section className="py-8 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
-                <button
-                  key={category.name}
-                  onClick={() => setSelectedCategory(category.name)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                    selectedCategory === category.name
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-lg shadow-purple-500/25'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-                  }`}
-                >
-                  {category.label} ({category.count})
-                </button>
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -246,53 +191,6 @@ const CaseStudiesPage: React.FC = () => {
                         {study.results.map((result, index) => (
                           <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-=======
-        {/* Case Studies Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredStudies.map((study) => (
-                <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
-                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {study.industry}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <div className="p-8">
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                      <span className="flex items-center gap-1">
-                        <Building className="w-4 h-4" />
-                        {study.client}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {study.duration}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                      {study.title}
-                    </h3>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-purple-400 mb-2">Challenge</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed mb-4">{study.challenge}</p>
-                      
-                      <h4 className="text-lg font-semibold text-purple-400 mb-2">Solution</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">{study.solution}</p>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-purple-400 mb-3">Key Results</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, index) => (
-                          <li key={index} className="flex items-center gap-2 text-gray-300 text-sm">
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                             {result}
                           </li>
                         ))}
@@ -300,7 +198,6 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
 
                     <div className="mb-6">
-<<<<<<< HEAD
                       <h4 className="text-lg font-semibold text-white mb-3">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-2">
                         {study.technologies.map((tech, index) => (
@@ -308,41 +205,23 @@ const CaseStudiesPage: React.FC = () => {
                             key={index}
                             className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full"
                           >
-=======
-                      <h4 className="text-lg font-semibold text-purple-400 mb-3">Technologies Used</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech, index) => (
-                          <span key={index} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm">
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                             {tech}
                           </span>
                         ))}
                       </div>
                     </div>
 
-<<<<<<< HEAD
                     <div className="flex items-center justify-between text-sm text-gray-400">
                       <span>Team: {study.teamSize}</span>
                       <button className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1">
                         Read Full Case Study
                         <ExternalLink className="w-4 h-4" />
-=======
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-400">
-                        <span className="block">Team: {study.teamSize}</span>
-                        <span className="block">Duration: {study.duration}</span>
-                      </div>
-                      <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">
-                        View Details
-                        <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                       </button>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
           </div>
         </section>
 
@@ -363,49 +242,13 @@ const CaseStudiesPage: React.FC = () => {
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   View Our Services
                 </button>
-=======
-
-            {/* CTA Section */}
-            <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Create Your Success Story?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss how we can help you achieve similar results for your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/consultation"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Start Your Project</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="/contact"
-                  className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-                >
-                  Contact Us
-                </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-        <Footer />
-        <SEOOptimizer />
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default CaseStudiesPage;
-=======
-export default CaseStudiesPage;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b629

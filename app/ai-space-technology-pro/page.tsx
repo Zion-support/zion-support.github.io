@@ -6,7 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -66,8 +65,6 @@ const PagePage: React.FC = () => {
         'Payload operations',
         'Ground station coordination'
       ]
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     },
     {
       icon: Zap,
@@ -86,7 +83,6 @@ const PagePage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -297,16 +293,10 @@ const PagePage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}<p className="text-gray-300">{feature.description}<div className="space-y-3">{feature.benefits.map((benefit, benefitIndex) => (</div>
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Advanced Space AI Capabilities;
-=======
-  ];
-
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -347,8 +337,6 @@ const PagePage: React.FC = () => {
                       <span className="text-gray-300">{benefit}</span>
                     </div>
                   ))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -358,7 +346,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -537,8 +524,6 @@ const PagePage: React.FC = () => {
                     <div className="font-semibold text-white">{testimonial.name}</div><div className="text-sm text-cyan-400">{testimonial.role}</div><div className="text-sm text-gray-400">{testimonial.company}</div>
                   </div>
                 </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -546,7 +531,6 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -627,8 +611,6 @@ const PagePage: React.FC = () => {
       </section>
 
       <Footer /></Footer>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     </div>
   );
 };

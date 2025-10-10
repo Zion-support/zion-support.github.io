@@ -1,17 +1,31 @@
 #!/bin/bash
 
-# Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" /workspace/app/ /workspace/src/ | cut -d: -f1 | sort -u)
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts by keeping HEAD version..."
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Fixing conflicts in $file..."
-    # Use git merge-file with ours strategy or manually remove conflict markers
-    # Remove conflict markers and keep the incoming version (after =======)
-    perl -i -0777 -pe 's/\n(.*?)\n
-    # Also handle nested conflicts
-    perl -i -0777 -pe 's/\n.*?\n
-  fi
+# Find all files with merge conflicts
+files_with_conflicts=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" | grep -v node_modules | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+
+echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
+
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
+    
+    # Create a temporary file
+    temp_file=$(mktemp)
+    
+    # Process the file to resolve conflicts by keeping HEAD version
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_head { print }
+    !in_head && !in_other { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
 done
 
-echo "All merge conflicts have been resolved!"
+echo "Merge conflicts resolved!"

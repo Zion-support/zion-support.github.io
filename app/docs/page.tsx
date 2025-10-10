@@ -75,7 +75,6 @@ export default function DocsPage() {
       />
       <Navigation />
       
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -133,8 +132,6 @@ export default function DocsPage() {
                   Step-by-step guides to help you make the most of our platform.
                 </p>
               </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

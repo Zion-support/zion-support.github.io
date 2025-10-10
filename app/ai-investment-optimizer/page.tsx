@@ -5,7 +5,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
 const PagePage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -109,8 +108,6 @@ const PagePage: React.FC = () => {
         "SLA guarantee"
       ],
       popular: false,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -125,7 +122,6 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       setIsOptimizing(false);
@@ -148,8 +144,6 @@ const PagePage: React.FC = () => {
   return(<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}>
   return (</div>
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -157,7 +151,6 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -181,14 +174,11 @@ const PagePage: React.FC = () => {
 
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
               Advanced Portfolio Management;</h1>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -421,15 +411,12 @@ const PagePage: React.FC = () => {
                     </>)}
                 </button>
               </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -445,13 +432,10 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Investment Features
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -483,8 +467,6 @@ const PagePage: React.FC = () => {
                 <div className="flex items-center justify-between"></div>
                   <span className="text-blue-400 font-semibold">{feature.price}</span>
                   <CheckCircle className="w-5 h-5 text-green-400" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -494,7 +476,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -512,13 +493,10 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Investment Plans
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -576,15 +554,12 @@ const PagePage: React.FC = () => {
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -602,13 +577,10 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Start Optimizing Today
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -675,8 +647,6 @@ const PagePage: React.FC = () => {
                   Start Free Analysis;
                 </button>
               </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -195,5 +194,3 @@ export const CardSkeleton: React.FC = React.memo(() => (
 );
 ,
 export default ServiceCardSkeleton;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629

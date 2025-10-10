@@ -6,7 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -204,14 +203,11 @@ const PagePage: React.FC = () => {
 
             <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-advanced">
               AI Project Manager Pro;</h1>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -274,13 +270,10 @@ const PagePage: React.FC = () => {
               </div>
             ))}
           </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -297,13 +290,10 @@ const PagePage: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{feature.title}<p className="text-gray-400 mb-6 leading-relaxed">{feature.description}<div className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</div>
             <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
               Powerful AI Features;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -348,8 +338,6 @@ const PagePage: React.FC = () => {
                       </CheckCircle>
                     ))}
                   </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -359,7 +347,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -380,15 +367,12 @@ const PagePage: React.FC = () => {
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-4 py-2 rounded-full">Most Popular</span>
             <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-text">,
               Simple, Transparent Pricing;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -433,13 +417,10 @@ const PagePage: React.FC = () => {
                     </CheckCircle>
                   ))}
                 </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -504,13 +485,10 @@ const PagePage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Project Management?<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of teams already using AI Project Manager Pro to achieve unprecedented efficiency and success.</p>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Project Management?
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -555,8 +533,6 @@ const PagePage: React.FC = () => {
                   </a>
                 </div>
               </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

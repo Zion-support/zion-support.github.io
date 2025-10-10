@@ -27,7 +27,6 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -291,5 +290,3 @@ export const PageSkeleton: React.FC = React.memo(() => (
 );
 ,
 export default Skeleton;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629

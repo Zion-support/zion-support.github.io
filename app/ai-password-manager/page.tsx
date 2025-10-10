@@ -6,7 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -47,8 +46,6 @@ const PagePage: React.FC = () => {
       title: 'Auto-Generate & Fill',
       description: 'Intelligent password generation and automatic form filling',
       benefits: ['Smart generation', 'Auto-fill forms', 'Cross-platform sync']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -63,7 +60,6 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   const pricingPlans = [
@@ -116,15 +112,12 @@ const PagePage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -333,8 +326,6 @@ const PagePage: React.FC = () => {
               </div>
             </div>
           </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
       </section>
 

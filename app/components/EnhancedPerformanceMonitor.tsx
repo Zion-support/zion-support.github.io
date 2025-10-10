@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const EnhancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
@@ -79,8 +78,6 @@ const $1: React.FC = () => {
 
       window.addEventListener('keydown', handleKeyPress);
       return () => window.removeEventListener('keydown', handleKeyPress);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -96,7 +93,6 @@ const $1: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>EnhancedPerformanceMonitor | Zion Tech Group</title>
@@ -159,8 +155,6 @@ const $1: React.FC = () => {
           <span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>
             {metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })})
           </span>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
       </section>
 
@@ -235,7 +229,6 @@ const $1: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
     </div>
         
@@ -277,8 +270,6 @@ const $1: React.FC = () => {
           Press Ctrl+Shift+P to toggle;
         </p>
       </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

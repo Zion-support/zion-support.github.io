@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -189,13 +188,10 @@ const AIExpenseTracker: React.FC = memo(() => {}
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a;
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <a
               href="/contact"
               className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
-<<<<<<< HEAD
               Get Started Today
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950;
@@ -378,8 +374,6 @@ const AIExpenseTracker: React.FC = memo(() => {}
       >
               <MessageSquare className="w-5 h-5 mr-2" />
               Email Us;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </a>
           </div>
         </div>

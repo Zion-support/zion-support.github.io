@@ -4,10 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Play, CheckCircle, ArrowRight, Star, Monitor, Smartphone, Tablet, Zap, BarChart, Brain, Cloud, Shield } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
-<<<<<<< HEAD
   const [selectedDemo, setSelectedDemo] = useState('ai-analytics');
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
   const demos = [
     {

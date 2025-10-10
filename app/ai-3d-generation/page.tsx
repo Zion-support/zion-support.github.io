@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
 
 const AI3DGenerationPage: React.FC = () => {
@@ -31,8 +30,6 @@ const AI3DGenerationPage: React.FC = () => {
 
   const applications = [
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Cube, Zap, Eye, Palette, Download, ArrowRight, Sparkles } from 'lucide-react';
@@ -104,7 +101,6 @@ description: 'Create game assets, characters, and environments instantly',
       icon: '🖨️'
     },
     {
-<<<<<<< HEAD
       title: 'Entertainment & Media',
       description: 'Produce 3 D content for films and animations',
       icon: '🎬',
@@ -224,8 +220,6 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '📤'}
   ]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       title: 'VR/AR Content',
       description: 'Generate immersive 3D content for virtual and augmented reality',
       icon: '🥽'
@@ -243,7 +237,6 @@ const AI3DGenerationPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Reduce 3D content creation time by 90%',
     'Lower production costs by 80%',
@@ -304,8 +297,6 @@ const AI3DGenerationPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
 <meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
@@ -313,7 +304,6 @@ const AI3DGenerationPage: React.FC = () => {
       </Helmet>
 
       <Navigation />
-<<<<<<< HEAD
 {/* Hero Section */}
       
       <main className="pt-24 pb-16 px-4">
@@ -420,8 +410,6 @@ const AI3DGenerationPage: React.FC = () => {
                 <span className="text-white font-medium"></span><span className="sr-only">Screen reader: </span>Middletown, DE</span>
               </div>
             </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -457,7 +445,6 @@ const AI3DGenerationPage: React.FC = () => {
               Powerful 3D Generation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Our AI-powered 3D generation technology combines cutting-edge machine learning 
               with intuitive design tools to create professional-quality 3D models.
               Our cutting-edge AI technology makes 3D model creation accessible to everyone, 
@@ -486,8 +473,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -517,7 +502,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {applications.map((app, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
 
@@ -529,8 +513,6 @@ const AI3DGenerationPage: React.FC = () => {
                 <div className="text-4xl mb-4">{useCase.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -539,7 +521,6 @@ const AI3DGenerationPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -593,15 +574,12 @@ const AI3DGenerationPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center"></div>
                   <div className="text-2xl mb-3">⚡</div>
                   <h3 className="text-lg font-semibold text-white">{feature}</h3>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
 {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -653,8 +631,6 @@ const AI3DGenerationPage: React.FC = () => {
                 <Mail className="w-5 h-5" />
                 Email Us
               </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (

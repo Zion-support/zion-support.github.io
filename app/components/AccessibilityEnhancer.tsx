@@ -36,7 +36,6 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
-<<<<<<< HEAD
   }, [settings.keyboardNavigation]);
 
   // Add skip links
@@ -48,15 +47,15 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
-      position: absolute,
+      position: absolute;
       top: -40px;
-      left: 6px,
+      left: 6px;
       background: #0891b2;
-      color: white,
-      padding: 8px,
-      text-decoration: none,
-      border-radius: 4px,
-      z-index: 1000,
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
       transition: top 0.3s;
     `;
     
@@ -69,8 +68,6 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     });
 
     document.body.insertBefore(skipLink, document.body.firstChild);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   }, []);
 
   return <>{children}</>;

@@ -33,7 +33,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   );
-<<<<<<< HEAD
 
   if (fullScreen) {
     return (
@@ -43,8 +42,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
 
   return spinner;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default LoadingSpinner;

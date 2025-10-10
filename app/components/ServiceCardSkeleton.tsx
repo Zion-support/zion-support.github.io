@@ -38,7 +38,6 @@ const ServiceCardSkeletonPage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -176,8 +175,6 @@ export default ServiceCardSkeleton;</div>
 )
       <div className="h-12 bg-gray-600 rounded">)
     </div>)
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

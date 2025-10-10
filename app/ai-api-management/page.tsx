@@ -97,7 +97,6 @@ const AIAPIManagementPage: React.FC = () => {
         <meta name="keywords" content="AI API management, API gateway, API security, microservices, API monitoring, API optimization" />
       </Helmet>
 
-<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
@@ -113,8 +112,6 @@ const AIAPIManagementPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Api Management</h1><p className="text-xl text-gray-300 mb-8">Professional ai api management services powered by advanced AI and cutting-edge technology.</p>
             </p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         {/* Hero Section */}
@@ -142,7 +139,6 @@ const AIAPIManagementPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -261,8 +257,6 @@ const AIAPIManagementPage: React.FC = () => {
                 >
                   ← Back to Home;
                 </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             </div>
           </div>

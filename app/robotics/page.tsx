@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -247,8 +246,6 @@ const RoboticsPage: React.FC = () => {
       <Footer />,
     </div>,
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -297,7 +294,6 @@ const PagePage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -340,14 +336,11 @@ const PagePage: React.FC = () => {
             >
               Learn More
             </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -398,13 +391,10 @@ const PagePage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our robotics solutions are designed for diverse industries and applications, from manufacturing to healthcare.
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
@@ -452,8 +442,6 @@ const PagePage: React.FC = () => {
                   <Bot className="w-8 h-8 mx-auto" />
                 </div>
                 <h3 className="text-sm font-semibold text-white">{tech}</h3>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -462,7 +450,6 @@ const PagePage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -512,8 +499,6 @@ const PagePage: React.FC = () => {
                   Get Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -522,7 +507,6 @@ const PagePage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -563,8 +547,6 @@ const PagePage: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
               Get Quote
             </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

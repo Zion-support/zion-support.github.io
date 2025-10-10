@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -69,8 +68,6 @@ const $1: React.FC = () => {
       description: 'Comprehensive security audits for smart contracts and blockchain applications.',
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checking'],
       benefits: ['Zero vulnerabilities', 'Compliance ready', 'Security best practices', 'Risk mitigation']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -88,7 +85,6 @@ const $1: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
@@ -159,14 +155,11 @@ const $1: React.FC = () => {
                   </div>
                 ))}
               </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -184,14 +177,11 @@ const $1: React.FC = () => {
                     <service.icon className="w-6 h-6 text-white" />
                   <h3 className="text-xl font-bold text-white">{service.title}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Development Services</h2>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -237,8 +227,6 @@ const $1: React.FC = () => {
                       <Star className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" >{benefit}</Star>
                     </Star>
                   ))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -248,7 +236,6 @@ const $1: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -298,14 +285,11 @@ const $1: React.FC = () => {
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300"></div>
                 <h3 className="text-xl font-bold text-white mb-4">{package_.title}<div className="text-3xl font-bold text-indigo-400 mb-6">{package_.price}<ul className="space-y-3 mb-8">{package_.features.map((feature, featureIndex) => (</ul>
             <h2 className="text-4xl font-bold text-white mb-4">Development Packages</h2>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -330,8 +314,6 @@ const $1: React.FC = () => {
                 <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">Get Started</button>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -348,7 +330,6 @@ const $1: React.FC = () => {
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -377,8 +358,6 @@ const $1: React.FC = () => {
               >
                 View Our Work;
               </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

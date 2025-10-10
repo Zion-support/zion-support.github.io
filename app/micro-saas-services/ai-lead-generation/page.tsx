@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -167,8 +166,6 @@ const $1: React.FC = () => {
               </div>
               <button className="cyber-button w-full">
                 Generate Leads;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </button>
             </div>
           </div>
@@ -187,7 +184,6 @@ const $1: React.FC = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -252,8 +248,6 @@ const $1: React.FC = () => {
             >
               Start Generating;
             </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

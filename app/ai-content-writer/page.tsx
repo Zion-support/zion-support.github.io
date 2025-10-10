@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { FileText, PenTool, Target, CheckCircle, Phone, Mail, MapPin, ArrowRight, Star, Users, Brain, Zap, Globe, Shield, Clock, Activity, TrendingUp } from 'lucide-react';
 
-<<<<<<< HEAD
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
@@ -54,8 +53,6 @@ const $1: React.FC = () => {
     'Ad Copy Creation',
     'Content Planning',
     'Brand Voice Consistency'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   const benefits = [
@@ -73,25 +70,18 @@ const $1: React.FC = () => {
     {
       title: 'Blog Writing',
       description: 'High-quality blog posts that engage readers and rank well in search engines',
-<<<<<<< HEAD
       icon: '📝'
       icon: FileText,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     },
     {
       title: 'Social Media',
       description: 'Engaging social media content that drives engagement and conversions',
-<<<<<<< HEAD
       icon: '📱'
       icon: PenTool,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     },
     {
       title: 'Marketing Copy',
       description: 'Compelling marketing copy that converts visitors into customers',
-<<<<<<< HEAD
       icon: '📢'
     },
     {
@@ -355,8 +345,6 @@ const $1: React.FC = () => {
                 <Phone className="w-5 h-5" />
                 Call +1 302 464 0950;
               </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </section>

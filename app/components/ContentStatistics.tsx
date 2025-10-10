@@ -48,7 +48,6 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   useEffect(() => {}
     const observer = new IntersectionObserver()
       ([entry]) => {}
@@ -188,8 +187,6 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ContentStatisticsPage: React.FC = () => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   const features = [
     {
       icon: Brain,
@@ -253,7 +250,6 @@ const ContentStatisticsPage: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentStatistics | Zion Tech Group</title>
@@ -286,18 +282,6 @@ const ContentStatisticsPage: React.FC = () => {
               </button>
             </div>
           </div>
-=======
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
-      <div className="container mx-auto px-4">
-        {/* Statistics Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Our <span className="text-cyan-400">Achievements</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Numbers that speak for themselves - our track record of success and client satisfaction.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -365,7 +349,6 @@ const ContentStatisticsPage: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -382,8 +365,6 @@ const ContentStatisticsPage: React.FC = () => {
           ))}
         </div>
     </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

@@ -49,7 +49,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
     {
       title: 'DeFi Platforms',
       description: 'AI-enhanced decentralized finance platforms with intelligent trading and risk management.',
-<<<<<<< HEAD
       icon: '🏦'
     },
     {
@@ -108,13 +107,10 @@ const AIBlockchainSolutionsPage: React.FC = () => {
       description: 'Decentralized energy trading platforms with AI for grid optimization.',
       icon: Zap,
       useCases: ['Energy trading', 'Grid optimization', 'Renewable energy', 'Carbon credits']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Increase transaction speed by 80%',
     'Reduce costs by 70%',
     'Improve security by 95%',
@@ -417,11 +413,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular;
                     </span>
-=======
-          </div>
-        </section>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -510,7 +501,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         </section>
       </main>
 
-<<<<<<< HEAD
       <Footer />
     </>
   );
@@ -538,8 +528,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
 
       <Footer />,
     </div>);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default AIBlockchainSolutionsPage;

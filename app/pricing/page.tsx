@@ -63,15 +63,9 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
-<<<<<<< HEAD
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -121,7 +115,6 @@ const PricingPage: React.FC = () => {
                 </ul>
 
                 <Link
-<<<<<<< HEAD
                   to="/consultation"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
                     plan.popular
@@ -131,17 +124,6 @@ const PricingPage: React.FC = () => {
                 >
                   <span>{plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}</span>
                   <ArrowRight className="w-4 h-4" />
-=======
-                  to="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular
-                      ? 'bg-white text-cyan-600 hover:bg-gray-100'
-                      : 'bg-cyan-600 text-white hover:bg-cyan-700'
-                  }`}
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 inline-block ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </Link>
               </div>
             ))}
@@ -201,7 +183,6 @@ const PricingPage: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-<<<<<<< HEAD
           <div className="text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -224,29 +205,6 @@ const PricingPage: React.FC = () => {
                   View Our Services
                 </Link>
               </div>
-=======
-          <div className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI and IT solutions to drive growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
-                <Zap className="w-5 h-5" />
-                <span>Start Your Project</span>
-              </Link>
-              <Link
-                to="/about"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"
-              >
-                Learn More
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

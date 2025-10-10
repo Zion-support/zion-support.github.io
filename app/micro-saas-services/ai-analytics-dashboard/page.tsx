@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -206,8 +205,6 @@ const $1: React.FC = () => {
             >
               Start Analytics;
             </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

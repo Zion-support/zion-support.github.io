@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -25,8 +24,6 @@ const $1: React.FC = () => {
       marketPrice: '$8,000-25,000/month',
       category: 'Trading',
       technologies: ['QuantLib', 'Zipline', 'Backtrader', 'TensorFlow', 'PyTorch']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     },
     {
       icon: Zap,
@@ -44,7 +41,6 @@ const $1: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-<<<<<<< HEAD
 
   const benefits = [
     'Advanced AI technology integration',
@@ -422,8 +418,6 @@ const $1: React.FC = () => {
         <Footer /></Footer>
       </div>
     
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

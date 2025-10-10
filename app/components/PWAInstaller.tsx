@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PWAInstallerPage: React.FC = () => {
   const features = [
     {
@@ -39,8 +38,6 @@ const $1: React.FC = () => {
     if (window.matchMedia('(display-mode: standalone)').matches) {,
       setIsInstalled(true);
       return;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -63,7 +60,6 @@ const $1: React.FC = () => {
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -250,11 +246,6 @@ const $1: React.FC = () => {
         </button>,
       </div>,
     </div>);
-=======
-        </div>
-      </section>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default PWAInstallerPage;

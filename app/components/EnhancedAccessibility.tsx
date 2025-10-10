@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 'use client';
-import React, { useState, useEffect } from 'react';
-
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [settings, setSettings] = useState({
-    fontSize: 'medium' as 'small' | 'medium' | 'large',
-=======
 import React, { useState, useEffect } from 'react';
 
 interface AccessibilitySettings {
@@ -17,11 +9,10 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
 }
 
-const EnhancedAccessibility: React.FC = () => {
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     highContrast: false,
     reducedMotion: false,
     screenReader: false,
@@ -29,7 +20,6 @@ const EnhancedAccessibility: React.FC = () => {
   });
 
   useEffect(() => {
-<<<<<<< HEAD
     // Add ARIA landmarks
     const addLandmarks = () => {
       const main = document.querySelector('main');
@@ -85,10 +75,7 @@ const EnhancedAccessibility: React.FC = () => {
     addSkipLinks();
     applySettings();
 
-    // Load saved settings
-=======
     // Load settings from localStorage
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       try {

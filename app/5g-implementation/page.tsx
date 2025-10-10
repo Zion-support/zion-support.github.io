@@ -43,17 +43,13 @@ const FiveGImplementationPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network infrastructure, IoT connectivity, edge computing, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -68,40 +64,6 @@ const FiveGImplementationPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Complete 5G network implementation services with ultra-low latency, high-speed connectivity,
               and advanced features for modern applications and IoT ecosystems.
-=======
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            5G Network</h1>
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Implementation
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Complete 5G network implementation services with ultra-low latency, high-speed connectivity,
-            and advanced features for modern applications and IoT ecosystems.
-          </p>
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Advanced 5G Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge 5G technology for the next generation of connectivity
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">

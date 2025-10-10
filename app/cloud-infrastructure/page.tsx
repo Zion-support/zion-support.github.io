@@ -39,7 +39,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <div></div><Helmet>
         <title>Cloud Infrastructure Solutions - Zion Tech Group</title>
@@ -267,14 +266,11 @@ const PagePage: React.FC = () => {
 const CloudInfrastructurePage: React.FC = () => {
   return (
     <>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -292,14 +288,11 @@ const CloudInfrastructurePage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Cloud <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Infrastructure</span>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -348,8 +341,6 @@ const CloudInfrastructurePage: React.FC = () => {
                 <li>• Security Monitoring</li>
                 <li>• Compliance Management</li>
               </ul>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

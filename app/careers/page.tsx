@@ -167,7 +167,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-6">Our Benefits</h3>
               <div className="grid grid-cols-1 gap-4">
@@ -178,21 +177,6 @@ const CareersPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-=======
-          {/* Benefits */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-white mb-8 text-center">Benefits & Perks</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"
-                >
-                  <CheckCircle className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-                  <p className="text-white font-medium">{benefit}</p>
-                </div>
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
 
@@ -268,7 +252,6 @@ const CareersPage: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-<<<<<<< HEAD
           <div className="text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -286,29 +269,6 @@ const CareersPage: React.FC = () => {
                   Learn About Our Culture
                 </button>
               </div>
-=======
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Don't See Your Role?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals to join our team. 
-              Send us your resume and let's discuss how you can contribute.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Send Your Resume
-              </Link>
-              <Link
-                to="/about"
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Learn About Us
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

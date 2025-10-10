@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AdvancedPerformanceOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -125,8 +124,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       };
 
       measureWebVitals();
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 

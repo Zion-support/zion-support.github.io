@@ -6,7 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -80,14 +79,11 @@ const PagePage: React.FC = () => {
     {
       icon: Zap,
     {}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-<<<<<<< HEAD
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
@@ -113,8 +109,6 @@ const PagePage: React.FC = () => {
       icon: Target,
       title: 'Market Leadership',
       description: 'Leading position in enterprise AI solutions'}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   return (
@@ -126,7 +120,6 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -183,15 +176,12 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -216,8 +206,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <metric.icon className="w-8 h-8 text-white" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -227,7 +215,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -238,15 +225,12 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -313,8 +297,6 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{highlight.title}</h>
                 <p className="text-gray-300">{highlight.description}</p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -322,7 +304,6 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -361,8 +342,6 @@ const PagePage: React.FC = () => {
               Download Pitch Deck;
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Download</butto></<<butto>Pitch</butto></<butto>Deck</butto>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AdvancedSEOOptimizer_newPage: React.FC = () => {
   const features = [
     {
@@ -568,11 +567,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       document.head.appendChild(link);
     }
   }, [seoData]);
-=======
-    }
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

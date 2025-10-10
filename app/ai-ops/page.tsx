@@ -5,15 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Settings, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const AIOpsPage: React.FC = () => {
   const features = [
     {
 const $1: React.FC = () => {
   const features = [,
     {,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       icon: Settings,
       title: 'Intelligent IT Operations',
       description: 'AI-powered IT operations that automatically detect, diagnose, and resolve issues before they impact your business.',
@@ -33,7 +30,6 @@ const $1: React.FC = () => {
     },
     {
       icon: Users,
-<<<<<<< HEAD
       title: 'Self-Healing Systems',
       description: 'Systems that automatically detect and fix issues without human intervention, reducing manual work.',
       benefits: ['Automatic fixes', 'Reduced manual work', 'Improved reliability']
@@ -96,13 +92,10 @@ const $1: React.FC = () => {
       title: 'Performance Analytics',
       description: 'Comprehensive analytics to track IT performance and identify optimization opportunities.',
       benefits: ['Performance insights', 'Trend analysis', 'Optimization recommendations']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Ops - Zion Tech Group | Intelligent IT Operations</title>
@@ -203,14 +196,11 @@ const $1: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-6 h-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Operations Features</h2>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Ops solutions combine machine learning, automation, and intelligent monitoring 
               to revolutionize how you manage your IT infrastructure.
             </p>
           </div>
-<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -238,8 +228,6 @@ const $1: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
                     </CheckCircle>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   ))}
                 </ul>
 </div>
@@ -298,7 +286,6 @@ const $1: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -313,21 +300,16 @@ const $1: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Operations?</h2>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           <p className="text-xl text-gray-300 mb-8">
             Discover how AI Ops can revolutionize your IT infrastructure management. 
             Get started with a free consultation and demo.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Free Consultation
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo

@@ -16,17 +16,13 @@ const PagePage: React.FC = () => {
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-<<<<<<< HEAD
       icon: Shield,
     {}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-<<<<<<< HEAD
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
@@ -113,8 +109,6 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'International Standards',
       description: 'We comply with international data protection standards and regulations.'}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   return (
@@ -126,7 +120,6 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -318,8 +311,6 @@ const PagePage: React.FC = () => {
                 <h3 className="text-lg font-bold text-white">Phone</h3>
               </div>
               <p className="text-gray-300">+1 (302) 464-0950</p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

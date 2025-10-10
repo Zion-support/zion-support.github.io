@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const EnhancedLoadingPage: React.FC = () => {
   const features = [
     {
@@ -221,8 +220,6 @@ const EnhancedLoading: React.FC<LoadingProps> = ({ ,
       {message && (
         <p className={`text-gray-300 ${textSizeClasses[size]} font-medium animate-pulse`}>{message}</p>
       )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     </div>
   );
 };

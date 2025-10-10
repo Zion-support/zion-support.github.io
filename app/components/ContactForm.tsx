@@ -15,11 +15,8 @@ interface FormStatus {
   message: string,
 }
 
-<<<<<<< HEAD
 const ContactForm: React.FC = () => {
 const $1: React.FC = () => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -83,7 +80,6 @@ const $1: React.FC = () => {
     'Other'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="max-w-2xl mx-auto">
       <div className="bg-white rounded-2xl shadow-2xl p-8">
@@ -234,8 +230,6 @@ const $1: React.FC = () => {
             <div></div>
               <label htmlFor="service" className="block text-white font-medium mb-2">
                 Service Interest;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </label>
               <input
                 type="text"
@@ -264,7 +258,6 @@ const $1: React.FC = () => {
                 placeholder="your.email@company.com"
               />
             </div>
-<<<<<<< HEAD
           </div>
 ,
             {status.message && (,
@@ -281,8 +274,6 @@ const $1: React.FC = () => {
                 <span>{status.message}</spa>
               </div>
             )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -327,7 +318,6 @@ const $1: React.FC = () => {
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
-<<<<<<< HEAD
               <option value="">Select a service</option>
               {services.map((service) => (
                 <option key={service} value={service}>
@@ -370,8 +360,6 @@ const $1: React.FC = () => {
                   <div className="$2" />
                   Sending...</div>
                 </>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               )}

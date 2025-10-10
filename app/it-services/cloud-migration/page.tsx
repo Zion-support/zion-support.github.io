@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -170,8 +169,6 @@ const $1: React.FC = () => {
               </div>
               <button className="cyber-button w-full">
                 Get Migration Plan;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </button>
             </div>
           </div>
@@ -199,7 +196,6 @@ const $1: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-<<<<<<< HEAD
             ))}
               <div className="space-y-4"></div>
                 <div className="flex items-center space-x-3"></div>
@@ -269,8 +265,6 @@ const $1: React.FC = () => {
             >
               Get Migration Quote;
             </a>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

@@ -5,7 +5,6 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock,
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-<<<<<<< HEAD
 const DynamicContentShowcasePage: React.FC = () => {
   const features = [
 const $1: React.FC = () => {
@@ -16,13 +15,6 @@ const $1: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-=======
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     },
     {
       icon: Zap,
@@ -36,7 +28,6 @@ const $1: React.FC = () => {
     },
     {
       icon: Globe,
-<<<<<<< HEAD
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
       color: 'text-purple-400',
@@ -121,10 +112,6 @@ const $1: React.FC = () => {
           { label: 'ROI', value: '250%', icon: TrendingUp }
         ]
       }
-=======
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -139,7 +126,6 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -147,31 +133,6 @@ const $1: React.FC = () => {
         <meta name="description" content="Professional DynamicContentShowcase services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="DynamicContentShowcase, AI solutions, IT services, Zion Tech Group, dynamiccontentshowcase" />
       </Helmet>
-=======
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300%.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month.',
-      rating: 5
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -183,7 +144,6 @@ const $1: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -236,25 +196,6 @@ const $1: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Dynamic <span className="text-cyan-400">Content Showcase</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
-            and interactive showcases that bring your business to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-              <span>Start Demo</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>
@@ -285,13 +226,8 @@ const $1: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-=======
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -367,7 +303,6 @@ const $1: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
           {/* Tab Content */}
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{/* Content */}</div>
@@ -504,8 +439,6 @@ const DynamicContentShowcase: React.FC = () => {
           ))}
         </div>
     </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

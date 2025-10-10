@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -206,8 +205,6 @@ const HelpPage: React.FC = () => {}
     setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
   };
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -217,7 +214,6 @@ const HelpPage: React.FC = () => {}
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -288,15 +284,12 @@ const HelpPage: React.FC = () => {}
           <div className="text-center mb-16"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -401,15 +394,12 @@ const HelpPage: React.FC = () => {}
                     ))}
                   </div>
                 )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -420,15 +410,12 @@ const HelpPage: React.FC = () => {}
           <div className="text-center mb-16"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -461,15 +448,12 @@ const HelpPage: React.FC = () => {}
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-6 rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all">,
                   {method.action}
                 </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -494,8 +478,6 @@ const HelpPage: React.FC = () => {}
         </div>
       </section>
       <Footer /></Footer>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     </div>
   );
 };

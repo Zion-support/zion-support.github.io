@@ -1,13 +1,10 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './globals.css';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
 const MainPage: React.FC = () => {
   const features = [

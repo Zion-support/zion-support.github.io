@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Shield, Lock, Database, UserCheck, AlertTriangle, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -412,8 +411,6 @@ const SecurityPage: React.FC = () => {
       <Footer />,
     </div>,
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -459,7 +456,6 @@ const PagePage: React.FC = () => {
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -477,14 +473,11 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Security <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -533,8 +526,6 @@ const PagePage: React.FC = () => {
                 <li>• SOC 2 Certification</li>
                 <li>• ISO 27001</li>
               </ul>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>
