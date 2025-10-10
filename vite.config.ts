@@ -26,6 +26,8 @@ export default defineConfig({
     cssTarget: 'chrome80',
     reportCompressedSize: true,
     chunkSizeWarningLimit: 500,
+    emptyOutDir: true,
+    copyPublicDir: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {

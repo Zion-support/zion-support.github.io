@@ -1,6 +1,11 @@
 'use client';
+<<<<<<< HEAD
 import React, {useState, useEffect}from 'react';
 import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock}}from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react';
+import { TrendingUp, Users, Award, Clock, Brain, Globe, Zap } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
 const ContentStatistics: React.FC = () => {,
   const [counters, setCounters] = useState({)
@@ -12,7 +17,10 @@ const ContentStatistics: React.FC = () => {,
 =======
     years: 0
   });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
   const targetCounters = {clients: 500,
     projects: 1000,
@@ -22,7 +30,10 @@ const ContentStatistics: React.FC = () => {,
 =======
     years: 10
   };
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
   const statistics = [
     {icon: Users,
@@ -77,7 +88,11 @@ const ContentStatistics: React.FC = () => {,
     {
       icon: Brain,
       title: 'AI Innovation',
+<<<<<<< HEAD
       description: 'Leading the industry with cutting-edge AI solutions'
+=======
+      description: 'Leading the industry in AI-powered solutions'
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
     },
     {
       icon: Globe,
@@ -105,11 +120,15 @@ const ContentStatistics: React.FC = () => {,
               ...prev,
               [key]: Math.min(current + increment, target)
             };
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
           }
           return prev;
         });
       }, 16);
+<<<<<<< HEAD
 <<<<<<< HEAD
     });
 
@@ -140,6 +159,9 @@ const ContentStatistics: React.FC = () => {,
 =======
 
       // Clear timer after duration
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       setTimeout(() => clearInterval(timer), duration);
     };
 
@@ -157,7 +179,11 @@ const ContentStatistics: React.FC = () => {,
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
             Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Impact</span>
+=======
+            Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Impact</span>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Numbers that speak for themselves - see how we've transformed businesses worldwide.
@@ -168,20 +194,31 @@ const ContentStatistics: React.FC = () => {,
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="text-center">
+<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
                 <div className={`w-16 h-16 ${stat.color} mx-auto mb-4 rounded-full flex items-center justify-center`}>
                   <stat.icon className="w-8 h-8" />
+=======
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center`}>
+                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">
                   {Math.floor(stat.value)}{stat.suffix}
                 </div>
+<<<<<<< HEAD
                 <div className="text-gray-300 text-lg">{stat.label}</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+                <div className="text-gray-300">{stat.label}</div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
               </div>
             </div>
           ))}
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Achievements Section */} <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 md: p-12">,</div>
           <div className="text-center mb-12">
@@ -225,6 +262,21 @@ const ContentStatistics: React.FC = () => {,
               </div>
             ))}
           </div>
+=======
+        {/* Achievements */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {achievements.map((achievement, index) => (
+            <div key={index} className="text-center">
+              <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center">
+                  <achievement.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{achievement.title}</h3>
+                <p className="text-gray-300">{achievement.description}</p>
+              </div>
+            </div>
+          ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
         </div>
       </div>
     </div>

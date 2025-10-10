@@ -1,19 +1,43 @@
 'use client';
+<<<<<<< HEAD
 import React, {Component, ErrorInfo, ReactNode}from 'react';
 
 interface Props {children: ReactNode;,}
   fallback?: ReactNode;}interface State {hasError: boolean;,}
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { ErrorBoundaryFallback } from './EnhancedLoadingStates';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
   error?: Error;
   errorInfo?: ErrorInfo;}class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) {,
     super(props);
+<<<<<<< HEAD
     this.state = { hasError: false ,}}
 
   static getDerivedStateFromError(error: Error): State {,}
     return {hasError: true, error}}}
+=======
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({)
       error,
+<<<<<<< HEAD
       errorInfo;})
 
     // Log error to console in development;
@@ -45,10 +69,35 @@ interface Props {children: ReactNode;,}
           </div>
         </div>
       );
+=======
+      errorInfo
+    });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // You can integrate with error tracking services like Sentry here
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || <ErrorBoundaryFallback error={this.state.error} />;
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
     }
 
     return this.props.children;
   }
-};
+}
 
 export default EnhancedErrorBoundary;

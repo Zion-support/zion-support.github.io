@@ -5,7 +5,10 @@ import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
 =======
 import React, { useState, useEffect } from 'react';
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
 const ContentCarousel: React.FC = () => {,
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,6 +16,7 @@ const ContentCarousel: React.FC = () => {,
   const slides = [
     {
       id: 1,
+<<<<<<< HEAD
       title: 'AI Solutions',
 <<<<<<< HEAD
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
@@ -23,15 +27,24 @@ const ContentCarousel: React.FC = () => {,
       features: [
         'Machine Learning',
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+      title: 'AI-Powered Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      features: [
+        'Machine Learning Models',
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
         'Natural Language Processing',
         'Computer Vision',
         'Predictive Analytics'
       ],
       icon: Zap,
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: 'from-purple-500 to-pink-600',},
     {id: 2,
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       color: 'from-purple-500 to-pink-600'
     },
     {
@@ -47,6 +60,7 @@ const ContentCarousel: React.FC = () => {,
       ],
       icon: Cloud,
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: 'from-green-500 to-blue-600',},
     {id: 3,
       title: 'AI Automation',
@@ -61,11 +75,16 @@ const ContentCarousel: React.FC = () => {,
       color: 'from-orange-500 to-red-600',},
     {id: 4,
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       color: 'from-green-500 to-blue-600'
     },
     {
       id: 3,
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       features: [,
@@ -76,12 +95,18 @@ const ContentCarousel: React.FC = () => {,
       ],
       icon: Shield,
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: 'from-blue-500 to-indigo-600',}];
 =======
       color: 'from-red-500 to-orange-600'
     }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+      color: 'from-red-500 to-orange-600'
+    }
+  ];
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
   useEffect(() => {const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);}, 5000);
@@ -116,6 +141,7 @@ const ContentCarousel: React.FC = () => {,
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative w-full max-w-4xl mx-auto">
       <div className="relative overflow-hidden rounded-2xl">
         <div 
@@ -133,6 +159,28 @@ const ContentCarousel: React.FC = () => {,
                       </div>
                       <h3 className="text-2xl md:text-3xl font-bold">{slide.title}</h3>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+    <div className="relative w-full max-w-6xl mx-auto">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800">
+        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+          {slides.map((slide) => (
+            <div key={slide.id} className="w-full flex-shrink-0">
+              <div className="p-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                  <div>
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${slide.color} mb-6`}>
+                      <slide.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-4xl font-bold text-white mb-4">{slide.title}</h3>
+                    <p className="text-xl text-gray-300 mb-8">{slide.description}</p>
+                    <div className="grid grid-cols-2 gap-4">
+                      {slide.features.map((feature, index) => (
+                        <div key={index} className="flex items-center space-x-3">
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                          <span className="text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
                     </div>
                     <p className="text-lg md:text-xl text-white/90 mb-6">
                       {slide.description}
@@ -147,6 +195,7 @@ const ContentCarousel: React.FC = () => {,
                     </ul>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <h2 className="text-3xl md: text-4xl font-bold text-center mb-4">,</h2>
                     {slide.title} </h2>
                   <p className="text-xl text-center mb-8 text-white/90">{slide.description</p>} </p>
@@ -160,11 +209,17 @@ const ContentCarousel: React.FC = () => {,
                   </div>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+                  <div className="hidden lg:block">
+                    <div className={`w-full h-80 rounded-2xl bg-gradient-to-br ${slide.color} opacity-20`}></div>
+                  </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
                 </div>
               </div>
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
       
@@ -189,11 +244,19 @@ const ContentCarousel: React.FC = () => {,
         <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+=======
+        
+        {/* Navigation Buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
+<<<<<<< HEAD
           className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
         >
           <ChevronRight className="w-6 h-6" />
@@ -212,6 +275,25 @@ const ContentCarousel: React.FC = () => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
           />
         ))}
+=======
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+        
+        {/* Dots Indicator */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       </div>
     </div>
   );

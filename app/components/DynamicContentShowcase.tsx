@@ -6,15 +6,22 @@ import {Cloud, Zap, Shield, Globe, Brain, Star}}from 'lucide-react';
 const DynamicContentShowcase: React.FC = () => {,
 =======
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Cloud, Zap, Shield, Brain, Globe, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+import { Cloud, Zap, Shield, Brain, Star, CheckCircle } from 'lucide-react';
+
+const DynamicContentShowcase: React.FC = () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
   const [currentFeature, setCurrentFeature] = useState(0);
 
   const features = [
     {
       id: 1,
+<<<<<<< HEAD
       title: 'AI Solutions',
 <<<<<<< HEAD
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
@@ -42,6 +49,10 @@ const DynamicContentShowcase: React.FC = () => {
       color: 'from-teal-500 to-cyan-600',}];
 =======
       description: 'Transform your business with cutting-edge AI technology and automation.',
+=======
+      title: 'AI-Powered Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       icon: Brain,
       color: 'from-purple-500 to-pink-600'
     },
@@ -58,6 +69,7 @@ const DynamicContentShowcase: React.FC = () => {
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
       color: 'from-red-500 to-orange-600'
+<<<<<<< HEAD
     },
     {
       id: 4,
@@ -68,6 +80,10 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+    }
+  ];
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
   const benefits = [
     'Advanced AI technology integration',
@@ -80,6 +96,9 @@ const DynamicContentShowcase: React.FC = () => {
     'Proven track record of success'
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
   const testimonials = [
     {name: 'Sarah Johnson',
@@ -96,17 +115,27 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
+<<<<<<< HEAD
       rating: 5;,}];
 
   useEffect(() => {const timer = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);}, 3000);
 =======
+=======
+      rating: 5
+    }
+  ];
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
+<<<<<<< HEAD
     }, 4000);
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+    }, 5000);
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
     return () => clearInterval(timer);
   }, [features.length]);
@@ -120,6 +149,7 @@ const DynamicContentShowcase: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Features Carousel */} <div className="mb-16">
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,</div>
@@ -173,19 +203,43 @@ const DynamicContentShowcase: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
 =======
+=======
+        {/* Feature Showcase */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h3 className="text-3xl font-bold text-white mb-4">{features[currentFeature].title}</h3>
+            <p className="text-lg text-gray-300 mb-6">{features[currentFeature].description}</p>
+            <div className="flex space-x-2">
+              {features.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentFeature(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentFeature ? 'bg-cyan-400' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
           {/* Feature Visual */}
           <div className="flex justify-center">
             <div className={`w-80 h-80 bg-gradient-to-br ${features[currentFeature].color} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
               <div className="absolute inset-0 bg-black/20"></div>
               {React.createElement(features[currentFeature].icon, { className: "w-32 h-32 text-white/90 relative z-10" })}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
             </div>
           </div>
         </div>
 
         {/* Benefits Section */} <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,</div>
             {benefits.map((benefit, index) => (
@@ -199,6 +253,13 @@ const DynamicContentShowcase: React.FC = () => {
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">{benefit}</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
               </div>
             ))}
           </div>
