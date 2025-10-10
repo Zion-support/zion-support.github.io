@@ -1,11 +1,37 @@
-'use client';
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+// Find all files with merge conflicts
+const findMergeConflictFiles = () => {
+  try {
+    const result = execSync('grep -l "^<<<<<<< HEAD\\|^=======\\|^>>>>>>> " app/ai-*/page.tsx', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    return [];
+  }
+};
+
+// Template for AI pages
+const createAIPageTemplate = (pageName, title, description, keywords, icon) => {
+  const componentName = pageName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
+  
+  const displayName = pageName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+
+  return `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Code, Lock, Monitor, Eye, Cpu, Network, Layers } from 'lucide-react';
 
-const AiBlockchainSolutionsPage: React.FC = () => {
+const ${componentName}: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -14,9 +40,9 @@ const AiBlockchainSolutionsPage: React.FC = () => {
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: Layers,
-      title: 'Blockchain Solutions',
-      description: 'Comprehensive AI-powered blockchain solutions for enterprise applications and decentralized systems.',
+      icon: ${icon},
+      title: '${title}',
+      description: '${description}',
       benefits: ['Advanced features', 'Real-time processing', 'Scalable solutions', 'Enterprise-grade security']
     },
     {
@@ -89,9 +115,9 @@ const AiBlockchainSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Ai Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI-powered blockchain solutions for enterprise applications and decentralized systems." />
-        <meta name="keywords" content="AI blockchain solutions, enterprise blockchain, smart contracts, DeFi, cryptocurrency, distributed systems" />
+        <title>${displayName} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
 
       <Navigation />
@@ -102,10 +128,10 @@ const AiBlockchainSolutionsPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Blockchain Solutions
+              ${displayName}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive AI-powered blockchain solutions for enterprise applications and decentralized systems.
+              ${description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -123,7 +149,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful Ai Blockchain Solutions Features
+                Powerful ${displayName} Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Unlock the full potential of your business with our comprehensive AI-powered platform
@@ -161,7 +187,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
                 Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how Ai Blockchain Solutions can transform your business across different domains
+                Discover how ${displayName} can transform your business across different domains
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -181,7 +207,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Ai Blockchain Solutions?
+                Why Choose Our ${displayName}?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the power of AI-driven solutions that deliver real business value
@@ -227,4 +253,126 @@ const AiBlockchainSolutionsPage: React.FC = () => {
   );
 };
 
-export default AiBlockchainSolutionsPage;
+export default ${componentName};`;
+};
+
+// Page configurations
+const pageConfigs = {
+  'ai-api-manager': {
+    title: 'API Management',
+    description: 'Advanced AI-powered API management solution for modern businesses. Intelligent routing, monitoring, and optimization.',
+    keywords: 'AI API management, artificial intelligence, API gateway, microservices, API optimization, API security',
+    icon: 'Code'
+  },
+  'ai-autonomous-systems': {
+    title: 'Autonomous Systems',
+    description: 'Build intelligent autonomous systems that can operate independently and make decisions in real-time.',
+    keywords: 'AI autonomous systems, artificial intelligence, automation, robotics, intelligent systems, autonomous vehicles',
+    icon: 'Cpu'
+  },
+  'ai-blockchain-analytics': {
+    title: 'Blockchain Analytics',
+    description: 'Advanced AI-powered blockchain analytics for cryptocurrency and distributed ledger technologies.',
+    keywords: 'AI blockchain analytics, cryptocurrency analysis, blockchain intelligence, crypto trading, DeFi analytics',
+    icon: 'Layers'
+  },
+  'ai-blockchain-solutions': {
+    title: 'Blockchain Solutions',
+    description: 'Comprehensive AI-powered blockchain solutions for enterprise applications and decentralized systems.',
+    keywords: 'AI blockchain solutions, enterprise blockchain, smart contracts, DeFi, cryptocurrency, distributed systems',
+    icon: 'Layers'
+  },
+  'ai-climate-solutions-pro': {
+    title: 'Climate Solutions Pro',
+    description: 'Advanced AI-powered climate solutions for environmental monitoring, sustainability, and green technology.',
+    keywords: 'AI climate solutions, environmental AI, sustainability, green technology, climate monitoring, carbon tracking',
+    icon: 'Globe'
+  },
+  'ai-cloud-infrastructure': {
+    title: 'Cloud Infrastructure',
+    description: 'Intelligent cloud infrastructure management with AI-powered optimization and automation.',
+    keywords: 'AI cloud infrastructure, cloud management, cloud optimization, cloud automation, cloud security, cloud monitoring',
+    icon: 'Cloud'
+  },
+  'ai-code-assistant': {
+    title: 'Code Assistant',
+    description: 'AI-powered code assistant that helps developers write better code faster with intelligent suggestions.',
+    keywords: 'AI code assistant, code generation, programming AI, developer tools, code optimization, software development',
+    icon: 'Code'
+  },
+  'ai-code-security-auditor': {
+    title: 'Code Security Auditor',
+    description: 'Advanced AI-powered code security auditing to identify vulnerabilities and security issues.',
+    keywords: 'AI code security, security auditing, vulnerability detection, code analysis, cybersecurity, secure coding',
+    icon: 'Shield'
+  },
+  'ai-computer-vision': {
+    title: 'Computer Vision',
+    description: 'Advanced AI-powered computer vision solutions for image recognition, object detection, and visual analysis.',
+    keywords: 'AI computer vision, image recognition, object detection, visual AI, machine learning, computer vision',
+    icon: 'Eye'
+  },
+  'ai-content-delivery-network': {
+    title: 'Content Delivery Network',
+    description: 'Intelligent content delivery network with AI-powered optimization for faster, more reliable content delivery.',
+    keywords: 'AI CDN, content delivery, network optimization, CDN management, content acceleration, global distribution',
+    icon: 'Network'
+  },
+  'ai-content-generation': {
+    title: 'Content Generation',
+    description: 'AI-powered content generation for creating high-quality text, images, and multimedia content.',
+    keywords: 'AI content generation, content creation, text generation, image generation, content marketing, creative AI',
+    icon: 'FileText'
+  },
+  'ai-content-studio': {
+    title: 'Content Studio',
+    description: 'Comprehensive AI-powered content studio for creating, editing, and managing multimedia content.',
+    keywords: 'AI content studio, content creation, multimedia, video editing, content management, creative tools',
+    icon: 'Monitor'
+  },
+  'ai-content-writer': {
+    title: 'Content Writer',
+    description: 'AI-powered content writing assistant for creating engaging, high-quality written content.',
+    keywords: 'AI content writer, content writing, copywriting, blog writing, content creation, writing assistant',
+    icon: 'FileText'
+  },
+  'ai-crm-assistant': {
+    title: 'CRM Assistant',
+    description: 'Intelligent CRM assistant that helps manage customer relationships and sales processes.',
+    keywords: 'AI CRM, customer relationship management, sales automation, CRM assistant, customer management, sales AI',
+    icon: 'Users'
+  }
+};
+
+// Fix merge conflicts
+const fixMergeConflicts = () => {
+  const files = findMergeConflictFiles();
+  console.log(`Found ${files.length} files with merge conflicts`);
+  
+  files.forEach(file => {
+    console.log(`Fixing merge conflicts in: ${file}`);
+    
+    // Extract page name from file path
+    const pageName = path.basename(path.dirname(file));
+    const config = pageConfigs[pageName];
+    
+    if (config) {
+      const content = createAIPageTemplate(
+        pageName,
+        config.title,
+        config.description,
+        config.keywords,
+        config.icon
+      );
+      
+      fs.writeFileSync(file, content);
+      console.log(`✓ Fixed: ${file}`);
+    } else {
+      console.log(`⚠ No config found for: ${pageName}`);
+    }
+  });
+};
+
+// Run the fix
+fixMergeConflicts();
+console.log('Merge conflict fixing completed!');
