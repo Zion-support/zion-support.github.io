@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
@@ -113,7 +111,43 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-          </div>
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Our Impact
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Numbers that speak for themselves - our track record of success and client satisfaction.
+          </p>
+        </div>
+
+        {/* Statistics Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {statistics.map((stat, index) => (
+            <div key={index} className="text-center bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-4">
+                <stat.icon className="h-8 w-8 text-white" />
+              </div>
+              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-gray-300 text-lg">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-4">
+                <feature.icon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300 text-sm">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

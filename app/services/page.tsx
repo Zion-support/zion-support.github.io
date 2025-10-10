@@ -26,7 +26,9 @@ const ServicesPage: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-solutions',
+      trial: '30-day free trial'
     },
     {
       icon: Brain,
@@ -34,7 +36,9 @@ const ServicesPage: React.FC = () => {
       description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
       features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
       price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-marketing-automation',
+      trial: '14-day free trial'
     },
     {
       icon: Brain,
@@ -42,7 +46,9 @@ const ServicesPage: React.FC = () => {
       description: 'Intelligent customer support with chatbots, sentiment analysis, and automated ticket routing.',
       features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base', '24/7 Support'],
       price: 'Starting at $199/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-customer-support',
+      trial: '21-day free trial'
     },
     {
       icon: Brain,
@@ -50,7 +56,9 @@ const ServicesPage: React.FC = () => {
       description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling.',
       features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards', 'ML Models'],
       price: 'Starting at $399/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-data-analytics',
+      trial: '14-day free trial'
     },
     {
       icon: Brain,
@@ -58,7 +66,9 @@ const ServicesPage: React.FC = () => {
       description: 'Create high-quality content at scale with AI-powered writing, image generation, and video production.',
       features: ['Content Writing', 'Image Generation', 'Video Creation', 'SEO Optimization', 'Multi-language'],
       price: 'Starting at $149/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-content-generation',
+      trial: '14-day free trial'
     },
     {
       icon: Brain,
@@ -66,7 +76,9 @@ const ServicesPage: React.FC = () => {
       description: 'HIPAA-compliant AI solutions for medical imaging, drug discovery, and patient care optimization.',
       features: ['Medical Imaging', 'Drug Discovery', 'Patient Analytics', 'Diagnostic Support', 'HIPAA Compliance'],
       price: 'Starting at $1,999/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-healthcare-solutions',
+      trial: '30-day free trial'
     },
     {
       icon: Brain,
@@ -74,7 +86,9 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced AI solutions for fraud detection, risk assessment, and algorithmic trading.',
       features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring', 'Compliance'],
       price: 'Starting at $1,499/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-financial-services',
+      trial: '21-day free trial'
     },
     {
       icon: Brain,
@@ -82,7 +96,39 @@ const ServicesPage: React.FC = () => {
       description: 'Intelligent e-commerce platform with recommendation engines and dynamic pricing.',
       features: ['Recommendation Engine', 'Dynamic Pricing', 'Inventory Optimization', 'Customer Insights', 'Sales Forecasting'],
       price: 'Starting at $799/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-ecommerce-solutions',
+      trial: '14-day free trial'
+    },
+    {
+      icon: Brain,
+      title: 'AI Cybersecurity Suite',
+      description: 'AI-powered cybersecurity with threat detection, vulnerability assessment, and automated response.',
+      features: ['Threat Detection', 'Vulnerability Scanning', 'Automated Response', 'Behavioral Analysis', 'Compliance'],
+      price: 'Starting at $899/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-cybersecurity-suite',
+      trial: '21-day free trial'
+    },
+    {
+      icon: Brain,
+      title: 'AI Business Intelligence',
+      description: 'Advanced BI with AI insights, predictive analytics, and automated reporting.',
+      features: ['Predictive Analytics', 'Automated Reports', 'Data Integration', 'Self-service Analytics', 'Mobile Access'],
+      price: 'Starting at $599/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-business-intelligence',
+      trial: '14-day free trial'
+    },
+    {
+      icon: Brain,
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business processes with intelligent decision-making and exception handling.',
+      features: ['Process Automation', 'Decision Making', 'Exception Handling', 'Integration', 'Monitoring'],
+      price: 'Starting at $499/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-workflow-automation',
+      trial: '14-day free trial'
     },
     
     // Cloud Services
@@ -93,7 +139,9 @@ const ServicesPage: React.FC = () => {
       features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud'],
       price: 'Starting at $1,299/month',
       category: 'Cloud Services',
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/cloud-services',
+      trial: '30-day free trial'
     },
     {
       icon: Cloud,
@@ -316,17 +364,20 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text glitch" data-text="Our Services">
               Our Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business and drive growth.
+            <p className="text-xl text-cyan-400 mb-8 font-medium cyber-glow neon-text">
+              Comprehensive AI and IT Solutions
+            </p>
+            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our cutting-edge AI and IT solutions designed to drive unprecedented growth and innovation.
             </p>
           </div>
         </section>
@@ -399,9 +450,9 @@ const ServicesPage: React.FC = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative cyber-card hologram-card energy-pulse">
                   {service.popular && (
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium neon-glow">
                       Popular
                     </div>
                   )}
@@ -411,7 +462,7 @@ const ServicesPage: React.FC = () => {
                       <service.icon className="w-8 h-8 text-cyan-400" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2 neon-text cyber-scan-line">{service.title}</h3>
                       <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">
                         {service.category}
                       </span>
@@ -440,15 +491,20 @@ const ServicesPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-6">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-sm text-gray-300">Contact for custom pricing</div>
+                    <div className="text-2xl font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                    <div className="text-sm text-gray-300 mb-1">{service.trial || 'Contact for custom pricing'}</div>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
-                      Get Quote
+                    <a
+                      href={service.link || '#'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 neon-glow"
+                    >
+                      {service.trial ? 'Start Free Trial' : 'Get Quote'}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </a>
                     <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
                       Learn More
                     </button>

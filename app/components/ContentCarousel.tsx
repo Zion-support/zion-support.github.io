@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -59,6 +57,56 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Our Solutions
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive suite of AI and IT solutions designed to transform your business.
+          </p>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                      <div>
+                        <div className="flex items-center mb-6">
+                          <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <slide.icon className="h-8 w-8 text-white" />
+                          </div>
+                          <h3 className="text-3xl font-bold text-white">{slide.title}</h3>
+                        </div>
+                        <p className="text-xl text-gray-300 mb-6">{slide.description}</p>
+                        <div className="grid grid-cols-2 gap-4">
+                          {slide.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center space-x-2">
+                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                              <span className="text-gray-300">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <button className="mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2">
+                          <span>Learn More</span>
+                          <ArrowRight className="w-5 h-5" />
+                        </button>
+                      </div>
+                      <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center">
+                        <div className="text-6xl">🚀</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
