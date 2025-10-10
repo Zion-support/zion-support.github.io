@@ -1,379 +1,168 @@
-
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface ErrorBoundaryState {// TODO: Add content;}
-
-};
-  hasErro,
-  r: boolean;,
-    erro,
-  r: Error | null;,
-    errorInf,
-  o: ErrorInfo | null;,
-    errorI,
-  d: string | null;
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string | null;
 }
-interface ErrorBoundaryProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
 
+interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
 }
-interface ErrorReport {// TODO: Add content;}
 
-};
-  errorI,
-  d: string | null;
-    erro,
-  r: Error;
-    errorInf,
-  o: ErrorInfo;
-    messag,
-  e: string;
-    stac,
-  k: string | undefined;
-    componentStac,
-  k: string | null | undefined;,
-    timestam,
-  p: string;,
-    userAgen,
-  t: string;,
-    ur,
-  l: string;,
-    userI,
-  d: string | null;,
-    sessionI,
-  d: string;
+interface ErrorReport {
+  errorId: string | null;
+  error: Error;
+  errorInfo: ErrorInfo;
+  errorMessage: string;
+  errorStack: string | undefined;
+  errorComponentStack: string | null | undefined;
+  errorBoundary: string;
+  errorTimestamp: string;
+  errorUserAgent: string | null;
+  errorUrl: string | null;
 }
-class AdvancedErrorBoundary extends Component;
-          <
-// ErrorBoundaryProps,
-//   ErrorBoundaryState;
-> {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  private retryCount = 0;
-  private maxRetries = 3;
-  constructor(prop)
-  s: ErrorBoundaryProps) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+
+class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  hasErro,
-  r: false,
-      erro,
-  r: null,
-      errorInf,
-  o: null,
-      errorI,
-  d: null;
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
     };
   }
-  static getDerivedStateFromError(erro)
-  r: Error): Partial;
-          <ErrorBoundaryState> {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  hasErro,
-  r: true,
-//       error,
-      errorI,
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
+    return {
+      hasError: true,
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
-  componentDidCatch(erro,
-  r: Error, errorInf)
-  o: ErrorInfo) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    this.setState({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-//       error,
-//       errorInfo;)
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
-    // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      logger.error('Error Boundary caught an error', {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  contex,
-  t: 'ErrorBoundary',
-        erro,
-  r: error.message,
-//         errorInfo;)
-      });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
     }
-    // Call custom error handler;
-    if (this.props.onError) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      this.props.onError(error, errorInfo);
-    }
-    // Report error to external service;
-    if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+
+    // Send error report in production
+    if (process.env.NODE_ENV === 'production') {
       this.reportError(error, errorInfo);
     }
   }
-  private reportError = (erro,
-  r: Error, errorInf)
-  o: ErrorInfo) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    const,
-  _errorReport: ErrorReport = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  errorI,
-  d: this.state.errorId || this.generateErrorId(),
-//       error,
-//       errorInfo,
-      messag,
-  e: error.message,
-      stac,
-  k: error.stack,
-      componentStac,
-  k: errorInfo.componentStack,
-      timestam,
-  p: new Date().toISOString(),
-      userAgen,
-  t: navigator.userAgent,
-      ur,
-  l: window.location.href,
-      userI,
-  d: this.getUserId(),
-      sessionI,
-  d: this.getSessionId()
-    };
-    // Send to error reporting service;
-    this.sendErrorReport(errorReport);
-  };
-  private getUserId = (): string | null => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    // Try to get user ID from localStorage or other sources;
-    try {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      return localStorage.getItem('userId') || null;
-    } catch {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      return null;
-    }
-  };
-  private getSessionId = (): string => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    // Generate or retrieve session ID;
-    try {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      let _sessionId = sessionStorage.getItem('sessionId');
-      if (!sessionId) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}`
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
-      }
-      return sessionId;
-    } catch {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}`
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
-  };
-  private generateErrorId = (): string => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}`
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
-  private sendErrorReport = async (errorRepor)
-  t: ErrorReport) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    try {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      // Send to your error reporting service;
-      await fetch('/api/errors', {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  metho,
-  d: 'POST',
-        header,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-          'Content-Type': 'application/json'
+
+  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      const errorReport: ErrorReport = {
+        errorId: this.state.errorId,
+        error,
+        errorInfo,
+        errorMessage: error.message,
+        errorStack: error.stack,
+        errorComponentStack: errorInfo.componentStack,
+        errorBoundary: 'AdvancedErrorBoundary',
+        errorTimestamp: new Date().toISOString(),
+        errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : null,
+        errorUrl: typeof window !== 'undefined' ? window.location.href : null
+      };
+
+      // Send to error reporting service
+      await fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        bod)
-  y: JSON.stringify(errorReport)
+        body: JSON.stringify(errorReport),
       });
-    } catch (reportError) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      logger.error('Failed to send error report', {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  contex,
-  t: 'ErrorReporting',
-        erro,
-  r: reportError;)
-      });
+    } catch (reportError) {
+      console.error('Failed to report error:', reportError);
     }
   };
-  private handleRetry = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    if (this.retryCount;)
-          < this.maxRetries) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      this.retryCount++;
-      this.setState({/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  hasErro,
-  r: false,
-        erro,
-  r: null,
-        errorInf,
-  o: null,
-        errorI,
-  d: null;)
-      });
+
+  private handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
+    });
+  };
+
+  private handleReload = () => {
+    if (typeof window !== 'undefined') {
+      window.location.reload();
     }
   };
-  private handleReload = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    window.location.reload();
-  };
-  private handleGoHome = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    window.location.href = '/';
-  };
-  render() {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    if (this.state.hasError) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      // Custom fallback UI;
-      if (this.props.fallback) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
         return this.props.fallback;
       }
-      // Default error UI;
-      return (<div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12,
-  sm:px-6,
-  lg:px-8'><div className='s,
-  m:mx-auto,
-  sm:w-full,
-  sm:max-w-md'><div className='bg-white py-8 px-4 shadow,
-  sm:rounded-lg,
-  sm:px-10'><div className='text-center'><div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'><svg className='h-6 w-6 text-red-600'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke='currentColor'
-                  ><path></path>
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
-/></svg></div><h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>
-                  Oops! Something went wrong;
-                </h2><p className='mt-2 text-sm text-gray-600'></p>
-                  We&apos;re sorry, but something unexpected happened. Our team;
-                  has been notified.
-                </p></div>
-              {process.env.NODE_ENV === 'development' && (}
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'><h3 className='text-sm font-medium text-red-800'></h3>
-                    Error,
-  Details:
-                  </h3><div className='mt-2 text-sm text-red-700'><p><strong>Error,
-  ID:</strong> {this.state.errorId}
-                    </p><p><strong>Messag,
-  e:</strong> {this.state.error?.message}
-                    </p><details className='mt-2'><summary className='cursor-pointer font-medium'></summary>
-                        Stack Trace;
-                      </summary><pre className='mt-2 text-xs overflow-auto'></pre>
-                        {this.state.error?.stack}
-                      </pre></details><details className='mt-2'><summary className='cursor-pointer font-medium'></summary>
-                        Component Stack;
-                      </summary><pre className='mt-2 text-xs overflow-auto'></pre>
-                        {this.state.errorInfo?.componentStack}
-                      </pre></details></div></div>)
-              )}
-              <div className='mt-6 space-y-3'></div>
-                {this.props.enableRetry &&}
-// this.retryCount;
-          < this.maxRetries && ()
-                    
-          <button></button>
-onClick={this.handleRetry} className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600,
-  hover:bg-indigo-700,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-offset-2,
-  focus:ring-indigo-500'
-                    >
-                      Try Again ({this.maxRetries - this.retryCount} attempts;)
-// left)
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </button>
-                  )}
-                <button></button>
-onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white,
-  hover:bg-gray-50,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-offset-2,
-  focus:ring-indigo-500'
-                >
-                  Reload Page;
-                </button><button></button>
-                  onClick={this.handleGoHome} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white,
-  hover:bg-gray-50,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-offset-2,
-  focus:ring-indigo-500'
-                >
-                  Go to Homepage;
-                </button></div><div className='mt-6 text-center'><p className='text-xs text-gray-500'></p>
-                  If this problem persists, please contact our support team;
-                  at&nbsp;
-                  <a></a>
-                    href='mailt,
-  o:kleber@ziontechgroup.com' className='text-indigo-600,
-  hover:text-indigo-500'
-                  >
-                    kleber@ziontechgroup.com;
-                  </a></p></div></div></div></div>
+
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0">
+                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
+                <p className="text-sm text-gray-500">
+                  We're sorry, but something unexpected happened.
+                </p>
+              </div>
+            </div>
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
+                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:</h4>
+                <pre className="text-xs text-red-700 overflow-auto">
+                  {this.state.error.message}
+                  {this.state.error.stack && `\n\n${this.state.error.stack}`}
+                </pre>
+              </div>
+            )}
+
+            <div className="flex space-x-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              >
+                Try Again
+              </button>
+              <button
+                onClick={this.handleReload}
+                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              >
+                Reload Page
+              </button>
+            </div>
+
+            {this.state.errorId && (
+              <p className="mt-4 text-xs text-gray-500 text-center">
+                Error ID: {this.state.errorId}
+              </p>
+            )}
+          </div>
+        </div>
       );
     }
 
@@ -381,7 +170,4 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
   }
 }
 
-export default AdvancedErrorBoundary;`
-
-
-
+export default AdvancedErrorBoundary;
