@@ -1,98 +1,98 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Home, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, TrendingUp, BarChart, Users, Shield } from 'lucide-react';
+import { FileText, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Scale, Shield, Search, BookOpen } from 'lucide-react';
 
-const AIRealEstatePage: React.FC = () => {
+const AILegalAnalysisPage: React.FC = () => {
   const features = [
-    'Property Valuation AI',
-    'Market Analysis & Trends',
-    'Investment Recommendations',
-    'Property Search Optimization',
-    'Price Prediction Models',
-    'Neighborhood Analytics',
-    'Rental Yield Analysis',
-    'Property Management AI',
-    'Tenant Screening',
-    'Market Forecasting'
+    'Contract Analysis & Review',
+    'Legal Document Processing',
+    'Compliance Monitoring',
+    'Risk Assessment',
+    'Legal Research Automation',
+    'Case Law Analysis',
+    'Document Classification',
+    'Legal Entity Extraction',
+    'Contract Clause Analysis',
+    'Regulatory Updates'
   ];
 
   const benefits = [
     {
-      title: 'Investment ROI',
-      description: 'Increase investment returns by 35%',
-      icon: TrendingUp,
-      value: '35%'
-    },
-    {
       title: 'Time Savings',
-      description: 'Reduce property research time by 70%',
+      description: 'Reduce document review time by 80%',
       icon: Clock,
-      value: '70%'
+      value: '80%'
     },
     {
       title: 'Accuracy',
-      description: '95% accuracy in property valuations',
-      icon: BarChart,
-      value: '95%'
+      description: '99.5% accuracy in legal analysis',
+      icon: Scale,
+      value: '99.5%'
     },
     {
-      title: 'Market Insights',
-      description: 'Real-time market intelligence',
-      icon: Home,
-      value: '24/7'
+      title: 'Cost Reduction',
+      description: 'Save up to 70% on legal research costs',
+      icon: Shield,
+      value: '70%'
+    },
+    {
+      title: 'Compliance',
+      description: '100% regulatory compliance tracking',
+      icon: BookOpen,
+      value: '100%'
     }
   ];
 
   const useCases = [
     {
-      title: 'Property Investment',
-      description: 'AI-powered investment analysis and recommendations',
-      icon: TrendingUp
+      title: 'Contract Management',
+      description: 'Automated contract review and risk assessment',
+      icon: FileText
     },
     {
-      title: 'Real Estate Agents',
-      description: 'Enhanced property marketing and client matching',
-      icon: Users
+      title: 'Due Diligence',
+      description: 'Comprehensive legal document analysis',
+      icon: Search
     },
     {
-      title: 'Property Management',
-      description: 'Automated tenant screening and rent optimization',
-      icon: Home
+      title: 'Compliance',
+      description: 'Regulatory compliance monitoring and reporting',
+      icon: Shield
     },
     {
-      title: 'Market Research',
-      description: 'Comprehensive market analysis and forecasting',
-      icon: BarChart
+      title: 'Litigation',
+      description: 'Case law research and precedent analysis',
+      icon: Scale
     }
   ];
 
   const pricingTiers = [
     {
-      name: 'Individual',
-      price: '$199',
+      name: 'Solo Practitioner',
+      price: '$249',
       period: '/month',
-      description: 'For individual investors',
+      description: 'For individual lawyers',
       features: [
-        'Up to 50 property analyses/month',
-        'Basic market data',
+        'Up to 100 documents/month',
+        'Basic legal analysis',
         'Email support',
-        'Mobile app access',
-        'Standard reports'
+        'Standard templates',
+        'Basic reporting'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$499',
+      name: 'Law Firm',
+      price: '$599',
       period: '/month',
-      description: 'For real estate professionals',
+      description: 'For small to medium firms',
       features: [
-        'Up to 200 property analyses/month',
-        'Advanced market analytics',
+        'Up to 500 documents/month',
+        'Advanced legal analysis',
         'Priority support',
-        'API access',
-        'Custom reports',
+        'Custom templates',
+        'Advanced reporting',
         'Team collaboration'
       ],
       popular: true
@@ -101,9 +101,9 @@ const AIRealEstatePage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'For large organizations',
+      description: 'For large law firms',
       features: [
-        'Unlimited analyses',
+        'Unlimited documents',
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
@@ -117,9 +117,9 @@ const AIRealEstatePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Real Estate Analytics - Zion Tech Group</title>
-        <meta name="description" content="AI-powered real estate analytics, property valuation, and investment recommendations. Increase ROI by 35%. Starting at $199/month." />
-        <meta name="keywords" content="AI real estate, property valuation, real estate analytics, investment analysis, property management AI" />
+        <title>AI Legal Analysis - Zion Tech Group</title>
+        <meta name="description" content="AI-powered legal document analysis, contract review, and compliance monitoring. Reduce review time by 80%. Starting at $249/month." />
+        <meta name="keywords" content="AI legal analysis, legal document processing, contract review, compliance monitoring, legal research automation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -131,14 +131,14 @@ const AIRealEstatePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-8">
-                <Home className="w-10 h-10 text-white" />
+                <FileText className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Real Estate Analytics
+                AI Legal Analysis
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your real estate business with AI-powered property valuation, market analysis, 
-                and investment recommendations. Make smarter decisions with data-driven insights.
+                Transform your legal practice with AI-powered document analysis, contract review, 
+                and compliance monitoring. Work faster and more accurately.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -157,10 +157,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Maximize Your Real Estate Success
+                Revolutionize Your Legal Practice
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI real estate platform delivers measurable improvements in investment performance
+                Our AI legal analysis platform delivers measurable improvements in efficiency and accuracy
               </p>
             </div>
 
@@ -184,10 +184,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Comprehensive Real Estate AI
+                Advanced Legal AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced analytics and insights for every aspect of real estate
+                Comprehensive legal analysis tools powered by advanced AI technology
               </p>
             </div>
 
@@ -209,10 +209,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Real Estate Applications
+                Legal Practice Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform serves various real estate professionals and investors
+                Our AI platform adapts to various legal practice areas and use cases
               </p>
             </div>
 
@@ -238,7 +238,7 @@ const AIRealEstatePage: React.FC = () => {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your real estate business needs
+                Choose the plan that fits your practice size and legal needs
               </p>
             </div>
 
@@ -288,10 +288,10 @@ const AIRealEstatePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Real Estate Business?
+              Ready to Transform Your Legal Practice?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the future of real estate analytics.
+              Start your free trial today and experience the future of legal analysis.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -342,4 +342,4 @@ const AIRealEstatePage: React.FC = () => {
   );
 };
 
-export default AIRealEstatePage;
+export default AILegalAnalysisPage;

@@ -1,99 +1,76 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Home, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, TrendingUp, BarChart, Users, Shield } from 'lucide-react';
+import { BarChart, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Calculator, FileText, TrendingUp, Shield } from 'lucide-react';
 
-const AIRealEstatePage: React.FC = () => {
+const AIAccountingAssistantPage: React.FC = () => {
   const features = [
-    'Property Valuation AI',
-    'Market Analysis & Trends',
-    'Investment Recommendations',
-    'Property Search Optimization',
-    'Price Prediction Models',
-    'Neighborhood Analytics',
-    'Rental Yield Analysis',
-    'Property Management AI',
-    'Tenant Screening',
-    'Market Forecasting'
+    'Automated Bookkeeping',
+    'AI-Powered Expense Categorization',
+    'Tax Preparation & Filing',
+    'Financial Report Generation',
+    'Invoice Processing',
+    'Receipt Scanning & OCR',
+    'Bank Reconciliation',
+    'Cash Flow Forecasting',
+    'Compliance Monitoring',
+    'Multi-Currency Support'
   ];
 
   const benefits = [
     {
-      title: 'Investment ROI',
-      description: 'Increase investment returns by 35%',
-      icon: TrendingUp,
-      value: '35%'
+      title: 'Time Savings',
+      description: 'Save up to 20 hours per week on accounting tasks',
+      icon: Clock,
+      value: '20h'
     },
     {
-      title: 'Time Savings',
-      description: 'Reduce property research time by 70%',
-      icon: Clock,
-      value: '70%'
+      title: 'Cost Reduction',
+      description: 'Reduce accounting costs by 60%',
+      icon: TrendingUp,
+      value: '60%'
     },
     {
       title: 'Accuracy',
-      description: '95% accuracy in property valuations',
-      icon: BarChart,
-      value: '95%'
+      description: '99.9% accuracy in financial calculations',
+      icon: Calculator,
+      value: '99.9%'
     },
     {
-      title: 'Market Insights',
-      description: 'Real-time market intelligence',
-      icon: Home,
-      value: '24/7'
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Property Investment',
-      description: 'AI-powered investment analysis and recommendations',
-      icon: TrendingUp
-    },
-    {
-      title: 'Real Estate Agents',
-      description: 'Enhanced property marketing and client matching',
-      icon: Users
-    },
-    {
-      title: 'Property Management',
-      description: 'Automated tenant screening and rent optimization',
-      icon: Home
-    },
-    {
-      title: 'Market Research',
-      description: 'Comprehensive market analysis and forecasting',
-      icon: BarChart
+      title: 'Compliance',
+      description: '100% tax compliance guarantee',
+      icon: Shield,
+      value: '100%'
     }
   ];
 
   const pricingTiers = [
     {
-      name: 'Individual',
-      price: '$199',
+      name: 'Solo',
+      price: '$149',
       period: '/month',
-      description: 'For individual investors',
+      description: 'For freelancers & solopreneurs',
       features: [
-        'Up to 50 property analyses/month',
-        'Basic market data',
+        'Up to 100 transactions/month',
+        'Basic bookkeeping',
+        'Tax preparation',
         'Email support',
-        'Mobile app access',
-        'Standard reports'
+        'Mobile app access'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$499',
+      name: 'Business',
+      price: '$299',
       period: '/month',
-      description: 'For real estate professionals',
+      description: 'For small businesses',
       features: [
-        'Up to 200 property analyses/month',
-        'Advanced market analytics',
+        'Up to 1,000 transactions/month',
+        'Advanced bookkeeping',
+        'Financial reporting',
         'Priority support',
-        'API access',
-        'Custom reports',
-        'Team collaboration'
+        'API integrations',
+        'Multi-user access'
       ],
       popular: true
     },
@@ -103,8 +80,8 @@ const AIRealEstatePage: React.FC = () => {
       period: '',
       description: 'For large organizations',
       features: [
-        'Unlimited analyses',
-        'Custom AI models',
+        'Unlimited transactions',
+        'Custom workflows',
         'White-label solution',
         'Dedicated support',
         'On-premise deployment',
@@ -117,9 +94,9 @@ const AIRealEstatePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Real Estate Analytics - Zion Tech Group</title>
-        <meta name="description" content="AI-powered real estate analytics, property valuation, and investment recommendations. Increase ROI by 35%. Starting at $199/month." />
-        <meta name="keywords" content="AI real estate, property valuation, real estate analytics, investment analysis, property management AI" />
+        <title>AI Accounting Assistant - Zion Tech Group</title>
+        <meta name="description" content="Automated accounting with AI-powered bookkeeping, tax preparation, and financial reporting. Save 20 hours per week. Starting at $149/month." />
+        <meta name="keywords" content="AI accounting, automated bookkeeping, tax preparation, financial reporting, accounting software, expense tracking" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -131,14 +108,14 @@ const AIRealEstatePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-8">
-                <Home className="w-10 h-10 text-white" />
+                <BarChart className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Real Estate Analytics
+                AI Accounting Assistant
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your real estate business with AI-powered property valuation, market analysis, 
-                and investment recommendations. Make smarter decisions with data-driven insights.
+                Automate your accounting with AI-powered bookkeeping, tax preparation, and financial reporting. 
+                Save time, reduce errors, and ensure compliance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -157,10 +134,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Maximize Your Real Estate Success
+                Transform Your Accounting Process
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI real estate platform delivers measurable improvements in investment performance
+                Our AI accounting assistant delivers measurable improvements in efficiency and accuracy
               </p>
             </div>
 
@@ -184,10 +161,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Comprehensive Real Estate AI
+                Comprehensive Accounting Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced analytics and insights for every aspect of real estate
+                Everything you need to manage your finances with AI-powered automation
               </p>
             </div>
 
@@ -204,41 +181,15 @@ const AIRealEstatePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Pricing Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Real Estate Applications
+                Affordable Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform serves various real estate professionals and investors
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="bg-cyan-500/20 p-4 rounded-lg w-fit mb-6 group-hover:bg-cyan-500/30 transition-colors">
-                    <useCase.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Flexible Pricing Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your real estate business needs
+                Choose the plan that fits your business size and accounting needs
               </p>
             </div>
 
@@ -285,13 +236,13 @@ const AIRealEstatePage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Real Estate Business?
+              Ready to Automate Your Accounting?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the future of real estate analytics.
+              Start your free trial today and experience the future of accounting.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -342,4 +293,4 @@ const AIRealEstatePage: React.FC = () => {
   );
 };
 
-export default AIRealEstatePage;
+export default AIAccountingAssistantPage;

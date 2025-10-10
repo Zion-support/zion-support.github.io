@@ -1,99 +1,87 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Home, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, TrendingUp, BarChart, Users, Shield } from 'lucide-react';
+import { Shield, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, TrendingUp, BarChart, Eye, AlertTriangle } from 'lucide-react';
 
-const AIRealEstatePage: React.FC = () => {
+const AIQualityControlPage: React.FC = () => {
   const features = [
-    'Property Valuation AI',
-    'Market Analysis & Trends',
-    'Investment Recommendations',
-    'Property Search Optimization',
-    'Price Prediction Models',
-    'Neighborhood Analytics',
-    'Rental Yield Analysis',
-    'Property Management AI',
-    'Tenant Screening',
-    'Market Forecasting'
+    'Computer Vision Inspection',
+    'Defect Detection AI',
+    'Real-time Quality Monitoring',
+    'Automated Quality Reports',
+    'Predictive Quality Analytics',
+    'Quality Trend Analysis',
+    'Custom Quality Standards',
+    'Integration APIs',
+    'Mobile Quality App',
+    'Quality Dashboard'
   ];
 
   const benefits = [
     {
-      title: 'Investment ROI',
-      description: 'Increase investment returns by 35%',
+      title: 'Defect Reduction',
+      description: 'Reduce defects by up to 90%',
       icon: TrendingUp,
-      value: '35%'
+      value: '90%'
     },
     {
-      title: 'Time Savings',
-      description: 'Reduce property research time by 70%',
-      icon: Clock,
-      value: '70%'
+      title: 'Cost Savings',
+      description: 'Save up to 50% on quality costs',
+      icon: BarChart,
+      value: '50%'
     },
     {
       title: 'Accuracy',
-      description: '95% accuracy in property valuations',
-      icon: BarChart,
-      value: '95%'
+      description: '99.8% accuracy in defect detection',
+      icon: Eye,
+      value: '99.8%'
     },
     {
-      title: 'Market Insights',
-      description: 'Real-time market intelligence',
-      icon: Home,
-      value: '24/7'
+      title: 'Speed',
+      description: '10x faster quality inspection',
+      icon: Clock,
+      value: '10x'
     }
   ];
 
-  const useCases = [
-    {
-      title: 'Property Investment',
-      description: 'AI-powered investment analysis and recommendations',
-      icon: TrendingUp
-    },
-    {
-      title: 'Real Estate Agents',
-      description: 'Enhanced property marketing and client matching',
-      icon: Users
-    },
-    {
-      title: 'Property Management',
-      description: 'Automated tenant screening and rent optimization',
-      icon: Home
-    },
-    {
-      title: 'Market Research',
-      description: 'Comprehensive market analysis and forecasting',
-      icon: BarChart
-    }
+  const industries = [
+    'Manufacturing',
+    'Food & Beverage',
+    'Pharmaceuticals',
+    'Automotive',
+    'Electronics',
+    'Textiles',
+    'Packaging',
+    'Aerospace'
   ];
 
   const pricingTiers = [
     {
-      name: 'Individual',
-      price: '$199',
+      name: 'Basic',
+      price: '$1,199',
       period: '/month',
-      description: 'For individual investors',
+      description: 'For small production lines',
       features: [
-        'Up to 50 property analyses/month',
-        'Basic market data',
+        'Up to 5 inspection points',
+        'Basic defect detection',
         'Email support',
-        'Mobile app access',
-        'Standard reports'
+        'Standard reports',
+        'Mobile app access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$2,499',
       period: '/month',
-      description: 'For real estate professionals',
+      description: 'For medium production facilities',
       features: [
-        'Up to 200 property analyses/month',
-        'Advanced market analytics',
+        'Up to 20 inspection points',
+        'Advanced AI detection',
         'Priority support',
-        'API access',
         'Custom reports',
-        'Team collaboration'
+        'API integration',
+        'Real-time alerts'
       ],
       popular: true
     },
@@ -101,9 +89,9 @@ const AIRealEstatePage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'For large organizations',
+      description: 'For large manufacturing facilities',
       features: [
-        'Unlimited analyses',
+        'Unlimited inspection points',
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
@@ -117,9 +105,9 @@ const AIRealEstatePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Real Estate Analytics - Zion Tech Group</title>
-        <meta name="description" content="AI-powered real estate analytics, property valuation, and investment recommendations. Increase ROI by 35%. Starting at $199/month." />
-        <meta name="keywords" content="AI real estate, property valuation, real estate analytics, investment analysis, property management AI" />
+        <title>AI Quality Control System - Zion Tech Group</title>
+        <meta name="description" content="AI-powered quality control with computer vision inspection and defect detection. Reduce defects by 90%. Starting at $1,199/month." />
+        <meta name="keywords" content="AI quality control, computer vision, defect detection, quality inspection, manufacturing AI" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -131,14 +119,14 @@ const AIRealEstatePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-8">
-                <Home className="w-10 h-10 text-white" />
+                <Shield className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Real Estate Analytics
+                AI Quality Control System
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your real estate business with AI-powered property valuation, market analysis, 
-                and investment recommendations. Make smarter decisions with data-driven insights.
+                Revolutionize your quality control with AI-powered computer vision inspection and defect detection. 
+                Ensure consistent quality and reduce waste with intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -157,10 +145,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Maximize Your Real Estate Success
+                Transform Your Quality Control
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI real estate platform delivers measurable improvements in investment performance
+                Our AI quality control system delivers measurable improvements in quality and efficiency
               </p>
             </div>
 
@@ -184,10 +172,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Comprehensive Real Estate AI
+                Advanced Quality AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced analytics and insights for every aspect of real estate
+                Comprehensive AI tools for every aspect of quality control and inspection
               </p>
             </div>
 
@@ -204,26 +192,22 @@ const AIRealEstatePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Industries Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Real Estate Applications
+                Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform serves various real estate professionals and investors
+                Our AI quality control system serves various manufacturing industries
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="bg-cyan-500/20 p-4 rounded-lg w-fit mb-6 group-hover:bg-cyan-500/30 transition-colors">
-                    <useCase.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {industries.map((industry, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 text-center">
+                  <h3 className="text-lg font-semibold text-white">{industry}</h3>
                 </div>
               ))}
             </div>
@@ -238,7 +222,7 @@ const AIRealEstatePage: React.FC = () => {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your real estate business needs
+                Choose the plan that fits your production scale and quality requirements
               </p>
             </div>
 
@@ -288,10 +272,10 @@ const AIRealEstatePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Real Estate Business?
+              Ready to Revolutionize Your Quality Control?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the future of real estate analytics.
+              Start your free trial today and experience the future of quality control.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -342,4 +326,4 @@ const AIRealEstatePage: React.FC = () => {
   );
 };
 
-export default AIRealEstatePage;
+export default AIQualityControlPage;

@@ -1,99 +1,76 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Home, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, TrendingUp, BarChart, Users, Shield } from 'lucide-react';
+import { Users, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Target, FileText, Calendar, BarChart } from 'lucide-react';
 
-const AIRealEstatePage: React.FC = () => {
+const AIRecruitmentAssistantPage: React.FC = () => {
   const features = [
-    'Property Valuation AI',
-    'Market Analysis & Trends',
-    'Investment Recommendations',
-    'Property Search Optimization',
-    'Price Prediction Models',
-    'Neighborhood Analytics',
-    'Rental Yield Analysis',
-    'Property Management AI',
-    'Tenant Screening',
-    'Market Forecasting'
+    'AI Resume Screening',
+    'Candidate Matching Algorithm',
+    'Automated Interview Scheduling',
+    'Skills Assessment Tools',
+    'Background Check Integration',
+    'Bias Detection & Mitigation',
+    'Candidate Scoring System',
+    'Recruitment Analytics',
+    'Job Description Optimization',
+    'Talent Pipeline Management'
   ];
 
   const benefits = [
     {
-      title: 'Investment ROI',
-      description: 'Increase investment returns by 35%',
-      icon: TrendingUp,
-      value: '35%'
-    },
-    {
-      title: 'Time Savings',
-      description: 'Reduce property research time by 70%',
+      title: 'Faster Hiring',
+      description: 'Reduce time-to-hire by up to 60%',
       icon: Clock,
-      value: '70%'
+      value: '60%'
     },
     {
-      title: 'Accuracy',
-      description: '95% accuracy in property valuations',
+      title: 'Better Matches',
+      description: 'Improve candidate-job fit by 85%',
+      icon: Target,
+      value: '85%'
+    },
+    {
+      title: 'Cost Savings',
+      description: 'Reduce recruitment costs by 40%',
       icon: BarChart,
-      value: '95%'
+      value: '40%'
     },
     {
-      title: 'Market Insights',
-      description: 'Real-time market intelligence',
-      icon: Home,
-      value: '24/7'
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Property Investment',
-      description: 'AI-powered investment analysis and recommendations',
-      icon: TrendingUp
-    },
-    {
-      title: 'Real Estate Agents',
-      description: 'Enhanced property marketing and client matching',
-      icon: Users
-    },
-    {
-      title: 'Property Management',
-      description: 'Automated tenant screening and rent optimization',
-      icon: Home
-    },
-    {
-      title: 'Market Research',
-      description: 'Comprehensive market analysis and forecasting',
-      icon: BarChart
+      title: 'Quality Hires',
+      description: 'Increase retention rates by 35%',
+      icon: Users,
+      value: '35%'
     }
   ];
 
   const pricingTiers = [
     {
-      name: 'Individual',
+      name: 'Starter',
       price: '$199',
       period: '/month',
-      description: 'For individual investors',
+      description: 'For small teams',
       features: [
-        'Up to 50 property analyses/month',
-        'Basic market data',
+        'Up to 50 job postings/month',
+        'Basic AI screening',
+        'Standard integrations',
         'Email support',
-        'Mobile app access',
-        'Standard reports'
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$399',
       period: '/month',
-      description: 'For real estate professionals',
+      description: 'For growing companies',
       features: [
-        'Up to 200 property analyses/month',
-        'Advanced market analytics',
+        'Up to 200 job postings/month',
+        'Advanced AI matching',
+        'Custom integrations',
         'Priority support',
-        'API access',
-        'Custom reports',
-        'Team collaboration'
+        'Advanced analytics',
+        'Interview scheduling'
       ],
       popular: true
     },
@@ -103,12 +80,12 @@ const AIRealEstatePage: React.FC = () => {
       period: '',
       description: 'For large organizations',
       features: [
-        'Unlimited analyses',
+        'Unlimited job postings',
         'Custom AI models',
         'White-label solution',
         'Dedicated support',
         'On-premise deployment',
-        'Custom integrations'
+        'Custom workflows'
       ],
       popular: false
     }
@@ -117,9 +94,9 @@ const AIRealEstatePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Real Estate Analytics - Zion Tech Group</title>
-        <meta name="description" content="AI-powered real estate analytics, property valuation, and investment recommendations. Increase ROI by 35%. Starting at $199/month." />
-        <meta name="keywords" content="AI real estate, property valuation, real estate analytics, investment analysis, property management AI" />
+        <title>AI Recruitment Assistant - Zion Tech Group</title>
+        <meta name="description" content="Streamline hiring with AI-powered resume screening, candidate matching, and interview scheduling. Reduce time-to-hire by 60%. Starting at $199/month." />
+        <meta name="keywords" content="AI recruitment, hiring automation, resume screening, candidate matching, recruitment software, talent acquisition" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -131,14 +108,14 @@ const AIRealEstatePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-8">
-                <Home className="w-10 h-10 text-white" />
+                <Users className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Real Estate Analytics
+                AI Recruitment Assistant
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your real estate business with AI-powered property valuation, market analysis, 
-                and investment recommendations. Make smarter decisions with data-driven insights.
+                Streamline your hiring process with AI-powered resume screening, candidate matching, 
+                and automated interview scheduling. Find the best talent faster and more efficiently.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -157,10 +134,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Maximize Your Real Estate Success
+                Transform Your Hiring Process
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI real estate platform delivers measurable improvements in investment performance
+                Our AI recruitment assistant delivers measurable improvements in hiring efficiency and quality
               </p>
             </div>
 
@@ -184,10 +161,10 @@ const AIRealEstatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Comprehensive Real Estate AI
+                Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced analytics and insights for every aspect of real estate
+                Our platform combines advanced AI with intuitive design to revolutionize recruitment
               </p>
             </div>
 
@@ -204,41 +181,15 @@ const AIRealEstatePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Pricing Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Real Estate Applications
+                Simple Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform serves various real estate professionals and investors
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="bg-cyan-500/20 p-4 rounded-lg w-fit mb-6 group-hover:bg-cyan-500/30 transition-colors">
-                    <useCase.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Flexible Pricing Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your real estate business needs
+                Choose the plan that fits your hiring volume and team size
               </p>
             </div>
 
@@ -285,13 +236,13 @@ const AIRealEstatePage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Real Estate Business?
+              Ready to Revolutionize Your Hiring?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the future of real estate analytics.
+              Start your free trial today and experience the future of recruitment.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -342,4 +293,4 @@ const AIRealEstatePage: React.FC = () => {
   );
 };
 
-export default AIRealEstatePage;
+export default AIRecruitmentAssistantPage;
