@@ -1,50 +1,46 @@
 'use client';
-import React, { Component, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: any;
-}
-
-interface ErrorBoundaryProps {
+interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
+    this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: any) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({
       error,
       errorInfo
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    // Log error to monitoring service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      });
     }
-
-    // You can also log the error to an error reporting service here
-    // Example: logErrorToService(error, errorInfo);
   }
 
-  handleRefresh = () => {
+  handleReload = () => {
     window.location.reload();
   };
 
@@ -54,64 +50,70 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <pre className="text-xs text-red-300 whitespace-pre-wrap">
-                  {this.state.error.toString()}
-                </pre>
-                {this.state.errorInfo && (
-                  <pre className="text-xs text-red-300 whitespace-pre-wrap mt-2">
-                    {this.state.errorInfo.componentStack}
-                  </pre>
-                )}
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="cyber-card hologram-card p-8">
+              <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AlertTriangle className="w-10 h-10 text-white" />
               </div>
-            )}
-            
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                onClick={this.handleRefresh}
-                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
               
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </button>
-            </div>
-            
-            <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-sm text-gray-400 mb-3">
-                Still having trouble? Contact our support team:
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
+              
+              <p className="text-lg text-gray-300 mb-6">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                support@ziontechgroup.com
-              </a>
+
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left">
+                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                  <pre className="text-sm text-gray-300 whitespace-pre-wrap">
+                    {this.state.error.toString()}
+                  </pre>
+                  {this.state.errorInfo && (
+                    <pre className="text-sm text-gray-300 whitespace-pre-wrap mt-2">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
+                  )}
+                </div>
+              )}
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={this.handleReload}
+                  className="cyber-button text-center"
+                >
+                  <RefreshCw className="w-4 h-4 mr-2 inline" />
+                  Try Again
+                </button>
+                
+                <button
+                  onClick={this.handleGoHome}
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 flex items-center justify-center"
+                >
+                  <Home className="w-4 h-4 mr-2" />
+                  Go Home
+                </button>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-gray-700">
+                <p className="text-gray-400 text-sm mb-4">
+                  If this problem persists, please contact our support team:
+                </p>
+                <a
+                  href="mailto:support@ziontechgroup.com"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  support@ziontechgroup.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
