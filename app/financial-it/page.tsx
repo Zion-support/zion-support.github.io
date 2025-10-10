@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-const FinancialITPage: React.FC = () => {
+const FinancialITPage: React.FC = ( => {
   const features = [
     {
       icon: DollarSign,
@@ -84,7 +84,7 @@ const FinancialITPage: React.FC = () => {
         <meta name="description" content="Professional financial IT solutions by Zion Tech Group. SOX compliance, security, and regulatory solutions for financial services." />
         <meta name="keywords" content="financial IT, SOX compliance, banking solutions, financial security, Zion Tech Group" />
       </Helmet>
-      
+
       <Navigation />
 
       {/* Hero Section */}
@@ -93,9 +93,9 @@ const FinancialITPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Financial Services
+            Financial Services;
             <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Solutions
+              IT Solutions;
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -104,11 +104,11 @@ const FinancialITPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
-              Get Started Today
+              Get Started Today;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo
+              Schedule Demo;
             </button>
           </div>
         </div>
@@ -120,10 +120,10 @@ const FinancialITPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed specifically for financial services industry
+              Comprehensive IT solutions designed specifically for financial services industry;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
@@ -151,13 +151,13 @@ const FinancialITPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Financial Services
+              Financial Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of financial services and banking operations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
@@ -181,7 +181,7 @@ const FinancialITPage: React.FC = () => {
               Experience the benefits of modern financial technology with our proven solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -200,14 +200,14 @@ const FinancialITPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading financial institutions using our specialized IT solutions for compliance and security
+            Join leading financial institutions using our specialized IT solutions for compliance and security;
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
+              Start Free Trial;
             </button>
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
+              Contact Sales;
             </button>
           </div>
         </div>
@@ -215,7 +215,7 @@ const FinancialITPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ;
 };
 
 export default FinancialITPage;

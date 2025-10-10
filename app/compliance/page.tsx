@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react';
 
-const CompliancePage: React.FC = () => {
+const CompliancePage: React.FC = ( => {
   const features = [
     {
       icon: Shield,
@@ -56,22 +56,22 @@ const CompliancePage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Compliance
+                Compliance;
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Ensure your business meets all regulatory and security requirements 
+              Ensure your business meets all regulatory and security requirements;
               with our comprehensive compliance solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -83,7 +83,7 @@ const CompliancePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Compliance Services
+              Our Compliance Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive compliance solutions for your business needs.
@@ -109,7 +109,7 @@ const CompliancePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Compliance Benefits
+              Compliance Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Why choose our compliance solutions.
@@ -128,7 +128,7 @@ const CompliancePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -139,10 +139,10 @@ const CompliancePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                Get Started
+                Get Started;
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -151,7 +151,7 @@ const CompliancePage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  ;
 };
 
 export default CompliancePage;

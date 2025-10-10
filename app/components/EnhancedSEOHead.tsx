@@ -45,7 +45,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <meta name="author" content={author} />
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
       <link rel="canonical" href={canonicalUrl} />
-      
+
       {/* Open Graph Tags */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={fullTitle} />
@@ -54,7 +54,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
@@ -62,14 +62,14 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
+
       {/* Additional SEO Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -92,7 +92,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   locale = 'en_US'
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  
+
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
@@ -157,10 +157,10 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
-      
+
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={fullTitle} />
@@ -169,10 +169,13 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content={locale} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
-      
+      <meta property="og: imag,
+    e:width" content="1200" />
+      <meta property="og: imag,
+    e:height" content="630" />
+      <meta property="og: imag,
+    e:alt" content={title} />
+
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
@@ -180,8 +183,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={title} />
-      
+      <meta name="twitter: imag,
+    e:alt" content={title} />
+
       {/* Mobile and App Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       <meta name="theme-color" content="#1e40af" />
@@ -189,20 +193,20 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
+
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      
+
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
-      
+
       {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
@@ -214,14 +218,14 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
-      
+
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
+
       {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -255,29 +259,29 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
           ]
         })}
       </script>
-      
+
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbStructuredData)}
       </script>
-      
+
       {/* Additional SEO Meta Tags */}
       <meta name="format-detection" content="telephone=yes" />
       <meta name="geo.region" content="US-DE" />
       <meta name="geo.placename" content="Middletown" />
-      <meta name="geo.position" content="39.4496;-75.7163" />
+      <meta name="geo.position" content="39.4496-75.7163" />
       <meta name="ICBM" content="39.4496, -75.7163" />
-      
+
       {/* Language and Content */}
       <meta httpEquiv="content-language" content="en-US" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       <meta name="rating" content="General" />
-      
+
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      
+      <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />
+
       {/* Performance Hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
@@ -286,3 +290,4 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default EnhancedSEOHead;
+}

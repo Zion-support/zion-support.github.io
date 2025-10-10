@@ -14,7 +14,7 @@ interface Slide {
   }[];
 }
 
-const ContentCarousel: React.FC = () => {
+const ContentCarousel: React.FC = ( => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
@@ -104,7 +104,7 @@ const ContentCarousel: React.FC = () => {
                   </div>
                   <h3 className="text-3xl font-bold text-white">{currentSlideData.title}</h3>
                 </div>
-                
+
                 <p className="text-xl text-gray-300 leading-relaxed">
                   {currentSlideData.description}
                 </p>
@@ -136,11 +136,11 @@ const ContentCarousel: React.FC = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    Get Started
+                    Get Started;
                   </button>
                 </div>
               </div>
@@ -160,13 +160,13 @@ const ContentCarousel: React.FC = () => {
             </div>
 
           {/* Navigation Buttons */}
-          <button
+          <button;
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button
+          <button;
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
@@ -176,7 +176,7 @@ const ContentCarousel: React.FC = () => {
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
-              <button
+              <button;
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${

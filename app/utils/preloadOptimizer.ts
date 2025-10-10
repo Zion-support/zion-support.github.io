@@ -6,14 +6,14 @@ export const preloadCriticalResources = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
 export const preloadCriticalResources = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
+  if (typeof window === 'undefined') return;
+  // Preload critical fonts;
   const fontPreloads = [
     'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ]
   fontPreloads.forEach(href => {)
-  fontPreloads.forEach(href => {)}
+  fontPreloads.forEach(href => {}
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style',
@@ -42,8 +42,8 @@ export const preloadRoute = useCallback((...args) => {
   // Preload route-specific resources;
   const routeResources = {
 export const preloadRoute = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  // Preload route-specific resources
+  if (typeof window === 'undefined') return;
+  // Preload route-specific resources;
   const routeResources = {}
     '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],
     '/services': ['/api/services', '/images/services-hero.webp'],
@@ -76,18 +76,18 @@ export const optimizeImages = useCallback((...args) => {
           const img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {
 export const optimizeImages = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  // Add loading="lazy" to images below the fold
+  if (typeof window === 'undefined') return;
+  // Add loading="lazy" to images below the fold;
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {)}
     img.setAttribute('loading', 'lazy')}
   })
-  // Add intersection observer for lazy loading
+  // Add intersection observer for lazy loading;
   if ('IntersectionObserver' in window) {}
     const imageObserver = new IntersectionObserver((entries) => {}
       entries.forEach(entry => {)}
         if (entry.isIntersecting) {}
-          const img = entry.target as HTMLImageElement
+          const img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {}
             img['src'] = img.dataset['src']
             img.removeAttribute('data-src')
@@ -97,7 +97,7 @@ export const optimizeImages = useCallback((...args) => {}
   })
 }
 export const preloadRoute = (rout)
-  e: string) => {/* TODO: Fix JSX expression */}
+  e: string => {/* TODO: Fix JSX expression */}
   };
   const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {/* TODO: Fix JSX expression */}
@@ -127,13 +127,13 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
 export const optimizeThirdPartyScripts = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  // Defer non-critical scripts
+  if (typeof window === 'undefined') return;
+  // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)}
     script.setAttribute('defer', '')}
   })
-  // Load analytics after page load
+  // Load analytics after page load;
   if (document.readyState === 'loading') {}
     document.addEventListener('DOMContentLoaded', () => {}
       loadAnalytics()}
@@ -145,7 +145,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
 const loadAnalytics = useCallback((...args) => {
   // Load Google Analytics after page load;
 const loadAnalytics = useCallback((...args) => {}
-  // Load Google Analytics after page load
+  // Load Google Analytics after page load;
   const gaScript = document.createElement('script')
   gaScript.async = true;
   gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',

@@ -4,15 +4,15 @@ import React from 'react';
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
   src: string,
-    alt: string
+    alt: string;
 interface ImageProps {}
   src: string,
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  _quality?: number;
   src: string,
   alt: string,
   width?: number;
@@ -101,14 +101,14 @@ export const,
         style={imageStyle}
         {...props});
       >)</div>
-        <span className="text-gray-500 text-sm"></spa><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>)
+        <span className="text-gray-500 text-sm"></span><span className="sr-only"></span>Screen reader: </span>Failed to load image</span>)
       </div>)
-    ),
+    ,
         {...props}
       ></div>
-        <span></spa><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>
+        <span></span><span className="sr-only"></span>Screen reader: </span>Failed to load image</span>
       </div>
-    );)
+    );
 }
   return(<img;
   return (<img>

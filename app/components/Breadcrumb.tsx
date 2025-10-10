@@ -13,9 +13,9 @@ interface BreadcrumbItem {
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
-  
+
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
-    const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+    const pathSegments = location.pathname.split('/').filter(segment => segment !== '';
     const breadcrumbs: BreadcrumbItem[] = [
       { name: 'Home', href: '/' }
     ];
@@ -24,9 +24,9 @@ const Breadcrumb: React.FC = () => {
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`;
       const isLast = index === pathSegments.length - 1;
-      
-      // Convert segment to readable name
-      const name = segment
+
+      // Convert segment to readable name;
+      const name = segment;
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
@@ -34,7 +34,7 @@ const Breadcrumb: React.FC = () => {
       breadcrumbs.push({
         name,
         href: currentPath,
-        current: isLast
+        current: isLast;
       });
     });
 
@@ -43,7 +43,7 @@ const Breadcrumb: React.FC = () => {
 
   const breadcrumbs = generateBreadcrumbs();
 
-  // Don't show breadcrumb on home page
+  // Don't show breadcrumb on home page;
   if (location.pathname === '/') {
     return null;
   }
@@ -57,22 +57,22 @@ const Breadcrumb: React.FC = () => {
               {index > 0 && (
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true" />
               )}
-              
+
               {index === 0 ? (
-                <Link
+                <Link;
                   to={item.href}
-                  className="flex items-center text-gray-300 hover:text-white transition-colors"
+                  className="flex items-center text-gray-300 hover: text-white transition-colors"
                   aria-label="Home"
                 >
                   <Home className="w-4 h-4" aria-hidden="true" />
                   <span className="sr-only">Home</span>
                 </Link>
-              ) : item.current ? (
+               : item.current ? (
                 <span className="text-white font-medium" aria-current="page">
                   {item.name}
                 </span>
               ) : (
-                <Link
+                <Link;
                   to={item.href}
                   className="text-gray-300 hover:text-white transition-colors"
                 >

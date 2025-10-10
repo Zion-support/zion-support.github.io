@@ -4,43 +4,43 @@ import React, { useEffect, useState } from 'react';
 import { useAnalytics } from './AnalyticsProvider';
 
 interface PerformanceMetrics {
-  fcp: number | null; // First Contentful Paint
-  lcp: number | null; // Largest Contentful Paint
-  fid: number | null; // First Input Delay
-  cls: number | null; // Cumulative Layout Shift
-  ttfb: number | null; // Time to First Byte
-  fmp: number | null; // First Meaningful Paint
+  fcp: number | null; // First Contentful Paint;
+  lcp: number | null; // Largest Contentful Paint;
+  fid: number | null; // First Input Delay;
+  cls: number | null; // Cumulative Layout Shift;
+  ttfb: number | null; // Time to First Byte;
+  fmp: number | null; // First Meaningful Paint;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = ( => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-    fmp: null
+    fmp: null;
   });
   const [isVisible, setIsVisible] = useState(false);
   const { trackEvent } = useAnalytics();
 
   useEffect(() => {
-    // Only run in browser
+    // Only run in browser;
     if (typeof window === 'undefined') return;
 
-    // Monitor Core Web Vitals
+    // Monitor Core Web Vitals;
     monitorCoreWebVitals();
-    
-    // Monitor other performance metrics
+
+    // Monitor other performance metrics;
     monitorPerformanceMetrics();
 
-    // Monitor resource loading
+    // Monitor resource loading;
     monitorResourceLoading();
 
-    // Monitor memory usage
+    // Monitor memory usage;
     monitorMemoryUsage();
 
-    // Show performance panel in development
+    // Show performance panel in development;
     if (process.env.NODE_ENV === 'development') {
       setIsVisible(true);
     }
@@ -56,7 +56,7 @@ const PerformanceMonitor: React.FC = () => {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
           trackEvent('performance_metric', {
             metric: 'FCP',
-            value: Math.round(fcpEntry.startTime),
+            value: Math.round(fcpEntry.startTime,
             category: 'performance'
           });
         }
@@ -70,7 +70,7 @@ const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         trackEvent('performance_metric', {
           metric: 'LCP',
-          value: Math.round(lastEntry.startTime),
+          value: Math.round(lastEntry.startTime,
           category: 'performance'
         });
       });
@@ -79,11 +79,11 @@ const PerformanceMonitor: React.FC = () => {
       // First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: any => {
           setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
           trackEvent('performance_metric', {
             metric: 'FID',
-            value: Math.round(entry.processingStart - entry.startTime),
+            value: Math.round(entry.processingStart - entry.startTime,
             category: 'performance'
           });
         });
@@ -95,12 +95,12 @@ const PerformanceMonitor: React.FC = () => {
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
+          if (!entry.hadRecentInput {
             clsValue += entry.value;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
             trackEvent('performance_metric', {
               metric: 'CLS',
-              value: Math.round(clsValue * 1000) / 1000,
+              value: Math.round(clsValue * 1000 / 1000,
               category: 'performance'
             });
           }
@@ -119,13 +119,13 @@ const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, ttfb }));
         trackEvent('performance_metric', {
           metric: 'TTFB',
-          value: Math.round(ttfb),
+          value: Math.round(ttfb,
           category: 'performance'
         });
       }
     });
 
-    // First Meaningful Paint (FMP) - approximation
+    // First Meaningful Paint (FMP) - approximation;
     if ('PerformanceObserver' in window) {
       const fmpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -134,7 +134,7 @@ const PerformanceMonitor: React.FC = () => {
           setMetrics(prev => ({ ...prev, fmp: fmpEntry.startTime }));
           trackEvent('performance_metric', {
             metric: 'FMP',
-            value: Math.round(fmpEntry.startTime),
+            value: Math.round(fmpEntry.startTime,
             category: 'performance'
           });
         }
@@ -148,10 +148,10 @@ const PerformanceMonitor: React.FC = () => {
       const resourceObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          if (entry.duration > 1000) { // Resources taking more than 1 second
+          if (entry.duration > 1000 { // Resources taking more than 1 second;
             trackEvent('slow_resource', {
               resource: entry.name,
-              duration: Math.round(entry.duration),
+              duration: Math.round(entry.duration,
               size: entry.transferSize || 0,
               category: 'performance'
             });
@@ -167,16 +167,16 @@ const PerformanceMonitor: React.FC = () => {
       const checkMemory = () => {
         const memory = (performance as any).memory;
         trackEvent('memory_usage', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024), // MB
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024), // MB
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024), // MB
+          used: Math.round(memory.usedJSHeapSize / 1024 / 1024, // MB;
+          total: Math.round(memory.totalJSHeapSize / 1024 / 1024, // MB;
+          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024, // MB;
           category: 'performance'
         });
       };
 
-      // Check memory usage every 30 seconds
+      // Check memory usage every 30 seconds;
       setInterval(checkMemory, 30000);
-      checkMemory(); // Initial check
+      checkMemory(); // Initial check;
     }
   };
 
@@ -200,68 +200,68 @@ const PerformanceMonitor: React.FC = () => {
     <div className="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900">Performance Monitor</h3>
-        <button
+        <button;
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-gray-600"
+          className="text-gray-400 hover: text-gray-600"
         >
           ×
         </button>
       </div>
-    // Resource timing analysis
+    // Resource timing analysis;
     const analyzeResources = () => {
       const resources = performance.getEntriesByType('resource');
       const slowResources = resources.filter((resource: any) => resource.duration > 1000);
-      
-      if (slowResources.length > 0) {
-        console.warn('Slow resources detected:', slowResources.map((r: any) => ({
+
+      if (slowResources.length > 0 {
+        console.warn('Slow resources detected:', slowResources.map((r: any => ({
           name: r.name,
           duration: r.duration,
-          size: r.transferSize
+          size: r.transferSize;
         })));
       }
     };
 
-    // Memory usage monitoring
+    // Memory usage monitoring;
     const monitorMemory = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
         const memoryUsage = {
-          used: Math.round(memory.usedJSHeapSize / 1048576), // MB
-          total: Math.round(memory.totalJSHeapSize / 1048576), // MB
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
+          used: Math.round(memory.usedJSHeapSize / 1048576, // MB;
+          total: Math.round(memory.totalJSHeapSize / 1048576, // MB;
+          limit: Math.round(memory.jsHeapSizeLimit / 1048576 // MB;
         };
-        
+
         if (memoryUsage.used > memoryUsage.limit * 0.8) {
           console.warn('High memory usage detected:', memoryUsage);
         }
       }
     };
 
-    // Network information
+    // Network information;
     const monitorNetwork = () => {
       if ('connection' in navigator) {
         const connection = (navigator as any).connection;
         const networkInfo = {
           effectiveType: connection.effectiveType,
           downlink: connection.downlink,
-          rtt: connection.rtt
+          rtt: connection.rtt;
         };
-        
+
         console.log('Network information:', networkInfo);
       }
     };
 
-    // Run measurements
+    // Run measurements;
     measureWebVitals();
     analyzeResources();
     monitorMemory();
     monitorNetwork();
 
-    // Log performance metrics
+    // Log performance metrics;
     const logMetrics = () => {
       console.log('Performance Metrics:', metrics);
-      
-      // Send to analytics if available
+
+      // Send to analytics if available;
       if (typeof window !== 'undefined' && 'gtag' in window) {
         const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
 
@@ -333,24 +333,24 @@ const PerformanceMonitor: React.FC = () => {
       </div>
 
       <div className="mt-4 pt-3 border-t border-gray-200">
-        <button
+        <button;
           onClick={() => window.location.reload()}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors text-sm"
         >
-          Refresh Metrics
+          Refresh Metrics;
         </button>
       </div>
     </div>
   );
-        if (metrics.fcp) gtag('event', 'web_vitals', { metric_name: 'FCP', metric_value: Math.round(metrics.fcp) });
-        if (metrics.lcp) gtag('event', 'web_vitals', { metric_name: 'LCP', metric_value: Math.round(metrics.lcp) });
-        if (metrics.fid) gtag('event', 'web_vitals', { metric_name: 'FID', metric_value: Math.round(metrics.fid) });
-        if (metrics.cls) gtag('event', 'web_vitals', { metric_name: 'CLS', metric_value: Math.round(metrics.cls * 1000) / 1000 });
-        if (metrics.ttfb) gtag('event', 'web_vitals', { metric_name: 'TTFB', metric_value: Math.round(metrics.ttfb) });
+        if (metrics.fcp gtag('event', 'web_vitals', { metric_name: 'FCP', metric_value: Math.round(metrics.fcp });
+        if (metrics.lcp) gtag('event', 'web_vitals', { metric_name: 'LCP', metric_value: Math.round(metrics.lcp });
+        if (metrics.fid) gtag('event', 'web_vitals', { metric_name: 'FID', metric_value: Math.round(metrics.fid });
+        if (metrics.cls) gtag('event', 'web_vitals', { metric_name: 'CLS', metric_value: Math.round(metrics.cls * 1000 / 1000 });
+        if (metrics.ttfb) gtag('event', 'web_vitals', { metric_name: 'TTFB', metric_value: Math.round(metrics.ttfb });
       }
     };
 
-    // Log metrics after a delay to allow for measurements
+    // Log metrics after a delay to allow for measurements;
     const timeoutId = setTimeout(logMetrics, 5000);
 
     return () => {
@@ -358,7 +358,7 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, [metrics]);
 
-  // Don't render anything visible
+  // Don't render anything visible;
   return null;
 };
 

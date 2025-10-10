@@ -4,7 +4,7 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
 
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
-  
+
   const dataTypes = [
     {
       category: 'Personal Information',
@@ -30,22 +30,22 @@ export default function PrivacyPage() {
     {
       title: 'Service Provision',
       icon: Globe,
-      description: 'To provide and maintain our services';)
+      description: 'To provide and maintain our services';
 },
     {
       title: 'Communication',
       icon: Mail,
-      description: 'To communicate with you about our services';)
+      description: 'To communicate with you about our services';
 },
     {
       title: 'Improvement',
       icon: ArrowRight,
-      description: 'To improve and develop new features';)
+      description: 'To improve and develop new features';
 },
     {
       title: 'Security',
       icon: Shield,
-      description: 'To protect against fraud and abuse';)
+      description: 'To protect against fraud and abuse';
 }
   ];
 
@@ -53,22 +53,22 @@ export default function PrivacyPage() {
     {
       title: 'Access',
       description: 'Request access to your personal data',
-      icon: Eye;)
+      icon: Eye;
 },
     {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: CheckCircle;)
+      icon: CheckCircle;
 },
     {
       title: 'Erasure',
       description: 'Request deletion of your personal data',
-      icon: Lock;)
+      icon: Lock;
 },
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database;)
+      icon: Database;
 }
   ];
 
@@ -91,10 +91,10 @@ export default function PrivacyPage() {
 
       <div></div>
         <div></div>
-          <div className="max-w-4xl mx-auto space-y-12"></div>
+          <div className="max-w-4xl mx-auto space-y-12">
             {/* Introduction */}</div>
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Introduction</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h2>Introduction</h2>
               <p className="text-gray-700 leading-relaxed mb-4"></p>
                 At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
@@ -105,13 +105,13 @@ export default function PrivacyPage() {
 
             {/* Information We Collect */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Information We Collect</h2>
-              <div className="grid md:grid-cols-3 gap-6"></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h2>Information We Collect</h2>
+              <div className="grid md:grid-cols-3 gap-6">
                 {dataTypes.map((type, index) => (</div>
                   <div></div>
                     <div></div>
                       <type.icon className="h-6 w-6 text-blue-600 mr-3" />
-                      <h3 className="text-lg font-semibold text-gray-900"></h>{type.category}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900"></h2>{type.category}</h3>
                     </div>
                     <p className="text-gray-700 mb-3">{type.description}</p>
                     <ul className="text-sm text-gray-600 space-y-1"></ul>
@@ -126,15 +126,15 @@ export default function PrivacyPage() {
 
             {/* How We Use Information */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
-              <div className="grid md:grid-cols-2 gap-6"></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h2>How We Use Your Information</h2>
+              <div className="grid md:grid-cols-2 gap-6">
                 {purposes.map((purpose, index) => (</div>
                   <div></div>
                     <div></div>
                       <purpose.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div></div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>{purpose.title}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2"></h2>{purpose.title}</h3>
                       <p className="text-gray-700">{purpose.description}</p>
                     </div>
                   </div>
@@ -144,12 +144,12 @@ export default function PrivacyPage() {
 
             {/* Data Security */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Data Security</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h2>Data Security</h2>
               <div></div>
                 <div></div>
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
                   <div></div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Security Measures</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2"></h2>Security Measures</h3>
                     <p className="text-gray-700 mb-4"></p>
                       We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
                     </p>
@@ -166,13 +166,13 @@ export default function PrivacyPage() {
 
             {/* Your Rights */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Your Rights</h2>
-              <div className="grid md:grid-cols-2 gap-6"></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h2>Your Rights</h2>
+              <div className="grid md:grid-cols-2 gap-6">
                 {rights.map((right, index) => (</div>
                   <div></div>
                     <div></div>
                       <right.icon className="h-6 w-6 text-green-600 mr-3" />
-                      <h3 className="text-lg font-semibold text-gray-900"></h>{right.title}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900"></h2>{right.title}</h3>
                     </div>
                     <p className="text-gray-700">{right.description}</p>
                   </div>
@@ -182,26 +182,25 @@ export default function PrivacyPage() {
 
             {/* Contact Information */}
             <section className="bg-gray-50 rounded-lg p-8"></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Contact Us</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h2>Contact Us</h2>
               <p className="text-gray-700 mb-6"></p>
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
-              </p>
+                If you have any questions about this Privacy Policy or our data practices, please contact us: </p>
               <div></div>
                 <div></div>
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>privacy@ziontechgroup.com</span>
+                  <span className="text-gray-700"></span>privacy@ziontechgroup.com</span>
                 </div>
                 <div></div>
                   <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>(302) 464-0950</span>
+                  <span className="text-gray-700"></span>(302 464-0950</span>
                 </div>
                 <div></div>
                   <Globe className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>ziontechgroup.com</span>
+                  <span className="text-gray-700"></span>ziontechgroup.com</span>
                 </div>
                 <div></div>
                   <User className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>Zion Tech Group Privacy Team</span>
+                  <span className="text-gray-700"></span>Zion Tech Group Privacy Team</span>
                 </div>
               </div>
             </section>
@@ -212,7 +211,7 @@ export default function PrivacyPage() {
                 <div></div>
                   <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
                   <div></div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Policy Updates</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2"></h2>Policy Updates</h3>
                     <p className="text-gray-700"></p>
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
                     </p>
@@ -226,3 +225,5 @@ export default function PrivacyPage() {
     </div>
   );)
 }
+
+}}}}

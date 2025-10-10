@@ -24,14 +24,14 @@ class ProductionLogger {}
       level,
       message,
       data,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString(,
       context});
 };
 
     // Only log in development;
     if (this.isDevelopment) {
       switch (level) {
-    // Only log in development
+    // Only log in development;
     if (this.isDevelopment) {}
       switch (level) {}
         case 'debug':
@@ -47,23 +47,23 @@ class ProductionLogger {}
 
     // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {
-    // In production, send critical errors to monitoring service
+    // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {}
       this.sendToMonitoring(entry);)
 }
   }
 
-  private sendToMonitoring(entry: LogEntry): void {,
+  private sendToMonitoring(entry: LogEntry: void {,
     // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {,
       (window as any).gtag('event', 'error_log', {)
         error_message: entry.message}
-        error_context: entry.context),
-  error_timestamp: entry.timestamp),
+        error_context: entry.context,
+  error_timestamp: entry.timestamp,
         event_category: 'Error',
 ,
-  private sendToMonitoring(entry: LogEntry): void {}
-    // Send to analytics/monitoring service
+  private sendToMonitoring(entry: LogEntry: void {}
+    // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {);
         error_message: entry.message,

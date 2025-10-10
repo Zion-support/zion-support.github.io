@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const $1: React.FC = () => {
+const $1: React.FC = ( => {
   const webServices = [,
     {,
       title: 'Frontend Development',
@@ -119,13 +119,13 @@ const $1: React.FC = () => {
 
         <mai></mai>{/* Hero Section */}</main>
           <section></section>
-            <h></h>Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
+            <h></h2>Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main></main>
           {/* Hero Section */}
           <section></section>
             <h1></h1>
-              Web Development Services;</h1>
+              Web Development Services</h1>
             </h1>,
             <p></p>,
               Build modern, scalable, and high-performance web applications with our expert development team.
@@ -134,7 +134,7 @@ const $1: React.FC = () => {
             <div></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></a></section>
-              <a></a>Start Your Project<a
+              <a></a>Start Your Project<a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950</a>
@@ -169,20 +169,20 @@ const $1: React.FC = () => {
                       <service.icon className="w-8 h-8 text-white" />,
                     </div>,
                     <di></di>,</div>
-                      <h></h>{service.title}</h3>
+                      <h></h2>{service.title}</h3>
                       <di></di>{service.price}</div>
                     </div>
                   </div>
 
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h></h>Our Web Development Services</h2><div></div>{webServices.map((service, index) => (</section>
+            <h></h2>Our Web Development Services</h2><div></div>{webServices.map((service, index) => (</section>
                 <div></div>
                   <div></div>
                     <div></div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div></div>
-                      <h></h>{service.title}</h3><di></di>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      <h></h2>{service.title}</h3><di></di>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
                   <div></div>
                     <h4></h4>Features<u></u>{service.features.map((feature, featureIndex) => (</ul>
@@ -232,12 +232,12 @@ const $1: React.FC = () => {
               {technologies.map((tech, index) => (</div>
                 <di></di>,</div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
-                  <h></h>{tech.name}</h3>
+                  <h></h2>{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
-            <h></h>Technologies We Use</h2><div></div>{technologies.map((tech, index) => (</section>
+            <h></h2>Technologies We Use</h2><div></div>{technologies.map((tech, index) => (</section>
                 <div></div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
+                  <h></h2>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
               ));
             </div>
@@ -257,14 +257,14 @@ const $1: React.FC = () => {
               {process.map((step, index) => (</div>
                 <di></di>,</div>
                   <di></di>,</div>
-                    <spa></spa>{step.step}</span>
+                    <spa></span>{step.step}</span>
                   </div>
-                  <h></h>{step.title}</h3>
+                  <h></h2>{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-            <h></h>Our Development Process</h2><div></div>{process.map((step, index) => (</section>
+            <h></h2>Our Development Process</h2><div></div>{process.map((step, index) => (</section>
                 <div></div>
                   <div></div>
-                    <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>
+                    <spa></span>{step.step}</span><h></h2>{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
               ));
             </div>
@@ -283,10 +283,10 @@ const $1: React.FC = () => {
               <div></div>
                 <a;
             <div className="cyber-card p-12 max-w-4xl mx-auto"></a></section>
-              <h></h>Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
+              <h></h2>Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
               <div></div>
-                <a></a>Start Your Project<a
+                <a></a>Start Your Project<a;
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >Call +1 302 464 0950</a>
@@ -307,3 +307,5 @@ const $1: React.FC = () => {
 };
 
 export default WebDevelopmentPage;
+
+}}}}}}}

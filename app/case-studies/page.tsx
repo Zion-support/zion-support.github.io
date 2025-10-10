@@ -21,7 +21,7 @@ interface CaseStudy {
   published: string;
 }
 
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: React.FC = ( => {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
   const caseStudies: CaseStudy[] = [
@@ -173,11 +173,11 @@ const CaseStudiesPage: React.FC = () => {
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+              {caseStudies.map((study => (
                 <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">
-                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute inset-0 bg-black/20">
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex items-center gap-2 text-white text-sm">
                         <span className="bg-purple-500 px-3 py-1 rounded-full">{study.industry}</span>
@@ -185,12 +185,12 @@ const CaseStudiesPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="p-8">
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                       {study.title}
                     </h3>
-                    
+
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-purple-400 mb-2">Client: {study.client}</h4>
                       <p className="text-gray-300 text-sm mb-4">{study.team}</p>
@@ -219,21 +219,21 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <Link
+                      <Link;
                         to={`/case-studies/${study.id}`}
-                        className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                        className="flex items-center gap-2 text-purple-400 hover: text-purple-300 transition-colors"
                       >
-                        Read Full Case Study
+                        Read Full Case Study;
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                         <ExternalLink className="w-4 h-4" />
-                        Share
+                        Share;
                       </button>
                     </div>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -248,36 +248,35 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how we can help transform your business with our AI and IT solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <Link;
                   to="/contact"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Your Project
+                  Start Your Project;
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link
+                <Link;
                   to="/services"
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  Explore Our Services
+                  Explore Our Services;
                 </Link>
               </div>
             </div>
           </section>
-        )}
+        }
 
         {/* Filter Section */}
         <section className="py-8 bg-gray-100">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-4">
               {industries.map((industry) => (
-                <button
+                <button;
                   key={industry}
                   onClick={() => setSelectedIndustry(industry)}
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                    selectedIndustry === industry
-                      ? 'bg-blue-600 text-white'
+                    selectedIndustry === industry ? 'bg-blue-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -294,7 +293,7 @@ const CaseStudiesPage: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">All Case Studies</h2>
               <p className="text-xl text-gray-600">
-                {filteredCaseStudies.length} case stud{filteredCaseStudies.length !== 1 ? 'ies' : 'y'} found
+                {filteredCaseStudies.length} case stud{filteredCaseStudies.length !== 1 ? 'ies' : 'y'} found;
               </p>
             </div>
             <div className="grid gap-8">
@@ -302,7 +301,7 @@ const CaseStudiesPage: React.FC = () => {
                 <div key={study.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="md:flex">
                     <div className="md:w-1/3">
-                      <img
+                      <img;
                         src={study.image}
                         alt={study.title}
                         className="w-full h-48 md:h-full object-cover"
@@ -321,7 +320,7 @@ const CaseStudiesPage: React.FC = () => {
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{study.title}</h3>
                       <p className="text-blue-600 font-medium mb-4">{study.client}</p>
                       <p className="text-gray-600 mb-4">{study.challenge}</p>
-                      
+
                       <div className="grid md:grid-cols-3 gap-4 mb-6">
                         <div className="flex items-center text-sm text-gray-600">
                           <Building className="w-4 h-4 mr-2" />
@@ -346,19 +345,19 @@ const CaseStudiesPage: React.FC = () => {
                           ))}
                           {study.technologies.length > 3 && (
                             <span className="bg-gray-100 text-gray-600 text-sm px-2 py-1 rounded-full">
-                              +{study.technologies.length - 3} more
+                              +{study.technologies.length - 3} more;
                             </span>
                           )}
                         </div>
-                        <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
-                          Read Full Case Study
+                        <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors flex items-center">
+                          Read Full Case Study;
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </button>
                       </div>
                     </div>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
 
             {filteredCaseStudies.length === 0 && (
@@ -380,19 +379,19 @@ const CaseStudiesPage: React.FC = () => {
             <p className="text-xl mb-8 text-blue-100">
               Let's discuss how we can help transform your organization with innovative technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Schedule a Consultation
+                Schedule a Consultation;
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
-                View Our Services
+                View Our Services;
               </button>
             </div>
           </div>
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default CaseStudiesPage;

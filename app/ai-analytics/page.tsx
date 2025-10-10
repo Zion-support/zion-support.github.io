@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AiAnalyticsPage: React.FC = () => {
+const AiAnalyticsPage: React.FC = ( => {
   const features = [
     {
       icon: Brain,
@@ -100,3 +100,5 @@ const AiAnalyticsPage: React.FC = () => {
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
+
+}}

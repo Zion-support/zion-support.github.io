@@ -3,7 +3,7 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
+const ContentPromotionBanner: React.FC = ( => {
   const features = [
     {
       icon: Brain,
@@ -70,14 +70,14 @@ const ContentPromotionBanner: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Zap className="w-5 h-5" />
-              Get Started Today
+              Get Started Today;
             </button>
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              Learn More
+              Learn More;
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
@@ -124,7 +124,7 @@ const ContentPromotionBanner: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
             <p className="text-xl text-gray-300">Experience the benefits that thousands of businesses already enjoy</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center text-gray-300">
@@ -144,20 +144,20 @@ const ContentPromotionBanner: React.FC = () => {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Join the future of business technology. Get started with our AI solutions today and see the difference.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  ;
 };
 
 export default ContentPromotionBanner;

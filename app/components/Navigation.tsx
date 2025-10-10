@@ -190,13 +190,12 @@ const Navigation: React.FC = () => {
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
-            </div>
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -222,13 +221,12 @@ const Navigation: React.FC = () => {
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
-            </div>
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
               <button
@@ -254,13 +252,12 @@ const Navigation: React.FC = () => {
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
-            </div>
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
               <button
@@ -286,13 +283,12 @@ const Navigation: React.FC = () => {
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
-            </div>
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -300,23 +296,23 @@ const Navigation: React.FC = () => {
               Services
             </Link>
             <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing
+              Pricing;
             </Link>
             <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
+              Blog;
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact
+              Contact;
             </Link>
           </div>
           {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg: flex items-center space-x-4">
             <a
               href="tel:+13024640950"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
             >
               <Phone className="w-4 h-4" />
-              <span className="text-sm">(302) 464-0950</span>
+              <span className="text-sm">(302 464-0950</span>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
@@ -342,7 +338,7 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Home
+                Home;
               </Link>
               {/* Mobile AI Services */}
               <div>
@@ -376,8 +372,7 @@ const Navigation: React.FC = () => {
                       View All AI Services →
                     </Link>
                   </div>
-                )}
-              </div>
+                ))</div>
               {/* Mobile IT Services */}
               <div>
                 <button
@@ -401,10 +396,8 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+                    )))</div>
+                ))</div>
               {/* Mobile Micro SAAS */}
               <div>
                 <button
@@ -437,31 +430,30 @@ const Navigation: React.FC = () => {
                       View All Micro SAAS →
                     </Link>
                   </div>
-                )}
-              </div>
+                ))</div>
               <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About
+                About;
               </Link>
               <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
+                Services;
               </Link>
               <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Pricing
+                Pricing;
               </Link>
               <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
+                Blog;
               </Link>
               <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Contact
+                Contact;
               </Link>
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20 space-y-2">
                 <a
-                  href="tel:+13024640950"
+                  href="tel: +13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>(302) 464-0950</span>
+                  <span>(302 464-0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
@@ -477,8 +469,7 @@ const Navigation: React.FC = () => {
               </div>
             </div>
           </div>
-        )}
-      </div>
+        ))</div>
     </nav>
   );
 };

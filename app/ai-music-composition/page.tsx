@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AiMusicCompositionPage: React.FC = () => {
+const AiMusicCompositionPage: React.FC = ( => {
   const features = [
     {
       icon: Brain,
@@ -57,17 +57,17 @@ const AiMusicCompositionPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Music Composition
+              Ai Music Composition;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai music composition solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
+                Get Started;
               </button>
               <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
+                View Demo;
               </button>
             </div>
           </div>
@@ -78,10 +78,10 @@ const AiMusicCompositionPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
+                Key Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
+                Advanced AI technology that drives results;
               </p>
             </div>
 
@@ -117,7 +117,7 @@ const AiMusicCompositionPage: React.FC = () => {
                 Why Choose Our Solution?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
+                Proven results that drive business growth and efficiency;
               </p>
             </div>
 
@@ -138,7 +138,7 @@ const AiMusicCompositionPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -146,10 +146,10 @@ const AiMusicCompositionPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
+                  Contact Us;
                 </button>
                 <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
+                  Learn More;
                 </button>
               </div>
             </div>
@@ -158,7 +158,7 @@ const AiMusicCompositionPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
+  ;
 };
 
 export default AiMusicCompositionPage;

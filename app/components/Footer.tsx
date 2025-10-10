@@ -85,7 +85,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Terms of Service', url: '/terms' }
   ];
   const contactInfo = {
-    phone: '+1 (302) 464-0950',
+    phone: '+1 (302 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST',
@@ -99,12 +99,12 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Brain className="w-5 h-5 mr-2" />
-              AI Services
+              AI Services;
             </h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
@@ -113,7 +113,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -126,12 +126,12 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Cloud className="w-5 h-5 mr-2" />
-              IT Services
+              IT Services;
             </h3>
             <ul className="space-y-2">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
@@ -140,7 +140,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -153,12 +153,12 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Code className="w-5 h-5 mr-2" />
-              Micro SAAS
+              Micro SAAS;
             </h3>
             <ul className="space-y-2">
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
@@ -167,7 +167,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   href="/micro-saas"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -180,12 +180,12 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech
+              Emerging Tech;
             </h3>
             <ul className="space-y-2">
               {emergingTech.map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
@@ -199,12 +199,12 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Users className="w-5 h-5 mr-2" />
-              Company
+              Company;
             </h3>
             <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
@@ -217,7 +217,7 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2 mb-6">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
@@ -259,14 +259,14 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
+              <a href="/privacy" className="text-sm text-gray-400 hover: text-cyan-400 transition-colors">
+                Privacy Policy;
               </a>
               <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
+                Terms of Service;
               </a>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
+                Cookie Policy;
               </a>
             </div>
           </div>

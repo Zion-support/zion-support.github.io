@@ -6,13 +6,13 @@ export const debounce = <T></T> any>(,
   wait: number,
 ): ((...args: Parameters<T></T>) => void) => {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T></T>) => {,
+  return (...args: Parameters<T></T> => {,
     clearTimeout(timeout),
   func: T,
-  wait: number
-): ((...args: Parameters<T></T>) => void) => {}
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T></T>) => {}
+  wait: number;
+): ((...args: Parameters<T></T>) => void => {}
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T></T> => {}
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait);});;)
 }
@@ -21,35 +21,35 @@ export const debounce = <T></T> any>(,
 export const throttle = <T></T> any>(,
   func: T,
   limit: number,
-): ((...args: Parameters<T></T>) => void) => {
+): ((...args: Parameters<T></T>) => void => {
   let inThrottle: boolean,
   return (...args: Parameters<T></T>) => {
-    if (!inThrottle) {,
+    if (!inThrottle {,
       func(...args),
       inThrottle = true;
   func: T,
-  limit: number
-): ((...args: Parameters<T></T>) => void) => {}
-  let inThrottle: boolean
-  return (...args: Parameters<T></T>) => {}
+  limit: number;
+): ((...args: Parameters<T></T>) => void => {}
+  let inThrottle: boolean;
+  return (...args: Parameters<T></T> => {}
     if (!inThrottle) {}
       func(...args)
-      inThrottle = true
+      inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);});;)
 }
   });;)
 }
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void;
+  callback: (entries: IntersectionObserverEntry[] => void;
   options: IntersectionObserverInit = {}
 ) => {}
   const observer = useMemo()
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {)
-            threshold: 0.1),
-            rootMargin: '50px'),
+            threshold: 0.1,
+            rootMargin: '50px',
         ? new IntersectionObserver(callback, {);
             threshold: 0.1,
             rootMargin: '50px',
@@ -59,11 +59,11 @@ export const useIntersectionObserver = (
     [callback, options]
   )
   const observe = useCallback(
-    (element: Element | null) => {,
+    (element: Element | null => {,
       if (observer && element) {,
         observer.observe(element),
   const observe = useCallback()
-    (element: Element | null) => {}
+    (element: Element | null => {}
       if (observer && element) {}
         observer.observe(element)
         return () => observer.unobserve(element);}
@@ -75,7 +75,7 @@ export const debounce = <T></T> any>(fun,
   wai,
   t: number}
 ): ((...arg)
-  s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */});;)
+  s: Parameters<T></T>) => void => {/* TODO: Fix JSX expression */});;)
 }});
 };
 // Throttle utility for performance;
@@ -84,14 +84,14 @@ export const throttle = <T></T> any>(fun,
   limi,
   t: number}
 ): ((...arg)
-  s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */});;)
+  s: Parameters<T></T>) => void => {/* TODO: Fix JSX expression */});;)
 }
   }});
 };
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (callbac,
-  k: (entrie),
-  s: IntersectionObserverEntry[]) => void,
+  k: (entrie,
+  s: IntersectionObserverEntry[] => void,
   option,
   s: IntersectionObserverInit = {}
 ) => {/* TODO: Fix JSX expression */});;)
@@ -100,7 +100,7 @@ export const useIntersectionObserver = (callbac,
     [callback, options]
   );
   const observe = useCallback((elemen)
-  t: Element | null) => {/* TODO: Fix JSX expression */});;)
+  t: Element | null => {/* TODO: Fix JSX expression */});;)
 }
       return () => {});;)
 },
@@ -125,7 +125,7 @@ export const useLazyImage = useCallback((...args) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
-// Image lazy loading hook
+// Image lazy loading hook;
 export const useLazyImage = useCallback((...args) => {}
   const [imageSrc, setImageSrc] = useState(placeholder || '')
   const [isLoaded, setIsLoaded] = useState(false)
@@ -192,29 +192,29 @@ export const usePerformanceMonitoring = useCallback((...args) => {
 }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {
-// Performance monitoring hook
+// Performance monitoring hook;
 export const usePerformanceMonitoring = useCallback((...args) => {}
   const [metrics, setMetrics] = useState<{}
-    fcp?: number
-    lcp?: number
-    fid?: number
-    cls?: number
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
     ttfb?: number;});;)
 }>({});
   useEffect(() => {}
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => {}
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({);
         fcp,
         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart});;)
 });;)
 }
-    // Monitor performance after page load
+    // Monitor performance after page load;
     if (document.readyState === 'complete') {}
       updateMetrics();});;)
 } else {}
@@ -249,19 +249,19 @@ export const useMemoryMonitoring = useCallback((...args) => {
       const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({)
-          usedJSHeapSize: memory.usedJSHeapSize),
-          totalJSHeapSize: memory.totalJSHeapSize),
-// Memory usage monitoring
+          usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
+// Memory usage monitoring;
 export const useMemoryMonitoring = useCallback((...args) => {}
   const [memoryInfo, setMemoryInfo] = useState<{}
-    usedJSHeapSize?: number
-    totalJSHeapSize?: number
+    usedJSHeapSize?: number;
+    totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;});;)
 }>({});
   useEffect(() => {}
-    if (typeof window === 'undefined' || !('memory' in performance)) return
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = useCallback((...args) => {}
-      const memory = (performance as any).memory
+      const memory = (performance as any).memory;
       if (memory) {}
         setMemoryInfo({);
           usedJSHeapSize: memory.usedJSHeapSize,
@@ -316,9 +316,9 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */});;)
 // Resource preloading utility;
 export const preloadResource = useCallback((...args) => {
   if (typeof window === 'undefined') return;
-// Resource preloading utility
+// Resource preloading utility;
 export const preloadResource = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return;
   const link = document.createElement('link')
   link.rel = 'preload'
   link.href = href;
@@ -329,10 +329,10 @@ export const preloadResource = useCallback((...args) => {}
 export const preloadCriticalResources = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
-// Critical resource preloading
+// Critical resource preloading;
 export const preloadCriticalResources = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
+  if (typeof window === 'undefined') return;
+  // Preload critical fonts;
   preloadResource('/fonts/inter-var.woff2', 'font')
   preloadResource('/fonts/inter-var.woff', 'font')
   // Preload critical images;
@@ -361,25 +361,25 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
         const size = (resource as PerformanceResourceTiming).transferSize || 0;
         totalSize += size;
         if (resource.name.includes('.js')) {
-// Bundle size monitoring
+// Bundle size monitoring;
 export const useBundleSizeMonitoring = useCallback((...args) => {}
   const [bundleSize, setBundleSize] = useState<{}
-    totalSize?: number
-    jsSize?: number
-    cssSize?: number
+    totalSize?: number;
+    jsSize?: number;
+    cssSize?: number;
     imageSize?: number;});;)
 }>({});
   useEffect(() => {}
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     const calculateBundleSize = useCallback((...args) => {}
       const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
+      let totalSize = 0;
+      let jsSize = 0;
+      let cssSize = 0;
+      let imageSize = 0;
       resources.forEach((resource) => {}
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
-        totalSize += size
+        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+        totalSize += size;
         if (resource.name.includes('.js')) {}
           jsSize += size;});;)
 } else if (resource.name.includes('.css')) {}
@@ -404,7 +404,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
         imageSize});;)
 });;)
 }
-    // Calculate after page load
+    // Calculate after page load;
     if (document.readyState === 'complete') {}
       calculateBundleSize();});;)
 } else {}
@@ -431,7 +431,7 @@ export default {}
 // Resource preloading utility;
 export const preloadResource = (hre,
   f: string, a)
-  s: string) => {/* TODO: Fix JSX expression */});;)
+  s: string => {/* TODO: Fix JSX expression */});;)
 };
 // Critical resource preloading;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */});;)

@@ -10,7 +10,7 @@ interface FAQ {
   category: string;
 }
 
-const SupportPage: React.FC = () => {
+const SupportPage: React.FC = ( => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
@@ -63,7 +63,7 @@ const SupportPage: React.FC = () => {
       name: 'Phone Support',
       description: 'Speak directly with our technical experts',
       icon: Phone,
-      contact: '+1 (555) 123-4567',
+      contact: '+1 (555 123-4567',
       availability: '24/7 Available',
       color: 'text-blue-400'
     },
@@ -87,7 +87,7 @@ const SupportPage: React.FC = () => {
       name: 'Emergency Support',
       description: 'Critical issues resolved quickly',
       icon: Zap,
-      contact: '+1 (555) 911-TECH',
+      contact: '+1 (555 911-TECH',
       availability: '24/7 Critical Support',
       color: 'text-red-400'
     }
@@ -103,7 +103,7 @@ const SupportPage: React.FC = () => {
   });
 
   const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
+    setExpandedFAQ(expandedFAQ === index ? null : index;
   };
 
   return (
@@ -128,7 +128,7 @@ const SupportPage: React.FC = () => {
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search for help..."
                 value={searchTerm}
@@ -217,7 +217,7 @@ const SupportPage: React.FC = () => {
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
-                  <button
+                  <button;
                     onClick={() => toggleFAQ(index)}
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                   >
@@ -240,9 +240,9 @@ const SupportPage: React.FC = () => {
               <div className="space-y-4">
                 {filteredFAQs.map((faq, index) => (
                   <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200">
-                    <button
-                      className="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
+                    <button;
+                      className="w-full text-left p-6 focus: outline-none focus:ring-2 focus:ring-blue-500"
+                      onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index}
                     >
                       <div className="flex items-center justify-between">
                         <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
@@ -285,14 +285,14 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Can't find what you're looking for? Our expert team is here to help with any questions or issues.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Phone className="w-5 h-5" />
-                  Call Support
+                  Call Support;
                 </button>
                 <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <Mail className="w-5 h-5" />
-                  Email Support
+                  Email Support;
                 </button>
               </div>
             </div>
@@ -300,7 +300,8 @@ const SupportPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default SupportPage;
+}

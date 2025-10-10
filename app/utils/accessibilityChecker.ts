@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const AccessibilityCheckerPage: React.FC = () => {
+const AccessibilityCheckerPage: React.FC = ( => {
   const features = [
     {
       icon: Brain,
@@ -42,7 +42,7 @@ const AccessibilityCheckerPage: React.FC = () => {
     <>
       <div></div>
       <Helmet></Helmet>
-        <titl></titl>AccessibilityChecker | Zion Tech Group</title>
+        <titl></title>AccessibilityChecker | Zion Tech Group</title>
         <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
       </Helmet>
@@ -53,10 +53,10 @@ const AccessibilityCheckerPage: React.FC = () => {
           <div></div>
             <h1></h1>
               <span></span>
-                AccessibilityChecker
+                AccessibilityChecker;
               </span>
               <br />
-              <spa></spa>Solutions</span>
+              <spa></span>Solutions</span>
             </h1>
             <p></p>
               Transform your business with our advanced accessibilitychecker solutions. 
@@ -64,11 +64,11 @@ const AccessibilityCheckerPage: React.FC = () => {
             </p>
             <div></div>
               <button></button>
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button></button>
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -93,7 +93,7 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <div></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h></h>{feature.title}</h3>
+                <h></h2>{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ));
@@ -106,7 +106,7 @@ const AccessibilityCheckerPage: React.FC = () => {
         <div></div>
           <div></div>
             <h2></h2>
-              Key Benefits
+              Key Benefits;
             </h2>
             <p></p>
               Experience the power of our accessibilitychecker solutions for your business.
@@ -137,11 +137,11 @@ const AccessibilityCheckerPage: React.FC = () => {
             <div></div>
               <button></button>
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
               </button>
               <button></button>
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us
+                Email Us;
               </button>
             </div>
           </div>

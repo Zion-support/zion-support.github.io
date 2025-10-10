@@ -2,37 +2,37 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const AIAnalyticsDashboardPage: React.FC = ( => {
   const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive charts.';)
+      description: 'Live data visualization with instant updates and interactive charts.';
 },
     {
       icon: TrendingUp,
       title: 'Predictive Insights',
-      description: 'AI-powered forecasting and trend analysis for better decision making.';)
+      description: 'AI-powered forecasting and trend analysis for better decision making.';
 },
     {
       icon: Users,
       title: 'User Behavior Tracking',
-      description: 'Comprehensive user analytics and engagement metrics tracking.';)
+      description: 'Comprehensive user analytics and engagement metrics tracking.';
 },
     {
       icon: DollarSign,
       title: 'Revenue Analytics',
-      description: 'Detailed financial metrics and revenue optimization insights.';)
+      description: 'Detailed financial metrics and revenue optimization insights.';
 },
     {
       icon: Zap,
       title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.';)
+      description: 'Build personalized dashboards tailored to your business needs.';
 },
     {
       icon: Target,
       title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.';)
+      description: 'Monitor KPIs and business objectives with automated alerts.';
 }
   ];
 
@@ -55,24 +55,24 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
+        <title></title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
         <meta name="keywords" content="AI analytics dashboard, business intelligence, data visualization, real-time analytics, predictive insights, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}</div>
         <section className="pt-24 pb-16 px-4"></section>
           <div></div>
             <div></div>
               <div></div>
                 <BarChart className="w-4 h-4" />
-                <span></spa>AI Analytics Dashboard</span>
+                <span></span>AI Analytics Dashboard</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text"></h1>
                 Real-time Business </h1>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"></spa> Intelligence</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"></span> Intelligence</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
                 Transform your data into actionable insights with our AI-powered analytics dashboard. 
@@ -80,11 +80,11 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </p>
               <div></div>
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
-                  <span></spa>Start Free Trial</span>
+                  <span></span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>
-                  View Demo
+                  View Demo;
                 </button>
               </div>
             </div>
@@ -95,18 +95,18 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <section className="py-16 px-4"></section>
           <div></div>
             <div></div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h>Powerful Analytics Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2>Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Everything you need to make data-driven decisions with confidence
+                Everything you need to make data-driven decisions with confidence;
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (</div>
                 <div></div>
                   <div></div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3"></h>{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3"></h2>{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ));
@@ -118,12 +118,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <section className="py-16 px-4 bg-slate-800/30"></section>
           <div></div>
             <div></div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h>Platform Performance</h2>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2>Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Built for scale and reliability
+                Built for scale and reliability;
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metrics.map((metric, index) => (</div>
                 <div></div>
                   <div></div>
@@ -141,34 +141,34 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <section className="py-16 px-4"></section>
           <div></div>
             <div></div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h>Why Choose Our Dashboard</h2>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2>Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Experience the difference with our AI-powered analytics platform
+                Experience the difference with our AI-powered analytics platform;
               </p>
             </div>
             <div></div>
-              <div className="space-y-6"></div>
+              <div className="space-y-6">
                 {benefits.map((benefit, index) => (</div>
                   <div></div>
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-300 text-lg"></spa>{benefit}</span>
+                    <span className="text-gray-300 text-lg"></span>{benefit}</span>
                   </div>
                 ));
               </div>
               <div></div>
-                <h3 className="text-2xl font-bold text-white mb-4"></h>Success Stories</h3>
+                <h3 className="text-2xl font-bold text-white mb-4"></h2>Success Stories</h3>
                 <div></div>
                   <div></div>
                     <Star className="w-5 h-5 text-yellow-400" />
-                    <span className="text-gray-300"></spa>"Increased revenue by 40% with better insights"</span>
+                    <span className="text-gray-300"></span>"Increased revenue by 40% with better insights"</span>
                   </div>
                   <div></div>
                     <Star className="w-5 h-5 text-yellow-400" />
-                    <span className="text-gray-300"></spa>"Reduced reporting time by 80%"</span>
+                    <span className="text-gray-300"></span>"Reduced reporting time by 80%"</span>
                   </div>
                   <div></div>
                     <Star className="w-5 h-5 text-yellow-400" />
-                    <span className="text-gray-300"></spa>"Improved decision making speed by 3x"</span>
+                    <span className="text-gray-300"></span>"Improved decision making speed by 3x"</span>
                   </div>
                 </div>
               </div>
@@ -184,16 +184,16 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Ready to Transform Your Analytics?
               </h2>
               <p className="text-xl text-gray-300 mb-8"></p>
-                Join thousands of businesses already using our AI analytics dashboard 
+                Join thousands of businesses already using our AI analytics dashboard;
                 to make smarter, data-driven decisions.
               </p>
               <div></div>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
-                  <span></spa>Start Free Trial</span>
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
+                  <span></span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </div>
@@ -201,7 +201,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
     </>
-  );)
+  );
 };
 
 export default AIAnalyticsDashboardPage;
+
+}}}

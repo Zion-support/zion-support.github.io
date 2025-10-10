@@ -17,7 +17,7 @@ interface MicroSaasProduct {
   category: string;
 }
 
-const MicroSaasPage: React.FC = () => {
+const MicroSaasPage: React.FC = ( => {
   const microSaasProducts: MicroSaasProduct[] = [
     {
       id: '1',
@@ -139,7 +139,7 @@ const MicroSaasPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions
+              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
@@ -165,7 +165,7 @@ const MicroSaasPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button
+                <button;
                   key={category}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     category === 'All'
@@ -190,12 +190,11 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product) => (
-                <div
-                  key={product.id}
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasProducts.map((product => (
+                <div key={product.id}
                   className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    product.popular
+                    product.popular;
                       ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
                       : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}
@@ -204,7 +203,7 @@ const MicroSaasPage: React.FC = () => {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                         <Star className="w-4 h-4 fill-current" />
-                        Most Popular
+                        Most Popular;
                       </div>
                       <p className="text-gray-600 mb-4">{product.description}</p>
                       <ul className="space-y-2 mb-6">
@@ -221,12 +220,12 @@ const MicroSaasPage: React.FC = () => {
                           <span className="text-gray-600 ml-2">{product.users}</span>
                         </div>
                       </div>
-                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
-                        Get Started
+                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover: bg-blue-700 transition-colors flex items-center justify-center">
+                        Get Started;
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
-                  )}
+                  }
 
                   <div className="text-center mb-6">
                     <div className="text-4xl mb-4">{product.icon}</div>
@@ -253,15 +252,15 @@ const MicroSaasPage: React.FC = () => {
                   </ul>
 
                   <div className="flex flex-col gap-3">
-                    <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
-                      Start Free Trial
+                    <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover: from-purple-600 hover:to-blue-600 transform hover:scale-105">
+                      Start Free Trial;
                     </button>
                     <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
-                      Learn More
+                      Learn More;
                     </button>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -296,8 +295,8 @@ const MicroSaasPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">All Solutions</h2>
               <p className="text-xl text-gray-600">Explore our complete collection of micro SaaS products</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasProducts.map((product => (
                 <div key={product.id} className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all">
                   <div className="flex items-center mb-4">
                     <div className="bg-gray-100 p-3 rounded-lg mr-4">
@@ -318,7 +317,7 @@ const MicroSaasPage: React.FC = () => {
                     ))}
                     {product.features.length > 3 && (
                       <li className="text-sm text-gray-500">
-                        +{product.features.length - 3} more features
+                        +{product.features.length - 3} more features;
                       </li>
                     )}
                   </ul>
@@ -328,12 +327,12 @@ const MicroSaasPage: React.FC = () => {
                       <span className="text-gray-600 ml-2 text-sm">{product.users}</span>
                     </div>
                   </div>
-                  <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
-                    Learn More
+                  <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover: bg-blue-700 transition-colors flex items-center justify-center">
+                    Learn More;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -343,21 +342,21 @@ const MicroSaasPage: React.FC = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Choose the perfect micro SaaS solution for your business needs and start seeing results today
+              Choose the perfect micro SaaS solution for your business needs and start seeing results today;
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </div>
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default MicroSaasPage;

@@ -14,20 +14,21 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy;
   contentSecurityPolicy: [,
 export interface SecurityHeadersConfig {}
-  contentSecurityPolicy?: string
-  strictTransportSecurity?: string
-  xFrameOptions?: string
-  xContentTypeOptions?: string
-  referrerPolicy?: string
+  contentSecurityPolicy?: string;
+  strictTransportSecurity?: string;
+  xFrameOptions?: string;
+  xContentTypeOptions?: string;
+  referrerPolicy?: string;
   permissionsPolicy?: string;});
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
-  // Content Security Policy
+  // Content Security Policy;
   contentSecurityPolicy: [
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
     "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https: blob:",
+    "img-src 'self' data: http,
+    s: blob:",
     "font-src 'self' data: ",
     "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
     "frame-ancestors 'none'",
@@ -42,7 +43,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   xContentTypeOptions: 'nosniff'
   // Referrer Policy;
   referrerPolicy: 'strict-origin-when-cross-origin'
-  // Permissions Policy (formerly Feature Policy),
+  // Permissions Policy (formerly Feature Policy,
   permissionsPolicy: [,
     'camera=()',
     'microphone=()',

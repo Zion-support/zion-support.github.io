@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 
-const EnterprisePage: React.FC = () => {
+const EnterprisePage: React.FC = ( => {
   const features = [
     {
       icon: Shield,
@@ -92,13 +92,13 @@ const EnterprisePage: React.FC = () => {
 
   return (
     <div></div>
-      <SEOOptimizer
+      <SEOOptimizer;
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
       />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div></div>
@@ -107,7 +107,7 @@ const EnterprisePage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
             Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span>
-              Solutions
+              Solutions;
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
@@ -116,11 +116,11 @@ const EnterprisePage: React.FC = () => {
           </p>
           <div></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"></button>
-              Get Enterprise Consultation
+              Get Enterprise Consultation;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
-              View Case Studies
+              View Case Studies;
             </button>
           </div>
         </div>
@@ -128,11 +128,11 @@ const EnterprisePage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center"></div>
-                <div className="flex justify-center mb-4"></div>
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
                   <stat.icon className="w-12 h-12 text-purple-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2"></di>{stat.number}</div>
@@ -148,16 +148,16 @@ const EnterprisePage: React.FC = () => {
         <div></div>
           <div></div>
             <h2 className="text-4xl font-bold text-white mb-4"></h2>
-              Enterprise-Grade Features
+              Enterprise-Grade Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white"></h>{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white"></h2>{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2"></ul>
@@ -175,13 +175,13 @@ const EnterprisePage: React.FC = () => {
       </section>
 
             <h2 className="text-4xl font-bold text-white mb-4"></h2>
-              Comprehensive Solutions
+              Comprehensive Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               End-to-end enterprise solutions that address every aspect of your business operations.
             </p>
           </div>
-          
+
                     </li>
                   ));
                 </ul>
@@ -210,12 +210,12 @@ const EnterprisePage: React.FC = () => {
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
           <div></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
-              Contact Enterprise Sales
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+              Contact Enterprise Sales;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>
@@ -223,7 +223,9 @@ const EnterprisePage: React.FC = () => {
 
       <Footer />
     </div>
-  );)
+  );
 };
 
 export default EnterprisePage;
+
+}}

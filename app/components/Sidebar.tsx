@@ -2,26 +2,9 @@
 import React from 'react';
 import React, { memo, useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  X, 
-  Menu, 
-  Home, 
-  Users, 
-  Settings, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  ChevronDown, 
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Clock;)
-} from 'lucide-react';
+import { X, Menu, Home, Users, Settings, Brain, Cloud, Shield, Code, BarChart, ChevronDown, ChevronRight, Phone, Mail, MapPin, Clock;) } from 'lucide-react';
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC = ( => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
@@ -40,7 +23,7 @@ const Sidebar: React.FC = () => {
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);)
+      newExpanded.delete(section);
 } else {
       newExpanded.add(section);)
 }
@@ -133,16 +116,16 @@ const Sidebar: React.FC = () => {
   ];
 
   const contactInfo = {
-    phone: '(302) 464-0950',
+    phone: '(302 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST';)
+    hours: 'Mon-Fri 9AM-6PM EST';
 };
 
   return (
     <>
       {/* Mobile Menu Button */}
-      <button
+      <button;
         onClick={() =></button> setIsOpen(true);
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
@@ -152,29 +135,30 @@ const Sidebar: React.FC = () => {
 
       {/* Sidebar Overlay */}
       {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+        <div;
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden"
           onClick={() =></div> setIsOpen(false);
         />
-      );
+      ;
 
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full';)
-} lg:translate-x-0 lg:static lg:z-auto`}></aside>
-        <div className="flex flex-col h-full"></div>
+        isOpen ? 'translate-x-0' : '-translate-x-full')
+} lg:translate-x-0 lg: static,
+    lg:z-auto`}></aside>
+        <div className="flex flex-col h-full">
           {/* Header */}</div>
-          <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
+          <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
             <Link to="/" className="flex items-center space-x-3" onClick={() =></Link> setIsOpen(false);>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div></div>
-                <h2 className="text-xl font-bold text-white cyber-text"></h>Zion Tech Group</h2>
+                <h2 className="text-xl font-bold text-white cyber-text"></h2>Zion Tech Group</h2>
                 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
               </div>
             </Link>
-            <button
+            <button;
               onClick={() =></button> setIsOpen(false);
               className="lg:hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
@@ -184,37 +168,36 @@ const Sidebar: React.FC = () => {
           </div>
 
           {/* Navigation */}
-          <div className="flex-1 overflow-y-auto py-6"></div>
+          <div className="flex-1 overflow-y-auto py-6">
             <nav className="space-y-2 px-4"></nav>
               {navigationSections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="space-y-1"></div>
-                  <button
+                <div key={sectionIndex} className="space-y-1">
+                  <button;
                     onClick={() =></button> section.key && toggleSection(section.key);
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
-                    <span></spa>{section.title}</span>
+                    <span></span>{section.title}</span>
                     {section.key && (
                       expandedSections.has(section.key) ? 
                         <ChevronDown className="w-4 h-4" /> : 
                         <ChevronRight className="w-4 h-4" />
                     );
                   </button>
-                  
+
                   {(!section.key || expandedSections.has(section.key)) && (
-                    <div className="ml-4 space-y-1"></div>
+                    <div className="ml-4 space-y-1">
                       {section.items.map((item, itemIndex) => (</div>
-                        <Link
+                        <Link;
                           key={itemIndex}
                           to={item.path}
                           onClick={() =></Link> setIsOpen(false);
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
-                            location.pathname === item.path
-                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50';)
+                            location.pathname === item.path ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
+                              : 'text-gray-300 hover: text-white hover:bg-slate-800/50';
 }`}
                         >
                           <item.icon className="w-4 h-4 flex-shrink-0" />
-                          <span></spa>{item.name}</span>
+                          <span></span>{item.name}</span>
                         </Link>
                       ));
                     </div>
@@ -225,24 +208,24 @@ const Sidebar: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="border-t border-slate-700/50 p-6"></div>
-            <h3 className="text-sm font-semibold text-cyan-400 mb-4"></h>Contact Information</h3>
-            <div className="space-y-3 text-sm text-gray-300"></div>
-              <div className="flex items-center space-x-3"></div>
+          <div className="border-t border-slate-700/50 p-6">
+            <h3 className="text-sm font-semibold text-cyan-400 mb-4"></h2>Contact Information</h3>
+            <div className="space-y-3 text-sm text-gray-300">
+              <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span></spa>{contactInfo.phone}</span>
+                <span></span>{contactInfo.phone}</span>
               </div>
-              <div className="flex items-center space-x-3"></div>
+              <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="truncate"></spa>{contactInfo.email}</span>
+                <span className="truncate"></span>{contactInfo.email}</span>
               </div>
-              <div className="flex items-center space-x-3"></div>
+              <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-xs"></spa>{contactInfo.address}</span>
+                <span className="text-xs"></span>{contactInfo.address}</span>
               </div>
-              <div className="flex items-center space-x-3"></div>
+              <div className="flex items-center space-x-3">
                 <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-xs"></spa>{contactInfo.hours}</span>
+                <span className="text-xs"></span>{contactInfo.hours}</span>
               </div>
           </div>
       </aside>
@@ -253,3 +236,5 @@ const Sidebar: React.FC = () => {
 Sidebar.displayName = 'Sidebar';
 
 export default Sidebar;
+
+}}}}}}}}}}}

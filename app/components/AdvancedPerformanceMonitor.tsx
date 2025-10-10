@@ -7,17 +7,17 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-  memory: number | null;)
+  memory: number | null;
 }
 
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;)
+  enableRealTimeMonitoring?: boolean;
 }
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorProps> = ({
   onMetricsUpdate,
-  enableRealTimeMonitoring = true
+  enableRealTimeMonitoring = true;
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -25,12 +25,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
     fid: null,
     cls: null,
     ttfb: null,
-    memory: null
+    memory: null;
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
 
-  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
+  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics> => {
     setMetrics(prev => ({ ...prev, ...newMetrics }));
     if (onMetricsUpdate) {
       onMetricsUpdate({ ...metrics, ...newMetrics });
@@ -64,7 +64,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
     let clsValue = 0;
     const clsEntries = performance.getEntriesByType('layout-shift');
     clsEntries.forEach((entry: any) => {
-      if (!entry.hadRecentInput) {
+      if (!entry.hadRecentInput {
         clsValue += entry.value;
       }
     });
@@ -76,10 +76,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
       updateMetrics({ ttfb: navigationEntry.responseStart - navigationEntry.requestStart });
     }
 
-    // Measure memory usage
+    // Measure memory usage;
     if ('memory' in performance) {
       const memory = (performance as any).memory;
-      updateMetrics({ memory: memory.usedJSHeapSize / 1024 / 1024 }); // Convert to MB
+      updateMetrics({ memory: memory.usedJSHeapSize / 1024 / 1024 }); // Convert to MB;
     }
   }, [updateMetrics]);
 
@@ -88,14 +88,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
 
     const startMonitoring = () => {
       setIsMonitoring(true);
-      
-      // Initial measurement
+
+      // Initial measurement;
       measurePerformance();
 
-      // Set up periodic monitoring
+      // Set up periodic monitoring;
       const interval = setInterval(measurePerformance, 5000);
 
-      // Set up performance observer for real-time updates
+      // Set up performance observer for real-time updates;
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
@@ -108,7 +108,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
             if (!cls.hadRecentInput) {
               setMetrics(prev => ({ 
                 ...prev, 
-                cls: (prev.cls || 0) + cls.value 
+                cls: (prev.cls || 0 + cls.value;
               }));
             }
           }
@@ -143,7 +143,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
   return (
     <div className="performance-monitor p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
       <h3 className="text-lg font-semibold text-white mb-4">Performance Metrics</h3>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="metric-item">
           <div className="flex justify-between items-center mb-1">
@@ -210,13 +210,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
         </div>
 
         {metrics.memory && (
-          <div className="metric-item md:col-span-2">
+          <div className="metric-item md: col-span-2">
             <div className="flex justify-between items-center mb-1">
               <span className="text-sm text-gray-300">Memory Usage</span>
               <span className="text-xs text-gray-400">MB</span>
             </div>
             <div className="text-lg font-mono text-white">
-              {metrics.memory.toFixed(2)} MB
+              {metrics.memory.toFixed(2} MB;
             </div>
           </div>
         );
@@ -238,3 +238,5 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
 };
 
 export default AdvancedPerformanceMonitor;
+
+}

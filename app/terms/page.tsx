@@ -4,7 +4,7 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
 
 export default function TermsPage() {
   const lastUpdated = 'January 1, 2024';
-  
+
   const sections = [
     {
       title: 'Acceptance of Terms',
@@ -19,12 +19,12 @@ export default function TermsPage() {
     {
       title: 'Service Availability',
       icon: Server,
-      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.';)
+      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.';
 },
     {
       title: 'Limitation of Liability',
       icon: Shield,
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.';)
+      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.';
 },
     {
       title: 'Privacy Policy',
@@ -44,7 +44,7 @@ export default function TermsPage() {
     {
       title: 'Governing Law',
       icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';)
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';
 }
   ];
 
@@ -56,7 +56,7 @@ export default function TermsPage() {
             Terms of Service</h1>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
-            Please read these terms carefully before using our services
+            Please read these terms carefully before using our services;
           </p>
           <div></div>
             <Calendar className="h-4 w-4 mr-2" />
@@ -68,7 +68,7 @@ export default function TermsPage() {
       <div></div>
         <div></div>
           <div></div>
-            <div className="space-y-8"></div>
+            <div className="space-y-8">
               {sections.map((section, index) => (</div>
                 <div></div>
                   <div></div>
@@ -89,26 +89,25 @@ export default function TermsPage() {
             </div>
 
             <div></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h2>Contact Information</h3>
               <p className="text-gray-700 mb-6"></p>
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
+                If you have any questions about these Terms of Service, please contact us: </p>
               <div></div>
                 <div></div>
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>legal@ziontechgroup.com</span>
+                  <span className="text-gray-700"></span>legal@ziontechgroup.com</span>
                 </div>
                 <div></div>
                   <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>(302) 464-0950</span>
+                  <span className="text-gray-700"></span>(302 464-0950</span>
                 </div>
                 <div></div>
                   <Globe className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>ziontechgroup.com</span>
+                  <span className="text-gray-700"></span>ziontechgroup.com</span>
                 </div>
                 <div></div>
                   <User className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>Zion Tech Group Legal Team</span>
+                  <span className="text-gray-700"></span>Zion Tech Group Legal Team</span>
                 </div>
               </div>
             </div>
@@ -123,4 +122,6 @@ export default function TermsPage() {
       </div>
     </div>
   );)
+}
+
 }

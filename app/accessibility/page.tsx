@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 
-const AccessibilityPage: React.FC = () => {
+const AccessibilityPage: React.FC = ( => {
   const features = [
     {
       icon: Eye,
@@ -81,21 +81,21 @@ const AccessibilityPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Accessibility
+              Accessibility;
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Solutions
+                Solutions;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure 
+              Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure;
               your applications are usable by people of all abilities and comply with international standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                Get Accessibility Audit
+                Get Accessibility Audit;
               </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -106,7 +106,7 @@ const AccessibilityPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Comprehensive Accessibility Features
+                Comprehensive Accessibility Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our solutions cover all aspects of digital accessibility to ensure inclusive experiences for all users.
@@ -115,7 +115,7 @@ const AccessibilityPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div
+                <div;
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
@@ -145,7 +145,7 @@ const AccessibilityPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Standards Compliance
+                Standards Compliance;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We ensure full compliance with international accessibility standards and regulations.
@@ -154,7 +154,7 @@ const AccessibilityPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standards.map((standard, index) => (
-                <div
+                <div;
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center"
                 >
@@ -176,7 +176,7 @@ const AccessibilityPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Make Your Digital Experience Accessible?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -184,10 +184,10 @@ const AccessibilityPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Accessibility Audit
+                  Get Accessibility Audit;
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Contact Us
+                  Contact Us;
                 </button>
               </div>
             </div>
@@ -195,7 +195,7 @@ const AccessibilityPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default AccessibilityPage;

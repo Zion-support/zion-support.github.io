@@ -19,7 +19,7 @@ interface JobPosition {
   featured?: boolean;
 }
 
-const CareersPage: React.FC = () => {
+const CareersPage: React.FC = ( => {
   const openPositions: JobPosition[] = [
     {
       id: '1',
@@ -45,7 +45,7 @@ const CareersPage: React.FC = () => {
       ],
       salary: '$120,000 - $180,000',
       posted: '2024-01-15',
-      featured: true
+      featured: true;
     },
     {
       id: '2',
@@ -69,7 +69,7 @@ const CareersPage: React.FC = () => {
         'Professional development budget'
       ],
       posted: '1 week ago',
-      featured: false
+      featured: false;
     },
     {
       id: '3',
@@ -93,7 +93,7 @@ const CareersPage: React.FC = () => {
         'Professional development budget'
       ],
       posted: '3 days ago',
-      featured: false
+      featured: false;
     },
     {
       id: '4',
@@ -117,7 +117,7 @@ const CareersPage: React.FC = () => {
         'Professional development budget'
       ],
       posted: '5 days ago',
-      featured: false
+      featured: false;
     }
   ];
 
@@ -168,17 +168,17 @@ const CareersPage: React.FC = () => {
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our Team
+              Join Our Team;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Be part of a team that's shaping the future of AI and technology. We're looking for passionate individuals who want to make a difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                View Open Positions
+                View Open Positions;
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                Learn About Our Culture
+                Learn About Our Culture;
               </button>
             </div>
           </div>
@@ -206,8 +206,8 @@ const CareersPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {openPositions.map((position) => (
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+              {openPositions.map((position => (
                 <div key={position.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div>
@@ -216,7 +216,7 @@ const CareersPage: React.FC = () => {
                     </div>
                     {position.featured && (
                       <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Featured
+                        Featured;
                       </span>
                     )}
                   </div>
@@ -254,12 +254,12 @@ const CareersPage: React.FC = () => {
 
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">Posted {position.posted}</span>
-                    <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
-                      Apply Now
+                    <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
+                      Apply Now;
                     </button>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -291,12 +291,12 @@ const CareersPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                  Send Your Resume
+                  Send Your Resume;
                 </button>
                 <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                  Learn More About Us
+                  Learn More About Us;
                 </button>
               </div>
             </div>
@@ -304,7 +304,7 @@ const CareersPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default CareersPage;

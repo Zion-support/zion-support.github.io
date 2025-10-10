@@ -1,162 +1,96 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
 
-// Function to fix JSX syntax errors
-function fixJSXSyntax(content) {
-  let fixed = content;
-  
-  // Fix missing closing tags by analyzing the structure
-  const openTags = [];
-  const lines = fixed.split('\n');
-  let result = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    result.push(line);
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Track opening tags
-    const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/g);
-    if (openTagMatch) {
-      for (const tag of openTagMatch) {
-        const tagName = tag.match(/<(\w+)/)?.[1];
-        if (tagName && !tag.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-          openTags.push(tagName);
-        }
-      }
-    }
+    // Fix common syntax errors
     
-    // Track closing tags
-    const closeTagMatch = line.match(/<\/(\w+)>/g);
-    if (closeTagMatch) {
-      for (const tag of closeTagMatch) {
-        const tagName = tag.match(/<\/(\w+)>/)?.[1];
-        if (tagName) {
-          const lastIndex = openTags.lastIndexOf(tagName);
-          if (lastIndex !== -1) {
-            openTags.splice(lastIndex, 1);
-          }
-        }
-      }
-    }
-  }
-  
-  // Add missing closing tags at the end
-  for (let i = openTags.length - 1; i >= 0; i--) {
-    result.push(`</${openTags[i]}>`);
-  }
-  
-  return result.join('\n');
-}
-
-// Function to fix TypeScript interface issues
-function fixTypeScriptSyntax(content) {
-  let fixed = content;
-  
-  // Fix missing commas in interfaces
-  fixed = fixed.replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2');
-  
-  // Fix missing semicolons
-  fixed = fixed.replace(/([^;}])\n\s*}/g, '$1;\n}');
-  
-  // Fix missing closing braces
-  fixed = fixed.replace(/([^}])\n\s*$/g, '$1\n}');
-  
-  // Fix property signature issues
-  fixed = fixed.replace(/(\w+)\s*:\s*([^,;}\n]+)(?=\n\s*[^:])/g, '$1: $2;');
-  
-  return fixed;
-}
-
-// Function to fix specific parsing errors
-function fixParsingErrors(content) {
-  let fixed = content;
-  
-  // Fix JSX expressions must have one parent element
-  fixed = fixed.replace(/(\s*)<(\w+)([^>]*)>\s*\n\s*<(\w+)([^>]*)>/g, '$1<>\n$1  <$2$3>\n$1    <$4$5>');
-  fixed = fixed.replace(/(\s*)<\/\w+>\s*\n\s*<\/\w+>\s*\n\s*<\/\w+>/g, '$1    </div>\n$1  </div>\n$1</>');
-  
-  // Fix missing closing tags for common elements
-  const commonElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside'];
-  for (const element of commonElements) {
-    const regex = new RegExp(`<${element}([^>]*)>(?!.*</${element}>)`, 'g');
-    fixed = fixed.replace(regex, (match, attrs) => {
-      // Count opening and closing tags
-      const openMatches = (fixed.match(new RegExp(`<${element}`, 'g')) || []).length;
-      const closeMatches = (fixed.match(new RegExp(`</${element}>`, 'g')) || []).length;
-      
-      if (openMatches > closeMatches) {
-        return match + `</${element}>`;
-      }
-      return match;
-    });
-  }
-  
-  // Fix missing commas in object literals
-  fixed = fixed.replace(/([^,}])\n\s*}/g, '$1,\n}');
-  
-  // Fix missing parentheses
-  fixed = fixed.replace(/([^)])\n\s*}/g, '$1)\n}');
-  
-  return fixed;
-}
-
-// Main function to process files
-async function processFiles() {
-  console.log('Starting syntax error fixes...');
-  
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts'
-  ];
-  
-  let processedCount = 0;
-  let errorCount = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        '*.disabled/**',
-        '*-disabled/**',
-        'backup*/**',
-        '**/*.backup',
-        '**/*.broken'
-      ]
+    // Fix malformed JSX closing tags
+    content = content.replace(/<\/titl>/g, '</title>');
+    content = content.replace(/<\/spa>/g, '</span>');
+    content = content.replace(/<\/h>/g, '</h2>');
+    content = content.replace(/<\/div>/g, '</div>');
+    
+    // Fix missing commas in object properties
+    content = content.replace(/(\w+):\s*(\w+)\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*)"\s*>\s*<\/div>/g, 'className="$1">');
+    
+    // Fix missing closing tags for common elements
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
+    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1>');
+    content = content.replace(/<h1([^>]*)>\s*$/gm, '<h1$1>');
+    content = content.replace(/<h2([^>]*)>\s*$/gm, '<h2$1>');
+    content = content.replace(/<h3([^>]*)>\s*$/gm, '<h3$1>');
+    content = content.replace(/<p([^>]*)>\s*$/gm, '<p$1>');
+    
+    // Fix malformed function declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');
+    
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*$/gm, '$1;');
+    
+    // Fix malformed imports
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s+'([^']+)';/g, (match, imports, module) => {
+      const cleanImports = imports.split(',').map(imp => imp.trim()).join(', ');
+      return `import { ${cleanImports} } from '${module}';`;
     });
     
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check if file has syntax issues
-        if (content.includes('JSX expressions must have one parent element') || 
-            content.includes('Property or signature expected') ||
-            content.includes('Expected corresponding JSX closing tag') ||
-            content.includes('Declaration or statement expected')) {
-          
-          console.log(`Processing syntax errors in: ${file}`);
-          
-          let fixed = fixJSXSyntax(content);
-          fixed = fixTypeScriptSyntax(fixed);
-          fixed = fixParsingErrors(fixed);
-          
-          fs.writeFileSync(file, fixed);
-          processedCount++;
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        errorCount++;
+    // Fix malformed JSX expressions
+    content = content.replace(/\{\s*(\w+)\s*\}\s*$/gm, '{$1}');
+    
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      content += '\n'.repeat(openBraces - closeBraces) + '}'.repeat(openBraces - closeBraces);
+    }
+    
+    // Fix malformed TypeScript types
+    content = content.replace(/:\s*(\w+)\s*\[\]/g, ': $1[]');
+    content = content.replace(/:\s*(\w+)\s*<\s*(\w+)\s*>/g, ': $1<$2>');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s+$/gm, '');
+    
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += findAndFixFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
       }
     }
   }
   
-  console.log(`\nSyntax error fixes complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
+  return fixedCount;
 }
 
-// Run the script
-processFiles().catch(console.error);
+console.log('Starting syntax error fixes...');
+const fixedCount = findAndFixFiles('./app');
+console.log(`Fixed ${fixedCount} files with syntax errors.`);

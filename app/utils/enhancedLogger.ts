@@ -99,7 +99,7 @@ export class EnhancedLogger {
   private static instance: EnhancedLogger,
   private config: LoggerConfig,
   private logs: LogEntry[] = [],
-  private performanceMarks: Map<string></string> = new Map()
+  private performanceMarks: Map<string></string> = new Map(
 
   private constructor(config: Partial<LoggerConfig></LoggerConfig> = {}); {
     this.config = { ...defaultConfig, ...config }
@@ -295,7 +295,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * logger.endPerformance('api_call'); // Logs the duration;
    * ``
    */
-  public startPerformance(markName: string): void {,
+  public startPerformance(markName: string: void {,
     if (!this.config.enablePerformance) return;
     this.performanceMarks.set(markName, performance.now())
    * @example;`
@@ -306,7 +306,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * ```
    */
   public startPerformance(markNam)
-  e: string): void {/* TODO: Fix JSX expression */});;)
+  e: string: void {/* TODO: Fix JSX expression */});;)
 }
   /**
    * End a performance measurement and log the duration;
@@ -326,7 +326,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     this.performanceMarks.delete(markName)
     this.info(`Performance: ${markName}`)
       {
-        duration: `${duration.toFixed(2);ms`,
+        duration: `${duration.toFixed(2;ms`,
   public endPerformance(markNam)
   e: string, data?: Record<string></string>): number | undefined {/* TODO: Fix JSX expression */}`
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
@@ -337,7 +337,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     this.info(`Performanc,`
   e: ${markName}`,
       {/* TODO: Fix JSX expression */});`
-  n: `${duration.toFixed(2);ms`,
+  n: `${duration.toFixed(2;ms`,
         ...data});
 },
       'PerformanceMonitor'
@@ -363,15 +363,15 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     // Check if log level meets minimum threshold;
     if (level < this.config.minLevel) return;
     const logEntry: LogEntry = {,
-      id: this.generateLogId(),
+      id: this.generateLogId(,
       level,
       message,
-      timestamp: new Date(),
+      timestamp: new Date(,
       data,
       source,
       stack,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
+      userId: this.getUserId(,
+      sessionId: this.getSessionId(,
       environment: this.config.environment});
 }
     // Store log entry;
@@ -424,7 +424,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @private;
    * @param entry - Log entry to output;
    */
-  private logToConsole(entry: LogEntry): void {,
+  private logToConsole(entry: LogEntry: void {,
     const levelName = LogLevel[entry.level],
     const timestamp = entry.timestamp.toISOString(),
     const source = entry.source ? ` [${entry.source}]` : ''
@@ -438,11 +438,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         data: entry.data});
 }
       switch (entry.level) {
-        case LogLevel.DEBUG: if (this.isDevelopment()) {,
+        case LogLevel.DEBUG: if (this.isDevelopment() {,
             logger.debug(message, structuredLog);)
 }
           break;
-        case LogLevel.INFO: if (this.isDevelopment()) {,
+        case LogLevel.INFO: if (this.isDevelopment() {,
             logger.info(message, structuredLog);)
 }
           break;
@@ -459,11 +459,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     } else {
       // Simple console output;
       switch (entry.level) {
-        case LogLevel.DEBUG: if (this.isDevelopment()) {,
+        case LogLevel.DEBUG: if (this.isDevelopment() {,
             logger.debug(message, entry.data);)
 }
           break;
-        case LogLevel.INFO: if (this.isDevelopment()) {,
+        case LogLevel.INFO: if (this.isDevelopment() {,
             logger.info(message, entry.data);)
 }
           break;
@@ -473,7 +473,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         case LogLevel.ERROR: case LogLevel.FATAL:,
           logger.error(message, entry.data)
   private logToConsole(entr)
-  y: LogEntry): void {/* TODO: Fix JSX expression */}`
+  y: LogEntry: void {/* TODO: Fix JSX expression */}`
     const source = entry.source ? ` [${entry.source}]` : '';`
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (this.config.enableStructured) {/* TODO: Fix JSX expression */});;)
@@ -482,8 +482,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 }
           break;
         case LogLevel.INF,
-  O:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */});;)
+  O: if (this.isDevelopment() {/* TODO: Fix JSX expression */});;)
 }
           break;
         case LogLevel.WAR,
@@ -504,8 +503,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 }
           break;
         case LogLevel.INF,
-  O:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */});;)
+  O: if (this.isDevelopment() {/* TODO: Fix JSX expression */});;)
 }
           break;
         case LogLevel.WAR,
@@ -527,23 +525,23 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @private;
    * @param entry - Log entry to send;
    */
-  private async logToRemote(entry: LogEntry): Promise<void></void> {,
+  private async logToRemote(entry: LogEntry: Promise<void></void> {,
     if (!this.config.remoteEndpoint) return;
     try {,
       await fetch(this.config.remoteEndpoint, {)
-        method: 'POST'),
+        method: 'POST',
   headers: {)
           'Content-Type': 'application/json');)
         body: JSON.stringify({)
-          ...entry),
-          timestamp: entry.timestamp.toISOString(););)
+          ...entry,
+          timestamp: entry.timestamp.toISOString(););
 });;)
 } catch (error) {
       // Fallback to console if remote logging fails;
       logger.error('Failed to send log to remote endpoint:', {)
         error: error instanceof Error ? error.message : String(error);)
   private async logToRemote(entr)
-  y: LogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});;)
+  y: LogEntry: Promise<void></void> {/* TODO: Fix JSX expression */});;)
 },
         bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */});;)
@@ -614,10 +612,10 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Source identifier;
    * @returns Array of log entries from the specified source;
    */
-  public getLogsBySource(source: string): LogEntry[] {,
+  public getLogsBySource(source: string: LogEntry[] {,
     return this.logs.filter(log => log.source === source),
   public getLogsBySource(sourc)
-  e: string): LogEntry[] {/* TODO: Fix JSX expression */});;)
+  e: string: LogEntry[] {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Get log statistics;
@@ -666,10 +664,10 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    *
    * @param config - Partial configuration to merge;
    */
-  public configure(config: Partial<LoggerConfig></LoggerConfig>): void {,
+  public configure(config: Partial<LoggerConfig></LoggerConfig>: void {,
     this.config = { ...this.config, ...config }
   public configure(confi)
-  g: Partial<LoggerConfig></LoggerConfig>): void {/* TODO: Fix JSX expression */}
+  g: Partial<LoggerConfig></LoggerConfig>: void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config }});
 }
   /**
@@ -680,7 +678,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   public exportLogs(): string {
     return JSON.stringify(this.logs.map(log => ({)
         ...log)
-        timestamp: log.timestamp.toISOString();)),
+        timestamp: log.timestamp.toISOString();),
       null,
       2;
     );)

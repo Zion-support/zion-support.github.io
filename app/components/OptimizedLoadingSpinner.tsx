@@ -2,7 +2,6 @@
 import React from 'react';
 import React, { memo, useMemo } from 'react';
 
-
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
@@ -59,17 +58,17 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {[0, 1, 2].map(i => (</div>
-                <div
+                <div;
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 />
-              ));</div>
+              ))</div>
           );
 
         case 'pulse':
           return (
-            <div
+            <div;
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status'
               aria-label='Loading'
@@ -88,21 +87,20 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></Optimized
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {[0, 1, 2, 3].map(i => (</div>
-                <div
-                  key={i}
+                <div key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{
                     height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,;)
+                    animationDelay: `${i * 0.1}s`,)
 }}
                 />
-              ));</div>
+              ))</div>
           );
 
         case 'spinner':
         default:
           return (
-            <div
+            <div;
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
               aria-label='Loading'
@@ -132,3 +130,5 @@ OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 
 export default OptimizedLoadingSpinner;
 }
+
+}}

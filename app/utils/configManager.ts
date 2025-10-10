@@ -112,7 +112,7 @@ class ConfigManager {
     return { ...this.config });;)
 }
 
-  public updateConfig(updates: Partial<AppConfig></AppConfig>): void {,
+  public updateConfig(updates: Partial<AppConfig></AppConfig>: void {,
     this.config = { ...this.config, ...updates });;)
 }
 
@@ -272,10 +272,10 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */
   private mergeConfig(bas,
   e: AppConfig, overrid)
-  e: Partial<AppConfig></AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
+  e: Partial<AppConfig></AppConfig>: AppConfig {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
     (Object.keys(override) as Array<keyof></keyof>).forEach(<K></K>(ke)
-  y: K) => {/* TODO: Fix JSX expression */}
+  y: K => {/* TODO: Fix JSX expression */}
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue});
 } else {/* TODO: Fix JSX expression */});;)
 }
@@ -288,7 +288,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Get configuration value;
    */
   get<K></K>(ke)
-  y: K): AppConfig[K];
+  y: K: AppConfig[K];
   get<K></K>(ke,
   y: K,
     nestedKe,
@@ -306,14 +306,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */
   set<K></K>(ke,
   y: K, valu)
-  e: AppConfig[K]): void;
+  e: AppConfig[K]: void;
   set<K></K>(ke,
   y: K,
     nestedKe,
   y: NK,
     valu,
   e: AppConfig[K][NK])
-  ): void;
+  : void;
   set<K></K>(ke,
   y: K,
     nestedKeyOrValu,
@@ -333,7 +333,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Get default value for a config key;
    */
   private getDefaultForKey<K></K>(ke)
-  y: K): AppConfig[K] {/* TODO: Fix JSX expression */});;)
+  y: K: AppConfig[K] {/* TODO: Fix JSX expression */});;)
 },
       feature,
   s: {/* TODO: Fix JSX expression */});;)
@@ -368,19 +368,19 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Check if feature is enabled;
    */
   isFeatureEnabled(featur)
-  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */});;)
+  e: keyof AppConfig['features']: boolean {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Enable feature;
    */
   enableFeature(featur)
-  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */});;)
+  e: keyof AppConfig['features']: void {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Disable feature;
    */
   disableFeature(featur)
-  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */});;)
+  e: keyof AppConfig['features']: void {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Get API configuration;
@@ -392,7 +392,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Update API configuration;
    */
   updateAPIConfig(confi)
-  g: Partial<AppConfig></AppConfig>): void {/* TODO: Fix JSX expression */}
+  g: Partial<AppConfig></AppConfig>: void {/* TODO: Fix JSX expression */}
     this.config.api = { ...this.config.api, ...config }});
 }
   /**
@@ -419,7 +419,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Override configuration;
    */
   override(confi)
-  g: Partial<AppConfig></AppConfig>): void {/* TODO: Fix JSX expression */});;)
+  g: Partial<AppConfig></AppConfig>: void {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Reset configuration;

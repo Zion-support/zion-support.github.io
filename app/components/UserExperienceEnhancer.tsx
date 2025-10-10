@@ -11,12 +11,12 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
-    // UX enhancement logic
+    // UX enhancement logic;
     const enhanceUX = () => {
-      // Add smooth scrolling
+      // Add smooth scrolling;
       document.documentElement.style.scrollBehavior = 'smooth';
 
-      // Add loading states for interactive elements
+      // Add loading states for interactive elements;
       const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {
         element.addEventListener('click', () => {
@@ -27,7 +27,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
         });
       });
 
-      // Add focus indicators
+      // Add focus indicators;
       const style = document.createElement('style');
       style.textContent = `
         *:focus {

@@ -3,14 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
+const ContentStatistics: React.FC = ( => {
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
     satisfaction: 0,
     years: 0,
     countries: 0,
-    uptime: 0
+    uptime: 0;
   });
 
   const targetCounters = {
@@ -19,7 +19,7 @@ const ContentStatistics: React.FC = () => {
     satisfaction: 99,
     years: 15,
     countries: 50,
-    uptime: 99
+    uptime: 99;
   };
 
   const statistics = [
@@ -133,7 +133,7 @@ const ContentStatistics: React.FC = () => {
   ];
 
   useEffect(() => {
-    const duration = 3000; // 3 seconds
+    const duration = 3000; // 3 seconds;
     const steps = 60;
     const stepDuration = duration / steps;
 
@@ -165,7 +165,7 @@ const ContentStatistics: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the measurable impact we've made for businesses worldwide through our innovative AI and IT solutions.
@@ -196,7 +196,7 @@ const ContentStatistics: React.FC = () => {
               Our comprehensive suite of AI and IT solutions delivers measurable results for businesses of all sizes.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300">
@@ -228,7 +228,7 @@ const ContentStatistics: React.FC = () => {
               Recognition and awards that validate our commitment to excellence and innovation.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
@@ -253,7 +253,7 @@ const ContentStatistics: React.FC = () => {
               Comprehensive benefits that come with choosing our AI and IT solutions.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center text-gray-300">
@@ -273,20 +273,20 @@ const ContentStatistics: React.FC = () => {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Be part of our growing community of successful businesses. Start your transformation journey today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Get Started</span>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                View Case Studies
+                View Case Studies;
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  ;
 };
 
 export default ContentStatistics;

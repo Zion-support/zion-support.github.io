@@ -1,30 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-  BarChart,
-  TrendingUp,
-  Database,
-  CheckCircle,
-  Brain,
-  Clock,
-  Users,
-  Zap,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Globe,
-  Lock,
-  Activity,
-  Settings,
-  Target,
-  Eye,
-  PieChart,
-  LineChart
-} from 'lucide-react';
+import { BarChart, TrendingUp, Database, CheckCircle, Brain, Clock, Users, Zap, Phone, Mail, MapPin, ArrowRight, Globe, Lock, Activity, Settings, Target, Eye, PieChart, LineChart; } from 'lucide-react';
 
-const DataAnalyticsPage: React.FC = () => {
+const DataAnalyticsPage: React.FC = ( => {
   const features = [
     {
       icon: BarChart,
@@ -72,8 +51,8 @@ const DataAnalyticsPage: React.FC = () => {
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Data Analytics Services
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+                Data Analytics Services;
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with our advanced analytics solutions. 
@@ -82,11 +61,11 @@ const DataAnalyticsPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <BarChart className="mr-2 h-5 w-5" />
-                  Get Analytics Now
+                  Get Analytics Now;
                 </button>
                 <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (302) 464-0950
+                  Call (302 464-0950;
                 </button>
               </div>
             </div>
@@ -98,7 +77,7 @@ const DataAnalyticsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Analytics Solutions
+                Our Analytics Solutions;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We provide comprehensive data analytics services to help you unlock the power of your data.
@@ -124,7 +103,7 @@ const DataAnalyticsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Benefits
+                Key Benefits;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Drive business success with our comprehensive data analytics services.
@@ -143,7 +122,7 @@ const DataAnalyticsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -155,11 +134,11 @@ const DataAnalyticsPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (302) 464-0950
+                  Call (302) 464-0950;
                 </button>
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                   <Mail className="mr-2 h-5 w-5" />
-                  Email Us
+                  Email Us;
                 </button>
               </div>
             </div>
@@ -167,7 +146,7 @@ const DataAnalyticsPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default DataAnalyticsPage;

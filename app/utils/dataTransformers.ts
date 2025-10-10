@@ -7,7 +7,7 @@
  * Deep clone an object;
  */
 export function deepClone<T></T>(ob)
-  j: T): T {/* TODO: Fix JSX expression */});
+  j: T: T {/* TODO: Fix JSX expression */});
 }
   if (obj instanceof Date) {/* TODO: Fix JSX expression */});
 }
@@ -27,7 +27,7 @@ export function deepClone<T></T>(ob)
  */
 export function deepMerge<T extends Record<string, unknown></T>>(targe,
   t: T, sourc)
-  e: Partial<T></T>): T {/* TODO: Fix JSX expression */}
+  e: Partial<T></T>: T {/* TODO: Fix JSX expression */}
   const output = { ...target };
   for (const key in source) {/* TODO: Fix JSX expression */});
 } else {/* TODO: Fix JSX expression */});
@@ -79,7 +79,7 @@ export function pick<T extends Record<string, unknown></T>, K extends keyof T>(o
   j: T,
   key,
   s: K[])
-): Pick<T, K></T> {/* TODO: Fix JSX expression */}
+: Pick<T, K></T> {/* TODO: Fix JSX expression */}
   const result = {} as Pick<T, K></T>;
   keys.forEach(key => {/* TODO: Fix JSX expression */});
 });;)
@@ -93,7 +93,7 @@ export function omit<T extends Record<string, unknown></T>, K extends keyof T>(o
   j: T,
   key,
   s: K[])
-): Omit<T, K></T> {/* TODO: Fix JSX expression */}
+: Omit<T, K></T> {/* TODO: Fix JSX expression */}
   const result = { ...obj };
   keys.forEach(key => {/* TODO: Fix JSX expression */});;)
 });;
@@ -105,9 +105,9 @@ export function omit<T extends Record<string, unknown></T>, K extends keyof T>(o
 export function groupBy<T></T>(arra,
   y: T[],
   ke,
-  y: keyof T | ((ite),
+  y: keyof T | ((ite,
   m: T) => string | number)
-): Record<string, T[]></string> {/* TODO: Fix JSX expression */});
+: Record<string, T[]></string> {/* TODO: Fix JSX expression */});
 },
     {} as Record<string></string>
   );)
@@ -131,11 +131,11 @@ export function unique<T></T>(arra)
 export function sortBy<T></T>(arra,
   y: T[],
   key,
-  s: Array<keyof T | ((ite),
-  m: T) =></keyof> unknown)>,
+  s: Array<keyof T | ((ite,
+  m: T) =></keyof> unknown>,
   order,
   s: Array<'asc' | 'desc'> = []
-): T[] {/* TODO: Fix JSX expression */});
+: T[] {/* TODO: Fix JSX expression */});
 }
       // Convert to comparable values;
       const aComp =
@@ -157,7 +157,7 @@ export function sortBy<T></T>(arra,
  */
 export function chunk<T></T>(arra,
   y: T[], siz)
-  e: number): T[][] {/* TODO: Fix JSX expression */});
+  e: number: T[][] {/* TODO: Fix JSX expression */});
 }
   return chunks;)
 }
@@ -165,7 +165,7 @@ export function chunk<T></T>(arra,
  * Zip multiple arrays together;
  */
 export function zip<T></T>(...array)
-  s: T[][]): T[][] {/* TODO: Fix JSX expression */});
+  s: T[][]: T[][] {/* TODO: Fix JSX expression */});
 }
   return result;)
 }
@@ -203,7 +203,7 @@ export function formatDate(dat,
  * Format relative time;
  */
 export function formatRelativeTime(dat)
-  e: Date | string | number): string {/* TODO: Fix JSX expression */}`
+  e: Date | string | number: string {/* TODO: Fix JSX expression */}`
   if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;`
   if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;`
   if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
@@ -222,31 +222,31 @@ export function truncate(st,
  * Capitalize first letter;
  */
 export function capitalize(st)
-  r: string): string {/* TODO: Fix JSX expression */});
+  r: string: string {/* TODO: Fix JSX expression */});
 }
 /**
  * Convert to title case;
  */
 export function titleCase(st)
-  r: string): string {/* TODO: Fix JSX expression */});
+  r: string: string {/* TODO: Fix JSX expression */});
 }
 /**
  * Convert to kebab case;
  */
 export function kebabCase(st)
-  r: string): string {/* TODO: Fix JSX expression */});
+  r: string: string {/* TODO: Fix JSX expression */});
 }
 /**
  * Convert to camel case;
  */
 export function camelCase(st)
-  r: string): string {/* TODO: Fix JSX expression */});
+  r: string: string {/* TODO: Fix JSX expression */});
 }
 /**
  * Convert to snake case;
  */
 export function snakeCase(st)
-  r: string): string {/* TODO: Fix JSX expression */});
+  r: string: string {/* TODO: Fix JSX expression */});
 }
 export default {/* TODO: Fix JSX expression */});
 };

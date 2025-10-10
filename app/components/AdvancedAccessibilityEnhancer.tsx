@@ -9,32 +9,32 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   const [isEnhanced, setIsEnhanced] = useState(false);
 
   useEffect(() => {
-    // Initialize accessibility enhancements
+    // Initialize accessibility enhancements;
     const initAccessibility = () => {
-      // Add high contrast mode support
+      // Add high contrast mode support;
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
       if (prefersHighContrast) {
-        document.documentElement.classList.add('high-contrast');
+        document.documentElement.classList.add('high-contrast';
       }
 
-      // Add reduced motion support
+      // Add reduced motion support;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) {
-        document.documentElement.classList.add('reduced-motion');
+        document.documentElement.classList.add('reduced-motion';
       }
 
-      // Add focus indicators
+      // Add focus indicators;
       const style = document.createElement('style');
       style.textContent = `
         .focus-visible {
           outline: 2px solid #3b82f6;
           outline-offset: 2px;
         }
-        
+
         .high-contrast {
-          filter: contrast(150%);
+          filter: contrast(150%;
         }
-        
+
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
@@ -43,10 +43,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       `;
       document.head.appendChild(style);
 
-      // Add keyboard navigation support
+      // Add keyboard navigation support;
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
+          document.body.classList.add('keyboard-navigation';
         }
       };
 

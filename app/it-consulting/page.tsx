@@ -2,85 +2,14 @@
 import React from 'react';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, 
-  Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, 
-  TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, 
-  Mail, Phone, DollarSign, Clock, Award, CheckCircle, 
-  Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, 
-  CreditCard, Building, Factory, Car, Plane, Ship, Train, 
-  Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, 
-  Hammer, Paintbrush, Scissors, BookOpen, Calculator, 
-  Compass, PieChart, TrendingDown, Activity, Zap as Lightning, 
-  Target as Crosshair, Shield as Security, Users as People, 
-  Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, 
-  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location,
-  Eye, Search, MessageSquare, PieChart as Chart, 
-  Download, Upload, RefreshCw, Play, Pause, Stop,
-  Volume2, VolumeX, Mic, MicOff, Headphones, 
-  Wifi, WifiOff, Battery, BatteryCharging, 
-  Sun, Moon, Sunrise, Sunset, CloudRain, 
-  Snowflake, Wind, Thermometer, Droplets,
-  Lightbulb, LightbulbOff, Power, PowerOff,
-  Wrench as Tool, Hammer as HammerIcon, 
-  Paintbrush as Brush, Scissors as ScissorIcon,
-  BookOpen as Book, Calculator as Calc,
-  Compass as CompassIcon, PieChart as PieChartIcon,
-  TrendingDown as TrendingDownIcon, Activity as ActivityIcon,
-  Grid3X3, Package, Utensils, Microscope, 
-  Atom, Cpu as CpuIcon, Database as DatabaseIcon,
-  Network, Layers, Workflow, GitBranch,
-  Zap as ZapIcon, Brain as BrainIcon, Eye as EyeIcon,
-  Search as SearchIcon, MessageSquare as MessageSquareIcon,
-  PieChart as PieChartIcon2, BarChart as BarChartIcon,
-  TrendingUp as TrendingUpIcon, Activity as ActivityIcon2,
-  Target as TargetIcon, Globe as GlobeIcon,
-  Shield as ShieldIcon, Lock as LockIcon,
-  Users as UsersIcon, Settings as SettingsIcon,
-  Calendar as CalendarIcon, CheckSquare as CheckSquareIcon,
-  FileText as FileTextIcon, Mail as MailIcon2,
-  Phone as PhoneIcon2, DollarSign as DollarSignIcon,
-  Clock as ClockIcon, Award as AwardIcon,
-  CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon,
-  Bot as BotIcon, Palette as PaletteIcon,
-  Camera as CameraIcon, Music as MusicIcon,
-  Video as VideoIcon, Gamepad2 as Gamepad2Icon,
-  ShoppingCart as ShoppingCartIcon, CreditCard as CreditCardIcon,
-  Building as BuildingIcon, Factory as FactoryIcon,
-  Car as CarIcon, Plane as PlaneIcon,
-  Ship as ShipIcon, Train as TrainIcon,
-  Home as HomeIcon, Heart as HeartIcon,
-  Stethoscope as StethoscopeIcon, GraduationCap as GraduationCapIcon,
-  Briefcase as BriefcaseIcon, Wrench as WrenchIcon,
-  Hammer as HammerIcon2, Paintbrush as PaintbrushIcon,
-  Scissors as ScissorsIcon, BookOpen as BookOpenIcon,
-  Calculator as CalculatorIcon, Compass as CompassIcon2,
-  PieChart as PieChartIcon3, TrendingDown as TrendingDownIcon2,
-  Activity as ActivityIcon3, Zap as ZapIcon2,
-  Target as TargetIcon2, Shield as ShieldIcon2,
-  Users as UsersIcon2, Star as StarIcon2,
-  CheckCircle as CheckCircleIcon2, ArrowRight as ArrowRightIcon2,
-  Phone as PhoneIcon3, Mail as MailIcon3,
-  MapPin as LocationIcon, Server, HardDrive, 
-  Monitor, Printer, Router, Wifi as WifiIcon,
-  Smartphone as SmartphoneIcon, Laptop, 
-  Tablet, Headphones as HeadphonesIcon,
-  Keyboard, Mouse, Webcam, Speaker,
-  HardDrive as HardDriveIcon, Server as ServerIcon,
-  Monitor as MonitorIcon, Printer as PrinterIcon,
-  Router as RouterIcon, Wifi as WifiIcon2,
-  Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
-  Tablet as TabletIcon, Headphones as HeadphonesIcon2,
-  Keyboard as KeyboardIcon, Mouse as MouseIcon,
-  Webcam as WebcamIcon, Speaker as SpeakerIcon;)
-} from 'lucide-react';
+import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Mail, Phone, DollarSign, Clock, Award, CheckCircle, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Compass, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Eye, Search, MessageSquare, PieChart as Chart, Download, Upload, RefreshCw, Play, Pause, Stop, Volume2, VolumeX, Mic, MicOff, Headphones, Wifi, WifiOff, Battery, BatteryCharging, Sun, Moon, Sunrise, Sunset, CloudRain, Snowflake, Wind, Thermometer, Droplets, Lightbulb, LightbulbOff, Power, PowerOff, Wrench as Tool, Hammer as HammerIcon, Paintbrush as Brush, Scissors as ScissorIcon, BookOpen as Book, Calculator as Calc, Compass as CompassIcon, PieChart as PieChartIcon, TrendingDown as TrendingDownIcon, Activity as ActivityIcon, Grid3X3, Package, Utensils, Microscope, Atom, Cpu as CpuIcon, Database as DatabaseIcon, Network, Layers, Workflow, GitBranch, Zap as ZapIcon, Brain as BrainIcon, Eye as EyeIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, PieChart as PieChartIcon2, BarChart as BarChartIcon, TrendingUp as TrendingUpIcon, Activity as ActivityIcon2, Target as TargetIcon, Globe as GlobeIcon, Shield as ShieldIcon, Lock as LockIcon, Users as UsersIcon, Settings as SettingsIcon, Calendar as CalendarIcon, CheckSquare as CheckSquareIcon, FileText as FileTextIcon, Mail as MailIcon2, Phone as PhoneIcon2, DollarSign as DollarSignIcon, Clock as ClockIcon, Award as AwardIcon, CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon, Bot as BotIcon, Palette as PaletteIcon, Camera as CameraIcon, Music as MusicIcon, Video as VideoIcon, Gamepad2 as Gamepad2Icon, ShoppingCart as ShoppingCartIcon, CreditCard as CreditCardIcon, Building as BuildingIcon, Factory as FactoryIcon, Car as CarIcon, Plane as PlaneIcon, Ship as ShipIcon, Train as TrainIcon, Home as HomeIcon, Heart as HeartIcon, Stethoscope as StethoscopeIcon, GraduationCap as GraduationCapIcon, Briefcase as BriefcaseIcon, Wrench as WrenchIcon, Hammer as HammerIcon2, Paintbrush as PaintbrushIcon, Scissors as ScissorsIcon, BookOpen as BookOpenIcon, Calculator as CalculatorIcon, Compass as CompassIcon2, PieChart as PieChartIcon3, TrendingDown as TrendingDownIcon2, Activity as ActivityIcon3, Zap as ZapIcon2, Target as TargetIcon2, Shield as ShieldIcon2, Users as UsersIcon2, Star as StarIcon2, CheckCircle as CheckCircleIcon2, ArrowRight as ArrowRightIcon2, Phone as PhoneIcon3, Mail as MailIcon3, MapPin as LocationIcon, Server, HardDrive, Monitor, Printer, Router, Wifi as WifiIcon, Smartphone as SmartphoneIcon, Laptop, Tablet, Headphones as HeadphonesIcon, Keyboard, Mouse, Webcam, Speaker, HardDrive as HardDriveIcon, Server as ServerIcon, Monitor as MonitorIcon, Printer as PrinterIcon, Router as RouterIcon, Wifi as WifiIcon2, Smartphone as SmartphoneIcon2, Laptop as LaptopIcon, Tablet as TabletIcon, Headphones as HeadphonesIcon2, Keyboard as KeyboardIcon, Mouse as MouseIcon, Webcam as WebcamIcon, Speaker as SpeakerIcon;) } from 'lucide-react';
 
-const ITConsultingPage: React.FC = () => {
+const ITConsultingPage: React.FC = ( => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const itServices = [
-    // IT Infrastructure Services
+    // IT Infrastructure Services;
     {
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
@@ -111,7 +40,7 @@ const ITConsultingPage: React.FC = () => {
       support: '24/7 technical support',
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
       link: 'https://ziontechgroup.com/it-infrastructure-design',
-      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design';)
+      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design';
 },
     {
       id: 'cloud-migration-services',
@@ -143,7 +72,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Migration specialist and ongoing support',
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
       link: 'https://ziontechgroup.com/cloud-migration-services',
-      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure';)
+      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure';
 },
     {
       id: 'cybersecurity-services',
@@ -175,7 +104,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Security specialist and 24/7 monitoring',
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],
       link: 'https://ziontechgroup.com/cybersecurity-services',
-      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations';)
+      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations';
 },
     {
       id: 'network-design-optimization',
@@ -207,7 +136,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Network specialist and ongoing optimization',
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],
       link: 'https://ziontechgroup.com/network-design-optimization',
-      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues';)
+      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues';
 },
     {
       id: 'database-management',
@@ -239,7 +168,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Database specialist and 24/7 monitoring',
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],
       link: 'https://ziontechgroup.com/database-management',
-      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%';)
+      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%';
 },
     {
       id: 'it-support-services',
@@ -271,7 +200,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Dedicated support team',
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],
       link: 'https://ziontechgroup.com/it-support-services',
-      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity';)
+      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity';
 },
     {
       id: 'software-development',
@@ -303,7 +232,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Development team and ongoing maintenance',
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],
       link: 'https://ziontechgroup.com/software-development',
-      caseStudy: 'Logistics company automated 80% of manual processes with custom software';)
+      caseStudy: 'Logistics company automated 80% of manual processes with custom software';
 },
     {
       id: 'it-consulting',
@@ -335,7 +264,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Senior consultant and ongoing guidance',
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],
       link: 'https://ziontechgroup.com/it-consulting',
-      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning';)
+      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning';
 },
     {
       id: 'disaster-recovery',
@@ -367,7 +296,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Recovery specialist and ongoing testing',
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],
       link: 'https://ziontechgroup.com/disaster-recovery',
-      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution';)
+      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution';
 },
     {
       id: 'compliance-auditing',
@@ -399,7 +328,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';)
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';
 }
   ];
 
@@ -425,32 +354,32 @@ const ITConsultingPage: React.FC = () => {
 });;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>
         <div></div>
         <div></div>
           <h1></h1>
-            Professional <span className="holographic-text"></spa>IT Services</span>
+            Professional <span className="holographic-text"></span>IT Services</span>
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow"></p>
             Comprehensive IT solutions designed to optimize your technology infrastructure, 
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
           <div></div>
-            <a
-              href="tel:+13024640950"
+            <a;
+              href="tel: +13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
             ></a>
               <Phone className="w-5 h-5 inline mr-2" />
-              Call (302) 464-0950
+              Call (302 464-0950;
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
             ></a>
               <Mail className="w-5 h-5 inline mr-2" />
-              Get IT Consultation
+              Get IT Consultation;
             </a>
           </div>
         </div>
@@ -459,12 +388,12 @@ const ITConsultingPage: React.FC = () => {
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
+          <div className="flex flex-col lg:flex-row gap-6 mb-8">
             {/* Search */}</div>
             <div></div>
               <div></div>
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search IT services..."
                   value={searchTerm}
@@ -473,15 +402,15 @@ const ITConsultingPage: React.FC = () => {
                 />
               </div>
             </div>
-            
+
             {/* Category Filter */}
             <div></div>
-              <select
+              <select;
                 value={selectedCategory}
                 onChange={(e) =></select> setSelectedCategory(e.target.value);
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >
-                {categories.map((category) => (
+                {categories.map((category => (
                   <option key={category.id} value={category.id}></option>
                     {category.name}
                   </option>
@@ -491,15 +420,14 @@ const ITConsultingPage: React.FC = () => {
           </div>
 
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8"></div>
+          <div className="flex flex-wrap gap-2 mb-8">
             {categories.map((category) => (</div>
-              <button
+              <button;
                 key={category.id}
                 onClick={() =></button> setSelectedCategory(category.id);
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400';)
+                  selectedCategory === category.id ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 hover:text-cyan-400';
 }`}
               >
                 {category.name}
@@ -510,10 +438,10 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
+      <section className="py-12 px-4 sm: px-6 lg:px-8"></section>
         <div></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {filteredServices.map((service) => (</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service => (</div>
               <div></div>
                 <div></div>
                   <div></div>
@@ -524,30 +452,30 @@ const ITConsultingPage: React.FC = () => {
                     <div className="text-sm text-gray-400"></di>starting price</div>
                   </div>
                 </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow"></h>{service.name}</h3>
+
+                <h3 className="text-xl font-bold text-white mb-3 neon-glow"></h2>{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                
+
                 <div></div>
                   <div></div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h2>Key Features:</h4>
                     <ul className="space-y-1"></ul>
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          <span></spa>{feature}</span>
+                          <span></span>{feature}</span>
                         </li>
                       ));
                     </ul>
                   </div>
-                  
+
                   <div></div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Benefits:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h2>Benefits:</h4>
                     <ul className="space-y-1"></ul>
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          <span></spa>{benefit}</span>
+                          <span></span>{benefit}</span>
                         </li>
                       ));
                     </ul>
@@ -556,16 +484,16 @@ const ITConsultingPage: React.FC = () => {
 
                 <div></div>
                   <div></div>
-                    <span className="text-gray-400"></spa>Setup Time:</span>
-                    <span className="text-white"></spa>{service.setupTime}</span>
+                    <span className="text-gray-400"></span>Setup Time:</span>
+                    <span className="text-white"></span>{service.setupTime}</span>
                   </div>
                   <div></div>
-                    <span className="text-gray-400"></spa>Free Consultation:</span>
-                    <span className="text-green-400"></spa>{service.freeConsultation}</span>
+                    <span className="text-gray-400"></span>Free Consultation:</span>
+                    <span className="text-green-400"></span>{service.freeConsultation}</span>
                   </div>
                   <div></div>
-                    <span className="text-gray-400"></spa>Target:</span>
-                    <span className="text-white"></spa>{service.targetAudience}</span>
+                    <span className="text-gray-400"></span>Target:</span>
+                    <span className="text-white"></span>{service.targetAudience}</span>
                   </div>
                 </div>
 
@@ -576,24 +504,24 @@ const ITConsultingPage: React.FC = () => {
                 );
 
                 <div></div>
-                  <a
+                  <a;
                     href={service.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                   ></a>
-                    Get Free Consultation
+                    Get Free Consultation;
                   </a>
-                  <a
+                  <a;
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                   ></a>
                     <Phone className="w-4 h-4 inline mr-2" />
-                    Call for Quote
+                    Call for Quote;
                   </a>
                 </div>
               </div>
-            ));
+            );
           </div>
         </div>
       </section>
@@ -609,25 +537,27 @@ const ITConsultingPage: React.FC = () => {
             All services include free consultations and ongoing support.
           </p>
           <div></div>
-            <a
-              href="tel:+13024640950"
+            <a;
+              href="tel: +13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
             ></a>
               <Phone className="w-5 h-5" />
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
             ></a>
               <Mail className="w-5 h-5" />
-              Get Custom IT Strategy
+              Get Custom IT Strategy;
             </a>
           </div>
         </div>
       </section>
     </div>
-  );)
+  );
 };
 
 export default ITConsultingPage;
+
+}}}}}}}}}

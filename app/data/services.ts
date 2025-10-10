@@ -1,9 +1,4 @@
-import {
-  Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
-  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;
-} from 'lucide-react';
+import { Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory, GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard, Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon, Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon; } from 'lucide-react';
 
 export const microSAASServices = [
   // Productivity & Management Tools;
@@ -554,7 +549,7 @@ export interface Service {
 }
 
 export const services: Service[] = [
-  // AI Services
+  // AI Services;
   {
     id: 'ai-project-manager',
     name: 'AI Project Manager Pro',
@@ -591,7 +586,7 @@ export const services: Service[] = [
     new: true,
     path: '/ai-project-manager',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-project-manager'
     },
@@ -636,7 +631,7 @@ export const services: Service[] = [
     popular: true,
     path: '/ai-customer-support-bot',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot'
     },
@@ -681,7 +676,7 @@ export const services: Service[] = [
     popular: true,
     path: '/ai-content-generation',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-content-generator'
     },
@@ -726,7 +721,7 @@ export const services: Service[] = [
     popular: true,
     path: '/ai-data-analytics',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-data-analytics'
     },
@@ -771,7 +766,7 @@ export const services: Service[] = [
     popular: true,
     path: '/ai-cybersecurity',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-cybersecurity'
     },
@@ -782,7 +777,7 @@ export const services: Service[] = [
     }
   },
 
-  // Micro SAAS Services
+  // Micro SAAS Services;
   {
     id: 'ai-social-media-manager',
     name: 'AI Social Media Manager',
@@ -818,7 +813,7 @@ export const services: Service[] = [
     popular: true,
     path: '/ai-social-media-manager',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-social-media-manager'
     },
@@ -863,7 +858,7 @@ export const services: Service[] = [
     popular: true,
     path: '/ai-email-marketing',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-email-marketing'
     },
@@ -908,7 +903,7 @@ export const services: Service[] = [
     popular: true,
     path: '/ai-seo-optimizer',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer'
     },
@@ -953,7 +948,7 @@ export const services: Service[] = [
     popular: false,
     path: '/ai-invoice-generator',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-invoice-generator'
     },
@@ -998,7 +993,7 @@ export const services: Service[] = [
     popular: false,
     path: '/ai-time-tracker',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/ai-time-tracker'
     },
@@ -1009,7 +1004,7 @@ export const services: Service[] = [
     }
   },
 
-  // IT Services
+  // IT Services;
   {
     id: 'cloud-infrastructure',
     name: 'Cloud Infrastructure Solutions',
@@ -1045,7 +1040,7 @@ export const services: Service[] = [
     popular: true,
     path: '/cloud-infrastructure',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/cloud-infrastructure'
     },
@@ -1090,7 +1085,7 @@ export const services: Service[] = [
     popular: true,
     path: '/cybersecurity-suite',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/cybersecurity-suite'
     },
@@ -1135,7 +1130,7 @@ export const services: Service[] = [
     popular: true,
     path: '/devops-automation',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/devops-automation'
     },
@@ -1180,7 +1175,7 @@ export const services: Service[] = [
     popular: false,
     path: '/database-management',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/database-management'
     },
@@ -1191,7 +1186,7 @@ export const services: Service[] = [
     }
   },
 
-  // Emerging Technologies
+  // Emerging Technologies;
   {
     id: 'quantum-computing',
     name: 'Quantum Computing Solutions',
@@ -1210,7 +1205,7 @@ export const services: Service[] = [
       starting: 5000,
       currency: 'USD',
       period: 'month',
-      custom: true
+      custom: true;
     },
     benefits: [
       'Exponential computational power',
@@ -1229,7 +1224,7 @@ export const services: Service[] = [
     new: true,
     path: '/quantum-computing',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/quantum-computing'
     },
@@ -1257,7 +1252,7 @@ export const services: Service[] = [
       starting: 2999,
       currency: 'USD',
       period: 'month',
-      custom: true
+      custom: true;
     },
     benefits: [
       'Decentralized solutions',
@@ -1276,7 +1271,7 @@ export const services: Service[] = [
     new: true,
     path: '/blockchain-solutions',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/blockchain-solutions'
     },
@@ -1321,7 +1316,7 @@ export const services: Service[] = [
     popular: false,
     path: '/iot-edge-computing',
     contact: {
-      phone: '+1 (302) 464-0950',
+      phone: '+1 (302 464-0950',
       email: 'kleber@ziontechgroup.com',
       demo: 'https://ziontechgroup.com/demo/iot-edge-computing'
     },
@@ -1369,7 +1364,7 @@ export const serviceCategories = [
 ];
 
 export const contactInfo = {
-  phone: '+1 (302) 464-0950',
+  phone: '+1 (302 464-0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',

@@ -18,31 +18,31 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData;
 }) => {
   useEffect(() => {
-    // Update page title
+    // Update page title;
     if (typeof document !== 'undefined') {
       document.title = title;
     }
 
-    // Add structured data
+    // Add structured data;
     if (structuredData && typeof document !== 'undefined') {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
       script.id = 'structured-data';
-      
-      // Remove existing structured data
+
+      // Remove existing structured data;
       const existing = document.getElementById('structured-data');
       if (existing) {
         existing.remove();
       }
-      
+
       document.head.appendChild(script);
     }
 
-    // Add breadcrumb structured data
+    // Add breadcrumb structured data;
     if (typeof document !== 'undefined') {
       const breadcrumbData = {
         '@context': 'https://schema.org',
@@ -61,13 +61,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(breadcrumbData);
       script.id = 'breadcrumb-structured-data';
-      
-      // Remove existing breadcrumb structured data
+
+      // Remove existing breadcrumb structured data;
       const existing = document.getElementById('breadcrumb-structured-data');
       if (existing) {
         existing.remove();
       }
-      
+
       document.head.appendChild(script);
     }
   }, [title, structuredData]);
@@ -78,7 +78,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
-      
+
       {/* Open Graph tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -86,18 +86,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
+
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
+
       {/* Additional SEO tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
+
       {/* Structured data */}
       {structuredData && (
         <script type="application/ld+json">

@@ -48,7 +48,7 @@ class APIClient {}
 
     // Check cache for GET requests;
     if (method === 'GET' && cache) {
-    // Check cache for GET requests
+    // Check cache for GET requests;
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {}
@@ -73,7 +73,7 @@ class APIClient {}
         headers: Object.fromEntries(response.headers.entries());;
 
       // Cache successful GET requests;
-      if (method === 'GET' && cache && response.ok) {
+      if (method === 'GET' && cache && response.ok {
     try {}
       const response = await fetch(url, {);
         method,
@@ -81,18 +81,17 @@ class APIClient {}
           ...this.defaultHeaders,
           ...headers;)
 },
-        body: body ? JSON.stringify(body) : undefined
-
-      const data = await response.json();
+        body: body ? JSON.stringify(body) : undefined;
+      const data = await response.json(;
 
       const apiResponse: APIResponse<T></T> = {}
         data,
         status: response.status,
         statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries());)
+        headers: Object.fromEntries(response.headers.entries());
 };
 
-      // Cache successful GET requests
+      // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {}
         apiCache.set(cacheKey, apiResponse, cacheTTL);)
 }
@@ -119,7 +118,7 @@ class ApiClient {/* TODO: Fix JSX expression */});
   g: ApiClientConfig = {}); {/* TODO: Fix JSX expression */});
 },
       cacheOption,
-  s: config.cacheOptions;)
+  s: config.cacheOptions;
 };)
 }
   /**
@@ -179,7 +178,7 @@ class ApiClient {/* TODO: Fix JSX expression */});
    * Main request method with retry logic;
    */
   private async request<T></T>(confi)
-  g: RequestConfig): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */}
+  g: RequestConfig: Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */}
       headers = {},
       cacheOption,
   s: cacheConfig,
@@ -203,10 +202,10 @@ class ApiClient {/* TODO: Fix JSX expression */});
     let,
   lastError: Error | null = null;
     let attempt = 0;
-    while (attempt < retries) {/* TODO: Fix JSX expression */});
+    while (attempt < retries {/* TODO: Fix JSX expression */});
 },
           signa,
-  l: controller.signal;)
+  l: controller.signal;
 });;
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
@@ -252,7 +251,7 @@ class ApiClient {/* TODO: Fix JSX expression */});
    */
   cancel(ur,
   l: string, metho)
-  d: string = 'GET'): void {/* TODO: Fix JSX expression */}`
+  d: string = 'GET': void {/* TODO: Fix JSX expression */}`
     const cacheKey = `${method}:${url}`;
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {/* TODO: Fix JSX expression */});
@@ -269,7 +268,7 @@ class ApiClient {/* TODO: Fix JSX expression */});
    * Update default config;
    */
   setConfig(confi)
-  g: Partial<ApiClientConfig></ApiClientConfig>): void {/* TODO: Fix JSX expression */}
+  g: Partial<ApiClientConfig></ApiClientConfig>: void {/* TODO: Fix JSX expression */}
         ...(config.headers || {});;)
 }
     };)
@@ -278,7 +277,7 @@ class ApiClient {/* TODO: Fix JSX expression */});
    * Set authorization header;
    */
   setAuthToken(toke)
-  n: string): void {/* TODO: Fix JSX expression */}`
+  n: string: void {/* TODO: Fix JSX expression */}`
     this.config.headers['Authorization'] = `Bearer ${token}`;)
 }
   /**
@@ -290,13 +289,13 @@ class ApiClient {/* TODO: Fix JSX expression */});
    * Delay helper;
    */
   private delay(m)
-  s: number): Promise<void></void> {/* TODO: Fix JSX expression */});
+  s: number: Promise<void></void> {/* TODO: Fix JSX expression */});
 }
   /**
    * Health check;
    */
   async healthCheck(endpoin)
-  t: string = '/health'): Promise<boolean></boolean> {/* TODO: Fix JSX expression */}
+  t: string = '/health': Promise<boolean></boolean> {/* TODO: Fix JSX expression */}
   s: 1 });;
       return response.status === 200;)
 } catch {/* TODO: Fix JSX expression */});
@@ -324,7 +323,7 @@ class ApiClient {/* TODO: Fix JSX expression */});
 }
 
   // Set base URL;
-  setBaseURL(baseURL: string): void {,
+  setBaseURL(baseURL: string: void {,
     this.baseURL = baseURL;)
 }
 
@@ -335,17 +334,17 @@ class ApiClient {/* TODO: Fix JSX expression */});
 
   // Clear cache;
   clearCache(): void {
-  // Set base URL
-  setBaseURL(baseURL: string): void {}
+  // Set base URL;
+  setBaseURL(baseURL: string: void {}
     this.baseURL = baseURL;)
 }
 
-  // Set default headers
+  // Set default headers;
   setDefaultHeaders(headers: Record<string, string></string>): void {}
     this.defaultHeaders = { ...this.defaultHeaders, ...headers };)
 }
 
-  // Clear cache
+  // Clear cache;
   clearCache(): void {}
     apiCache.clear();)
 }

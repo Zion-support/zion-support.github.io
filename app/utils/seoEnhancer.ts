@@ -5,7 +5,7 @@
  */
 // Generate meta tags;
 export const generateMetaTags = (data: {
-// Generate meta tags
+// Generate meta tags;
 export const generateMetaTags = (data: {}
 // title: string,
 // description: string,
@@ -87,7 +87,7 @@ export const generateMetaTags = (dat,
 interface SEOConfig {
   title: string,
   description: string,
-// SEO Config interface
+// SEO Config interface;
 interface SEOConfig {}
   title: string,
   description: string,
@@ -114,7 +114,7 @@ const defaultSEOConfig: SEOConfig = {,
   title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
   keywords: []
-// Default SEO config
+// Default SEO config;
 const defaultSEOConfig: SEOConfig = {}
   title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
@@ -133,7 +133,7 @@ const defaultSEOConfig: SEOConfig = {}
   author: 'Zion Holdings'}
 // Generate structured data;
 export const generateStructuredData = (data: {
-// Generate structured data
+// Generate structured data;
 export const generateStructuredData = (data: {}
 // type: 'Organization' | 'WebSite' | 'Article' | 'Service';
 // name: string,
@@ -159,9 +159,9 @@ export const generateStructuredData = (data: {}
 // SEO Enhancer class;
 export class SEOEnhancer {
   private static instance: SEOEnhancer,
-// SEO Enhancer class
+// SEO Enhancer class;
 export class SEOEnhancer {}
-  private static instance: SEOEnhancer
+  private static instance: SEOEnhancer;
   private config: SEOConfig;}
   constructor(config: Partial<SEOConfi></SEOConfi> = {}); {}</<<<SEOConfi></SEOConfi>this</SEOConfig>.config = { ...defaultSEOConfig, ...config });;)
 }
@@ -172,42 +172,42 @@ export class SEOEnhancer {}
     return SEOEnhancer.instance});
 }
   // Update page title;
-  updateTitle(title: string) {,
+  updateTitle(title: string {,
     if (typeof document !== 'undefined') {,
       document.title = title;});;)
 }
   }
   // Update meta description;
-  updateDescription(description: string) {,
+  updateDescription(description: string {,
     this.updateMetaTag('description', description);});;)
 }
   // Update meta keywords;
-  updateKeywords(keywords: string[]) {,
+  updateKeywords(keywords: string[] {,
     this.updateMetaTag('keywords', keywords.join(', '));});;)
 }
   // Update canonical URL;
   updateCanonicalUrl(url: string) {
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {,
+    if (!canonical {,
       canonical = document.createElement('link'),
       canonical.rel = 'canonical',
-  // Update page title
-  updateTitle(title: string) {}
+  // Update page title;
+  updateTitle(title: string {}
     if (typeof document !== 'undefined') {}
       document.title = title;});;)
 }
   }
-  // Update meta description
-  updateDescription(description: string) {}
+  // Update meta description;
+  updateDescription(description: string {}
     this.updateMetaTag('description', description);});;)
 }
-  // Update meta keywords
-  updateKeywords(keywords: string[]) {}
+  // Update meta keywords;
+  updateKeywords(keywords: string[] {}
     this.updateMetaTag('keywords', keywords.join(', '));});;)
 }
-  // Update canonical URL
-  updateCanonicalUrl(url: string) {}
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
+  // Update canonical URL;
+  updateCanonicalUrl(url: string {}
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {}
       canonical = document.createElement('link')
       canonical.rel = 'canonical'
@@ -216,10 +216,10 @@ export class SEOEnhancer {}
     canonical.href = url});
 }
   // Update Open Graph tags;
-  updateOpenGraph(config: Partial<SEOConfig></SEOConfig>) {,
+  updateOpenGraph(config: Partial<SEOConfig></SEOConfig> {,
 ,
-  // Update Open Graph tags
-  updateOpenGraph(config: Partial<SEOConfig></SEOConfig>) {}
+  // Update Open Graph tags;
+  updateOpenGraph(config: Partial<SEOConfig></SEOConfig> {}
     if (config.publishedTime) {}
       ogTags.push({ property: 'og:published_time', content: config.publishedTime });;)
 }
@@ -237,9 +237,9 @@ export class SEOEnhancer {}
 });;)
 }
   // Update Twitter Card tags;
-  updateTwitterCard(config: Partial<SEOConfig></SEOConfig>) {,
-  // Update Twitter Card tags
-  updateTwitterCard(config: Partial<SEOConfig></SEOConfig>) {}
+  updateTwitterCard(config: Partial<SEOConfig></SEOConfig> {,
+  // Update Twitter Card tags;
+  updateTwitterCard(config: Partial<SEOConfig></SEOConfig> {}
     const twitterTags = [}
       { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard },
       { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite },
@@ -253,8 +253,8 @@ export class SEOEnhancer {}
 }
   // Update structured data;
   updateStructuredData(data: Record<string></string>) {
-  // Update structured data
-  updateStructuredData(data: Record<string></string>) {}
+  // Update structured data;
+  updateStructuredData(data: Record<string></string> {}
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
@@ -298,26 +298,26 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
 }
   // Update page title;
   updateTitle(titl)
-  e: string) {/* TODO: Fix JSX expression */});;)
+  e: string {/* TODO: Fix JSX expression */});;)
 }
   }
   // Update meta description;
   updateDescription(descriptio)
-  n: string) {/* TODO: Fix JSX expression */});;)
+  n: string {/* TODO: Fix JSX expression */});;)
 }
   // Update meta keywords;
   updateKeywords(keyword)
-  s: string[]) {/* TODO: Fix JSX expression */});;)
+  s: string[] {/* TODO: Fix JSX expression */});;)
 }
   // Update canonical URL;
   updateCanonicalUrl(ur)
-  l: string) {/* TODO: Fix JSX expression */});;)
+  l: string {/* TODO: Fix JSX expression */});;)
 }
     canonical.href = url});
 }
   // Update Open Graph tags;
   updateOpenGraph(confi)
-  g: Partial<SEOConfig></SEOConfig>) {/* TODO: Fix JSX expression */}
+  g: Partial<SEOConfig></SEOConfig> {/* TODO: Fix JSX expression */}
   t: config.title || this.config.title },
       {/* TODO: Fix JSX expression */}
   t: config.description || this.config.description },
@@ -348,7 +348,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
 }
   // Update Twitter Card tags;
   updateTwitterCard(confi)
-  g: Partial<SEOConfig></SEOConfig>) {/* TODO: Fix JSX expression */}
+  g: Partial<SEOConfig></SEOConfig> {/* TODO: Fix JSX expression */}
   t: config.twitterCard || this.config.twitterCard },
       {/* TODO: Fix JSX expression */}
   t: config.twitterSite || this.config.twitterSite },
@@ -365,76 +365,76 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
 }
   // Update structured data;
   updateStructuredData(dat)
-  a: Record<string></string>) {/* TODO: Fix JSX expression */});;)
+  a: Record<string></string> {/* TODO: Fix JSX expression */});;)
 }
     document.head.appendChild(script);)
 }
   // Update robots meta tag;
-  updateRobots(robots: string) {,
+  updateRobots(robots: string {,
     this.updateMetaTag('robots', robots);});;)
 }
   // Update language;
-  updateLanguage(language: string) {,
+  updateLanguage(language: string {,
     if (typeof document !== 'undefined') {,
       document.documentElement.lang = language;});;)
 }
   }
   // Update author;
-  updateAuthor(author: string) {,
+  updateAuthor(author: string {,
     this.updateMetaTag('author', author);});;)
 }
   // Helper method to update meta tags;
-  private updateMetaTag(nameOrProperty: string, content: string) {,
+  private updateMetaTag(nameOrProperty: string, content: string {,
     if (typeof document === 'undefined') return;
     let meta = document.querySelector(});
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])
     ) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta')
-      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,
-  // Update robots meta tag
-  updateRobots(robots: string) {}
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:') {,
+  // Update robots meta tag;
+  updateRobots(robots: string {}
     this.updateMetaTag('robots', robots);});;)
 }
-  // Update language
-  updateLanguage(language: string) {}
+  // Update language;
+  updateLanguage(language: string {}
     if (typeof document !== 'undefined') {}
       document.documentElement.lang = language;});;)
 }
   }
-  // Update author
-  updateAuthor(author: string) {}
+  // Update author;
+  updateAuthor(author: string {}
     this.updateMetaTag('author', author);});;)
 }
-  // Helper method to update meta tags
-  private updateMetaTag(nameOrProperty: string, content: string) {}
-    if (typeof document === 'undefined') return
+  // Helper method to update meta tags;
+  private updateMetaTag(nameOrProperty: string, content: string {}
+    if (typeof document === 'undefined') return;
     let meta = document.querySelector(});
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]
-    ) as HTMLMetaElement
+    ) as HTMLMetaElement;
     if (!meta) {}
       meta = document.createElement('meta')
-      if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:') {}
         meta.setAttribute('property', nameOrProperty);});;)
 } else {}
         meta.setAttribute('name', nameOrProperty);}
   // Update robots meta tag;
   updateRobots(robot)
-  s: string) {/* TODO: Fix JSX expression */});;)
+  s: string {/* TODO: Fix JSX expression */});;)
 }
   // Update language;
   updateLanguage(languag)
-  e: string) {/* TODO: Fix JSX expression */});;)
+  e: string {/* TODO: Fix JSX expression */});;)
 }
   }
   // Update author;
   updateAuthor(autho)
-  r: string) {/* TODO: Fix JSX expression */});;)
+  r: string {/* TODO: Fix JSX expression */});;)
 }
   // Helper method to update meta tags;
   private updateMetaTag(nameOrPropert,
   y: string, conten)
-  t: string) {/* TODO: Fix JSX expression */}
+  t: string {/* TODO: Fix JSX expression */}
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`
     ) as HTMLMetaElement;
     if (!meta) {/* TODO: Fix JSX expression */});;)
@@ -451,7 +451,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
 <urlset></urlset>,
 ${pages;
   .map(,
-  // Generate sitemap
+  // Generate sitemap;
   generateSitemap()
     pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>
   ) {}
@@ -471,10 +471,10 @@ ${pages}
     return sitemap});
 }
   // Generate robots.txt;
-  generateRobotsTxt(disallowPaths: string[] = []) {,
+  generateRobotsTxt(disallowPaths: string[] = [] {,
     const robots = `User-agent: *,
-  // Generate robots.txt
-  generateRobotsTxt(disallowPaths: string[] = []) {}
+  // Generate robots.txt;
+  generateRobotsTxt(disallowPaths: string[] = [] {}
     const robots = `User-agent: *,
   Allow: /`}
 ${disallowPaths.map(path => `Disallow: ${path}`).join('\n');
@@ -483,7 +483,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
 }
   // Initialize SEO;
   initialize(config?: Partial<SEOConfig></SEOConfig>) {
-  // Initialize SEO
+  // Initialize SEO;
   initialize(config?: Partial<SEOConfig></SEOConfig>) {}
     if (typeof document === 'undefined') return;}
     const finalConfig = { ...this.config, ...config }
@@ -505,19 +505,18 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
     if (typeof document === 'undefined') return {}
     return {
       title: document.title;
-      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content' || '',
     return {}
       title: document.title,
-      description:
-        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
-      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
-      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''});;)
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content' || '',
+      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content' || '',
+      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href' || ''});;)
 }
   });;)
 }
 // Generate structured data with type-specific properties;
 export const generateAdvancedStructuredData = (data: {
-// Generate structured data with type-specific properties
+// Generate structured data with type-specific properties;
 export const generateAdvancedStructuredData = (data: {}
 // type: 'Organization' | 'WebSite' | 'Article' | 'Service';
 // name: string,
@@ -543,7 +542,7 @@ export const generateAdvancedStructuredData = (data: {}
     return {
       ...baseStructure,
       address: {,
-  // Add type-specific properties
+  // Add type-specific properties;
   if (data.type === 'Organization') {}
     return {}
       ...baseStructure,
@@ -573,7 +572,7 @@ export const generateAdvancedStructuredData = (data: {}
 }
   // Generate robots.txt;
   generateRobotsTxt(disallowPath)
-  s: string[] = []) {/* TODO: Fix JSX expression */}`
+  s: string[] = [] {/* TODO: Fix JSX expression */}`
   w: ${path}`).join('
 ');
 Sitema,`
@@ -656,8 +655,8 @@ export const generateAdvancedStructuredData = (dat,
           url: data.logo || '/logo.webp'});;)
 }
       },
-      datePublished: new Date().toISOString(),
-      dateModified: new Date().toISOString(););)
+      datePublished: new Date().toISOString(,
+      dateModified: new Date().toISOString(););
 }
   return baseStructure});
 }
@@ -666,16 +665,16 @@ export const generateSitemapData = useCallback((...args) => {
   return {
     urlset: {
       '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-  url: pages.map(page => ({),
+  url: pages.map(page => ({,
         loc: page.url},
-        lastmod: page.lastModified),
-        changefreq: page.changeFrequency),
-// Generate sitemap data
+        lastmod: page.lastModified,
+        changefreq: page.changeFrequency,
+// Generate sitemap data;
 export const generateSitemapData = useCallback((...args) => {}
   return {}
     urlset: {}
       '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-      url: pages.map(page => ({);
+      url: pages.map(page => ({;
         loc: page.url,
         lastmod: page.lastModified,
         changefreq: page.changeFrequency,
@@ -700,9 +699,9 @@ export const validateSEOData = (data: {// title: string; description: string; ur
 }
       },
       datePublishe,
-  d: new Date().toISOString(),
+  d: new Date().toISOString(,
       dateModifie,
-  d: new Date().toISOString();)
+  d: new Date().toISOString();
 }});
 }
   return baseStructure});
@@ -719,7 +718,7 @@ export const generateSitemapData = (page,
 // Generate robots.txt content;
 export const generateRobotsTxt = (sitemapUr,
   l: string, disallowPath)
-  s: string[] = []) => {/* TODO: Fix JSX expression */}`
+  s: string[] = [] => {/* TODO: Fix JSX expression */}`
   w: ${path}`).join('
 ');`
   return `User-agen,
@@ -729,33 +728,33 @@ Sitema,`
   p: ${sitemapUrl}`});
 };
 
-// SEO validation
+// SEO validation;
 export const validateSEOData = (data: { title: string; description: string; url: string }); => {
   const issues: string[] = [];
   // Check title length;,
   if (data.title.length < 30) {,
-// SEO validation
+// SEO validation;
 export const validateSEOData = (data: {// title: string; description: string; url: string}); => {}
   const issues: string[] = [];
-  // Check title length
-  if (data.title.length < 30) {}
-    issues.push('Title is too short (recommended: 30-60 characters)');});;)
+  // Check title length;
+  if (data.title.length < 30 {}
+    issues.push('Title is too short (recommended: 30-60 characters)';});;)
 } else if (data.title.length > 60) {}
-    issues.push('Title is too long (recommended: 30-60 characters)');});;)
+    issues.push('Title is too long (recommended: 30-60 characters)';});;)
 }
   // Check description length;
   if (data.description.length < 120) {
-  // Check description length
+  // Check description length;
   if (data.description.length < 120) {}
-    issues.push('Description is too short (recommended: 120-160 characters)');});;)
+    issues.push('Description is too short (recommended: 120-160 characters)';});;)
 } else if (data.description.length > 160) {}
-    issues.push('Description is too long (recommended: 120-160 characters)');});;)
+    issues.push('Description is too long (recommended: 120-160 characters)';});;)
 }
   // Check URL format;
   if (!data.url.startsWith('http')) {
-  // Check URL format
+  // Check URL format;
   if (!data.url.startsWith('http')) {}
-    issues.push('URL should start with http:// or https://');});;)
+    issues.push('URL should start with http: // or https://';});;)
 }
   return issues});
 }
@@ -763,7 +762,7 @@ export const validateSEOData = (data: {// title: string; description: string; ur
 export const generateBreadcrumbData = useCallback((...args) => {
   return {
     '@context': 'https: //schema.org',
-// Generate breadcrumb data
+// Generate breadcrumb data;
 export const generateBreadcrumbData = useCallback((...args) => {}
   return {}
     '@context': 'https://schema.org',
@@ -781,15 +780,15 @@ export const initializeSEOEnhancements = useCallback((...args) => {
   if (typeof document === 'undefined') return;
   // Add structured data for organization;
   const organizationData = generateStructuredData({)
-    type: 'Organization'),
-  name: 'Zion Holdings'),
-  description: 'Leading provider of AI-powered business solutions'),
-  url: 'https://zion.app'),
-    logo: 'https://zion.app/logo.webp'),
-// Initialize SEO enhancements
+    type: 'Organization',
+  name: 'Zion Holdings',
+  description: 'Leading provider of AI-powered business solutions',
+  url: 'https://zion.app',
+    logo: 'https://zion.app/logo.webp',
+// Initialize SEO enhancements;
 export const initializeSEOEnhancements = useCallback((...args) => {}
-  if (typeof document === 'undefined') return
-  // Add structured data for organization
+  if (typeof document === 'undefined') return;
+  // Add structured data for organization;
   const organizationData = generateStructuredData({);
     type: 'Organization',
     name: 'Zion Holdings',
@@ -804,9 +803,9 @@ export const initializeSEOEnhancements = useCallback((...args) => {}
   document.head.appendChild(script);)
 }
   if (data.title.length < 30) {
-    issues.push('Title is too short (recommended: 30-60 characters)');)
+    issues.push('Title is too short (recommended: 30-60 characters)');
 } else if (data.title.length > 60) {
-    issues.push('Title is too long (recommended: 30-60 characters)');)
+    issues.push('Title is too long (recommended: 30-60 characters)');
 }
 }
   // Check description length;

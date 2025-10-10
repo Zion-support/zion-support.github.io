@@ -892,4 +892,4 @@ export const contactInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
-  timezone: 'EST (Eastern Standard Time)'};
+  timezone: 'EST (Eastern Standard Time'};

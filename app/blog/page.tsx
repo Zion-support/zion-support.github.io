@@ -19,7 +19,7 @@ interface BlogPost {
   featured: boolean;
 }
 
-const BlogPage: React.FC = () => {
+const BlogPage: React.FC = ( => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
@@ -36,7 +36,7 @@ const BlogPage: React.FC = () => {
       category: 'AI & Machine Learning',
       tags: ['AI', 'Enterprise', 'Innovation'],
       image: '/images/blog/ai-enterprise.jpg',
-      featured: true
+      featured: true;
     },
     {
       id: '2',
@@ -49,7 +49,7 @@ const BlogPage: React.FC = () => {
       category: 'Cloud Computing',
       tags: ['Cloud', 'Migration', 'Best Practices'],
       image: '/images/blog/cloud-migration.jpg',
-      featured: false
+      featured: false;
     },
     {
       id: '3',
@@ -62,7 +62,7 @@ const BlogPage: React.FC = () => {
       category: 'Cybersecurity',
       tags: ['Security', 'Trends', 'Protection'],
       image: '/images/blog/cybersecurity.jpg',
-      featured: true
+      featured: true;
     },
     {
       id: '4',
@@ -75,7 +75,7 @@ const BlogPage: React.FC = () => {
       category: 'Development',
       tags: ['Web Development', 'Scalability', 'Architecture'],
       image: '/images/blog/scalable-apps.jpg',
-      featured: false
+      featured: false;
     }
   ];
 
@@ -112,17 +112,17 @@ const BlogPage: React.FC = () => {
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech Insights & News
+              Tech Insights & News;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search articles..."
                   value={searchTerm}
@@ -135,12 +135,11 @@ const BlogPage: React.FC = () => {
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               {categories.map((category) => (
-                <button
+                <button;
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-cyan-500 text-white'
+                    selectedCategory === category ? 'bg-cyan-500 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
                   }`}
                 >
@@ -155,10 +154,10 @@ const BlogPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Featured Articles
+              Featured Articles;
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => post.featured).map((post) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.filter(post => post.featured).map((post => (
                 <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center space-x-4">
@@ -181,12 +180,12 @@ const BlogPage: React.FC = () => {
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-32 flex items-center justify-center mb-4">
                     <div className="text-4xl">📊</div>
                   </div>
-                  <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+                  <button className="flex items-center space-x-2 text-cyan-400 hover: text-cyan-300 transition-colors font-medium">
                     <span>Read More</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </article>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -195,8 +194,8 @@ const BlogPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">All Articles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post => (
                 <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-48 flex items-center justify-center mb-6">
                     <div className="text-4xl">📝</div>
@@ -225,15 +224,15 @@ const BlogPage: React.FC = () => {
                     <span className="text-gray-400 text-sm">
                       {new Date(post.date).toLocaleDateString()}
                     </span>
-                    <button className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+                    <button className="flex items-center space-x-1 text-cyan-400 hover: text-cyan-300 transition-colors font-medium">
                       <span>Read</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
                 </article>
-              ))}
+              )}
             </div>
-            
+
             {filteredPosts.length === 0 && searchTerm && (
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
@@ -246,26 +245,26 @@ const BlogPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Stay Updated
+              Stay Updated;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Subscribe to our newsletter for the latest AI and IT insights delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
+            <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
               />
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </div>
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default BlogPage;

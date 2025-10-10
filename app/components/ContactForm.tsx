@@ -15,7 +15,7 @@ interface FormStatus {
   message: string;
 }
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC = ( => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -30,28 +30,28 @@ const ContactForm: React.FC = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement> => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(;
     setStatus({ type: 'loading', message: 'Sending message...' });
 
     try {
-      // Simulate API call
+      // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully.'
       });
-      
-      // Reset form
+
+      // Reset form;
       setFormData({
         name: '',
         email: '',
@@ -96,13 +96,12 @@ const ContactForm: React.FC = () => {
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name *
               </label>
-              <input
-                type="text"
+              <input type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                required
+                required;
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Your full name"
               />
@@ -111,13 +110,12 @@ const ContactForm: React.FC = () => {
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address *
               </label>
-              <input
-                type="email"
+              <input type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
+                required;
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="your.email@example.com"
               />
@@ -127,9 +125,9 @@ const ContactForm: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                Company
+                Company;
               </label>
-              <input
+              <input;
                 type="text"
                 id="company"
                 name="company"
@@ -141,33 +139,33 @@ const ContactForm: React.FC = () => {
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number
+                Phone Number;
               </label>
-              <input
+              <input;
                 type="tel"
                 id="phone"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="+1 (555) 123-4567"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="+1 (555 123-4567"
               />
             </div>
           </div>
 
           <div>
             <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-              Service Interest
+              Service Interest;
             </label>
-            <select
+            <select;
               id="service"
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="">Select a service</option>
-              {services.map((service) => (
+              {services.map((service => (
                 <option key={service} value={service}>
                   {service}
                 </option>
@@ -179,12 +177,11 @@ const ContactForm: React.FC = () => {
             <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
               Message *
             </label>
-            <textarea
-              id="message"
+            <textarea id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              required
+              required;
               rows={5}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Tell us about your project and how we can help..."
@@ -208,27 +205,27 @@ const ContactForm: React.FC = () => {
             </div>
           )}
 
-          <button
+          <button;
             type="submit"
             disabled={status.type === 'loading'}
-            className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+            className="w-full bg-blue-600 hover: bg-blue-700 disabled:bg-blue-400 text-white py-4 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
           >
             {status.type === 'loading' ? (
               <>
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">
                 Sending...
               </>
             ) : (
               <>
-                Send Message
+                Send Message;
                 <Send className="w-5 h-5 ml-2" />
               </>
-            )}
+            }
           </button>
         </form>
 
         <div className="mt-8 pt-8 border-t border-gray-200">
-          <div className="grid md:grid-cols-3 gap-6 text-center">
+          <div className="grid md: grid-cols-3 gap-6 text-center">
             <div className="flex flex-col items-center">
               <Mail className="w-6 h-6 text-blue-600 mb-2" />
               <span className="text-sm font-medium text-gray-900">Email</span>
@@ -237,7 +234,7 @@ const ContactForm: React.FC = () => {
             <div className="flex flex-col items-center">
               <Phone className="w-6 h-6 text-blue-600 mb-2" />
               <span className="text-sm font-medium text-gray-900">Phone</span>
-              <span className="text-sm text-gray-600">+1 (555) 123-4567</span>
+              <span className="text-sm text-gray-600">+1 (555 123-4567</span>
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="w-6 h-6 text-blue-600 mb-2" />

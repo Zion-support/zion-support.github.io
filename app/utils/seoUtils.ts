@@ -1,5 +1,4 @@
-// SEO utilities for the application
-
+// SEO utilities for the application;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -17,11 +16,11 @@
 export class SEOManager {
   private config: SEOConfig;
 
-  constructor(config: SEOConfig) {
+  constructor(config: SEOConfig {
     this.config = config;
   }
 
-  public updateConfig(newConfig: Partial<SEOConfig>): void {
+  public updateConfig(newConfig: Partial<SEOConfig>: void {
     this.config = { ...this.config, ...newConfig };
     this.applyConfig();
   }
@@ -33,50 +32,50 @@ export class SEOManager {
   private applyConfig(): void {
     if (typeof document === 'undefined') return;
 
-    // Update title
+    // Update title;
     document.title = this.config.title;
 
-    // Update meta description
+    // Update meta description;
     this.updateMetaTag('description', this.config.description);
 
-    // Update meta keywords
+    // Update meta keywords;
     this.updateMetaTag('keywords', this.config.keywords.join(', '));
 
-    // Update canonical URL
+    // Update canonical URL;
     this.updateCanonicalUrl();
 
-    // Update Open Graph tags
+    // Update Open Graph tags;
     this.updateOpenGraphTags();
 
-    // Update Twitter Card tags
+    // Update Twitter Card tags;
     this.updateTwitterTags();
 
-    // Update robots meta
+    // Update robots meta;
     if (this.config.robots) {
       this.updateMetaTag('robots', this.config.robots);
     }
 
-    // Update author
+    // Update author;
     if (this.config.author) {
       this.updateMetaTag('author', this.config.author);
     }
 
-    // Update published time
+    // Update published time;
     if (this.config.publishedTime) {
       this.updateMetaTag('article:published_time', this.config.publishedTime);
     }
 
-    // Update modified time
+    // Update modified time;
     if (this.config.modifiedTime) {
       this.updateMetaTag('article:modified_time', this.config.modifiedTime);
     }
 
-    // Update section
+    // Update section;
     if (this.config.section) {
       this.updateMetaTag('article:section', this.config.section);
     }
 
-    // Update tags
+    // Update tags;
     if (this.config.tags) {
       this.config.tags.forEach(tag => {
         this.addMetaTag('article:tag', tag);
@@ -85,7 +84,7 @@ export class SEOManager {
   }
 
   private updateMetaTag(name: string, content: string): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined' return;
 
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
@@ -146,7 +145,7 @@ export class SEOManager {
   }
 
   private updateMetaTagByProperty(property: string, content: string): void {
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined' return;
 
     let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
     if (!meta) {
@@ -163,12 +162,12 @@ export class SEOManager {
     const meta = document.createElement('meta');
     meta.name = name;
     meta.content = content;
-    document.head.appendChild(meta);
+    document.head.appendChild(meta;
   }
 }
 
-// Utility functions
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
+// Utility functions;
+export const generateMetaDescription = (content: string, maxLength: number = 160: string => {
   const cleanContent = content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {
     return cleanContent;
@@ -185,5 +184,5 @@ export const addStructuredData = (data: any): void => {
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = createStructuredData(data);
-  document.head.appendChild(script);
+  document.head.appendChild(script;
 };

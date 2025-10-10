@@ -1,5 +1,4 @@
-// Accessibility utilities for the application
-
+// Accessibility utilities for the application;
 export interface AccessibilityConfig {
   enableHighContrast: boolean;
   enableScreenReader: boolean;
@@ -19,11 +18,11 @@ export const defaultAccessibilityConfig: AccessibilityConfig = {
 export class AccessibilityManager {
   private config: AccessibilityConfig;
 
-  constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {
+  constructor(config: AccessibilityConfig = defaultAccessibilityConfig {
     this.config = config;
   }
 
-  public updateConfig(newConfig: Partial<AccessibilityConfig>): void {
+  public updateConfig(newConfig: Partial<AccessibilityConfig>: void {
     this.config = { ...this.config, ...newConfig };
     this.applyConfig();
   }
@@ -36,25 +35,25 @@ export class AccessibilityManager {
     if (typeof document === 'undefined') return;
 
     const root = document.documentElement;
-    
-    // Apply high contrast
+
+    // Apply high contrast;
     if (this.config.enableHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Apply font size
+    // Apply font size;
     root.setAttribute('data-font-size', this.config.fontSize);
 
-    // Apply color scheme
+    // Apply color scheme;
     root.setAttribute('data-color-scheme', this.config.colorScheme);
   }
 
   public announceToScreenReader(message: string): void {
     if (typeof document === 'undefined' || !this.config.enableScreenReader) return;
 
-    const announcement = document.createElement('div');
+    const announcement = document.createElement('div';
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -72,13 +71,13 @@ export class AccessibilityManager {
 
     const element = document.querySelector(selector) as HTMLElement;
     if (element) {
-      element.focus();
+      element.focus(;
       return true;
     }
     return false;
   }
 
-  public trapFocus(container: HTMLElement): () => void {
+  public trapFocus(container: HTMLElement): ( => void {
     const focusableElements = container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     ) as NodeListOf<HTMLElement>;
@@ -92,7 +91,7 @@ export class AccessibilityManager {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault();
+          e.preventDefault(;
         }
       } else {
         if (document.activeElement === lastElement) {
@@ -113,27 +112,27 @@ export class AccessibilityManager {
 
 export const accessibilityManager = new AccessibilityManager();
 
-// Utility functions
+// Utility functions;
 export const isAccessible = (element: HTMLElement): boolean => {
   const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
   const hasTextContent = element.textContent?.trim().length > 0;
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex');
-  
-  return isInteractive && (hasAriaLabel || hasTextContent);
+
+  return isInteractive && (hasAriaLabel || hasTextContent;
 };
 
-export const addAriaLabel = (element: HTMLElement, label: string): void => {
+export const addAriaLabel = (element: HTMLElement, label: string: void => {
   element.setAttribute('aria-label', label);
 };
 
-export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {
+export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string: void => {
   element.setAttribute('aria-describedby', descriptionId);
 };
 
-export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {
+export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0: void => {
   element.setAttribute('tabindex', tabIndex.toString());
 };
 
-export const removeElementFocus = (element: HTMLElement): void => {
+export const removeElementFocus = (element: HTMLElement: void => {
   element.setAttribute('tabindex', '-1');
 };

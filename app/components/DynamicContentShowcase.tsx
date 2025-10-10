@@ -22,7 +22,7 @@ interface Testimonial {
   avatar?: string;
 }
 
-const DynamicContentShowcase: React.FC = () => {
+const DynamicContentShowcase: React.FC = ( => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
@@ -86,38 +86,38 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
       content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Emily Rodriguez',
       company: 'InnovateLab',
       role: 'Product Manager',
       content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'David Kim',
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
-      rating: 5
+      rating: 5;
     }
   ];
 
   useEffect(() => {
     if (!isPlaying) return;
-    
+
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
-    
+
     return () => clearInterval(timer);
   }, [isPlaying, testimonials.length]);
 
@@ -144,17 +144,17 @@ const DynamicContentShowcase: React.FC = () => {
             Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
+            Experience the power of our cutting-edge solutions with real-time demonstrations;
             and interactive showcases that bring your business to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Play className="w-5 h-5" />
-              Start Demo
+              Start Demo;
             </button>
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>
@@ -182,7 +182,7 @@ const DynamicContentShowcase: React.FC = () => {
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
-                
+
                 {feature.stats && (
                   <div className="grid grid-cols-3 gap-4">
                     {feature.stats.map((stat, statIndex) => (
@@ -217,11 +217,11 @@ const DynamicContentShowcase: React.FC = () => {
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
                   "{currentTestimonial.content}"
                 </blockquote>
-                
+
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
                     <Users className="w-8 h-8 text-white" />
@@ -237,21 +237,21 @@ const DynamicContentShowcase: React.FC = () => {
 
             {/* Navigation Controls */}
             <div className="flex items-center justify-center gap-4 mt-8">
-              <button
+              <button;
                 onClick={prevTestimonial}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              
-              <button
+
+              <button;
                 onClick={togglePlayPause}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </button>
-              
-              <button
+
+              <button;
                 onClick={nextTestimonial}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
@@ -262,7 +262,7 @@ const DynamicContentShowcase: React.FC = () => {
             {/* Dots Indicator */}
             <div className="flex justify-center gap-2 mt-6">
               {testimonials.map((_, index) => (
-                <button
+                <button;
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
@@ -308,20 +308,20 @@ const DynamicContentShowcase: React.FC = () => {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  ;
 };
 
 export default DynamicContentShowcase;

@@ -13,7 +13,7 @@ interface Partner {
   tier: 'strategic' | 'preferred' | 'certified';
 }
 
-const PartnersPage: React.FC = () => {
+const PartnersPage: React.FC = ( => {
   const partners: Partner[] = [
     {
       name: 'Microsoft',
@@ -71,21 +71,21 @@ const PartnersPage: React.FC = () => {
       description: 'Long-term strategic partnerships with shared vision and deep integration',
       bgColor: 'bg-gradient-to-br from-purple-500/20 to-blue-500/20',
       borderColor: 'border-purple-400/50',
-      icon: Award
+      icon: Award;
     },
     {
       name: 'Preferred',
       description: 'Preferred vendor relationships with priority support and collaboration',
       bgColor: 'bg-gradient-to-br from-cyan-500/20 to-teal-500/20',
       borderColor: 'border-cyan-400/50',
-      icon: Users
+      icon: Users;
     },
     {
       name: 'Certified',
       description: 'Certified partner status with proven expertise and reliable delivery',
       bgColor: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20',
       borderColor: 'border-green-400/50',
-      icon: CheckCircle
+      icon: CheckCircle;
     }
   };
 
@@ -115,7 +115,7 @@ const PartnersPage: React.FC = () => {
   const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
 
   const getPartnersByTier = (tier: keyof typeof partnerTiers) => 
-    partners.filter(partner => partner.tier === tier);
+    partners.filter(partner => partner.tier === tier;
 
   return (
     <>
@@ -130,17 +130,17 @@ const PartnersPage: React.FC = () => {
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Partners
+              Our Partners;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               We collaborate with industry leaders to deliver cutting-edge solutions and drive innovation in AI, cloud computing, and enterprise technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                Become a Partner
+                Become a Partner;
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                View Partnership Program
+                View Partnership Program;
               </button>
             </div>
           </div>
@@ -184,15 +184,15 @@ const PartnersPage: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 text-sm font-medium">{partner.category}</span>
                         {partner.website && (
-                          <a
+                          <a;
                             href={partner.website}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white hover:text-cyan-400 transition-colors"
+                            className="text-white hover: text-cyan-400 transition-colors"
                           >
                             <ExternalLink className="w-4 h-4" />
                           </a>
-                        )}
+                        }
                       </div>
                     </div>
                   ))}
@@ -208,7 +208,7 @@ const PartnersPage: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Partner With Us?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our partnerships provide you with access to the latest technologies and expert support
+                Our partnerships provide you with access to the latest technologies and expert support;
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -268,14 +268,14 @@ const PartnersPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Interested in partnering with us? We're always looking for innovative companies to join our ecosystem.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Handshake className="w-5 h-5" />
-                  Partner With Us
+                  Partner With Us;
                 </button>
                 <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <TrendingUp className="w-5 h-5" />
-                  View Partnership Program
+                  View Partnership Program;
                 </button>
               </div>
             </div>
@@ -283,7 +283,7 @@ const PartnersPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default PartnersPage;

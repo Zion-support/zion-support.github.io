@@ -24,15 +24,14 @@ class EnvironmentConfig {
     // Safely access environment variables with defaults;
     return {
 class EnvironmentConfig {}
-  private config: EnvConfig
-  private isInitialized = false
-  constructor() {}
+  private config: EnvConfig;
+  private isInitialized = false;
+  constructor( {}
     this.config = this.loadConfig()
     this.isInitialized = true;}
   }
   private loadConfig(): EnvConfig {}
-    // Safely access environment variables with defaults
-
+    // Safely access environment variables with defaults;
     return {}
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
@@ -62,11 +61,11 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   /**
    * Get a specific configuration value;
    */
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
+  public get<K extends keyof EnvConfig>(key: K: EnvConfig[K] {,
+  public get<K extends keyof EnvConfig>(key: K: EnvConfig[K] {}
     return this.config[key];}
   public get<K extends keyof EnvConfig>(ke)
-  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
+  y: K: EnvConfig[K] {/* TODO: Fix JSX expression */}
   }
   /**
    * Check if running in production;
@@ -92,7 +91,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   /**
    * Validate required environment variables;
    */
-  public validate(requiredVars: (keyof EnvConfig)[]): {,
+  public validate(requiredVars: (keyof EnvConfig)[]: {,
     valid: boolean,
     missing: string[];}
   } {
@@ -104,12 +103,12 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
     return {
       valid: missing.length === 0;
-  public validate(requiredVars: (keyof EnvConfig)[]): {}
-    valid: boolean
+  public validate(requiredVars: (keyof EnvConfig)[]: {}
+    valid: boolean,
     missing: string[];}
   } {}
     const missing: string[] = []
-    for (const varName of requiredVars) {}
+    for (const varName of requiredVars {}
       if (!this.config[varName]) {}
         missing.push(varName);}
       }
@@ -119,7 +118,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       missing}
     }
   public validate(requiredVar)
-  s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
+  s: (keyof EnvConfig)[]: {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
       }
     }

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
 
-const FiveGImplementationPage: React.FC = () => {
+const FiveGImplementationPage: React.FC = ( => {
   const features = [
     {
       icon: Wifi,
@@ -57,9 +57,9 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              5G Network
+              5G Network;
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Implementation
+                Implementation;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -68,10 +68,10 @@ const FiveGImplementationPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
+                Get Started;
               </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
@@ -82,10 +82,10 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced 5G Features
+                Advanced 5G Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge 5G technology for the next generation of connectivity
+                Cutting-edge 5G technology for the next generation of connectivity;
               </p>
             </div>
 
@@ -117,7 +117,7 @@ const FiveGImplementationPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Implement 5G?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -125,10 +125,10 @@ const FiveGImplementationPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
+                  Contact Us;
                 </button>
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
+                  Learn More;
                 </button>
               </div>
             </div>
@@ -136,7 +136,7 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ;
 };
 
 export default FiveGImplementationPage;

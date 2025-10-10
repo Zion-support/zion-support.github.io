@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AiContentGenerationPage: React.FC = () => {
+const AiContentGenerationPage: React.FC = ( => {
   const features = [
     {
       icon: Brain,
@@ -32,7 +32,7 @@ const AiContentGenerationPage: React.FC = () => {
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = ( => {
   const features = [
     {
       title: 'Feature 1',
@@ -71,17 +71,17 @@ const PagePage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Content Generation
+              Ai Content Generation;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai content generation solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
+                Get Started;
               </button>
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
+                View Demo;
               </button>
             </div>
           </div>
@@ -92,10 +92,10 @@ const PagePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
+                Key Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
+                Advanced AI technology that drives results;
               </p>
             </div>
 
@@ -131,7 +131,7 @@ const PagePage: React.FC = () => {
                 Why Choose Our Solution?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
+                Proven results that drive business growth and efficiency;
               </p>
             </div>
 
@@ -160,10 +160,10 @@ const PagePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
+                  Contact Us;
                 </button>
                 <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
+                  Learn More;
                 </button>    'Benefit 1',
     'Benefit 2',
     'Benefit 3',
@@ -179,7 +179,7 @@ const PagePage: React.FC = () => {
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
+
       <Navigation />
 
       {/* Hero Section */}
@@ -188,9 +188,9 @@ const PagePage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Page
+            Page;
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
+              Solutions;
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -198,11 +198,11 @@ const PagePage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today
+              Get Started Today;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
+              View Demo;
             </button>
           </div>
         </div>
@@ -214,10 +214,10 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
+              Advanced solutions designed for modern business needs;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
@@ -246,10 +246,10 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
+              Experience the benefits of our proven solutions;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -268,14 +268,14 @@ const PagePage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today
+            Transform your business with our page solutions today;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
+              Start Free Trial;
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
+              Contact Sales;
             </button>
           </div>
         </div>
@@ -283,3 +283,5 @@ const PagePage: React.FC = () => {
 export default AiContentGenerationPage;
 export default PagePage;
 export default AiContentGenerationPage;export default PagePage;
+
+}}}}}

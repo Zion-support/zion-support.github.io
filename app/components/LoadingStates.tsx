@@ -14,7 +14,7 @@ export const PageLoader: React.FC = () => {
         <p className="text-gray-300">Please wait while we load the page</p>
       </div>
     </div>
-  );
+  ;
 };
 
 export const ComponentLoader: React.FC = () => {
@@ -25,7 +25,7 @@ export const ComponentLoader: React.FC = () => {
         <span>Loading component...</span>
       </div>
     </div>
-  );
+  ;
 };
 
 export const ServiceCardSkeleton: React.FC = () => {
@@ -36,7 +36,7 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-3 bg-slate-700 rounded mb-4"></div>
       <div className="h-8 bg-slate-700 rounded"></div>
     </div>
-  );
+  ;
 };
 
 export const ContentSkeleton: React.FC = () => {
@@ -47,5 +47,5 @@ export const ContentSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded"></div>
     </div>
-  );
+  ;
 };

@@ -1,6 +1,6 @@
 'use client';
 
-const AccessibilityEnhancerPage: React.FC = () => {
+const AccessibilityEnhancerPage: React.FC = ( => {
   const features = [
     {
       icon: Brain,
@@ -42,11 +42,11 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (!this.options.enableKeyboardNavigation) return;
 
     document.addEventListener('keydown', (event) => {
-      // Skip links for keyboard navigation
+      // Skip links for keyboard navigation;
       if (event.key === 'Tab' && event.shiftKey) {
         const focusableElements = this.getFocusableElements();
         const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-        
+
         if (currentIndex > 0) {
           focusableElements[currentIndex - 1]?.focus();
           event.preventDefault();
@@ -54,7 +54,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       } else if (event.key === 'Tab' && !event.shiftKey) {
         const focusableElements = this.getFocusableElements();
         const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-        
+
         if (currentIndex < focusableElements.length - 1) {
           focusableElements[currentIndex + 1]?.focus();
           event.preventDefault();
@@ -66,23 +66,23 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupScreenReaderSupport(): void {
     if (!this.options.enableScreenReaderSupport) return;
 
-    // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
+    // Add ARIA labels to interactive elements;
+    const buttons = document.querySelectorAll('button: not([aria-label])');
     buttons.forEach((button) => {
-      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+      if (!button.getAttribute('aria-label') && !button.textContent?.trim() {
         button.setAttribute('aria-label', 'Button');
       }
     });
 
-    // Add ARIA labels to images
-    const images = document.querySelectorAll('img:not([alt])');
-    images.forEach((img) => {
+    // Add ARIA labels to images;
+    const images = document.querySelectorAll('img: not([alt])');
+    images.forEach((img => {
       img.setAttribute('alt', 'Image');
     });
 
-    // Add role attributes where needed
-    const sections = document.querySelectorAll('section:not([role])');
-    sections.forEach((section) => {
+    // Add role attributes where needed;
+    const sections = document.querySelectorAll('section: not([role])');
+    sections.forEach((section => {
       section.setAttribute('role', 'region');
     });
   }
@@ -90,13 +90,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupHighContrast(): void {
     if (!this.options.enableHighContrast) return;
 
-    // Check for high contrast mode preference
+    // Check for high contrast mode preference;
     if (window.matchMedia('(prefers-contrast: high)').matches) {
-      document.body.classList.add('high-contrast');
+      document.body.classList.add('high-contrast';
     }
 
-    // Listen for changes in contrast preference
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
+    // Listen for changes in contrast preference;
+    window.matchMedia('(prefers-contrast: high)'.addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
       } else {
@@ -108,14 +108,14 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupFocusManagement(): void {
     if (!this.options.enableFocusManagement) return;
 
-    // Add focus indicators
+    // Add focus indicators;
     const style = document.createElement('style');
     style.textContent = `
       *:focus {
         outline: 2px solid #0066cc;
         outline-offset: 2px;
       }
-      
+
       .focus-visible {
         outline: 2px solid #0066cc;
         outline-offset: 2px;
@@ -123,7 +123,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     `;
     document.head.appendChild(style);
 
-    // Manage focus for modals and dropdowns
+    // Manage focus for modals and dropdowns;
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
         const modal = document.querySelector('[role="dialog"]');
@@ -137,12 +137,12 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupColorContrast(): void {
     if (!this.options.enableColorContrast) return;
 
-    // Check for reduced color preference
+    // Check for reduced color preference;
     if (window.matchMedia('(prefers-reduced-data)').matches) {
       document.body.classList.add('reduced-color');
     }
 
-    // Listen for changes in color preference
+    // Listen for changes in color preference;
     window.matchMedia('(prefers-reduced-data)').addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('reduced-color');
@@ -155,13 +155,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupTextScaling(): void {
     if (!this.options.enableTextScaling) return;
 
-    // Check for text scaling preference
+    // Check for text scaling preference;
     const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
     if (fontSize > 16) {
       document.body.classList.add('text-scaled');
     }
 
-    // Listen for changes in text scaling
+    // Listen for changes in text scaling;
     const observer = new ResizeObserver(() => {
       const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
       if (fontSize > 16) {
@@ -177,13 +177,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupReducedMotion(): void {
     if (!this.options.enableReducedMotion) return;
 
-    // Check for reduced motion preference
+    // Check for reduced motion preference;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.classList.add('reduced-motion');
+      document.body.classList.add('reduced-motion';
     }
 
-    // Listen for changes in motion preference
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
+    // Listen for changes in motion preference;
+    window.matchMedia('(prefers-reduced-motion: reduce)'.addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('reduced-motion');
       } else {
@@ -195,10 +195,10 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
       'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+      'button: not([disabled]',
+      'input: not([disabled]',
+      'select: not([disabled]',
+      'textarea: not([disabled]',
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'
     ];
@@ -209,7 +209,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   public announceToScreenReader(message: string): void {
     if (!this.options.enableScreenReaderSupport) return;
 
-    const announcement = document.createElement('div');
+    const announcement = document.createElement('div';
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -225,7 +225,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   public setFocus(element: HTMLElement): void {
     if (!this.options.enableFocusManagement) return;
 
-    element.focus();
+    element.focus(;
   }
 
   public trapFocus(container: HTMLElement): void {
@@ -235,7 +235,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       container.contains(el)
     );
 
-    if (focusableElements.length === 0) return;
+    if (focusableElements.length === 0 return;
 
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];

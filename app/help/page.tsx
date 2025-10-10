@@ -24,14 +24,14 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+              Key Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>

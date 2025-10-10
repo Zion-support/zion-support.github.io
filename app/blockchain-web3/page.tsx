@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const BlockchainWeb3Page: React.FC = () => {
+const BlockchainWeb3Page: React.FC = ( => {
   const features = [
     {
       icon: Zap,
@@ -38,7 +38,7 @@ const BlockchainWeb3Page: React.FC = () => {
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
