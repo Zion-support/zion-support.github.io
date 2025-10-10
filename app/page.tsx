@@ -108,7 +108,7 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 neural-network-bg matrix-rain">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -535,86 +535,112 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
-          {/* New AI Services Grid */}
+          {/* Advanced AI Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Advanced AI Services
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Customer Support</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">💬</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Customer Support</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Revolutionary AI-powered customer support with chatbots, omnichannel communication, and intelligent automation.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-customer-support" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2 neon-text">Starting at $199/month</div>
+                  <a href="/ai-customer-support" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sales Automation</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📈</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Sales Automation</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Boost sales by 300% with intelligent lead scoring, automated outreach, and CRM integration.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $299/month</div>
-                  <a href="/ai-sales-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $299/month</div>
+                  <a href="/ai-sales-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Workflow Automation</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚡</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Workflow Automation</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Automate any business process with intelligent workflows, 90% time savings, and 500+ integrations.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">Starting at $99/month</div>
-                  <a href="/ai-workflow-automation" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2 neon-text">Starting at $99/month</div>
+                  <a href="/ai-workflow-automation" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Data Visualization</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📊</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Data Visualization</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Transform data into actionable insights with AI-powered visualization, interactive dashboards, and 100+ data sources.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">Starting at $149/month</div>
-                  <a href="/ai-data-visualization" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $149/month</div>
+                  <a href="/ai-data-visualization" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Lead Generation</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🎯</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Lead Generation</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Generate high-quality leads with AI-powered prospecting, email sequences, and automated follow-ups.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-lead-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
+                  <a href="/ai-lead-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Document Processing</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🔍</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Document Processing</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Automatically extract, process, and analyze documents with AI-powered OCR and intelligent data extraction.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $149/month</div>
-                  <a href="/ai-document-processing" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2 neon-text">Starting at $149/month</div>
+                  <a href="/ai-document-processing" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🧠</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Business Intelligence</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced business intelligence with predictive analytics, automated reporting, and strategic insights.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2 neon-text">Starting at $399/month</div>
+                  <a href="/ai-business-intelligence" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🔐</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Cybersecurity Suite</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced AI-powered cybersecurity with threat detection, automated response, and compliance monitoring.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2 neon-text">Starting at $499/month</div>
+                  <a href="/ai-cybersecurity-suite" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
