@@ -7,8 +7,8 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const testPagetsx: React.FC = () => {
-  const _features = [];
+const testPagetsx: React.FC = () => {;
+const _features = [];
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -99,8 +99,7 @@ const testPagetsx: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 export default testPagetsx;
 
 

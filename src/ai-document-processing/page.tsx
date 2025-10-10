@@ -8,8 +8,7 @@ import Footer from '../components/Footer';
 
           Contact Us;
         </a></div></div>)
-  );
-};
+  )};
 export default AiDocumentProcessingPage;
 
 

@@ -2,10 +2,9 @@
 import React from 'react';
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-
-const AISchedulerPage: React.FC = () => {
-  const features = [
+;
+const AISchedulerPage: React.FC = () => {;
+const features = [
     {
       icon: Calendar,
       title: 'Smart Scheduling',
@@ -34,8 +33,8 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-
-  const pricingPlans = [
+;
+const pricingPlans = [
       name: 'Personal',
       price: '$19',
       period: '/month',
@@ -71,9 +70,8 @@ $4}
         'Dedicated support',
         'White-label options',
         'SSO integration',
-        'Custom workflows'
-
-  const integrations = [
+        'Custom workflows';
+const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
     { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },
@@ -82,8 +80,8 @@ $4}
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-
-  const testimonials = [
+;
+const testimonials = [
       name: 'Jennifer Lee',
       company: 'TechStart',
       role: 'Operations Manager',
@@ -222,8 +220,7 @@ $4}
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
-  );
-};
+  )};
 
 export default AISchedulerPage;
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';

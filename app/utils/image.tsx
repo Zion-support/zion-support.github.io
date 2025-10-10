@@ -61,8 +61,9 @@ export const Image: React.FC<ImageProps> = ({,
   const imageStyle: React.CSSProperties = {
     ...style;
     ...(fill && {
-      position: 'absolute'
-      top: 0,
+      position: 'absolute',
+      top:
+        top: 0,
       left: 0,
   const imageStyle: React.CSSProperties = {}
     ...style,

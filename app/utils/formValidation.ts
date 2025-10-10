@@ -182,12 +182,12 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({,
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({}
     validate: (value: string) => value === otherFieldValue,`}
-    message: `Must match ${fieldName}
+    message: 'Must match ${fieldName}
   matche,
   s: (otherFieldValu,
   e: string, fieldNam)
-  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`
-  e: `Must match ${fieldName}`)
+  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}',
+  e: 'Must match ${fieldName}')
   }),
   /**
    * Validate file size;

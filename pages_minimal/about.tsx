@@ -73,6 +73,5 @@ export default function about() {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </div>)
-  );
-}
+  )}
 "

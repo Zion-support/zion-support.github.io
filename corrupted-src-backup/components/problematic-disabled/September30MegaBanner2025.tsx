@@ -282,6 +282,5 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </moti, o, n.d, i, v>
-  );
-};
+  )};
 export default September30MegaBanner2025;"`

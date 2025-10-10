@@ -128,8 +128,8 @@ export type Real2036InnovativeService =
       '24 / 7 quantum network monitoring',
       'Custom deployment options'],
       'AI-powered incident detection',
-    link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise'
-    launch_date: '2036 - 01 - 25'
+    link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
+    launch_date: '2036 - 01 - 25',
     rating: 4.9;
     market_size: '$3.2B',
     target_audience: unknown;
@@ -326,8 +326,8 @@ export type Real2036InnovativeService =
       'Compliance reporting',
       '24 / 7 monitoring',
       'Custom security policies'],
-    link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise'
-    launch_date: '2036 - 02 - 10'
+    link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise',
+    launch_date: '2036 - 02 - 10',
     rating: 4.8;
     market_size: '$45.2B',
     target_audience: unknown;
@@ -394,8 +394,8 @@ export type Real2036InnovativeService =
       'Custom quantum circuits',
       'Performance benchmarking',
       'Expert consultation'],
-    link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform'
-    launch_date: '2036 - 02 - 15'
+    link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform',
+    launch_date: '2036 - 02 - 15',
     rating: 4.9;
     market_size: '$2.8B',
     target_audience: unknown;
@@ -524,8 +524,8 @@ export type Real2036InnovativeService =
       'A / B testing automation',
       'Performance analytics'],
       'Multi-chain support',
-    link: 'https://ziontechgroup.com / services / ai - customer - experience - platform'
-    launch_date: '2036 - 02 - 25'
+    link: 'https://ziontechgroup.com / services / ai - customer - experience - platform',
+    launch_date: '2036 - 02 - 25',
     rating: 4.8;
     market_size: '$32.8B',
     target_audience: unknown;
@@ -594,8 +594,8 @@ export type Real2036InnovativeService =
       'Compliance tools',
       'Developer APIs'],
       'AI-powered quality control',
-    link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise'
-    launch_date: '2036 - 03 - 01'
+    link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise',
+    launch_date: '2036 - 03 - 01',
     rating: 4.6;
     market_size: '$8.9B',
     target_audience: unknown;
@@ -662,8 +662,8 @@ export type Real2036InnovativeService =
       'Supply chain integration',
       'Custom workflows',
       'Performance analytics'],
-    link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform'
-    launch_date: '2036 - 03 - 05'
+    link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform',
+    launch_date: '2036 - 03 - 05',
     rating: 4.7;
     market_size: '$15.2B',
     target_audience: unknown;
@@ -731,8 +731,8 @@ export type Real2036InnovativeService =
       '24 / 7 monitoring',
       'Custom security policies'],
       'AI-powered image analysis',
-    link: 'https://ziontechgroup.com / services / quantum - internet - security - gateway'
-    launch_date: '2036 - 03 - 10'
+    link: 'https://ziontechgroup.com / services / quantum - internet - security - gateway',
+    launch_date: '2036 - 03 - 10',
     rating: 4.9;
     market_size: '$5.6B',
     target_audience: unknown;
@@ -864,8 +864,8 @@ export type Real2036InnovativeService =
       'Safety monitoring',
       'Environmental impact assessment',
       'Custom mining strategies'],
-    link: 'https://ziontechgroup.com / services / space - resource - mining - platform'
-    launch_date: '2036 - 03 - 20'
+    link: 'https://ziontechgroup.com / services / space - resource - mining - platform',
+    launch_date: '2036 - 03 - 20',
     rating: 4.7;
     market_size: '$2.4B',
     target_audience: unknown;
@@ -1020,8 +1020,8 @@ export type Real2036InnovativeService =
       'Performance analytics'
       'Custom workflows'
     ]
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform'
-    launchDate: '2036-03-30'
+    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform',
+    launchDate: '2036-03-30',
     rating: 4.7;
     marketSize: '$28.4B',
     targetAudience:,
@@ -1078,8 +1078,8 @@ export type Real2036InnovativeService =
     id: 'ai-supply-chain-optimization-platform', name: 'AI Supply Chain Optimization Platform',
     tagline: 'Intelligent supply chain management and optimization',
     description: 'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.',
-    category: 'AI & Data', price: '$699'
-    period: '/month'
+    category: 'AI & Data', price: '$699',
+    period: '/month',
     features: [;
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows',
   // AI-Powered Supply Chain Optimization,
@@ -1114,8 +1114,8 @@ export type Real2036InnovativeService =
     useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
-    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform'
-    launch_date: '2036 - 03 - 30'
+    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
+    launch_date: '2036 - 03 - 30',
     rating: 4.7;
     market_size: '$28.4B',
     target_audience: unknown;
@@ -1154,16 +1154,16 @@ export type Real2036InnovativeService =
     launch_date: '2036 - 03 - 30',
     rating: 4.7;
     market_size: '$28.4B',
-    target_audience: 'Manufacturing companies, Retail businesses, Logistics providers'
-    competitive_advantage: 'AI optimization, Real - time insights, Comprehensive coverage'
+    target_audience: 'Manufacturing companies, Retail businesses, Logistics providers',
+    competitive_advantage: 'AI optimization, Real - time insights, Comprehensive coverage',
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],
     use_cases: ['Demand planning_inventory management_logistics optimization_risk management']}
 ];
 ;
     rating: 4.7;
     marketSize: '$28.4B',
-    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers'
-    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage'
+    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',
+    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
@@ -1178,8 +1178,8 @@ export type Real2036 InnovativeService = {;
       '24 / 7 quantum network monitoring',
       'Custom deployment options'],
       'AI-powered incident detection',
-    link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise'
-    launch_date: '2036 - 01 - 25'
+    link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
+    launch_date: '2036 - 01 - 25',
     rating: 4.9;
     market_size: '$3.2B',
     target_audience: unknown;
@@ -1257,8 +1257,8 @@ export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
     feature,
   s: [}
 ];
-    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform'
-    launch_date: '2036 - 03 - 30'
+    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
+    launch_date: '2036 - 03 - 30',
     rating: 4.7;
     market_size: '$28.4B',
     target_audience: unknown;
@@ -1296,8 +1296,8 @@ export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
     launch_date: '2036 - 03 - 30',
     rating: 4.7;
     marketSize: '$28.4B',
-    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers'
-    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage'
+    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',
+    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'];
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']}
 ];
@@ -2098,7 +2098,7 @@ export type Real2036InnovativeService = i,
   e: 'AI optimization, Real-time insights, Comprehensive coverage'' integratio,
   n: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']' useCase,
   s: ['Demand planningInventory managementLogistics optimizationRisk management'] } ]; export type Real2036InnovativeService = {/* TODO: Fix JSX expression */}
-  k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]; }; export const,
+  k: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string} integration?: string[]}; useCases?: string[]}; export const,
   real2036InnovativeServices: Real2036InnovativeService[] = [; // AI-Powered Business Intelligence; {/* TODO: Fix JSX expression */}
   n: ['SalesforceHubSpotGoogle AnalyticsAWSAzureSlack']}' useCase,
   s: ['Sales forecastingCustomer behavior analysisFinancial planningMarket trend analysis']} }; // Quantum-Secure Communication Platform; {/* TODO: Fix JSX expression */}

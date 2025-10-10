@@ -8,18 +8,19 @@ exports.handler = async function (event, context) {
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({)
         message: 'Unused media scanner executed successfully')
-        timestamp: new Date().toISOString()
-        function: 'unused-media-scanner'
+timestamp: new Date().toISOString()
+        function: 'unused-media-scanner',
+        source:
         source: event.source || 'unknown'
         scanning: {
-          status: 'active'
-          mediaScanned: 0;
+          status: 'active',
+          mediaScanned:
+        mediaScanned: 0;
           unusedFound: 0;
           lastScan: new Date().toISOString()}
       })
     };
-    return result;
-  } catch (error) {
+    return result} catch (error) {
 
     return {
       statusCode: 500;
@@ -28,8 +29,8 @@ exports.handler = async function (event, context) {
         'Access-Control-Allow-Origin': '*'},
       body: JSON.stringify({),
         error: 'Internal server error'),
-        message: error.message),
-        function: 'unused-media-scanner',
+        message: error.message),;
+function: 'unused-media-scanner',
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
       },
       bod,
@@ -37,12 +38,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         })
       })
     };
-    return result;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return result} catch (error) {/* TODO: Fix JSX expression */}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })
-    };
-  }
+    }}
 };

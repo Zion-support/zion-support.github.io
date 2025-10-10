@@ -89,8 +89,7 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
 //         const startTime = Date.now();
         // Simulate some work;
 //         const endTime = Date.now();
-        expect(endTime - startTime).toBeLessThan(1000);
-    });
+        expect(endTime - startTime).toBeLessThan(1000)});
 
     it('should pass accessibility test', () => {
         // Basic accessibility check;
@@ -99,8 +98,7 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     });
 
     it('should pass accessibility test', () => {/* TODO: Fix JSX expression */}
-    });
-});`
+    })});`
 `;
 
 fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
@@ -109,8 +107,8 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 
 // // Monitor performance;
 // try {
-//     // console.log('Memory usage:', {)
-        rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
+//     // // console.log removed for production
+rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB',
 // // 6. Create monitoring script;`
@@ -204,7 +202,7 @@ const improvementSummary = {
         'Test accessibility features',
         'Verify SEO improvements',
         'Monitor system performance'
-    ]
+    ];
 const improvementSummary = {/* TODO: Fix JSX expression */}
 };
 

@@ -3,9 +3,9 @@ import React from 'react';
 import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const ITSupportPage: React.FC = () => {
-  const features = [
+;
+const ITSupportPage: React.FC = () => {;
+const features = [
     {
       icon: Headphones,
       title: '24/7 Support',
@@ -99,7 +99,6 @@ const ITSupportPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default ITSupportPage;

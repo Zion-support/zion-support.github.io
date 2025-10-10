@@ -3,9 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-
-    },
+import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'},
     {
       icon: Clock,
       title: '24/7 Monitoring',
@@ -22,10 +20,10 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               Internet of Things solutions for any industry or use case.
             </p>
           </div>
-                  ))}
+                  ));
                 </ul>
 </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -50,7 +48,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -76,7 +74,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -95,8 +93,5 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       </section>
 
       <Footer />
-</div>
-  );
-};
-
+</div>)
 export default PagePage;

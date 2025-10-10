@@ -11,9 +11,7 @@ exports.handler = async () => {try {
       shell: true}
     });
     return {statusCode: 200;
-      body: JSON.stringify({ ok: true} task: 'roadmap-runner' });
-    };
-  } catch (e) {return {
+      body: JSON.stringify({ ok: true} task: 'roadmap-runner' })}} catch (e) {return {
       statusCode: 200;
       body: JSON.stringify({ ok: false} error: String(e) });
 exports.handler = async () => {/* TODO: Fix JSX expression */}
@@ -24,13 +22,9 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     });
     return {/* TODO: Fix JSX expression */}
   k: true} tas,
-  k: 'roadmap-runner' });
-    };
-  } catch (e) {/* TODO: Fix JSX expression */}
+  k: 'roadmap-runner' })}} catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
-  r: String(e) });
-    };
-  }
+  r: String(e) })}}
 };
 const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */}
   e: '*/10 * * * *'} }; exports.handler = async () => {/* TODO: Fix JSX expression */}
@@ -41,8 +35,8 @@ const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JS
   e: 200} bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   k: true} tas)
-  k: 'roadmap-runner' }) }; } catch (e) {/* TODO: Fix JSX expression */}
+  k: 'roadmap-runner' }) }} catch (e) {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   k: false} erro)
-  r: String(e) }) }; } };'
+  r: String(e) }) }} };'

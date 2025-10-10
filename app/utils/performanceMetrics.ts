@@ -282,8 +282,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       value: pageLoadTime)
       unit: 'ms')
       timestamp: new Date()
-      category: 'load'
-      metadata: {
+      category: 'load',
+      metadata:
+        metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart;
         tcpConnection: perfData.connectEnd - perfData.connectStart;
         serverResponse: perfData.responseEnd - perfData.requestStart;

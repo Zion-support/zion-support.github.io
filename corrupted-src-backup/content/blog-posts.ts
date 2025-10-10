@@ -9,7 +9,7 @@ export interface BlogPost {
   tags: string[];
   featured: boolean;
   readTime: string;
-  image?: string;}
+  image?: string}
 
 export const blogPosts: BlogPost[] = [,
   {,
@@ -40,7 +40,7 @@ export const blogPosts: BlogPost[] = [,
     title: 'Enterprise RAG Quality Budgets: Lift Correctness, Cut Spend',
     description:
       'Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.',
-    content: `
+    content: '
 # Enterprise RAG Quality Budgets: Production RAG needs governance and budgets.
 
 ## Core Patterns;
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [,
 - Freshness windows per intent;
 - Retrieval budgets with quality tiers;
 - Semantic caches for cost optimization;
-    `
+    ',
     author: 'Zion Tech Group Knowledge Systems',
     date: '2025-10-04',
     category: 'RAG Engineering',

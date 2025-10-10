@@ -140,7 +140,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupGlobalErrorHandlers(): void {
     window.addEventListener('error', event => {
       this.handleError({
-        type: 'javascript'
+        type: 'javascript',
+        message:
         message: event.message;)
         stack: event.error?.stack;)
         filename: event.filename;)
@@ -817,13 +818,13 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json',`}
-          Authorization: `Bearer ${this.config.apiKey}
+          Authorization: 'Bearer ${this.config.apiKey}
         })
         body: JSON.stringify(errorReport)})
     } catch (error) {}
   private async reportToRemote(errorRepor)
-  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${this.config.apiKey}`
+  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}',
+  n: 'Bearer ${this.config.apiKey}'
         },
         bod,
   y: JSON.stringify(errorReport)

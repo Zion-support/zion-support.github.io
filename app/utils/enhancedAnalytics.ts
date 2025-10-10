@@ -315,10 +315,10 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       action: conversionType,
       value,
       metadata: {`}
-        conversionId: `conv-${Date.now()}
+        conversionId: 'conv-${Date.now()}
   public trackConversion(conversionTyp)
-  e: string, value?: number): void {/* TODO: Fix JSX expression */}`
-  d: `conv-${Date.now()}`
+  e: string, value?: number): void {/* TODO: Fix JSX expression */}',
+  d: 'conv-${Date.now()}'
       }
     })
   }

@@ -75,13 +75,12 @@ export interface Revolutionary2027AiService {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const revolutionary2027 AIServices: Revolutionary2027 AiService[] = [,
     id: "2027-revolutionary-ai", name: "2027 Revolutionary AI Platform",
-    tagline: "Revolutionary AI for 2027", price: "$399/month"
-    description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027."
+    tagline: "Revolutionary AI for 2027", price: '$399/month',
+    description: 'Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.',
     features: [;
       "Revolutionary AI"
       "Transformative capabilities"
@@ -171,8 +170,8 @@ export const,
   }
 ];
 ;
-    id: "2027-revolutionary-ai"
-    name: "2027 Revolutionary AI Platform",
+    id: '2027-revolutionary-ai',
+    name: '2027 Revolutionary AI Platform',
     tagline: "Revolutionary AI for 2027",
     price: "$399/month",
     description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.",
@@ -183,12 +182,12 @@ export const,
       "Innovation platform",
       "Future-ready AI"
     ],
-    link: "/services/2027-revolutionary-ai"
-    category: "Revolutionary 2027 AI"
+    link: '/services/2027-revolutionary-ai',
+    category: 'Revolutionary 2027 AI',
     realImplementation: true;
     contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};

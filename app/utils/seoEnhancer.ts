@@ -111,8 +111,8 @@ interface SEOConfig {}
 }
 // Default SEO config;
 const defaultSEOConfig: SEOConfig = {
-  title: 'Zion Holdings'
-  description: 'Leading provider of AI-powered business solutions'
+  title: 'Zion Holdings',
+  description: 'Leading provider of AI-powered business solutions',
   keywords: []
 // Default SEO config
 const defaultSEOConfig: SEOConfig = {}

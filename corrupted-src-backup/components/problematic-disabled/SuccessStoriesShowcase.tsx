@@ -1,11 +1,15 @@
 import React from 'react';
-const SuccessStoriesShowcas, e: React.FC = () => { ,
-  const storie, s = [
+const SuccessStoriesShowcas, e: React.FC = () => {
+return (
+ ,;
+const storie, s = [
     {
       company: "TechCorp, Internatio, n, a, l",
       industry: "Technol, o, g, y",
       ic, o, n: '🚀',
-      ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > ,</TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Grow, t, h",
+      ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > ,</TrendingUp>resu</TrendingUp>
+);
+}, l, t: "3, 0, 0% Revenue, Grow, t, h",
       description: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion ra, t, e, s.",",
       metri, c, s: [,
         "98% prediction, accura, c, y",
@@ -67,7 +71,7 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
                 <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
                   {sto, r, y.ic, o, n}</div>
                   <d, i, v>
-                    <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>
+                    <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>;
 const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -145,6 +149,5 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
+  )};
 export default SuccessStoriesShowcase;"`

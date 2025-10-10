@@ -306,8 +306,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
     </div>,
       </section>
     </div>)
-  );
-}`
+  )}`
 `;
 
 // Write the fixed content;

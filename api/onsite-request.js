@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-// Simple wrapper function to replace withSentry
-const withSentry = (handler) => handler;
-
+// Simple wrapper function to replace withSentry;
+// withSentry removed
+;
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
@@ -12,28 +12,24 @@ export default function handler(req, res) {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
-
-  const { name, email, company, phone, message, location } = req.body || {};
+    return}
+;
+const { name, email, company, phone, message, location } = req.body || {};
 
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-
-  let existing = [];
+    fs.mkdirSync(dir, { recursive: true })}
+;
+let existing = [];
   try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
+    if (fs.existsSync(file)) {;
+const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
-    }
+      if (!Array.isArray(existing)) existing = []}
   } catch (error) {
-    console.error('Error reading existing requests:', error);
-    existing = [];
-  }
-
-  const newRequest = {
+    // console.error removed for production
+existing = []}
+;
+const newRequest = {
     id: Date.now().toString(),
     name,
     email,
@@ -55,13 +51,11 @@ export default function handler(req, res) {
       success: true, 
       message: 'Onsite request submitted successfully',
       id: newRequest.id
-    }));
-  } catch (error) {
-    console.error('Error saving onsite request:', error);
-    res.statusCode = 500;
+    }))} catch (error) {
+    // console.error removed for production
+res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save request' }));
-  }
+    res.end(JSON.stringify({ error: 'Failed to save request' }))}
 }
 module.exports = handler;
 

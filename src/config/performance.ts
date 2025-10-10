@@ -91,7 +91,7 @@ export default performanceConfig;
  * Centralized performance monitoring and optimization settings;
  */
 
-export const _performanceConfig = {// TODO: Add content;}
+export const _performanceConfig = {// TODO: Add content}
 
 }
   // Core Web Vitals thresholds,
@@ -101,30 +101,24 @@ export const _performanceConfig = {// TODO: Add content;}
 // goo,
   d: 2500,
 // needsImprovemen,
-  t: 4000;
-    },
+  t: 4000},
 
-    fid: {// TODO: Add content;}
+    fid: {// TODO: Add content}
 };
   good: 100,
-      needsImprovement: 300;
-    },
-    cls: {// TODO: Add content;}
+      needsImprovement: 300},
+    cls: {// TODO: Add content}
 };
   good: 0.1,
-      needsImprovement: 0.25;
-    },
-    fcp: {// TODO: Add content;}
+      needsImprovement: 0.25},
+    fcp: {// TODO: Add content}
 };
   good: 1800,
-      needsImprovement: 3000;
-    },
-    ttfb: {// TODO: Add content;}
+      needsImprovement: 3000},
+    ttfb: {// TODO: Add content}
 };
   good: 800,
-      needsImprovement: 1800;
-
-    }
+      needsImprovement: 1800}
   },
   // Cache strategies,
   cach,
@@ -133,21 +127,17 @@ export const _performanceConfig = {// TODO: Add content;}
 // maxAg,
   e: 31536000, // 1 year;
 // staleWhileRevalidat,
-  e: 86400, // 1 day;
-    },
+  e: 86400, // 1 day},
 
-    dynamic: {// TODO: Add content;}
+    dynamic: {// TODO: Add content}
 };
   maxAge: 3600, // 1 hour,
-  staleWhileRevalidate: 60, // 1 minute;
-
-    },
+  staleWhileRevalidate: 60, // 1 minute},
     ap,
   i: {/* TODO: Fix JSX expression */}
-  e: 300, // 5 minutes;}
+  e: 300, // 5 minutes}
 // staleWhileRevalidat,
-  e: 30, // 30 seconds;
-    }
+  e: 30, // 30 seconds}
   },
   // Resource hints,
   preloa,
@@ -175,8 +165,7 @@ export const _performanceConfig = {// TODO: Add content;}
 // minimumCacheTT,
   L: 60,
 // dangerouslyAllowSV,
-  G: false;
-  },
+  G: false},
   // Bundle optimization,
   bundl,
   e: {/* TODO: Fix JSX expression */}
@@ -192,16 +181,13 @@ export const _performanceConfig = {// TODO: Add content;}
 // priorit,
   y: -10,
 // reuseExistingChun,
-  k: true;
-        },
+  k: true},
 
-        default: {// TODO: Add content;}
+        default: {// TODO: Add content}
 };
   minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true;
-
-        }
+          reuseExistingChunk: true}
       }
     }
   },

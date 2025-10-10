@@ -1,3 +1,4 @@
+import React from 'react';
 
 export interface CybersecurityQuantumService;
 export interface CybersecurityQuantumService {;
@@ -12,13 +13,14 @@ export interface CybersecurityQuantumService {;
     currency: string;
     trialDays: number}
     setupTime: string;
-    id: 'quantum - resistant - encryption - platform'
+    id: 'quantum - resistant - encryption - platform',
     name: 'Quantum - Resistant Encryption Platform',
     tagline: 'Future - proof security with post - quantum cryptography',
     description: unknown;
       'Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.',
-    category: 'Quantum Security & Cryptography'
-    price: unknown;
+    category: 'Quantum Security & Cryptography',
+    price:
+        price: unknown;
       monthly: 499;
       yearly: 4990;
       currency: 'USD',
@@ -123,12 +125,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, FIPS 140 - 2, Common Criteria, FedRAMP'],
-    link: 'https://ziontechgroup.com / quantum - resistant - encryption - platform'
-    icon: ''
-    color: 'from - red - 500 to - orange - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 15'
-    customers: 650;
+    link: 'https://ziontechgroup.com / quantum - resistant - encryption - platform',
+    icon: '',
+    color: 'from - red - 500 to - orange - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 15',
+    customers:
+        customers: 650;
     rating: 4 && 4.9;
     reviews: 480;
     lin,
@@ -156,8 +160,8 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   k: [,
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch'],
     realImplementation: true;
-    implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
-    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
+    implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.',
+    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.',
     useCases: [;
     realImplementatio,
   n: true,
@@ -191,12 +195,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tagline: 'Proactive threat detection with autonomous security intelligence',
     description: unknown;
       'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.',
-    category: 'AI Cybersecurity & Threat Intelligence'
-    price: unknown;
+    category: 'AI Cybersecurity & Threat Intelligence',
+    price:
+        price: unknown;
       monthly: 399;
       yearly: 3990;
-      currency: 'USD'
-      trial_days: 21;
+      currency: 'USD',
+      trial_days:
+        trial_days: 21;
       setup_time: '1 - 2 weeks',
       enterprise: 'Custom pricing',
     lin,
@@ -295,20 +301,21 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'],
-    link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform'
-    icon: ''
-    color: 'from - purple - 500 to - indigo - 600'
-    popular: true;
-    launch_date: '2024 - 02 - 01'
-    customers: 1200;
+    link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform',
+    icon: '',
+    color: 'from - purple - 500 to - indigo - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 02 - 01',
+    customers:
+        customers: 1200;
     rating: 4 && 4.8;
-    reviews: 950;
-  },
+    reviews: 950},
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security'],
     techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
     realImplementation: true;
-    implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
-    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
+    implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',
+    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.',
     useCases: [;
     lin,
   k: 'http,
@@ -355,12 +362,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tagline: 'Secure access with continuous verification and least privilege',
     description: unknown;
       'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.',
-    category: 'Zero - Trust Security & Access Control'
-    price: unknown;
+    category: 'Zero - Trust Security & Access Control',
+    price:
+        price: unknown;
       monthly: 299;
       yearly: 2990;
-      currency: 'USD'
-      trial_days: 21;
+      currency: 'USD',
+      trial_days:
+        trial_days: 21;
       setup_time: '1 - 2 weeks',
       enterprise: 'Custom pricing',
       'Risk management'
@@ -465,15 +474,16 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     support: unknown;
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
-    link: 'https://ziontechgroup.com / zero - trust - network - access - platform'
-    icon: ''
-    color: 'from - blue - 500 to - cyan - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 20'
-    customers: 1800;
+    link: 'https://ziontechgroup.com / zero - trust - network - access - platform',
+    icon: '',
+    color: 'from - blue - 500 to - cyan - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 20',
+    customers:
+        customers: 1800;
     rating: 4 && 4.7;
-    reviews: 1400;
-  },
+    reviews: 1400},
       'Highest security standards, Government security requirements, Industry-specific standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
     id: 'quantum - key - distribution - network',
@@ -481,12 +491,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tagline: 'Unhackable communication with quantum entanglement',
     description: unknown;
       'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',
-    category: 'Quantum Communications & Security'
-    price: unknown;
+    category: 'Quantum Communications & Security',
+    price:
+        price: unknown;
       monthly: 999;
       yearly: 9990;
-      currency: 'USD'
-      trial_days: 30;
+      currency: 'USD',
+      trial_days:
+        trial_days: 30;
       setup_time: '2 - 4 weeks',
       enterprise: 'Custom pricing',
     suppor,
@@ -608,21 +620,22 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'Highest security standards, Government security requirements, Industry - specific standards'],
-    link: 'https://ziontechgroup.com / quantum - key - distribution - network'
-    icon: ''
-    color: 'from - purple - 500 to - pink - 600'
-    popular: true;
-    launch_date: '2024 - 03 - 01'
-    customers: 120;
+    link: 'https://ziontechgroup.com / quantum - key - distribution - network',
+    icon: '',
+    color: 'from - purple - 500 to - pink - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 03 - 01',
+    customers:
+        customers: 120;
     rating: 4 && 4.9;
-    reviews: 95;
-  },
+    reviews: 95},
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true;
-    implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
+    implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
+    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.',
     useCases: [;
     lin,
   k: 'http,
@@ -672,12 +685,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   t: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
-    icon: ''
-    color: 'from-green-500 to-emerald-600'
-    popular: true;
-    launchDate: '2024-02-15'
-    customers: 2500;
+    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
+    icon: '',
+    color: 'from-green-500 to-emerald-600',
+    popular:
+        popular: true;
+    launchDate: '2024-02-15',
+    customers:
+        customers: 2500;
     rating: 4.8;
     reviews: 1900;
     complianc,
@@ -713,12 +728,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     tagline: 'Intelligent security scanning with AI - driven risk analysis',
     description: unknown;
       'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',
-    category: 'Vulnerability Management & Security Testing'
-    price: unknown;
+    category: 'Vulnerability Management & Security Testing',
+    price:
+        price: unknown;
       monthly: 199;
       yearly: 1990;
-      currency: 'USD'
-      trial_days: 14;
+      currency: 'USD',
+      trial_days:
+        trial_days: 14;
       setup_time: '1 - 3 days',
       enterprise: 'Custom pricing',
     complianc,
@@ -813,15 +830,16 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     support: unknown;
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment'
-    icon: ''
-    color: 'from - green - 500 to - emerald - 600'
-    popular: true;
-    launch_date: '2024 - 02 - 15'
-    customers: 2500;
+    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
+    icon: '',
+    color: 'from - green - 500 to - emerald - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 02 - 15',
+    customers:
+        customers: 2500;
     rating: 4 && 4.8;
-    reviews: 1900;
-  },
+    reviews: 1900},
   id: string, name: string;
   tagline: string, description: string;
   category: string;
@@ -829,8 +847,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: string;
-    },
+    enterprise: string},
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string;
   competitors: string[], techStack: string[],
@@ -841,18 +858,20 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   icon: string, color: string;
   popular: boolean, launchDate: string;
   customers: number, rating: number;
-  reviews: number;
-}
+  reviews: number}
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring'
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
-    support: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.'
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
+    support: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
+    compliance:
+        compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
     icon: '';
-    color: 'from - green - 500 to - emerald - 600'
-    popular: true;
-    launch_date: '2024 - 02 - 15'
-    customers: 2500;
+    color: 'from - green - 500 to - emerald - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 02 - 15',
+    customers:
+        customers: 2500;
     rating: 4 && 4.8;
     reviews: 1900;
     rating: 4.8;
@@ -961,8 +980,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
-  }
+}
 ];
 export interface CybersecurityQuantumService {;
   id: string;
@@ -998,8 +1016,7 @@ export interface CybersecurityQuantumService {;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
 export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [;
   {
@@ -1042,8 +1059,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-01-15';
     customers: 650;
     rating: 4.9;
-    reviews: 480;
-  };
+    reviews: 480};
   {;
     id: 'ai-powered-threat-hunting-platform';
     name: 'AI-Powered Threat Hunting Platform';
@@ -1084,8 +1100,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-02-01';
     customers: 1200;
     rating: 4.8;
-    reviews: 950;
-  };
+    reviews: 950};
   {;
     id: 'zero-trust-network-access-platform';
     name: 'Zero-Trust Network Access Platform';
@@ -1126,8 +1141,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-01-20';
     customers: 1800;
     rating: 4.7;
-    reviews: 1400;
-  };
+    reviews: 1400};
   {;
     id: 'quantum-key-distribution-network';
     name: 'Quantum Key Distribution Network';
@@ -1168,8 +1182,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-03-01';
     customers: 120;
     rating: 4.9;
-    reviews: 95;
-  };
+    reviews: 95};
   {;
     id: 'ai-powered-vulnerability-assessment';
     name: 'AI-Powered Vulnerability Assessment Platform';
@@ -1210,8 +1223,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-02-15';
     customers: 2500;
     rating: 4.8;
-    reviews: 1900;
-  }
+    reviews: 1900}
 ];
     rating: 4.8;
     reviews: 1900;
@@ -1893,7 +1905,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   g: 4 && 4.8, review,
   s: 1900,
   rating: 4.8, review,
-  s: 1900} export interface CybersecurityQuantumService {; } ]; ; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
+  s: 1900} export interface CybersecurityQuantumService {} ]; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: string} enterpris,
   e: string} }; feature,
   s: string[]; benefit,

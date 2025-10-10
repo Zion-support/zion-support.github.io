@@ -1,7 +1,33 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
+=======
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+<<<<<<< HEAD
+const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+const [servicesOpen, setServicesOpen] = useState(false);
+const [aiServicesOpen, setAiServicesOpen] = useState(false);
+const [itServicesOpen, setItServicesOpen] = useState(false);
+const [microSaasOpen, setMicroSaasOpen] = useState(false);
+const [isScrolled, setIsScrolled] = useState(false);
+const handleResize = () => {
+    if (window.innerWidth >= 1024) {
+      setIsOpen(false);
+    }
+  }
+const handleScroll = () => {
+    setIsScrolled(window.scrollY > 50);
+  };
+  
+=======
+>>>>>>> main
+>>>>>>> origin/main
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -9,15 +35,8 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-      }
-    };
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -25,20 +44,17 @@ const Navigation: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const closeAllMenus = () => {
+const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
-  };
-  const toggleMenu = () => {
+  }
+const toggleMenu = () => {
     setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus();
-    }
-  };
-  const aiServices = [
+  }
+const aiServices = [
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
     { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support Systems' },
@@ -71,7 +87,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
-  const itServices = [
+const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -102,7 +118,7 @@ const Navigation: React.FC = () => {
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
     { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
   ];
-  const microSaasServices = [
+const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
     { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management' },
@@ -136,7 +152,7 @@ const Navigation: React.FC = () => {
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
   ];
-  const emergingTech = [
+const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
     { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
@@ -192,7 +208,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                    ))}
+                      ))}
                   </div>
                 </div>
               )}
@@ -224,7 +240,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                    ))}
+                      ))}
                   </div>
                 </div>
               )}
@@ -256,7 +272,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                    ))}
+                      ))}
                   </div>
                 </div>
               )}
@@ -288,7 +304,7 @@ const Navigation: React.FC = () => {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                    ))}
+                      ))}
                   </div>
                 </div>
               )}
@@ -367,7 +383,7 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
-                    ))}
+                      ))}
                     <Link
                       href="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
@@ -401,7 +417,7 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
-                    ))}
+                      ))}
                   </div>
                 )}
               </div>
@@ -428,7 +444,7 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
-                    ))}
+                      ))}
                     <Link
                       href="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
@@ -479,7 +495,7 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </div>
-    </nav>
-  );
-};
+      </nav>
+    );
+  }
 export default Navigation;

@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -6,10 +7,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Bot, Cpu, Settings, Shield, CheckCircle, Star,  Bot,  Cpu,  Shield } from 'lucide-react';
-const AIRoboticsPage: React.FC = () => {
-  const features = [];
+const AIRoboticsPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -19,8 +20,7 @@ const AIRoboticsPage: React.FC = () => {
       descriptio,
   n: 'AI-powered robots that learn and adapt to their environment',
       benefit,
-  s: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior'];
-    },
+  s: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior']},
       ico,
   n: Cpu,
       titl,
@@ -98,8 +98,7 @@ const AIRoboticsPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default AiRoboticsPage;

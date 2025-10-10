@@ -62,8 +62,8 @@ export const,
         'Advanced features'
         'Expert insights'
       ]
-      link: '/services/2029-emerging-tech-breakthrough'
-      category: 'Emerging Tech Breakthroughs 2029'
+      link: '/services/2029-emerging-tech-breakthrough',
+      category: 'Emerging Tech Breakthroughs 2029',
       realImplementation: true;
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -92,8 +92,8 @@ export const,
   }
 }
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
-    id: "2029-emerging-tech-breakthrough"
-    name: "2029 Emerging Tech Breakthrough Platform",
+    id: '2029-emerging-tech-breakthrough',
+    name: '2029 Emerging Tech Breakthrough Platform',
     tagline: "Emerging tech breakthroughs for 2029",
     price: "$899/month",
     description: "Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.",
@@ -187,8 +187,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
     }
   }
 ];
-;
-    }
+}
   }
 ];"
       "Emerging tech breakthroughs""
@@ -198,7 +197,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   };
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
   [
-      id: '2029-emerging-tech-breakthrough'
+      id: '2029-emerging-tech-breakthrough',
       name: '2029 Emerging Tech Breakthrough Platform',
       tagline: 'Emerging tech breakthroughs for 2029',
       price: '$899/month',
@@ -224,8 +223,8 @@ export const,
         'Future capabilities',
         'Advanced features',
         'Expert insights'],
-      link: '/services/2029-emerging-tech-breakthrough'
-      category: 'Emerging Tech Breakthroughs 2029'
+      link: '/services/2029-emerging-tech-breakthrough',
+      category: 'Emerging Tech Breakthroughs 2029',
       realImplementation: true;
       contactInfo: unknown;
         mobile: '+1 302 464 0950',
@@ -282,8 +281,8 @@ export const,
 }
 export interface EmergingTechBreakthrough2029 {;
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
-    id: "2029-emerging-tech-breakthrough"
-    name: "2029 Emerging Tech Breakthrough Platform",
+    id: '2029-emerging-tech-breakthrough',
+    name: '2029 Emerging Tech Breakthrough Platform',
     tagline: "Emerging tech breakthroughs for 2029",
     price: "$899/month",
     description: "Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.",
@@ -294,8 +293,8 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Advanced features",
       "Expert insights"
     ],
-    link: "/services/2029-emerging-tech-breakthrough"
-    category: "Emerging Tech Breakthroughs 2029"
+    link: '/services/2029-emerging-tech-breakthrough',
+    category: 'Emerging Tech Breakthroughs 2029',
     realImplementation: true;
     contactInfo: unknown;
       mobile: "+1 302 464 0950",
@@ -311,10 +310,9 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-;    }
+}
   }
-];
-    }
+]}
   }
 ;"
 "Emerging tech breakthroughs" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ]; lin,"
@@ -369,7 +367,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   n: "Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.", feature,"
   s: [ "Emerging tech breakthroughs", "Innovation platform", "Future capabilities", "Advanced features", export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   n: true} contactInf,"
-  o: } } ]; } } ]; "Emerging tech breakthroughs" "Innovation platform" "Future capabilities" export interface EmergingTechBreakthrough2029 {; }; export const,
+  o: } } ]} } ]; "Emerging tech breakthroughs" "Innovation platform" "Future capabilities" export interface EmergingTechBreakthrough2029 {}; export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [ ' i,
   d: '2029-emerging-tech-breakthrough',' nam,
   e: '2029 Emerging Tech Breakthrough Platform',' taglin,
@@ -398,4 +396,4 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   l: string} addres,
   s: string} } } export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"} addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ; } } ]; } } ; '"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } } } ]} } ; '"

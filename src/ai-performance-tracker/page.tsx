@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -6,10 +7,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings } from 'lucide-react';
-const AIPerformanceTrackerPage: React.FC = () => {
-  const features = [];
+const AIPerformanceTrackerPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -19,8 +20,7 @@ const AIPerformanceTrackerPage: React.FC = () => {
       descriptio,
   n: 'Comprehensive performance tracking and analysis',
       benefit,
-  s: ['Real-time metrics', 'Performance alerts', 'Trend analysis'];
-    },
+  s: ['Real-time metrics', 'Performance alerts', 'Trend analysis']},
       ico,
   n: Target,
       titl,
@@ -98,8 +98,7 @@ const AIPerformanceTrackerPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default AiPerformanceTrackerPage;

@@ -7,9 +7,8 @@ const Button: React.FC<{
   onClick: () => void;
   variant?: string;
   className?: string;
-  children: React.ReactNode;
-}> = ({ onClick, className = '', children }) => (
-  <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>
+  children: React.ReactNode}> = ({ onClick, className = '', children }) => (
+  <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>;
 const,
   Button: React.FC<{/* TODO: Fix JSX expression */}
 }> = ({ onClick, className = '', children }) => (<button onClick={onClick} className={`px-4 py-2 rounded ${className}`}></button>
@@ -19,7 +18,7 @@ const,
 
 // Simple logger replacement;
 const logger = {
-  error: (message: string, error?: unknown, meta?: unknown) => {
+  error: (message: string, error?: unknown, meta?: unknown) => {;
 const logger = {/* TODO: Fix JSX expression */}
     //     },
   war,

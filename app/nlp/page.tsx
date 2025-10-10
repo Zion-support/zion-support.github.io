@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -27,13 +27,13 @@ import React from 'react';
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
 
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -61,8 +61,5 @@ import React from 'react';
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default PagePage;

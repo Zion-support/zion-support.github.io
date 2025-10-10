@@ -1,4 +1,4 @@
-export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027'
+export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027',
     path: '/services/cutting-edge-ai-innovation-2027',
     description: 'Next-generation AI innovations for 2027',
     icon: 'Brain',
@@ -14,7 +14,7 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
       professional: '$1399/month'}
       enterprise: 'Custom'}
   },
-    name: 'Cutting Edge Tech Innovation 2027'
+    name: 'Cutting Edge Tech Innovation 2027',
     path: '/services/cutting-edge-tech-innovation-2027',
     description: 'Revolutionary technology innovations for 2027',
     icon: 'Zap',

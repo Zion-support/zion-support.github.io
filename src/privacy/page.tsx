@@ -2,10 +2,10 @@
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 
-export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
-
-  const dataTypes = [
+export default function PrivacyPage() {;
+const lastUpdated = 'January 1, 2024';
+;
+const dataTypes = [
     {
       category: 'Personal Information',
       icon: User,
@@ -31,8 +31,8 @@ export default function PrivacyPage() {
       examples: ['Contact forms', 'Support requests', 'Email correspondence']
     }
   ];
-
-  const rights = [
+;
+const rights = [
     {
       title: 'Right to Access',
       description: 'Request a copy of your personal data',
@@ -64,8 +64,8 @@ export default function PrivacyPage() {
       icon: Lock
     }
   ];
-
-  const securityMeasures = [
+;
+const securityMeasures = [
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
     'Access controls and authentication systems',
@@ -284,5 +284,4 @@ export default function PrivacyPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

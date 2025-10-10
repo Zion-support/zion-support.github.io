@@ -1,3 +1,4 @@
+import React from 'react';
 
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true;
@@ -110,20 +111,21 @@
     integrations: [,
       'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'
     ]
-    support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
-    compliance: [
-    icon: ''
-    color: 'from - purple - 500 to - pink - 600'
+    support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',
+    compliance:
+        compliance: [
+    icon: '',
+    color: 'from - purple - 500 to - pink - 600',
     popular: true;
-    launch_date: '2024 - 01 - 05'
-    customers: 120;
+    launch_date: '2024 - 01 - 05',
+    customers:
+        customers: 120;
     rating: 4 && 4.9;
-    reviews: 45;
-  },
+    reviews: 45},
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true;
-    implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
-    roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
+    implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
+    roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     useCases: [;
       'Regulatory compliance'
     ]
@@ -182,12 +184,14 @@
     tagline: 'Quantum computing meets biological systems',
     description: unknown;
       'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
-    category: 'Quantum & Emerging Tech'
-    price: unknown;
+    category: 'Quantum & Emerging Tech',
+    price:
+        price: unknown;
       monthly: 599;
       yearly: 5990;
-      currency: 'USD'
-      trial_days: 14;
+      currency: 'USD',
+      trial_days:
+        trial_days: 14;
       setup_time: '8 hours',
       enterprise: 2499;
     lin,
@@ -285,20 +289,22 @@
     complianc,
   e: [,
       'Research ethics, Data privacy, Scientific standards, Industry regulations'],
-    link: 'https://ziontechgroup.com / quantum - bio - computing - platform'
-    icon: ''
-    color: 'from - green - 500 to - emerald - 600'
-    popular: true;
-    launch_date: '2024 - 02 - 01'
-    customers: 280;
+    link: 'https://ziontechgroup.com / quantum - bio - computing - platform',
+    icon: '',
+    color: 'from - green - 500 to - emerald - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 02 - 01',
+    customers:
+        customers: 280;
     rating: 4 && 4.8;
     reviews: 85;
     market_size: '$12B quantum bio - computing market',
     growth_rate: '65% annually'},
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware'],
     realImplementation: true;
-    implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
-    roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
+    implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.',
+    roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     useCases: [;
     lin,
   k: 'http,
@@ -354,12 +360,14 @@
     tagline: 'Direct neural interface for human - computer interaction',
     description: unknown;
       'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
-    category: 'Emerging Tech'
-    price: unknown;
+    category: 'Emerging Tech',
+    price:
+        price: unknown;
       monthly: 399;
       yearly: 3990;
-      currency: 'USD'
-      trial_days: 21;
+      currency: 'USD',
+      trial_days:
+        trial_days: 21;
       setup_time: '6 hours',
       enterprise: 1599;
     lin,
@@ -457,20 +465,22 @@
     complianc,
   e: [,
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards'],
-    link: 'https://ziontechgroup.com / brain - computer - interface - platform'
-    icon: ''
-    color: 'from - blue - 500 to - indigo - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 15'
-    customers: 450;
+    link: 'https://ziontechgroup.com / brain - computer - interface - platform',
+    icon: '',
+    color: 'from - blue - 500 to - indigo - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 15',
+    customers:
+        customers: 450;
     rating: 4 && 4.7;
     reviews: 120;
     market_size: '$18B BCI market',
     growth_rate: '55% annually'},
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems'],
     realImplementation: true;
-    implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
-    roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
+    implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
+    roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     useCases: [;
     lin,
   k: 'http,
@@ -526,12 +536,14 @@
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
     description: unknown;
       'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
-    category: 'Quantum & Emerging Tech'
-    price: unknown;
+    category: 'Quantum & Emerging Tech',
+    price:
+        price: unknown;
       monthly: 499;
       yearly: 4990;
-      currency: 'USD'
-      trial_days: 14;
+      currency: 'USD',
+      trial_days:
+        trial_days: 14;
       setup_time: '6 hours',
       enterprise: 1999;
     lin,
@@ -629,20 +641,22 @@
     complianc,
   e: [,
       'Energy regulations, Safety standards, Environmental regulations, Industry standards'],
-    link: 'https://ziontechgroup.com / quantum - energy - platform'
-    icon: ''
-    color: 'from - yellow - 500 to - orange - 600'
-    popular: true;
-    launch_date: '2024 - 02 - 10'
-    customers: 320;
+    link: 'https://ziontechgroup.com / quantum - energy - platform',
+    icon: '',
+    color: 'from - yellow - 500 to - orange - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 02 - 10',
+    customers:
+        customers: 320;
     rating: 4 && 4.8;
     reviews: 95;
     market_size: '$25B quantum energy market',
     growth_rate: '45% annually'},
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems'],
     realImplementation: true;
-    implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
-    roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
+    implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.',
+    roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
     useCases: [;
     lin,
   k: 'http,
@@ -692,12 +706,14 @@
     complianc,
   e: [,
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
-    icon: ''
-    color: 'from-red-500 to-pink-600'
-    popular: true;
-    launchDate: '2024-01-25'
-    customers: 180;
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
+    icon: '',
+    color: 'from-red-500 to-pink-600',
+    popular:
+        popular: true;
+    launchDate: '2024-01-25',
+    customers:
+        customers: 180;
     rating: 4.9;
     reviews: 65;
     marketSize: '$35B autonomous vehicle market',
@@ -736,18 +752,21 @@
     techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'],
     realImplementation: true;
     implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.',
-    roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
-    useCases: [;
+    roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.',
+    useCases:
+        useCases: [;
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'],
     integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],
     support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',
     compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],
-    link: 'https://ziontechgroup.com/space-mining-platform'
+    link: 'https://ziontechgroup.com/space-mining-platform',
     icon: '';
-    color: 'from-purple-500 to-pink-600'
-    popular: true;
-    launchDate: '2024-01-05'
-    customers: 120;
+    color: 'from-purple-500 to-pink-600',
+    popular:
+        popular: true;
+    launchDate: '2024-01-05',
+    customers:
+        customers: 120;
     rating: 4.9;
     reviews: 45;
     marketSize: '$3.5B space mining market',
@@ -756,12 +775,14 @@
     name: 'Quantum Bio-Computing Platform',
     tagline: 'Quantum computing meets biological systems',
     description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
-    category: 'Quantum & Emerging Tech'
-    price: unknown;
+    category: 'Quantum & Emerging Tech',
+    price:
+        price: unknown;
       monthly: 799;
       yearly: 7990;
-      currency: 'USD'
-      trial_days: 14;
+      currency: 'USD',
+      trial_days:
+        trial_days: 14;
       setup_time: '12 hours',
       enterprise: 2999;
     targetAudienc,
@@ -904,12 +925,14 @@
     complianc,
   e: [,
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform'
-    icon: ''
-    color: 'from - red - 500 to - pink - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 25'
-    customers: 180;
+    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
+    icon: '',
+    color: 'from - red - 500 to - pink - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 25',
+    customers:
+        customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
     market_size: '$35B autonomous vehicle market',
@@ -921,8 +944,7 @@
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: number;
-    },
+    enterprise: number},
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string;
   competitors: string[], techStack: string[],
@@ -934,22 +956,25 @@
   popular: boolean, launchDate: string;
   customers: number, rating: number;
   reviews: number, marketSize: string;
-  growthRate: string;
-}
+  growthRate: string}
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development'
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
-    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
+    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
+    compliance:
+        compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
-    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform'
+    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
+    compliance:
+        compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
+    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
     icon: '';
-    color: 'from - red - 500 to - pink - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 25'
-    customers: 180;
+    color: 'from - red - 500 to - pink - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 25',
+    customers:
+        customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
     market_size: '$35B autonomous vehicle market',
@@ -1083,18 +1108,21 @@
     techStack: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true;
     implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
-    roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
-    useCases: [;
+    roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
+    useCases:
+        useCases: [;
       'Drug discoveryGenetic analysisProtein foldingMolecular dynamicsBiological optimizationResearch acceleration'],
     integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'],
     support: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.',
     compliance: ['Research ethics, Data privacy, Scientific standards, Industry regulations'],
-    link: 'https://ziontechgroup.com/quantum-bio-computing-platform'
+    link: 'https://ziontechgroup.com/quantum-bio-computing-platform',
     icon: '';
-    color: 'from-green-500 to-emerald-600'
-    popular: true;
-    launchDate: '2024-02-01'
-    customers: 280;
+    color: 'from-green-500 to-emerald-600',
+    popular:
+        popular: true;
+    launchDate: '2024-02-01',
+    customers:
+        customers: 280;
     rating: 4.8;
     reviews: 85;
     marketSize: '$12B quantum bio-computing market',
@@ -1103,12 +1131,14 @@
     name: 'Brain-Computer Interface Platform',
     tagline: 'Direct neural interface for human-computer interaction',
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
-    category: 'Emerging Tech'
-    price: unknown;
+    category: 'Emerging Tech',
+    price:
+        price: unknown;
       monthly: 399;
       yearly: 3990;
-      currency: 'USD'
-      trialDays: 21;
+      currency: 'USD',
+      trialDays:
+        trialDays: 21;
       setupTime: '6 hours',
       enterprise: 1599;
     targetAudienc,
@@ -1200,18 +1230,21 @@
     techStack: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware'],
     realImplementation: true;
     implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.',
-    roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
-    useCases: [;
+    roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
+    useCases:
+        useCases: [;
       'Accessibility assistanceGaming controlMedical researchCommunication aidsProsthetic controlCognitive enhancement'],
     integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'],
     support: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.',
     compliance: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'],
-    link: 'https://ziontechgroup.com/brain-computer-interface-platform'
+    link: 'https://ziontechgroup.com/brain-computer-interface-platform',
     icon: '';
-    color: 'from-blue-500 to-indigo-600'
-    popular: true;
-    launchDate: '2024-01-15'
-    customers: 450;
+    color: 'from-blue-500 to-indigo-600',
+    popular:
+        popular: true;
+    launchDate: '2024-01-15',
+    customers:
+        customers: 450;
     rating: 4.7;
     reviews: 120;
     marketSize: '$18B BCI market',
@@ -1220,12 +1253,14 @@
     name: 'Quantum Energy Platform',
     tagline: 'Quantum-enhanced energy optimization and fusion simulation',
     description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
-    category: 'Quantum & Emerging Tech'
-    price: unknown;
+    category: 'Quantum & Emerging Tech',
+    price:
+        price: unknown;
       monthly: 499;
       yearly: 4990;
-      currency: 'USD'
-      trialDays: 14;
+      currency: 'USD',
+      trialDays:
+        trialDays: 14;
       setupTime: '6 hours',
       enterprise: 1999;
     targetAudienc,
@@ -1317,18 +1352,21 @@
     techStack: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems'],
     realImplementation: true;
     implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
-    roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
-    useCases: [;
+    roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
+    useCases:
+        useCases: [;
       'Energy system optimizationFusion power simulationGrid optimizationEnergy storage optimizationRenewable integrationEnergy research'],
     integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'],
     support: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.',
     compliance: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'],
-    link: 'https://ziontechgroup.com/quantum-energy-platform'
+    link: 'https://ziontechgroup.com/quantum-energy-platform',
     icon: '';
-    color: 'from-yellow-500 to-orange-600'
-    popular: true;
-    launchDate: '2024-02-10'
-    customers: 320;
+    color: 'from-yellow-500 to-orange-600',
+    popular:
+        popular: true;
+    launchDate: '2024-02-10',
+    customers:
+        customers: 320;
     rating: 4.8;
     reviews: 95;
     marketSize: '$25B quantum energy market',
@@ -1337,12 +1375,14 @@
     name: 'Autonomous Vehicle AI Platform',
     tagline: 'Advanced AI for self-driving vehicles and transportation',
     description: 'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision-making, and safety systems for the future of transportation.',
-    category: 'Emerging Tech'
-    price: unknown;
+    category: 'Emerging Tech',
+    price:
+        price: unknown;
       monthly: 799;
       yearly: 7990;
-      currency: 'USD'
-      trialDays: 14;
+      currency: 'USD',
+      trialDays:
+        trialDays: 14;
       setupTime: '12 hours',
       enterprise: 2999;
     targetAudienc,
@@ -1434,18 +1474,21 @@
     techStack: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems'],
     realImplementation: true;
     implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.',
-    roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
-    useCases: [;
+    roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
+    useCases:
+        useCases: [;
       'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'],
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     icon: '';
-    color: 'from-red-500 to-pink-600'
-    popular: true;
-    launchDate: '2024-01-25'
-    customers: 180;
+    color: 'from-red-500 to-pink-600',
+    popular:
+        popular: true;
+    launchDate: '2024-01-25',
+    customers:
+        customers: 180;
     rating: 4.9;
     reviews: 65;
     marketSize: '$35B autonomous vehicle market',
@@ -1537,8 +1580,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   rating: number;
   reviews: number;
   marketSize: string;
-  growthRate: string;
-}
+  growthRate: string}
 ;
 export const emergingTechServicesV2: EmergingTechService[] = [;
   {
@@ -2771,10 +2813,8 @@ export const,
     growthRat,
   e: '75% annually'
   }
-];
-  }
-];
-  }
+]}
+]}
 ];
 ;
 'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'], realImplementatio,
@@ -3226,7 +3266,7 @@ export const,
   g: 4.9; review,
   s: 65, ' marketSiz,
   e: '$35B autonomous vehicle market' ' growthRat,
-  e: '75% annually' } ]; export interface EmergingTechService {; } i,
+  e: '75% annually' } ]; export interface EmergingTechService {} i,
   d: string; nam,
   e: string; taglin,
   e: string; descriptio,
@@ -3418,7 +3458,7 @@ export const,
   g: number; review,
   s: number; marketSiz,
   e: string; growthRat,
-  e: string} ; export interface EmergingTechService {; } ]; export const,
+  e: string} ; export interface EmergingTechService {} ]; export const,
   emergingTechServicesV2: EmergingTechService[] = [; {/* TODO: Fix JSX expression */}
   e: '24 hours'} enterpris,
   e: 4999} }; feature,
@@ -3554,4 +3594,4 @@ export const,
   g: 4.9; review,
   s: 65;' marketSiz,
   e: '$35B autonomous vehicle market';' growthRat,
-  e: '75% annually' } ]; } ]; } ]; '
+  e: '75% annually' } ]} ]} ]; '

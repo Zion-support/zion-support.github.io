@@ -1,59 +1,62 @@
 'use client';
 import React, { useState } from 'react';
 
-
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Navigation from '../components
+import Footer from '../components
 
 'use client';
 import React, { useState } from 'react';
-const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
-  const _solutionCategories = [
+const SolutionsPage: React.FC = () => {;
+const [activeTab, setActiveTab] = useState('ai');
+;
+const _solutionCategories = [
     {
       id: 'ai',
       name: 'AI Solutions',
       icon: Brain,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description:     ,
+      bgColor: 'bg-purple-500
+      descriptio,
+    n:     ,
 $4},
     {
       id: 'it',
       name: 'IT Infrastructure',
       icon: Cloud,
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      description:     ,
+      bgColor: 'bg-blue-500
+      descriptio,
+    n:     ,
 $4},
     {
       id: 'security',
       name: 'Cybersecurity',
       icon: Shield,
       color: 'text-red-400',
-      bgColor: 'bg-red-500/10',
-      description:     ,
+      bgColor: 'bg-red-500
+      descriptio,
+    n:     ,
 $4},
     {
       id: 'automation',
       name: 'Automation',
       icon: Zap,
       color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10',
-      description:     ,
+      bgColor: 'bg-yellow-500
+      descriptio,
+    n:     ,
 $4}
   ];
-
-  const solutions = {
+;
+const solutions = {
     ai: [
       {
-        title: 'AI-Powered Analytics',
+        titl,
+    e: 'AI-Powered Analytics',
         description: 'Transform raw data into actionable insights with advanced AI analytics',
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
-        pricing: 'Starting at $1,500/month',
+        pricing: 'Starting at $1,500
         icon: BarChart,
         color:       ,
 $4},
@@ -61,33 +64,37 @@ $4},
         title: 'AI Marketing Automation',
         description: 'Revolutionize your marketing with AI-powered automation and personalization',
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
-        pricing: 'Starting at $199/month',
-        icon: Target,
+        pricing: 'Starting at $199
+        ico,
+    n: Target,
         color:       ,
 $4},
       {
         title: 'AI Customer Support',
         description: 'Enhance customer experience with intelligent AI-powered support systems',
-        features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
-        pricing: 'Starting at $299/month',
-        icon: Users,
+        features: ['24
+        pricing: 'Starting at $299
+        ico,
+    n: Users,
         color:       ,
 $4},
       {
         title: 'AI Process Automation',
         description: 'Automate complex business processes with intelligent decision-making capabilities',
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
-        pricing: 'Starting at $399/month',
-        icon: Zap,
+        pricing: 'Starting at $399
+        ico,
+    n: Zap,
         color:       ,
 $4}
     ],
     it: [
       {
-        title: 'Cloud Migration',
+        titl,
+    e: 'Cloud Migration',
         description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
-        features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
-        pricing: 'Starting at $1,299/month',
+        features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24
+        pricing: 'Starting at $1,299
         icon: Cloud,
         color:       ,
 $4},
@@ -95,98 +102,112 @@ $4},
         title: 'IT Infrastructure Management',
         description: 'Comprehensive IT infrastructure management and optimization services',
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
-        pricing: 'Starting at $799/month',
-        icon: Globe,
+        pricing: 'Starting at $799
+        ico,
+    n: Globe,
         color:       ,
 $4},
       {
-        title: 'DevOps & CI/CD',
-        description: 'Streamline development workflows with automated testing and deployment',
+        title: 'DevOps & CI
+        descriptio,
+    n: 'Streamline development workflows with automated testing and deployment',
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
-        pricing: 'Starting at $599/month',
-        icon: Zap,
+        pricing: 'Starting at $599
+        ico,
+    n: Zap,
         color:       ,
 $4},
       {
         title: 'Database Management',
         description: 'Optimize and manage your databases with AI-powered performance tuning',
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
-        pricing: 'Starting at $399/month',
-        icon: BarChart,
+        pricing: 'Starting at $399
+        ico,
+    n: BarChart,
         color:       ,
 $4}
     ],
     security: [
       {
-        title: 'Cybersecurity Suite',
+        titl,
+    e: 'Cybersecurity Suite',
         description: 'Comprehensive security solutions with threat detection and response',
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
-        pricing: 'Starting at $799/month',
-        icon: Shield,
+        pricing: 'Starting at $799
+        ico,
+    n: Shield,
         color:       ,
 $4},
       {
         title: 'AI Security Monitoring',
         description: 'Real-time security monitoring with AI-powered threat detection',
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
-        pricing: 'Starting at $299/month',
-        icon: Brain,
+        pricing: 'Starting at $299
+        ico,
+    n: Brain,
         color:       ,
 $4},
       {
         title: 'Compliance Management',
         description: 'Ensure regulatory compliance with automated compliance monitoring',
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
-        pricing: 'Starting at $499/month',
-        icon: CheckCircle,
+        pricing: 'Starting at $499
+        ico,
+    n: CheckCircle,
         color:       ,
 $4},
       {
         title: 'Security Training',
         description: 'Comprehensive security awareness training for your organization',
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
-        pricing: 'Starting at $199/month',
-        icon: Users,
+        pricing: 'Starting at $199
+        ico,
+    n: Users,
         color:       ,
 $4}
     ],
     automation: [
       {
-        title: 'Business Process Automation',
+        titl,
+    e: 'Business Process Automation',
         description: 'Automate complex business processes with intelligent workflow management',
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
-        pricing: 'Starting at $399/month',
-        icon: Zap,
+        pricing: 'Starting at $399
+        ico,
+    n: Zap,
         color:       ,
 $4},
       {
         title: 'IT Automation',
         description: 'Automate IT operations and reduce manual tasks with intelligent automation',
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
-        pricing: 'Starting at $299/month',
-        icon: Cloud,
+        pricing: 'Starting at $299
+        ico,
+    n: Cloud,
         color:       ,
 $4},
       {
         title: 'Marketing Automation',
         description: 'Automate marketing campaigns and customer engagement processes',
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
-        pricing: 'Starting at $199/month',
-        icon: Target,
+        pricing: 'Starting at $199
+        ico,
+    n: Target,
         color:       ,
 $4},
       {
         title: 'Data Automation',
         description: 'Automate data processing, analysis, and reporting workflows',
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
-        pricing: 'Starting at $249/month',
-        icon: BarChart,
+        pricing: 'Starting at $249
+        ico,
+    n: BarChart,
         color:       ,
 $4}
     ]
   };
-
-  const benefits = [
+;
+const benefits = [
     {
       icon: Star,
       title: 'Proven Results',
@@ -209,54 +230,63 @@ $4},
 $4}
   ];
 
+<<<<<<< HEAD
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+  return (<>
+      
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+          {/* Header *
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Our Solutions
-            </h1>
+            <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
-            </p>
-          </div>
+            <
+          <
 
-          {/* Solution Categories Tabs */}
+          {/* Solution Categories Tabs *
           <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {solutionCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveTab(category.id)}
+            <div className="flex flex-wrap justify-center gap-4 mb-8">)
+              {solutionCategories.map((category) => (<button
+                  key = { category.id };)
+                  onClick = { () => setActiveTab(category.id) };
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700
                   }`}
                 >
-                  <category.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{category.name}</span>
-                </button>
+                  <category.icon className="w-5 h-5 mr-2" 
+                  <span className="font-medium">{category.name}<
+                <
               ))}
-            </div>
+            <
             
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
-    <div>Coming Soon</div>
+    <div>Coming Soon<
 
-  );
-};
+  )};
   const [activeTab, setActiveTab] = useState('ai');
   const _solutionCategories = [
-  // TOD,
+  /
   O: Add items;
 ];;
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'ai',
@@ -267,12 +297,18 @@ $4}
       colo,
   r: 'text-purple-400',
       bgColo,
-  r: 'bg-purple-500/10',
+  r: 'bg-purple-500
       descriptio,
   n: 'Transform your business with cutting-edge artificial intelligence'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'it',
@@ -283,12 +319,18 @@ $4}
       colo,
   r: 'text-blue-400',
       bgColo,
-  r: 'bg-blue-500/10',
+  r: 'bg-blue-500
       descriptio,
   n: 'Robust and scalable IT infrastructure solutions'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'security',
@@ -299,12 +341,18 @@ $4}
       colo,
   r: 'text-red-400',
       bgColo,
-  r: 'bg-red-500/10',
+  r: 'bg-red-500
       descriptio,
   n: 'Comprehensive security solutions for your digital assets'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'automation',
@@ -315,20 +363,32 @@ $4}
       colo,
   r: 'text-yellow-400',
       bgColo,
-  r: 'bg-yellow-500/10',
+  r: 'bg-yellow-500
       descriptio,
   n: 'Streamline operations with intelligent automation'
     }
   ];
+<<<<<<< HEAD
   const solutions = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+  const solutions = { /* TODO: Fix JSX expression *
+  ,
+    O: Add content; };
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   a,
   i: [
-  // TOD,
+  /
   O: Add items]
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI-Powered Analytics',
@@ -337,14 +397,20 @@ $4}
         feature,
   s: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricin,
-  g: 'Starting at $1,500/month',
+  g: 'Starting at $1,500
         ico,
   n: BarChart,
         colo,
   r: 'text-blue-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI Marketing Automation',
@@ -353,30 +419,42 @@ $4}
         feature,
   s: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricin,
-  g: 'Starting at $199/month',
+  g: 'Starting at $199
         ico,
   n: Target,
         colo,
   r: 'text-pink-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI Customer Support',
         descriptio,
   n: 'Enhance customer experience with intelligent AI-powered support systems',
         feature,
-  s: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
+  s: ['24
         pricin,
-  g: 'Starting at $299/month',
+  g: 'Starting at $299
         ico,
   n: Users,
         colo,
   r: 'text-green-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI Process Automation',
@@ -385,35 +463,47 @@ $4}
         feature,
   s: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricin,
-  g: 'Starting at $399/month',
+  g: 'Starting at $399
         ico,
   n: Zap,
         colo,
   r: 'text-yellow-400'
       }
-//     ],
+/
     i,
   t: [
-  // TOD,
+  /
   O: Add items]
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Cloud Migration',
         descriptio,
   n: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
         feature,
-  s: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
+  s: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24
         pricin,
-  g: 'Starting at $1,299/month',
+  g: 'Starting at $1,299
         ico,
   n: Cloud,
         colo,
   r: 'text-blue-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'IT Infrastructure Management',
@@ -422,30 +512,42 @@ $4}
         feature,
   s: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricin,
-  g: 'Starting at $799/month',
+  g: 'Starting at $799
         ico,
   n: Globe,
         colo,
   r: 'text-green-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
-  e: 'DevOps & CI/CD',
+  e: 'DevOps & CI
         descriptio,
   n: 'Streamline development workflows with automated testing and deployment',
         feature,
   s: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricin,
-  g: 'Starting at $599/month',
+  g: 'Starting at $599
         ico,
   n: Zap,
         colo,
   r: 'text-purple-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Database Management',
@@ -454,19 +556,25 @@ $4}
         feature,
   s: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricin,
-  g: 'Starting at $399/month',
+  g: 'Starting at $399
         ico,
   n: BarChart,
         colo,
   r: 'text-orange-400'
       }
-//     ],
+/
     securit,
   y: [
-  // TOD,
+  /
   O: Add items]
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Cybersecurity Suite',
@@ -475,14 +583,20 @@ $4}
         feature,
   s: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricin,
-  g: 'Starting at $799/month',
+  g: 'Starting at $799
         ico,
   n: Shield,
         colo,
   r: 'text-red-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI Security Monitoring',
@@ -491,14 +605,20 @@ $4}
         feature,
   s: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricin,
-  g: 'Starting at $299/month',
+  g: 'Starting at $299
         ico,
   n: Brain,
         colo,
   r: 'text-purple-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Compliance Management',
@@ -507,14 +627,20 @@ $4}
         feature,
   s: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricin,
-  g: 'Starting at $499/month',
+  g: 'Starting at $499
         ico,
   n: CheckCircle,
         colo,
   r: 'text-green-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Security Training',
@@ -523,19 +649,25 @@ $4}
         feature,
   s: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricin,
-  g: 'Starting at $199/month',
+  g: 'Starting at $199
         ico,
   n: Users,
         colo,
   r: 'text-blue-400'
       }
-//     ],
+/
     automatio,
   n: [
-  // TOD,
+  /
   O: Add items]
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Business Process Automation',
@@ -544,14 +676,20 @@ $4}
         feature,
   s: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricin,
-  g: 'Starting at $399/month',
+  g: 'Starting at $399
         ico,
   n: Zap,
         colo,
   r: 'text-yellow-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'IT Automation',
@@ -560,14 +698,20 @@ $4}
         feature,
   s: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricin,
-  g: 'Starting at $299/month',
+  g: 'Starting at $299
         ico,
   n: Cloud,
         colo,
   r: 'text-blue-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Marketing Automation',
@@ -576,14 +720,20 @@ $4}
         feature,
   s: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricin,
-  g: 'Starting at $199/month',
+  g: 'Starting at $199
         ico,
   n: Target,
         colo,
   r: 'text-pink-400'
       },
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+      {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Data Automation',
@@ -592,20 +742,26 @@ $4}
         feature,
   s: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricin,
-  g: 'Starting at $249/month',
+  g: 'Starting at $249
         ico,
   n: BarChart,
         colo,
   r: 'text-green-400'
       }
-//     ]
+/
   };
   const benefits = [
-  // TOD,
+  /
   O: Add items;
 ];;
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Star,
@@ -614,8 +770,14 @@ $4}
       descriptio,
   n: '300% average ROI and 95% process automation for our clients'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Shield,
@@ -624,18 +786,30 @@ $4}
       descriptio,
   n: 'Bank-level security and compliance for all our solutions'
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Globe,
       titl,
   e: 'Global Support',
       descriptio,
-  n: '24/7 support and services across multiple time zones'
+  n: '24
     },
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
+=======
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Users,
@@ -645,314 +819,263 @@ $4}
   n: 'Certified professionals with years of industry experience'
     }
   ];
-  return (<div>Coming Soon</div>)
+  return (<div>Coming Soon<)
   )
     
-          <>
+<<<<<<< HEAD
+          <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
+=======
+          <>
+      <Navigation /><
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
+        <div className="container mx-auto px-4 py-16 pt-24"><
+          {/* Header *
+          <div className="text-center mb-16"><
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Our Solutions;
-          </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-// Comprehensive technology solutions designed to transform your business operations;
-//               and drive innovation across every aspect of your organization.
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          </p>
-          </div>
-          {/* Solution Categories Tabs */}"
-          <div className="mb-12"></div>"
-            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+  md:text-5xl font-bold text-white mb-6 neon-text"><
+/
+          <
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"><
+/
+/
+
+          <
+          <
+          {/* Solution Categories Tabs *
+          <div className="mb-12"><
+            <div className="flex flex-wrap justify-center gap-4 mb-8"><
               {solutionCategories.map((category) => ()}
+<<<<<<< HEAD
           <button></button>
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
+  O: Add content}
+=======
+          <button><
+                  key = { category.id };
+                  onClick = { () => setActiveTab(category.id) };
+                  className = { `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };
+  /
   O: Add content;
 }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300,
-  hover:bg-slate-700/50 border-2 border-transparent'`
+                      : 'bg-slate-800
+  hover:bg-slate-700
                   }`}
-//                 >
-                  
-          
-          
-          
-          
-          
-          
-          
-          "
-          <category.icon className="w-5 h-5 mr-2" /></category>"
-                  <span className="font-medium">{category.name}</span>
-                </button>
-              ))}
-            </div>"
-            <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto"></p>
-                {solutionCategories.find(cat => cat.id === activeTab)?.description}
-              </p>
-            </div>
-          </div>
+/
 
-          {/* Solutions Grid */}
+          "
+          <category.icon className="w-5 h-5 mr-2" /><
+                  <span className="font-medium">{category.name}<
+                <
+              ))}
+            <
+            <div className="text-center"><
+              <p className="text-gray-300 max-w-2xl mx-auto"><
+                {solutionCategories.find(cat => cat.id === activeTab)?.description}
+              <
+            <
+          <
+
+          {/* Solutions Grid *
           <div className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+              {solutions[activeTab as keyof typeof solutions].map((solution), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400
                   <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} />
-                    </div>
+                    <div className={`w-12 h-12 bg-slate-700
+                      <solution.icon className={`w-6 h-6 ${solution.color}`} 
+                    <
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    </div>
-                  </div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}<
+                      <p className="text-gray-300 text-sm mb-4">{solution.description}<
+                    <
+                  <
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-          {/* Solutions Grid */}"
-          <div className="mb-16"></div>"
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features: <
+                    <ul className="space-y-1">)
+                      {solution.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" 
+          {/* Solutions Grid *
+          <div className="mb-16"><
             <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-8"></div>
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
-  hover:border-cyan-400/50 transition-all duration-300"></div>"
-                  <div className="flex items-start mb-4"></div>`
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} /></solution>
-                    </div>"
-                    <div className="flex-1"></div>"
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    </div>
-                  </div>"
-                  <div className="mb-4"></div>"
+  md: grid-cols-2 gap-8"><)
+              {solutions[activeTab as keyof typeof solutions].map((solution), index) => ()}"
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
+  hover:border-cyan-400/50 transition-all duration-300"><
+                  <div className="flex items-start mb-4"><
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}><
+                      <solution.icon className={`w-6 h-6 ${solution.color}`} /><
+                    <
+                    <div className="flex-1"><
+                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}<
+                      <p className="text-gray-300 text-sm mb-4">{solution.description}<
+                    <
+                  <
+                  <div className="mb-4"><
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
-  Features:</h4>"
-                    <ul className="space-y-1"></ul>
-                      {solution.features.map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
+  Features: <
+                    <ul className="space-y-1"><
+                      {solution.features.map((feature), featureIndex) => ()}"
+          <li key={featureIndex} className="flex items-center text-sm text-gray-300"><
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /><
                           {feature}
-                        </li>
+                        <
                       ))}
-                    </ul>
-                  </div>
+                    <
+                  <
                   
                   <div className="flex items-center justify-between">
                     <div className={`text-lg font-bold ${solution.color}`}>
                       {solution.pricing}
-                    </div>
+                    <
                     <a
-                      href="/contact"
+                      href="
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                  </div>"
-                  <div className="flex items-center justify-between"></div>`
-                    <div className={`text-lg font-bold ${solution.color}`}></div>
+                      <ArrowRight className="w-4 h-4 ml-1" 
+                  <
+                  <div className="flex items-center justify-between"><
+                    <div className={`text-lg font-bold ${solution.color}`}><
                       {solution.pricing}
-                    </div>
+                    <
 
                     <a
-                      href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                      href="
 
-// >
-//                       Learn More;"
-          <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
-                    </a>
-                  </div>
-                </div>
+/
+/
+          <ArrowRight className="w-4 h-4 ml-1" /><
+                    <
+                  <
+                <
               ))}
-            </div>
-          </div>
+            <
+          <
 
-          {/* Benefits Section */}
+          {/* Benefits Section *
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Choose Our Solutions?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-          {/* Benefits Section */}"
-          <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Why Choose Our Solutions?
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          </h2>"
+            <
+            <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-6">
+              {benefits.map((benefit), index) => (<div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500
+                    <benefit.icon className="w-8 h-8 text-cyan-400" 
+                  <
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
+          {/* Benefits Section *
+          <div className="mb-16"><
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"><
+/
+
+          <
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>
-              {benefits.map((benefit, index) => ()}"
-          <div key={index} className="text-center"></div>"
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
-                    <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>
-                  </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
+  lg: grid-cols-4 gap-6"><)
+              {benefits.map((benefit), index) => ()}"
+          <div key={index} className="text-center"><
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><
+                    <benefit.icon className="w-8 h-8 text-cyan-400" /><
+                  <
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
+                  <p className="text-gray-300 text-sm">{benefit.description}<
+                <
               ))}
-            </div>
-          </div>
+            <
+          <
 
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          {/* CTA Section *
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h2>
+            <
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Get a free consultation and discover how our solutions can revolutionize your operations 
               and drive unprecedented growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
-                href="/contact"
+                href="
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-              </a>
-          {/* CTA Section */}"
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4"></h2>
-// Ready to Transform Your Business?
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
-// Get a free consultation and discover how our solutions can revolutionize your operations;
-//               and drive unprecedented growth.
-            
-          
-          
-          
-          
-          
-          
-          
-          
 
-          </p>
+                <Mail className="w-4 h-4 mr-2" 
+                Email Us
+              <
+          {/* CTA Section *
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"><
+            <h2 className="text-2xl font-bold text-white mb-4"><
+/
+
+          <
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"><
+/
+/
+
+          <
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                href="
 
-// >
-                
-          
-          
-          
-          
-          
-          
-          
+/
+
           "
-          <Phone className="w-5 h-5 mr-2" /></Phone>
-// Get Free Consultation;
-          </a>
+          <Phone className="w-5 h-5 mr-2" /><
+/
+          <
 
               <a
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
-// >
-                
-          
-          
-          
-          
-          
-          
-          
+/
+
           "
-          <Phone className="w-4 h-4 mr-2" /></Phone>
-// (302) 464-0950;
-          </a>
+          <Phone className="w-4 h-4 mr-2" /><
+/
+          <
 
               <a
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
+    r:text-slate-900 transition-all duration-300 inline-flex items-center"
 
-// >
-                
-          
-          
-          
-          
-          
-          
-          
+/
+
           "
-          <Mail className="w-4 h-4 mr-2" /></Mail>
-// Email Us;
-          </a>
-            </div>
-          </div>
-        </div>
-      </div>
+          <Mail className="w-4 h-4 mr-2" /><
+/
+          <
+            <
+          <
+        <
+      <
 
+<<<<<<< HEAD
       <Footer />
-    </>
+    </React.Fragment>
 
     </div>
+  )};
+=======
+      <Footer 
+    <
+
+    <
   );
 };
-
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default SolutionsPage;
-
 

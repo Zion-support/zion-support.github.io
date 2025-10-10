@@ -15,6 +15,8 @@ export const lazyLoadBanner = (
   importFn: () => Promise<BannerModule>
       // Retry once after a delay;
       return new Promise<BannerModule>(resolve => {
+return (
+
         setTimeout(() => {
           importFn()
             .then(resolve),
@@ -22,18 +24,18 @@ export const lazyLoadBanner = (
 export const lazyLoadBanner = (importF)
   n: () => Promise<BannerModule>,
       // Retry once after a delay;
-      return new Promise<BannerModule>(resolve => {/* TODO: Fix JSX expression */})
-            });
-        }, 1000);
-      });
-    })
-  );
-};
+      return new Promise<BannerModule>
+);
+}(resolve => {/* TODO: Fix JSX expression */})
+            })}, 1000)})})
+  )};
 
 /**
  * Preload banner components for better performance;
  */
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
+return (
+
   if (typeof window !== 'undefined') {
     // Preload on idle;
     if ('requestIdleCallback' in window) {
@@ -41,19 +43,19 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
         importFn().catch(() => {,
           // Silently fail for preload;
 export const preloadBanner = (importF)
-  n: () => Promise<BannerModule>): void => {/* TODO: Fix JSX expression */}
-        });
-      });
-  }
+  n: () => Promise<BannerModule>
+);
+}): void => {/* TODO: Fix JSX expression */}
+        })})}
 };
 
 /**
  * Banner loader with intersection observer;
  */
-export const createBannerLoader = () => {
-  const observer = new IntersectionObserver(
-        if (entry.isIntersecting) {
-          const _element = entry.target as HTMLElement;
+export const createBannerLoader = () => {;
+const observer = new IntersectionObserver(
+        if (entry.isIntersecting) {;
+const _element = entry.target as HTMLElement;
           const _importFn = element.dataset.bannerImport;
           if (importFn) {
             // Load the banner when it comes into view;
@@ -61,12 +63,10 @@ export const createBannerLoader = () => {
 export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
           }
         }
-      });
-    },
+      })},
     {/* TODO: Fix JSX expression */}
   n: '50px' }
   );
 
   return {/* TODO: Fix JSX expression */}
-  };
-};
+  }};

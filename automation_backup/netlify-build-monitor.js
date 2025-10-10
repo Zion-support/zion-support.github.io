@@ -90,8 +90,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -393,8 +393,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -696,8 +696,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -999,8 +999,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -1302,8 +1302,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -1605,8 +1605,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -1908,8 +1908,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -2211,8 +2211,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -2514,8 +2514,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -2817,8 +2817,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -3120,8 +3120,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -3423,8 +3423,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -3732,8 +3732,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -4041,8 +4041,8 @@
   n: 'issues'} if (content.includes( '.test.')) {/* TODO: Fix JSX expression */}
   message: Console.log found in production code'})} if (content.includes(')'TOD,
   O: ') || content.includes(')'FIXM,
-  E: ')) {/* TODO: Fix JSX expression */}`
-  e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
+  E: ')) {/* TODO: Fix JSX expression */}',
+  e: '} 'TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
   timeout: '6000'}0}) this.log(Buil,
@@ -4266,7 +4266,8 @@
   s:  ,3, logFil,
   e:} this.initialize()} this.setupLogging(); this.setupIssuePatterns(); this.setupFixStrategies(); this.ensureLogDirectory(); setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,`
-  t: logMessage = `[${timestamp}] ${message}`; // // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } setupIssuePatterns() {// Build failure patterns;' this.issuePatterns.set('' 'build_timeout)' ') /Build exceeded maximum time limit/i);' this.issuePatterns.set('' 'dependency_conflict)' ') /Cannot resolve module|Module not found|Peer dependency conflict/i);' this.issuePatterns.set('' 'typescript_error)' ') /Type.*is not assignable|Cannot find name|Property.*does not exist/i);' this.issuePatterns.set('lint_error)' ') /ESLint|Prettier|Stylelint/i);' this.issuePatterns.set('' 'memory_error)' ') /JavaScript heap out of memory|ENOMEM|Out of memory/i);' this.issuePatterns.set('' 'network_error)' ') /Network timeout|Connection refused|ETIMEDOUT/i);' this.issuePatterns.set('' 'permission_error)' ') /Permission denied|EACCES|Access denied/i);' this.issuePatterns.set('disk_space}' '} /ENOSPC|No space left on device/i)} setupFixStrategies() {/* TODO: Fix JSX expression */}
+  t: logMessage = `[${timestamp}] ${message}`; // // // console.log removed for production
+} this.error = (message) error) => { const timestamp = new Date().toISOString()} } setupIssuePatterns() {// Build failure patterns;' this.issuePatterns.set('' 'build_timeout)' ') /Build exceeded maximum time limit/i);' this.issuePatterns.set('' 'dependency_conflict)' ') /Cannot resolve module|Module not found|Peer dependency conflict/i);' this.issuePatterns.set('' 'typescript_error)' ') /Type.*is not assignable|Cannot find name|Property.*does not exist/i);' this.issuePatterns.set('lint_error)' ') /ESLint|Prettier|Stylelint/i);' this.issuePatterns.set('' 'memory_error)' ') /JavaScript heap out of memory|ENOMEM|Out of memory/i);' this.issuePatterns.set('' 'network_error)' ') /Network timeout|Connection refused|ETIMEDOUT/i);' this.issuePatterns.set('' 'permission_error)' ') /Permission denied|EACCES|Access denied/i);' this.issuePatterns.set('disk_space}' '} /ENOSPC|No space left on device/i)} setupFixStrategies() {/* TODO: Fix JSX expression */}
   c: fix strategies for each issue type;' this.fixStrategies.set('build_timeout,'' ') () => this.fixBuildTimeout());'' this.fixStrategies.set('dependency_conflict)'' ') () =>;' this.fixDependencyConflicts());' this.fixStrategies.set('typescript_error)'' ') () =>;' this.fixTypeScriptErrors());' this.fixStrategies.set('lint_error)'' ') () => this.fixLintErrors());'' this.fixStrategies.set('memory_error)'' ') () => this.fixMemoryIssues());'' this.fixStrategies.set('network_error)'' ') () => this.fixNetworkIssues());'' this.fixStrategies.set('permission_error)'' ') () =>;' this.fixPermissionIssues())} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
@@ -4283,7 +4284,8 @@
   t: true}); const hasChanges = gitStatus.trim().length > 0;' if (hasChanges) {'' this.log('Detected uncommitted changes} checking for issues...)' '); await this.analyzeChanges()} // Check for build issues; await this.checkBuildIssues(); // Check for dependency issues; await this.checkDependencyIssues(); // Check for code quality issues; ' this.error('Build status monitoring failed)' ') error) } } asyn,`
   c: analyzeChanges() {try { // Get list of changed files; ' file.endsWith('.tsx)' ') ||;' file.endsWith('.js)' ') ||}' file.endsWith('.jsx}' ')) { await this.analyzeFile(file)} } ' this.error('Change analysis failed) `) error) } } asyn,`
   c: analyzeFile(filePath) { try { if (!fs.existsSync(filePath)) { return} this.log(`Issues detected in ${filePath}: ${issues.length}`); i,
-  f: (this.config.autoFixEnabled) {await this.autoFixFile(filePath} issues)} } } detectIssues(content) filePath) {const issues = []; // Check for common code smells} if (content.includes()' // // console.log(') && !filePath.includes('' '.test.')) {/* TODO: Fix JSX expression */}
+  f: (this.config.autoFixEnabled) {await this.autoFixFile(filePath} issues)} } } detectIssues(content) filePath) {const issues = []; // Check for common code smells} if (content.includes()' // // // console.log removed for production
+&& !filePath.includes('' '.test.')) {/* TODO: Fix JSX expression */}
   e:}' Console.log found in production code'})}' if (content.includes('' 'TOD)
   O: ') || content.includes('' 'FIXM)' E: ')) {issues.push({ typ, e:  )' 'code_smell} messag,`
   e:; `TODO/FIXME comment found` })} return issues} async autoFixFile(filePath) issues) {' try {' this.log(`Auto-fixing issues in ${filePath}...`); fo,

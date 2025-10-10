@@ -1,11 +1,11 @@
 import React from 'react';
 impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-
-const Sideba, r: React.FC = () => { ,
-  const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
+;
+const Sideba, r: React.FC = () => { ,;
+const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
     {
       title: 'Exp, l, o, r, e',
-      lin, k, s: [,
+      lin, k, s: [,;
 const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
         { lab, e, l: 'H, o, m, e', pa, t, h: '/'  },
         { lab, e, l: 'Soluti, o, n, s', pa, t, h: '/solution, s' },
@@ -83,8 +83,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </a, s, i, d, e>
-  );
-};
+  )};
 
 export default Sidebar;
 `

@@ -1,5 +1,10 @@
 'use client';
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect } from 'react';
+=======
+
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+>>>>>>> origin/main
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;

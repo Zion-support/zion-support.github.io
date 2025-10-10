@@ -30,6 +30,10 @@ const,
   });
 
 <<<<<<< HEAD
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  p: entry.startTime }));
+        }
+=======
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -71,11 +75,7 @@ const,
         renderTime,
         memoryUsage,
         fps
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        }
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       });
     });
 

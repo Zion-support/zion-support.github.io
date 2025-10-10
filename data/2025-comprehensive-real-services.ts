@@ -1,6 +1,7 @@
 
-];      phone: '+1 302 464 0950'
-  id: string;
+];      phone: '+1 302 464 0950',
+  id:
+        id: string;
   name: string;
   tagline: string;
   description: string;
@@ -22,14 +23,14 @@
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trial_days: 60;
-    setup_time: '4 - 6 weeks'
-    competitors: ['PTCSiemensGE DigitalRockwell Automation'];
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launch_date: '2024 - 01 - 10'
+    setup_time: '4 - 6 weeks',
+    competitors:
+        competitors: ['PTCSiemensGE DigitalRockwell Automation'];
+    roi: 'Average customer sees 600% ROI through operational improvements',
+    launch_date: '2024 - 01 - 10',
     customers: 950;
     rating: 4 && 4.9;
-    reviews: 520;
-  }
+    reviews: 520}
 ];
   id: string, name: string;
   tagline: string, description: string;
@@ -48,21 +49,20 @@
   website: string;
   contact: unknown;
     phone: string, email: string;
-    address: string;
-    },
+    address: string},
     trialDays: number, setupTime: string;
   competitors: string[], roi: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services;
     id: 'ai-content-factory-pro', name: 'AI Content Factory Pro',
     tagline: 'Enterprise-grade AI content generation with brand voice consistency',
     description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
-    price: '$49', period: '/month'
-    features: [;
+    price: '$49', period: '/month',
+    features:
+        features: [;
       'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics',
       'API access for enterprise integrationsCustom AI model training for industry-specific content'],
     category: 'AI & Content Creation', marketSize: '$15.2 B',
@@ -79,14 +79,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['JasperCopy.aiWritesonicGrammarly Business'], roi: 'Average customer sees 300% ROI within 3 months',
     launchDate: '2024-01-15', customers: 2500;
     rating: 4.8;
-    reviews: 1250;
-  };
+    reviews: 1250};
   // Customer Success & Support;
     id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
     description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
-    price: '$199', period: '/month'
-    features: [;
+    price: '$199', period: '/month',
+    features:
+        features: [;
       'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms',
       'Advanced reporting and analyticsMobile app for customer success managers'],
     category: 'Customer Success & Support', marketSize: '$8.4 B',
@@ -103,14 +103,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['GainsightTotangoClientSuccessChurnZero'], roi: 'Average customer sees 400% ROI through reduced churn',
     launchDate: '2024-02-20', customers: 1800;
     rating: 4.9;
-    reviews: 950;
-  };
+    reviews: 950};
   // Financial Technology;
     id: 'ai-financial-risk-manager', name: 'AI Financial Risk Manager',
     tagline: 'Real-time financial risk assessment and compliance',
     description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',
-    price: '$299', period: '/month'
-    features: [;
+    price: '$299', period: '/month',
+    features:
+        features: [;
       'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis',
       'Integration with core banking systemsAdvanced analytics and reporting'],
     category: 'Financial Technology', marketSize: '$12.8 B',
@@ -127,14 +127,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['SASIBMOracleSAP'], roi: 'Average customer sees 500% ROI through risk reduction',
     launchDate: '2024-03-10', customers: 1200;
     rating: 4.7;
-    reviews: 680;
-  };
+    reviews: 680};
   // Healthcare & Biotech;
     id: 'ai-healthcare-diagnostics', name: 'AI Healthcare Diagnostics Platform',
     tagline: 'AI-powered medical imaging and diagnostic support',
     description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',
-    price: '$399', period: '/month'
-    features: [;
+    price: '$399', period: '/month',
+    features:
+        features: [;
       'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools',
       'Compliance with medical standardsAdvanced security and privacy controls'],
     category: 'Healthcare & Biotech', marketSize: '$18.5 B',
@@ -151,14 +151,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips'], roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
     launchDate: '2024-01-30', customers: 850;
     rating: 4.9;
-    reviews: 420;
-  };
+    reviews: 420};
   // E-commerce & Retail;
     id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',
     tagline: 'Intelligent e-commerce optimization and personalization',
     description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',
-    price: '$149', period: '/month'
-    features: [;
+    price: '$149', period: '/month',
+    features:
+        features: [;
       'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights',
       'Integration with major e-commerce platformsReal-time analytics and reporting'],
     category: 'E-commerce & Retail', marketSize: '$22.1 B',
@@ -175,14 +175,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['Dynamic YieldOptimizelyKlevuAlgolia'], roi: 'Average customer sees 350% ROI through increased conversions',
     launchDate: '2024-02-15', customers: 3200;
     rating: 4.8;
-    reviews: 1680;
-  };
+    reviews: 1680};
   // Cybersecurity & Compliance;
     id: 'ai-cybersecurity-suite', name: 'AI Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',
     description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',
-    price: '$249', period: '/month'
-    features: [;
+    price: '$249', period: '/month',
+    features:
+        features: [;
       'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response',
       'Cloud security monitoringAdvanced security analytics'],
     category: 'Cybersecurity & Compliance', marketSize: '$19.8 B',
@@ -199,14 +199,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'], roi: 'Average customer sees 450% ROI through threat prevention',
     launchDate: '2024-03-01', customers: 2100;
     rating: 4.9;
-    reviews: 1100;
-  };
+    reviews: 1100};
   // Data & Analytics;
     id: 'ai-data-pipeline-platform', name: 'AI Data Pipeline Platform',
     tagline: 'Intelligent data processing and analytics automation',
     description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',
-    price: '$179', period: '/month'
-    features: [;
+    price: '$179', period: '/month',
+    features:
+        features: [;
       'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure',
       'Advanced monitoring and alertingCollaborative data workspace'],
     category: 'Data & Analytics', marketSize: '$25.3 B',
@@ -223,14 +223,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['FivetranAlteryxTalendInformatica'], roi: 'Average customer sees 400% ROI through data automation',
     launchDate: '2024-02-01', customers: 2800;
     rating: 4.8;
-    reviews: 1450;
-  };
+    reviews: 1450};
   // Human Resources;
     id: 'ai-hr-recruitment-platform', name: 'AI HR Recruitment Platform',
     tagline: 'Intelligent talent acquisition and HR automation',
     description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',
-    price: '$129', period: '/month'
-    features: [;
+    price: '$129', period: '/month',
+    features:
+        features: [;
       'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics',
       'Integration with major HR systemsAdvanced reporting and insights'],
     category: 'Human Resources', marketSize: '$16.7 B',
@@ -247,14 +247,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['HireVuePymetricsHiredScoreEntelo'], roi: 'Average customer sees 300% ROI through improved hiring',
     launchDate: '2024-01-20', customers: 1900;
     rating: 4.7;
-    reviews: 890;
-  };
+    reviews: 890};
   // Legal & Compliance;
     id: 'ai-legal-contract-analyzer', name: 'AI Legal Contract Analyzer',
     tagline: 'Intelligent contract analysis and legal automation',
     description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',
-    price: '$199', period: '/month'
-    features: [;
+    price: '$199', period: '/month',
+    features:
+        features: [;
       'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval',
       'Collaborative review workflowsAudit trail and version control'],
     category: 'Legal & Compliance', marketSize: '$14.2 B',
@@ -271,14 +271,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['EvisortContractPodAiKira SystemsLuminance'], roi: 'Average customer sees 500% ROI through contract automation',
     launchDate: '2024-02-10', customers: 1100;
     rating: 4.8;
-    reviews: 580;
-  };
+    reviews: 580};
   // Manufacturing & IoT;
     id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer',
     tagline: 'Intelligent manufacturing optimization and predictive maintenance',
     description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
-    price: '$299', period: '/month'
-    features: [;
+    price: '$299', period: '/month',
+    features:
+        features: [;
       'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting',
       'Integration with ERP and MES systemsMobile app for field workers'],
     category: 'Manufacturing & IoT', marketSize: '$28.9 B',
@@ -303,10 +303,11 @@ export interface ComprehensiveService {}
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 60;
-    setupTime: '4-6 weeks'
-    competitors: ['PTCSiemensGE DigitalRockwell Automation'];
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launchDate: '2024-01-10'
+    setupTime: '4-6 weeks',
+    competitors:
+        competitors: ['PTCSiemensGE DigitalRockwell Automation'];
+    roi: 'Average customer sees 600% ROI through operational improvements',
+    launchDate: '2024-01-10',
     customers: 950;
     rating: 4.9;
     reviews: 520;
@@ -1054,8 +1055,7 @@ export const,
     launchDate: '2024-01-15';
     customers: 2500;
     rating: 4.8;
-    reviews: 1250;
-  };
+    reviews: 1250};
   // Customer Success & Support;
   {;
     id: 'ai-customer-success-platform';
@@ -1089,8 +1089,7 @@ export const,
     launchDate: '2024-02-20';
     customers: 1800;
     rating: 4.9;
-    reviews: 950;
-  };
+    reviews: 950};
   // Financial Technology;
   {;
     id: 'ai-financial-risk-manager';
@@ -1124,8 +1123,7 @@ export const,
     launchDate: '2024-03-10';
     customers: 1200;
     rating: 4.7;
-    reviews: 680;
-  };
+    reviews: 680};
   // Healthcare & Biotech;
   {;
     id: 'ai-healthcare-diagnostics';
@@ -1159,8 +1157,7 @@ export const,
     launchDate: '2024-01-30';
     customers: 850;
     rating: 4.9;
-    reviews: 420;
-  };
+    reviews: 420};
   // E-commerce & Retail;
   {;
     id: 'ai-ecommerce-optimizer';
@@ -1194,8 +1191,7 @@ export const,
     launchDate: '2024-02-15';
     customers: 3200;
     rating: 4.8;
-    reviews: 1680;
-  };
+    reviews: 1680};
   // Cybersecurity & Compliance;
   {;
     id: 'ai-cybersecurity-suite';
@@ -1229,8 +1225,7 @@ export const,
     launchDate: '2024-03-01';
     customers: 2100;
     rating: 4.9;
-    reviews: 1100;
-  };
+    reviews: 1100};
   // Data & Analytics;
   {;
     id: 'ai-data-pipeline-platform';
@@ -1264,8 +1259,7 @@ export const,
     launchDate: '2024-02-01';
     customers: 2800;
     rating: 4.8;
-    reviews: 1450;
-  };
+    reviews: 1450};
   // Human Resources;
   {;
     id: 'ai-hr-recruitment-platform';
@@ -1299,8 +1293,7 @@ export const,
     launchDate: '2024-01-20';
     customers: 1900;
     rating: 4.7;
-    reviews: 890;
-  };
+    reviews: 890};
   // Legal & Compliance;
   {;
     id: 'ai-legal-contract-analyzer';
@@ -1334,8 +1327,7 @@ export const,
     launchDate: '2024-02-10';
     customers: 1100;
     rating: 4.8;
-    reviews: 580;
-  };
+    reviews: 580};
   // Manufacturing & IoT;
   {;
     id: 'ai-manufacturing-optimizer';
@@ -1648,8 +1640,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
 ];
     phone: string;
     email: string;
-    address: string;
-  }
+    address: string}
   competitors: string[];
   roi: string;
   launch_date: string;
@@ -1714,12 +1705,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    roi: 'Average customer sees 300% ROI within 3 months'
-    launch_date: '2024 - 01 - 15'
+    roi: 'Average customer sees 300% ROI within 3 months',
+    launch_date: '2024 - 01 - 15',
     customers: 2500;
     rating: 4 && 4.8;
-    reviews: 1250;
-  },
+    reviews: 1250},
     id: 'ai-content-factory-pro',
     name: 'AI Content Factory Pro',
     tagline: 'Enterprise-grade AI content generation with brand voice consistency',
@@ -1806,12 +1796,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trialDays: 14;
     setupTime: '5 minutes',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business']
-    roi: 'Average customer sees 300% ROI within 3 months'
-    launchDate: '2024-01-15'
+    roi: 'Average customer sees 300% ROI within 3 months',
+    launchDate: '2024-01-15',
     customers: 2500;
     rating: 4.8;
-    reviews: 1250;
-  }
+    reviews: 1250}
   // Customer Success & Support;
     id: 'ai-customer-success-platform',
     name: 'AI Customer Success Platform',
@@ -1909,12 +1898,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 21;
     setup_time: '1 - 2 days',
     competitors: ['Gainsight', 'Totango', 'ClientSuccess', 'ChurnZero'],
-    roi: 'Average customer sees 400% ROI through reduced churn'
-    launch_date: '2024 - 02 - 20'
+    roi: 'Average customer sees 400% ROI through reduced churn',
+    launch_date: '2024 - 02 - 20',
     customers: 1800;
     rating: 4 && 4.9;
-    reviews: 950;
-  },
+    reviews: 950},
   // Financial Technology;
     id: 'ai-financial-risk-manager',
     name: 'AI Financial Risk Manager',
@@ -2005,12 +1993,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30;
     setup_time: '2 - 4 weeks',
     competitors: ['SAS', 'IBM', 'Oracle', 'SAP'],
-    roi: 'Average customer sees 500% ROI through risk reduction'
-    launch_date: '2024 - 03 - 10'
+    roi: 'Average customer sees 500% ROI through risk reduction',
+    launch_date: '2024 - 03 - 10',
     customers: 1200;
     rating: 4 && 4.7;
-    reviews: 680;
-  },
+    reviews: 680},
   // Healthcare & Biotech;
     id: 'ai-healthcare-diagnostics',
     name: 'AI Healthcare Diagnostics Platform',
@@ -2121,12 +2108,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Google Health',
       'Microsoft Healthcare',
       'Philips'],
-    roi: 'Average customer sees 600% ROI through improved diagnostic accuracy'
-    launch_date: '2024 - 01 - 30'
+    roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
+    launch_date: '2024 - 01 - 30',
     customers: 850;
     rating: 4 && 4.9;
-    reviews: 420;
-  },
+    reviews: 420},
   // E-commerce & Retail;
     id: 'ai-ecommerce-optimizer',
     name: 'AI E-commerce Optimizer',
@@ -2200,12 +2186,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 14;
     setup_time: '1 - 2 days',
     competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia'],
-    roi: 'Average customer sees 350% ROI through increased conversions'
-    launch_date: '2024 - 02 - 15'
+    roi: 'Average customer sees 350% ROI through increased conversions',
+    launch_date: '2024 - 02 - 15',
     customers: 3200;
     rating: 4 && 4.8;
-    reviews: 1680;
-  },
+    reviews: 1680},
   // Cybersecurity & Compliance;
     id: 'ai-cybersecurity-suite',
     name: 'AI Cybersecurity Suite',
@@ -2297,12 +2282,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30;
     setup_time: '1 - 2 weeks',
     competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
-    roi: 'Average customer sees 450% ROI through threat prevention'
-    launch_date: '2024 - 03 - 01'
+    roi: 'Average customer sees 450% ROI through threat prevention',
+    launch_date: '2024 - 03 - 01',
     customers: 2100;
     rating: 4 && 4.9;
-    reviews: 1100;
-  },
+    reviews: 1100},
   // Data & Analytics;
     id: 'ai-data-pipeline-platform',
     name: 'AI Data Pipeline Platform',
@@ -2395,12 +2379,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 21;
     setup_time: '1 - 2 weeks',
     competitors: ['Fivetran', 'Alteryx', 'Talend', 'Informatica'],
-    roi: 'Average customer sees 400% ROI through data automation'
-    launch_date: '2024 - 02 - 01'
+    roi: 'Average customer sees 400% ROI through data automation',
+    launch_date: '2024 - 02 - 01',
     customers: 2800;
     rating: 4 && 4.8;
-    reviews: 1450;
-  },
+    reviews: 1450},
   // Human Resources;
     id: 'ai-hr-recruitment-platform',
     name: 'AI HR Recruitment Platform',
@@ -2492,12 +2475,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 14;
     setup_time: '1 - 2 days',
     competitors: ['HireVue', 'Pymetrics', 'HiredScore', 'Entelo'],
-    roi: 'Average customer sees 300% ROI through improved hiring'
-    launch_date: '2024 - 01 - 20'
+    roi: 'Average customer sees 300% ROI through improved hiring',
+    launch_date: '2024 - 01 - 20',
     customers: 1900;
     rating: 4 && 4.7;
-    reviews: 890;
-  },
+    reviews: 890},
   // Legal & Compliance;
     id: 'ai-legal-contract-analyzer',
     name: 'AI Legal Contract Analyzer',
@@ -2596,12 +2578,11 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30;
     setup_time: '1 - 2 weeks',
     competitors: ['Evisort', 'ContractPodAi', 'Kira Systems', 'Luminance'],
-    roi: 'Average customer sees 500% ROI through contract automation'
-    launch_date: '2024 - 02 - 10'
+    roi: 'Average customer sees 500% ROI through contract automation',
+    launch_date: '2024 - 02 - 10',
     customers: 1100;
     rating: 4 && 4.8;
-    reviews: 580;
-  },
+    reviews: 580},
   // Manufacturing & IoT;
     id: 'ai-manufacturing-optimizer',
     name: 'AI Manufacturing Optimizer',
@@ -2682,8 +2663,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 60;
     setup_time: '4 - 6 weeks',
     competitors: ['PTC', 'Siemens', 'GE Digital', 'Rockwell Automation'],
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launch_date: '2024 - 01 - 10'
+    roi: 'Average customer sees 600% ROI through operational improvements',
+    launch_date: '2024 - 01 - 10',
     customers: 950;
     rating: 4 && 4.9;
     reviews: 520;
@@ -2741,14 +2722,12 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   website: string;
   contact: unknown;
     phone: string, email: string;
-    address: string;
-    },
+    address: string},
     trialDays: number, setupTime: string;
   competitors: string[], roi: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services;
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -2756,14 +2735,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['JasperCopy.aiWritesonicGrammarly Business'], roi: 'Average customer sees 300% ROI within 3 months',
     launchDate: '2024-01-15', customers: 2500;
     rating: 4.8;
-    reviews: 1250;
-  };
+    reviews: 1250};
   // Customer Success & Support;
     id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
     description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
-    price: '$199', period: '/month'
-    features: [;
+    price: '$199', period: '/month',
+    features:
+        features: [;
       'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms',
       'Advanced reporting and analyticsMobile app for customer success managers'],
     category: 'Customer Success & Support', marketSize: '$8.4 B',
@@ -2780,14 +2759,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['GainsightTotangoClientSuccessChurnZero'], roi: 'Average customer sees 400% ROI through reduced churn',
     launchDate: '2024-02-20', customers: 1800;
     rating: 4.9;
-    reviews: 950;
-  };
+    reviews: 950};
   // Financial Technology;
     id: 'ai-financial-risk-manager', name: 'AI Financial Risk Manager',
     tagline: 'Real-time financial risk assessment and compliance',
     description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',
-    price: '$299', period: '/month'
-    features: [;
+    price: '$299', period: '/month',
+    features:
+        features: [;
       'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis',
       'Integration with core banking systemsAdvanced analytics and reporting'],
     category: 'Financial Technology', marketSize: '$12.8 B',
@@ -2804,14 +2783,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['SASIBMOracleSAP'], roi: 'Average customer sees 500% ROI through risk reduction',
     launchDate: '2024-03-10', customers: 1200;
     rating: 4.7;
-    reviews: 680;
-  };
+    reviews: 680};
   // Healthcare & Biotech;
     id: 'ai-healthcare-diagnostics', name: 'AI Healthcare Diagnostics Platform',
     tagline: 'AI-powered medical imaging and diagnostic support',
     description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',
-    price: '$399', period: '/month'
-    features: [;
+    price: '$399', period: '/month',
+    features:
+        features: [;
       'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools',
       'Compliance with medical standardsAdvanced security and privacy controls'],
     category: 'Healthcare & Biotech', marketSize: '$18.5 B',
@@ -2828,14 +2807,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips'], roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
     launchDate: '2024-01-30', customers: 850;
     rating: 4.9;
-    reviews: 420;
-  };
+    reviews: 420};
   // E-commerce & Retail;
     id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',
     tagline: 'Intelligent e-commerce optimization and personalization',
     description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',
-    price: '$149', period: '/month'
-    features: [;
+    price: '$149', period: '/month',
+    features:
+        features: [;
       'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights',
       'Integration with major e-commerce platformsReal-time analytics and reporting'],
     category: 'E-commerce & Retail', marketSize: '$22.1 B',
@@ -2852,14 +2831,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['Dynamic YieldOptimizelyKlevuAlgolia'], roi: 'Average customer sees 350% ROI through increased conversions',
     launchDate: '2024-02-15', customers: 3200;
     rating: 4.8;
-    reviews: 1680;
-  };
+    reviews: 1680};
   // Cybersecurity & Compliance;
     id: 'ai-cybersecurity-suite', name: 'AI Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',
     description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',
-    price: '$249', period: '/month'
-    features: [;
+    price: '$249', period: '/month',
+    features:
+        features: [;
       'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response',
       'Cloud security monitoringAdvanced security analytics'],
     category: 'Cybersecurity & Compliance', marketSize: '$19.8 B',
@@ -2876,14 +2855,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'], roi: 'Average customer sees 450% ROI through threat prevention',
     launchDate: '2024-03-01', customers: 2100;
     rating: 4.9;
-    reviews: 1100;
-  };
+    reviews: 1100};
   // Data & Analytics;
     id: 'ai-data-pipeline-platform', name: 'AI Data Pipeline Platform',
     tagline: 'Intelligent data processing and analytics automation',
     description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',
-    price: '$179', period: '/month'
-    features: [;
+    price: '$179', period: '/month',
+    features:
+        features: [;
       'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure',
       'Advanced monitoring and alertingCollaborative data workspace'],
     category: 'Data & Analytics', marketSize: '$25.3 B',
@@ -2900,14 +2879,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['FivetranAlteryxTalendInformatica'], roi: 'Average customer sees 400% ROI through data automation',
     launchDate: '2024-02-01', customers: 2800;
     rating: 4.8;
-    reviews: 1450;
-  };
+    reviews: 1450};
   // Human Resources;
     id: 'ai-hr-recruitment-platform', name: 'AI HR Recruitment Platform',
     tagline: 'Intelligent talent acquisition and HR automation',
     description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',
-    price: '$129', period: '/month'
-    features: [;
+    price: '$129', period: '/month',
+    features:
+        features: [;
       'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics',
       'Integration with major HR systemsAdvanced reporting and insights'],
     category: 'Human Resources', marketSize: '$16.7 B',
@@ -2924,14 +2903,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['HireVuePymetricsHiredScoreEntelo'], roi: 'Average customer sees 300% ROI through improved hiring',
     launchDate: '2024-01-20', customers: 1900;
     rating: 4.7;
-    reviews: 890;
-  };
+    reviews: 890};
   // Legal & Compliance;
     id: 'ai-legal-contract-analyzer', name: 'AI Legal Contract Analyzer',
     tagline: 'Intelligent contract analysis and legal automation',
     description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',
-    price: '$199', period: '/month'
-    features: [;
+    price: '$199', period: '/month',
+    features:
+        features: [;
       'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval',
       'Collaborative review workflowsAudit trail and version control'],
     category: 'Legal & Compliance', marketSize: '$14.2 B',
@@ -2948,14 +2927,14 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     competitors: ['EvisortContractPodAiKira SystemsLuminance'], roi: 'Average customer sees 500% ROI through contract automation',
     launchDate: '2024-02-10', customers: 1100;
     rating: 4.8;
-    reviews: 580;
-  };
+    reviews: 580};
   // Manufacturing & IoT;
     id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer',
     tagline: 'Intelligent manufacturing optimization and predictive maintenance',
     description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
-    price: '$299', period: '/month'
-    features: [;
+    price: '$299', period: '/month',
+    features:
+        features: [;
       'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting',
       'Integration with ERP and MES systemsMobile app for field workers'],
     category: 'Manufacturing & IoT', marketSize: '$28.9 B',

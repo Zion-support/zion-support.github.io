@@ -8,9 +8,9 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarCha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
-const ServicesPage: React.FC = () => {
-  const aiServices = [
+;
+const ServicesPage: React.FC = () => {;
+const aiServices = [
     {
       icon: Brain,
       title: 'AI Services',
@@ -66,8 +66,8 @@ const ServicesPage: React.FC = () => {
       link: '/ai-computer-vision'
     }
   ];
-
-  const itServices = [
+;
+const itServices = [
     {
       icon: Database,
       title: 'Database Management',
@@ -123,8 +123,8 @@ const ServicesPage: React.FC = () => {
       link: '/network-solutions'
     }
   ];
-
-  const microSaasServices = [
+;
+const microSaasServices = [
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -180,8 +180,8 @@ const ServicesPage: React.FC = () => {
       link: '/ai-content-generation'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
@@ -203,8 +203,8 @@ const ServicesPage: React.FC = () => {
       description: 'Quick implementation with minimal downtime'
     }
   ];
-
-  const stats = [
+;
+const stats = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
@@ -470,8 +470,7 @@ const ServicesPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default ServicesPage;
 

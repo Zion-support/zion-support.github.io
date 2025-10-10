@@ -47,10 +47,10 @@ export interface Q4Service {/* TODO: Fix JSX expression */}
   rating?: number;
   reviews?: number;
 const contact =
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup && ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  mobile: '+1 302 464 0950'
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
@@ -75,25 +75,27 @@ const contact =
       'Partnership analytics'],
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
-    marketSize: '$1.5B affiliate software'
-    growthRate: '15% YoY'
-    variant: 'ai-futuristic'
-    contactInfo: contact;
+marketSize: '$1.5B affiliate software',
+    growthRate: '15% YoY',
+    variant: 'ai-futuristic',
+    contactInfo:
+        contactInfo: contact;
     realImplementation: true;
-    implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.'
-    launchDate: '2025-10-01'
-    market_size: '$1.5B affiliate software'
-    growth_rate: '15% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+    implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.',
+    launchDate: '2025-10-01',
+    market_size: '$1.5B affiliate software',
+    growth_rate: '15% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Server - side tracking with webhook ingestion and fraud - scoring pipeline.',
-    launch_date: '2025 - 10 - 01'
-    customers: 120;
+    launch_date: '2025 - 10 - 01',
+    customers:
+        customers: 120;
     rating: 4 && 4.7;
-    reviews: 48;
-  },
+    reviews: 48},
       'Multi-speaker diarization',
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
@@ -108,8 +110,8 @@ const contact =
     marketSiz,
   e: '$1.5B affiliate software',
     growthRat,
-  e: '15% YoY',
-    varian,
+  e: '15% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -122,8 +124,8 @@ const contact =
     market_siz,
   e: '$1.5B affiliate software',
     growth_rat,
-  e: '15% YoY',
-    varian,
+  e: '15% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -187,8 +189,8 @@ const contact =
       'Export to SRT, VTT, DOCX',
       'Podcast platform integrations'],
     popular: false;
-    icon: ''
-    color: 'from - cyan - 600 to - blue - 700'
+    icon: '',
+    color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / services / podcast - transcription - studio',
     market_position: unknown;
@@ -203,18 +205,19 @@ const contact =
     use_cases: ['Transcripts', 'SEO summaries', 'Episode search'],
     roi: 'Save 48 hours per episode and improve SEO traffic.',
     competitors: ['Otter', 'Descript', 'Rev'],
-    market_size: '$500M transcription tools'
-    growth_rate: '20% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$500M transcription tools',
+    growth_rate: '20% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Batch transcription queue with GPU support, diarization and summarization pipeline.',
-    launch_date: '2025 - 09 - 15'
-    customers: 60;
+    launch_date: '2025 - 09 - 15',
+    customers:
+        customers: 60;
     rating: 4 && 4.6;
-    reviews: 22;
-  },
+    reviews: 22},
     id: 'micro - crm - local - business',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
@@ -231,13 +234,14 @@ const contact =
     roi: 'Save 48 hours per episode and improve SEO traffic.',
     competitors: ['Otter', 'Descript', 'Rev'],
     marketSize: '$500 M transcription tools',
-    growthRate: '20% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '20% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
-    launchDate: '2025-09-15'
-    customers: 60;
+    launchDate: '2025-09-15',
+    customers:
+        customers: 60;
     rating: 4.6;
     reviews: 22;
     popula,
@@ -277,8 +281,8 @@ const contact =
     market_siz,
   e: '$500M transcription tools',
     growth_rat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -329,8 +333,8 @@ const contact =
     marketSiz,
   e: '$500M transcription tools',
     growthRat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -367,18 +371,18 @@ const contact =
       'Mobile-friendly PWA',
       'Basic reporting'],
     popular: true;
-    icon: ''
-    color: 'from-emerald-600 to-teal-700'
+    icon: '',
+    color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/micro-crm-local-business',
     marketPosition: unknown;
       'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',
     targetAudience: 'Local businesses, consultants, freelancers',
     trialDays: 14;
-    setupTime: '15 minutes'
-    category: 'Developer Tools'
+    setupTime: '15 minutes',
+    category: 'Developer Tools',
     realService: true;
-    color: 'from - emerald - 600 to - teal - 700'
+    color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / services / micro - crm - local - business',
     market_position: unknown;
@@ -393,19 +397,21 @@ const contact =
     use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
     roi: 'Increase follow - through and close rates 1020% via reminders.',
     competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
-    market_size: '$5B SMB CRM'
-    growth_rate: '12% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$5B SMB CRM',
+    growth_rate: '12% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'PWA with offline storage, task reminders, and webhook - based integrations.',
-    launch_date: '2025 - 10 - 20'
-    customers: 210;
+    launch_date: '2025 - 10 - 20',
+    customers:
+        customers: 210;
     rating: 4 && 4.5;
-    reviews: 77;
+reviews: 77;
   },
-    id: 'returns - automation - saas'
+    id: 'returns - automation - saas',
     name: 'Ecommerce Returns Automation',
     tagline: 'Self - serve returns portal and automated labels',
     price: '$49',
@@ -419,13 +425,14 @@ const contact =
     roi: 'Increase follow-through and close rates 1020% via reminders.',
     competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
     marketSize: '$5 B SMB CRM',
-    growthRate: '12% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '12% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'PWA with offline storage, task reminders, and webhook-based integrations.',
-    launchDate: '2025-10-20'
-    customers: 210;
+    launchDate: '2025-10-20',
+    customers:
+        customers: 210;
     rating: 4.5;
     reviews: 77;
     popula,
@@ -485,8 +492,8 @@ const contact =
     market_siz,
   e: '$5B SMB CRM',
     growth_rat,
-  e: '12% YoY',
-    varian,
+  e: '12% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -531,8 +538,8 @@ const contact =
     marketSiz,
   e: '$5B SMB CRM',
     growthRat,
-  e: '12% YoY',
-    varian,
+  e: '12% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -569,15 +576,15 @@ const contact =
       'Email/SMS notifications',
       'Analytics on reasons and cost'],
     popular: false;
-    icon: ''
+    icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/services/returns-automation-saas',
     marketPosition: 'Competes with Returnly/Loop, quick setup for SMBs.',
     targetAudience: 'DTC brands, Shopify/WooCommerce stores',
     trialDays: 14;
-    setupTime: '2 hours'
-    category: 'Developer Tools'
+    setupTime: '2 hours',
+    category: 'Developer Tools',
     realService: true;
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 400',
@@ -593,18 +600,19 @@ const contact =
     use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
     roi: 'Reduce support tickets ~30% and speed refunds.',
     competitors: ['Loop Returns', 'Returnly'],
-    market_size: '$800M returns software'
-    growth_rate: '18% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$800M returns software',
+    growth_rate: '18% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Webhook - driven order sync, label / provider adapters.',
-    launch_date: '2025 - 10 - 05'
-    customers: 95;
+    launch_date: '2025 - 10 - 05',
+    customers:
+        customers: 95;
     rating: 4 && 4.6;
-    reviews: 35;
-  },
+    reviews: 35},
     id: 'it - helpdesk - for - msps',
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
@@ -612,13 +620,14 @@ const contact =
     roi: 'Reduce support tickets ~30% and speed refunds.',
     competitors: ['Loop Returns', 'Returnly'],
     marketSize: '$800 M returns software',
-    growthRate: '18% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '18% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Webhook-driven order sync, label/provider adapters.',
-    launchDate: '2025-10-05'
-    customers: 95;
+    launchDate: '2025-10-05',
+    customers:
+        customers: 95;
     rating: 4.6;
     reviews: 35;
     popula,
@@ -676,8 +685,8 @@ const contact =
     market_siz,
   e: '$800M returns software',
     growth_rat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -709,8 +718,8 @@ const contact =
     marketSiz,
   e: '$800M returns software',
     growthRat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -747,18 +756,18 @@ const contact =
       'RMM and network tool integrations',
       'Billing export and time tracking'],
     popular: true;
-    icon: ''
-    color: 'from-blue-600 to-indigo-700'
+    icon: '',
+    color: 'from-blue-600 to-indigo-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
     marketPosition: unknown;
       'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',
     targetAudience: 'Managed service providers, internal IT teams',
     trialDays: 14;
-    setupTime: '1 day'
-    category: 'Quality & Monitoring'
+    setupTime: '1 day',
+    category: 'Quality & Monitoring',
     realService: true;
-    color: 'from - blue - 600 to - indigo - 700'
+    color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / services / it - helpdesk - for - msps',
     market_position: unknown;
@@ -773,18 +782,19 @@ const contact =
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
     competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
-    market_size: '$10B helpdesk software'
-    growth_rate: '10% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$10B helpdesk software',
+    growth_rate: '10% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Email ingestion, rules engine, and portal with RBAC.',
-    launch_date: '2025 - 09 - 28'
-    customers: 70;
+    launch_date: '2025 - 09 - 28',
+    customers:
+        customers: 70;
     rating: 4 && 4.5;
-    reviews: 28;
-  }];
+    reviews: 28}];
 export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -816,19 +826,21 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     use_cases: ['Support copilots, Internal search, Drafting with review'],
     roi: 'Ship copilots 3 x faster with governance baked in.',
     competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
-    market_size: '$30B+ AI tooling'
-    growth_rate: '45% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$30B+ AI tooling',
+    growth_rate: '45% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Pipelines, policies, eval harness, cost and latency budgets.',
-    launch_date: '2025 - 03 - 01'
-    customers: 18;
+    launch_date: '2025 - 03 - 01',
+    customers:
+        customers: 18;
     rating: 4 && 4.8;
-    reviews: 11;
+reviews: 11;
   },
-    id: 'edge - personalization - engine'
+    id: 'edge - personalization - engine',
     name: 'Edge Personalization Engine',
     tagline: 'Real - time content and pricing personalization at the edge',
     price: '$249',
@@ -891,8 +903,8 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     market_siz,
   e: '$10B helpdesk software',
     growth_rat,
-  e: '10% YoY',
-    varian,
+  e: '10% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -912,8 +924,9 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text - cyan - 300'}
     lin,
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
     market_positio,
   n: unknown;
       'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',
@@ -940,8 +953,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$30B+ AI tooling',
     growth_rat,
-  e: '45% YoY',
-    varian,
+  e: '45% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -986,17 +999,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Faster resolution, less toil; better client satisfaction.',
     competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
     marketSize: '$10 B helpdesk software',
-    growthRate: '10% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '10% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
-    launchDate: '2025-09-28'
-    customers: 70;
+    launchDate: '2025-09-28',
+    customers:
+        customers: 70;
     rating: 4.5;
-    reviews: 28;
-  }];
-}
+    reviews: 28}]}
     customers: 120;
     rating: 4.7;
     reviews: 48;
@@ -1017,8 +1029,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$10B helpdesk software',
     growthRat,
-  e: '10% YoY',
-    varian,
+  e: '10% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -1033,8 +1045,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 28}];
-}
+  s: 28}]}
     customer,
   s: 120,
     ratin,
@@ -1070,15 +1081,17 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Transcripts', 'SEO summaries', 'Episode search'],
     roi: 'Save 48 hours per episode and improve SEO traffic.',
     competitors: ['Otter', 'Descript', 'Rev'],
-    market_size: '$500M transcription tools'
-    growth_rate: '20% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$500M transcription tools',
+    growth_rate: '20% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Batch transcription queue with GPU support, diarization and summarization pipeline.',
-    launch_date: '2025 - 09 - 15'
-    customers: 60;
+    launch_date: '2025 - 09 - 15',
+    customers:
+        customers: 60;
     rating: 4 && 4.6;
     reviews: 22;
     popula,
@@ -1103,8 +1116,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$500M transcription tools',
     growth_rat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1133,15 +1146,17 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
     roi: 'Increase follow - through and close rates 1020% via reminders.',
     competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
-    market_size: '$5B SMB CRM'
-    growth_rate: '12% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$5B SMB CRM',
+    growth_rate: '12% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'PWA with offline storage, task reminders, and webhook - based integrations.',
-    launch_date: '2025 - 10 - 20'
-    customers: 210;
+    launch_date: '2025 - 10 - 20',
+    customers:
+        customers: 210;
     rating: 4 && 4.5;
     reviews: 77;
     popula,
@@ -1159,8 +1174,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$5B SMB CRM',
     growth_rat,
-  e: '12% YoY',
-    varian,
+  e: '12% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1188,15 +1203,17 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
     roi: 'Reduce support tickets ~30% and speed refunds.',
     competitors: ['Loop Returns', 'Returnly'],
-    market_size: '$800M returns software'
-    growth_rate: '18% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$800M returns software',
+    growth_rate: '18% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Webhook - driven order sync, label / provider adapters.',
-    launch_date: '2025 - 10 - 05'
-    customers: 95;
+    launch_date: '2025 - 10 - 05',
+    customers:
+        customers: 95;
     rating: 4 && 4.6;
     reviews: 35;
     popula,
@@ -1212,8 +1229,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$800M returns software',
     growth_rat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1241,15 +1258,17 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
     competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
-    market_size: '$10B helpdesk software'
-    growth_rate: '10% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
+market_size: '$10B helpdesk software',
+    growth_rate: '10% YoY',
+    variant: 'ai - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Email ingestion, rules engine, and portal with RBAC.',
-    launch_date: '2025 - 09 - 28'
-    customers: 70;
+    launch_date: '2025 - 09 - 28',
+    customers:
+        customers: 70;
     rating: 4 && 4.5;
     reviews: 28;
     popula,
@@ -1265,8 +1284,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$10B helpdesk software',
     growth_rat,
-  e: '10% YoY',
-    varian,
+  e: '10% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1292,8 +1311,9 @@ export const real2025 Q4 Additions = [
       'SDKs for Node / Python'],
     popular: true;
       'Pipelines, policies, eval harness, cost and latency budgets.',
-    launch_date: '2025 - 03 - 01'
-    customers: 18;
+    launch_date: '2025 - 03 - 01',
+    customers:
+        customers: 18;
     rating: 4 && 4.8;
     reviews: 11;
     popula,
@@ -1340,13 +1360,14 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     roi: 'Ship copilots 3 x faster with governance baked in.',
     competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
     marketSize: '$30 B+ AI tooling',
-    growthRate: '45% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '45% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Pipelines, policies, eval harness, cost and latency budgets.',
-    launchDate: '2025-03-01'
-    customers: 18;
+    launchDate: '2025-03-01',
+    customers:
+        customers: 18;
     rating: 4.8;
     reviews: 11;
     popula,
@@ -1354,8 +1375,9 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-cyan-300'}
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     targetAudienc,
   e: 'Platform, data, and compliance teams',
     trialDay,
@@ -1379,8 +1401,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$30B+ AI tooling',
     growthRat,
-  e: '45% YoY',
-    varian,
+  e: '45% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -1420,18 +1442,20 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
     marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
-    targetAudience: 'Growth and eCommerce teams'
-    trialDays: 7;
-    setupTime: 'Same day'
-    category: 'Micro SaaS'
+    targetAudience: 'Growth and eCommerce teams',
+    trialDays:
+        trialDays: 7;
+    setupTime: 'Same day',
+    category: 'Micro SaaS',
     realService: true;
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`,
     market_position: unknown;
       'Simpler alternative to enterprise CDPs for SMBs, edge - native.',
-    target_audience: 'Growth and e_commerce teams'
-    trial_days: 7;
+    target_audience: 'Growth and e_commerce teams',
+    trial_days:
+        trial_days: 7;
     setup_time: 'Same day',
     category: 'Micro SaaS',
     real_service: true;
@@ -1440,20 +1464,21 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Homepage variants, Pricing tests, Onsite promos'],
     roi: 'Lift conversion by 515% via real - time variants.',
     competitors: ['Uniform, Optimizely, Cloudflare Workers + DIY'],
-    market_size: '$5B experimentation'
-    growth_rate: '12% YoY'
-    variant: 'edge - futuristic'
-    contact_info: contact;
+market_size: '$5B experimentation',
+    growth_rate: '12% YoY',
+    variant: 'edge - futuristic',
+    contact_info:
+        contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
       'Rules engine, audience traits, edge execution and analytics.',
-    launch_date: '2025 - 03 - 10'
-    customers: 42;
+    launch_date: '2025 - 03 - 10',
+    customers:
+        customers: 42;
     rating: 4 && 4.6;
-    reviews: 23;
-  },
+    reviews: 23},
       'One-PR one-env automation',
-    id: 'devx - preview - environments'
+    id: 'devx - preview - environments',
     name: 'DevX Preview Environments',
     tagline: 'On - demand ephemeral previews with seeded data and checks',
     price: '$199',
@@ -1468,8 +1493,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-emerald-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
     marketPositio,
   n: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudienc,
@@ -1487,8 +1513,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - emerald - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`,
     market_positio,
   n: unknown;
       'Simpler alternative to enterprise CDPs for SMBs, edge - native.',
@@ -1515,8 +1542,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$5B experimentation',
     growth_rat,
-  e: '12% YoY',
-    varian,
+  e: '12% YoY',;
+varian,
   t: 'edge - futuristic',
     contact_inf,
   o: contact,
@@ -1561,13 +1588,15 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - blue - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('devx - preview - environments')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('devx - preview - environments')}`,
     market_positio,
   n: unknown;
       'Faster than DIY scripts, comparable to Uffizzi / Gitpod previews.',
-    target_audience: 'Platform and app teams'
-    trial_days: 14;
+    target_audience: 'Platform and app teams',
+    trial_days:
+        trial_days: 14;
     setup_time: '13 days',
     category: 'Developer Tools',
     real_service: true;
@@ -1577,17 +1606,18 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Cut review cycle time by 3050%.',
     competitors: ['Uffizzi, Okteto, GitHub Codespaces'],
     market_size: '$4 B DevEx',
-    growth_rate: '18% YoY',
-    variant: 'dev - futuristic',
+    growth_rate: '18% YoY',;
+variant: 'dev - futuristic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Templates, runners, seeders, TTL and cleanup jobs.',
-    launch_date: '2025 - 03 - 05'
-    customers: 27;
+    launch_date: '2025 - 03 - 05',
+    customers:
+        customers: 27;
     rating: 4 && 4.7;
-    reviews: 16;
+reviews: 16;
   },
-    id: 'real - time - log - anomaly - guard'
+    id: 'real - time - log - anomaly - guard',
     name: 'Real - time Log Anomaly Guard',
     tagline: 'Detect anomalies and regressions with LLM - assisted alerts',
     price: '$129',
@@ -1616,8 +1646,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$4B DevEx',
     growth_rat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'dev - futuristic',
     contact_inf,
   o: contact,
@@ -1660,13 +1690,15 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - rose - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('real - time - log - anomaly - guard')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('real - time - log - anomaly - guard')}`,
     market_positio,
   n: unknown;
       'Adds AI summaries to classic log alerts, vendor - agnostic ingestion.',
-    target_audience: 'SREs and platform teams'
-    trial_days: 7;
+    target_audience: 'SREs and platform teams',
+    trial_days:
+        trial_days: 7;
     setup_time: 'Same day',
     category: 'Observability',
     real_service: true;
@@ -1676,16 +1708,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce MTTR by 2540%.',
     competitors: ['Datadog Logs, Elastic ML, Axiom'],
     market_size: '$10 B log analytics',
-    growth_rate: '20% YoY',
-    variant: 'monitoring - futuristic',
+    growth_rate: '20% YoY',;
+variant: 'monitoring - futuristic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Ingestion adapters, anomaly models, runbooks.',
-    launch_date: '2025 - 03 - 08'
-    customers: 33;
+    launch_date: '2025 - 03 - 08',
+    customers:
+        customers: 33;
     rating: 4 && 4.5;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'governed - feature - flags',
     name: 'Governed Feature Flags',
     tagline: 'Audit - ready flags with policies, approvals, and rollbacks',
@@ -1715,8 +1747,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$10B log analytics',
     growth_rat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'monitoring - futuristic',
     contact_inf,
   o: contact,
@@ -1759,13 +1791,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Lift conversion by 515% via real-time variants.',
     competitors: ['Uniform, Optimizely, Cloudflare Workers + DIY'],
     marketSize: '$5 B experimentation',
-    growthRate: '12% YoY',
-    variant: 'edge-futuristic',
+    growthRate: '12% YoY',;
+variant: 'edge-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Rules engine, audience traits, edge execution and analytics.',
-    launchDate: '2025-03-10'
-    customers: 42;
+    launchDate: '2025-03-10',
+    customers:
+        customers: 42;
     rating: 4.6;
     reviews: 23;
     ico,
@@ -1783,8 +1816,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$5B experimentation',
     growthRat,
-  e: '12% YoY',
-    varian,
+  e: '12% YoY',;
+varian,
   t: 'edge-futuristic',
     contactInf,
   o: contact,
@@ -1823,8 +1856,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColor: 'text-blue-300',
     link: `https://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
     marketPosition: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
-    targetAudience: 'Platform and app teams'
-    trialDays: 14;
+    targetAudience: 'Platform and app teams',
+    trialDays:
+        trialDays: 14;
     setupTime: '13 days',
     category: 'Developer Tools',
     realService: true;
@@ -1834,13 +1868,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Cut review cycle time by 3050%.',
     competitors: ['Uffizzi, Okteto, GitHub Codespaces'],
     marketSize: '$4 B DevEx',
-    growthRate: '18% YoY',
-    variant: 'dev-futuristic',
+    growthRate: '18% YoY',;
+variant: 'dev-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Templates, runners, seeders, TTL and cleanup jobs.',
-    launchDate: '2025-03-05'
-    customers: 27;
+    launchDate: '2025-03-05',
+    customers:
+        customers: 27;
     rating: 4.7;
     reviews: 16;
     ico,
@@ -1850,8 +1885,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-blue-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
     marketPositio,
   n: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
     targetAudienc,
@@ -1877,8 +1913,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$4B DevEx',
     growthRat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'dev-futuristic',
     contactInf,
   o: contact,
@@ -1917,8 +1953,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColor: 'text-rose-300',
     link: `https://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
     marketPosition: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
-    targetAudience: 'SREs and platform teams'
-    trialDays: 7;
+    targetAudience: 'SREs and platform teams',
+    trialDays:
+        trialDays: 7;
     setupTime: 'Same day',
     category: 'Observability',
     realService: true;
@@ -1928,13 +1965,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce MTTR by 2540%.',
     competitors: ['Datadog Logs, Elastic ML, Axiom'],
     marketSize: '$10 B log analytics',
-    growthRate: '20% YoY',
-    variant: 'monitoring-futuristic',
+    growthRate: '20% YoY',;
+variant: 'monitoring-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Ingestion adapters, anomaly models, runbooks.',
-    launchDate: '2025-03-08'
-    customers: 33;
+    launchDate: '2025-03-08',
+    customers:
+        customers: 33;
     rating: 4.5;
     reviews: 19;
     ico,
@@ -1944,8 +1982,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-rose-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
     marketPositio,
   n: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
     targetAudienc,
@@ -1971,8 +2010,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$10B log analytics',
     growthRat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'monitoring-futuristic',
     contactInf,
   o: contact,
@@ -2010,15 +2049,15 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: `https://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
-    marketPosition: 'Policy-focused alternative to generic toggle tools.'
-    targetAudience: 'Product and platform teams'
+    marketPosition: 'Policy-focused alternative to generic toggle tools.',
+    targetAudience: 'Product and platform teams',
     trialDays: 14;
     setupTime: '1 day',
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,
-    market_position: 'Policy - focused alternative to generic toggle tools.'
-    target_audience: 'Product and platform teams'
+    market_position: 'Policy - focused alternative to generic toggle tools.',
+    target_audience: 'Product and platform teams',
     trial_days: 14;
     setup_time: '1 day',
     category: 'Developer Tools',
@@ -2029,16 +2068,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce incident risk and speed delivery.',
     competitors: ['LaunchDarkly, Flagsmith, Unleash'],
     market_size: '$2 B feature management',
-    growth_rate: '16% YoY',
-    variant: 'dev - futuristic',
+    growth_rate: '16% YoY',;
+variant: 'dev - futuristic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Audit trails, policy engine, SLO hooks.',
-    launch_date: '2025 - 03 - 02'
-    customers: 21;
+    launch_date: '2025 - 03 - 02',
+    customers:
+        customers: 21;
     rating: 4 && 4.6;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'email - sequence - copilot',
     name: 'Email Sequence Copilot',
     tagline: 'On - brand outbound with warm - up, scoring, and safety',
@@ -2052,8 +2091,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-amber-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
     marketPositio,
   n: 'Policy-focused alternative to generic toggle tools.',
     targetAudienc,
@@ -2067,8 +2107,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - amber - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,
     market_positio,
   n: 'Policy - focused alternative to generic toggle tools.',
     target_audienc,
@@ -2094,8 +2135,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$2B feature management',
     growth_rat,
-  e: '16% YoY',
-    varian,
+  e: '16% YoY',;
+varian,
   t: 'dev - futuristic',
     contact_inf,
   o: contact,
@@ -2136,8 +2177,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_color: 'text - fuchsia - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,
     market_position: 'Safer than generic sequencers, deliverability - first.',
-    target_audience: 'Sales and growth teams'
-    trial_days: 7;
+    target_audience: 'Sales and growth teams',
+    trial_days:
+        trial_days: 7;
     setup_time: 'Same day',
     category: 'Growth & Marketing',
     real_service: true;
@@ -2147,16 +2189,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Increase positive replies by 1020%.',
     competitors: ['Apollo, Instantly, Yesware'],
     market_size: '$6 B sales engagement',
-    growth_rate: '9% YoY',
-    variant: 'growth - futuristic',
+    growth_rate: '9% YoY',;
+variant: 'growth - futuristic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Deliverability checks, AI drafts, safety policies.',
-    launch_date: '2025 - 03 - 12'
-    customers: 38;
+    launch_date: '2025 - 03 - 12',
+    customers:
+        customers: 38;
     rating: 4 && 4.5;
-    reviews: 20;
-  },
+    reviews: 20},
     id: 'data - contracts - guardrails',
     name: 'Data Contracts Guardrails',
     tagline: 'Schema governance, lineage, and backward - compat checks',
@@ -2170,8 +2212,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - fuchsia - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,
     market_positio,
   n: 'Safer than generic sequencers, deliverability - first.',
     target_audienc,
@@ -2197,8 +2240,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$6B sales engagement',
     growth_rat,
-  e: '9% YoY',
-    varian,
+  e: '9% YoY',;
+varian,
   t: 'growth - futuristic',
     contact_inf,
   o: contact,
@@ -2243,13 +2286,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce incident risk and speed delivery.',
     competitors: ['LaunchDarkly, Flagsmith, Unleash'],
     marketSize: '$2 B feature management',
-    growthRate: '16% YoY',
-    variant: 'dev-futuristic',
+    growthRate: '16% YoY',;
+variant: 'dev-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Audit trails, policy engine, SLO hooks.',
-    launchDate: '2025-03-02'
-    customers: 21;
+    launchDate: '2025-03-02',
+    customers:
+        customers: 21;
     rating: 4.6;
     reviews: 12;
     ico,
@@ -2271,8 +2315,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$2B feature management',
     growthRat,
-  e: '16% YoY',
-    varian,
+  e: '16% YoY',;
+varian,
   t: 'dev-futuristic',
     contactInf,
   o: contact,
@@ -2311,8 +2355,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColor: 'text-fuchsia-300',
     link: `https://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
     marketPosition: 'Safer than generic sequencers, deliverability-first.',
-    targetAudience: 'Sales and growth teams'
-    trialDays: 7;
+    targetAudience: 'Sales and growth teams',
+    trialDays:
+        trialDays: 7;
     setupTime: 'Same day',
     category: 'Growth & Marketing',
     realService: true;
@@ -2322,13 +2367,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Increase positive replies by 1020%.',
     competitors: ['Apollo, Instantly, Yesware'],
     marketSize: '$6 B sales engagement',
-    growthRate: '9% YoY',
-    variant: 'growth-futuristic',
+    growthRate: '9% YoY',;
+variant: 'growth-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Deliverability checks, AI drafts, safety policies.',
-    launchDate: '2025-03-12'
-    customers: 38;
+    launchDate: '2025-03-12',
+    customers:
+        customers: 38;
     rating: 4.5;
     reviews: 20;
     ico,
@@ -2338,8 +2384,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-fuchsia-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
     marketPositio,
   n: 'Safer than generic sequencers, deliverability-first.',
     targetAudienc,
@@ -2365,8 +2412,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$6B sales engagement',
     growthRat,
-  e: '9% YoY',
-    varian,
+  e: '9% YoY',;
+varian,
   t: 'growth-futuristic',
     contactInf,
   o: contact,
@@ -2404,15 +2451,15 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
     link: `https://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
-    marketPosition: 'Practical contracts vs. building from scratch.'
-    targetAudience: 'Data engineering teams'
+    marketPosition: 'Practical contracts vs. building from scratch.',
+    targetAudience: 'Data engineering teams',
     trialDays: 14;
     setupTime: '35 days',
     color: 'from - sky - 600 to - indigo - 700',
     text_color: 'text - sky - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,
-    market_position: 'Practical contracts vs. building from scratch.'
-    target_audience: 'Data engineering teams'
+    market_position: 'Practical contracts vs. building from scratch.',
+    target_audience: 'Data engineering teams',
     trial_days: 14;
     setup_time: '35 days',
     category: 'Data & Analytics',
@@ -2423,16 +2470,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce data incidents by 3050%.',
     competitors: ['Monte Carlo, open - source stacks'],
     market_size: '$5 B data quality',
-    growth_rate: '18% YoY',
-    variant: 'quantum - matrix',
+    growth_rate: '18% YoY',;
+variant: 'quantum - matrix',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Registries, CI checks, alerts, lineage.',
-    launch_date: '2025 - 03 - 03'
-    customers: 12;
+    launch_date: '2025 - 03 - 03',
+    customers:
+        customers: 12;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
       'Okta/Entra app configs',
       'SAML/OIDC + SCIM',
     id: 'managed - sso - fast - track',
@@ -2448,8 +2495,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-sky-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
     marketPositio,
   n: 'Practical contracts vs. building from scratch.',
     targetAudienc,
@@ -2463,8 +2511,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - sky - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,
     market_positio,
   n: 'Practical contracts vs. building from scratch.',
     target_audienc,
@@ -2490,8 +2539,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$5B data quality',
     growth_rat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'quantum - matrix',
     contact_inf,
   o: contact,
@@ -2537,13 +2586,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce data incidents by 3050%.',
     competitors: ['Monte Carlo, open-source stacks'],
     marketSize: '$5 B data quality',
-    growthRate: '18% YoY',
-    variant: 'quantum-matrix',
+    growthRate: '18% YoY',;
+variant: 'quantum-matrix',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Registries, CI checks, alerts, lineage.',
-    launchDate: '2025-03-03'
-    customers: 12;
+    launchDate: '2025-03-03',
+    customers:
+        customers: 12;
     rating: 4.6;
     reviews: 9;
     ico,
@@ -2565,8 +2615,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$5B data quality',
     growthRat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'quantum-matrix',
     contactInf,
   o: contact,
@@ -2603,15 +2653,15 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
     link: `https://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
-    marketPosition: 'Accelerates enterprise deals vs. open-ended projects.'
-    targetAudience: 'B2B SaaS product teams'
+    marketPosition: 'Accelerates enterprise deals vs. open-ended projects.',
+    targetAudience: 'B2B SaaS product teams',
     trialDays: 0;
     setupTime: '1 week',
     color: 'from - slate - 600 to - gray - 700',
     text_color: 'text - slate - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,
-    market_position: 'Accelerates enterprise deals vs. open - ended projects.'
-    target_audience: 'B2B SaaS product teams'
+    market_position: 'Accelerates enterprise deals vs. open - ended projects.',
+    target_audience: 'B2B SaaS product teams',
     trial_days: 0;
     setup_time: '1 week',
     category: 'Enterprise IT',
@@ -2622,16 +2672,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Shorten security review cycles by 24 weeks.',
     competitors: ['WorkOS PS, consultancies'],
     market_size: '$6 B identity services',
-    growth_rate: '13% CAGR',
-    variant: 'enterprise - futuristic',
+    growth_rate: '13% CAGR',;
+variant: 'enterprise - futuristic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'IdP configs, SP metadata, SCIM schema and guides.',
-    launch_date: '2025 - 03 - 06'
-    customers: 9;
+    launch_date: '2025 - 03 - 06',
+    customers:
+        customers: 9;
     rating: 4 && 4.7;
-    reviews: 7;
-  },
+    reviews: 7},
     id: 'ai - sales - pipeline - insights',
     name: 'AI Sales Pipeline Insights',
     tagline: 'Forecast hygiene, stage risks, and next - best actions',
@@ -2645,8 +2695,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-slate-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
     marketPositio,
   n: 'Accelerates enterprise deals vs. open-ended projects.',
     targetAudienc,
@@ -2660,8 +2711,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - slate - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,
     market_positio,
   n: 'Accelerates enterprise deals vs. open - ended projects.',
     target_audienc,
@@ -2687,8 +2739,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$6B identity services',
     growth_rat,
-  e: '13% CAGR',
-    varian,
+  e: '13% CAGR',;
+varian,
   t: 'enterprise - futuristic',
     contact_inf,
   o: contact,
@@ -2732,13 +2784,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Shorten security review cycles by 24 weeks.',
     competitors: ['WorkOS PS, consultancies'],
     marketSize: '$6 B identity services',
-    growthRate: '13% CAGR',
-    variant: 'enterprise-futuristic',
+    growthRate: '13% CAGR',;
+variant: 'enterprise-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'IdP configs, SP metadata, SCIM schema and guides.',
-    launchDate: '2025-03-06'
-    customers: 9;
+    launchDate: '2025-03-06',
+    customers:
+        customers: 9;
     rating: 4.7;
     reviews: 7;
     ico,
@@ -2760,8 +2813,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$6B identity services',
     growthRat,
-  e: '13% CAGR',
-    varian,
+  e: '13% CAGR',;
+varian,
   t: 'enterprise-futuristic',
     contactInf,
   o: contact,
@@ -2798,15 +2851,15 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
-    marketPosition: 'Lightweight RevOps insights without heavy BI projects.'
-    targetAudience: 'Sales and RevOps leaders'
+    marketPosition: 'Lightweight RevOps insights without heavy BI projects.',
+    targetAudience: 'Sales and RevOps leaders',
     trialDays: 7;
     setupTime: '23 days',
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,
-    market_position: 'Lightweight RevOps insights without heavy BI projects.'
-    target_audience: 'Sales and RevOps leaders'
+    market_position: 'Lightweight RevOps insights without heavy BI projects.',
+    target_audience: 'Sales and RevOps leaders',
     trial_days: 7;
     setup_time: '23 days',
     category: 'Business Automation',
@@ -2823,26 +2876,28 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Increase forecast accuracy and win rates.',
     competitors: ['People.ai, Clari (lightweight alt)'],
     marketSize: '$12 B RevOps',
-    growthRate: '10% CAGR',
-    variant: 'holographic-futuristic',
+    growthRate: '10% CAGR',;
+variant: 'holographic-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Data sync, scoring, weekly reviews.',
     launchDate: '2025-03-04',
     competitors: ['People.ai, Clari (lightweight alt)'],
     market_size: '$12 B RevOps',
-    growth_rate: '10% CAGR',
-    variant: 'holographic - futuristic',
+    growth_rate: '10% CAGR',;
+variant: 'holographic - futuristic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Data sync, scoring, weekly reviews.',
-    launch_date: '2025 - 03 - 04'
-    customers: 14;
+    launch_date: '2025 - 03 - 04',
+    customers:
+        customers: 14;
     rating: 4 && 4.5;
-    reviews: 10;
+reviews: 10;
   },
-    id: 'secure - webhook - relay'
-    customers: 14;
+    id: 'secure - webhook - relay',
+    customers:
+        customers: 14;
     rating: 4.5;
     reviews: 10;
     ico,
@@ -2852,8 +2907,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-amber-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
     marketPositio,
   n: 'Lightweight RevOps insights without heavy BI projects.',
     targetAudienc,
@@ -2867,8 +2923,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - amber - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,
     market_positio,
   n: 'Lightweight RevOps insights without heavy BI projects.',
     target_audienc,
@@ -2906,8 +2963,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$12B RevOps',
     growthRat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'holographic-futuristic',
     contactInf,
   o: contact,
@@ -2922,8 +2979,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$12B RevOps',
     growth_rat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'holographic - futuristic',
     contact_inf,
   o: contact,
@@ -2980,8 +3037,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-cyan-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
     marketPositio,
   n: 'Production-ready relay alternative to building in-house.',
     targetAudienc,
@@ -2999,8 +3057,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,
-    market_position: 'Production - ready relay alternative to building in - house.'
-    target_audience: 'Developers and platform teams'
+    market_position: 'Production - ready relay alternative to building in - house.',
+    target_audience: 'Developers and platform teams',
     trial_days: 14;
     setup_time: 'Same day',
     category: 'Developer Tools',
@@ -3011,16 +3069,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce failures and save engineering time.',
     competitors: ['Svix, Hookdeck'],
     market_size: '$1 B+ integration tooling',
-    growth_rate: '14% YoY',
-    variant: 'dev - futuristic',
+    growth_rate: '14% YoY',;
+variant: 'dev - futuristic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Relay service, verification, replay UI.',
-    launch_date: '2025 - 03 - 09'
-    customers: 31;
+    launch_date: '2025 - 03 - 09',
+    customers:
+        customers: 31;
     rating: 4 && 4.6;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'managed - postgres - ha - lite',
     category: 'Developer Tools',
     realService: true;
@@ -3030,13 +3088,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce failures and save engineering time.',
     competitors: ['Svix, Hookdeck'],
     marketSize: '$1 B+ integration tooling',
-    growthRate: '14% YoY',
-    variant: 'dev-futuristic',
+    growthRate: '14% YoY',;
+variant: 'dev-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Relay service, verification, replay UI.',
-    launchDate: '2025-03-09'
-    customers: 31;
+    launchDate: '2025-03-09',
+    customers:
+        customers: 31;
     rating: 4.6;
     reviews: 18;
     ico,
@@ -3046,8 +3105,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - cyan - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,
     market_positio,
   n: 'Production - ready relay alternative to building in - house.',
     target_audienc,
@@ -3073,8 +3133,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$1B+ integration tooling',
     growth_rat,
-  e: '14% YoY',
-    varian,
+  e: '14% YoY',;
+varian,
   t: 'dev - futuristic',
     contact_inf,
   o: contact,
@@ -3109,8 +3169,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$1B+ integration tooling',
     growthRat,
-  e: '14% YoY',
-    varian,
+  e: '14% YoY',;
+varian,
   t: 'dev-futuristic',
     contactInf,
   o: contact,
@@ -3159,8 +3219,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-emerald-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
     marketPositio,
   n: 'Practical alternative to DBAs for small teams.',
     targetAudienc,
@@ -3177,8 +3238,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,
-    market_position: 'Practical alternative to DBAs for small teams.'
-    target_audience: 'SMBs and startups'
+    market_position: 'Practical alternative to DBAs for small teams.',
+    target_audience: 'SMBs and startups',
     trial_days: 7;
     setup_time: '35 days',
     category: 'Enterprise IT',
@@ -3189,16 +3250,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce incidents and toil for DB ops.',
     competitors: ['Aiven, Crunchy Bridge (managed services)'],
     market_size: '$3 B DB ops services',
-    growth_rate: '11% YoY',
-    variant: 'enterprise - futuristic',
+    growth_rate: '11% YoY',;
+variant: 'enterprise - futuristic',
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Backup policies, failover drills, dashboards.',
-    launch_date: '2025 - 03 - 11'
-    customers: 17;
+    launch_date: '2025 - 03 - 11',
+    customers:
+        customers: 17;
     rating: 4 && 4.6;
-    reviews: 9;
-  },
+    reviews: 9},
     mobile: string, email: string;
     address: string;
     website: string;
@@ -3209,8 +3270,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     text_colo,
   r: 'text - emerald - 300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,
     market_positio,
   n: 'Practical alternative to DBAs for small teams.',
     target_audienc,
@@ -3236,8 +3298,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_siz,
   e: '$3B DB ops services',
     growth_rat,
-  e: '11% YoY',
-    varian,
+  e: '11% YoY',;
+varian,
   t: 'enterprise - futuristic',
     contact_inf,
   o: contact,
@@ -3265,8 +3327,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   launchDate?: string;
   customers?: number;
   rating?: number;
-  reviews?: number;
-}
+  reviews?: number}
 const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3382,8 +3443,7 @@ export const,
 		implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
     launchDate: '2025-09-15', customers: 60;
 		rating: 4.6;
-		reviews: 22;
-	};
+		reviews: 22};
 		id: 'micro-crm-local-business', name: 'Micro CRM for Local Business',
 		tagline: 'Simple contacts, pipelines, and reminders that just work',
     price: '$19', period: '/month',
@@ -3405,8 +3465,7 @@ export const,
 		implementationDetails: 'PWA with offline storage, task reminders, and webhook-based integrations.',
     launchDate: '2025-10-20', customers: 210;
 		rating: 4.5;
-		reviews: 77;
-	};
+		reviews: 77};
 		id: 'returns-automation-saas', name: 'Ecommerce Returns Automation',
 		tagline: 'Self-serve returns portal and automated labels', price: '$49',
 		period: '/month',
@@ -3616,8 +3675,7 @@ export const,
 		implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
     launchDate: '2025-09-28', customers: 70;
 		rating: 4.5;
-		reviews: 28;
-	}
+		reviews: 28}
 ];
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
@@ -3634,10 +3692,11 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
-    color: 'from-emerald-600 to-teal-700'
-    marketPosition: 'Practical alternative to DBAs for small teams.'
-    targetAudience: 'SMBs and startups'
-    trialDays: 7;
+    color: 'from-emerald-600 to-teal-700',
+    marketPosition: 'Practical alternative to DBAs for small teams.',
+    targetAudience: 'SMBs and startups',
+    trialDays:
+        trialDays: 7;
     setupTime: '35 days',
     category: 'Enterprise IT',
     realService: true;
@@ -3647,12 +3706,12 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     roi: 'Reduce incidents and toil for DB ops.',
     competitors: ['Aiven, Crunchy Bridge (managed services)'];
     marketSize: '$3B DB ops services',
-    growthRate: '11% YoY',
-    variant: 'enterprise-futuristic',
+    growthRate: '11% YoY',;
+variant: 'enterprise-futuristic',
     contactInfo: contact;
     realImplementation: true;
-    implementationDetails: 'Backup policies, failover drills, dashboards.'
-    launchDate: '2025-03-11'
+    implementationDetails: 'Backup policies, failover drills, dashboards.',
+    launchDate: '2025-03-11',
     customers: 17;
     rating: 4 && 4.6;
     category: 'Enterprise IT',
@@ -3663,16 +3722,16 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     roi: 'Reduce incidents and toil for DB ops.',
     competitors: ['Aiven, Crunchy Bridge (managed services)'],
     marketSize: '$3 B DB ops services',
-    growthRate: '11% YoY',
-    variant: 'enterprise-futuristic',
+    growthRate: '11% YoY',;
+variant: 'enterprise-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Backup policies, failover drills, dashboards.',
-    launchDate: '2025-03-11'
-    customers: 17;
+    launchDate: '2025-03-11',
+    customers:
+        customers: 17;
     rating: 4.6;
-    reviews: 9;
-  }
+    reviews: 9}
 ];
     rating: 4 && 4.6;
     reviews: 9;
@@ -3730,8 +3789,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-emerald-300'}
     lin,`
-  k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+  k: 'http,',
+  s:
+        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
     ];
     ico,
   n: '',
@@ -3740,8 +3800,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-emerald-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+  k: 'http,',
+  s:
+        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
     colo,
   r: 'from-emerald-600 to-teal-700'
     marketPositio,
@@ -3769,8 +3830,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$3B DB ops services'
     growthRat,
-  e: '11% YoY'
-    varian,
+  e: '11% YoY';
+varian,
   t: 'enterprise-futuristic'
     contactInf,
   o: contact;
@@ -3801,8 +3862,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$3B DB ops services',
     growthRat,
-  e: '11% YoY',
-    varian,
+  e: '11% YoY',;
+varian,
   t: 'enterprise-futuristic',
     contactInf,
   o: contact,
@@ -3857,8 +3918,8 @@ export const,
       'Shareable links, coupons, and influencer codes',
       'Partner portal and real-time analytics'],
     popular: true;
-    icon: ''
-    color: 'from-violet-600 to-fuchsia-700'
+    icon: '',
+    color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
     marketPosition: unknown;
@@ -3906,13 +3967,14 @@ export const,
       'Partnership analytics'],
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
-    marketSize: '$1.5B affiliate software'
-    growthRate: '15% YoY'
-    variant: 'ai-futuristic'
-    contactInfo: contact;
+marketSize: '$1.5B affiliate software',
+    growthRate: '15% YoY',
+    variant: 'ai-futuristic',
+    contactInfo:
+        contactInfo: contact;
     realImplementation: true;
-    implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.'
-    launchDate: '2025-10-01'
+    implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.',
+    launchDate: '2025-10-01',
     customers: 120;
     rating: 4.7;
     reviews: 48;
@@ -3923,8 +3985,8 @@ export const,
     marketSiz,
   e: '$1.5B affiliate software',
     growthRat,
-  e: '15% YoY',
-    varian,
+  e: '15% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -3961,7 +4023,7 @@ export const,
       'Export to SRT, VTT, DOCX',
       'Podcast platform integrations'],
     popular: false;
-    icon: ''
+    icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
@@ -3977,13 +4039,14 @@ export const,
     roi: 'Save 48 hours per episode and improve SEO traffic.',
     competitors: ['Otter', 'Descript', 'Rev'],
     marketSize: '$500 M transcription tools',
-    growthRate: '20% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '20% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
-    launchDate: '2025-09-15'
-    customers: 60;
+    launchDate: '2025-09-15',
+    customers:
+        customers: 60;
     rating: 4.6;
     reviews: 22;
     popula,
@@ -4022,8 +4085,8 @@ export const,
     marketSiz,
   e: '$500M transcription tools',
     growthRat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -4060,8 +4123,8 @@ export const,
       'Mobile-friendly PWA',
       'Basic reporting'],
     popular: true;
-    icon: ''
-    color: 'from-emerald-600 to-teal-700'
+    icon: '',
+    color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/micro-crm-local-business',
     marketPosition: unknown;
@@ -4077,13 +4140,14 @@ export const,
     roi: 'Increase follow-through and close rates 1020% via reminders.',
     competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
     marketSize: '$5 B SMB CRM',
-    growthRate: '12% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '12% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'PWA with offline storage, task reminders, and webhook-based integrations.',
-    launchDate: '2025-10-20'
-    customers: 210;
+    launchDate: '2025-10-20',
+    customers:
+        customers: 210;
     rating: 4.5;
     reviews: 77;
     popula,
@@ -4123,8 +4187,8 @@ export const,
     marketSiz,
   e: '$5B SMB CRM',
     growthRat,
-  e: '12% YoY',
-    varian,
+  e: '12% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -4161,7 +4225,7 @@ export const,
       'Email/SMS notifications',
       'Analytics on reasons and cost'],
     popular: false;
-    icon: ''
+    icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/services/returns-automation-saas',
@@ -4177,13 +4241,14 @@ export const,
     roi: 'Reduce support tickets ~30% and speed refunds.',
     competitors: ['Loop Returns', 'Returnly'],
     marketSize: '$800 M returns software',
-    growthRate: '18% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '18% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Webhook-driven order sync, label/provider adapters.',
-    launchDate: '2025-10-05'
-    customers: 95;
+    launchDate: '2025-10-05',
+    customers:
+        customers: 95;
     rating: 4.6;
     reviews: 35;
     popula,
@@ -4222,8 +4287,8 @@ export const,
     marketSiz,
   e: '$800M returns software',
     growthRat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -4260,8 +4325,8 @@ export const,
       'RMM and network tool integrations',
       'Billing export and time tracking'],
     popular: true;
-    icon: ''
-    color: 'from-blue-600 to-indigo-700'
+    icon: '',
+    color: 'from-blue-600 to-indigo-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
     marketPosition: unknown;
@@ -4277,17 +4342,16 @@ export const,
     roi: 'Faster resolution, less toil; better client satisfaction.',
     competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
     marketSize: '$10 B helpdesk software',
-    growthRate: '10% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '10% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
-    launchDate: '2025-09-28'
-    customers: 70;
+    launchDate: '2025-09-28',
+    customers:
+        customers: 70;
     rating: 4.5;
-    reviews: 28;
-  }];
-}
+    reviews: 28}]}
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
@@ -4316,13 +4380,14 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     roi: 'Ship copilots 3 x faster with governance baked in.',
     competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
     marketSize: '$30 B+ AI tooling',
-    growthRate: '45% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '45% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Pipelines, policies, eval harness, cost and latency budgets.',
-    launchDate: '2025-03-01'
-    customers: 18;
+    launchDate: '2025-03-01',
+    customers:
+        customers: 18;
     rating: 4.8;
     reviews: 11;
     popula,
@@ -4362,8 +4427,8 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     marketSiz,
   e: '$10B helpdesk software',
     growthRat,
-  e: '10% YoY',
-    varian,
+  e: '10% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -4378,13 +4443,13 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     ratin,
   g: 4.5,
     review,
-  s: 28}];
-}
+  s: 28}]}
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-cyan-300'}
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     marketPositio,
   n: unknown;
       'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',    targetAudienc,
@@ -4410,8 +4475,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$30B+ AI tooling',
     growthRat,
-  e: '45% YoY',
-    varian,
+  e: '45% YoY',;
+varian,
   t: 'ai-futuristic',
     contactInf,
   o: contact,
@@ -4451,8 +4516,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
     marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
-    targetAudience: 'Growth and eCommerce teams'
-    trialDays: 7;
+    targetAudience: 'Growth and eCommerce teams',
+    trialDays:
+        trialDays: 7;
     setupTime: 'Same day',
     category: 'Micro SaaS',
     realService: true;
@@ -4462,13 +4528,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Lift conversion by 515% via real-time variants.',
     competitors: ['Uniform, Optimizely, Cloudflare Workers + DIY'],
     marketSize: '$5 B experimentation',
-    growthRate: '12% YoY',
-    variant: 'edge-futuristic',
+    growthRate: '12% YoY',;
+variant: 'edge-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Rules engine, audience traits, edge execution and analytics.',
-    launchDate: '2025-03-10'
-    customers: 42;
+    launchDate: '2025-03-10',
+    customers:
+        customers: 42;
     rating: 4.6;
     reviews: 23;
     popula,
@@ -4480,8 +4547,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-emerald-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
     marketPositio,
   n: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudienc,
@@ -4507,8 +4575,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$5B experimentation',
     growthRat,
-  e: '12% YoY',
-    varian,
+  e: '12% YoY',;
+varian,
   t: 'edge-futuristic',
     contactInf,
   o: contact,
@@ -4547,8 +4615,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColor: 'text-blue-300',
     link: `https://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
     marketPosition: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
-    targetAudience: 'Platform and app teams'
-    trialDays: 14;
+    targetAudience: 'Platform and app teams',
+    trialDays:
+        trialDays: 14;
     setupTime: '13 days',
     category: 'Developer Tools',
     realService: true;
@@ -4558,13 +4627,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Cut review cycle time by 3050%.',
     competitors: ['Uffizzi, Okteto, GitHub Codespaces'],
     marketSize: '$4 B DevEx',
-    growthRate: '18% YoY',
-    variant: 'dev-futuristic',
+    growthRate: '18% YoY',;
+variant: 'dev-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Templates, runners, seeders, TTL and cleanup jobs.',
-    launchDate: '2025-03-05'
-    customers: 27;
+    launchDate: '2025-03-05',
+    customers:
+        customers: 27;
     rating: 4.7;
     reviews: 16;
     ico,
@@ -4574,8 +4644,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-blue-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
     marketPositio,
   n: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
     targetAudienc,
@@ -4601,8 +4672,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$4B DevEx',
     growthRat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'dev-futuristic',
     contactInf,
   o: contact,
@@ -4641,8 +4712,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColor: 'text-rose-300',
     link: `https://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
     marketPosition: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
-    targetAudience: 'SREs and platform teams'
-    trialDays: 7;
+    targetAudience: 'SREs and platform teams',
+    trialDays:
+        trialDays: 7;
     setupTime: 'Same day',
     category: 'Observability',
     realService: true;
@@ -4652,13 +4724,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce MTTR by 2540%.',
     competitors: ['Datadog Logs, Elastic ML, Axiom'],
     marketSize: '$10 B log analytics',
-    growthRate: '20% YoY',
-    variant: 'monitoring-futuristic',
+    growthRate: '20% YoY',;
+variant: 'monitoring-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Ingestion adapters, anomaly models, runbooks.',
-    launchDate: '2025-03-08'
-    customers: 33;
+    launchDate: '2025-03-08',
+    customers:
+        customers: 33;
     rating: 4.5;
     reviews: 19;
     ico,
@@ -4668,8 +4741,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-rose-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
     marketPositio,
   n: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
     targetAudienc,
@@ -4695,8 +4769,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$10B log analytics',
     growthRat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'monitoring-futuristic',
     contactInf,
   o: contact,
@@ -4734,8 +4808,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: `https://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
-    marketPosition: 'Policy-focused alternative to generic toggle tools.'
-    targetAudience: 'Product and platform teams'
+    marketPosition: 'Policy-focused alternative to generic toggle tools.',
+    targetAudience: 'Product and platform teams',
     trialDays: 14;
     setupTime: '1 day',
     category: 'Developer Tools',
@@ -4746,13 +4820,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce incident risk and speed delivery.',
     competitors: ['LaunchDarkly, Flagsmith, Unleash'],
     marketSize: '$2 B feature management',
-    growthRate: '16% YoY',
-    variant: 'dev-futuristic',
+    growthRate: '16% YoY',;
+variant: 'dev-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Audit trails, policy engine, SLO hooks.',
-    launchDate: '2025-03-02'
-    customers: 21;
+    launchDate: '2025-03-02',
+    customers:
+        customers: 21;
     rating: 4.6;
     reviews: 12;
     ico,
@@ -4762,8 +4837,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-amber-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
     marketPositio,
   n: 'Policy-focused alternative to generic toggle tools.',
     targetAudienc,
@@ -4789,8 +4865,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$2B feature management',
     growthRat,
-  e: '16% YoY',
-    varian,
+  e: '16% YoY',;
+varian,
   t: 'dev-futuristic',
     contactInf,
   o: contact,
@@ -4829,8 +4905,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColor: 'text-fuchsia-300',
     link: `https://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
     marketPosition: 'Safer than generic sequencers, deliverability-first.',
-    targetAudience: 'Sales and growth teams'
-    trialDays: 7;
+    targetAudience: 'Sales and growth teams',
+    trialDays:
+        trialDays: 7;
     setupTime: 'Same day',
     category: 'Growth & Marketing',
     realService: true;
@@ -4840,13 +4917,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Increase positive replies by 1020%.',
     competitors: ['Apollo, Instantly, Yesware'],
     marketSize: '$6 B sales engagement',
-    growthRate: '9% YoY',
-    variant: 'growth-futuristic',
+    growthRate: '9% YoY',;
+variant: 'growth-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Deliverability checks, AI drafts, safety policies.',
-    launchDate: '2025-03-12'
-    customers: 38;
+    launchDate: '2025-03-12',
+    customers:
+        customers: 38;
     rating: 4.5;
     reviews: 20;
     ico,
@@ -4856,8 +4934,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-fuchsia-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
     marketPositio,
   n: 'Safer than generic sequencers, deliverability-first.',
     targetAudienc,
@@ -4883,8 +4962,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$6B sales engagement',
     growthRat,
-  e: '9% YoY',
-    varian,
+  e: '9% YoY',;
+varian,
   t: 'growth-futuristic',
     contactInf,
   o: contact,
@@ -4922,8 +5001,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
     link: `https://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
-    marketPosition: 'Practical contracts vs. building from scratch.'
-    targetAudience: 'Data engineering teams'
+    marketPosition: 'Practical contracts vs. building from scratch.',
+    targetAudience: 'Data engineering teams',
     trialDays: 14;
     setupTime: '35 days',
     category: 'Data & Analytics',
@@ -4934,13 +5013,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce data incidents by 3050%.',
     competitors: ['Monte Carlo, open-source stacks'],
     marketSize: '$5 B data quality',
-    growthRate: '18% YoY',
-    variant: 'quantum-matrix',
+    growthRate: '18% YoY',;
+variant: 'quantum-matrix',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Registries, CI checks, alerts, lineage.',
-    launchDate: '2025-03-03'
-    customers: 12;
+    launchDate: '2025-03-03',
+    customers:
+        customers: 12;
     rating: 4.6;
     reviews: 9;
     ico,
@@ -4950,8 +5030,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-sky-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
     marketPositio,
   n: 'Practical contracts vs. building from scratch.',
     targetAudienc,
@@ -4977,8 +5058,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$5B data quality',
     growthRat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'quantum-matrix',
     contactInf,
   o: contact,
@@ -5015,8 +5096,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
     link: `https://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
-    marketPosition: 'Accelerates enterprise deals vs. open-ended projects.'
-    targetAudience: 'B2B SaaS product teams'
+    marketPosition: 'Accelerates enterprise deals vs. open-ended projects.',
+    targetAudience: 'B2B SaaS product teams',
     trialDays: 0;
     setupTime: '1 week',
     category: 'Enterprise IT',
@@ -5027,13 +5108,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Shorten security review cycles by 24 weeks.',
     competitors: ['WorkOS PS, consultancies'],
     marketSize: '$6 B identity services',
-    growthRate: '13% CAGR',
-    variant: 'enterprise-futuristic',
+    growthRate: '13% CAGR',;
+variant: 'enterprise-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'IdP configs, SP metadata, SCIM schema and guides.',
-    launchDate: '2025-03-06'
-    customers: 9;
+    launchDate: '2025-03-06',
+    customers:
+        customers: 9;
     rating: 4.7;
     reviews: 7;
     ico,
@@ -5043,8 +5125,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-slate-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
     marketPositio,
   n: 'Accelerates enterprise deals vs. open-ended projects.',
     targetAudienc,
@@ -5070,8 +5153,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$6B identity services',
     growthRat,
-  e: '13% CAGR',
-    varian,
+  e: '13% CAGR',;
+varian,
   t: 'enterprise-futuristic',
     contactInf,
   o: contact,
@@ -5108,8 +5191,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
-    marketPosition: 'Lightweight RevOps insights without heavy BI projects.'
-    targetAudience: 'Sales and RevOps leaders'
+    marketPosition: 'Lightweight RevOps insights without heavy BI projects.',
+    targetAudience: 'Sales and RevOps leaders',
     trialDays: 7;
     setupTime: '23 days',
     category: 'Business Automation',
@@ -5120,13 +5203,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Increase forecast accuracy and win rates.',
     competitors: ['People.ai, Clari (lightweight alt)'],
     marketSize: '$12 B RevOps',
-    growthRate: '10% CAGR',
-    variant: 'holographic-futuristic',
+    growthRate: '10% CAGR',;
+variant: 'holographic-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Data sync, scoring, weekly reviews.',
-    launchDate: '2025-03-04'
-    customers: 14;
+    launchDate: '2025-03-04',
+    customers:
+        customers: 14;
     rating: 4.5;
     reviews: 10;
     ico,
@@ -5136,8 +5220,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-amber-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
     marketPositio,
   n: 'Lightweight RevOps insights without heavy BI projects.',
     targetAudienc,
@@ -5163,8 +5248,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$12B RevOps',
     growthRat,
-  e: '10% CAGR',
-    varian,
+  e: '10% CAGR',;
+varian,
   t: 'holographic-futuristic',
     contactInf,
   o: contact,
@@ -5202,8 +5287,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
-    marketPosition: 'Production-ready relay alternative to building in-house.'
-    targetAudience: 'Developers and platform teams'
+    marketPosition: 'Production-ready relay alternative to building in-house.',
+    targetAudience: 'Developers and platform teams',
     trialDays: 14;
     setupTime: 'Same day',
     category: 'Developer Tools',
@@ -5214,13 +5299,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce failures and save engineering time.',
     competitors: ['Svix, Hookdeck'],
     marketSize: '$1 B+ integration tooling',
-    growthRate: '14% YoY',
-    variant: 'dev-futuristic',
+    growthRate: '14% YoY',;
+variant: 'dev-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Relay service, verification, replay UI.',
-    launchDate: '2025-03-09'
-    customers: 31;
+    launchDate: '2025-03-09',
+    customers:
+        customers: 31;
     rating: 4.6;
     reviews: 18;
     ico,
@@ -5230,8 +5316,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-cyan-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
     marketPositio,
   n: 'Production-ready relay alternative to building in-house.',
     targetAudienc,
@@ -5257,8 +5344,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$1B+ integration tooling',
     growthRat,
-  e: '14% YoY',
-    varian,
+  e: '14% YoY',;
+varian,
   t: 'dev-futuristic',
     contactInf,
   o: contact,
@@ -5296,8 +5383,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
-    marketPosition: 'Practical alternative to DBAs for small teams.'
-    targetAudience: 'SMBs and startups'
+    marketPosition: 'Practical alternative to DBAs for small teams.',
+    targetAudience: 'SMBs and startups',
     trialDays: 7;
     setupTime: '35 days',
     category: 'Enterprise IT',
@@ -5308,16 +5395,16 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     roi: 'Reduce incidents and toil for DB ops.',
     competitors: ['Aiven, Crunchy Bridge (managed services)'],
     marketSize: '$3 B DB ops services',
-    growthRate: '11% YoY',
-    variant: 'enterprise-futuristic',
+    growthRate: '11% YoY',;
+variant: 'enterprise-futuristic',
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Backup policies, failover drills, dashboards.',
-    launchDate: '2025-03-11'
-    customers: 17;
+    launchDate: '2025-03-11',
+    customers:
+        customers: 17;
     rating: 4.6;
-    reviews: 9;
-  }
+    reviews: 9}
 ];
     reviews: 9;
     ico,
@@ -5327,8 +5414,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     textColo,
   r: 'text-emerald-300',
     lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
     marketPositio,
   n: 'Practical alternative to DBAs for small teams.',
     targetAudienc,
@@ -5354,8 +5442,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$3B DB ops services',
     growthRat,
-  e: '11% YoY',
-    varian,
+  e: '11% YoY',;
+varian,
   t: 'enterprise-futuristic',
     contactInf,
   o: contact,
@@ -5669,8 +5757,9 @@ export interface Q4Service,
   n: '🧠', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`, market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`, market_positio,
   n: ;' 'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',' target_audienc,
   e: 'Platform, data, and compliance teams', trial_day,
   s: 14,' setup_tim,
@@ -5715,7 +5804,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28}]; } customer,
+  s: 28}]} customer,
   s: 120, ratin,
   g: 4.7, review,
   s: 48}, ' i,
@@ -5808,8 +5897,9 @@ export interface Q4Service,
   n: '🧠',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,' targetAudienc,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,' targetAudienc,
   e: 'Platform, data, and compliance teams', trialDay,
   s: 14,' setupTim,
   e: '1–2 days',' categor,
@@ -5841,8 +5931,9 @@ export interface Q4Service,
   n: '⚡',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,' marketPositio,
   n: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',' targetAudienc,
   e: 'Growth and eCommerce teams', trialDay,
   s: 7,' setupTim,
@@ -5851,8 +5942,9 @@ export interface Q4Service,
   e: true, ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`, market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`, market_positio,
   n: ;' 'Simpler alternative to enterprise CDPs for SMBs, edge - native.',' target_audienc,
   e: 'Growth and e_commerce teams', trial_day,
   s: 7,' setup_tim,
@@ -5884,8 +5976,9 @@ export interface Q4Service,
   n: '🚀', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('devx - preview - environments')}`, market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('devx - preview - environments')}`, market_positio,
   n: ;' 'Faster than DIY scripts, comparable to Uffizzi / Gitpod previews.',' target_audienc,
   e: 'Platform and app teams', trial_day,
   s: 14,' setup_tim,
@@ -5917,8 +6010,9 @@ export interface Q4Service,
   n: '📈', ' colo,
   r: 'from - rose - 600 to - red - 700',' text_colo,
   r: 'text - rose - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('real - time - log - anomaly - guard')}`, market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('real - time - log - anomaly - guard')}`, market_positio,
   n: ;' 'Adds AI summaries to classic log alerts, vendor - agnostic ingestion.',' target_audienc,
   e: 'SREs and platform teams', trial_day,
   s: 7,' setup_tim,
@@ -5973,8 +6067,9 @@ export interface Q4Service,
   n: '🚀',' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-blue-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,' marketPositio,
   n: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',' targetAudienc,
   e: 'Platform and app teams', trialDay,
   s: 14,' setupTim,
@@ -6006,8 +6101,9 @@ export interface Q4Service,
   n: '📈',' colo,
   r: 'from-rose-600 to-red-700',' textColo,
   r: 'text-rose-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,' marketPositio,
   n: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',' targetAudienc,
   e: 'SREs and platform teams', trialDay,
   s: 7,' setupTim,
@@ -6039,16 +6135,18 @@ export interface Q4Service,
   n: '🏳️',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`, ' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`, ' marketPositio,
   n: 'Policy-focused alternative to generic toggle tools.',' targetAudienc,
   e: 'Product and platform teams', trialDay,
   s: 14,' setupTim,
   e: '1 day', ' colo,
   r: 'from - amber - 600 to - orange - 700',' text_colo,
   r: 'text - amber - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,' market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,' market_positio,
   n: 'Policy - focused alternative to generic toggle tools.',' target_audienc,
   e: 'Product and platform teams', trial_day,
   s: 14,' setup_tim,
@@ -6080,8 +6178,9 @@ export interface Q4Service,
   n: '✉️', ' colo,
   r: 'from - fuchsia - 600 to - pink - 700',' text_colo,
   r: 'text - fuchsia - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,' market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,' market_positio,
   n: 'Safer than generic sequencers, deliverability - first.',' target_audienc,
   e: 'Sales and growth teams', trial_day,
   s: 7,' setup_tim,
@@ -6138,8 +6237,9 @@ export interface Q4Service,
   n: '✉️',' colo,
   r: 'from-fuchsia-600 to-pink-700',' textColo,
   r: 'text-fuchsia-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,' marketPositio,
   n: 'Safer than generic sequencers, deliverability-first.',' targetAudienc,
   e: 'Sales and growth teams', trialDay,
   s: 7,' setupTim,
@@ -6171,16 +6271,18 @@ export interface Q4Service,
   n: '🧮',' colo,
   r: 'from-sky-600 to-indigo-700',' textColo,
   r: 'text-sky-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`, ' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`, ' marketPositio,
   n: 'Practical contracts vs. building from scratch.',' targetAudienc,
   e: 'Data engineering teams', trialDay,
   s: 14,' setupTim,
   e: '3–5 days', ' colo,
   r: 'from - sky - 600 to - indigo - 700',' text_colo,
   r: 'text - sky - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,' market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,' market_positio,
   n: 'Practical contracts vs. building from scratch.',' target_audienc,
   e: 'Data engineering teams', trial_day,
   s: 14,' setup_tim,
@@ -6237,16 +6339,18 @@ export interface Q4Service,
   n: '🔐',' colo,
   r: 'from-slate-600 to-gray-700',' textColo,
   r: 'text-slate-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`, ' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`, ' marketPositio,
   n: 'Accelerates enterprise deals vs. open-ended projects.',' targetAudienc,
   e: 'B2B SaaS product teams', trialDay,
   s: 0,' setupTim,
   e: '1 week', ' colo,
   r: 'from - slate - 600 to - gray - 700',' text_colo,
   r: 'text - slate - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,' market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,' market_positio,
   n: 'Accelerates enterprise deals vs. open - ended projects.',' target_audienc,
   e: 'B2B SaaS product teams', trial_day,
   s: 0,' setup_tim,
@@ -6303,16 +6407,18 @@ export interface Q4Service,
   n: '📊',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`, ' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`, ' marketPositio,
   n: 'Lightweight RevOps insights without heavy BI projects.',' targetAudienc,
   e: 'Sales and RevOps leaders', trialDay,
   s: 7,' setupTim,
   e: '2–3 days', ' colo,
   r: 'from - amber - 600 to - orange - 700',' text_colo,
   r: 'text - amber - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,' market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,' market_positio,
   n: 'Lightweight RevOps insights without heavy BI projects.',' target_audienc,
   e: 'Sales and RevOps leaders', trial_day,
   s: 7,' setup_tim,
@@ -6362,8 +6468,9 @@ export interface Q4Service,
   n: '🔁',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`, ' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`, ' marketPositio,
   n: 'Production-ready relay alternative to building in-house.',' targetAudienc,
   e: 'Developers and platform teams', trialDay,
   s: 14,' setupTim,
@@ -6371,8 +6478,9 @@ export interface Q4Service,
   n: '🔁',' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,' market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,' market_positio,
   n: 'Production - ready relay alternative to building in - house.',' target_audienc,
   e: 'Developers and platform teams', trial_day,
   s: 14,' setup_tim,
@@ -6423,8 +6531,9 @@ export interface Q4Service,
   n: '🗄️',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`, ' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`, ' marketPositio,
   n: 'Practical alternative to DBAs for small teams.',' targetAudienc,
   e: 'SMBs and startups', trialDay,
   s: 7,' setupTim,
@@ -6432,8 +6541,9 @@ export interface Q4Service,
   n: '🗄️',' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,' market_positio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,' market_positio,
   n: 'Practical alternative to DBAs for small teams.',' target_audienc,
   e: 'SMBs and startups', trial_day,
   s: 7,' setup_tim,
@@ -6646,13 +6756,15 @@ export interface Q4Service,
   n: '🗄️'' colo,
   r: 'from-emerald-600 to-teal-700' ' textColo,
   r: 'text-emerald-300',' lin,`
-  k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`; ];' ico,
+  k: 'http,',
+  s:
+        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`; ];' ico,
   n: '🗄️'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300',' lin,`
-  k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;' colo,
+  k: 'http,',
+  s:
+        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;' colo,
   r: 'from-emerald-600 to-teal-700'' marketPositio,
   n: 'Practical alternative to DBAs for small teams.'' targetAudienc,
   e: 'SMBs and startups' trialDay,
@@ -6868,7 +6980,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28}]; } export const real2025Q4Additions = [ ' i,
+  s: 28}]} export const real2025Q4Additions = [ ' i,
   d: 'ai-governed-rag-platform',' nam,
   e: 'AI-Governed RAG Platform',' taglin,
   e: 'Enterprise-grade RAG with guardrails, approvals, and evals',' pric,
@@ -6880,8 +6992,9 @@ export interface Q4Service,
   n: '🧠',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`, marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`, marketPositio,
   n: ;' 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.', targetAudienc,
   e: 'Platform, data, and compliance teams', trialDay,
   s: 14,' setupTim,
@@ -6914,8 +7027,9 @@ export interface Q4Service,
   n: '⚡',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,' marketPositio,
   n: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',' targetAudienc,
   e: 'Growth and eCommerce teams', trialDay,
   s: 7,' setupTim,
@@ -6947,8 +7061,9 @@ export interface Q4Service,
   n: '🚀',' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-blue-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,' marketPositio,
   n: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',' targetAudienc,
   e: 'Platform and app teams', trialDay,
   s: 14,' setupTim,
@@ -6980,8 +7095,9 @@ export interface Q4Service,
   n: '📈',' colo,
   r: 'from-rose-600 to-red-700',' textColo,
   r: 'text-rose-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,' marketPositio,
   n: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',' targetAudienc,
   e: 'SREs and platform teams', trialDay,
   s: 7,' setupTim,
@@ -7013,8 +7129,9 @@ export interface Q4Service,
   n: '🏳️',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,' marketPositio,
   n: 'Policy-focused alternative to generic toggle tools.',' targetAudienc,
   e: 'Product and platform teams', trialDay,
   s: 14,' setupTim,
@@ -7046,8 +7163,9 @@ export interface Q4Service,
   n: '✉️',' colo,
   r: 'from-fuchsia-600 to-pink-700',' textColo,
   r: 'text-fuchsia-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,' marketPositio,
   n: 'Safer than generic sequencers, deliverability-first.',' targetAudienc,
   e: 'Sales and growth teams', trialDay,
   s: 7,' setupTim,
@@ -7079,8 +7197,9 @@ export interface Q4Service,
   n: '🧮',' colo,
   r: 'from-sky-600 to-indigo-700',' textColo,
   r: 'text-sky-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,' marketPositio,
   n: 'Practical contracts vs. building from scratch.',' targetAudienc,
   e: 'Data engineering teams', trialDay,
   s: 14,' setupTim,
@@ -7112,8 +7231,9 @@ export interface Q4Service,
   n: '🔐',' colo,
   r: 'from-slate-600 to-gray-700',' textColo,
   r: 'text-slate-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,' marketPositio,
   n: 'Accelerates enterprise deals vs. open-ended projects.',' targetAudienc,
   e: 'B2B SaaS product teams', trialDay,
   s: 0,' setupTim,
@@ -7145,8 +7265,9 @@ export interface Q4Service,
   n: '📊',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,' marketPositio,
   n: 'Lightweight RevOps insights without heavy BI projects.',' targetAudienc,
   e: 'Sales and RevOps leaders', trialDay,
   s: 7,' setupTim,
@@ -7178,8 +7299,9 @@ export interface Q4Service,
   n: '🔁',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,' marketPositio,
   n: 'Production-ready relay alternative to building in-house.',' targetAudienc,
   e: 'Developers and platform teams', trialDay,
   s: 14,' setupTim,
@@ -7212,8 +7334,9 @@ export interface Q4Service,
   n: '🗄️',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-300',' lin,`
-  k: `http,`
-  s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,' marketPositio,
+  k: 'http,',
+  s:
+        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,' marketPositio,
   n: 'Practical alternative to DBAs for small teams.',' targetAudienc,
   e: 'SMBs and startups', trialDay,
   s: 7,' setupTim,

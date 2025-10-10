@@ -1,77 +1,96 @@
-'use client';
-
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
 export const usePerformanceMonitor = () => {
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Monitor page load performance
-    const handleLoad = () => {
+  const measurePerformance = useCallback(() => {
+    // Measure page load time
+    if (typeof window !== 'undefined' && 'performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       
       if (navigation) {
-        const metrics = {
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        };
-
-        console.log('Performance Metrics:', metrics);
-
-        // Send to analytics if available
-        if ('gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
-          gtag('event', 'page_performance', {
-            event_category: 'performance',
-            dom_content_loaded: Math.round(metrics.domContentLoaded),
-            load_complete: Math.round(metrics.loadComplete),
-            total_load_time: Math.round(metrics.totalLoadTime),
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+        
+        // Track performance metrics
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'performance_metric', {
+            event_category: 'Performance',
+            event_label: 'Page Load Time',
+            value: Math.round(loadTime)
           });
         }
       }
-    };
+    }
+  }, []);
 
-    // Monitor resource loading
-    const handleResourceTiming = () => {
+  const measureResourceTiming = useCallback(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
       const resources = performance.getEntriesByType('resource');
-      const slowResources = resources.filter(resource => resource.duration > 1000);
       
-      if (slowResources.length > 0) {
-        console.warn('Slow loading resources:', slowResources);
-      }
-    };
+      resources.forEach((resource: PerformanceResourceTiming) => {
+        const loadTime = resource.responseEnd - resource.startTime;
+        
+        // Track slow resources
+        if (loadTime > 1000) {
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'slow_resource', {
+              event_category: 'Performance',
+              event_label: resource.name,
+              value: Math.round(loadTime)
+            });
+          }
+        }
+      });
+    }
+  }, []);
 
-    // Monitor memory usage
-    const handleMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024),
-        };
-
-        if (memoryUsage.used > memoryUsage.limit * 0.8) {
-          console.warn('High memory usage detected:', memoryUsage);
+  const measureMemoryUsage = useCallback(() => {
+    if (typeof window !== 'undefined' && 'performance' in window && (performance as any).memory) {
+      const memory = (performance as any).memory;
+      const memoryUsage = {
+        used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
+        total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
+        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
+      };
+      
+      if (memoryUsage.used > memoryUsage.limit * 0.8) {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'high_memory_usage', {
+            event_category: 'Performance',
+            event_label: 'Memory Usage',
+            value: memoryUsage.used
+          });
         }
       }
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      measurePerformance();
+      measureResourceTiming();
+      measureMemoryUsage();
     };
 
-    // Set up monitoring
     if (document.readyState === 'complete') {
       handleLoad();
     } else {
       window.addEventListener('load', handleLoad);
     }
 
-    // Monitor resources after a delay
-    setTimeout(handleResourceTiming, 2000);
-    setTimeout(handleMemoryUsage, 5000);
+    // Set up periodic monitoring
+    const performanceInterval = setInterval(measureResourceTiming, 30000);
+    const memoryInterval = setInterval(measureMemoryUsage, 60000);
 
-    // Cleanup
     return () => {
       window.removeEventListener('load', handleLoad);
+      clearInterval(performanceInterval);
+      clearInterval(memoryInterval);
     };
-  }, []);
+  }, [measurePerformance, measureResourceTiming, measureMemoryUsage]);
+
+  return {
+    measurePerformance,
+    measureResourceTiming,
+    measureMemoryUsage
+  };
 };

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 interface ModernNavigationProps {/* TODO: Fix JSX expression */}
 }
-
+;
 const,
   ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {/* TODO: Fix JSX expression */}
   f: '/' },
@@ -94,8 +94,7 @@ const,
         )}
       </div>
     </nav>
-  );
-};
+  )};
 
 export default ModernNavigation;
 "`

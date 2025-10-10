@@ -502,7 +502,7 @@ Disallo,`
 }
 // Default configuration;
 const defaultConfig: SEOConfig = {
-  siteName: 'Zion Tech Group'
+  siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app'
 // Default configuration
 const defaultConfig: SEOConfig = {}

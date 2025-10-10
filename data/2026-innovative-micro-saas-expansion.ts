@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -28,25 +29,24 @@
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
+    website: string}
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
   customers: number;
   rating: number;
   reviews: number;
-
+;
 const contact =
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup && ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-      customers: 24;
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+      customers:
+        customers: 24;
       rating: 4 && 4.3;
-      reviews: 18;
-    };
+      reviews: 18};
   ];
-      id: 'ai-business-intelligence-suite'
+      id: 'ai-business-intelligence-suite',
       name: 'AI Business Intelligence Suite',
       tagline: 'Transform raw data into actionable insights with AI-powered analytics',
       price: '$299',
@@ -124,7 +124,7 @@ const contact =
   g: number;
   review,
   s: number;
-,
+,;
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -166,7 +166,7 @@ const contact =
         '24/7 AI monitoring and alerts'
       ]
       popular: true;
-      color: 'from-blue-600 to-cyan-600'
+      color: 'from-blue-600 to-cyan-600',
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
       marketPosition:,
@@ -224,19 +224,19 @@ const contact =
         'Operational efficiency monitoring'],
       roi: 'Businesses report 300% ROI through improved decision-making and operational efficiency.',
       competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView']
-      marketSize: '$29.5 B BI market'
-      growthRate: '15% annual growth'
+      marketSize: '$29.5 B BI market',
+      growthRate: '15% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.'
-      launchDate: '2024-11-01'
-      customers: 45;
+      launchDate: '2024-11-01',
+      customers:
+        customers: 45;
       rating: 4.8;
-      reviews: 23;
-    }
+      reviews: 23}
     // AI Content Creation & Marketing;
-      id: 'ai-content-factory-pro'
+      id: 'ai-content-factory-pro',
       name: 'AI Content Factory Pro',
       tagline: 'Generate high-quality content at scale with AI-powered writing assistance',
       price: '$199',
@@ -294,15 +294,16 @@ const contact =
         'Mobile app access'
       ]
       popular: true;
-      color: 'from-green-600 to-emerald-600'
+      color: 'from-green-600 to-emerald-600',
       textColor: 'text-green-400',
       link: 'https://ziontechgroup.com/ai-content-factory-pro',
       marketPosition:,
         'Competes with Copy.ai ($49/month), Jasper ($39/month). Our advantage: Advanced AI models, better SEO optimization, and comprehensive content management.'
-      targetAudience: 'Content creators, Marketing teams, Agencies, E-commerce businesses, Bloggers'
-      trialDays: 7;
-      setupTime: '30 minutes'
-      category: 'Content Creation & Marketing'
+      targetAudience: 'Content creators, Marketing teams, Agencies, E-commerce businesses, Bloggers',
+      trialDays:
+        trialDays: 7;
+      setupTime: '30 minutes',
+      category: 'Content Creation & Marketing',
       realService: true;
       technology: [;
       popula,
@@ -356,19 +357,19 @@ const contact =
         'Ad copy generation'],
       roi: 'Marketing teams save 15-20 hours per week and see 40% improvement in content engagement.',
       competitors: ['Copy.ai', 'Jasper', 'Writesonic', 'ContentBot']
-      marketSize: '$12.5 B content marketing market'
-      growthRate: '18% annual growth'
+      marketSize: '$12.5 B content marketing market',
+      growthRate: '18% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'AI-powered content generation platform with advanced language models, SEO tools, and comprehensive content management system.'
-      launchDate: '2024-10-15'
-      customers: 78;
+      launchDate: '2024-10-15',
+      customers:
+        customers: 78;
       rating: 4.7;
-      reviews: 34;
-    }
+      reviews: 34}
     // AI Customer Service & Support;
-      id: 'ai-customer-service-automation'
+      id: 'ai-customer-service-automation',
       name: 'AI Customer Service Automation',
       tagline: 'Automate customer support with intelligent chatbots and ticket management',
       price: '$149',
@@ -474,19 +475,19 @@ const contact =
         'Support analytics'],
       roi: 'Businesses see 60% reduction in support costs and 85% improvement in response times.',
       competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']
-      marketSize: '$18.5 B customer service software market'
-      growthRate: '22% annual growth'
+      marketSize: '$18.5 B customer service software market',
+      growthRate: '22% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'AI-powered customer service platform with natural language processing, automated ticket management, and comprehensive analytics.'
-      launchDate: '2024-09-20'
-      customers: 56;
+      launchDate: '2024-09-20',
+      customers:
+        customers: 56;
       rating: 4.6;
-      reviews: 28;
-    }
+      reviews: 28}
     // AI-Powered E-commerce Optimization;
-      id: 'ai-ecommerce-optimizer'
+      id: 'ai-ecommerce-optimizer',
       name: 'AI E-commerce Optimizer',
       tagline: 'Boost sales with AI-powered product recommendations and pricing optimization',
       price: '$249',
@@ -592,19 +593,19 @@ const contact =
         'Conversion optimization'],
       roi: 'E-commerce businesses report 25-40% increase in average order value and 30% improvement in conversion rates.',
       competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia']
-      marketSize: '$22.8 B e-commerce optimization market'
-      growthRate: '20% annual growth'
+      marketSize: '$22.8 B e-commerce optimization market',
+      growthRate: '20% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'AI-powered e-commerce optimization platform with machine learning algorithms for recommendations, pricing, and customer experience enhancement.'
-      launchDate: '2024-08-10'
-      customers: 32;
+      launchDate: '2024-08-10',
+      customers:
+        customers: 32;
       rating: 4.5;
-      reviews: 19;
-    }
+      reviews: 19}
     // AI-Powered HR & Recruitment;
-      id: 'ai-hr-recruitment-suite'
+      id: 'ai-hr-recruitment-suite',
       name: 'AI HR & Recruitment Suite',
       tagline: 'Streamline hiring with AI-powered candidate screening and talent management',
       price: '$199',
@@ -662,7 +663,7 @@ const contact =
         'Integration with job boards'
       ]
       popular: false;
-      color: 'from-indigo-600 to-blue-600'
+      color: 'from-indigo-600 to-blue-600',
       textColor: 'text-indigo-400',
       link: 'https://ziontechgroup.com/ai-hr-recruitment-suite',
       marketPosition:,
@@ -720,19 +721,19 @@ const contact =
         'Employee onboarding'],
       roi: 'HR teams save 20-30 hours per week and improve hiring quality by 40%.',
       competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']
-      marketSize: '$15.8 B HR software market'
-      growthRate: '12% annual growth'
+      marketSize: '$15.8 B HR software market',
+      growthRate: '12% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'AI-powered HR and recruitment platform with natural language processing, automated screening, and comprehensive talent management tools.'
-      launchDate: '2024-07-15'
-      customers: 41;
+      launchDate: '2024-07-15',
+      customers:
+        customers: 41;
       rating: 4.4;
-      reviews: 22;
-    }
+      reviews: 22}
     // AI-Powered Financial Management;
-      id: 'ai-financial-management-platform'
+      id: 'ai-financial-management-platform',
       name: 'AI Financial Management Platform',
       tagline: 'Intelligent financial planning and analysis with AI-powered insights',
       price: '$179',
@@ -790,15 +791,16 @@ const contact =
         'Mobile app for on-the-go management'
       ]
       popular: false;
-      color: 'from-yellow-600 to-orange-600'
+      color: 'from-yellow-600 to-orange-600',
       textColor: 'text-yellow-400',
       link: 'https://ziontechgroup.com/ai-financial-management-platform',
       marketPosition:,
         'Competes with Mint (Free), YNAB ($11.99/month), Personal Capital (Free). Our advantage: AI-powered insights, better forecasting, and comprehensive financial planning tools.'
-      targetAudience: 'Individuals, Small businesses, Financial advisors, Freelancers'
-      trialDays: 30;
-      setupTime: '1 hour'
-      category: 'Financial Management'
+      targetAudience: 'Individuals, Small businesses, Financial advisors, Freelancers',
+      trialDays:
+        trialDays: 30;
+      setupTime: '1 hour',
+      category: 'Financial Management',
       realService: true;
       technology: [;
       popula,
@@ -852,19 +854,19 @@ const contact =
         'Financial goal achievement'],
       roi: 'Users report 25% improvement in savings and 40% better financial decision-making.',
       competitors: ['Mint', 'YNAB', 'Personal Capital', 'Moneydance']
-      marketSize: '$8.9 B personal finance software market'
-      growthRate: '16% annual growth'
+      marketSize: '$8.9 B personal finance software market',
+      growthRate: '16% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'AI-powered financial management platform with machine learning algorithms for expense categorization, forecasting, and financial planning.'
-      launchDate: '2024-06-20'
-      customers: 67;
+      launchDate: '2024-06-20',
+      customers:
+        customers: 67;
       rating: 4.6;
-      reviews: 31;
-    }
+      reviews: 31}
     // AI-Powered Project Management;
-      id: 'ai-project-management-suite'
+      id: 'ai-project-management-suite',
       name: 'AI Project Management Suite',
       tagline: 'Smart project management with AI-powered task optimization and team collaboration',
       price: '$159',
@@ -922,7 +924,7 @@ const contact =
         'Advanced reporting and insights'
       ]
       popular: false;
-      color: 'from-teal-600 to-cyan-600'
+      color: 'from-teal-600 to-cyan-600',
       textColor: 'text-teal-400',
       link: 'https://ziontechgroup.com/ai-project-management-suite',
       marketPosition:,
@@ -980,19 +982,19 @@ const contact =
         'Performance tracking'],
       roi: 'Teams report 35% improvement in project delivery time and 25% increase in productivity.',
       competitors: ['Asana', 'Monday.com', 'ClickUp', 'Basecamp']
-      marketSize: '$6.8 B project management software market'
-      growthRate: '14% annual growth'
+      marketSize: '$6.8 B project management software market',
+      growthRate: '14% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'AI-powered project management platform with machine learning algorithms for task optimization, resource allocation, and project forecasting.'
-      launchDate: '2024-05-25'
-      customers: 53;
+      launchDate: '2024-05-25',
+      customers:
+        customers: 53;
       rating: 4.5;
-      reviews: 26;
-    }
+      reviews: 26}
     // AI-Powered Learning & Training;
-      id: 'ai-learning-management-system'
+      id: 'ai-learning-management-system',
       name: 'AI Learning Management System',
       tagline: 'Personalized learning experiences with AI-powered content adaptation and progress tracking',
       price: '$129',
@@ -1098,19 +1100,19 @@ const contact =
         'Skill development'],
       roi: 'Educational institutions see 25% improvement in student performance and 40% reduction in administrative workload.',
       competitors: ['Canvas', 'Blackboard', 'Moodle', 'Schoology']
-      marketSize: '$18.6 B learning management system market'
-      growthRate: '19% annual growth'
+      marketSize: '$18.6 B learning management system market',
+      growthRate: '19% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'AI-powered learning management system with machine learning algorithms for personalization, content adaptation, and progress tracking.'
-      launchDate: '2024-04-30'
-      customers: 38;
+      launchDate: '2024-04-30',
+      customers:
+        customers: 38;
       rating: 4.4;
-      reviews: 21;
-    }
+      reviews: 21}
     // AI-Powered Healthcare Solutions;
-      id: 'ai-healthcare-assistant'
+      id: 'ai-healthcare-assistant',
       name: 'AI Healthcare Assistant',
       tagline: 'Intelligent healthcare management with AI-powered patient care and administrative automation',
       price: '$299',
@@ -1216,20 +1218,21 @@ const contact =
         'Healthcare analytics'],
       roi: 'Healthcare practices report 30% reduction in administrative costs and 25% improvement in patient satisfaction.',
       competitors: ['Epic', 'Cerner', 'Allscripts', 'Practice Fusion']
-      marketSize: '$31.5 B healthcare IT market'
-      growthRate: '17% annual growth'
+      marketSize: '$31.5 B healthcare IT market',
+      growthRate: '17% annual growth',
       contactInfo: contact;
       realImplementation: true;
       implementationDetails:,
         'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.'
-      launchDate: '2024-03-15'
-      customers: 24;
+      launchDate: '2024-03-15',
+      customers:
+        customers: 24;
       rating: 4.3;
-      reviews: 18;
-    }
+      reviews: 18}
         'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
-      launchDate: '2024-03-15'
-      customers: 24;
+      launchDate: '2024-03-15',
+      customers:
+        customers: 24;
       rating: 4.3;
       reviews: 18;
   ];
@@ -1280,12 +1283,9 @@ export const getPopularInnovativeMicroSaasServices2026 = () =>
 export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
   return innovativeMicroSaasServices2026.filter(service => service.popular)}
 }
-  return innovativeMicroSaasServices2026.filter(service => service.popular);
-}
-  return innovativeMicroSaasServices2026.filter(service => service.popular);
-}
-  return innovativeMicroSaasServices2026.filter(service => service.popular);
-}
+  return innovativeMicroSaasServices2026.filter(service => service.popular)}
+  return innovativeMicroSaasServices2026.filter(service => service.popular)}
+  return innovativeMicroSaasServices2026.filter(service => service.popular)}
   ];
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number),
   maxPrice: number)) =>})
@@ -1311,8 +1311,7 @@ export interface InnovativeMicroSaasService2026 {id: string, name: string;
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1341,8 +1340,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.',
     launchDate: '2024-11-01', customers: 45;
     rating: 4.8;
-    reviews: 23;
-  };
+    reviews: 23};
   // AI Content Creation & Marketing;
     id: 'ai-content-factory-pro', name: 'AI Content Factory Pro',
     tagline: 'Generate high-quality content at scale with AI-powered writing assistance', price: '$199',
@@ -1366,8 +1364,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'AI-powered content generation platform with advanced language models, SEO tools, and comprehensive content management system.',
     launchDate: '2024-10-15', customers: 78;
     rating: 4.7;
-    reviews: 34;
-  };
+    reviews: 34};
   // AI Customer Service & Support;
     id: 'ai-customer-service-automation', name: 'AI Customer Service Automation',
     tagline: 'Automate customer support with intelligent chatbots and ticket management', price: '$149',
@@ -1391,8 +1388,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'AI-powered customer service platform with natural language processing, automated ticket management, and comprehensive analytics.',
     launchDate: '2024-09-20', customers: 56;
     rating: 4.6;
-    reviews: 28;
-  };
+    reviews: 28};
   // AI-Powered E-commerce Optimization;
     id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',
     tagline: 'Boost sales with AI-powered product recommendations and pricing optimization', price: '$249',
@@ -1416,8 +1412,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'AI-powered e-commerce optimization platform with machine learning algorithms for recommendations, pricing, and customer experience enhancement.',
     launchDate: '2024-08-10', customers: 32;
     rating: 4.5;
-    reviews: 19;
-  };
+    reviews: 19};
   // AI-Powered HR & Recruitment;
     id: 'ai-hr-recruitment-suite', name: 'AI HR & Recruitment Suite',
     tagline: 'Streamline hiring with AI-powered candidate screening and talent management', price: '$199',
@@ -1441,8 +1436,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'AI-powered HR and recruitment platform with natural language processing, automated screening, and comprehensive talent management tools.',
     launchDate: '2024-07-15', customers: 41;
     rating: 4.4;
-    reviews: 22;
-  };
+    reviews: 22};
   // AI-Powered Financial Management;
     id: 'ai-financial-management-platform', name: 'AI Financial Management Platform',
     tagline: 'Intelligent financial planning and analysis with AI-powered insights', price: '$179',
@@ -1466,8 +1460,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'AI-powered financial management platform with machine learning algorithms for expense categorization, forecasting, and financial planning.',
     launchDate: '2024-06-20', customers: 67;
     rating: 4.6;
-    reviews: 31;
-  };
+    reviews: 31};
   // AI-Powered Project Management;
     id: 'ai-project-management-suite', name: 'AI Project Management Suite',
     tagline: 'Smart project management with AI-powered task optimization and team collaboration', price: '$159',
@@ -1491,8 +1484,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'AI-powered project management platform with machine learning algorithms for task optimization, resource allocation, and project forecasting.',
     launchDate: '2024-05-25', customers: 53;
     rating: 4.5;
-    reviews: 26;
-  };
+    reviews: 26};
   // AI-Powered Learning & Training;
     id: 'ai-learning-management-system', name: 'AI Learning Management System',
     tagline: 'Personalized learning experiences with AI-powered content adaptation and progress tracking', price: '$129',
@@ -1516,8 +1508,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'AI-powered learning management system with machine learning algorithms for personalization, content adaptation, and progress tracking.',
     launchDate: '2024-04-30', customers: 38;
     rating: 4.4;
-    reviews: 21;
-  };
+    reviews: 21};
   // AI-Powered Healthcare Solutions;
     id: 'ai-healthcare-assistant', name: 'AI Healthcare Assistant',
     tagline: 'Intelligent healthcare management with AI-powered patient care and administrative automation', price: '$299',
@@ -1541,8 +1532,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     implementationDetails: 'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
     launchDate: '2024-03-15', customers: 24;
     rating: 4.3;
-    reviews: 18;
-  }
+    reviews: 18}
 ];
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =>,
   return innovativeMicroSaasServices2026.filter(service => service.category === category),
@@ -2113,17 +2103,13 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number)
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
-  return innovativeMicroSaasServices2026.filter(service =>)
-    const _price = parseInt(service.price.replace('$') ''));
-};
-  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service =>)
-    const _price = parseInt(service && service.price.replace('$') ''));
-  return innovativeMicroSaasServices2026.filter(service =>)
-    const _price = parseInt(service.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
-  })
+  return innovativeMicroSaasServices2026.filter(service =>);
+const _price = parseInt(service.price.replace('$') ''))};
+  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service =>);
+const _price = parseInt(service && service.price.replace('$') ''));
+  return innovativeMicroSaasServices2026.filter(service =>);
+const _price = parseInt(service.price.replace('$') ''));
+    return price >= minPrice && price <= maxPrice})}})
 }
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
@@ -2132,12 +2118,10 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
 export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) =>: unknown;
   return innovativeMicroSaasServices2026.filter ()
-    service => service.category === category);
-}
+    service => service.category === category)}
 ;
 export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown;
-  return innovativeMicroSaasServices2026.filter (service => service.popular);
-}
+  return innovativeMicroSaasServices2026.filter (service => service.popular)}
 ;
 export const getInnovativeMicroSaasServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
@@ -2146,14 +2130,9 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-  return innovativeMicroSaasServices2026.filter (service =>)
-    const _price = parse_int (service.price.replace ('$') ''));
-    return price >= min_price && price <= max_price;
-  });
-};
-}    return price >= min_price && price <= max_price;
-  });
-}
+  return innovativeMicroSaasServices2026.filter (service =>);
+const _price = parse_int (service.price.replace ('$') ''));
+    return price >= min_price && price <= max_price})}}    return price >= min_price && price <= max_price})}
 ;
 export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   s: string}
@@ -2165,8 +2144,7 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
 // const contact = {;
   mobile: '+1 302 464 0950';
@@ -2600,12 +2578,9 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number)
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => {/* TODO: Fix JSX expression */}
-  return innovativeMicroSaasServices2026.filter(service => {})
-    const _price = parseInt(service.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};    return price >= minPrice && price <= maxPrice;
-  })
+  return innovativeMicroSaasServices2026.filter(service => {});
+const _price = parseInt(service.price.replace('$') ''));
+    return price >= minPrice && price <= maxPrice})};    return price >= minPrice && price <= maxPrice})
 };
 i,
   d: string; nam,
@@ -2935,7 +2910,7 @@ i,
   s: 24, ratin,
   g: 4.3, review,
   s: 18]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string ) => return innovativeMicroSaasServices2026.filter(service => service.category === category) )} export const getPopularInnovativeMicroSaasServices2026 = () => }; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } ]; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,
+  y: string ) => return innovativeMicroSaasServices2026.filter(service => service.category === category) )} export const getPopularInnovativeMicroSaasServices2026 = () => }; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} } return innovativeMicroSaasServices2026.filter(service => service.popular)} return innovativeMicroSaasServices2026.filter(service => service.popular)} return innovativeMicroSaasServices2026.filter(service => service.popular)} ]; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,
   e: number)
   maxPrice: number ) => }) } export interface InnovativeMicroSaasService2026,
   id: string, nam,
@@ -3288,10 +3263,10 @@ i,
   s: 18 } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) => return innovativeMicroSaasServices2026.filter(service => service.category === category) }; export const getPopularInnovativeMicroSaasServices2026 = () => return innovativeMicroSaasServices2026.filter(service => service.popular) }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); }; return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')); return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); }; }) } ; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string) =>: unknown return innovativeMicroSaasServices2026.filter ( service => service.category === category); } ; export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown return innovativeMicroSaasServices2026.filter (service => service.popular); } ; export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
+  e: number) => return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') ''))}; return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')); return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice})}}) } ; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
+  y: string) =>: unknown return innovativeMicroSaasServices2026.filter ( service => service.category === category)} ; export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown return innovativeMicroSaasServices2026.filter (service => service.popular)} ; export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovativeMicroSaasServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price; }); }; } return price >= min_price && price <= max_price; }); } ; ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
+  e: number) =>: unknown return innovativeMicroSaasServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price})}} return price >= min_price && price <= max_price})} ; ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -3325,4 +3300,4 @@ i,
   s: 18} } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) => {; return innovativeMicroSaasServices2026.filter(service => service.category === category)} };; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => {; return innovativeMicroSaasServices2026.filter(service => {}' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); }; return price >= minPrice && price <= maxPrice }) }; '
+  e: number) => {; return innovativeMicroSaasServices2026.filter(service => {}' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice})}; return price >= minPrice && price <= maxPrice }) }; '

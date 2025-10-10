@@ -55,6 +55,5 @@ export default function QuantumNeuralConsensusImplementation() {/* TODO: Fix JSX
         </div>
       </div>
     </div>)
-  );
-}
+  )}
 "

@@ -1,3 +1,4 @@
+import React from 'react';
 export interface AdvancedAIAutomationService {id: string;
   name: string;
   tagline: string;
@@ -48,14 +49,13 @@ export interface AdvancedAIAutomationService {id: string;
     integrations: ['Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure'];
     useCases: ['Financial forecastingSupply chain optimizationCustomer behavior predictionRisk management'], roi: 'Improve decision accuracy by 85% and reduce forecasting errors by 90%.',
     competitors: ['Tableau, Power BI, Qlik, Alteryx, SAS'];
-    marketSize: '$30B+ business intelligence market', growthRate: '95% YoY',
-    variant: 'ai-futuristic', contactInfo: contact;
+    marketSize: '$30B+ business intelligence market', growthRate: '95% YoY',;
+variant: 'ai-futuristic', contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01', customers: 234;
     rating: 4.9;
-    reviews: 312;
-  };
+    reviews: 312};
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success',
     tagline: 'Automatically increase customer retention and satisfaction with AI-driven insights', price: '$699',
     period: '/month',
@@ -74,14 +74,13 @@ export interface AdvancedAIAutomationService {id: string;
     integrations: ['Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams'];
     useCases: ['SaaS customer retentionSubscription managementCustomer support automationRevenue optimization'], roi: 'Increase customer retention by 35% and reduce churn by 60%.',
     competitors: ['Gainsight, Totango, ChurnZero, Customer.io'];
-    marketSize: '$8B+ customer success market', growthRate: '140% YoY',
-    variant: 'ai-futuristic', contactInfo: contact;
+    marketSize: '$8B+ customer success market', growthRate: '140% YoY',;
+variant: 'ai-futuristic', contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',
     launchDate: '2026-01-20', customers: 167;
     rating: 4.7;
-    reviews: 203;
-  };
+    reviews: 203};
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator',
     tagline: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',
     price: '$1,199',
@@ -101,8 +100,8 @@ export interface AdvancedAIAutomationService {id: string;
     integrations: ['Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp'];
     useCases: ['Multi-channel marketingCampaign optimizationBudget managementROI maximization'], roi: 'Increase marketing ROI by 250% and reduce customer acquisition costs by 40%.',
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'];
-    marketSize: '$20B+ marketing automation market', growthRate: '110% YoY',
-    variant: 'ai-futuristic', contactInfo: contact;
+    marketSize: '$20B+ marketing automation market', growthRate: '110% YoY',;
+variant: 'ai-futuristic', contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',
     launchDate: '2026-02-15', customers: 145;
@@ -158,8 +157,8 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: ['Tableau, Power BI, Qlik, Alteryx, SAS'];
     marketSiz,
   e: '$30B+ business intelligence market', growthRat,
-  e: '95% YoY',
-    varian,
+  e: '95% YoY',;
+varian,
   t: 'ai-futuristic', contactInf,
   o: contact,
     realImplementatio,
@@ -218,8 +217,8 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: ['Gainsight, Totango, ChurnZero, Customer.io'];
     marketSiz,
   e: '$8B+ customer success market', growthRat,
-  e: '140% YoY',
-    varian,
+  e: '140% YoY',;
+varian,
   t: 'ai-futuristic', contactInf,
   o: contact,
     realImplementatio,
@@ -279,8 +278,8 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'];
     marketSiz,
   e: '$20B+ marketing automation market', growthRat,
-  e: '110% YoY',
-    varian,
+  e: '110% YoY',;
+varian,
   t: 'ai-futuristic', contactInf,
   o: contact,
     realImplementatio,
@@ -310,12 +309,13 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
       'ROI trackingCRM integration'
     ];
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
-    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
-    targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
+    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.',
+    targetAudience:
+        targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
     trialDays: 14;
     setupTime: '1 week',
     category: 'AI & Sales',
@@ -326,12 +326,12 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     roi: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.',
     competitors: ['SalesLoft, Outreach, HubSpot Sales, Pipedrive, Close'];
     marketSize: '$12B+ sales intelligence market',
-    growthRate: '130% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '130% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
-    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
-    launchDate: '2026-01-25'
+    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
+    launchDate: '2026-01-25',
     customers: 198;
     rating: 4 && 4.9;
     reviews: 267;
@@ -371,8 +371,8 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     marketSiz,
   e: '$12B+ sales intelligence market'
     growthRat,
-  e: '130% YoY'
-    varian,
+  e: '130% YoY';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: contact;
@@ -401,44 +401,46 @@ export const aiAutomationCategories = [
 ];
 export const getAIAutomationServicesByCategory = (category: string) =>;
   if (category === 'All') return advancedAIAutomationServices;,
-  return advancedAIAutomationServices.filter(service => service.category === category);
-};
+  return advancedAIAutomationServices.filter(service => service.category === category)};
 export const getPopularAIAutomationServices = (limit: number = 6): AIAutomationService[] =>
   return advancedAIAutomationServices;
     .filter(service => service.popular),
-    .slice(0) limit);
-};
+    .slice(0) limit)};
 export const getAIAutomationServicesByTechnology = (technology: string): AIAutomationService[] =>;
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByCategory = (categor)
   y: string) =>;
   if (category === 'All') return advancedAIAutomationServices;
-  return advancedAIAutomationServices.filter(service => service.category === category);
-};
+  return advancedAIAutomationServices.filter(service => service.category === category)};
 export const getPopularAIAutomationServices = (limi)
   t: number = 6): AIAutomationService[] =>,
   return advancedAIAutomationServices;
     .filter(service => service.popular)
-    .slice(0) limit);
-};
+    .slice(0) limit)};
 export const getAIAutomationServicesByTechnology = (technolog)
   y: string): AIAutomationService[] =>;
   return advancedAIAutomationServices.filter(service =>
     service.technology.some(tech =>)
       tech.toLowerCase().includes(technology.toLowerCase())
-  </div>));
-};
+  </div>))};
 export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: number): AIAutomationService[] =>,
   return advancedAIAutomationServices.filter(service =>)
 export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number): AIAutomationService[] =>,
+<<<<<<< HEAD
+  return advancedAIAutomationServices.filter(service =>);
+const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
+    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
+export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
+=======
   return advancedAIAutomationServices.filter(service =>)
     const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
+export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',
@@ -454,7 +456,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       professional: '$1199/month'}
       enterprise: 'Custom'}
   },
-    name: 'Advanced AI Workflow Engine 2026'
+    name: 'Advanced AI Workflow Engine 2026',
     path: '/services/advanced-ai-workflow-engine-2026',
     description: 'Intelligent workflow automation with AI',
     icon: 'Workflow',
@@ -686,11 +688,11 @@ export interface AdvancedAIAutomationService,
   s: 198, ratin,
   g: 4 && 4.9, review,
   s: 267 } ]; // Service categories export const aiAutomationCategories = [' 'All',' 'AI & Business Automation',' 'AI & Customer Experience',' 'AI & Supply Chain',' 'AI & Financial Services',' 'AI & Human Resources',' 'AI & Marketing' ]; export const getAIAutomationServicesByCategory = (categor)
-  y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category); }; export const getPopularAIAutomationServices = (limi)
-  t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit); }; export const getAIAutomationServicesByTechnology = (technolog)
-  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) ); }; export const getAIAutomationServicesByPriceRange = (minPric)
+  y: string) => ' if (category === 'All') return advancedAIAutomationServices; return advancedAIAutomationServices.filter(service => service.category === category)}; export const getPopularAIAutomationServices = (limi)
+  t: number = 6): AIAutomationService[] => return advancedAIAutomationServices .filter(service => service.popular) .slice(0) limit)}; export const getAIAutomationServicesByTechnology = (technolog)
+  y: string): AIAutomationService[] => return advancedAIAutomationServices.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()) </div> ) )}; export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice); }); }; export const advancedAIAutomationServices2026 = [ ' nam,
+  e: number): AIAutomationService[] => return advancedAIAutomationServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(')'; '')); return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})}; export const advancedAIAutomationServices2026 = [ ' nam,
   e: 'Advanced AI Automation Platform 2026',' pat,
   h: '/services/advanced-ai-automation-platform-2026',' descriptio,
   n: 'Next-generation AI automation platform for enterprise',' ico,

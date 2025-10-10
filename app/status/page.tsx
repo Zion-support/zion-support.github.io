@@ -3,21 +3,19 @@ import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-
-export default function StatusPage() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  const refreshStatus = async () => {
+import SEOOptimizer from '../components/SEOOptimizer'
+export default function StatusPage() {;
+const [lastUpdated, setLastUpdated] = useState(new Date());
+const [isRefreshing, setIsRefreshing] = useState(false);
+;
+const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
     setIsRefreshing(false);
-  };
-
-  const services = [
+;
+const services = [
     {
       name: 'API Services',
       status: 'operational',
@@ -67,8 +65,8 @@ export default function StatusPage() {
       description: 'System monitoring and alerts'
     }
   ];
-
-  const incidents = [
+;
+const incidents = [
     {
       id: 1,
       title: 'API Response Time Degradation',
@@ -90,8 +88,10 @@ export default function StatusPage() {
       affectedServices: ['Database', 'API Services']
     }
   ];
+;
+const getStatusIcon = (status: string) => {
+return (
 
-  const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
@@ -100,11 +100,12 @@ export default function StatusPage() {
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-400" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
-    }
+        return <Clock className="w-5 h-5 text-gray-400" />
+);
+}}
   };
-
-  const getStatusColor = (status: string) => {
+;
+const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
         return 'text-green-400';
@@ -113,11 +114,10 @@ export default function StatusPage() {
       case 'outage':
         return 'text-red-400';
       default:
-        return 'text-gray-400';
-    }
+        return 'text-gray-400'}
   };
-
-  const getSeverityColor = (severity: string) => {
+;
+const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical':
         return 'bg-red-500/20 text-red-400 border-red-500/50';
@@ -126,11 +126,10 @@ export default function StatusPage() {
       case 'minor':
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
       default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
-    }
+        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'}
   };
-
-  const overallStatus = services.every(service => service.status === 'operational') 
+;
+const overallStatus = services.every(service => service.status === 'operational') 
     ? 'operational' 
     : services.some(service => service.status === 'outage') 
       ? 'outage' 
@@ -145,7 +144,7 @@ export default function StatusPage() {
           
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2">
-              {getStatusIcon(overallStatus)}
+              {getStatusIcon(overallStatus);
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
                 {overallStatus === 'operational' ? 'All Systems Operational' : 
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
@@ -162,7 +161,7 @@ export default function StatusPage() {
           </div>
           
           <p className="text-gray-400 text-sm">
-            Last updated: {lastUpdated.toLocaleString()}
+            Last updated: {lastUpdated.toLocaleString();
           </p>
         </div>
       </section>
@@ -176,7 +175,7 @@ export default function StatusPage() {
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    {getStatusIcon(service.status)}
+                    {getStatusIcon(service.status);
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
@@ -201,7 +200,7 @@ export default function StatusPage() {
                   </div>
                 </div>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -242,7 +241,7 @@ export default function StatusPage() {
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -308,6 +307,4 @@ export default function StatusPage() {
       </section>
 
       <Footer />
-    </div>
-  );
-}
+    </div>);

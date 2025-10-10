@@ -60,7 +60,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
         ]
       }
       enterprise: price: 1299;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -74,8 +75,9 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'Customer Success'
-    tags: [
+    category: 'Customer Success',
+    tags:
+        tags: [
     categor,
   y: 'Customer Success'
     tag,
@@ -158,7 +160,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     ]
     pricing: starter: unknown;
         price: 299;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -173,7 +176,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Standard analytics',
           'Email support']}
       professional: price: 799;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       professiona,
   l: pric,
@@ -187,7 +191,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Priority support',
           'Custom modeling']}
       enterprise: price: 1999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -201,8 +206,9 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'Supply Chain'
-    tags: [
+    category: 'Supply Chain',
+    tags:
+        tags: [
     categor,
   y: 'Supply Chain'
     tag,
@@ -315,7 +321,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
         ]
       }
       enterprise: price: 999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -329,8 +336,9 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'Identity Verification'
-    tags: [
+    category: 'Identity Verification',
+    tags:
+        tags: [
     categor,
   y: 'Identity Verification'
     tag,
@@ -412,7 +420,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     ]
     pricing: starter: unknown;
         price: 249;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -443,7 +452,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
         ]
       }
       enterprise: price: 1699;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -457,8 +467,9 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'HR Analytics'
-    tags: [
+    category: 'HR Analytics',
+    tags:
+        tags: [
     categor,
   y: 'HR Analytics'
     tag,
@@ -539,7 +550,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     ]
     pricing: starter: unknown;
         price: 399;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -554,7 +566,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Standard analytics',
           'Email support']}
       professional: price: 999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       professiona,
   l: pric,
@@ -568,7 +581,8 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Priority support',
           'Custom models']}
       enterprise: price: 2499;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -582,8 +596,9 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'Financial Risk Management'
-    tags: [
+    category: 'Financial Risk Management',
+    tags:
+        tags: [
     categor,
   y: 'Financial Risk Management'
     tag,
@@ -713,14 +728,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 1}000 customersBasic AI featuresEmail support'];
-      };
+  s: ['Up to 1}000 customersBasic AI featuresEmail support']};
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows'];
-      };
+  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -849,14 +862,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 1}000 verificationsBasic verification featuresEmail support'];
-      };
+  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']};
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows'];
-      };
+  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -923,8 +934,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}
         feature,
-  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting'];
-      };
+  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']};
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}
@@ -1037,14 +1047,10 @@ export const cuttingEdgeMicroSaasServices2025 = [
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']}
-];
-  }
-];
-  }
-];
-  }
-];
-  }];
+]}
+]}
+]}
+]}];
     integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     complianc,
@@ -1216,10 +1222,10 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
   e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'] export const cuttingEdgeMicroSaasServices2025 = [; {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 1}000 customersBasic AI featuresEmail support']; }; professiona,
+  s: ['Up to 1}000 customersBasic AI featuresEmail support']}; professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']; }; enterpris,
+  s: ['Up to 10}000 customersAdvanced AI featuresPriority supportCustom workflows']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited customersFull AI platformDedicated specialists24/7 support']} } };' categor,
@@ -1258,10 +1264,10 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: ['ERP SystemsWMS PlatformsTMS SolutionsE-commerce PlatformsAnalytics Tools'];' complianc,
   e: ['Supply Chain StandardsLogistics RegulationsData Privacy Laws']}; {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']; }; professiona,
+  s: ['Up to 1}000 verificationsBasic verification featuresEmail support']}; professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']; }; enterpris,
+  s: ['Up to 10}000 verificationsAdvanced verification featuresPriority supportCustom workflows']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited verificationsFull verification platformDedicated specialists24/7 support']} } };' categor,
@@ -1282,7 +1288,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   s: ['Up to 500 employeesBasic analytics featuresEmail support']} }; professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
-  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']; }; enterpris,
+  s: ['Up to 5}000 employeesAdvanced analytics featuresPriority supportCustom reporting']}; enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'}' feature,
   s: ['Unlimited employeesFull analytics platformDedicated specialists24/7 support']} } };' categor,
@@ -1319,6 +1325,6 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   e: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics'; useCase,
   s: [,' 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
-  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']} ]; } ]; } ]; } ]; }];' integration,
+  e: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']} ]} ]} ]} ]}];' integration,
   s: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];' complianc,
   e: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards']} ]; '

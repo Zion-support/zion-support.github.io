@@ -2,8 +2,8 @@ import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";"
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
 interface, NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
-const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({
-  varia, n, t = 'def, a, u, l, t',
+const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({;
+varia, n, t = 'def, a, u, l, t',
   showCou, n, t =  , 3,
   autoRota, t, e = fa, l, s, e,
   rotationInterv, a, l = 5, 0, 0, 0,
