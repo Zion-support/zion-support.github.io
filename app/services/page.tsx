@@ -524,6 +524,89 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
 
+    // Advanced AI Services
+    {
+      icon: Brain,
+      title: 'AI Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing services for complex optimization problems, cryptography, and scientific simulations.',
+      features: ['Quantum Optimization', 'Cryptographic Security', 'Scientific Simulations', 'Machine Learning Acceleration', 'Quantum Algorithms'],
+      price: 'Starting at $5,000/month',
+      category: 'AI Services',
+      popular: true
+    },
+    {
+      icon: Brain,
+      title: 'AI Autonomous Vehicle Systems',
+      description: 'Complete autonomous vehicle solutions with computer vision, sensor fusion, and real-time decision making.',
+      features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Processing', 'Safety Systems'],
+      price: 'Starting at $10,000/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Space Technology Solutions',
+      description: 'Advanced AI systems for space exploration, satellite management, and interplanetary communication.',
+      features: ['Satellite Management', 'Space Communication', 'Mission Planning', 'Data Analysis', 'Autonomous Operations'],
+      price: 'Starting at $15,000/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Climate Change Solutions',
+      description: 'AI-powered climate modeling, carbon footprint analysis, and environmental impact assessment.',
+      features: ['Climate Modeling', 'Carbon Analysis', 'Environmental Monitoring', 'Predictive Analytics', 'Sustainability Planning'],
+      price: 'Starting at $2,500/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical drug discovery, molecular analysis, and clinical trial optimization.',
+      features: ['Molecular Analysis', 'Drug Design', 'Clinical Trials', 'Toxicity Prediction', 'Patent Analysis'],
+      price: 'Starting at $8,000/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Smart City Solutions',
+      description: 'Comprehensive AI solutions for smart city infrastructure, traffic management, and urban planning.',
+      features: ['Traffic Management', 'Energy Optimization', 'Public Safety', 'Urban Planning', 'IoT Integration'],
+      price: 'Starting at $12,000/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Agricultural Intelligence',
+      description: 'AI-powered precision agriculture with crop monitoring, yield prediction, and automated farming systems.',
+      features: ['Crop Monitoring', 'Yield Prediction', 'Soil Analysis', 'Pest Detection', 'Automated Irrigation'],
+      price: 'Starting at $1,800/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Financial Trading Systems',
+      description: 'High-frequency trading algorithms, market analysis, and automated investment strategies.',
+      features: ['Algorithmic Trading', 'Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Execution'],
+      price: 'Starting at $3,500/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Cybersecurity Intelligence',
+      description: 'Advanced AI-powered cybersecurity with threat detection, incident response, and vulnerability assessment.',
+      features: ['Threat Detection', 'Incident Response', 'Vulnerability Assessment', 'Behavioral Analysis', 'Automated Defense'],
+      price: 'Starting at $2,200/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Manufacturing Optimization',
+      description: 'AI-driven manufacturing process optimization, quality control, and predictive maintenance.',
+      features: ['Process Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain', 'Production Planning'],
+      price: 'Starting at $4,500/month',
+      category: 'AI Services'
+    },
+
     // Micro SAAS Services
     {
       icon: Smartphone,
