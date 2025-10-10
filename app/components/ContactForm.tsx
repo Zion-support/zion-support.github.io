@@ -15,6 +15,7 @@ interface FormStatus {
   message: string,
 }
 
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -78,6 +79,66 @@ interface FormStatus {
     'Other'
   ];
 
+  return (
+    <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+      <div className="grid md:grid-cols-2 gap-0">
+        {/* Contact Information */}
+        <div className="bg-gradient-to-br from-blue-600 to-purple-700 p-8 text-white">
+          <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+          <p className="text-blue-100 mb-8 text-lg">
+            Ready to transform your business with cutting-edge technology? 
+            Let's discuss your project and bring your vision to life.
+          </p>
+          
+          <div className="space-y-6">
+            <div className="flex items-center space-x-4">
+              <Mail className="w-6 h-6 text-cyan-300" />
+              <div>
+                <p className="font-semibold">Email</p>
+                <p className="text-blue-100">contact@ziontechgroup.com</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <Phone className="w-6 h-6 text-cyan-300" />
+              <div>
+                <p className="font-semibold">Phone</p>
+                <p className="text-blue-100">+1 (555) 123-4567</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <MapPin className="w-6 h-6 text-cyan-300" />
+              <div>
+                <p className="font-semibold">Address</p>
+                <p className="text-blue-100">123 Tech Street, Innovation City, IC 12345</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Form */}
+        <div className="p-8">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
+          
+          {status.type === 'success' && (
+            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-green-600" />
+              <p className="text-green-800">{status.message}</p>
+            </div>
+          )}
+
+          {status.type === 'error' && (
+            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center space-x-2">
+              <AlertCircle className="w-5 h-5 text-red-600" />
+              <p className="text-red-800">{status.message}</p>
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Full Name *
               </label>
               <input
                 type="text"
@@ -150,12 +211,30 @@ interface FormStatus {
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
-              ) : (
-                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-              )}
-              <span className="text-sm font-medium">{status.message}</span>
-            </div>
-          )}
+              <option value="">Select a service</option>
+              {services.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              Message *
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows={4}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+              placeholder="Tell us about your project..."
+            />
+          </div>
 
           <button
             type="submit"
@@ -175,8 +254,9 @@ interface FormStatus {
             )}
           </button>
         </form>
+      </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200">
+      <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="flex flex-col items-center space-y-2">
               <div className="p-3 bg-blue-100 rounded-full">
@@ -209,6 +289,7 @@ interface FormStatus {
             </div>
           </div>
         </div>
+      </div>
     </div>
   );
 };
