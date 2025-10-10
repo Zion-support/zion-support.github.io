@@ -113,7 +113,7 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden matrix-bg">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden cyber-grid-advanced quantum-field-ultra">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -124,10 +124,10 @@ const Footer: React.FC = memo(() => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6 group">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow pulse-glow">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-white font-bold text-xl cyber-text">Zion Tech Group</span>
+              <span className="text-white font-bold text-xl cyber-text-ultra">Zion Tech Group</span>
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -181,7 +181,7 @@ const Footer: React.FC = memo(() => {
 
           {/* Services */}
           <div className="lg:col-span-2">
-            <h3 className="text-white font-semibold text-lg mb-6 neon-glow-cyan">Our Services</h3>
+            <h3 className="text-white font-semibold text-lg mb-6 neon-glow-cyan cyber-text-enhanced">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {serviceCategories.map((category, index) => (
                 <div key={index}>
@@ -194,7 +194,7 @@ const Footer: React.FC = memo(() => {
                       <li key={serviceIndex}>
                         <Link 
                           to={service.href}
-                          className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                          className="text-gray-300 hover:text-cyan-400 transition-colors text-sm hover:neon-glow-cyan"
                         >
                           {service.name}
                         </Link>
@@ -217,7 +217,7 @@ const Footer: React.FC = memo(() => {
                     <li key={index}>
                       <Link 
                         to={link.href}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm hover:neon-glow-cyan"
                       >
                         {link.name}
                       </Link>
@@ -234,7 +234,7 @@ const Footer: React.FC = memo(() => {
                     <li key={index}>
                       <Link 
                         to={link.href}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm hover:neon-glow-cyan"
                       >
                         {link.name}
                       </Link>
@@ -251,7 +251,7 @@ const Footer: React.FC = memo(() => {
                     <li key={index}>
                       <Link 
                         to={link.href}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm hover:neon-glow-cyan"
                       >
                         {link.name}
                       </Link>
@@ -266,7 +266,7 @@ const Footer: React.FC = memo(() => {
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-white font-semibold text-lg mb-4 neon-text">
+            <h3 className="text-white font-semibold text-lg mb-4 cyber-text-enhanced neon-glow-cyan">
               Stay Updated with Our Latest Innovations
             </h3>
             <p className="text-gray-300 mb-6">
@@ -278,7 +278,7 @@ const Footer: React.FC = memo(() => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
-              <button className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
+              <button className="neon-button-ultra hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>

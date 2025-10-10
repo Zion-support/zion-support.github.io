@@ -316,13 +316,13 @@
     box-shadow: none !important;
   }
   
-<<<<<<< HEAD
   .neon-glow-cyan,
   .neon-glow-purple,
   .neon-glow-pink {
     animation: none !important;
     text-shadow: none !important;
-=======
+  }
+  
   .text-6xl {
     font-size: 2.5rem;
   }
@@ -1092,9 +1092,35 @@
 }
 
 /* Responsive Enhancements */
+@media (max-width: 1024px) {
+  .cyber-text-ultra {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .futuristic-card-ultra {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .neon-button-ultra {
+    padding: 14px 28px;
+    font-size: 0.9rem;
+  }
+  
+  .holographic-advanced {
+    padding: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .cyber-text-enhanced {
     font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .cyber-text-ultra {
+    font-size: 2rem;
     letter-spacing: 1px;
   }
   
@@ -1103,12 +1129,26 @@
     margin-bottom: 1rem;
   }
   
+  .futuristic-card-ultra {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
   .holographic-card {
+    padding: 0.75rem;
+  }
+  
+  .holographic-advanced {
     padding: 0.75rem;
   }
   
   .neon-button-enhanced {
     padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .neon-button-ultra {
+    padding: 12px 24px;
     font-size: 0.875rem;
   }
   
@@ -1120,19 +1160,8 @@
     animation-duration: 12s;
   }
   
-  .cyber-text-ultra {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-  }
-  
-  .futuristic-card-ultra {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .neon-button-ultra {
-    padding: 12px 24px;
-    font-size: 0.875rem;
+  .quantum-field-ultra::before {
+    animation-duration: 15s;
   }
 }
 
@@ -1161,6 +1190,49 @@
   
   .quantum-field::before {
     animation-duration: 8s;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-80f7
+  }
+  
+  .quantum-field-ultra::before {
+    animation-duration: 10s;
+  }
+  
+  .cyber-text-ultra {
+    font-size: 1.5rem;
+    letter-spacing: 0.25px;
+  }
+  
+  .futuristic-card-ultra {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .holographic-advanced {
+    padding: 0.5rem;
+  }
+  
+  .neon-button-ultra {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-text-ultra {
+    font-size: 1.75rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .futuristic-card-ultra {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .neon-button-ultra {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+  
+  .holographic-advanced {
+    padding: 0.5rem;
   }
 }
